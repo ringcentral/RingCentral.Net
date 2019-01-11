@@ -3,10 +3,10 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class UnitTest1
+    public class AuthorizationTest
     {
         [Fact]
-        public async void Test1()
+        public async void TestPasswordFlow()
         {
             var env = Environment.GetEnvironmentVariables();
             var rc = new RestClient(

@@ -39,9 +39,14 @@ namespace RingCentral
                     {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}"}
                 }
             };
-            var wsgBody = $"grant_type=password&username={username}&extension={extension}&password={password}";
-            var wsgRequest = $"[{JsonConvert.SerializeObject(wsgMetadata)}, \"{wsgBody}\"]";
-
+            var oauthTokenRequest = new OauthTokenRequest
+            {
+                grant_type = "password",
+                username = username,
+                extension = extension,
+                password = password
+            };
+            var wsgRequest = $"[{wsgMetadata.ToJsonString()}, \"{oauthTokenRequest.ToQueryString()}\"]";
             var t = new TaskCompletionSource<string>();
             IDisposable subscription = null;
             subscription = client.MessageReceived.Subscribe(msg =>
