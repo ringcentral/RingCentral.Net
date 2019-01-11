@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Websocket.Client;
 using Newtonsoft.Json;
+using System.Threading;
 
 namespace RingCentral
 {
@@ -36,12 +37,14 @@ namespace RingCentral
                 path = "/restapi/oauth/token",
                 headers = new Dictionary<string, string> {
                     { "Content-Type", "application/x-www-form-urlencoded" },
-                    {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format("{0}:{1}", this.clientId, this.clientSecret)))}"}
+                    {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}"}
                 }
             };
             var wsgBody = $"grant_type=password&username={username}&extension={extension}&password={password}";
-            var wsgRequest = $"[{JsonConvert.SerializeObject(wsgMetadata)}, {wsgBody}]";
+            var wsgRequest = $"[{JsonConvert.SerializeObject(wsgMetadata)}, \"{wsgBody}\"]";
             Console.WriteLine(wsgRequest);
+            this.client.Send(wsgRequest);
+            Thread.Sleep(5000);
         }
     }
 }
