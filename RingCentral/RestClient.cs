@@ -30,7 +30,7 @@ namespace RingCentral
             client.Start();
         }
 
-        public Task<string> Authorize(string username, string extension, string password)
+        public Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
         {
             var messageId = Guid.NewGuid().ToString();
             var wsgMetadata = new WsgMetadata
@@ -52,18 +52,19 @@ namespace RingCentral
                 password = password
             };
             var wsgRequest = $"[{wsgMetadata.ToJsonString()}, \"{oauthTokenRequest.ToQueryString()}\"]";
-            var t = new TaskCompletionSource<string>();
+            var t = new TaskCompletionSource<WsgResponse<TokenInfo>>();
             IDisposable subscription = null;
             subscription = client.MessageReceived.Subscribe(message =>
             {
                 if (message.Contains($"\"messageId\":\"{messageId}\""))
                 {
                     subscription.Dispose();
-                    var jArray = JArray.Parse(message);
-                    var metadata = jArray[0].ToObject<WsgMetadata>();
-                    var token = jArray[1].ToObject<TokenInfo>();
-                    this.token = token;
-                    t.TrySetResult(message);
+                    var wsgResponse = WsgResponse<TokenInfo>.Parse(message);
+                    // var jArray = JArray.Parse(message);
+                    // var metadata = jArray[0].ToObject<WsgMetadata>();
+                    // var token = jArray[1].ToObject<TokenInfo>();
+                    this.token = wsgResponse.body;
+                    t.TrySetResult(wsgResponse);
                 }
             });
             this.client.Send(wsgRequest);

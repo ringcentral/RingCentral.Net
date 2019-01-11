@@ -19,7 +19,8 @@ namespace RingCentral.Tests
                 env["RINGCENTRAL_EXTENSION"] as string,
                 env["RINGCENTRAL_PASSWORD"] as string
             );
-            Console.WriteLine(r);
+            Assert.Equal(200, r.metadata.status);
+            Assert.NotNull(r.body.access_token);
         }
     }
 }
