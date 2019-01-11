@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class TokenInfo
+    public class TokenInfo : Serializable
     {
         public string access_token;
         public int? expires_in;

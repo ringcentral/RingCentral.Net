@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateSubscriptionRequest
+    public class CreateSubscriptionRequest : Serializable
     {
         public string[] eventFilters;
         public NotificationDeliveryModeRequest deliveryMode;

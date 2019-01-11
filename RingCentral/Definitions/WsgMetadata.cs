@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RingCentral
 {
-    public class WsgMetadata
+    public class WsgMetadata : Serializable
     {
         public string type;
         public string messageId;

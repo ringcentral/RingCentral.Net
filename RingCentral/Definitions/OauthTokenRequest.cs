@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class OauthTokenRequest
+    public class OauthTokenRequest : Serializable
     {
         public string grant_type;
         public string username;

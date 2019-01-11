@@ -3,6 +3,10 @@ using Newtonsoft.Json;
 
 namespace RingCentral
 {
+    public interface Serializable
+    {
+    }
+
     public static class ExtensionMethods
     {
         private static readonly JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
@@ -10,11 +14,11 @@ namespace RingCentral
             NullValueHandling = NullValueHandling.Ignore
         };
 
-        public static string ToJsonString(this object obj)
+        public static string ToJsonString(this Serializable obj)
         {
             return JsonConvert.SerializeObject(obj, Formatting.None, jsonSerializerSettings);
         }
-        public static string ToQueryString(this object obj)
+        public static string ToQueryString(this Serializable obj)
         {
             var fields = obj.GetType().GetFields()
                 .Where(f => f.GetValue(obj) != null)

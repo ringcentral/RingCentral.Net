@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NotificationDeliveryModeRequest
+    public class NotificationDeliveryModeRequest : Serializable
     {
         public string transportType;
         public string address;
