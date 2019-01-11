@@ -30,13 +30,34 @@ namespace RingCentral
             client.Start();
         }
 
-        public Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
+        public Task<WsgResponse<T>> Request<T>(WsgMetadata metadata, string body)
         {
             var messageId = Guid.NewGuid().ToString();
-            var wsgMetadata = new WsgMetadata
+            metadata.messageId = messageId;
+            if (metadata.type == null)
             {
-                type = "ClientRequest",
-                messageId = messageId,
+                metadata.type = "ClientRequest";
+            }
+            var wsgRequest = $"[{metadata.ToJsonString()}, {body}]";
+            var t = new TaskCompletionSource<WsgResponse<T>>();
+            IDisposable subscription = null;
+            subscription = client.MessageReceived.Subscribe(message =>
+            {
+                if (message.Contains($"\"messageId\":\"{messageId}\""))
+                {
+                    subscription.Dispose();
+                    var wsgResponse = WsgResponse<T>.Parse(message);
+                    t.TrySetResult(wsgResponse);
+                }
+            });
+            this.client.Send(wsgRequest);
+            return t.Task;
+        }
+
+        public async Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
+        {
+            var metadata = new WsgMetadata
+            {
                 method = "POST",
                 path = "/restapi/oauth/token",
                 headers = new Dictionary<string, string> {
@@ -51,24 +72,10 @@ namespace RingCentral
                 extension = extension,
                 password = password
             };
-            var wsgRequest = $"[{wsgMetadata.ToJsonString()}, \"{oauthTokenRequest.ToQueryString()}\"]";
-            var t = new TaskCompletionSource<WsgResponse<TokenInfo>>();
-            IDisposable subscription = null;
-            subscription = client.MessageReceived.Subscribe(message =>
-            {
-                if (message.Contains($"\"messageId\":\"{messageId}\""))
-                {
-                    subscription.Dispose();
-                    var wsgResponse = WsgResponse<TokenInfo>.Parse(message);
-                    // var jArray = JArray.Parse(message);
-                    // var metadata = jArray[0].ToObject<WsgMetadata>();
-                    // var token = jArray[1].ToObject<TokenInfo>();
-                    this.token = wsgResponse.body;
-                    t.TrySetResult(wsgResponse);
-                }
-            });
-            this.client.Send(wsgRequest);
-            return t.Task;
+            var body = $"\"{oauthTokenRequest.ToQueryString()}\"";
+            var r = await this.Request<TokenInfo>(metadata, body);
+            this.token = r.body;
+            return r;
         }
 
         public Task<string> Subscribe(string[] eventFilters, Action<string> callback)
