@@ -31,6 +31,7 @@ namespace RingCentral
         {
             var wsgMetadata = new WsgMetadata
             {
+                type = "ClientRequest",
                 messageId = "authorize",
                 method = "POST",
                 path = "/restapi/oauth/token",

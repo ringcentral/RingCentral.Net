@@ -4,7 +4,7 @@ namespace RingCentral
 {
     public class WsgMetadata
     {
-        public string type = "ClientRequest";
+        public string type;
         public string messageId;
         public string method;
         public string path;
