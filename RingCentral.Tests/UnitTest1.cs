@@ -6,7 +6,7 @@ namespace RingCentral.Tests
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public async void Test1()
         {
             var env = Environment.GetEnvironmentVariables();
             var rc = new RestClient(
@@ -14,11 +14,12 @@ namespace RingCentral.Tests
                 env["RINGCENTRAL_CLIENT_SECRET"] as string,
                 env["RINGCENTRAL_WSG_URL"] as string
             );
-            rc.Authorize(
+            var r = await rc.Authorize(
                 env["RINGCENTRAL_USERNAME"] as string,
                 env["RINGCENTRAL_EXTENSION"] as string,
                 env["RINGCENTRAL_PASSWORD"] as string
             );
+            Console.WriteLine(r);
         }
     }
 }

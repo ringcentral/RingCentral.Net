@@ -4,6 +4,7 @@ using System.Text;
 using Websocket.Client;
 using Newtonsoft.Json;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace RingCentral
 {
@@ -23,12 +24,10 @@ namespace RingCentral
             client = new WebsocketClient(url);
             client.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(30).TotalMilliseconds;
             client.ReconnectionHappened.Subscribe(type => Console.WriteLine($"Reconnection happened, type: {type}"));
-
-            client.MessageReceived.Subscribe(msg => Console.WriteLine($"Message received: {msg}"));
             client.Start();
         }
 
-        public void Authorize(string username, string extension, string password)
+        public Task<string> Authorize(string username, string extension, string password)
         {
             var wsgMetadata = new WsgMetadata
             {
@@ -42,9 +41,16 @@ namespace RingCentral
             };
             var wsgBody = $"grant_type=password&username={username}&extension={extension}&password={password}";
             var wsgRequest = $"[{JsonConvert.SerializeObject(wsgMetadata)}, \"{wsgBody}\"]";
-            Console.WriteLine(wsgRequest);
+
+            var t = new TaskCompletionSource<string>();
+            IDisposable subscription = null;
+            subscription = client.MessageReceived.Subscribe(msg =>
+            {
+                subscription.Dispose();
+                t.TrySetResult(msg);
+            });
             this.client.Send(wsgRequest);
-            Thread.Sleep(5000);
+            return t.Task;
         }
     }
 }
