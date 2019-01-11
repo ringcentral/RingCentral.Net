@@ -24,8 +24,8 @@ namespace RingCentral.Tests
             {
                 Console.WriteLine(msg);
             });
-            Console.WriteLine(r);
-            // Assert.Equal(200, r.metadata.status);
+            Assert.Equal(200, r.metadata.status);
+            Assert.Equal("WebSocket", r.body.deliveryMode.transportType);
         }
     }
 }

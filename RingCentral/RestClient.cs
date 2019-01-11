@@ -78,13 +78,10 @@ namespace RingCentral
             return r;
         }
 
-        public Task<string> Subscribe(string[] eventFilters, Action<string> callback)
+        public async Task<WsgResponse<SubscriptionInfo>> Subscribe(string[] eventFilters, Action<string> callback)
         {
-            var messageId = Guid.NewGuid().ToString();
-            var wsgMetadata = new WsgMetadata
+            var metadata = new WsgMetadata
             {
-                type = "ClientRequest",
-                messageId = messageId,
                 method = "POST",
                 path = "/restapi/v1.0/subscription",
                 headers = new Dictionary<string, string> {
@@ -99,20 +96,10 @@ namespace RingCentral
                     transportType = "WebSocket"
                 }
             };
+            var body = createSubscriptionRequest.ToJsonString();
 
-            var wsgRequest = $"[{wsgMetadata.ToJsonString()},{createSubscriptionRequest.ToJsonString()}]";
-            var t = new TaskCompletionSource<string>();
-            IDisposable subscription = null;
-            subscription = client.MessageReceived.Subscribe(message =>
-            {
-                if (message.Contains($"\"messageId\":\"{messageId}\""))
-                {
-                    subscription.Dispose();
-                    t.TrySetResult(message);
-                }
-            });
-            this.client.Send(wsgRequest);
-            return t.Task;
+            var r = await this.Request<SubscriptionInfo>(metadata, body);
+            return r;
         }
     }
 }
