@@ -29,10 +29,11 @@ namespace RingCentral
 
         public Task<string> Authorize(string username, string extension, string password)
         {
+            var messageId = Guid.NewGuid().ToString();
             var wsgMetadata = new WsgMetadata
             {
                 type = "ClientRequest",
-                messageId = "authorize",
+                messageId = messageId,
                 method = "POST",
                 path = "/restapi/oauth/token",
                 headers = new Dictionary<string, string> {
@@ -52,8 +53,11 @@ namespace RingCentral
             IDisposable subscription = null;
             subscription = client.MessageReceived.Subscribe(msg =>
             {
-                subscription.Dispose();
-                t.TrySetResult(msg);
+                if (msg.Contains($"\"messageId\":\"{messageId}\""))
+                {
+                    subscription.Dispose();
+                    t.TrySetResult(msg);
+                }
             });
             this.client.Send(wsgRequest);
             return t.Task;
