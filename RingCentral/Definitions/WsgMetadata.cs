@@ -9,5 +9,6 @@ namespace RingCentral
         public string method;
         public string path;
         public Dictionary<string, string> headers;
+        public int? status;
     }
 }

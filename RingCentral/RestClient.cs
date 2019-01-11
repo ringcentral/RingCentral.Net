@@ -5,6 +5,7 @@ using Websocket.Client;
 using Newtonsoft.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace RingCentral
 {
@@ -14,6 +15,8 @@ namespace RingCentral
         private string clientId;
         private string clientSecret;
         private string wsgUrl;
+
+        public TokenInfo token;
 
         public RestClient(string clientId, string clientSecret, string wsgUrl)
         {
@@ -51,12 +54,53 @@ namespace RingCentral
             var wsgRequest = $"[{wsgMetadata.ToJsonString()}, \"{oauthTokenRequest.ToQueryString()}\"]";
             var t = new TaskCompletionSource<string>();
             IDisposable subscription = null;
-            subscription = client.MessageReceived.Subscribe(msg =>
+            subscription = client.MessageReceived.Subscribe(message =>
             {
-                if (msg.Contains($"\"messageId\":\"{messageId}\""))
+                if (message.Contains($"\"messageId\":\"{messageId}\""))
                 {
                     subscription.Dispose();
-                    t.TrySetResult(msg);
+                    var jArray = JArray.Parse(message);
+                    var metadata = jArray[0].ToObject<WsgMetadata>();
+                    var token = jArray[1].ToObject<TokenInfo>();
+                    this.token = token;
+                    t.TrySetResult(message);
+                }
+            });
+            this.client.Send(wsgRequest);
+            return t.Task;
+        }
+
+        public Task<string> Subscribe(string[] eventFilters, Action<string> callback)
+        {
+            var messageId = Guid.NewGuid().ToString();
+            var wsgMetadata = new WsgMetadata
+            {
+                type = "ClientRequest",
+                messageId = messageId,
+                method = "POST",
+                path = "/restapi/v1.0/subscription",
+                headers = new Dictionary<string, string> {
+                    {"Authorization", $"Bearer {this.token.access_token}"}
+                }
+            };
+            var createSubscriptionRequest = new CreateSubscriptionRequest
+            {
+                eventFilters = eventFilters,
+                deliveryMode = new NotificationDeliveryModeRequest
+                {
+                    transportType = "WebSocket"
+                }
+            };
+
+            var wsgRequest = $"[{wsgMetadata.ToJsonString()},{createSubscriptionRequest.ToJsonString()}]";
+            var t = new TaskCompletionSource<string>();
+            IDisposable subscription = null;
+            subscription = client.MessageReceived.Subscribe(message =>
+            {
+                if (message.Contains($"\"messageId\":\"{messageId}\""))
+                {
+                    subscription.Dispose();
+                    t.TrySetResult(message);
                 }
             });
             this.client.Send(wsgRequest);
