@@ -9,13 +9,12 @@ using Newtonsoft.Json.Linq;
 
 namespace RingCentral
 {
-    public class RestClient
+    public class RestClient : IDisposable
     {
         private WebsocketClient client;
         private string clientId;
         private string clientSecret;
         private string wsgUrl;
-
         public TokenInfo token;
 
         public RestClient(string clientId, string clientSecret, string wsgUrl)
@@ -30,8 +29,21 @@ namespace RingCentral
             client.Start();
         }
 
-        public Task<WsgResponse<T>> Request<T>(WsgMetadata metadata, string body)
+        public Task<WsgResponse<T>> Request<T>(WsgMetadata metadata, string body, bool oauth = false)
         {
+            if (oauth)
+            {
+                metadata.headers = new Dictionary<string, string> {
+                    { "Content-Type", "application/x-www-form-urlencoded" },
+                    {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}"}
+                };
+            }
+            else
+            {
+                metadata.headers = new Dictionary<string, string> {
+                    {"Authorization", $"Bearer {this.token.access_token}"}
+                };
+            }
             var messageId = Guid.NewGuid().ToString();
             metadata.messageId = messageId;
             if (metadata.type == null)
@@ -64,10 +76,6 @@ namespace RingCentral
             {
                 method = "POST",
                 path = "/restapi/oauth/token",
-                headers = new Dictionary<string, string> {
-                    { "Content-Type", "application/x-www-form-urlencoded" },
-                    {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}"}
-                }
             };
             var oauthTokenRequest = new OauthTokenRequest
             {
@@ -76,24 +84,24 @@ namespace RingCentral
                 extension = extension,
                 password = password
             };
-            var r = await this.Request<TokenInfo>(metadata, oauthTokenRequest.ToQueryString());
+            var r = await this.Request<TokenInfo>(metadata, oauthTokenRequest.ToQueryString(), true);
             this.token = r.body;
             return r;
         }
 
         public async Task<WsgResponse<string>> Revoke()
         {
+            if (this.token == null) // nothing  to revoke
+            {
+                return null;
+            }
             var metadata = new WsgMetadata
             {
                 method = "POST",
                 path = "/restapi/oauth/revoke",
-                headers = new Dictionary<string, string> {
-                    { "Content-Type", "application/x-www-form-urlencoded" },
-                    {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}"}
-                }
             };
             var body = $"token={this.token.access_token}";
-            var r = await this.Request<string>(metadata, body);
+            var r = await this.Request<string>(metadata, body, true);
             this.token = null;
             return r;
         }
@@ -104,9 +112,6 @@ namespace RingCentral
             {
                 method = "POST",
                 path = "/restapi/v1.0/subscription",
-                headers = new Dictionary<string, string> {
-                    {"Authorization", $"Bearer {this.token.access_token}"}
-                }
             };
             var createSubscriptionRequest = new CreateSubscriptionRequest
             {
@@ -117,9 +122,13 @@ namespace RingCentral
                 }
             };
             var body = createSubscriptionRequest.ToJsonString();
-
             var r = await this.Request<SubscriptionInfo>(metadata, body);
             return r;
+        }
+
+        public async void Dispose()
+        {
+            await this.Revoke();
         }
     }
 }
