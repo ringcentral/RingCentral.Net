@@ -14,7 +14,10 @@ namespace RingCentral
             wsgResponse.rawMessage = rawMessage;
             var jArray = JArray.Parse(rawMessage);
             wsgResponse.metadata = jArray[0].ToObject<WsgMetadata>();
-            wsgResponse.body = jArray[1].ToObject<T>();
+            if (jArray.Count > 1) // has body
+            {
+                wsgResponse.body = jArray[1].ToObject<T>();
+            }
             return wsgResponse;
         }
     }

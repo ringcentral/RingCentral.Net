@@ -38,6 +38,10 @@ namespace RingCentral
             {
                 metadata.type = "ClientRequest";
             }
+            if (!(body.StartsWith("{") && body.EndsWith("}"))) // x-www-form-urlencoded istead of json
+            {
+                body = $"\"{body}\"";
+            }
             var wsgRequest = $"[{metadata.ToJsonString()}, {body}]";
             var t = new TaskCompletionSource<WsgResponse<T>>();
             IDisposable subscription = null;
@@ -72,9 +76,25 @@ namespace RingCentral
                 extension = extension,
                 password = password
             };
-            var body = $"\"{oauthTokenRequest.ToQueryString()}\"";
-            var r = await this.Request<TokenInfo>(metadata, body);
+            var r = await this.Request<TokenInfo>(metadata, oauthTokenRequest.ToQueryString());
             this.token = r.body;
+            return r;
+        }
+
+        public async Task<WsgResponse<string>> Revoke()
+        {
+            var metadata = new WsgMetadata
+            {
+                method = "POST",
+                path = "/restapi/oauth/revoke",
+                headers = new Dictionary<string, string> {
+                    { "Content-Type", "application/x-www-form-urlencoded" },
+                    {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}"}
+                }
+            };
+            var body = $"token={this.token.access_token}";
+            var r = await this.Request<string>(metadata, body);
+            this.token = null;
             return r;
         }
 

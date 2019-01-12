@@ -21,6 +21,9 @@ namespace RingCentral.Tests
             );
             Assert.Equal(200, r.metadata.status);
             Assert.NotNull(r.body.access_token);
+            var r2 = await rc.Revoke();
+            Assert.Equal(200, r2.metadata.status);
+            Assert.Null(r2.body); // no response
         }
     }
 }
