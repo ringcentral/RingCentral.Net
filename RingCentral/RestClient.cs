@@ -143,6 +143,14 @@ namespace RingCentral
                 }
             };
             var r = await this.Post<SubscriptionInfo>("/restapi/v1.0/subscription", createSubscriptionRequest);
+            var subscriptionId = r.body.id;
+            wsClient.MessageReceived.Subscribe(message =>
+            {
+                if (message.Contains($"\"subscriptionId\":\"{subscriptionId}\""))
+                {
+                    callback(message);
+                }
+            });
             return r;
         }
 
