@@ -3,15 +3,42 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class SmsTest : BaseTest
+    public class SmsTest
     {
         [Fact]
-        public void TestSendSms()
+        public async void TestSendSms()
         {
-            AutoAuth(rc =>
+            var env = Environment.GetEnvironmentVariables();
+            using (var rc = new RestClient(
+                env["RINGCENTRAL_CLIENT_ID"] as string,
+                env["RINGCENTRAL_CLIENT_SECRET"] as string,
+                env["RINGCENTRAL_WSG_URL"] as string
+            ))
             {
-                // code for test sms
-            });
+                await rc.Authorize(
+                    env["RINGCENTRAL_USERNAME"] as string,
+                    env["RINGCENTRAL_EXTENSION"] as string,
+                    env["RINGCENTRAL_PASSWORD"] as string
+                );
+                var body = new CreateSMSMessage
+                {
+                    from = new MessageStoreCallerInfoRequest
+                    {
+                        phoneNumber = env["RINGCENTRAL_USERNAME"] as string
+                    },
+                    to = new MessageStoreCallerInfoRequest[]
+                    {
+                        new MessageStoreCallerInfoRequest
+                        {
+                            phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
+                        }
+                    },
+                    text = "Hello world"
+                };
+                var r = await rc.Post<GetMessageInfoResponse>("/restapi/v1.0/account/~/extension/~/sms", body);
+                Assert.Equal(200, r.metadata.status);
+                Assert.Equal("Outbound", r.body.direction);
+            }
         }
     }
 }
