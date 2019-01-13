@@ -134,11 +134,6 @@ namespace RingCentral
 
         public async Task<WsgResponse<SubscriptionInfo>> Subscribe(string[] eventFilters, Action<string> callback)
         {
-            var metadata = new WsgMetadata
-            {
-                method = "POST",
-                path = "/restapi/v1.0/subscription",
-            };
             var createSubscriptionRequest = new CreateSubscriptionRequest
             {
                 eventFilters = eventFilters,
@@ -147,8 +142,7 @@ namespace RingCentral
                     transportType = "WebSocket"
                 }
             };
-            var body = createSubscriptionRequest.ToJsonString();
-            var r = await this.Request<SubscriptionInfo>(metadata, body);
+            var r = await this.Post<SubscriptionInfo>("/restapi/v1.0/subscription", createSubscriptionRequest);
             return r;
         }
 
