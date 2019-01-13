@@ -13,10 +13,10 @@ namespace RingCentral
         // MIME type for a given attachment, for instance 'audio/wav'
         public string contentType;
         // Voicemail only Duration of the voicemail in seconds
-        public int? vmDuration;
+        public long? vmDuration;
         // Name of a file attached
         public string filename;
         // Size of attachment in bytes
-        public int? size;
+        public long? size;
     }
 }

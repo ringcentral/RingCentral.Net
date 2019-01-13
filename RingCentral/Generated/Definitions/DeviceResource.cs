@@ -31,7 +31,7 @@ namespace RingCentral
         // Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer
         public ShippingResource shipping;
         // Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either  model structure, or boxBillingId must be specified for HardPhone
-        public int? boxBillingId;
+        public long? boxBillingId;
         // Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
         public string linePooling;
         // Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.

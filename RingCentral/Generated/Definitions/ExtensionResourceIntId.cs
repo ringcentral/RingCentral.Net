@@ -5,7 +5,7 @@ namespace RingCentral
     public class ExtensionResourceIntId : Serializable
     {
         public string uri;
-        public int? id;
+        public long? id;
         public string partnerId;
         public string extensionNumber;
         public string loginName;

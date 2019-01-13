@@ -5,7 +5,7 @@ namespace RingCentral
     public class ExtensionCreationResponse : Serializable
     {
         // Internal identifier of an extension
-        public int? id;
+        public long? id;
         // Canonical URI of an extension
         public string uri;
         // Contact detailed information

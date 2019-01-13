@@ -7,7 +7,7 @@ namespace RingCentral
         public string uri;
         public string userId;
         public string accountId;
-        public int? userType;
+        public long? userType;
         public string userToken;
     }
 }

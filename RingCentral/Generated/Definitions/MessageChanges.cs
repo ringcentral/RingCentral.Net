@@ -7,8 +7,8 @@ namespace RingCentral
         // Message type
         public string type;
         // The number of new messages. Can be omitted if the value is zero
-        public int? newCount;
+        public long? newCount;
         // The number of updated messages. Can be omitted if the value is zero
-        public int? updatedCount;
+        public long? updatedCount;
     }
 }

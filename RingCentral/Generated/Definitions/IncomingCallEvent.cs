@@ -41,7 +41,7 @@ namespace RingCentral
         // File containing recorded caller name
         public string recUrl;
         // Notification lifetime value in seconds, the default value is 30 seconds
-        public int? pn_ttl;
+        public long? pn_ttl;
         // Internal identifier of a subscription owner extension
         public string ownerId;
     }

@@ -19,7 +19,7 @@ namespace RingCentral
         // The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         public string startTime;
         // Call duration in seconds
-        public int? duration;
+        public long? duration;
         public RecordingInfo recording;
     }
 }

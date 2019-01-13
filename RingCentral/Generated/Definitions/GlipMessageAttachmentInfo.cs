@@ -39,7 +39,7 @@ namespace RingCentral
         // Condition of ending
         public string endingCondition;
         // Count of iterations. For periodic events only
-        public int? endingAfter;
+        public long? endingAfter;
         // Iterations end datetime for periodic events
         public string endingOn;
         // Hex color code specifying font color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card

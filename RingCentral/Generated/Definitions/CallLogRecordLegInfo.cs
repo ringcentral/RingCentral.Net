@@ -9,7 +9,7 @@ namespace RingCentral
         // Call direction
         public string direction;
         // Call duration in seconds
-        public int? duration;
+        public long? duration;
         // Information on extension
         public ExtensionInfoCallLog extension;
         // Leg type

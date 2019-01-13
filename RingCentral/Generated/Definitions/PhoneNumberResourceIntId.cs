@@ -5,7 +5,7 @@ namespace RingCentral
     public class PhoneNumberResourceIntId : Serializable
     {
         // Internal identifier of a phone number
-        public int? id;
+        public long? id;
         // Brief information on a phone number country
         public CountryResource country;
         // Information on an extension to which the phone number is assigned

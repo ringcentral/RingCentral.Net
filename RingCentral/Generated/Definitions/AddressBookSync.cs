@@ -7,7 +7,7 @@ namespace RingCentral
         public string uri;
         public PersonalContactResource[] records;
         public SyncInfo syncInfo;
-        public int? nextPageId;
+        public long? nextPageId;
         public string nextPageUri;
     }
 }

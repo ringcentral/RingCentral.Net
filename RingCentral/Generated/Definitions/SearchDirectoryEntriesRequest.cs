@@ -12,7 +12,7 @@ namespace RingCentral
         public string extensionType;
         // Sorting settings
         public OrderBy[] orderBy;
-        public int? page;
-        public int? perPage;
+        public long? page;
+        public long? perPage;
     }
 }

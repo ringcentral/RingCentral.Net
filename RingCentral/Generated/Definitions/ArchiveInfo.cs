@@ -5,7 +5,7 @@ namespace RingCentral
     public class ArchiveInfo : Serializable
     {
         // Archive size in bytes
-        public int? size;
+        public long? size;
         // Link for archive download
         public string uri;
     }

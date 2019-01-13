@@ -11,6 +11,6 @@ namespace RingCentral
         // Call recording file format. Supported format is audio/x-wav
         public string contentType;
         // Recorded call duration
-        public int? duration;
+        public long? duration;
     }
 }

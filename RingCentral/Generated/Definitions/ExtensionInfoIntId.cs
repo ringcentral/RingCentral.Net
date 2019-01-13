@@ -5,7 +5,7 @@ namespace RingCentral
     public class ExtensionInfoIntId : Serializable
     {
         // Internal identifier of an extension
-        public int? id;
+        public long? id;
         // Canonical URI of an extension
         public string uri;
         // Number of department extension

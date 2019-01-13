@@ -11,7 +11,7 @@ namespace RingCentral
         // List of the latest 10 active calls on extension
         public ActiveCallInfoWithoutSIP[] activeCalls;
         // Order number of a notification to state the chronology
-        public int? sequence;
+        public long? sequence;
         // Aggregated presence status, calculated from a number of sources
         public string presenceStatus;
         // User-defined presence status (as previously published by the user)
@@ -25,7 +25,7 @@ namespace RingCentral
         // If 'True' enables the extension user to pick up a monitored line on hold
         public bool? pickUpCallsOnHold;
         // Total number of active calls on extension at the present moment
-        public int? totalActiveCalls;
+        public long? totalActiveCalls;
         // Internal identifier of a subscription owner extension
         public string ownerId;
     }

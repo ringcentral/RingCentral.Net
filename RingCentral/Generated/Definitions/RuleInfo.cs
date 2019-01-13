@@ -5,9 +5,9 @@ namespace RingCentral
     public class RuleInfo : Serializable
     {
         // Forwarding number (or group) ordinal
-        public int? index;
+        public long? index;
         // Number of rings for a forwarding number (or group)
-        public int? ringCount;
+        public long? ringCount;
         // Forwarding number status. Returned only if `showInactiveNumbers` is set to `true`
         public bool? enabled;
         // Forwarding number (or group) data

@@ -15,7 +15,7 @@ namespace RingCentral
         // Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
         public string expirationTime;
         // Subscription lifetime in seconds
-        public int? expiresIn;
+        public long? expiresIn;
         // Subscription status
         public string status;
         // Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z

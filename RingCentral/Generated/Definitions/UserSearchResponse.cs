@@ -6,9 +6,9 @@ namespace RingCentral
     {
         // user list
         public UserResponse[] Resources;
-        public int? itemsPerPage;
+        public long? itemsPerPage;
         public string[] schemas;
-        public int? startIndex;
-        public int? totalResults;
+        public long? startIndex;
+        public long? totalResults;
     }
 }

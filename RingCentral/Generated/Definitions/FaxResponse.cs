@@ -5,7 +5,7 @@ namespace RingCentral
     public class FaxResponse : Serializable
     {
         // Internal identifier of a message
-        public int? id;
+        public long? id;
         // Canonical URI of a message
         public string uri;
         // Message type - 'Fax'
@@ -31,11 +31,11 @@ namespace RingCentral
         // Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi)
         public string faxResolution;
         // Page count in a fax message
-        public int? faxPageCount;
+        public long? faxPageCount;
         // Datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         public string lastModifiedTime;
         // Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages
-        public int? coverIndex;
+        public long? coverIndex;
         // Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
         public string coverPageText;
     }

@@ -4,7 +4,7 @@ namespace RingCentral
 {
     public class FilterSupported : Serializable
     {
-        public int? maxResults;
+        public long? maxResults;
         public bool? supported;
     }
 }

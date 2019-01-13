@@ -13,6 +13,6 @@ namespace RingCentral
         // Flag for controlling 'Allow mute in auto call recording' settings
         public bool? allowMute;
         // Total amount of extension that are used in call recordings
-        public int? extensionCount;
+        public long? extensionCount;
     }
 }

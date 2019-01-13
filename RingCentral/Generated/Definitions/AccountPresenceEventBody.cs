@@ -9,7 +9,7 @@ namespace RingCentral
         // Telephony presence status. Returned if telephony status is changed.
         public string telephonyStatus;
         // Order number of a notification to state the chronology
-        public int? sequence;
+        public long? sequence;
         // Aggregated presence status, calculated from a number of sources
         public string presenceStatus;
         // User-defined presence status (as previously published by the user)

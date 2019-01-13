@@ -13,7 +13,7 @@ namespace RingCentral
         // Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
         public string availability;
         // SMS and Pager only. Identifier of a conversation the message belongs to
-        public int? conversationId;
+        public long? conversationId;
         // SMS and Pager only. Identifier of a conversation the message belongs to
         public ConversationInfo conversation;
         // Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
@@ -23,7 +23,7 @@ namespace RingCentral
         // Message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound
         public string direction;
         // Fax only. Page count in a fax message
-        public int? faxPageCount;
+        public long? faxPageCount;
         // Fax only. Resolution of a fax message. 'High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi
         public string faxResolution;
         // Sender information
@@ -41,7 +41,7 @@ namespace RingCentral
         // SMS only. The datetime when outbound SMS was delivered to recipient's handset in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. It is filled only if the carrier sends a delivery receipt to RingCentral
         public string smsDeliveryTime;
         // SMS only. Number of attempts made to send an outbound SMS to the gateway (if gateway is temporary unavailable)
-        public int? smsSendingAttemptsCount;
+        public long? smsSendingAttemptsCount;
         // Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment
         public string subject;
         // Recipient information

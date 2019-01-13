@@ -5,7 +5,7 @@ namespace RingCentral
     public class MessageAttachmentInfoIntId : Serializable
     {
         // Internal identifier of a message attachment
-        public int? id;
+        public long? id;
         // Canonical URI of a message attachment
         public string uri;
         // Type of message attachment
@@ -13,10 +13,10 @@ namespace RingCentral
         // MIME type for a given attachment, for instance 'audio/wav'
         public string contentType;
         // Voicemail only Duration of the voicemail in seconds
-        public int? vmDuration;
+        public long? vmDuration;
         // Name of a file attached
         public string filename;
         // Size of attachment in bytes
-        public int? size;
+        public long? size;
     }
 }

@@ -15,7 +15,7 @@ namespace RingCentral
         // Type of option this phone number is used for. Multiple values are accepted
         public string[] features;
         // Number assigned to the call flip phone number, corresponds to the shortcut dial number
-        public int? flipNumber;
+        public long? flipNumber;
         // Forwarding phone number type
         public string type;
     }
