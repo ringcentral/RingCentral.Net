@@ -148,7 +148,8 @@ namespace RingCentral
             {
                 if (message.Contains($"\"subscriptionId\":\"{subscriptionId}\""))
                 {
-                    callback(message);
+                    var messages = JArray.Parse(message);
+                    callback(messages[1].ToString()); // message[0] is some metadata
                 }
             });
             return r;

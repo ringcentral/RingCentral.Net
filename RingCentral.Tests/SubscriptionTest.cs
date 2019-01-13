@@ -48,14 +48,12 @@ namespace RingCentral.Tests
                     "/restapi/v1.0/account/~/extension/~/message-store"
                 };
                 var count = 0;
-                var r = await rc.Subscribe(eventFilters, msg =>
+                var r = await rc.Subscribe(eventFilters, message =>
                 {
                     count += 1;
-                    Console.WriteLine(msg);
                 });
                 Assert.Equal(200, r.metadata.status);
                 Assert.Equal("WebSocket", r.body.deliveryMode.transportType);
-                Console.WriteLine(r.body.id);
 
                 SendSms(rc);
 
