@@ -3,24 +3,15 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class SmsTest
+    public class SmsTest : BaseTest
     {
         [Fact]
-        public async void TestSendSms()
+        public void TestSendSms()
         {
-            var env = Environment.GetEnvironmentVariables();
-            using (var rc = new RestClient(
-                env["RINGCENTRAL_CLIENT_ID"] as string,
-                env["RINGCENTRAL_CLIENT_SECRET"] as string,
-                env["RINGCENTRAL_WSG_URL"] as string
-            ))
+            AutoAuth(rc =>
             {
-                await rc.Authorize(
-                    env["RINGCENTRAL_USERNAME"] as string,
-                    env["RINGCENTRAL_EXTENSION"] as string,
-                    env["RINGCENTRAL_PASSWORD"] as string
-                );
-            }
+                // code for test sms
+            });
         }
     }
 }
