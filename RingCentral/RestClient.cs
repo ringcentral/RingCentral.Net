@@ -91,13 +91,18 @@ namespace RingCentral
             return t.Task;
         }
 
-        public async Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
+        public Task<WsgResponse<T>> Post<T>(string path, Serializable body, bool oauth = false)
         {
             var metadata = new WsgMetadata
             {
                 method = "POST",
-                path = "/restapi/oauth/token",
+                path = path
             };
+            return Request<T>(metadata, oauth ? body.ToQueryString() : body.ToJsonString(), oauth);
+        }
+
+        public async Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
+        {
             var oauthTokenRequest = new OauthTokenRequest
             {
                 grant_type = "password",
@@ -105,7 +110,7 @@ namespace RingCentral
                 extension = extension,
                 password = password
             };
-            var r = await this.Request<TokenInfo>(metadata, oauthTokenRequest.ToQueryString(), true);
+            var r = await this.Post<TokenInfo>("/restapi/oauth/token", oauthTokenRequest, true);
             this.token = r.body;
             return r;
         }

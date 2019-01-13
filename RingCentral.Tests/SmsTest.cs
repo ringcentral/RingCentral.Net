@@ -3,10 +3,10 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class SubscriptionTest
+    public class SmsTest
     {
         [Fact]
-        public async void TestSetupSubscription()
+        public async void TestSendSms()
         {
             var env = Environment.GetEnvironmentVariables();
             var rc = new RestClient(
@@ -19,13 +19,7 @@ namespace RingCentral.Tests
                 env["RINGCENTRAL_EXTENSION"] as string,
                 env["RINGCENTRAL_PASSWORD"] as string
             );
-            var eventFilters = new string[] { "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true" };
-            var r = await rc.Subscribe(eventFilters, msg =>
-            {
-                Console.WriteLine(msg);
-            });
-            Assert.Equal(200, r.metadata.status);
-            Assert.Equal("WebSocket", r.body.deliveryMode.transportType);
+
             await rc.Revoke();
         }
     }
