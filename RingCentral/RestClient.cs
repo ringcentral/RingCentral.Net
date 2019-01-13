@@ -11,22 +11,43 @@ namespace RingCentral
 {
     public class RestClient : IDisposable
     {
-        private WebsocketClient client;
-        private string clientId;
-        private string clientSecret;
-        private string wsgUrl;
+        public const string SANDBOX_HTTPS_SERVER = "https://platform.devtest.ringcentral.com";
+        public const string PRODUCTION_HTTPS_SERVER = "https://platform.ringcentral.com";
+        public const string SANDBOX_WSS_SERVER = "wss://ws-api.devtest.ringcentral.com/ws";
+        public const string PRODUCTION_WSS_SERVER = "wss://ws-api.ringcentral.com/ws";
+
+        public WebsocketClient wsClient;
+        public string clientId;
+        public string clientSecret;
         public TokenInfo token;
 
-        public RestClient(string clientId, string clientSecret, string wsgUrl)
+        public RestClient(string clientId, string clientSecret, string wssServer)
         {
             this.clientId = clientId;
             this.clientSecret = clientSecret;
-            this.wsgUrl = wsgUrl;
-            var url = new Uri("wss://ws-api.devtest.ringcentral.com/ws");
-            client = new WebsocketClient(url);
-            client.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(30).TotalMilliseconds;
-            client.ReconnectionHappened.Subscribe(type => Console.WriteLine($"Reconnection happened, type: {type}"));
-            client.Start();
+            if (!wssServer.StartsWith("wss://"))
+            {
+                if (wssServer.StartsWith(SANDBOX_HTTPS_SERVER))
+                {
+                    wssServer = SANDBOX_WSS_SERVER;
+                }
+                else if (wssServer.StartsWith(PRODUCTION_HTTPS_SERVER))
+                {
+                    wssServer = PRODUCTION_WSS_SERVER;
+                }
+                else
+                {
+                    throw new ArgumentException("wssServer should start with \"wss://\"", "wssServer");
+                }
+            }
+            wsClient = new WebsocketClient(new Uri(wssServer));
+            wsClient.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(60).TotalMilliseconds;
+            wsClient.ReconnectionHappened.Subscribe(type => Console.WriteLine($"WebSocket Reconnection: {type}"));
+            wsClient.Start();
+        }
+        public RestClient(string clientId, string clientSecret, bool production = false)
+            : this(clientId, clientSecret, production ? PRODUCTION_WSS_SERVER : SANDBOX_WSS_SERVER)
+        {
         }
 
         public Task<WsgResponse<T>> Request<T>(WsgMetadata metadata, string body, bool oauth = false)
@@ -57,7 +78,7 @@ namespace RingCentral
             var wsgRequest = $"[{metadata.ToJsonString()}, {body}]";
             var t = new TaskCompletionSource<WsgResponse<T>>();
             IDisposable subscription = null;
-            subscription = client.MessageReceived.Subscribe(message =>
+            subscription = wsClient.MessageReceived.Subscribe(message =>
             {
                 if (message.Contains($"\"messageId\":\"{messageId}\""))
                 {
@@ -66,7 +87,7 @@ namespace RingCentral
                     t.TrySetResult(wsgResponse);
                 }
             });
-            this.client.Send(wsgRequest);
+            this.wsClient.Send(wsgRequest);
             return t.Task;
         }
 
