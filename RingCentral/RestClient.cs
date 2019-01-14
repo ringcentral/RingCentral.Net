@@ -99,14 +99,19 @@ namespace RingCentral
             return t.Task;
         }
 
-        public Task<WsgResponse<T>> Post<T>(string path, Serializable body, bool oauth = false)
+        public Task<WsgResponse<T>> Post<T>(string path, Serializable body = null, bool oauth = false)
         {
             var metadata = new WsgMetadata
             {
                 method = "POST",
                 path = path
             };
-            return Request<T>(metadata, oauth ? body.ToQueryString() : body.ToJsonString(), oauth);
+            string bodyString = null;
+            if (body != null)
+            {
+                bodyString = oauth ? body.ToQueryString() : body.ToJsonString();
+            }
+            return Request<T>(metadata, bodyString, oauth);
         }
 
         public Task<WsgResponse<T>> Delete<T>(string path)

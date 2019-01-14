@@ -15,7 +15,30 @@ namespace RingCentral
         public RestClient rc;
         public Action<string> callback;
         public IDisposable subscription;
-        public SubscriptionInfo subscriptionInfo;
+
+        private SubscriptionInfo _subscriptionInfo;
+        private bool renewScheduled = false;
+        public SubscriptionInfo subscriptionInfo
+        {
+            get
+            {
+                return _subscriptionInfo;
+            }
+            set
+            {
+                _subscriptionInfo = value;
+                if (value != null && !renewScheduled)
+                {
+                    Task.Delay((int)(_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(async (action) =>
+                    { // 2 minutes before expiration
+                        renewScheduled = false;
+                        await Renew();
+                    });
+                    renewScheduled = true;
+                }
+            }
+        }
+
         public Subscription(RestClient rc, string[] eventFilters, Action<string> callback)
         {
             this.rc = rc;
@@ -46,9 +69,18 @@ namespace RingCentral
             return r;
         }
 
-        public Task<WsgResponse<string>> Revoke()
+        public async Task<WsgResponse<string>> Revoke()
         {
-            return rc.Delete<string>($"/restapi/v1.0/subscription/{subscriptionInfo.id}");
+            var r = await rc.Delete<string>($"/restapi/v1.0/subscription/{subscriptionInfo.id}");
+            subscriptionInfo = null;
+            return r;
+        }
+
+        public async Task<WsgResponse<SubscriptionInfo>> Renew()
+        {
+            var r = await rc.Post<SubscriptionInfo>($"/restapi/v1.0/subscription/{subscriptionInfo.id}/renew");
+            subscriptionInfo = r.body;
+            return r;
         }
     }
 }

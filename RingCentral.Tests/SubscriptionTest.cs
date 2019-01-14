@@ -61,6 +61,9 @@ namespace RingCentral.Tests
 
                 Thread.Sleep(20000);
 
+                r = await subscription.Renew();
+                Assert.Equal(200, r.metadata.status);
+
                 var r2 = await subscription.Revoke();
                 Assert.Equal(204, r2.metadata.status);
 
