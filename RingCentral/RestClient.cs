@@ -175,6 +175,22 @@ namespace RingCentral
             return r;
         }
 
+        public async Task<WsgResponse<TokenInfo>> Refresh()
+        {
+            if (this.token == null) // nothing  to refresh
+            {
+                return null;
+            }
+            var oauthTokenRequest = new OauthTokenRequest
+            {
+                grant_type = "refresh_token",
+                refresh_token = this.token.refresh_token,
+            };
+            var r = await this.Post<TokenInfo>("/restapi/oauth/token", oauthTokenRequest, true);
+            this.token = r.body;
+            return r;
+        }
+
         public async void Dispose()
         {
             await this.Revoke();
