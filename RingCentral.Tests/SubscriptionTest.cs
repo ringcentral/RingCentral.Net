@@ -57,7 +57,11 @@ namespace RingCentral.Tests
 
                 SendSms(rc);
 
-                Thread.Sleep(15000);
+                Thread.Sleep(25000);
+
+                var r2 = await rc.Delete<string>($"/restapi/v1.0/subscription/{r.body.id}");
+                Console.WriteLine(r2.rawMessage);
+
                 Assert.True(count >= 1);
             }
         }

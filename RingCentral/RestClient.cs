@@ -50,7 +50,7 @@ namespace RingCentral
         {
         }
 
-        public Task<WsgResponse<T>> Request<T>(WsgMetadata metadata, string body, bool oauth = false)
+        public Task<WsgResponse<T>> Request<T>(WsgMetadata metadata, string body = null, bool oauth = false)
         {
             if (oauth)
             {
@@ -71,11 +71,19 @@ namespace RingCentral
             {
                 metadata.type = "ClientRequest";
             }
-            if (!(body.StartsWith("{") && body.EndsWith("}"))) // x-www-form-urlencoded istead of json
+            var wsgRequest = "";
+            if (body == null)
             {
-                body = $"\"{body}\"";
+                wsgRequest = $"[{metadata.ToJsonString()}]";
             }
-            var wsgRequest = $"[{metadata.ToJsonString()}, {body}]";
+            else
+            {
+                if (!(body.StartsWith("{") && body.EndsWith("}"))) // x-www-form-urlencoded istead of json
+                {
+                    body = $"\"{body}\"";
+                }
+                wsgRequest = $"[{metadata.ToJsonString()}, {body}]";
+            }
             var t = new TaskCompletionSource<WsgResponse<T>>();
             IDisposable subscription = null;
             subscription = wsClient.MessageReceived.Subscribe(message =>
@@ -99,6 +107,16 @@ namespace RingCentral
                 path = path
             };
             return Request<T>(metadata, oauth ? body.ToQueryString() : body.ToJsonString(), oauth);
+        }
+
+        public Task<WsgResponse<T>> Delete<T>(string path)
+        {
+            var metadata = new WsgMetadata
+            {
+                method = "DELETE",
+                path = path
+            };
+            return Request<T>(metadata);
         }
 
         public async Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
