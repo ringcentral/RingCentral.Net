@@ -9,7 +9,7 @@ namespace RingCentral.Tests
     {
         public IDictionary env = Environment.GetEnvironmentVariables();
 
-        private void SendSms(RestClient rc)
+        private void SendSms(RingCentral rc)
         {
             var body = new CreateSMSMessage
             {
@@ -32,7 +32,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void TestSetupSubscription()
         {
-            using (var rc = new RestClient(
+            using (var rc = new RingCentral(
                 env["RINGCENTRAL_CLIENT_ID"] as string,
                 env["RINGCENTRAL_CLIENT_SECRET"] as string,
                 env["RINGCENTRAL_WSG_URL"] as string

@@ -12,7 +12,7 @@ namespace RingCentral
     public class Subscription
     {
         public string[] eventFilters;
-        public RestClient rc;
+        public RingCentral rc;
         public Action<string> callback;
         public IDisposable subscription;
 
@@ -39,7 +39,7 @@ namespace RingCentral
             }
         }
 
-        public Subscription(RestClient rc, string[] eventFilters, Action<string> callback)
+        public Subscription(RingCentral rc, string[] eventFilters, Action<string> callback)
         {
             this.rc = rc;
             this.eventFilters = eventFilters;
