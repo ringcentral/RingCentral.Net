@@ -150,29 +150,6 @@ namespace RingCentral
             return r;
         }
 
-        public async Task<WsgResponse<SubscriptionInfo>> Subscribe(string[] eventFilters, Action<string> callback)
-        {
-            var createSubscriptionRequest = new CreateSubscriptionRequest
-            {
-                eventFilters = eventFilters,
-                deliveryMode = new NotificationDeliveryModeRequest
-                {
-                    transportType = "WebSocket"
-                }
-            };
-            var r = await this.Post<SubscriptionInfo>("/restapi/v1.0/subscription", createSubscriptionRequest);
-            var subscriptionId = r.body.id;
-            wsClient.MessageReceived.Subscribe(message =>
-            {
-                if (message.Contains($"\"subscriptionId\":\"{subscriptionId}\""))
-                {
-                    var messages = JArray.Parse(message);
-                    callback(messages[1].ToString()); // message[0] is some metadata
-                }
-            });
-            return r;
-        }
-
         public async void Dispose()
         {
             await this.Revoke();

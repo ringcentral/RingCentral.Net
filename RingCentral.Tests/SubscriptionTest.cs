@@ -47,20 +47,22 @@ namespace RingCentral.Tests
                     "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true",
                     "/restapi/v1.0/account/~/extension/~/message-store"
                 };
+
                 var count = 0;
-                var r = await rc.Subscribe(eventFilters, message =>
+                var subscription = new Subscription(rc, eventFilters, message =>
                 {
                     count += 1;
                 });
+                var r = await subscription.Subscribe();
                 Assert.Equal(200, r.metadata.status);
                 Assert.Equal("WebSocket", r.body.deliveryMode.transportType);
 
                 SendSms(rc);
 
-                Thread.Sleep(25000);
+                Thread.Sleep(20000);
 
-                var r2 = await rc.Delete<string>($"/restapi/v1.0/subscription/{r.body.id}");
-                Console.WriteLine(r2.rawMessage);
+                var r2 = await subscription.Revoke();
+                Assert.Equal(204, r2.metadata.status);
 
                 Assert.True(count >= 1);
             }
