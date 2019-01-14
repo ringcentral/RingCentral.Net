@@ -124,6 +124,16 @@ namespace RingCentral
             return Request<T>(metadata);
         }
 
+        public Task<WsgResponse<T>> Get<T>(string path)
+        {
+            var metadata = new WsgMetadata
+            {
+                method = "GET",
+                path = path
+            };
+            return Request<T>(metadata);
+        }
+
         public async Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
         {
             var oauthTokenRequest = new OauthTokenRequest
