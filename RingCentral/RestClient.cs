@@ -114,6 +114,16 @@ namespace RingCentral
             return Request<T>(metadata, bodyString, oauth);
         }
 
+        public Task<WsgResponse<T>> Put<T>(string path, Serializable body = null)
+        {
+            var metadata = new WsgMetadata
+            {
+                method = "PUT",
+                path = path
+            };
+            return Request<T>(metadata, body == null ? null : body.ToJsonString());
+        }
+
         public Task<WsgResponse<T>> Delete<T>(string path)
         {
             var metadata = new WsgMetadata
