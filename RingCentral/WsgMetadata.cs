@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace RingCentral
+namespace RingCentral.Net
 {
     public class WsgMetadata : Serializable
     {

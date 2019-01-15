@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
-namespace RingCentral
+namespace RingCentral.Net
 {
     public class RingCentral : IDisposable
     {

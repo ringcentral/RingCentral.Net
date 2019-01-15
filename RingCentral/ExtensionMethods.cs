@@ -1,7 +1,7 @@
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace RingCentral
+namespace RingCentral.Net
 {
     public interface Serializable
     {

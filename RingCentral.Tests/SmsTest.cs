@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace RingCentral.Tests
+namespace RingCentral.Net.Tests
 {
     public class SmsTest
     {

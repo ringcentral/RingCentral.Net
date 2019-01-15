@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral
+namespace RingCentral.Net
 {
     public class GlipNotesInfo : Serializable
     {

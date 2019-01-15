@@ -1,4 +1,4 @@
-namespace RingCentral
+namespace RingCentral.Net
 {
     public class OauthTokenRequest : Serializable
     {

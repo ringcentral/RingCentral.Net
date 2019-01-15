@@ -3,7 +3,7 @@ using System.Collections;
 using System.Threading;
 using Xunit;
 
-namespace RingCentral.Tests
+namespace RingCentral.Net.Tests
 {
     public class SubscriptionTest
     {

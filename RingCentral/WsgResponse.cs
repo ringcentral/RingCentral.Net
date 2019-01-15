@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json.Linq;
 
-namespace RingCentral
+namespace RingCentral.Net
 {
     public class WsgResponse<T>
     {
