@@ -5,10 +5,12 @@ namespace RingCentral.Net
     public class QueueInfo : Serializable
     {
         // Specifies how calls are transferred to group members
+        // Enum: Rotating, Simultaneous, FixedOrder
         public string transferMode;
         // Information on a call forwarding rule
         public FixedOrderAgents[] fixedOrderAgents;
         // Connecting audio interruption mode
+        // Enum: Never, WhenMusicEnds, Periodically
         public string holdAudioInterruptionMode;
         // Connecting audio interruption message period in seconds
         public long? holdAudioInterruptionPeriod;
@@ -21,6 +23,7 @@ namespace RingCentral.Net
         // Maximum count of callers on hold
         public long? maxCallers;
         // Action which should be taken if count of callers on hold exceeds the maximum
+        // Enum: Voicemail, Announcement
         public string maxCallersAction;
     }
 }

@@ -11,6 +11,7 @@ namespace RingCentral.Net
         // Specifies delay between ring on apps and starting of a call forwarding
         public long? softPhonesRingCount;
         // Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ringing all at the same time. The default value is 'Sequentially'
+        // Enum: Sequentially, Simultaneously
         public string ringingMode;
         // Information on a call forwarding rule
         public RuleInfoCreateRuleRequest[] rules;

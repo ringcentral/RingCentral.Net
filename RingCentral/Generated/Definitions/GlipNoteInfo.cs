@@ -13,6 +13,7 @@ namespace RingCentral.Net
         // Internal identifier of a note creator
         public string creatorId;
         // Status of a note. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
+        // Enum: Active, Draft
         public string status;
         // Creation time
         public string creationTime;

@@ -7,10 +7,12 @@ namespace RingCentral.Net
         // Internal identifier of a post
         public string id;
         // Type of a post event
+        // Enum: PostAdded, PostChanged, PostRemoved
         public string eventType;
         // Internal identifier of a group a post belongs to
         public string groupId;
         // Type of a post. 'TextMessage' - an incoming text message; 'PersonJoined' - a message notifying that person has joined a conversation; 'PersonsAdded' - a message notifying that a person(s) were added to a conversation
+        // Enum: TextMessage, PersonJoined, PersonsAdded, Card
         public string type;
         // For 'TextMessage' post type only. Message text
         public string text;

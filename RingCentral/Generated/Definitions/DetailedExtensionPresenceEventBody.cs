@@ -7,16 +7,20 @@ namespace RingCentral.Net
         // Internal identifier of an extension
         public string extensionId;
         // Telephony presence status. Returned if telephony status is changed.
+        // Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
         public string telephonyStatus;
         // List of the latest 10 active calls on extension
         public ActiveCallInfoWithoutSIP[] activeCalls;
         // Order number of a notification to state the chronology
         public long? sequence;
         // Aggregated presence status, calculated from a number of sources
+        // Enum: Offline, Busy, Available
         public string presenceStatus;
         // User-defined presence status (as previously published by the user)
+        // Enum: Offline, Busy, Available
         public string userStatus;
         // Extended DnD (Do not Disturb) status
+        // Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
         public string dndStatus;
         // If 'True' enables other extensions to see the extension presence status
         public bool? allowSeeMyPresence;

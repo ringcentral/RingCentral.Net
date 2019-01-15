@@ -15,6 +15,7 @@ namespace RingCentral.Net
         // Formatting language preferences for numbers, dates and currencies
         public FormattingLocaleInfo formattingLocale;
         // Time format setting. The default value is '12h' = ['12h', '24h']
+        // Enum: 12h, 24h
         public string timeFormat;
     }
 }

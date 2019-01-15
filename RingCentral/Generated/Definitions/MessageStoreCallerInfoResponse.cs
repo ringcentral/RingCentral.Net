@@ -9,8 +9,10 @@ namespace RingCentral.Net
         // Contains party location (city, state) if one can be determined from phoneNumber. This property is filled only when phoneNumber is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-free numbers)
         public string location;
         // Status of a message. Returned for outbound fax messages only
+        // Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
         public string messageStatus;
         // Fax only. Error code returned in case of fax sending failure. Returned if messageStatus value is 'SendingFailed'
+        // Enum: InternationalCallingDisabled, DestinationCountryDisabled, NoAnswer, LineBusy, CallerHungUp, UnknownCountryCode, InvalidNumber, NotAccepted, CallDeclined, TooManyCallsPerLine, NotEnoughCredits, SentPartially, CallFailed
         public string faxErrorCode;
         // Symbolic name associated with a party. If the phone does not belong to the known extension, only the location is returned, the name is not determined then
         public string name;

@@ -17,6 +17,7 @@ namespace RingCentral.Net
         // Public link to send a webhook payload
         public string uri;
         // Current status of a webhook
+        // Enum: Active, Suspended, Deleted
         public string status;
     }
 }

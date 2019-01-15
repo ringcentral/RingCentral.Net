@@ -5,6 +5,7 @@ namespace RingCentral.Net
     public class SyncInfoCallLog : Serializable
     {
         // Type of synchronization
+        // Enum: FSync, ISync
         public string syncType;
         // Synchronization token
         public string syncToken;

@@ -27,12 +27,15 @@ namespace RingCentral.Net
         // Extension service features returned in response only when the logged-in user requests his/her own extension info, see also Extension Service Features
         public ExtensionServiceFeatureInfo[] serviceFeatures;
         // Specifies extension configuration wizard state (web service setup). The default value is 'NotStarted'
+        // Enum: NotStarted, Incomplete, Completed
         public string setupWizardState;
         // Extension current state. If the status is 'Unassigned'. Returned for all extensions
+        // Enum: Enabled, Disabled, NotActivated, Unassigned
         public string status;
         // Status information (reason, comment). Returned for 'Disabled' status only
         public ExtensionStatusInfo statusInfo;
         // Extension type
+        // Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnlyGroup, ParkLocation
         public string type;
         // Hides extension from showing in company directory. Supported for extensions of User type only
         public bool? hidden;

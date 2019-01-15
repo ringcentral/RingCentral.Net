@@ -7,6 +7,7 @@ namespace RingCentral.Net
         // Internal identifier of a chat
         public string id;
         // Type of a chat
+        // Enum: Everyone
         public string type;
         // Chat name
         public string name;

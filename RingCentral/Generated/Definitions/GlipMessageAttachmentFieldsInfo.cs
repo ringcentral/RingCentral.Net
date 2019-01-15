@@ -9,6 +9,7 @@ namespace RingCentral.Net
         // Value of an individual field (supports Markdown)
         public string value;
         // Style of width span applied to a field
+        // Enum: Short, Long
         public string style;
     }
 }

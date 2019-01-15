@@ -9,6 +9,7 @@ namespace RingCentral.Net
         // Link to a task
         public string uri;
         // Status of a message store report task
+        // Enum: Accepted, Pending, InProgress, AttemptFailed, Failed, Completed, Cancelled
         public string status;
         // Internal identifier of an account
         public string accountId;

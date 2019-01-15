@@ -13,6 +13,7 @@ namespace RingCentral.Net
         // Title of a forwarding number
         public string label;
         // Type of a forwarding number
+        // Enum: Home, Mobile, Work, PhoneLine, Outage, Other
         public string type;
     }
 }

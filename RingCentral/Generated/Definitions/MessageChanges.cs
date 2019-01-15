@@ -5,6 +5,7 @@ namespace RingCentral.Net
     public class MessageChanges : Serializable
     {
         // Message type
+        // Enum: Voicemail, SMS, Fax, Pager
         public string type;
         // The number of new messages. Can be omitted if the value is zero
         public long? newCount;

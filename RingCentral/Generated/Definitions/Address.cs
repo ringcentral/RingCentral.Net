@@ -9,6 +9,7 @@ namespace RingCentral.Net
         public string postalCode;
         public string region;
         public string streetAddress;
+        // Enum: work
         public string type;
     }
 }

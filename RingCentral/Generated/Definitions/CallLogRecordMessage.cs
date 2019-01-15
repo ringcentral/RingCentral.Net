@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 
 namespace RingCentral.Net
 {
+    // Linked message (Fax/Voicemail)
     public class CallLogRecordMessage : Serializable
     {
         // Internal identifier of a message

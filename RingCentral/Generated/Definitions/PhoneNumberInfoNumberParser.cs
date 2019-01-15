@@ -18,7 +18,7 @@ namespace RingCentral.Net
         public string formattedNational;
         // One of the numbers to be parsed, passed as a string in response
         public string originalString;
-        //  'True'  if the number is in a special format (for example N11 code)
+        // 'True'  if the number is in a special format (for example N11 code)
         public bool? special;
         // E.164 (11-digits) format of a phone number without the plus sign ('+')
         public string normalized;

@@ -11,7 +11,7 @@ namespace RingCentral.Net
         // Extension number of a call monitoring group member
         public string extensionNumber;
         // Call monitoring permission; mltiple values allowed: * "Monitoring" - User can monitor a group * "Monitored" - User can be monitored
-
+        // Enum: Monitoring, Monitored
         public string permissions;
     }
 }

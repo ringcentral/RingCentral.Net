@@ -9,8 +9,10 @@ namespace RingCentral.Net
         // Internal identifier of an answering rule
         public string id;
         // Type of a company greeting
+        // Enum: Company, StartRecording, StopRecording, AutomaticRecording
         public string type;
         // Content media type in WAV/MP3 format
+        // Enum: WAV, MP3
         public string contentType;
         // Link to a greeting content (audio file)
         public string contentUri;

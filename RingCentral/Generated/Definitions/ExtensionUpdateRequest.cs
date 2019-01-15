@@ -4,6 +4,7 @@ namespace RingCentral.Net
 {
     public class ExtensionUpdateRequest : Serializable
     {
+        // Enum: Disabled, Enabled, NotActivated
         public string status;
         public ExtensionStatusInfo statusInfo;
         // Type of suspension
@@ -14,8 +15,9 @@ namespace RingCentral.Net
         public string extensionNumber;
         public ContactInfoUpdateRequest contact;
         public ExtensionRegionalSettingRequest regionalSettings;
+        // Enum: NotStarted, Incomplete, Completed
         public string setupWizardState;
-        //  Extension partner identifier
+        // Extension partner identifier
         public string partnerId;
         // IVR PIN
         public string ivrPin;

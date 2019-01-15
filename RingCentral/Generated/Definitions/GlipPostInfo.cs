@@ -9,6 +9,7 @@ namespace RingCentral.Net
         // Internal identifier of a group a post belongs to
         public string groupId;
         // Type of a post
+        // Enum: TextMessage, PersonJoined, PersonsAdded
         public string type;
         // For 'TextMessage' post type only. Text of a message
         public string text;

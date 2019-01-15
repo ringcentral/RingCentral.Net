@@ -15,6 +15,7 @@ namespace RingCentral.Net
         // SIP outbound proxy
         public string outboundProxy;
         // Preferred transport. SIP info will be returned for this transport if supported
+        // Enum: UDP, TCP, TLS, WS, WSS
         public string transport;
         // For TLS transport only Base64 encoded certificate
         public string certificate;

@@ -13,6 +13,7 @@ namespace RingCentral.Net
         // Task last modification datetime
         public string lastModifiedTime;
         // Task status
+        // Enum: Accepted, InProgress, Completed, Failed
         public string status;
         // Data collection archives. Returned by task ID
         public ExportTaskResultInfo[] result;

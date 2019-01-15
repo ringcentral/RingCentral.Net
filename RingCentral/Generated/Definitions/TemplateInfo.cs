@@ -8,6 +8,7 @@ namespace RingCentral.Net
         public string uri;
         // Internal identifier of a template
         public string id;
+        // Enum: UserSettings, CallHandling
         public string type;
         // Name of a template
         public string name;

@@ -5,12 +5,14 @@ namespace RingCentral.Net
     public class GlipMessageAttachmentInfoRequest : Serializable
     {
         // Type of attachment
+        // Enum: Card, Event, Note
         public string type;
         // Attachment title
         public string title;
         // Default message returned in case the client does not support interactive messages
         public string fallback;
         // Hex color code specifying font color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
+        // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         public string color;
         // Introductory text displayed directly above a message
         public string intro;
@@ -33,6 +35,7 @@ namespace RingCentral.Net
         // Indicates whether an event has some specific time slot or lasts for the whole day(s)
         public bool? allDay;
         // Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
+        // Enum: None, Day, Weekday, Week, Month, Year
         public string recurrence;
         // Condition of ending an event
         public string endingCondition;

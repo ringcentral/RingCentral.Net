@@ -4,7 +4,9 @@ namespace RingCentral.Net
 {
     public class PresenceInfoResource : Serializable
     {
+        // Enum: Offline, Busy, Available
         public string userStatus;
+        // Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         public string dndStatus;
         public string message;
         public bool? allowSeeMyPresence;

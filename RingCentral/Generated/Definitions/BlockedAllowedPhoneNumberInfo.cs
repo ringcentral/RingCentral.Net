@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 
 namespace RingCentral.Net
 {
+    // Information on a blocked/allowed phone number
     public class BlockedAllowedPhoneNumberInfo : Serializable
     {
         // Link to a blocked/allowed phone number
@@ -13,6 +14,7 @@ namespace RingCentral.Net
         // Custom name of a blocked/allowed phone number
         public string label;
         // Status of a phone number
+        // Enum: Blocked, Allowed
         public string status;
     }
 }

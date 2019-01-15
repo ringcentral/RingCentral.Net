@@ -7,6 +7,7 @@ namespace RingCentral.Net
         // Internal identifier of an attachment
         public string id;
         // Type of an attachment
+        // Enum: Card, Event, Note
         public string type;
         // A string of default text that will be rendered in the case that the client does not support Interactive Messages
         public string fallback;
@@ -35,14 +36,17 @@ namespace RingCentral.Net
         // Indicates whether an event has some specific time slot or lasts for the whole day(s)
         public bool? allDay;
         // Event recurrence settings.
+        // Enum: None, Day, Weekday, Week, Month, Year
         public string recurrence;
         // Condition of ending
         public string endingCondition;
         // Count of iterations. For periodic events only
         public long? endingAfter;
         // Iterations end datetime for periodic events
+        // Enum: None, Count, Date
         public string endingOn;
         // Hex color code specifying font color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
+        // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         public string color;
         // Event location
         public string location;

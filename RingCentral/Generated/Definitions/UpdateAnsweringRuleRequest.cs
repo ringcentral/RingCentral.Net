@@ -17,6 +17,7 @@ namespace RingCentral.Net
         // Schedule when an answering rule should be applied
         public ScheduleInfo schedule;
         // Specifies how incoming calls are forwarded
+        // Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly
         public string callHandlingAction;
         // Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
         public UnconditionalForwardingInfo unconditionalForwarding;
@@ -27,6 +28,7 @@ namespace RingCentral.Net
         // Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
         public GreetingInfo[] greetings;
         // Call screening status. 'Off' - no call screening; 'NoCallerId' - if caller ID is missing, then callers are asked to say their name before connecting; 'UnknownCallerId' - if caller ID is not in contact list, then callers are asked to say their name before connecting; 'Always' - the callers are always asked to say their name before connecting. The default value is 'Off'
+        // Enum: Off, NoCallerId, UnknownCallerId, Always
         public string screening;
         // Indicates whether inactive numbers should be returned or not.
         public bool? showInactiveNumbers;

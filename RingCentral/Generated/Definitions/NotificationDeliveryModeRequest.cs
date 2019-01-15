@@ -5,6 +5,7 @@ namespace RingCentral.Net
     public class NotificationDeliveryModeRequest : Serializable
     {
         // Notifications transportation provider name. 'APNS' (Apple Push Notifications Service)
+        // Enum: PubNub, WebHook, APNS, PubNub/APNS, PubNub/GCM
         public string transportType;
         // Mandatory for 'APNS' and 'WebHook' transport types. For 'APNS' - internal identifier of a device 'device_token' for 'WebHook' - URL of a consumer service (cannot be changed during subscription update)
         public string address;

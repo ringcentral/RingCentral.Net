@@ -7,6 +7,7 @@ namespace RingCentral.Net
         // Internal identifier of a chat
         public string id;
         // Type of a chat
+        // Enum: Everyone, Team, Group, Direct, Personal
         public string type;
         // For 'Team' chat type only. Team access level.
         public bool? @public;
@@ -15,6 +16,7 @@ namespace RingCentral.Net
         // For 'Team','Everyone' chats types only. Chat description.
         public string description;
         // For 'Team' chat type only. Team status.
+        // Enum: Active, Archived
         public string status;
         // Chat creation datetime in ISO 8601 format
         public string creationTime;
