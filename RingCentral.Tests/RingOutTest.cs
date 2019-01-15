@@ -33,8 +33,7 @@ namespace RingCentral.Net.Tests
                 });
 
                 Assert.Equal(200, r.metadata.status);
-                Console.WriteLine(r.message);
-                // Assert.Equal("Outbound", r.body.direction);
+                Console.WriteLine(r.body);
             }
         }
     }
