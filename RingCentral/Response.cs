@@ -3,12 +3,12 @@ using Newtonsoft.Json.Linq;
 
 namespace RingCentral.Net
 {
-    public class WsgResponse
+    public class Response
     {
         public string message;
         public WsgMetadata metadata;
         public string body;
-        public WsgResponse(string message)
+        public Response(string message)
         {
             this.message = message;
             var jArray = JArray.Parse(message);
@@ -20,30 +20,30 @@ namespace RingCentral.Net
         }
     }
 
-    public class WsgResponse<T>
+    public class Response<T>
     {
         public string message;
         public WsgMetadata metadata;
         public T body;
-        public static WsgResponse<T> Parse(string message)
+        public static Response<T> Parse(string message)
         {
-            var wsgResponse = new WsgResponse<T>();
-            wsgResponse.message = message;
+            var response = new Response<T>();
+            response.message = message;
             var jArray = JArray.Parse(message);
-            wsgResponse.metadata = jArray[0].ToObject<WsgMetadata>();
+            response.metadata = jArray[0].ToObject<WsgMetadata>();
             if (jArray.Count > 1) // has body
             {
-                // wsgResponse.bodyString = jArray[1].ToString();
+                // response.bodyString = jArray[1].ToString();
                 try
                 {
-                    wsgResponse.body = jArray[1].ToObject<T>();
+                    response.body = jArray[1].ToObject<T>();
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
                 }
             }
-            return wsgResponse;
+            return response;
         }
     }
 }

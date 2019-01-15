@@ -50,7 +50,7 @@ namespace RingCentral.Net
         {
         }
 
-        public Task<WsgResponse<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
+        public Task<Response<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
         {
             var messageId = Guid.NewGuid().ToString();
             var metadata = new WsgMetadata
@@ -68,43 +68,43 @@ namespace RingCentral.Net
                 requestItems.Add(basicAuth ? $"\"{body}\"" : body);
             }
             var requestBody = $"[{string.Join(",", requestItems)}]";
-            var t = new TaskCompletionSource<WsgResponse<T>>();
+            var t = new TaskCompletionSource<Response<T>>();
             IDisposable subscription = null;
             subscription = wsClient.MessageReceived.Subscribe(message =>
             {
                 if (message.Contains($"\"messageId\":\"{messageId}\""))
                 {
                     subscription.Dispose();
-                    var wsgResponse = WsgResponse<T>.Parse(message);
-                    t.TrySetResult(wsgResponse);
+                    var response = Response<T>.Parse(message);
+                    t.TrySetResult(response);
                 }
             });
             this.wsClient.Send(requestBody);
             return t.Task;
         }
 
-        public Task<WsgResponse<T>> Post<T>(string path, Serializable body = null)
+        public Task<Response<T>> Post<T>(string path, Serializable body = null)
         {
             return Request<T>("POST", path, body == null ? null : body.ToJsonString());
         }
-        public Task<WsgResponse<T>> Put<T>(string path, Serializable body = null)
+        public Task<Response<T>> Put<T>(string path, Serializable body = null)
         {
             return Request<T>("PUT", path, body == null ? null : body.ToJsonString());
         }
-        public Task<WsgResponse<T>> Delete<T>(string path)
+        public Task<Response<T>> Delete<T>(string path)
         {
             return Request<T>("DELETE", path);
         }
-        public Task<WsgResponse<T>> Get<T>(string path)
+        public Task<Response<T>> Get<T>(string path)
         {
             return Request<T>("GET", path);
         }
-        public Task<WsgResponse<T>> Patch<T>(string path)
+        public Task<Response<T>> Patch<T>(string path)
         {
             return Request<T>("PATCH", path);
         }
 
-        public async Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
+        public async Task<Response<TokenInfo>> Authorize(string username, string extension, string password)
         {
             var oauthTokenRequest = new OauthTokenRequest
             {
@@ -117,7 +117,7 @@ namespace RingCentral.Net
             this.token = r.body;
             return r;
         }
-        public async Task<WsgResponse<string>> Revoke()
+        public async Task<Response<string>> Revoke()
         {
             if (this.token == null) // nothing  to revoke
             {
@@ -128,7 +128,7 @@ namespace RingCentral.Net
             this.token = null;
             return r;
         }
-        public async Task<WsgResponse<TokenInfo>> Refresh()
+        public async Task<Response<TokenInfo>> Refresh()
         {
             if (this.token == null) // nothing  to refresh
             {

@@ -46,7 +46,7 @@ namespace RingCentral.Net
             this.callback = callback;
         }
 
-        public async Task<WsgResponse<SubscriptionInfo>> Subscribe()
+        public async Task<Response<SubscriptionInfo>> Subscribe()
         {
             var createSubscriptionRequest = new CreateSubscriptionRequest
             {
@@ -69,14 +69,14 @@ namespace RingCentral.Net
             return r;
         }
 
-        public async Task<WsgResponse<string>> Revoke()
+        public async Task<Response<string>> Revoke()
         {
             var r = await rc.Delete<string>($"/restapi/v1.0/subscription/{subscriptionInfo.id}");
             subscriptionInfo = null;
             return r;
         }
 
-        public async Task<WsgResponse<SubscriptionInfo>> Renew()
+        public async Task<Response<SubscriptionInfo>> Renew()
         {
             var r = await rc.Post<SubscriptionInfo>($"/restapi/v1.0/subscription/{subscriptionInfo.id}/renew");
             subscriptionInfo = r.body;
