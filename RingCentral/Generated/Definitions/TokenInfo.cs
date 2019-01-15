@@ -18,5 +18,7 @@ namespace RingCentral.Net
         public string token_type;
         // Extension identifier
         public string owner_id;
+        // Application instance identifier
+        public string endpoint_id;
     }
 }

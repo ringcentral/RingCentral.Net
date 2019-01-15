@@ -12,6 +12,8 @@ namespace RingCentral.Net
         public string preview;
         // Internal identifier of a note creator
         public string creatorId;
+        // Internal identifier of the person editing the note. Returned for the note being edited (locked) at the moment
+        public string lockedBy;
         // Status of a note. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
         // Enum: Active, Draft
         public string status;
