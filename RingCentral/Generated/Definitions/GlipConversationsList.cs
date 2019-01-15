@@ -5,7 +5,7 @@ namespace RingCentral.Net
     public class GlipConversationsList : Serializable
     {
         // List of conversations
-        public GlipConversationInfo[] records;
+        public GlipConversationInfo[] records; // Required
         public GlipNavigationInfo navigation;
     }
 }

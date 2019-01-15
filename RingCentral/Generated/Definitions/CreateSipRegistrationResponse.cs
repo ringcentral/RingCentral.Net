@@ -8,8 +8,8 @@ namespace RingCentral.Net
         public long? pollingInterval;
         public string[] sipErrorCodes;
         // SIP settings for device
-        public SIPInfoResponse[] sipInfo;
+        public SIPInfoResponse[] sipInfo; // Required
         // SIP flags data
-        public SIPFlagsResponse[] sipFlags;
+        public SIPFlagsResponse[] sipFlags; // Required
     }
 }

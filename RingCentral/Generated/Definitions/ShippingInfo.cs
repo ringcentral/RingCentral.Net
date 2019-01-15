@@ -12,8 +12,8 @@ namespace RingCentral.Net
         // Carrier-specific tracking number. Appears only if the device status is 'Shipped'
         public string trackingNumber;
         // Shipping method information
-        public MethodInfo method;
+        public MethodInfo method; // Required
         // Shipping address for the order. If it coincides with the Emergency Service Address, then can be omitted. By default the same value as the emergencyServiceAddress. Multiple addresses can be specified; in case an order contains several devices, they can be delivered to different addresses
-        public ShippingAddressInfo address;
+        public ShippingAddressInfo address; // Required
     }
 }

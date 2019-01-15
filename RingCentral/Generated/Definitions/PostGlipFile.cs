@@ -5,9 +5,9 @@ namespace RingCentral.Net
     public class PostGlipFile : Serializable
     {
         // Internal identifier of a file
-        public string id;
+        public string id; // Required
         // Link to binary content
-        public string contentUri;
+        public string contentUri; // Required
         // Name of a file
         public string name;
     }

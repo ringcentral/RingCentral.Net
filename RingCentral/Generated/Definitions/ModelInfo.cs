@@ -9,7 +9,7 @@ namespace RingCentral.Net
         // Device name
         public string name;
         // Addons description
-        public AddonInfo[] addons;
+        public AddonInfo[] addons; // Required
         // Device feature or multiple features supported
         public string[] features;
     }

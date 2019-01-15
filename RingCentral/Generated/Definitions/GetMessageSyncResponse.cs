@@ -5,8 +5,8 @@ namespace RingCentral.Net
     public class GetMessageSyncResponse : Serializable
     {
         // List of message records with synchronization information
-        public GetMessageInfoResponse[] records;
+        public GetMessageInfoResponse[] records; // Required
         // Sync type, token and time
-        public SyncInfoMessages syncInfo;
+        public SyncInfoMessages syncInfo; // Required
     }
 }

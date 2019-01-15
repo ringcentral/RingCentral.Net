@@ -9,11 +9,11 @@ namespace RingCentral.Net
         // Internal identifier of a person created an event
         public string creatorId;
         // Event title
-        public string title;
+        public string title; // Required
         // Datetime of starting an event
-        public string startTime;
+        public string startTime; // Required
         // Datetime of ending an event
-        public string endTime;
+        public string endTime; // Required
         // Indicates whether event has some specific time slot or lasts for whole day(s)
         public bool? allDay;
         // Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year

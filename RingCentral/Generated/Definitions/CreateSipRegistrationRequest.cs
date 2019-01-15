@@ -5,8 +5,8 @@ namespace RingCentral.Net
     public class CreateSipRegistrationRequest : Serializable
     {
         // Device unique description
-        public DeviceInfoRequest[] device;
+        public DeviceInfoRequest[] device; // Required
         // SIP settings for device
-        public SIPInfoRequest[] sipInfo;
+        public SIPInfoRequest[] sipInfo; // Required
     }
 }

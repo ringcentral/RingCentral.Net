@@ -5,7 +5,7 @@ namespace RingCentral.Net
     public class GlipPersonInfo : Serializable
     {
         // Internal identifier of a user
-        public string id;
+        public string id; // Required
         // First name of a user
         public string firstName;
         // Last name of a user

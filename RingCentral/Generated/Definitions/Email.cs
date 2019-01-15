@@ -5,7 +5,7 @@ namespace RingCentral.Net
     public class Email : Serializable
     {
         // Enum: work
-        public string type;
-        public string value;
+        public string type; // Required
+        public string value; // Required
     }
 }

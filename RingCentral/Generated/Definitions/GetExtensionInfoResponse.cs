@@ -5,9 +5,9 @@ namespace RingCentral.Net
     public class GetExtensionInfoResponse : Serializable
     {
         // Internal identifier of an extension
-        public long? id;
+        public long? id; // Required
         // Canonical URI of an extension
-        public string uri;
+        public string uri; // Required
         // Contact detailed information
         public ContactInfo contact;
         // Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
@@ -20,7 +20,7 @@ namespace RingCentral.Net
         public string partnerId;
         public ExtensionPermissions permissions;
         // Information on profile image
-        public ProfileImageInfo profileImage;
+        public ProfileImageInfo profileImage; // Required
         // List of non-RC internal identifiers assigned to an extension
         public ReferenceInfo[] references;
         public Roles[] roles;
@@ -33,12 +33,12 @@ namespace RingCentral.Net
         public string setupWizardState;
         // Extension current state. If the status is 'Unassigned'. Returned for all extensions
         // Enum: Enabled, Disabled, NotActivated, Unassigned
-        public string status;
+        public string status; // Required
         // Status information (reason, comment). Returned for 'Disabled' status only
         public ExtensionStatusInfo statusInfo;
         // Extension type
         // Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnlyGroup, IvrMenu, ApplicationExtension, ParkLocation
-        public string type;
+        public string type; // Required
         // For Department extension type only. Call queue settings
         public CallQueueExtensionInfo callQueueExtensionInfo;
         // Hides extension from showing in company directory. Supported for extensions of User type only

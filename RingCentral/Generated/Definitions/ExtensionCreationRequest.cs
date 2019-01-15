@@ -5,7 +5,7 @@ namespace RingCentral.Net
     public class ExtensionCreationRequest : Serializable
     {
         // Contact Information
-        public ContactInfoCreationRequest contact;
+        public ContactInfoCreationRequest contact; // Required
         // Number of extension
         public string extensionNumber;
         // Password for extension. If not specified, the password is auto-generated
@@ -25,7 +25,7 @@ namespace RingCentral.Net
         public ExtensionStatusInfo statusInfo;
         // Extension type
         // Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnlyGroup, ParkLocation
-        public string type;
+        public string type; // Required
         // Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default
         public bool? hidden;
     }

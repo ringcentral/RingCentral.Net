@@ -9,6 +9,6 @@ namespace RingCentral.Net
         // Company business email address
         public string email;
         // Company business address
-        public BusinessAddressInfo businessAddress;
+        public BusinessAddressInfo businessAddress; // Required
     }
 }

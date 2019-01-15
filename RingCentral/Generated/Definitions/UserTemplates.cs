@@ -7,10 +7,10 @@ namespace RingCentral.Net
         // Link to user templates resource
         public string uri;
         // List of user templates
-        public TemplateInfo[] records;
+        public TemplateInfo[] records; // Required
         // Information on navigation
-        public NavigationInfo navigation;
+        public NavigationInfo navigation; // Required
         // Information on paging
-        public PagingInfo paging;
+        public PagingInfo paging; // Required
     }
 }

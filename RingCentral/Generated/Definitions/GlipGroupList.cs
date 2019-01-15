@@ -5,7 +5,7 @@ namespace RingCentral.Net
     public class GlipGroupList : Serializable
     {
         // List of groups/teams/private chats
-        public GlipGroupInfo[] records;
+        public GlipGroupInfo[] records; // Required
         public GlipNavigationInfo navigation;
     }
 }

@@ -7,9 +7,9 @@ namespace RingCentral.Net
         // Specifies if the rule is active or inactive. The default value is 'True'
         public bool? enabled;
         // Type of an answering rule. The 'Custom' value should be specified
-        public string type;
+        public string type; // Required
         // Name of an answering rule specified by user
-        public string name;
+        public string name; // Required
         // Answering rule will be applied when calls are received from the specified caller(s)
         public CallersInfoRequest[] callers;
         // Answering rules are applied when calling to selected number(s)
