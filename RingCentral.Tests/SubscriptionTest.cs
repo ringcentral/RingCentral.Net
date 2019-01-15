@@ -9,7 +9,7 @@ namespace RingCentral.Net.Tests
     {
         public IDictionary env = Environment.GetEnvironmentVariables();
 
-        private void SendSms(RingCentral rc)
+        private async void SendSms(RingCentral rc)
         {
             var body = new CreateSMSMessage
             {
@@ -26,7 +26,7 @@ namespace RingCentral.Net.Tests
                     },
                 text = "Hello world"
             };
-            rc.Post<GetMessageInfoResponse>("/restapi/v1.0/account/~/extension/~/sms", body);
+            await rc.Post<GetMessageInfoResponse>("/restapi/v1.0/account/~/extension/~/sms", body);
         }
 
         [Fact]
@@ -61,7 +61,7 @@ namespace RingCentral.Net.Tests
 
                 // Thread.Sleep(15000);
 
-                r = await subscription.Renew();
+                r = await subscription.Refresh();
                 Assert.Equal(200, r.metadata.status);
 
                 var r2 = await subscription.Revoke();

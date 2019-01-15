@@ -1,2 +1,3 @@
 --ignore-dir=obj
 --ignore-dir=.vscode
+--ignore-file=match:/\.csproj$/

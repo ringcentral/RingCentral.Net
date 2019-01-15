@@ -82,32 +82,54 @@ namespace RingCentral.Net
             this.wsClient.Send(requestBody);
             return t.Task;
         }
-
         public async Task<Response<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
         {
-            var response = await Request(method, path, body, basicAuth);
-            return response.ConvertTo<T>();
+            return (await Request(method, path, body, basicAuth)).ConvertTo<T>();
         }
 
-        public Task<Response<T>> Post<T>(string path, Serializable body = null)
+        public Task<Response> Post(string path, Serializable body = null)
         {
-            return Request<T>("POST", path, body == null ? null : body.ToJsonString());
+            return Request("POST", path, body == null ? null : body.ToJsonString());
         }
-        public Task<Response<T>> Put<T>(string path, Serializable body = null)
+        public async Task<Response<T>> Post<T>(string path, Serializable body = null)
         {
-            return Request<T>("PUT", path, body == null ? null : body.ToJsonString());
+            return (await Post(path, body)).ConvertTo<T>();
         }
-        public Task<Response<T>> Delete<T>(string path)
+
+        public Task<Response> Put(string path, Serializable body = null)
         {
-            return Request<T>("DELETE", path);
+            return Request("PUT", path, body == null ? null : body.ToJsonString());
         }
-        public Task<Response<T>> Get<T>(string path)
+        public async Task<Response<T>> Put<T>(string path, Serializable body = null)
         {
-            return Request<T>("GET", path);
+            return (await Put(path, body)).ConvertTo<T>();
         }
-        public Task<Response<T>> Patch<T>(string path)
+
+        public Task<Response> Delete(string path)
         {
-            return Request<T>("PATCH", path);
+            return Request("DELETE", path);
+        }
+        public async Task<Response<T>> Delete<T>(string path)
+        {
+            return (await Delete(path)).ConvertTo<T>();
+        }
+
+        public Task<Response> Get(string path)
+        {
+            return Request("GET", path);
+        }
+        public async Task<Response<T>> Get<T>(string path)
+        {
+            return (await Get(path)).ConvertTo<T>();
+        }
+
+        public Task<Response> Patch(string path)
+        {
+            return Request("PATCH", path);
+        }
+        public async Task<Response<T>> Patch<T>(string path)
+        {
+            return (await Patch(path)).ConvertTo<T>();
         }
 
         public async Task<Response<TokenInfo>> Authorize(string username, string extension, string password)
@@ -123,14 +145,14 @@ namespace RingCentral.Net
             this.token = r.body;
             return r;
         }
-        public async Task<Response<string>> Revoke()
+        public async Task<Response> Revoke()
         {
             if (this.token == null) // nothing  to revoke
             {
                 return null;
             }
             var body = $"token={this.token.access_token}";
-            var r = await this.Request<string>("POST", "/restapi/oauth/revoke", body, true);
+            var r = await this.Request("POST", "/restapi/oauth/revoke", body, true);
             this.token = null;
             return r;
         }

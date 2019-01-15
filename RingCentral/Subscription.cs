@@ -14,9 +14,9 @@ namespace RingCentral.Net
         public string[] eventFilters;
         public RingCentral rc;
         public Action<string> callback;
-        public IDisposable subscription;
+        public IDisposable subscription; // from Websocket.Client
 
-        private SubscriptionInfo _subscriptionInfo;
+        private SubscriptionInfo _subscriptionInfo; // from RingCentral spec
         private bool renewScheduled = false;
         public SubscriptionInfo subscriptionInfo
         {
@@ -32,7 +32,7 @@ namespace RingCentral.Net
                     Task.Delay((int)(_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(async (action) =>
                     { // 2 minutes before expiration
                         renewScheduled = false;
-                        await Renew();
+                        await Refresh();
                     });
                     renewScheduled = true;
                 }
@@ -69,14 +69,15 @@ namespace RingCentral.Net
             return r;
         }
 
-        public async Task<Response<string>> Revoke()
+        public async Task<Response> Revoke()
         {
-            var r = await rc.Delete<string>($"/restapi/v1.0/subscription/{subscriptionInfo.id}");
+            var r = await rc.Delete($"/restapi/v1.0/subscription/{subscriptionInfo.id}");
+            subscription.Dispose();
             subscriptionInfo = null;
             return r;
         }
 
-        public async Task<Response<SubscriptionInfo>> Renew()
+        public async Task<Response<SubscriptionInfo>> Refresh()
         {
             var r = await rc.Post<SubscriptionInfo>($"/restapi/v1.0/subscription/{subscriptionInfo.id}/renew");
             subscriptionInfo = r.body;
