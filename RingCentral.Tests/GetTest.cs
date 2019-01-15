@@ -43,9 +43,8 @@ namespace RingCentral.Net.Tests
                 );
                 var r = await rc.Get<string>("/restapi/v1.0/dictionary/country/1");
                 Assert.Equal(200, r.metadata.status);
-                Assert.Null(r.body);
-                Assert.NotNull(r.bodyString);
-                Assert.Contains("United States", r.bodyString);
+                Assert.Null(r.body); // because object cannot be converted to string.
+                Assert.Contains("United States", r.message);
             }
         }
 
