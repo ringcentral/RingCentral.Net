@@ -27,6 +27,29 @@ namespace RingCentral.Tests
         }
 
         [Fact]
+        public async void TestStringResponse()
+        {
+            var env = Environment.GetEnvironmentVariables();
+            using (var rc = new RingCentral(
+                env["RINGCENTRAL_CLIENT_ID"] as string,
+                env["RINGCENTRAL_CLIENT_SECRET"] as string,
+                env["RINGCENTRAL_WSG_URL"] as string
+            ))
+            {
+                await rc.Authorize(
+                    env["RINGCENTRAL_USERNAME"] as string,
+                    env["RINGCENTRAL_EXTENSION"] as string,
+                    env["RINGCENTRAL_PASSWORD"] as string
+                );
+                var r = await rc.Get<string>("/restapi/v1.0/dictionary/country/1");
+                Assert.Equal(200, r.metadata.status);
+                Assert.Null(r.body);
+                Assert.NotNull(r.bodyString);
+                Assert.Contains("United States", r.bodyString);
+            }
+        }
+
+        [Fact]
         public async void TestGetCallLog()
         {
             var env = Environment.GetEnvironmentVariables();

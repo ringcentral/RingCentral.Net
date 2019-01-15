@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json.Linq;
 
 namespace RingCentral
@@ -6,8 +7,8 @@ namespace RingCentral
     {
         public string rawMessage;
         public WsgMetadata metadata;
+        public string bodyString;
         public T body;
-
         public static WsgResponse<T> Parse(string rawMessage)
         {
             var wsgResponse = new WsgResponse<T>();
@@ -16,7 +17,15 @@ namespace RingCentral
             wsgResponse.metadata = jArray[0].ToObject<WsgMetadata>();
             if (jArray.Count > 1) // has body
             {
-                wsgResponse.body = jArray[1].ToObject<T>();
+                wsgResponse.bodyString = jArray[1].ToString();
+                try
+                {
+                    wsgResponse.body = jArray[1].ToObject<T>();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
             }
             return wsgResponse;
         }
