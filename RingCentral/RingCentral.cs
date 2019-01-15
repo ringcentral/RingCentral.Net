@@ -50,27 +50,17 @@ namespace RingCentral
         {
         }
 
-        public Task<WsgResponse<T>> Request<T>(WsgMetadata metadata, string body = null, bool oauth = false)
+        public Task<WsgResponse<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
         {
-            if (oauth)
-            {
-                metadata.headers = new Dictionary<string, string> {
-                    { "Content-Type", "application/x-www-form-urlencoded" },
-                    {"Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}"}
-                };
-            }
-            else
-            {
-                metadata.headers = new Dictionary<string, string> {
-                    {"Authorization", $"Bearer {this.token.access_token}"}
-                };
-            }
             var messageId = Guid.NewGuid().ToString();
-            metadata.messageId = messageId;
-            if (metadata.type == null)
+            var metadata = new WsgMetadata
             {
-                metadata.type = "ClientRequest";
-            }
+                type = "ClientRequest",
+                method = method,
+                path = path,
+                messageId = messageId,
+                headers = GetHeaders(basicAuth)
+            };
             var wsgRequest = "";
             if (body == null)
             {
@@ -99,49 +89,25 @@ namespace RingCentral
             return t.Task;
         }
 
-        public Task<WsgResponse<T>> Post<T>(string path, Serializable body = null, bool oauth = false)
+        public Task<WsgResponse<T>> Post<T>(string path, Serializable body = null)
         {
-            var metadata = new WsgMetadata
-            {
-                method = "POST",
-                path = path
-            };
-            string bodyString = null;
-            if (body != null)
-            {
-                bodyString = oauth ? body.ToQueryString() : body.ToJsonString();
-            }
-            return Request<T>(metadata, bodyString, oauth);
+            return Request<T>("POST", path, body == null ? null : body.ToJsonString());
         }
-
         public Task<WsgResponse<T>> Put<T>(string path, Serializable body = null)
         {
-            var metadata = new WsgMetadata
-            {
-                method = "PUT",
-                path = path
-            };
-            return Request<T>(metadata, body == null ? null : body.ToJsonString());
+            return Request<T>("PUT", path, body == null ? null : body.ToJsonString());
         }
-
         public Task<WsgResponse<T>> Delete<T>(string path)
         {
-            var metadata = new WsgMetadata
-            {
-                method = "DELETE",
-                path = path
-            };
-            return Request<T>(metadata);
+            return Request<T>("DELETE", path);
         }
-
         public Task<WsgResponse<T>> Get<T>(string path)
         {
-            var metadata = new WsgMetadata
-            {
-                method = "GET",
-                path = path
-            };
-            return Request<T>(metadata);
+            return Request<T>("GET", path);
+        }
+        public Task<WsgResponse<T>> Patch<T>(string path)
+        {
+            return Request<T>("PATCH", path);
         }
 
         public async Task<WsgResponse<TokenInfo>> Authorize(string username, string extension, string password)
@@ -153,28 +119,21 @@ namespace RingCentral
                 extension = extension,
                 password = password
             };
-            var r = await this.Post<TokenInfo>("/restapi/oauth/token", oauthTokenRequest, true);
+            var r = await Request<TokenInfo>("POST", "/restapi/oauth/token", oauthTokenRequest.ToQueryString(), true);
             this.token = r.body;
             return r;
         }
-
         public async Task<WsgResponse<string>> Revoke()
         {
             if (this.token == null) // nothing  to revoke
             {
                 return null;
             }
-            var metadata = new WsgMetadata
-            {
-                method = "POST",
-                path = "/restapi/oauth/revoke",
-            };
             var body = $"token={this.token.access_token}";
-            var r = await this.Request<string>(metadata, body, true);
+            var r = await this.Request<string>("POST", "/restapi/oauth/revoke", body, true);
             this.token = null;
             return r;
         }
-
         public async Task<WsgResponse<TokenInfo>> Refresh()
         {
             if (this.token == null) // nothing  to refresh
@@ -186,7 +145,7 @@ namespace RingCentral
                 grant_type = "refresh_token",
                 refresh_token = this.token.refresh_token,
             };
-            var r = await this.Post<TokenInfo>("/restapi/oauth/token", oauthTokenRequest, true);
+            var r = await this.Request<TokenInfo>("POST", "/restapi/oauth/token", oauthTokenRequest.ToQueryString(), true);
             this.token = r.body;
             return r;
         }
@@ -194,6 +153,24 @@ namespace RingCentral
         public async void Dispose()
         {
             await this.Revoke();
+        }
+
+        const string userAgent = "tylerlong/RingCentral.Net";
+        private Dictionary<string, string> GetHeaders(bool basicAuth = false)
+        {
+            var dict = new Dictionary<string, string>();
+            dict["X-User-Agent"] = userAgent;
+            dict["RC-User-Agent"] = userAgent;
+            if (basicAuth)
+            {
+                dict["Content-Type"] = "application/x-www-form-urlencoded";
+                dict["Authorization"] = $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.clientId}:{this.clientSecret}"))}";
+            }
+            else
+            {
+                dict["Authorization"] = $"Bearer {this.token.access_token}";
+            }
+            return dict;
         }
     }
 }
