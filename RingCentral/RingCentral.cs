@@ -53,7 +53,7 @@ namespace RingCentral.Net
         public Task<Response<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
         {
             var messageId = Guid.NewGuid().ToString();
-            var metadata = new WsgMetadata
+            var metadata = new Metadata
             {
                 type = "ClientRequest",
                 method = method,

@@ -12,7 +12,7 @@ namespace RingCentral.Net.Tests
             var rc = new RingCentral(
                 env["RINGCENTRAL_CLIENT_ID"] as string,
                 env["RINGCENTRAL_CLIENT_SECRET"] as string,
-                env["RINGCENTRAL_WSG_URL"] as string
+                env["RINGCENTRAL_WSS_URL"] as string
             );
             var r = await rc.Authorize(
                 env["RINGCENTRAL_USERNAME"] as string,
