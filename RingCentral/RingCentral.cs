@@ -41,7 +41,7 @@ namespace RingCentral.Net
                 }
             }
             wsClient = new WebsocketClient(new Uri(wssServer));
-            wsClient.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(60).TotalMilliseconds;
+            wsClient.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(3600).TotalMilliseconds;
             wsClient.ReconnectionHappened.Subscribe(type => Console.WriteLine($"WebSocket Reconnection: {type}"));
             wsClient.Start();
         }

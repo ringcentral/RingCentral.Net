@@ -57,9 +57,9 @@ namespace RingCentral.Net.Tests
                 Assert.Equal(200, r.metadata.status);
                 Assert.Equal("WebSocket", r.body.deliveryMode.transportType);
 
-                // SendSms(rc);
+                SendSms(rc);
 
-                // Thread.Sleep(15000);
+                Thread.Sleep(15000);
 
                 r = await subscription.Refresh();
                 Assert.Equal(200, r.metadata.status);
@@ -67,7 +67,7 @@ namespace RingCentral.Net.Tests
                 var r2 = await subscription.Revoke();
                 Assert.Equal(204, r2.metadata.status);
 
-                // Assert.True(count >= 1);
+                Assert.True(count >= 1);
             }
         }
     }
