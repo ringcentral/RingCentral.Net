@@ -50,7 +50,7 @@ namespace RingCentral.Net
         {
         }
 
-        public Task<Response<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
+        public Task<Response> Request(string method, string path, string body = null, bool basicAuth = false)
         {
             var messageId = Guid.NewGuid().ToString();
             var metadata = new Metadata
@@ -68,19 +68,25 @@ namespace RingCentral.Net
                 requestItems.Add(basicAuth ? $"\"{body}\"" : body);
             }
             var requestBody = $"[{string.Join(",", requestItems)}]";
-            var t = new TaskCompletionSource<Response<T>>();
+            var t = new TaskCompletionSource<Response>();
             IDisposable subscription = null;
             subscription = wsClient.MessageReceived.Subscribe(message =>
             {
                 if (message.Contains($"\"messageId\":\"{messageId}\""))
                 {
                     subscription.Dispose();
-                    var response = Response<T>.Parse(message);
+                    var response = new Response(message);
                     t.TrySetResult(response);
                 }
             });
             this.wsClient.Send(requestBody);
             return t.Task;
+        }
+
+        public async Task<Response<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
+        {
+            var response = await Request(method, path, body, basicAuth);
+            return response.ConvertTo<T>();
         }
 
         public Task<Response<T>> Post<T>(string path, Serializable body = null)

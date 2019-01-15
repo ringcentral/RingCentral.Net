@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace RingCentral.Net
 {
@@ -18,6 +19,19 @@ namespace RingCentral.Net
                 this.body = jArray[1].ToString();
             }
         }
+        public Response<T> ConvertTo<T>()
+        {
+            var response = new Response<T>
+            {
+                message = this.message,
+                metadata = this.metadata
+            };
+            if (this.body != null)
+            {
+                response.body = JsonConvert.DeserializeObject<T>(this.body);
+            }
+            return response;
+        }
     }
 
     public class Response<T>
@@ -25,25 +39,5 @@ namespace RingCentral.Net
         public string message;
         public Metadata metadata;
         public T body;
-        public static Response<T> Parse(string message)
-        {
-            var response = new Response<T>();
-            response.message = message;
-            var jArray = JArray.Parse(message);
-            response.metadata = jArray[0].ToObject<Metadata>();
-            if (jArray.Count > 1) // has body
-            {
-                // response.bodyString = jArray[1].ToString();
-                try
-                {
-                    response.body = jArray[1].ToObject<T>();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            }
-            return response;
-        }
     }
 }
