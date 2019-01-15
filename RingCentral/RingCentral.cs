@@ -61,19 +61,13 @@ namespace RingCentral
                 messageId = messageId,
                 headers = GetHeaders(basicAuth)
             };
-            var wsgRequest = "";
-            if (body == null)
+            var requestItems = new List<string>();
+            requestItems.Add(metadata.ToJsonString());
+            if (body != null)
             {
-                wsgRequest = $"[{metadata.ToJsonString()}]";
+                requestItems.Add(basicAuth ? $"\"{body}\"" : body);
             }
-            else
-            {
-                if (!(body.StartsWith("{") && body.EndsWith("}"))) // x-www-form-urlencoded istead of json
-                {
-                    body = $"\"{body}\"";
-                }
-                wsgRequest = $"[{metadata.ToJsonString()}, {body}]";
-            }
+            var requestBody = $"[{string.Join(",", requestItems)}]";
             var t = new TaskCompletionSource<WsgResponse<T>>();
             IDisposable subscription = null;
             subscription = wsClient.MessageReceived.Subscribe(message =>
@@ -85,7 +79,7 @@ namespace RingCentral
                     t.TrySetResult(wsgResponse);
                 }
             });
-            this.wsClient.Send(wsgRequest);
+            this.wsClient.Send(requestBody);
             return t.Task;
         }
 
