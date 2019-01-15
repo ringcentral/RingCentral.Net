@@ -9,7 +9,7 @@ namespace RingCentral.Net.Tests
         public async void TestPasswordFlow()
         {
             var env = Environment.GetEnvironmentVariables();
-            var rc = new RingCentral(
+            var rc = new RingClient(
                 env["RINGCENTRAL_CLIENT_ID"] as string,
                 env["RINGCENTRAL_CLIENT_SECRET"] as string,
                 env["RINGCENTRAL_WSS_URL"] as string

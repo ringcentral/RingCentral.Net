@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 
 namespace RingCentral.Net
 {
-    public partial class RingCentral : IDisposable
+    public partial class RingClient : IDisposable
     {
         public const string SANDBOX_HTTPS_SERVER = "https://platform.devtest.ringcentral.com";
         public const string PRODUCTION_HTTPS_SERVER = "https://platform.ringcentral.com";
@@ -21,7 +21,7 @@ namespace RingCentral.Net
         public string clientSecret;
         public TokenInfo token;
 
-        public RingCentral(string clientId, string clientSecret, string wssServer)
+        public RingClient(string clientId, string clientSecret, string wssServer)
         {
             this.clientId = clientId;
             this.clientSecret = clientSecret;
@@ -45,7 +45,7 @@ namespace RingCentral.Net
             wsClient.ReconnectionHappened.Subscribe(type => Console.WriteLine($"WebSocket Reconnection: {type}"));
             wsClient.Start();
         }
-        public RingCentral(string clientId, string clientSecret, bool production = false)
+        public RingClient(string clientId, string clientSecret, bool production = false)
             : this(clientId, clientSecret, production ? PRODUCTION_WSS_SERVER : SANDBOX_WSS_SERVER)
         {
         }

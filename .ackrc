@@ -1,3 +1,6 @@
 --ignore-dir=obj
 --ignore-dir=.vscode
+--ignore-dir=bin
+--ignore-dir=obj
+--ignore-dir=Definitions/Generated
 --ignore-file=match:/\.csproj$/

@@ -12,7 +12,7 @@ namespace RingCentral.Net
     public class Subscription
     {
         public string[] eventFilters;
-        public RingCentral rc;
+        public RingClient rc;
         public Action<string> callback;
         public IDisposable subscription; // from Websocket.Client
 
@@ -39,7 +39,7 @@ namespace RingCentral.Net
             }
         }
 
-        public Subscription(RingCentral rc, string[] eventFilters, Action<string> callback)
+        public Subscription(RingClient rc, string[] eventFilters, Action<string> callback)
         {
             this.rc = rc;
             this.eventFilters = eventFilters;

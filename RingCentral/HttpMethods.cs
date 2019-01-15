@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Net
 {
-    public partial class RingCentral
+    public partial class RingClient
     {
         public async Task<Response<T>> Request<T>(string method, string path, string body = null, bool basicAuth = false)
         {
