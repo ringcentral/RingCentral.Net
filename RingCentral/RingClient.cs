@@ -64,7 +64,6 @@ namespace RingCentral.Net
             wssClient = new ClientWebSocket();
             wssClient.Options.KeepAliveInterval = TimeSpan.FromDays(40);
             wssClient.ConnectAsync(wssServer, cancelSource.Token).Wait();
-            Console.WriteLine("wssClient.ConnectAsync");
             Task.Factory.StartNew(
                 async () =>
                 {
@@ -77,7 +76,6 @@ namespace RingCentral.Net
                         bytesList.AddRange(bytes);
                         if (result.EndOfMessage)
                         {
-                            Console.WriteLine("MessageReceivedEventHandler");
                             MessageReceivedEventHandler(this, new MessageReceivedEventArgs
                             {
                                 type = result.MessageType,

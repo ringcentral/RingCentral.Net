@@ -31,9 +31,7 @@ namespace RingCentral.Net.Tests
                 //         phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
                 //     }
                 // });
-
                 // Assert.Equal(200, r.metadata.status);
-                // Console.WriteLine(r.body);
             }
         }
     }
