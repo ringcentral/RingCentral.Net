@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace RingCentral.Net.Tests
@@ -57,12 +58,11 @@ namespace RingCentral.Net.Tests
                 Assert.Equal(200, r.metadata.status);
                 Assert.Equal("WebSocket", r.body.deliveryMode.transportType);
 
-                SendSms(rc);
-
-                Thread.Sleep(15000);
-
                 r = await subscription.Refresh();
                 Assert.Equal(200, r.metadata.status);
+
+                SendSms(rc);
+                await Task.Delay(15000);
 
                 var r2 = await subscription.Revoke();
                 Assert.Equal(204, r2.metadata.status);
