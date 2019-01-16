@@ -1,4 +1,4 @@
-# RingCentral.NET
+# RingCentral.Net
 
 
 ## Release
