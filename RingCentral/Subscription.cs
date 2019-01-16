@@ -14,7 +14,8 @@ namespace RingCentral.Net
         public string[] eventFilters;
         public RingClient rc;
         public Action<string> callback;
-        public IDisposable subscription; // from Websocket.Client
+        // public IDisposable subscription; // from Websocket.Client
+        public EventHandler<MessageReceivedEventArgs> handler;
 
         private SubscriptionInfo _subscriptionInfo; // from RingCentral spec
         private bool renewScheduled = false;
@@ -44,6 +45,14 @@ namespace RingCentral.Net
             this.rc = rc;
             this.eventFilters = eventFilters;
             this.callback = callback;
+            this.handler = (sender, args) =>
+            {
+                var message = args.text;
+                if (message != null && message.Contains($"\"subscriptionId\":\"{subscriptionInfo.id}\""))
+                {
+                    callback(message);
+                }
+            };
         }
 
         public async Task<Response<SubscriptionInfo>> Subscribe()
@@ -58,6 +67,7 @@ namespace RingCentral.Net
             };
             var r = await this.rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", createSubscriptionRequest);
             subscriptionInfo = r.body;
+            this.rc.MessageReceivedEventHandler += this.handler;
             // subscription = this.rc.wsClient.MessageReceived.Subscribe(message =>
             // {
             //     if (message.Contains($"\"subscriptionId\":\"{subscriptionInfo.id}\""))
@@ -72,8 +82,9 @@ namespace RingCentral.Net
         public async Task<Response> Revoke()
         {
             var r = await rc.Delete($"/restapi/v1.0/subscription/{subscriptionInfo.id}");
-            subscription.Dispose();
+            // subscription.Dispose();
             subscriptionInfo = null;
+            this.rc.MessageReceivedEventHandler -= this.handler;
             return r;
         }
 
