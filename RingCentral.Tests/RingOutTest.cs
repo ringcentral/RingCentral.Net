@@ -20,20 +20,20 @@ namespace RingCentral.Net.Tests
                     env["RINGCENTRAL_EXTENSION"] as string,
                     env["RINGCENTRAL_PASSWORD"] as string
                 );
-                var r = await rc.Post("/restapi/v1.0/account/~/extension/~/ring-out", new MakeRingOutRequest
-                {
-                    from = new MakeRingOutCallerInfoRequestFrom
-                    {
-                        phoneNumber = env["RINGCENTRAL_USERNAME"] as string
-                    },
-                    to = new MakeRingOutCallerInfoRequestTo
-                    {
-                        phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
-                    }
-                });
+                // var r = await rc.Post("/restapi/v1.0/account/~/extension/~/ring-out", new MakeRingOutRequest
+                // {
+                //     from = new MakeRingOutCallerInfoRequestFrom
+                //     {
+                //         phoneNumber = env["RINGCENTRAL_USERNAME"] as string
+                //     },
+                //     to = new MakeRingOutCallerInfoRequestTo
+                //     {
+                //         phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
+                //     }
+                // });
 
-                Assert.Equal(200, r.metadata.status);
-                Console.WriteLine(r.body);
+                // Assert.Equal(200, r.metadata.status);
+                // Console.WriteLine(r.body);
             }
         }
     }
