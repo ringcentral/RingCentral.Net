@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-// using Websocket.Client;
 using Newtonsoft.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -35,7 +34,6 @@ namespace RingCentral.Net
         public const string SANDBOX_WSS_SERVER = "wss://ws-api.devtest.ringcentral.com/ws";
         public const string PRODUCTION_WSS_SERVER = "wss://ws-api.ringcentral.com/ws";
 
-        // public WebsocketClient wsClient;
         public string clientId;
         public string clientSecret;
         public TokenInfo token;
@@ -93,11 +91,6 @@ namespace RingCentral.Net
                 },
                 cancelSource.Token, TaskCreationOptions.LongRunning, TaskScheduler.Default
             );
-
-            // wsClient = new WebsocketClient(new Uri(wssServer));
-            // wsClient.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(3600).TotalMilliseconds;
-            // wsClient.ReconnectionHappened.Subscribe(type => Console.WriteLine($"WebSocket Reconnection: {type}"));
-            // wsClient.Start();
         }
         public RingClient(string clientId, string clientSecret, bool production = false)
             : this(clientId, clientSecret, production ? PRODUCTION_WSS_SERVER : SANDBOX_WSS_SERVER)
@@ -137,19 +130,6 @@ namespace RingCentral.Net
             MessageReceivedEventHandler += handler;
             wssClient.SendAsync(new ArraySegment<byte>(Encoding.UTF8.GetBytes(requestBody)), WebSocketMessageType.Text, true, cancelSource.Token);
             return t.Task;
-            // var t = new TaskCompletionSource<Response>();
-            // IDisposable subscription = null;
-            // subscription = wsClient.MessageReceived.Subscribe(message =>
-            // {
-            //     if (message.Contains($"\"messageId\":\"{messageId}\""))
-            //     {
-            //         subscription.Dispose();
-            //         var response = new Response(message);
-            //         t.TrySetResult(response);
-            //     }
-            // });
-            // this.wsClient.Send(requestBody);
-            // return t.Task;
         }
 
         public async Task<Response<TokenInfo>> Authorize(string username, string extension, string password)
