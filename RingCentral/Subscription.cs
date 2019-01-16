@@ -1,10 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
-using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 
 namespace RingCentral.Net
 {
