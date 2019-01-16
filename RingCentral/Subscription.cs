@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Websocket.Client;
+// using Websocket.Client;
 using Newtonsoft.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -58,14 +58,14 @@ namespace RingCentral.Net
             };
             var r = await this.rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", createSubscriptionRequest);
             subscriptionInfo = r.body;
-            subscription = this.rc.wsClient.MessageReceived.Subscribe(message =>
-            {
-                if (message.Contains($"\"subscriptionId\":\"{subscriptionInfo.id}\""))
-                {
-                    var messages = JArray.Parse(message);
-                    callback(messages[1].ToString()); // message[0] is some metadata
-                }
-            });
+            // subscription = this.rc.wsClient.MessageReceived.Subscribe(message =>
+            // {
+            //     if (message.Contains($"\"subscriptionId\":\"{subscriptionInfo.id}\""))
+            //     {
+            //         var messages = JArray.Parse(message);
+            //         callback(messages[1].ToString()); // message[0] is some metadata
+            //     }
+            // });
             return r;
         }
 

@@ -1,14 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Websocket.Client;
+// using Websocket.Client;
 using Newtonsoft.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using System.Net.WebSockets;
+using System.Linq;
 
 namespace RingCentral.Net
 {
+    public class MessageReceivedEventArgs : EventArgs
+    {
+        public WebSocketMessageType type;
+        public byte[] bytes;
+        public string text
+        {
+            get
+            {
+                if (type == WebSocketMessageType.Text)
+                {
+                    return Encoding.UTF8.GetString(bytes);
+                }
+                return null;
+            }
+        }
+    }
+
     public partial class RingClient : IDisposable
     {
         public const string SANDBOX_HTTPS_SERVER = "https://platform.devtest.ringcentral.com";
@@ -16,34 +35,69 @@ namespace RingCentral.Net
         public const string SANDBOX_WSS_SERVER = "wss://ws-api.devtest.ringcentral.com/ws";
         public const string PRODUCTION_WSS_SERVER = "wss://ws-api.ringcentral.com/ws";
 
-        public WebsocketClient wsClient;
+        // public WebsocketClient wsClient;
         public string clientId;
         public string clientSecret;
         public TokenInfo token;
 
-        public RingClient(string clientId, string clientSecret, string wssServer)
+        public Uri wssServer;
+        public ClientWebSocket wssClient;
+        public CancellationTokenSource cancelSource = new CancellationTokenSource();
+        public event EventHandler<MessageReceivedEventArgs> MessageReceivedEventHandler;
+
+        public RingClient(string clientId, string clientSecret, string server)
         {
             this.clientId = clientId;
             this.clientSecret = clientSecret;
-            if (!wssServer.StartsWith("wss://"))
+            if (!server.StartsWith("wss://"))
             {
-                if (wssServer.StartsWith(SANDBOX_HTTPS_SERVER))
+                if (server.StartsWith(SANDBOX_HTTPS_SERVER))
                 {
-                    wssServer = SANDBOX_WSS_SERVER;
+                    server = SANDBOX_WSS_SERVER;
                 }
-                else if (wssServer.StartsWith(PRODUCTION_HTTPS_SERVER))
+                else if (server.StartsWith(PRODUCTION_HTTPS_SERVER))
                 {
-                    wssServer = PRODUCTION_WSS_SERVER;
+                    server = PRODUCTION_WSS_SERVER;
                 }
                 else
                 {
                     throw new ArgumentException("wssServer should start with \"wss://\"", "wssServer");
                 }
             }
-            wsClient = new WebsocketClient(new Uri(wssServer));
-            wsClient.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(3600).TotalMilliseconds;
-            wsClient.ReconnectionHappened.Subscribe(type => Console.WriteLine($"WebSocket Reconnection: {type}"));
-            wsClient.Start();
+            wssServer = new Uri(server);
+            wssClient = new ClientWebSocket();
+            wssClient.Options.KeepAliveInterval = TimeSpan.FromDays(40);
+            wssClient.ConnectAsync(wssServer, cancelSource.Token).Wait();
+            Console.WriteLine("wssClient.ConnectAsync");
+            Task.Factory.StartNew(
+                async () =>
+                {
+                    var buffer = new ArraySegment<byte>(new byte[1024]);
+                    var bytesList = new List<byte>();
+                    while (true)
+                    {
+                        var result = await wssClient.ReceiveAsync(buffer, cancelSource.Token);
+                        var bytes = buffer.Skip(buffer.Offset).Take(result.Count).ToArray();
+                        bytesList.AddRange(bytes);
+                        if (result.EndOfMessage)
+                        {
+                            Console.WriteLine("MessageReceivedEventHandler");
+                            MessageReceivedEventHandler(this, new MessageReceivedEventArgs
+                            {
+                                type = result.MessageType,
+                                bytes = bytesList.ToArray()
+                            });
+                            bytesList.Clear();
+                        }
+                    }
+                },
+                cancelSource.Token, TaskCreationOptions.LongRunning, TaskScheduler.Default
+            );
+
+            // wsClient = new WebsocketClient(new Uri(wssServer));
+            // wsClient.ReconnectTimeoutMs = (int)TimeSpan.FromSeconds(3600).TotalMilliseconds;
+            // wsClient.ReconnectionHappened.Subscribe(type => Console.WriteLine($"WebSocket Reconnection: {type}"));
+            // wsClient.Start();
         }
         public RingClient(string clientId, string clientSecret, bool production = false)
             : this(clientId, clientSecret, production ? PRODUCTION_WSS_SERVER : SANDBOX_WSS_SERVER)
@@ -69,18 +123,33 @@ namespace RingCentral.Net
             }
             var requestBody = $"[{string.Join(",", requestItems)}]";
             var t = new TaskCompletionSource<Response>();
-            IDisposable subscription = null;
-            subscription = wsClient.MessageReceived.Subscribe(message =>
+            EventHandler<MessageReceivedEventArgs> handler = null;
+            handler = (sender, args) =>
             {
-                if (message.Contains($"\"messageId\":\"{messageId}\""))
+                var message = args.text;
+                if (message != null && message.Contains($"\"messageId\":\"{messageId}\""))
                 {
-                    subscription.Dispose();
+                    MessageReceivedEventHandler -= handler;
                     var response = new Response(message);
                     t.TrySetResult(response);
                 }
-            });
-            this.wsClient.Send(requestBody);
+            };
+            MessageReceivedEventHandler += handler;
+            wssClient.SendAsync(new ArraySegment<byte>(Encoding.UTF8.GetBytes(requestBody)), WebSocketMessageType.Text, true, cancelSource.Token);
             return t.Task;
+            // var t = new TaskCompletionSource<Response>();
+            // IDisposable subscription = null;
+            // subscription = wsClient.MessageReceived.Subscribe(message =>
+            // {
+            //     if (message.Contains($"\"messageId\":\"{messageId}\""))
+            //     {
+            //         subscription.Dispose();
+            //         var response = new Response(message);
+            //         t.TrySetResult(response);
+            //     }
+            // });
+            // this.wsClient.Send(requestBody);
+            // return t.Task;
         }
 
         public async Task<Response<TokenInfo>> Authorize(string username, string extension, string password)
