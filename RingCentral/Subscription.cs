@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-// using Websocket.Client;
 using Newtonsoft.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,7 +13,6 @@ namespace RingCentral.Net
         public string[] eventFilters;
         public RingClient rc;
         public Action<string> callback;
-        // public IDisposable subscription; // from Websocket.Client
         public EventHandler<MessageReceivedEventArgs> handler;
 
         private SubscriptionInfo _subscriptionInfo; // from RingCentral spec
@@ -68,21 +66,12 @@ namespace RingCentral.Net
             var r = await this.rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", createSubscriptionRequest);
             subscriptionInfo = r.body;
             this.rc.MessageReceivedEventHandler += this.handler;
-            // subscription = this.rc.wsClient.MessageReceived.Subscribe(message =>
-            // {
-            //     if (message.Contains($"\"subscriptionId\":\"{subscriptionInfo.id}\""))
-            //     {
-            //         var messages = JArray.Parse(message);
-            //         callback(messages[1].ToString()); // message[0] is some metadata
-            //     }
-            // });
             return r;
         }
 
         public async Task<Response> Revoke()
         {
             var r = await rc.Delete($"/restapi/v1.0/subscription/{subscriptionInfo.id}");
-            // subscription.Dispose();
             subscriptionInfo = null;
             this.rc.MessageReceivedEventHandler -= this.handler;
             return r;
