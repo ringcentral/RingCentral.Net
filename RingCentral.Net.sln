@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral", "RingCentral\RingCentral.csproj", "{D86932E7-BB04-4412-9BAD-156382504E90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D86932E7-BB04-4412-9BAD-156382504E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86932E7-BB04-4412-9BAD-156382504E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86932E7-BB04-4412-9BAD-156382504E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86932E7-BB04-4412-9BAD-156382504E90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
