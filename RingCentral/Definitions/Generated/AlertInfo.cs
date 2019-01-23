@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // Title of a message
         public string title;
+
         // Message Description
         public string body;
     }

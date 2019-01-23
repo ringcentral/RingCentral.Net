@@ -82,6 +82,7 @@ namespace RingCentral
             {
                 return null;
             }
+
             var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
                 {"grant_type", "refresh_token"},
@@ -97,6 +98,27 @@ namespace RingCentral
             var json = await httpResponseMessage.Content.ReadAsStringAsync();
             token = JsonConvert.DeserializeObject<TokenInfo>(json);
             return token;
+        }
+
+        public async Task Revoke()
+        {
+            if (token == null) // nothing  to revoke
+            {
+                return;
+            }
+
+            var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            {
+                {"token", token.access_token},
+            });
+            var httpRequestMessage = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri(server, "/restapi/oauth/revoke"),
+                Content = httpContent
+            };
+            await Request(httpRequestMessage, true);
+            token = null;
         }
 
         public async Task<HttpResponseMessage> Post(string endpoint, HttpContent httpContent,

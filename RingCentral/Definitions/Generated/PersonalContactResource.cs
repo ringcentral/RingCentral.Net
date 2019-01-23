@@ -3,6 +3,7 @@ namespace RingCentral
     public class PersonalContactResource : Serializable
     {
         public string uri;
+
         // Enum: Alive, Deleted, Purged
         public string availability;
         public string id;

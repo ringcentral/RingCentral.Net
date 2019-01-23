@@ -7,7 +7,9 @@ namespace RingCentral
         public string phoneNumber;
         public string label;
         public string[] features;
+
         public string flipNumber;
+
         // Forwarding phone number type
         // Enum: Home, Mobile, Work, PhoneLine, Outage, Other
         public string type;

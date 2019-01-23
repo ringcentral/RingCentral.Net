@@ -4,10 +4,10 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class TokenRefreshTest
+    public class TokenRevokeTest
     {
         [Fact]
-        public async Task RefreshToken()
+        public async Task RevokeToken()
         {
             var env = Environment.GetEnvironmentVariables();
             var rc = new RestClient(
@@ -20,18 +20,9 @@ namespace RingCentral.Tests
                 env["RINGCENTRAL_EXTENSION"] as string,
                 env["RINGCENTRAL_PASSWORD"] as string
             );
-            var refreshToken = rc.token.refresh_token;
-            await rc.Refresh();
             Assert.NotNull(rc.token);
-            Assert.NotNull(rc.token.refresh_token);
-            Assert.NotEqual(refreshToken, rc.token.refresh_token);
-
-            rc.token.refresh_token = refreshToken;
-            Assert.Equal(refreshToken, rc.token.refresh_token);
-            await rc.Refresh();
-            Assert.NotNull(rc.token);
-            Assert.NotNull(rc.token.refresh_token);
-            Assert.NotEqual(refreshToken, rc.token.refresh_token);
+            await rc.Revoke();
+            Assert.Null(rc.token);
         }
     }
 }
