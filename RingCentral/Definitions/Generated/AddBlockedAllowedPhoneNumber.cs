@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Updates either blocked or allowed phone number list with a new phone number.
     public class AddBlockedAllowedPhoneNumber : Serializable

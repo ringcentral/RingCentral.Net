@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Peer session / party data. Valid in Gone state only
     public class PeerInfo : Serializable

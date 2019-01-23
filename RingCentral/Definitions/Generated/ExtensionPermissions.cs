@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // [Deprecated] Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling'
     public class ExtensionPermissions : Serializable

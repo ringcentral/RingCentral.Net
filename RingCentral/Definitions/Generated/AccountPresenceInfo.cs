@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     public class AccountPresenceInfo : Serializable
     {

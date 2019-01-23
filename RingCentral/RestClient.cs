@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     public class RestClient
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     public class Metadata : Serializable
     {

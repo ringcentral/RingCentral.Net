@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Official name of a formatting language
     public class FormattingLocaleInfo : Serializable

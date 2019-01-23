@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Information on a blocked/allowed phone number
     public class BlockedAllowedPhoneNumberInfo : Serializable

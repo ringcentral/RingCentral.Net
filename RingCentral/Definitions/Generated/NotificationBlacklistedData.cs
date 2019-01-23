@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Returned if WebHook subscription is blacklisted
     public class NotificationBlacklistedData : Serializable

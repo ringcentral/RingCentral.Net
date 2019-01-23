@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Description of an error occurred during request processing. This data type can be used only in readonly mode, no writing is allowed
     public class Error : Serializable

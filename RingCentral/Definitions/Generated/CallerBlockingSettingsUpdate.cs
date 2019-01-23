@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Returns the lists of blocked and allowed phone numbers
     public class CallerBlockingSettingsUpdate : Serializable

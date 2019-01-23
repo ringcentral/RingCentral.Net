@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RingCentral.Net
+namespace RingCentral
 {
     // Returns data on call recording custom greetings.
     public class CallRecordingCustomGreetings : Serializable

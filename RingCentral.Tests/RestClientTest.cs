@@ -1,7 +1,7 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using RingCentral.Net;
+using RingCentral;
 using Xunit;
 
 namespace RingCentral.Tests
