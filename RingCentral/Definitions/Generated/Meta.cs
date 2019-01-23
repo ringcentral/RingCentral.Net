@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace RingCentral
 {
     // resource metadata

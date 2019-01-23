@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace RingCentral
 {
     // Official name of a formatting language

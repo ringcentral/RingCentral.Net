@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace RingCentral
 {
     // Returned if WebHook subscription is blacklisted

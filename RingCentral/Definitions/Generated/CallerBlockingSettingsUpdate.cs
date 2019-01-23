@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace RingCentral
 {
     // Returns the lists of blocked and allowed phone numbers

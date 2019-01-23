@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace RingCentral
 {
     // Updates either blocked or allowed phone number list with a new phone number.
