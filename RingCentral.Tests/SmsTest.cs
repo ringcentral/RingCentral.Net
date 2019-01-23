@@ -30,8 +30,10 @@ namespace RingCentral.Tests
                 {
                     phoneNumber = env["RINGCENTRAL_USERNAME"] as string
                 },
-                to = new[] {
-                    new MessageStoreCallerInfoRequest {
+                to = new[]
+                {
+                    new MessageStoreCallerInfoRequest
+                    {
                         phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
                     }
                 },

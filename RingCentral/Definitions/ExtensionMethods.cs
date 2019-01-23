@@ -18,6 +18,7 @@ namespace RingCentral
         {
             return JsonConvert.SerializeObject(obj, Formatting.None, jsonSerializerSettings);
         }
+
         public static string ToQueryString(this Serializable obj)
         {
             var fields = obj.GetType().GetFields()

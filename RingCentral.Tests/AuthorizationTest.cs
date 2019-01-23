@@ -5,7 +5,7 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class UnitTest1
+    public class AuthorizationTest
     {
         [Fact]
         public async Task AuthorizeTest()
