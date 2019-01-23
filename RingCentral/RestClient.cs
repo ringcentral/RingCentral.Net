@@ -55,7 +55,7 @@ namespace RingCentral
             }
         }
 
-        public async Task<HttpResponseMessage> Authorize(string username, string extension, string password)
+        public async Task<TokenInfo> Authorize(string username, string extension, string password)
         {
             var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
@@ -73,7 +73,30 @@ namespace RingCentral
             var httpResponseMessage = await Request(httpRequestMessage, true);
             var json = await httpResponseMessage.Content.ReadAsStringAsync();
             token = JsonConvert.DeserializeObject<TokenInfo>(json);
-            return httpResponseMessage;
+            return token;
+        }
+
+        public async Task<TokenInfo> Refresh()
+        {
+            if (token == null) // nothing  to refresh
+            {
+                return null;
+            }
+            var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            {
+                {"grant_type", "refresh_token"},
+                {"refresh_token", token.refresh_token},
+            });
+            var httpRequestMessage = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri(server, "/restapi/oauth/token"),
+                Content = httpContent
+            };
+            var httpResponseMessage = await Request(httpRequestMessage, true);
+            var json = await httpResponseMessage.Content.ReadAsStringAsync();
+            token = JsonConvert.DeserializeObject<TokenInfo>(json);
+            return token;
         }
 
         public async Task<HttpResponseMessage> Post(string endpoint, HttpContent httpContent,

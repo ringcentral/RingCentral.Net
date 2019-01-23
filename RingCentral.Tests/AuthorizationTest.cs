@@ -1,5 +1,4 @@
 using System;
-using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -16,14 +15,12 @@ namespace RingCentral.Tests
                 env["RINGCENTRAL_CLIENT_SECRET"] as string,
                 env["RINGCENTRAL_SERVER_URL"] as string
             );
-            var responseMessage = await rc.Authorize(
+            var token = await rc.Authorize(
                 env["RINGCENTRAL_USERNAME"] as string,
                 env["RINGCENTRAL_EXTENSION"] as string,
                 env["RINGCENTRAL_PASSWORD"] as string
             );
-            Assert.Equal(HttpStatusCode.OK, responseMessage.StatusCode);
-            var responseString = await responseMessage.Content.ReadAsStringAsync();
-            Assert.Contains("access_token", responseString);
+            Assert.Equal(token, rc.token);
             Assert.NotNull(rc.token);
             Assert.NotEmpty(rc.token.access_token);
         }
