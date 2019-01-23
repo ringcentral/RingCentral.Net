@@ -39,6 +39,7 @@ namespace RingCentral
             bool basicAuth = false)
         {
             var httpClient = new HttpClient();
+            httpRequestMessage.Headers.UserAgent.ParseAdd("RingCentral.Net");
             httpRequestMessage.Headers.Authorization = basicAuth
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(
@@ -126,8 +127,7 @@ namespace RingCentral
             await Revoke();
         }
 
-        public async Task<HttpResponseMessage> Post(string endpoint, HttpContent httpContent,
-            bool basicAuthorization = false)
+        public async Task<HttpResponseMessage> Post(string endpoint, HttpContent httpContent)
         {
             var httpRequestMessage = new HttpRequestMessage
             {
@@ -135,7 +135,7 @@ namespace RingCentral
                 RequestUri = new Uri(server, endpoint),
                 Content = httpContent
             };
-            return await Request(httpRequestMessage, basicAuthorization);
+            return await Request(httpRequestMessage, false);
         }
     }
 }
