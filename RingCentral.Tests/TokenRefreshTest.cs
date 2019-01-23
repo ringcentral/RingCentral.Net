@@ -32,6 +32,8 @@ namespace RingCentral.Tests
             Assert.NotNull(rc.token);
             Assert.NotNull(rc.token.refresh_token);
             Assert.NotEqual(refreshToken, rc.token.refresh_token);
+
+            await rc.Revoke();
         }
     }
 }

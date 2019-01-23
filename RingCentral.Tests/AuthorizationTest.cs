@@ -23,6 +23,8 @@ namespace RingCentral.Tests
             Assert.Equal(token, rc.token);
             Assert.NotNull(rc.token);
             Assert.NotEmpty(rc.token.access_token);
+
+            await rc.Revoke();
         }
     }
 }
