@@ -44,7 +44,15 @@ namespace RingCentral
                     Convert.ToBase64String(
                         Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
                 : new AuthenticationHeaderValue("Bearer", token.access_token);
-            return await httpClient.SendAsync(httpRequestMessage);
+            var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                return httpResponseMessage;
+            }
+            else
+            {
+                throw new RestException(httpResponseMessage);
+            }
         }
 
         public async Task<HttpResponseMessage> Authorize(string username, string extension, string password)
