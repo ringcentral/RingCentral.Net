@@ -30,6 +30,7 @@ namespace RingCentral.Tests
 
                 MultipartFormDataContent multipartFormDataContent = new MultipartFormDataContent();
 
+                // specify fax sending options including "to"
                 var stringContent = new StringContent(JsonConvert.SerializeObject(new
                 {
                     to = new[]
