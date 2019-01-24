@@ -20,9 +20,9 @@ namespace RingCentral.Tests
                 env["RINGCENTRAL_EXTENSION"] as string,
                 env["RINGCENTRAL_PASSWORD"] as string
             );
-            Assert.NotNull(rc.token);
+            Assert.NotNull(rc.Token);
             await rc.Revoke();
-            Assert.Null(rc.token);
+            Assert.Null(rc.Token);
         }
     }
 }

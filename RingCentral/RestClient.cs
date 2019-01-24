@@ -16,7 +16,7 @@ namespace RingCentral
         public string clientId;
         public string clientSecret;
         public Uri server;
-        public TokenInfo token;
+        public TokenInfo Token;
 
         private RestClient(string clientId, string clientSecret, Uri server)
         {
@@ -44,7 +44,7 @@ namespace RingCentral
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(
                         Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
-                : new AuthenticationHeaderValue("Bearer", token.access_token);
+                : new AuthenticationHeaderValue("Bearer", Token.access_token);
             var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
             if (httpResponseMessage.IsSuccessStatusCode)
             {
@@ -73,13 +73,13 @@ namespace RingCentral
             };
             var httpResponseMessage = await Request(httpRequestMessage, true);
             var json = await httpResponseMessage.Content.ReadAsStringAsync();
-            token = JsonConvert.DeserializeObject<TokenInfo>(json);
-            return token;
+            Token = JsonConvert.DeserializeObject<TokenInfo>(json);
+            return Token;
         }
 
         public async Task<TokenInfo> Refresh()
         {
-            if (token == null) // nothing  to refresh
+            if (Token == null) // nothing  to refresh
             {
                 return null;
             }
@@ -87,7 +87,7 @@ namespace RingCentral
             var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
                 {"grant_type", "refresh_token"},
-                {"refresh_token", token.refresh_token},
+                {"refresh_token", Token.refresh_token},
             });
             var httpRequestMessage = new HttpRequestMessage
             {
@@ -97,20 +97,20 @@ namespace RingCentral
             };
             var httpResponseMessage = await Request(httpRequestMessage, true);
             var json = await httpResponseMessage.Content.ReadAsStringAsync();
-            token = JsonConvert.DeserializeObject<TokenInfo>(json);
-            return token;
+            Token = JsonConvert.DeserializeObject<TokenInfo>(json);
+            return Token;
         }
 
         public async Task Revoke()
         {
-            if (token == null) // nothing  to revoke
+            if (Token == null) // nothing  to revoke
             {
                 return;
             }
 
             var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
-                {"token", token.access_token},
+                {"token", Token.access_token},
             });
             var httpRequestMessage = new HttpRequestMessage
             {
@@ -119,7 +119,7 @@ namespace RingCentral
                 Content = httpContent
             };
             await Request(httpRequestMessage, true);
-            token = null;
+            Token = null;
         }
 
         public async void Dispose()

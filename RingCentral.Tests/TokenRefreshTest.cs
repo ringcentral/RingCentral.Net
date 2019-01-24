@@ -20,18 +20,18 @@ namespace RingCentral.Tests
                 env["RINGCENTRAL_EXTENSION"] as string,
                 env["RINGCENTRAL_PASSWORD"] as string
             );
-            var refreshToken = rc.token.refresh_token;
+            var refreshToken = rc.Token.refresh_token;
             await rc.Refresh();
-            Assert.NotNull(rc.token);
-            Assert.NotNull(rc.token.refresh_token);
-            Assert.NotEqual(refreshToken, rc.token.refresh_token);
+            Assert.NotNull(rc.Token);
+            Assert.NotNull(rc.Token.refresh_token);
+            Assert.NotEqual(refreshToken, rc.Token.refresh_token);
 
-            rc.token.refresh_token = refreshToken;
-            Assert.Equal(refreshToken, rc.token.refresh_token);
+            rc.Token.refresh_token = refreshToken;
+            Assert.Equal(refreshToken, rc.Token.refresh_token);
             await rc.Refresh();
-            Assert.NotNull(rc.token);
-            Assert.NotNull(rc.token.refresh_token);
-            Assert.NotEqual(refreshToken, rc.token.refresh_token);
+            Assert.NotNull(rc.Token);
+            Assert.NotNull(rc.Token.refresh_token);
+            Assert.NotEqual(refreshToken, rc.Token.refresh_token);
 
             await rc.Revoke();
         }
