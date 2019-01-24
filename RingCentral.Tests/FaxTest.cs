@@ -36,7 +36,8 @@ namespace RingCentral.Tests
                     {
                         new
                         {
-                            phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
+//                            phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
+                            phoneNumber = "16506417402"
                         }
                     },
                 }), Encoding.UTF8, "application/json");
@@ -49,7 +50,16 @@ namespace RingCentral.Tests
                     Name = "rc.png",
                     FileName = "rc.png"
                 };
-                multipartFormDataContent.Add(streamContent, "attachment");
+                multipartFormDataContent.Add(streamContent, "rc.png");
+
+                var stream2 = new FileStream("./glip.png", FileMode.Open);
+                var streamContent2 = new StreamContent(stream2);
+                streamContent2.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    Name = "glip.png",
+                    FileName = "glip.png"
+                };
+                multipartFormDataContent.Add(streamContent2, "glip.png");
 
                 var responseMessage =
                     await rc.Post("/restapi/v1.0/account/~/extension/~/fax", multipartFormDataContent);

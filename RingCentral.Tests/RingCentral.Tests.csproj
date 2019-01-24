@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="rc.png">
+        <Content Include="*.png">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
