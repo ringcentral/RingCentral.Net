@@ -16,4 +16,10 @@
       <ProjectReference Include="..\RingCentral\RingCentral.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Content Include="rc.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
 </Project>
