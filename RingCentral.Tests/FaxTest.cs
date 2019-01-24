@@ -34,7 +34,7 @@ namespace RingCentral.Tests
                 {
                     to = new[]
                     {
-                        new MessageStoreCallerInfoRequest
+                        new
                         {
                             phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
                         }
@@ -54,10 +54,10 @@ namespace RingCentral.Tests
                 var responseMessage =
                     await rc.Post("/restapi/v1.0/account/~/extension/~/fax", multipartFormDataContent);
                 Assert.Equal(HttpStatusCode.OK, responseMessage.StatusCode);
-//                var responseString = await responseMessage.Content.ReadAsStringAsync();
-//                Assert.Contains("SMS", responseString);
-//                Assert.Contains("Outbound", responseString);
-//                Assert.Contains("readStatus", responseString);
+                var responseString = await responseMessage.Content.ReadAsStringAsync();
+                Assert.Contains("Fax", responseString);
+                Assert.Contains("Outbound", responseString);
+                Assert.Contains("faxResolution", responseString);
             }
         }
     }

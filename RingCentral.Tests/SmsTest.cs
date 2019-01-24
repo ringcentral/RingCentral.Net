@@ -25,7 +25,7 @@ namespace RingCentral.Tests
                     env["RINGCENTRAL_EXTENSION"] as string,
                     env["RINGCENTRAL_PASSWORD"] as string
                 );
-                var httpContent = new StringContent(JsonConvert.SerializeObject(new CreateSMSMessage
+                var httpContent = new StringContent(JsonConvert.SerializeObject(new
                 {
                     from = new MessageStoreCallerInfoRequest
                     {
