@@ -36,30 +36,43 @@ namespace RingCentral.Tests
                     {
                         new
                         {
-//                            phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
-                            phoneNumber = "16506417402"
+                            phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
+//                            phoneNumber = "16506417402"
                         }
                     },
                 }), Encoding.UTF8, "application/json");
                 multipartFormDataContent.Add(stringContent, "request.json");
 
-                var stream = new FileStream("./rc.png", FileMode.Open);
-                var streamContent = new StreamContent(stream);
+                // append a text file
+                var stringContent2 = new StringContent("Hello", Encoding.UTF8, "text/plain");
+                multipartFormDataContent.Add(stringContent2, "hello.txt");
+
+                // another way to append a text file
+                var plainFileStreamContent = new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes("World")));
+                plainFileStreamContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    Name = "world.txt",
+                    FileName = "world.txt"
+                };
+                multipartFormDataContent.Add(plainFileStreamContent);
+
+                // append an image file
+                var streamContent = new StreamContent(new FileStream("./rc.png", FileMode.Open));
                 streamContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
                 {
                     Name = "rc.png",
                     FileName = "rc.png"
                 };
-                multipartFormDataContent.Add(streamContent, "rc.png");
+                multipartFormDataContent.Add(streamContent);
 
-                var stream2 = new FileStream("./glip.png", FileMode.Open);
-                var streamContent2 = new StreamContent(stream2);
+                // append another image file
+                var streamContent2 = new StreamContent(new FileStream("./glip.png", FileMode.Open));
                 streamContent2.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
                 {
                     Name = "glip.png",
                     FileName = "glip.png"
                 };
-                multipartFormDataContent.Add(streamContent2, "glip.png");
+                multipartFormDataContent.Add(streamContent2);
 
                 var responseMessage =
                     await rc.Post("/restapi/v1.0/account/~/extension/~/fax", multipartFormDataContent);
