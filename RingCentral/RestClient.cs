@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace RingCentral
 {
-    public class RestClient : IDisposable
+    public partial class RestClient : IDisposable
     {
         public const string SandboxServer = "https://platform.devtest.ringcentral.com";
         public const string ProductionServer = "https://platform.ringcentral.com";
@@ -125,17 +125,6 @@ namespace RingCentral
         public async void Dispose()
         {
             await Revoke();
-        }
-
-        public async Task<HttpResponseMessage> Post(string endpoint, HttpContent httpContent)
-        {
-            var httpRequestMessage = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri(server, endpoint),
-                Content = httpContent
-            };
-            return await Request(httpRequestMessage, false);
         }
     }
 }
