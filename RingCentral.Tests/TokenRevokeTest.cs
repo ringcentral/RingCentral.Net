@@ -11,14 +11,14 @@ namespace RingCentral.Tests
         {
             var env = Environment.GetEnvironmentVariables();
             var rc = new RestClient(
-                env["RINGCENTRAL_CLIENT_ID"] as string,
-                env["RINGCENTRAL_CLIENT_SECRET"] as string,
-                env["RINGCENTRAL_SERVER_URL"] as string
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
             );
             var responseMessage = await rc.Authorize(
-                env["RINGCENTRAL_USERNAME"] as string,
-                env["RINGCENTRAL_EXTENSION"] as string,
-                env["RINGCENTRAL_PASSWORD"] as string
+                Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
             );
             Assert.NotNull(rc.Token);
             await rc.Revoke();
