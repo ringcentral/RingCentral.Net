@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,14 +52,16 @@ namespace RingCentral.Tests
                     "/restapi/v1.0/account/~/extension/~/message-store"
                 };
                 var count = 0;
-                var subscription = new Subscription(rc, eventFilters, message => { count += 1; });
+                var messages = new List<string>();
+                var subscription = new Subscription(rc, eventFilters, message => { messages.Add(message); });
                 var subscriptionInfo = await subscription.Subscribe();
                 Assert.NotNull(subscriptionInfo);
                 Assert.NotNull(subscription.subscriptionInfo);
                 Assert.Equal(eventFilters.Length, subscriptionInfo.eventFilters.Length);
                 await SendSms(rc);
                 await Task.Delay(15000);
-                Assert.True(count >= 1);
+                Assert.True(messages.Count >= 1);
+                Assert.Contains(messages, message => message.Contains("message-store"));
                 subscriptionInfo = await subscription.Refresh();
                 Assert.NotNull(subscriptionInfo);
                 Assert.NotNull(subscription.subscriptionInfo);
