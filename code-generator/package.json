@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
-    "generate": "node -r @babel/register index.js"
+    "generate": "rm -rf ../RingCentral/Definitions/Generated/* && node -r @babel/register index.js"
   },
   "dependencies": {
     "js-yaml": "^3.12.1"

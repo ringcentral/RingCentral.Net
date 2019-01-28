@@ -2,6 +2,8 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
 
+const outputDir = '../RingCentral/Definitions/Generated'
+
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
 const definitions = doc.definitions
 const models = Object.keys(definitions).map(k => ({ name: k, ...definitions[k] }))
@@ -70,7 +72,7 @@ namespace RingCentral
 }
 `.trim()
   console.log(source)
-  fs.writeFileSync(path.join('../RingCentral/Definitions/Generated', `${m.name}.cs`), source)
+  fs.writeFileSync(path.join(outputDir, `${m.name}.cs`), source)
 })
 
 console.log(new Set(types.filter(t => /^[a-z]+$/.test(t))))

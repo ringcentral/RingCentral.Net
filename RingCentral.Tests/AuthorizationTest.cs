@@ -9,7 +9,6 @@ namespace RingCentral.Tests
         [Fact]
         public async Task AuthorizeTest()
         {
-            var env = Environment.GetEnvironmentVariables();
             var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),

@@ -13,7 +13,6 @@ namespace RingCentral.Tests
         [Fact]
         public async Task SendSms()
         {
-            var env = Environment.GetEnvironmentVariables();
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
@@ -35,7 +34,7 @@ namespace RingCentral.Tests
                     {
                         new MessageStoreCallerInfoRequest
                         {
-                            phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
+                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
                         }
                     },
                     text = "Hello world"

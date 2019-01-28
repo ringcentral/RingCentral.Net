@@ -15,7 +15,6 @@ namespace RingCentral.Tests
         [Fact]
         public async Task SendFax()
         {
-            var env = Environment.GetEnvironmentVariables();
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
@@ -37,7 +36,7 @@ namespace RingCentral.Tests
                     {
                         new
                         {
-                            phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
+                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
 //                            phoneNumber = "16506417402"
                         }
                     }

@@ -50,7 +50,6 @@ namespace RingCentral.Tests
                     "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true",
                     "/restapi/v1.0/account/~/extension/~/message-store"
                 };
-                var count = 0;
                 var messages = new List<string>();
                 var subscription = new Subscription(rc, eventFilters, message => { messages.Add(message); });
                 var subscriptionInfo = await subscription.Subscribe();
