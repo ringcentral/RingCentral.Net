@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ScheduleInfo : Serializable
+    public class ScheduleInfo
     {
         // Weekly schedule
         public WeeklyScheduleInfo weeklyRanges;

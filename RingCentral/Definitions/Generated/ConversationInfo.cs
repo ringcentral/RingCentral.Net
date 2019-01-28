@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ConversationInfo : Serializable
+    public class ConversationInfo
     {
         // Internal identifier of a conversation
         public string id;

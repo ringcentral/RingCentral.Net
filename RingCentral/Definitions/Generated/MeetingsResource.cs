@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingsResource : Serializable
+    public class MeetingsResource
     {
         public string uri;
         public MeetingResponseResource[] records;

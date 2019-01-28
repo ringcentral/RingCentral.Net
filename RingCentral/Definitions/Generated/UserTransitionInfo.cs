@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UserTransitionInfo : Serializable
+    public class UserTransitionInfo
     {
         // Specifies if an activation email is automatically sent to new users (Not Activated extensions) or not
         public bool? sendWelcomeEmailsToUsers;

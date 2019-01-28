@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class TokenInfo : Serializable
+    public class TokenInfo
     {
         // Access token to pass to subsequent API requests
         public string access_token;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallLogRecordLegInfo : Serializable
+    public class CallLogRecordLegInfo
     {
         // Action description of the call operation
         // Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, FindMe, FollowMe, Outgoing Fax, Call Return, Calling Card, Ring Directly, RingOut Web, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile

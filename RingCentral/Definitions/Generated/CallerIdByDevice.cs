@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallerIdByDevice : Serializable
+    public class CallerIdByDevice
     {
         public CallerIdDeviceInfo device;
         public CallerIdByDeviceInfo callerId;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DataExportTask : Serializable
+    public class DataExportTask
     {
         // Canonical URI of a task
         public string uri;

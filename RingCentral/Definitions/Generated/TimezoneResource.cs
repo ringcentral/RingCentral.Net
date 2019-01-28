@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class TimezoneResource : Serializable
+    public class TimezoneResource
     {
         public string uri;
         public string id;

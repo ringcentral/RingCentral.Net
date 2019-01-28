@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipGroupsEvent : Serializable
+    public class GlipGroupsEvent
     {
         // Internal identifier of a group
         public string id;

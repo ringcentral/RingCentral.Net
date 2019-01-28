@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PagingDeviceInfo : Serializable
+    public class PagingDeviceInfo
     {
         // Internal identifier of a paging device
         public string id;

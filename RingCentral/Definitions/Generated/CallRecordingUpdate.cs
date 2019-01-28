@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallRecordingUpdate : Serializable
+    public class CallRecordingUpdate
     {
         // Recording status
         public bool? active;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RuleInfoCreateRuleRequest : Serializable
+    public class RuleInfoCreateRuleRequest
     {
         // Forwarding number (or group) ordinal. Not returned for inactive numbers
         public long? index;

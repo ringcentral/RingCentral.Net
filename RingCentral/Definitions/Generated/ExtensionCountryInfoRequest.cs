@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionCountryInfoRequest : Serializable
+    public class ExtensionCountryInfoRequest
     {
         // internal Identifier of a country
         public string id;

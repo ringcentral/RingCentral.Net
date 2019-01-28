@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SIPInfoResponse : Serializable
+    public class SIPInfoResponse
     {
         // User credentials
         public string username;

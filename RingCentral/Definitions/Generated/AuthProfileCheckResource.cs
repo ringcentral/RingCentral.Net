@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AuthProfileCheckResource : Serializable
+    public class AuthProfileCheckResource
     {
         public string uri;
         public bool? successful;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class IVRMenuInfo : Serializable
+    public class IVRMenuInfo
     {
         // Internal identifier of an IVR Menu extension
         public string id;

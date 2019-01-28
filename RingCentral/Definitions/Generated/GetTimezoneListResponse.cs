@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetTimezoneListResponse : Serializable
+    public class GetTimezoneListResponse
     {
         // List of timezones
         public GetTimezoneInfoResponse[] records; // Required

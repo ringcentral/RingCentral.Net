@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionRegionalSettingRequest : Serializable
+    public class ExtensionRegionalSettingRequest
     {
         public ExtensionCountryInfoRequest homeCountry;
         public ExtensionTimezoneInfoRequest timezone;

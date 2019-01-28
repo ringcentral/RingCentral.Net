@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ShippingResource : Serializable
+    public class ShippingResource
     {
         public EmergencyServiceAddressResource address;
         public MethodResource method;

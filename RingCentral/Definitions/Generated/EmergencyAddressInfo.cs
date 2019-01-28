@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EmergencyAddressInfo : Serializable
+    public class EmergencyAddressInfo
     {
         // Name of a customer
         public string customerName;

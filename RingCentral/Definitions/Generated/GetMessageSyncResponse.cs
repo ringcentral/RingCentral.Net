@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetMessageSyncResponse : Serializable
+    public class GetMessageSyncResponse
     {
         // List of message records with synchronization information
         public GetMessageInfoResponse[] records; // Required

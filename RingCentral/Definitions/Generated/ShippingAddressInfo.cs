@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ShippingAddressInfo : Serializable
+    public class ShippingAddressInfo
     {
         // Name of a receiver
         public string customerName;

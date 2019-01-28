@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CustomGreetingAnsweringRuleInfo : Serializable
+    public class CustomGreetingAnsweringRuleInfo
     {
         // Canonical URI of an answering rule
         public string uri;

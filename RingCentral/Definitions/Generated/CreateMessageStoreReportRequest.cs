@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateMessageStoreReportRequest : Serializable
+    public class CreateMessageStoreReportRequest
     {
         // Starting time for collecting messages. The default value equals to the current time minus 24 hours
         public string dateFrom;

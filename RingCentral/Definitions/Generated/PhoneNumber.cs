@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PhoneNumber : Serializable
+    public class PhoneNumber
     {
         // Enum: work, mobile, other
         public string type; // Required

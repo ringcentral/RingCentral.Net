@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class QueueInfo : Serializable
+    public class QueueInfo
     {
         // Specifies how calls are transferred to group members
         // Enum: Rotating, Simultaneous, FixedOrder

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PagingOnlyGroupDevices : Serializable
+    public class PagingOnlyGroupDevices
     {
         // List of paging devices assigned to this group
         public PagingDeviceInfo[] records;

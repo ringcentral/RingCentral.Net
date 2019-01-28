@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ServiceFeatureValue : Serializable
+    public class ServiceFeatureValue
     {
         public string featureName;
 

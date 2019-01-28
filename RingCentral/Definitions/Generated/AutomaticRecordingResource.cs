@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AutomaticRecordingResource : Serializable
+    public class AutomaticRecordingResource
     {
         // Flag for controling Automatic Call Recording settings
         public bool? enabled;

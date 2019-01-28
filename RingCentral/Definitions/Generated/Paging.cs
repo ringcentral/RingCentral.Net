@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Paging : Serializable
+    public class Paging
     {
         public long? page;
         public long? totalPages;

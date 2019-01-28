@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateInternalTextMessageRequest : Serializable
+    public class CreateInternalTextMessageRequest
     {
         // Sender of a pager message.
         public PagerCallerInfoRequest from; // Required

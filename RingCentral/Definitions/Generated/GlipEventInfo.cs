@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipEventInfo : Serializable
+    public class GlipEventInfo
     {
         // Internal identifier of an event
         public string id;

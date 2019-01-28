@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NotificationSettings : Serializable
+    public class NotificationSettings
     {
         // Canonical URI of notifications settings resource
         public string uri;

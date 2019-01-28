@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EnterpriseUser : Serializable
+    public class EnterpriseUser
     {
         public string department;
     }

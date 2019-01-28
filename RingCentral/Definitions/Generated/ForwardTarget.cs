@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ForwardTarget : Serializable
+    public class ForwardTarget
     {
         // Phone number
         public string phoneNumber;

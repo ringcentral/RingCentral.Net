@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetExtensionDevicesResponse : Serializable
+    public class GetExtensionDevicesResponse
     {
         // List of extension devices
         public GetDeviceInfoResponse[] records; // Required

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class InstantMessageEventBody : Serializable
+    public class InstantMessageEventBody
     {
         // Internal identifier of a message
         public string id;

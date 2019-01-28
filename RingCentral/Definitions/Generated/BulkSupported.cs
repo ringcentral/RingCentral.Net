@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BulkSupported : Serializable
+    public class BulkSupported
     {
         public long? maxOperations;
         public long? maxPayloadSize;

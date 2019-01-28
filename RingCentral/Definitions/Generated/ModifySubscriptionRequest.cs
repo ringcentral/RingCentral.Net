@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ModifySubscriptionRequest : Serializable
+    public class ModifySubscriptionRequest
     {
         // Collection of URIs to API resources
         public string[] eventFilters; // Required

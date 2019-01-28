@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class OriginInfo : Serializable
+    public class OriginInfo
     {
         // Session origin type
         // Enum: RingOut, RingMe, Conference, GreetingRecording, VerificartionCall, Call

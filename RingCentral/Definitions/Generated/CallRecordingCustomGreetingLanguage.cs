@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallRecordingCustomGreetingLanguage : Serializable
+    public class CallRecordingCustomGreetingLanguage
     {
         // Link to a language
         public string uri;

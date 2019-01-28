@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetMessageInfoResponse : Serializable
+    public class GetMessageInfoResponse
     {
         // Internal identifier of a message
         public string id;

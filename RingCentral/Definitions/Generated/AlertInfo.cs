@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AlertInfo : Serializable
+    public class AlertInfo
     {
         // Title of a message
         public string title;

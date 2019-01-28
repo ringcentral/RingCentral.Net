@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SyncInfoCallLog : Serializable
+    public class SyncInfoCallLog
     {
         // Type of synchronization
         // Enum: FSync, ISync

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Email : Serializable
+    public class Email
     {
         // Enum: work
         public string type; // Required

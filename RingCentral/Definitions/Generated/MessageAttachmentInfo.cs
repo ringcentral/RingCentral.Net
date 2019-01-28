@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MessageAttachmentInfo : Serializable
+    public class MessageAttachmentInfo
     {
         // Internal identifier of a message attachment
         public string id;

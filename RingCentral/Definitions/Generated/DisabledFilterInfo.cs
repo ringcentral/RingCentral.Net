@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DisabledFilterInfo : Serializable
+    public class DisabledFilterInfo
     {
         // Event filter that is disabled for the user
         public string filter;

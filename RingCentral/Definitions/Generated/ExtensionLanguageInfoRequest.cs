@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionLanguageInfoRequest : Serializable
+    public class ExtensionLanguageInfoRequest
     {
         // internal Identifier of a language
         public string id;

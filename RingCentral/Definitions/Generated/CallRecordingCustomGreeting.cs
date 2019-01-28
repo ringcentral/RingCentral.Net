@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallRecordingCustomGreeting : Serializable
+    public class CallRecordingCustomGreeting
     {
         // Enum: StartRecording, StopRecording, AutomaticRecording
         public string type;

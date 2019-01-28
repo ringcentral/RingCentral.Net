@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     // Official name of a formatting language
-    public class FormattingLocaleInfo : Serializable
+    public class FormattingLocaleInfo
     {
         // Internal identifier of a formatting language
         public string id;

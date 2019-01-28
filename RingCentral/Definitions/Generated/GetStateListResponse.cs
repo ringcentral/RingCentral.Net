@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetStateListResponse : Serializable
+    public class GetStateListResponse
     {
         // List of states
         public GetStateInfoResponse[] records; // Required

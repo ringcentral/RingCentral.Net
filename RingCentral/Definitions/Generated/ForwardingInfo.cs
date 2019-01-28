@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ForwardingInfo : Serializable
+    public class ForwardingInfo
     {
         // Specifies if the user's softphone(s) are notified before forwarding the incoming call to desk phones and forwarding numbers
         public bool? notifyMySoftPhones;

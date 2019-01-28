@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LanguageInfo : Serializable
+    public class LanguageInfo
     {
         // Internal identifier of a language
         public string id;

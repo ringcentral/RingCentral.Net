@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PagingOnlyGroupUsers : Serializable
+    public class PagingOnlyGroupUsers
     {
         // List of users allowed to page this group
         public PagingGroupExtensionInfo[] records;

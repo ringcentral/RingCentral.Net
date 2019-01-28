@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountPresenceEventBody : Serializable
+    public class AccountPresenceEventBody
     {
         // Internal identifier of an extension. Optional parameter
         public string extensionId;

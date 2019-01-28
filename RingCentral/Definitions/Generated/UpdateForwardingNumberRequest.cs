@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UpdateForwardingNumberRequest : Serializable
+    public class UpdateForwardingNumberRequest
     {
         // Forwarding/Call flip phone number
         public string phoneNumber;

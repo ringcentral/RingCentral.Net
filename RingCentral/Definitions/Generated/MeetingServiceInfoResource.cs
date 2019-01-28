@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingServiceInfoResource : Serializable
+    public class MeetingServiceInfoResource
     {
         public string uri;
         public string supportUri;

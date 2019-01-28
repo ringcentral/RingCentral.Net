@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DictionaryGreetingList : Serializable
+    public class DictionaryGreetingList
     {
         // Canonical URI of greetings list resource
         public string uri;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionCreationResponse : Serializable
+    public class ExtensionCreationResponse
     {
         // Internal identifier of an extension
         public long? id;

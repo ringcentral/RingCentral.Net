@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PermissionIdResource : Serializable
+    public class PermissionIdResource
     {
         public string uri;
 

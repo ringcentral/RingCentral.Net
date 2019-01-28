@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PhoneNumberResource : Serializable
+    public class PhoneNumberResource
     {
         public string formattedPhoneNumber;
         public string phoneNumber;

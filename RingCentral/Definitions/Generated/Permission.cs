@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Permission : Serializable
+    public class Permission
     {
         public bool? enabled;
     }

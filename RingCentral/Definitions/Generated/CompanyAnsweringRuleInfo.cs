@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CompanyAnsweringRuleInfo : Serializable
+    public class CompanyAnsweringRuleInfo
     {
         // Internal identifier of an answering rule
         public string id;

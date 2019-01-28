@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UserCallLogResponse : Serializable
+    public class UserCallLogResponse
     {
         // List of call log records
         public CallLogRecord[] records; // Required

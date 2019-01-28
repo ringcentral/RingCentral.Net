@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UpdateDevicePhoneInfo : Serializable
+    public class UpdateDevicePhoneInfo
     {
         // Internal identifier of a phone number
         public string id;

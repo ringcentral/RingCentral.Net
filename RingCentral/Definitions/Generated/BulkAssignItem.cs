@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BulkAssignItem : Serializable
+    public class BulkAssignItem
     {
         public string departmentId;
         public string[] addedExtensionIds;

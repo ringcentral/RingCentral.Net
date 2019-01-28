@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CompanyAnsweringRuleList : Serializable
+    public class CompanyAnsweringRuleList
     {
         // Link to an answering rule resource
         public string uri;

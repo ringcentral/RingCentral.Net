@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class FaxResponse : Serializable
+    public class FaxResponse
     {
         // Internal identifier of a message
         public long? id;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MessageStoreReport : Serializable
+    public class MessageStoreReport
     {
         // Internal identifier of a message store report task
         public string id;

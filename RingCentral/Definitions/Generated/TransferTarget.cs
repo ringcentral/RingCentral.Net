@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class TransferTarget : Serializable
+    public class TransferTarget
     {
         // Phone number
         public string phoneNumber;

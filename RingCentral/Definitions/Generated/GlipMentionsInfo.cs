@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipMentionsInfo : Serializable
+    public class GlipMentionsInfo
     {
         // Internal identifier of a user
         public string id;

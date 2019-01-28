@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class FederationResource : Serializable
+    public class FederationResource
     {
         public FederatedAccountResource[] accounts;
         public string creationTime;

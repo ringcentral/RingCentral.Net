@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ContactList : Serializable
+    public class ContactList
     {
         // List of personal contacts from the extension address book
         public PersonalContactResource[] records;

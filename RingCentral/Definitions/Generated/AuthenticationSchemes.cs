@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AuthenticationSchemes : Serializable
+    public class AuthenticationSchemes
     {
         public AuthenticationScheme[] authenticationSchemes;
     }

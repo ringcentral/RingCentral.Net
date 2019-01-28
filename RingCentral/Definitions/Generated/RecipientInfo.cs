@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RecipientInfo : Serializable
+    public class RecipientInfo
     {
         // Link to a recipient extension resource
         public string uri;

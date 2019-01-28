@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Binary : Serializable
+    public class Binary
     {
         // Required Binary Data
         public string data;

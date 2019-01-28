@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class IVRMenuPromptInfo : Serializable
+    public class IVRMenuPromptInfo
     {
         // Prompt mode: custom media or text
         // Enum: Audio, TextToSpeech

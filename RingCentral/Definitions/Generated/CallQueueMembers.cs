@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallQueueMembers : Serializable
+    public class CallQueueMembers
     {
         // Link to a call queue members resource
         public string uri; // Required

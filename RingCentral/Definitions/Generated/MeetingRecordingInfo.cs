@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingRecordingInfo : Serializable
+    public class MeetingRecordingInfo
     {
         public MeetingInfo meeting;
         public RecordingInfo[] recordings;

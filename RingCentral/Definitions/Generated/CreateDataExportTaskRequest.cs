@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateDataExportTaskRequest : Serializable
+    public class CreateDataExportTaskRequest
     {
         // Starting time for data collection. The default value is current time minus 24 hours. If `dateTo` is not specified then its value is set to `dateFrom` plus 24 hours. The specified time range should not be greater than 7 days
         public string dateFrom;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MessageStoreReportArchive : Serializable
+    public class MessageStoreReportArchive
     {
         public ArchiveInfo[] records;
     }

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AnsweringRuleInfo : Serializable
+    public class AnsweringRuleInfo
     {
         // Canonical URI to an answering rule resource
         public string uri;

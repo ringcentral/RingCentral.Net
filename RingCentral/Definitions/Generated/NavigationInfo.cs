@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NavigationInfo : Serializable
+    public class NavigationInfo
     {
         // Canonical URI for the first page of the list
         public NavigationInfoURI firstPage;

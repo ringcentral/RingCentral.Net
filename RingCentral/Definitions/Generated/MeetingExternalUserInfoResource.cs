@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingExternalUserInfoResource : Serializable
+    public class MeetingExternalUserInfoResource
     {
         public string uri;
         public string userId;

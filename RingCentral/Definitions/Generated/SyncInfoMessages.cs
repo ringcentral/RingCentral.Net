@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SyncInfoMessages : Serializable
+    public class SyncInfoMessages
     {
         // Type of synchronization
         // Enum: FSync, ISync

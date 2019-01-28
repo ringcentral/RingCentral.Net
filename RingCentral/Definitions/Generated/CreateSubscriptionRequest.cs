@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateSubscriptionRequest : Serializable
+    public class CreateSubscriptionRequest
     {
         // Collection of URIs to API resources. For APNS transport type only message event filter is available
         public string[] eventFilters; // Required

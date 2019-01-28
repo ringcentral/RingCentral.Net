@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PresenceInfoResource : Serializable
+    public class PresenceInfoResource
     {
         // Enum: Offline, Busy, Available
         public string userStatus;

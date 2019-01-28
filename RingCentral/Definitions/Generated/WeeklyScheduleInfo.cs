@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class WeeklyScheduleInfo : Serializable
+    public class WeeklyScheduleInfo
     {
         // Time intervals for a particular day
         public TimeInterval[] monday;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetVersionResponse : Serializable
+    public class GetVersionResponse
     {
         // Canonical URI of the version info resource
         public string uri;

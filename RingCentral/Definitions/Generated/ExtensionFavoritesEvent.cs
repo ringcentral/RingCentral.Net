@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionFavoritesEvent : Serializable
+    public class ExtensionFavoritesEvent
     {
         // Universally unique identifier of a notification
         public string uuid;

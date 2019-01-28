@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipPostInfo : Serializable
+    public class GlipPostInfo
     {
         // Internal identifier of a post
         public string id;

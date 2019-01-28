@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionInfoGrants : Serializable
+    public class ExtensionInfoGrants
     {
         // Internal identifier of an extension
         public string id;

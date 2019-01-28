@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetExtensionListResponse : Serializable
+    public class GetExtensionListResponse
     {
         // List of extensions with extension information
         public GetExtensionInfoResponse[] records; // Required

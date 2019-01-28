@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DepartmentResource : Serializable
+    public class DepartmentResource
     {
         public string uri;
         public string id;

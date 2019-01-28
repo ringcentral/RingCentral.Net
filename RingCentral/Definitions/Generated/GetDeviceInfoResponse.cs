@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetDeviceInfoResponse : Serializable
+    public class GetDeviceInfoResponse
     {
         // Internal identifier of a device
         public string id;

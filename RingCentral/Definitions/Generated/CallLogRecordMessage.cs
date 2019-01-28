@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     // Linked message (Fax/Voicemail)
-    public class CallLogRecordMessage : Serializable
+    public class CallLogRecordMessage
     {
         // Internal identifier of a message
         public string id;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetExtensionPhoneNumbersResponse : Serializable
+    public class GetExtensionPhoneNumbersResponse
     {
         // List of phone numbers
         public UserPhoneNumberInfo[] records; // Required

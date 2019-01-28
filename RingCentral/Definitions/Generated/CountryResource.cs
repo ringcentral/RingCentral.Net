@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CountryResource : Serializable
+    public class CountryResource
     {
         public string uri;
         public string id;

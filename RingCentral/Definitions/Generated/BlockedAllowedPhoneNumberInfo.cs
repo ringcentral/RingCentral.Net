@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     // Information on a blocked/allowed phone number
-    public class BlockedAllowedPhoneNumberInfo : Serializable
+    public class BlockedAllowedPhoneNumberInfo
     {
         // Link to a blocked/allowed phone number
         public string uri;

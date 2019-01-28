@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ContactAddressInfo : Serializable
+    public class ContactAddressInfo
     {
         // Country name of extension user company. Not returned for Address Book
         public string country;

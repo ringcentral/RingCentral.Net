@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Navigation : Serializable
+    public class Navigation
     {
         public ResourceLink nextPage;
         public ResourceLink previousPage;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ParsePhoneNumberResponse : Serializable
+    public class ParsePhoneNumberResponse
     {
         // Canonical URI of a resource
         public string uri;

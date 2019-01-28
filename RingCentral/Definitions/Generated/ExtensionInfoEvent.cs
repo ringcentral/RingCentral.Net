@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionInfoEvent : Serializable
+    public class ExtensionInfoEvent
     {
         // Universally unique identifier of a notification
         public string uuid;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MessageEventBody : Serializable
+    public class MessageEventBody
     {
         // Internal identifier of an extension
         public string extensionId;

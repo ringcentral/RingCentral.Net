@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountLimits : Serializable
+    public class AccountLimits
     {
         // Max number of free softphone phone lines per user extension
         public long? freeSoftPhoneLinesPerExtension;

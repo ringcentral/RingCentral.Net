@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipWebhookInfo : Serializable
+    public class GlipWebhookInfo
     {
         // Internal identifier of a webhook
         public string id;

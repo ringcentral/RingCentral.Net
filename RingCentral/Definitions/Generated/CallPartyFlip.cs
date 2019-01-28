@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallPartyFlip : Serializable
+    public class CallPartyFlip
     {
         // Call flip id
         public string callFlipId;

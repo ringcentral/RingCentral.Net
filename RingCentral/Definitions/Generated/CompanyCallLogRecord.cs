@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CompanyCallLogRecord : Serializable
+    public class CompanyCallLogRecord
     {
         // Internal identifier of a cal log record
         public string id;

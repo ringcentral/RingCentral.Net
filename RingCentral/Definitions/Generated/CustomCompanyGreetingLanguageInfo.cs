@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CustomCompanyGreetingLanguageInfo : Serializable
+    public class CustomCompanyGreetingLanguageInfo
     {
         // Internal identifier of a greeting language
         public string id;

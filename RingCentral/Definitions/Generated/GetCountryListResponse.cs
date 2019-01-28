@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetCountryListResponse : Serializable
+    public class GetCountryListResponse
     {
         // List of countries with the country data
         public GetCountryInfoDictionaryResponse[] records; // Required

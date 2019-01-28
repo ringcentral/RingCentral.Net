@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class FilterSupported : Serializable
+    public class FilterSupported
     {
         public long? maxResults;
         public bool? supported;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ServiceInfo : Serializable
+    public class ServiceInfo
     {
         // Canonical URI of a service info resource
         public string uri;

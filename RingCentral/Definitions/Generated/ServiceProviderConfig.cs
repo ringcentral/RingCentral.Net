@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ServiceProviderConfig : Serializable
+    public class ServiceProviderConfig
     {
         public AuthenticationSchemes authenticationSchemes;
         public BulkSupported bulk;

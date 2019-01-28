@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PersonalContactResource : Serializable
+    public class PersonalContactResource
     {
         public string uri;
 

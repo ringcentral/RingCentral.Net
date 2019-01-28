@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipMessageAttachmentAuthorInfo : Serializable
+    public class GlipMessageAttachmentAuthorInfo
     {
         // Name of a message author
         public string name;

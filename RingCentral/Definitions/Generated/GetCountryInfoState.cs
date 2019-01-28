@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetCountryInfoState : Serializable
+    public class GetCountryInfoState
     {
         // Internal identifier of a state
         public string id;

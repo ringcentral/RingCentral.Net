@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetAccountInfoResponse : Serializable
+    public class GetAccountInfoResponse
     {
         // Internal identifier of an account
         public string id;

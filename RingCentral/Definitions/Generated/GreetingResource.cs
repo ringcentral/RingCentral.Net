@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GreetingResource : Serializable
+    public class GreetingResource
     {
         // Enum: StartRecording, StopRecording, AutomaticRecording
         public string type;

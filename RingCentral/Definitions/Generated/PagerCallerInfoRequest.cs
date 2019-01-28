@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PagerCallerInfoRequest : Serializable
+    public class PagerCallerInfoRequest
     {
         // Extension identifier
         public string extensionId; // Required

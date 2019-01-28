@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallStatusInfo : Serializable
+    public class CallStatusInfo
     {
         // Status code of a call
         // Enum: Setup, Proceeding, Answered, Disconnected, Gone, Parked, Hold, VoiceMail, FaxReceive, Tds, VoiceMailScreening

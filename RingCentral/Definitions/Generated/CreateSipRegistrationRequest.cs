@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateSipRegistrationRequest : Serializable
+    public class CreateSipRegistrationRequest
     {
         // Device unique description
         public DeviceInfoRequest[] device; // Required

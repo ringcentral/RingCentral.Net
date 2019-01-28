@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipTeamInfo : Serializable
+    public class GlipTeamInfo
     {
         // Internal identifier of a team
         public string id;

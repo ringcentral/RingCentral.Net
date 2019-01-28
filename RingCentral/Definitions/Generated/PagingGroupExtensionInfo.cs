@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PagingGroupExtensionInfo : Serializable
+    public class PagingGroupExtensionInfo
     {
         // Internal identifier of a paging group user extension
         public string id;

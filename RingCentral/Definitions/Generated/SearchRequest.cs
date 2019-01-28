@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SearchRequest : Serializable
+    public class SearchRequest
     {
         // page size
         public long? count;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PromptInfo : Serializable
+    public class PromptInfo
     {
         // Internal identifier of a prompt
         public string uri;

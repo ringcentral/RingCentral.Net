@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DepartmentMemberList : Serializable
+    public class DepartmentMemberList
     {
         // List of department members extensions
         public ExtensionInfo[] records;

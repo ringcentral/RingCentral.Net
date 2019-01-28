@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipMessageAttachmentFieldsInfo : Serializable
+    public class GlipMessageAttachmentFieldsInfo
     {
         // Title of an individual field
         public string title;

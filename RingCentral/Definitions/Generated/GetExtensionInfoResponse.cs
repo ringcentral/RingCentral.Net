@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetExtensionInfoResponse : Serializable
+    public class GetExtensionInfoResponse
     {
         // Internal identifier of an extension
         public long? id; // Required

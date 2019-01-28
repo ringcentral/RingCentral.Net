@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class StatusInfo : Serializable
+    public class StatusInfo
     {
         public string reason;
         public string till;

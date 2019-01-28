@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PartyUpdateInfo : Serializable
+    public class PartyUpdateInfo
     {
         // True if the party is muted. False - otherwise
         public bool? muted;

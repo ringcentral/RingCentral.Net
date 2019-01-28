@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipEventCreate : Serializable
+    public class GlipEventCreate
     {
         // Internal identifier of an event
         public string id;

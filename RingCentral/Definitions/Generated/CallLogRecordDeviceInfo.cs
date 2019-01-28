@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallLogRecordDeviceInfo : Serializable
+    public class CallLogRecordDeviceInfo
     {
         // Internal identifier of a device
         public string id;

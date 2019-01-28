@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PromptLanguageInfo : Serializable
+    public class PromptLanguageInfo
     {
         // Link to a prompt language
         public string uri;

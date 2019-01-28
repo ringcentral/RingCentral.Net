@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ContactInfo : Serializable
+    public class ContactInfo
     {
         // For User extension type only. Extension user first name
         public string firstName; // Required

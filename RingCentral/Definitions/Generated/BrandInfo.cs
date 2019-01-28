@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BrandInfo : Serializable
+    public class BrandInfo
     {
         // Internal identifier of a brand
         public string id;

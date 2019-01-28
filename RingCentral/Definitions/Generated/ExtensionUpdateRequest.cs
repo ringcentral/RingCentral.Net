@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionUpdateRequest : Serializable
+    public class ExtensionUpdateRequest
     {
         // Enum: Disabled, Enabled, NotActivated
         public string status;

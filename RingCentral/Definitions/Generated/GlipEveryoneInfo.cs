@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipEveryoneInfo : Serializable
+    public class GlipEveryoneInfo
     {
         // Internal identifier of a chat
         public string id;

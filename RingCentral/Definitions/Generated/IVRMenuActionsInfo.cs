@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class IVRMenuActionsInfo : Serializable
+    public class IVRMenuActionsInfo
     {
         // Key. The following values are supported: numeric: '1' to '9' Star Hash NoInput
         public string input;

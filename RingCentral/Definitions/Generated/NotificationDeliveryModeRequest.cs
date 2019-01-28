@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NotificationDeliveryModeRequest : Serializable
+    public class NotificationDeliveryModeRequest
     {
         // Notifications transportation provider name. 'APNS' (Apple Push Notifications Service)
         // Enum: PubNub, WebHook, APNS, PubNub/APNS, PubNub/GCM

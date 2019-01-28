@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ActivePermissionResource : Serializable
+    public class ActivePermissionResource
     {
         public PermissionIdResource permission;
         public RoleIdResource effectiveRole;

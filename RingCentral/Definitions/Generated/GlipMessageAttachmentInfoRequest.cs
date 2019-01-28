@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipMessageAttachmentInfoRequest : Serializable
+    public class GlipMessageAttachmentInfoRequest
     {
         // Type of attachment
         // Enum: Card, Event, Note

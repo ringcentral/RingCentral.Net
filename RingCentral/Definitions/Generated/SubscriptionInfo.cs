@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SubscriptionInfo : Serializable
+    public class SubscriptionInfo
     {
         // Internal identifier of a subscription
         public string id;

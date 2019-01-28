@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class VoicemailsInfo : Serializable
+    public class VoicemailsInfo
     {
         // Email notification flag
         public bool? notifyByEmail;

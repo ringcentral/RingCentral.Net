@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class FixedOrderAgents : Serializable
+    public class FixedOrderAgents
     {
         public ExtensionInfo extension;
 

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ForwardingNumberInfoRulesCreateRuleRequest : Serializable
+    public class ForwardingNumberInfoRulesCreateRuleRequest
     {
         // Internal identifier of a forwarding number
         public string id;

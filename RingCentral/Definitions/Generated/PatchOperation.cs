@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PatchOperation : Serializable
+    public class PatchOperation
     {
         // Enum: add, replace, remove
         public string op; // Required

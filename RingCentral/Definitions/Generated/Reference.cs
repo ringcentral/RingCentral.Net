@@ -1,6 +1,8 @@
+using Newtonsoft.Json;
+
 namespace RingCentral
 {
-    public class Reference : Serializable
+    public class Reference
     {
         // Enum: PartnerId, CustomerDirectoryId
         public string type;

@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     // Returns the lists of blocked and allowed phone numbers
-    public class CallerBlockingSettings : Serializable
+    public class CallerBlockingSettings
     {
         // Call blocking options: either specific or all calls and faxes
         // Enum: Specific, All

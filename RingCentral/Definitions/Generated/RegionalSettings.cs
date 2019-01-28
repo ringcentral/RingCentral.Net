@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RegionalSettings : Serializable
+    public class RegionalSettings
     {
         // Extension country information
         public CountryInfo homeCountry;

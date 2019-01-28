@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CompanyPhoneNumberInfo : Serializable
+    public class CompanyPhoneNumberInfo
     {
         // Internal identifier of a phone number
         public string id;

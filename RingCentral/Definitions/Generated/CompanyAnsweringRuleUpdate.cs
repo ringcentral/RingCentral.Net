@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CompanyAnsweringRuleUpdate : Serializable
+    public class CompanyAnsweringRuleUpdate
     {
         // Specifies if the rule is active or inactive. The default value is 'True'
         public bool? enabled;

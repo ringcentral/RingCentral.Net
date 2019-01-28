@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionPermissionsResource : Serializable
+    public class ExtensionPermissionsResource
     {
         public string uri;
         public Permission admin;

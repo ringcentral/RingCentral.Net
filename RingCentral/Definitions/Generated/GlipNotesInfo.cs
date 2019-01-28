@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipNotesInfo : Serializable
+    public class GlipNotesInfo
     {
         public GlipNoteInfo[] records;
         public GlipNavigationInfo navigation;

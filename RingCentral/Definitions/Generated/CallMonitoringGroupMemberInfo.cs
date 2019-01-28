@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallMonitoringGroupMemberInfo : Serializable
+    public class CallMonitoringGroupMemberInfo
     {
         // Link to a call monitoring group member
         public string uri;

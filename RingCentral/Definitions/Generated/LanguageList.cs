@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LanguageList : Serializable
+    public class LanguageList
     {
         // Canonical URI of the language list resource
         public string uri;

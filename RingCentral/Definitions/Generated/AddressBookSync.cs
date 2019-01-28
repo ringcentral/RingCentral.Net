@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AddressBookSync : Serializable
+    public class AddressBookSync
     {
         public string uri;
         public PersonalContactResource[] records;

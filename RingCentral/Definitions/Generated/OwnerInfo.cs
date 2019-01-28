@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class OwnerInfo : Serializable
+    public class OwnerInfo
     {
         // Internal identifier of an account
         public string accountId;

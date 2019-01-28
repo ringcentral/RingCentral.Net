@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LocationInfo : Serializable
+    public class LocationInfo
     {
         // Canonical URI of a location
         public string uri;

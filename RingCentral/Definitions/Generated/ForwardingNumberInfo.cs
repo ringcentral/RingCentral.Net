@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ForwardingNumberInfo : Serializable
+    public class ForwardingNumberInfo
     {
         // Internal identifier of a forwarding/call flip phone number
         public string id;

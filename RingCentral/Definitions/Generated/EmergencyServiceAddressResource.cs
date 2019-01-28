@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EmergencyServiceAddressResource : Serializable
+    public class EmergencyServiceAddressResource
     {
         public string street;
         public string street2;

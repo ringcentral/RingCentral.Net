@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AuthProfileResource : Serializable
+    public class AuthProfileResource
     {
         public string uri;
         public ActivePermissionResource[] permissions;

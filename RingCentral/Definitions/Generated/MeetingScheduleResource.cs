@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingScheduleResource : Serializable
+    public class MeetingScheduleResource
     {
         public string startTime;
         public long? durationInMinutes;

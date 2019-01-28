@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetExtensionForwardingNumberListResponse : Serializable
+    public class GetExtensionForwardingNumberListResponse
     {
         // List of forwarding phone numbers
         public ForwardingNumberInfo[] records;

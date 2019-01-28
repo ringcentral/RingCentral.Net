@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ConferencePhoneNumberInfo : Serializable
+    public class ConferencePhoneNumberInfo
     {
         // Dial-in phone number to connect to a conference
         public string phoneNumber;

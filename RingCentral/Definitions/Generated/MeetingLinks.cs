@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingLinks : Serializable
+    public class MeetingLinks
     {
         public string startUri;
         public string joinUri;

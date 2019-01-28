@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ModelInfo : Serializable
+    public class ModelInfo
     {
         // Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
         public string id;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BlockedCallerGreetingInfo : Serializable
+    public class BlockedCallerGreetingInfo
     {
         // Type of a greeting
         public string type;

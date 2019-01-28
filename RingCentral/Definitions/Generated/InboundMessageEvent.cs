@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class InboundMessageEvent : Serializable
+    public class InboundMessageEvent
     {
         // Information on a notification
         public NotificationInfo aps;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ActiveCallInfoWithoutSIP : Serializable
+    public class ActiveCallInfoWithoutSIP
     {
         // Internal identifier of a call
         public string id;

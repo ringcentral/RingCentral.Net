@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     // resource metadata
-    public class Meta : Serializable
+    public class Meta
     {
         public string created;
 

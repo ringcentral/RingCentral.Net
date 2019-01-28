@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallRecordingCustomGreetingData : Serializable
+    public class CallRecordingCustomGreetingData
     {
         // Link to a custom company greeting
         public string uri;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BulkAccountCallRecordingsResource : Serializable
+    public class BulkAccountCallRecordingsResource
     {
         public CallRecordingExtensionResource addedExtensions;
         public CallRecordingExtensionResource updatedExtensions;

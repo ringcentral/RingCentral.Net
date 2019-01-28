@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipNoteCreate : Serializable
+    public class GlipNoteCreate
     {
         // Title of a note
         public string title; // Required

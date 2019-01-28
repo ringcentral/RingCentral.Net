@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountResource : Serializable
+    public class AccountResource
     {
         public string companyName;
         public string federatedName;

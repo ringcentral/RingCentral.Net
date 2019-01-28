@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CompanyAnsweringRuleWeeklyScheduleInfoRequest : Serializable
+    public class CompanyAnsweringRuleWeeklyScheduleInfoRequest
     {
         // Time interval for a particular day
         public CompanyAnsweringRuleTimeIntervalRequest[] monday;

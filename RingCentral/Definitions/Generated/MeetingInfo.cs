@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingInfo : Serializable
+    public class MeetingInfo
     {
         public string id;
         public string topic;

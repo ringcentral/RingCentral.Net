@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class TemplateInfo : Serializable
+    public class TemplateInfo
     {
         // Link to a template
         public string uri;

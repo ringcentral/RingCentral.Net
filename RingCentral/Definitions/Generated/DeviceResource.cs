@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DeviceResource : Serializable
+    public class DeviceResource
     {
         // Internal identifier of a device
         public string id;

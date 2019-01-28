@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetTimezoneInfoResponse : Serializable
+    public class GetTimezoneInfoResponse
     {
         // Internal identifier of a timezone
         public string id;

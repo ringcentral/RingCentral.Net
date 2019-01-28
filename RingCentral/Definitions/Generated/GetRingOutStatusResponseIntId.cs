@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetRingOutStatusResponseIntId : Serializable
+    public class GetRingOutStatusResponseIntId
     {
         // Internal identifier of a RingOut call
         public long? id;

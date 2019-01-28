@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RegionalSettingsResource : Serializable
+    public class RegionalSettingsResource
     {
         public TimezoneResource timezone;
         public CountryResource homeCountry;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountBusinessAddressResource : Serializable
+    public class AccountBusinessAddressResource
     {
         public string uri;
         public ContactBusinessAddressInfo businessAddress;

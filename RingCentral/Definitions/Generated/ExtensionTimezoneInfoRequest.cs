@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionTimezoneInfoRequest : Serializable
+    public class ExtensionTimezoneInfoRequest
     {
         // internal Identifier of a timezone
         public string id;

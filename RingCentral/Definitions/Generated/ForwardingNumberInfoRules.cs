@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ForwardingNumberInfoRules : Serializable
+    public class ForwardingNumberInfoRules
     {
         // Link to a forwarding number resource
         public string uri;

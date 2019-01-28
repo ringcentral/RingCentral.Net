@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class OrderBy : Serializable
+    public class OrderBy
     {
         // Sorting priority index, starting from '1'. Optional if only one element in `orderBy` array is specified
         public long? index;

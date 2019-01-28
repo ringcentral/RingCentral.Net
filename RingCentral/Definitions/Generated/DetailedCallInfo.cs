@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DetailedCallInfo : Serializable
+    public class DetailedCallInfo
     {
         public string callId;
         public string toTag;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DictionaryGreetingInfo : Serializable
+    public class DictionaryGreetingInfo
     {
         // Internal identifier of a greeting
         public string id;

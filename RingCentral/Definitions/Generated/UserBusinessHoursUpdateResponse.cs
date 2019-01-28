@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UserBusinessHoursUpdateResponse : Serializable
+    public class UserBusinessHoursUpdateResponse
     {
         // Canonical URI of a business-hours resource
         public string uri;

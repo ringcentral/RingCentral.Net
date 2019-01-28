@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ModifyAccountBusinessAddressRequest : Serializable
+    public class ModifyAccountBusinessAddressRequest
     {
         // Company business name
         public string company;

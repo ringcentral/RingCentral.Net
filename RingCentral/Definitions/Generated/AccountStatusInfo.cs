@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountStatusInfo : Serializable
+    public class AccountStatusInfo
     {
         // A free-form user comment, describing the status change reason
         public string comment;

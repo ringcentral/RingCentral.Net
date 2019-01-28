@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class TransferredExtensionInfo : Serializable
+    public class TransferredExtensionInfo
     {
         public ExtensionInfo extension;
     }

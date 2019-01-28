@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class APNSInfo : Serializable
+    public class APNSInfo
     {
         // Notification priority data
         public APSInfo aps;

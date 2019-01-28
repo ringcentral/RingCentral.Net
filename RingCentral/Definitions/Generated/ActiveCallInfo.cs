@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ActiveCallInfo : Serializable
+    public class ActiveCallInfo
     {
         public string id;
 

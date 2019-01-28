@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ActiveCallsRecordExtensionInfo : Serializable
+    public class ActiveCallsRecordExtensionInfo
     {
         // Link to an extension on whose behalf a call is initiated
         public string uri;

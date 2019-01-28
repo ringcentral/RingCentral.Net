@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountPhoneNumbers : Serializable
+    public class AccountPhoneNumbers
     {
         // List of account phone numbers
         public CompanyPhoneNumberInfo[] records;

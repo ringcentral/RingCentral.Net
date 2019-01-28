@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EmergencyAddress : Serializable
+    public class EmergencyAddress
     {
         // 'True' if specifying of emergency address is required
         public bool? required;

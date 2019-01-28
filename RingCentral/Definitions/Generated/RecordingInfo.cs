@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RecordingInfo : Serializable
+    public class RecordingInfo
     {
         // Internal identifier of the call recording
         public string id;

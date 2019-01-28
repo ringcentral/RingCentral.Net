@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipCreatePost : Serializable
+    public class GlipCreatePost
     {
         // Title of a message. (Can be set for bot's messages only).
         public string title;

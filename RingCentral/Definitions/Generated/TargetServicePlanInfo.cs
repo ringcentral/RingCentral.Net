@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class TargetServicePlanInfo : Serializable
+    public class TargetServicePlanInfo
     {
         // Internal identifier of a target service plan
         public string id;

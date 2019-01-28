@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace RingCentral
 {
-    public class NotificationInfo : Serializable
+    public class NotificationInfo
     {
         // Alert information
         public AlertInfo alert;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionInfoCallLog : Serializable
+    public class ExtensionInfoCallLog
     {
         // Internal identifier of an extension
         public string id;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ProfileImageResource : Serializable
+    public class ProfileImageResource
     {
         public string uri;
         public string etag;

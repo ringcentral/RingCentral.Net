@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipMessageAttachmentInfo : Serializable
+    public class GlipMessageAttachmentInfo
     {
         // Internal identifier of an attachment
         public string id;

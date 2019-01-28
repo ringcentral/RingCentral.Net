@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class FederatedAccountResource : Serializable
+    public class FederatedAccountResource
     {
         public string companyName;
         public long? conflictCount;

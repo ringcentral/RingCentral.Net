@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetMessageList : Serializable
+    public class GetMessageList
     {
         // List of records with message information
         public GetMessageInfoResponse[] records; // Required

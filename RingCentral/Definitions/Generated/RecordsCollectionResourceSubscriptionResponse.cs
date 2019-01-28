@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RecordsCollectionResourceSubscriptionResponse : Serializable
+    public class RecordsCollectionResourceSubscriptionResponse
     {
         public string uri;
         public SubscriptionInfo[] records;

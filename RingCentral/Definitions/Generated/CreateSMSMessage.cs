@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateSMSMessage : Serializable
+    public class CreateSMSMessage
     {
         // Sender of an SMS message. The phoneNumber property must be filled to correspond to one of the account phone numbers which is allowed to send SMS
         public MessageStoreCallerInfoRequest from; // Required

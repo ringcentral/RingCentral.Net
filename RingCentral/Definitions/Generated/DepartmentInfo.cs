@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DepartmentInfo : Serializable
+    public class DepartmentInfo
     {
         // Internal identifier of a department extension
         public string id;

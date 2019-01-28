@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BillingPlanInfo : Serializable
+    public class BillingPlanInfo
     {
         // Internal identifier of a billing plan
         public string id;

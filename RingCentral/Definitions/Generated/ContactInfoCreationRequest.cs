@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ContactInfoCreationRequest : Serializable
+    public class ContactInfoCreationRequest
     {
         // For User extension type only. Extension user first name
         public string firstName; // Required

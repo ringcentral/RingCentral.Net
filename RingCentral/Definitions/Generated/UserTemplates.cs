@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UserTemplates : Serializable
+    public class UserTemplates
     {
         // Link to user templates resource
         public string uri;

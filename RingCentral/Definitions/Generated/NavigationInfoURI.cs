@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NavigationInfoURI : Serializable
+    public class NavigationInfoURI
     {
         public string uri;
     }

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SearchDirectoryEntriesRequest : Serializable
+    public class SearchDirectoryEntriesRequest
     {
         // String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`
         public string searchString;

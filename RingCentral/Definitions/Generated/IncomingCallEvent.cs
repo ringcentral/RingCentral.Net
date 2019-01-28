@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class IncomingCallEvent : Serializable
+    public class IncomingCallEvent
     {
         // Apple Push Notification Service Info
         public APSInfo aps;

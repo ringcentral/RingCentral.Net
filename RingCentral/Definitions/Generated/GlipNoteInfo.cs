@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipNoteInfo : Serializable
+    public class GlipNoteInfo
     {
         // Internal identifier of a note
         public string id;

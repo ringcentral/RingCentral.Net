@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class InstantMessageEvent : Serializable
+    public class InstantMessageEvent
     {
         // Universally unique identifier of a notification
         public string uuid;

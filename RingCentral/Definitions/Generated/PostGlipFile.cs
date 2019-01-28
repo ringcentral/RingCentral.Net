@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PostGlipFile : Serializable
+    public class PostGlipFile
     {
         // Internal identifier of a file
         public string id; // Required

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NotificationSettingsUpdateRequest : Serializable
+    public class NotificationSettingsUpdateRequest
     {
         // List of notification recipient email addresses
         public string[] emailAddresses;

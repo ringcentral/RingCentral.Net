@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetPresenceInfo : Serializable
+    public class GetPresenceInfo
     {
         // Canonical URI of a presence info resource
         public string uri;

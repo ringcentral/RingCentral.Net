@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RingOutStatusInfo : Serializable
+    public class RingOutStatusInfo
     {
         // Status of a call
         // Enum: Invalid, Success, InProgress, Busy, NoAnswer, Rejected, GenericError, Finished, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser

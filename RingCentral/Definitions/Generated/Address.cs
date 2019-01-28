@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Address : Serializable
+    public class Address
     {
         public string country;
         public string locality;

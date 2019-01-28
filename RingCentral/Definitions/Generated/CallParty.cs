@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallParty : Serializable
+    public class CallParty
     {
         // Internal identifier of a party
         public string id;

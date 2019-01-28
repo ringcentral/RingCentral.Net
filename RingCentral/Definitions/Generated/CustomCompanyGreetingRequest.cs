@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CustomCompanyGreetingRequest : Serializable
+    public class CustomCompanyGreetingRequest
     {
         // Type of a greeting
         // Enum: Company, StartRecording, StopRecording, AutomaticRecording

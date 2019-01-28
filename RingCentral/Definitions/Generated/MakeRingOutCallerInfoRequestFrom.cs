@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MakeRingOutCallerInfoRequestFrom : Serializable
+    public class MakeRingOutCallerInfoRequestFrom
     {
         // Phone number in E.164 format
         public string phoneNumber;

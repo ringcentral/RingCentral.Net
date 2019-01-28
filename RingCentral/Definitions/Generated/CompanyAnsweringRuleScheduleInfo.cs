@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CompanyAnsweringRuleScheduleInfo : Serializable
+    public class CompanyAnsweringRuleScheduleInfo
     {
         // Weekly schedule. If specified, ranges cannot be specified
         public CompanyAnsweringRuleWeeklyScheduleInfoRequest weeklyRanges;

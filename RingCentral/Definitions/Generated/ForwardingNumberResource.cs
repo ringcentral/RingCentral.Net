@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ForwardingNumberResource : Serializable
+    public class ForwardingNumberResource
     {
         public string uri;
         public string id;

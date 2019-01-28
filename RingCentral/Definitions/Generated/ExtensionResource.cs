@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionResource : Serializable
+    public class ExtensionResource
     {
         public string uri;
         public string id;

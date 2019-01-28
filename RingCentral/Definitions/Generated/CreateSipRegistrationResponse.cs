@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateSipRegistrationResponse : Serializable
+    public class CreateSipRegistrationResponse
     {
         // Suggested interval in seconds to periodically call SIP-provision API and update the local cache
         public long? pollingInterval;

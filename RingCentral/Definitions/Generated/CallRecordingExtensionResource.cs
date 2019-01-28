@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallRecordingExtensionResource : Serializable
+    public class CallRecordingExtensionResource
     {
         // Internal identifier of an extension
         public string id;

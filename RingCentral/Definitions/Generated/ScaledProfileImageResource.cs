@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ScaledProfileImageResource : Serializable
+    public class ScaledProfileImageResource
     {
         public string uri;
     }

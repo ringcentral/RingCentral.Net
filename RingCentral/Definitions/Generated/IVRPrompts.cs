@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class IVRPrompts : Serializable
+    public class IVRPrompts
     {
         // Link to prompts library resource
         public string uri;

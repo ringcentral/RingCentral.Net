@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipMessageAttachmentFootnoteInfo : Serializable
+    public class GlipMessageAttachmentFootnoteInfo
     {
         // Text of a footer
         public string text;

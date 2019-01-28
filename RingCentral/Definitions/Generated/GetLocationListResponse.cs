@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetLocationListResponse : Serializable
+    public class GetLocationListResponse
     {
         // List of locations
         public LocationInfo[] records;

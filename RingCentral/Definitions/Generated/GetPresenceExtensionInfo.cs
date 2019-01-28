@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetPresenceExtensionInfo : Serializable
+    public class GetPresenceExtensionInfo
     {
         // Internal identifier of an extension
         public string id;

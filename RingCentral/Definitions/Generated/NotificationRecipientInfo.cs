@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NotificationRecipientInfo : Serializable
+    public class NotificationRecipientInfo
     {
         // Phone number in E.164 (with '+' sign) format
         public string phoneNumber;

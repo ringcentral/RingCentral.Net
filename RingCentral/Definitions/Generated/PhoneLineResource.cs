@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PhoneLineResource : Serializable
+    public class PhoneLineResource
     {
         // Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
         public string lineType;

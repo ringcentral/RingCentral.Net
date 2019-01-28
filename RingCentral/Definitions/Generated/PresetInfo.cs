@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PresetInfo : Serializable
+    public class PresetInfo
     {
         // Link to a greeting resource
         public string uri;

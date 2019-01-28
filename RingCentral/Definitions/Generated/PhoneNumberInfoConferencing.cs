@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PhoneNumberInfoConferencing : Serializable
+    public class PhoneNumberInfoConferencing
     {
         // Information on a home country of a conference phone number
         public GetCountryInfoConferencing country;

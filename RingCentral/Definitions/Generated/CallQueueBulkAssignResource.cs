@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallQueueBulkAssignResource : Serializable
+    public class CallQueueBulkAssignResource
     {
         public string[] addedExtensionIds;
         public string[] removedExtensionIds;

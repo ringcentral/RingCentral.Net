@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ProfileImageInfo : Serializable
+    public class ProfileImageInfo
     {
         // Link to a profile image. If an image is not uploaded for an extension, only uri is returned
         public string uri; // Required

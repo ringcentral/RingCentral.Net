@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetCountryInfoConferencing : Serializable
+    public class GetCountryInfoConferencing
     {
         // Internal identifier of a country
         public string id;

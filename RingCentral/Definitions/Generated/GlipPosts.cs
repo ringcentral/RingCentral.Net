@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipPosts : Serializable
+    public class GlipPosts
     {
         // List of posts
         public GlipPostInfo[] records; // Required

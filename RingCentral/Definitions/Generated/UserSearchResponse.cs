@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UserSearchResponse : Serializable
+    public class UserSearchResponse
     {
         // user list
         public UserResponse[] Resources;

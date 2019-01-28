@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DelegateInfo : Serializable
+    public class DelegateInfo
     {
         // Internal identifier of a Secretary extension
         public string id;

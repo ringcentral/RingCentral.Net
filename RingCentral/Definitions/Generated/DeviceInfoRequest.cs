@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DeviceInfoRequest : Serializable
+    public class DeviceInfoRequest
     {
         // Device unique identifier, retrieved on previous session (if any)
         public string id;

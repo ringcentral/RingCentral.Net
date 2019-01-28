@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Roles : Serializable
+    public class Roles
     {
         public string uri;
 

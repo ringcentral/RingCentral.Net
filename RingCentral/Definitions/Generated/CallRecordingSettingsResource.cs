@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallRecordingSettingsResource : Serializable
+    public class CallRecordingSettingsResource
     {
         public OnDemandResource onDemand;
 

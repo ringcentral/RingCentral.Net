@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LanguageResource : Serializable
+    public class LanguageResource
     {
         public string id;
         public string name;

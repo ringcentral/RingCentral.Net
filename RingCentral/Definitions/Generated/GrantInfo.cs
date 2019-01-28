@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GrantInfo : Serializable
+    public class GrantInfo
     {
         // Canonical URI of a grant
         public string uri;

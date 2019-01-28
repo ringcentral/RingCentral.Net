@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountPresenceEvent : Serializable
+    public class AccountPresenceEvent
     {
         // Universally unique identifier of a notification
         public string uuid;

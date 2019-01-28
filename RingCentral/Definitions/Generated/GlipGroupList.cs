@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipGroupList : Serializable
+    public class GlipGroupList
     {
         // List of groups/teams/private chats
         public GlipGroupInfo[] records; // Required

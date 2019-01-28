@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RuleInfo : Serializable
+    public class RuleInfo
     {
         // Forwarding number (or group) ordinal
         public long? index;

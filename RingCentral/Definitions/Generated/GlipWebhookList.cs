@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipWebhookList : Serializable
+    public class GlipWebhookList
     {
         public GlipWebhookInfo[] records;
     }

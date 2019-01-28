@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionServiceFeatureInfo : Serializable
+    public class ExtensionServiceFeatureInfo
     {
         // Feature status; shows feature availability for an extension
         public bool? enabled;

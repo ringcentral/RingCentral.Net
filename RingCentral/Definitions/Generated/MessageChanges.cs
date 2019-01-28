@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MessageChanges : Serializable
+    public class MessageChanges
     {
         // Message type
         // Enum: Voicemail, SMS, Fax, Pager

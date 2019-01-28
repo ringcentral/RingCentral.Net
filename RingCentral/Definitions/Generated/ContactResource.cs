@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ContactResource : Serializable
+    public class ContactResource
     {
         public AccountResource account;
         public string department;

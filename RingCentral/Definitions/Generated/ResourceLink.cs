@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ResourceLink : Serializable
+    public class ResourceLink
     {
         public string uri;
     }

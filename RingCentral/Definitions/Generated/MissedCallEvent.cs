@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MissedCallEvent : Serializable
+    public class MissedCallEvent
     {
         // Universally unique identifier of a notification
         public string uuid;

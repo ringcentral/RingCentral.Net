@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PartyUpdateRequest : Serializable
+    public class PartyUpdateRequest
     {
         // Party update data
         public PartyUpdateInfo party;

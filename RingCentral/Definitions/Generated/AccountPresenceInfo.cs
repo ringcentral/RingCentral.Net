@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountPresenceInfo : Serializable
+    public class AccountPresenceInfo
     {
         // Canonical URI of account presence resource
         public string uri;

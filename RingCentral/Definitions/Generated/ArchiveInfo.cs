@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ArchiveInfo : Serializable
+    public class ArchiveInfo
     {
         // Archive size in bytes
         public long? size;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PartyInfo : Serializable
+    public class PartyInfo
     {
         // Phone number of a party
         public string phoneNumber;

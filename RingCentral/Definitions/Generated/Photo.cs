@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Photo : Serializable
+    public class Photo
     {
         // Enum: photo
         public string type; // Required

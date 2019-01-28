@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetConferencingInfoResponse : Serializable
+    public class GetConferencingInfoResponse
     {
         // Canonical URI of a conferencing
         public string uri;

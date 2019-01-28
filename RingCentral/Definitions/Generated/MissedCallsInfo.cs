@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MissedCallsInfo : Serializable
+    public class MissedCallsInfo
     {
         // Email notification flag
         public bool? notifyByEmail;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DetailedExtensionPresenceWithSIPEvent : Serializable
+    public class DetailedExtensionPresenceWithSIPEvent
     {
         // Universally unique identifier of a notification
         public string uuid;

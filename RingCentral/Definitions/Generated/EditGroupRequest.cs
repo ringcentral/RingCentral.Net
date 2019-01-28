@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EditGroupRequest : Serializable
+    public class EditGroupRequest
     {
         // List of users to be added to a team
         public string[] addedPersonIds;

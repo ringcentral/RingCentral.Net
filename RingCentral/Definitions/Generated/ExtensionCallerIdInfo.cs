@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionCallerIdInfo : Serializable
+    public class ExtensionCallerIdInfo
     {
         // Canonical URL of a caller ID resource
         public string uri;

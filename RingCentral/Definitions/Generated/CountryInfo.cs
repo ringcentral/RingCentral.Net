@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CountryInfo : Serializable
+    public class CountryInfo
     {
         // Internal identifier of a home country
         public string id;

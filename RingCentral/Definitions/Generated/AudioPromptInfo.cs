@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AudioPromptInfo : Serializable
+    public class AudioPromptInfo
     {
         // Link to an prompt audio file
         public string uri;

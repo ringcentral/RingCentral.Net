@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MakeRingOutCoutryInfo : Serializable
+    public class MakeRingOutCoutryInfo
     {
         // Dialing plan country identifier
         public string id;

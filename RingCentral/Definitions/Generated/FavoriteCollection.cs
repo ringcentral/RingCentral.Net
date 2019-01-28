@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class FavoriteCollection : Serializable
+    public class FavoriteCollection
     {
         public string uri;
         public FavoriteContactResource[] records;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AddonInfo : Serializable
+    public class AddonInfo
     {
         public string id;
         public string name;

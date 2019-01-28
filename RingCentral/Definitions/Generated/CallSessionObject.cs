@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallSessionObject : Serializable
+    public class CallSessionObject
     {
         // Internal identifier of a call session
         public string id;

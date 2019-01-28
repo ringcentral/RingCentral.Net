@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UserPatch : Serializable
+    public class UserPatch
     {
         // patch operations list
         public PatchOperation[] Operations; // Required

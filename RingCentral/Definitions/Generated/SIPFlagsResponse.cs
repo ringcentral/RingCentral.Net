@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SIPFlagsResponse : Serializable
+    public class SIPFlagsResponse
     {
         // If 'True' VoIP calling feature is enabled
         // Enum: True, False

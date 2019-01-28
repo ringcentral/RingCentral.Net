@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CalledNumberInfo : Serializable
+    public class CalledNumberInfo
     {
         // Called phone number
         public string phoneNumber;

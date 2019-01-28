@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ListMeetingRecordingsResponse : Serializable
+    public class ListMeetingRecordingsResponse
     {
         public MeetingRecordingInfo[] records;
         public PagingInfo paging;

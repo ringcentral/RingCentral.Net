@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace RingCentral
 {
-    public class User : Serializable
+    public class User
     {
         // user status
         public bool? active;

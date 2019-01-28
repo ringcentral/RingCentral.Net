@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DepartmentBulkAssignResource : Serializable
+    public class DepartmentBulkAssignResource
     {
         public BulkAssignItem[] items;
     }

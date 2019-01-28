@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class IVRMenuExtensionInfo : Serializable
+    public class IVRMenuExtensionInfo
     {
         // Link to an extension resource
         public string uri;

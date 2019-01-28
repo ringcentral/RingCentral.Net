@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallMonitoringBulkAssign : Serializable
+    public class CallMonitoringBulkAssign
     {
         public CallMonitoringExtensionUpdate[] addedExtensions;
         public CallMonitoringExtensionUpdate[] removedExtensions;

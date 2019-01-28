@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class InboundTextsInfo : Serializable
+    public class InboundTextsInfo
     {
         // Email notification flag
         public bool? notifyByEmail;

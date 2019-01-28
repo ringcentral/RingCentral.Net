@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BusinessSiteResource : Serializable
+    public class BusinessSiteResource
     {
         public string id;
         public string name;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MethodResource : Serializable
+    public class MethodResource
     {
         public string id;
         public string name;

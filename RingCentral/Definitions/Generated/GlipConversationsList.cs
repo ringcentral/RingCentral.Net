@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GlipConversationsList : Serializable
+    public class GlipConversationsList
     {
         // List of conversations
         public GlipConversationInfo[] records; // Required
