@@ -1,11 +1,8 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
-import dotenv from 'dotenv'
 import path from 'path'
 
-dotenv.config()
-
-var doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
+const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
 const definitions = doc.definitions
 const models = Object.keys(definitions).map(k => ({ name: k, ...definitions[k] }))
 
@@ -73,7 +70,7 @@ namespace RingCentral
 }
 `.trim()
   console.log(source)
-  fs.writeFileSync(path.join(process.env.csharp_output_dir, `${m.name}.cs`), source)
+  fs.writeFileSync(path.join('../RingCentral/Definitions/Generated', `${m.name}.cs`), source)
 })
 
 console.log(new Set(types.filter(t => /^[a-z]+$/.test(t))))
