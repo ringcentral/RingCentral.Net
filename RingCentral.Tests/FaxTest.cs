@@ -40,7 +40,7 @@ namespace RingCentral.Tests
                             phoneNumber = env["RINGCENTRAL_RECEIVER"] as string
 //                            phoneNumber = "16506417402"
                         }
-                    },
+                    }
                 }), Encoding.UTF8, "application/json");
                 multipartFormDataContent.Add(stringContent, "request.json");
 

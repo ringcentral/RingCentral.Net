@@ -18,7 +18,7 @@ namespace RingCentral
         public Action<string> callback;
         private Pubnub pubnub;
 
-        private bool renewScheduled = false;
+        private bool renewScheduled;
         private SubscriptionInfo _subscriptionInfo;
 
         public SubscriptionInfo subscriptionInfo
@@ -29,7 +29,7 @@ namespace RingCentral
                 _subscriptionInfo = value;
                 if (value == null || renewScheduled) return;
                 Debug.Assert(_subscriptionInfo.expiresIn != null, "subscriptionInfo.expiresIn != null");
-                Task.Delay((int) (_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(async (action) =>
+                Task.Delay((int) (_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(async action =>
                 {
                     // 2 minutes before expiration
                     renewScheduled = false;
@@ -67,7 +67,7 @@ namespace RingCentral
                 (pubnubObj, presence) => { },
                 (pubnubObj, status) => { }
             ));
-            pubnub.Subscribe<string>().Channels(new string[]
+            pubnub.Subscribe<string>().Channels(new[]
             {
                 subscriptionInfo.deliveryMode.address
             }).Execute();

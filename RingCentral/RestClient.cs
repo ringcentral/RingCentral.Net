@@ -50,10 +50,8 @@ namespace RingCentral
             {
                 return httpResponseMessage;
             }
-            else
-            {
-                throw new RestException(httpResponseMessage);
-            }
+
+            throw new RestException(httpResponseMessage);
         }
 
         public async Task<TokenInfo> Authorize(string username, string extension, string password)
@@ -87,7 +85,7 @@ namespace RingCentral
             var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
                 {"grant_type", "refresh_token"},
-                {"refresh_token", Token.refresh_token},
+                {"refresh_token", Token.refresh_token}
             });
             var httpRequestMessage = new HttpRequestMessage
             {
@@ -110,7 +108,7 @@ namespace RingCentral
 
             var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
-                {"token", Token.access_token},
+                {"token", Token.access_token}
             });
             var httpRequestMessage = new HttpRequestMessage
             {
