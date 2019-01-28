@@ -26,13 +26,13 @@ namespace RingCentral.Tests
                 );
                 var httpContent = new StringContent(JsonConvert.SerializeObject(new
                 {
-                    from = new MessageStoreCallerInfoRequest
+                    from = new
                     {
                         phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME")
                     },
                     to = new[]
                     {
-                        new MessageStoreCallerInfoRequest
+                        new
                         {
                             phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
                         }

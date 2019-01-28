@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <Folder Include="Definitions\Generated" />
+      <Folder Include="Paths\Generated" />
     </ItemGroup>
 
     <ItemGroup>
