@@ -20232,7 +20232,9 @@ definitions:
     type: object
     properties:
       authenticationSchemes:
-        $ref: '#/definitions/AuthenticationSchemes'
+        type: array
+        items:
+          $ref: '#/definitions/AuthenticationScheme'
       bulk:
         $ref: '#/definitions/BulkSupported'
       changePassword:
@@ -20388,13 +20390,6 @@ definitions:
       value:
         type: string
         description: corresponding 'value' of that field specified by 'path'
-  AuthenticationSchemes:
-    type: object
-    properties:
-      authenticationSchemes:
-        type: array
-        items:
-          $ref: '#/definitions/AuthenticationScheme'
   BulkSupported:
     type: object
     properties:
