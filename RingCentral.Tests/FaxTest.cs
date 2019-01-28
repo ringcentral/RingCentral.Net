@@ -27,7 +27,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                MultipartFormDataContent multipartFormDataContent = new MultipartFormDataContent();
+                var multipartFormDataContent = new MultipartFormDataContent();
 
                 // specify fax sending options including "to"
                 var stringContent = new StringContent(JsonConvert.SerializeObject(new
