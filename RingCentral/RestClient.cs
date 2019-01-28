@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using RingCentral.Paths;
 
 namespace RingCentral
 {
@@ -123,6 +124,11 @@ namespace RingCentral
         public async void Dispose()
         {
             await Revoke();
+        }
+
+        public Restapi Restapi()
+        {
+            return new Restapi(this);
         }
     }
 }
