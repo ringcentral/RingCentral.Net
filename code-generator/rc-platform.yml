@@ -14299,18 +14299,20 @@ definitions:
     type: object
     properties:
       chats:
-        type: object
-        properties:
-          maxCount:
-            type: number
-            default: 10
-          leftRailMode:
-            type: string
-            default: CombineAllChatTypes
-            enum:
-            - SeparateAllChatTypes
-            - SeparateConversationsAndTeams
-            - CombineAllChatTypes
+        $ref: '#/definitions/GlipPreferencesChats'
+  GlipPreferencesChats:
+    type: object
+    properties:
+      maxCount:
+        type: number
+        default: 10
+      leftRailMode:
+        type: string
+        default: CombineAllChatTypes
+        enum:
+        - SeparateAllChatTypes
+        - SeparateConversationsAndTeams
+        - CombineAllChatTypes
   GlipConversationsList:
     type: object
     required:
