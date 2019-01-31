@@ -25,7 +25,7 @@ namespace RingCentral.Tests
                 Assert.Equal("v1.0", restApi.uriString);
             }
         }
-        
+
         [Fact]
         public async Task List()
         {

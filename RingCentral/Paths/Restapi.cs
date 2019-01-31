@@ -6,7 +6,7 @@ namespace RingCentral.Paths
     {
         public RestClient rc;
         public string apiVersion;
-        
+
         public Restapi(RestClient rc, string apiVersion = "v1.0")
         {
             this.rc = rc;
