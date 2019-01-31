@@ -13,12 +13,22 @@ namespace RingCentral.Paths.Scim
 
         public string Path()
         {
-            return $"/scim/{version}";
+            if (version != null)
+            {
+                return $"/scim/{version}";
+            }
+
+            return "/scim";
         }
 
         public Scim.ServiceProviderConfig.Index ServiceProviderConfig()
         {
             return new Scim.ServiceProviderConfig.Index(this);
+        }
+
+        public Scim.Health.Index Health()
+        {
+            return new Scim.Health.Index(this);
         }
     }
 }

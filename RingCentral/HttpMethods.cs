@@ -23,7 +23,17 @@ namespace RingCentral
             HttpContent httpContent = null)
         {
             var httpResponseMessage = await Request(httpMethod, endpoint, httpContent);
+            if (typeof(T) == typeof(HttpResponseMessage))
+            {
+                return (T)(object)httpResponseMessage;
+            }
+
             var content = await httpResponseMessage.Content.ReadAsStringAsync();
+            if (typeof(T) == typeof(string))
+            {
+                return (T)(object)content;
+            }
+            
             return JsonConvert.DeserializeObject<T>(content);
         }
 
