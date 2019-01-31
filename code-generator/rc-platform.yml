@@ -2809,7 +2809,7 @@ paths:
         description: Number of chats to be fetched by one request. The maximum value
           is 250, by default - 30.
         required: false
-        type: number
+        type: integer
         default: 30
         maximum: 250
       - name: pageToken
@@ -2877,7 +2877,7 @@ paths:
         description: Number of conversations to be fetched by one request. The maximum
           value is 250, by default - 30
         required: false
-        type: number
+        type: integer
         default: 30
         maximum: 250
       - name: pageToken
@@ -2982,7 +2982,7 @@ paths:
         description: Number of teams to be fetched by one request. The maximum value
           is 250, by default - 30
         required: false
-        type: number
+        type: integer
         default: 30
         maximum: 250
       - name: pageToken
@@ -3222,7 +3222,7 @@ paths:
         description: Number of groups to be fetched by one request. The maximum value
           is 250, by default - 30
         required: false
-        type: number
+        type: integer
         default: 30
         maximum: 250
       - name: pageToken
@@ -4039,7 +4039,7 @@ paths:
         description: Number of groups to be fetched by one request, the maximum value
           is 250, the default is 30
         required: false
-        type: number
+        type: integer
         default: 30
         maximum: 250
       - name: pageToken
@@ -14304,7 +14304,7 @@ definitions:
     type: object
     properties:
       maxCount:
-        type: number
+        type: integer
         default: 10
       leftRailMode:
         type: string
