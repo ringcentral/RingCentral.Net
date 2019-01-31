@@ -53,7 +53,7 @@ namespace RingCentral
         // Datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         public string lastModifiedTime;
 
-        // Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages
+        // Cover page identifier. For the list of available cover page identifiers please call the Fax Cover Pages method
         public long? coverIndex;
 
         // Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols

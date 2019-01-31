@@ -11,7 +11,7 @@ namespace RingCentral
         // Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
         public ExtensionInfo extension;
 
-        // Custom user name of a phone number, if any. Supported for numbers assigned to Auto-Receptionist, with usage type 'CompanyNumber'
+        // Custom user name of a phone number, if any
         public string label;
 
         // Location (City, State). Filled for local US numbers

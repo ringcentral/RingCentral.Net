@@ -8,7 +8,7 @@ namespace RingCentral
         // Street address, line 1 - street address, P.O. box, company name, c/o
         public string street;
 
-        // Street address, line 2 - apartment, suite, unit, building, floor, etc
+        // Street address, line 2 - apartment, suite, unit, building, floor, etc.
         public string street2;
 
         // City name

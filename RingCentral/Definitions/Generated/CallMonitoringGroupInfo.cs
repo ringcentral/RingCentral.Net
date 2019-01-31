@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallMonitoringGroup
+    public class CallMonitoringGroupInfo
     {
         // Internal identifier of a group
         public string id;

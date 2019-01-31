@@ -44,5 +44,11 @@ namespace RingCentral
 
         // Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
         public bool? useAsCommonPhone;
+
+        // Network location status. 'True' if the device is located in the configured corporate network (On-Net); 'False' for Off-Net location. Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not enabled for the account/user, or if device network location is not determined
+        public bool? inCompanyNet;
+
+        // Site data
+        public SiteInfo site;
     }
 }

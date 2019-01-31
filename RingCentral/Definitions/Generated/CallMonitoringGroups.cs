@@ -6,7 +6,7 @@ namespace RingCentral
         public string uri; // Required
 
         // List of call monitoring group members
-        public CallMonitoringGroup[] records; // Required
+        public CallMonitoringGroupInfo[] records; // Required
 
         // Information on navigation
         public NavigationInfo navigation; // Required

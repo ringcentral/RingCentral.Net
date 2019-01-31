@@ -17,7 +17,7 @@ namespace RingCentral
         // Access code for any participant
         public string participantCode;
 
-        // Primary conference phone number for user's home country returned in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (11-digits) format
+        // Primary conference phone number for user's home country returned in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format
         public string phoneNumber;
 
         // Short URL leading to the service web page Tap to Join for audio conference bridge

@@ -36,9 +36,9 @@ namespace RingCentral
         // Enum: Offline, Busy, Available
         public string userStatus;
 
-        // Meetings presence
+        // RingCentral Meetings presence
         // Enum: Connected, Disconnected
-        public string meetingsStatus;
+        public string meetingStatus;
 
         // Information on active calls
         public ActiveCallInfo[] activeCalls;
