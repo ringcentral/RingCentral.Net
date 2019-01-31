@@ -23,7 +23,8 @@ namespace RingCentral.Tests
                 );
 
                 var serviceProviderConfig = await rc.Scim().ServiceProviderConfig().Get();
-                Assert.Equal(new[]{"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"}, serviceProviderConfig.schemas);
+                Assert.Equal(new[] {"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"},
+                    serviceProviderConfig.schemas);
             }
         }
 
@@ -44,7 +45,7 @@ namespace RingCentral.Tests
 
                 var str = await rc.Scim().Health().Get();
                 Assert.Equal("OK", str);
-                
+
                 var str2 = await rc.Scim(null).Health().Get();
                 Assert.Equal("OK", str2);
             }
