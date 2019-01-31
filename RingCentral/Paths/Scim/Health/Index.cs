@@ -1,5 +1,3 @@
-using System.ComponentModel;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Scim.Health

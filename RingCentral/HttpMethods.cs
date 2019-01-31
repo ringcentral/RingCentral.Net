@@ -1,5 +1,6 @@
 using System;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -8,8 +9,18 @@ namespace RingCentral
     public partial class RestClient
     {
         public async Task<HttpResponseMessage> Request(HttpMethod httpMethod, string endpoint,
-            HttpContent httpContent = null)
+            object obj = null)
         {
+            HttpContent httpContent;
+            if (obj is HttpContent)
+            {
+                httpContent = (HttpContent) obj;
+            }
+            else
+            {
+                httpContent = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
+            }
+
             var httpRequestMessage = new HttpRequestMessage
             {
                 Method = httpMethod,
@@ -20,9 +31,9 @@ namespace RingCentral
         }
 
         public async Task<T> Request<T>(HttpMethod httpMethod, string endpoint,
-            HttpContent httpContent = null)
+            object obj = null)
         {
-            var httpResponseMessage = await Request(httpMethod, endpoint, httpContent);
+            var httpResponseMessage = await Request(httpMethod, endpoint, obj);
             if (typeof(T) == typeof(HttpResponseMessage))
             {
                 return (T) (object) httpResponseMessage;
@@ -37,35 +48,35 @@ namespace RingCentral
             return JsonConvert.DeserializeObject<T>(content);
         }
 
-        public async Task<HttpResponseMessage> Post(string endpoint, HttpContent httpContent)
+        public async Task<HttpResponseMessage> Post(string endpoint, object obj)
         {
-            return await Request(HttpMethod.Post, endpoint, httpContent);
+            return await Request(HttpMethod.Post, endpoint, obj);
         }
 
-        public async Task<T> Post<T>(string endpoint, HttpContent httpContent)
+        public async Task<T> Post<T>(string endpoint, object obj)
         {
-            return await Request<T>(HttpMethod.Post, endpoint, httpContent);
+            return await Request<T>(HttpMethod.Post, endpoint, obj);
         }
 
 
-        public async Task<HttpResponseMessage> Put(string endpoint, HttpContent httpContent)
+        public async Task<HttpResponseMessage> Put(string endpoint, object obj)
         {
-            return await Request(HttpMethod.Put, endpoint, httpContent);
+            return await Request(HttpMethod.Put, endpoint, obj);
         }
 
-        public async Task<T> Put<T>(string endpoint, HttpContent httpContent)
+        public async Task<T> Put<T>(string endpoint, object obj)
         {
-            return await Request<T>(HttpMethod.Put, endpoint, httpContent);
+            return await Request<T>(HttpMethod.Put, endpoint, obj);
         }
 
-        public async Task<HttpResponseMessage> Patch(string endpoint, HttpContent httpContent)
+        public async Task<HttpResponseMessage> Patch(string endpoint, object obj)
         {
-            return await Request(new HttpMethod("PATCH"), endpoint, httpContent);
+            return await Request(new HttpMethod("PATCH"), endpoint, obj);
         }
 
-        public async Task<T> Patch<T>(string endpoint, HttpContent httpContent)
+        public async Task<T> Patch<T>(string endpoint, object obj)
         {
-            return await Request<T>(new HttpMethod("PATCH"), endpoint, httpContent);
+            return await Request<T>(new HttpMethod("PATCH"), endpoint, obj);
         }
 
         public async Task<HttpResponseMessage> Get(string endpoint)

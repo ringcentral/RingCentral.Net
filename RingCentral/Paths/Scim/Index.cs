@@ -30,5 +30,10 @@ namespace RingCentral.Paths.Scim
         {
             return new Scim.Health.Index(this);
         }
+
+        public Scim.Users.Index Users(string id = null)
+        {
+            return new Scim.Users.Index(this, id);
+        }
     }
 }
