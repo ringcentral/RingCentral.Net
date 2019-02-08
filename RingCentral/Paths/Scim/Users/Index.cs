@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Scim.Users
@@ -25,9 +26,19 @@ namespace RingCentral.Paths.Scim.Users
             return $"{parent.Path()}/Users/{this.id}";
         }
 
-        public async Task<UserSearchResponse> Get()
+        public async Task<UserSearchResponse> List()
         {
             return await rc.Get<UserSearchResponse>(this.Path());
+        }
+
+        public async Task<UserResponse> Get()
+        {
+            if (this.id == null)
+            {
+                throw new ArgumentNullException("id");
+            }
+
+            return await rc.Get<UserResponse>(this.Path());
         }
 
         public async Task<UserResponse> Post(User user)
