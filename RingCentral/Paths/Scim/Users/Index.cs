@@ -46,6 +46,16 @@ namespace RingCentral.Paths.Scim.Users
             return await rc.Post<UserResponse>(this.Path(), user);
         }
 
+        public async Task<UserResponse> Put(User user)
+        {
+            return await rc.Put<UserResponse>(this.Path(), user);
+        }
+
+        public async Task<UserResponse> Patch(UserPatch userPatch)
+        {
+            return await rc.Put<UserResponse>(this.Path(), userPatch);
+        }
+
         public async Task<string> Delete()
         {
             return await rc.Delete<string>(this.Path());

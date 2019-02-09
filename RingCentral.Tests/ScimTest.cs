@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -180,6 +181,40 @@ namespace RingCentral.Tests
                 Assert.Equal(user.id, firstUser.id);
                 Assert.Equal(user.name.familyName, firstUser.name.familyName);
                 Assert.Equal(user.name.givenName, firstUser.name.givenName);
+            }
+        }
+
+        [Fact]
+        public async Task UpdateUser()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+
+                var searchRequest = new SearchRequest
+                {
+                    count = 1,
+                    filter = "emails eq \"tyler.liu@ringcentral.com\""
+                };
+                var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
+                if (userSearchResponse.Resources.Length == 1)
+                {
+                    var userResponse = userSearchResponse.Resources[0];
+                    var user = JsonConvert.DeserializeObject<User>(JsonConvert.SerializeObject(userResponse));
+                    var guid = Guid.NewGuid().ToString();
+                    user.name.familyName = guid;
+                    var ur = await rc.Scim().Users(user.id).Put(user);
+                    Assert.Equal("tyler.liu@ringcentral.com", ur.emails[0].value);
+                    Assert.Equal(guid, ur.name.familyName);
+                }
             }
         }
     }
