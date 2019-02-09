@@ -217,5 +217,54 @@ namespace RingCentral.Tests
                 }
             }
         }
+
+        [Fact]
+        public async Task PatchUser()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+
+                var searchRequest = new SearchRequest
+                {
+                    count = 1,
+                    filter = "emails eq \"tyler.liu@ringcentral.com\""
+                };
+                var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
+                if (userSearchResponse.Resources.Length == 1)
+                {
+                    var userResponse = userSearchResponse.Resources[0];
+
+                    var guid = Guid.NewGuid().ToString();
+                    var userPatch = new UserPatch
+                    {
+                        schemas = new[]
+                        {
+                            "urn:ietf:params:scim:api:messages:2.0:PatchOp"
+                        },
+                        Operations = new[]
+                        {
+                            new PatchOperation
+                            {
+                                op = "replace",
+                                path = "name.familyName",
+                                value = guid
+                            }
+                        }
+                    };
+                    var ur = await rc.Scim().Users(userResponse.id).Patch(userPatch);
+                    Assert.Equal("tyler.liu@ringcentral.com", ur.emails[0].value);
+                    Assert.Equal(guid, ur.name.familyName);
+                }
+            }
+        }
     }
 }

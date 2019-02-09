@@ -53,7 +53,7 @@ namespace RingCentral.Paths.Scim.Users
 
         public async Task<UserResponse> Patch(UserPatch userPatch)
         {
-            return await rc.Put<UserResponse>(this.Path(), userPatch);
+            return await rc.Patch<UserResponse>(this.Path(), userPatch);
         }
 
         public async Task<string> Delete()
