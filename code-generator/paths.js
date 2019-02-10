@@ -23,18 +23,19 @@ const getFolderPath = (prefix, name) => {
 
 const generate = (prefix = '/') => {
   const nextLevels = R.pipe(
-    R.map(p => p.split(prefix).filter(t => !R.isEmpty(t))[0]),
+    R.filter(p => p.startsWith(prefix)),
+    R.map(p => p.substring(prefix.length).replace(/^\{.+?\}/, '').split('/').filter(t => t !== '')[0]),
     R.filter(t => !R.isNil(t)),
     R.uniq
   )(normalizedPaths)
   if (R.isEmpty(nextLevels)) {
     return
   }
-  console.log(nextLevels)
+  console.log('nextLeves', nextLevels)
 
   R.forEach(name => {
     const routes = getRoutes(prefix, name)
-    console.log(routes)
+    console.log('routes', routes)
     const folderPath = getFolderPath(prefix, name)
     console.log(folderPath)
     fs.mkdirSync(folderPath)
@@ -44,7 +45,9 @@ const generate = (prefix = '/') => {
       R.map(p => R.init(R.tail(p.split('/')[2]))),
       R.head
     )(normalizedPaths)
-    console.log(paramName)
+    if (paramName) {
+      console.log('paramName', paramName)
+    }
     let defaultParamValue
     if (name === 'restapi' && paramName === 'apiVersion') {
       defaultParamValue = 'v1.0'
@@ -104,7 +107,10 @@ const generate = (prefix = '/') => {
     }
 }`
     fs.writeFileSync(path.join(folderPath, 'Index.cs'), code)
+
+    // generate(`${prefix}${name}/`)
   })(nextLevels)
 }
 
-generate()
+generate('/')
+generate('/scim/')
