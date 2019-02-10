@@ -68,6 +68,24 @@ R.forEach(name => {
       }`
   }
 
+  if (paramName) {
+    code += `
+      public string Path()
+      {
+          if (${paramName} != null)
+          {
+              return $"/${name}/{${paramName}}";
+          }
+          return "/${name}";
+      }`
+  } else {
+    code += `
+    public string Path()
+    {
+        return "/${name}";
+    }`
+  }
+
   code += `
     }
 }`
