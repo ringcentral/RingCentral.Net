@@ -14,19 +14,27 @@ const normalizedPaths = paths.map(p => p
   .replace(/\/\.search/, '/dotSearch')
 )
 
+const getRoutes = (prefix, name) => {
+  return [...prefix.split('/').filter(t => t !== ''), name].map(t => changeCase.pascalCase(t))
+}
 const getFolderPath = (prefix, name) => {
-  return path.join(outputDir, ...[...prefix.split('/').filter(t => t !== ''), name].map(t => changeCase.pascalCase(t)))
+  return path.join(outputDir, ...getRoutes(prefix, name))
 }
 
 const generate = (prefix = '/') => {
   const nextLevels = R.pipe(
     R.map(p => p.split(prefix).filter(t => !R.isEmpty(t))[0]),
+    R.filter(t => !R.isNil(t)),
     R.uniq
-  )(paths)
+  )(normalizedPaths)
+  if (R.isEmpty(nextLevels)) {
+    return
+  }
   console.log(nextLevels)
 
   R.forEach(name => {
-    const folderName = changeCase.pascalCase(name)
+    const routes = getRoutes(prefix, name)
+    console.log(routes)
     const folderPath = getFolderPath(prefix, name)
     console.log(folderPath)
     fs.mkdirSync(folderPath)
@@ -48,7 +56,7 @@ const generate = (prefix = '/') => {
       defaultParamValue = '~'
     }
 
-    let code = `namespace RingCentral.Paths.${folderName}
+    let code = `namespace RingCentral.Paths.${routes.join('.')}
 {
     public class Index
     {
