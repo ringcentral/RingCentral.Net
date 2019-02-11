@@ -1,13 +1,13 @@
 using System.Threading.Tasks;
 
-namespace RingCentral.Paths
+namespace RingCentral.Paths.Restapi
 {
-    public class Restapi
+    public class Index
     {
         public RestClient rc;
         public string apiVersion;
 
-        public Restapi(RestClient rc, string apiVersion = "v1.0")
+        public Index(RestClient rc, string apiVersion = "v1.0")
         {
             this.rc = rc;
             this.apiVersion = apiVersion;

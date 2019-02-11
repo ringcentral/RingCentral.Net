@@ -126,9 +126,9 @@ namespace RingCentral
             await Revoke();
         }
 
-        public Restapi Restapi(string apiVersion = "v1.0")
+        public Paths.Restapi.Index Restapi(string apiVersion = "v1.0")
         {
-            return new Restapi(this, apiVersion);
+            return new Paths.Restapi.Index(this, apiVersion);
         }
 
         public Paths.Scim.Index Scim(string version = "v2")
