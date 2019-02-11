@@ -147,11 +147,17 @@ ${code}`
     operations.forEach(operation => {
       const method = changeCase.pascalCase(operation.method)
       const smartMethod = (method === 'Get' && !operation.endpoint.endsWith('}')) ? 'List' : method
+      const responses = operation.detail.responses
+      const responseSchema = (responses[200] || responses[201] || responses[204] || responses.default).schema
+      let responseType = 'string'
+      if (responseSchema) {
+        responseType = R.last(responseSchema['$ref'].split('/'))
+      }
       code += `
 
-        public async Task<GetVersionResponse> ${smartMethod}()
+        public async Task<${responseType}> ${smartMethod}()
         {
-            return await rc.${method}<GetVersionResponse>(this.Path());
+            return await rc.${method}<${responseType}>(this.Path());
         }`
     })
 
