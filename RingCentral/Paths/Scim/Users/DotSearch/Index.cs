@@ -1,15 +1,5 @@
 using System.Threading.Tasks;
 
-namespace RingCentral.Paths.Scim.Users
-{
-    public partial class Index
-    {
-        public DotSearch.Index DotSearch()
-        {
-            return new DotSearch.Index(this);
-        }
-    }
-}
 
 namespace RingCentral.Paths.Scim.Users.DotSearch
 {
@@ -32,6 +22,17 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         public async Task<UserSearchResponse> Post(SearchRequest searchRequest)
         {
             return await this.rc.Post<UserSearchResponse>(this.Path(), searchRequest);
+        }
+    }
+}
+
+namespace RingCentral.Paths.Scim.Users
+{
+    public partial class Index
+    {
+        public DotSearch.Index DotSearch()
+        {
+            return new DotSearch.Index(this);
         }
     }
 }

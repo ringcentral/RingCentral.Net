@@ -1,15 +1,5 @@
 using System.Threading.Tasks;
 
-namespace RingCentral
-{
-    public partial class RestClient
-    {
-        public Paths.Restapi.Index Restapi(string apiVersion = "v1.0")
-        {
-            return new Paths.Restapi.Index(this, apiVersion);
-        }
-    }
-}
 
 namespace RingCentral.Paths.Restapi
 {
@@ -42,6 +32,17 @@ namespace RingCentral.Paths.Restapi
         public async Task<GetVersionResponse> Get()
         {
             return await rc.Get<GetVersionResponse>(this.Path());
+        }
+    }
+}
+
+namespace RingCentral
+{
+    public partial class RestClient
+    {
+        public Paths.Restapi.Index Restapi(string apiVersion = "v1.0")
+        {
+            return new Paths.Restapi.Index(this, apiVersion);
         }
     }
 }

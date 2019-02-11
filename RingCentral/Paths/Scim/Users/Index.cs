@@ -1,16 +1,6 @@
 using System;
 using System.Threading.Tasks;
 
-namespace RingCentral.Paths.Scim
-{
-    public partial class Index
-    {
-        public Scim.Users.Index Users(string id = null)
-        {
-            return new Scim.Users.Index(this, id);
-        }
-    }
-}
 
 namespace RingCentral.Paths.Scim.Users
 {
@@ -70,6 +60,17 @@ namespace RingCentral.Paths.Scim.Users
         public async Task<string> Delete()
         {
             return await rc.Delete<string>(this.Path());
+        }
+    }
+}
+
+namespace RingCentral.Paths.Scim
+{
+    public partial class Index
+    {
+        public Scim.Users.Index Users(string id = null)
+        {
+            return new Scim.Users.Index(this, id);
         }
     }
 }

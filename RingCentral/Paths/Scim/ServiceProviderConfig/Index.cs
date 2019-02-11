@@ -1,15 +1,5 @@
 using System.Threading.Tasks;
 
-namespace RingCentral.Paths.Scim
-{
-    public partial class Index
-    {
-        public Scim.ServiceProviderConfig.Index ServiceProviderConfig()
-        {
-            return new Scim.ServiceProviderConfig.Index(this);
-        }
-    }
-}
 
 namespace RingCentral.Paths.Scim.ServiceProviderConfig
 {
@@ -32,6 +22,17 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
         public async Task<RingCentral.ServiceProviderConfig> Get()
         {
             return await rc.Get<RingCentral.ServiceProviderConfig>(this.Path());
+        }
+    }
+}
+
+namespace RingCentral.Paths.Scim
+{
+    public partial class Index
+    {
+        public Scim.ServiceProviderConfig.Index ServiceProviderConfig()
+        {
+            return new Scim.ServiceProviderConfig.Index(this);
         }
     }
 }

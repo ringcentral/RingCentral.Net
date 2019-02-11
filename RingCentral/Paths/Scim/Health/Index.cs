@@ -1,15 +1,5 @@
 using System.Threading.Tasks;
 
-namespace RingCentral.Paths.Scim
-{
-    public partial class Index
-    {
-        public Scim.Health.Index Health()
-        {
-            return new Scim.Health.Index(this);
-        }
-    }
-}
 
 namespace RingCentral.Paths.Scim.Health
 {
@@ -32,6 +22,17 @@ namespace RingCentral.Paths.Scim.Health
         public async Task<string> Get()
         {
             return await rc.Get<string>(this.Path());
+        }
+    }
+}
+
+namespace RingCentral.Paths.Scim
+{
+    public partial class Index
+    {
+        public Scim.Health.Index Health()
+        {
+            return new Scim.Health.Index(this);
         }
     }
 }
