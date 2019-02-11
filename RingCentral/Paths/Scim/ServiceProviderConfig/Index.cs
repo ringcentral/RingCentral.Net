@@ -1,8 +1,19 @@
 using System.Threading.Tasks;
 
+namespace RingCentral.Paths.Scim
+{
+    public partial class Index
+    {
+        public Scim.ServiceProviderConfig.Index ServiceProviderConfig()
+        {
+            return new Scim.ServiceProviderConfig.Index(this);
+        }
+    }
+}
+
 namespace RingCentral.Paths.Scim.ServiceProviderConfig
 {
-    public class Index
+    public partial class Index
     {
         public Scim.Index parent;
         public RestClient rc;

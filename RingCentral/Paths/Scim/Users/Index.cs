@@ -1,9 +1,20 @@
 using System;
 using System.Threading.Tasks;
 
+namespace RingCentral.Paths.Scim
+{
+    public partial class Index
+    {
+        public Scim.Users.Index Users(string id = null)
+        {
+            return new Scim.Users.Index(this, id);
+        }
+    }
+}
+
 namespace RingCentral.Paths.Scim.Users
 {
-    public class Index
+    public partial class Index
     {
         public Scim.Index parent;
         public RestClient rc;
@@ -59,11 +70,6 @@ namespace RingCentral.Paths.Scim.Users
         public async Task<string> Delete()
         {
             return await rc.Delete<string>(this.Path());
-        }
-
-        public DotSearch.Index DotSearch()
-        {
-            return new DotSearch.Index(this);
         }
     }
 }

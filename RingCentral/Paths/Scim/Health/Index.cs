@@ -1,8 +1,19 @@
 using System.Threading.Tasks;
 
+namespace RingCentral.Paths.Scim
+{
+    public partial class Index
+    {
+        public Scim.Health.Index Health()
+        {
+            return new Scim.Health.Index(this);
+        }
+    }
+}
+
 namespace RingCentral.Paths.Scim.Health
 {
-    public class Index
+    public partial class Index
     {
         public Scim.Index parent;
         public RestClient rc;

@@ -1,8 +1,19 @@
 using System.Threading.Tasks;
 
+namespace RingCentral.Paths.Scim.Users
+{
+    public partial class Index
+    {
+        public DotSearch.Index DotSearch()
+        {
+            return new DotSearch.Index(this);
+        }
+    }
+}
+
 namespace RingCentral.Paths.Scim.Users.DotSearch
 {
-    public class Index
+    public partial class Index
     {
         public Scim.Users.Index parent;
         public RestClient rc;

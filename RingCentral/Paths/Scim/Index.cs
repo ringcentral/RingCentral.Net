@@ -1,6 +1,6 @@
 namespace RingCentral.Paths.Scim
 {
-    public class Index
+    public partial class Index
     {
         public RestClient rc;
         public string version;
@@ -19,21 +19,6 @@ namespace RingCentral.Paths.Scim
             }
 
             return "/scim";
-        }
-
-        public Scim.ServiceProviderConfig.Index ServiceProviderConfig()
-        {
-            return new Scim.ServiceProviderConfig.Index(this);
-        }
-
-        public Scim.Health.Index Health()
-        {
-            return new Scim.Health.Index(this);
-        }
-
-        public Scim.Users.Index Users(string id = null)
-        {
-            return new Scim.Users.Index(this, id);
         }
     }
 }
