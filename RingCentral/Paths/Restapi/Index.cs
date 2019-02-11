@@ -24,9 +24,9 @@ namespace RingCentral.Paths.Restapi
             this.apiVersion = apiVersion;
         }
 
-        public string Path()
+        public string Path(bool withParameter = true)
         {
-            if (apiVersion != null)
+            if (withParameter)
             {
                 return $"/restapi/{apiVersion}";
             }
@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi
 
         public async Task<GetVersionsResponse> List()
         {
-            return await rc.Get<GetVersionsResponse>(this.Path());
+            return await rc.Get<GetVersionsResponse>(this.Path(false));
         }
 
         public async Task<GetVersionResponse> Get()
