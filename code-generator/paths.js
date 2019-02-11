@@ -34,12 +34,14 @@ const generate = (prefix = '/') => {
   console.log('nextLeves', nextLevels)
 
   R.forEach(name => {
+    console.log('prefix', prefix)
+    console.log('name', name)
     const routes = getRoutes(prefix, name)
     console.log('routes', routes)
     const folderPath = getFolderPath(prefix, name)
-    console.log(folderPath)
+    console.log('folderPath', folderPath)
     fs.mkdirSync(folderPath)
-    var paramName = R.pipe(
+    const paramName = R.pipe(
       R.filter(p => p.startsWith(`${prefix}${name}/{`)),
       R.uniqBy(p => R.take(2, p.split('/').filter(t => t !== '')).join('/')),
       R.map(p => R.init(R.tail(p.split('/')[2]))),
@@ -120,11 +122,22 @@ const generate = (prefix = '/') => {
 
 ${code}`
     } else {
+      code = `namespace RingCentral.Paths.${R.init(routes).join('.')}
+{
+    public partial class Index
+    {
+        public ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName}${defaultParamValue ? ` = "${defaultParamValue}"` : ''}` : ''})
+        {
+            return new ${routes.join('.')}.Index(this${paramName ? `, ${paramName}` : ''});
+        }
+    }
+}
 
+${code}`
     }
     fs.writeFileSync(path.join(folderPath, 'Index.cs'), code)
 
-    // generate(`${prefix}${name}/`)
+    // generate(`${prefix}${name}/`) // todo: uncomment this line
   })(nextLevels)
 }
 
