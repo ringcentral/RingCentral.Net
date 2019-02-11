@@ -68,13 +68,14 @@ const generate = (prefix = '/') => {
 
     let code = `namespace RingCentral.Paths.${routes.join('.')}
 {
-    public class Index
+    public partial class Index
     {
         public RestClient rc;`
 
     if (paramName) {
       code += `
-        public string ${paramName};`
+        public string ${paramName};
+`
     }
 
     if (paramName) {
@@ -94,6 +95,7 @@ const generate = (prefix = '/') => {
 
     if (paramName) {
       code += `
+
         public string Path()
         {
             if (${paramName} != null)

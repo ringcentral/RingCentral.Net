@@ -13,7 +13,7 @@ namespace RingCentral
 
 namespace RingCentral.Paths.Restapi
 {
-    public class Index
+    public partial class Index
     {
         public RestClient rc;
         public string apiVersion;
@@ -24,14 +24,24 @@ namespace RingCentral.Paths.Restapi
             this.apiVersion = apiVersion;
         }
 
+        public string Path()
+        {
+            if (apiVersion != null)
+            {
+                return $"/restapi/{apiVersion}";
+            }
+
+            return "/restapi";
+        }
+
         public async Task<GetVersionsResponse> List()
         {
-            return await rc.Get<GetVersionsResponse>("/restapi");
+            return await rc.Get<GetVersionsResponse>(this.Path());
         }
 
         public async Task<GetVersionResponse> Get()
         {
-            return await rc.Get<GetVersionResponse>($"/restapi/{apiVersion}");
+            return await rc.Get<GetVersionResponse>(this.Path());
         }
     }
 }
