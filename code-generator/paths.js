@@ -15,7 +15,7 @@ const normalizedPaths = paths.map(p => p
 )
 
 const getRoutes = (prefix, name) => {
-  return [...prefix.split('/').filter(t => t !== ''), name].map(t => changeCase.pascalCase(t))
+  return [...prefix.split('/').filter(t => t !== '' && !t.startsWith('{')), name].map(t => changeCase.pascalCase(t))
 }
 const getFolderPath = (prefix, name) => {
   return path.join(outputDir, ...getRoutes(prefix, name))
@@ -24,8 +24,8 @@ const getFolderPath = (prefix, name) => {
 const generate = (prefix = '/') => {
   const nextLevels = R.pipe(
     R.filter(p => p.startsWith(prefix)),
-    R.map(p => p.substring(prefix.length).replace(/^\{.+?\}/, '').split('/').filter(t => t !== '')[0]),
-    R.filter(t => !R.isNil(t)),
+    R.map(p => p.substring(prefix.length).split('/').filter(t => t !== '')[0]),
+    R.filter(t => !R.isNil(t) && !t.startsWith('{')),
     R.uniq
   )(normalizedPaths)
   if (R.isEmpty(nextLevels)) {
@@ -40,11 +40,16 @@ const generate = (prefix = '/') => {
     console.log('routes', routes)
     const folderPath = getFolderPath(prefix, name)
     console.log('folderPath', folderPath)
+    if (fs.existsSync(folderPath)) {
+      console.log('folder already exists')
+      return
+    }
     fs.mkdirSync(folderPath)
     const paramName = R.pipe(
       R.filter(p => p.startsWith(`${prefix}${name}/{`)),
-      R.uniqBy(p => R.take(2, p.split('/').filter(t => t !== '')).join('/')),
-      R.map(p => R.init(R.tail(p.split('/')[2]))),
+      R.map(p => p.substring(`${prefix}${name}/`.length)),
+      R.map(p => p.split('/').filter(t => t !== '')[0]),
+      R.map(t => t.substring(1, t.length - 1)),
       R.head
     )(normalizedPaths)
     if (paramName) {
@@ -113,7 +118,7 @@ const generate = (prefix = '/') => {
 {
     public partial class RestClient
     {
-        public Paths.${R.last(routes)}.Index ${R.last(routes)}(${paramName ? `string ${paramName}${defaultParamValue ? ` = "${defaultParamValue}"` : ''}` : ''})
+        public Paths.${R.last(routes)}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''})
         {
             return new Paths.${R.last(routes)}.Index(this${paramName ? `, ${paramName}` : ''});
         }
@@ -126,7 +131,7 @@ ${code}`
 {
     public partial class Index
     {
-        public ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName}${defaultParamValue ? ` = "${defaultParamValue}"` : ''}` : ''})
+        public ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''})
         {
             return new ${routes.join('.')}.Index(this${paramName ? `, ${paramName}` : ''});
         }
@@ -143,3 +148,4 @@ ${code}`
 
 generate('/')
 generate('/scim/')
+generate('/scim/{version}/')
