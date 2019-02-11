@@ -1,3 +1,14 @@
+namespace RingCentral
+{
+    public partial class RestClient
+    {
+        public Paths.Scim.Index Scim(string version = "v2")
+        {
+            return new Paths.Scim.Index(this, version);
+        }
+    }
+}
+
 namespace RingCentral.Paths.Scim
 {
     public partial class Index

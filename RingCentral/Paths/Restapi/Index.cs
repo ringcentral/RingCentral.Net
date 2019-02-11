@@ -1,5 +1,16 @@
 using System.Threading.Tasks;
 
+namespace RingCentral
+{
+    public partial class RestClient
+    {
+        public Paths.Restapi.Index Restapi(string apiVersion = "v1.0")
+        {
+            return new Paths.Restapi.Index(this, apiVersion);
+        }
+    }
+}
+
 namespace RingCentral.Paths.Restapi
 {
     public class Index
