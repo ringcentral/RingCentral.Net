@@ -146,7 +146,8 @@ ${code}`
     }
     operations.forEach(operation => {
       const method = changeCase.pascalCase(operation.method)
-      const smartMethod = (method === 'Get' && !operation.endpoint.endsWith('}')) ? 'List' : method
+      const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
+        R.any(o => o.method === 'get' && o.endpoint === operation.endpoint + `/{${paramName}}`)(operations)) ? 'List' : method
       const responses = operation.detail.responses
       const responseSchema = (responses[200] || responses[201] || responses[204] || responses.default).schema
       let responseType = 'string'
