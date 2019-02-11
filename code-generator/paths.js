@@ -119,7 +119,26 @@ const generate = (prefix = '/') => {
         }`
     }
 
-    // todo:  add HTTP methods
+    const operations = []
+    const endpoints = [deNormalizePath(`${prefix}${name}`)]
+    if (paramName) {
+      endpoints.push(`${deNormalizePath(`${prefix}${name}`)}/{${paramName}}`)
+    }
+    endpoints.forEach(endpoint => {
+      console.log('endpoint', endpoint)
+      const endpointObj = doc.paths[endpoint]
+      if (endpointObj) {
+        const methods = Object.keys(endpointObj)
+        console.log('HTTP methods', methods)
+        methods.forEach(method => {
+          operations.push({
+            endpoint,
+            method,
+            detail: endpointObj[method]
+          })
+        })
+      }
+    })
 
     code += `
     }
