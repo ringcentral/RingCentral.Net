@@ -139,12 +139,29 @@ const generate = (prefix = '/') => {
         })
       }
     })
+    if (operations.length > 0) {
+      code = `using System.Threading.Tasks;
+
+${code}`
+    }
+    operations.forEach(operation => {
+      const method = changeCase.pascalCase(operation.method)
+      const smartMethod = (method === 'Get' && !operation.endpoint.endsWith('}')) ? 'List' : method
+      code += `
+
+        public async Task<GetVersionResponse> ${smartMethod}()
+        {
+            return await rc.${method}<GetVersionResponse>(this.Path());
+        }`
+    })
 
     code += `
     }
 }`
     if (routes.length === 1) { // top level path, such as /restapi & /scim
-      code = `namespace RingCentral
+      code = `${code}
+
+namespace RingCentral
 {
     public partial class RestClient
     {
@@ -153,11 +170,11 @@ const generate = (prefix = '/') => {
             return new Paths.${R.last(routes)}.Index(this${paramName ? `, ${paramName}` : ''});
         }
     }
-}
-
-${code}`
+}`
     } else {
-      code = `namespace RingCentral.Paths.${R.init(routes).join('.')}
+      code = `${code}
+
+namespace RingCentral.Paths.${R.init(routes).join('.')}
 {
     public partial class Index
     {
@@ -166,9 +183,7 @@ ${code}`
             return new ${routes.join('.')}.Index(this${paramName ? `, ${paramName}` : ''});
         }
     }
-}
-
-${code}`
+}`
     }
     fs.writeFileSync(path.join(folderPath, 'Index.cs'), code)
 
@@ -179,3 +194,4 @@ ${code}`
 generate('/')
 generate('/scim/')
 generate('/scim/{version}/')
+generate('/scim/{version}/Users/')
