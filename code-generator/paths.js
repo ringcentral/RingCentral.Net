@@ -158,7 +158,7 @@ ${code}`
 
         public async Task<${responseType}> ${smartMethod}()
         {
-            return await rc.${method}<${responseType}>(this.Path());
+            return await rc.${method}<${responseType}>(this.Path(${(paramName && !operation.endpoint.endsWith('}')) ? 'false' : ''}));
         }`
     })
 
