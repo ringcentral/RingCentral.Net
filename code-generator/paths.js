@@ -13,6 +13,12 @@ const normalizedPaths = paths.map(p => p
   .replace(/\/scim\/v2/, '/scim/{version}')
   .replace(/\/\.search/, '/dotSearch')
 )
+const deNormalizePath = path => {
+  return path
+    .replace(/\/restapi\/\{apiVersion\}/, '/restapi/v1.0')
+    .replace(/\/scim\/\{version\}/, '/scim/v2')
+    .replace(/\/dotSearch/, '/.search')
+}
 
 const getRoutes = (prefix, name) => {
   return [...prefix.split('/').filter(t => t !== '' && !t.startsWith('{')), name].map(t => changeCase.pascalCase(t))
@@ -96,12 +102,13 @@ const generate = (prefix = '/') => {
     if (paramName) {
       code += `
 
-        public string Path()
+        public string Path(bool withParameter = true)
         {
-            if (${paramName} != null)
+            if (withParameter)
             {
                 return $"/${name}/{${paramName}}";
             }
+
             return "/${name}";
         }`
     } else {
@@ -111,6 +118,8 @@ const generate = (prefix = '/') => {
             return "/${name}";
         }`
     }
+
+    // todo:  add HTTP methods
 
     code += `
     }
