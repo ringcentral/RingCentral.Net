@@ -106,6 +106,22 @@ const generate = (prefix = '/') => {
     code += `
     }
 }`
+    if (routes.length === 1) { // top level path, such as /restapi & /scim
+      code = `namespace RingCentral
+{
+    public partial class RestClient
+    {
+        public Paths.${R.last(routes)}.Index ${R.last(routes)}(${paramName ? `string ${paramName}${defaultParamValue ? ` = "${defaultParamValue}"` : ''}` : ''})
+        {
+            return new Paths.${R.last(routes)}.Index(this${paramName ? `, ${paramName}` : ''});
+        }
+    }
+}
+
+${code}`
+    } else {
+
+    }
     fs.writeFileSync(path.join(folderPath, 'Index.cs'), code)
 
     // generate(`${prefix}${name}/`)
