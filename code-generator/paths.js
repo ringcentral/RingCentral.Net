@@ -80,7 +80,11 @@ const generate = (prefix = '/') => {
 
     if (paramName) {
       code += `
-        public string ${paramName};
+        public string ${paramName};`
+    }
+    if (routes.length > 1) {
+      code += `
+        public ${R.init(routes).join('.')}.Index parent;
 `
     }
 
