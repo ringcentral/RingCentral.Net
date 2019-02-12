@@ -39,10 +39,7 @@ models.forEach(m => {
       types.push(f.type)
       return f
     })
-  const source = `
-using Newtonsoft.Json;
-
-namespace RingCentral
+  let source = `namespace RingCentral
 {${m.description ? '\n    // ' + m.description : ''}
     public class ${m.name}
     {
@@ -71,7 +68,9 @@ namespace RingCentral
     }
 }
 `.trim()
-  console.log(source)
+  if (source.includes('[JsonProperty(')) {
+    source = 'using Newtonsoft.Json;\n\n' + source
+  }
   fs.writeFileSync(path.join(outputDir, `${m.name}.cs`), source)
 })
 
