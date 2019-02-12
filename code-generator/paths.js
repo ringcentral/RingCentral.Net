@@ -157,16 +157,27 @@ ${code}`
       const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
         R.any(o => o.method === 'get' && o.endpoint === operation.endpoint + `/{${paramName}}`)(operations)) ? 'List' : method
       const responses = operation.detail.responses
-      const responseSchema = (responses[200] || responses[201] || responses[204] || responses.default).schema
+      const responseSchema = (responses[200] || responses[201] || responses[202] || responses[204] || responses[205] || responses[302] || responses.default).schema
       let responseType = 'string'
       if (responseSchema) {
-        responseType = 'RingCentral.' + R.last(responseSchema['$ref'].split('/'))
+        if (responseSchema.type === 'file') {
+          responseType = 'byte[]'
+        } else if (responseSchema.type === 'string') {
+          responseType = 'string'
+        } else {
+          responseType = 'RingCentral.' + R.last(responseSchema['$ref'].split('/'))
+        }
       }
       let body, bodyClass, bodyParam
       body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
       if (body) {
-        bodyClass = R.last(body.schema['$ref'].split('/'))
-        bodyParam = changeCase.lowerCaseFirst(bodyClass)
+        if (body.schema.type === 'string') {
+          bodyClass = 'string'
+          bodyParam = 'body'
+        } else {
+          bodyClass = R.last(body.schema['$ref'].split('/'))
+          bodyParam = changeCase.lowerCaseFirst(bodyClass)
+        }
       }
       const withParam = paramName && operation.endpoint.endsWith('}')
       code += `
@@ -214,11 +225,11 @@ namespace RingCentral.Paths.${R.init(routes).join('.')}
     }
     fs.writeFileSync(path.join(folderPath, 'Index.cs'), code)
 
-    // generate(`${prefix}${name}/`) // todo: uncomment this line
+    generate(`${prefix}${name}/`)
+    if (paramName) {
+      generate(`${prefix}${name}/{${paramName}}/`)
+    }
   })(nextLevels)
 }
 
 generate('/')
-generate('/scim/')
-generate('/scim/{version}/')
-generate('/scim/{version}/Users/')
