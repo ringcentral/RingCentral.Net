@@ -4,16 +4,15 @@ namespace RingCentral.Paths.Scim
     {
         public RestClient rc;
         public string version;
-
         public Index(RestClient rc, string version = "v2")
         {
             this.rc = rc;
             this.version = version;
         }
 
-        public string Path()
+        public string Path(bool withParameter = true)
         {
-            if (version != null)
+            if (withParameter && version != null)
             {
                 return $"/scim/{version}";
             }

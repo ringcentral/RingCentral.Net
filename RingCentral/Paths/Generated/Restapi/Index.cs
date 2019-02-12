@@ -1,5 +1,5 @@
+using System;
 using System.Threading.Tasks;
-
 
 namespace RingCentral.Paths.Restapi
 {
@@ -7,7 +7,6 @@ namespace RingCentral.Paths.Restapi
     {
         public RestClient rc;
         public string apiVersion;
-
         public Index(RestClient rc, string apiVersion = "v1.0")
         {
             this.rc = rc;
@@ -16,7 +15,7 @@ namespace RingCentral.Paths.Restapi
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter)
+            if (withParameter && apiVersion != null)
             {
                 return $"/restapi/{apiVersion}";
             }
@@ -24,14 +23,19 @@ namespace RingCentral.Paths.Restapi
             return "/restapi";
         }
 
-        public async Task<GetVersionsResponse> List()
+        public async Task<RingCentral.GetVersionsResponse> List()
         {
-            return await rc.Get<GetVersionsResponse>(this.Path(false));
+            return await rc.Get<RingCentral.GetVersionsResponse>(this.Path(false));
         }
 
-        public async Task<GetVersionResponse> Get()
+        public async Task<RingCentral.GetVersionResponse> Get()
         {
-            return await rc.Get<GetVersionResponse>(this.Path());
+            if (this.apiVersion == null)
+            {
+                throw new ArgumentNullException("apiVersion");
+            }
+        
+            return await rc.Get<RingCentral.GetVersionResponse>(this.Path());
         }
     }
 }

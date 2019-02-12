@@ -1,22 +1,21 @@
+using System;
 using System.Threading.Tasks;
-
 
 namespace RingCentral.Paths.Scim.Health
 {
     public partial class Index
     {
-        public Scim.Index parent;
         public RestClient rc;
+        public Scim.Index parent;
 
         public Index(Scim.Index parent)
         {
             this.parent = parent;
-            this.rc = this.parent.rc;
+            this.rc = parent.rc;
         }
-
         public string Path()
         {
-            return parent.Path() + "/health";
+            return $"{parent.Path()}/health";
         }
 
         public async Task<string> Get()
