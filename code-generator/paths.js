@@ -140,7 +140,8 @@ const generate = (prefix = '/') => {
       }
     })
     if (operations.length > 0) {
-      code = `using System.Threading.Tasks;
+      code = `using System;
+using System.Threading.Tasks;
 
 ${code}`
     }
