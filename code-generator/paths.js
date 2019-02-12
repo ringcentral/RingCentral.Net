@@ -160,11 +160,17 @@ ${code}`
         bodyClass = R.last(body.schema['$ref'].split('/'))
         bodyParam = changeCase.lowerCaseFirst(bodyClass)
       }
+      const withParam = paramName && operation.endpoint.endsWith('}')
       code += `
 
         public async Task<${responseType}> ${smartMethod}(${body ? `${bodyClass} ${bodyParam}` : ''})
-        {
-            return await rc.${method}<${responseType}>(this.Path(${(paramName && !operation.endpoint.endsWith('}')) ? 'false' : ''})${body ? `, ${bodyParam}` : ''});
+        {${withParam ? `
+            if (this.${paramName} == null)
+            {
+                throw new ArgumentNullException("${paramName}");
+            }
+        ` : ''}
+            return await rc.${method}<${responseType}>(this.Path(${withParam ? '' : 'false'})${body ? `, ${bodyParam}` : ''});
         }`
     })
 
