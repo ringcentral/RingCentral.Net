@@ -159,7 +159,7 @@ ${code}`
       const responseSchema = (responses[200] || responses[201] || responses[204] || responses.default).schema
       let responseType = 'string'
       if (responseSchema) {
-        responseType = R.last(responseSchema['$ref'].split('/'))
+        responseType = 'RingCentral.' + R.last(responseSchema['$ref'].split('/'))
       }
       let body, bodyClass, bodyParam
       body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
@@ -170,14 +170,14 @@ ${code}`
       const withParam = paramName && operation.endpoint.endsWith('}')
       code += `
 
-        public async Task<${responseType}> ${smartMethod}(${body ? `${bodyClass} ${bodyParam}` : ''})
+        public async Task<${responseType}> ${smartMethod}(${body ? `RingCentral.${bodyClass} ${bodyParam}` : ''})
         {${withParam ? `
             if (this.${paramName} == null)
             {
                 throw new ArgumentNullException("${paramName}");
             }
         ` : ''}
-            return await rc.${method}<${responseType}>(this.Path(${withParam ? '' : 'false'})${body ? `, ${bodyParam}` : ''});
+            return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${body ? `, ${bodyParam}` : ''});
         }`
     })
 
