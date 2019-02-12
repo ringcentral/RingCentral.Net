@@ -98,6 +98,7 @@ const generate = (prefix = '/') => {
         }`
     } else {
       code += `
+
         public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'})
         {
             ${routes.length > 1 ? `this.parent = parent;
@@ -176,7 +177,7 @@ ${code}`
             {
                 throw new System.ArgumentNullException("${paramName}");
             }
-        ` : ''}
+` : ''}
             return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${body ? `, ${bodyParam}` : ''});
         }`
     })

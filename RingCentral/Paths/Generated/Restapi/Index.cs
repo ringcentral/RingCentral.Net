@@ -34,7 +34,7 @@ namespace RingCentral.Paths.Restapi
             {
                 throw new System.ArgumentNullException("apiVersion");
             }
-        
+
             return await rc.Get<RingCentral.GetVersionResponse>(this.Path());
         }
     }

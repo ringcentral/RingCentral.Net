@@ -6,6 +6,7 @@ namespace RingCentral.Paths.Scim.Health
     {
         public RestClient rc;
         public Scim.Index parent;
+
         public Index(Scim.Index parent)
         {
             this.parent = parent;

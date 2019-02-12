@@ -6,6 +6,7 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
     {
         public RestClient rc;
         public Scim.Users.Index parent;
+
         public Index(Scim.Users.Index parent)
         {
             this.parent = parent;
