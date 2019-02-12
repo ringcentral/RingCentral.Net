@@ -15,6 +15,7 @@ namespace RingCentral
 
         // Extension number available
         public string extensionNumber;
+
         public ContactInfoUpdateRequest contact;
 
         public ExtensionRegionalSettingRequest regionalSettings;

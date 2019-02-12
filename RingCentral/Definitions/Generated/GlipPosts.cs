@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // List of posts
         public GlipPostInfo[] records; // Required
+
         public GlipNavigationInfo navigation;
     }
 }

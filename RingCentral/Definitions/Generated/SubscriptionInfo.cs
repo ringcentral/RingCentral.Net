@@ -29,6 +29,7 @@ namespace RingCentral
 
         // Delivery mode data
         public NotificationDeliveryMode deliveryMode; // Required
+
         public NotificationBlacklistedData blacklistedData;
     }
 }

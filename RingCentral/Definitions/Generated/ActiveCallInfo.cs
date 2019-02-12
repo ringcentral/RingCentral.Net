@@ -21,9 +21,13 @@ namespace RingCentral
 
         // Time when the call is actually started
         public string startTime;
+
         public string telephonyStatus;
+
         public DetailedCallInfo sipData;
+
         public string sessionId;
+
         public string terminationType;
     }
 }

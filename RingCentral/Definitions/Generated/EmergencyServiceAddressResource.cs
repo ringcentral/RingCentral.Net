@@ -3,8 +3,11 @@ namespace RingCentral
     public class EmergencyServiceAddressResource
     {
         public string street;
+
         public string street2;
+
         public string city;
+
         public string zip;
 
         public string customerName;

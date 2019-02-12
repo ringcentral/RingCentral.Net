@@ -10,6 +10,7 @@ namespace RingCentral
 
         // Internal identifier of a call session
         public string sessionId;
+
         public CallLogCallerInfo from;
 
         public CallLogCallerInfo to;
@@ -27,6 +28,7 @@ namespace RingCentral
 
         // Call duration in seconds
         public long? duration;
+
         public RecordingInfo recording;
     }
 }

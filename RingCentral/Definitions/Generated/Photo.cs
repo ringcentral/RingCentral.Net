@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // Enum: photo
         public string type; // Required
+
         public string value; // Required
     }
 }

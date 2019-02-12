@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // patch operations list
         public PatchOperation[] Operations; // Required
+
         public string[] schemas; // Required
     }
 }

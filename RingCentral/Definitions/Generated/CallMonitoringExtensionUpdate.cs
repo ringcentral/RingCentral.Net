@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // Only the following extension types are allowed: User, DigitalUser, VirtualUser, FaxUser, Limited
         public string id;
+
         public string[] permissions;
     }
 }

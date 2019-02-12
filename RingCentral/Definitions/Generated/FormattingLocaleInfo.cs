@@ -8,6 +8,7 @@ namespace RingCentral
 
         // Localization code of a formatting language
         public string localeCode;
+
         public string name;
     }
 }

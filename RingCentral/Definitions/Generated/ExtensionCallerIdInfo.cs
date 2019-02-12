@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // Canonical URL of a caller ID resource
         public string uri;
+
         public CallerIdByDevice[] byDevice;
 
         public CallerIdByFeature[] byFeature;

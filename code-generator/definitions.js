@@ -64,7 +64,7 @@ models.forEach(m => {
       p = `// ${f.description.trim()}\n        ${p}`
     }
     return p
-  }).join('\n        ')}
+  }).join('\n\n        ')}
     }
 }
 `.trim()

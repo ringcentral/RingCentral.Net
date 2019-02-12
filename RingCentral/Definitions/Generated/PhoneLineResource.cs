@@ -4,7 +4,9 @@ namespace RingCentral
     {
         // Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
         public string lineType;
+
         public PhoneNumberResourceIntId phoneInfo;
+
         public EmergencyAddress emergencyAddress;
     }
 }

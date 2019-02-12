@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // Enum: RingOut, RingMe, CallFlip, FaxNumber, AdditionalSoftphone, Alternate, CommonPhone, MobileApp, Delegated
         public string feature;
+
         public CallerIdByFeatureInfo callerId;
     }
 }

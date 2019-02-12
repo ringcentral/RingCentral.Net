@@ -4,8 +4,11 @@ namespace RingCentral
     {
         // Enum: FSync, ISync
         public string syncType;
+
         public string syncToken;
+
         public string syncTime;
+
         public bool? olderRecordsExist;
     }
 }

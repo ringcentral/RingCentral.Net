@@ -3,6 +3,7 @@ namespace RingCentral
     public class CallerInfoTo
     {
         public string phoneNumber;
+
         public string name;
 
         public string location;

@@ -4,6 +4,7 @@ namespace RingCentral
     public class PeerInfo
     {
         public string sessionId;
+
         public string partyId;
     }
 }

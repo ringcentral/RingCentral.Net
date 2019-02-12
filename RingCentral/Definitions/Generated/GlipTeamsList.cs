@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // List of teams
         public GlipTeamInfo[] records; // Required
+
         public GlipNavigationInfo navigation;
     }
 }

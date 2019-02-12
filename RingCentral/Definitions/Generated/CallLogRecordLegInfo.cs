@@ -43,6 +43,7 @@ namespace RingCentral
 
         // Call recording data. Returned if the call is recorded
         public RecordingInfo recording;
+
         public bool? master;
     }
 }

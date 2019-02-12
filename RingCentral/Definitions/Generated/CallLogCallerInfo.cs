@@ -13,6 +13,7 @@ namespace RingCentral
 
         // Symbolic name associated with a party. If the phone does not belong to the known extension, only the location is returned, the name is not determined then
         public string name;
+
         public CallLogRecordDeviceInfo device;
     }
 }

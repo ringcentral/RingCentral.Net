@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // List of chats
         public GlipChatInfo[] records; // Required
+
         public GlipNavigationInfo navigation;
     }
 }

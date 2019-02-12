@@ -7,10 +7,15 @@ namespace RingCentral
 
         // Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         public string dndStatus;
+
         public string message;
+
         public bool? allowSeeMyPresence;
+
         public bool? ringOnMonitoredCall;
+
         public bool? pickUpCallsOnHold;
+
         public ActiveCallInfo[] activeCalls;
     }
 }

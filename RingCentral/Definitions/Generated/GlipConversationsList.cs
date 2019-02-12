@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // List of conversations
         public GlipConversationInfo[] records; // Required
+
         public GlipNavigationInfo navigation;
     }
 }

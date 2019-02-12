@@ -9,6 +9,7 @@ namespace RingCentral
         // Usage type of a greeting, specifying if the greeting is applied to user extension or department extension.
         // Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule
         public string usageType;
+
         public PresetInfo preset;
     }
 }

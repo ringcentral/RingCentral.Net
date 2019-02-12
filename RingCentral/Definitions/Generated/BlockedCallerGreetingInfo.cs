@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // Type of a greeting
         public string type;
+
         public PresetInfo preset;
     }
 }

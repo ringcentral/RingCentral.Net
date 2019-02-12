@@ -14,7 +14,9 @@ namespace RingCentral
 
         // Sorting settings
         public OrderBy[] orderBy;
+
         public long? page;
+
         public long? perPage;
     }
 }

@@ -4,7 +4,9 @@ namespace RingCentral
     {
         // Internal identifier of an extension
         public string id;
+
         public string uri;
+
         public string extensionNumber;
 
         public string type;

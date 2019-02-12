@@ -4,6 +4,7 @@ namespace RingCentral
     {
         // Enum: PartnerId, CustomerDirectoryId
         public string type;
+
         public string @ref;
     }
 }
