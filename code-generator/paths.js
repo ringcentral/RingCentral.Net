@@ -112,16 +112,16 @@ const generate = (prefix = '/') => {
         {
             if (withParameter)
             {
-                return $"/${name}/{${paramName}}";
+                return $"${routes.length > 1 ? '{parent.Path()}' : ''}/${name}/{${paramName}}";
             }
 
-            return "/${name}";
+            return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name}";
         }`
     } else {
       code += `
         public string Path()
         {
-            return "/${name}";
+            return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name}";
         }`
     }
 
