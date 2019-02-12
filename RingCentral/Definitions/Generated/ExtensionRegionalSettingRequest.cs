@@ -9,7 +9,8 @@ namespace RingCentral
 
         public ExtensionFormattingLocaleInfoRequest formattingLocale;
 
-        // Time format setting. The default value is '12h' = ['12h', '24h']
+        // Time format setting
+        // Enum: 12h, 24h
         public string timeFormat;
     }
 }

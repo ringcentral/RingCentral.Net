@@ -48,7 +48,7 @@ namespace RingCentral
         // Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
         public string messageStatus;
 
-        // Pager only True if at least one of the message recipients is Department extension
+        // 'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
         public bool? pgToDepartment;
 
         // Message priority

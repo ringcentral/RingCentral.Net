@@ -9,10 +9,10 @@ namespace RingCentral
         // Enum: Everyone
         public string type;
 
-        // Chat name.
+        // Chat name
         public string name;
 
-        // Chat description.
+        // Chat description
         public string description;
 
         // Chat creation datetime in ISO 8601 format

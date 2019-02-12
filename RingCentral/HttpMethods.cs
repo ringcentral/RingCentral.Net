@@ -21,7 +21,7 @@ namespace RingCentral
             {
                 httpContent = (HttpContent) obj;
             }
-            else if(obj != null)
+            else if (obj != null)
             {
                 httpContent = new StringContent(
                     JsonConvert.SerializeObject(obj, Formatting.None, jsonSerializerSettings), Encoding.UTF8,

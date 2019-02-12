@@ -8,7 +8,7 @@ namespace RingCentral
         // Specific data ranges. If specified, weeklyRanges cannot be specified
         public RangesInfo[] ranges;
 
-        // Reference to Business Hours or After Hours schedule = ['BusinessHours', 'AfterHours']
+        // Reference to Business Hours or After Hours schedule
         // Enum: BusinessHours, AfterHours
         public string @ref;
     }
