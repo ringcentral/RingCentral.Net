@@ -14,8 +14,7 @@ namespace RingCentral
         public string sound;
 
         // Content availability
-        [JsonProperty("content-available")]
-        public string contentAvailable;
+        [JsonProperty("content-available")] public string contentAvailable;
 
         // Category of a message
         public string category;
