@@ -37,7 +37,6 @@ namespace RingCentral.Tests
                         new
                         {
                             phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
-//                            phoneNumber = "16506417402"
                         }
                     }
                 }), Encoding.UTF8, "application/json");

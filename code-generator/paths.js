@@ -154,6 +154,7 @@ ${code}`
       if (responseSchema) {
         responseType = R.last(responseSchema['$ref'].split('/'))
       }
+      // todo: request body
       code += `
 
         public async Task<${responseType}> ${smartMethod}()
