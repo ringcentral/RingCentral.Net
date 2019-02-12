@@ -154,12 +154,17 @@ ${code}`
       if (responseSchema) {
         responseType = R.last(responseSchema['$ref'].split('/'))
       }
-      // todo: request body
+      let body, bodyClass, bodyParam
+      body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
+      if (body) {
+        bodyClass = R.last(body.schema['$ref'].split('/'))
+        bodyParam = changeCase.lowerCaseFirst(bodyClass)
+      }
       code += `
 
-        public async Task<${responseType}> ${smartMethod}()
+        public async Task<${responseType}> ${smartMethod}(${body ? `${bodyClass} ${bodyParam}` : ''})
         {
-            return await rc.${method}<${responseType}>(this.Path(${(paramName && !operation.endpoint.endsWith('}')) ? 'false' : ''}));
+            return await rc.${method}<${responseType}>(this.Path(${(paramName && !operation.endpoint.endsWith('}')) ? 'false' : ''})${body ? `, ${bodyParam}` : ''});
         }`
     })
 
