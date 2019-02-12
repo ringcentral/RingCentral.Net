@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Scim.ServiceProviderConfig
@@ -13,6 +12,7 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
             this.parent = parent;
             this.rc = parent.rc;
         }
+
         public string Path()
         {
             return $"{parent.Path()}/ServiceProviderConfig";

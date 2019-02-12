@@ -84,12 +84,12 @@ const generate = (prefix = '/') => {
     }
     if (routes.length > 1) {
       code += `
-        public ${R.init(routes).join('.')}.Index parent;
-`
+        public ${R.init(routes).join('.')}.Index parent;`
     }
 
     if (paramName) {
       code += `
+
         public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null})
         {
           ${routes.length > 1 ? `  this.parent = parent;
@@ -119,6 +119,7 @@ const generate = (prefix = '/') => {
         }`
     } else {
       code += `
+
         public string Path()
         {
             return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name.replace('dotSearch', '.search')}";
@@ -146,8 +147,7 @@ const generate = (prefix = '/') => {
       }
     })
     if (operations.length > 0) {
-      code = `using System;
-using System.Threading.Tasks;
+      code = `using System.Threading.Tasks;
 
 ${code}`
     }
@@ -174,7 +174,7 @@ ${code}`
         {${withParam ? `
             if (this.${paramName} == null)
             {
-                throw new ArgumentNullException("${paramName}");
+                throw new System.ArgumentNullException("${paramName}");
             }
         ` : ''}
             return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${body ? `, ${bodyParam}` : ''});

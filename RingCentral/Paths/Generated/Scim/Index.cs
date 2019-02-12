@@ -4,6 +4,7 @@ namespace RingCentral.Paths.Scim
     {
         public RestClient rc;
         public string version;
+
         public Index(RestClient rc, string version = "v2")
         {
             this.rc = rc;

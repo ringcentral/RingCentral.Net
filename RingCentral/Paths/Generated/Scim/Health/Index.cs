@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Scim.Health
@@ -7,12 +6,12 @@ namespace RingCentral.Paths.Scim.Health
     {
         public RestClient rc;
         public Scim.Index parent;
-
         public Index(Scim.Index parent)
         {
             this.parent = parent;
             this.rc = parent.rc;
         }
+
         public string Path()
         {
             return $"{parent.Path()}/health";

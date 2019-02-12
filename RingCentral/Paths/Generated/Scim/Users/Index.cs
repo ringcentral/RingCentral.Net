@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Scim.Users
@@ -40,9 +39,9 @@ namespace RingCentral.Paths.Scim.Users
         {
             if (this.id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new System.ArgumentNullException("id");
             }
-        
+
             return await rc.Get<RingCentral.UserResponse>(this.Path());
         }
 
@@ -50,9 +49,9 @@ namespace RingCentral.Paths.Scim.Users
         {
             if (this.id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new System.ArgumentNullException("id");
             }
-        
+
             return await rc.Put<RingCentral.UserResponse>(this.Path(), user);
         }
 
@@ -60,9 +59,9 @@ namespace RingCentral.Paths.Scim.Users
         {
             if (this.id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new System.ArgumentNullException("id");
             }
-        
+
             return await rc.Delete<string>(this.Path());
         }
 
@@ -70,9 +69,9 @@ namespace RingCentral.Paths.Scim.Users
         {
             if (this.id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new System.ArgumentNullException("id");
             }
-        
+
             return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch);
         }
     }

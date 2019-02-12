@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi
@@ -7,6 +6,7 @@ namespace RingCentral.Paths.Restapi
     {
         public RestClient rc;
         public string apiVersion;
+
         public Index(RestClient rc, string apiVersion = "v1.0")
         {
             this.rc = rc;
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi
         {
             if (this.apiVersion == null)
             {
-                throw new ArgumentNullException("apiVersion");
+                throw new System.ArgumentNullException("apiVersion");
             }
         
             return await rc.Get<RingCentral.GetVersionResponse>(this.Path());
