@@ -127,7 +127,7 @@ const generate = (prefix = '/') => {
         }`
     }
 
-    const operations = []
+    let operations = []
     const endpoints = [deNormalizePath(`${prefix}${name}`)]
     if (paramName) {
       endpoints.push(`${deNormalizePath(`${prefix}${name}`)}/{${paramName}}`)
@@ -139,6 +139,9 @@ const generate = (prefix = '/') => {
         const methods = Object.keys(endpointObj)
         console.log('HTTP methods', methods)
         methods.forEach(method => {
+          // remove duplicate DELETE operation
+          // it's OK to have duplicate GETs since we have both Get and List
+          operations = operations.filter(op => op.method === 'get' || op.method !== method)
           operations.push({
             endpoint,
             method,
@@ -177,12 +180,13 @@ ${code}`
         } else {
           bodyClass = R.last(body.schema['$ref'].split('/'))
           bodyParam = changeCase.lowerCaseFirst(bodyClass)
+          bodyClass = 'RingCentral.' + bodyClass
         }
       }
       const withParam = paramName && operation.endpoint.endsWith('}')
       code += `
 
-        public async Task<${responseType}> ${smartMethod}(${body ? `RingCentral.${bodyClass} ${bodyParam}` : ''})
+        public async Task<${responseType}> ${smartMethod}(${body ? `${bodyClass} ${bodyParam}` : ''})
         {${withParam ? `
             if (this.${paramName} == null)
             {
