@@ -51,7 +51,7 @@ namespace RingCentral
                 return httpResponseMessage;
             }
 
-            throw new RestException(httpResponseMessage);
+            throw new RestException(httpResponseMessage, httpRequestMessage);
         }
 
         public async Task<TokenInfo> Authorize(string username, string extension, string password)
