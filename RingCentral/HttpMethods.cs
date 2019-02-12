@@ -8,6 +8,11 @@ namespace RingCentral
 {
     public partial class RestClient
     {
+        public static readonly JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
+        {
+            NullValueHandling = NullValueHandling.Ignore
+        };
+
         public async Task<HttpResponseMessage> Request(HttpMethod httpMethod, string endpoint,
             object obj = null)
         {
@@ -18,7 +23,10 @@ namespace RingCentral
             }
             else
             {
-                httpContent = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
+                httpContent = new StringContent(
+                    JsonConvert.SerializeObject(obj, Formatting.None, jsonSerializerSettings), Encoding.UTF8,
+                    "application/json"
+                );
             }
 
             var httpRequestMessage = new HttpRequestMessage
