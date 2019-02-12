@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 
-
 namespace RingCentral.Paths.Scim.Users
 {
     public partial class Index
