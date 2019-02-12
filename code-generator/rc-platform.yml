@@ -18852,6 +18852,7 @@ definitions:
         $ref: '#/definitions/PagingInfo'
   ValidateEmergencyAddress:
     type: object
+    properties: {}
   OutboundFaxesInfo:
     type: object
     properties:
