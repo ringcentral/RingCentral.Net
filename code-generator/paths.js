@@ -110,7 +110,7 @@ const generate = (prefix = '/') => {
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter)
+            if (withParameter && ${paramName} != null)
             {
                 return $"${routes.length > 1 ? '{parent.Path()}' : ''}/${name}/{${paramName}}";
             }
@@ -121,7 +121,7 @@ const generate = (prefix = '/') => {
       code += `
         public string Path()
         {
-            return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name}";
+            return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name.replace('dotSearch', '.search')}";
         }`
     }
 
