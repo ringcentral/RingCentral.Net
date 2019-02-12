@@ -90,16 +90,18 @@ const generate = (prefix = '/') => {
 
     if (paramName) {
       code += `
-        public Index(RestClient rc, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null})
+        public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null})
         {
-            this.rc = rc;
+          ${routes.length > 1 ? `  this.parent = parent;
+            this.rc = parent.rc;` : '  this.rc = rc;'}
             this.${paramName} = ${paramName};
         }`
     } else {
       code += `
-        public Index(RestClient rc)
+        public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'})
         {
-            this.rc = rc;
+            ${routes.length > 1 ? `this.parent = parent;
+            this.rc = parent.rc;` : '  this.rc = rc;'}
         }`
     }
 
