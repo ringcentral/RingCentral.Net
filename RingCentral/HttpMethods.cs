@@ -16,12 +16,12 @@ namespace RingCentral
         public async Task<HttpResponseMessage> Request(HttpMethod httpMethod, string endpoint,
             object obj = null)
         {
-            HttpContent httpContent;
+            HttpContent httpContent = null;
             if (obj is HttpContent)
             {
                 httpContent = (HttpContent) obj;
             }
-            else
+            else if(obj != null)
             {
                 httpContent = new StringContent(
                     JsonConvert.SerializeObject(obj, Formatting.None, jsonSerializerSettings), Encoding.UTF8,
@@ -56,33 +56,33 @@ namespace RingCentral
             return JsonConvert.DeserializeObject<T>(content);
         }
 
-        public async Task<HttpResponseMessage> Post(string endpoint, object obj)
+        public async Task<HttpResponseMessage> Post(string endpoint, object obj = null)
         {
             return await Request(HttpMethod.Post, endpoint, obj);
         }
 
-        public async Task<T> Post<T>(string endpoint, object obj)
+        public async Task<T> Post<T>(string endpoint, object obj = null)
         {
             return await Request<T>(HttpMethod.Post, endpoint, obj);
         }
 
 
-        public async Task<HttpResponseMessage> Put(string endpoint, object obj)
+        public async Task<HttpResponseMessage> Put(string endpoint, object obj = null)
         {
             return await Request(HttpMethod.Put, endpoint, obj);
         }
 
-        public async Task<T> Put<T>(string endpoint, object obj)
+        public async Task<T> Put<T>(string endpoint, object obj = null)
         {
             return await Request<T>(HttpMethod.Put, endpoint, obj);
         }
 
-        public async Task<HttpResponseMessage> Patch(string endpoint, object obj)
+        public async Task<HttpResponseMessage> Patch(string endpoint, object obj = null)
         {
             return await Request(new HttpMethod("PATCH"), endpoint, obj);
         }
 
-        public async Task<T> Patch<T>(string endpoint, object obj)
+        public async Task<T> Patch<T>(string endpoint, object obj = null)
         {
             return await Request<T>(new HttpMethod("PATCH"), endpoint, obj);
         }
