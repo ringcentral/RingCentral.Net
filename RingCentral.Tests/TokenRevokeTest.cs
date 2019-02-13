@@ -19,9 +19,9 @@ namespace RingCentral.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
             );
-            Assert.NotNull(rc.Token);
+            Assert.NotNull(rc.token);
             await rc.Revoke();
-            Assert.Null(rc.Token);
+            Assert.Null(rc.token);
         }
     }
 }
