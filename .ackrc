@@ -1,0 +1,3 @@
+--ignore-dir=obj
+--ignore-dir=bin
+--ignore-dir=.idea
