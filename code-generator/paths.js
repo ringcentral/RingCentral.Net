@@ -194,7 +194,24 @@ ${code}`
         public class ${smartMethod}QueryParams
         {
             ${queryParams.map(qp => {
-    let field = `public string ${qp.name};`
+    let type = ''
+    switch (qp.type) {
+      case 'string':
+        type = 'string'
+        break
+      case 'integer':
+        type = 'long?'
+        break
+      case 'array':
+        type = qp.items.type + '[]'
+        break
+      case 'boolean':
+        type = 'bool?'
+        break
+      default:
+        throw new Error(`Unknown type: ${qp.type}`)
+    }
+    let field = `public ${type} ${qp.name};`
     if (qp.required) {
       field += ` // Required`
     }

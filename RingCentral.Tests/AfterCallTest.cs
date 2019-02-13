@@ -34,7 +34,7 @@ namespace RingCentral.Tests
 
                 const string phoneNumber = "+15889546648";
                 var addressBook = rc.Restapi().Account().Extension().AddressBook();
-                await addressBook.Contact().List(new ListQueryParams {phoneNumber = phoneNumber});
+                await addressBook.Contact().List(new ListQueryParams {phoneNumber = new[] {phoneNumber}});
 
                 // todo: make code below work
 //                await addressBook.Contact().List(new { phoneNumber = phoneNumber });

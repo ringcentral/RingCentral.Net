@@ -24,7 +24,7 @@ namespace RingCentral.Tests
 
                 var callLogResponse = await rc.Restapi().Account().CallLog().List(new ListQueryParams
                 {
-                    perPage = "3",
+                    perPage = 3,
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o")
                 });
                 Assert.Equal(3, callLogResponse.records.Length);
