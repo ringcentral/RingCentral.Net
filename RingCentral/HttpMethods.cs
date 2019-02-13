@@ -29,10 +29,12 @@ namespace RingCentral
                 );
             }
 
+            var uriBuilder = new UriBuilder(server) {Path = endpoint};
+
             var httpRequestMessage = new HttpRequestMessage
             {
                 Method = httpMethod,
-                RequestUri = new Uri(server, endpoint),
+                RequestUri = uriBuilder.Uri,
                 Content = httpContent
             };
             return await Request(httpRequestMessage);
