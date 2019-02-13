@@ -191,7 +191,19 @@ ${code}`
 
         public class ${smartMethod}QueryParams
         {
-            ${queryParams.map(qp => `public string ${qp.name};`).join('\n            ')}
+            ${queryParams.map(qp => {
+    let field = `public string ${qp.name};`
+    if (qp.required) {
+      field += ` // Required`
+    }
+    if (qp.enum) {
+      field = `// Enum: ${qp.enum.join(', ')}\n            ${field}`
+    }
+    if (qp.description) {
+      field = `// ${qp.description.trim()}\n            ${field}`
+    }
+    return field
+  }).join('\n\n            ')}
         }`
       }
 
