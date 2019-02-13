@@ -77,8 +77,20 @@ namespace RingCentral
             return token;
         }
 
-        public async Task<TokenInfo> Refresh()
+        public async Task<TokenInfo> Refresh(string refreshToken = null)
         {
+            if (refreshToken != null)
+            {
+                if (token != null)
+                {
+                    token.refresh_token = refreshToken;
+                }
+                else
+                {
+                    token = new TokenInfo {refresh_token = refreshToken};
+                }
+            }
+
             if (token == null) // nothing  to refresh
             {
                 return null;
