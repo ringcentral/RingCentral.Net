@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -65,6 +66,78 @@ namespace RingCentral.Tests
             {
                 Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
             }
+        }
+
+        [Fact]
+        public async void TestRefreshWithTokenOnly()
+        {
+            var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            );
+            await rc.Authorize(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+            );
+            
+            // suppose data is read from file
+            var data = JsonConvert.SerializeObject(rc.token);
+
+            // suppose token is null (not logged in)
+            rc.token = null;
+
+            // deserialize to get token
+            var token = JsonConvert.DeserializeObject<TokenInfo>(data);
+
+            // refresh by refresh token
+            await rc.Refresh(token.refresh_token);
+
+            // got token from server
+            Assert.NotNull(rc.token);
+
+            // assert access_token not null
+            Assert.NotNull(rc.token.access_token);
+
+            await rc.Revoke();
+        }
+
+
+        [Fact]
+        public async void TestRefreshWithSavedToken()
+        {
+            var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            );
+            await rc.Authorize(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+            );
+
+            // suppose data is read form file
+            var data = JsonConvert.SerializeObject(rc.token);
+
+            // suppose token is null (not logged in)
+            rc.token = null;
+
+            // deserialize to get token
+            var token = JsonConvert.DeserializeObject<TokenInfo>(data);
+            rc.token = token;
+
+            // refresh
+            await rc.Refresh();
+
+            // got token from server
+            Assert.NotNull(rc.token);
+
+            // assert access_token is not null
+            Assert.NotNull(rc.token.access_token);
+
+            await rc.Revoke();
         }
     }
 }
