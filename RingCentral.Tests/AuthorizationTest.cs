@@ -28,19 +28,19 @@ namespace RingCentral.Tests
             await rc.Refresh();
             Assert.NotNull(rc.token);
             Assert.NotEqual(oldToken, rc.token.access_token);
-            
+
             // refresh null token
             var temp = new RestClient("", "");
             await temp.Refresh(); // refresh null token
             Assert.Null(temp.token);
-            
+
             // revoke null token
-            await temp.Revoke(); 
+            await temp.Revoke();
             Assert.Null(temp.token);
 
             await rc.Revoke();
         }
-        
+
         [Fact]
         public async void AuthorizeUri()
         {
@@ -49,21 +49,22 @@ namespace RingCentral.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
             );
-            
+
             var redirectUri = "http://localhost:3000/callback";
-            
+
             var uri = rc.AuthorizeUri(redirectUri, "myState");
             Assert.NotNull(uri);
             Assert.Contains("state=myState", uri);
-//            try
-//            {
-//                await rc.Authorize("fakeCode", redirectUri);
-//                throw new Exception("Code above should throw");
-//            }
-//            catch (RestException re)
-//            {
-//                Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
-//            }
+
+            try
+            {
+                await rc.Authorize("fakeCode", redirectUri);
+                throw new Exception("Code above should throw");
+            }
+            catch (RestException re)
+            {
+                Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
+            }
         }
     }
 }

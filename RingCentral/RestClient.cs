@@ -126,16 +126,16 @@ namespace RingCentral
         {
             await Revoke();
         }
-        
+
         public string AuthorizeUri(string redirectUri, string state = "")
         {
-            return AuthorizeUri(redirectUri, new OAuthOptions { state = state });
+            return AuthorizeUri(redirectUri, new OAuthOptions {state = state});
         }
-        
+
         public string AuthorizeUri(string redirectUri, OAuthOptions options)
         {
             var uriBuilder = new UriBuilder(server) {Path = "/restapi/oauth/authorize"};
-            var queryParams = new []
+            var queryParams = new[]
             {
                 ("redirect_uri", redirectUri),
                 ("client_id", clientId),
@@ -145,8 +145,29 @@ namespace RingCentral
                 ("display", options.display),
                 ("prompt", options.prompt)
             };
-            uriBuilder.Query = string.Join("&", queryParams.Select(qp => $"{qp.Item1}={Uri.EscapeUriString(qp.Item2)}"));
+            uriBuilder.Query =
+                string.Join("&", queryParams.Select(qp => $"{qp.Item1}={Uri.EscapeUriString(qp.Item2)}"));
             return uriBuilder.Uri.ToString();
+        }
+
+        public async Task<TokenInfo> Authorize(string authCode, string redirectUri)
+        {
+            var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            {
+                {"grant_type", "authorization_code"},
+                {"code", authCode},
+                {"redirect_uri", redirectUri}
+            });
+            var httpRequestMessage = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri(server, "/restapi/oauth/token"),
+                Content = httpContent
+            };
+            var httpResponseMessage = await Request(httpRequestMessage, true);
+            var json = await httpResponseMessage.Content.ReadAsStringAsync();
+            token = JsonConvert.DeserializeObject<TokenInfo>(json);
+            return token;
         }
     }
 
