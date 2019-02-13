@@ -35,7 +35,20 @@ namespace RingCentral
             {
                 var fields = queryObj.GetType().GetFields()
                     .Where(f => f.GetValue(queryObj) != null)
-                    .Select(f => $"{f.Name}={Uri.EscapeUriString(f.GetValue(queryObj).ToString())}")
+                    .Select(f =>
+                    {
+                        var obj = f.GetValue(queryObj);
+                        if (obj.GetType().IsArray)
+                        {
+                            return String.Join("&",
+                                (obj as object[]).Select(o => $"{f.Name}={Uri.EscapeUriString(o.ToString())}")
+                                .ToArray());
+                        }
+                        else
+                        {
+                            return $"{f.Name}={Uri.EscapeUriString(obj.ToString())}";
+                        }
+                    })
                     .ToArray();
                 uriBuilder.Query = string.Join("&", fields);
             }

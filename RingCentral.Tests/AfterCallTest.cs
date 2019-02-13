@@ -28,13 +28,14 @@ namespace RingCentral.Tests
                 {
                     var rateLimitRemaining = eventArgs.httpResponseMessage.Headers
                         .First(i => i.Key == "X-Rate-Limit-Remaining").Value.First();
+                    Assert.True(int.Parse(rateLimitRemaining) > 0);
                     count += 1;
                 };
                 rc.AfterHttpCall += eventHandler;
 
                 const string phoneNumber = "+15889546648";
                 var addressBook = rc.Restapi().Account().Extension().AddressBook();
-                // todo: write unit test for query params
+
                 await addressBook.Contact().List(new ListQueryParams {phoneNumber = new[] {phoneNumber}});
 
                 await addressBook.Contact().List(new {phoneNumber = phoneNumber});
