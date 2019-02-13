@@ -171,6 +171,7 @@ ${code}`
           responseType = 'RingCentral.' + R.last(responseSchema['$ref'].split('/'))
         }
       }
+
       let body, bodyClass, bodyParam
       body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
       if (body) {
@@ -183,17 +184,35 @@ ${code}`
           bodyClass = 'RingCentral.' + bodyClass
         }
       }
+
+      const queryParams = (operation.detail.parameters || []).filter(p => p.in === 'query')
+      if (queryParams.length > 0) {
+        code += `
+
+        public class ${smartMethod}QueryParams
+        {
+            ${queryParams.map(qp => `public string ${qp.name};`).join('\n            ')}
+        }`
+      }
+
       const withParam = paramName && operation.endpoint.endsWith('}')
+      const methodParams = []
+      if (body) {
+        methodParams.push(`${bodyClass} ${bodyParam}`)
+      }
+      if (queryParams.length > 0) {
+        methodParams.push(`${smartMethod}QueryParams queryParams = null`)
+      }
       code += `
 
-        public async Task<${responseType}> ${smartMethod}(${body ? `${bodyClass} ${bodyParam}` : ''})
+        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
         {${withParam ? `
             if (this.${paramName} == null)
             {
                 throw new System.ArgumentNullException("${paramName}");
             }
 ` : ''}
-            return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${body ? `, ${bodyParam}` : ''});
+            return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${body ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
         }`
     })
 
