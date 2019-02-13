@@ -155,6 +155,8 @@ const generate = (prefix = '/') => {
 
 ${code}`
     }
+
+    let queryParamsCodeSnippets = ''
     operations.forEach(operation => {
       const method = changeCase.pascalCase(operation.method)
       const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
@@ -187,7 +189,7 @@ ${code}`
 
       const queryParams = (operation.detail.parameters || []).filter(p => p.in === 'query')
       if (queryParams.length > 0) {
-        code += `
+        queryParamsCodeSnippets += `
 
         public class ${smartMethod}QueryParams
         {
@@ -229,8 +231,13 @@ ${code}`
     })
 
     code += `
+    }`
+    if (queryParamsCodeSnippets.length > 0) {
+      code += queryParamsCodeSnippets
     }
+    code += `
 }`
+
     if (routes.length === 1) { // top level path, such as /restapi & /scim
       code = `${code}
 
