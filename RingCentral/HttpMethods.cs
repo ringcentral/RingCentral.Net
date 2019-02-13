@@ -40,7 +40,7 @@ namespace RingCentral
                         var obj = f.GetValue(queryObj);
                         if (obj.GetType().IsArray)
                         {
-                            return String.Join("&",
+                            return string.Join("&",
                                 (obj as object[]).Select(o => $"{f.Name}={Uri.EscapeUriString(o.ToString())}")
                                 .ToArray());
                         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -125,5 +126,36 @@ namespace RingCentral
         {
             await Revoke();
         }
+        
+        public string AuthorizeUri(string redirectUri, string state = "")
+        {
+            return AuthorizeUri(redirectUri, new OAuthOptions { state = state });
+        }
+        
+        public string AuthorizeUri(string redirectUri, OAuthOptions options)
+        {
+            var uriBuilder = new UriBuilder(server) {Path = "/restapi/oauth/authorize"};
+            var queryParams = new []
+            {
+                ("redirect_uri", redirectUri),
+                ("client_id", clientId),
+                ("response_type", options.responseType),
+                ("state", options.state),
+                ("brand_id", options.brandId),
+                ("display", options.display),
+                ("prompt", options.prompt)
+            };
+            uriBuilder.Query = string.Join("&", queryParams.Select(qp => $"{qp.Item1}={Uri.EscapeUriString(qp.Item2)}"));
+            return uriBuilder.Uri.ToString();
+        }
+    }
+
+    public class OAuthOptions
+    {
+        public string responseType = "code";
+        public string state = "";
+        public string brandId = "";
+        public string display = "";
+        public string prompt = "";
     }
 }
