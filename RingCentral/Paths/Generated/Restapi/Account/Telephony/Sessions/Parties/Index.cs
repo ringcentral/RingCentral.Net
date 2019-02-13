@@ -44,6 +44,16 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 
             return await rc.Patch<RingCentral.CallParty>(this.Path(), partyUpdateRequest);
         }
+
+        public async Task<RingCentral.CallParty> Patch(object partyUpdateRequest)
+        {
+            if (this.partyId == null)
+            {
+                throw new System.ArgumentNullException("partyId");
+            }
+
+            return await rc.Patch<RingCentral.CallParty>(this.Path(), partyUpdateRequest);
+        }
     }
 }
 

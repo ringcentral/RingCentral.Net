@@ -25,19 +25,12 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
             return $"{parent.Path()}/phone-number";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.AccountPhoneNumbers> List(ListQueryParams queryParams = null)
         {
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-
-            // Usage type of a phone number
-            public string usageType;
+            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.AccountPhoneNumbers> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.AccountPhoneNumbers> List(object queryParams)
         {
             return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
         }
@@ -51,6 +44,18 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
 
             return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path());
         }
+    }
+
+    public class ListQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
+
+        // Usage type of a phone number
+        public string[] usageType;
     }
 }
 

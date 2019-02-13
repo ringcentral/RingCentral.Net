@@ -28,6 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         {
             return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate);
         }
+
+        public async Task<RingCentral.CallerBlockingSettings> Put(object callerBlockingSettingsUpdate)
+        {
+            return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate);
+        }
     }
 }
 

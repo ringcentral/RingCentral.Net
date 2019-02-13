@@ -25,15 +25,16 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return $"{parent.Path()}/cards";
         }
 
-        public class PostQueryParams
-        {
-            // Internal identifier of a group where to create a post with the card
-            public string groupId;
-        }
-
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
             RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
             PostQueryParams queryParams = null)
+        {
+            return await rc.Post<RingCentral.GlipMessageAttachmentInfo>(this.Path(false),
+                glipMessageAttachmentInfoRequest, queryParams);
+        }
+
+        public async Task<RingCentral.GlipMessageAttachmentInfo> Post(object glipMessageAttachmentInfoRequest,
+            object queryParams)
         {
             return await rc.Post<RingCentral.GlipMessageAttachmentInfo>(this.Path(false),
                 glipMessageAttachmentInfoRequest, queryParams);
@@ -59,6 +60,16 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return await rc.Put<string>(this.Path(), glipMessageAttachmentInfoRequest);
         }
 
+        public async Task<string> Put(object glipMessageAttachmentInfoRequest)
+        {
+            if (this.cardId == null)
+            {
+                throw new System.ArgumentNullException("cardId");
+            }
+
+            return await rc.Put<string>(this.Path(), glipMessageAttachmentInfoRequest);
+        }
+
         public async Task<string> Delete()
         {
             if (this.cardId == null)
@@ -68,6 +79,12 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
 
             return await rc.Delete<string>(this.Path());
         }
+    }
+
+    public class PostQueryParams
+    {
+        // Internal identifier of a group where to create a post with the card
+        public long? groupId;
     }
 }
 

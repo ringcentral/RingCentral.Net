@@ -18,28 +18,33 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
             return $"{parent.Path()}/location";
         }
 
-        public class GetQueryParams
-        {
-            // Sorts results by the property specified
-            public string orderBy;
-
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-
-            // Internal identifier of a state
-            public string stateId;
-
-            // Specifies if nxx codes are returned
-            public string withNxx;
-        }
-
         public async Task<RingCentral.GetLocationListResponse> Get(GetQueryParams queryParams = null)
         {
             return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams);
         }
+
+        public async Task<RingCentral.GetLocationListResponse> Get(object queryParams)
+        {
+            return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams);
+        }
+    }
+
+    public class GetQueryParams
+    {
+        // Sorts results by the property specified
+        public string[] orderBy;
+
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
+
+        // Internal identifier of a state
+        public string stateId;
+
+        // Specifies if nxx codes are returned
+        public bool? withNxx;
     }
 }
 

@@ -25,22 +25,23 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return $"{parent.Path()}/forwarding-number";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(ListQueryParams queryParams = null)
         {
-            // Indicates the page number to retrieve. Only positive number values are accepted.
-            public string page;
-
-            // Indicates the page size (number of items).
-            public string perPage;
+            return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(object queryParams)
         {
             return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.ForwardingNumberInfo> Post(
             RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest)
+        {
+            return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest);
+        }
+
+        public async Task<RingCentral.ForwardingNumberInfo> Post(object createForwardingNumberRequest)
         {
             return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest);
         }
@@ -66,6 +67,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest);
         }
 
+        public async Task<RingCentral.ForwardingNumberInfo> Put(object updateForwardingNumberRequest)
+        {
+            if (this.forwardingNumberId == null)
+            {
+                throw new System.ArgumentNullException("forwardingNumberId");
+            }
+
+            return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest);
+        }
+
         public async Task<string> Delete()
         {
             if (this.forwardingNumberId == null)
@@ -75,6 +86,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
             return await rc.Delete<string>(this.Path());
         }
+    }
+
+    public class ListQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted.
+        public long? page;
+
+        // Indicates the page size (number of items).
+        public long? perPage;
     }
 }
 

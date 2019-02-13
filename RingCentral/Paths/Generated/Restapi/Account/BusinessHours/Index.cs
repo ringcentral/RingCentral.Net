@@ -28,6 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.BusinessHours
         {
             return await rc.Put<RingCentral.CompanyBusinessHours>(this.Path(), companyBusinessHoursUpdateRequest);
         }
+
+        public async Task<RingCentral.CompanyBusinessHours> Put(object companyBusinessHoursUpdateRequest)
+        {
+            return await rc.Put<RingCentral.CompanyBusinessHours>(this.Path(), companyBusinessHoursUpdateRequest);
+        }
     }
 }
 

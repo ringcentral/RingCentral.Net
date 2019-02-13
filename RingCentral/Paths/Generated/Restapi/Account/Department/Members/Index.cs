@@ -18,19 +18,24 @@ namespace RingCentral.Paths.Restapi.Account.Department.Members
             return $"{parent.Path()}/members";
         }
 
-        public class GetQueryParams
-        {
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-        }
-
         public async Task<RingCentral.DepartmentMemberList> Get(GetQueryParams queryParams = null)
         {
             return await rc.Get<RingCentral.DepartmentMemberList>(this.Path(), queryParams);
         }
+
+        public async Task<RingCentral.DepartmentMemberList> Get(object queryParams)
+        {
+            return await rc.Get<RingCentral.DepartmentMemberList>(this.Path(), queryParams);
+        }
+    }
+
+    public class GetQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
     }
 }
 

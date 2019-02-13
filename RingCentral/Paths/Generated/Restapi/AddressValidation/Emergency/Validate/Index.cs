@@ -22,6 +22,11 @@ namespace RingCentral.Paths.Restapi.AddressValidation.Emergency.Validate
         {
             return await rc.Post<string>(this.Path(), validateEmergencyAddress);
         }
+
+        public async Task<string> Post(object validateEmergencyAddress)
+        {
+            return await rc.Post<string>(this.Path(), validateEmergencyAddress);
+        }
     }
 }
 

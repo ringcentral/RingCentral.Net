@@ -25,16 +25,12 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
             return $"{parent.Path()}/posts";
         }
 
-        public class GetQueryParams
+        public async Task<RingCentral.GlipPosts> Get(GetQueryParams queryParams = null)
         {
-            // Max number of records to be returned
-            public string recordCount;
-
-            // Pagination token
-            public string pageToken;
+            return await rc.Get<RingCentral.GlipPosts>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipPosts> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.GlipPosts> Get(object queryParams)
         {
             return await rc.Get<RingCentral.GlipPosts>(this.Path(false), queryParams);
         }
@@ -43,6 +39,20 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
         {
             return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), glipCreatePost);
         }
+
+        public async Task<RingCentral.GlipPostInfo> Post(object glipCreatePost)
+        {
+            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), glipCreatePost);
+        }
+    }
+
+    public class GetQueryParams
+    {
+        // Max number of records to be returned
+        public long? recordCount;
+
+        // Pagination token
+        public string pageToken;
     }
 }
 

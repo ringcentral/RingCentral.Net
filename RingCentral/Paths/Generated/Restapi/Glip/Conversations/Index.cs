@@ -25,22 +25,23 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
             return $"{parent.Path()}/conversations";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.GlipConversationsList> List(ListQueryParams queryParams = null)
         {
-            // Number of conversations to be fetched by one request. The maximum value is 250, by default - 30
-            public string recordCount;
-
-            // Pagination token.
-            public string pageToken;
+            return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipConversationsList> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GlipConversationsList> List(object queryParams)
         {
             return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.GlipConversationInfo> Post(
             RingCentral.GlipPostMembersListBody glipPostMembersListBody)
+        {
+            return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), glipPostMembersListBody);
+        }
+
+        public async Task<RingCentral.GlipConversationInfo> Post(object glipPostMembersListBody)
         {
             return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), glipPostMembersListBody);
         }
@@ -54,6 +55,15 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
 
             return await rc.Get<RingCentral.GlipConversationInfo>(this.Path());
         }
+    }
+
+    public class ListQueryParams
+    {
+        // Number of conversations to be fetched by one request. The maximum value is 250, by default - 30
+        public long? recordCount;
+
+        // Pagination token.
+        public string pageToken;
     }
 }
 

@@ -18,19 +18,24 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Users
             return $"{parent.Path()}/users";
         }
 
-        public class GetQueryParams
-        {
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-        }
-
         public async Task<RingCentral.PagingOnlyGroupUsers> Get(GetQueryParams queryParams = null)
         {
             return await rc.Get<RingCentral.PagingOnlyGroupUsers>(this.Path(), queryParams);
         }
+
+        public async Task<RingCentral.PagingOnlyGroupUsers> Get(object queryParams)
+        {
+            return await rc.Get<RingCentral.PagingOnlyGroupUsers>(this.Path(), queryParams);
+        }
+    }
+
+    public class GetQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
     }
 }
 

@@ -28,6 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         {
             return await rc.Put<RingCentral.NotificationSettings>(this.Path(), notificationSettingsUpdateRequest);
         }
+
+        public async Task<RingCentral.NotificationSettings> Put(object notificationSettingsUpdateRequest)
+        {
+            return await rc.Put<RingCentral.NotificationSettings>(this.Path(), notificationSettingsUpdateRequest);
+        }
     }
 }
 

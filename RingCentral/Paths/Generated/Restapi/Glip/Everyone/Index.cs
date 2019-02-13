@@ -28,6 +28,11 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         {
             return await rc.Patch<RingCentral.GlipEveryoneInfo>(this.Path(), updateGlipEveryoneRequest);
         }
+
+        public async Task<RingCentral.GlipEveryoneInfo> Patch(object updateGlipEveryoneRequest)
+        {
+            return await rc.Patch<RingCentral.GlipEveryoneInfo>(this.Path(), updateGlipEveryoneRequest);
+        }
     }
 }
 

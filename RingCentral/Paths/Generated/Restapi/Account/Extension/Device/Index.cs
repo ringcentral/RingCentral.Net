@@ -18,21 +18,26 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
             return $"{parent.Path()}/device";
         }
 
-        public class GetQueryParams
-        {
-            // Pooling type of a device
-            // Enum: Host, Guest, None
-            public string linePooling;
-
-            // Device feature or multiple features supported
-            // Enum: Intercom, Paging, BLA
-            public string feature;
-        }
-
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(GetQueryParams queryParams = null)
         {
             return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams);
         }
+
+        public async Task<RingCentral.GetExtensionDevicesResponse> Get(object queryParams)
+        {
+            return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams);
+        }
+    }
+
+    public class GetQueryParams
+    {
+        // Pooling type of a device
+        // Enum: Host, Guest, None
+        public string linePooling;
+
+        // Device feature or multiple features supported
+        // Enum: Intercom, Paging, BLA
+        public string feature;
     }
 }
 

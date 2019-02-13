@@ -25,43 +25,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return $"{parent.Path()}/message-store";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.GetMessageList> List(ListQueryParams queryParams = null)
         {
-            // Specifies the availability status for the resulting messages. Multiple values are accepted
-            public string availability;
-
-            // Specifies the conversation identifier for the resulting messages
-            public string conversationId;
-
-            // The start datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
-            public string dateFrom;
-
-            // The end datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
-            public string dateTo;
-
-            // The direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
-            public string direction;
-
-            // If 'True', then the latest messages per every conversation ID are returned
-            public string distinctConversations;
-
-            // The type of the resulting messages. If not specified, all messages without message type filtering are returned. Multiple values are accepted
-            public string messageType;
-
-            // The read status for the resulting messages. Multiple values are accepted
-            public string readStatus;
-
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-
-            // The phone number. If specified, messages are returned for this particular phone number only
-            public string phoneNumber;
+            return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetMessageList> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GetMessageList> List(object queryParams)
         {
             return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
         }
@@ -86,13 +55,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
         }
 
-        public class DeleteQueryParams
+        public async Task<RingCentral.GetMessageInfoResponse> Put(object updateMessageRequest)
         {
-            // If the value is 'True', then the message is purged immediately with all the attachments
-            public string purge;
+            if (this.messageId == null)
+            {
+                throw new System.ArgumentNullException("messageId");
+            }
 
-            // Internal identifier of a message thread
-            public string conversationId;
+            return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
         }
 
         public async Task<string> Delete(DeleteQueryParams queryParams = null)
@@ -104,6 +74,61 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
 
             return await rc.Delete<string>(this.Path(), queryParams);
         }
+
+        public async Task<string> Delete(object queryParams)
+        {
+            if (this.messageId == null)
+            {
+                throw new System.ArgumentNullException("messageId");
+            }
+
+            return await rc.Delete<string>(this.Path(), queryParams);
+        }
+    }
+
+    public class ListQueryParams
+    {
+        // Specifies the availability status for the resulting messages. Multiple values are accepted
+        public string[] availability;
+
+        // Specifies the conversation identifier for the resulting messages
+        public long? conversationId;
+
+        // The start datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
+        public string dateFrom;
+
+        // The end datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
+        public string dateTo;
+
+        // The direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
+        public string[] direction;
+
+        // If 'True', then the latest messages per every conversation ID are returned
+        public bool? distinctConversations;
+
+        // The type of the resulting messages. If not specified, all messages without message type filtering are returned. Multiple values are accepted
+        public string[] messageType;
+
+        // The read status for the resulting messages. Multiple values are accepted
+        public string[] readStatus;
+
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
+
+        // The phone number. If specified, messages are returned for this particular phone number only
+        public string phoneNumber;
+    }
+
+    public class DeleteQueryParams
+    {
+        // If the value is 'True', then the message is purged immediately with all the attachments
+        public bool? purge;
+
+        // Internal identifier of a message thread
+        public long? conversationId;
     }
 }
 

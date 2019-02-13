@@ -27,6 +27,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         {
             return await rc.Put<string>(this.Path(), favoriteCollection);
         }
+
+        public async Task<string> Put(object favoriteCollection)
+        {
+            return await rc.Put<string>(this.Path(), favoriteCollection);
+        }
     }
 }
 

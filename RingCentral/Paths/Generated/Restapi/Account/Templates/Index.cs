@@ -25,17 +25,12 @@ namespace RingCentral.Paths.Restapi.Account.Templates
             return $"{parent.Path()}/templates";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.UserTemplates> List(ListQueryParams queryParams = null)
         {
-            // Enum: UserSettings, CallHandling
-            public string type;
-
-            public string page;
-
-            public string perPage;
+            return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.UserTemplates> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.UserTemplates> List(object queryParams)
         {
             return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams);
         }
@@ -49,6 +44,16 @@ namespace RingCentral.Paths.Restapi.Account.Templates
 
             return await rc.Get<RingCentral.TemplateInfo>(this.Path());
         }
+    }
+
+    public class ListQueryParams
+    {
+        // Enum: UserSettings, CallHandling
+        public string type;
+
+        public string page;
+
+        public string perPage;
     }
 }
 

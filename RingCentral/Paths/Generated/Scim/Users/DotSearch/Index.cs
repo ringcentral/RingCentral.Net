@@ -22,6 +22,11 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         {
             return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest);
         }
+
+        public async Task<RingCentral.UserSearchResponse> Post(object searchRequest)
+        {
+            return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest);
+        }
     }
 }
 

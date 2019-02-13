@@ -23,6 +23,11 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
         {
             return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(), customCompanyGreetingRequest);
         }
+
+        public async Task<RingCentral.CustomCompanyGreetingInfo> Post(object customCompanyGreetingRequest)
+        {
+            return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(), customCompanyGreetingRequest);
+        }
     }
 }
 

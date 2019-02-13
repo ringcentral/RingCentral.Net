@@ -25,24 +25,22 @@ namespace RingCentral.Paths.Scim.Users
             return $"{parent.Path()}/Users";
         }
 
-        public class ListQueryParams
-        {
-            // only support 'userName' or 'email' filter expressions for now
-            public string filter;
-
-            // start index (1-based)
-            public string startIndex;
-
-            // page size
-            public string count;
-        }
-
         public async Task<RingCentral.UserSearchResponse> List(ListQueryParams queryParams = null)
         {
             return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
         }
 
+        public async Task<RingCentral.UserSearchResponse> List(object queryParams)
+        {
+            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
+        }
+
         public async Task<RingCentral.UserResponse> Post(RingCentral.User user)
+        {
+            return await rc.Post<RingCentral.UserResponse>(this.Path(false), user);
+        }
+
+        public async Task<RingCentral.UserResponse> Post(object user)
         {
             return await rc.Post<RingCentral.UserResponse>(this.Path(false), user);
         }
@@ -58,6 +56,16 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         public async Task<RingCentral.UserResponse> Put(RingCentral.User user)
+        {
+            if (this.id == null)
+            {
+                throw new System.ArgumentNullException("id");
+            }
+
+            return await rc.Put<RingCentral.UserResponse>(this.Path(), user);
+        }
+
+        public async Task<RingCentral.UserResponse> Put(object user)
         {
             if (this.id == null)
             {
@@ -86,6 +94,28 @@ namespace RingCentral.Paths.Scim.Users
 
             return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch);
         }
+
+        public async Task<RingCentral.UserResponse> Patch(object userPatch)
+        {
+            if (this.id == null)
+            {
+                throw new System.ArgumentNullException("id");
+            }
+
+            return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch);
+        }
+    }
+
+    public class ListQueryParams
+    {
+        // only support 'userName' or 'email' filter expressions for now
+        public string filter;
+
+        // start index (1-based)
+        public long? startIndex;
+
+        // page size
+        public long? count;
     }
 }
 

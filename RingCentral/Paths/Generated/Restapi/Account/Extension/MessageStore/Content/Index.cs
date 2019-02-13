@@ -25,13 +25,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
             return $"{parent.Path()}/content";
         }
 
-        public class GetQueryParams
-        {
-            // Content disposition of a response
-            // Enum: Inline, Attachment
-            public string contentDisposition;
-        }
-
         public async Task<string> Get(GetQueryParams queryParams = null)
         {
             if (this.attachmentId == null)
@@ -41,6 +34,23 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
 
             return await rc.Get<string>(this.Path(), queryParams);
         }
+
+        public async Task<string> Get(object queryParams)
+        {
+            if (this.attachmentId == null)
+            {
+                throw new System.ArgumentNullException("attachmentId");
+            }
+
+            return await rc.Get<string>(this.Path(), queryParams);
+        }
+    }
+
+    public class GetQueryParams
+    {
+        // Content disposition of a response
+        // Enum: Inline, Attachment
+        public string contentDisposition;
     }
 }
 

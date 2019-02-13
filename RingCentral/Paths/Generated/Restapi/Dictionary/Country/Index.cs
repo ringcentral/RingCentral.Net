@@ -25,28 +25,12 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
             return $"{parent.Path()}/country";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.GetCountryListResponse> List(ListQueryParams queryParams = null)
         {
-            // Specifies whether login with the phone numbers of this country is enabled or not
-            public string loginAllowed;
-
-            // Indicates whether signup/billing is allowed for a country. If not specified all countries are returned (according to other filters specified if any)
-            public string signupAllowed;
-
-            // Specifies if RingCentral sells phone numbers of this country
-            public string numberSelling;
-
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-
-            // Specifies if free phone line for softphone is available for a country or not
-            public string freeSoftphoneLine;
+            return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetCountryListResponse> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GetCountryListResponse> List(object queryParams)
         {
             return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams);
         }
@@ -60,6 +44,27 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
 
             return await rc.Get<RingCentral.GetCountryInfoDictionaryResponse>(this.Path());
         }
+    }
+
+    public class ListQueryParams
+    {
+        // Specifies whether login with the phone numbers of this country is enabled or not
+        public bool? loginAllowed;
+
+        // Indicates whether signup/billing is allowed for a country. If not specified all countries are returned (according to other filters specified if any)
+        public bool? signupAllowed;
+
+        // Specifies if RingCentral sells phone numbers of this country
+        public bool? numberSelling;
+
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
+
+        // Specifies if free phone line for softphone is available for a country or not
+        public bool? freeSoftphoneLine;
     }
 }
 

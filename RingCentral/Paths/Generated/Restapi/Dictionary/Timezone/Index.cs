@@ -25,27 +25,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
             return $"{parent.Path()}/timezone";
         }
 
-        public class ListQueryParams
-        {
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-        }
-
         public async Task<RingCentral.GetTimezoneListResponse> List(ListQueryParams queryParams = null)
         {
             return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
         }
 
-        public class GetQueryParams
+        public async Task<RingCentral.GetTimezoneListResponse> List(object queryParams)
         {
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
+            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.GetTimezoneInfoResponse> Get(GetQueryParams queryParams = null)
@@ -57,6 +44,34 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 
             return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams);
         }
+
+        public async Task<RingCentral.GetTimezoneInfoResponse> Get(object queryParams)
+        {
+            if (this.timezoneId == null)
+            {
+                throw new System.ArgumentNullException("timezoneId");
+            }
+
+            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams);
+        }
+    }
+
+    public class ListQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public string page;
+
+        // Indicates the page size (number of items)
+        public string perPage;
+    }
+
+    public class GetQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public string page;
+
+        // Indicates the page size (number of items)
+        public string perPage;
     }
 }
 

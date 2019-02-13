@@ -25,25 +25,12 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
             return $"{parent.Path()}/state";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.GetStateListResponse> List(ListQueryParams queryParams = null)
         {
-            // If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the value is empty then the parameter is ignored
-            public string allCountries;
-
-            // Internal identifier of a country
-            public string countryId;
-
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-
-            // If 'True', the list of states with phone numbers available for buying is returned
-            public string withPhoneNumbers;
+            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetStateListResponse> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GetStateListResponse> List(object queryParams)
         {
             return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams);
         }
@@ -57,6 +44,24 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
 
             return await rc.Get<RingCentral.GetStateInfoResponse>(this.Path());
         }
+    }
+
+    public class ListQueryParams
+    {
+        // If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the value is empty then the parameter is ignored
+        public bool? allCountries;
+
+        // Internal identifier of a country
+        public long? countryId;
+
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
+
+        // If 'True', the list of states with phone numbers available for buying is returned
+        public bool? withPhoneNumbers;
     }
 }
 

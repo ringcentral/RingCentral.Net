@@ -25,22 +25,27 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
             return $"{parent.Path()}/call-queues";
         }
 
-        public class GetQueryParams
-        {
-            // Indicates the page number to retrieve. Only positive number values are accepted
-            public string page;
-
-            // Indicates the page size (number of items)
-            public string perPage;
-
-            // Internal identifier of an extension that is a member of every group within the result
-            public string memberExtensionId;
-        }
-
         public async Task<RingCentral.CallQueues> Get(GetQueryParams queryParams = null)
         {
             return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams);
         }
+
+        public async Task<RingCentral.CallQueues> Get(object queryParams)
+        {
+            return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams);
+        }
+    }
+
+    public class GetQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted
+        public long? page;
+
+        // Indicates the page size (number of items)
+        public long? perPage;
+
+        // Internal identifier of an extension that is a member of every group within the result
+        public string memberExtensionId;
     }
 }
 

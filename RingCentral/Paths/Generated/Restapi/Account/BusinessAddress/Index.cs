@@ -29,6 +29,12 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
             return await rc.Put<RingCentral.AccountBusinessAddressResource>(this.Path(),
                 modifyAccountBusinessAddressRequest);
         }
+
+        public async Task<RingCentral.AccountBusinessAddressResource> Put(object modifyAccountBusinessAddressRequest)
+        {
+            return await rc.Put<RingCentral.AccountBusinessAddressResource>(this.Path(),
+                modifyAccountBusinessAddressRequest);
+        }
     }
 }
 

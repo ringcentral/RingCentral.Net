@@ -34,16 +34,16 @@ namespace RingCentral.Tests
 
                 const string phoneNumber = "+15889546648";
                 var addressBook = rc.Restapi().Account().Extension().AddressBook();
+                // todo: write unit test for query params
                 await addressBook.Contact().List(new ListQueryParams {phoneNumber = new[] {phoneNumber}});
 
-                // todo: make code below work
-//                await addressBook.Contact().List(new { phoneNumber = phoneNumber });
+                await addressBook.Contact().List(new {phoneNumber = phoneNumber});
 
                 var china = await rc.Restapi().Dictionary().Country("46").Get();
                 Assert.Equal("China", china.name);
 
                 rc.AfterHttpCall -= eventHandler;
-                Assert.Equal(2, count);
+                Assert.Equal(3, count);
             }
         }
     }

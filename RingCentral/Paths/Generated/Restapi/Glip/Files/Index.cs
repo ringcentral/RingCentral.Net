@@ -18,19 +18,24 @@ namespace RingCentral.Paths.Restapi.Glip.Files
             return $"{parent.Path()}/files";
         }
 
-        public class PostQueryParams
-        {
-            // Internal identifier of a group to which the post with attachement will be added to
-            public string groupId;
-
-            // Name of a file attached
-            public string name;
-        }
-
         public async Task<RingCentral.PostGlipFile> Post(PostQueryParams queryParams = null)
         {
             return await rc.Post<RingCentral.PostGlipFile>(this.Path(), queryParams);
         }
+
+        public async Task<RingCentral.PostGlipFile> Post(object queryParams)
+        {
+            return await rc.Post<RingCentral.PostGlipFile>(this.Path(), queryParams);
+        }
+    }
+
+    public class PostQueryParams
+    {
+        // Internal identifier of a group to which the post with attachement will be added to
+        public long? groupId;
+
+        // Name of a file attached
+        public string name;
     }
 }
 

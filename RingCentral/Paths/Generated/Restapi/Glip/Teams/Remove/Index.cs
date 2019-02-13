@@ -22,6 +22,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Remove
         {
             return await rc.Post<string>(this.Path(), glipPostMembersIdsListBody);
         }
+
+        public async Task<string> Post(object glipPostMembersIdsListBody)
+        {
+            return await rc.Post<string>(this.Path(), glipPostMembersIdsListBody);
+        }
     }
 }
 

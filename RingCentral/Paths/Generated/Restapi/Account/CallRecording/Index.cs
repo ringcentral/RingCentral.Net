@@ -28,6 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         {
             return await rc.Put<RingCentral.CallRecordingSettingsResource>(this.Path(), callRecordingSettingsResource);
         }
+
+        public async Task<RingCentral.CallRecordingSettingsResource> Put(object callRecordingSettingsResource)
+        {
+            return await rc.Put<RingCentral.CallRecordingSettingsResource>(this.Path(), callRecordingSettingsResource);
+        }
     }
 }
 

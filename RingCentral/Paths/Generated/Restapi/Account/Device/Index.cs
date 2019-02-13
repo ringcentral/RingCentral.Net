@@ -44,6 +44,16 @@ namespace RingCentral.Paths.Restapi.Account.Device
 
             return await rc.Put<RingCentral.DeviceResource>(this.Path(), accountDeviceUpdate);
         }
+
+        public async Task<RingCentral.DeviceResource> Put(object accountDeviceUpdate)
+        {
+            if (this.deviceId == null)
+            {
+                throw new System.ArgumentNullException("deviceId");
+            }
+
+            return await rc.Put<RingCentral.DeviceResource>(this.Path(), accountDeviceUpdate);
+        }
     }
 }
 

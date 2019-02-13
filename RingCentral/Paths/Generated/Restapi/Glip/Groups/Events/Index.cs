@@ -23,6 +23,11 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
             return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
         }
 
+        public async Task<RingCentral.GlipEventInfo> Post(object glipEventCreate)
+        {
+            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
+        }
+
         public async Task<RingCentral.GlipEventInfo> Get()
         {
             return await rc.Get<RingCentral.GlipEventInfo>(this.Path());

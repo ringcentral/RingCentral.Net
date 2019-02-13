@@ -25,24 +25,12 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
             return $"{parent.Path()}/greeting";
         }
 
-        public class ListQueryParams
+        public async Task<RingCentral.DictionaryGreetingList> List(ListQueryParams queryParams = null)
         {
-            // Indicates the page number to retrieve. Only positive number values are accepted.
-            public string page;
-
-            // Indicates the page size (number of items).
-            public string perPage;
-
-            // Type of a greeting, specifying the case when the greeting is played
-            // Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic, Company
-            public string type;
-
-            // Usage type of a greeting, specifying if the greeting is applied for user extension or department extension
-            // Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule
-            public string usageType;
+            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.DictionaryGreetingList> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.DictionaryGreetingList> List(object queryParams)
         {
             return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams);
         }
@@ -56,6 +44,23 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
 
             return await rc.Get<RingCentral.DictionaryGreetingInfo>(this.Path());
         }
+    }
+
+    public class ListQueryParams
+    {
+        // Indicates the page number to retrieve. Only positive number values are accepted.
+        public long? page;
+
+        // Indicates the page size (number of items).
+        public long? perPage;
+
+        // Type of a greeting, specifying the case when the greeting is played
+        // Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic, Company
+        public string type;
+
+        // Usage type of a greeting, specifying if the greeting is applied for user extension or department extension
+        // Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule
+        public string usageType;
     }
 }
 

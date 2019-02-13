@@ -30,6 +30,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
             return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest);
         }
 
+        public async Task<RingCentral.GetRingOutStatusResponse> Post(object makeRingOutRequest)
+        {
+            return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest);
+        }
+
         public async Task<RingCentral.GetRingOutStatusResponse> Get()
         {
             if (this.ringoutId == null)

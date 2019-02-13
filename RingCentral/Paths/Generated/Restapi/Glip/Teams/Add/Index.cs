@@ -22,6 +22,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Add
         {
             return await rc.Post<string>(this.Path(), glipPostMembersListBody);
         }
+
+        public async Task<string> Post(object glipPostMembersListBody)
+        {
+            return await rc.Post<string>(this.Path(), glipPostMembersListBody);
+        }
     }
 }
 

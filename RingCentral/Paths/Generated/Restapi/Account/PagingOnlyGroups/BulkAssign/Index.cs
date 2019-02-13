@@ -22,6 +22,11 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
         {
             return await rc.Post<string>(this.Path(), editPagingGroupRequest);
         }
+
+        public async Task<string> Post(object editPagingGroupRequest)
+        {
+            return await rc.Post<string>(this.Path(), editPagingGroupRequest);
+        }
     }
 }
 
