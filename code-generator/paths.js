@@ -234,9 +234,7 @@ ${code}`
       if (queryParams.length > 0) {
         methodParams.push(`${smartMethod}QueryParams queryParams = null`)
       }
-      code += `
-
-        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
+      const codeBody = `
         {${withParam ? `
             if (this.${paramName} == null)
             {
@@ -245,6 +243,14 @@ ${code}`
 ` : ''}
             return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${body ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
         }`
+      code += `
+
+        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})${codeBody}`
+      if (methodParams.length > 0) {
+        code += `
+
+        public async Task<${responseType}> ${smartMethod}(${methodParams.map(mp => `object ${mp.split(' ')[1]}`).join(', ')})${codeBody}`
+      }
     })
 
     code += `
