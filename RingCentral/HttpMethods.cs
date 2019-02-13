@@ -14,17 +14,17 @@ namespace RingCentral
         };
 
         public async Task<HttpResponseMessage> Request(HttpMethod httpMethod, string endpoint,
-            object obj = null)
+            object content = null)
         {
             HttpContent httpContent = null;
-            if (obj is HttpContent)
+            if (content is HttpContent)
             {
-                httpContent = (HttpContent) obj;
+                httpContent = (HttpContent) content;
             }
-            else if (obj != null)
+            else if (content != null)
             {
                 httpContent = new StringContent(
-                    JsonConvert.SerializeObject(obj, Formatting.None, jsonSerializerSettings), Encoding.UTF8,
+                    JsonConvert.SerializeObject(content, Formatting.None, jsonSerializerSettings), Encoding.UTF8,
                     "application/json"
                 );
             }
@@ -41,52 +41,52 @@ namespace RingCentral
         }
 
         public async Task<T> Request<T>(HttpMethod httpMethod, string endpoint,
-            object obj = null)
+            object content = null)
         {
-            var httpResponseMessage = await Request(httpMethod, endpoint, obj);
+            var httpResponseMessage = await Request(httpMethod, endpoint, content);
             if (typeof(T) == typeof(HttpResponseMessage))
             {
                 return (T) (object) httpResponseMessage;
             }
 
-            var content = await httpResponseMessage.Content.ReadAsStringAsync();
+            var httpContent = await httpResponseMessage.Content.ReadAsStringAsync();
             if (typeof(T) == typeof(string))
             {
-                return (T) (object) content;
+                return (T) (object) httpContent;
             }
 
-            return JsonConvert.DeserializeObject<T>(content);
+            return JsonConvert.DeserializeObject<T>(httpContent);
         }
 
-        public async Task<HttpResponseMessage> Post(string endpoint, object obj = null)
+        public async Task<HttpResponseMessage> Post(string endpoint, object content = null)
         {
-            return await Request(HttpMethod.Post, endpoint, obj);
+            return await Request(HttpMethod.Post, endpoint, content);
         }
 
-        public async Task<T> Post<T>(string endpoint, object obj = null)
+        public async Task<T> Post<T>(string endpoint, object content = null)
         {
-            return await Request<T>(HttpMethod.Post, endpoint, obj);
+            return await Request<T>(HttpMethod.Post, endpoint, content);
         }
 
 
-        public async Task<HttpResponseMessage> Put(string endpoint, object obj = null)
+        public async Task<HttpResponseMessage> Put(string endpoint, object content = null)
         {
-            return await Request(HttpMethod.Put, endpoint, obj);
+            return await Request(HttpMethod.Put, endpoint, content);
         }
 
-        public async Task<T> Put<T>(string endpoint, object obj = null)
+        public async Task<T> Put<T>(string endpoint, object content = null)
         {
-            return await Request<T>(HttpMethod.Put, endpoint, obj);
+            return await Request<T>(HttpMethod.Put, endpoint, content);
         }
 
-        public async Task<HttpResponseMessage> Patch(string endpoint, object obj = null)
+        public async Task<HttpResponseMessage> Patch(string endpoint, object content = null)
         {
-            return await Request(new HttpMethod("PATCH"), endpoint, obj);
+            return await Request(new HttpMethod("PATCH"), endpoint, content);
         }
 
-        public async Task<T> Patch<T>(string endpoint, object obj = null)
+        public async Task<T> Patch<T>(string endpoint, object content = null)
         {
-            return await Request<T>(new HttpMethod("PATCH"), endpoint, obj);
+            return await Request<T>(new HttpMethod("PATCH"), endpoint, content);
         }
 
         public async Task<HttpResponseMessage> Get(string endpoint)
