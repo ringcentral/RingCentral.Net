@@ -30,14 +30,21 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
             return await rc.Post<string>(this.Path(false));
         }
 
-        public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate)
+        public class PatchQueryParams
+        {
+            // Identifies a brand of a logged in user or a brand of a sign-up session
+            public string brandId; // Required
+        }
+
+        public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate,
+            PatchQueryParams queryParams = null)
         {
             if (this.recordingId == null)
             {
                 throw new System.ArgumentNullException("recordingId");
             }
 
-            return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate);
+            return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams);
         }
     }
 }

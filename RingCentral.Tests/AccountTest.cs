@@ -20,7 +20,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                
+
                 var account = await rc.Restapi().Account().Get();
                 Assert.NotNull(account);
                 Assert.NotNull(account.serviceInfo);

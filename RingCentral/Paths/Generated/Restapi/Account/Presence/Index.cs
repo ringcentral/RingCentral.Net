@@ -18,9 +18,24 @@ namespace RingCentral.Paths.Restapi.Account.Presence
             return $"{parent.Path()}/presence";
         }
 
-        public async Task<RingCentral.AccountPresenceInfo> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path());
+            // Whether to return detailed telephony state
+            public string detailedTelephonyState;
+
+            // Whether to return SIP data
+            public string sipData;
+
+            // Page number for account presence information
+            public string page;
+
+            // Number for account presence information items per page
+            public string perPage;
+        }
+
+        public async Task<RingCentral.AccountPresenceInfo> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams);
         }
     }
 }

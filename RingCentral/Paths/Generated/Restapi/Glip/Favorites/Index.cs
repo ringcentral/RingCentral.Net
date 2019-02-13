@@ -18,9 +18,15 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
             return $"{parent.Path()}/favorites";
         }
 
-        public async Task<RingCentral.GlipChatsListWithoutNavigation> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path());
+            // Max number of chats to be fetched by one request (Not more than 250).
+            public string recordCount;
+        }
+
+        public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);
         }
     }
 }

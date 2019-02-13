@@ -18,9 +18,18 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
             return $"{parent.Path()}/devices";
         }
 
-        public async Task<RingCentral.PagingOnlyGroupDevices> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.PagingOnlyGroupDevices>(this.Path());
+            // Indicates the page number to retrieve. Only positive number values are accepted
+            public string page;
+
+            // Indicates the page size (number of items)
+            public string perPage;
+        }
+
+        public async Task<RingCentral.PagingOnlyGroupDevices> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.PagingOnlyGroupDevices>(this.Path(), queryParams);
         }
     }
 }

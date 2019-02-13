@@ -25,9 +25,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return $"{parent.Path()}/forwarding-number";
         }
 
-        public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false));
+            // Indicates the page number to retrieve. Only positive number values are accepted.
+            public string page;
+
+            // Indicates the page size (number of items).
+            public string perPage;
+        }
+
+        public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.ForwardingNumberInfo> Post(

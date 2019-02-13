@@ -18,9 +18,21 @@ namespace RingCentral.Paths.Restapi.Glip.Posts
             return $"{parent.Path()}/posts";
         }
 
-        public async Task<RingCentral.GlipPosts> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.GlipPosts>(this.Path());
+            // Identifier of a group to filter posts
+            public string groupId;
+
+            // Token of a page to be returned
+            public string pageToken;
+
+            // Number of records to be returned. The maximum value is 250, by default - 30
+            public string recordCount;
+        }
+
+        public async Task<RingCentral.GlipPosts> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GlipPosts>(this.Path(), queryParams);
         }
 
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost)

@@ -25,9 +25,27 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
             return $"{parent.Path()}/state";
         }
 
-        public async Task<RingCentral.GetStateListResponse> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false));
+            // If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the value is empty then the parameter is ignored
+            public string allCountries;
+
+            // Internal identifier of a country
+            public string countryId;
+
+            // Indicates the page number to retrieve. Only positive number values are accepted
+            public string page;
+
+            // Indicates the page size (number of items)
+            public string perPage;
+
+            // If 'True', the list of states with phone numbers available for buying is returned
+            public string withPhoneNumbers;
+        }
+
+        public async Task<RingCentral.GetStateListResponse> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.GetStateInfoResponse> Get()

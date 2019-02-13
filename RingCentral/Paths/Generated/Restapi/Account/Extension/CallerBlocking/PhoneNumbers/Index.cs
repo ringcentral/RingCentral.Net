@@ -25,9 +25,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return $"{parent.Path()}/phone-numbers";
         }
 
-        public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false));
+            public string page;
+
+            public string perPage;
+
+            // Enum: Blocked, Allowed
+            public string status;
+        }
+
+        public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(

@@ -25,19 +25,37 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
             return $"{parent.Path()}/timezone";
         }
 
-        public async Task<RingCentral.GetTimezoneListResponse> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false));
+            // Indicates the page number to retrieve. Only positive number values are accepted
+            public string page;
+
+            // Indicates the page size (number of items)
+            public string perPage;
         }
 
-        public async Task<RingCentral.GetTimezoneInfoResponse> Get()
+        public async Task<RingCentral.GetTimezoneListResponse> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
+        }
+
+        public class GetQueryParams
+        {
+            // Indicates the page number to retrieve. Only positive number values are accepted
+            public string page;
+
+            // Indicates the page size (number of items)
+            public string perPage;
+        }
+
+        public async Task<RingCentral.GetTimezoneInfoResponse> Get(GetQueryParams queryParams = null)
         {
             if (this.timezoneId == null)
             {
                 throw new System.ArgumentNullException("timezoneId");
             }
 
-            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path());
+            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams);
         }
     }
 }

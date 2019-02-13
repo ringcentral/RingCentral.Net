@@ -25,14 +25,23 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
             return $"{parent.Path()}/sessions";
         }
 
-        public async Task<RingCentral.CallSessionObject> Get()
+        public class GetQueryParams
+        {
+            // The date and time of a call session latest change
+            public string timestamp;
+
+            // The time frame of awaiting for a status change before sending the resulting one in response
+            public string timeout;
+        }
+
+        public async Task<RingCentral.CallSessionObject> Get(GetQueryParams queryParams = null)
         {
             if (this.sessionId == null)
             {
                 throw new System.ArgumentNullException("sessionId");
             }
 
-            return await rc.Get<RingCentral.CallSessionObject>(this.Path());
+            return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams);
         }
 
         public async Task<string> Delete()

@@ -25,9 +25,22 @@ namespace RingCentral.Paths.Restapi.Glip.Groups
             return $"{parent.Path()}/groups";
         }
 
-        public async Task<RingCentral.GlipGroupList> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.GlipGroupList>(this.Path(false));
+            // Type of groups to be fetched (by default all type of groups will be fetched)
+            // Enum: Group, Team, PrivateChat, PersonalChat
+            public string type;
+
+            // Number of groups to be fetched by one request. The maximum value is 250, by default - 30
+            public string recordCount;
+
+            // Pagination token.
+            public string pageToken;
+        }
+
+        public async Task<RingCentral.GlipGroupList> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GlipGroupList>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.GlipCreateGroup glipCreateGroup)

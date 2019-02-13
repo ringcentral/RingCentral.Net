@@ -18,10 +18,20 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
             return $"{parent.Path()}/parse";
         }
 
-        public async Task<RingCentral.ParsePhoneNumberResponse> Post(
-            RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest)
+        public class PostQueryParams
         {
-            return await rc.Post<RingCentral.ParsePhoneNumberResponse>(this.Path(), parsePhoneNumberRequest);
+            // Internal identifier of a home country. The default value is ISO code (ISO 3166) of the user's home country or brand country, if the user is undefined
+            public string homeCountry;
+
+            // The default value is 'False'. If 'True', the numbers that are closer to the home country are given higher priority
+            public string nationalAsPriority;
+        }
+
+        public async Task<RingCentral.ParsePhoneNumberResponse> Post(
+            RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest, PostQueryParams queryParams = null)
+        {
+            return await rc.Post<RingCentral.ParsePhoneNumberResponse>(this.Path(), parsePhoneNumberRequest,
+                queryParams);
         }
     }
 }

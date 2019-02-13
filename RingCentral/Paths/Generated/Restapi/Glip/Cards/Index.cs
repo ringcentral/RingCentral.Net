@@ -25,11 +25,18 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return $"{parent.Path()}/cards";
         }
 
+        public class PostQueryParams
+        {
+            // Internal identifier of a group where to create a post with the card
+            public string groupId;
+        }
+
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
-            RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest)
+            RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
+            PostQueryParams queryParams = null)
         {
             return await rc.Post<RingCentral.GlipMessageAttachmentInfo>(this.Path(false),
-                glipMessageAttachmentInfoRequest);
+                glipMessageAttachmentInfoRequest, queryParams);
         }
 
         public async Task<RingCentral.GlipMessageAttachmentInfo> Get()

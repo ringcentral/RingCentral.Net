@@ -25,9 +25,21 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
             return $"{parent.Path()}/phone-number";
         }
 
-        public async Task<RingCentral.AccountPhoneNumbers> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false));
+            // Indicates the page number to retrieve. Only positive number values are accepted
+            public string page;
+
+            // Indicates the page size (number of items)
+            public string perPage;
+
+            // Usage type of a phone number
+            public string usageType;
+        }
+
+        public async Task<RingCentral.AccountPhoneNumbers> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.CompanyPhoneNumberInfo> Get()

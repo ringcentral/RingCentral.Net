@@ -25,9 +25,21 @@ namespace RingCentral.Paths.Scim.Users
             return $"{parent.Path()}/Users";
         }
 
-        public async Task<RingCentral.UserSearchResponse> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false));
+            // only support 'userName' or 'email' filter expressions for now
+            public string filter;
+
+            // start index (1-based)
+            public string startIndex;
+
+            // page size
+            public string count;
+        }
+
+        public async Task<RingCentral.UserSearchResponse> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.UserResponse> Post(RingCentral.User user)

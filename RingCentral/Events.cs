@@ -7,7 +7,9 @@ namespace RingCentral
     {
         public HttpResponseMessage httpResponseMessage;
         public HttpRequestMessage httpRequestMessage;
-        public HttpCallEventArgs(HttpResponseMessage httpResponseMessage, HttpRequestMessage httpRequestMessage) {
+
+        public HttpCallEventArgs(HttpResponseMessage httpResponseMessage, HttpRequestMessage httpRequestMessage)
+        {
             this.httpResponseMessage = httpResponseMessage;
             this.httpRequestMessage = httpRequestMessage;
         }

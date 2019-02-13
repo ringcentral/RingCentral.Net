@@ -25,9 +25,15 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
             return $"{parent.Path()}/custom-greetings";
         }
 
-        public async Task<RingCentral.CallRecordingCustomGreetings> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false));
+            // Enum: StartRecording, StopRecording, AutomaticRecording
+            public string type;
+        }
+
+        public async Task<RingCentral.CallRecordingCustomGreetings> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams);
         }
 
         public async Task<string> Delete()

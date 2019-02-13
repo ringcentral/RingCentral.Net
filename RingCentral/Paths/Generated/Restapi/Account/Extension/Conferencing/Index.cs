@@ -18,9 +18,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
             return $"{parent.Path()}/conferencing";
         }
 
-        public async Task<RingCentral.GetConferencingInfoResponse> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path());
+            // Internal identifier of a country. If not specified, the response is returned for the brand country
+            public string countryId;
+        }
+
+        public async Task<RingCentral.GetConferencingInfoResponse> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
         }
 
         public async Task<RingCentral.GetConferencingInfoResponse> Put(

@@ -18,9 +18,25 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Notes
             return $"{parent.Path()}/notes";
         }
 
-        public async Task<RingCentral.GlipNotesInfo> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path());
+            // Number of groups to be fetched by one request, the maximum value is 250, the default is 30
+            public string recordCount;
+
+            // Token of a page to be returned
+            public string pageToken;
+
+            // Status of notes to be fetched. If not specified all notes are returned
+            // Enum: Active, Draft, Unknown
+            public string status;
+
+            // Internal identifier of a note author
+            public string creatorId;
+        }
+
+        public async Task<RingCentral.GlipNotesInfo> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams);
         }
 
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate)

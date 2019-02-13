@@ -25,9 +25,26 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
             return $"{parent.Path()}/greeting";
         }
 
-        public async Task<RingCentral.DictionaryGreetingList> List()
+        public class ListQueryParams
         {
-            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false));
+            // Indicates the page number to retrieve. Only positive number values are accepted.
+            public string page;
+
+            // Indicates the page size (number of items).
+            public string perPage;
+
+            // Type of a greeting, specifying the case when the greeting is played
+            // Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic, Company
+            public string type;
+
+            // Usage type of a greeting, specifying if the greeting is applied for user extension or department extension
+            // Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule
+            public string usageType;
+        }
+
+        public async Task<RingCentral.DictionaryGreetingList> List(ListQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.DictionaryGreetingInfo> Get()

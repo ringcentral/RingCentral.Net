@@ -46,15 +46,21 @@ namespace RingCentral.Paths.Restapi.Subscription
             return await rc.Get<RingCentral.SubscriptionInfo>(this.Path());
         }
 
+        public class PutQueryParams
+        {
+            // If 'True' then aggregated presence status is returned in a notification payload
+            public string aggregated;
+        }
+
         public async Task<RingCentral.SubscriptionInfo> Put(
-            RingCentral.ModifySubscriptionRequest modifySubscriptionRequest)
+            RingCentral.ModifySubscriptionRequest modifySubscriptionRequest, PutQueryParams queryParams = null)
         {
             if (this.subscriptionId == null)
             {
                 throw new System.ArgumentNullException("subscriptionId");
             }
 
-            return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest);
+            return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams);
         }
 
         public async Task<string> Delete()

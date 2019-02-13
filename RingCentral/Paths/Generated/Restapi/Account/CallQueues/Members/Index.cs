@@ -18,9 +18,18 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
             return $"{parent.Path()}/members";
         }
 
-        public async Task<RingCentral.CallQueueMembers> Get()
+        public class GetQueryParams
         {
-            return await rc.Get<RingCentral.CallQueueMembers>(this.Path());
+            // Indicates the page number to retrieve. Only positive number values are allowed
+            public string page;
+
+            // Indicates the page size (number of items)
+            public string perPage;
+        }
+
+        public async Task<RingCentral.CallQueueMembers> Get(GetQueryParams queryParams = null)
+        {
+            return await rc.Get<RingCentral.CallQueueMembers>(this.Path(), queryParams);
         }
     }
 }

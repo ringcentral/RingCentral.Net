@@ -39,7 +39,6 @@ namespace RingCentral
                     .ToArray();
                 uriBuilder.Query = string.Join("&", fields);
             }
-            Console.WriteLine(uriBuilder.Uri);
 
             var httpRequestMessage = new HttpRequestMessage
             {
