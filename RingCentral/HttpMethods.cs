@@ -33,7 +33,7 @@ namespace RingCentral
             var uriBuilder = new UriBuilder(server) {Path = endpoint};
             if (queryObj != null)
             {
-                var fields = queryObj.GetType().GetFields()
+                var fields = queryObj.GetType().GetProperties()
                     .Where(f => f.GetValue(queryObj) != null)
                     .Select(f =>
                     {
