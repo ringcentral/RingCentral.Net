@@ -33,20 +33,20 @@ namespace RingCentral
             var uriBuilder = new UriBuilder(server) {Path = endpoint};
             if (queryObj != null)
             {
-                var fields = queryObj.GetType().GetProperties()
-                    .Where(f => f.GetValue(queryObj) != null)
-                    .Select(f =>
+                var fields = queryObj.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(queryObj)))
+                    .Concat(queryObj.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(queryObj))))
+                    .Where(t => t.value != null)
+                    .Select(t =>
                     {
-                        var obj = f.GetValue(queryObj);
-                        if (obj.GetType().IsArray)
+                        if (t.value.GetType().IsArray)
                         {
                             return string.Join("&",
-                                (obj as object[]).Select(o => $"{f.Name}={Uri.EscapeUriString(o.ToString())}")
+                                (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeUriString(o.ToString())}")
                                 .ToArray());
                         }
                         else
                         {
-                            return $"{f.Name}={Uri.EscapeUriString(obj.ToString())}";
+                            return $"{t.name}={Uri.EscapeUriString(t.value.ToString())}";
                         }
                     })
                     .ToArray();

@@ -41,7 +41,7 @@ namespace RingCentral
         {
             var httpClient = new HttpClient();
             httpRequestMessage.Headers.UserAgent.ParseAdd("RingCentral.Net");
-            httpRequestMessage.Headers.Authorization = basicAuth
+            httpRequestMessage.Headers.Authorization = (basicAuth || token == null || token.access_token == null)
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(
                         Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
@@ -56,15 +56,23 @@ namespace RingCentral
             throw new RestException(httpResponseMessage, httpRequestMessage);
         }
 
-        public async Task<TokenInfo> Authorize(string username, string extension, string password)
+        public async Task<TokenInfo> Authorize(string username, string extension, string password,
+            object options = null)
         {
-            var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            var dict = new Dictionary<string, string>
             {
                 {"grant_type", "password"},
                 {"username", username},
                 {"extension", extension},
                 {"password", password}
-            });
+            };
+
+            options?.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(options)))
+                .Concat(options.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(options))))
+                .Where(t => t.value != null).ToList()
+                .ForEach(t => dict.Add(t.name, t.value.ToString()));
+
+            var httpContent = new FormUrlEncodedContent(dict);
             var httpRequestMessage = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
@@ -113,16 +121,16 @@ namespace RingCentral
             return token;
         }
 
-        public async Task Revoke()
+        public async Task Revoke(string tokenToRevoke = null)
         {
-            if (token == null) // nothing  to revoke
+            if (tokenToRevoke == null && token == null) // nothing  to revoke
             {
                 return;
             }
 
             var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
-                {"token", token.access_token}
+                {"token", tokenToRevoke ?? token.access_token ?? token.refresh_token}
             });
             var httpRequestMessage = new HttpRequestMessage
             {
@@ -152,23 +160,36 @@ namespace RingCentral
                 ("redirect_uri", redirectUri),
                 ("client_id", clientId),
             };
-            options.GetType().GetFields().Where(f => f.GetValue(options) != null)
-                .ToList().ForEach(f => queryParams.Add((f.Name, f.GetValue(options).ToString())));
-            extraOptions?.GetType().GetProperties().Where(f => f.GetValue(extraOptions) != null)
-                .ToList().ForEach(f => queryParams.Add((f.Name, f.GetValue(extraOptions).ToString())));
+
+            options.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(options)))
+                .Concat(options.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(options))))
+                .Where(t => t.value != null).ToList()
+                .ForEach(t => queryParams.Add((t.name, t.value.ToString())));
+            extraOptions?.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(extraOptions)))
+                .Concat(extraOptions.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(extraOptions))))
+                .Where(t => t.value != null).ToList()
+                .ForEach(t => queryParams.Add((t.name, t.value.ToString())));
+
             uriBuilder.Query =
                 string.Join("&", queryParams.Select(qp => $"{qp.Item1}={Uri.EscapeUriString(qp.Item2)}"));
             return uriBuilder.Uri.ToString();
         }
 
-        public async Task<TokenInfo> Authorize(string authCode, string redirectUri)
+        public async Task<TokenInfo> Authorize(string authCode, string redirectUri, object options = null)
         {
-            var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            var dict = new Dictionary<string, string>
             {
                 {"grant_type", "authorization_code"},
                 {"code", authCode},
                 {"redirect_uri", redirectUri}
-            });
+            };
+
+            options?.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(options)))
+                .Concat(options?.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(options))))
+                .Where(t => t.value != null).ToList()
+                .ForEach(t => dict.Add(t.name, t.value.ToString()));
+
+            var httpContent = new FormUrlEncodedContent(dict);
             var httpRequestMessage = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
@@ -184,9 +205,9 @@ namespace RingCentral
 
     public class OAuthOptions
     {
-        public string responseType = "code";
+        public string response_type = "code";
         public string state = "";
-        public string brandId = "";
+        public string brand_id = "";
         public string display = "";
         public string prompt = "";
     }
