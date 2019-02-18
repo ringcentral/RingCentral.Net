@@ -4,7 +4,7 @@ import path from 'path'
 
 const outputDir = '../RingCentral/Definitions/Generated'
 
-const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
+const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 const definitions = doc.definitions
 const models = Object.keys(definitions).map(k => ({ name: k, ...definitions[k] }))
 

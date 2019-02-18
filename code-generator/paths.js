@@ -6,7 +6,7 @@ import path from 'path'
 
 const outputDir = '../RingCentral/Paths/Generated'
 
-const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
+const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 const paths = Object.keys(doc.paths)
 const normalizedPaths = paths.map(p => p
   .replace(/\/restapi\/v1\.0/, '/restapi/{apiVersion}')
