@@ -71,6 +71,12 @@ namespace RingCentral
                 return (T) (object) httpResponseMessage;
             }
 
+            if (typeof(T) == typeof(byte[]))
+            {
+                var bytes = await httpResponseMessage.Content.ReadAsByteArrayAsync();
+                return (T) (object) bytes;
+            }
+
             var httpContent = await httpResponseMessage.Content.ReadAsStringAsync();
             if (typeof(T) == typeof(string))
             {

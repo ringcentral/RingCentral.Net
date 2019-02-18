@@ -25,29 +25,29 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
             return $"{parent.Path()}/profile-image";
         }
 
-        public async Task<RingCentral.Binary> List()
+        public async Task<byte[]> List()
         {
-            return await rc.Get<RingCentral.Binary>(this.Path(false));
+            return await rc.Get<byte[]>(this.Path(false));
         }
 
-        public async Task<RingCentral.Binary> Post()
+        public async Task<byte[]> Post()
         {
-            return await rc.Post<RingCentral.Binary>(this.Path(false));
+            return await rc.Post<byte[]>(this.Path(false));
         }
 
-        public async Task<RingCentral.Binary> Put()
+        public async Task<byte[]> Put()
         {
-            return await rc.Put<RingCentral.Binary>(this.Path(false));
+            return await rc.Put<byte[]>(this.Path(false));
         }
 
-        public async Task<RingCentral.Binary> Get()
+        public async Task<byte[]> Get()
         {
             if (this.scaleSize == null)
             {
                 throw new System.ArgumentNullException("scaleSize");
             }
 
-            return await rc.Get<RingCentral.Binary>(this.Path());
+            return await rc.Get<byte[]>(this.Path());
         }
     }
 }

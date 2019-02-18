@@ -165,11 +165,9 @@ ${code}`
       const responseSchema = (responses[200] || responses[201] || responses[202] || responses[204] || responses[205] || responses[302] || responses.default).schema
       let responseType = 'string'
       if (responseSchema) {
-        if (responseSchema.type === 'file') {
+        if (responseSchema.type === 'string' && responseSchema.format === 'binary') {
           responseType = 'byte[]'
-        } else if (responseSchema.type === 'string') {
-          responseType = 'string'
-        } else {
+        } else if (responseSchema['$ref']) {
           responseType = 'RingCentral.' + R.last(responseSchema['$ref'].split('/'))
         }
       }
