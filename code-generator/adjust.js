@@ -23,10 +23,9 @@ Object.keys(doc.paths).forEach(path => {
 
 // Support multiple attachments: https://git.ringcentral.com/platform/api-metadata-specs/issues/21
 const faxAttachment = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax'].post.parameters.filter(p => p.name === 'attachment')[0]
-console.log(faxAttachment)
 if (faxAttachment.type === 'file') {
   faxAttachment.type = 'array'
   faxAttachment.collectionFormat = 'multi'
   faxAttachment.items = { type: 'file' }
 }
-fs.writeFileSync('rc-patform-adjusted.yml', yaml.safeDump(doc))
+fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
