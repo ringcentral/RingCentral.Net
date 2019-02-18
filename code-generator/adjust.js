@@ -1,7 +1,6 @@
+// adjust swagger spec, because it is not 100% correct
 import yaml from 'js-yaml'
 import fs from 'fs'
-
-// adjust swagger spec, because it is not 100% correct
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
 
@@ -23,5 +22,11 @@ Object.keys(doc.paths).forEach(path => {
 })
 
 // Support multiple attachments: https://git.ringcentral.com/platform/api-metadata-specs/issues/21
-
+const faxAttachment = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax'].post.parameters.filter(p => p.name === 'attachment')[0]
+console.log(faxAttachment)
+if (faxAttachment.type === 'file') {
+  faxAttachment.type = 'array'
+  faxAttachment.collectionFormat = 'multi'
+  faxAttachment.items = { type: 'file' }
+}
 fs.writeFileSync('rc-patform-adjusted.yml', yaml.safeDump(doc))

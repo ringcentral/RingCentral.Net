@@ -1115,7 +1115,10 @@ paths:
           in: formData
           description: File to upload
           required: true
-          type: file
+          type: array
+          collectionFormat: multi
+          items:
+            type: file
         - name: faxResolution
           in: formData
           description: Resolution of Fax
