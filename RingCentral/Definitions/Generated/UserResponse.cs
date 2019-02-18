@@ -7,7 +7,7 @@ namespace RingCentral
         // user status
         public bool? active;
 
-        public Address[] addresses;
+        public UserAddress[] addresses;
 
         public Email[] emails; // Required
 

@@ -6,9 +6,9 @@ namespace RingCentral
         public CallLogRecord[] records; // Required
 
         // Information on navigation
-        public NavigationInfo navigation; // Required
+        public CallLogNavigationInfo navigation; // Required
 
         // Information on paging
-        public PagingInfo paging; // Required
+        public CallLogPagingInfo paging; // Required
     }
 }

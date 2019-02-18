@@ -81,7 +81,7 @@ namespace RingCentral.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
             );
-            
+
             // suppose data is read from file
             var data = JsonConvert.SerializeObject(rc.token);
 

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RegionalSettingsResource
+    public class RegionalSettingsInfo
     {
         public TimezoneResource timezone;
 

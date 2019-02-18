@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class NavigationInfoURI
+    public class PresenceNavigationInfoURI
     {
         public string uri;
     }

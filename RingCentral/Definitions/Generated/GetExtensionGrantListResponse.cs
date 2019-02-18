@@ -6,9 +6,9 @@ namespace RingCentral
         public GrantInfo[] records; // Required
 
         // Information on navigation
-        public NavigationInfo navigation; // Required
+        public ProvisioningNavigationInfo navigation; // Required
 
         // Information on paging
-        public PagingInfo paging; // Required
+        public ProvisioningPagingInfo paging; // Required
     }
 }

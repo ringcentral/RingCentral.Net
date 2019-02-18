@@ -49,6 +49,6 @@ namespace RingCentral
         public bool? inCompanyNet;
 
         // Site data
-        public SiteInfo site;
+        public DeviceSiteInfo site;
     }
 }

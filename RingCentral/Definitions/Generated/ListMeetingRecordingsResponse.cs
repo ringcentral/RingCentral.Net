@@ -2,10 +2,10 @@ namespace RingCentral
 {
     public class ListMeetingRecordingsResponse
     {
-        public MeetingRecordingInfo[] records;
+        public MeetingRecordings[] records;
 
-        public PagingInfo paging;
+        public MeetingRecordingsPagingInfo paging;
 
-        public NavigationInfo navigation;
+        public MeetingRecordingsNavigationInfo navigation;
     }
 }

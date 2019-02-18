@@ -9,9 +9,9 @@ namespace RingCentral
         public GetPresenceInfo[] records;
 
         // Information on navigation
-        public NavigationInfo navigation;
+        public PresenceNavigationInfo navigation;
 
         // Information on paging
-        public PagingInfo paging;
+        public PresencePagingInfo paging;
     }
 }

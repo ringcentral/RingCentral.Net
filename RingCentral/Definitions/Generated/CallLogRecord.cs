@@ -40,7 +40,7 @@ namespace RingCentral
         public long? duration;
 
         // Call recording data. Returned if the call is recorded, the withRecording parameter is set to 'True' in this case
-        public RecordingInfo recording;
+        public CallLogRecordingInfo recording;
 
         // For 'Detailed' view only. The datetime when the call log record was modified in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         public string lastModifiedTime;

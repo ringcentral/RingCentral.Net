@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Address
+    public class UserAddress
     {
         public string country;
 

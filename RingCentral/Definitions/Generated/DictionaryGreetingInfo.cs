@@ -30,9 +30,9 @@ namespace RingCentral
         public string category;
 
         // Information on navigation
-        public NavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation;
 
         // Information on paging
-        public PagingInfo paging;
+        public CallHandlingPagingInfo paging;
     }
 }

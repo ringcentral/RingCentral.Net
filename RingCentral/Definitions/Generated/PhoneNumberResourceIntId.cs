@@ -9,7 +9,7 @@ namespace RingCentral
         public CountryResource country;
 
         // Information on an extension to which the phone number is assigned
-        public ExtensionResource extension;
+        public PhoneNumberExtensionInfo extension;
 
         // Custom user name of a phone number, if any
         public string label;

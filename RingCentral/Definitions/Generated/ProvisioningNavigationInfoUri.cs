@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ResourceLink
+    public class ProvisioningNavigationInfoUri
     {
         public string uri;
     }

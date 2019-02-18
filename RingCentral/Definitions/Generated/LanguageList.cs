@@ -9,9 +9,9 @@ namespace RingCentral
         public LanguageInfo[] records;
 
         // Information on navigation
-        public NavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation;
 
         // Information on paging
-        public PagingInfo paging;
+        public ProvisioningPagingInfo paging;
     }
 }

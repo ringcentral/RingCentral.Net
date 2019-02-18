@@ -6,9 +6,9 @@ namespace RingCentral
         public GetDeviceInfoResponse[] records; // Required
 
         // Information on navigation
-        public NavigationInfo navigation; // Required
+        public DeviceProvisioningNavigationInfo navigation; // Required
 
         // Information on paging
-        public PagingInfo paging; // Required
+        public DeviceProvisioningPagingInfo paging; // Required
     }
 }

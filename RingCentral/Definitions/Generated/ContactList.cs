@@ -6,9 +6,9 @@ namespace RingCentral
         public PersonalContactResource[] records;
 
         // Information on navigation
-        public NavigationInfo navigation;
+        public UserContactsNavigationInfo navigation;
 
         // Information on paging
-        public PagingInfo paging;
+        public UserContactsPagingInfo paging;
     }
 }

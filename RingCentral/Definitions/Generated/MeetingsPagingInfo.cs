@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Paging
+    public class MeetingsPagingInfo
     {
         public long? page;
 

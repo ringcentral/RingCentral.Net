@@ -2,17 +2,10 @@ namespace RingCentral
 {
     public class RecordingInfo
     {
-        // Internal identifier of the call recording
+        // Internal identifier of a Recording resource
         public string id;
 
-        // Link to the call recording metadata resource
-        public string uri;
-
-        // Indicates recording mode used
-        // Enum: Automatic, OnDemand
-        public string type;
-
-        // Link to the call recording binary content
-        public string contentUri;
+        // True if the recording is active. False if the recording is paused.
+        public bool? active;
     }
 }

@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public class DirectoryResource
     {
-        public Paging paging;
+        public CompanyContactsPagingInfo paging;
 
         public ContactResource[] records;
     }

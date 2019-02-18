@@ -40,6 +40,6 @@ namespace RingCentral
         public long? duration;
 
         // Call recording data. Returned if a call is recorded
-        public RecordingInfo recording;
+        public CallLogRecordingInfo recording;
     }
 }

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ExtensionResource
+    public class PhoneNumberExtensionInfo
     {
         public string uri;
 
@@ -12,7 +12,7 @@ namespace RingCentral
 
         public string loginName;
 
-        public ContactInfo contact;
+        public ExtensionContactInfo contact;
 
         public Reference[] references;
 
@@ -30,7 +30,7 @@ namespace RingCentral
 
         public ServiceFeatureValue[] serviceFeatures;
 
-        public RegionalSettingsResource regionalSettings;
+        public RegionalSettingsInfo regionalSettings;
 
         // Enum: NotStarted, Incomplete, Completed, Unknown
         public string setupWizardState;

@@ -42,7 +42,7 @@ namespace RingCentral
         public string transport;
 
         // Call recording data. Returned if the call is recorded
-        public RecordingInfo recording;
+        public CallLogRecordingInfo recording;
 
         public bool? master;
     }

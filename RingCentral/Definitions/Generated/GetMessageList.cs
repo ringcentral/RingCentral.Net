@@ -6,9 +6,9 @@ namespace RingCentral
         public GetMessageInfoResponse[] records; // Required
 
         // Information on navigation
-        public NavigationInfo navigation; // Required
+        public MessagingNavigationInfo navigation; // Required
 
         // Information on paging
-        public PagingInfo paging; // Required
+        public MessagingPagingInfo paging; // Required
     }
 }

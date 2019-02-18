@@ -6,8 +6,8 @@ namespace RingCentral
 
         public MeetingResponseResource[] records;
 
-        public Paging paging;
+        public MeetingsPagingInfo paging;
 
-        public Navigation navigation;
+        public MeetingsNavigationInfo navigation;
     }
 }

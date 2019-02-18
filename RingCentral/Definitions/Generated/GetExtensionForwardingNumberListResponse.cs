@@ -6,9 +6,9 @@ namespace RingCentral
         public ForwardingNumberInfo[] records;
 
         // Information on navigation
-        public NavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation;
 
         // Information on paging
-        public PagingInfo paging;
+        public CallHandlingPagingInfo paging;
     }
 }

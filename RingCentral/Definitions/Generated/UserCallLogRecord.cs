@@ -29,6 +29,6 @@ namespace RingCentral
         // Call duration in seconds
         public long? duration;
 
-        public RecordingInfo recording;
+        public CallLogRecordingInfo recording;
     }
 }

@@ -1,17 +1,17 @@
 namespace RingCentral
 {
-    public class NavigationInfo
+    public class PresenceNavigationInfo
     {
         // Canonical URI for the first page of the list
-        public NavigationInfoURI firstPage;
+        public PresenceNavigationInfoURI firstPage;
 
         // Canonical URI for the next page of the list
-        public NavigationInfoURI nextPage;
+        public PresenceNavigationInfoURI nextPage;
 
         // Canonical URI for the previous page of the list
-        public NavigationInfoURI previousPage;
+        public PresenceNavigationInfoURI previousPage;
 
         // Canonical URI for the last page of the list
-        public NavigationInfoURI lastPage;
+        public PresenceNavigationInfoURI lastPage;
     }
 }

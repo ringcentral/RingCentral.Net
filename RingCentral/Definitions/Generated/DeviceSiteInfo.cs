@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SiteInfo
+    public class DeviceSiteInfo
     {
         // Internal identifier of a site
         public string id;

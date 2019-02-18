@@ -9,9 +9,9 @@ namespace RingCentral
         public ListCompanyAnsweringRuleInfo[] records;
 
         // Information on paging
-        public PagingInfo paging;
+        public CallHandlingPagingInfo paging;
 
         // Information on navigation
-        public NavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation;
     }
 }

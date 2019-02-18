@@ -7,9 +7,9 @@ namespace RingCentral
         public FaxCoverPageInfo[] records;
 
         // Information on navigation
-        public NavigationInfo navigation;
+        public MessagingNavigationInfo navigation;
 
         // Information on paging
-        public PagingInfo paging;
+        public MessagingPagingInfo paging;
     }
 }
