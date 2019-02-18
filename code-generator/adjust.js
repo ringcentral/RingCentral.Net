@@ -28,4 +28,8 @@ if (faxAttachment.type === 'file') {
   faxAttachment.collectionFormat = 'multi'
   faxAttachment.items = { type: 'file' }
 }
+
+// delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
+delete doc.paths['/restapi/oauth/authorize']
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
