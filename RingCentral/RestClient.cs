@@ -144,19 +144,18 @@ namespace RingCentral
             return AuthorizeUri(redirectUri, new OAuthOptions {state = state});
         }
 
-        public string AuthorizeUri(string redirectUri, OAuthOptions options)
+        public string AuthorizeUri(string redirectUri, OAuthOptions options, object extraOptions = null)
         {
             var uriBuilder = new UriBuilder(server) {Path = "/restapi/oauth/authorize"};
-            var queryParams = new[]
+            var queryParams = new List<(string, string)>
             {
                 ("redirect_uri", redirectUri),
                 ("client_id", clientId),
-                ("response_type", options.responseType),
-                ("state", options.state),
-                ("brand_id", options.brandId),
-                ("display", options.display),
-                ("prompt", options.prompt)
             };
+            options.GetType().GetFields().Where(f => f.GetValue(options) != null)
+                .ToList().ForEach(f => queryParams.Add((f.Name, f.GetValue(options).ToString())));
+            extraOptions?.GetType().GetProperties().Where(f => f.GetValue(extraOptions) != null)
+                .ToList().ForEach(f => queryParams.Add((f.Name, f.GetValue(extraOptions).ToString())));
             uriBuilder.Query =
                 string.Join("&", queryParams.Select(qp => $"{qp.Item1}={Uri.EscapeUriString(qp.Item2)}"));
             return uriBuilder.Uri.ToString();
