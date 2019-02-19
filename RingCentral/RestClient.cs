@@ -56,29 +56,26 @@ namespace RingCentral
         public async Task<TokenInfo> Authorize(string username, string extension, string password,
             object options = null)
         {
-            var dict = new Dictionary<string, string>
+            var getTokenRequest = new GetTokenRequest
             {
-                {"grant_type", "password"},
-                {"username", username},
-                {"extension", extension},
-                {"password", password}
+                grant_type = "password",
+                username = username,
+                extension = extension,
+                password = password
             };
+            token = await this.Restapi(null).Oauth().Token().Post(getTokenRequest);
+            return token;
+        }
 
-            options?.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(options)))
-                .Concat(options.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(options))))
-                .Where(t => t.value != null).ToList()
-                .ForEach(t => dict.Add(t.name, t.value.ToString()));
-
-            var httpContent = new FormUrlEncodedContent(dict);
-            var httpRequestMessage = new HttpRequestMessage
+        public async Task<TokenInfo> Authorize(string authCode, string redirectUri, object options = null)
+        {
+            var getTokenRequest = new GetTokenRequest
             {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri(server, "/restapi/oauth/token"),
-                Content = httpContent
+                grant_type = "authorization_code",
+                code = authCode,
+                redirect_uri = redirectUri,
             };
-            var httpResponseMessage = await Request(httpRequestMessage, true);
-            var json = await httpResponseMessage.Content.ReadAsStringAsync();
-            token = JsonConvert.DeserializeObject<TokenInfo>(json);
+            token = await this.Restapi(null).Oauth().Token().Post(getTokenRequest);
             return token;
         }
 
@@ -170,33 +167,6 @@ namespace RingCentral
             uriBuilder.Query =
                 string.Join("&", queryParams.Select(qp => $"{qp.Item1}={Uri.EscapeUriString(qp.Item2)}"));
             return uriBuilder.Uri.ToString();
-        }
-
-        public async Task<TokenInfo> Authorize(string authCode, string redirectUri, object options = null)
-        {
-            var dict = new Dictionary<string, string>
-            {
-                {"grant_type", "authorization_code"},
-                {"code", authCode},
-                {"redirect_uri", redirectUri}
-            };
-
-            options?.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(options)))
-                .Concat(options?.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(options))))
-                .Where(t => t.value != null).ToList()
-                .ForEach(t => dict.Add(t.name, t.value.ToString()));
-
-            var httpContent = new FormUrlEncodedContent(dict);
-            var httpRequestMessage = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri(server, "/restapi/oauth/token"),
-                Content = httpContent
-            };
-            var httpResponseMessage = await Request(httpRequestMessage, true);
-            var json = await httpResponseMessage.Content.ReadAsStringAsync();
-            token = JsonConvert.DeserializeObject<TokenInfo>(json);
-            return token;
         }
     }
 

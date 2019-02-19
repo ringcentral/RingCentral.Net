@@ -38,5 +38,8 @@ namespace RingCentral
 
         // The authorization code that the client previously received from the authorization server
         public string code;
+
+        // The redirect URI in the token request must be an exact match of the redirect URI that was used when generating the authorization code
+        public string redirect_uri;
     }
 }
