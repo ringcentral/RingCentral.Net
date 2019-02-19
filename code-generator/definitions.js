@@ -14,27 +14,39 @@ models.forEach(m => {
   Object.keys(m).forEach(k => keys.push(k))
 })
 
-const types = []
+const normalizeType = f => {
+  if (f.type === 'integer') {
+    return 'long?'
+  } else if (f.type === 'array') {
+    return `${normalizeType(f.items)}[]`
+  } else if (f.type === undefined || f.type === 'object') {
+    if (!f['$ref']) {
+      return 'object' // anonymous object
+    }
+    return f['$ref'].split('/').slice(-1)[0]
+  } else if (f.type === 'boolean') {
+    return 'bool?'
+  } else if (f.type === 'file') {
+    return 'Attachment'
+  } else if (f.type === 'string') {
+    return 'string'
+  } else {
+    throw new Error(`Unknown type ${f.type}`)
+  }
+}
+const normalizeField = f => {
+  f.type = normalizeType(f)
+  if (['event', 'delegate', 'ref', 'default', 'operator', 'public'].includes(f.name)) {
+    f.name = `@${f.name}`
+  }
+  return f
+}
+
 models.forEach(m => {
   const properties = m.properties
   const fields = Object.keys(properties)
     .map(k => ({ name: k, ...properties[k] }))
-    .map(f => {
-      if (f.type === 'integer') {
-        f.type = 'long?'
-      } else if (f.type === 'array') {
-        f.type = `${f.items.type || f.items['$ref'].split('/').slice(-1)[0]}[]`
-      } else if (f.type === undefined || f.type === 'object') {
-        f.type = f['$ref'].split('/').slice(-1)[0]
-      } else if (f.type === 'boolean') {
-        f.type = 'bool?'
-      }
-      if (['event', 'delegate', 'ref', 'default', 'operator', 'public'].includes(f.name)) {
-        f.name = `@${f.name}`
-      }
-      types.push(f.type)
-      return f
-    })
+    .map(f => normalizeField(f))
   let source = `namespace RingCentral
 {${m.description ? '\n    // ' + m.description : ''}
     public class ${m.name}
@@ -79,21 +91,8 @@ Object.keys(doc.paths).forEach(p => {
       const className = pascalCase(operationId) + 'Request'
       const fields = operation.parameters.filter(p => p.in === 'formData')
         .map(p => {
-          let type = p.type
-          const isArrayType = type === 'array'
-          if (isArrayType) {
-            type = p.items.type
-          }
-          if (type === 'integer') {
-            type = 'long?'
-          }
-          if (type === 'file') {
-            type = 'Attachment'
-          }
-          if (isArrayType) {
-            type += '[]'
-          }
-          let f = `        public ${type} ${p.name};`
+          p = normalizeField(p)
+          let f = `        public ${p.type} ${p.name};`
           if (p.enum) {
             f = `        // Enum: ${p.enum.join(', ')}\n${f}`
           }
