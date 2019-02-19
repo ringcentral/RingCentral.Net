@@ -8,15 +8,10 @@ const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 const definitions = doc.definitions
 const models = Object.keys(definitions).map(k => ({ name: k, ...definitions[k] }))
 
-console.log(models)
-
-console.log(models.filter(m => m.type !== 'object'))
-
 const keys = []
 models.forEach(m => {
   Object.keys(m).forEach(k => keys.push(k))
 })
-console.log(new Set(keys))
 
 const types = []
 models.forEach(m => {
@@ -73,5 +68,3 @@ models.forEach(m => {
   }
   fs.writeFileSync(path.join(outputDir, `${m.name}.cs`), source)
 })
-
-console.log(new Set(types.filter(t => /^[a-z]+$/.test(t))))
