@@ -94,6 +94,9 @@ Object.keys(doc.paths).forEach(p => {
             type += '[]'
           }
           let f = `        public ${type} ${p.name};`
+          if (p.enum) {
+            f = `        // Enum: ${p.enum.join(', ')}\n${f}`
+          }
           if (p.description) {
             f = `        // ${p.description}\n${f}`
           }

@@ -172,16 +172,20 @@ ${code}`
         }
       }
 
-      let body, bodyClass, bodyParam
-      body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
-      if (body) {
-        if (body.schema.type === 'string') {
-          bodyClass = 'string'
-          bodyParam = 'body'
-        } else {
-          bodyClass = R.last(body.schema['$ref'].split('/'))
-          bodyParam = changeCase.lowerCaseFirst(bodyClass)
-          bodyClass = 'RingCentral.' + bodyClass
+      let body, bodyClass, bodyParam, formUrlEncoded
+      if (operation.detail.consumes && operation.detail.consumes[0] === 'application/x-www-form-urlencoded') {
+        formUrlEncoded = true
+      } else {
+        body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
+        if (body) {
+          if (body.schema.type === 'string') {
+            bodyClass = 'string'
+            bodyParam = 'body'
+          } else {
+            bodyClass = R.last(body.schema['$ref'].split('/'))
+            bodyParam = changeCase.lowerCaseFirst(bodyClass)
+            bodyClass = 'RingCentral.' + bodyClass
+          }
         }
       }
 
@@ -226,28 +230,45 @@ ${code}`
 
       const withParam = paramName && operation.endpoint.endsWith('}')
       const methodParams = []
-      if (body) {
+      if (bodyParam) {
         methodParams.push(`${bodyClass} ${bodyParam}`)
       }
       if (queryParams.length > 0) {
         methodParams.push(`${smartMethod}QueryParams queryParams = null`)
       }
-      const codeBody = `
+      if (formUrlEncoded) {
+        code = `using System.Linq;
+using System.Net.Http;
+${code}`
+        code += `
+        public async Task<${responseType}> ${smartMethod}(${changeCase.pascalCase(operation.detail.operationId)}Request ${operation.detail.operationId}Request)
+        {
+            var dict = new System.Collections.Generic.Dictionary<string, string>();
+            ${operation.detail.operationId}Request.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(${operation.detail.operationId}Request)))
+              .Concat(${operation.detail.operationId}Request.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(${operation.detail.operationId}Request))))
+              .Where(t => t.value != null).ToList()
+              .ForEach(t => dict.Add(t.name, t.value.ToString()));
+            return await rc.Post<${responseType}>(this.Path(), new FormUrlEncodedContent(dict));
+        }
+        `
+      } else {
+        const codeBody = `
         {${withParam ? `
             if (this.${paramName} == null)
             {
                 throw new System.ArgumentNullException("${paramName}");
             }
 ` : ''}
-            return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${body ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
+            return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
         }`
-      code += `
-
-        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})${codeBody}`
-      if (methodParams.length > 0) {
         code += `
 
+        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})${codeBody}`
+        if (methodParams.length > 0) {
+          code += `
+
         public async Task<${responseType}> ${smartMethod}(${methodParams.map(mp => `object ${mp.split(' ')[1]}`).join(', ')})${codeBody}`
+        }
       }
     })
 

@@ -6,6 +6,7 @@ namespace RingCentral
         public Attachment[] attachment;
 
         // Resolution of Fax
+        // Enum: High, Low
         public string faxResolution;
 
         // To Phone Number

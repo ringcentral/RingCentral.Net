@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Oauth.Token
@@ -18,9 +20,15 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
             return $"{parent.Path()}/token";
         }
 
-        public async Task<RingCentral.TokenInfo> Post()
+        public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest)
         {
-            return await rc.Post<RingCentral.TokenInfo>(this.Path());
+            var dict = new System.Collections.Generic.Dictionary<string, string>();
+            getTokenRequest.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(getTokenRequest)))
+                .Concat(getTokenRequest.GetType().GetFields()
+                    .Select(p => (name: p.Name, value: p.GetValue(getTokenRequest))))
+                .Where(t => t.value != null).ToList()
+                .ForEach(t => dict.Add(t.name, t.value.ToString()));
+            return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict));
         }
     }
 }

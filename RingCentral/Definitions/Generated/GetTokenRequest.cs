@@ -12,6 +12,7 @@ namespace RingCentral
         public string extension;
 
         // Grant type
+        // Enum: authorization_code, password, refresh_token, client_credentials
         public string grant_type;
 
         // Access token lifetime in seconds
