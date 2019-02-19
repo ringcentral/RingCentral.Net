@@ -11674,6 +11674,13 @@ paths:
           description: >-
             The unique identifier of a client application. If not specified, the
             previously specified or auto generated value is used by default
+        - name: code
+          in: formData
+          required: false
+          type: string
+          description: >-
+            The authorization code that the client previously received from the
+            authorization server
       responses:
         '200':
           description: Access/Refresh Tokens

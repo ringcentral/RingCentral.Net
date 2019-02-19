@@ -1,4 +1,4 @@
-// adjust swagger spec, because it is not 100% correct
+// Adjust swagger spec, because it is not 100% correct
 import yaml from 'js-yaml'
 import fs from 'fs'
 
@@ -29,7 +29,16 @@ if (faxAttachment.type === 'file') {
   faxAttachment.items = { type: 'file' }
 }
 
-// delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
+// Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
 delete doc.paths['/restapi/oauth/authorize']
+
+// Add code for getToken: https://git.ringcentral.com/platform/api-metadata-specs/issues/25
+doc.paths['/restapi/oauth/token'].post.parameters.push({
+  name: 'code',
+  in: 'formData',
+  required: false,
+  type: 'string',
+  description: 'The authorization code that the client previously received from the authorization server'
+})
 
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
