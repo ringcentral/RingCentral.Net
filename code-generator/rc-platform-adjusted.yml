@@ -11681,6 +11681,13 @@ paths:
           description: >-
             The authorization code that the client previously received from the
             authorization server
+        - name: redirect_uri
+          in: formData
+          required: false
+          type: string
+          description: >-
+            The redirect URI in the token request must be an exact match of the
+            redirect URI that was used when generating the authorization code
       responses:
         '200':
           description: Access/Refresh Tokens

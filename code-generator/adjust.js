@@ -32,13 +32,20 @@ if (faxAttachment.type === 'file') {
 // Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
 delete doc.paths['/restapi/oauth/authorize']
 
-// Add code for getToken: https://git.ringcentral.com/platform/api-metadata-specs/issues/25
+// Add code & redirect_uri for getToken: https://git.ringcentral.com/platform/api-metadata-specs/issues/25
 doc.paths['/restapi/oauth/token'].post.parameters.push({
   name: 'code',
   in: 'formData',
   required: false,
   type: 'string',
   description: 'The authorization code that the client previously received from the authorization server'
+})
+doc.paths['/restapi/oauth/token'].post.parameters.push({
+  name: 'redirect_uri',
+  in: 'formData',
+  required: false,
+  type: 'string',
+  description: 'The redirect URI in the token request must be an exact match of the redirect URI that was used when generating the authorization code'
 })
 
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
