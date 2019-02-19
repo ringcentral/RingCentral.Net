@@ -1,6 +1,7 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
+import pascalCase from 'pascal-case'
 
 const outputDir = '../RingCentral/Definitions/Generated'
 
@@ -68,3 +69,57 @@ models.forEach(m => {
   }
   fs.writeFileSync(path.join(outputDir, `${m.name}.cs`), source)
 })
+
+// generate models for form-data objects
+Object.keys(doc.paths).forEach(p => {
+  Object.keys(doc.paths[p]).forEach(method => {
+    const operation = doc.paths[p][method]
+    if ((operation.parameters || []).some(p => p.in === 'formData')) {
+      const operationId = operation.operationId
+      const className = pascalCase(operationId) + 'Request'
+      const fields = operation.parameters.filter(p => p.in === 'formData')
+        .map(p => {
+          let type = p.type
+          const isArrayType = type === 'array'
+          if (isArrayType) {
+            type = p.items.type
+          }
+          if (type === 'integer') {
+            type = 'long?'
+          }
+          if (type === 'file') {
+            type = 'Attachment'
+          }
+          if (isArrayType) {
+            type += '[]'
+          }
+          let f = `        public ${type} ${p.name};`
+          if (p.description) {
+            f = `        // ${p.description}\n${f}`
+          }
+          return f
+        })
+      const code = `namespace RingCentral
+{
+    public class ${className}
+    {
+${fields.join('\n\n')}
+    }
+}`
+      fs.writeFileSync(path.join(outputDir, `${className}.cs`), code)
+    }
+  })
+})
+
+// Generate Attachment
+fs.writeFileSync(path.join(outputDir, 'Attachment.cs'), `namespace RingCentral
+{
+    public class Attachment
+    {
+        // File name with extension, such as "example.png"
+        public string fileName;
+
+        // Binary content of the file
+        public byte[] bytes;
+    }
+}`)
