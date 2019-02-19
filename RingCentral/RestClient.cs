@@ -50,7 +50,7 @@ namespace RingCentral
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
             return httpResponseMessage;
         }
-        
+
         public async Task<TokenInfo> Authorize(GetTokenRequest getTokenRequest)
         {
             token = null; // force it to use basicAuth
@@ -83,19 +83,8 @@ namespace RingCentral
 
         public Task<TokenInfo> Refresh(string refreshToken = null)
         {
-            if (refreshToken != null)
-            {
-                if (token != null)
-                {
-                    token.refresh_token = refreshToken;
-                }
-                else
-                {
-                    token = new TokenInfo {refresh_token = refreshToken};
-                }
-            }
-
-            if (token == null) // nothing  to refresh
+            var tokenToRefresh = refreshToken ?? token?.refresh_token;
+            if (tokenToRefresh == null)
             {
                 return Task.FromResult<TokenInfo>(null);
             }
@@ -103,7 +92,7 @@ namespace RingCentral
             var getTokenRequest = new GetTokenRequest
             {
                 grant_type = "refresh_token",
-                refresh_token = token.refresh_token
+                refresh_token = tokenToRefresh
             };
             return Authorize(getTokenRequest);
         }
