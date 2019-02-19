@@ -18,6 +18,7 @@ namespace RingCentral
         public string timestamp;
 
         // Internal identifier of an extension
+        // Default: ~
         public string extensionId;
 
         // Calling action, for example 'StartRing'

@@ -26,6 +26,7 @@ namespace RingCentral
         public ContactBusinessAddressInfo businessAddress;
 
         // If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
+        // Default: False
         public bool? emailAsLoginName;
 
         public PronouncedNameInfo pronouncedName;

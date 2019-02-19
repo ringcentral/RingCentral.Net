@@ -12,13 +12,19 @@ namespace RingCentral
         public string extension;
 
         // Grant type
+        // Default: password
         // Enum: authorization_code, password, refresh_token, client_credentials
         public string grant_type;
 
         // Access token lifetime in seconds
+        // Maximum: 3600
+        // Minimum: 600
+        // Default: 3600
         public long? access_token_ttl;
 
         // Refresh token lifetime in seconds
+        // Maximum: 604800
+        // Default: 604800
         public long? refresh_token_ttl;
 
         // List of API permissions to be used with access token. Can be omitted when requesting all permissions defined during the application registration phase

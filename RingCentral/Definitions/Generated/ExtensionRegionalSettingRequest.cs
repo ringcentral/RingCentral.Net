@@ -13,6 +13,7 @@ namespace RingCentral
         public ExtensionFormattingLocaleInfoRequest formattingLocale;
 
         // Time format setting
+        // Default: 12h
         // Enum: 12h, 24h
         public string timeFormat;
     }

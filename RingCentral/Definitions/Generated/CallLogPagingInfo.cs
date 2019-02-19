@@ -6,6 +6,7 @@ namespace RingCentral
         public long? page;
 
         // Current page size, describes how many items are in each page. Maximum value is 1000. If perPage value in the request is greater than 1000, the maximum value (1000) is applied
+        // Default: 100
         public long? perPage;
 
         // The zero-based number of the first element on the current page. Omitted if the page is omitted or result is empty

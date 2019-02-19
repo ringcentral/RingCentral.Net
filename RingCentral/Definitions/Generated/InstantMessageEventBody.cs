@@ -21,23 +21,28 @@ namespace RingCentral
         public string lastModifiedTime;
 
         // Status of a message
+        // Default: Unread
         public string readStatus;
 
+        // Default: Normal
         public string priority;
 
         // Message attachment data
         public MessageAttachmentInfo[] attachments;
 
         // Message direction
+        // Default: Inbound
         public string direction;
 
         // Message availability status
+        // Default: Alive
         public string availability;
 
         // Message subject. It replicates message text which is also returned as an attachment
         public string subject;
 
         // Status of a message
+        // Default: Received
         public string messageStatus;
 
         // Deprecated. Identifier of a conversation the message belongs to

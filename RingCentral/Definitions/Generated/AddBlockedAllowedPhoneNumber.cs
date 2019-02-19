@@ -10,6 +10,7 @@ namespace RingCentral
         public string label;
 
         // Status of a phone number
+        // Default: Blocked
         // Enum: Blocked, Allowed
         public string status;
     }

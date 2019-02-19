@@ -9,6 +9,7 @@ namespace RingCentral
         public string uri;
 
         // Specifies if the rule is active or inactive. The default value is 'True'
+        // Default: true
         public bool? enabled;
 
         // Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']

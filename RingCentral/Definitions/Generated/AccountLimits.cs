@@ -15,6 +15,7 @@ namespace RingCentral
         public long? maxMonitoredExtensionsPerUser;
 
         // Max length of extension numbers of an account; depends on account type
+        // Default: 5
         public long? maxExtensionNumberLength;
 
         // Length of a site code

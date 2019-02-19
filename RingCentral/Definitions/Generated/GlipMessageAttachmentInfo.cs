@@ -6,6 +6,7 @@ namespace RingCentral
         public string id;
 
         // Type of an attachment
+        // Default: Card
         // Enum: Card, Event, Note
         public string type;
 
@@ -59,10 +60,12 @@ namespace RingCentral
         public long? endingAfter;
 
         // Iterations end datetime for periodic events
+        // Default: None
         // Enum: None, Count, Date
         public string endingOn;
 
         // Hex color code specifying font color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
+        // Default: Black
         // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         public string color;
 

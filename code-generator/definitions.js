@@ -60,6 +60,15 @@ const generateField = (m, f) => {
   if (f.enum) {
     p = `// Enum: ${f.enum.join(', ')}\n        ${p}`
   }
+  if (f.default) {
+    p = `// Default: ${f.default}\n        ${p}`
+  }
+  if (f.minimum) {
+    p = `// Minimum: ${f.minimum}\n        ${p}`
+  }
+  if (f.maximum) {
+    p = `// Maximum: ${f.maximum}\n        ${p}`
+  }
   if (f.description) {
     p = `// ${f.description.trim()}\n        ${p}`
   }
@@ -68,12 +77,12 @@ const generateField = (m, f) => {
 
 const generateCode = (m, fields) => {
   let code = `namespace RingCentral
-  {${m.description ? '\n    // ' + m.description : ''}
-      public class ${m.name}
-      {
-          ${fields.join('\n\n        ')}
-      }
-  }`
+{${m.description ? '\n    // ' + m.description : ''}
+    public class ${m.name}
+    {
+        ${fields.join('\n\n        ')}
+    }
+}`
   if (code.includes('[JsonProperty(')) {
     code = 'using Newtonsoft.Json;\n\n' + code
   }

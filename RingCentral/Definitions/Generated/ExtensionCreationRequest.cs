@@ -20,6 +20,7 @@ namespace RingCentral
         public RegionalSettings regionalSettings;
 
         // Specifies extension configuration wizard state (web service setup).
+        // Default: NotStarted
         // Enum: NotStarted, Incomplete, Completed
         public string setupWizardState;
 

@@ -3,6 +3,7 @@ namespace RingCentral
     public class ExtensionPresenceEventBody
     {
         // Internal identifier of an extension. Optional parameter
+        // Default: ~
         public string extensionId;
 
         // Telephony presence status. Returned if telephony status is changed.

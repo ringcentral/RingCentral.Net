@@ -9,9 +9,11 @@ namespace RingCentral
         public string uri;
 
         // Specifies if the rule is active or inactive. The default value is 'True'
+        // Default: true
         public bool? enabled;
 
         // Type of an answering rule
+        // Default: Custom
         // Enum: BusinessHours, AfterHours, Custom
         public string type;
 

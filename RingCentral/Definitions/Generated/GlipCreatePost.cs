@@ -6,6 +6,7 @@ namespace RingCentral
         public string title;
 
         // Text of a post
+        // Maximum: 1000
         public string text;
 
         // Internal identifier of a group

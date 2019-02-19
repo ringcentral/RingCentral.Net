@@ -12,6 +12,7 @@ namespace RingCentral
         public string sku;
 
         // Device type
+        // Default: HardPhone
         // Enum: HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
         public string type;
 

@@ -31,10 +31,12 @@ namespace RingCentral
         public long? endingAfter;
 
         // Iterations end datetime for periodic events.
+        // Default: None
         // Enum: None, Count, Date
         public string endingOn;
 
         // Hex color code, specifying font color of Event title (including its presentation in Calendar)
+        // Default: Black
         // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         public string color;
 

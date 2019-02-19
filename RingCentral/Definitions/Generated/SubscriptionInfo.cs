@@ -18,6 +18,7 @@ namespace RingCentral
         public string expirationTime;
 
         // Subscription lifetime in seconds
+        // Default: 900
         public long? expiresIn;
 
         // Subscription status

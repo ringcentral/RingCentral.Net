@@ -9,6 +9,7 @@ namespace RingCentral
         public string value;
 
         // Style of width span applied to a field
+        // Default: Short
         // Enum: Short, Long
         public string style;
     }

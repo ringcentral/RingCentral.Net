@@ -3,6 +3,7 @@ namespace RingCentral
     public class CompanyAnsweringRuleUpdate
     {
         // Specifies if the rule is active or inactive. The default value is 'True'
+        // Default: true
         public bool? enabled;
 
         // Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number

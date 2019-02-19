@@ -3,6 +3,7 @@ namespace RingCentral
     public class GlipMessageAttachmentInfoRequest
     {
         // Type of attachment
+        // Default: Card
         // Enum: Card, Event, Note
         public string type;
 
@@ -13,6 +14,7 @@ namespace RingCentral
         public string fallback;
 
         // Hex color code specifying font color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
+        // Default: Black
         // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         public string color;
 
