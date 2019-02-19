@@ -41,19 +41,16 @@ namespace RingCentral
         {
             var httpClient = new HttpClient();
             httpRequestMessage.Headers.UserAgent.ParseAdd("RingCentral.Net");
-            httpRequestMessage.Headers.Authorization = (basicAuth || token == null || token.access_token == null)
+            httpRequestMessage.Headers.Authorization = (basicAuth || token?.access_token == null)
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(
                         Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
                 : new AuthenticationHeaderValue("Bearer", token.access_token);
             var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
-            if (httpResponseMessage.IsSuccessStatusCode)
-            {
-                AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
-                return httpResponseMessage;
-            }
-
-            throw new RestException(httpResponseMessage, httpRequestMessage);
+            if (!httpResponseMessage.IsSuccessStatusCode)
+                throw new RestException(httpResponseMessage, httpRequestMessage);
+            AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
+            return httpResponseMessage;
         }
 
         public async Task<TokenInfo> Authorize(string username, string extension, string password,
