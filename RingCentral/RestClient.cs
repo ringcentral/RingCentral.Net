@@ -5,7 +5,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace RingCentral
 {
@@ -36,12 +35,11 @@ namespace RingCentral
         {
         }
 
-        public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
-            bool basicAuth = false)
+        public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
         {
             var httpClient = new HttpClient();
             httpRequestMessage.Headers.UserAgent.ParseAdd("RingCentral.Net");
-            httpRequestMessage.Headers.Authorization = (basicAuth || token?.access_token == null)
+            httpRequestMessage.Headers.Authorization = token == null
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(
                         Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
@@ -52,9 +50,15 @@ namespace RingCentral
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
             return httpResponseMessage;
         }
+        
+        public async Task<TokenInfo> Authorize(GetTokenRequest getTokenRequest)
+        {
+            token = null; // force it to use basicAuth
+            token = await Restapi(null).Oauth().Token().Post(getTokenRequest);
+            return token;
+        }
 
-        public async Task<TokenInfo> Authorize(string username, string extension, string password,
-            object options = null)
+        public Task<TokenInfo> Authorize(string username, string extension, string password)
         {
             var getTokenRequest = new GetTokenRequest
             {
@@ -63,11 +67,10 @@ namespace RingCentral
                 extension = extension,
                 password = password
             };
-            token = await this.Restapi(null).Oauth().Token().Post(getTokenRequest);
-            return token;
+            return Authorize(getTokenRequest);
         }
 
-        public async Task<TokenInfo> Authorize(string authCode, string redirectUri, object options = null)
+        public Task<TokenInfo> Authorize(string authCode, string redirectUri)
         {
             var getTokenRequest = new GetTokenRequest
             {
@@ -75,11 +78,10 @@ namespace RingCentral
                 code = authCode,
                 redirect_uri = redirectUri,
             };
-            token = await this.Restapi(null).Oauth().Token().Post(getTokenRequest);
-            return token;
+            return Authorize(getTokenRequest);
         }
 
-        public async Task<TokenInfo> Refresh(string refreshToken = null)
+        public Task<TokenInfo> Refresh(string refreshToken = null)
         {
             if (refreshToken != null)
             {
@@ -95,24 +97,15 @@ namespace RingCentral
 
             if (token == null) // nothing  to refresh
             {
-                return null;
+                return Task.FromResult<TokenInfo>(null);
             }
 
-            var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            var getTokenRequest = new GetTokenRequest
             {
-                {"grant_type", "refresh_token"},
-                {"refresh_token", token.refresh_token}
-            });
-            var httpRequestMessage = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri(server, "/restapi/oauth/token"),
-                Content = httpContent
+                grant_type = "refresh_token",
+                refresh_token = token.refresh_token
             };
-            var httpResponseMessage = await Request(httpRequestMessage, true);
-            var json = await httpResponseMessage.Content.ReadAsStringAsync();
-            token = JsonConvert.DeserializeObject<TokenInfo>(json);
-            return token;
+            return Authorize(getTokenRequest);
         }
 
         public async Task Revoke(string tokenToRevoke = null)
@@ -122,18 +115,12 @@ namespace RingCentral
                 return;
             }
 
-            var httpContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            tokenToRevoke = tokenToRevoke ?? token.access_token ?? token.refresh_token;
+            token = null; // force it to use basicAuth
+            await Restapi(null).Oauth().Revoke().Post(new RevokeTokenRequest
             {
-                {"token", tokenToRevoke ?? token.access_token ?? token.refresh_token}
+                token = tokenToRevoke
             });
-            var httpRequestMessage = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri(server, "/restapi/oauth/revoke"),
-                Content = httpContent
-            };
-            await Request(httpRequestMessage, true);
-            token = null;
         }
 
         public async void Dispose()
