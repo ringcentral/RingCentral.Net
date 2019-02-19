@@ -66,23 +66,27 @@ const generateField = (m, f) => {
   return p
 }
 
+const generateCode = (m, fields) => {
+  let code = `namespace RingCentral
+  {${m.description ? '\n    // ' + m.description : ''}
+      public class ${m.name}
+      {
+          ${fields.join('\n\n        ')}
+      }
+  }`
+  if (code.includes('[JsonProperty(')) {
+    code = 'using Newtonsoft.Json;\n\n' + code
+  }
+  return code
+}
+
 models.forEach(m => {
   const properties = m.properties
   const fields = Object.keys(properties)
     .map(k => ({ name: k, ...properties[k] }))
     .map(f => normalizeField(f))
-  let source = `namespace RingCentral
-{${m.description ? '\n    // ' + m.description : ''}
-    public class ${m.name}
-    {
-        ${fields.map(f => generateField(m, f)).join('\n\n        ')}
-    }
-}
-`.trim()
-  if (source.includes('[JsonProperty(')) {
-    source = 'using Newtonsoft.Json;\n\n' + source
-  }
-  fs.writeFileSync(path.join(outputDir, `${m.name}.cs`), source)
+    .map(f => generateField(m, f))
+  fs.writeFileSync(path.join(outputDir, `${m.name}.cs`), generateCode(m, fields))
 })
 
 // generate models for form-data objects
@@ -97,14 +101,7 @@ Object.keys(doc.paths).forEach(p => {
           p = normalizeField(p)
           return generateField({}, p)
         })
-      const code = `namespace RingCentral
-{
-    public class ${className}
-    {
-        ${fields.join('\n\n        ')}
-    }
-}`
-      fs.writeFileSync(path.join(outputDir, `${className}.cs`), code)
+      fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
     }
   })
 })
