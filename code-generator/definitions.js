@@ -34,12 +34,36 @@ const normalizeType = f => {
     throw new Error(`Unknown type ${f.type}`)
   }
 }
+
 const normalizeField = f => {
   f.type = normalizeType(f)
   if (['event', 'delegate', 'ref', 'default', 'operator', 'public'].includes(f.name)) {
     f.name = `@${f.name}`
   }
   return f
+}
+
+const generateField = (m, f) => {
+  let p = ''
+  if (f.name.includes('-')) {
+    p += `[JsonProperty("${f.name}")]`
+    p += `\n        public ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())};`
+  } else if (f.name.includes(':') || f.name.includes('.')) {
+    p += `[JsonProperty("${f.name}")]`
+    p += `\n        public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
+  } else {
+    p = `public ${f.type} ${f.name};`
+  }
+  if (m.required && m.required.includes(f.name)) {
+    p += ` // Required`
+  }
+  if (f.enum) {
+    p = `// Enum: ${f.enum.join(', ')}\n        ${p}`
+  }
+  if (f.description) {
+    p = `// ${f.description.trim()}\n        ${p}`
+  }
+  return p
 }
 
 models.forEach(m => {
@@ -51,28 +75,7 @@ models.forEach(m => {
 {${m.description ? '\n    // ' + m.description : ''}
     public class ${m.name}
     {
-        ${fields.map(f => {
-    let p = ''
-    if (f.name.includes('-')) {
-      p += `[JsonProperty("${f.name}")]`
-      p += `\n        public ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())};`
-    } else if (f.name.includes(':') || f.name.includes('.')) {
-      p += `[JsonProperty("${f.name}")]`
-      p += `\n        public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
-    } else {
-      p = `public ${f.type} ${f.name};`
-    }
-    if (m.required && m.required.includes(f.name)) {
-      p += ` // Required`
-    }
-    if (f.enum) {
-      p = `// Enum: ${f.enum.join(', ')}\n        ${p}`
-    }
-    if (f.description) {
-      p = `// ${f.description.trim()}\n        ${p}`
-    }
-    return p
-  }).join('\n\n        ')}
+        ${fields.map(f => generateField(m, f)).join('\n\n        ')}
     }
 }
 `.trim()
@@ -92,20 +95,13 @@ Object.keys(doc.paths).forEach(p => {
       const fields = operation.parameters.filter(p => p.in === 'formData')
         .map(p => {
           p = normalizeField(p)
-          let f = `        public ${p.type} ${p.name};`
-          if (p.enum) {
-            f = `        // Enum: ${p.enum.join(', ')}\n${f}`
-          }
-          if (p.description) {
-            f = `        // ${p.description}\n${f}`
-          }
-          return f
+          return generateField({}, p)
         })
       const code = `namespace RingCentral
 {
     public class ${className}
     {
-${fields.join('\n\n')}
+        ${fields.join('\n\n        ')}
     }
 }`
       fs.writeFileSync(path.join(outputDir, `${className}.cs`), code)
