@@ -27,10 +27,14 @@ namespace RingCentral.Paths.Restapi.Glip.Files
             var pairs = Utils.GetPairs(createGlipFileRequest);
             var dict = pairs.Where(p => !(p.value is Attachment || p.value is IEnumerable<Attachment>))
                 .ToDictionary(p => p.name, p => p.value);
-            var stringContent =
-                new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(dict), System.Text.Encoding.UTF8,
-                    "application/json");
-            multipartFormDataContent.Add(stringContent, "request.json");
+            if (dict.Count > 0)
+            {
+                var stringContent =
+                    new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(dict), System.Text.Encoding.UTF8,
+                        "application/json");
+                multipartFormDataContent.Add(stringContent, "request.json");
+            }
+
             pairs.Where(p => p.value is Attachment || p.value is IEnumerable<Attachment>).ToList().ForEach(p =>
             {
                 var attachments = p.value;
@@ -39,10 +43,16 @@ namespace RingCentral.Paths.Restapi.Glip.Files
                     attachments = new[] {attachments};
                 }
 
-                (attachments as IEnumerable<Attachment>).ToList().ForEach(attachment =>
+                ((object[]) attachments).Select(a => a as Attachment).ToList().ForEach(attachment =>
                 {
                     var content = new ByteArrayContent(attachment.bytes);
-                    multipartFormDataContent.Add(content, attachment.fileName, attachment.fileName);
+                    if (attachment.contentType != null)
+                    {
+                        content.Headers.ContentType =
+                            new System.Net.Http.Headers.MediaTypeHeaderValue(attachment.contentType);
+                    }
+
+                    multipartFormDataContent.Add(content, p.name, attachment.fileName);
                 });
             });
             return await rc.Post<RingCentral.PostGlipFile>(this.Path(), multipartFormDataContent);

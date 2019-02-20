@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -8,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ProfileImage()
         {
-            var bytes = System.IO.File.ReadAllBytes("rc.png");
+//            var bytes = System.IO.File.ReadAllBytes("rc.png");
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
@@ -25,10 +26,22 @@ namespace RingCentral.Tests
 //                var temp = await extension.ProfileImage().Post(bytes, "test.png");
 //                Assert.True(temp);
 
-                var r = await extension.ProfileImage().List();
-                Assert.NotNull(r);
-//                Assert.Equal(bytes, content.data);
+                var bytes = await extension.ProfileImage().Post(new UploadProfileImageRequest
+                {
+                    image = new Attachment
+                    {
+                        bytes = File.ReadAllBytes("./rc.png"),
+                        fileName = "rc.png",
+                        contentType = "image/png"
+                    }
+                });
+                Assert.NotNull(bytes);
 
+//
+//                var content = await extension.ProfileImage().Get();
+//                Assert.NotNull(content);
+//                Assert.Equal(bytes, content.data);
+//
 //                var bytes4 = await extension.ProfileImage("90x90").Get();
 //                Assert.NotNull(bytes4);
 //
