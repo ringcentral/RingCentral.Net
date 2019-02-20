@@ -176,9 +176,11 @@ ${code}`
         }
       }
 
-      let body, bodyClass, bodyParam, formUrlEncoded
+      let body, bodyClass, bodyParam, formUrlEncoded, formData
       if (operation.detail.consumes && operation.detail.consumes[0] === 'application/x-www-form-urlencoded') {
         formUrlEncoded = true
+      } else if (operation.detail.consumes && operation.detail.consumes[0] === 'multipart/form-data') {
+        formData = true
       } else {
         body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
         if (body) {
@@ -251,8 +253,39 @@ ${code}`
             RingCentral.Utils.GetPairs(${operation.detail.operationId}Request)
               .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<${responseType}>(this.Path(), new FormUrlEncodedContent(dict));
+        }`
+      } else if (formData) {
+        if (code.indexOf('using System.Linq;') === -1) {
+          code = `using System.Linq;
+using System.Net.Http;
+using System.Collections.Generic;
+${code}`
         }
-        `
+        code += `
+        public async Task<${responseType}> ${smartMethod}(${changeCase.pascalCase(operation.detail.operationId)}Request ${operation.detail.operationId}Request)
+        {
+            var multipartFormDataContent = new MultipartFormDataContent();
+            var pairs = Utils.GetPairs(${operation.detail.operationId}Request);
+            var dict = pairs.Where(p => !(p.value is Attachment || p.value is IEnumerable<Attachment>))
+                .ToDictionary(p => p.name, p => p.value);
+            var stringContent =
+                new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(dict), System.Text.Encoding.UTF8, "application/json");
+            multipartFormDataContent.Add(stringContent, "request.json");
+            pairs.Where(p => p.value is Attachment || p.value is IEnumerable<Attachment>).ToList().ForEach(p =>
+            {
+                var attachments = p.value;
+                if (!(attachments is IEnumerable<Attachment>))
+                {
+                    attachments = new[] {attachments};
+                }
+                (attachments as IEnumerable<Attachment>).ToList().ForEach(attachment =>
+                {
+                    var content = new ByteArrayContent(attachment.bytes);
+                    multipartFormDataContent.Add(content, attachment.fileName, attachment.fileName);
+                });
+            });
+            return await rc.Post<${responseType}>(this.Path(), multipartFormDataContent);
+        }`
       } else {
         const codeBody = `
         {${withParam ? `

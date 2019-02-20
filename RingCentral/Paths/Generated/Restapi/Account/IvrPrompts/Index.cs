@@ -1,3 +1,6 @@
+using System.Linq;
+using System.Net.Http;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.IvrPrompts
@@ -25,9 +28,31 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return $"{parent.Path()}/ivr-prompts";
         }
 
-        public async Task<RingCentral.PromptInfo> Post()
+        public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIvrPromptRequest)
         {
-            return await rc.Post<RingCentral.PromptInfo>(this.Path(false));
+            var multipartFormDataContent = new MultipartFormDataContent();
+            var pairs = Utils.GetPairs(createIvrPromptRequest);
+            var dict = pairs.Where(p => !(p.value is Attachment || p.value is IEnumerable<Attachment>))
+                .ToDictionary(p => p.name, p => p.value);
+            var stringContent =
+                new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(dict), System.Text.Encoding.UTF8,
+                    "application/json");
+            multipartFormDataContent.Add(stringContent, "request.json");
+            pairs.Where(p => p.value is Attachment || p.value is IEnumerable<Attachment>).ToList().ForEach(p =>
+            {
+                var attachments = p.value;
+                if (!(attachments is IEnumerable<Attachment>))
+                {
+                    attachments = new[] {attachments};
+                }
+
+                (attachments as IEnumerable<Attachment>).ToList().ForEach(attachment =>
+                {
+                    var content = new ByteArrayContent(attachment.bytes);
+                    multipartFormDataContent.Add(content, attachment.fileName, attachment.fileName);
+                });
+            });
+            return await rc.Post<RingCentral.PromptInfo>(this.Path(), multipartFormDataContent);
         }
 
         public async Task<RingCentral.IVRPrompts> List()
