@@ -22,11 +22,18 @@ Object.keys(doc.paths).forEach(path => {
 })
 
 // Support multiple attachments: https://git.ringcentral.com/platform/api-metadata-specs/issues/21
-const faxAttachment = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax'].post.parameters.filter(p => p.name === 'attachment')[0]
+const sendFaxParams = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax'].post.parameters
+const faxAttachment = sendFaxParams.filter(p => p.name === 'attachment')[0]
 if (faxAttachment.type === 'file') {
   faxAttachment.type = 'array'
   faxAttachment.collectionFormat = 'multi'
   faxAttachment.items = { type: 'file' }
+}
+// fix send fax "to" parameter
+const faxTo = sendFaxParams.filter(p => p.name === 'to')[0]
+if (faxTo.items.type === 'string') {
+  delete faxTo.items.type
+  faxTo.items['$ref'] = '#/definitions/MessageStoreCallerInfoRequest'
 }
 
 // Add code & redirect_uri for getToken: https://git.ringcentral.com/platform/api-metadata-specs/issues/25
