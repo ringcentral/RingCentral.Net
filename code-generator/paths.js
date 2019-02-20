@@ -7,6 +7,10 @@ import path from 'path'
 const outputDir = '../RingCentral/Paths/Generated'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
+
+// Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
+delete doc.paths['/restapi/oauth/authorize']
+
 const paths = Object.keys(doc.paths)
 const normalizedPaths = paths.map(p => p
   .replace(/\/restapi\/v1\.0/, '/restapi/{apiVersion}')

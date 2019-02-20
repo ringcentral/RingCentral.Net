@@ -29,9 +29,6 @@ if (faxAttachment.type === 'file') {
   faxAttachment.items = { type: 'file' }
 }
 
-// Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
-delete doc.paths['/restapi/oauth/authorize']
-
 // Add code & redirect_uri for getToken: https://git.ringcentral.com/platform/api-metadata-specs/issues/25
 doc.paths['/restapi/oauth/token'].post.parameters.push({
   name: 'code',
