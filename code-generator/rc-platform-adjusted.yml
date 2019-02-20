@@ -1653,6 +1653,9 @@ paths:
       responses:
         '200':
           description: Attachment Data
+          schema:
+            type: string
+            format: binary
       x-api-group: extension/message-store/content
       x-throttling-group: Medium
       x-metered-api: true

@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -34,7 +35,7 @@ namespace RingCentral.Tests
                 });
                 Assert.NotNull(bytes2);
                 Assert.Empty(bytes2);
-                
+
                 var bytes3 = await extension.ProfileImage().Put(new UpdateProfileImageRequest
                 {
                     image = new Attachment
@@ -50,50 +51,51 @@ namespace RingCentral.Tests
                 var bytes4 = await extension.ProfileImage().List(); // todo: this name should be Get
                 Assert.NotNull(bytes4);
                 Assert.Equal(bytes, bytes4);
-                
+
                 var bytes5 = await extension.ProfileImage("90x90").Get();
                 Assert.NotNull(bytes5);
             }
         }
 
-//        [Fact]
-//        public async void MessageContent()
-//        {
-//            using (var rc = new RestClient(
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-//            ))
-//            {
-//                await rc.Authorize(
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-//                );
-//                var extension = rc.Restapi().Account().Extension();
-//
-//                var response = await extension.MessageStore()
-//                    .List(new {dateFrom = DateTime.UtcNow.AddDays(-30).ToString("o")});
-//                var messages = response.records;
-//
-//                // sms
-//                var message = messages.Where(m => m.type == "SMS" && m.attachments != null && m.attachments.Length > 0)
-//                    .First();
-//                var content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
-//                var str = System.Text.Encoding.UTF8.GetString(content.data);
-//                Assert.NotNull(str);
-//                Assert.True(str.Length > 0);
-//
-//                // fax
-//                message = messages.Where(m =>
-//                    m.type == "Fax" && m.messageStatus != "SendingFailed" && m.attachments != null &&
-//                    m.attachments.Length > 0).Skip(3).First();
-//                content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
-//                Assert.NotNull(content);
-//                Assert.True(content.data.Length > 0);
-//                System.IO.File.WriteAllBytes("test.pdf", content.data);
-//            }
-//        }
+        [Fact]
+        public async void MessageContent()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+                var extension = rc.Restapi().Account().Extension();
+
+                var response = await extension.MessageStore()
+                    .List(new {dateFrom = DateTime.UtcNow.AddDays(-30).ToString("o")});
+                var messages = response.records;
+
+                // sms
+                var message = messages
+                    .First(m => m.type == "SMS" && m.attachments != null && m.attachments.Length > 0);
+                var content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
+                var str = System.Text.Encoding.UTF8.GetString(content);
+                Assert.NotNull(str);
+                Assert.True(str.Length > 0);
+
+                // fax
+                message = messages.Where(m =>
+                    m.type == "Fax" && m.messageStatus != "SendingFailed" && m.attachments != null &&
+                    m.attachments.Length > 0).Skip(3).First();
+                content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
+                Assert.NotNull(content);
+                Assert.True(content.Length > 0);
+                System.IO.File.WriteAllBytes("test.pdf", content);
+            }
+        }
+
 //
 //        [Fact]
 //        public async void RecordingContent()

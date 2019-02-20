@@ -53,4 +53,13 @@ doc.paths['/restapi/oauth/token'].post.parameters.push({
   description: 'The redirect URI in the token request must be an exact match of the redirect URI that was used when generating the authorization code'
 })
 
+// fix message attachment response type issue: https://git.ringcentral.com/platform/api-metadata-specs/issues/29
+const response = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}'].get.responses[200]
+if (!response.schema) {
+  response.schema = {
+    type: 'string',
+    format: 'binary'
+  }
+}
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
