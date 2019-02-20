@@ -78,7 +78,7 @@ namespace RingCentral.Tests
             Assert.NotNull(uri2);
             Assert.Contains("state=hello", uri2);
             Assert.Contains("ui_options=hide_logo", uri2);
-            
+
             var uri3 = rc.AuthorizeUri(new AuthorizeRequest
             {
                 redirect_uri = redirectUri,

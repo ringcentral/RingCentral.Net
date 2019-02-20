@@ -23,12 +23,8 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
         public async Task<string> Post(RevokeTokenRequest revokeTokenRequest)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
-            revokeTokenRequest.GetType().GetProperties()
-                .Select(p => (name: p.Name, value: p.GetValue(revokeTokenRequest)))
-                .Concat(revokeTokenRequest.GetType().GetFields()
-                    .Select(p => (name: p.Name, value: p.GetValue(revokeTokenRequest))))
-                .Where(t => t.value != null).ToList()
-                .ForEach(t => dict.Add(t.name, t.value.ToString()));
+            RingCentral.Utils.GetPairs(revokeTokenRequest)
+                .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<string>(this.Path(), new FormUrlEncodedContent(dict));
         }
     }

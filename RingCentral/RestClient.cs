@@ -131,11 +131,8 @@ namespace RingCentral
             var uriBuilder = new UriBuilder(server)
             {
                 Path = "/restapi/oauth/authorize",
-                Query = string.Join("&", request.GetType().GetProperties()
-                    .Select(p => (name: p.Name, value: p.GetValue(request)))
-                    .Concat(request.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(request))))
-                    .Where(t => t.value != null)
-                    .Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"))
+                Query = string.Join("&",
+                    Utils.GetPairs(request).Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"))
             };
             return uriBuilder.Uri.ToString();
         }

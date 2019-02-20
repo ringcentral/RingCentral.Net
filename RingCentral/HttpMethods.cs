@@ -33,23 +33,19 @@ namespace RingCentral
             var uriBuilder = new UriBuilder(server) {Path = endpoint};
             if (queryObj != null)
             {
-                var fields = queryObj.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(queryObj)))
-                    .Concat(queryObj.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(queryObj))))
-                    .Where(t => t.value != null)
-                    .Select(t =>
+                var fields = Utils.GetPairs(queryObj).Select(t =>
+                {
+                    if (t.value.GetType().IsArray)
                     {
-                        if (t.value.GetType().IsArray)
-                        {
-                            return string.Join("&",
-                                (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeUriString(o.ToString())}")
-                                .ToArray());
-                        }
-                        else
-                        {
-                            return $"{t.name}={Uri.EscapeUriString(t.value.ToString())}";
-                        }
-                    })
-                    .ToArray();
+                        return string.Join("&",
+                            (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeUriString(o.ToString())}")
+                            .ToArray());
+                    }
+                    else
+                    {
+                        return $"{t.name}={Uri.EscapeUriString(t.value.ToString())}";
+                    }
+                });
                 uriBuilder.Query = string.Join("&", fields);
             }
 

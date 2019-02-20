@@ -248,10 +248,8 @@ ${code}`
         public async Task<${responseType}> ${smartMethod}(${changeCase.pascalCase(operation.detail.operationId)}Request ${operation.detail.operationId}Request)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
-            ${operation.detail.operationId}Request.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(${operation.detail.operationId}Request)))
-              .Concat(${operation.detail.operationId}Request.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(${operation.detail.operationId}Request))))
-              .Where(t => t.value != null).ToList()
-              .ForEach(t => dict.Add(t.name, t.value.ToString()));
+            RingCentral.Utils.GetPairs(${operation.detail.operationId}Request)
+              .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<${responseType}>(this.Path(), new FormUrlEncodedContent(dict));
         }
         `

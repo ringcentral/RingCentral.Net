@@ -23,11 +23,8 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
-            getTokenRequest.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(getTokenRequest)))
-                .Concat(getTokenRequest.GetType().GetFields()
-                    .Select(p => (name: p.Name, value: p.GetValue(getTokenRequest))))
-                .Where(t => t.value != null).ToList()
-                .ForEach(t => dict.Add(t.name, t.value.ToString()));
+            RingCentral.Utils.GetPairs(getTokenRequest)
+                .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict));
         }
     }
