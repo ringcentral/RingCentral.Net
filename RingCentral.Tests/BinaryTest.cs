@@ -9,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ProfileImage()
         {
-//            var bytes = System.IO.File.ReadAllBytes("rc.png");
+            var bytes = System.IO.File.ReadAllBytes("rc.png");
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
@@ -23,37 +23,36 @@ namespace RingCentral.Tests
                 );
                 var extension = rc.Restapi().Account().Extension();
 
-//                var temp = await extension.ProfileImage().Post(bytes, "test.png");
-//                Assert.True(temp);
-
-                var bytes = await extension.ProfileImage().Post(new UploadProfileImageRequest
+                var bytes2 = await extension.ProfileImage().Post(new UploadProfileImageRequest
                 {
                     image = new Attachment
                     {
-                        bytes = File.ReadAllBytes("./rc.png"),
+                        bytes = bytes,
                         fileName = "rc.png",
                         contentType = "image/png"
                     }
                 });
-                Assert.NotNull(bytes);
+                Assert.NotNull(bytes2);
+                Assert.Empty(bytes2);
+                
+                var bytes3 = await extension.ProfileImage().Put(new UpdateProfileImageRequest
+                {
+                    image = new Attachment
+                    {
+                        bytes = bytes,
+                        fileName = "rc.png",
+                        contentType = "image/png"
+                    }
+                });
+                Assert.NotNull(bytes3);
+                Assert.Empty(bytes3);
 
-//
-//                var content = await extension.ProfileImage().Get();
-//                Assert.NotNull(content);
-//                Assert.Equal(bytes, content.data);
-//
-//                var bytes4 = await extension.ProfileImage("90x90").Get();
-//                Assert.NotNull(bytes4);
-//
-//                temp = await extension.ProfileImage().Put(bytes, "test.png");
-//                Assert.True(temp);
-//
-//                content = await extension.ProfileImage().Get();
-//                Assert.NotNull(content);
-//                Assert.Equal(bytes, content.data);
-//
-//                var bytes6 = await extension.ProfileImage("90x90").Get();
-//                Assert.NotNull(bytes6);
+                var bytes4 = await extension.ProfileImage().List(); // todo: this name should be Get
+                Assert.NotNull(bytes4);
+                Assert.Equal(bytes, bytes4);
+                
+                var bytes5 = await extension.ProfileImage("90x90").Get();
+                Assert.NotNull(bytes5);
             }
         }
 
