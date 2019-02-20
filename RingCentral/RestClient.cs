@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -117,41 +116,37 @@ namespace RingCentral
             await Revoke();
         }
 
-        public string AuthorizeUri(string redirectUri, string state = "")
+        public string AuthorizeUri(AuthorizeRequest request)
         {
-            return AuthorizeUri(redirectUri, new OAuthOptions {state = state});
-        }
-
-        public string AuthorizeUri(string redirectUri, OAuthOptions options, object extraOptions = null)
-        {
-            var uriBuilder = new UriBuilder(server) {Path = "/restapi/oauth/authorize"};
-            var queryParams = new List<(string, string)>
+            if (request.response_type == null)
             {
-                ("redirect_uri", redirectUri),
-                ("client_id", clientId),
+                request.response_type = "code";
+            }
+
+            if (request.client_id == null)
+            {
+                request.client_id = clientId;
+            }
+
+            var uriBuilder = new UriBuilder(server)
+            {
+                Path = "/restapi/oauth/authorize",
+                Query = string.Join("&", request.GetType().GetProperties()
+                    .Select(p => (name: p.Name, value: p.GetValue(request)))
+                    .Concat(request.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(request))))
+                    .Where(t => t.value != null)
+                    .Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"))
             };
-
-            options.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(options)))
-                .Concat(options.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(options))))
-                .Where(t => t.value != null).ToList()
-                .ForEach(t => queryParams.Add((t.name, t.value.ToString())));
-            extraOptions?.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(extraOptions)))
-                .Concat(extraOptions.GetType().GetFields().Select(p => (name: p.Name, value: p.GetValue(extraOptions))))
-                .Where(t => t.value != null).ToList()
-                .ForEach(t => queryParams.Add((t.name, t.value.ToString())));
-
-            uriBuilder.Query =
-                string.Join("&", queryParams.Select(qp => $"{qp.Item1}={Uri.EscapeUriString(qp.Item2)}"));
             return uriBuilder.Uri.ToString();
         }
-    }
 
-    public class OAuthOptions
-    {
-        public string response_type = "code";
-        public string state = "";
-        public string brand_id = "";
-        public string display = "";
-        public string prompt = "";
+        public string AuthorizeUri(string redirectUri, string state = "")
+        {
+            return AuthorizeUri(new AuthorizeRequest
+            {
+                redirect_uri = redirectUri,
+                state = state
+            });
+        }
     }
 }

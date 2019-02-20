@@ -67,10 +67,27 @@ namespace RingCentral.Tests
                 Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
             }
 
-            var uri2 = rc.AuthorizeUri(redirectUri, new OAuthOptions {state = "hello"}, new {ui_options = "hide_logo"});
+            var uri2 = rc.AuthorizeUri(new AuthorizeRequest
+            {
+                redirect_uri = redirectUri,
+                client_id = rc.clientId,
+                response_type = "code",
+                state = "hello",
+                ui_options = "hide_logo"
+            });
             Assert.NotNull(uri2);
             Assert.Contains("state=hello", uri2);
             Assert.Contains("ui_options=hide_logo", uri2);
+            
+            var uri3 = rc.AuthorizeUri(new AuthorizeRequest
+            {
+                redirect_uri = redirectUri,
+                state = "hello",
+                ui_options = "hide_logo"
+            });
+            Assert.NotNull(uri3);
+            Assert.Contains("response_type=code", uri3);
+            Assert.Contains($"client_id={rc.clientId}", uri3);
         }
 
         [Fact]
