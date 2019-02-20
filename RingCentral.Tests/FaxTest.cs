@@ -76,12 +76,7 @@ namespace RingCentral.Tests
                     (attachments as IEnumerable<Attachment>).ToList().ForEach(attachment =>
                     {
                         var content = new ByteArrayContent(attachment.bytes);
-                        content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
-                        {
-                            Name = attachment.fileName,
-                            FileName = attachment.fileName
-                        };
-                        multipartFormDataContent.Add(content);
+                        multipartFormDataContent.Add(content, attachment.fileName, attachment.fileName);
                     });
                 });
 
