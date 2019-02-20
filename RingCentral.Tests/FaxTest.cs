@@ -28,6 +28,53 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
+                var sendFaxMessageRequest = new SendFaxMessageRequest
+                {
+                    to = new[]
+                    {
+                        new MessageStoreCallerInfoRequest
+                        {
+                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
+                        }
+                    },
+                    attachments = new[]
+                    {
+                        new Attachment
+                        {
+                            fileName = "rc.png",
+                            bytes = File.ReadAllBytes("./rc.png")
+                        },
+                        new Attachment
+                        {
+                            fileName = "glip.png",
+                            bytes = File.ReadAllBytes("./glip.png")
+                        },
+                        new Attachment
+                        {
+                            fileName = "hello.txt",
+                            bytes = Encoding.UTF8.GetBytes("Hello 888")
+                        }
+                    }
+                };
+                var r = await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest);
+                Assert.Equal("High", r.faxResolution);
+            }
+        }
+
+        [Fact]
+        public async Task SendFaxComplicated()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
 
                 var requestObj = new SendFaxMessageRequest
                 {
@@ -35,7 +82,7 @@ namespace RingCentral.Tests
                     {
                         new MessageStoreCallerInfoRequest
                         {
-                            phoneNumber = "16506417402"
+                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
                         }
                     },
                     faxResolution = "Low",
@@ -80,11 +127,6 @@ namespace RingCentral.Tests
                     });
                 });
 
-                rc.AfterHttpCall += async (sender, args) =>
-                {
-                    var str = await args.httpRequestMessage.Content.ReadAsStringAsync();
-                };
-
                 var responseMessage =
                     await rc.Post("/restapi/v1.0/account/~/extension/~/fax", multipartFormDataContent);
                 Assert.Equal(HttpStatusCode.OK, responseMessage.StatusCode);
@@ -96,7 +138,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task SendFaxComplicated()
+        public async Task SendFaxMoreComplicated()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -155,11 +197,6 @@ namespace RingCentral.Tests
                     FileName = "glip.png"
                 };
                 multipartFormDataContent.Add(streamContent2);
-
-                rc.AfterHttpCall += async (sender, args) =>
-                {
-                    var str = await args.httpRequestMessage.Content.ReadAsStringAsync();
-                };
 
                 var responseMessage =
                     await rc.Post("/restapi/v1.0/account/~/extension/~/fax", multipartFormDataContent);
