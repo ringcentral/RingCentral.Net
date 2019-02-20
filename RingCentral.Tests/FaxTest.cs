@@ -27,6 +27,70 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
+                var requestObj = new
+                {
+                    to = new[]
+                    {
+                        new
+                        {
+                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
+                        }
+                    },
+                    attachment = new[]
+                    {
+                        new Attachment
+                        {
+                            fileName = "test.png",
+                            bytes = File.ReadAllBytes("./rc.png")
+                        },
+                        new Attachment
+                        {
+                            fileName = "test.png",
+                            bytes = File.ReadAllBytes("./glip.png")
+                        }
+                    }
+                };
+
+                var multipartFormDataContent = new MultipartFormDataContent();
+
+                var content1 = new StringContent("16506417402");
+                multipartFormDataContent.Add(content1, "to");
+
+                var content2 = new ByteArrayContent(requestObj.attachment[0].bytes);
+                multipartFormDataContent.Add(content2, requestObj.attachment[0].fileName,
+                    requestObj.attachment[0].fileName);
+
+                rc.AfterHttpCall += async (sender, args) =>
+                {
+                    var str = args.httpRequestMessage.ToString();
+                    var str2 = await args.httpRequestMessage.Content.ReadAsStringAsync();
+                };
+
+                var responseMessage =
+                    await rc.Post("/restapi/v1.0/account/~/extension/~/fax", multipartFormDataContent);
+                Assert.Equal(HttpStatusCode.OK, responseMessage.StatusCode);
+                var responseString = await responseMessage.Content.ReadAsStringAsync();
+                Assert.Contains("Fax", responseString);
+                Assert.Contains("Outbound", responseString);
+                Assert.Contains("faxResolution", responseString);
+            }
+        }
+
+        [Fact]
+        public async Task SendFaxComplicated()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+
                 var multipartFormDataContent = new MultipartFormDataContent();
 
                 // specify fax sending options including "to"
