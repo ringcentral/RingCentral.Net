@@ -1109,7 +1109,7 @@ paths:
             current session
           required: true
           type: string
-        - name: attachment
+        - name: attachments
           in: formData
           description: File to upload
           required: true

@@ -39,7 +39,7 @@ namespace RingCentral.Tests
                         }
                     },
                     faxResolution = "Low",
-                    attachment = new[]
+                    attachments = new[]
                     {
                         new Attachment
                         {

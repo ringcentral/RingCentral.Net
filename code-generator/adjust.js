@@ -28,6 +28,7 @@ if (faxAttachment.type === 'file') {
   faxAttachment.type = 'array'
   faxAttachment.collectionFormat = 'multi'
   faxAttachment.items = { type: 'file' }
+  faxAttachment.name = 'attachments'
 }
 // fix send fax "to" parameter
 const faxTo = sendFaxParams.filter(p => p.name === 'to')[0]

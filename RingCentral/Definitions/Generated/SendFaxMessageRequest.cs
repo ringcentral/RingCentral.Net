@@ -3,7 +3,7 @@ namespace RingCentral
     public class SendFaxMessageRequest
     {
         // File to upload
-        public Attachment[] attachment;
+        public Attachment[] attachments;
 
         // Resolution of Fax
         // Enum: High, Low
