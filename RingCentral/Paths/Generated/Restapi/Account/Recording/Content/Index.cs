@@ -18,9 +18,9 @@ namespace RingCentral.Paths.Restapi.Account.Recording.Content
             return $"{parent.Path()}/content";
         }
 
-        public async Task<string> Get()
+        public async Task<byte[]> Get()
         {
-            return await rc.Get<string>(this.Path());
+            return await rc.Get<byte[]>(this.Path());
         }
     }
 }

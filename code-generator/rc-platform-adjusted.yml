@@ -973,6 +973,9 @@ paths:
       responses:
         '200':
           description: Call Recording Media Data
+          schema:
+            type: string
+            format: binary
       x-api-group: account/recording/content
       x-throttling-group: Heavy
       x-metered-api: true

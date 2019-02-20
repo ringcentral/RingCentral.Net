@@ -54,9 +54,18 @@ doc.paths['/restapi/oauth/token'].post.parameters.push({
 })
 
 // fix message attachment response type issue: https://git.ringcentral.com/platform/api-metadata-specs/issues/29
-const response = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}'].get.responses[200]
-if (!response.schema) {
-  response.schema = {
+const messageAttachment = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}'].get.responses[200]
+if (!messageAttachment.schema) {
+  messageAttachment.schema = {
+    type: 'string',
+    format: 'binary'
+  }
+}
+
+// fix recording content response type issue: https://git.ringcentral.com/platform/api-metadata-specs/issues/30
+const recordingContent = doc.paths['/restapi/v1.0/account/{accountId}/recording/{recordingId}/content'].get.responses[200]
+if (!recordingContent.schema) {
+  recordingContent.schema = {
     type: 'string',
     format: 'binary'
   }

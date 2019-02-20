@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using RingCentral.Paths.Restapi.Account.CallLog;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -96,46 +97,46 @@ namespace RingCentral.Tests
             }
         }
 
-//
-//        [Fact]
-//        public async void RecordingContent()
-//        {
-//            using (var rc = new RestClient(
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-//            ))
-//            {
-//                await rc.Authorize(
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-//                );
-//                var account = rc.Restapi().Account();
-//
-//                // List call Logs
-//                var queryParams = new CallLogPath.ListParameters
-//                {
-//                    type = new string[] {"Voice"},
-//                    view = "Detailed",
-//                    dateFrom = DateTime.UtcNow.AddDays(-365).ToString("o"),
-//                    withRecording = true,
-//                    perPage = 10,
-//                };
-//                var callLogs = await account.CallLog().List(queryParams);
-//                if (callLogs.records.Length > 0)
-//                {
-//                    // download a call recording
-//                    var callLog = callLogs.records[0];
-//                    if (callLog.recording != null)
-//                    {
-//                        var content = await account.Recording(callLog.recording.id).Content().Get();
-//                        Assert.NotNull(content);
-//                        Assert.True(content.data.Length > 0);
-//                        System.IO.File.WriteAllBytes("test.wav", content.data);
-//                    }
-//                }
-//            }
-//        }
+
+        [Fact]
+        public async void RecordingContent()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+                var account = rc.Restapi().Account();
+
+                // List call Logs
+                var queryParams = new ListQueryParams
+                {
+                    type = new string[] {"Voice"},
+                    view = "Detailed",
+                    dateFrom = DateTime.UtcNow.AddDays(-365).ToString("o"),
+                    withRecording = true,
+                    perPage = 10,
+                };
+                var callLogs = await account.CallLog().List(queryParams);
+                if (callLogs.records.Length > 0)
+                {
+                    // download a call recording
+                    var callLog = callLogs.records[0];
+                    if (callLog.recording != null)
+                    {
+                        var content = await account.Recording(callLog.recording.id).Content().Get();
+                        Assert.NotNull(content);
+                        Assert.True(content.Length > 0);
+                        System.IO.File.WriteAllBytes("test.wav", content);
+                    }
+                }
+            }
+        }
     }
 }
