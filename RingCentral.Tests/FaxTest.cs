@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -27,43 +29,65 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var requestObj = new
+                var requestObj = new SendFaxMessageRequest
                 {
                     to = new[]
                     {
-                        new
+                        new MessageStoreCallerInfoRequest
                         {
-                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
+                            phoneNumber = "16506417402"
                         }
                     },
+                    faxResolution = "Low",
                     attachment = new[]
                     {
                         new Attachment
                         {
-                            fileName = "test.png",
+                            fileName = "rc.png",
                             bytes = File.ReadAllBytes("./rc.png")
                         },
                         new Attachment
                         {
-                            fileName = "test.png",
+                            fileName = "glip.png",
                             bytes = File.ReadAllBytes("./glip.png")
+                        },
+                        new Attachment
+                        {
+                            fileName = "hello.txt",
+                            bytes = Encoding.UTF8.GetBytes("Hello 888")
                         }
                     }
                 };
-
                 var multipartFormDataContent = new MultipartFormDataContent();
+                var pairs = Utils.GetPairs(requestObj);
+                var dict = pairs.Where(p => !(p.value is Attachment || p.value is IEnumerable<Attachment>))
+                    .ToDictionary(p => p.name, p => p.value);
+                var stringContent =
+                    new StringContent(JsonConvert.SerializeObject(dict), Encoding.UTF8, "application/json");
+                multipartFormDataContent.Add(stringContent, "request.json");
+                pairs.Where(p => p.value is Attachment || p.value is IEnumerable<Attachment>).ToList().ForEach(p =>
+                {
+                    var attachments = p.value;
+                    if (!(attachments is IEnumerable<Attachment>))
+                    {
+                        attachments = new[] {attachments};
+                    }
 
-                var content1 = new StringContent("16506417402");
-                multipartFormDataContent.Add(content1, "to");
-
-                var content2 = new ByteArrayContent(requestObj.attachment[0].bytes);
-                multipartFormDataContent.Add(content2, requestObj.attachment[0].fileName,
-                    requestObj.attachment[0].fileName);
+                    (attachments as IEnumerable<Attachment>).ToList().ForEach(attachment =>
+                    {
+                        var content = new ByteArrayContent(attachment.bytes);
+                        content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                        {
+                            Name = attachment.fileName,
+                            FileName = attachment.fileName
+                        };
+                        multipartFormDataContent.Add(content);
+                    });
+                });
 
                 rc.AfterHttpCall += async (sender, args) =>
                 {
-                    var str = args.httpRequestMessage.ToString();
-                    var str2 = await args.httpRequestMessage.Content.ReadAsStringAsync();
+                    var str = await args.httpRequestMessage.Content.ReadAsStringAsync();
                 };
 
                 var responseMessage =
@@ -136,6 +160,11 @@ namespace RingCentral.Tests
                     FileName = "glip.png"
                 };
                 multipartFormDataContent.Add(streamContent2);
+
+                rc.AfterHttpCall += async (sender, args) =>
+                {
+                    var str = await args.httpRequestMessage.Content.ReadAsStringAsync();
+                };
 
                 var responseMessage =
                     await rc.Post("/restapi/v1.0/account/~/extension/~/fax", multipartFormDataContent);

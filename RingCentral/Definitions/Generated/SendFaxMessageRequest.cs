@@ -10,7 +10,7 @@ namespace RingCentral
         public string faxResolution;
 
         // To Phone Number
-        public string[] to;
+        public MessageStoreCallerInfoRequest[] to;
 
         // Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately
         public string sendTime;
