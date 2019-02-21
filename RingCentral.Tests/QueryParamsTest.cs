@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact;
 using Xunit;
 
 namespace RingCentral.Tests

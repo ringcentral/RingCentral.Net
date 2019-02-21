@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using RingCentral.Paths.Restapi.Account.CallLog;
 using Xunit;
 
 namespace RingCentral.Tests
