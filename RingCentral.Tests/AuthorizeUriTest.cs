@@ -10,7 +10,7 @@ namespace RingCentral.Tests
     public class AuthorizeUriTest
     {
         [Fact]
-        public async Task GetQueryObj()
+        public async void GetQueryObj()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -31,7 +31,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task PostQueryObj()
+        public async void PostQueryObj()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -52,7 +52,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task PostFormUrlEncoded()
+        public async void PostFormUrlEncoded()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -75,7 +75,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task GetFormUrlEncoded()
+        public async void GetFormUrlEncoded()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

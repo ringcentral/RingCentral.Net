@@ -8,7 +8,7 @@ namespace RingCentral.Tests
     public class ScimTest
     {
         [Fact]
-        public async Task GetServiceProviderConfig()
+        public async void GetServiceProviderConfig()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -29,7 +29,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task CheckHealth()
+        public async void CheckHealth()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -52,7 +52,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task GetUsers()
+        public async void GetUsers()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -74,7 +74,7 @@ namespace RingCentral.Tests
         }
 
 //        [Fact]
-//        public async Task CreateUser()
+//        public async void CreateUser()
 //        {
 //            using (var rc = new RestClient(
 //                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -130,7 +130,7 @@ namespace RingCentral.Tests
 //        }
 
         [Fact]
-        public async Task SearchUser()
+        public async void SearchUser()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -156,7 +156,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task GetUserById()
+        public async void GetUserById()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -185,7 +185,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task UpdateUser()
+        public async void UpdateUser()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -219,7 +219,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task PatchUser()
+        public async void PatchUser()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

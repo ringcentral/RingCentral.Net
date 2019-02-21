@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class TokenRefreshTest
     {
         [Fact]
-        public async Task RefreshToken()
+        public async void RefreshToken()
         {
             var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

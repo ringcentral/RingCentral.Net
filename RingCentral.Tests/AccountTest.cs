@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class AccountTest
     {
         [Fact]
-        public async Task GetAccount()
+        public async void GetAccount()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

@@ -29,6 +29,5 @@ namespace RingCentral.Tests
                 Assert.NotEmpty(r.records);
             }
         }
-
     }
 }

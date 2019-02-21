@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class RestapiTest
     {
         [Fact]
-        public async Task Get()
+        public async void Get()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -27,7 +27,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task List()
+        public async void List()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

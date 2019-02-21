@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class TokenRevokeTest
     {
         [Fact]
-        public async Task RevokeToken()
+        public async void RevokeToken()
         {
             var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class CallLogTest
     {
         [Fact]
-        public async Task GetCallLogs()
+        public async void GetCallLogs()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

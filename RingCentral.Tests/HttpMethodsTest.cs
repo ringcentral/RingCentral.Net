@@ -9,7 +9,7 @@ namespace RingCentral.Tests
     public class HttpMethodsTest
     {
         [Fact]
-        public async Task DifferentResponseTypes()
+        public async void DifferentResponseTypes()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

@@ -10,7 +10,7 @@ namespace RingCentral.Tests
     public class MultipartMixed
     {
         [Fact]
-        public async Task UpdateCompanyGreeting()
+        public async void UpdateCompanyGreeting()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -45,7 +45,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task UpdateUserGreeting()
+        public async void UpdateUserGreeting()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

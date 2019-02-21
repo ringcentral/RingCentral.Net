@@ -8,7 +8,7 @@ namespace RingCentral.Tests
     public class AfterCallTest
     {
         [Fact]
-        public async Task AfterCall()
+        public async void AfterCall()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

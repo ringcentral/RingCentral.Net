@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class FormUrlEncodedTest
     {
         [Fact]
-        public async Task GetAndRevokeToken()
+        public async void GetAndRevokeToken()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

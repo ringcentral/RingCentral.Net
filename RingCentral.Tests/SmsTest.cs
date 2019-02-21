@@ -11,7 +11,7 @@ namespace RingCentral.Tests
     public class SmsTest
     {
         [Fact]
-        public async Task SendSms()
+        public async void SendSms()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

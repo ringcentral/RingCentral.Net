@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class QueryParamsTest
     {
         [Fact]
-        public async Task ArrayParams()
+        public async void ArrayParams()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

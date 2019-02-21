@@ -8,7 +8,7 @@ namespace RingCentral.Tests
     public class ExceptionTest
     {
         [Fact]
-        public async Task WrongPassword()
+        public async void WrongPassword()
         {
             var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

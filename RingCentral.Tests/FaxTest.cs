@@ -15,7 +15,7 @@ namespace RingCentral.Tests
     public class FaxTest
     {
         [Fact]
-        public async Task SendFax()
+        public async void SendFax()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -62,7 +62,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task SendFax2()
+        public async void SendFax2()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -109,7 +109,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task SendFaxComplicated()
+        public async void SendFaxComplicated()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -185,7 +185,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async Task SendFaxMoreComplicated()
+        public async void SendFaxMoreComplicated()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
