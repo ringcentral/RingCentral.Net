@@ -115,7 +115,7 @@ namespace RingCentral.Tests
                 // List call Logs
                 var queryParams = new LoadCompanyCallLogParameters
                 {
-                    type = new [] {"Voice"},
+                    type = new[] {"Voice"},
                     view = "Detailed",
                     dateFrom = DateTime.UtcNow.AddDays(-365).ToString("o"),
                     withRecording = true,

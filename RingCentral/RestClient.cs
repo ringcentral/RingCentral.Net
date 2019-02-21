@@ -85,7 +85,7 @@ namespace RingCentral
             var tokenToRefresh = refreshToken ?? token?.refresh_token;
             if (tokenToRefresh == null)
             {
-                return null;
+                return Task.FromResult<TokenInfo>(null);
             }
 
             var getTokenRequest = new GetTokenRequest

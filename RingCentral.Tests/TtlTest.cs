@@ -27,7 +27,7 @@ namespace RingCentral.Tests
                 Assert.True(token.refresh_token_expires_in > 302300 && token.refresh_token_expires_in < 302500);
             }
         }
-        
+
         [Fact]
         public async void TestRefresh()
         {

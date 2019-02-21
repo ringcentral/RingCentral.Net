@@ -25,7 +25,8 @@ namespace RingCentral.Tests
 
                 void EventHandler(object sender, HttpCallEventArgs eventArgs)
                 {
-                    var rateLimitRemaining = eventArgs.httpResponseMessage.Headers.First(i => i.Key == "X-Rate-Limit-Remaining").Value.First();
+                    var rateLimitRemaining = eventArgs.httpResponseMessage.Headers
+                        .First(i => i.Key == "X-Rate-Limit-Remaining").Value.First();
                     Assert.True(int.Parse(rateLimitRemaining) > 0);
                     count += 1;
                 }
