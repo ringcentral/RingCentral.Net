@@ -80,7 +80,7 @@ namespace RingCentral
             return Authorize(getTokenRequest);
         }
 
-        public async Task<TokenInfo> Refresh(string refreshToken = null)
+        public Task<TokenInfo> Refresh(string refreshToken = null)
         {
             var tokenToRefresh = refreshToken ?? token?.refresh_token;
             if (tokenToRefresh == null)
@@ -93,9 +93,7 @@ namespace RingCentral
                 grant_type = "refresh_token",
                 refresh_token = tokenToRefresh
             };
-            var newToken = await Authorize(getTokenRequest);
-            TokenRefreshed?.Invoke(this, new TokenEventArgs(newToken));
-            return newToken;
+            return Authorize(getTokenRequest);
         }
 
         public async Task Revoke(string tokenToRevoke = null)
