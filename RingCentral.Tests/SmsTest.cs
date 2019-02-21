@@ -41,7 +41,7 @@ namespace RingCentral.Tests
                 });
                 Assert.Equal("SMS", messageInfo.type);
                 Assert.Equal("Outbound", messageInfo.direction);
-                Assert.Equal("Unread", messageInfo.readStatus);
+                Assert.Equal("Read", messageInfo.readStatus); // because it is an outbound SMS
             }
         }
 
