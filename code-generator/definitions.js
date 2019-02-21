@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import pascalCase from 'pascal-case'
 
-const outputDir = '../RingCentral/Definitions/Generated'
+const outputDir = '../RingCentral/Definitions'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 const definitions = doc.definitions

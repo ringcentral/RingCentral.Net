@@ -4,7 +4,7 @@ import * as R from 'ramda'
 import changeCase from 'change-case'
 import path from 'path'
 
-const outputDir = '../RingCentral/Paths/Generated'
+const outputDir = '../RingCentral/Paths'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 
