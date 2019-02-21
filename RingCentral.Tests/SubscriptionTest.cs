@@ -1,18 +1,18 @@
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace RingCentral.Tests
 {
     public class SubscriptionTest
     {
-        private async Task<HttpResponseMessage> SendSms(RestClient rc)
+        private Task<GetMessageInfoResponse> SendSms(RestClient rc)
         {
-            var httpContent = new StringContent(JsonConvert.SerializeObject(new
+            return rc.Restapi().Account().Extension().Sms().Post(new CreateSMSMessage
             {
                 from = new MessageStoreCallerInfoRequest
                 {
@@ -26,8 +26,7 @@ namespace RingCentral.Tests
                     }
                 },
                 text = "Hello world"
-            }), Encoding.UTF8, "application/json");
-            return await rc.Post("/restapi/v1.0/account/~/extension/~/sms", httpContent);
+            });
         }
 
         [Fact]
@@ -51,7 +50,21 @@ namespace RingCentral.Tests
                     "/restapi/v1.0/account/~/extension/~/message-store"
                 };
                 var messages = new List<string>();
-                var subscription = new Subscription(rc, eventFilters, message => { messages.Add(message); });
+                var messageStoreMessageCount = 0;
+                var subscription = new Subscription(rc, eventFilters, message =>
+                {
+                    messages.Add(message);
+                    dynamic jObject = JObject.Parse(message);
+                    var eventString = (string) jObject.@event;
+                    if (new Regex("/account/\\d+/extension/\\d+/message-store").Match(eventString).Success)
+                    {
+                        messageStoreMessageCount += 1;
+                        var bodyString = JsonConvert.SerializeObject(jObject.body);
+                        MessageEvent messageEvent = JsonConvert.DeserializeObject<MessageEvent>(bodyString);
+                        Assert.NotNull(messageEvent.uuid);
+                        Assert.NotNull(messageEvent.body);
+                    }
+                });
                 var subscriptionInfo = await subscription.Subscribe();
                 Assert.NotNull(subscriptionInfo);
                 Assert.NotNull(subscription.subscriptionInfo);
@@ -59,6 +72,7 @@ namespace RingCentral.Tests
                 await SendSms(rc);
                 await Task.Delay(20000);
                 Assert.True(messages.Count >= 1);
+                Assert.True(messageStoreMessageCount >= 1);
                 Assert.Contains(messages, message => message.Contains("message-store"));
                 subscriptionInfo = await subscription.Refresh();
                 Assert.NotNull(subscriptionInfo);
