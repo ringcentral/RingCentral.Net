@@ -222,9 +222,9 @@ using System.Net.Http;
 ${code}`
         code += `
             var dict = new System.Collections.Generic.Dictionary<string, string>();
-            RingCentral.Utils.GetPairs(${operation.detail.operationId}Request)
+            RingCentral.Utils.GetPairs(${bodyParam})
               .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<${responseType}>(this.Path(), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? `, queryParams` : ''});
+            return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? `, queryParams` : ''});
         }`
       } else if (formData) {
         if (code.indexOf('using System.Linq;') === -1) {
@@ -235,7 +235,7 @@ ${code}`
         }
         code += `
             var multipartFormDataContent = new MultipartFormDataContent();
-            var pairs = Utils.GetPairs(${operation.detail.operationId}Request);
+            var pairs = Utils.GetPairs(${bodyParam});
             var dict = pairs.Where(p => !(p.value is Attachment || p.value is IEnumerable<Attachment>))
                 .ToDictionary(p => p.name, p => p.value);
             if (dict.Count > 0)
@@ -261,7 +261,7 @@ ${code}`
                     multipartFormDataContent.Add(content, p.name, attachment.fileName);
                 });
             });
-            return await rc.Post<${responseType}>(this.Path(), multipartFormDataContent${queryParams.length > 0 ? `, queryParams` : ''});
+            return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? `, queryParams` : ''});
         }`
       } else {
         code += `

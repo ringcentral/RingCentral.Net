@@ -67,7 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
                     multipartFormDataContent.Add(content, p.name, attachment.fileName);
                 });
             });
-            return await rc.Post<byte[]>(this.Path(), multipartFormDataContent);
+            return await rc.Post<byte[]>(this.Path(false), multipartFormDataContent);
         }
 
         public async Task<byte[]> Put(UpdateProfileImageRequest updateProfileImageRequest)
@@ -104,7 +104,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
                     multipartFormDataContent.Add(content, p.name, attachment.fileName);
                 });
             });
-            return await rc.Post<byte[]>(this.Path(), multipartFormDataContent);
+            return await rc.Post<byte[]>(this.Path(false), multipartFormDataContent);
         }
 
         public async Task<byte[]> Get()

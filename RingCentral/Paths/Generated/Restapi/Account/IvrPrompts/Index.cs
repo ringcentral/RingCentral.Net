@@ -62,7 +62,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
                     multipartFormDataContent.Add(content, p.name, attachment.fileName);
                 });
             });
-            return await rc.Post<RingCentral.PromptInfo>(this.Path(), multipartFormDataContent);
+            return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent);
         }
 
         public async Task<RingCentral.IVRPrompts> List()
