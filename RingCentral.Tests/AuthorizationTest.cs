@@ -69,8 +69,8 @@ namespace RingCentral.Tests
             var uri2 = rc.AuthorizeUri(new AuthorizeRequest
             {
                 redirect_uri = redirectUri,
-                client_id = rc.clientId,
-                response_type = "code",
+                client_id = rc.clientId, // optional
+                response_type = "code", // optional
                 state = "hello",
                 ui_options = "hide_logo"
             });
@@ -90,7 +90,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async void TestRefreshWithTokenOnly()
+        public async void TestRefreshWithTokenAsParameter()
         {
             var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -126,7 +126,7 @@ namespace RingCentral.Tests
 
 
         [Fact]
-        public async void TestRefreshWithSavedToken()
+        public async void LoadTokenTest()
         {
             var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

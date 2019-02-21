@@ -22,14 +22,15 @@ namespace RingCentral.Tests
                 );
 
                 var count = 0;
-                EventHandler<HttpCallEventArgs> eventHandler = (object sender, HttpCallEventArgs eventArgs) =>
+
+                void EventHandler(object sender, HttpCallEventArgs eventArgs)
                 {
-                    var rateLimitRemaining = eventArgs.httpResponseMessage.Headers
-                        .First(i => i.Key == "X-Rate-Limit-Remaining").Value.First();
+                    var rateLimitRemaining = eventArgs.httpResponseMessage.Headers.First(i => i.Key == "X-Rate-Limit-Remaining").Value.First();
                     Assert.True(int.Parse(rateLimitRemaining) > 0);
                     count += 1;
-                };
-                rc.AfterHttpCall += eventHandler;
+                }
+
+                rc.AfterHttpCall += EventHandler;
 
                 const string phoneNumber = "+15889546648";
                 var addressBook = rc.Restapi().Account().Extension().AddressBook();
@@ -39,7 +40,7 @@ namespace RingCentral.Tests
                 var china = await rc.Restapi().Dictionary().Country("46").Get();
                 Assert.Equal("China", china.name);
 
-                rc.AfterHttpCall -= eventHandler;
+                rc.AfterHttpCall -= EventHandler;
                 Assert.Equal(2, count);
             }
         }

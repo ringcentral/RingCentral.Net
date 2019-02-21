@@ -6,6 +6,8 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
+    // Note: this test class is for API troubleshooting only
+    // Please do not reference the code here, it should not be used in production
     public class AuthorizeUriTest
     {
         [Fact]
