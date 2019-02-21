@@ -6,17 +6,17 @@ namespace RingCentral
 {
     public static class Utils
     {
-        public static IEnumerable<(string name, object value)> GetPairs(object obj)
+        public static IEnumerable<(string name, object value)> GetPairs(params object[] objs)
         {
-            return obj.GetType().GetFields().Select(f => (name: f.Name, value: f.GetValue(obj)))
+            return objs.Select(obj => obj.GetType().GetFields().Select(f => (name: f.Name, value: f.GetValue(obj)))
                 .Concat(obj.GetType().GetProperties().Select(p => (name: p.Name, value: p.GetValue(obj))))
-                .Where(t => t.value != null);
+                .Where(t => t.value != null)).SelectMany(p => p);
         }
 
-        public static MultipartFormDataContent GetMultipartFormDataContent(object obj)
+        public static MultipartFormDataContent GetMultipartFormDataContent(params object[] objs)
         {
             var multipartFormDataContent = new MultipartFormDataContent();
-            var pairs = Utils.GetPairs(obj);
+            var pairs = Utils.GetPairs(objs);
             var dict = pairs.Where(p => !(p.value is Attachment || p.value is IEnumerable<Attachment>))
                 .ToDictionary(p => p.name, p => p.value);
             if (dict.Count > 0)
