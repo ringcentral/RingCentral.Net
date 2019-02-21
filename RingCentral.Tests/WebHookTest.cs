@@ -21,9 +21,9 @@ namespace RingCentral.Tests
                 );
                 try
                 {
-                    var r = await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest
+                    await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest
                     {
-                        eventFilters = new string[] {"/restapi/v1.0/account/~/extension/~/message-store"},
+                        eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"},
                         deliveryMode = new NotificationDeliveryModeRequest
                         {
                             transportType = "WebHook",

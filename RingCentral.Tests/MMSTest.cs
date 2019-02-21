@@ -4,10 +4,10 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class MMSTest
+    public class MmsTest
     {
         [Fact]
-        public async void SendMMS()
+        public async void SendMms()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -46,6 +46,7 @@ namespace RingCentral.Tests
                     },
                     text = "Hello world again"
                 }, attachments);
+
                 Assert.NotNull(messageInfo);
                 Assert.Equal("SMS", messageInfo.type);
             }

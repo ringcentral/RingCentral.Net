@@ -1,6 +1,8 @@
 using System.Linq;
 using Xunit;
 
+// Note: this test file is for API troubleshooting only
+// Please do not reference the code here, it should not be used in production
 namespace RingCentral.Tests
 {
     class A

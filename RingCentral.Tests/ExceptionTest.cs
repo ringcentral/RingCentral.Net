@@ -14,7 +14,7 @@ namespace RingCentral.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
             );
-            var ex = await Assert.ThrowsAsync<RestException>(async () =>
+            var re = await Assert.ThrowsAsync<RestException>(async () =>
             {
                 await rc.Authorize(
                     Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
@@ -22,8 +22,8 @@ namespace RingCentral.Tests
                     "wrong-password"
                 );
             });
-            Assert.Equal(HttpStatusCode.BadRequest, ex.HttpResponseMessage.StatusCode);
-            Assert.Contains("invalid_grant", ex.Message);
+            Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
+            Assert.Contains("invalid_grant", re.Message);
         }
     }
 }

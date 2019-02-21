@@ -5,7 +5,7 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class HttpMethodsTest
+    public class LowLevelApiTest
     {
         [Fact]
         public async void DifferentResponseTypes()

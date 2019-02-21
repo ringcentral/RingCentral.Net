@@ -20,13 +20,15 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var extension = rc.Restapi().Account().Extension();
+
+                var r = await extension.ForwardingNumber().List();
+                Assert.NotEmpty(r.records);
+
+                // a complicated way, not recommended
                 var response = await rc.Get(extension.ForwardingNumber().Path(false));
                 var body = await response.Content.ReadAsStringAsync();
                 Assert.NotNull(response);
                 Assert.NotEmpty(body);
-
-                var r = await extension.ForwardingNumber().List();
-                Assert.NotEmpty(r.records);
             }
         }
     }
