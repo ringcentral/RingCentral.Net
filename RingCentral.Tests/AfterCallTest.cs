@@ -41,7 +41,7 @@ namespace RingCentral.Tests
                 Assert.Equal("China", china.name);
 
                 rc.AfterHttpCall -= eventHandler;
-                Assert.Equal(3, count);
+                Assert.Equal(2, count);
             }
         }
     }

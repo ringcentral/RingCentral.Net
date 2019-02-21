@@ -193,6 +193,10 @@ ${code}`
           }
         }
       }
+      if (formUrlEncoded || formData) {
+        bodyClass = `${changeCase.pascalCase(operation.detail.operationId)}Request`
+        bodyParam = `${operation.detail.operationId}Request`
+      }
 
       const queryParams = (operation.detail.parameters || []).filter(p => p.in === 'query')
       const withParam = paramName && operation.endpoint.endsWith('}')
@@ -203,13 +207,20 @@ ${code}`
       if (queryParams.length > 0) {
         methodParams.push(`${changeCase.pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
       }
+      code += `
+
+      public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
+      {${withParam ? `
+          if (this.${paramName} == null)
+          {
+              throw new System.ArgumentNullException("${paramName}");
+          }
+` : ''}`
       if (formUrlEncoded) {
         code = `using System.Linq;
 using System.Net.Http;
 ${code}`
         code += `
-        public async Task<${responseType}> ${smartMethod}(${changeCase.pascalCase(operation.detail.operationId)}Request ${operation.detail.operationId}Request)
-        {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
             RingCentral.Utils.GetPairs(${operation.detail.operationId}Request)
               .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
@@ -223,8 +234,6 @@ using System.Collections.Generic;
 ${code}`
         }
         code += `
-        public async Task<${responseType}> ${smartMethod}(${changeCase.pascalCase(operation.detail.operationId)}Request ${operation.detail.operationId}Request)
-        {
             var multipartFormDataContent = new MultipartFormDataContent();
             var pairs = Utils.GetPairs(${operation.detail.operationId}Request);
             var dict = pairs.Where(p => !(p.value is Attachment || p.value is IEnumerable<Attachment>))
@@ -256,14 +265,6 @@ ${code}`
         }`
       } else {
         code += `
-
-        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
-        {${withParam ? `
-            if (this.${paramName} == null)
-            {
-                throw new System.ArgumentNullException("${paramName}");
-            }
-` : ''}
             return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
         }`
       }
