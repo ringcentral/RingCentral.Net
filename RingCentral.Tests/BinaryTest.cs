@@ -73,7 +73,11 @@ namespace RingCentral.Tests
                 var extension = rc.Restapi().Account().Extension();
 
                 var response = await extension.MessageStore()
-                    .List(new ListMessagesParameters {dateFrom = DateTime.UtcNow.AddDays(-30).ToString("o")});
+                    .List(new ListMessagesParameters
+                    {
+                        dateFrom = DateTime.UtcNow.AddDays(-30).ToString("o"),
+                        perPage = 200
+                    });
                 var messages = response.records;
 
                 // sms
