@@ -21,7 +21,8 @@ namespace RingCentral.Paths.Restapi.Glip.Files
             return $"{parent.Path()}/files";
         }
 
-        public async Task<RingCentral.PostGlipFile> Post(CreateGlipFileRequest createGlipFileRequest)
+        public async Task<RingCentral.PostGlipFile> Post(CreateGlipFileRequest createGlipFileRequest,
+            CreateGlipFileParameters queryParams = null)
         {
             var multipartFormDataContent = new MultipartFormDataContent();
             var pairs = Utils.GetPairs(createGlipFileRequest);
@@ -55,7 +56,7 @@ namespace RingCentral.Paths.Restapi.Glip.Files
                     multipartFormDataContent.Add(content, p.name, attachment.fileName);
                 });
             });
-            return await rc.Post<RingCentral.PostGlipFile>(this.Path(), multipartFormDataContent);
+            return await rc.Post<RingCentral.PostGlipFile>(this.Path(), multipartFormDataContent, queryParams);
         }
     }
 }
