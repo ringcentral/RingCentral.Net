@@ -255,7 +255,9 @@ ${code}`
             return await rc.Post<${responseType}>(this.Path(), multipartFormDataContent);
         }`
       } else {
-        const codeBody = `
+        code += `
+
+        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
         {${withParam ? `
             if (this.${paramName} == null)
             {
@@ -264,9 +266,6 @@ ${code}`
 ` : ''}
             return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
         }`
-        code += `
-
-        public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})${codeBody}`
       }
     })
 
