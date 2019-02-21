@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
         {
             return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);
-        }
     }
 }
 

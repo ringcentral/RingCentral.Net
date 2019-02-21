@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Account.Templates
             return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.UserTemplates> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.TemplateInfo> Get()
         {
             if (this.templateId == null)

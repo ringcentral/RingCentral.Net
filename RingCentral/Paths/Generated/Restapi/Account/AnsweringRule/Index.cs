@@ -31,11 +31,6 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest);
         }
 
-        public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(object companyAnsweringRuleRequest)
-        {
-            return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest);
-        }
-
         public async Task<RingCentral.CompanyAnsweringRuleList> List()
         {
             return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false));
@@ -53,16 +48,6 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
 
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(
             RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate)
-        {
-            if (this.ruleId == null)
-            {
-                throw new System.ArgumentNullException("ruleId");
-            }
-
-            return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate);
-        }
-
-        public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(object companyAnsweringRuleUpdate)
         {
             if (this.ruleId == null)
             {

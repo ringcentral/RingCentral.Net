@@ -35,16 +35,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
             return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams);
         }
 
-        public async Task<RingCentral.CallSessionObject> Get(object queryParams)
-        {
-            if (this.sessionId == null)
-            {
-                throw new System.ArgumentNullException("sessionId");
-            }
-
-            return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams);
-        }
-
         public async Task<string> Delete()
         {
             if (this.sessionId == null)

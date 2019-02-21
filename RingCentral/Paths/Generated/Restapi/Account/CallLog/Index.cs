@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
             return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.AccountCallLogResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.CompanyCallLogRecord> Get()
         {
             if (this.callRecordId == null)

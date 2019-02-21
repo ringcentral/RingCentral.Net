@@ -40,16 +40,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
 
             return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams);
         }
-
-        public async Task<RingCentral.CallRecording> Patch(object callRecordingUpdate, object queryParams)
-        {
-            if (this.recordingId == null)
-            {
-                throw new System.ArgumentNullException("recordingId");
-            }
-
-            return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams);
-        }
     }
 }
 

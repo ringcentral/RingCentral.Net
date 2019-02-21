@@ -33,13 +33,6 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
                 glipMessageAttachmentInfoRequest, queryParams);
         }
 
-        public async Task<RingCentral.GlipMessageAttachmentInfo> Post(object glipMessageAttachmentInfoRequest,
-            object queryParams)
-        {
-            return await rc.Post<RingCentral.GlipMessageAttachmentInfo>(this.Path(false),
-                glipMessageAttachmentInfoRequest, queryParams);
-        }
-
         public async Task<RingCentral.GlipMessageAttachmentInfo> Get()
         {
             if (this.cardId == null)
@@ -51,16 +44,6 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
         }
 
         public async Task<string> Put(RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest)
-        {
-            if (this.cardId == null)
-            {
-                throw new System.ArgumentNullException("cardId");
-            }
-
-            return await rc.Put<string>(this.Path(), glipMessageAttachmentInfoRequest);
-        }
-
-        public async Task<string> Put(object glipMessageAttachmentInfoRequest)
         {
             if (this.cardId == null)
             {

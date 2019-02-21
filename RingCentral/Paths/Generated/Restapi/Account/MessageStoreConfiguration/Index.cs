@@ -28,11 +28,6 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         {
             return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration);
         }
-
-        public async Task<RingCentral.MessageStoreConfiguration> Put(object messageStoreConfiguration)
-        {
-            return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration);
-        }
     }
 }
 

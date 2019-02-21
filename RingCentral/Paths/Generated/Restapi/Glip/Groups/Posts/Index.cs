@@ -30,17 +30,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
             return await rc.Get<RingCentral.GlipPosts>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipPosts> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipPosts>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost)
-        {
-            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), glipCreatePost);
-        }
-
-        public async Task<RingCentral.GlipPostInfo> Post(object glipCreatePost)
         {
             return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), glipCreatePost);
         }

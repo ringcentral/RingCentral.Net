@@ -30,17 +30,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipNotesInfo> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate)
-        {
-            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(false), glipNoteCreate);
-        }
-
-        public async Task<RingCentral.GlipNoteInfo> Post(object glipNoteCreate)
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(false), glipNoteCreate);
         }
@@ -76,27 +66,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, queryParams);
         }
 
-        public async Task<RingCentral.GlipNoteInfo> Patch(object glipNoteCreate, object queryParams)
-        {
-            if (this.noteId == null)
-            {
-                throw new System.ArgumentNullException("noteId");
-            }
-
-            return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, queryParams);
-        }
-
         public async Task<RingCentral.GlipNoteInfo> Put(RingCentral.GlipNoteCreate glipNoteCreate)
-        {
-            if (this.noteId == null)
-            {
-                throw new System.ArgumentNullException("noteId");
-            }
-
-            return await rc.Put<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate);
-        }
-
-        public async Task<RingCentral.GlipNoteInfo> Put(object glipNoteCreate)
         {
             if (this.noteId == null)
             {

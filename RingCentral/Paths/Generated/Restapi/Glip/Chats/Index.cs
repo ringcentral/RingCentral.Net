@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
             return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipChatsList> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GlipChatInfo> Get()
         {
             if (this.chatId == null)

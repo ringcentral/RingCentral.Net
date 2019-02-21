@@ -36,11 +36,6 @@ namespace RingCentral.Paths.Restapi.Subscription
             return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(false), createSubscriptionRequest);
         }
 
-        public async Task<RingCentral.SubscriptionInfo> Post(object createSubscriptionRequest)
-        {
-            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(false), createSubscriptionRequest);
-        }
-
         public async Task<RingCentral.SubscriptionInfo> Get()
         {
             if (this.subscriptionId == null)
@@ -54,16 +49,6 @@ namespace RingCentral.Paths.Restapi.Subscription
         public async Task<RingCentral.SubscriptionInfo> Put(
             RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
             UpdateSubscriptionParameters queryParams = null)
-        {
-            if (this.subscriptionId == null)
-            {
-                throw new System.ArgumentNullException("subscriptionId");
-            }
-
-            return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams);
-        }
-
-        public async Task<RingCentral.SubscriptionInfo> Put(object modifySubscriptionRequest, object queryParams)
         {
             if (this.subscriptionId == null)
             {

@@ -31,19 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
-        {
-            return await rc.Post<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(false),
-                addBlockedAllowedPhoneNumber);
-        }
-
-        public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(object addBlockedAllowedPhoneNumber)
         {
             return await rc.Post<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(false),
                 addBlockedAllowedPhoneNumber);
@@ -71,16 +60,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
-        {
-            if (this.blockedNumberId == null)
-            {
-                throw new System.ArgumentNullException("blockedNumberId");
-            }
-
-            return await rc.Put<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), addBlockedAllowedPhoneNumber);
-        }
-
-        public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(object addBlockedAllowedPhoneNumber)
         {
             if (this.blockedNumberId == null)
             {

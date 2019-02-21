@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Presence
         {
             return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.AccountPresenceInfo> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams);
-        }
     }
 }
 

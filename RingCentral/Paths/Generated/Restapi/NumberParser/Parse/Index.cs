@@ -24,12 +24,6 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
             return await rc.Post<RingCentral.ParsePhoneNumberResponse>(this.Path(), parsePhoneNumberRequest,
                 queryParams);
         }
-
-        public async Task<RingCentral.ParsePhoneNumberResponse> Post(object parsePhoneNumberRequest, object queryParams)
-        {
-            return await rc.Post<RingCentral.ParsePhoneNumberResponse>(this.Path(), parsePhoneNumberRequest,
-                queryParams);
-        }
     }
 }
 

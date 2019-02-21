@@ -23,17 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
             return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams);
         }
 
-        public async Task<RingCentral.GetPresenceInfo> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams);
-        }
-
         public async Task<RingCentral.PresenceInfoResource> Put(RingCentral.PresenceInfoResource presenceInfoResource)
-        {
-            return await rc.Put<RingCentral.PresenceInfoResource>(this.Path(), presenceInfoResource);
-        }
-
-        public async Task<RingCentral.PresenceInfoResource> Put(object presenceInfoResource)
         {
             return await rc.Put<RingCentral.PresenceInfoResource>(this.Path(), presenceInfoResource);
         }

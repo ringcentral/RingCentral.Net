@@ -31,11 +31,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
             return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(false), customGreetingRequest);
         }
 
-        public async Task<RingCentral.CustomCompanyGreetingInfo> Post(object customGreetingRequest)
-        {
-            return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(false), customGreetingRequest);
-        }
-
         public async Task<RingCentral.CustomUserGreetingInfo> Get()
         {
             if (this.greetingId == null)

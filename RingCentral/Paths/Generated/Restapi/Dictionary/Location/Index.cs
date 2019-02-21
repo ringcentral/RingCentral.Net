@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
         {
             return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.GetLocationListResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams);
-        }
     }
 }
 

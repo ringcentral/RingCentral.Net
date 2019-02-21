@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.BulkAssign
         {
             return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(), editGroupRequest);
         }
-
-        public async Task<RingCentral.GlipGroupInfo> Post(object editGroupRequest)
-        {
-            return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(), editGroupRequest);
-        }
     }
 }
 

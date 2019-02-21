@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
         {
             return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.GetMessageSyncResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams);
-        }
     }
 }
 

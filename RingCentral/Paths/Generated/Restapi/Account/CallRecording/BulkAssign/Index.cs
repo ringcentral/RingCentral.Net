@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
         {
             return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource);
         }
-
-        public async Task<string> Post(object bulkAccountCallRecordingsResource)
-        {
-            return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource);
-        }
     }
 }
 

@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         {
             return await rc.Get<RingCentral.DirectoryResource>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.DirectoryResource> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.DirectoryResource>(this.Path(), queryParams);
-        }
     }
 }
 

@@ -28,11 +28,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         {
             return await rc.Put<RingCentral.ExtensionCallerIdInfo>(this.Path(), extensionCallerIdInfo);
         }
-
-        public async Task<RingCentral.ExtensionCallerIdInfo> Put(object extensionCallerIdInfo)
-        {
-            return await rc.Put<RingCentral.ExtensionCallerIdInfo>(this.Path(), extensionCallerIdInfo);
-        }
     }
 }
 

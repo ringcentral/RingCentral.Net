@@ -29,11 +29,6 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         {
             return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams);
         }
-
-        public async Task<RingCentral.CallQueues> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams);
-        }
     }
 }
 

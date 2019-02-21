@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Users
         {
             return await rc.Get<RingCentral.PagingOnlyGroupUsers>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.PagingOnlyGroupUsers> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.PagingOnlyGroupUsers>(this.Path(), queryParams);
-        }
     }
 }
 

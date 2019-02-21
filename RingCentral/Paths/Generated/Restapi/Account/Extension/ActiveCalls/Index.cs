@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
         {
             return await rc.Get<RingCentral.ActiveCallsResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.ActiveCallsResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.ActiveCallsResponse>(this.Path(), queryParams);
-        }
     }
 }
 

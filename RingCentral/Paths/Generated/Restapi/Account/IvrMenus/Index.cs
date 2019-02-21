@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
             return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo);
         }
 
-        public async Task<RingCentral.IVRMenuInfo> Post(object iVRMenuInfo)
-        {
-            return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo);
-        }
-
         public async Task<RingCentral.IVRMenuInfo> Get()
         {
             if (this.ivrMenuId == null)
@@ -46,16 +41,6 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo)
-        {
-            if (this.ivrMenuId == null)
-            {
-                throw new System.ArgumentNullException("ivrMenuId");
-            }
-
-            return await rc.Put<RingCentral.IVRMenuInfo>(this.Path(), iVRMenuInfo);
-        }
-
-        public async Task<RingCentral.IVRMenuInfo> Put(object iVRMenuInfo)
         {
             if (this.ivrMenuId == null)
             {

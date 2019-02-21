@@ -30,17 +30,7 @@ namespace RingCentral.Paths.Scim.Users
             return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.UserSearchResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.UserResponse> Post(RingCentral.User user)
-        {
-            return await rc.Post<RingCentral.UserResponse>(this.Path(false), user);
-        }
-
-        public async Task<RingCentral.UserResponse> Post(object user)
         {
             return await rc.Post<RingCentral.UserResponse>(this.Path(false), user);
         }
@@ -65,16 +55,6 @@ namespace RingCentral.Paths.Scim.Users
             return await rc.Put<RingCentral.UserResponse>(this.Path(), user);
         }
 
-        public async Task<RingCentral.UserResponse> Put(object user)
-        {
-            if (this.id == null)
-            {
-                throw new System.ArgumentNullException("id");
-            }
-
-            return await rc.Put<RingCentral.UserResponse>(this.Path(), user);
-        }
-
         public async Task<string> Delete()
         {
             if (this.id == null)
@@ -86,16 +66,6 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch)
-        {
-            if (this.id == null)
-            {
-                throw new System.ArgumentNullException("id");
-            }
-
-            return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch);
-        }
-
-        public async Task<RingCentral.UserResponse> Patch(object userPatch)
         {
             if (this.id == null)
             {

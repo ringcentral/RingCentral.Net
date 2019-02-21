@@ -31,33 +31,13 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest);
         }
 
-        public async Task<RingCentral.CallMonitoringGroup> Post(object createCallMonitoringGroupRequest)
-        {
-            return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest);
-        }
-
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null)
-        {
-            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams);
-        }
-
-        public async Task<RingCentral.CallMonitoringGroups> Get(object queryParams)
         {
             return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.CallMonitoringGroup> Put(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
-        {
-            if (this.groupId == null)
-            {
-                throw new System.ArgumentNullException("groupId");
-            }
-
-            return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest);
-        }
-
-        public async Task<RingCentral.CallMonitoringGroup> Put(object createCallMonitoringGroupRequest)
         {
             if (this.groupId == null)
             {

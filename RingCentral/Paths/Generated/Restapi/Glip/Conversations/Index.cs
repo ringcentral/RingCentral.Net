@@ -30,18 +30,8 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
             return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipConversationsList> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GlipConversationInfo> Post(
             RingCentral.GlipPostMembersListBody glipPostMembersListBody)
-        {
-            return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), glipPostMembersListBody);
-        }
-
-        public async Task<RingCentral.GlipConversationInfo> Post(object glipPostMembersListBody)
         {
             return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), glipPostMembersListBody);
         }

@@ -30,32 +30,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
             return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.UserCallLogResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null)
         {
             return await rc.Delete<string>(this.Path(false), queryParams);
         }
 
-        public async Task<string> Delete(object queryParams)
-        {
-            return await rc.Delete<string>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.UserCallLogRecord> Get(GetCallRecordsParameters queryParams = null)
-        {
-            if (this.callRecordId == null)
-            {
-                throw new System.ArgumentNullException("callRecordId");
-            }
-
-            return await rc.Get<RingCentral.UserCallLogRecord>(this.Path(), queryParams);
-        }
-
-        public async Task<RingCentral.UserCallLogRecord> Get(object queryParams)
         {
             if (this.callRecordId == null)
             {

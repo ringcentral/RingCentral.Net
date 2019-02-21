@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
             return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetCountryListResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get()
         {
             if (this.countryId == null)

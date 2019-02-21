@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
         {
             return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest);
         }
-
-        public async Task<RingCentral.DirectoryResource> Post(object searchDirectoryEntriesRequest)
-        {
-            return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest);
-        }
     }
 }
 

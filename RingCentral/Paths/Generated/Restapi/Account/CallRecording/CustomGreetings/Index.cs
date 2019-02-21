@@ -31,11 +31,6 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
             return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.CallRecordingCustomGreetings> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams);
-        }
-
         public async Task<string> Delete()
         {
             if (this.greetingId == null)

@@ -31,18 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.ForwardingNumberInfo> Post(
             RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest)
-        {
-            return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest);
-        }
-
-        public async Task<RingCentral.ForwardingNumberInfo> Post(object createForwardingNumberRequest)
         {
             return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest);
         }
@@ -59,16 +49,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         public async Task<RingCentral.ForwardingNumberInfo> Put(
             RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest)
-        {
-            if (this.forwardingNumberId == null)
-            {
-                throw new System.ArgumentNullException("forwardingNumberId");
-            }
-
-            return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest);
-        }
-
-        public async Task<RingCentral.ForwardingNumberInfo> Put(object updateForwardingNumberRequest)
         {
             if (this.forwardingNumberId == null)
             {

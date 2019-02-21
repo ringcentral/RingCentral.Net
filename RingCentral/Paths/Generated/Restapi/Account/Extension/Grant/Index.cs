@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         {
             return await rc.Get<RingCentral.GetExtensionGrantListResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.GetExtensionGrantListResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetExtensionGrantListResponse>(this.Path(), queryParams);
-        }
     }
 }
 

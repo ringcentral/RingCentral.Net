@@ -30,17 +30,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipTeamsList> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GlipTeamInfo> Post(RingCentral.GlipPostTeamBody glipPostTeamBody)
-        {
-            return await rc.Post<RingCentral.GlipTeamInfo>(this.Path(false), glipPostTeamBody);
-        }
-
-        public async Task<RingCentral.GlipTeamInfo> Post(object glipPostTeamBody)
         {
             return await rc.Post<RingCentral.GlipTeamInfo>(this.Path(false), glipPostTeamBody);
         }
@@ -56,16 +46,6 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody)
-        {
-            if (this.chatId == null)
-            {
-                throw new System.ArgumentNullException("chatId");
-            }
-
-            return await rc.Patch<RingCentral.GlipTeamInfo>(this.Path(), glipPatchTeamBody);
-        }
-
-        public async Task<RingCentral.GlipTeamInfo> Patch(object glipPatchTeamBody)
         {
             if (this.chatId == null)
             {

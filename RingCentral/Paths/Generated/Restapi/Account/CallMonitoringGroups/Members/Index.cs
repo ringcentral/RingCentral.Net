@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
         {
             return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.CallMonitoringGroupMemberList> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams);
-        }
     }
 }
 

@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Department.BulkAssign
         {
             return await rc.Post<string>(this.Path(), departmentBulkAssignResource);
         }
-
-        public async Task<string> Post(object departmentBulkAssignResource)
-        {
-            return await rc.Post<string>(this.Path(), departmentBulkAssignResource);
-        }
     }
 }
 

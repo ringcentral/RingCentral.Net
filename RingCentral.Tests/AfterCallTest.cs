@@ -38,8 +38,6 @@ namespace RingCentral.Tests
 
                 await addressBook.Contact().List(new ListContactsParameters {phoneNumber = new[] {phoneNumber}});
 
-                await addressBook.Contact().List(new {phoneNumber = phoneNumber});
-
                 var china = await rc.Restapi().Dictionary().Country("46").Get();
                 Assert.Equal("China", china.name);
 

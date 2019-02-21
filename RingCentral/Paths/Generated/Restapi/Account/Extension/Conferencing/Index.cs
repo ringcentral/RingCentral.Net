@@ -24,18 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
             return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
         }
 
-        public async Task<RingCentral.GetConferencingInfoResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
-        }
-
         public async Task<RingCentral.GetConferencingInfoResponse> Put(
             RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest)
-        {
-            return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest);
-        }
-
-        public async Task<RingCentral.GetConferencingInfoResponse> Put(object updateConferencingInfoRequest)
         {
             return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest);
         }

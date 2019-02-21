@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts.Text
         {
             return await rc.Put<string>(this.Path(), body);
         }
-
-        public async Task<string> Put(object body)
-        {
-            return await rc.Put<string>(this.Path(), body);
-        }
     }
 }
 

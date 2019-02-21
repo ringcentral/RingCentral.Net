@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
             return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.AccountPhoneNumbers> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.CompanyPhoneNumberInfo> Get()
         {
             if (this.phoneNumberId == null)

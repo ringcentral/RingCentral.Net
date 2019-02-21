@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         {
             return await rc.Post<RingCentral.CreateSipRegistrationResponse>(this.Path(), createSipRegistrationRequest);
         }
-
-        public async Task<RingCentral.CreateSipRegistrationResponse> Post(object createSipRegistrationRequest)
-        {
-            return await rc.Post<RingCentral.CreateSipRegistrationResponse>(this.Path(), createSipRegistrationRequest);
-        }
     }
 }
 

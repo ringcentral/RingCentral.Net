@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
         {
             return await rc.Get<RingCentral.AddressBookSync>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.AddressBookSync> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.AddressBookSync>(this.Path(), queryParams);
-        }
     }
 }
 

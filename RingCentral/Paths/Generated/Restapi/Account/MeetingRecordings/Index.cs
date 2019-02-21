@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         {
             return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.ListMeetingRecordingsResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams);
-        }
     }
 }
 

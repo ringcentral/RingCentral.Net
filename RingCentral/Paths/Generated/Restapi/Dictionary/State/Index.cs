@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
             return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetStateListResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GetStateInfoResponse> Get()
         {
             if (this.stateId == null)

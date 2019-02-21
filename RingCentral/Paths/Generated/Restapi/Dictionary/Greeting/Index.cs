@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
             return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.DictionaryGreetingList> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.DictionaryGreetingInfo> Get()
         {
             if (this.greetingId == null)

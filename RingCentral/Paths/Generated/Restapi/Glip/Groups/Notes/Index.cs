@@ -23,17 +23,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Notes
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams);
         }
 
-        public async Task<RingCentral.GlipNotesInfo> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams);
-        }
-
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate)
-        {
-            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate);
-        }
-
-        public async Task<RingCentral.GlipNoteInfo> Post(object glipNoteCreate)
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate);
         }

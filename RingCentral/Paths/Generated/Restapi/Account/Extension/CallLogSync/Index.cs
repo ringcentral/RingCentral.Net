@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLogSync
         {
             return await rc.Get<RingCentral.CallLogSync>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.CallLogSync> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.CallLogSync>(this.Path(), queryParams);
-        }
     }
 }
 

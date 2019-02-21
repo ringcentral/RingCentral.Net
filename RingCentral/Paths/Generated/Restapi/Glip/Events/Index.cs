@@ -30,17 +30,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipEventsInfo> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate)
-        {
-            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(false), glipEventCreate);
-        }
-
-        public async Task<RingCentral.GlipEventInfo> Post(object glipEventCreate)
         {
             return await rc.Post<RingCentral.GlipEventInfo>(this.Path(false), glipEventCreate);
         }
@@ -56,16 +46,6 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate)
-        {
-            if (this.eventId == null)
-            {
-                throw new System.ArgumentNullException("eventId");
-            }
-
-            return await rc.Put<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
-        }
-
-        public async Task<RingCentral.GlipEventInfo> Put(object glipEventCreate)
         {
             if (this.eventId == null)
             {

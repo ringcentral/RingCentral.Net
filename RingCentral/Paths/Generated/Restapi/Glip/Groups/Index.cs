@@ -30,17 +30,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups
             return await rc.Get<RingCentral.GlipGroupList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GlipGroupList> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GlipGroupList>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.GlipCreateGroup glipCreateGroup)
-        {
-            return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(false), glipCreateGroup);
-        }
-
-        public async Task<RingCentral.GlipGroupInfo> Post(object glipCreateGroup)
         {
             return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(false), glipCreateGroup);
         }

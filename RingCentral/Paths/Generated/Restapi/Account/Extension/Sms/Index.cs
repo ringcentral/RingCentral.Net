@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
         {
             return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createSMSMessage);
         }
-
-        public async Task<RingCentral.GetMessageInfoResponse> Post(object createSMSMessage)
-        {
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createSMSMessage);
-        }
     }
 }
 

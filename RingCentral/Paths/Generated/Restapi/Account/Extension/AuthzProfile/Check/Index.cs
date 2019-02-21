@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
         {
             return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.AuthProfileCheckResource> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams);
-        }
     }
 }
 

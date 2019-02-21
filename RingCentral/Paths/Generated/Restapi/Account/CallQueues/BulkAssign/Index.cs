@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
         {
             return await rc.Post<string>(this.Path(), callQueueBulkAssignResource);
         }
-
-        public async Task<string> Post(object callQueueBulkAssignResource)
-        {
-            return await rc.Post<string>(this.Path(), callQueueBulkAssignResource);
-        }
     }
 }
 

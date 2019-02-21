@@ -30,11 +30,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetMessageList> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GetMessageInfoResponse> Get()
         {
             if (this.messageId == null)
@@ -55,27 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
         }
 
-        public async Task<RingCentral.GetMessageInfoResponse> Put(object updateMessageRequest)
-        {
-            if (this.messageId == null)
-            {
-                throw new System.ArgumentNullException("messageId");
-            }
-
-            return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
-        }
-
         public async Task<string> Delete(DeleteMessageParameters queryParams = null)
-        {
-            if (this.messageId == null)
-            {
-                throw new System.ArgumentNullException("messageId");
-            }
-
-            return await rc.Delete<string>(this.Path(), queryParams);
-        }
-
-        public async Task<string> Delete(object queryParams)
         {
             if (this.messageId == null)
             {

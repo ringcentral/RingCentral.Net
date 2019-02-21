@@ -35,11 +35,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
             return await rc.Post<string>(this.Path(false), meetingRequestResource);
         }
 
-        public async Task<string> Post(object meetingRequestResource)
-        {
-            return await rc.Post<string>(this.Path(false), meetingRequestResource);
-        }
-
         public async Task<RingCentral.MeetingResponseResource> Get()
         {
             if (this.meetingId == null)
@@ -52,16 +47,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         public async Task<RingCentral.MeetingResponseResource> Put(
             RingCentral.MeetingRequestResource meetingRequestResource)
-        {
-            if (this.meetingId == null)
-            {
-                throw new System.ArgumentNullException("meetingId");
-            }
-
-            return await rc.Put<RingCentral.MeetingResponseResource>(this.Path(), meetingRequestResource);
-        }
-
-        public async Task<RingCentral.MeetingResponseResource> Put(object meetingRequestResource)
         {
             if (this.meetingId == null)
             {

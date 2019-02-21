@@ -267,11 +267,6 @@ ${code}`
         code += `
 
         public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})${codeBody}`
-        if (methodParams.length > 0) {
-          code += `
-
-        public async Task<${responseType}> ${smartMethod}(${methodParams.map(mp => `object ${mp.split(' ')[1]}`).join(', ')})${codeBody}`
-        }
       }
     })
 

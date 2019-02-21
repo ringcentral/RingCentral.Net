@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
         {
             return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.ListFaxCoverPagesResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams);
-        }
     }
 }
 

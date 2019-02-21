@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
         {
             return await rc.Get<RingCentral.GetExtensionPhoneNumbersResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetExtensionPhoneNumbersResponse>(this.Path(), queryParams);
-        }
     }
 }
 

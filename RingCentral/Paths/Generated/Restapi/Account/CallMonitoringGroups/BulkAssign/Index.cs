@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
         {
             return await rc.Post<RingCentral.CallMonitoringBulkAssign>(this.Path(), callMonitoringBulkAssign);
         }
-
-        public async Task<RingCentral.CallMonitoringBulkAssign> Post(object callMonitoringBulkAssign)
-        {
-            return await rc.Post<RingCentral.CallMonitoringBulkAssign>(this.Path(), callMonitoringBulkAssign);
-        }
     }
 }
 

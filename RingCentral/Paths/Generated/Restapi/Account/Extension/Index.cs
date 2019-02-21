@@ -30,18 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetExtensionListResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.ExtensionCreationResponse> Post(
             RingCentral.ExtensionCreationRequest extensionCreationRequest)
-        {
-            return await rc.Post<RingCentral.ExtensionCreationResponse>(this.Path(false), extensionCreationRequest);
-        }
-
-        public async Task<RingCentral.ExtensionCreationResponse> Post(object extensionCreationRequest)
         {
             return await rc.Post<RingCentral.ExtensionCreationResponse>(this.Path(false), extensionCreationRequest);
         }
@@ -58,16 +48,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
             RingCentral.ExtensionUpdateRequest extensionUpdateRequest)
-        {
-            if (this.extensionId == null)
-            {
-                throw new System.ArgumentNullException("extensionId");
-            }
-
-            return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest);
-        }
-
-        public async Task<RingCentral.GetExtensionInfoResponse> Put(object extensionUpdateRequest)
         {
             if (this.extensionId == null)
             {

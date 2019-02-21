@@ -30,22 +30,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
             return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetTimezoneListResponse> List(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
-        }
-
         public async Task<RingCentral.GetTimezoneInfoResponse> Get(LoadTimezoneParameters queryParams = null)
-        {
-            if (this.timezoneId == null)
-            {
-                throw new System.ArgumentNullException("timezoneId");
-            }
-
-            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams);
-        }
-
-        public async Task<RingCentral.GetTimezoneInfoResponse> Get(object queryParams)
         {
             if (this.timezoneId == null)
             {

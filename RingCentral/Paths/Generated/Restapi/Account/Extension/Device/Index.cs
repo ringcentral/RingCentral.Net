@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         {
             return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.GetExtensionDevicesResponse> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams);
-        }
     }
 }
 

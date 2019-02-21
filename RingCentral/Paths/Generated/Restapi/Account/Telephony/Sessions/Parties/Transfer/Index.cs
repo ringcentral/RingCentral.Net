@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
         {
             return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget);
         }
-
-        public async Task<RingCentral.CallParty> Post(object transferTarget)
-        {
-            return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget);
-        }
     }
 }
 

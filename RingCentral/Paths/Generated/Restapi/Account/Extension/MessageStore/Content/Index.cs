@@ -34,16 +34,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
 
             return await rc.Get<byte[]>(this.Path(), queryParams);
         }
-
-        public async Task<byte[]> Get(object queryParams)
-        {
-            if (this.attachmentId == null)
-            {
-                throw new System.ArgumentNullException("attachmentId");
-            }
-
-            return await rc.Get<byte[]>(this.Path(), queryParams);
-        }
     }
 }
 

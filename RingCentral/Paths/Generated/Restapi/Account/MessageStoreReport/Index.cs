@@ -31,11 +31,6 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
             return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest);
         }
 
-        public async Task<RingCentral.MessageStoreReport> Post(object createMessageStoreReportRequest)
-        {
-            return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest);
-        }
-
         public async Task<RingCentral.MessageStoreReport> Get()
         {
             if (this.taskId == null)

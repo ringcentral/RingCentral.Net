@@ -23,11 +23,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         {
             return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createInternalTextMessageRequest);
         }
-
-        public async Task<RingCentral.GetMessageInfoResponse> Post(object createInternalTextMessageRequest)
-        {
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createInternalTextMessageRequest);
-        }
     }
 }
 

@@ -22,11 +22,6 @@ namespace RingCentral.Paths.Restapi.Account.Department.Members
         {
             return await rc.Get<RingCentral.DepartmentMemberList>(this.Path(), queryParams);
         }
-
-        public async Task<RingCentral.DepartmentMemberList> Get(object queryParams)
-        {
-            return await rc.Get<RingCentral.DepartmentMemberList>(this.Path(), queryParams);
-        }
     }
 }
 
