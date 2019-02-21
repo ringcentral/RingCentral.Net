@@ -22,6 +22,10 @@ namespace RingCentral
             {
                 httpContent = (HttpContent) content;
             }
+            else if (content is string s)
+            {
+                httpContent = new StringContent(s);
+            }
             else if (content != null)
             {
                 httpContent = new StringContent(
