@@ -1,6 +1,3 @@
-using System.Linq;
-using System.Net.Http;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Greeting

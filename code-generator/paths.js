@@ -238,12 +238,6 @@ ${code}`
             return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? `, queryParams` : ''});
         }`
       } else if (formData) {
-        if (code.indexOf('using System.Linq;') === -1) {
-          code = `using System.Linq;
-using System.Net.Http;
-using System.Collections.Generic;
-${code}`
-        }
         code += `
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
             return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? `, queryParams` : ''});
