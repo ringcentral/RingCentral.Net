@@ -52,7 +52,8 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         public async Task<RingCentral.SubscriptionInfo> Put(
-            RingCentral.ModifySubscriptionRequest modifySubscriptionRequest, PutQueryParams queryParams = null)
+            RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
+            UpdateSubscriptionParameters queryParams = null)
         {
             if (this.subscriptionId == null)
             {
@@ -81,12 +82,6 @@ namespace RingCentral.Paths.Restapi.Subscription
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class PutQueryParams
-    {
-        // If 'True' then aggregated presence status is returned in a notification payload
-        public bool? aggregated;
     }
 }
 

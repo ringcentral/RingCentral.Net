@@ -87,12 +87,12 @@ namespace RingCentral.Tests
 //                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
 //                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
 //                );
-//                
+//
 //                // delete existing user first
 //                var searchRequest = new SearchRequest
 //                {
 //                    count = 1,
-//                    filter="emails eq \"tyler.liu@ringcentral.com\""
+//                    filter = "emails eq \"tyler.liu@ringcentral.com\""
 //                };
 //                var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
 //                if (userSearchResponse.Resources.Length == 1)

@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
             return $"{parent.Path()}/fax-cover-page";
         }
 
-        public async Task<RingCentral.ListFaxCoverPagesResponse> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.ListFaxCoverPagesResponse> Get(ListFaxCoverPagesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams);
         }
@@ -27,15 +27,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
         {
             return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams);
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Indicates the page number to retrieve. Only positive number values are accepted
-        public long? page;
-
-        // Indicates the page size (number of items)
-        public long? perPage;
     }
 }
 

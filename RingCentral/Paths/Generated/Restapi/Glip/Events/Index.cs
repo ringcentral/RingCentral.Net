@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return $"{parent.Path()}/events";
         }
 
-        public async Task<RingCentral.GlipEventsInfo> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GlipEventsInfo> List(LoadGlipEventsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
         }
@@ -84,15 +84,6 @@ namespace RingCentral.Paths.Restapi.Glip.Events
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class ListQueryParams
-    {
-        // Number of groups to be fetched by one request. The maximum value is 250, by default - 30.
-        public long? recordCount;
-
-        // Token of a page to be returned
-        public string pageToken;
     }
 }
 

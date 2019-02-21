@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             return $"{parent.Path()}/contact";
         }
 
-        public async Task<RingCentral.ContactList> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams);
         }
@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         public async Task<RingCentral.PersonalContactResource> Post(
-            RingCentral.PersonalContactResource personalContactResource, PostQueryParams queryParams = null)
+            RingCentral.PersonalContactResource personalContactResource, CreateContactParameters queryParams = null)
         {
             return await rc.Post<RingCentral.PersonalContactResource>(this.Path(false), personalContactResource,
                 queryParams);
@@ -59,7 +59,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         public async Task<RingCentral.PersonalContactResource> Put(
-            RingCentral.PersonalContactResource personalContactResource, PutQueryParams queryParams = null)
+            RingCentral.PersonalContactResource personalContactResource, UpdateContactParameters queryParams = null)
         {
             if (this.contactId == null)
             {
@@ -88,35 +88,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class ListQueryParams
-    {
-        // If specified, only contacts whose First name or Last name start with the mentioned substring are returned. Case-insensitive
-        public string startsWith;
-
-        // Sorts results by the specified property
-        public string[] sortBy;
-
-        // Indicates the page number to retrieve. Only positive number values are accepted
-        public long? page;
-
-        // Indicates the page size (number of items)
-        public long? perPage;
-
-        public string[] phoneNumber;
-    }
-
-    public class PostQueryParams
-    {
-        // A country code value complying with the [ISO 3166-1 alpha-2](https://ru.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. The default value is home country of the current extension
-        public string dialingPlan;
-    }
-
-    public class PutQueryParams
-    {
-        // A country code value complying with the [ISO 3166-1 alpha-2](https://ru.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. The default value is home country of the current extension
-        public string dialingPlan;
     }
 }
 

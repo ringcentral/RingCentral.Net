@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
             return $"{parent.Path()}/presence";
         }
 
-        public async Task<RingCentral.GetPresenceInfo> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.GetPresenceInfo> Get(GetPresenceStatusParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams);
         }
@@ -37,15 +37,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         {
             return await rc.Put<RingCentral.PresenceInfoResource>(this.Path(), presenceInfoResource);
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Whether to return detailed telephony state
-        public bool? detailedTelephonyState;
-
-        // Whether to return SIP data
-        public bool? sipData;
     }
 }
 

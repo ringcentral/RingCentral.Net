@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return $"{parent.Path()}/teams";
         }
 
-        public async Task<RingCentral.GlipTeamsList> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams);
         }
@@ -84,15 +84,6 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class ListQueryParams
-    {
-        // Number of teams to be fetched by one request. The maximum value is 250, by default - 30
-        public long? recordCount;
-
-        // Pagination token.
-        public string pageToken;
     }
 }
 

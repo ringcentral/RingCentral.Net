@@ -34,7 +34,7 @@ namespace RingCentral.Tests
                 }
 
                 rc.AfterHttpCall += EventHandler1;
-                await addressBook.Contact().List(new ListQueryParams {phoneNumber = new[] {phoneNumber}});
+                await addressBook.Contact().List(new ListContactsParameters {phoneNumber = new[] {phoneNumber}});
                 rc.AfterHttpCall -= EventHandler1;
                 Assert.Equal(1, count);
 
@@ -46,7 +46,8 @@ namespace RingCentral.Tests
                 }
 
                 rc.AfterHttpCall += EventHandler2;
-                await addressBook.Contact().List(new ListQueryParams {phoneNumber = new[] {phoneNumber, phoneNumber2}});
+                await addressBook.Contact().List(new ListContactsParameters
+                    {phoneNumber = new[] {phoneNumber, phoneNumber2}});
                 rc.AfterHttpCall -= EventHandler2;
                 Assert.Equal(2, count);
             }

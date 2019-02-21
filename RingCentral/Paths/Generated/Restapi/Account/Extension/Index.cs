@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return $"{parent.Path()}/extension";
         }
 
-        public async Task<RingCentral.GetExtensionListResponse> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams);
         }
@@ -86,27 +86,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class ListQueryParams
-    {
-        // Extension number to retrieve
-        public string extensionId;
-
-        // Extension email address
-        public string email;
-
-        // Indicates the page number to retrieve. Only positive number values are allowed
-        public long? page;
-
-        // Indicates the page size (number of items)
-        public long? perPage;
-
-        // Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without extensionNumber are returned. If not specified, then all extensions are returned.
-        public string[] status;
-
-        // Extension type. Multiple values are supported
-        public string[] type;
     }
 }
 

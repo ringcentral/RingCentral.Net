@@ -58,15 +58,6 @@ namespace RingCentral.Paths.Restapi.Glip.Files
             return await rc.Post<RingCentral.PostGlipFile>(this.Path(), multipartFormDataContent);
         }
     }
-
-    public class PostQueryParams
-    {
-        // Internal identifier of a group to which the post with attachement will be added to
-        public long? groupId;
-
-        // Name of a file attached
-        public string name;
-    }
 }
 
 namespace RingCentral.Paths.Restapi.Glip

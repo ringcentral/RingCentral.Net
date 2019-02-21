@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             return $"{parent.Path()}/notes";
         }
 
-        public async Task<RingCentral.GlipNotesInfo> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GlipNotesInfo> List(LoadUserNotesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(false), queryParams);
         }
@@ -66,7 +66,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
-            PatchQueryParams queryParams = null)
+            PatchNoteParameters queryParams = null)
         {
             if (this.noteId == null)
             {
@@ -105,25 +105,6 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
 
             return await rc.Put<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate);
         }
-    }
-
-    public class ListQueryParams
-    {
-        // Status of notes to be fetched. If not specified all notes are returned
-        // Enum: Active, Draft
-        public string status;
-
-        // Number of groups to be fetched by one request. The maximum value is 250, by default - 30.
-        public long? recordCount;
-
-        // Token of a page to be returned
-        public string pageToken;
-    }
-
-    public class PatchQueryParams
-    {
-        // If true then note lock (if any) will be released upon request
-        public bool? releaseLock;
     }
 }
 

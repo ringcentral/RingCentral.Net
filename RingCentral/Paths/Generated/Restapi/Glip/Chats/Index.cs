@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
             return $"{parent.Path()}/chats";
         }
 
-        public async Task<RingCentral.GlipChatsList> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GlipChatsList> List(ListGlipChatsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams);
         }
@@ -44,18 +44,6 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
 
             return await rc.Get<RingCentral.GlipChatInfo>(this.Path());
         }
-    }
-
-    public class ListQueryParams
-    {
-        // Type of chats to be fetched. By default all type of chats will be fetched
-        public string[] type;
-
-        // Number of chats to be fetched by one request. The maximum value is 250, by default - 30.
-        public long? recordCount;
-
-        // Pagination token.
-        public string pageToken;
     }
 }
 

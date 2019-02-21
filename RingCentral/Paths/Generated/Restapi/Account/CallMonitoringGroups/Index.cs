@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest);
         }
 
-        public async Task<RingCentral.CallMonitoringGroups> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams);
         }
@@ -76,18 +76,6 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Indicates the page number to retrieve. Only positive number values are allowed
-        public long? page;
-
-        // Indicates the page size (number of items)
-        public long? perPage;
-
-        // Internal identifier of an extension that is a member of every group within the result
-        public string memberExtensionId;
     }
 }
 

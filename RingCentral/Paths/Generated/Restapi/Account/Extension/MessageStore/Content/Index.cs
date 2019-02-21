@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
             return $"{parent.Path()}/content";
         }
 
-        public async Task<byte[]> Get(GetQueryParams queryParams = null)
+        public async Task<byte[]> Get(GetMessageAttachmentByIdParameters queryParams = null)
         {
             if (this.attachmentId == null)
             {
@@ -44,13 +44,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
 
             return await rc.Get<byte[]>(this.Path(), queryParams);
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Content disposition of a response
-        // Enum: Inline, Attachment
-        public string contentDisposition;
     }
 }
 

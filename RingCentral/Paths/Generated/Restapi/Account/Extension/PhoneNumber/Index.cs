@@ -18,7 +18,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
             return $"{parent.Path()}/phone-number";
         }
 
-        public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(
+            ListExtensionPhoneNumbersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetExtensionPhoneNumbersResponse>(this.Path(), queryParams);
         }
@@ -27,18 +28,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
         {
             return await rc.Get<RingCentral.GetExtensionPhoneNumbersResponse>(this.Path(), queryParams);
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Usage type of a phone number
-        public string[] usageType;
-
-        // Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'
-        public long? page;
-
-        // Indicates the page size (number of items). If not specified, the value is '100' by default
-        public long? perPage;
     }
 }
 

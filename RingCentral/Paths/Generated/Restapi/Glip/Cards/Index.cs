@@ -27,7 +27,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
 
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
             RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
-            PostQueryParams queryParams = null)
+            CreateGlipCardParameters queryParams = null)
         {
             return await rc.Post<RingCentral.GlipMessageAttachmentInfo>(this.Path(false),
                 glipMessageAttachmentInfoRequest, queryParams);
@@ -79,12 +79,6 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class PostQueryParams
-    {
-        // Internal identifier of a group where to create a post with the card
-        public long? groupId;
     }
 }
 

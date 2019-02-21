@@ -22,7 +22,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var callLogResponse = await rc.Restapi().Account().CallLog().List(new ListQueryParams
+                var callLogResponse = await rc.Restapi().Account().CallLog().List(new LoadCompanyCallLogParameters
                 {
                     perPage = 3,
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o")

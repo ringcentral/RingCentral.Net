@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
             return $"{parent.Path()}/timezone";
         }
 
-        public async Task<RingCentral.GetTimezoneListResponse> List(ListQueryParams queryParams = null)
+        public async Task<RingCentral.GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
         }
@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
             return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
         }
 
-        public async Task<RingCentral.GetTimezoneInfoResponse> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.GetTimezoneInfoResponse> Get(LoadTimezoneParameters queryParams = null)
         {
             if (this.timezoneId == null)
             {
@@ -54,24 +54,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 
             return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams);
         }
-    }
-
-    public class ListQueryParams
-    {
-        // Indicates the page number to retrieve. Only positive number values are accepted
-        public string page;
-
-        // Indicates the page size (number of items)
-        public string perPage;
-    }
-
-    public class GetQueryParams
-    {
-        // Indicates the page number to retrieve. Only positive number values are accepted
-        public string page;
-
-        // Indicates the page size (number of items)
-        public string perPage;
     }
 }
 

@@ -115,7 +115,7 @@ namespace RingCentral.Tests
                 var account = rc.Restapi().Account();
 
                 // List call Logs
-                var queryParams = new ListQueryParams
+                var queryParams = new LoadCompanyCallLogParameters
                 {
                     type = new string[] {"Voice"},
                     view = "Detailed",

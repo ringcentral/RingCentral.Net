@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return $"{parent.Path()}/answering-rule";
         }
 
-        public async Task<string> List(ListQueryParams queryParams = null)
+        public async Task<string> List(ListAnsweringRulesParameters queryParams = null)
         {
             return await rc.Get<string>(this.Path(false), queryParams);
         }
@@ -46,7 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return await rc.Post<RingCentral.AnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest);
         }
 
-        public async Task<RingCentral.AnsweringRuleInfo> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.AnsweringRuleInfo> Get(LoadAnsweringRuleParameters queryParams = null)
         {
             if (this.ruleId == null)
             {
@@ -96,19 +96,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class ListQueryParams
-    {
-        public string page;
-
-        public string perPage;
-    }
-
-    public class GetQueryParams
-    {
-        // Indicates whether inactive numbers should be returned or not
-        public bool? showInactiveNumbers;
     }
 }
 

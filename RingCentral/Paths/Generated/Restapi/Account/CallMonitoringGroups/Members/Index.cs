@@ -18,7 +18,8 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
             return $"{parent.Path()}/members";
         }
 
-        public async Task<RingCentral.CallMonitoringGroupMemberList> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.CallMonitoringGroupMemberList> Get(
+            ListCallMonitoringGroupMembersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams);
         }
@@ -27,15 +28,6 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
         {
             return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams);
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Indicates the page number to retrieve. Only positive number values are allowed
-        public long? page;
-
-        // Indicates the page size (number of items)
-        public long? perPage;
     }
 }
 

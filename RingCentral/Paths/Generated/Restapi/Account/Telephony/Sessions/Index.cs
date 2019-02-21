@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
             return $"{parent.Path()}/sessions";
         }
 
-        public async Task<RingCentral.CallSessionObject> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.CallSessionObject> Get(GetCallSessionStatusParameters queryParams = null)
         {
             if (this.sessionId == null)
             {
@@ -54,15 +54,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
 
             return await rc.Delete<string>(this.Path());
         }
-    }
-
-    public class GetQueryParams
-    {
-        // The date and time of a call session latest change
-        public string timestamp;
-
-        // The time frame of awaiting for a status change before sending the resulting one in response
-        public string timeout;
     }
 }
 

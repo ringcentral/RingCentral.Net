@@ -18,7 +18,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
             return $"{parent.Path()}/conferencing";
         }
 
-        public async Task<RingCentral.GetConferencingInfoResponse> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.GetConferencingInfoResponse> Get(
+            LoadConferencingInfoParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
         }
@@ -38,12 +39,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         {
             return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest);
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Internal identifier of a country. If not specified, the response is returned for the brand country
-        public string countryId;
     }
 }
 

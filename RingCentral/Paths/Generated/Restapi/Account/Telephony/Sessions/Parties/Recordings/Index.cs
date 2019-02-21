@@ -31,7 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         }
 
         public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate,
-            PatchQueryParams queryParams = null)
+            PauseResumeCallRecordingParameters queryParams = null)
         {
             if (this.recordingId == null)
             {
@@ -50,12 +50,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
 
             return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams);
         }
-    }
-
-    public class PatchQueryParams
-    {
-        // Identifies a brand of a logged in user or a brand of a sign-up session
-        public string brandId; // Required
     }
 }
 

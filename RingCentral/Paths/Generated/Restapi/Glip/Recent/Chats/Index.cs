@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
             return $"{parent.Path()}/chats";
         }
 
-        public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(GetQueryParams queryParams = null)
+        public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(ListRecentChatsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);
         }
@@ -27,15 +27,6 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
         {
             return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);
         }
-    }
-
-    public class GetQueryParams
-    {
-        // Type of chats to be fetched (by default, all type of chats will be fetched).
-        public string[] type;
-
-        // Max number of chats to be fetched by one request (Not more than 250).
-        public long? recordCount;
     }
 }
 

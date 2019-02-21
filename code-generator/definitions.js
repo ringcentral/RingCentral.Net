@@ -115,6 +115,23 @@ Object.keys(doc.paths).forEach(p => {
   })
 })
 
+// generate models for query parameters
+Object.keys(doc.paths).forEach(p => {
+  Object.keys(doc.paths[p]).forEach(method => {
+    const operation = doc.paths[p][method]
+    if ((operation.parameters || []).some(p => p.in === 'query')) {
+      const operationId = operation.operationId
+      const className = pascalCase(operationId) + 'Parameters'
+      const fields = operation.parameters.filter(p => p.in === 'query')
+        .map(p => {
+          p = normalizeField(p)
+          return generateField({}, p)
+        })
+      fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
+    }
+  })
+})
+
 // Generate Attachment
 fs.writeFileSync(path.join(outputDir, 'Attachment.cs'), `namespace RingCentral
 {
