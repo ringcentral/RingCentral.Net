@@ -41,7 +41,8 @@ namespace RingCentral.Tests
 
                 var countryResponse = await rc.Get<GetCountryInfoDictionaryResponse>(country.Path());
                 var countryResponse2 = await rc.Restapi().Dictionary().Country("46").Get();
-                Assert.Equal(JsonConvert.SerializeObject(countryResponse2), JsonConvert.SerializeObject(countryResponse));
+                Assert.Equal(JsonConvert.SerializeObject(countryResponse2),
+                    JsonConvert.SerializeObject(countryResponse));
             }
         }
 

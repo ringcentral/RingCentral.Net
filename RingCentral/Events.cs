@@ -19,16 +19,17 @@ namespace RingCentral
     {
         public event EventHandler<HttpCallEventArgs> AfterHttpCall;
     }
-    
+
     public class TokenEventArgs : EventArgs
     {
         public TokenInfo Token;
+
         public TokenEventArgs(TokenInfo token)
         {
             Token = token;
         }
     }
-    
+
     public partial class RestClient
     {
         public event EventHandler<TokenEventArgs> TokenRefreshed;
