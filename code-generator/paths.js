@@ -160,7 +160,6 @@ const generate = (prefix = '/') => {
 ${code}`
     }
 
-    // let queryParamsCodeSnippets = ''
     operations.forEach(operation => {
       const method = changeCase.pascalCase(operation.method)
       const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
@@ -196,44 +195,6 @@ ${code}`
       }
 
       const queryParams = (operation.detail.parameters || []).filter(p => p.in === 'query')
-      //     if (queryParams.length > 0) {
-      //       queryParamsCodeSnippets += `
-
-      //       public class ${smartMethod}QueryParams
-      //       {
-      //           ${queryParams.map(qp => {
-      //   let type = ''
-      //   switch (qp.type) {
-      //     case 'string':
-      //       type = 'string'
-      //       break
-      //     case 'integer':
-      //       type = 'long?'
-      //       break
-      //     case 'array':
-      //       type = qp.items.type + '[]'
-      //       break
-      //     case 'boolean':
-      //       type = 'bool?'
-      //       break
-      //     default:
-      //       throw new Error(`Unknown type: ${qp.type}`)
-      //   }
-      //   let field = `public ${type} ${qp.name};`
-      //   if (qp.required) {
-      //     field += ` // Required`
-      //   }
-      //   if (qp.enum) {
-      //     field = `// Enum: ${qp.enum.join(', ')}\n            ${field}`
-      //   }
-      //   if (qp.description) {
-      //     field = `// ${qp.description.trim()}\n            ${field}`
-      //   }
-      //   return field
-      // }).join('\n\n            ')}
-      //       }`
-      //     }
-
       const withParam = paramName && operation.endpoint.endsWith('}')
       const methodParams = []
       if (bodyParam) {
@@ -315,11 +276,7 @@ ${code}`
     })
 
     code += `
-    }`
-    // if (queryParamsCodeSnippets.length > 0) {
-    //   code += queryParamsCodeSnippets
-    // }
-    code += `
+    }
 }`
 
     if (routes.length === 1) { // top level path, such as /restapi & /scim
