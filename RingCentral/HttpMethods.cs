@@ -15,7 +15,7 @@ namespace RingCentral
         };
 
         public async Task<HttpResponseMessage> Request(HttpMethod httpMethod, string endpoint,
-            object content = null, object queryObj = null)
+            object content = null, object queryParams = null)
         {
             HttpContent httpContent = null;
             if (content is HttpContent)
@@ -31,9 +31,9 @@ namespace RingCentral
             }
 
             var uriBuilder = new UriBuilder(server) {Path = endpoint};
-            if (queryObj != null)
+            if (queryParams != null)
             {
-                var fields = Utils.GetPairs(queryObj).Select(t =>
+                var fields = Utils.GetPairs(queryParams).Select(t =>
                 {
                     if (t.value.GetType().IsArray)
                     {
@@ -59,9 +59,9 @@ namespace RingCentral
         }
 
         public async Task<T> Request<T>(HttpMethod httpMethod, string endpoint,
-            object content = null, object queryObj = null)
+            object content = null, object queryParams = null)
         {
-            var httpResponseMessage = await Request(httpMethod, endpoint, content, queryObj);
+            var httpResponseMessage = await Request(httpMethod, endpoint, content, queryParams);
             if (typeof(T) == typeof(HttpResponseMessage))
             {
                 return (T) (object) httpResponseMessage;
@@ -82,54 +82,54 @@ namespace RingCentral
             return JsonConvert.DeserializeObject<T>(httpContent);
         }
 
-        public async Task<HttpResponseMessage> Post(string endpoint, object content = null, object queryObj = null)
+        public async Task<HttpResponseMessage> Post(string endpoint, object content = null, object queryParams = null)
         {
-            return await Request(HttpMethod.Post, endpoint, content, queryObj);
+            return await Request(HttpMethod.Post, endpoint, content, queryParams);
         }
 
-        public async Task<T> Post<T>(string endpoint, object content = null, object queryObj = null)
+        public async Task<T> Post<T>(string endpoint, object content = null, object queryParams = null)
         {
-            return await Request<T>(HttpMethod.Post, endpoint, content, queryObj);
+            return await Request<T>(HttpMethod.Post, endpoint, content, queryParams);
         }
 
-        public async Task<HttpResponseMessage> Put(string endpoint, object content = null, object queryObj = null)
+        public async Task<HttpResponseMessage> Put(string endpoint, object content = null, object queryParams = null)
         {
-            return await Request(HttpMethod.Put, endpoint, content, queryObj);
+            return await Request(HttpMethod.Put, endpoint, content, queryParams);
         }
 
-        public async Task<T> Put<T>(string endpoint, object content = null, object queryObj = null)
+        public async Task<T> Put<T>(string endpoint, object content = null, object queryParams = null)
         {
-            return await Request<T>(HttpMethod.Put, endpoint, content, queryObj);
+            return await Request<T>(HttpMethod.Put, endpoint, content, queryParams);
         }
 
-        public async Task<HttpResponseMessage> Patch(string endpoint, object content = null, object queryObj = null)
+        public async Task<HttpResponseMessage> Patch(string endpoint, object content = null, object queryParams = null)
         {
-            return await Request(new HttpMethod("PATCH"), endpoint, content, queryObj);
+            return await Request(new HttpMethod("PATCH"), endpoint, content, queryParams);
         }
 
-        public async Task<T> Patch<T>(string endpoint, object content = null, object queryObj = null)
+        public async Task<T> Patch<T>(string endpoint, object content = null, object queryParams = null)
         {
-            return await Request<T>(new HttpMethod("PATCH"), endpoint, content, queryObj);
+            return await Request<T>(new HttpMethod("PATCH"), endpoint, content, queryParams);
         }
 
-        public async Task<HttpResponseMessage> Get(string endpoint, object queryObj = null)
+        public async Task<HttpResponseMessage> Get(string endpoint, object queryParams = null)
         {
-            return await Request(HttpMethod.Get, endpoint, null, queryObj);
+            return await Request(HttpMethod.Get, endpoint, null, queryParams);
         }
 
-        public async Task<T> Get<T>(string endpoint, object queryObj = null)
+        public async Task<T> Get<T>(string endpoint, object queryParams = null)
         {
-            return await Request<T>(HttpMethod.Get, endpoint, null, queryObj);
+            return await Request<T>(HttpMethod.Get, endpoint, null, queryParams);
         }
 
-        public async Task<HttpResponseMessage> Delete(string endpoint, object queryObj = null)
+        public async Task<HttpResponseMessage> Delete(string endpoint, object queryParams = null)
         {
-            return await Request(HttpMethod.Delete, endpoint, null, queryObj);
+            return await Request(HttpMethod.Delete, endpoint, null, queryParams);
         }
 
-        public async Task<T> Delete<T>(string endpoint, object queryObj = null)
+        public async Task<T> Delete<T>(string endpoint, object queryParams = null)
         {
-            return await Request<T>(HttpMethod.Delete, endpoint, null, queryObj);
+            return await Request<T>(HttpMethod.Delete, endpoint, null, queryParams);
         }
     }
 }
