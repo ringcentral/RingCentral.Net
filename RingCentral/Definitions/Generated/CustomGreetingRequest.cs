@@ -8,5 +8,8 @@ namespace RingCentral
 
         // Information on an answering rule that the greeting is applied to
         public CustomGreetingAnsweringRuleInfoRequest answeringRule;
+
+        // Custom greeting audio
+        public Attachment audio;
     }
 }

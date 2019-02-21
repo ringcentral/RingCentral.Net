@@ -11,5 +11,8 @@ namespace RingCentral
 
         // Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
         public CustomCompanyGreetingLanguageInfoRequest language;
+
+        // Custom greeting audio
+        public Attachment audio;
     }
 }

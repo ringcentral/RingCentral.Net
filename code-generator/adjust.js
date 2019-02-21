@@ -71,4 +71,52 @@ if (!recordingContent.schema) {
   }
 }
 
+// add audio property to greeting update request: https://git.ringcentral.com/platform/api-metadata-specs/issues/33
+let props = doc.definitions['CustomGreetingRequest'].properties
+if (!props.audio) {
+  props.audio = {
+    type: 'file',
+    description: 'Custom greeting audio'
+  }
+}
+props = doc.definitions['CustomCompanyGreetingRequest'].properties
+if (!props.audio) {
+  props.audio = {
+    type: 'file',
+    description: 'Custom greeting audio'
+  }
+}
+
+// add user greetings list response type: https://git.ringcentral.com/platform/api-metadata-specs/issues/34
+const response = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule'].get.responses['200']
+if (!response.schema) {
+  response.schema = {
+    '$ref': '#/definitions/UserAnsweringRuleList'
+  }
+  doc.definitions['UserAnsweringRuleList'] = {
+    type: 'object',
+    properties: {
+      uri: {
+        type: 'string',
+        description: 'Link to an answering rule resource'
+      },
+      records: {
+        type: 'array',
+        description: 'List of user answering rules',
+        items: {
+          $ref: '#/definitions/ListCompanyAnsweringRuleInfo'
+        }
+      },
+      paging: {
+        description: 'Information on paging',
+        $ref: '#/definitions/CallHandlingPagingInfo'
+      },
+      navigation: {
+        description: 'Information on navigation',
+        $ref: '#/definitions/CallHandlingNavigationInfo'
+      }
+    }
+  }
+}
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))

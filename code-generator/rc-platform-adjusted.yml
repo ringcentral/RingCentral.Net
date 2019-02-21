@@ -6699,6 +6699,8 @@ paths:
       responses:
         '200':
           description: OK
+          schema:
+            $ref: '#/definitions/UserAnsweringRuleList'
       x-api-group: extension/answering-rule
       x-throttling-group: Medium
       x-metered-api: true
@@ -16913,6 +16915,9 @@ definitions:
       answeringRule:
         description: Information on an answering rule that the greeting is applied to
         $ref: '#/definitions/CustomGreetingAnsweringRuleInfoRequest'
+      audio:
+        type: file
+        description: Custom greeting audio
   UserBusinessHoursUpdateRequest:
     type: object
     required:
@@ -17360,6 +17365,9 @@ definitions:
           Information on a greeting language. Supported for types
           'StopRecording', 'StartRecording', 'AutomaticRecording'
         $ref: '#/definitions/CustomCompanyGreetingLanguageInfoRequest'
+      audio:
+        type: file
+        description: Custom greeting audio
   DictionaryGreetingInfo:
     type: object
     properties:
@@ -23308,6 +23316,23 @@ definitions:
         type: string
         description: Application instance identifier
         example: 8zXq6oaLT7WvwWITlGiA1A
+  UserAnsweringRuleList:
+    type: object
+    properties:
+      uri:
+        type: string
+        description: Link to an answering rule resource
+      records:
+        type: array
+        description: List of user answering rules
+        items:
+          $ref: '#/definitions/ListCompanyAnsweringRuleInfo'
+      paging:
+        description: Information on paging
+        $ref: '#/definitions/CallHandlingPagingInfo'
+      navigation:
+        description: Information on navigation
+        $ref: '#/definitions/CallHandlingNavigationInfo'
 securityDefinitions:
   OAuth2:
     type: oauth2

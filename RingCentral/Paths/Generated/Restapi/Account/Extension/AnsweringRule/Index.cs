@@ -25,9 +25,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return $"{parent.Path()}/answering-rule";
         }
 
-        public async Task<string> List(ListAnsweringRulesParameters queryParams = null)
+        public async Task<RingCentral.UserAnsweringRuleList> List(ListAnsweringRulesParameters queryParams = null)
         {
-            return await rc.Get<string>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryParams);
         }
 
         public async Task<RingCentral.AnsweringRuleInfo> Post(
