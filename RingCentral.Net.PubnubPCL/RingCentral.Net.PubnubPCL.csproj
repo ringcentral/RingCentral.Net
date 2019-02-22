@@ -8,7 +8,7 @@
         <Description>RingCentral SDK for .NET, PubnubPCL</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <PackageTags>RingCentral,Pubnub</PackageTags>
+        <PackageTags>RingCentral,Pubnub,PubnubPCL</PackageTags>
         <RootNamespace>RingCentral</RootNamespace>
     </PropertyGroup>
 
