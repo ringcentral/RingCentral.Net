@@ -6,8 +6,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Tests", "RingCe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Demo.NetCore", "RingCentral.Demo.NetCore\RingCentral.Demo.NetCore.csproj", "{D258AB70-56EA-4E3C-839D-50BF354C4969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Demo.NetFramework", "RingCentral.Demo.NetFramework\RingCentral.Demo.NetFramework.csproj", "{39CA7F4F-FB87-405B-8C3B-2C35B897D6E9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +24,5 @@ Global
 		{D258AB70-56EA-4E3C-839D-50BF354C4969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D258AB70-56EA-4E3C-839D-50BF354C4969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D258AB70-56EA-4E3C-839D-50BF354C4969}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39CA7F4F-FB87-405B-8C3B-2C35B897D6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39CA7F4F-FB87-405B-8C3B-2C35B897D6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39CA7F4F-FB87-405B-8C3B-2C35B897D6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39CA7F4F-FB87-405B-8C3B-2C35B897D6E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
