@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace RingCentral.Demo
+namespace RingCentral.Demo.NetCore
 {
     class Program
     {
