@@ -1,12 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net", "RingCentral.Net\RingCentral.Net.csproj", "{D86932E7-BB04-4412-9BAD-156382504E90}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RingCentral.Net", "RingCentral.Net\RingCentral.Net.csproj", "{D86932E7-BB04-4412-9BAD-156382504E90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Tests", "RingCentral.Tests\RingCentral.Tests.csproj", "{9532BF16-8BCB-4AA2-B311-364286093DCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RingCentral.Tests", "RingCentral.Tests\RingCentral.Tests.csproj", "{9532BF16-8BCB-4AA2-B311-364286093DCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Demo.NetCore", "RingCentral.Demo.NetCore\RingCentral.Demo.NetCore.csproj", "{D258AB70-56EA-4E3C-839D-50BF354C4969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RingCentral.Demo.NetCore", "RingCentral.Demo.NetCore\RingCentral.Demo.NetCore.csproj", "{D258AB70-56EA-4E3C-839D-50BF354C4969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net.PubnubPCL", "RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj", "{8F6B2DF8-0911-4367-BA13-F3790D506E16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RingCentral.Net.PubnubPCL", "RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj", "{8F6B2DF8-0911-4367-BA13-F3790D506E16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net.Pubnub", "RingCentral.Net.Pubnub\RingCentral.Net.Pubnub.csproj", "{ED9F2155-7EF0-497E-9411-1A3638346E02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Demo.NetFramework", "RingCentral.Demo.NetFramework\RingCentral.Demo.NetFramework.csproj", "{8F0ECB96-8871-40FE-AFFA-54B502AA008E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +37,19 @@ Global
 		{8F6B2DF8-0911-4367-BA13-F3790D506E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F6B2DF8-0911-4367-BA13-F3790D506E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F6B2DF8-0911-4367-BA13-F3790D506E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9F2155-7EF0-497E-9411-1A3638346E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9F2155-7EF0-497E-9411-1A3638346E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9F2155-7EF0-497E-9411-1A3638346E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9F2155-7EF0-497E-9411-1A3638346E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0ECB96-8871-40FE-AFFA-54B502AA008E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0ECB96-8871-40FE-AFFA-54B502AA008E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0ECB96-8871-40FE-AFFA-54B502AA008E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0ECB96-8871-40FE-AFFA-54B502AA008E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBE3D4AB-EEB8-4E58-B4AC-1F07E3F53F1B}
 	EndGlobalSection
 EndGlobal
