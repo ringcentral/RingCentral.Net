@@ -7,9 +7,16 @@ This project is complete rewrite of [ringcentral/ringcentral-csharp-client](http
 
 ### Release
 
-Update version number in `RingCentral/RingCentral.csproj`
+Update version number in `RingCentral.Net/RingCentral.csproj`
 
 ```
-cd RingCentral
+cd RingCentral.Net
+dotnet pack
+```
+
+Update version number in `RingCentral.Net.PubnubPCL/RingCentral.csproj`
+
+```
+cd RingCentral.Net.PubnubPCL
 dotnet pack
 ```
