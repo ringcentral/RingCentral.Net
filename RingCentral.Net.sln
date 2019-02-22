@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral", "RingCentral\RingCentral.csproj", "{D86932E7-BB04-4412-9BAD-156382504E90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net", "RingCentral.Net\RingCentral.Net.csproj", "{D86932E7-BB04-4412-9BAD-156382504E90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Tests", "RingCentral.Tests\RingCentral.Tests.csproj", "{9532BF16-8BCB-4AA2-B311-364286093DCF}"
 EndProject

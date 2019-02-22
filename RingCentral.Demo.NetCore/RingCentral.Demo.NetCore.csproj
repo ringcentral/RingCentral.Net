@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\RingCentral\RingCentral.csproj" />
+      <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
     </ItemGroup>
 
 </Project>
