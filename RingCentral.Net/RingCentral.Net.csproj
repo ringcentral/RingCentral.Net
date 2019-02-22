@@ -13,7 +13,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="PubnubPCL" Version="4.0.26" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     </ItemGroup>
 
 </Project>

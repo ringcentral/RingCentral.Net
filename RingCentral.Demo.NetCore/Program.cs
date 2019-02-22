@@ -11,9 +11,9 @@ namespace RingCentral.Demo.NetCore
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Task t = MainAsync(args);
+            Task t = MainAsync();
             t.Wait();
         }
 
@@ -36,7 +36,7 @@ namespace RingCentral.Demo.NetCore
             });
         }
 
-        static async Task MainAsync(string[] args)
+        static async Task MainAsync()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

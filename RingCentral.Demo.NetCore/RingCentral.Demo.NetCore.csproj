@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj" />
       <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
     </ItemGroup>
 

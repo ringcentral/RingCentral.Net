@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>RingCentral.Net.PubnubPCL</PackageId>
+        <PackageVersion>0.6.0</PackageVersion>
+        <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
+        <Description>RingCentral SDK for .NET, PubnubPCL</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageTags>RingCentral,Pubnub</PackageTags>
+        <RootNamespace>RingCentral</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="PubnubPCL" Version="4.0.26" />
+    </ItemGroup>
+
+</Project>
