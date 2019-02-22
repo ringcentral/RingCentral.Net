@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral", "RingCentral\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Tests", "RingCentral.Tests\RingCentral.Tests.csproj", "{9532BF16-8BCB-4AA2-B311-364286093DCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Demo", "RingCentral.Demo\RingCentral.Demo.csproj", "{D258AB70-56EA-4E3C-839D-50BF354C4969}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Demo.NetCore", "RingCentral.Demo.NetCore\RingCentral.Demo.NetCore.csproj", "{D258AB70-56EA-4E3C-839D-50BF354C4969}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
