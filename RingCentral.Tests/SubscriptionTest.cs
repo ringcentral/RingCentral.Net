@@ -59,8 +59,7 @@ namespace RingCentral.Tests
                     if (new Regex("/account/\\d+/extension/\\d+/message-store").Match(eventString).Success)
                     {
                         messageStoreMessageCount += 1;
-                        var bodyString = JsonConvert.SerializeObject(jObject.body);
-                        MessageEvent messageEvent = JsonConvert.DeserializeObject<MessageEvent>(bodyString);
+                        var messageEvent = JsonConvert.DeserializeObject<MessageEvent>(message);
                         Assert.NotNull(messageEvent.uuid);
                         Assert.NotNull(messageEvent.body);
                     }
