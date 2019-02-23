@@ -23,4 +23,10 @@ dotnet pack
 
 Update version number in `RingCentral.Net.Pubnub/RingCentral.Net.Pubnub.csproj`
 
-Reference [Quickstart: Create and publish a package using Visual Studio (.NET Framework, Windows)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework) to publish `RingCentral.Net.Pubnub`.
+
+```
+cd RingCentral.Net.Pubnub
+nuget pack
+```
+
+Reference: [Quickstart: Create and publish a package using Visual Studio (.NET Framework, Windows)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework)

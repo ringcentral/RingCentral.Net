@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/tylerlong/RingCentral.Nets</projectUrl>
+    <iconUrl>https://netstorage.ringcentral.com/dpw/apps/7gufiGT3T3CCuCP37hMDaQ/7a8e3042-67a9-477b-8300-39ecfddaef6a.pngs</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Release a separate package of RingCentral.Net Pubnub.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>RingCentral Pubnub</tags>
+  </metadata>
+</package>

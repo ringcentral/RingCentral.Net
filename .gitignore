@@ -3,3 +3,4 @@ obj/
 .idea/
 packages/
 .vs/
+*.nupkg
