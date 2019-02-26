@@ -22,7 +22,6 @@ using (var rc = new RestClient(
 ```
 
 
-- Parameter `apiVersion` is optional with default value `v1.0`
 
 
 ## Get api version
@@ -71,8 +70,6 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## Load user call log
@@ -202,6 +199,7 @@ using (var rc = new RestClient(
 - Parameter `listExtensionActiveCallsParameters` is of type [ListExtensionActiveCallsParameters](./RingCentral.Net/Definitions/ListExtensionActiveCallsParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Load company call log
@@ -327,7 +325,6 @@ using (var rc = new RestClient(
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## Send sms
@@ -404,6 +401,8 @@ using (var rc = new RestClient(
 
 - Parameter `sendFaxMessageRequest` is of type [SendFaxMessageRequest](./RingCentral.Net/Definitions/SendFaxMessageRequest.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## List fax cover pages
@@ -428,8 +427,6 @@ using (var rc = new RestClient(
 
 - Parameter `listFaxCoverPagesParameters` is of type [ListFaxCoverPagesParameters](./RingCentral.Net/Definitions/ListFaxCoverPagesParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## List messages
@@ -585,6 +582,7 @@ using (var rc = new RestClient(
 - Parameter `syncMessagesParameters` is of type [SyncMessagesParameters](./RingCentral.Net/Definitions/SyncMessagesParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Load message store configuration
@@ -635,7 +633,6 @@ using (var rc = new RestClient(
 - Parameter `messageStoreConfiguration` is of type [MessageStoreConfiguration](./RingCentral.Net/Definitions/MessageStoreConfiguration.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## Make ring out call
@@ -923,6 +920,7 @@ using (var rc = new RestClient(
 - Parameter `favoriteCollection` is of type [FavoriteCollection](./RingCentral.Net/Definitions/FavoriteCollection.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Search directory entries
@@ -998,7 +996,6 @@ using (var rc = new RestClient(
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## Get presence status
@@ -1050,6 +1047,7 @@ using (var rc = new RestClient(
 - Parameter `presenceInfoResource` is of type [PresenceInfoResource](./RingCentral.Net/Definitions/PresenceInfoResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Account presence
@@ -1074,6 +1072,7 @@ using (var rc = new RestClient(
 
 - Parameter `accountPresenceParameters` is of type [AccountPresenceParameters](./RingCentral.Net/Definitions/AccountPresenceParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
 
 
 ## List glip chats
@@ -2661,8 +2660,6 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## List meetings
@@ -2843,6 +2840,8 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## List subscriptions
@@ -2988,8 +2987,6 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## Get authorization profile
@@ -3093,6 +3090,7 @@ using (var rc = new RestClient(
 - Parameter `userBusinessHoursUpdateRequest` is of type [UserBusinessHoursUpdateRequest](./RingCentral.Net/Definitions/UserBusinessHoursUpdateRequest.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Load company business hours
@@ -3143,7 +3141,6 @@ using (var rc = new RestClient(
 - Parameter `companyBusinessHoursUpdateRequest` is of type [CompanyBusinessHoursUpdateRequest](./RingCentral.Net/Definitions/CompanyBusinessHoursUpdateRequest.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## Load call blocking settings
@@ -3611,6 +3608,7 @@ using (var rc = new RestClient(
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Create company answering rule
@@ -3735,6 +3733,7 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
 
 
 ## List standard greetings
@@ -3783,7 +3782,6 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
 
 
 ## Create company greeting
@@ -3809,7 +3807,6 @@ using (var rc = new RestClient(
 - Parameter `customCompanyGreetingRequest` is of type [CustomCompanyGreetingRequest](./RingCentral.Net/Definitions/CustomCompanyGreetingRequest.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## Create user custom greeting
@@ -3861,6 +3858,7 @@ using (var rc = new RestClient(
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Create ivr prompt
@@ -4235,6 +4233,7 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
 
 
 ## Create sip registration
@@ -4259,8 +4258,6 @@ using (var rc = new RestClient(
 
 - Parameter `createSipRegistrationRequest` is of type [CreateSipRegistrationRequest](./RingCentral.Net/Definitions/CreateSipRegistrationRequest.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## List extension phone numbers
@@ -4650,6 +4647,7 @@ using (var rc = new RestClient(
 - Parameter `updateConferencingInfoRequest` is of type [UpdateConferencingInfoRequest](./RingCentral.Net/Definitions/UpdateConferencingInfoRequest.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Load account
@@ -4749,6 +4747,7 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
 
 
 ## List languages
@@ -4965,7 +4964,6 @@ using (var rc = new RestClient(
 
 - Parameter `loadTimezoneParameters` is of type [LoadTimezoneParameters](./RingCentral.Net/Definitions/LoadTimezoneParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
 
 
 ## List account phone numbers
@@ -5465,6 +5463,7 @@ using (var rc = new RestClient(
 
 - Parameter `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./RingCentral.Net/Definitions/CallMonitoringBulkAssign.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
 
 
 ## Parse phone number
@@ -5490,7 +5489,6 @@ using (var rc = new RestClient(
 - Parameter `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./RingCentral.Net/Definitions/ParsePhoneNumberRequest.cs)
 - Parameter `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./RingCentral.Net/Definitions/ParsePhoneNumberParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
 
 
 ## Load account device
@@ -5541,7 +5539,6 @@ using (var rc = new RestClient(
 - Parameter `accountDeviceUpdate` is of type [AccountDeviceUpdate](./RingCentral.Net/Definitions/AccountDeviceUpdate.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## List extension devices
@@ -5565,6 +5562,9 @@ using (var rc = new RestClient(
 ```
 
 - Parameter `listExtensionDevicesParameters` is of type [ListExtensionDevicesParameters](./RingCentral.Net/Definitions/ListExtensionDevicesParameters.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Check health
@@ -5588,7 +5588,6 @@ using (var rc = new RestClient(
 ```
 
 
-- Parameter `version` is optional with default value `v2`
 
 
 ## Get service provider config2
@@ -5780,8 +5779,7 @@ using (var rc = new RestClient(
 ```
 
 - Parameter `userPatch` is of type [UserPatch](./RingCentral.Net/Definitions/UserPatch.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
+- Parameter `version` is optional with default value `v2`
 
 
 ## Get call session status
@@ -6082,6 +6080,7 @@ using (var rc = new RestClient(
 - Parameter `callRecordingUpdate` is of type [CallRecordingUpdate](./RingCentral.Net/Definitions/CallRecordingUpdate.cs)
 - Parameter `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./RingCentral.Net/Definitions/PauseResumeCallRecordingParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
 
 
 ## Get compliance archive stream
@@ -6154,7 +6153,6 @@ using (var rc = new RestClient(
 
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
 
 
 ## Create message store report
@@ -6280,7 +6278,6 @@ using (var rc = new RestClient(
 - Parameter `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./RingCentral.Net/Definitions/ListAccountMeetingRecordingsParameters.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
 
 
 ## List user meeting recordings
@@ -6304,6 +6301,9 @@ using (var rc = new RestClient(
 ```
 
 - Parameter `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./RingCentral.Net/Definitions/ListUserMeetingRecordingsParameters.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
 
 
 ## Get token
