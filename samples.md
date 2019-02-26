@@ -3,7 +3,7 @@
 
 ## getAllVersions
 
-Http List /restapi
+HTTP LIST `/restapi`
 
 ```cs
 using (var rc = new RestClient(
@@ -26,7 +26,7 @@ using (var rc = new RestClient(
 
 ## getApiVersion
 
-Http Get /restapi/{apiVersion}
+HTTP GET `/restapi/{apiVersion}`
 
 ```cs
 using (var rc = new RestClient(
@@ -49,7 +49,7 @@ using (var rc = new RestClient(
 
 ## loadAPIStatus
 
-Http Get /restapi/v1.0/status
+HTTP GET `/restapi/v1.0/status`
 
 ```cs
 using (var rc = new RestClient(
@@ -72,7 +72,7 @@ using (var rc = new RestClient(
 
 ## loadUserCallLog
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
 ```cs
 using (var rc = new RestClient(
@@ -95,7 +95,7 @@ using (var rc = new RestClient(
 
 ## deleteUserCallLog
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
 ```cs
 using (var rc = new RestClient(
@@ -118,7 +118,7 @@ using (var rc = new RestClient(
 
 ## syncUserCallLog
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync`
 
 ```cs
 using (var rc = new RestClient(
@@ -141,7 +141,7 @@ using (var rc = new RestClient(
 
 ## getCallRecords
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -164,7 +164,7 @@ using (var rc = new RestClient(
 
 ## listExtensionActiveCalls
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls`
 
 ```cs
 using (var rc = new RestClient(
@@ -187,7 +187,7 @@ using (var rc = new RestClient(
 
 ## loadCompanyCallLog
 
-Http List /restapi/v1.0/account/{accountId}/call-log
+HTTP LIST `/restapi/v1.0/account/{accountId}/call-log`
 
 ```cs
 using (var rc = new RestClient(
@@ -210,7 +210,7 @@ using (var rc = new RestClient(
 
 ## loadCompanyCallLogRecord
 
-Http Get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
+HTTP GET `/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -233,7 +233,7 @@ using (var rc = new RestClient(
 
 ## listCompanyActiveCalls
 
-Http Get /restapi/v1.0/account/{accountId}/active-calls
+HTTP GET `/restapi/v1.0/account/{accountId}/active-calls`
 
 ```cs
 using (var rc = new RestClient(
@@ -256,7 +256,7 @@ using (var rc = new RestClient(
 
 ## listCallRecordings
 
-Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}
+HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -279,7 +279,7 @@ using (var rc = new RestClient(
 
 ## listCallRecordingData
 
-Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
+HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}/content`
 
 ```cs
 using (var rc = new RestClient(
@@ -302,7 +302,7 @@ using (var rc = new RestClient(
 
 ## sendSMS
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`
 
 ```cs
 using (var rc = new RestClient(
@@ -325,7 +325,7 @@ using (var rc = new RestClient(
 
 ## createInternalTextMessage
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager`
 
 ```cs
 using (var rc = new RestClient(
@@ -348,7 +348,7 @@ using (var rc = new RestClient(
 
 ## sendFaxMessage
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax`
 
 ```cs
 using (var rc = new RestClient(
@@ -371,7 +371,7 @@ using (var rc = new RestClient(
 
 ## listFaxCoverPages
 
-Http Get /restapi/v1.0/dictionary/fax-cover-page
+HTTP GET `/restapi/v1.0/dictionary/fax-cover-page`
 
 ```cs
 using (var rc = new RestClient(
@@ -394,7 +394,7 @@ using (var rc = new RestClient(
 
 ## listMessages
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store`
 
 ```cs
 using (var rc = new RestClient(
@@ -417,7 +417,7 @@ using (var rc = new RestClient(
 
 ## loadMessage
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -440,7 +440,7 @@ using (var rc = new RestClient(
 
 ## updateMessage
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -463,7 +463,7 @@ using (var rc = new RestClient(
 
 ## deleteMessage
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -486,7 +486,7 @@ using (var rc = new RestClient(
 
 ## getMessageAttachmentById
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -509,7 +509,7 @@ using (var rc = new RestClient(
 
 ## syncMessages
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync`
 
 ```cs
 using (var rc = new RestClient(
@@ -532,7 +532,7 @@ using (var rc = new RestClient(
 
 ## loadMessageStoreConfiguration
 
-Http Get /restapi/v1.0/account/{accountId}/message-store-configuration
+HTTP GET `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
 ```cs
 using (var rc = new RestClient(
@@ -555,7 +555,7 @@ using (var rc = new RestClient(
 
 ## updateMessageStoreConfiguration
 
-Http Put /restapi/v1.0/account/{accountId}/message-store-configuration
+HTTP PUT `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
 ```cs
 using (var rc = new RestClient(
@@ -578,7 +578,7 @@ using (var rc = new RestClient(
 
 ## makeRingOutCall
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`
 
 ```cs
 using (var rc = new RestClient(
@@ -601,7 +601,7 @@ using (var rc = new RestClient(
 
 ## getRingOutCallStatus
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -624,7 +624,7 @@ using (var rc = new RestClient(
 
 ## cancelRingOutCall
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -647,7 +647,7 @@ using (var rc = new RestClient(
 
 ## listContacts
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
 ```cs
 using (var rc = new RestClient(
@@ -670,7 +670,7 @@ using (var rc = new RestClient(
 
 ## createContact
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
 ```cs
 using (var rc = new RestClient(
@@ -694,7 +694,7 @@ using (var rc = new RestClient(
 
 ## loadContact
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -717,7 +717,7 @@ using (var rc = new RestClient(
 
 ## updateContact
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -741,7 +741,7 @@ using (var rc = new RestClient(
 
 ## deleteContact
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -764,7 +764,7 @@ using (var rc = new RestClient(
 
 ## syncAddressBook
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync`
 
 ```cs
 using (var rc = new RestClient(
@@ -787,7 +787,7 @@ using (var rc = new RestClient(
 
 ## listFavoriteContacts
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
 ```cs
 using (var rc = new RestClient(
@@ -810,7 +810,7 @@ using (var rc = new RestClient(
 
 ## updateFavoriteContactList
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
 ```cs
 using (var rc = new RestClient(
@@ -833,7 +833,7 @@ using (var rc = new RestClient(
 
 ## searchDirectoryEntries
 
-Http Post /restapi/v1.0/account/{accountId}/directory/entries/search
+HTTP POST `/restapi/v1.0/account/{accountId}/directory/entries/search`
 
 ```cs
 using (var rc = new RestClient(
@@ -856,7 +856,7 @@ using (var rc = new RestClient(
 
 ## listDirectoryEntries
 
-Http Get /restapi/v1.0/account/{accountId}/directory/entries
+HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries`
 
 ```cs
 using (var rc = new RestClient(
@@ -879,7 +879,7 @@ using (var rc = new RestClient(
 
 ## loadAccountFederation
 
-Http Get /restapi/v1.0/account/{accountId}/directory/federation
+HTTP GET `/restapi/v1.0/account/{accountId}/directory/federation`
 
 ```cs
 using (var rc = new RestClient(
@@ -902,7 +902,7 @@ using (var rc = new RestClient(
 
 ## getPresenceStatus
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
 ```cs
 using (var rc = new RestClient(
@@ -925,7 +925,7 @@ using (var rc = new RestClient(
 
 ## updatePresenceStatus
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
 ```cs
 using (var rc = new RestClient(
@@ -948,7 +948,7 @@ using (var rc = new RestClient(
 
 ## accountPresence
 
-Http Get /restapi/v1.0/account/{accountId}/presence
+HTTP GET `/restapi/v1.0/account/{accountId}/presence`
 
 ```cs
 using (var rc = new RestClient(
@@ -971,7 +971,7 @@ using (var rc = new RestClient(
 
 ## listGlipChats
 
-Http List /restapi/v1.0/glip/chats
+HTTP LIST `/restapi/v1.0/glip/chats`
 
 ```cs
 using (var rc = new RestClient(
@@ -994,7 +994,7 @@ using (var rc = new RestClient(
 
 ## loadGlipChat
 
-Http Get /restapi/v1.0/glip/chats/{chatId}
+HTTP GET `/restapi/v1.0/glip/chats/{chatId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1017,7 +1017,7 @@ using (var rc = new RestClient(
 
 ## listGlipConversations
 
-Http List /restapi/v1.0/glip/conversations
+HTTP LIST `/restapi/v1.0/glip/conversations`
 
 ```cs
 using (var rc = new RestClient(
@@ -1040,7 +1040,7 @@ using (var rc = new RestClient(
 
 ## createGlipConversation
 
-Http Post /restapi/v1.0/glip/conversations
+HTTP POST `/restapi/v1.0/glip/conversations`
 
 ```cs
 using (var rc = new RestClient(
@@ -1063,7 +1063,7 @@ using (var rc = new RestClient(
 
 ## loadGlipConversation
 
-Http Get /restapi/v1.0/glip/conversations/{chatId}
+HTTP GET `/restapi/v1.0/glip/conversations/{chatId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1086,7 +1086,7 @@ using (var rc = new RestClient(
 
 ## listGlipTeams
 
-Http List /restapi/v1.0/glip/teams
+HTTP LIST `/restapi/v1.0/glip/teams`
 
 ```cs
 using (var rc = new RestClient(
@@ -1109,7 +1109,7 @@ using (var rc = new RestClient(
 
 ## createGlipTeam
 
-Http Post /restapi/v1.0/glip/teams
+HTTP POST `/restapi/v1.0/glip/teams`
 
 ```cs
 using (var rc = new RestClient(
@@ -1132,7 +1132,7 @@ using (var rc = new RestClient(
 
 ## loadGlipTeam
 
-Http Get /restapi/v1.0/glip/teams/{chatId}
+HTTP GET `/restapi/v1.0/glip/teams/{chatId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1155,7 +1155,7 @@ using (var rc = new RestClient(
 
 ## updateGlipTeam
 
-Http Patch /restapi/v1.0/glip/teams/{chatId}
+HTTP PATCH `/restapi/v1.0/glip/teams/{chatId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1178,7 +1178,7 @@ using (var rc = new RestClient(
 
 ## deleteGlipTeam
 
-Http Delete /restapi/v1.0/glip/teams/{chatId}
+HTTP DELETE `/restapi/v1.0/glip/teams/{chatId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1201,7 +1201,7 @@ using (var rc = new RestClient(
 
 ## joinGlipTeam
 
-Http Post /restapi/v1.0/glip/teams/{chatId}/join
+HTTP POST `/restapi/v1.0/glip/teams/{chatId}/join`
 
 ```cs
 using (var rc = new RestClient(
@@ -1224,7 +1224,7 @@ using (var rc = new RestClient(
 
 ## leaveGlipTeam
 
-Http Post /restapi/v1.0/glip/teams/{chatId}/leave
+HTTP POST `/restapi/v1.0/glip/teams/{chatId}/leave`
 
 ```cs
 using (var rc = new RestClient(
@@ -1247,7 +1247,7 @@ using (var rc = new RestClient(
 
 ## addGlipTeamMembers
 
-Http Post /restapi/v1.0/glip/teams/{chatId}/add
+HTTP POST `/restapi/v1.0/glip/teams/{chatId}/add`
 
 ```cs
 using (var rc = new RestClient(
@@ -1270,7 +1270,7 @@ using (var rc = new RestClient(
 
 ## removeGlipTeamMembers
 
-Http Post /restapi/v1.0/glip/teams/{chatId}/remove
+HTTP POST `/restapi/v1.0/glip/teams/{chatId}/remove`
 
 ```cs
 using (var rc = new RestClient(
@@ -1293,7 +1293,7 @@ using (var rc = new RestClient(
 
 ## archiveGlipTeam
 
-Http Post /restapi/v1.0/glip/teams/{chatId}/archive
+HTTP POST `/restapi/v1.0/glip/teams/{chatId}/archive`
 
 ```cs
 using (var rc = new RestClient(
@@ -1316,7 +1316,7 @@ using (var rc = new RestClient(
 
 ## unarchiveGlipTeam
 
-Http Post /restapi/v1.0/glip/teams/{chatId}/unarchive
+HTTP POST `/restapi/v1.0/glip/teams/{chatId}/unarchive`
 
 ```cs
 using (var rc = new RestClient(
@@ -1339,7 +1339,7 @@ using (var rc = new RestClient(
 
 ## loadGlipEveryone
 
-Http Get /restapi/v1.0/glip/everyone
+HTTP GET `/restapi/v1.0/glip/everyone`
 
 ```cs
 using (var rc = new RestClient(
@@ -1362,7 +1362,7 @@ using (var rc = new RestClient(
 
 ## updateGlipEveryone
 
-Http Patch /restapi/v1.0/glip/everyone
+HTTP PATCH `/restapi/v1.0/glip/everyone`
 
 ```cs
 using (var rc = new RestClient(
@@ -1385,7 +1385,7 @@ using (var rc = new RestClient(
 
 ## listGlipGroups
 
-Http List /restapi/v1.0/glip/groups
+HTTP LIST `/restapi/v1.0/glip/groups`
 
 ```cs
 using (var rc = new RestClient(
@@ -1408,7 +1408,7 @@ using (var rc = new RestClient(
 
 ## createGlipGroup
 
-Http Post /restapi/v1.0/glip/groups
+HTTP POST `/restapi/v1.0/glip/groups`
 
 ```cs
 using (var rc = new RestClient(
@@ -1431,7 +1431,7 @@ using (var rc = new RestClient(
 
 ## loadGlipGroup
 
-Http Get /restapi/v1.0/glip/groups/{groupId}
+HTTP GET `/restapi/v1.0/glip/groups/{groupId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1454,7 +1454,7 @@ using (var rc = new RestClient(
 
 ## assignGlipGroupMembers
 
-Http Post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
+HTTP POST `/restapi/v1.0/glip/groups/{groupId}/bulk-assign`
 
 ```cs
 using (var rc = new RestClient(
@@ -1477,7 +1477,7 @@ using (var rc = new RestClient(
 
 ## listGlipGroupPosts
 
-Http Get /restapi/v1.0/glip/groups/{groupId}/posts
+HTTP GET `/restapi/v1.0/glip/groups/{groupId}/posts`
 
 ```cs
 using (var rc = new RestClient(
@@ -1500,7 +1500,7 @@ using (var rc = new RestClient(
 
 ## createGlipGroupPost
 
-Http Post /restapi/v1.0/glip/groups/{groupId}/posts
+HTTP POST `/restapi/v1.0/glip/groups/{groupId}/posts`
 
 ```cs
 using (var rc = new RestClient(
@@ -1523,7 +1523,7 @@ using (var rc = new RestClient(
 
 ## updateGlipPostText
 
-Http Put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
+HTTP PUT `/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text`
 
 ```cs
 using (var rc = new RestClient(
@@ -1546,7 +1546,7 @@ using (var rc = new RestClient(
 
 ## listRecentChats
 
-Http Get /restapi/v1.0/glip/recent/chats
+HTTP GET `/restapi/v1.0/glip/recent/chats`
 
 ```cs
 using (var rc = new RestClient(
@@ -1569,7 +1569,7 @@ using (var rc = new RestClient(
 
 ## listFavoriteChats
 
-Http Get /restapi/v1.0/glip/favorites
+HTTP GET `/restapi/v1.0/glip/favorites`
 
 ```cs
 using (var rc = new RestClient(
@@ -1592,7 +1592,7 @@ using (var rc = new RestClient(
 
 ## favoriteGlipChat
 
-Http Post /restapi/v1.0/glip/chats/{chatId}/favorite
+HTTP POST `/restapi/v1.0/glip/chats/{chatId}/favorite`
 
 ```cs
 using (var rc = new RestClient(
@@ -1615,7 +1615,7 @@ using (var rc = new RestClient(
 
 ## unfavoriteGlipChat
 
-Http Post /restapi/v1.0/glip/chats/{chatId}/unfavorite
+HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unfavorite`
 
 ```cs
 using (var rc = new RestClient(
@@ -1638,7 +1638,7 @@ using (var rc = new RestClient(
 
 ## markChatRead
 
-Http Post /restapi/v1.0/glip/chats/{chatId}/read
+HTTP POST `/restapi/v1.0/glip/chats/{chatId}/read`
 
 ```cs
 using (var rc = new RestClient(
@@ -1661,7 +1661,7 @@ using (var rc = new RestClient(
 
 ## markChatUnread
 
-Http Post /restapi/v1.0/glip/chats/{chatId}/unread
+HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unread`
 
 ```cs
 using (var rc = new RestClient(
@@ -1684,7 +1684,7 @@ using (var rc = new RestClient(
 
 ## listGlipPosts
 
-Http Get /restapi/v1.0/glip/posts
+HTTP GET `/restapi/v1.0/glip/posts`
 
 ```cs
 using (var rc = new RestClient(
@@ -1707,7 +1707,7 @@ using (var rc = new RestClient(
 
 ## createPost
 
-Http Post /restapi/v1.0/glip/posts
+HTTP POST `/restapi/v1.0/glip/posts`
 
 ```cs
 using (var rc = new RestClient(
@@ -1730,7 +1730,7 @@ using (var rc = new RestClient(
 
 ## createGlipFile
 
-Http Post /restapi/v1.0/glip/files
+HTTP POST `/restapi/v1.0/glip/files`
 
 ```cs
 using (var rc = new RestClient(
@@ -1754,7 +1754,7 @@ using (var rc = new RestClient(
 
 ## createGlipCard
 
-Http Post /restapi/v1.0/glip/cards
+HTTP POST `/restapi/v1.0/glip/cards`
 
 ```cs
 using (var rc = new RestClient(
@@ -1778,7 +1778,7 @@ using (var rc = new RestClient(
 
 ## loadGlipCard
 
-Http Get /restapi/v1.0/glip/cards/{cardId}
+HTTP GET `/restapi/v1.0/glip/cards/{cardId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1801,7 +1801,7 @@ using (var rc = new RestClient(
 
 ## updateGlipCard
 
-Http Put /restapi/v1.0/glip/cards/{cardId}
+HTTP PUT `/restapi/v1.0/glip/cards/{cardId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1824,7 +1824,7 @@ using (var rc = new RestClient(
 
 ## deleteGlipCard
 
-Http Delete /restapi/v1.0/glip/cards/{cardId}
+HTTP DELETE `/restapi/v1.0/glip/cards/{cardId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1847,7 +1847,7 @@ using (var rc = new RestClient(
 
 ## loadGlipEvents
 
-Http List /restapi/v1.0/glip/events
+HTTP LIST `/restapi/v1.0/glip/events`
 
 ```cs
 using (var rc = new RestClient(
@@ -1870,7 +1870,7 @@ using (var rc = new RestClient(
 
 ## createEvent
 
-Http Post /restapi/v1.0/glip/events
+HTTP POST `/restapi/v1.0/glip/events`
 
 ```cs
 using (var rc = new RestClient(
@@ -1893,7 +1893,7 @@ using (var rc = new RestClient(
 
 ## loadEvent
 
-Http Get /restapi/v1.0/glip/events/{eventId}
+HTTP GET `/restapi/v1.0/glip/events/{eventId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1916,7 +1916,7 @@ using (var rc = new RestClient(
 
 ## updateEvent
 
-Http Put /restapi/v1.0/glip/events/{eventId}
+HTTP PUT `/restapi/v1.0/glip/events/{eventId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1939,7 +1939,7 @@ using (var rc = new RestClient(
 
 ## deleteEvent
 
-Http Delete /restapi/v1.0/glip/events/{eventId}
+HTTP DELETE `/restapi/v1.0/glip/events/{eventId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -1962,7 +1962,7 @@ using (var rc = new RestClient(
 
 ## createEventbyGroupId
 
-Http Post /restapi/v1.0/glip/groups/{groupId}/events
+HTTP POST `/restapi/v1.0/glip/groups/{groupId}/events`
 
 ```cs
 using (var rc = new RestClient(
@@ -1985,7 +1985,7 @@ using (var rc = new RestClient(
 
 ## listGroupEvents
 
-Http Get /restapi/v1.0/glip/groups/{groupId}/events
+HTTP GET `/restapi/v1.0/glip/groups/{groupId}/events`
 
 ```cs
 using (var rc = new RestClient(
@@ -2008,7 +2008,7 @@ using (var rc = new RestClient(
 
 ## loadGroupNotes
 
-Http Get /restapi/v1.0/glip/groups/{groupId}/notes
+HTTP GET `/restapi/v1.0/glip/groups/{groupId}/notes`
 
 ```cs
 using (var rc = new RestClient(
@@ -2031,7 +2031,7 @@ using (var rc = new RestClient(
 
 ## createGroupNote
 
-Http Post /restapi/v1.0/glip/groups/{groupId}/notes
+HTTP POST `/restapi/v1.0/glip/groups/{groupId}/notes`
 
 ```cs
 using (var rc = new RestClient(
@@ -2054,7 +2054,7 @@ using (var rc = new RestClient(
 
 ## loadUserNotes
 
-Http List /restapi/v1.0/glip/notes
+HTTP LIST `/restapi/v1.0/glip/notes`
 
 ```cs
 using (var rc = new RestClient(
@@ -2077,7 +2077,7 @@ using (var rc = new RestClient(
 
 ## createUserNote
 
-Http Post /restapi/v1.0/glip/notes
+HTTP POST `/restapi/v1.0/glip/notes`
 
 ```cs
 using (var rc = new RestClient(
@@ -2100,7 +2100,7 @@ using (var rc = new RestClient(
 
 ## loadUserNote
 
-Http Get /restapi/v1.0/glip/notes/{noteId}
+HTTP GET `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2123,7 +2123,7 @@ using (var rc = new RestClient(
 
 ## deleteNote
 
-Http Delete /restapi/v1.0/glip/notes/{noteId}
+HTTP DELETE `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2146,7 +2146,7 @@ using (var rc = new RestClient(
 
 ## patchNote
 
-Http Patch /restapi/v1.0/glip/notes/{noteId}
+HTTP PATCH `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2170,7 +2170,7 @@ using (var rc = new RestClient(
 
 ## updateNote
 
-Http Put /restapi/v1.0/glip/notes/{noteId}
+HTTP PUT `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2193,7 +2193,7 @@ using (var rc = new RestClient(
 
 ## lockNote
 
-Http Post /restapi/v1.0/glip/notes/{noteId}/lock
+HTTP POST `/restapi/v1.0/glip/notes/{noteId}/lock`
 
 ```cs
 using (var rc = new RestClient(
@@ -2216,7 +2216,7 @@ using (var rc = new RestClient(
 
 ## publishNote
 
-Http Post /restapi/v1.0/glip/notes/{noteId}/publish
+HTTP POST `/restapi/v1.0/glip/notes/{noteId}/publish`
 
 ```cs
 using (var rc = new RestClient(
@@ -2239,7 +2239,7 @@ using (var rc = new RestClient(
 
 ## unlockNote
 
-Http Post /restapi/v1.0/glip/notes/{noteId}/unlock
+HTTP POST `/restapi/v1.0/glip/notes/{noteId}/unlock`
 
 ```cs
 using (var rc = new RestClient(
@@ -2262,7 +2262,7 @@ using (var rc = new RestClient(
 
 ## loadGlipPerson
 
-Http Get /restapi/v1.0/glip/persons/{personId}
+HTTP GET `/restapi/v1.0/glip/persons/{personId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2285,7 +2285,7 @@ using (var rc = new RestClient(
 
 ## loadGlipCompany
 
-Http Get /restapi/v1.0/glip/companies/{companyId}
+HTTP GET `/restapi/v1.0/glip/companies/{companyId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2308,7 +2308,7 @@ using (var rc = new RestClient(
 
 ## createGlipGroupWebhook
 
-Http Post /restapi/v1.0/glip/groups/{groupId}/webhooks
+HTTP POST `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
 ```cs
 using (var rc = new RestClient(
@@ -2331,7 +2331,7 @@ using (var rc = new RestClient(
 
 ## listGlipGroupWebhooks
 
-Http Get /restapi/v1.0/glip/groups/{groupId}/webhooks
+HTTP GET `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
 ```cs
 using (var rc = new RestClient(
@@ -2354,7 +2354,7 @@ using (var rc = new RestClient(
 
 ## listGlipWebhooks
 
-Http List /restapi/v1.0/glip/webhooks
+HTTP LIST `/restapi/v1.0/glip/webhooks`
 
 ```cs
 using (var rc = new RestClient(
@@ -2377,7 +2377,7 @@ using (var rc = new RestClient(
 
 ## loadGlipWebhook
 
-Http Get /restapi/v1.0/glip/webhooks/{webhookId}
+HTTP GET `/restapi/v1.0/glip/webhooks/{webhookId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2400,7 +2400,7 @@ using (var rc = new RestClient(
 
 ## deleteGlipWebhook
 
-Http Delete /restapi/v1.0/glip/webhooks/{webhookId}
+HTTP DELETE `/restapi/v1.0/glip/webhooks/{webhookId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2423,7 +2423,7 @@ using (var rc = new RestClient(
 
 ## activateGlipWebhook
 
-Http Post /restapi/v1.0/glip/webhooks/{webhookId}/activate
+HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/activate`
 
 ```cs
 using (var rc = new RestClient(
@@ -2446,7 +2446,7 @@ using (var rc = new RestClient(
 
 ## suspendGlipWebhook
 
-Http Post /restapi/v1.0/glip/webhooks/{webhookId}/suspend
+HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/suspend`
 
 ```cs
 using (var rc = new RestClient(
@@ -2469,7 +2469,7 @@ using (var rc = new RestClient(
 
 ## loadGlipPreferences
 
-Http Get /restapi/v1.0/glip/preferences
+HTTP GET `/restapi/v1.0/glip/preferences`
 
 ```cs
 using (var rc = new RestClient(
@@ -2492,7 +2492,7 @@ using (var rc = new RestClient(
 
 ## listMeetings
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
 ```cs
 using (var rc = new RestClient(
@@ -2515,7 +2515,7 @@ using (var rc = new RestClient(
 
 ## createMeeting
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
 ```cs
 using (var rc = new RestClient(
@@ -2538,7 +2538,7 @@ using (var rc = new RestClient(
 
 ## loadMeeting
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2561,7 +2561,7 @@ using (var rc = new RestClient(
 
 ## updateMeeting
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2584,7 +2584,7 @@ using (var rc = new RestClient(
 
 ## deleteMeeting
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2607,7 +2607,7 @@ using (var rc = new RestClient(
 
 ## endMeeting
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end`
 
 ```cs
 using (var rc = new RestClient(
@@ -2630,7 +2630,7 @@ using (var rc = new RestClient(
 
 ## loadMeetingServiceInfo
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
 
 ```cs
 using (var rc = new RestClient(
@@ -2653,7 +2653,7 @@ using (var rc = new RestClient(
 
 ## listSubscriptions
 
-Http List /restapi/v1.0/subscription
+HTTP LIST `/restapi/v1.0/subscription`
 
 ```cs
 using (var rc = new RestClient(
@@ -2676,7 +2676,7 @@ using (var rc = new RestClient(
 
 ## createSubscription
 
-Http Post /restapi/v1.0/subscription
+HTTP POST `/restapi/v1.0/subscription`
 
 ```cs
 using (var rc = new RestClient(
@@ -2699,7 +2699,7 @@ using (var rc = new RestClient(
 
 ## loadSubscription
 
-Http Get /restapi/v1.0/subscription/{subscriptionId}
+HTTP GET `/restapi/v1.0/subscription/{subscriptionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2722,7 +2722,7 @@ using (var rc = new RestClient(
 
 ## updateSubscription
 
-Http Put /restapi/v1.0/subscription/{subscriptionId}
+HTTP PUT `/restapi/v1.0/subscription/{subscriptionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2746,7 +2746,7 @@ using (var rc = new RestClient(
 
 ## deleteSubscription
 
-Http Delete /restapi/v1.0/subscription/{subscriptionId}
+HTTP DELETE `/restapi/v1.0/subscription/{subscriptionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -2769,7 +2769,7 @@ using (var rc = new RestClient(
 
 ## renewSubscription
 
-Http Post /restapi/v1.0/subscription/{subscriptionId}/renew
+HTTP POST `/restapi/v1.0/subscription/{subscriptionId}/renew`
 
 ```cs
 using (var rc = new RestClient(
@@ -2792,7 +2792,7 @@ using (var rc = new RestClient(
 
 ## getAuthorizationProfile
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile`
 
 ```cs
 using (var rc = new RestClient(
@@ -2815,7 +2815,7 @@ using (var rc = new RestClient(
 
 ## checkUserPermission
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check`
 
 ```cs
 using (var rc = new RestClient(
@@ -2838,7 +2838,7 @@ using (var rc = new RestClient(
 
 ## loadUserBusinessHours
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
 ```cs
 using (var rc = new RestClient(
@@ -2861,7 +2861,7 @@ using (var rc = new RestClient(
 
 ## updateUserBusinessHours
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
 ```cs
 using (var rc = new RestClient(
@@ -2884,7 +2884,7 @@ using (var rc = new RestClient(
 
 ## loadCompanyBusinessHours
 
-Http Get /restapi/v1.0/account/{accountId}/business-hours
+HTTP GET `/restapi/v1.0/account/{accountId}/business-hours`
 
 ```cs
 using (var rc = new RestClient(
@@ -2907,7 +2907,7 @@ using (var rc = new RestClient(
 
 ## updateCompanyBusinessHours
 
-Http Put /restapi/v1.0/account/{accountId}/business-hours
+HTTP PUT `/restapi/v1.0/account/{accountId}/business-hours`
 
 ```cs
 using (var rc = new RestClient(
@@ -2930,7 +2930,7 @@ using (var rc = new RestClient(
 
 ## loadCallBlockingSettings
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
 ```cs
 using (var rc = new RestClient(
@@ -2953,7 +2953,7 @@ using (var rc = new RestClient(
 
 ## updateCallBlockingSettings
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
 ```cs
 using (var rc = new RestClient(
@@ -2976,7 +2976,7 @@ using (var rc = new RestClient(
 
 ## listBlockedAllowedPhoneNumber
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
 ```cs
 using (var rc = new RestClient(
@@ -2999,7 +2999,7 @@ using (var rc = new RestClient(
 
 ## createBlockedAllowedPhoneNumberList
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
 ```cs
 using (var rc = new RestClient(
@@ -3022,7 +3022,7 @@ using (var rc = new RestClient(
 
 ## createBlockedAllowedPhoneNumberLists
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/bulk-update
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/bulk-update`
 
 ```cs
 using (var rc = new RestClient(
@@ -3045,7 +3045,7 @@ using (var rc = new RestClient(
 
 ## loadBlockedAllowedPhoneNumber
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3068,7 +3068,7 @@ using (var rc = new RestClient(
 
 ## deleteBlockedAllowedPhoneNumber
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3091,7 +3091,7 @@ using (var rc = new RestClient(
 
 ## updateBlockedAllowedPhoneNumber
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3114,7 +3114,7 @@ using (var rc = new RestClient(
 
 ## listExtensionForwardingNumbers
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
 ```cs
 using (var rc = new RestClient(
@@ -3137,7 +3137,7 @@ using (var rc = new RestClient(
 
 ## createExtensionForwardingNumber
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
 ```cs
 using (var rc = new RestClient(
@@ -3160,7 +3160,7 @@ using (var rc = new RestClient(
 
 ## loadExtensionForwardingNumber
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3183,7 +3183,7 @@ using (var rc = new RestClient(
 
 ## updateExtensionForwardingNumber
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3206,7 +3206,7 @@ using (var rc = new RestClient(
 
 ## deleteExtensionForwardingNumber
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3229,7 +3229,7 @@ using (var rc = new RestClient(
 
 ## listAnsweringRules
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
 ```cs
 using (var rc = new RestClient(
@@ -3252,7 +3252,7 @@ using (var rc = new RestClient(
 
 ## createAnsweringRule
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
 ```cs
 using (var rc = new RestClient(
@@ -3275,7 +3275,7 @@ using (var rc = new RestClient(
 
 ## loadAnsweringRule
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3298,7 +3298,7 @@ using (var rc = new RestClient(
 
 ## updateAnsweringRule
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3321,7 +3321,7 @@ using (var rc = new RestClient(
 
 ## deleteAnsweringRule
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3344,7 +3344,7 @@ using (var rc = new RestClient(
 
 ## createCompanyAnsweringRule
 
-Http Post /restapi/v1.0/account/{accountId}/answering-rule
+HTTP POST `/restapi/v1.0/account/{accountId}/answering-rule`
 
 ```cs
 using (var rc = new RestClient(
@@ -3367,7 +3367,7 @@ using (var rc = new RestClient(
 
 ## listCompanyAnsweringRule
 
-Http List /restapi/v1.0/account/{accountId}/answering-rule
+HTTP LIST `/restapi/v1.0/account/{accountId}/answering-rule`
 
 ```cs
 using (var rc = new RestClient(
@@ -3390,7 +3390,7 @@ using (var rc = new RestClient(
 
 ## loadCompanyAnsweringRule
 
-Http Get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3413,7 +3413,7 @@ using (var rc = new RestClient(
 
 ## updateCompanyAnsweringRule
 
-Http Put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3436,7 +3436,7 @@ using (var rc = new RestClient(
 
 ## deleteCompanyAnsweringRule
 
-Http Delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3459,7 +3459,7 @@ using (var rc = new RestClient(
 
 ## listStandardGreetings
 
-Http List /restapi/v1.0/dictionary/greeting
+HTTP LIST `/restapi/v1.0/dictionary/greeting`
 
 ```cs
 using (var rc = new RestClient(
@@ -3482,7 +3482,7 @@ using (var rc = new RestClient(
 
 ## loadStandardGreeting
 
-Http Get /restapi/v1.0/dictionary/greeting/{greetingId}
+HTTP GET `/restapi/v1.0/dictionary/greeting/{greetingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3505,7 +3505,7 @@ using (var rc = new RestClient(
 
 ## createCompanyGreeting
 
-Http Post /restapi/v1.0/account/{accountId}/greeting
+HTTP POST `/restapi/v1.0/account/{accountId}/greeting`
 
 ```cs
 using (var rc = new RestClient(
@@ -3528,7 +3528,7 @@ using (var rc = new RestClient(
 
 ## createUserCustomGreeting
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 
 ```cs
 using (var rc = new RestClient(
@@ -3551,7 +3551,7 @@ using (var rc = new RestClient(
 
 ## loadCustomGreeting
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3574,7 +3574,7 @@ using (var rc = new RestClient(
 
 ## createIvrPrompt
 
-Http Post /restapi/v1.0/account/{accountId}/ivr-prompts
+HTTP POST `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
 ```cs
 using (var rc = new RestClient(
@@ -3597,7 +3597,7 @@ using (var rc = new RestClient(
 
 ## listIvrPrompts
 
-Http List /restapi/v1.0/account/{accountId}/ivr-prompts
+HTTP LIST `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
 ```cs
 using (var rc = new RestClient(
@@ -3620,7 +3620,7 @@ using (var rc = new RestClient(
 
 ## loadIvrPrompt
 
-Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3643,7 +3643,7 @@ using (var rc = new RestClient(
 
 ## deleteIvrPrompt
 
-Http Delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3666,7 +3666,7 @@ using (var rc = new RestClient(
 
 ## updateIvrPrompt
 
-Http Put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3689,7 +3689,7 @@ using (var rc = new RestClient(
 
 ## loadIvrPromptContent
 
-Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
+HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content`
 
 ```cs
 using (var rc = new RestClient(
@@ -3712,7 +3712,7 @@ using (var rc = new RestClient(
 
 ## createIvrMenu
 
-Http Post /restapi/v1.0/account/{accountId}/ivr-menus
+HTTP POST `/restapi/v1.0/account/{accountId}/ivr-menus`
 
 ```cs
 using (var rc = new RestClient(
@@ -3735,7 +3735,7 @@ using (var rc = new RestClient(
 
 ## loadIvrMenu
 
-Http Get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+HTTP GET `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3758,7 +3758,7 @@ using (var rc = new RestClient(
 
 ## updateIvrMenu
 
-Http Put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3781,7 +3781,7 @@ using (var rc = new RestClient(
 
 ## loadCallRecordingSettings
 
-Http Get /restapi/v1.0/account/{accountId}/call-recording
+HTTP GET `/restapi/v1.0/account/{accountId}/call-recording`
 
 ```cs
 using (var rc = new RestClient(
@@ -3804,7 +3804,7 @@ using (var rc = new RestClient(
 
 ## updateCallRecordingSettings
 
-Http Put /restapi/v1.0/account/{accountId}/call-recording
+HTTP PUT `/restapi/v1.0/account/{accountId}/call-recording`
 
 ```cs
 using (var rc = new RestClient(
@@ -3827,7 +3827,7 @@ using (var rc = new RestClient(
 
 ## listCallRecordingExtensionSettings
 
-Http Get /restapi/v1.0/account/{accountId}/call-recording/extensions
+HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/extensions`
 
 ```cs
 using (var rc = new RestClient(
@@ -3850,7 +3850,7 @@ using (var rc = new RestClient(
 
 ## updateCallRecordingExtensionSettings
 
-Http Post /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
+HTTP POST `/restapi/v1.0/account/{accountId}/call-recording/bulk-assign`
 
 ```cs
 using (var rc = new RestClient(
@@ -3873,7 +3873,7 @@ using (var rc = new RestClient(
 
 ## listCallRecordingCustomGreetings
 
-Http Get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
+HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`
 
 ```cs
 using (var rc = new RestClient(
@@ -3896,7 +3896,7 @@ using (var rc = new RestClient(
 
 ## deleteCallRecordingCustomGreeting
 
-Http Delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3919,7 +3919,7 @@ using (var rc = new RestClient(
 
 ## createSipRegistration
 
-Http Post /restapi/v1.0/client-info/sip-provision
+HTTP POST `/restapi/v1.0/client-info/sip-provision`
 
 ```cs
 using (var rc = new RestClient(
@@ -3942,7 +3942,7 @@ using (var rc = new RestClient(
 
 ## listExtensionPhoneNumbers
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number`
 
 ```cs
 using (var rc = new RestClient(
@@ -3965,7 +3965,7 @@ using (var rc = new RestClient(
 
 ## loadExtensionInfo
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -3988,7 +3988,7 @@ using (var rc = new RestClient(
 
 ## updateExtension
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4011,7 +4011,7 @@ using (var rc = new RestClient(
 
 ## deleteExtension
 
-Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4034,7 +4034,7 @@ using (var rc = new RestClient(
 
 ## loadExtensionCallerId
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
 ```cs
 using (var rc = new RestClient(
@@ -4057,7 +4057,7 @@ using (var rc = new RestClient(
 
 ## updateExtensionCallerId
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
 ```cs
 using (var rc = new RestClient(
@@ -4080,7 +4080,7 @@ using (var rc = new RestClient(
 
 ## listExtensionGrants
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant`
 
 ```cs
 using (var rc = new RestClient(
@@ -4103,7 +4103,7 @@ using (var rc = new RestClient(
 
 ## loadNotificationSettings
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
 ```cs
 using (var rc = new RestClient(
@@ -4126,7 +4126,7 @@ using (var rc = new RestClient(
 
 ## updateNotificationSettings
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
 ```cs
 using (var rc = new RestClient(
@@ -4149,7 +4149,7 @@ using (var rc = new RestClient(
 
 ## downloadProfileImage
 
-Http List /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
 ```cs
 using (var rc = new RestClient(
@@ -4172,7 +4172,7 @@ using (var rc = new RestClient(
 
 ## uploadProfileImage
 
-Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
 ```cs
 using (var rc = new RestClient(
@@ -4195,7 +4195,7 @@ using (var rc = new RestClient(
 
 ## updateProfileImage
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
 ```cs
 using (var rc = new RestClient(
@@ -4218,7 +4218,7 @@ using (var rc = new RestClient(
 
 ## downloadScaledPofileImage
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4241,7 +4241,7 @@ using (var rc = new RestClient(
 
 ## loadConferencingInfo
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
 ```cs
 using (var rc = new RestClient(
@@ -4264,7 +4264,7 @@ using (var rc = new RestClient(
 
 ## updateConferencingInfo
 
-Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
 ```cs
 using (var rc = new RestClient(
@@ -4287,7 +4287,7 @@ using (var rc = new RestClient(
 
 ## loadAccount
 
-Http Get /restapi/v1.0/account/{accountId}
+HTTP GET `/restapi/v1.0/account/{accountId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4310,7 +4310,7 @@ using (var rc = new RestClient(
 
 ## loadAccountBusinessAddress
 
-Http Get /restapi/v1.0/account/{accountId}/business-address
+HTTP GET `/restapi/v1.0/account/{accountId}/business-address`
 
 ```cs
 using (var rc = new RestClient(
@@ -4333,7 +4333,7 @@ using (var rc = new RestClient(
 
 ## updateAccountBusinessAddress
 
-Http Put /restapi/v1.0/account/{accountId}/business-address
+HTTP PUT `/restapi/v1.0/account/{accountId}/business-address`
 
 ```cs
 using (var rc = new RestClient(
@@ -4356,7 +4356,7 @@ using (var rc = new RestClient(
 
 ## loadServiceInfo
 
-Http Get /restapi/v1.0/account/{accountId}/service-info
+HTTP GET `/restapi/v1.0/account/{accountId}/service-info`
 
 ```cs
 using (var rc = new RestClient(
@@ -4379,7 +4379,7 @@ using (var rc = new RestClient(
 
 ## listLanguages
 
-Http List /restapi/v1.0/dictionary/language
+HTTP LIST `/restapi/v1.0/dictionary/language`
 
 ```cs
 using (var rc = new RestClient(
@@ -4402,7 +4402,7 @@ using (var rc = new RestClient(
 
 ## loadLanguage
 
-Http Get /restapi/v1.0/dictionary/language/{languageId}
+HTTP GET `/restapi/v1.0/dictionary/language/{languageId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4425,7 +4425,7 @@ using (var rc = new RestClient(
 
 ## listCountries
 
-Http List /restapi/v1.0/dictionary/country
+HTTP LIST `/restapi/v1.0/dictionary/country`
 
 ```cs
 using (var rc = new RestClient(
@@ -4448,7 +4448,7 @@ using (var rc = new RestClient(
 
 ## loadCountry
 
-Http Get /restapi/v1.0/dictionary/country/{countryId}
+HTTP GET `/restapi/v1.0/dictionary/country/{countryId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4471,7 +4471,7 @@ using (var rc = new RestClient(
 
 ## listLocations
 
-Http Get /restapi/v1.0/dictionary/location
+HTTP GET `/restapi/v1.0/dictionary/location`
 
 ```cs
 using (var rc = new RestClient(
@@ -4494,7 +4494,7 @@ using (var rc = new RestClient(
 
 ## listStates
 
-Http List /restapi/v1.0/dictionary/state
+HTTP LIST `/restapi/v1.0/dictionary/state`
 
 ```cs
 using (var rc = new RestClient(
@@ -4517,7 +4517,7 @@ using (var rc = new RestClient(
 
 ## loadState
 
-Http Get /restapi/v1.0/dictionary/state/{stateId}
+HTTP GET `/restapi/v1.0/dictionary/state/{stateId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4540,7 +4540,7 @@ using (var rc = new RestClient(
 
 ## listTimezones
 
-Http List /restapi/v1.0/dictionary/timezone
+HTTP LIST `/restapi/v1.0/dictionary/timezone`
 
 ```cs
 using (var rc = new RestClient(
@@ -4563,7 +4563,7 @@ using (var rc = new RestClient(
 
 ## loadTimezone
 
-Http Get /restapi/v1.0/dictionary/timezone/{timezoneId}
+HTTP GET `/restapi/v1.0/dictionary/timezone/{timezoneId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4586,7 +4586,7 @@ using (var rc = new RestClient(
 
 ## listAccountPhoneNumbers
 
-Http List /restapi/v1.0/account/{accountId}/phone-number
+HTTP LIST `/restapi/v1.0/account/{accountId}/phone-number`
 
 ```cs
 using (var rc = new RestClient(
@@ -4609,7 +4609,7 @@ using (var rc = new RestClient(
 
 ## loadAccountPhoneNumber
 
-Http Get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
+HTTP GET `/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4632,7 +4632,7 @@ using (var rc = new RestClient(
 
 ## listExtensions
 
-Http List /restapi/v1.0/account/{accountId}/extension
+HTTP LIST `/restapi/v1.0/account/{accountId}/extension`
 
 ```cs
 using (var rc = new RestClient(
@@ -4655,7 +4655,7 @@ using (var rc = new RestClient(
 
 ## createExtension
 
-Http Post /restapi/v1.0/account/{accountId}/extension
+HTTP POST `/restapi/v1.0/account/{accountId}/extension`
 
 ```cs
 using (var rc = new RestClient(
@@ -4678,7 +4678,7 @@ using (var rc = new RestClient(
 
 ## listTemplates
 
-Http List /restapi/v1.0/account/{accountId}/templates
+HTTP LIST `/restapi/v1.0/account/{accountId}/templates`
 
 ```cs
 using (var rc = new RestClient(
@@ -4701,7 +4701,7 @@ using (var rc = new RestClient(
 
 ## loadTemplate
 
-Http Get /restapi/v1.0/account/{accountId}/templates/{templateId}
+HTTP GET `/restapi/v1.0/account/{accountId}/templates/{templateId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4724,7 +4724,7 @@ using (var rc = new RestClient(
 
 ## listCallQueues
 
-Http Get /restapi/v1.0/account/{accountId}/call-queues
+HTTP GET `/restapi/v1.0/account/{accountId}/call-queues`
 
 ```cs
 using (var rc = new RestClient(
@@ -4747,7 +4747,7 @@ using (var rc = new RestClient(
 
 ## listCallQueueMembers
 
-Http Get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
+HTTP GET `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members`
 
 ```cs
 using (var rc = new RestClient(
@@ -4770,7 +4770,7 @@ using (var rc = new RestClient(
 
 ## assignCallQueueMembers
 
-Http Post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
+HTTP POST `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign`
 
 ```cs
 using (var rc = new RestClient(
@@ -4793,7 +4793,7 @@ using (var rc = new RestClient(
 
 ## listDepartmentMembers
 
-Http Get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
+HTTP GET `/restapi/v1.0/account/{accountId}/department/{departmentId}/members`
 
 ```cs
 using (var rc = new RestClient(
@@ -4816,7 +4816,7 @@ using (var rc = new RestClient(
 
 ## bulkAssignDepartments
 
-Http Post /restapi/v1.0/account/{accountId}/department/bulk-assign
+HTTP POST `/restapi/v1.0/account/{accountId}/department/bulk-assign`
 
 ```cs
 using (var rc = new RestClient(
@@ -4839,7 +4839,7 @@ using (var rc = new RestClient(
 
 ## listPagingGroupUsers
 
-Http Get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
+HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`
 
 ```cs
 using (var rc = new RestClient(
@@ -4862,7 +4862,7 @@ using (var rc = new RestClient(
 
 ## listPagingGroupDevices
 
-Http Get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
+HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`
 
 ```cs
 using (var rc = new RestClient(
@@ -4885,7 +4885,7 @@ using (var rc = new RestClient(
 
 ## bulkAssignPagingGroup
 
-Http Post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
+HTTP POST `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`
 
 ```cs
 using (var rc = new RestClient(
@@ -4908,7 +4908,7 @@ using (var rc = new RestClient(
 
 ## createCallMonitoringGroup
 
-Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups
+HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
 ```cs
 using (var rc = new RestClient(
@@ -4931,7 +4931,7 @@ using (var rc = new RestClient(
 
 ## listCallMonitoringGroups
 
-Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
+HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
 ```cs
 using (var rc = new RestClient(
@@ -4954,7 +4954,7 @@ using (var rc = new RestClient(
 
 ## updateCallMonitoringGroup
 
-Http Put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -4977,7 +4977,7 @@ using (var rc = new RestClient(
 
 ## removeCallMonitoringGroup
 
-Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5000,7 +5000,7 @@ using (var rc = new RestClient(
 
 ## listCallMonitoringGroupMembers
 
-Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
+HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members`
 
 ```cs
 using (var rc = new RestClient(
@@ -5023,7 +5023,7 @@ using (var rc = new RestClient(
 
 ## updateCallMonitoringGroups
 
-Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
+HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
 
 ```cs
 using (var rc = new RestClient(
@@ -5046,7 +5046,7 @@ using (var rc = new RestClient(
 
 ## parsePhoneNumber
 
-Http Post /restapi/v1.0/number-parser/parse
+HTTP POST `/restapi/v1.0/number-parser/parse`
 
 ```cs
 using (var rc = new RestClient(
@@ -5070,7 +5070,7 @@ using (var rc = new RestClient(
 
 ## loadAccountDevice
 
-Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
+HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5093,7 +5093,7 @@ using (var rc = new RestClient(
 
 ## updateDevice
 
-Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
+HTTP PUT `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5116,7 +5116,7 @@ using (var rc = new RestClient(
 
 ## listExtensionDevices
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/device`
 
 ```cs
 using (var rc = new RestClient(
@@ -5139,7 +5139,7 @@ using (var rc = new RestClient(
 
 ## checkHealth
 
-Http Get /scim/health
+HTTP GET `/scim/health`
 
 ```cs
 using (var rc = new RestClient(
@@ -5162,7 +5162,7 @@ using (var rc = new RestClient(
 
 ## getServiceProviderConfig2
 
-Http Get /scim/v2/ServiceProviderConfig
+HTTP GET `/scim/v2/ServiceProviderConfig`
 
 ```cs
 using (var rc = new RestClient(
@@ -5185,7 +5185,7 @@ using (var rc = new RestClient(
 
 ## searchViaGet2
 
-Http List /scim/v2/Users
+HTTP LIST `/scim/v2/Users`
 
 ```cs
 using (var rc = new RestClient(
@@ -5208,7 +5208,7 @@ using (var rc = new RestClient(
 
 ## createUser2
 
-Http Post /scim/v2/Users
+HTTP POST `/scim/v2/Users`
 
 ```cs
 using (var rc = new RestClient(
@@ -5231,7 +5231,7 @@ using (var rc = new RestClient(
 
 ## searchViaPost2
 
-Http Post /scim/v2/Users/.search
+HTTP POST `/scim/v2/Users/.search`
 
 ```cs
 using (var rc = new RestClient(
@@ -5254,7 +5254,7 @@ using (var rc = new RestClient(
 
 ## getUser2
 
-Http Get /scim/v2/Users/{id}
+HTTP GET `/scim/v2/Users/{id}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5277,7 +5277,7 @@ using (var rc = new RestClient(
 
 ## replaceUser2
 
-Http Put /scim/v2/Users/{id}
+HTTP PUT `/scim/v2/Users/{id}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5300,7 +5300,7 @@ using (var rc = new RestClient(
 
 ## deleteUser2
 
-Http Delete /scim/v2/Users/{id}
+HTTP DELETE `/scim/v2/Users/{id}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5323,7 +5323,7 @@ using (var rc = new RestClient(
 
 ## patchUser2
 
-Http Patch /scim/v2/Users/{id}
+HTTP PATCH `/scim/v2/Users/{id}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5346,7 +5346,7 @@ using (var rc = new RestClient(
 
 ## getCallSessionStatus
 
-Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}
+HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5369,7 +5369,7 @@ using (var rc = new RestClient(
 
 ## deleteCallSession
 
-Http Delete /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}
+HTTP DELETE `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5392,7 +5392,7 @@ using (var rc = new RestClient(
 
 ## holdCallParty
 
-Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/hold
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/hold`
 
 ```cs
 using (var rc = new RestClient(
@@ -5415,7 +5415,7 @@ using (var rc = new RestClient(
 
 ## unholdCallParty
 
-Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/unhold
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/unhold`
 
 ```cs
 using (var rc = new RestClient(
@@ -5438,7 +5438,7 @@ using (var rc = new RestClient(
 
 ## rejectParty
 
-Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/reject
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/reject`
 
 ```cs
 using (var rc = new RestClient(
@@ -5461,7 +5461,7 @@ using (var rc = new RestClient(
 
 ## transferCallParty
 
-Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/transfer
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/transfer`
 
 ```cs
 using (var rc = new RestClient(
@@ -5484,7 +5484,7 @@ using (var rc = new RestClient(
 
 ## forwardCallParty
 
-Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/forward
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/forward`
 
 ```cs
 using (var rc = new RestClient(
@@ -5507,7 +5507,7 @@ using (var rc = new RestClient(
 
 ## callFlipParty
 
-Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/flip
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/flip`
 
 ```cs
 using (var rc = new RestClient(
@@ -5530,7 +5530,7 @@ using (var rc = new RestClient(
 
 ## getCallPartyStatus
 
-Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}
+HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5553,7 +5553,7 @@ using (var rc = new RestClient(
 
 ## updateCallParty
 
-Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}
+HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5576,7 +5576,7 @@ using (var rc = new RestClient(
 
 ## startCallRecording
 
-Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings`
 
 ```cs
 using (var rc = new RestClient(
@@ -5599,7 +5599,7 @@ using (var rc = new RestClient(
 
 ## pauseResumeCallRecording
 
-Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings/{recordingId}
+HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings/{recordingId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5623,7 +5623,7 @@ using (var rc = new RestClient(
 
 ## getComplianceArchiveStream
 
-Http Get /restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}
+HTTP GET `/restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5646,7 +5646,7 @@ using (var rc = new RestClient(
 
 ## createDataExportTask
 
-Http Post /restapi/v1.0/glip/data-export
+HTTP POST `/restapi/v1.0/glip/data-export`
 
 ```cs
 using (var rc = new RestClient(
@@ -5669,7 +5669,7 @@ using (var rc = new RestClient(
 
 ## loadDataExportTask
 
-Http Get /restapi/v1.0/glip/data-export/{taskId}
+HTTP GET `/restapi/v1.0/glip/data-export/{taskId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5692,7 +5692,7 @@ using (var rc = new RestClient(
 
 ## createMessageStoreReport
 
-Http Post /restapi/v1.0/account/{accountId}/message-store-report
+HTTP POST `/restapi/v1.0/account/{accountId}/message-store-report`
 
 ```cs
 using (var rc = new RestClient(
@@ -5715,7 +5715,7 @@ using (var rc = new RestClient(
 
 ## loadMessageStoreReportTask
 
-Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
+HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5738,7 +5738,7 @@ using (var rc = new RestClient(
 
 ## loadMessageStoreReportArchive
 
-Http List /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
+HTTP LIST `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive`
 
 ```cs
 using (var rc = new RestClient(
@@ -5761,7 +5761,7 @@ using (var rc = new RestClient(
 
 ## loadMessageStoreReportArchiveContent
 
-Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
+HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}`
 
 ```cs
 using (var rc = new RestClient(
@@ -5784,7 +5784,7 @@ using (var rc = new RestClient(
 
 ## listAccountMeetingRecordings
 
-Http Get /restapi/v1.0/account/{accountId}/meeting-recordings
+HTTP GET `/restapi/v1.0/account/{accountId}/meeting-recordings`
 
 ```cs
 using (var rc = new RestClient(
@@ -5807,7 +5807,7 @@ using (var rc = new RestClient(
 
 ## listUserMeetingRecordings
 
-Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings`
 
 ```cs
 using (var rc = new RestClient(
@@ -5830,7 +5830,7 @@ using (var rc = new RestClient(
 
 ## getToken
 
-Http Post /restapi/oauth/token
+HTTP POST `/restapi/oauth/token`
 
 ```cs
 using (var rc = new RestClient(
@@ -5853,7 +5853,7 @@ using (var rc = new RestClient(
 
 ## revokeToken
 
-Http Post /restapi/oauth/revoke
+HTTP POST `/restapi/oauth/revoke`
 
 ```cs
 using (var rc = new RestClient(
