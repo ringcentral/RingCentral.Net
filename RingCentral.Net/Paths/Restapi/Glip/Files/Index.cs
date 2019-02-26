@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Files
             return $"{parent.Path()}/files";
         }
 
+        // Operation: createGlipFile
         public async Task<RingCentral.PostGlipFile> Post(CreateGlipFileRequest createGlipFileRequest,
             CreateGlipFileParameters queryParams = null)
         {

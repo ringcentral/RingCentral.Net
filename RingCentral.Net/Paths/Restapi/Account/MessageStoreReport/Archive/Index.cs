@@ -25,11 +25,13 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
             return $"{parent.Path()}/archive";
         }
 
+        // Operation: loadMessageStoreReportArchive
         public async Task<RingCentral.MessageStoreReportArchive> List()
         {
             return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(false));
         }
 
+        // Operation: loadMessageStoreReportArchiveContent
         public async Task<string> Get()
         {
             if (this.archiveId == null)

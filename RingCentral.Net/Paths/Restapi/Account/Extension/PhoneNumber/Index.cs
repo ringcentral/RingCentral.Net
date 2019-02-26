@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
             return $"{parent.Path()}/phone-number";
         }
 
+        // Operation: listExtensionPhoneNumbers
         public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(
             ListExtensionPhoneNumbersParameters queryParams = null)
         {

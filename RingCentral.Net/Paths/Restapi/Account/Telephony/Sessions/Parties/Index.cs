@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
             return $"{parent.Path()}/parties";
         }
 
+        // Operation: getCallPartyStatus
         public async Task<RingCentral.CallParty> Get()
         {
             if (this.partyId == null)
@@ -35,6 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
             return await rc.Get<RingCentral.CallParty>(this.Path());
         }
 
+        // Operation: updateCallParty
         public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest)
         {
             if (this.partyId == null)

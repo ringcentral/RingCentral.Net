@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Archive
             return $"{parent.Path()}/archive";
         }
 
+        // Operation: getComplianceArchiveStream
         public async Task<string> Get()
         {
             if (this.archiveId == null)

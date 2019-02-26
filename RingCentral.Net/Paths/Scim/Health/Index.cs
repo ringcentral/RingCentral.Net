@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Scim.Health
             return $"{parent.Path()}/health";
         }
 
+        // Operation: checkHealth
         public async Task<string> Get()
         {
             return await rc.Get<string>(this.Path());

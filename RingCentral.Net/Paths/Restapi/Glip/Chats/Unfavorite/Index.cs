@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unfavorite
             return $"{parent.Path()}/unfavorite";
         }
 
+        // Operation: unfavoriteGlipChat
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
             return $"{parent.Path()}/transfer";
         }
 
+        // Operation: transferCallParty
         public async Task<RingCentral.CallParty> Post(RingCentral.TransferTarget transferTarget)
         {
             return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget);

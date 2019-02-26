@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLogSync
             return $"{parent.Path()}/call-log-sync";
         }
 
+        // Operation: syncUserCallLog
         public async Task<RingCentral.CallLogSync> Get(SyncUserCallLogParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallLogSync>(this.Path(), queryParams);

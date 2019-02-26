@@ -25,11 +25,13 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
             return $"{parent.Path()}/phone-number";
         }
 
+        // Operation: listAccountPhoneNumbers
         public async Task<RingCentral.AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
         }
 
+        // Operation: loadAccountPhoneNumber
         public async Task<RingCentral.CompanyPhoneNumberInfo> Get()
         {
             if (this.phoneNumberId == null)

@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Publish
             return $"{parent.Path()}/publish";
         }
 
+        // Operation: publishNote
         public async Task<RingCentral.GlipNoteInfo> Post()
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path());

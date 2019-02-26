@@ -20,6 +20,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
             return $"{parent.Path()}/token";
         }
 
+        // Operation: getToken
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();

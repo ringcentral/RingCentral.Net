@@ -61,7 +61,7 @@ namespace RingCentral.Demo.NetFramework
                 {
                     messages.Add(message);
                     dynamic jObject = JObject.Parse(message);
-                    var eventString = (string)jObject.@event;
+                    var eventString = (string) jObject.@event;
                     if (new Regex("/account/\\d+/extension/\\d+/message-store").Match(eventString).Success)
                     {
                         messageStoreMessageCount += 1;

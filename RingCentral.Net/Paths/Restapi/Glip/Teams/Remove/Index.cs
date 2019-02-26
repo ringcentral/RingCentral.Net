@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Remove
             return $"{parent.Path()}/remove";
         }
 
+        // Operation: removeGlipTeamMembers
         public async Task<string> Post(RingCentral.GlipPostMembersIdsListBody glipPostMembersIdsListBody)
         {
             return await rc.Post<string>(this.Path(), glipPostMembersIdsListBody);

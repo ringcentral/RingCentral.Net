@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
             return $"{parent.Path()}/persons";
         }
 
+        // Operation: loadGlipPerson
         public async Task<RingCentral.GlipPersonInfo> Get()
         {
             if (this.personId == null)

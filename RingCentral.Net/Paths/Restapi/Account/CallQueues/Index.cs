@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
             return $"{parent.Path()}/call-queues";
         }
 
+        // Operation: listCallQueues
         public async Task<RingCentral.CallQueues> Get(ListCallQueuesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams);

@@ -25,11 +25,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             return $"{parent.Path()}/contact";
         }
 
+        // Operation: listContacts
         public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams);
         }
 
+        // Operation: createContact
         public async Task<RingCentral.PersonalContactResource> Post(
             RingCentral.PersonalContactResource personalContactResource, CreateContactParameters queryParams = null)
         {
@@ -37,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
                 queryParams);
         }
 
+        // Operation: loadContact
         public async Task<RingCentral.PersonalContactResource> Get()
         {
             if (this.contactId == null)
@@ -47,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             return await rc.Get<RingCentral.PersonalContactResource>(this.Path());
         }
 
+        // Operation: updateContact
         public async Task<RingCentral.PersonalContactResource> Put(
             RingCentral.PersonalContactResource personalContactResource, UpdateContactParameters queryParams = null)
         {
@@ -58,6 +62,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             return await rc.Put<RingCentral.PersonalContactResource>(this.Path(), personalContactResource, queryParams);
         }
 
+        // Operation: deleteContact
         public async Task<string> Delete()
         {
             if (this.contactId == null)

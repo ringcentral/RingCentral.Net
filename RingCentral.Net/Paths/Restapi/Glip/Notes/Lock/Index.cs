@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Lock
             return $"{parent.Path()}/lock";
         }
 
+        // Operation: lockNote
         public async Task<RingCentral.GlipNoteInfo> Post()
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path());

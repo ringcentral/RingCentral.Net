@@ -25,12 +25,14 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
             return $"{parent.Path()}/data-export";
         }
 
+        // Operation: createDataExportTask
         public async Task<RingCentral.DataExportTask> Post(
             RingCentral.CreateDataExportTaskRequest createDataExportTaskRequest)
         {
             return await rc.Post<RingCentral.DataExportTask>(this.Path(false), createDataExportTaskRequest);
         }
 
+        // Operation: loadDataExportTask
         public async Task<RingCentral.DataExportTask> Get()
         {
             if (this.taskId == null)

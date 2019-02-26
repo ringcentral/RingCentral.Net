@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Department.BulkAssign
             return $"{parent.Path()}/bulk-assign";
         }
 
+        // Operation: bulkAssignDepartments
         public async Task<string> Post(RingCentral.DepartmentBulkAssignResource departmentBulkAssignResource)
         {
             return await rc.Post<string>(this.Path(), departmentBulkAssignResource);

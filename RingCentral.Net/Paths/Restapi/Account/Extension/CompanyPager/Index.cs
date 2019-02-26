@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
             return $"{parent.Path()}/company-pager";
         }
 
+        // Operation: createInternalTextMessage
         public async Task<RingCentral.GetMessageInfoResponse> Post(
             RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest)
         {

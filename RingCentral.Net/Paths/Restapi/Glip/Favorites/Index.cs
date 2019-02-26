@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
             return $"{parent.Path()}/favorites";
         }
 
+        // Operation: listFavoriteChats
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(
             ListFavoriteChatsParameters queryParams = null)
         {

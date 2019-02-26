@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Presence
             return $"{parent.Path()}/presence";
         }
 
+        // Operation: accountPresence
         public async Task<RingCentral.AccountPresenceInfo> Get(AccountPresenceParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams);

@@ -212,6 +212,7 @@ ${code}`
       }
       code += `
 
+      // Operation: ${operation.detail.operationId}
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
       {${withParam ? `
           if (this.${paramName} == null)
@@ -224,20 +225,20 @@ ${code}`
 using System.Net.Http;
 ${code}`
         code += `
-            var dict = new System.Collections.Generic.Dictionary<string, string>();
-            RingCentral.Utils.GetPairs(${bodyParam})
-              .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? `, queryParams` : ''});
-        }`
+          var dict = new System.Collections.Generic.Dictionary<string, string>();
+          RingCentral.Utils.GetPairs(${bodyParam})
+            .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
+          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? `, queryParams` : ''});
+      }`
       } else if (formData) {
         code += `
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
-            return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? `, queryParams` : ''});
-        }`
+          var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
+          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? `, queryParams` : ''});
+      }`
       } else {
         code += `
-            return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
-        }`
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
+      }`
       }
     })
 

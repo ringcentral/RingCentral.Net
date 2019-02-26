@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
             return $"{parent.Path()}/location";
         }
 
+        // Operation: listLocations
         public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams);

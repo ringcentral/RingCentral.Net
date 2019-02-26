@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Flip
             return $"{parent.Path()}/flip";
         }
 
+        // Operation: callFlipParty
         public async Task<string> Post(RingCentral.CallPartyFlip callPartyFlip)
         {
             return await rc.Post<string>(this.Path(), callPartyFlip);

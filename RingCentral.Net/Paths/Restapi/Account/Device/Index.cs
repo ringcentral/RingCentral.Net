@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
             return $"{parent.Path()}/device";
         }
 
+        // Operation: loadAccountDevice
         public async Task<RingCentral.GetDeviceInfoResponse> Get()
         {
             if (this.deviceId == null)
@@ -35,6 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
             return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path());
         }
 
+        // Operation: updateDevice
         public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate)
         {
             if (this.deviceId == null)

@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Read
             return $"{parent.Path()}/read";
         }
 
+        // Operation: markChatRead
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
             return $"{parent.Path()}/authz-profile";
         }
 
+        // Operation: getAuthorizationProfile
         public async Task<RingCentral.AuthProfileResource> Get()
         {
             return await rc.Get<RingCentral.AuthProfileResource>(this.Path());

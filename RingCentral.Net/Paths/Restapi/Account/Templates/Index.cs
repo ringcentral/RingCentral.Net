@@ -25,11 +25,13 @@ namespace RingCentral.Paths.Restapi.Account.Templates
             return $"{parent.Path()}/templates";
         }
 
+        // Operation: listTemplates
         public async Task<RingCentral.UserTemplates> List(ListTemplatesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams);
         }
 
+        // Operation: loadTemplate
         public async Task<RingCentral.TemplateInfo> Get()
         {
             if (this.templateId == null)

@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
             return $"{parent.Path()}/caller-blocking";
         }
 
+        // Operation: loadCallBlockingSettings
         public async Task<RingCentral.CallerBlockingSettings> Get()
         {
             return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path());
         }
 
+        // Operation: updateCallBlockingSettings
         public async Task<RingCentral.CallerBlockingSettings> Put(
             RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate)
         {

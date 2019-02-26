@@ -25,11 +25,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return $"{parent.Path()}/message-store";
         }
 
+        // Operation: listMessages
         public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
         }
 
+        // Operation: loadMessage
         public async Task<RingCentral.GetMessageInfoResponse> Get()
         {
             if (this.messageId == null)
@@ -40,6 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path());
         }
 
+        // Operation: updateMessage
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest)
         {
             if (this.messageId == null)
@@ -50,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
         }
 
+        // Operation: deleteMessage
         public async Task<string> Delete(DeleteMessageParameters queryParams = null)
         {
             if (this.messageId == null)

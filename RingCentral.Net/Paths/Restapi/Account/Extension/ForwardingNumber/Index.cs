@@ -25,18 +25,21 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return $"{parent.Path()}/forwarding-number";
         }
 
+        // Operation: listExtensionForwardingNumbers
         public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(
             ListExtensionForwardingNumbersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
         }
 
+        // Operation: createExtensionForwardingNumber
         public async Task<RingCentral.ForwardingNumberInfo> Post(
             RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest)
         {
             return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest);
         }
 
+        // Operation: loadExtensionForwardingNumber
         public async Task<RingCentral.ForwardingNumberResource> Get()
         {
             if (this.forwardingNumberId == null)
@@ -47,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Get<RingCentral.ForwardingNumberResource>(this.Path());
         }
 
+        // Operation: updateExtensionForwardingNumber
         public async Task<RingCentral.ForwardingNumberInfo> Put(
             RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest)
         {
@@ -58,6 +62,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest);
         }
 
+        // Operation: deleteExtensionForwardingNumber
         public async Task<string> Delete()
         {
             if (this.forwardingNumberId == null)

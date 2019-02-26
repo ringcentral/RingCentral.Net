@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
             return $"{parent.Path()}/device";
         }
 
+        // Operation: listExtensionDevices
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(
             ListExtensionDevicesParameters queryParams = null)
         {

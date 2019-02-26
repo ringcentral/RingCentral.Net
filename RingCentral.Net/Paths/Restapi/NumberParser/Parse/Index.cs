@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
             return $"{parent.Path()}/parse";
         }
 
+        // Operation: parsePhoneNumber
         public async Task<RingCentral.ParsePhoneNumberResponse> Post(
             RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest, ParsePhoneNumberParameters queryParams = null)
         {

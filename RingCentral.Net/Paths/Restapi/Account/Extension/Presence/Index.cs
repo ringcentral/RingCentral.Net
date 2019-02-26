@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
             return $"{parent.Path()}/presence";
         }
 
+        // Operation: getPresenceStatus
         public async Task<RingCentral.GetPresenceInfo> Get(GetPresenceStatusParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams);
         }
 
+        // Operation: updatePresenceStatus
         public async Task<RingCentral.PresenceInfoResource> Put(RingCentral.PresenceInfoResource presenceInfoResource)
         {
             return await rc.Put<RingCentral.PresenceInfoResource>(this.Path(), presenceInfoResource);

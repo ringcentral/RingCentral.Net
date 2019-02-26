@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
             return $"{parent.Path()}/federation";
         }
 
+        // Operation: loadAccountFederation
         public async Task<RingCentral.FederationResource> Get()
         {
             return await rc.Get<RingCentral.FederationResource>(this.Path());

@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
             return $"{parent.Path()}/chats";
         }
 
+        // Operation: listRecentChats
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(ListRecentChatsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);

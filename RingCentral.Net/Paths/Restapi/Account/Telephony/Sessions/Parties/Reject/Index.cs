@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
             return $"{parent.Path()}/reject";
         }
 
+        // Operation: rejectParty
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

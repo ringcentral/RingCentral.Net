@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Status
             return $"{parent.Path()}/status";
         }
 
+        // Operation: loadAPIStatus
         public async Task<string> Get()
         {
             return await rc.Get<string>(this.Path());

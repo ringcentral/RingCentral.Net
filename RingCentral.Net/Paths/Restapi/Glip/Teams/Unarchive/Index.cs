@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Unarchive
             return $"{parent.Path()}/unarchive";
         }
 
+        // Operation: unarchiveGlipTeam
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

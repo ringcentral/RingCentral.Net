@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
             return $"{parent.Path()}/fax-cover-page";
         }
 
+        // Operation: listFaxCoverPages
         public async Task<RingCentral.ListFaxCoverPagesResponse> Get(ListFaxCoverPagesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams);

@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Unlock
             return $"{parent.Path()}/unlock";
         }
 
+        // Operation: unlockNote
         public async Task<RingCentral.GlipNoteInfo> Post()
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path());

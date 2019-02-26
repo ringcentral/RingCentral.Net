@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
             return $"{parent.Path()}/webhooks";
         }
 
+        // Operation: createGlipGroupWebhook
         public async Task<RingCentral.GlipWebhookInfo> Post()
         {
             return await rc.Post<RingCentral.GlipWebhookInfo>(this.Path());
         }
 
+        // Operation: listGlipGroupWebhooks
         public async Task<RingCentral.GlipWebhookList> Get()
         {
             return await rc.Get<RingCentral.GlipWebhookList>(this.Path());

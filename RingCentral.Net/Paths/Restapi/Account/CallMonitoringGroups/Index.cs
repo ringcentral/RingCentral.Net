@@ -25,17 +25,20 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             return $"{parent.Path()}/call-monitoring-groups";
         }
 
+        // Operation: createCallMonitoringGroup
         public async Task<RingCentral.CallMonitoringGroup> Post(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
         {
             return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest);
         }
 
+        // Operation: listCallMonitoringGroups
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams);
         }
 
+        // Operation: updateCallMonitoringGroup
         public async Task<RingCentral.CallMonitoringGroup> Put(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
         {
@@ -47,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest);
         }
 
+        // Operation: removeCallMonitoringGroup
         public async Task<string> Delete()
         {
             if (this.groupId == null)

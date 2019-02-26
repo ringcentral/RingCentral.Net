@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
             return $"{parent.Path()}/check";
         }
 
+        // Operation: checkUserPermission
         public async Task<RingCentral.AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams);

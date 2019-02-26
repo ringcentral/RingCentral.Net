@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
             return $"{parent.Path()}/caller-id";
         }
 
+        // Operation: loadExtensionCallerId
         public async Task<RingCentral.ExtensionCallerIdInfo> Get()
         {
             return await rc.Get<RingCentral.ExtensionCallerIdInfo>(this.Path());
         }
 
+        // Operation: updateExtensionCallerId
         public async Task<RingCentral.ExtensionCallerIdInfo> Put(
             RingCentral.ExtensionCallerIdInfo extensionCallerIdInfo)
         {

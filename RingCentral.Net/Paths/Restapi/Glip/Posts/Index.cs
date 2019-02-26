@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Glip.Posts
             return $"{parent.Path()}/posts";
         }
 
+        // Operation: listGlipPosts
         public async Task<RingCentral.GlipPosts> Get(ListGlipPostsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipPosts>(this.Path(), queryParams);
         }
 
+        // Operation: createPost
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost)
         {
             return await rc.Post<RingCentral.GlipPostInfo>(this.Path(), glipCreatePost);

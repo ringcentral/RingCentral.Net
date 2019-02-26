@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Notes
             return $"{parent.Path()}/notes";
         }
 
+        // Operation: loadGroupNotes
         public async Task<RingCentral.GlipNotesInfo> Get(LoadGroupNotesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams);
         }
 
+        // Operation: createGroupNote
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate)
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate);

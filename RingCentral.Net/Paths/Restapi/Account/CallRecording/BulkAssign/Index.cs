@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
             return $"{parent.Path()}/bulk-assign";
         }
 
+        // Operation: updateCallRecordingExtensionSettings
         public async Task<string> Post(RingCentral.BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource)
         {
             return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource);

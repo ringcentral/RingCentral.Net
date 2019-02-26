@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
             return $"{parent.Path()}/sessions";
         }
 
+        // Operation: getCallSessionStatus
         public async Task<RingCentral.CallSessionObject> Get(GetCallSessionStatusParameters queryParams = null)
         {
             if (this.sessionId == null)
@@ -35,6 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
             return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams);
         }
 
+        // Operation: deleteCallSession
         public async Task<string> Delete()
         {
             if (this.sessionId == null)

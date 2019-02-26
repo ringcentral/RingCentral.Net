@@ -25,11 +25,13 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
             return $"{parent.Path()}/webhooks";
         }
 
+        // Operation: listGlipWebhooks
         public async Task<RingCentral.GlipWebhookList> List()
         {
             return await rc.Get<RingCentral.GlipWebhookList>(this.Path(false));
         }
 
+        // Operation: loadGlipWebhook
         public async Task<RingCentral.GlipWebhookList> Get()
         {
             if (this.webhookId == null)
@@ -40,6 +42,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
             return await rc.Get<RingCentral.GlipWebhookList>(this.Path());
         }
 
+        // Operation: deleteGlipWebhook
         public async Task<string> Delete()
         {
             if (this.webhookId == null)

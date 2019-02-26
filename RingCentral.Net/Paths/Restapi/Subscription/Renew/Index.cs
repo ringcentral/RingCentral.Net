@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
             return $"{parent.Path()}/renew";
         }
 
+        // Operation: renewSubscription
         public async Task<RingCentral.SubscriptionInfo> Post()
         {
             return await rc.Post<RingCentral.SubscriptionInfo>(this.Path());

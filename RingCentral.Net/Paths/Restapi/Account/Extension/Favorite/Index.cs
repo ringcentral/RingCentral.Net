@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
             return $"{parent.Path()}/favorite";
         }
 
+        // Operation: listFavoriteContacts
         public async Task<string> Get()
         {
             return await rc.Get<string>(this.Path());
         }
 
+        // Operation: updateFavoriteContactList
         public async Task<string> Put(RingCentral.FavoriteCollection favoriteCollection)
         {
             return await rc.Put<string>(this.Path(), favoriteCollection);

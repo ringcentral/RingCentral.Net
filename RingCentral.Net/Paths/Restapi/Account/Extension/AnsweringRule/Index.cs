@@ -25,17 +25,20 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return $"{parent.Path()}/answering-rule";
         }
 
+        // Operation: listAnsweringRules
         public async Task<RingCentral.UserAnsweringRuleList> List(ListAnsweringRulesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryParams);
         }
 
+        // Operation: createAnsweringRule
         public async Task<RingCentral.AnsweringRuleInfo> Post(
             RingCentral.CreateAnsweringRuleRequest createAnsweringRuleRequest)
         {
             return await rc.Post<RingCentral.AnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest);
         }
 
+        // Operation: loadAnsweringRule
         public async Task<RingCentral.AnsweringRuleInfo> Get(LoadAnsweringRuleParameters queryParams = null)
         {
             if (this.ruleId == null)
@@ -46,6 +49,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return await rc.Get<RingCentral.AnsweringRuleInfo>(this.Path(), queryParams);
         }
 
+        // Operation: updateAnsweringRule
         public async Task<RingCentral.AnsweringRuleInfo> Put(
             RingCentral.UpdateAnsweringRuleRequest updateAnsweringRuleRequest)
         {
@@ -57,6 +61,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return await rc.Put<RingCentral.AnsweringRuleInfo>(this.Path(), updateAnsweringRuleRequest);
         }
 
+        // Operation: deleteAnsweringRule
         public async Task<string> Delete()
         {
             if (this.ruleId == null)

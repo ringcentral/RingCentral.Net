@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Favorite
             return $"{parent.Path()}/favorite";
         }
 
+        // Operation: favoriteGlipChat
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

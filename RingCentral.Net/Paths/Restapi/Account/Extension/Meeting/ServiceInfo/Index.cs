@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
             return $"{parent.Path()}/service-info";
         }
 
+        // Operation: loadMeetingServiceInfo
         public async Task<RingCentral.MeetingServiceInfoResource> Get()
         {
             return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path());

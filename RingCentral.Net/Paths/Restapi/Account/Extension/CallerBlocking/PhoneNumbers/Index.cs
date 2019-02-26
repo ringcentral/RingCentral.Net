@@ -25,12 +25,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return $"{parent.Path()}/phone-numbers";
         }
 
+        // Operation: listBlockedAllowedPhoneNumber
         public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(
             ListBlockedAllowedPhoneNumberParameters queryParams = null)
         {
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams);
         }
 
+        // Operation: createBlockedAllowedPhoneNumberList
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
         {
@@ -38,6 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
                 addBlockedAllowedPhoneNumber);
         }
 
+        // Operation: loadBlockedAllowedPhoneNumber
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get()
         {
             if (this.blockedNumberId == null)
@@ -48,6 +51,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path());
         }
 
+        // Operation: deleteBlockedAllowedPhoneNumber
         public async Task<string> Delete()
         {
             if (this.blockedNumberId == null)
@@ -58,6 +62,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return await rc.Delete<string>(this.Path());
         }
 
+        // Operation: updateBlockedAllowedPhoneNumber
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
         {

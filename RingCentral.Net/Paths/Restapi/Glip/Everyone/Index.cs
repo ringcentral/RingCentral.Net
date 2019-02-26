@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
             return $"{parent.Path()}/everyone";
         }
 
+        // Operation: loadGlipEveryone
         public async Task<RingCentral.GlipEveryoneInfo> Get()
         {
             return await rc.Get<RingCentral.GlipEveryoneInfo>(this.Path());
         }
 
+        // Operation: updateGlipEveryone
         public async Task<RingCentral.GlipEveryoneInfo> Patch(
             RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest)
         {

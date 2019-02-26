@@ -25,23 +25,27 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
             return $"{parent.Path()}/profile-image";
         }
 
+        // Operation: downloadProfileImage
         public async Task<byte[]> List()
         {
             return await rc.Get<byte[]>(this.Path(false));
         }
 
+        // Operation: uploadProfileImage
         public async Task<byte[]> Post(UploadProfileImageRequest uploadProfileImageRequest)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(uploadProfileImageRequest);
             return await rc.Post<byte[]>(this.Path(false), multipartFormDataContent);
         }
 
+        // Operation: updateProfileImage
         public async Task<byte[]> Put(UpdateProfileImageRequest updateProfileImageRequest)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateProfileImageRequest);
             return await rc.Post<byte[]>(this.Path(false), multipartFormDataContent);
         }
 
+        // Operation: downloadScaledPofileImage
         public async Task<byte[]> Get()
         {
             if (this.scaleSize == null)

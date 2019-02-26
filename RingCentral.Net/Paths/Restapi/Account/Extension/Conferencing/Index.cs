@@ -18,12 +18,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
             return $"{parent.Path()}/conferencing";
         }
 
+        // Operation: loadConferencingInfo
         public async Task<RingCentral.GetConferencingInfoResponse> Get(
             LoadConferencingInfoParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
         }
 
+        // Operation: updateConferencingInfo
         public async Task<RingCentral.GetConferencingInfoResponse> Put(
             RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest)
         {

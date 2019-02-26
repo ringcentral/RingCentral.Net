@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Leave
             return $"{parent.Path()}/leave";
         }
 
+        // Operation: leaveGlipTeam
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

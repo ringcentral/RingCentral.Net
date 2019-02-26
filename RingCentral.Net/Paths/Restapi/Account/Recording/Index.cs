@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Recording
             return $"{parent.Path()}/recording";
         }
 
+        // Operation: listCallRecordings
         public async Task<RingCentral.GetCallRecordingResponse> Get()
         {
             if (this.recordingId == null)

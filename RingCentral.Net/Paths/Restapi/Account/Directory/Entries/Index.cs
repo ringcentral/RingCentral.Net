@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
             return $"{parent.Path()}/entries";
         }
 
+        // Operation: listDirectoryEntries
         public async Task<RingCentral.DirectoryResource> Get(ListDirectoryEntriesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.DirectoryResource>(this.Path(), queryParams);

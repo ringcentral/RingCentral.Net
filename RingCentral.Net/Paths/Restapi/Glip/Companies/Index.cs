@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
             return $"{parent.Path()}/companies";
         }
 
+        // Operation: loadGlipCompany
         public async Task<RingCentral.GlipCompany> Get()
         {
             if (this.companyId == null)

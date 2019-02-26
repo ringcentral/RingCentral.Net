@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Join
             return $"{parent.Path()}/join";
         }
 
+        // Operation: joinGlipTeam
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

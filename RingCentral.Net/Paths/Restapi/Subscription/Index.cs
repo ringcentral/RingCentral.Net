@@ -25,17 +25,20 @@ namespace RingCentral.Paths.Restapi.Subscription
             return $"{parent.Path()}/subscription";
         }
 
+        // Operation: listSubscriptions
         public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List()
         {
             return await rc.Get<RingCentral.RecordsCollectionResourceSubscriptionResponse>(this.Path(false));
         }
 
+        // Operation: createSubscription
         public async Task<RingCentral.SubscriptionInfo> Post(
             RingCentral.CreateSubscriptionRequest createSubscriptionRequest)
         {
             return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(false), createSubscriptionRequest);
         }
 
+        // Operation: loadSubscription
         public async Task<RingCentral.SubscriptionInfo> Get()
         {
             if (this.subscriptionId == null)
@@ -46,6 +49,7 @@ namespace RingCentral.Paths.Restapi.Subscription
             return await rc.Get<RingCentral.SubscriptionInfo>(this.Path());
         }
 
+        // Operation: updateSubscription
         public async Task<RingCentral.SubscriptionInfo> Put(
             RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
             UpdateSubscriptionParameters queryParams = null)
@@ -58,6 +62,7 @@ namespace RingCentral.Paths.Restapi.Subscription
             return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams);
         }
 
+        // Operation: deleteSubscription
         public async Task<string> Delete()
         {
             if (this.subscriptionId == null)

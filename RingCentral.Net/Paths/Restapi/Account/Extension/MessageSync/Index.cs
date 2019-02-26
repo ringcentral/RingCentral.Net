@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
             return $"{parent.Path()}/message-sync";
         }
 
+        // Operation: syncMessages
         public async Task<RingCentral.GetMessageSyncResponse> Get(SyncMessagesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams);

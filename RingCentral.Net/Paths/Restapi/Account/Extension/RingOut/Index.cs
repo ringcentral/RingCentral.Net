@@ -25,11 +25,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
             return $"{parent.Path()}/ring-out";
         }
 
+        // Operation: makeRingOutCall
         public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest)
         {
             return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest);
         }
 
+        // Operation: getRingOutCallStatus
         public async Task<RingCentral.GetRingOutStatusResponse> Get()
         {
             if (this.ringoutId == null)
@@ -40,6 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
             return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path());
         }
 
+        // Operation: cancelRingOutCall
         public async Task<string> Delete()
         {
             if (this.ringoutId == null)

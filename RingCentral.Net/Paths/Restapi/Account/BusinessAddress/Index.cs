@@ -18,11 +18,13 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
             return $"{parent.Path()}/business-address";
         }
 
+        // Operation: loadAccountBusinessAddress
         public async Task<RingCentral.AccountBusinessAddressResource> Get()
         {
             return await rc.Get<RingCentral.AccountBusinessAddressResource>(this.Path());
         }
 
+        // Operation: updateAccountBusinessAddress
         public async Task<RingCentral.AccountBusinessAddressResource> Put(
             RingCentral.ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest)
         {

@@ -25,6 +25,7 @@ namespace RingCentral.Paths.Restapi.Account
             return $"{parent.Path()}/account";
         }
 
+        // Operation: loadAccount
         public async Task<RingCentral.GetAccountInfoResponse> Get()
         {
             if (this.accountId == null)

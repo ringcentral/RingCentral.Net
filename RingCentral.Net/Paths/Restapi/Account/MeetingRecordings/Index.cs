@@ -18,6 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
             return $"{parent.Path()}/meeting-recordings";
         }
 
+        // Operation: listAccountMeetingRecordings
         public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
             ListAccountMeetingRecordingsParameters queryParams = null)
         {
