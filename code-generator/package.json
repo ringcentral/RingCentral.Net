@@ -4,7 +4,8 @@
     "adjust": "node -r @babel/register adjust.js",
     "definitions": "rm -rf ../RingCentral/Definitions/* && node -r @babel/register definitions.js",
     "paths": "rm -rf ../RingCentral/Paths/* && node -r @babel/register paths.js",
-    "generate": "yarn adjust && yarn definitions && yarn paths"
+    "generate": "yarn adjust && yarn definitions && yarn paths",
+    "samples": "node -r @babel/register samples.js"
   },
   "dependencies": {
     "change-case": "^3.1.0",
