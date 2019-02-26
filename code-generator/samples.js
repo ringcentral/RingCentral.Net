@@ -2,7 +2,7 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import changeCase from 'change-case'
 
-import { normalizedPath, deNormalizePath } from './utils'
+import { normalizedPath } from './utils'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 const paths = Object.keys(doc.paths)
@@ -33,11 +33,9 @@ const pathToCode = path => {
 
 normalizedPaths.forEach(path => {
   console.log(path)
-  const pathObj = doc.paths[deNormalizePath(path)]
-  const methods = Object.keys(pathObj)
-  methods.forEach(method => {
-    console.log(method)
-    let code = `using (var rc = new RestClient(
+  const names = path.split('/').filter(name => name !== '' && !name.startsWith('{'))
+  console.log(names)
+  let code = `using (var rc = new RestClient(
       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
@@ -48,8 +46,7 @@ normalizedPaths.forEach(path => {
           Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
           Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
       );
-      await ${pathToCode(path)}.${changeCase.pascalCase(method)}
+      await ${pathToCode(path)}
   }`
-    console.log(code)
-  })
+  console.log(code)
 })
