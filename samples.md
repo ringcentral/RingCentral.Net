@@ -6,17 +6,9 @@
 HTTP GET `/restapi`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi().List();
 }
 ```
@@ -29,17 +21,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/{apiVersion}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Get();
 }
 ```
@@ -53,17 +37,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/status`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Status().Get();
 }
 ```
@@ -77,17 +53,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(loadUserCallLogParameters);
 }
 ```
@@ -103,17 +71,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
 }
 ```
@@ -129,17 +89,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters);
 }
 ```
@@ -155,17 +107,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(getCallRecordsParameters);
 }
 ```
@@ -181,17 +125,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
 }
 ```
@@ -207,17 +143,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(loadCompanyCallLogParameters);
 }
 ```
@@ -232,17 +160,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get();
 }
 ```
@@ -257,17 +177,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/active-calls`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters);
 }
 ```
@@ -282,17 +194,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get();
 }
 ```
@@ -307,17 +211,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}/content`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get();
 }
 ```
@@ -332,17 +228,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSmsMessage);
 }
 ```
@@ -358,17 +246,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest);
 }
 ```
@@ -384,17 +264,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(sendFaxMessageRequest);
 }
 ```
@@ -410,17 +282,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/fax-cover-page`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
 }
 ```
@@ -434,17 +298,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters);
 }
 ```
@@ -460,17 +316,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
 }
 ```
@@ -486,17 +334,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest);
 }
 ```
@@ -512,17 +352,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters);
 }
 ```
@@ -538,17 +370,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(getMessageAttachmentByIdParameters);
 }
 ```
@@ -564,17 +388,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters);
 }
 ```
@@ -590,17 +406,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get();
 }
 ```
@@ -615,17 +423,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
 }
 ```
@@ -640,17 +440,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest);
 }
 ```
@@ -666,17 +458,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get();
 }
 ```
@@ -692,17 +476,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
 }
 ```
@@ -718,17 +494,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
 }
 ```
@@ -744,17 +512,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactResource, createContactParameters);
 }
 ```
@@ -771,17 +531,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
 }
 ```
@@ -797,17 +549,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactResource, updateContactParameters);
 }
 ```
@@ -824,17 +568,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
 }
 ```
@@ -850,17 +586,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters);
 }
 ```
@@ -876,17 +604,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get();
 }
 ```
@@ -902,17 +622,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
 }
 ```
@@ -928,17 +640,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/directory/entries/search`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest);
 }
 ```
@@ -953,17 +657,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Get(listDirectoryEntriesParameters);
 }
 ```
@@ -978,17 +674,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/federation`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get();
 }
 ```
@@ -1003,17 +691,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(getPresenceStatusParameters);
 }
 ```
@@ -1029,17 +709,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoResource);
 }
 ```
@@ -1055,17 +727,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/presence`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(accountPresenceParameters);
 }
 ```
@@ -1080,17 +744,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/chats`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters);
 }
 ```
@@ -1104,17 +760,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get();
 }
 ```
@@ -1128,17 +776,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/conversations`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters);
 }
 ```
@@ -1152,17 +792,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/conversations`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(glipPostMembersListBody);
 }
 ```
@@ -1176,17 +808,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/conversations/{chatId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get();
 }
 ```
@@ -1200,17 +824,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/teams`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters);
 }
 ```
@@ -1224,17 +840,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/teams`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody);
 }
 ```
@@ -1248,17 +856,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/teams/{chatId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get();
 }
 ```
@@ -1272,17 +872,9 @@ using (var rc = new RestClient(
 HTTP PATCH `/restapi/v1.0/glip/teams/{chatId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody);
 }
 ```
@@ -1296,17 +888,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/glip/teams/{chatId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete();
 }
 ```
@@ -1320,17 +904,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/join`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post();
 }
 ```
@@ -1344,17 +920,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/leave`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post();
 }
 ```
@@ -1368,17 +936,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/add`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody);
 }
 ```
@@ -1392,17 +952,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/remove`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody);
 }
 ```
@@ -1416,17 +968,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/archive`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post();
 }
 ```
@@ -1440,17 +984,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/unarchive`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post();
 }
 ```
@@ -1464,17 +1000,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/everyone`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Everyone().Get();
 }
 ```
@@ -1488,17 +1016,9 @@ using (var rc = new RestClient(
 HTTP PATCH `/restapi/v1.0/glip/everyone`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest);
 }
 ```
@@ -1512,17 +1032,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/groups`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups().List(listGlipGroupsParameters);
 }
 ```
@@ -1536,17 +1048,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/groups`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups().Post(glipCreateGroup);
 }
 ```
@@ -1560,17 +1064,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Get();
 }
 ```
@@ -1584,17 +1080,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/bulk-assign`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).BulkAssign().Post(editGroupRequest);
 }
 ```
@@ -1608,17 +1096,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/posts`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().Get(listGlipGroupPostsParameters);
 }
 ```
@@ -1632,17 +1112,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/posts`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().Post(glipCreatePost);
 }
 ```
@@ -1656,17 +1128,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts(postId).Text().Put(string);
 }
 ```
@@ -1680,17 +1144,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/recent/chats`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters);
 }
 ```
@@ -1704,17 +1160,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/favorites`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters);
 }
 ```
@@ -1728,17 +1176,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/favorite`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post();
 }
 ```
@@ -1752,17 +1192,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unfavorite`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post();
 }
 ```
@@ -1776,17 +1208,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/read`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post();
 }
 ```
@@ -1800,17 +1224,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unread`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post();
 }
 ```
@@ -1824,17 +1240,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/posts`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Posts().Get(listGlipPostsParameters);
 }
 ```
@@ -1848,17 +1256,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/posts`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Posts().Post(glipCreatePost);
 }
 ```
@@ -1872,17 +1272,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/files`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Files().Post(createGlipFileRequest, createGlipFileParameters);
 }
 ```
@@ -1897,17 +1289,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/cards`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Cards().Post(glipMessageAttachmentInfoRequest, createGlipCardParameters);
 }
 ```
@@ -1922,17 +1306,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/cards/{cardId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).Get();
 }
 ```
@@ -1946,17 +1322,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/glip/cards/{cardId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).Put(glipMessageAttachmentInfoRequest);
 }
 ```
@@ -1970,17 +1338,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/glip/cards/{cardId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).Delete();
 }
 ```
@@ -1994,17 +1354,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/events`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Events().List(loadGlipEventsParameters);
 }
 ```
@@ -2018,17 +1370,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/events`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate);
 }
 ```
@@ -2042,17 +1386,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/events/{eventId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get();
 }
 ```
@@ -2066,17 +1402,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/glip/events/{eventId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate);
 }
 ```
@@ -2090,17 +1418,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/glip/events/{eventId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete();
 }
 ```
@@ -2114,17 +1434,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/events`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate);
 }
 ```
@@ -2138,17 +1450,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/events`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get();
 }
 ```
@@ -2162,17 +1466,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/notes`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Notes().Get(loadGroupNotesParameters);
 }
 ```
@@ -2186,17 +1482,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/notes`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Notes().Post(glipNoteCreate);
 }
 ```
@@ -2210,17 +1498,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/notes`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes().List(loadUserNotesParameters);
 }
 ```
@@ -2234,17 +1514,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/notes`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes().Post(glipNoteCreate);
 }
 ```
@@ -2258,17 +1530,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get();
 }
 ```
@@ -2282,17 +1546,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete();
 }
 ```
@@ -2306,17 +1562,9 @@ using (var rc = new RestClient(
 HTTP PATCH `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate, patchNoteParameters);
 }
 ```
@@ -2331,17 +1579,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/glip/notes/{noteId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Put(glipNoteCreate);
 }
 ```
@@ -2355,17 +1595,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/lock`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post();
 }
 ```
@@ -2379,17 +1611,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/publish`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post();
 }
 ```
@@ -2403,17 +1627,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/unlock`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post();
 }
 ```
@@ -2427,17 +1643,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/persons/{personId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get();
 }
 ```
@@ -2451,17 +1659,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/companies/{companyId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get();
 }
 ```
@@ -2475,17 +1675,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post();
 }
 ```
@@ -2499,17 +1691,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get();
 }
 ```
@@ -2523,17 +1707,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/webhooks`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Webhooks().List();
 }
 ```
@@ -2547,17 +1723,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/webhooks/{webhookId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get();
 }
 ```
@@ -2571,17 +1739,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/glip/webhooks/{webhookId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete();
 }
 ```
@@ -2595,17 +1755,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/activate`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post();
 }
 ```
@@ -2619,17 +1771,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/suspend`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post();
 }
 ```
@@ -2643,17 +1787,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/preferences`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().Preferences().Get();
 }
 ```
@@ -2667,17 +1803,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List();
 }
 ```
@@ -2693,17 +1821,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource);
 }
 ```
@@ -2719,17 +1839,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get();
 }
 ```
@@ -2745,17 +1857,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource);
 }
 ```
@@ -2771,17 +1875,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete();
 }
 ```
@@ -2797,17 +1893,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post();
 }
 ```
@@ -2823,17 +1911,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get();
 }
 ```
@@ -2849,17 +1929,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/subscription`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Subscription().List();
 }
 ```
@@ -2873,17 +1945,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/subscription`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest);
 }
 ```
@@ -2897,17 +1961,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/subscription/{subscriptionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get();
 }
 ```
@@ -2921,17 +1977,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/subscription/{subscriptionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest, updateSubscriptionParameters);
 }
 ```
@@ -2946,17 +1994,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/subscription/{subscriptionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete();
 }
 ```
@@ -2970,17 +2010,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/subscription/{subscriptionId}/renew`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
 }
 ```
@@ -2994,17 +2026,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get();
 }
 ```
@@ -3020,17 +2044,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters);
 }
 ```
@@ -3046,17 +2062,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get();
 }
 ```
@@ -3072,17 +2080,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest);
 }
 ```
@@ -3098,17 +2098,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/business-hours`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
 }
 ```
@@ -3123,17 +2115,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-hours`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
 }
 ```
@@ -3148,17 +2132,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();
 }
 ```
@@ -3174,17 +2150,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);
 }
 ```
@@ -3200,17 +2168,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedPhoneNumberParameters);
 }
 ```
@@ -3226,17 +2186,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber);
 }
 ```
@@ -3252,17 +2204,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/bulk-update`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().BulkUpdate().Post();
 }
 ```
@@ -3278,17 +2222,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get();
 }
 ```
@@ -3304,17 +2240,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
 }
 ```
@@ -3330,17 +2258,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber);
 }
 ```
@@ -3356,17 +2276,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listExtensionForwardingNumbersParameters);
 }
 ```
@@ -3382,17 +2294,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest);
 }
 ```
@@ -3408,17 +2312,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
 }
 ```
@@ -3434,17 +2330,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest);
 }
 ```
@@ -3460,17 +2348,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
 }
 ```
@@ -3486,17 +2366,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
 }
 ```
@@ -3512,17 +2384,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest);
 }
 ```
@@ -3538,17 +2402,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(loadAnsweringRuleParameters);
 }
 ```
@@ -3564,17 +2420,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest);
 }
 ```
@@ -3590,17 +2438,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
 }
 ```
@@ -3616,17 +2456,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/answering-rule`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
 }
 ```
@@ -3641,17 +2473,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List();
 }
 ```
@@ -3666,17 +2490,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
 }
 ```
@@ -3691,17 +2507,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
 }
 ```
@@ -3716,17 +2524,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
 }
 ```
@@ -3741,17 +2541,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/greeting`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
 }
 ```
@@ -3765,17 +2557,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/greeting/{greetingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
 }
 ```
@@ -3789,17 +2573,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/greeting`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(customCompanyGreetingRequest);
 }
 ```
@@ -3814,17 +2590,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(customGreetingRequest);
 }
 ```
@@ -3840,17 +2608,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get();
 }
 ```
@@ -3866,17 +2626,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIvrPromptRequest);
 }
 ```
@@ -3891,17 +2643,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
 }
 ```
@@ -3916,17 +2660,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
 }
 ```
@@ -3941,17 +2677,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
 }
 ```
@@ -3966,17 +2694,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put();
 }
 ```
@@ -3991,17 +2711,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get();
 }
 ```
@@ -4016,17 +2728,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-menus`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(ivrMenuInfo);
 }
 ```
@@ -4041,17 +2745,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get();
 }
 ```
@@ -4066,17 +2762,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(ivrMenuInfo);
 }
 ```
@@ -4091,17 +2779,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
 }
 ```
@@ -4116,17 +2796,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-recording`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
 }
 ```
@@ -4141,17 +2813,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/extensions`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();
 }
 ```
@@ -4166,17 +2830,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/call-recording/bulk-assign`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource);
 }
 ```
@@ -4191,17 +2847,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters);
 }
 ```
@@ -4216,17 +2864,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
 }
 ```
@@ -4241,17 +2881,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/client-info/sip-provision`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest);
 }
 ```
@@ -4265,17 +2897,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters);
 }
 ```
@@ -4291,17 +2915,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get();
 }
 ```
@@ -4317,17 +2933,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest);
 }
 ```
@@ -4343,17 +2951,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete();
 }
 ```
@@ -4369,17 +2969,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get();
 }
 ```
@@ -4395,17 +2987,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfo);
 }
 ```
@@ -4421,17 +3005,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
 }
 ```
@@ -4447,17 +3023,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get();
 }
 ```
@@ -4473,17 +3041,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest);
 }
 ```
@@ -4499,17 +3059,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List();
 }
 ```
@@ -4525,17 +3077,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(uploadProfileImageRequest);
 }
 ```
@@ -4551,17 +3095,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateProfileImageRequest);
 }
 ```
@@ -4577,17 +3113,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
 }
 ```
@@ -4603,17 +3131,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(loadConferencingInfoParameters);
 }
 ```
@@ -4629,17 +3149,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest);
 }
 ```
@@ -4655,17 +3167,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Get();
 }
 ```
@@ -4680,17 +3184,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/business-address`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
 }
 ```
@@ -4705,17 +3201,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-address`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
 }
 ```
@@ -4730,17 +3218,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/service-info`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
 }
 ```
@@ -4755,17 +3235,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/language`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
 }
 ```
@@ -4779,17 +3251,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/language/{languageId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
 }
 ```
@@ -4803,17 +3267,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/country`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
 }
 ```
@@ -4827,17 +3283,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/country/{countryId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
 }
 ```
@@ -4851,17 +3299,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/location`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
 }
 ```
@@ -4875,17 +3315,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/state`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters);
 }
 ```
@@ -4899,17 +3331,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/state/{stateId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get();
 }
 ```
@@ -4923,17 +3347,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/timezone`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
 }
 ```
@@ -4947,17 +3363,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/dictionary/timezone/{timezoneId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(loadTimezoneParameters);
 }
 ```
@@ -4971,17 +3379,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
 }
 ```
@@ -4996,17 +3396,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
 }
 ```
@@ -5021,17 +3413,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters);
 }
 ```
@@ -5046,17 +3430,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/extension`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest);
 }
 ```
@@ -5071,17 +3447,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/templates`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listTemplatesParameters);
 }
 ```
@@ -5096,17 +3464,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/templates/{templateId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get();
 }
 ```
@@ -5121,17 +3481,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().Get(listCallQueuesParameters);
 }
 ```
@@ -5146,17 +3498,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
 }
 ```
@@ -5171,17 +3515,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource);
 }
 ```
@@ -5196,17 +3532,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/department/{departmentId}/members`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Department(departmentId).Members().Get(listDepartmentMembersParameters);
 }
 ```
@@ -5221,17 +3549,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/department/bulk-assign`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Department().BulkAssign().Post(departmentBulkAssignResource);
 }
 ```
@@ -5246,17 +3566,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters);
 }
 ```
@@ -5271,17 +3583,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
 }
 ```
@@ -5296,17 +3600,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest);
 }
 ```
@@ -5321,17 +3617,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
 }
 ```
@@ -5346,17 +3634,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters);
 }
 ```
@@ -5371,17 +3651,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest);
 }
 ```
@@ -5396,17 +3668,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete();
 }
 ```
@@ -5421,17 +3685,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
 }
 ```
@@ -5446,17 +3702,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign);
 }
 ```
@@ -5471,17 +3719,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/number-parser/parse`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
 }
 ```
@@ -5496,17 +3736,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get();
 }
 ```
@@ -5521,17 +3753,9 @@ using (var rc = new RestClient(
 HTTP PUT `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate);
 }
 ```
@@ -5546,17 +3770,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/device`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
 }
 ```
@@ -5572,17 +3788,9 @@ using (var rc = new RestClient(
 HTTP GET `/scim/health`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim().Health().Get();
 }
 ```
@@ -5595,17 +3803,9 @@ using (var rc = new RestClient(
 HTTP GET `/scim/v2/ServiceProviderConfig`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).ServiceProviderConfig().Get();
 }
 ```
@@ -5619,17 +3819,9 @@ using (var rc = new RestClient(
 HTTP GET `/scim/v2/Users`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).Users().List(searchViaGet2Parameters);
 }
 ```
@@ -5643,17 +3835,9 @@ using (var rc = new RestClient(
 HTTP POST `/scim/v2/Users`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).Users().Post(user);
 }
 ```
@@ -5667,17 +3851,9 @@ using (var rc = new RestClient(
 HTTP POST `/scim/v2/Users/.search`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest);
 }
 ```
@@ -5691,17 +3867,9 @@ using (var rc = new RestClient(
 HTTP GET `/scim/v2/Users/{id}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).Users(id).Get();
 }
 ```
@@ -5715,17 +3883,9 @@ using (var rc = new RestClient(
 HTTP PUT `/scim/v2/Users/{id}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).Users(id).Put(user);
 }
 ```
@@ -5739,17 +3899,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/scim/v2/Users/{id}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).Users(id).Delete();
 }
 ```
@@ -5763,17 +3915,9 @@ using (var rc = new RestClient(
 HTTP PATCH `/scim/v2/Users/{id}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Scim(version).Users(id).Patch(userPatch);
 }
 ```
@@ -5787,17 +3931,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Get(getCallSessionStatusParameters);
 }
 ```
@@ -5812,17 +3948,9 @@ using (var rc = new RestClient(
 HTTP DELETE `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Delete();
 }
 ```
@@ -5837,17 +3965,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/hold`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Hold().Post();
 }
 ```
@@ -5862,17 +3982,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/unhold`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Unhold().Post();
 }
 ```
@@ -5887,17 +3999,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/reject`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Reject().Post();
 }
 ```
@@ -5912,17 +4016,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/transfer`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Transfer().Post(transferTarget);
 }
 ```
@@ -5937,17 +4033,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/forward`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Forward().Post(forwardTarget);
 }
 ```
@@ -5962,17 +4050,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/flip`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Flip().Post(callPartyFlip);
 }
 ```
@@ -5987,17 +4067,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Get();
 }
 ```
@@ -6012,17 +4084,9 @@ using (var rc = new RestClient(
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Patch(partyUpdateRequest);
 }
 ```
@@ -6037,17 +4101,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Recordings().Post();
 }
 ```
@@ -6062,17 +4118,9 @@ using (var rc = new RestClient(
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings/{recordingId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
 }
 ```
@@ -6088,17 +4136,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Archive(archiveId).Get();
 }
 ```
@@ -6112,17 +4152,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/glip/data-export`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest);
 }
 ```
@@ -6136,17 +4168,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get();
 }
 ```
@@ -6160,17 +4184,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/v1.0/account/{accountId}/message-store-report`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest);
 }
 ```
@@ -6185,17 +4201,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get();
 }
 ```
@@ -6210,17 +4218,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List();
 }
 ```
@@ -6235,17 +4235,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
 }
 ```
@@ -6260,17 +4252,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/meeting-recordings`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters);
 }
 ```
@@ -6285,17 +4269,9 @@ using (var rc = new RestClient(
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters);
 }
 ```
@@ -6311,17 +4287,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/oauth/token`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest);
 }
 ```
@@ -6334,17 +4302,9 @@ using (var rc = new RestClient(
 HTTP POST `/restapi/oauth/revoke`
 
 ```cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest);
 }
 ```

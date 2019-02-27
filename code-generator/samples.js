@@ -63,17 +63,9 @@ normalizedPaths.forEach(path => {
 HTTP ${changeCase.upperCase(method === 'List' ? 'Get' : method)} \`${endpoint}\`
 
 \`\`\`cs
-using (var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-))
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
-    await rc.Authorize(
-        Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-        Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-    );
+    await rc.Authorize("username", "extension", "password");
     var result = await ${pathToCode(path)}.${method}(${parameters.map(p => changeCase.camelCase(p)).join(', ')});
 }
 \`\`\`
