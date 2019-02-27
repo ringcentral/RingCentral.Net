@@ -92,7 +92,8 @@ namespace RingCentral.Tests
                 message = messages.Last(m => m.type == "Fax" && m.messageStatus != "SendingFailed" &&
                                              m.attachments != null &&
                                              m.attachments.Length > 0);
-                content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
+//                content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
+                content = await rc.Get<byte[]>(message.attachments[0].uri);
                 Assert.NotNull(content);
                 Assert.True(content.Length > 0);
                 System.IO.File.WriteAllBytes("test.pdf", content);

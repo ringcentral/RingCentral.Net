@@ -34,7 +34,16 @@ namespace RingCentral
                 );
             }
 
-            var uriBuilder = new UriBuilder(server) {Path = endpoint};
+            UriBuilder uriBuilder = null;
+            if (endpoint.StartsWith("https://"))
+            {
+                uriBuilder = new UriBuilder(endpoint);
+            }
+            else
+            {
+                uriBuilder = new UriBuilder(server) {Path = endpoint};
+            }
+
             if (queryParams != null)
             {
                 var fields = Utils.GetPairs(queryParams).Select(t =>
