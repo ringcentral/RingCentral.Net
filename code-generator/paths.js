@@ -4,7 +4,7 @@ import * as R from 'ramda'
 import changeCase from 'change-case'
 import path from 'path'
 
-import { normalizedPath, deNormalizePath } from './utils'
+import { normalizePath, deNormalizePath } from './utils'
 
 const outputDir = '../RingCentral.Net/Paths'
 
@@ -14,7 +14,7 @@ const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 delete doc.paths['/restapi/oauth/authorize']
 
 const paths = Object.keys(doc.paths)
-const normalizedPaths = paths.map(p => normalizedPath(p))
+const normalizedPaths = paths.map(p => normalizePath(p))
 
 const getRoutes = (prefix, name) => {
   return [...prefix.split('/').filter(t => t !== '' && !t.startsWith('{')), name].map(t => changeCase.pascalCase(t))
@@ -213,6 +213,7 @@ ${code}`
       code += `
 
       // Operation: ${operation.detail.operationId}
+      // Http ${method} ${operation.endpoint}
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
       {${withParam ? `
           if (this.${paramName} == null)

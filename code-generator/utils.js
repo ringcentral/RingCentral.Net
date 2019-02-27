@@ -1,4 +1,4 @@
-export const normalizedPath = path => {
+export const normalizePath = path => {
   return path
     .replace(/\/restapi\/v1\.0\//, '/restapi/{apiVersion}/')
     .replace(/\/scim\/v2/, '/scim/{version}')
