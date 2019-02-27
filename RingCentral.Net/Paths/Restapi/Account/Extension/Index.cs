@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         // Operation: listExtensions
+        // Http Get /restapi/v1.0/account/{accountId}/extension
         public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams);
         }
 
         // Operation: createExtension
+        // Http Post /restapi/v1.0/account/{accountId}/extension
         public async Task<RingCentral.ExtensionCreationResponse> Post(
             RingCentral.ExtensionCreationRequest extensionCreationRequest)
         {
@@ -39,6 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         // Operation: loadExtensionInfo
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
         public async Task<RingCentral.GetExtensionInfoResponse> Get()
         {
             if (this.extensionId == null)
@@ -50,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         // Operation: updateExtension
+        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
             RingCentral.ExtensionUpdateRequest extensionUpdateRequest)
         {
@@ -62,6 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         // Operation: deleteExtension
+        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
         public async Task<string> Delete()
         {
             if (this.extensionId == null)

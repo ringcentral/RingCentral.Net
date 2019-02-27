@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         }
 
         // Operation: createInternalTextMessage
+        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
         public async Task<RingCentral.GetMessageInfoResponse> Post(
             RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest)
         {

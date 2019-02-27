@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         }
 
         // Operation: loadMessageStoreReportArchive
+        // Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
         public async Task<RingCentral.MessageStoreReportArchive> List()
         {
             return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(false));
         }
 
         // Operation: loadMessageStoreReportArchiveContent
+        // Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
         public async Task<string> Get()
         {
             if (this.archiveId == null)

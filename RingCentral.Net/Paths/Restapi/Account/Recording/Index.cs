@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Recording
         }
 
         // Operation: listCallRecordings
+        // Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}
         public async Task<RingCentral.GetCallRecordingResponse> Get()
         {
             if (this.recordingId == null)

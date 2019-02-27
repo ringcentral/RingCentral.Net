@@ -26,18 +26,21 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         }
 
         // Operation: loadUserCallLog
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         public async Task<RingCentral.UserCallLogResponse> List(LoadUserCallLogParameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams);
         }
 
         // Operation: deleteUserCallLog
+        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null)
         {
             return await rc.Delete<string>(this.Path(false), queryParams);
         }
 
         // Operation: getCallRecords
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
         public async Task<RingCentral.UserCallLogRecord> Get(GetCallRecordsParameters queryParams = null)
         {
             if (this.callRecordId == null)

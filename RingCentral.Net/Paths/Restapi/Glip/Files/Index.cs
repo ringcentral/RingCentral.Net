@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Files
         }
 
         // Operation: createGlipFile
+        // Http Post /restapi/v1.0/glip/files
         public async Task<RingCentral.PostGlipFile> Post(CreateGlipFileRequest createGlipFileRequest,
             CreateGlipFileParameters queryParams = null)
         {

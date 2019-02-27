@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         // Operation: createCallMonitoringGroup
+        // Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups
         public async Task<RingCentral.CallMonitoringGroup> Post(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
         {
@@ -33,12 +34,14 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         // Operation: listCallMonitoringGroups
+        // Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams);
         }
 
         // Operation: updateCallMonitoringGroup
+        // Http Put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         public async Task<RingCentral.CallMonitoringGroup> Put(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
         {
@@ -51,6 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         // Operation: removeCallMonitoringGroup
+        // Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         public async Task<string> Delete()
         {
             if (this.groupId == null)

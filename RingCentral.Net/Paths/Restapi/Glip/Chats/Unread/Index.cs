@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unread
         }
 
         // Operation: markChatUnread
+        // Http Post /restapi/v1.0/glip/chats/{chatId}/unread
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
         }
 
         // Operation: bulkAssignPagingGroup
+        // Http Post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
         public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest)
         {
             return await rc.Post<string>(this.Path(), editPagingGroupRequest);

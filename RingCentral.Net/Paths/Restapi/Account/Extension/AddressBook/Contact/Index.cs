@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         // Operation: listContacts
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams);
         }
 
         // Operation: createContact
+        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         public async Task<RingCentral.PersonalContactResource> Post(
             RingCentral.PersonalContactResource personalContactResource, CreateContactParameters queryParams = null)
         {
@@ -40,6 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         // Operation: loadContact
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         public async Task<RingCentral.PersonalContactResource> Get()
         {
             if (this.contactId == null)
@@ -51,6 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         // Operation: updateContact
+        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         public async Task<RingCentral.PersonalContactResource> Put(
             RingCentral.PersonalContactResource personalContactResource, UpdateContactParameters queryParams = null)
         {
@@ -63,6 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         // Operation: deleteContact
+        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         public async Task<string> Delete()
         {
             if (this.contactId == null)

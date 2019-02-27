@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
         }
 
         // Operation: loadAccountDevice
+        // Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
         public async Task<RingCentral.GetDeviceInfoResponse> Get()
         {
             if (this.deviceId == null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
         }
 
         // Operation: updateDevice
+        // Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
         public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate)
         {
             if (this.deviceId == null)

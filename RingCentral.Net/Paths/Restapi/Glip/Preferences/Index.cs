@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
         }
 
         // Operation: loadGlipPreferences
+        // Http Get /restapi/v1.0/glip/preferences
         public async Task<RingCentral.GlipPreferencesInfo> Get()
         {
             return await rc.Get<RingCentral.GlipPreferencesInfo>(this.Path());

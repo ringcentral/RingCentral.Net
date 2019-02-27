@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
         }
 
         // Operation: loadServiceInfo
+        // Http Get /restapi/v1.0/account/{accountId}/service-info
         public async Task<RingCentral.GetServiceInfoResponse> Get()
         {
             return await rc.Get<RingCentral.GetServiceInfoResponse>(this.Path());

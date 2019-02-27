@@ -26,18 +26,21 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         // Operation: searchViaGet2
+        // Http Get /scim/v2/Users
         public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
         }
 
         // Operation: createUser2
+        // Http Post /scim/v2/Users
         public async Task<RingCentral.UserResponse> Post(RingCentral.User user)
         {
             return await rc.Post<RingCentral.UserResponse>(this.Path(false), user);
         }
 
         // Operation: getUser2
+        // Http Get /scim/v2/Users/{id}
         public async Task<RingCentral.UserResponse> Get()
         {
             if (this.id == null)
@@ -49,6 +52,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         // Operation: replaceUser2
+        // Http Put /scim/v2/Users/{id}
         public async Task<RingCentral.UserResponse> Put(RingCentral.User user)
         {
             if (this.id == null)
@@ -60,6 +64,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         // Operation: deleteUser2
+        // Http Delete /scim/v2/Users/{id}
         public async Task<string> Delete()
         {
             if (this.id == null)
@@ -71,6 +76,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         // Operation: patchUser2
+        // Http Patch /scim/v2/Users/{id}
         public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch)
         {
             if (this.id == null)

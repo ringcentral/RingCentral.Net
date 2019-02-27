@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
         }
 
         // Operation: checkUserPermission
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
         public async Task<RingCentral.AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams);

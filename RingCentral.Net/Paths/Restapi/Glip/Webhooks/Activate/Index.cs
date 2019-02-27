@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks.Activate
         }
 
         // Operation: activateGlipWebhook
+        // Http Post /restapi/v1.0/glip/webhooks/{webhookId}/activate
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

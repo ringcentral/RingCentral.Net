@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         }
 
         // Operation: listCountries
+        // Http Get /restapi/v1.0/dictionary/country
         public async Task<RingCentral.GetCountryListResponse> List(ListCountriesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams);
         }
 
         // Operation: loadCountry
+        // Http Get /restapi/v1.0/dictionary/country/{countryId}
         public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get()
         {
             if (this.countryId == null)

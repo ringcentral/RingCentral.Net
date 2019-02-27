@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
         }
 
         // Operation: createCompanyGreeting
+        // Http Post /restapi/v1.0/account/{accountId}/greeting
         public async Task<RingCentral.CustomCompanyGreetingInfo> Post(
             RingCentral.CustomCompanyGreetingRequest customCompanyGreetingRequest)
         {

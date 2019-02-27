@@ -26,18 +26,21 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         // Operation: loadUserNotes
+        // Http Get /restapi/v1.0/glip/notes
         public async Task<RingCentral.GlipNotesInfo> List(LoadUserNotesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(false), queryParams);
         }
 
         // Operation: createUserNote
+        // Http Post /restapi/v1.0/glip/notes
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate)
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(false), glipNoteCreate);
         }
 
         // Operation: loadUserNote
+        // Http Get /restapi/v1.0/glip/notes/{noteId}
         public async Task<RingCentral.GlipNotesInfo> Get()
         {
             if (this.noteId == null)
@@ -49,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         // Operation: deleteNote
+        // Http Delete /restapi/v1.0/glip/notes/{noteId}
         public async Task<string> Delete()
         {
             if (this.noteId == null)
@@ -60,6 +64,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         // Operation: patchNote
+        // Http Patch /restapi/v1.0/glip/notes/{noteId}
         public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
             PatchNoteParameters queryParams = null)
         {
@@ -72,6 +77,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         // Operation: updateNote
+        // Http Put /restapi/v1.0/glip/notes/{noteId}
         public async Task<RingCentral.GlipNoteInfo> Put(RingCentral.GlipNoteCreate glipNoteCreate)
         {
             if (this.noteId == null)

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         }
 
         // Operation: listAccountMeetingRecordings
+        // Http Get /restapi/v1.0/account/{accountId}/meeting-recordings
         public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
             ListAccountMeetingRecordingsParameters queryParams = null)
         {

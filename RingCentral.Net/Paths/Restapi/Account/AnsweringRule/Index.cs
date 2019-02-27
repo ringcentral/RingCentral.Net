@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         }
 
         // Operation: createCompanyAnsweringRule
+        // Http Post /restapi/v1.0/account/{accountId}/answering-rule
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(
             RingCentral.CompanyAnsweringRuleRequest companyAnsweringRuleRequest)
         {
@@ -33,12 +34,14 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         }
 
         // Operation: listCompanyAnsweringRule
+        // Http Get /restapi/v1.0/account/{accountId}/answering-rule
         public async Task<RingCentral.CompanyAnsweringRuleList> List()
         {
             return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false));
         }
 
         // Operation: loadCompanyAnsweringRule
+        // Http Get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Get()
         {
             if (this.ruleId == null)
@@ -50,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         }
 
         // Operation: updateCompanyAnsweringRule
+        // Http Put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(
             RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate)
         {
@@ -62,6 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         }
 
         // Operation: deleteCompanyAnsweringRule
+        // Http Delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         public async Task<string> Delete()
         {
             if (this.ruleId == null)

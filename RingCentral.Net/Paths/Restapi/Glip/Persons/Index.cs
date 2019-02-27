@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
         }
 
         // Operation: loadGlipPerson
+        // Http Get /restapi/v1.0/glip/persons/{personId}
         public async Task<RingCentral.GlipPersonInfo> Get()
         {
             if (this.personId == null)

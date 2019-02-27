@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         }
 
         // Operation: createDataExportTask
+        // Http Post /restapi/v1.0/glip/data-export
         public async Task<RingCentral.DataExportTask> Post(
             RingCentral.CreateDataExportTaskRequest createDataExportTaskRequest)
         {
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         }
 
         // Operation: loadDataExportTask
+        // Http Get /restapi/v1.0/glip/data-export/{taskId}
         public async Task<RingCentral.DataExportTask> Get()
         {
             if (this.taskId == null)

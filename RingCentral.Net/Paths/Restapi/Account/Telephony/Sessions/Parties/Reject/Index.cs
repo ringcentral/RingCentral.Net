@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
         }
 
         // Operation: rejectParty
+        // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/reject
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

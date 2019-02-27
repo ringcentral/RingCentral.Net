@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         }
 
         // Operation: listDirectoryEntries
+        // Http Get /restapi/v1.0/account/{accountId}/directory/entries
         public async Task<RingCentral.DirectoryResource> Get(ListDirectoryEntriesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.DirectoryResource>(this.Path(), queryParams);

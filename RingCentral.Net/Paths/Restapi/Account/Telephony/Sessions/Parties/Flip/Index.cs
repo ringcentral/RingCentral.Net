@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Flip
         }
 
         // Operation: callFlipParty
+        // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/flip
         public async Task<string> Post(RingCentral.CallPartyFlip callPartyFlip)
         {
             return await rc.Post<string>(this.Path(), callPartyFlip);

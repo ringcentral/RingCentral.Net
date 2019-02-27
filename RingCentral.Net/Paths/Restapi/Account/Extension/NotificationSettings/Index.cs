@@ -19,12 +19,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         }
 
         // Operation: loadNotificationSettings
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         public async Task<RingCentral.NotificationSettings> Get()
         {
             return await rc.Get<RingCentral.NotificationSettings>(this.Path());
         }
 
         // Operation: updateNotificationSettings
+        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         public async Task<RingCentral.NotificationSettings> Put(
             RingCentral.NotificationSettingsUpdateRequest notificationSettingsUpdateRequest)
         {

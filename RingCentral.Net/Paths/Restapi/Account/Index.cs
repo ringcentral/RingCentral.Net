@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account
         }
 
         // Operation: loadAccount
+        // Http Get /restapi/v1.0/account/{accountId}
         public async Task<RingCentral.GetAccountInfoResponse> Get()
         {
             if (this.accountId == null)

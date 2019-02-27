@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         // Operation: listBlockedAllowedPhoneNumber
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(
             ListBlockedAllowedPhoneNumberParameters queryParams = null)
         {
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         // Operation: createBlockedAllowedPhoneNumberList
+        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
         {
@@ -41,6 +43,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         // Operation: loadBlockedAllowedPhoneNumber
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get()
         {
             if (this.blockedNumberId == null)
@@ -52,6 +55,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         // Operation: deleteBlockedAllowedPhoneNumber
+        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         public async Task<string> Delete()
         {
             if (this.blockedNumberId == null)
@@ -63,6 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         // Operation: updateBlockedAllowedPhoneNumber
+        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
         {

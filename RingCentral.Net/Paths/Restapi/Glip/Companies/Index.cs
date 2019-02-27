@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         }
 
         // Operation: loadGlipCompany
+        // Http Get /restapi/v1.0/glip/companies/{companyId}
         public async Task<RingCentral.GlipCompany> Get()
         {
             if (this.companyId == null)

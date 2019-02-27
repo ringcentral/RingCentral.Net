@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold
         }
 
         // Operation: holdCallParty
+        // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/hold
         public async Task<RingCentral.CallParty> Post()
         {
             return await rc.Post<RingCentral.CallParty>(this.Path());

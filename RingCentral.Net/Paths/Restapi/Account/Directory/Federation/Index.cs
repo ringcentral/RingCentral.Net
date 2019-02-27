@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
         }
 
         // Operation: loadAccountFederation
+        // Http Get /restapi/v1.0/account/{accountId}/directory/federation
         public async Task<RingCentral.FederationResource> Get()
         {
             return await rc.Get<RingCentral.FederationResource>(this.Path());

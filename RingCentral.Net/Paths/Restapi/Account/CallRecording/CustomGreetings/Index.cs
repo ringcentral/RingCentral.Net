@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         }
 
         // Operation: listCallRecordingCustomGreetings
+        // Http Get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
         public async Task<RingCentral.CallRecordingCustomGreetings> Get(
             ListCallRecordingCustomGreetingsParameters queryParams = null)
         {
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         }
 
         // Operation: deleteCallRecordingCustomGreeting
+        // Http Delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
         public async Task<string> Delete()
         {
             if (this.greetingId == null)

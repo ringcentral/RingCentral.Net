@@ -26,18 +26,21 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         // Operation: loadGlipEvents
+        // Http Get /restapi/v1.0/glip/events
         public async Task<RingCentral.GlipEventsInfo> List(LoadGlipEventsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
         }
 
         // Operation: createEvent
+        // Http Post /restapi/v1.0/glip/events
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate)
         {
             return await rc.Post<RingCentral.GlipEventInfo>(this.Path(false), glipEventCreate);
         }
 
         // Operation: loadEvent
+        // Http Get /restapi/v1.0/glip/events/{eventId}
         public async Task<RingCentral.GlipEventInfo> Get()
         {
             if (this.eventId == null)
@@ -49,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         // Operation: updateEvent
+        // Http Put /restapi/v1.0/glip/events/{eventId}
         public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate)
         {
             if (this.eventId == null)
@@ -60,6 +64,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         // Operation: deleteEvent
+        // Http Delete /restapi/v1.0/glip/events/{eventId}
         public async Task<string> Delete()
         {
             if (this.eventId == null)

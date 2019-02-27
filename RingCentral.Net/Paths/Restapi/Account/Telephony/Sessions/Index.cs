@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         }
 
         // Operation: getCallSessionStatus
+        // Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}
         public async Task<RingCentral.CallSessionObject> Get(GetCallSessionStatusParameters queryParams = null)
         {
             if (this.sessionId == null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         }
 
         // Operation: deleteCallSession
+        // Http Delete /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}
         public async Task<string> Delete()
         {
             if (this.sessionId == null)

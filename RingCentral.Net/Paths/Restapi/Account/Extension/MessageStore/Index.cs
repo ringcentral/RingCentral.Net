@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         // Operation: listMessages
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
         public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
         }
 
         // Operation: loadMessage
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         public async Task<RingCentral.GetMessageInfoResponse> Get()
         {
             if (this.messageId == null)
@@ -43,6 +45,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         // Operation: updateMessage
+        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest)
         {
             if (this.messageId == null)
@@ -54,6 +57,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         // Operation: deleteMessage
+        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         public async Task<string> Delete(DeleteMessageParameters queryParams = null)
         {
             if (this.messageId == null)

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Publish
         }
 
         // Operation: publishNote
+        // Http Post /restapi/v1.0/glip/notes/{noteId}/publish
         public async Task<RingCentral.GlipNoteInfo> Post()
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path());

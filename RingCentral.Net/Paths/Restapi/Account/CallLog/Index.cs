@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         }
 
         // Operation: loadCompanyCallLog
+        // Http Get /restapi/v1.0/account/{accountId}/call-log
         public async Task<RingCentral.AccountCallLogResponse> List(LoadCompanyCallLogParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams);
         }
 
         // Operation: loadCompanyCallLogRecord
+        // Http Get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
         public async Task<RingCentral.CompanyCallLogRecord> Get()
         {
             if (this.callRecordId == null)

@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         }
 
         // Operation: listTimezones
+        // Http Get /restapi/v1.0/dictionary/timezone
         public async Task<RingCentral.GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
         }
 
         // Operation: loadTimezone
+        // Http Get /restapi/v1.0/dictionary/timezone/{timezoneId}
         public async Task<RingCentral.GetTimezoneInfoResponse> Get(LoadTimezoneParameters queryParams = null)
         {
             if (this.timezoneId == null)

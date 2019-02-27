@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
         }
 
         // Operation: listLocations
+        // Http Get /restapi/v1.0/dictionary/location
         public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams);

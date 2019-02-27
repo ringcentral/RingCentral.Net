@@ -26,18 +26,21 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         // Operation: listMeetings
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         public async Task<RingCentral.MeetingsResource> List()
         {
             return await rc.Get<RingCentral.MeetingsResource>(this.Path(false));
         }
 
         // Operation: createMeeting
+        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         public async Task<string> Post(RingCentral.MeetingRequestResource meetingRequestResource)
         {
             return await rc.Post<string>(this.Path(false), meetingRequestResource);
         }
 
         // Operation: loadMeeting
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         public async Task<RingCentral.MeetingResponseResource> Get()
         {
             if (this.meetingId == null)
@@ -49,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         // Operation: updateMeeting
+        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         public async Task<RingCentral.MeetingResponseResource> Put(
             RingCentral.MeetingRequestResource meetingRequestResource)
         {
@@ -61,6 +65,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         // Operation: deleteMeeting
+        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         public async Task<string> Delete()
         {
             if (this.meetingId == null)

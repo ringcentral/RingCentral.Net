@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         }
 
         // Operation: getToken
+        // Http Post /restapi/oauth/token
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();

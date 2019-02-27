@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Recording.Content
         }
 
         // Operation: listCallRecordingData
+        // Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
         public async Task<byte[]> Get()
         {
             return await rc.Get<byte[]>(this.Path());

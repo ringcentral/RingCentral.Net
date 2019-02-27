@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         }
 
         // Operation: createSipRegistration
+        // Http Post /restapi/v1.0/client-info/sip-provision
         public async Task<RingCentral.CreateSipRegistrationResponse> Post(
             RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest)
         {

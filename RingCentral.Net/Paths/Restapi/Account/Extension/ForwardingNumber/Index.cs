@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         // Operation: listExtensionForwardingNumbers
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(
             ListExtensionForwardingNumbersParameters queryParams = null)
         {
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         // Operation: createExtensionForwardingNumber
+        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         public async Task<RingCentral.ForwardingNumberInfo> Post(
             RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest)
         {
@@ -40,6 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         // Operation: loadExtensionForwardingNumber
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         public async Task<RingCentral.ForwardingNumberResource> Get()
         {
             if (this.forwardingNumberId == null)
@@ -51,6 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         // Operation: updateExtensionForwardingNumber
+        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         public async Task<RingCentral.ForwardingNumberInfo> Put(
             RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest)
         {
@@ -63,6 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         // Operation: deleteExtensionForwardingNumber
+        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         public async Task<string> Delete()
         {
             if (this.forwardingNumberId == null)

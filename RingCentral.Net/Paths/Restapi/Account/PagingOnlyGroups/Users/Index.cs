@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Users
         }
 
         // Operation: listPagingGroupUsers
+        // Http Get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
         public async Task<RingCentral.PagingOnlyGroupUsers> Get(ListPagingGroupUsersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.PagingOnlyGroupUsers>(this.Path(), queryParams);

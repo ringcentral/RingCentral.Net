@@ -26,18 +26,21 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         // Operation: listGlipTeams
+        // Http Get /restapi/v1.0/glip/teams
         public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams);
         }
 
         // Operation: createGlipTeam
+        // Http Post /restapi/v1.0/glip/teams
         public async Task<RingCentral.GlipTeamInfo> Post(RingCentral.GlipPostTeamBody glipPostTeamBody)
         {
             return await rc.Post<RingCentral.GlipTeamInfo>(this.Path(false), glipPostTeamBody);
         }
 
         // Operation: loadGlipTeam
+        // Http Get /restapi/v1.0/glip/teams/{chatId}
         public async Task<RingCentral.GlipTeamInfo> Get()
         {
             if (this.chatId == null)
@@ -49,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         // Operation: updateGlipTeam
+        // Http Patch /restapi/v1.0/glip/teams/{chatId}
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody)
         {
             if (this.chatId == null)
@@ -60,6 +64,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         // Operation: deleteGlipTeam
+        // Http Delete /restapi/v1.0/glip/teams/{chatId}
         public async Task<string> Delete()
         {
             if (this.chatId == null)

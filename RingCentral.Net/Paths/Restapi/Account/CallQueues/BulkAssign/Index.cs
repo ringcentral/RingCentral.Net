@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
         }
 
         // Operation: assignCallQueueMembers
+        // Http Post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
         public async Task<string> Post(RingCentral.CallQueueBulkAssignResource callQueueBulkAssignResource)
         {
             return await rc.Post<string>(this.Path(), callQueueBulkAssignResource);

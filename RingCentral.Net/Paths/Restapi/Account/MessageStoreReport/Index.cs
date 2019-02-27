@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         }
 
         // Operation: createMessageStoreReport
+        // Http Post /restapi/v1.0/account/{accountId}/message-store-report
         public async Task<RingCentral.MessageStoreReport> Post(
             RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest)
         {
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         }
 
         // Operation: loadMessageStoreReportTask
+        // Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
         public async Task<RingCentral.MessageStoreReport> Get()
         {
             if (this.taskId == null)

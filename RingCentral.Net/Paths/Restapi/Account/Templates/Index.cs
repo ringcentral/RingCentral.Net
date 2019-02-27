@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         }
 
         // Operation: listTemplates
+        // Http Get /restapi/v1.0/account/{accountId}/templates
         public async Task<RingCentral.UserTemplates> List(ListTemplatesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams);
         }
 
         // Operation: loadTemplate
+        // Http Get /restapi/v1.0/account/{accountId}/templates/{templateId}
         public async Task<RingCentral.TemplateInfo> Get()
         {
             if (this.templateId == null)

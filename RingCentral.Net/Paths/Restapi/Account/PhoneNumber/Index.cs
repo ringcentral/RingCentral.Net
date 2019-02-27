@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         }
 
         // Operation: listAccountPhoneNumbers
+        // Http Get /restapi/v1.0/account/{accountId}/phone-number
         public async Task<RingCentral.AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
         }
 
         // Operation: loadAccountPhoneNumber
+        // Http Get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
         public async Task<RingCentral.CompanyPhoneNumberInfo> Get()
         {
             if (this.phoneNumberId == null)

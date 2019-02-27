@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Unlock
         }
 
         // Operation: unlockNote
+        // Http Post /restapi/v1.0/glip/notes/{noteId}/unlock
         public async Task<RingCentral.GlipNoteInfo> Post()
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path());

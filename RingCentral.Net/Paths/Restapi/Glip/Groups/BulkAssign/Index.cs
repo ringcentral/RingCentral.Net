@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.BulkAssign
         }
 
         // Operation: assignGlipGroupMembers
+        // Http Post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
         public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.EditGroupRequest editGroupRequest)
         {
             return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(), editGroupRequest);

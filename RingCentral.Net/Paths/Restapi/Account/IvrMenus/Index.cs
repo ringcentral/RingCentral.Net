@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         // Operation: createIvrMenu
+        // Http Post /restapi/v1.0/account/{accountId}/ivr-menus
         public async Task<RingCentral.IVRMenuInfo> Post(RingCentral.IVRMenuInfo iVRMenuInfo)
         {
             return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo);
         }
 
         // Operation: loadIvrMenu
+        // Http Get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         public async Task<RingCentral.IVRMenuInfo> Get()
         {
             if (this.ivrMenuId == null)
@@ -43,6 +45,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         // Operation: updateIvrMenu
+        // Http Put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo)
         {
             if (this.ivrMenuId == null)

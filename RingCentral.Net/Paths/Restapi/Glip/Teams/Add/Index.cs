@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Add
         }
 
         // Operation: addGlipTeamMembers
+        // Http Post /restapi/v1.0/glip/teams/{chatId}/add
         public async Task<string> Post(RingCentral.GlipPostMembersListBody glipPostMembersListBody)
         {
             return await rc.Post<string>(this.Path(), glipPostMembersListBody);

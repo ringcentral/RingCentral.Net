@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         }
 
         // Operation: loadMeetingServiceInfo
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
         public async Task<RingCentral.MeetingServiceInfoResource> Get()
         {
             return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path());

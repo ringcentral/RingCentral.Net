@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         }
 
         // Operation: listExtensionDevices
+        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(
             ListExtensionDevicesParameters queryParams = null)
         {

@@ -26,12 +26,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         }
 
         // Operation: listLanguages
+        // Http Get /restapi/v1.0/dictionary/language
         public async Task<RingCentral.LanguageList> List()
         {
             return await rc.Get<RingCentral.LanguageList>(this.Path(false));
         }
 
         // Operation: loadLanguage
+        // Http Get /restapi/v1.0/dictionary/language/{languageId}
         public async Task<RingCentral.LanguageInfo> Get()
         {
             if (this.languageId == null)
