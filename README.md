@@ -3,6 +3,13 @@
 This project is complete rewrite of [ringcentral/ringcentral-csharp-client](https://github.com/ringcentral/ringcentral-csharp-client).
 
 
+## Code samples
+
+You can find [sample code for all the endpoints](./samples.md).
+
+There is also lots of useful code for your reference in our [test cases](./RingCentral.Tests).
+
+
 ## For maintainers
 
 ### Release
