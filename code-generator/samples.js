@@ -11,7 +11,7 @@ const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 delete doc.paths['/restapi/oauth/authorize']
 
 const paths = Object.keys(doc.paths)
-const normalizedPaths = paths.map(p => normalizePath(p))
+const normalizedPaths = paths.map(p => normalizePath(p)).sort()
 console.log(normalizedPaths)
 
 const pathToCode = path => {
