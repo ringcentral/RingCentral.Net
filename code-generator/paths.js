@@ -4,7 +4,7 @@ import * as R from 'ramda'
 import changeCase from 'change-case'
 import path from 'path'
 
-import { normalizePath, deNormalizePath } from './utils'
+import { normalizePath, deNormalizePath, getResponseType } from './utils'
 
 const outputDir = '../RingCentral.Net/Paths'
 
@@ -157,14 +157,9 @@ ${code}`
       const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
         R.any(o => o.method === 'get' && o.endpoint === operation.endpoint + `/{${paramName}}`)(operations)) ? 'List' : method
       const responses = operation.detail.responses
-      const responseSchema = (responses[200] || responses[201] || responses[202] || responses[204] || responses[205] || responses[302] || responses.default).schema
-      let responseType = 'string'
-      if (responseSchema) {
-        if (responseSchema.type === 'string' && responseSchema.format === 'binary') {
-          responseType = 'byte[]'
-        } else if (responseSchema['$ref']) {
-          responseType = 'RingCentral.' + R.last(responseSchema['$ref'].split('/'))
-        }
+      let responseType = getResponseType(responses)
+      if (!responseType) {
+        responseType = 'string'
       }
 
       let body, bodyClass, bodyParam, formUrlEncoded, formData, mixed

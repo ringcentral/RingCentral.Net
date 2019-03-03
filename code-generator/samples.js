@@ -3,7 +3,7 @@ import fs from 'fs'
 import changeCase from 'change-case'
 import * as R from 'ramda'
 
-import { normalizePath, deNormalizePath } from './utils'
+import { normalizePath, deNormalizePath, getResponseType } from './utils'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 
@@ -71,6 +71,18 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 \`\`\`
 
 ${parameters.map(p => `- Parameter \`${changeCase.camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
+
+      const responses = doc.paths[endpoint][changeCase.lowerCase(method === 'List' ? 'Get' : method)].responses
+      const responseType = getResponseType(responses)
+      if (!responseType) {
+        code += '\n- `result` is an empty string'
+      } else if (responseType.startsWith('RingCentral.')) {
+        const className = responseType.substring(12)
+        code += `\n- \`result\` is of type [${className}](./RingCentral.Net/Definitions/${className}.cs)`
+      } else {
+        code += `\n- \`result\` is of type \`${responseType}\``
+      }
+
       if (code.includes('.Restapi(apiVersion)')) {
         code += '\n- Parameter `apiVersion` is optional with default value `v1.0`'
       }
@@ -87,7 +99,5 @@ ${parameters.map(p => `- Parameter \`${changeCase.camelCase(p)}\` is of type [${
     }
   })
 })
-
-console.log(md)
 
 fs.writeFileSync('../samples.md', md)

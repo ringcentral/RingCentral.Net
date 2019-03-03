@@ -76,7 +76,7 @@ namespace RingCentral.Tests
                     .List(new ListMessagesParameters
                     {
                         dateFrom = DateTime.UtcNow.AddDays(-30).ToString("o"),
-                        perPage = 200
+                        perPage = 500
                     });
                 var messages = response.records;
 
