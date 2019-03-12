@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Favorite
             return $"{parent.Path()}/favorite";
         }
 
-        // Operation: favoriteGlipChat
+        // Operation: Add Chat to Favorites
         // Http Post /restapi/v1.0/glip/chats/{chatId}/favorite
         public async Task<string> Post()
         {

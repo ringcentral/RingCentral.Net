@@ -25,21 +25,21 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             return $"{parent.Path()}/notes";
         }
 
-        // Operation: loadUserNotes
+        // Operation: Get User Notes
         // Http Get /restapi/v1.0/glip/notes
         public async Task<RingCentral.GlipNotesInfo> List(LoadUserNotesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(false), queryParams);
         }
 
-        // Operation: createUserNote
+        // Operation: Create User Note
         // Http Post /restapi/v1.0/glip/notes
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate)
         {
             return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(false), glipNoteCreate);
         }
 
-        // Operation: loadUserNote
+        // Operation: Get Note
         // Http Get /restapi/v1.0/glip/notes/{noteId}
         public async Task<RingCentral.GlipNotesInfo> Get()
         {
@@ -51,7 +51,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path());
         }
 
-        // Operation: deleteNote
+        // Operation: Delete Note
         // Http Delete /restapi/v1.0/glip/notes/{noteId}
         public async Task<string> Delete()
         {
@@ -63,7 +63,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             return await rc.Delete<string>(this.Path());
         }
 
-        // Operation: patchNote
+        // Operation: Patch Note
         // Http Patch /restapi/v1.0/glip/notes/{noteId}
         public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
             PatchNoteParameters queryParams = null)
@@ -76,7 +76,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, queryParams);
         }
 
-        // Operation: updateNote
+        // Operation: Update Note
         // Http Put /restapi/v1.0/glip/notes/{noteId}
         public async Task<RingCentral.GlipNoteInfo> Put(RingCentral.GlipNoteCreate glipNoteCreate)
         {

@@ -1,7 +1,7 @@
-# RingCentral.Net SDK Code samples
+# RingCentral.Net SDK Code Samples
 
 
-## Get all versions
+## Get API Versions
 
 HTTP GET `/restapi`
 
@@ -17,7 +17,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GetVersionsResponse](./RingCentral.Net/Definitions/GetVersionsResponse.cs)
 
 
-## Revoke token
+## Revoke Token
 
 HTTP POST `/restapi/oauth/revoke`
 
@@ -33,7 +33,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 
 
-## Get token
+## Get Token
 
 HTTP POST `/restapi/oauth/token`
 
@@ -49,7 +49,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [TokenInfo](./RingCentral.Net/Definitions/TokenInfo.cs)
 
 
-## Get api version
+## Get Version Info
 
 HTTP GET `/restapi/{apiVersion}`
 
@@ -66,7 +66,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load account
+## Get Company Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}`
 
@@ -84,7 +84,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List company active calls
+## Get Company Active Calls
 
 HTTP GET `/restapi/v1.0/account/{accountId}/active-calls`
 
@@ -102,7 +102,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Create company answering rule
+## Create Company Call Handling Rule
 
 HTTP POST `/restapi/v1.0/account/{accountId}/answering-rule`
 
@@ -120,7 +120,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List company answering rule
+## Get Company Call Handling Rules
 
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule`
 
@@ -138,7 +138,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load company answering rule
+## Get Company Call Handling Rule
 
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
@@ -156,7 +156,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update company answering rule
+## Update Company Call Handling Rule
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
@@ -174,7 +174,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Delete company answering rule
+## Delete Company Call Handling Rule
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
@@ -192,7 +192,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load account business address
+## Get Company Business Address
 
 HTTP GET `/restapi/v1.0/account/{accountId}/business-address`
 
@@ -210,7 +210,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update account business address
+## Update Company Business Address
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-address`
 
@@ -228,7 +228,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load company business hours
+## Get Company Business Hours
 
 HTTP GET `/restapi/v1.0/account/{accountId}/business-hours`
 
@@ -246,7 +246,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update company business hours
+## Update Company Business Hours
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-hours`
 
@@ -264,7 +264,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load company call log
+## Get Company Call Log Records
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log`
 
@@ -282,7 +282,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load company call log record
+## Get Company Call Log Record(s)
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`
 
@@ -300,7 +300,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Create call monitoring group
+## Create Call Monitoring Group
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
@@ -318,7 +318,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call monitoring groups
+## Get Call Monitoring Groups
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
@@ -336,7 +336,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update call monitoring group
+## Updates Call Monitoring Group
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
@@ -354,7 +354,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Remove call monitoring group
+## Remove Given Call Monitoring Group
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
@@ -372,7 +372,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update call monitoring groups
+## Edit Call Monitoring Group
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
 
@@ -390,7 +390,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call monitoring group members
+## Get Call Monitoring Group Members
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members`
 
@@ -408,7 +408,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call queues
+## Get Call Queues
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues`
 
@@ -426,7 +426,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Assign call queue members
+## Edit Call Queue Members
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign`
 
@@ -444,7 +444,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call queue members
+## Get Call Queue Members
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members`
 
@@ -462,7 +462,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load call recording settings
+## Get Call Recording Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording`
 
@@ -480,7 +480,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update call recording settings
+## Update Call Recording Settings
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-recording`
 
@@ -498,7 +498,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update call recording extension settings
+## Update Call Recording Extension Settings
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-recording/bulk-assign`
 
@@ -516,7 +516,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call recording custom greetings
+## [Beta] Get Call Recording Custom Greetings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`
 
@@ -534,7 +534,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Delete call recording custom greeting
+## Delete Call Recording Custom Greeting
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}`
 
@@ -552,7 +552,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call recording extension settings
+## Get Call Recording Extension Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/extensions`
 
@@ -570,7 +570,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Bulk assign departments
+## Edit Department Members
 
 HTTP POST `/restapi/v1.0/account/{accountId}/department/bulk-assign`
 
@@ -588,7 +588,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List department members
+## Get Department Member List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/department/{departmentId}/members`
 
@@ -606,7 +606,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load account device
+## Get Device Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
@@ -624,7 +624,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update device
+## Update Device
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
@@ -642,7 +642,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List directory entries
+## Get Company Directory Entries
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries`
 
@@ -660,7 +660,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Search directory entries
+## Search Company Directory Entries
 
 HTTP POST `/restapi/v1.0/account/{accountId}/directory/entries/search`
 
@@ -678,7 +678,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load account federation
+## Get Account Federation
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/federation`
 
@@ -696,7 +696,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List extensions
+## Get Extension List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension`
 
@@ -714,7 +714,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Create extension
+## Create Extension
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension`
 
@@ -732,7 +732,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load extension info
+## Get Extension Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
@@ -751,7 +751,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update extension
+## Update Extension
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
@@ -770,7 +770,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete extension
+## Delete Extension
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
@@ -789,7 +789,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List extension active calls
+## Get User Active Calls
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls`
 
@@ -808,7 +808,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Sync address book
+## Address Book Synchronization
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync`
 
@@ -827,7 +827,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List contacts
+## Get Contact List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
@@ -846,7 +846,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create contact
+## Create Contact
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
@@ -866,7 +866,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load contact
+## Get Contact(s)
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
@@ -885,7 +885,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update contact
+## Update Contact(s)
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
@@ -905,7 +905,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete contact
+## Delete Contact(s)
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
@@ -924,7 +924,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List answering rules
+## Get Call Handling Rules
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
@@ -943,7 +943,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create answering rule
+## Create Custom Call Handling Rules
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
@@ -962,7 +962,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load answering rule
+## Get Call Handling Rule
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
@@ -981,7 +981,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update answering rule
+## Update Custom Call Handling Rule
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
@@ -1000,7 +1000,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete answering rule
+## Delete Call Handling Rule
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
@@ -1019,7 +1019,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Get authorization profile
+## Get User Permissions
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile`
 
@@ -1038,7 +1038,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Check user permission
+## Check User Permissions
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check`
 
@@ -1057,7 +1057,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load user business hours
+## Get User Business Hours
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
@@ -1076,7 +1076,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update user business hours
+## Update User Business Hours
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
@@ -1095,7 +1095,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load user call log
+## Get User Call Log Records
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
@@ -1114,7 +1114,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete user call log
+## Delete User Call Log Records
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
@@ -1133,7 +1133,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Sync user call log
+## Sync User Call Log
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync`
 
@@ -1152,7 +1152,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Get call records
+## Get User Call Record(s)
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`
 
@@ -1171,7 +1171,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load call blocking settings
+## Get Caller Blocking Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
@@ -1190,7 +1190,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update call blocking settings
+## Update Caller Blocking Settings
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
@@ -1209,7 +1209,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List blocked allowed phone number
+## Get Blocked/Allowed Numbers
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
@@ -1228,7 +1228,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create blocked allowed phone number list
+## Add Blocked/Allowed Number
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
@@ -1247,7 +1247,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create blocked allowed phone number lists
+## Add/Remove Blocked or Allowed Numbers using bulk request
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/bulk-update`
 
@@ -1266,7 +1266,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load blocked allowed phone number
+## Get Blocked/Allowed Number
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
@@ -1285,7 +1285,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete blocked allowed phone number
+## Delete Blocked Number
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
@@ -1304,7 +1304,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update blocked allowed phone number
+## Update Blocked/Allowed Number
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
@@ -1323,7 +1323,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load extension caller id
+## Get Extension Caller ID
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
@@ -1342,7 +1342,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update extension caller id
+## Update Extension Caller ID
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
@@ -1361,7 +1361,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create internal text message
+## Create Internal Text Message
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager`
 
@@ -1380,7 +1380,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load conferencing info
+## Get User Conferencing Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
@@ -1399,7 +1399,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update conferencing info
+## Update User Conferencing Settings
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
@@ -1418,7 +1418,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List extension devices
+## Get User Device Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/device`
 
@@ -1437,7 +1437,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List favorite contacts
+## Get Favorite Contact List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
@@ -1456,7 +1456,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update favorite contact list
+## Update Favorite Contact List
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
@@ -1475,7 +1475,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Send fax message
+## Create Fax Message
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax`
 
@@ -1494,7 +1494,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List extension forwarding numbers
+## Get Forwarding Numbers
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
@@ -1513,7 +1513,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create extension forwarding number
+## Create Forwarding Numbers
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
@@ -1532,7 +1532,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load extension forwarding number
+## Get Forwarding Number
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
@@ -1551,7 +1551,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update extension forwarding number
+## Update Forwarding Numbers
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
@@ -1570,7 +1570,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete extension forwarding number
+## Delete Forwarding Number
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
@@ -1589,7 +1589,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List extension grants
+## Get Extension Grants
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant`
 
@@ -1608,7 +1608,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create user custom greeting
+## Create User Custom Greeting
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 
@@ -1627,7 +1627,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load custom greeting
+## Get Custom Greeting Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`
 
@@ -1646,7 +1646,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List meetings
+## Get Scheduled Meetings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
@@ -1665,7 +1665,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create meeting
+## Create Meetings
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
@@ -1684,7 +1684,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List user meeting recordings
+## Get User Meeting Recordings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings`
 
@@ -1703,7 +1703,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load meeting service info
+## Get Meeting Service Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
 
@@ -1722,7 +1722,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load meeting
+## Get Meeting Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
@@ -1741,7 +1741,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update meeting
+## Update Meeting
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
@@ -1760,7 +1760,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete meeting
+## Delete Meeting
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
@@ -1779,7 +1779,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## End meeting
+## End Meeting
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end`
 
@@ -1798,7 +1798,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List messages
+## Get Message List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store`
 
@@ -1817,7 +1817,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load message
+## Get Message(s)
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
@@ -1836,7 +1836,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update message
+## Update Message(s)
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
@@ -1855,7 +1855,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Delete message
+## Delete Message(s)
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
@@ -1874,7 +1874,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Get message attachment by id
+## Get Message Attachment
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`
 
@@ -1893,7 +1893,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Sync messages
+## Sync Messages
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync`
 
@@ -1912,7 +1912,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Load notification settings
+## Get Notification Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
@@ -1931,7 +1931,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update notification settings
+## Update Notification Settings
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
@@ -1950,7 +1950,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## List extension phone numbers
+## Get Extension Phone Number List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number`
 
@@ -1969,7 +1969,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Get presence status
+## Get User Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
@@ -1988,7 +1988,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update presence status
+## Update User Status
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
@@ -2007,7 +2007,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Download profile image
+## Get User Profile Image
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
@@ -2026,7 +2026,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Upload profile image
+## Upload User Profile Image
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
@@ -2045,7 +2045,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Update profile image
+## Update User Profile Image
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
@@ -2064,7 +2064,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Download scaled pofile image
+## Get Extension Profile Image (Scaled)
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
 
@@ -2083,7 +2083,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Make ring out call
+## Make RingOut Call
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`
 
@@ -2102,7 +2102,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Get ring out call status
+##  Get RingOut Call Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
@@ -2121,7 +2121,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Cancel ring out call
+## Cancel RingOut Call
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
@@ -2140,7 +2140,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Send sms
+## Create SMS Message
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`
 
@@ -2159,7 +2159,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 
-## Create company greeting
+## Create Custom Company Greeting
 
 HTTP POST `/restapi/v1.0/account/{accountId}/greeting`
 
@@ -2177,7 +2177,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Create ivr menu
+## Create IVR Menu
 
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-menus`
 
@@ -2195,7 +2195,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load ivr menu
+## Get IVR Menu
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
@@ -2213,7 +2213,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update ivr menu
+## Update IVR Menu
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
@@ -2231,7 +2231,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Create ivr prompt
+## Create IVR Prompts
 
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
@@ -2249,7 +2249,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List ivr prompts
+## Get IVR Prompts
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
@@ -2267,7 +2267,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load ivr prompt
+## Get IVR Prompt
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
@@ -2285,7 +2285,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Delete ivr prompt
+## Delete IVR Prompt
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
@@ -2303,7 +2303,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update ivr prompt
+## Update IVR Prompt
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
@@ -2321,7 +2321,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load ivr prompt content
+## Get IVR Prompt Content
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content`
 
@@ -2339,7 +2339,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List account meeting recordings
+## Get Account Meeting Recordings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/meeting-recordings`
 
@@ -2357,7 +2357,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load message store configuration
+## Get Message Store Configuration
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
@@ -2375,7 +2375,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update message store configuration
+## Update Message Store Configuration
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
@@ -2393,7 +2393,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Create message store report
+## Create Message Store Report
 
 HTTP POST `/restapi/v1.0/account/{accountId}/message-store-report`
 
@@ -2411,7 +2411,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load message store report task
+## Get Message Store Report Task
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}`
 
@@ -2429,7 +2429,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load message store report archive
+## Get Message Store Report Archive
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive`
 
@@ -2447,7 +2447,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load message store report archive content
+## Get Message Store Report Archive Content
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}`
 
@@ -2465,7 +2465,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Bulk assign paging group
+## Edit Paging Group Users and Devices
 
 HTTP POST `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`
 
@@ -2483,7 +2483,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List paging group devices
+## Get Paging Only Group Devices
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`
 
@@ -2501,7 +2501,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List paging group users
+## Get Paging Only Group Users
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`
 
@@ -2519,7 +2519,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List account phone numbers
+## Get Company Phone Number List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number`
 
@@ -2537,7 +2537,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load account phone number
+## Get Phone Number
 
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}`
 
@@ -2555,7 +2555,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Account presence
+## Get User Presence Statuses List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/presence`
 
@@ -2573,7 +2573,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call recordings
+## Get Call Recording(s)
 
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}`
 
@@ -2591,7 +2591,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List call recording data
+## Get Call Recordings Data
 
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}/content`
 
@@ -2609,7 +2609,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load service info
+## Get Account Service Info [Beta]
 
 HTTP GET `/restapi/v1.0/account/{accountId}/service-info`
 
@@ -2627,7 +2627,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Get call session status
+## Get Call Session Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
 
@@ -2645,7 +2645,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Delete call session
+## Drop Call Session
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
 
@@ -2663,7 +2663,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Get call party status
+## Get Call Party Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}`
 
@@ -2681,7 +2681,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Update call party
+## Update Call Party
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}`
 
@@ -2699,7 +2699,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Call flip party
+## Call Flip on Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/flip`
 
@@ -2717,7 +2717,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Forward call party
+## Forward Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/forward`
 
@@ -2735,7 +2735,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Hold call party
+## Hold Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/hold`
 
@@ -2753,7 +2753,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Start call recording
+## Starts new call recording in a party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings`
 
@@ -2771,7 +2771,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Pause resume call recording
+## Pause/Resume Recording
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings/{recordingId}`
 
@@ -2790,7 +2790,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Reject party
+## Reject Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/reject`
 
@@ -2808,7 +2808,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Transfer call party
+## Transfer Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/transfer`
 
@@ -2826,7 +2826,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Unhold call party
+## Unhold Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/unhold`
 
@@ -2844,7 +2844,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## List templates
+## Get Templates
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates`
 
@@ -2862,7 +2862,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Load template
+## Get Template
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates/{templateId}`
 
@@ -2880,7 +2880,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 
-## Create sip registration
+## Register SIP Device
 
 HTTP POST `/restapi/v1.0/client-info/sip-provision`
 
@@ -2897,7 +2897,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List countries
+## Get Country List
 
 HTTP GET `/restapi/v1.0/dictionary/country`
 
@@ -2914,7 +2914,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load country
+## Get Country
 
 HTTP GET `/restapi/v1.0/dictionary/country/{countryId}`
 
@@ -2931,7 +2931,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List fax cover pages
+## Get Available Fax Cover Pages
 
 HTTP GET `/restapi/v1.0/dictionary/fax-cover-page`
 
@@ -2948,7 +2948,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List standard greetings
+## Get Standard Greetings
 
 HTTP GET `/restapi/v1.0/dictionary/greeting`
 
@@ -2965,7 +2965,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load standard greeting
+## Get Greeting Info
 
 HTTP GET `/restapi/v1.0/dictionary/greeting/{greetingId}`
 
@@ -2982,7 +2982,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List languages
+## Get Language List
 
 HTTP GET `/restapi/v1.0/dictionary/language`
 
@@ -2999,7 +2999,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load language
+## Get Language
 
 HTTP GET `/restapi/v1.0/dictionary/language/{languageId}`
 
@@ -3016,7 +3016,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List locations
+## Get Location List
 
 HTTP GET `/restapi/v1.0/dictionary/location`
 
@@ -3033,7 +3033,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List states
+## Get State List
 
 HTTP GET `/restapi/v1.0/dictionary/state`
 
@@ -3050,7 +3050,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load state
+## Get State
 
 HTTP GET `/restapi/v1.0/dictionary/state/{stateId}`
 
@@ -3067,7 +3067,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List timezones
+## Get Timezone List
 
 HTTP GET `/restapi/v1.0/dictionary/timezone`
 
@@ -3084,7 +3084,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load timezone
+## Get Timezone
 
 HTTP GET `/restapi/v1.0/dictionary/timezone/{timezoneId}`
 
@@ -3101,7 +3101,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create glip card
+## Create Card
 
 HTTP POST `/restapi/v1.0/glip/cards`
 
@@ -3119,7 +3119,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip card
+## Get Card
 
 HTTP GET `/restapi/v1.0/glip/cards/{cardId}`
 
@@ -3136,7 +3136,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Update glip card
+## Update Card
 
 HTTP PUT `/restapi/v1.0/glip/cards/{cardId}`
 
@@ -3153,7 +3153,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Delete glip card
+## Delete Card
 
 HTTP DELETE `/restapi/v1.0/glip/cards/{cardId}`
 
@@ -3170,7 +3170,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip chats
+## Get Chat List
 
 HTTP GET `/restapi/v1.0/glip/chats`
 
@@ -3187,7 +3187,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip chat
+## Get Chat
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}`
 
@@ -3204,7 +3204,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Favorite glip chat
+## Add Chat to Favorites
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/favorite`
 
@@ -3221,7 +3221,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Mark chat read
+## Mark Chat as Read
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/read`
 
@@ -3238,7 +3238,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Unfavorite glip chat
+## Remove Chat from Favorites
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unfavorite`
 
@@ -3255,7 +3255,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Mark chat unread
+## Mark Chat as Unread
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unread`
 
@@ -3272,7 +3272,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip company
+## Get Company Info
 
 HTTP GET `/restapi/v1.0/glip/companies/{companyId}`
 
@@ -3289,7 +3289,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip conversations
+## Get User Conversation List
 
 HTTP GET `/restapi/v1.0/glip/conversations`
 
@@ -3306,7 +3306,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create glip conversation
+## Create/Open Chat
 
 HTTP POST `/restapi/v1.0/glip/conversations`
 
@@ -3323,7 +3323,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip conversation
+## Get Conversation
 
 HTTP GET `/restapi/v1.0/glip/conversations/{chatId}`
 
@@ -3340,7 +3340,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create data export task
+## Create Data Export Task
 
 HTTP POST `/restapi/v1.0/glip/data-export`
 
@@ -3357,7 +3357,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load data export task
+## Get Data Export Task
 
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}`
 
@@ -3374,7 +3374,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Get compliance archive stream
+## Get Glip Data Archive
 
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}`
 
@@ -3391,7 +3391,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip events
+## Get User Events List
 
 HTTP GET `/restapi/v1.0/glip/events`
 
@@ -3408,7 +3408,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create event
+## Create Event
 
 HTTP POST `/restapi/v1.0/glip/events`
 
@@ -3425,7 +3425,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load event
+## Get Event
 
 HTTP GET `/restapi/v1.0/glip/events/{eventId}`
 
@@ -3442,7 +3442,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Update event
+## Update Event
 
 HTTP PUT `/restapi/v1.0/glip/events/{eventId}`
 
@@ -3459,7 +3459,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Delete event
+## Delete Event
 
 HTTP DELETE `/restapi/v1.0/glip/events/{eventId}`
 
@@ -3476,7 +3476,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip everyone
+## Get Everyone Chat Info
 
 HTTP GET `/restapi/v1.0/glip/everyone`
 
@@ -3493,7 +3493,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Update glip everyone
+## Update Everyone Сhat Info
 
 HTTP PATCH `/restapi/v1.0/glip/everyone`
 
@@ -3510,7 +3510,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List favorite chats
+## Get Favorite Chats
 
 HTTP GET `/restapi/v1.0/glip/favorites`
 
@@ -3527,7 +3527,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create glip file
+## Upload File
 
 HTTP POST `/restapi/v1.0/glip/files`
 
@@ -3545,7 +3545,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip groups
+## Get User Groups
 
 HTTP GET `/restapi/v1.0/glip/groups`
 
@@ -3562,7 +3562,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create glip group
+## Create Group
 
 HTTP POST `/restapi/v1.0/glip/groups`
 
@@ -3579,7 +3579,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip group
+## Get Group
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}`
 
@@ -3596,7 +3596,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Assign glip group members
+## Edit Group Members
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/bulk-assign`
 
@@ -3613,7 +3613,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create eventby group id
+## Create Event by Group ID
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/events`
 
@@ -3630,7 +3630,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List group events
+## Get Group Events
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/events`
 
@@ -3647,7 +3647,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load group notes
+## Get Group Notes
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/notes`
 
@@ -3664,7 +3664,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create group note
+## Create Group Note
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/notes`
 
@@ -3681,7 +3681,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip group posts
+## Get Group Posts
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/posts`
 
@@ -3698,7 +3698,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create glip group post
+## Create Post in Group
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/posts`
 
@@ -3715,7 +3715,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Update glip post text
+## Update Post
 
 HTTP PUT `/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text`
 
@@ -3732,7 +3732,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create glip group webhook
+## Create Webhook in Group
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
@@ -3749,7 +3749,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip group webhooks
+## Get Webhooks in Group
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
@@ -3766,7 +3766,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load user notes
+## Get User Notes
 
 HTTP GET `/restapi/v1.0/glip/notes`
 
@@ -3783,7 +3783,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create user note
+## Create User Note
 
 HTTP POST `/restapi/v1.0/glip/notes`
 
@@ -3800,7 +3800,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load user note
+## Get Note
 
 HTTP GET `/restapi/v1.0/glip/notes/{noteId}`
 
@@ -3817,7 +3817,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Delete note
+## Delete Note
 
 HTTP DELETE `/restapi/v1.0/glip/notes/{noteId}`
 
@@ -3834,7 +3834,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Patch note
+## Patch Note
 
 HTTP PATCH `/restapi/v1.0/glip/notes/{noteId}`
 
@@ -3852,7 +3852,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Update note
+## Update Note
 
 HTTP PUT `/restapi/v1.0/glip/notes/{noteId}`
 
@@ -3869,7 +3869,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Lock note
+## Lock Note
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/lock`
 
@@ -3886,7 +3886,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Publish note
+## Publish Note
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/publish`
 
@@ -3903,7 +3903,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Unlock note
+## Unlock Note
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/unlock`
 
@@ -3920,7 +3920,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip person
+## Get Person
 
 HTTP GET `/restapi/v1.0/glip/persons/{personId}`
 
@@ -3937,7 +3937,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip posts
+## Get Posts
 
 HTTP GET `/restapi/v1.0/glip/posts`
 
@@ -3954,7 +3954,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create post
+## Create Post
 
 HTTP POST `/restapi/v1.0/glip/posts`
 
@@ -3971,7 +3971,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip preferences
+## Get User Preferences
 
 HTTP GET `/restapi/v1.0/glip/preferences`
 
@@ -3988,7 +3988,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List recent chats
+## Get Recent Chats
 
 HTTP GET `/restapi/v1.0/glip/recent/chats`
 
@@ -4005,7 +4005,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip teams
+## Get Team List
 
 HTTP GET `/restapi/v1.0/glip/teams`
 
@@ -4022,7 +4022,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create glip team
+## Create Team
 
 HTTP POST `/restapi/v1.0/glip/teams`
 
@@ -4039,7 +4039,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip team
+## Get Team
 
 HTTP GET `/restapi/v1.0/glip/teams/{chatId}`
 
@@ -4056,7 +4056,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Update glip team
+## Update Team
 
 HTTP PATCH `/restapi/v1.0/glip/teams/{chatId}`
 
@@ -4073,7 +4073,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Delete glip team
+## Delete Team
 
 HTTP DELETE `/restapi/v1.0/glip/teams/{chatId}`
 
@@ -4090,7 +4090,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Add glip team members
+## Add Team Members
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/add`
 
@@ -4107,7 +4107,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Archive glip team
+## Archive Team
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/archive`
 
@@ -4124,7 +4124,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Join glip team
+## Join Team
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/join`
 
@@ -4141,7 +4141,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Leave glip team
+## Leave Team
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/leave`
 
@@ -4158,7 +4158,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Remove glip team members
+## Remove Members from Team
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/remove`
 
@@ -4175,7 +4175,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Unarchive glip team
+## Unarchive Team
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/unarchive`
 
@@ -4192,7 +4192,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List glip webhooks
+## Get Webhooks
 
 HTTP GET `/restapi/v1.0/glip/webhooks`
 
@@ -4209,7 +4209,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load glip webhook
+## Get Webhook
 
 HTTP GET `/restapi/v1.0/glip/webhooks/{webhookId}`
 
@@ -4226,7 +4226,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Delete glip webhook
+## Delete Webhook
 
 HTTP DELETE `/restapi/v1.0/glip/webhooks/{webhookId}`
 
@@ -4243,7 +4243,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Activate glip webhook
+## Activate Webhook
 
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/activate`
 
@@ -4260,7 +4260,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Suspend glip webhook
+## Suspend Webhook
 
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/suspend`
 
@@ -4277,7 +4277,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Parse phone number
+## Parse Phone Number [Beta]
 
 HTTP POST `/restapi/v1.0/number-parser/parse`
 
@@ -4295,7 +4295,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load api status
+## Get Service Status
 
 HTTP GET `/restapi/v1.0/status`
 
@@ -4312,7 +4312,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## List subscriptions
+## Get Subscriptions
 
 HTTP GET `/restapi/v1.0/subscription`
 
@@ -4329,7 +4329,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Create subscription
+## Create Subscription
 
 HTTP POST `/restapi/v1.0/subscription`
 
@@ -4346,7 +4346,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Load subscription
+## Get Subscription
 
 HTTP GET `/restapi/v1.0/subscription/{subscriptionId}`
 
@@ -4363,7 +4363,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Update subscription
+## Renew Subscription / Update Event Filters
 
 HTTP PUT `/restapi/v1.0/subscription/{subscriptionId}`
 
@@ -4381,7 +4381,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Delete subscription
+## Cancel Subscription
 
 HTTP DELETE `/restapi/v1.0/subscription/{subscriptionId}`
 
@@ -4398,7 +4398,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Renew subscription
+## Renew Subscription
 
 HTTP POST `/restapi/v1.0/subscription/{subscriptionId}/renew`
 
@@ -4415,7 +4415,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 
-## Check health
+## check health
 
 HTTP GET `/scim/health`
 
@@ -4431,7 +4431,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 
 
-## Get service provider config2
+## Get Service Provider Configuration
 
 HTTP GET `/scim/v2/ServiceProviderConfig`
 
@@ -4448,7 +4448,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 
-## Search via get2
+## Search or List Users
 
 HTTP GET `/scim/v2/Users`
 
@@ -4465,7 +4465,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 
-## Create user2
+## Create User
 
 HTTP POST `/scim/v2/Users`
 
@@ -4482,7 +4482,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 
-## Search via post2
+## Search or List Users
 
 HTTP POST `/scim/v2/Users/.search`
 
@@ -4499,7 +4499,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 
-## Get user2
+## Get User
 
 HTTP GET `/scim/v2/Users/{id}`
 
@@ -4516,7 +4516,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 
-## Replace user2
+## Update/Replace User
 
 HTTP PUT `/scim/v2/Users/{id}`
 
@@ -4533,7 +4533,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 
-## Delete user2
+## Delete User
 
 HTTP DELETE `/scim/v2/Users/{id}`
 
@@ -4550,7 +4550,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 
-## Patch user2
+## Update/Patch User
 
 HTTP PATCH `/scim/v2/Users/{id}`
 

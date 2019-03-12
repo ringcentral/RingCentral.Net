@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
             return $"{parent.Path()}/sms";
         }
 
-        // Operation: sendSMS
+        // Operation: Create SMS Message
         // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
         public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage)
         {

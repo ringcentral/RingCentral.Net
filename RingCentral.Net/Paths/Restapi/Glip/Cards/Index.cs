@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return $"{parent.Path()}/cards";
         }
 
-        // Operation: createGlipCard
+        // Operation: Create Card
         // Http Post /restapi/v1.0/glip/cards
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
             RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
                 glipMessageAttachmentInfoRequest, queryParams);
         }
 
-        // Operation: loadGlipCard
+        // Operation: Get Card
         // Http Get /restapi/v1.0/glip/cards/{cardId}
         public async Task<RingCentral.GlipMessageAttachmentInfo> Get()
         {
@@ -47,7 +47,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return await rc.Get<RingCentral.GlipMessageAttachmentInfo>(this.Path());
         }
 
-        // Operation: updateGlipCard
+        // Operation: Update Card
         // Http Put /restapi/v1.0/glip/cards/{cardId}
         public async Task<string> Put(RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest)
         {
@@ -59,7 +59,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return await rc.Put<string>(this.Path(), glipMessageAttachmentInfoRequest);
         }
 
-        // Operation: deleteGlipCard
+        // Operation: Delete Card
         // Http Delete /restapi/v1.0/glip/cards/{cardId}
         public async Task<string> Delete()
         {

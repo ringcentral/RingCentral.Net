@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
             return $"{parent.Path()}/ServiceProviderConfig";
         }
 
-        // Operation: getServiceProviderConfig2
+        // Operation: Get Service Provider Configuration
         // Http Get /scim/v2/ServiceProviderConfig
         public async Task<RingCentral.ServiceProviderConfig> Get()
         {

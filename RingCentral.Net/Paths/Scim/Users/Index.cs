@@ -25,21 +25,21 @@ namespace RingCentral.Paths.Scim.Users
             return $"{parent.Path()}/Users";
         }
 
-        // Operation: searchViaGet2
+        // Operation: Search or List Users
         // Http Get /scim/v2/Users
         public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
         }
 
-        // Operation: createUser2
+        // Operation: Create User
         // Http Post /scim/v2/Users
         public async Task<RingCentral.UserResponse> Post(RingCentral.User user)
         {
             return await rc.Post<RingCentral.UserResponse>(this.Path(false), user);
         }
 
-        // Operation: getUser2
+        // Operation: Get User
         // Http Get /scim/v2/Users/{id}
         public async Task<RingCentral.UserResponse> Get()
         {
@@ -51,7 +51,7 @@ namespace RingCentral.Paths.Scim.Users
             return await rc.Get<RingCentral.UserResponse>(this.Path());
         }
 
-        // Operation: replaceUser2
+        // Operation: Update/Replace User
         // Http Put /scim/v2/Users/{id}
         public async Task<RingCentral.UserResponse> Put(RingCentral.User user)
         {
@@ -63,7 +63,7 @@ namespace RingCentral.Paths.Scim.Users
             return await rc.Put<RingCentral.UserResponse>(this.Path(), user);
         }
 
-        // Operation: deleteUser2
+        // Operation: Delete User
         // Http Delete /scim/v2/Users/{id}
         public async Task<string> Delete()
         {
@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Scim.Users
             return await rc.Delete<string>(this.Path());
         }
 
-        // Operation: patchUser2
+        // Operation: Update/Patch User
         // Http Patch /scim/v2/Users/{id}
         public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch)
         {

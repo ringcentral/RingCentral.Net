@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
             return $"{parent.Path()}/parties";
         }
 
-        // Operation: getCallPartyStatus
+        // Operation: Get Call Party Status
         // Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}
         public async Task<RingCentral.CallParty> Get()
         {
@@ -37,7 +37,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
             return await rc.Get<RingCentral.CallParty>(this.Path());
         }
 
-        // Operation: updateCallParty
+        // Operation: Update Call Party
         // Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}
         public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest)
         {

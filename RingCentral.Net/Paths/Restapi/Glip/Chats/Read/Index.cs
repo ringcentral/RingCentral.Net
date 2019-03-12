@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Read
             return $"{parent.Path()}/read";
         }
 
-        // Operation: markChatRead
+        // Operation: Mark Chat as Read
         // Http Post /restapi/v1.0/glip/chats/{chatId}/read
         public async Task<string> Post()
         {

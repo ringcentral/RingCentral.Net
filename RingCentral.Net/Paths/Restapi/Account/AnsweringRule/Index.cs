@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return $"{parent.Path()}/answering-rule";
         }
 
-        // Operation: createCompanyAnsweringRule
+        // Operation: Create Company Call Handling Rule
         // Http Post /restapi/v1.0/account/{accountId}/answering-rule
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(
             RingCentral.CompanyAnsweringRuleRequest companyAnsweringRuleRequest)
@@ -33,14 +33,14 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest);
         }
 
-        // Operation: listCompanyAnsweringRule
+        // Operation: Get Company Call Handling Rules
         // Http Get /restapi/v1.0/account/{accountId}/answering-rule
         public async Task<RingCentral.CompanyAnsweringRuleList> List()
         {
             return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false));
         }
 
-        // Operation: loadCompanyAnsweringRule
+        // Operation: Get Company Call Handling Rule
         // Http Get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Get()
         {
@@ -52,7 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return await rc.Get<RingCentral.CompanyAnsweringRuleInfo>(this.Path());
         }
 
-        // Operation: updateCompanyAnsweringRule
+        // Operation: Update Company Call Handling Rule
         // Http Put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(
             RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate)
@@ -65,7 +65,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate);
         }
 
-        // Operation: deleteCompanyAnsweringRule
+        // Operation: Delete Company Call Handling Rule
         // Http Delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         public async Task<string> Delete()
         {

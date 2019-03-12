@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
             return $"{parent.Path()}/chats";
         }
 
-        // Operation: listGlipChats
+        // Operation: Get Chat List
         // Http Get /restapi/v1.0/glip/chats
         public async Task<RingCentral.GlipChatsList> List(ListGlipChatsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams);
         }
 
-        // Operation: loadGlipChat
+        // Operation: Get Chat
         // Http Get /restapi/v1.0/glip/chats/{chatId}
         public async Task<RingCentral.GlipChatInfo> Get()
         {

@@ -25,21 +25,21 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return $"{parent.Path()}/teams";
         }
 
-        // Operation: listGlipTeams
+        // Operation: Get Team List
         // Http Get /restapi/v1.0/glip/teams
         public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams);
         }
 
-        // Operation: createGlipTeam
+        // Operation: Create Team
         // Http Post /restapi/v1.0/glip/teams
         public async Task<RingCentral.GlipTeamInfo> Post(RingCentral.GlipPostTeamBody glipPostTeamBody)
         {
             return await rc.Post<RingCentral.GlipTeamInfo>(this.Path(false), glipPostTeamBody);
         }
 
-        // Operation: loadGlipTeam
+        // Operation: Get Team
         // Http Get /restapi/v1.0/glip/teams/{chatId}
         public async Task<RingCentral.GlipTeamInfo> Get()
         {
@@ -51,7 +51,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return await rc.Get<RingCentral.GlipTeamInfo>(this.Path());
         }
 
-        // Operation: updateGlipTeam
+        // Operation: Update Team
         // Http Patch /restapi/v1.0/glip/teams/{chatId}
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody)
         {
@@ -63,7 +63,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return await rc.Patch<RingCentral.GlipTeamInfo>(this.Path(), glipPatchTeamBody);
         }
 
-        // Operation: deleteGlipTeam
+        // Operation: Delete Team
         // Http Delete /restapi/v1.0/glip/teams/{chatId}
         public async Task<string> Delete()
         {

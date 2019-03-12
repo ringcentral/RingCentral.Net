@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts.Content
             return $"{parent.Path()}/content";
         }
 
-        // Operation: loadIvrPromptContent
+        // Operation: Get IVR Prompt Content
         // Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
         public async Task<string> Get()
         {

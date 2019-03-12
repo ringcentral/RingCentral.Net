@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return $"{parent.Path()}/bulk-update";
         }
 
-        // Operation: createBlockedAllowedPhoneNumberLists
+        // Operation: Add/Remove Blocked or Allowed Numbers using bulk request
         // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/bulk-update
         public async Task<string> Post()
         {

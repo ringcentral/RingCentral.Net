@@ -25,21 +25,21 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return $"{parent.Path()}/events";
         }
 
-        // Operation: loadGlipEvents
+        // Operation: Get User Events List
         // Http Get /restapi/v1.0/glip/events
         public async Task<RingCentral.GlipEventsInfo> List(LoadGlipEventsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
         }
 
-        // Operation: createEvent
+        // Operation: Create Event
         // Http Post /restapi/v1.0/glip/events
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate)
         {
             return await rc.Post<RingCentral.GlipEventInfo>(this.Path(false), glipEventCreate);
         }
 
-        // Operation: loadEvent
+        // Operation: Get Event
         // Http Get /restapi/v1.0/glip/events/{eventId}
         public async Task<RingCentral.GlipEventInfo> Get()
         {
@@ -51,7 +51,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return await rc.Get<RingCentral.GlipEventInfo>(this.Path());
         }
 
-        // Operation: updateEvent
+        // Operation: Update Event
         // Http Put /restapi/v1.0/glip/events/{eventId}
         public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate)
         {
@@ -63,7 +63,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return await rc.Put<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
         }
 
-        // Operation: deleteEvent
+        // Operation: Delete Event
         // Http Delete /restapi/v1.0/glip/events/{eventId}
         public async Task<string> Delete()
         {

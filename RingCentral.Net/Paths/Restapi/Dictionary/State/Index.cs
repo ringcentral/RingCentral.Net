@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
             return $"{parent.Path()}/state";
         }
 
-        // Operation: listStates
+        // Operation: Get State List
         // Http Get /restapi/v1.0/dictionary/state
         public async Task<RingCentral.GetStateListResponse> List(ListStatesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams);
         }
 
-        // Operation: loadState
+        // Operation: Get State
         // Http Get /restapi/v1.0/dictionary/state/{stateId}
         public async Task<RingCentral.GetStateInfoResponse> Get()
         {

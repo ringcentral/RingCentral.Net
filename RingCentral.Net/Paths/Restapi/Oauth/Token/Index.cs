@@ -20,7 +20,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
             return $"{parent.Path()}/token";
         }
 
-        // Operation: getToken
+        // Operation: Get Token
         // Http Post /restapi/oauth/token
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest)
         {

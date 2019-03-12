@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
             return $"{parent.Path()}/bulk-assign";
         }
 
-        // Operation: updateCallMonitoringGroups
+        // Operation: Edit Call Monitoring Group
         // Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
         public async Task<RingCentral.CallMonitoringBulkAssign> Post(
             RingCentral.CallMonitoringBulkAssign callMonitoringBulkAssign)

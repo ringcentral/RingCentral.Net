@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Archive
             return $"{parent.Path()}/archive";
         }
 
-        // Operation: getComplianceArchiveStream
+        // Operation: Get Glip Data Archive
         // Http Get /restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}
         public async Task<string> Get()
         {

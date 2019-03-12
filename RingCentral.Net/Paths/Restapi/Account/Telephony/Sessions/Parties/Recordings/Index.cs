@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
             return $"{parent.Path()}/recordings";
         }
 
-        // Operation: startCallRecording
+        // Operation: Starts new call recording in a party
         // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path(false));
         }
 
-        // Operation: pauseResumeCallRecording
+        // Operation: Pause/Resume Recording
         // Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings/{recordingId}
         public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate,
             PauseResumeCallRecordingParameters queryParams = null)

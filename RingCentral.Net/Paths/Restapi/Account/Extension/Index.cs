@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return $"{parent.Path()}/extension";
         }
 
-        // Operation: listExtensions
+        // Operation: Get Extension List
         // Http Get /restapi/v1.0/account/{accountId}/extension
         public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams);
         }
 
-        // Operation: createExtension
+        // Operation: Create Extension
         // Http Post /restapi/v1.0/account/{accountId}/extension
         public async Task<RingCentral.ExtensionCreationResponse> Post(
             RingCentral.ExtensionCreationRequest extensionCreationRequest)
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return await rc.Post<RingCentral.ExtensionCreationResponse>(this.Path(false), extensionCreationRequest);
         }
 
-        // Operation: loadExtensionInfo
+        // Operation: Get Extension Info
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
         public async Task<RingCentral.GetExtensionInfoResponse> Get()
         {
@@ -52,7 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path());
         }
 
-        // Operation: updateExtension
+        // Operation: Update Extension
         // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
             RingCentral.ExtensionUpdateRequest extensionUpdateRequest)
@@ -65,7 +65,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest);
         }
 
-        // Operation: deleteExtension
+        // Operation: Delete Extension
         // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
         public async Task<string> Delete()
         {

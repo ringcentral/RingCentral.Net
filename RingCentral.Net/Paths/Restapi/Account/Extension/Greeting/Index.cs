@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
             return $"{parent.Path()}/greeting";
         }
 
-        // Operation: createUserCustomGreeting
+        // Operation: Create User Custom Greeting
         // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
         public async Task<RingCentral.CustomCompanyGreetingInfo> Post(
             RingCentral.CustomGreetingRequest customGreetingRequest)
@@ -34,7 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
             return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(false), multipartFormDataContent);
         }
 
-        // Operation: loadCustomGreeting
+        // Operation: Get Custom Greeting Info
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
         public async Task<RingCentral.CustomUserGreetingInfo> Get()
         {

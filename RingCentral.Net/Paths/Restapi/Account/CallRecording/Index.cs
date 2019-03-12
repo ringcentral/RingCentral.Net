@@ -18,14 +18,14 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
             return $"{parent.Path()}/call-recording";
         }
 
-        // Operation: loadCallRecordingSettings
+        // Operation: Get Call Recording Settings
         // Http Get /restapi/v1.0/account/{accountId}/call-recording
         public async Task<RingCentral.CallRecordingSettingsResource> Get()
         {
             return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path());
         }
 
-        // Operation: updateCallRecordingSettings
+        // Operation: Update Call Recording Settings
         // Http Put /restapi/v1.0/account/{accountId}/call-recording
         public async Task<RingCentral.CallRecordingSettingsResource> Put(
             RingCentral.CallRecordingSettingsResource callRecordingSettingsResource)

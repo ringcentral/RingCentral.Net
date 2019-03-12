@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
             return $"{parent.Path()}/conversations";
         }
 
-        // Operation: listGlipConversations
+        // Operation: Get User Conversation List
         // Http Get /restapi/v1.0/glip/conversations
         public async Task<RingCentral.GlipConversationsList> List(ListGlipConversationsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams);
         }
 
-        // Operation: createGlipConversation
+        // Operation: Create/Open Chat
         // Http Post /restapi/v1.0/glip/conversations
         public async Task<RingCentral.GlipConversationInfo> Post(
             RingCentral.GlipPostMembersListBody glipPostMembersListBody)
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
             return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), glipPostMembersListBody);
         }
 
-        // Operation: loadGlipConversation
+        // Operation: Get Conversation
         // Http Get /restapi/v1.0/glip/conversations/{chatId}
         public async Task<RingCentral.GlipConversationInfo> Get()
         {

@@ -18,14 +18,14 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
             return $"{parent.Path()}/events";
         }
 
-        // Operation: createEventbyGroupId
+        // Operation: Create Event by Group ID
         // Http Post /restapi/v1.0/glip/groups/{groupId}/events
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate)
         {
             return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
         }
 
-        // Operation: listGroupEvents
+        // Operation: Get Group Events
         // Http Get /restapi/v1.0/glip/groups/{groupId}/events
         public async Task<RingCentral.GlipEventInfo> Get()
         {

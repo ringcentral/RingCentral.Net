@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
             return $"{parent.Path()}/phone-number";
         }
 
-        // Operation: listAccountPhoneNumbers
+        // Operation: Get Company Phone Number List
         // Http Get /restapi/v1.0/account/{accountId}/phone-number
         public async Task<RingCentral.AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
         }
 
-        // Operation: loadAccountPhoneNumber
+        // Operation: Get Phone Number
         // Http Get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
         public async Task<RingCentral.CompanyPhoneNumberInfo> Get()
         {

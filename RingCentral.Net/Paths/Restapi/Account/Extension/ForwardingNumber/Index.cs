@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return $"{parent.Path()}/forwarding-number";
         }
 
-        // Operation: listExtensionForwardingNumbers
+        // Operation: Get Forwarding Numbers
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(
             ListExtensionForwardingNumbersParameters queryParams = null)
@@ -33,7 +33,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
         }
 
-        // Operation: createExtensionForwardingNumber
+        // Operation: Create Forwarding Numbers
         // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         public async Task<RingCentral.ForwardingNumberInfo> Post(
             RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest)
@@ -41,7 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest);
         }
 
-        // Operation: loadExtensionForwardingNumber
+        // Operation: Get Forwarding Number
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         public async Task<RingCentral.ForwardingNumberResource> Get()
         {
@@ -53,7 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Get<RingCentral.ForwardingNumberResource>(this.Path());
         }
 
-        // Operation: updateExtensionForwardingNumber
+        // Operation: Update Forwarding Numbers
         // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         public async Task<RingCentral.ForwardingNumberInfo> Put(
             RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest)
@@ -66,7 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest);
         }
 
-        // Operation: deleteExtensionForwardingNumber
+        // Operation: Delete Forwarding Number
         // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         public async Task<string> Delete()
         {

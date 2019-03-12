@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Archive
             return $"{parent.Path()}/archive";
         }
 
-        // Operation: archiveGlipTeam
+        // Operation: Archive Team
         // Http Post /restapi/v1.0/glip/teams/{chatId}/archive
         public async Task<string> Post()
         {

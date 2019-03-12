@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.ActiveCalls
             return $"{parent.Path()}/active-calls";
         }
 
-        // Operation: listCompanyActiveCalls
+        // Operation: Get Company Active Calls
         // Http Get /restapi/v1.0/account/{accountId}/active-calls
         public async Task<RingCentral.ActiveCallsResponse> Get(ListCompanyActiveCallsParameters queryParams = null)
         {

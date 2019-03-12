@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unfavorite
             return $"{parent.Path()}/unfavorite";
         }
 
-        // Operation: unfavoriteGlipChat
+        // Operation: Remove Chat from Favorites
         // Http Post /restapi/v1.0/glip/chats/{chatId}/unfavorite
         public async Task<string> Post()
         {

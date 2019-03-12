@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
             return $"{parent.Path()}/address-book-sync";
         }
 
-        // Operation: syncAddressBook
+        // Operation: Address Book Synchronization
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
         public async Task<RingCentral.AddressBookSync> Get(SyncAddressBookParameters queryParams = null)
         {

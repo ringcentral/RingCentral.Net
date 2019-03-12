@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             return $"{parent.Path()}/contact";
         }
 
-        // Operation: listContacts
+        // Operation: Get Contact List
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams);
         }
 
-        // Operation: createContact
+        // Operation: Create Contact
         // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         public async Task<RingCentral.PersonalContactResource> Post(
             RingCentral.PersonalContactResource personalContactResource, CreateContactParameters queryParams = null)
@@ -41,7 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
                 queryParams);
         }
 
-        // Operation: loadContact
+        // Operation: Get Contact(s)
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         public async Task<RingCentral.PersonalContactResource> Get()
         {
@@ -53,7 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             return await rc.Get<RingCentral.PersonalContactResource>(this.Path());
         }
 
-        // Operation: updateContact
+        // Operation: Update Contact(s)
         // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         public async Task<RingCentral.PersonalContactResource> Put(
             RingCentral.PersonalContactResource personalContactResource, UpdateContactParameters queryParams = null)
@@ -66,7 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             return await rc.Put<RingCentral.PersonalContactResource>(this.Path(), personalContactResource, queryParams);
         }
 
-        // Operation: deleteContact
+        // Operation: Delete Contact(s)
         // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         public async Task<string> Delete()
         {

@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
             return $"{parent.Path()}/posts";
         }
 
-        // Operation: listGlipGroupPosts
+        // Operation: Get Group Posts
         // Http Get /restapi/v1.0/glip/groups/{groupId}/posts
         public async Task<RingCentral.GlipPosts> Get(ListGlipGroupPostsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipPosts>(this.Path(false), queryParams);
         }
 
-        // Operation: createGlipGroupPost
+        // Operation: Create Post in Group
         // Http Post /restapi/v1.0/glip/groups/{groupId}/posts
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost)
         {

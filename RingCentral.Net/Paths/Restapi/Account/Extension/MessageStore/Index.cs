@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return $"{parent.Path()}/message-store";
         }
 
-        // Operation: listMessages
+        // Operation: Get Message List
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
         public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
         }
 
-        // Operation: loadMessage
+        // Operation: Get Message(s)
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         public async Task<RingCentral.GetMessageInfoResponse> Get()
         {
@@ -44,7 +44,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path());
         }
 
-        // Operation: updateMessage
+        // Operation: Update Message(s)
         // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest)
         {
@@ -56,7 +56,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
         }
 
-        // Operation: deleteMessage
+        // Operation: Delete Message(s)
         // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         public async Task<string> Delete(DeleteMessageParameters queryParams = null)
         {

@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
             return $"{parent.Path()}/greeting";
         }
 
-        // Operation: listStandardGreetings
+        // Operation: Get Standard Greetings
         // Http Get /restapi/v1.0/dictionary/greeting
         public async Task<RingCentral.DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams);
         }
 
-        // Operation: loadStandardGreeting
+        // Operation: Get Greeting Info
         // Http Get /restapi/v1.0/dictionary/greeting/{greetingId}
         public async Task<RingCentral.DictionaryGreetingInfo> Get()
         {

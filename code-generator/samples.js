@@ -36,7 +36,7 @@ const pathToCode = path => {
   return 'rc.' + names.join('.').replace(/\.\(/g, '(')
 }
 
-let md = `# RingCentral.Net SDK Code samples`
+let md = `# RingCentral.Net SDK Code Samples`
 normalizedPaths.forEach(path => {
   console.log(path)
   const names = path.split('/').filter(name => name !== '' && !name.startsWith('{'))
@@ -46,19 +46,19 @@ normalizedPaths.forEach(path => {
     .map(f => {
       console.log(f)
       const ms = f.match(/Operation: (.+?)\s*\n\s*\/\/ Http (.+?)\s*\n.+?(Get|List|Post|Put|Patch|Delete)\((.*?)\)/)
-      const operationId = ms[1]
+      const summary = ms[1]
       const endpoint = ms[2].split(' ')[1]
       const method = ms[3]
       const parameters = ms[4].split(',').map(t => t.trim().split(' ').map(tt => tt.trim())[0]).filter(p => p !== '').map(p => R.last(p.split('.')))
-      return { operationId, endpoint, method, parameters }
+      return { summary, endpoint, method, parameters }
     })
   console.log(ms)
-  ms.forEach(({ operationId, endpoint, method, parameters }) => {
+  ms.forEach(({ summary, endpoint, method, parameters }) => {
     if (endpoint === deNormalizePath(path)) {
       let code = `
 
 
-## ${changeCase.sentenceCase(operationId)}
+## ${summary}
 
 HTTP ${changeCase.upperCase(method === 'List' ? 'Get' : method)} \`${endpoint}\`
 

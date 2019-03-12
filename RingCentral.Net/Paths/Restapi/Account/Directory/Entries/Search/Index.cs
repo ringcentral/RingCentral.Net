@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
             return $"{parent.Path()}/search";
         }
 
-        // Operation: searchDirectoryEntries
+        // Operation: Search Company Directory Entries
         // Http Post /restapi/v1.0/account/{accountId}/directory/entries/search
         public async Task<RingCentral.DirectoryResource> Post(
             RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest)

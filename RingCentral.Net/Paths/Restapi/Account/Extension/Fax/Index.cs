@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
             return $"{parent.Path()}/fax";
         }
 
-        // Operation: sendFaxMessage
+        // Operation: Create Fax Message
         // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
         public async Task<RingCentral.FaxResponse> Post(SendFaxMessageRequest sendFaxMessageRequest)
         {

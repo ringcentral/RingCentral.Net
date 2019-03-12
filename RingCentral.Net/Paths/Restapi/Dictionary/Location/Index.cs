@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
             return $"{parent.Path()}/location";
         }
 
-        // Operation: listLocations
+        // Operation: Get Location List
         // Http Get /restapi/v1.0/dictionary/location
         public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null)
         {

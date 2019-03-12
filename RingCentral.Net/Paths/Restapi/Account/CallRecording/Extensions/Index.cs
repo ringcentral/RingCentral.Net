@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
             return $"{parent.Path()}/extensions";
         }
 
-        // Operation: listCallRecordingExtensionSettings
+        // Operation: Get Call Recording Extension Settings
         // Http Get /restapi/v1.0/account/{accountId}/call-recording/extensions
         public async Task<string> Get()
         {

@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
             return $"{parent.Path()}/transfer";
         }
 
-        // Operation: transferCallParty
+        // Operation: Transfer Call Party
         // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/transfer
         public async Task<RingCentral.CallParty> Post(RingCentral.TransferTarget transferTarget)
         {

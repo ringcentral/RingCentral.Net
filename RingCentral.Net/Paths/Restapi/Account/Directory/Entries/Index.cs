@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
             return $"{parent.Path()}/entries";
         }
 
-        // Operation: listDirectoryEntries
+        // Operation: Get Company Directory Entries
         // Http Get /restapi/v1.0/account/{accountId}/directory/entries
         public async Task<RingCentral.DirectoryResource> Get(ListDirectoryEntriesParameters queryParams = null)
         {

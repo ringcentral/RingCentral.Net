@@ -25,14 +25,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return $"{parent.Path()}/answering-rule";
         }
 
-        // Operation: listAnsweringRules
+        // Operation: Get Call Handling Rules
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         public async Task<RingCentral.UserAnsweringRuleList> List(ListAnsweringRulesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryParams);
         }
 
-        // Operation: createAnsweringRule
+        // Operation: Create Custom Call Handling Rules
         // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         public async Task<RingCentral.AnsweringRuleInfo> Post(
             RingCentral.CreateAnsweringRuleRequest createAnsweringRuleRequest)
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return await rc.Post<RingCentral.AnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest);
         }
 
-        // Operation: loadAnsweringRule
+        // Operation: Get Call Handling Rule
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         public async Task<RingCentral.AnsweringRuleInfo> Get(LoadAnsweringRuleParameters queryParams = null)
         {
@@ -52,7 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return await rc.Get<RingCentral.AnsweringRuleInfo>(this.Path(), queryParams);
         }
 
-        // Operation: updateAnsweringRule
+        // Operation: Update Custom Call Handling Rule
         // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         public async Task<RingCentral.AnsweringRuleInfo> Put(
             RingCentral.UpdateAnsweringRuleRequest updateAnsweringRuleRequest)
@@ -65,7 +65,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             return await rc.Put<RingCentral.AnsweringRuleInfo>(this.Path(), updateAnsweringRuleRequest);
         }
 
-        // Operation: deleteAnsweringRule
+        // Operation: Delete Call Handling Rule
         // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         public async Task<string> Delete()
         {

@@ -20,7 +20,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
             return $"{parent.Path()}/revoke";
         }
 
-        // Operation: revokeToken
+        // Operation: Revoke Token
         // Http Post /restapi/oauth/revoke
         public async Task<string> Post(RevokeTokenRequest revokeTokenRequest)
         {

@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return $"{parent.Path()}/ivr-prompts";
         }
 
-        // Operation: createIvrPrompt
+        // Operation: Create IVR Prompts
         // Http Post /restapi/v1.0/account/{accountId}/ivr-prompts
         public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIvrPromptRequest)
         {
@@ -33,14 +33,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent);
         }
 
-        // Operation: listIvrPrompts
+        // Operation: Get IVR Prompts
         // Http Get /restapi/v1.0/account/{accountId}/ivr-prompts
         public async Task<RingCentral.IVRPrompts> List()
         {
             return await rc.Get<RingCentral.IVRPrompts>(this.Path(false));
         }
 
-        // Operation: loadIvrPrompt
+        // Operation: Get IVR Prompt
         // Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         public async Task<RingCentral.PromptInfo> Get()
         {
@@ -52,7 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return await rc.Get<RingCentral.PromptInfo>(this.Path());
         }
 
-        // Operation: deleteIvrPrompt
+        // Operation: Delete IVR Prompt
         // Http Delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         public async Task<string> Delete()
         {
@@ -64,7 +64,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return await rc.Delete<string>(this.Path());
         }
 
-        // Operation: updateIvrPrompt
+        // Operation: Update IVR Prompt
         // Http Put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         public async Task<string> Put()
         {

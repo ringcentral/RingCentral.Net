@@ -18,14 +18,14 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
             return $"{parent.Path()}/message-store-configuration";
         }
 
-        // Operation: loadMessageStoreConfiguration
+        // Operation: Get Message Store Configuration
         // Http Get /restapi/v1.0/account/{accountId}/message-store-configuration
         public async Task<RingCentral.MessageStoreConfiguration> Get()
         {
             return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path());
         }
 
-        // Operation: updateMessageStoreConfiguration
+        // Operation: Update Message Store Configuration
         // Http Put /restapi/v1.0/account/{accountId}/message-store-configuration
         public async Task<RingCentral.MessageStoreConfiguration> Put(
             RingCentral.MessageStoreConfiguration messageStoreConfiguration)

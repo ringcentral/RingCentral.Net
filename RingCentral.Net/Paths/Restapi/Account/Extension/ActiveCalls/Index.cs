@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
             return $"{parent.Path()}/active-calls";
         }
 
-        // Operation: listExtensionActiveCalls
+        // Operation: Get User Active Calls
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls
         public async Task<RingCentral.ActiveCallsResponse> Get(ListExtensionActiveCallsParameters queryParams = null)
         {

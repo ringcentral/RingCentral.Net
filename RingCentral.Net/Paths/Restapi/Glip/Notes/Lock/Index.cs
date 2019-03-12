@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Lock
             return $"{parent.Path()}/lock";
         }
 
-        // Operation: lockNote
+        // Operation: Lock Note
         // Http Post /restapi/v1.0/glip/notes/{noteId}/lock
         public async Task<RingCentral.GlipNoteInfo> Post()
         {

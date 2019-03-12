@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Join
             return $"{parent.Path()}/join";
         }
 
-        // Operation: joinGlipTeam
+        // Operation: Join Team
         // Http Post /restapi/v1.0/glip/teams/{chatId}/join
         public async Task<string> Post()
         {
