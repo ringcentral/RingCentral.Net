@@ -49,5 +49,23 @@ namespace RingCentral
             });
             return multipartFormDataContent;
         }
+
+        public static string FormatRequest(HttpResponseMessage httpResponseMessage,
+            HttpRequestMessage httpRequestMessage)
+        {
+            var message = $"Response:\n{httpResponseMessage.ToString()}";
+            if (httpResponseMessage.Content != null)
+            {
+                message += $"\nContent: {httpResponseMessage.Content.ReadAsStringAsync().Result}";
+            }
+
+            message += $"\n\nRequest:\n{httpRequestMessage.ToString()}";
+            if (httpRequestMessage.Content != null)
+            {
+                message += $"\nContent: {httpRequestMessage.Content.ReadAsStringAsync().Result}";
+            }
+
+            return message;
+        }
     }
 }

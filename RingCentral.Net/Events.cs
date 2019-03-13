@@ -13,6 +13,11 @@ namespace RingCentral
             this.httpResponseMessage = httpResponseMessage;
             this.httpRequestMessage = httpRequestMessage;
         }
+
+        public override string ToString()
+        {
+            return Utils.FormatRequest(httpResponseMessage, httpRequestMessage);
+        }
     }
 
     public partial class RestClient
