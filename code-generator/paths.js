@@ -162,14 +162,11 @@ ${code}`
         responseType = 'string'
       }
 
-      let body, bodyClass, bodyParam, formUrlEncoded, formData, mixed
+      let body, bodyClass, bodyParam, formUrlEncoded, formData
       if (operation.detail.consumes && operation.detail.consumes[0] === 'application/x-www-form-urlencoded') {
         formUrlEncoded = true
-      } else if (operation.detail.consumes && operation.detail.consumes[0] === 'multipart/form-data') {
+      } else if (operation.detail.consumes && operation.detail.consumes[0].startsWith('multipart/')) {
         formData = true
-      } else if (operation.detail.consumes && operation.detail.consumes[0] === 'multipart/mixed') {
-        formData = true
-        mixed = true
       } else if (operation.detail.consumes && !operation.detail.consumes.some(c => c === 'application/json') && !operation.detail.consumes.some(c => c.startsWith('text/'))) {
         throw new Error(`Unsupported consume content type: ${operation.detail.consumes.join(', ')}`)
       } else {
@@ -188,12 +185,12 @@ ${code}`
       if (formUrlEncoded || formData) {
         bodyClass = `${changeCase.pascalCase(operation.detail.operationId)}Request`
         bodyParam = `${operation.detail.operationId}Request`
-      }
-      if (mixed) {
-        body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
-        bodyClass = R.last(body.schema['$ref'].split('/'))
-        bodyParam = changeCase.lowerCaseFirst(bodyClass)
-        bodyClass = 'RingCentral.' + bodyClass
+        body = (operation.detail.parameters || []).filter(p => p.in === 'body' && p.schema && p.schema['$ref'])[0]
+        if (body) {
+          bodyClass = R.last(body.schema['$ref'].split('/'))
+          bodyParam = changeCase.lowerCaseFirst(bodyClass)
+          bodyClass = 'RingCentral.' + bodyClass
+        }
       }
 
       const queryParams = (operation.detail.parameters || []).filter(p => p.in === 'query')
