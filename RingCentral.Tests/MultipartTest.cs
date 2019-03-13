@@ -5,7 +5,7 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
-    public class MultipartMixed
+    public class MultipartTest
     {
         [Fact]
         public async void UpdateCompanyGreeting()
