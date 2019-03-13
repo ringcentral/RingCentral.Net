@@ -162,11 +162,11 @@ ${code}`
         responseType = 'string'
       }
 
-      let body, bodyClass, bodyParam, formUrlEncoded, formData
+      let body, bodyClass, bodyParam, formUrlEncoded, multipart
       if (operation.detail.consumes && operation.detail.consumes[0] === 'application/x-www-form-urlencoded') {
         formUrlEncoded = true
       } else if (operation.detail.consumes && operation.detail.consumes[0].startsWith('multipart/')) {
-        formData = true
+        multipart = true
       } else if (operation.detail.consumes && !operation.detail.consumes.some(c => c === 'application/json') && !operation.detail.consumes.some(c => c.startsWith('text/'))) {
         throw new Error(`Unsupported consume content type: ${operation.detail.consumes.join(', ')}`)
       } else {
@@ -182,7 +182,7 @@ ${code}`
           }
         }
       }
-      if (formUrlEncoded || formData) {
+      if (formUrlEncoded || multipart) {
         bodyClass = `${changeCase.pascalCase(operation.detail.operationId)}Request`
         bodyParam = `${operation.detail.operationId}Request`
         body = (operation.detail.parameters || []).filter(p => p.in === 'body' && p.schema && p.schema['$ref'])[0]
@@ -223,7 +223,7 @@ ${code}`
             .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
           return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? `, queryParams` : ''});
       }`
-      } else if (formData) {
+      } else if (multipart) {
         code += `
           var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
           return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? `, queryParams` : ''});
