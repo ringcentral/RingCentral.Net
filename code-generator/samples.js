@@ -95,6 +95,8 @@ ${parameters.map(p => `- Parameter \`${changeCase.camelCase(p)}\` is of type [${
       if (code.includes('.Scim(version)')) {
         code += '\n- Parameter `version` is optional with default value `v2`'
       }
+      const operation = doc.paths[endpoint][changeCase.lowerCase(method === 'List' ? 'Get' : method)]
+      code += `\n\n[Try it out](https://developer.ringcentral.com/api-reference#${operation.tags[0].replace(/ /g, '-')}-${operation.operationId}) in API Explorer.`
       md += code
     }
   })
