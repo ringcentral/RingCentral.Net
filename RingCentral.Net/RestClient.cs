@@ -16,28 +16,32 @@ namespace RingCentral
         public string clientSecret;
         public Uri server;
         public TokenInfo token;
+        public string appName = "MyTestApp";
+        public string appVersion = "0.0.1";
 
-        private RestClient(string clientId, string clientSecret, Uri server)
+        private RestClient(string clientId, string clientSecret, Uri server, string appName = "MyTestApp", string appVersion = "0.0.1")
         {
             this.clientId = clientId;
             this.clientSecret = clientSecret;
             this.server = server;
+            this.appName = appName;
+            this.appVersion = appVersion;
         }
 
-        public RestClient(string clientId, string clientSecret, string server)
-            : this(clientId, clientSecret, new Uri(server))
+        public RestClient(string clientId, string clientSecret, string server, string appName = "MyTestApp", string appVersion = "0.0.1")
+            : this(clientId, clientSecret, new Uri(server), appName, appVersion)
         {
         }
 
-        public RestClient(string clientId, string clientSecret, bool production = false)
-            : this(clientId, clientSecret, production ? ProductionServer : SandboxServer)
+        public RestClient(string clientId, string clientSecret, bool production = false, string appName = "MyTestApp", string appVersion = "0.0.1")
+            : this(clientId, clientSecret, production ? ProductionServer : SandboxServer, appName, appVersion)
         {
         }
 
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
         {
             var httpClient = new HttpClient();
-            httpRequestMessage.Headers.UserAgent.ParseAdd("RingCentral.Net");
+            httpRequestMessage.Headers.UserAgent.ParseAdd($"{appName}/{appVersion} RingCentral.Net/1.0.0");
             httpRequestMessage.Headers.Authorization = token == null
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(

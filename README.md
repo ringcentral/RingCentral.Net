@@ -17,7 +17,7 @@ There is also lots of useful code for your reference in our [test cases](./RingC
 
 ### Release
 
-Update version number in `RingCentral.Net/RingCentral.Net.csproj`
+Update version number in `RingCentral.Net/RingCentral.Net.csproj` & `RingCentral.Net/RestClient.cs`
 
 ```
 cd RingCentral.Net
