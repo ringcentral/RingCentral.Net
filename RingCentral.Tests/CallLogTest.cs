@@ -49,7 +49,7 @@ namespace RingCentral.Tests
                     perPage = 1,
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o")
                 });
-                Assert.Equal(1, callLogResponse.records.Length);
+                Assert.Single(callLogResponse.records);
 
                 var fromNumber = callLogResponse.records[0].@from.phoneNumber;
                 callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new LoadUserCallLogParameters
@@ -58,7 +58,7 @@ namespace RingCentral.Tests
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o"),
                     phoneNumber = fromNumber  // +123456789
                 });
-                Assert.Equal(0, callLogResponse.records.Length);
+                Assert.Empty(callLogResponse.records);
                 
                 callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new LoadUserCallLogParameters
                 {
@@ -66,7 +66,7 @@ namespace RingCentral.Tests
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o"),
                     phoneNumber = fromNumber.TrimStart('+') // 123456789
                 });
-                Assert.Equal(1, callLogResponse.records.Length);
+                Assert.Single(callLogResponse.records);
             }
         }
     }
