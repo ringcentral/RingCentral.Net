@@ -27,8 +27,9 @@ namespace RingCentral.Tests
                     var re = new RestException(eventArgs.httpResponseMessage, eventArgs.httpRequestMessage);
                     var str = re.ToString();
                     var userAgent = eventArgs.httpRequestMessage.Headers
-                        .First(i => i.Key == "User-Agent").Value.ToArray();
-                    Assert.Equal(new []{ "MyTestApp/0.0.1", "RingCentral.Net/1.0.0"}, userAgent);
+                        .First(i => i.Key == "X-User-Agent").Value.ToArray();
+                    Assert.Single(userAgent);
+                    Assert.StartsWith("Unknown/0.0.1 RingCentral.Net/", userAgent[0]);
                 }
 
                 rc.AfterHttpCall += EventHandler;

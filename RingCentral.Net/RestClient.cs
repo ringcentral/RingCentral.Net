@@ -16,10 +16,10 @@ namespace RingCentral
         public string clientSecret;
         public Uri server;
         public TokenInfo token;
-        public string appName = "MyTestApp";
+        public string appName = "Unknown";
         public string appVersion = "0.0.1";
 
-        private RestClient(string clientId, string clientSecret, Uri server, string appName = "MyTestApp", string appVersion = "0.0.1")
+        private RestClient(string clientId, string clientSecret, Uri server, string appName = "Unknown", string appVersion = "0.0.1")
         {
             this.clientId = clientId;
             this.clientSecret = clientSecret;
@@ -28,12 +28,12 @@ namespace RingCentral
             this.appVersion = appVersion;
         }
 
-        public RestClient(string clientId, string clientSecret, string server, string appName = "MyTestApp", string appVersion = "0.0.1")
+        public RestClient(string clientId, string clientSecret, string server, string appName = "Unknown", string appVersion = "0.0.1")
             : this(clientId, clientSecret, new Uri(server), appName, appVersion)
         {
         }
 
-        public RestClient(string clientId, string clientSecret, bool production = false, string appName = "MyTestApp", string appVersion = "0.0.1")
+        public RestClient(string clientId, string clientSecret, bool production = false, string appName = "Unknown", string appVersion = "0.0.1")
             : this(clientId, clientSecret, production ? ProductionServer : SandboxServer, appName, appVersion)
         {
         }
@@ -41,7 +41,7 @@ namespace RingCentral
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
         {
             var httpClient = new HttpClient();
-            httpRequestMessage.Headers.UserAgent.ParseAdd($"{appName}/{appVersion} RingCentral.Net/1.0.0");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/1.0.1");
             httpRequestMessage.Headers.Authorization = token == null
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(
