@@ -6,7 +6,7 @@ namespace RingCentral
 
         public string id;
 
-        // Site compatibility flag set for permission
+        /* Site compatibility flag set for permission */
         // Enum: Compatible, Incompatible, Independent
         public string siteCompatible;
     }

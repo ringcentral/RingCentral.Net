@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
             return $"{parent.Path()}/recordings";
         }
 
-        // Operation: Starts new call recording in a party
+        // Operation: Create Recording
         // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings
         public async Task<string> Post()
         {

@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class ScheduleInfo
     {
-        // Weekly schedule
+        /* Weekly schedule */
         public WeeklyScheduleInfo weeklyRanges;
 
-        // Specific data ranges
+        /* Specific data ranges */
         public RangesInfo[] ranges;
 
-        // The user's schedule specified for business hours or after hours; it can also be set/retrieved calling the corresponding method
+        /* The user's schedule specified for business hours or after hours; it can also be set/retrieved calling the corresponding method */
         // Enum: BusinessHours, AfterHours
         public string @ref;
     }

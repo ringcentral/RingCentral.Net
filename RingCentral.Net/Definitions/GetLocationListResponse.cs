@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class GetLocationListResponse
     {
-        // List of locations
+        /* List of locations */
         public LocationInfo[] records;
 
-        // Information on navigation
+        /* Information on navigation */
         public ProvisioningNavigationInfo navigation; // Required
 
-        // Information on paging
+        /* Information on paging */
         public ProvisioningPagingInfo paging; // Required
     }
 }

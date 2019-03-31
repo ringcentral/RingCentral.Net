@@ -2,19 +2,19 @@ namespace RingCentral
 {
     public class ContactAddressInfo
     {
-        // Country name of extension user company. Not returned for Address Book
+        /* Country name of extension user company. Not returned for Address Book */
         public string country;
 
-        // State/province name of extension user company
+        /* State/province name of extension user company */
         public string state;
 
-        // City name of extension user company
+        /* City name of extension user company */
         public string city;
 
-        // Street address of extension user company
+        /* Street address of extension user company */
         public string street;
 
-        // Zip code of extension user company
+        /* Zip code of extension user company */
         public string zip;
     }
 }

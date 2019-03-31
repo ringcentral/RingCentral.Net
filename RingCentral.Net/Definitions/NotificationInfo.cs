@@ -4,19 +4,19 @@ namespace RingCentral
 {
     public class NotificationInfo
     {
-        // Alert information
+        /* Alert information */
         public AlertInfo alert;
 
-        // Number of incoming messages
+        /* Number of incoming messages */
         public string badge;
 
-        // Message sound
+        /* Message sound */
         public string sound;
 
-        // Content availability
+        /* Content availability */
         [JsonProperty("content-available")] public string contentAvailable;
 
-        // Category of a message
+        /* Category of a message */
         public string category;
     }
 }

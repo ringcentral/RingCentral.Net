@@ -6,7 +6,7 @@ namespace RingCentral
 
         public AutomaticRecordingResource automatic;
 
-        // Collection of Greeting Info
+        /* Collection of Greeting Info */
         public GreetingResource[] greetings;
     }
 }

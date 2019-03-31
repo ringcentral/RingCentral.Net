@@ -4,7 +4,7 @@ namespace RingCentral
     {
         public string uri;
 
-        // Internal identifier of a role
+        /* Internal identifier of a role */
         public string id;
     }
 }

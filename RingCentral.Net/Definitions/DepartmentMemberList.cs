@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class DepartmentMemberList
     {
-        // List of department members extensions
+        /* List of department members extensions */
         public ExtensionInfo[] records;
 
-        // Information on navigation
+        /* Information on navigation */
         public ProvisioningNavigationInfo navigation;
 
-        // Information on paging
+        /* Information on paging */
         public ProvisioningPagingInfo paging;
     }
 }

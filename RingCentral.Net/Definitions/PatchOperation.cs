@@ -7,7 +7,7 @@ namespace RingCentral
 
         public string path;
 
-        // corresponding 'value' of that field specified by 'path'
+        /* corresponding 'value' of that field specified by 'path' */
         public string value;
     }
 }

@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class AccountPhoneNumbers
     {
-        // List of account phone numbers
+        /* List of account phone numbers */
         public CompanyPhoneNumberInfo[] records;
 
-        // Information on navigation
+        /* Information on navigation */
         public ProvisioningNavigationInfo navigation;
 
-        // Information on paging
+        /* Information on paging */
         public ProvisioningPagingInfo paging;
     }
 }

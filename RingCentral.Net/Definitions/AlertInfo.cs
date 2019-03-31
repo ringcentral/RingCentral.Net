@@ -2,10 +2,10 @@ namespace RingCentral
 {
     public class AlertInfo
     {
-        // Title of a message
+        /* Title of a message */
         public string title;
 
-        // Message Description
+        /* Message Description */
         public string body;
     }
 }

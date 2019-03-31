@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class GetExtensionForwardingNumberListResponse
     {
-        // List of forwarding phone numbers
+        /* List of forwarding phone numbers */
         public ForwardingNumberInfo[] records;
 
-        // Information on navigation
+        /* Information on navigation */
         public CallHandlingNavigationInfo navigation;
 
-        // Information on paging
+        /* Information on paging */
         public CallHandlingPagingInfo paging;
     }
 }

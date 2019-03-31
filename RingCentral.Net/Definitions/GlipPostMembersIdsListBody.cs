@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public class GlipPostMembersIdsListBody
     {
-        // Identifier(s) of chat members.
+        /* Identifier(s) of chat members. */
         public object[] members; // Required
     }
 }

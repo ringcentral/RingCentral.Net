@@ -2,16 +2,16 @@ namespace RingCentral
 {
     public class GetVersionsResponse
     {
-        // Canonical URI of the API version
+        /* Canonical URI of the API version */
         public string uri;
 
-        // Full API version information: uri, number, release date
+        /* Full API version information: uri, number, release date */
         public VersionInfo[] apiVersions;
 
-        // Server version
+        /* Server version */
         public string serverVersion;
 
-        // Server revision
+        /* Server revision */
         public string serverRevision;
     }
 }

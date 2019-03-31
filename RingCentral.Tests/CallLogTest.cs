@@ -44,11 +44,12 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new LoadUserCallLogParameters
-                {
-                    perPage = 1,
-                    dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o")
-                });
+                var callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(
+                    new LoadUserCallLogParameters
+                    {
+                        perPage = 1,
+                        dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o")
+                    });
                 Assert.Single(callLogResponse.records);
 
                 var fromNumber = callLogResponse.records[0].@from.phoneNumber;
@@ -56,10 +57,10 @@ namespace RingCentral.Tests
                 {
                     perPage = 1,
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o"),
-                    phoneNumber = fromNumber  // +123456789
+                    phoneNumber = fromNumber // +123456789
                 });
                 Assert.Empty(callLogResponse.records);
-                
+
                 callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new LoadUserCallLogParameters
                 {
                     perPage = 1,

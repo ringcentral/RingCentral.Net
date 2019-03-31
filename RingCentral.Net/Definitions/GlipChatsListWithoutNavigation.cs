@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public class GlipChatsListWithoutNavigation
     {
-        // List of chats
+        /* List of chats */
         public GlipChatInfo[] records; // Required
     }
 }

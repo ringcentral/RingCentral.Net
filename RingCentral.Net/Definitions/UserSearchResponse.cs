@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public class UserSearchResponse
     {
-        // user list
+        /* user list */
         public UserResponse[] Resources;
 
         public long? itemsPerPage;

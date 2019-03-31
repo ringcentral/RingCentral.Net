@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class UserCallLogResponse
     {
-        // List of call log records
+        /* List of call log records */
         public CallLogRecord[] records; // Required
 
-        // Information on navigation
+        /* Information on navigation */
         public CallLogNavigationInfo navigation; // Required
 
-        // Information on paging
+        /* Information on paging */
         public CallLogPagingInfo paging; // Required
     }
 }

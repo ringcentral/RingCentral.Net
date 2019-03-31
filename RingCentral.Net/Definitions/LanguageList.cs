@@ -2,16 +2,16 @@ namespace RingCentral
 {
     public class LanguageList
     {
-        // Canonical URI of the language list resource
+        /* Canonical URI of the language list resource */
         public string uri;
 
-        // Language data
+        /* Language data */
         public LanguageInfo[] records;
 
-        // Information on navigation
+        /* Information on navigation */
         public ProvisioningNavigationInfo navigation;
 
-        // Information on paging
+        /* Information on paging */
         public ProvisioningPagingInfo paging;
     }
 }

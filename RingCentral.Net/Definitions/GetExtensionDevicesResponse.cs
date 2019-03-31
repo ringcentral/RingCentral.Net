@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class GetExtensionDevicesResponse
     {
-        // List of extension devices
+        /* List of extension devices */
         public GetDeviceInfoResponse[] records; // Required
 
-        // Information on navigation
+        /* Information on navigation */
         public DeviceProvisioningNavigationInfo navigation; // Required
 
-        // Information on paging
+        /* Information on paging */
         public DeviceProvisioningPagingInfo paging; // Required
     }
 }

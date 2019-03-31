@@ -2,16 +2,14 @@ namespace RingCentral
 {
     public class UserAnsweringRuleList
     {
-        // Link to an answering rule resource
+        /* Canonical URI of an answering rule list resource */
         public string uri;
 
-        // List of user answering rules
-        public ListCompanyAnsweringRuleInfo[] records;
+        /* List of answering rules */
+        public UserAnsweringRuleListRecord[] records;
 
-        // Information on paging
-        public CallHandlingPagingInfo paging;
+        public UserAnsweringRuleListPaging paging;
 
-        // Information on navigation
-        public CallHandlingNavigationInfo navigation;
+        public UserAnsweringRuleListNavigation navigation;
     }
 }

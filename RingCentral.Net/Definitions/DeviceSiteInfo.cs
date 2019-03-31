@@ -2,10 +2,10 @@ namespace RingCentral
 {
     public class DeviceSiteInfo
     {
-        // Internal identifier of a site
+        /* Internal identifier of a site */
         public string id;
 
-        // Name of a site
+        /* Name of a site */
         public string name;
     }
 }

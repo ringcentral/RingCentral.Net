@@ -42,11 +42,6 @@ const generate = (prefix = '/') => {
     console.log('routes', routes)
     const folderPath = getFolderPath(prefix, name)
     console.log('folderPath', folderPath)
-    if (fs.existsSync(folderPath)) {
-      console.log('folder already exists')
-      return
-    }
-    fs.mkdirSync(folderPath)
     const paramName = R.pipe(
       R.filter(p => p.startsWith(`${prefix}${name}/{`)),
       R.map(p => p.substring(`${prefix}${name}/`.length)),
@@ -54,6 +49,15 @@ const generate = (prefix = '/') => {
       R.map(t => t.substring(1, t.length - 1)),
       R.head
     )(normalizedPaths)
+    if (fs.existsSync(folderPath)) {
+      console.log('folder already exists')
+      generate(`${prefix}${name}/`)
+      if (paramName) {
+        generate(`${prefix}${name}/{${paramName}}/`)
+      }
+      return
+    }
+    fs.mkdirSync(folderPath)
     if (paramName) {
       console.log('paramName', paramName)
     }

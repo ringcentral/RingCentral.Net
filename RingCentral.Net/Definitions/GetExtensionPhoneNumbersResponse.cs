@@ -2,13 +2,13 @@ namespace RingCentral
 {
     public class GetExtensionPhoneNumbersResponse
     {
-        // List of phone numbers
+        /* List of phone numbers */
         public UserPhoneNumberInfo[] records; // Required
 
-        // Information on navigation
+        /* Information on navigation */
         public ProvisioningNavigationInfo navigation; // Required
 
-        // Information on paging
+        /* Information on paging */
         public ProvisioningPagingInfo paging; // Required
     }
 }

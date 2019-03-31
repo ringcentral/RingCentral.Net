@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public class PagerCallerInfoRequest
     {
-        // Extension identifier
+        /* Extension identifier */
         public string extensionId; // Required
     }
 }

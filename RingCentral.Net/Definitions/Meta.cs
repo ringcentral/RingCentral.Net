@@ -7,7 +7,7 @@ namespace RingCentral
 
         public string lastModified;
 
-        // resource location URI
+        /* resource location URI */
         public string location;
 
         // Enum: User, Group

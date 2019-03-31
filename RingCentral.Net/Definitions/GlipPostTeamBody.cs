@@ -2,16 +2,16 @@ namespace RingCentral
 {
     public class GlipPostTeamBody
     {
-        // Team access level.
+        /* Team access level. */
         public bool? @public;
 
-        // Team name.
+        /* Team name. */
         public string name; // Required
 
-        // Team description.
+        /* Team description. */
         public string description;
 
-        // Identifier(s) of team members.
+        /* Identifier(s) of team members. */
         public object[] members;
     }
 }

@@ -2,16 +2,16 @@ namespace RingCentral
 {
     public class CallQueues
     {
-        // Link to a call queues resource
+        /* Link to a call queues resource */
         public string uri; // Required
 
-        // List of call queues
+        /* List of call queues */
         public CallQueueInfo[] records; // Required
 
-        // Information on navigation
+        /* Information on navigation */
         public ProvisioningNavigationInfo navigation; // Required
 
-        // Information on paging
+        /* Information on paging */
         public ProvisioningPagingInfo paging; // Required
     }
 }

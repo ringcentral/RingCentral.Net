@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public class ServiceProviderConfig
     {
-        public AuthenticationSchemes authenticationSchemes;
+        public AuthenticationScheme[] authenticationSchemes;
 
         public BulkSupported bulk;
 

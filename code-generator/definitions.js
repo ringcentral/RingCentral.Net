@@ -8,6 +8,7 @@ const outputDir = '../RingCentral.Net/Definitions'
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 const definitions = doc.definitions
 const models = Object.keys(definitions).map(k => ({ name: k, ...definitions[k] }))
+  .filter(m => m.type !== 'array')
 
 const keys = []
 models.forEach(m => {
@@ -70,7 +71,7 @@ const generateField = (m, f) => {
     p = `// Maximum: ${f.maximum}\n        ${p}`
   }
   if (f.description) {
-    p = `// ${f.description.trim()}\n        ${p}`
+    p = `/* ${f.description.trim()} */\n        ${p}`
   }
   return p
 }
@@ -108,6 +109,9 @@ Object.keys(doc.paths).forEach(p => {
       const fields = operation.parameters.filter(p => p.in === 'formData')
         .map(p => {
           p = normalizeField(p)
+          if (p['$ref']) {
+            p.type = p['$ref'].split('/').slice(-1)[0]
+          }
           return generateField({}, p)
         })
       fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))

@@ -12,28 +12,28 @@ namespace RingCentral
 
         public string customerName;
 
-        // State/province name
+        /* State/province name */
         public string state;
 
-        // Internal identifier of a state
+        /* Internal identifier of a state */
         public string stateId;
 
-        // ISO code of a state
+        /* ISO code of a state */
         public string stateIsoCode;
 
-        // Full name of a state
+        /* Full name of a state */
         public string stateName;
 
-        // Internal identifier of a country
+        /* Internal identifier of a country */
         public string countryId;
 
-        // ISO code of a country
+        /* ISO code of a country */
         public string countryIsoCode;
 
-        // Country name
+        /* Country name */
         public string country;
 
-        // Full name of a country
+        /* Full name of a country */
         public string countryName;
     }
 }

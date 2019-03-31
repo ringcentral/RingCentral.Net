@@ -4,10 +4,12 @@ namespace RingCentral
     {
         public string description;
 
-        public string documentationUrl;
+        public string documentationUri;
 
         public string name;
 
-        public string specUrl;
+        public string specUri;
+
+        public bool? primary;
     }
 }

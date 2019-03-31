@@ -41,7 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
         // Operation: Get User Call Record(s)
         // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
-        public async Task<RingCentral.UserCallLogRecord> Get(GetCallRecordsParameters queryParams = null)
+        public async Task<RingCentral.UserCallLogRecord> Get(GetUserCallRecordParameters queryParams = null)
         {
             if (this.callRecordId == null)
             {

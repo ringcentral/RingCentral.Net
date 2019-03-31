@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public class CallRecordingExtensionResource
     {
-        // Internal identifier of an extension
+        /* Internal identifier of an extension */
         public string id;
 
         public string uri;
@@ -11,7 +11,7 @@ namespace RingCentral
 
         public string type;
 
-        // Direction of call
+        /* Direction of call */
         // Enum: Outbound, Inbound, All
         public string callDirection;
     }

@@ -7,13 +7,13 @@ namespace RingCentral
 
         public ExtensionStatusInfo statusInfo;
 
-        // Type of suspension
+        /* Type of suspension */
         public string reason;
 
-        // Free Form user comment
+        /* Free Form user comment */
         public string comment;
 
-        // Extension number available
+        /* Extension number available */
         public string extensionNumber;
 
         public ContactInfoUpdateRequest contact;
@@ -23,19 +23,18 @@ namespace RingCentral
         // Enum: NotStarted, Incomplete, Completed
         public string setupWizardState;
 
-        // Extension partner identifier
+        /* Extension partner identifier */
         public string partnerId;
 
-        // IVR PIN
+        /* IVR PIN */
         public string ivrPin;
 
-        // Password for extension
+        /* Password for extension */
         public string password;
 
-        // For Department extension type only. Call queue settings
+        /* For Department extension type only. Call queue settings */
         public CallQueueInfoRequest callQueueInfo;
 
-        // For NotActivated extensions only. Welcome email settings
-        public UserTransitionInfo transition;
+        public UserTransitionInfo[] transition;
     }
 }

@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return $"{parent.Path()}/teams";
         }
 
-        // Operation: Get Team List
+        // Operation: Get Teams
         // Http Get /restapi/v1.0/glip/teams
         public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null)
         {

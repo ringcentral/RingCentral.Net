@@ -2,56 +2,56 @@ namespace RingCentral
 {
     public class InstantMessageEventBody
     {
-        // Internal identifier of a message
+        /* Internal identifier of a message */
         public string id;
 
-        // Message receiver(s) information
+        /* Message receiver(s) information */
         public NotificationRecipientInfo[] to;
 
-        // Extension Type. For GCM transport type '_from' property should be used
+        /* Extension Type. For GCM transport type '_from' property should be used */
         public SenderInfo from;
 
-        // Type of a message. The default value is 'SMS'
+        /* Type of a message. The default value is 'SMS' */
         public string type;
 
-        // Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        /* Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z */
         public string creationTime;
 
-        // Datetime when the message was modified in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        /* Datetime when the message was modified in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z */
         public string lastModifiedTime;
 
-        // Status of a message
+        /* Status of a message */
         // Default: Unread
         public string readStatus;
 
         // Default: Normal
         public string priority;
 
-        // Message attachment data
+        /* Message attachment data */
         public MessageAttachmentInfo[] attachments;
 
-        // Message direction
+        /* Message direction */
         // Default: Inbound
         public string direction;
 
-        // Message availability status
+        /* Message availability status */
         // Default: Alive
         public string availability;
 
-        // Message subject. It replicates message text which is also returned as an attachment
+        /* Message subject. It replicates message text which is also returned as an attachment */
         public string subject;
 
-        // Status of a message
+        /* Status of a message */
         // Default: Received
         public string messageStatus;
 
-        // Deprecated. Identifier of a conversation the message belongs to
+        /* Deprecated. Identifier of a conversation the message belongs to */
         public string conversationId;
 
-        // Information about a conversation the message belongs to
+        /* Information about a conversation the message belongs to */
         public ConversationInfo conversation;
 
-        // Internal identifier of a subscription owner extension
+        /* Internal identifier of a subscription owner extension */
         public string ownerId;
     }
 }

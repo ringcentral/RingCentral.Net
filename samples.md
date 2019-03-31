@@ -331,7 +331,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-loadCompanyCallLogRecord) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-loadCompanyCallRecord) in API Explorer.
 
 
 ## Create Call Monitoring Group
@@ -427,7 +427,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./RingCentral.Net/Definitions/CallMonitoringBulkAssign.cs)
-- `result` is of type [CallMonitoringBulkAssign](./RingCentral.Net/Definitions/CallMonitoringBulkAssign.cs)
+- `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -554,7 +554,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCallRecordingSettings) in API Explorer.
 
 
-## Update Call Recording Extension Settings
+## Update Call Recording Extension List
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-recording/bulk-assign`
 
@@ -571,10 +571,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCallRecordingExtensionSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCallRecordingExtensionList) in API Explorer.
 
 
-## [Beta] Get Call Recording Custom Greetings
+## Get Call Recording Custom Greetings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`
 
@@ -614,7 +614,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-deleteCallRecordingCustomGreeting) in API Explorer.
 
 
-## Get Call Recording Extension Settings
+## Get Call Recording Extension List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/extensions`
 
@@ -627,11 +627,11 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 
-- `result` is an empty string
+- `result` is of type [CallRecordingExtensions](./RingCentral.Net/Definitions/CallRecordingExtensions.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listCallRecordingExtensionSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listCallRecordingExtensions) in API Explorer.
 
 
 ## Edit Department Members
@@ -682,11 +682,11 @@ HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(loadAccountDeviceParameters);
 }
 ```
 
-
+- Parameter `loadAccountDeviceParameters` is of type [LoadAccountDeviceParameters](./RingCentral.Net/Definitions/LoadAccountDeviceParameters.cs)
 - `result` is of type [GetDeviceInfoResponse](./RingCentral.Net/Definitions/GetDeviceInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1286,17 +1286,17 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{ca
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(getCallRecordsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(getUserCallRecordParameters);
 }
 ```
 
-- Parameter `getCallRecordsParameters` is of type [GetCallRecordsParameters](./RingCentral.Net/Definitions/GetCallRecordsParameters.cs)
+- Parameter `getUserCallRecordParameters` is of type [GetUserCallRecordParameters](./RingCentral.Net/Definitions/GetUserCallRecordParameters.cs)
 - `result` is of type [UserCallLogRecord](./RingCentral.Net/Definitions/UserCallLogRecord.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-getCallRecords) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-getUserCallRecord) in API Explorer.
 
 
 ## Get Caller Blocking Settings
@@ -1381,27 +1381,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createBlockedAllowedPhoneNumberList) in API Explorer.
-
-
-## Add/Remove Blocked or Allowed Numbers using bulk request
-
-HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/bulk-update`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().BulkUpdate().Post();
-}
-```
-
-
-- `result` is an empty string
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createBlockedAllowedPhoneNumberLists) in API Explorer.
 
 
 ## Get Blocked/Allowed Number
@@ -1790,12 +1769,12 @@ HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(customGreetingRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createUserCustomGreetingRequest);
 }
 ```
 
-- Parameter `customGreetingRequest` is of type [CustomGreetingRequest](./RingCentral.Net/Definitions/CustomGreetingRequest.cs)
-- `result` is of type [CustomCompanyGreetingInfo](./RingCentral.Net/Definitions/CustomCompanyGreetingInfo.cs)
+- Parameter `createUserCustomGreetingRequest` is of type [CreateUserCustomGreetingRequest](./RingCentral.Net/Definitions/CreateUserCustomGreetingRequest.cs)
+- `result` is of type [CustomUserGreetingInfo](./RingCentral.Net/Definitions/CustomUserGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
@@ -1864,27 +1843,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Upcoming-Meetings-createMeeting) in API Explorer.
-
-
-## Get User Meeting Recordings
-
-HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters);
-}
-```
-
-- Parameter `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./RingCentral.Net/Definitions/ListUserMeetingRecordingsParameters.cs)
-- `result` is of type [ListMeetingRecordingsResponse](./RingCentral.Net/Definitions/ListMeetingRecordingsResponse.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listUserMeetingRecordings) in API Explorer.
 
 
 ## Get Meeting Service Info
@@ -2257,7 +2215,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `uploadProfileImageRequest` is of type [UploadProfileImageRequest](./RingCentral.Net/Definitions/UploadProfileImageRequest.cs)
-- `result` is of type `byte[]`
+- `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
@@ -2286,7 +2244,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateProfileImage) in API Explorer.
 
 
-## Get Extension Profile Image (Scaled)
+## Get User Profile Image (Scaled)
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
 
@@ -2370,7 +2328,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-cancelRingOutCall) in API Explorer.
 
 
-## Create SMS Message
+## Create SMS/MMS Message
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`
 
@@ -2399,11 +2357,11 @@ HTTP POST `/restapi/v1.0/account/{accountId}/greeting`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(customCompanyGreetingRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest);
 }
 ```
 
-- Parameter `customCompanyGreetingRequest` is of type [CustomCompanyGreetingRequest](./RingCentral.Net/Definitions/CustomCompanyGreetingRequest.cs)
+- Parameter `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./RingCentral.Net/Definitions/CreateCompanyGreetingRequest.cs)
 - `result` is of type [CustomCompanyGreetingInfo](./RingCentral.Net/Definitions/CustomCompanyGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2589,26 +2547,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadIvrPromptContent) in API Explorer.
-
-
-## Get Account Meeting Recordings
-
-HTTP GET `/restapi/v1.0/account/{accountId}/meeting-recordings`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters);
-}
-```
-
-- Parameter `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./RingCentral.Net/Definitions/ListAccountMeetingRecordingsParameters.cs)
-- `result` is of type [ListMeetingRecordingsResponse](./RingCentral.Net/Definitions/ListMeetingRecordingsResponse.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listAccountMeetingRecordings) in API Explorer.
 
 
 ## Get Message Store Configuration
@@ -2891,7 +2829,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCallRecordingData) in API Explorer.
 
 
-## Get Account Service Info [Beta]
+## Get Account Service Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/service-info`
 
@@ -2911,6 +2849,26 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Company-Settings-loadServiceInfo) in API Explorer.
 
 
+## Create CallOut Call Session
+
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/call-out`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest);
+}
+```
+
+- Parameter `makeCallOutRequest` is of type [MakeCallOutRequest](./RingCentral.Net/Definitions/MakeCallOutRequest.cs)
+- `result` is an empty string
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-createCallOutCallSession) in API Explorer.
+
+
 ## Get Call Session Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
@@ -2928,7 +2886,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-getCallSessionStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-getCallSessionStatus) in API Explorer.
 
 
 ## Drop Call Session
@@ -2948,7 +2906,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-deleteCallSession) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-deleteCallSession) in API Explorer.
 
 
 ## Get Call Party Status
@@ -2968,7 +2926,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-getCallPartyStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-getCallPartyStatus) in API Explorer.
 
 
 ## Update Call Party
@@ -2988,7 +2946,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-updateCallParty) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-updateCallParty) in API Explorer.
 
 
 ## Call Flip on Party
@@ -3008,7 +2966,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-callFlipParty) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.
 
 
 ## Forward Call Party
@@ -3028,7 +2986,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-forwardCallParty) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-forwardCallParty) in API Explorer.
 
 
 ## Hold Call Party
@@ -3048,10 +3006,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-holdCallParty) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty) in API Explorer.
 
 
-## Starts new call recording in a party
+## Create Recording
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings`
 
@@ -3068,7 +3026,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-startCallRecording) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-startCallRecording) in API Explorer.
 
 
 ## Pause/Resume Recording
@@ -3089,7 +3047,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-pauseResumeCallRecording) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pauseResumeCallRecording) in API Explorer.
 
 
 ## Reject Call Party
@@ -3109,7 +3067,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-rejectParty) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-rejectParty) in API Explorer.
 
 
 ## Transfer Call Party
@@ -3129,7 +3087,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-transferCallParty) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-transferCallParty) in API Explorer.
 
 
 ## Unhold Call Party
@@ -3149,7 +3107,27 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-[Beta]-unholdCallParty) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-unholdCallParty) in API Explorer.
+
+
+## Supervise Call
+
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/supervise`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Supervise().Post(superviseCallSessionRequest);
+}
+```
+
+- Parameter `superviseCallSessionRequest` is of type [SuperviseCallSessionRequest](./RingCentral.Net/Definitions/SuperviseCallSessionRequest.cs)
+- `result` is of type [SuperviseCallSession](./RingCentral.Net/Definitions/SuperviseCallSession.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-superviseCallSession) in API Explorer.
 
 
 ## Get Templates
@@ -3516,7 +3494,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-deleteGlipCard) in API Explorer.
 
 
-## Get Chat List
+## Get Chats
 
 HTTP GET `/restapi/v1.0/glip/chats`
 
@@ -3571,6 +3549,101 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-favoriteGlipChat) in API Explorer.
+
+
+## Load Glip Posts
+
+HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(loadGlipPostsParameters);
+}
+```
+
+- Parameter `loadGlipPostsParameters` is of type [LoadGlipPostsParameters](./RingCentral.Net/Definitions/LoadGlipPostsParameters.cs)
+- `result` is of type [GlipPostsList](./RingCentral.Net/Definitions/GlipPostsList.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipPosts) in API Explorer.
+
+
+## Create Glip Post
+
+HTTP POST `/restapi/v1.0/glip/chats/{chatId}/posts`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(glipPostPostBody);
+}
+```
+
+- Parameter `glipPostPostBody` is of type [GlipPostPostBody](./RingCentral.Net/Definitions/GlipPostPostBody.cs)
+- `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipPost) in API Explorer.
+
+
+## Get Post
+
+HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get();
+}
+```
+
+
+- `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipPostByChatId) in API Explorer.
+
+
+## Update Glip Post
+
+HTTP PATCH `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody);
+}
+```
+
+- Parameter `glipPatchPostBody` is of type [GlipPatchPostBody](./RingCentral.Net/Definitions/GlipPatchPostBody.cs)
+- `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-updateGlipPost) in API Explorer.
+
+
+## Delete Glip Post
+
+HTTP DELETE `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete();
+}
+```
+
+
+- `result` is an empty string
+- Parameter `apiVersion` is optional with default value `v1.0`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-deleteGlipPost) in API Explorer.
 
 
 ## Mark Chat as Read
@@ -3649,7 +3722,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-loadGlipCompany) in API Explorer.
 
 
-## Get User Conversation List
+## Get Conversations
 
 HTTP GET `/restapi/v1.0/glip/conversations`
 
@@ -3668,7 +3741,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listGlipConversations) in API Explorer.
 
 
-## Create/Open Chat
+## Create/Open Conversation
 
 HTTP POST `/restapi/v1.0/glip/conversations`
 
@@ -3676,11 +3749,11 @@ HTTP POST `/restapi/v1.0/glip/conversations`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(glipPostMembersListBody);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest);
 }
 ```
 
-- Parameter `glipPostMembersListBody` is of type [GlipPostMembersListBody](./RingCentral.Net/Definitions/GlipPostMembersListBody.cs)
+- Parameter `createGlipConversationRequest` is of type [CreateGlipConversationRequest](./RingCentral.Net/Definitions/CreateGlipConversationRequest.cs)
 - `result` is of type [GlipConversationInfo](./RingCentral.Net/Definitions/GlipConversationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -3858,7 +3931,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Events-deleteEvent) in API Explorer.
 
 
-## Get Everyone Chat Info
+## Get Everyone Chat
 
 HTTP GET `/restapi/v1.0/glip/everyone`
 
@@ -3877,7 +3950,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-loadGlipEveryone) in API Explorer.
 
 
-## Update Everyone Сhat Info
+## Update Everyone Сhat
 
 HTTP PATCH `/restapi/v1.0/glip/everyone`
 
@@ -4049,44 +4122,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Events-listGroupEvents) in API Explorer.
 
 
-## Get Group Notes
-
-HTTP GET `/restapi/v1.0/glip/groups/{groupId}/notes`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Notes().Get(loadGroupNotesParameters);
-}
-```
-
-- Parameter `loadGroupNotesParameters` is of type [LoadGroupNotesParameters](./RingCentral.Net/Definitions/LoadGroupNotesParameters.cs)
-- `result` is of type [GlipNotesInfo](./RingCentral.Net/Definitions/GlipNotesInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-loadGroupNotes) in API Explorer.
-
-
-## Create Group Note
-
-HTTP POST `/restapi/v1.0/glip/groups/{groupId}/notes`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Notes().Post(glipNoteCreate);
-}
-```
-
-- Parameter `glipNoteCreate` is of type [GlipNoteCreate](./RingCentral.Net/Definitions/GlipNoteCreate.cs)
-- `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-createGroupNote) in API Explorer.
-
-
 ## Get Group Posts
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/posts`
@@ -4182,178 +4217,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-listGlipGroupWebhooks) in API Explorer.
 
 
-## Get User Notes
-
-HTTP GET `/restapi/v1.0/glip/notes`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes().List(loadUserNotesParameters);
-}
-```
-
-- Parameter `loadUserNotesParameters` is of type [LoadUserNotesParameters](./RingCentral.Net/Definitions/LoadUserNotesParameters.cs)
-- `result` is of type [GlipNotesInfo](./RingCentral.Net/Definitions/GlipNotesInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-loadUserNotes) in API Explorer.
-
-
-## Create User Note
-
-HTTP POST `/restapi/v1.0/glip/notes`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes().Post(glipNoteCreate);
-}
-```
-
-- Parameter `glipNoteCreate` is of type [GlipNoteCreate](./RingCentral.Net/Definitions/GlipNoteCreate.cs)
-- `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-createUserNote) in API Explorer.
-
-
-## Get Note
-
-HTTP GET `/restapi/v1.0/glip/notes/{noteId}`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get();
-}
-```
-
-
-- `result` is of type [GlipNotesInfo](./RingCentral.Net/Definitions/GlipNotesInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-loadUserNote) in API Explorer.
-
-
-## Delete Note
-
-HTTP DELETE `/restapi/v1.0/glip/notes/{noteId}`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete();
-}
-```
-
-
-- `result` is an empty string
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-deleteNote) in API Explorer.
-
-
-## Patch Note
-
-HTTP PATCH `/restapi/v1.0/glip/notes/{noteId}`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate, patchNoteParameters);
-}
-```
-
-- Parameter `glipNoteCreate` is of type [GlipNoteCreate](./RingCentral.Net/Definitions/GlipNoteCreate.cs)
-- Parameter `patchNoteParameters` is of type [PatchNoteParameters](./RingCentral.Net/Definitions/PatchNoteParameters.cs)
-- `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-patchNote) in API Explorer.
-
-
-## Update Note
-
-HTTP PUT `/restapi/v1.0/glip/notes/{noteId}`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Put(glipNoteCreate);
-}
-```
-
-- Parameter `glipNoteCreate` is of type [GlipNoteCreate](./RingCentral.Net/Definitions/GlipNoteCreate.cs)
-- `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-updateNote) in API Explorer.
-
-
-## Lock Note
-
-HTTP POST `/restapi/v1.0/glip/notes/{noteId}/lock`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post();
-}
-```
-
-
-- `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNote) in API Explorer.
-
-
-## Publish Note
-
-HTTP POST `/restapi/v1.0/glip/notes/{noteId}/publish`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post();
-}
-```
-
-
-- `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-publishNote) in API Explorer.
-
-
-## Unlock Note
-
-HTTP POST `/restapi/v1.0/glip/notes/{noteId}/unlock`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post();
-}
-```
-
-
-- `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-unlockNote) in API Explorer.
-
-
 ## Get Person
 
 HTTP GET `/restapi/v1.0/glip/persons/{personId}`
@@ -4411,7 +4274,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-createPost) in API Explorer.
 
 
-## Get User Preferences
+## Get Preferences
 
 HTTP GET `/restapi/v1.0/glip/preferences`
 
@@ -4449,7 +4312,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listRecentChats) in API Explorer.
 
 
-## Get Team List
+## Get Teams
 
 HTTP GET `/restapi/v1.0/glip/teams`
 
@@ -4620,7 +4483,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-leaveGlipTeam) in API Explorer.
 
 
-## Remove Members from Team
+## Remove Team Members
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/remove`
 
@@ -4753,7 +4616,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-suspendGlipWebhook) in API Explorer.
 
 
-## Parse Phone Number [Beta]
+## Parse Phone Number
 
 HTTP POST `/restapi/v1.0/number-parser/parse`
 
@@ -4771,6 +4634,25 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-parsePhoneNumber) in API Explorer.
+
+
+## Number Porting Verify
+
+HTTP POST `/restapi/v1.0/number-porting/verify-number`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).NumberPorting().VerifyNumber().Post(numberPortingVerifyNumberRequest);
+}
+```
+
+- Parameter `numberPortingVerifyNumberRequest` is of type [NumberPortingVerifyNumberRequest](./RingCentral.Net/Definitions/NumberPortingVerifyNumberRequest.cs)
+- `result` is of type [NumberPortingVerifyNumberResponse](./RingCentral.Net/Definitions/NumberPortingVerifyNumberResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Number-Porting-numberPortingVerify) in API Explorer.
 
 
 ## Get Service Status
@@ -4905,24 +4787,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
-
-
-## check health
-
-HTTP GET `/scim/health`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim().Health().Get();
-}
-```
-
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#SCIM-checkHealth) in API Explorer.
 
 
 ## Get Service Provider Configuration
@@ -5075,3 +4939,22 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-patchUser2) in API Explorer.
+
+
+## check health
+
+HTTP GET `/scim/v2/health`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Scim(version).Health().Get();
+}
+```
+
+
+- `result` is an empty string
+- Parameter `version` is optional with default value `v2`
+
+[Try it out](https://developer.ringcentral.com/api-reference#SCIM-checkHealth2) in API Explorer.

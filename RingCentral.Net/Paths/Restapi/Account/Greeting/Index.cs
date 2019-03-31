@@ -21,9 +21,9 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
         // Operation: Create Custom Company Greeting
         // Http Post /restapi/v1.0/account/{accountId}/greeting
         public async Task<RingCentral.CustomCompanyGreetingInfo> Post(
-            RingCentral.CustomCompanyGreetingRequest customCompanyGreetingRequest)
+            CreateCompanyGreetingRequest createCompanyGreetingRequest)
         {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(customCompanyGreetingRequest);
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCompanyGreetingRequest);
             return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(), multipartFormDataContent);
         }
     }

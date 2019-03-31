@@ -2,12 +2,8 @@ namespace RingCentral
 {
     public class PersonalContactResource
     {
-        public string uri;
-
         // Enum: Alive, Deleted, Purged
         public string availability;
-
-        public string id;
 
         public string firstName;
 
@@ -62,5 +58,7 @@ namespace RingCentral
         public string assistantPhone;
 
         public string businessPhone2;
+
+        public string id;
     }
 }

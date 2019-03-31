@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
             return $"{parent.Path()}/service-info";
         }
 
-        // Operation: Get Account Service Info [Beta]
+        // Operation: Get Account Service Info
         // Http Get /restapi/v1.0/account/{accountId}/service-info
         public async Task<RingCentral.GetServiceInfoResponse> Get()
         {

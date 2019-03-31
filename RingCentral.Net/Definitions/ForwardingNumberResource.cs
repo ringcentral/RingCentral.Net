@@ -14,7 +14,7 @@ namespace RingCentral
 
         public string flipNumber;
 
-        // Forwarding phone number type
+        /* Forwarding phone number type */
         // Enum: Home, Mobile, Work, PhoneLine, Outage, Other
         public string type;
     }

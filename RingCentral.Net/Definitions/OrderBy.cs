@@ -2,14 +2,14 @@ namespace RingCentral
 {
     public class OrderBy
     {
-        // Sorting priority index, starting from '1'. Optional if only one element in `orderBy` array is specified
+        /* Sorting priority index, starting from '1'. Optional if only one element in `orderBy` array is specified */
         public long? index;
 
-        // Field name by which to sort the contacts
+        /* Field name by which to sort the contacts */
         // Enum: firstName, lastName, extensionNumber, phoneNumber, email
         public string fieldName;
 
-        // Sorting direction
+        /* Sorting direction */
         // Enum: Asc, Desc
         public string direction;
     }

@@ -2,16 +2,16 @@ namespace RingCentral
 {
     public class AccountPresenceInfo
     {
-        // Canonical URI of account presence resource
+        /* Canonical URI of account presence resource */
         public string uri;
 
-        // List of Prompts
+        /* List of Prompts */
         public GetPresenceInfo[] records;
 
-        // Information on navigation
+        /* Information on navigation */
         public PresenceNavigationInfo navigation;
 
-        // Information on paging
+        /* Information on paging */
         public PresencePagingInfo paging;
     }
 }

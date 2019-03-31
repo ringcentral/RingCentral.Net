@@ -27,14 +27,14 @@ namespace RingCentral.Paths.Restapi.Account.Device
 
         // Operation: Get Device Info
         // Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
-        public async Task<RingCentral.GetDeviceInfoResponse> Get()
+        public async Task<RingCentral.GetDeviceInfoResponse> Get(LoadAccountDeviceParameters queryParams = null)
         {
             if (this.deviceId == null)
             {
                 throw new System.ArgumentNullException("deviceId");
             }
 
-            return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path());
+            return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path(), queryParams);
         }
 
         // Operation: Update Device

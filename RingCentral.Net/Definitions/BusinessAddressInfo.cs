@@ -2,19 +2,19 @@ namespace RingCentral
 {
     public class BusinessAddressInfo
     {
-        // Name of a country
+        /* Name of a country */
         public string country;
 
-        // Name of a state/province
+        /* Name of a state/province */
         public string state;
 
-        // Name of a city
+        /* Name of a city */
         public string city;
 
-        // Street address
+        /* Street address */
         public string street;
 
-        // Zip code
+        /* Zip code */
         public string zip;
     }
 }

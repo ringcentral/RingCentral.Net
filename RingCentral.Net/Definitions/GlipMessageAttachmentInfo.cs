@@ -2,77 +2,77 @@ namespace RingCentral
 {
     public class GlipMessageAttachmentInfo
     {
-        // Internal identifier of an attachment
+        /* Internal identifier of an attachment */
         public string id;
 
-        // Type of an attachment
+        /* Type of an attachment */
         // Default: Card
         // Enum: Card, Event, Note
         public string type;
 
-        // A string of default text that will be rendered in the case that the client does not support Interactive Messages
+        /* A string of default text that will be rendered in the case that the client does not support Interactive Messages */
         public string fallback;
 
-        // A pretext to the message
+        /* A pretext to the message */
         public string intro;
 
-        // Information about the author
+        /* Information about the author */
         public GlipMessageAttachmentAuthorInfo author;
 
-        // Message title
+        /* Message title */
         public string title;
 
-        // A large string field (up to 1000 chars) to be displayed as the body of a message (Supports GlipDown)
+        /* A large string field (up to 1000 chars) to be displayed as the body of a message (Supports GlipDown) */
         public string text;
 
-        // url used to display a single image at the bottom of a message
+        /* url used to display a single image at the bottom of a message */
         public string imageUri;
 
-        // url used to display a thumbnail to the right of a message (82x82)
+        /* url used to display a thumbnail to the right of a message (82x82) */
         public string thumbnailUri;
 
-        // Information on navigation
+        /* Information on navigation */
         public GlipMessageAttachmentFieldsInfo[] fields;
 
-        // Message Footer
+        /* Message Footer */
         public GlipMessageAttachmentFootnoteInfo footnote;
 
-        // Internal identifier of a person created an event
+        /* Internal identifier of a person created an event */
         public string creatorId;
 
-        // Datetime of starting an event
+        /* Datetime of starting an event */
         public string startTime;
 
-        // Datetime of ending an event
+        /* Datetime of ending an event */
         public string endTime;
 
-        // Indicates whether an event has some specific time slot or lasts for the whole day(s)
+        /* Indicates whether an event has some specific time slot or lasts for the whole day(s) */
         public bool? allDay;
 
-        // Event recurrence settings.
+        /* Event recurrence settings. */
         // Enum: None, Day, Weekday, Week, Month, Year
         public string recurrence;
 
-        // Condition of ending
+        /* Condition of ending */
         public string endingCondition;
 
-        // Count of iterations. For periodic events only
+        /* Count of iterations. For periodic events only */
         public long? endingAfter;
 
-        // Iterations end datetime for periodic events
+        /* Iterations end datetime for periodic events */
         // Default: None
         // Enum: None, Count, Date
         public string endingOn;
 
-        // Hex color code specifying font color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
+        /* Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card */
         // Default: Black
         // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         public string color;
 
-        // Event location
+        /* Event location */
         public string location;
 
-        // Event details
+        /* Event details */
         public string description;
     }
 }

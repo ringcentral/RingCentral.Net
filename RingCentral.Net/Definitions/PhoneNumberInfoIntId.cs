@@ -2,36 +2,36 @@ namespace RingCentral
 {
     public class PhoneNumberInfoIntId
     {
-        // Internal identifier of a phone number
+        /* Internal identifier of a phone number */
         public long? id;
 
-        // Brief information on a phone number country
+        /* Brief information on a phone number country */
         public PhoneNumberCountryInfo country;
 
-        // Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
+        /* Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list */
         public ExtensionInfo extension;
 
-        // Custom user name of a phone number, if any
+        /* Custom user name of a phone number, if any */
         public string label;
 
-        // Location (City, State). Filled for local US numbers
+        /* Location (City, State). Filled for local US numbers */
         public string location;
 
-        // Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
+        /* Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system */
         // Enum: External, TollFree, Local
         public string paymentType;
 
-        // Phone number
+        /* Phone number */
         public string phoneNumber;
 
-        // Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
+        /* Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral */
         public string status;
 
-        // Phone number type
+        /* Phone number type */
         // Enum: VoiceFax, FaxOnly, VoiceOnly
         public string type;
 
-        // Usage type of the phone number
+        /* Usage type of the phone number */
         // Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
         public string usageType;
     }

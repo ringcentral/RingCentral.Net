@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
             return $"{parent.Path()}/preferences";
         }
 
-        // Operation: Get User Preferences
+        // Operation: Get Preferences
         // Http Get /restapi/v1.0/glip/preferences
         public async Task<RingCentral.GlipPreferencesInfo> Get()
         {

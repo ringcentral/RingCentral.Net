@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
             return $"{parent.Path()}/custom-greetings";
         }
 
-        // Operation: [Beta] Get Call Recording Custom Greetings
+        // Operation: Get Call Recording Custom Greetings
         // Http Get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
         public async Task<RingCentral.CallRecordingCustomGreetings> Get(
             ListCallRecordingCustomGreetingsParameters queryParams = null)
