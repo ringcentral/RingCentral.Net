@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class DictionaryGreetingList
     {
-        /* Canonical URI of greetings list resource */
+        /// <summary>
+        /// Canonical URI of greetings list resource
+        /// </summary>
         public string uri;
 
-        /* List of greetings */
+        /// <summary>
+        /// List of greetings
+        /// </summary>
         public DictionaryGreetingInfo[] records;
     }
 }

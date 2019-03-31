@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class CallRecordingExtensionInfo
     {
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string id;
 
-        /* Link to an extension resource */
+        /// <summary>
+        /// Link to an extension resource
+        /// </summary>
         public string uri;
 
-        /* Number of an extension */
+        /// <summary>
+        /// Number of an extension
+        /// </summary>
         public string extensionNumber;
 
-        /* Name of an extension */
+        /// <summary>
+        /// Name of an extension
+        /// </summary>
         public string name;
     }
 }

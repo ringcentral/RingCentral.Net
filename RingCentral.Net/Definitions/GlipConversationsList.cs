@@ -2,9 +2,14 @@ namespace RingCentral
 {
     public class GlipConversationsList
     {
-        /* List of conversations */
-        public GlipConversationInfo[] records; // Required
+        /// <summary>
+        /// List of conversations
+        /// Required
+        /// </summary>
+        public GlipConversationInfo[] records;
 
+        /// <summary>
+        /// </summary>
         public GlipNavigationInfo navigation;
     }
 }

@@ -2,46 +2,74 @@ namespace RingCentral
 {
     public class GlipPostInfo
     {
-        /* Internal identifier of a post */
+        /// <summary>
+        /// Internal identifier of a post
+        /// </summary>
         public string id;
 
-        /* Internal identifier of a group a post belongs to */
+        /// <summary>
+        /// Internal identifier of a group a post belongs to
+        /// </summary>
         public string groupId;
 
-        /* Type of a post */
-        // Enum: TextMessage, PersonJoined, PersonsAdded
+        /// <summary>
+        /// Type of a post
+        /// Enum: TextMessage, PersonJoined, PersonsAdded
+        /// </summary>
         public string type;
 
-        /* For 'TextMessage' post type only. Text of a message */
+        /// <summary>
+        /// For 'TextMessage' post type only. Text of a message
+        /// </summary>
         public string text;
 
-        /* Internal identifier of a user - author of a post */
+        /// <summary>
+        /// Internal identifier of a user - author of a post
+        /// </summary>
         public string creatorId;
 
-        /* For 'PersonsAdded' post type only. Identifiers of persons added to a group */
+        /// <summary>
+        /// For 'PersonsAdded' post type only. Identifiers of persons added to a group
+        /// </summary>
         public string[] addedPersonIds;
 
-        /* Post creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format */
+        /// <summary>
+        /// Post creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// </summary>
         public string creationTime;
 
-        /* Post last modification datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format */
+        /// <summary>
+        /// Post last modification datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// </summary>
         public string lastModifiedTime;
 
-        /* List of posted attachments */
+        /// <summary>
+        /// List of posted attachments
+        /// </summary>
         public GlipMessageAttachmentInfo[] attachments;
 
+        /// <summary>
+        /// </summary>
         public GlipMentionsInfo[] mentions;
 
-        /* Label of activity type */
+        /// <summary>
+        /// Label of activity type
+        /// </summary>
         public string activity;
 
-        /* Title of a message. (Can be set for bot's messages only) */
+        /// <summary>
+        /// Title of a message. (Can be set for bot's messages only)
+        /// </summary>
         public string title;
 
-        /* Link to an image used as an icon for this message */
+        /// <summary>
+        /// Link to an image used as an icon for this message
+        /// </summary>
         public string iconUri;
 
-        /* Emoji used as an icon for this message */
+        /// <summary>
+        /// Emoji used as an icon for this message
+        /// </summary>
         public string iconEmoji;
     }
 }

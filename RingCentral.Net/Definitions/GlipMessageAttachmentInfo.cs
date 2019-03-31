@@ -2,77 +2,121 @@ namespace RingCentral
 {
     public class GlipMessageAttachmentInfo
     {
-        /* Internal identifier of an attachment */
+        /// <summary>
+        /// Internal identifier of an attachment
+        /// </summary>
         public string id;
 
-        /* Type of an attachment */
-        // Default: Card
-        // Enum: Card, Event, Note
+        /// <summary>
+        /// Type of an attachment
+        /// Default: Card
+        /// Enum: Card, Event, Note
+        /// </summary>
         public string type;
 
-        /* A string of default text that will be rendered in the case that the client does not support Interactive Messages */
+        /// <summary>
+        /// A string of default text that will be rendered in the case that the client does not support Interactive Messages
+        /// </summary>
         public string fallback;
 
-        /* A pretext to the message */
+        /// <summary>
+        /// A pretext to the message
+        /// </summary>
         public string intro;
 
-        /* Information about the author */
+        /// <summary>
+        /// Information about the author
+        /// </summary>
         public GlipMessageAttachmentAuthorInfo author;
 
-        /* Message title */
+        /// <summary>
+        /// Message title
+        /// </summary>
         public string title;
 
-        /* A large string field (up to 1000 chars) to be displayed as the body of a message (Supports GlipDown) */
+        /// <summary>
+        /// A large string field (up to 1000 chars) to be displayed as the body of a message (Supports GlipDown)
+        /// </summary>
         public string text;
 
-        /* url used to display a single image at the bottom of a message */
+        /// <summary>
+        /// url used to display a single image at the bottom of a message
+        /// </summary>
         public string imageUri;
 
-        /* url used to display a thumbnail to the right of a message (82x82) */
+        /// <summary>
+        /// url used to display a thumbnail to the right of a message (82x82)
+        /// </summary>
         public string thumbnailUri;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public GlipMessageAttachmentFieldsInfo[] fields;
 
-        /* Message Footer */
+        /// <summary>
+        /// Message Footer
+        /// </summary>
         public GlipMessageAttachmentFootnoteInfo footnote;
 
-        /* Internal identifier of a person created an event */
+        /// <summary>
+        /// Internal identifier of a person created an event
+        /// </summary>
         public string creatorId;
 
-        /* Datetime of starting an event */
+        /// <summary>
+        /// Datetime of starting an event
+        /// </summary>
         public string startTime;
 
-        /* Datetime of ending an event */
+        /// <summary>
+        /// Datetime of ending an event
+        /// </summary>
         public string endTime;
 
-        /* Indicates whether an event has some specific time slot or lasts for the whole day(s) */
+        /// <summary>
+        /// Indicates whether an event has some specific time slot or lasts for the whole day(s)
+        /// </summary>
         public bool? allDay;
 
-        /* Event recurrence settings. */
-        // Enum: None, Day, Weekday, Week, Month, Year
+        /// <summary>
+        /// Event recurrence settings.
+        /// Enum: None, Day, Weekday, Week, Month, Year
+        /// </summary>
         public string recurrence;
 
-        /* Condition of ending */
+        /// <summary>
+        /// Condition of ending
+        /// </summary>
         public string endingCondition;
 
-        /* Count of iterations. For periodic events only */
+        /// <summary>
+        /// Count of iterations. For periodic events only
+        /// </summary>
         public long? endingAfter;
 
-        /* Iterations end datetime for periodic events */
-        // Default: None
-        // Enum: None, Count, Date
+        /// <summary>
+        /// Iterations end datetime for periodic events
+        /// Default: None
+        /// Enum: None, Count, Date
+        /// </summary>
         public string endingOn;
 
-        /* Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card */
-        // Default: Black
-        // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+        /// <summary>
+        /// Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
+        /// Default: Black
+        /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+        /// </summary>
         public string color;
 
-        /* Event location */
+        /// <summary>
+        /// Event location
+        /// </summary>
         public string location;
 
-        /* Event details */
+        /// <summary>
+        /// Event details
+        /// </summary>
         public string description;
     }
 }

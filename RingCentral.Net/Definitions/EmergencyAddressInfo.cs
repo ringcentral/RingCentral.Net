@@ -2,47 +2,75 @@ namespace RingCentral
 {
     public class EmergencyAddressInfo
     {
-        /* Name of a customer */
+        /// <summary>
+        /// Name of a customer
+        /// </summary>
         public string customerName;
 
-        /* Street address, line 1 - street address, P.O. box, company name, c/o */
+        /// <summary>
+        /// Street address, line 1 - street address, P.O. box, company name, c/o
+        /// </summary>
         public string street;
 
-        /* Street address, line 2 - apartment, suite, unit, building, floor, etc. */
+        /// <summary>
+        /// Street address, line 2 - apartment, suite, unit, building, floor, etc.
+        /// </summary>
         public string street2;
 
-        /* City name */
+        /// <summary>
+        /// City name
+        /// </summary>
         public string city;
 
-        /* Zip code */
+        /// <summary>
+        /// Zip code
+        /// </summary>
         public string zip;
 
-        /* State/province name */
+        /// <summary>
+        /// State/province name
+        /// </summary>
         public string state;
 
-        /* Internal identifier of a state */
+        /// <summary>
+        /// Internal identifier of a state
+        /// </summary>
         public string stateId;
 
-        /* ISO code of a state */
+        /// <summary>
+        /// ISO code of a state
+        /// </summary>
         public string stateIsoCode;
 
-        /* Full name of a state */
+        /// <summary>
+        /// Full name of a state
+        /// </summary>
         public string stateName;
 
-        /* Internal identifier of a country */
+        /// <summary>
+        /// Internal identifier of a country
+        /// </summary>
         public string countryId;
 
-        /* ISO code of a country */
+        /// <summary>
+        /// ISO code of a country
+        /// </summary>
         public string countryIsoCode;
 
-        /* Country name */
+        /// <summary>
+        /// Country name
+        /// </summary>
         public string country;
 
-        /* Full name of a country */
+        /// <summary>
+        /// Full name of a country
+        /// </summary>
         public string countryName;
 
-        /* Resulting status of emergency address synchronization. Returned for 'Get Device Info' request if `syncEmergencyAddress` parameter is set to 'True' */
-        // Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
+        /// <summary>
+        /// Resulting status of emergency address synchronization. Returned for 'Get Device Info' request if `syncEmergencyAddress` parameter is set to 'True'
+        /// Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
+        /// </summary>
         public string syncStatus;
     }
 }

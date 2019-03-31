@@ -2,25 +2,39 @@ namespace RingCentral
 {
     public class EmergencyAddressInfoRequest
     {
-        /* Name of a customer */
+        /// <summary>
+        /// Name of a customer
+        /// </summary>
         public string customerName;
 
-        /* Street address, line 1 - street address, P.O. box, company name, c/o */
+        /// <summary>
+        /// Street address, line 1 - street address, P.O. box, company name, c/o
+        /// </summary>
         public string street;
 
-        /* Street address, line 2 - apartment, suite, unit, building, floor, etc. */
+        /// <summary>
+        /// Street address, line 2 - apartment, suite, unit, building, floor, etc.
+        /// </summary>
         public string street2;
 
-        /* City name */
+        /// <summary>
+        /// City name
+        /// </summary>
         public string city;
 
-        /* Zip code */
+        /// <summary>
+        /// Zip code
+        /// </summary>
         public string zip;
 
-        /* State/province name */
+        /// <summary>
+        /// State/province name
+        /// </summary>
         public string state;
 
-        /* Country name */
+        /// <summary>
+        /// Country name
+        /// </summary>
         public string country;
     }
 }

@@ -2,15 +2,21 @@ namespace RingCentral
 {
     public class GlipMessageAttachmentFieldsInfo
     {
-        /* Title of an individual field */
+        /// <summary>
+        /// Title of an individual field
+        /// </summary>
         public string title;
 
-        /* Value of an individual field (supports Markdown) */
+        /// <summary>
+        /// Value of an individual field (supports Markdown)
+        /// </summary>
         public string value;
 
-        /* Style of width span applied to a field */
-        // Default: Short
-        // Enum: Short, Long
+        /// <summary>
+        /// Style of width span applied to a field
+        /// Default: Short
+        /// Enum: Short, Long
+        /// </summary>
         public string style;
     }
 }

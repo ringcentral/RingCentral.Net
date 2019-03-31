@@ -2,22 +2,34 @@ namespace RingCentral
 {
     public class InboundMessageEvent
     {
-        /* Information on a notification */
+        /// <summary>
+        /// Information on a notification
+        /// </summary>
         public NotificationInfo aps;
 
-        /* Internal identifier of a message */
+        /// <summary>
+        /// Internal identifier of a message
+        /// </summary>
         public string messageId;
 
-        /* Internal identifier of an conversation */
+        /// <summary>
+        /// Internal identifier of an conversation
+        /// </summary>
         public string conversationId;
 
-        /* Sender phone number. For GCM transport type '_from' property should be used */
+        /// <summary>
+        /// Sender phone number. For GCM transport type '_from' property should be used
+        /// </summary>
         public string from;
 
-        /* Receiver phone number */
+        /// <summary>
+        /// Receiver phone number
+        /// </summary>
         public string to;
 
-        /* Internal identifier of a subscription owner extension */
+        /// <summary>
+        /// Internal identifier of a subscription owner extension
+        /// </summary>
         public string ownerId;
     }
 }

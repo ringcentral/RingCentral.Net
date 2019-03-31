@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class AccountPresenceParameters
     {
-        /* Whether to return detailed telephony state */
+        /// <summary>
+        /// Whether to return detailed telephony state
+        /// </summary>
         public bool? detailedTelephonyState;
 
-        /* Whether to return SIP data */
+        /// <summary>
+        /// Whether to return SIP data
+        /// </summary>
         public bool? sipData;
 
-        /* Page number for account presence information */
+        /// <summary>
+        /// Page number for account presence information
+        /// </summary>
         public long? page;
 
-        /* Number for account presence information items per page */
+        /// <summary>
+        /// Number for account presence information items per page
+        /// </summary>
         public long? perPage;
     }
 }

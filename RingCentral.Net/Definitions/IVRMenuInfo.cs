@@ -2,22 +2,34 @@ namespace RingCentral
 {
     public class IVRMenuInfo
     {
-        /* Internal identifier of an IVR Menu extension */
+        /// <summary>
+        /// Internal identifier of an IVR Menu extension
+        /// </summary>
         public string id;
 
-        /* Link to an IVR Menu extension resource */
+        /// <summary>
+        /// Link to an IVR Menu extension resource
+        /// </summary>
         public string uri;
 
-        /* First name of an IVR Menu user */
+        /// <summary>
+        /// First name of an IVR Menu user
+        /// </summary>
         public string name;
 
-        /* Number of an IVR Menu extension */
+        /// <summary>
+        /// Number of an IVR Menu extension
+        /// </summary>
         public string extensionNumber;
 
-        /* Prompt metadata */
+        /// <summary>
+        /// Prompt metadata
+        /// </summary>
         public IVRMenuPromptInfo prompt;
 
-        /* Keys handling settings */
+        /// <summary>
+        /// Keys handling settings
+        /// </summary>
         public IVRMenuActionsInfo[] actions;
     }
 }

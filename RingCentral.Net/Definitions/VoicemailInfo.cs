@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class VoicemailInfo
     {
-        /* If 'True' then voicemails are allowed to be received */
+        /// <summary>
+        /// If 'True' then voicemails are allowed to be received
+        /// </summary>
         public bool? enabled;
 
-        /* Recipient data */
+        /// <summary>
+        /// Recipient data
+        /// </summary>
         public RecipientInfo recipient;
     }
 }

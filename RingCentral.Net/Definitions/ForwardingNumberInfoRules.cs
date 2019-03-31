@@ -2,20 +2,30 @@ namespace RingCentral
 {
     public class ForwardingNumberInfoRules
     {
-        /* Link to a forwarding number resource */
+        /// <summary>
+        /// Link to a forwarding number resource
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a forwarding number */
+        /// <summary>
+        /// Internal identifier of a forwarding number
+        /// </summary>
         public string id;
 
-        /* Phone number to which the call is forwarded */
+        /// <summary>
+        /// Phone number to which the call is forwarded
+        /// </summary>
         public string phoneNumber;
 
-        /* Title of a forwarding number */
+        /// <summary>
+        /// Title of a forwarding number
+        /// </summary>
         public string label;
 
-        /* Type of a forwarding number */
-        // Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+        /// <summary>
+        /// Type of a forwarding number
+        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+        /// </summary>
         public string type;
     }
 }

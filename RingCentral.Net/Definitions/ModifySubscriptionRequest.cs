@@ -2,14 +2,21 @@ namespace RingCentral
 {
     public class ModifySubscriptionRequest
     {
-        /* Collection of URIs to API resources */
-        public string[] eventFilters; // Required
+        /// <summary>
+        /// Collection of URIs to API resources
+        /// Required
+        /// </summary>
+        public string[] eventFilters;
 
-        /* Notification delivery settings */
+        /// <summary>
+        /// Notification delivery settings
+        /// </summary>
         public NotificationDeliveryModeRequest deliveryMode;
 
-        /* Subscription lifetime in seconds. Max value is 7 days (604800 sec). For *WebHook* transport type max value might be set up to 630720000 seconds (20 years) */
-        // Default: 604800
+        /// <summary>
+        /// Subscription lifetime in seconds. Max value is 7 days (604800 sec). For *WebHook* transport type max value might be set up to 630720000 seconds (20 years)
+        /// Default: 604800
+        /// </summary>
         public long? expiresIn;
     }
 }

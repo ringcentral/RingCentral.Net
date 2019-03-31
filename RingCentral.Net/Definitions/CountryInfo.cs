@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class CountryInfo
     {
-        /* Internal identifier of a home country */
+        /// <summary>
+        /// Internal identifier of a home country
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a home country */
+        /// <summary>
+        /// Canonical URI of a home country
+        /// </summary>
         public string uri;
 
-        /* Official name of a home country */
+        /// <summary>
+        /// Official name of a home country
+        /// </summary>
         public string name;
 
-        /* ISO code of a country */
+        /// <summary>
+        /// ISO code of a country
+        /// </summary>
         public string isoCode;
 
-        /* Calling code of a country */
+        /// <summary>
+        /// Calling code of a country
+        /// </summary>
         public string callingCode;
     }
 }

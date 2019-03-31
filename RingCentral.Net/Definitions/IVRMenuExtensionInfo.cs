@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class IVRMenuExtensionInfo
     {
-        /* Link to an extension resource */
+        /// <summary>
+        /// Link to an extension resource
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string id;
     }
 }

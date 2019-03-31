@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class ExtensionTimezoneInfoRequest
     {
-        /* internal Identifier of a timezone */
+        /// <summary>
+        /// internal Identifier of a timezone
+        /// </summary>
         public string id;
     }
 }

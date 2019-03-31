@@ -2,9 +2,13 @@ namespace RingCentral
 {
     public class FixedOrderAgents
     {
+        /// <summary>
+        /// </summary>
         public ExtensionInfo extension;
 
-        /* Ordinal of an agent (call queue member) */
+        /// <summary>
+        /// Ordinal of an agent (call queue member)
+        /// </summary>
         public long? index;
     }
 }

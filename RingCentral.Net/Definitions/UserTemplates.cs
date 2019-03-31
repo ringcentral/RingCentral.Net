@@ -2,16 +2,27 @@ namespace RingCentral
 {
     public class UserTemplates
     {
-        /* Link to user templates resource */
+        /// <summary>
+        /// Link to user templates resource
+        /// </summary>
         public string uri;
 
-        /* List of user templates */
-        public TemplateInfo[] records; // Required
+        /// <summary>
+        /// List of user templates
+        /// Required
+        /// </summary>
+        public TemplateInfo[] records;
 
-        /* Information on navigation */
-        public ProvisioningNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
-        public ProvisioningPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public ProvisioningPagingInfo paging;
     }
 }

@@ -2,13 +2,22 @@ namespace RingCentral
 {
     public class ActiveCallsResponse
     {
-        /* List of call log records */
-        public CallLogRecord[] records; // Required
+        /// <summary>
+        /// List of call log records
+        /// Required
+        /// </summary>
+        public CallLogRecord[] records;
 
-        /* Information on navigation */
-        public CallLogNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public CallLogNavigationInfo navigation;
 
-        /* Information on paging */
-        public CallLogPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public CallLogPagingInfo paging;
     }
 }

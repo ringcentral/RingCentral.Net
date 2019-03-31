@@ -2,23 +2,35 @@ namespace RingCentral
 {
     public class RegionalSettings
     {
-        /* Extension country information */
+        /// <summary>
+        /// Extension country information
+        /// </summary>
         public CountryInfo homeCountry;
 
-        /* Extension timezone information */
+        /// <summary>
+        /// Extension timezone information
+        /// </summary>
         public TimezoneInfo timezone;
 
-        /* User interface language data */
+        /// <summary>
+        /// User interface language data
+        /// </summary>
         public LanguageInfo language;
 
-        /* Information on language used for telephony greetings */
+        /// <summary>
+        /// Information on language used for telephony greetings
+        /// </summary>
         public GreetingLanguageInfo greetingLanguage;
 
-        /* Formatting language preferences for numbers, dates and currencies */
+        /// <summary>
+        /// Formatting language preferences for numbers, dates and currencies
+        /// </summary>
         public FormattingLocaleInfo formattingLocale;
 
-        /* Time format setting. The default value is '12h' = ['12h', '24h'] */
-        // Enum: 12h, 24h
+        /// <summary>
+        /// Time format setting. The default value is '12h' = ['12h', '24h']
+        /// Enum: 12h, 24h
+        /// </summary>
         public string timeFormat;
     }
 }

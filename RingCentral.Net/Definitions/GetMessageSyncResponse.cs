@@ -2,10 +2,16 @@ namespace RingCentral
 {
     public class GetMessageSyncResponse
     {
-        /* List of message records with synchronization information */
-        public GetMessageInfoResponse[] records; // Required
+        /// <summary>
+        /// List of message records with synchronization information
+        /// Required
+        /// </summary>
+        public GetMessageInfoResponse[] records;
 
-        /* Sync type, token and time */
-        public SyncInfoMessages syncInfo; // Required
+        /// <summary>
+        /// Sync type, token and time
+        /// Required
+        /// </summary>
+        public SyncInfoMessages syncInfo;
     }
 }

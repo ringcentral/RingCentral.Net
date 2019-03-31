@@ -2,26 +2,40 @@ namespace RingCentral
 {
     public class SendFaxMessageRequest
     {
-        /* File to upload */
+        /// <summary>
+        /// File to upload
+        /// </summary>
         public Attachment[] attachments;
 
-        /* Resolution of Fax */
-        // Enum: High, Low
+        /// <summary>
+        /// Resolution of Fax
+        /// Enum: High, Low
+        /// </summary>
         public string faxResolution;
 
-        /* To Phone Number */
+        /// <summary>
+        /// To Phone Number
+        /// </summary>
         public MessageStoreCallerInfoRequest[] to;
 
-        /* Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately */
+        /// <summary>
+        /// Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately
+        /// </summary>
         public string sendTime;
 
-        /* ISO Code. e.g UK */
+        /// <summary>
+        /// ISO Code. e.g UK
+        /// </summary>
         public string isoCode;
 
-        /* Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages. If not specified, the default cover page which is configured in 'Outbound Fax Settings' is attached */
+        /// <summary>
+        /// Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages. If not specified, the default cover page which is configured in 'Outbound Fax Settings' is attached
+        /// </summary>
         public long? coverIndex;
 
-        /* Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols */
+        /// <summary>
+        /// Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
+        /// </summary>
         public string coverPageText;
     }
 }

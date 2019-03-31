@@ -2,26 +2,40 @@ namespace RingCentral
 {
     public class NotificationDeliveryMode
     {
-        /* Notifications transportation provider name. 'APNS' (Apple Push Notifications Service) */
-        // Enum: PubNub, APNS, PubNub/APNS/VoIP
+        /// <summary>
+        /// Notifications transportation provider name. 'APNS' (Apple Push Notifications Service)
+        /// Enum: PubNub, APNS, PubNub/APNS/VoIP
+        /// </summary>
         public string transportType;
 
-        /* Optional parameter. Specifies if the message will be encrypted or not. For APNS transport type the value is always  false */
+        /// <summary>
+        /// Optional parameter. Specifies if the message will be encrypted or not. For APNS transport type the value is always  false
+        /// </summary>
         public bool? encryption;
 
-        /* PubNub channel name. For APNS transport type - internal identifier of a device  device_token */
+        /// <summary>
+        /// PubNub channel name. For APNS transport type - internal identifier of a device  device_token
+        /// </summary>
         public string address;
 
-        /* PubNub subscriber credentials required to subscribe to the channel */
+        /// <summary>
+        /// PubNub subscriber credentials required to subscribe to the channel
+        /// </summary>
         public string subscriberKey;
 
-        /* PubNub subscriber credentials required to subscribe to the channel. Optional (for PubNub transport type only) */
+        /// <summary>
+        /// PubNub subscriber credentials required to subscribe to the channel. Optional (for PubNub transport type only)
+        /// </summary>
         public string secretKey;
 
-        /* Encryption algorithm 'AES' (for PubNub transport type only) */
+        /// <summary>
+        /// Encryption algorithm 'AES' (for PubNub transport type only)
+        /// </summary>
         public string encryptionAlgorithm;
 
-        /* Key for notification message decryption (for PubNub transport type only) */
+        /// <summary>
+        /// Key for notification message decryption (for PubNub transport type only)
+        /// </summary>
         public string encryptionKey;
     }
 }

@@ -2,16 +2,28 @@ namespace RingCentral
 {
     public class CallMonitoringGroupMemberList
     {
-        /* Link to a call monitoring group members resource */
-        public string uri; // Required
+        /// <summary>
+        /// Link to a call monitoring group members resource
+        /// Required
+        /// </summary>
+        public string uri;
 
-        /* List of a call monitoring group members */
-        public CallMonitoringGroupMemberInfo[] records; // Required
+        /// <summary>
+        /// List of a call monitoring group members
+        /// Required
+        /// </summary>
+        public CallMonitoringGroupMemberInfo[] records;
 
-        /* Information on navigation */
-        public ProvisioningNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
-        public ProvisioningPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public ProvisioningPagingInfo paging;
     }
 }

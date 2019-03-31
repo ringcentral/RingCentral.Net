@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class DeviceInfoRequest
     {
-        /* Device unique identifier, retrieved on previous session (if any) */
+        /// <summary>
+        /// Device unique identifier, retrieved on previous session (if any)
+        /// </summary>
         public string id;
 
-        /* For iOS devices only Certificate name (used by iOS applications for APNS subscription) */
+        /// <summary>
+        /// For iOS devices only Certificate name (used by iOS applications for APNS subscription)
+        /// </summary>
         public string appExternalId;
 
-        /* For SoftPhone only Computer name */
+        /// <summary>
+        /// For SoftPhone only Computer name
+        /// </summary>
         public string computerName;
     }
 }

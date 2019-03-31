@@ -2,7 +2,10 @@ namespace RingCentral
 {
     public class UserBusinessHoursUpdateRequest
     {
-        /* Schedule when an answering rule is applied */
-        public UserBusinessHoursScheduleInfo schedule; // Required
+        /// <summary>
+        /// Schedule when an answering rule is applied
+        /// Required
+        /// </summary>
+        public UserBusinessHoursScheduleInfo schedule;
     }
 }

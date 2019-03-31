@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class CallQueueInfo
     {
-        /* Link to a call queue */
+        /// <summary>
+        /// Link to a call queue
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a call queue */
+        /// <summary>
+        /// Internal identifier of a call queue
+        /// </summary>
         public string id;
 
-        /* Extension number of a call queue */
+        /// <summary>
+        /// Extension number of a call queue
+        /// </summary>
         public string extensionNumber;
 
-        /* Name of a call queue */
+        /// <summary>
+        /// Name of a call queue
+        /// </summary>
         public string name;
     }
 }

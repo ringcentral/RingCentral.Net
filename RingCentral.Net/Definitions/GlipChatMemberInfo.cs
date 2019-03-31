@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class GlipChatMemberInfo
     {
-        /* Internal identifier of a user */
+        /// <summary>
+        /// Internal identifier of a user
+        /// </summary>
         public string id;
     }
 }

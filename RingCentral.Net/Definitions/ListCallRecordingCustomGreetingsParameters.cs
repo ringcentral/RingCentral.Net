@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class ListCallRecordingCustomGreetingsParameters
     {
-        // Enum: StartRecording, StopRecording, AutomaticRecording
+        /// <summary>
+        /// Enum: StartRecording, StopRecording, AutomaticRecording
+        /// </summary>
         public string type;
     }
 }

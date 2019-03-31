@@ -3,10 +3,14 @@ namespace RingCentral
     // Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling'
     public class ExtensionPermissions
     {
-        /* Admin permission */
+        /// <summary>
+        /// Admin permission
+        /// </summary>
         public PermissionInfo admin;
 
-        /* International Calling permission */
+        /// <summary>
+        /// International Calling permission
+        /// </summary>
         public PermissionInfo internationalCalling;
     }
 }

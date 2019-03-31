@@ -2,15 +2,21 @@ namespace RingCentral
 {
     public class SearchViaGet2Parameters
     {
-        /* only support 'userName' or 'email' filter expressions for now */
+        /// <summary>
+        /// only support 'userName' or 'email' filter expressions for now
+        /// </summary>
         public string filter;
 
-        /* start index (1-based) */
-        // Default: 1
+        /// <summary>
+        /// start index (1-based)
+        /// Default: 1
+        /// </summary>
         public long? startIndex;
 
-        /* page size */
-        // Default: 100
+        /// <summary>
+        /// page size
+        /// Default: 100
+        /// </summary>
         public long? count;
     }
 }

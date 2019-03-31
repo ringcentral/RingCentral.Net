@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class PagingOnlyGroupDevices
     {
-        /* List of paging devices assigned to this group */
+        /// <summary>
+        /// List of paging devices assigned to this group
+        /// </summary>
         public PagingDeviceInfo[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public ProvisioningPagingInfo paging;
     }
 }

@@ -2,9 +2,14 @@ namespace RingCentral
 {
     public class GlipPosts
     {
-        /* List of posts */
-        public GlipPostInfo[] records; // Required
+        /// <summary>
+        /// List of posts
+        /// Required
+        /// </summary>
+        public GlipPostInfo[] records;
 
+        /// <summary>
+        /// </summary>
         public GlipNavigationInfo navigation;
     }
 }

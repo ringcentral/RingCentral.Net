@@ -2,49 +2,75 @@ namespace RingCentral
 {
     public class CallLogRecordLegInfo
     {
-        /* Action description of the call operation */
-        // Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, FindMe, FollowMe, Outgoing Fax, Call Return, Calling Card, Ring Directly, RingOut Web, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile
+        /// <summary>
+        /// Action description of the call operation
+        /// Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, FindMe, FollowMe, Outgoing Fax, Call Return, Calling Card, Ring Directly, RingOut Web, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile
+        /// </summary>
         public string action;
 
-        /* Call direction */
-        // Enum: Inbound, Outbound
+        /// <summary>
+        /// Call direction
+        /// Enum: Inbound, Outbound
+        /// </summary>
         public string direction;
 
-        /* Call duration in seconds */
+        /// <summary>
+        /// Call duration in seconds
+        /// </summary>
         public long? duration;
 
-        /* Information on extension */
+        /// <summary>
+        /// Information on extension
+        /// </summary>
         public ExtensionInfoCallLog extension;
 
-        /* Leg type */
-        // Enum: SipForwarding, ServiceMinus2, ServiceMinus3, PstnToSip, Accept, FindMe, FollowMe, TestCall, FaxSent, CallBack, CallingCard, RingDirectly, RingOutWebToSubscriber, RingOutWebToCaller, SipToPstnMetered, RingOutClientToSubscriber, RingOutClientToCaller, RingMe, TransferCall, SipToPstnUnmetered, RingOutDeviceToSubscriber, RingOutDeviceToCaller, RingOutOneLegToCaller, ExtensionToExtension, CallPark, PagingServer, Hunting, OutgoingFreeSpDl, ParkLocation, ConferenceCall, MobileApp, MoveToConference, Unknown
+        /// <summary>
+        /// Leg type
+        /// Enum: SipForwarding, ServiceMinus2, ServiceMinus3, PstnToSip, Accept, FindMe, FollowMe, TestCall, FaxSent, CallBack, CallingCard, RingDirectly, RingOutWebToSubscriber, RingOutWebToCaller, SipToPstnMetered, RingOutClientToSubscriber, RingOutClientToCaller, RingMe, TransferCall, SipToPstnUnmetered, RingOutDeviceToSubscriber, RingOutDeviceToCaller, RingOutOneLegToCaller, ExtensionToExtension, CallPark, PagingServer, Hunting, OutgoingFreeSpDl, ParkLocation, ConferenceCall, MobileApp, MoveToConference, Unknown
+        /// </summary>
         public string legType;
 
-        /* The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z */
+        /// <summary>
+        /// The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// </summary>
         public string startTime;
 
-        /* Call type */
-        // Enum: Voice, Fax
+        /// <summary>
+        /// Call type
+        /// Enum: Voice, Fax
+        /// </summary>
         public string type;
 
-        /* Status description of the call operation */
-        // Enum: Unknown, ResultInProgress, Missed, Call accepted, Voicemail, Rejected, Reply, Received, Receive Error, Fax on Demand, Partial Receive, Blocked, Call connected, No Answer, International Disabled, Busy, Send Error, Sent, No fax machine, ResultEmpty, Account, Suspended, Call Failed, Call Failure, Internal Error, IP Phone offline, Restricted Number, Wrong Number, Stopped, Hang up, Poor Line Quality, Partially Sent, International Restriction, Abandoned, Declined, Fax Receipt Error, Fax Send Error
+        /// <summary>
+        /// Status description of the call operation
+        /// Enum: Unknown, ResultInProgress, Missed, Call accepted, Voicemail, Rejected, Reply, Received, Receive Error, Fax on Demand, Partial Receive, Blocked, Call connected, No Answer, International Disabled, Busy, Send Error, Sent, No fax machine, ResultEmpty, Account, Suspended, Call Failed, Call Failure, Internal Error, IP Phone offline, Restricted Number, Wrong Number, Stopped, Hang up, Poor Line Quality, Partially Sent, International Restriction, Abandoned, Declined, Fax Receipt Error, Fax Send Error
+        /// </summary>
         public string result;
 
-        /* Caller information */
+        /// <summary>
+        /// Caller information
+        /// </summary>
         public CallLogCallerInfo from;
 
-        /* Callee information */
+        /// <summary>
+        /// Callee information
+        /// </summary>
         public CallLogCallerInfo to;
 
-        /* Call transport */
-        // Enum: PSTN, VoIP
+        /// <summary>
+        /// Call transport
+        /// Enum: PSTN, VoIP
+        /// </summary>
         public string transport;
 
-        /* Call recording data. Returned if the call is recorded */
+        /// <summary>
+        /// Call recording data. Returned if the call is recorded
+        /// </summary>
         public CallLogRecordingInfo recording;
 
-        /* Returned for 'Detailed' call log. Specifies if the leg is master-leg */
+        /// <summary>
+        /// Returned for 'Detailed' call log. Specifies if the leg is master-leg
+        /// </summary>
         public bool? master;
     }
 }

@@ -2,11 +2,15 @@ namespace RingCentral
 {
     public class GlipPreferencesChats
     {
-        // Default: 10
+        /// <summary>
+        /// Default: 10
+        /// </summary>
         public long? maxCount;
 
-        // Default: CombineAllChatTypes
-        // Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
+        /// <summary>
+        /// Default: CombineAllChatTypes
+        /// Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
+        /// </summary>
         public string leftRailMode;
     }
 }

@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class RecipientInfo
     {
-        /* Link to a recipient extension resource */
+        /// <summary>
+        /// Link to a recipient extension resource
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a recipient extension */
+        /// <summary>
+        /// Internal identifier of a recipient extension
+        /// </summary>
         public string id;
     }
 }

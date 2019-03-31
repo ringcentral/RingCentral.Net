@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class BrandInfo
     {
-        /* Internal identifier of a brand */
+        /// <summary>
+        /// Internal identifier of a brand
+        /// </summary>
         public string id;
 
-        /* Brand name, for example  RingCentral UK ,  ClearFax */
+        /// <summary>
+        /// Brand name, for example  RingCentral UK ,  ClearFax
+        /// </summary>
         public string name;
 
-        /* Home country information */
+        /// <summary>
+        /// Home country information
+        /// </summary>
         public CountryInfo homeCountry;
     }
 }

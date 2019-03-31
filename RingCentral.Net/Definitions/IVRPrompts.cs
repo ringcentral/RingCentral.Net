@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class IVRPrompts
     {
-        /* Link to prompts library resource */
+        /// <summary>
+        /// Link to prompts library resource
+        /// </summary>
         public string uri;
 
-        /* List of Prompts */
+        /// <summary>
+        /// List of Prompts
+        /// </summary>
         public PromptInfo[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public CallHandlingNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public CallHandlingPagingInfo paging;
     }
 }

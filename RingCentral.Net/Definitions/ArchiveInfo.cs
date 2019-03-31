@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ArchiveInfo
     {
-        /* Archive size in bytes */
+        /// <summary>
+        /// Archive size in bytes
+        /// </summary>
         public long? size;
 
-        /* Link for archive download */
+        /// <summary>
+        /// Link for archive download
+        /// </summary>
         public string uri;
     }
 }

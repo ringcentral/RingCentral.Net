@@ -2,55 +2,87 @@ namespace RingCentral
 {
     public class GlipMessageAttachmentInfoRequest
     {
-        /* Type of attachment */
-        // Default: Card
-        // Enum: Card, Event, Note
+        /// <summary>
+        /// Type of attachment
+        /// Default: Card
+        /// Enum: Card, Event, Note
+        /// </summary>
         public string type;
 
-        /* Attachment title */
+        /// <summary>
+        /// Attachment title
+        /// </summary>
         public string title;
 
-        /* Default message returned in case the client does not support interactive messages */
+        /// <summary>
+        /// Default message returned in case the client does not support interactive messages
+        /// </summary>
         public string fallback;
 
-        /* Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card. The default color is 'Black' */
+        /// <summary>
+        /// Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card. The default color is 'Black'
+        /// </summary>
         public string color;
 
-        /* Introductory text displayed directly above a message */
+        /// <summary>
+        /// Introductory text displayed directly above a message
+        /// </summary>
         public string intro;
 
-        /* Information about the author */
+        /// <summary>
+        /// Information about the author
+        /// </summary>
         public GlipMessageAttachmentAuthorInfo author;
 
-        /* Text of attachment (up to 1000 chars), supports GlipDown */
+        /// <summary>
+        /// Text of attachment (up to 1000 chars), supports GlipDown
+        /// </summary>
         public string text;
 
-        /* Link to an image displayed at the bottom of a message */
+        /// <summary>
+        /// Link to an image displayed at the bottom of a message
+        /// </summary>
         public string imageUri;
 
-        /* Link to an image preview displayed to the right of a message (82x82) */
+        /// <summary>
+        /// Link to an image preview displayed to the right of a message (82x82)
+        /// </summary>
         public string thumbnailUri;
 
-        /* Individual subsections within a message */
+        /// <summary>
+        /// Individual subsections within a message
+        /// </summary>
         public GlipMessageAttachmentFieldsInfo[] fields;
 
-        /* Message footer information */
+        /// <summary>
+        /// Message footer information
+        /// </summary>
         public GlipMessageAttachmentFootnoteInfo footnote;
 
-        /* Datetime of starting an event */
+        /// <summary>
+        /// Datetime of starting an event
+        /// </summary>
         public string startTime;
 
-        /* Datetime of ending an event */
+        /// <summary>
+        /// Datetime of ending an event
+        /// </summary>
         public string endTime;
 
-        /* Indicates whether an event has some specific time slot or lasts for the whole day(s) */
+        /// <summary>
+        /// Indicates whether an event has some specific time slot or lasts for the whole day(s)
+        /// </summary>
         public bool? allDay;
 
-        /* Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year */
-        // Enum: None, Day, Weekday, Week, Month, Year
+        /// <summary>
+        /// Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
+        /// Enum: None, Day, Weekday, Week, Month, Year
+        /// </summary>
         public string recurrence;
 
-        /* Condition of ending an event */
+        /// <summary>
+        /// Condition of ending an event
+        /// </summary>
         public string endingCondition;
     }
 }

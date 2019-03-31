@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CreateGlipFileParameters
     {
-        /* Internal identifier of a group to which the post with attachement will be added to */
+        /// <summary>
+        /// Internal identifier of a group to which the post with attachement will be added to
+        /// </summary>
         public long? groupId;
 
-        /* Name of a file attached */
+        /// <summary>
+        /// Name of a file attached
+        /// </summary>
         public string name;
     }
 }

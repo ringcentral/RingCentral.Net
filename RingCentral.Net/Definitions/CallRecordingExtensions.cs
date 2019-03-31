@@ -2,15 +2,23 @@ namespace RingCentral
 {
     public class CallRecordingExtensions
     {
-        /* Link to call recording extension list resource */
+        /// <summary>
+        /// Link to call recording extension list resource
+        /// </summary>
         public string uri;
 
+        /// <summary>
+        /// </summary>
         public CallRecordingExtensionInfo[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public CallHandlingNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public CallHandlingPagingInfo paging;
     }
 }

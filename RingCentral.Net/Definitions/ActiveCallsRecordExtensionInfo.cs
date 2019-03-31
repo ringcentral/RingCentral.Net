@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ActiveCallsRecordExtensionInfo
     {
-        /* Link to an extension on whose behalf a call is initiated */
+        /// <summary>
+        /// Link to an extension on whose behalf a call is initiated
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of an extension on whose behalf a call is initiated */
+        /// <summary>
+        /// Internal identifier of an extension on whose behalf a call is initiated
+        /// </summary>
         public string id;
     }
 }

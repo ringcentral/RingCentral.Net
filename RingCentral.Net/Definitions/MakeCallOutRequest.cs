@@ -2,8 +2,14 @@ namespace RingCentral
 {
     public class MakeCallOutRequest
     {
-        public MakeCallOutCallerInfoRequestFrom from; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public MakeCallOutCallerInfoRequestFrom from;
 
-        public MakeCallOutCallerInfoRequestTo to; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public MakeCallOutCallerInfoRequestTo to;
     }
 }

@@ -2,22 +2,34 @@ namespace RingCentral
 {
     public class GetCountryInfoNumberParser
     {
-        /* Internal identifier of a country */
+        /// <summary>
+        /// Internal identifier of a country
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a country */
+        /// <summary>
+        /// Canonical URI of a country
+        /// </summary>
         public string uri;
 
-        /* Country calling code defined by ITU-T recommendations E.123 and E.164, see Calling Codes */
+        /// <summary>
+        /// Country calling code defined by ITU-T recommendations E.123 and E.164, see Calling Codes
+        /// </summary>
         public string callingCode;
 
-        /* Emergency calling feature availability/emergency address requirement indicator */
+        /// <summary>
+        /// Emergency calling feature availability/emergency address requirement indicator
+        /// </summary>
         public bool? emergencyCalling;
 
-        /* Country code according to the ISO standard, see ISO 3166 */
+        /// <summary>
+        /// Country code according to the ISO standard, see ISO 3166
+        /// </summary>
         public string isoCode;
 
-        /* Official name of a country */
+        /// <summary>
+        /// Official name of a country
+        /// </summary>
         public string name;
     }
 }

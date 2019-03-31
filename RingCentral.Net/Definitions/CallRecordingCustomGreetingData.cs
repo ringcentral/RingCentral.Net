@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CallRecordingCustomGreetingData
     {
-        /* Link to a custom company greeting */
+        /// <summary>
+        /// Link to a custom company greeting
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a custom company greeting */
+        /// <summary>
+        /// Internal identifier of a custom company greeting
+        /// </summary>
         public string id;
     }
 }

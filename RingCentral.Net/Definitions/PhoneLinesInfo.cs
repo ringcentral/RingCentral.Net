@@ -2,11 +2,15 @@ namespace RingCentral
 {
     public class PhoneLinesInfo
     {
-        /* Type of phone line */
-        // Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
+        /// <summary>
+        /// Type of phone line
+        /// Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
+        /// </summary>
         public string lineType;
 
-        /* Phone number information */
+        /// <summary>
+        /// Phone number information
+        /// </summary>
         public PhoneNumberInfoIntId phoneInfo;
     }
 }

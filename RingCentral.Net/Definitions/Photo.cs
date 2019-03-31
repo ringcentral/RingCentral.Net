@@ -2,9 +2,15 @@ namespace RingCentral
 {
     public class Photo
     {
-        // Enum: photo
-        public string type; // Required
+        /// <summary>
+        /// Required
+        /// Enum: photo
+        /// </summary>
+        public string type;
 
-        public string value; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public string value;
     }
 }

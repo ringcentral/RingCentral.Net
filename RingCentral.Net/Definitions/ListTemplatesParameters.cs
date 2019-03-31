@@ -2,11 +2,17 @@ namespace RingCentral
 {
     public class ListTemplatesParameters
     {
-        // Enum: UserSettings, CallHandling
+        /// <summary>
+        /// Enum: UserSettings, CallHandling
+        /// </summary>
         public string type;
 
+        /// <summary>
+        /// </summary>
         public string page;
 
+        /// <summary>
+        /// </summary>
         public string perPage;
     }
 }

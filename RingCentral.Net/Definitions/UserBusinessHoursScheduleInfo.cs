@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class UserBusinessHoursScheduleInfo
     {
-        /* Weekly schedule */
+        /// <summary>
+        /// Weekly schedule
+        /// </summary>
         public WeeklyScheduleInfo weeklyRanges;
     }
 }

@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class CompanyAnsweringRuleList
     {
-        /* Link to an answering rule resource */
+        /// <summary>
+        /// Link to an answering rule resource
+        /// </summary>
         public string uri;
 
-        /* List of company answering rules */
+        /// <summary>
+        /// List of company answering rules
+        /// </summary>
         public ListCompanyAnsweringRuleInfo[] records;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public CallHandlingPagingInfo paging;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public CallHandlingNavigationInfo navigation;
     }
 }

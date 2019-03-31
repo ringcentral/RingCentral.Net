@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class GreetingLanguageInfo
     {
-        /* Internal identifier of a greeting language */
+        /// <summary>
+        /// Internal identifier of a greeting language
+        /// </summary>
         public string id;
 
-        /* Localization code of a greeting language */
+        /// <summary>
+        /// Localization code of a greeting language
+        /// </summary>
         public string localeCode;
 
-        /* Official name of a greeting language */
+        /// <summary>
+        /// Official name of a greeting language
+        /// </summary>
         public string name;
     }
 }

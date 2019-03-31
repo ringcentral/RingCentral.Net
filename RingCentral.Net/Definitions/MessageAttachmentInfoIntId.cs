@@ -2,26 +2,40 @@ namespace RingCentral
 {
     public class MessageAttachmentInfoIntId
     {
-        /* Internal identifier of a message attachment */
+        /// <summary>
+        /// Internal identifier of a message attachment
+        /// </summary>
         public long? id;
 
-        /* Canonical URI of a message attachment */
+        /// <summary>
+        /// Canonical URI of a message attachment
+        /// </summary>
         public string uri;
 
-        /* Type of message attachment */
-        // Enum: AudioRecording, AudioTranscription, Text, SourceDocument, RenderedDocument, MmsAttachment
+        /// <summary>
+        /// Type of message attachment
+        /// Enum: AudioRecording, AudioTranscription, Text, SourceDocument, RenderedDocument, MmsAttachment
+        /// </summary>
         public string type;
 
-        /* MIME type for a given attachment, for instance 'audio/wav' */
+        /// <summary>
+        /// MIME type for a given attachment, for instance 'audio/wav'
+        /// </summary>
         public string contentType;
 
-        /* Voicemail only Duration of the voicemail in seconds */
+        /// <summary>
+        /// Voicemail only Duration of the voicemail in seconds
+        /// </summary>
         public long? vmDuration;
 
-        /* Name of a file attached */
+        /// <summary>
+        /// Name of a file attached
+        /// </summary>
         public string filename;
 
-        /* Size of attachment in bytes */
+        /// <summary>
+        /// Size of attachment in bytes
+        /// </summary>
         public long? size;
     }
 }

@@ -2,34 +2,52 @@ namespace RingCentral
 {
     public class QueueInfo
     {
-        /* Specifies how calls are transferred to group members */
-        // Enum: Rotating, Simultaneous, FixedOrder
+        /// <summary>
+        /// Specifies how calls are transferred to group members
+        /// Enum: Rotating, Simultaneous, FixedOrder
+        /// </summary>
         public string transferMode;
 
-        /* Information on a call forwarding rule */
+        /// <summary>
+        /// Information on a call forwarding rule
+        /// </summary>
         public FixedOrderAgents[] fixedOrderAgents;
 
-        /* Connecting audio interruption mode */
-        // Enum: Never, WhenMusicEnds, Periodically
+        /// <summary>
+        /// Connecting audio interruption mode
+        /// Enum: Never, WhenMusicEnds, Periodically
+        /// </summary>
         public string holdAudioInterruptionMode;
 
-        /* Connecting audio interruption message period in seconds */
+        /// <summary>
+        /// Connecting audio interruption message period in seconds
+        /// </summary>
         public long? holdAudioInterruptionPeriod;
 
-        /* Maximum time in seconds to wait for a call queue member before trying the next member */
+        /// <summary>
+        /// Maximum time in seconds to wait for a call queue member before trying the next member
+        /// </summary>
         public long? agentTimeout;
 
-        /* Minimum post-call wrap up time in seconds before agent status is automatically set */
+        /// <summary>
+        /// Minimum post-call wrap up time in seconds before agent status is automatically set
+        /// </summary>
         public long? wrapUpTime;
 
-        /* Maximum hold time in seconds to wait for an available call queue member */
+        /// <summary>
+        /// Maximum hold time in seconds to wait for an available call queue member
+        /// </summary>
         public long? holdTime;
 
-        /* Maximum count of callers on hold */
+        /// <summary>
+        /// Maximum count of callers on hold
+        /// </summary>
         public long? maxCallers;
 
-        /* Action which should be taken if count of callers on hold exceeds the maximum */
-        // Enum: Voicemail, Announcement
+        /// <summary>
+        /// Action which should be taken if count of callers on hold exceeds the maximum
+        /// Enum: Voicemail, Announcement
+        /// </summary>
         public string maxCallersAction;
     }
 }

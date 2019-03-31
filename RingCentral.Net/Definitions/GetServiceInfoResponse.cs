@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class GetServiceInfoResponse
     {
-        /* Canonical URI of the account Service Info resource */
+        /// <summary>
+        /// Canonical URI of the account Service Info resource
+        /// </summary>
         public string uri;
 
-        /* Account Service Plan name */
+        /// <summary>
+        /// Account Service Plan name
+        /// </summary>
         public string servicePlanName;
 
-        /* Service features information, see Service Feature List */
+        /// <summary>
+        /// Service features information, see Service Feature List
+        /// </summary>
         public ServiceFeatureInfo[] serviceFeatures;
 
-        /* Limits which are effective for the account */
+        /// <summary>
+        /// Limits which are effective for the account
+        /// </summary>
         public AccountLimits limits;
     }
 }

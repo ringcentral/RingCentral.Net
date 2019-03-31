@@ -2,12 +2,16 @@ namespace RingCentral
 {
     public class ListExtensionDevicesParameters
     {
-        /* Pooling type of a device */
-        // Enum: Host, Guest, None
+        /// <summary>
+        /// Pooling type of a device
+        /// Enum: Host, Guest, None
+        /// </summary>
         public string linePooling;
 
-        /* Device feature or multiple features supported */
-        // Enum: Intercom, Paging, BLA
+        /// <summary>
+        /// Device feature or multiple features supported
+        /// Enum: Intercom, Paging, BLA
+        /// </summary>
         public string feature;
     }
 }

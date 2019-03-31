@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class ExtensionCountryInfoRequest
     {
-        /* internal Identifier of a country */
+        /// <summary>
+        /// internal Identifier of a country
+        /// </summary>
         public string id;
     }
 }

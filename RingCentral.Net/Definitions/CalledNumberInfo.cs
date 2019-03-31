@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class CalledNumberInfo
     {
-        /* Called phone number */
+        /// <summary>
+        /// Called phone number
+        /// </summary>
         public string phoneNumber;
     }
 }

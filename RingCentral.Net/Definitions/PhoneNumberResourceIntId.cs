@@ -2,39 +2,61 @@ namespace RingCentral
 {
     public class PhoneNumberResourceIntId
     {
-        /* Internal identifier of a phone number */
+        /// <summary>
+        /// Internal identifier of a phone number
+        /// </summary>
         public long? id;
 
-        /* Brief information on a phone number country */
+        /// <summary>
+        /// Brief information on a phone number country
+        /// </summary>
         public CountryResource country;
 
-        /* Information on an extension to which the phone number is assigned */
+        /// <summary>
+        /// Information on an extension to which the phone number is assigned
+        /// </summary>
         public PhoneNumberExtensionInfo extension;
 
-        /* Custom user name of a phone number, if any */
+        /// <summary>
+        /// Custom user name of a phone number, if any
+        /// </summary>
         public string label;
 
-        /* Location (City, State). Filled for local US numbers */
+        /// <summary>
+        /// Location (City, State). Filled for local US numbers
+        /// </summary>
         public string location;
 
-        /* Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local'], */
-        // Enum: External, TollFree, Local
+        /// <summary>
+        /// Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local'],
+        /// Enum: External, TollFree, Local
+        /// </summary>
         public string paymentType;
 
-        /* Phone number */
+        /// <summary>
+        /// Phone number
+        /// </summary>
         public string phoneNumber;
 
-        /* Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral , */
+        /// <summary>
+        /// Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral ,
+        /// </summary>
         public string status;
 
-        // Enum: CompanyNumber, MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
+        /// <summary>
+        /// Enum: CompanyNumber, MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
+        /// </summary>
         public string usageType;
 
-        /* Type of a phone number */
-        // Enum: VoiceFax, FaxOnly, VoiceOnly
+        /// <summary>
+        /// Type of a phone number
+        /// Enum: VoiceFax, FaxOnly, VoiceOnly
+        /// </summary>
         public string type;
 
-        /* Internal identifier of a phone number reservation; encoded data including reservation type (by brand, by account, by session), particular brand/account/session data, and reservation date and time */
+        /// <summary>
+        /// Internal identifier of a phone number reservation; encoded data including reservation type (by brand, by account, by session), particular brand/account/session data, and reservation date and time
+        /// </summary>
         public string reservationId;
     }
 }

@@ -2,24 +2,36 @@ namespace RingCentral
 {
     public class ListExtensionsParameters
     {
-        /* Extension number to retrieve */
+        /// <summary>
+        /// Extension number to retrieve
+        /// </summary>
         public string extensionId;
 
-        /* Extension email address */
+        /// <summary>
+        /// Extension email address
+        /// </summary>
         public string email;
 
-        /* Indicates the page number to retrieve. Only positive number values are allowed */
-        // Default: 1
+        /// <summary>
+        /// Indicates the page number to retrieve. Only positive number values are allowed
+        /// Default: 1
+        /// </summary>
         public long? page;
 
-        /* Indicates the page size (number of items) */
-        // Default: 100
+        /// <summary>
+        /// Indicates the page size (number of items)
+        /// Default: 100
+        /// </summary>
         public long? perPage;
 
-        /* Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without extensionNumber are returned. If not specified, then all extensions are returned. */
+        /// <summary>
+        /// Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without extensionNumber are returned. If not specified, then all extensions are returned.
+        /// </summary>
         public string[] status;
 
-        /* Extension type. Multiple values are supported */
+        /// <summary>
+        /// Extension type. Multiple values are supported
+        /// </summary>
         public string[] type;
     }
 }

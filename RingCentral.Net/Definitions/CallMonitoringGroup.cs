@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CallMonitoringGroup
     {
-        /* Internal identifier of a group */
+        /// <summary>
+        /// Internal identifier of a group
+        /// </summary>
         public string id;
 
-        /* Name of a group */
+        /// <summary>
+        /// Name of a group
+        /// </summary>
         public string name;
     }
 }

@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CallLogRecordDeviceInfo
     {
-        /* Internal identifier of a device */
+        /// <summary>
+        /// Internal identifier of a device
+        /// </summary>
         public string id;
 
-        /* string to a device */
+        /// <summary>
+        /// string to a device
+        /// </summary>
         public string uri;
     }
 }

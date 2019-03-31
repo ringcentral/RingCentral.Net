@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class PagingDeviceInfo
     {
-        /* Internal identifier of a paging device */
+        /// <summary>
+        /// Internal identifier of a paging device
+        /// </summary>
         public string id;
 
-        /* Link to a paging device resource */
+        /// <summary>
+        /// Link to a paging device resource
+        /// </summary>
         public string uri;
 
-        /* Name of a paging device */
+        /// <summary>
+        /// Name of a paging device
+        /// </summary>
         public string name;
     }
 }

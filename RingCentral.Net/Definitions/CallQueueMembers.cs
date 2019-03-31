@@ -2,16 +2,28 @@ namespace RingCentral
 {
     public class CallQueueMembers
     {
-        /* Link to a call queue members resource */
-        public string uri; // Required
+        /// <summary>
+        /// Link to a call queue members resource
+        /// Required
+        /// </summary>
+        public string uri;
 
-        /* List of call queue members */
-        public CallQueueMemberInfo[] records; // Required
+        /// <summary>
+        /// List of call queue members
+        /// Required
+        /// </summary>
+        public CallQueueMemberInfo[] records;
 
-        /* Information on navigation */
-        public ProvisioningNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
-        public ProvisioningPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public ProvisioningPagingInfo paging;
     }
 }

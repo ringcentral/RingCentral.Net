@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class TargetServicePlanInfo
     {
-        /* Internal identifier of a target service plan */
+        /// <summary>
+        /// Internal identifier of a target service plan
+        /// </summary>
         public string id;
 
-        /* Name of a target service plan */
+        /// <summary>
+        /// Name of a target service plan
+        /// </summary>
         public string name;
     }
 }

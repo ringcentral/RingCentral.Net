@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class PartyInfo
     {
-        /* Phone number of a party */
+        /// <summary>
+        /// Phone number of a party
+        /// </summary>
         public string phoneNumber;
 
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string extensionId;
 
-        /* Displayed name of a party */
+        /// <summary>
+        /// Displayed name of a party
+        /// </summary>
         public string name;
 
-        /* Internal identifier of a device */
+        /// <summary>
+        /// Internal identifier of a device
+        /// </summary>
         public string deviceId;
     }
 }

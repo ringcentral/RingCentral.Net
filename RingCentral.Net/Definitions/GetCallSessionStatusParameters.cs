@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class GetCallSessionStatusParameters
     {
-        /* The date and time of a call session latest change */
+        /// <summary>
+        /// The date and time of a call session latest change
+        /// </summary>
         public string timestamp;
 
-        /* The time frame of awaiting for a status change before sending the resulting one in response */
+        /// <summary>
+        /// The time frame of awaiting for a status change before sending the resulting one in response
+        /// </summary>
         public string timeout;
     }
 }

@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CallRecording
     {
-        /* Internal identifier of a call recording */
+        /// <summary>
+        /// Internal identifier of a call recording
+        /// </summary>
         public string id;
 
-        /* Call recording status */
+        /// <summary>
+        /// Call recording status
+        /// </summary>
         public bool? active;
     }
 }

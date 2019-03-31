@@ -2,30 +2,46 @@ namespace RingCentral
 {
     public class GlipTeamInfo
     {
-        /* Internal identifier of a team */
+        /// <summary>
+        /// Internal identifier of a team
+        /// </summary>
         public string id;
 
-        /* Type of a chat */
-        // Enum: Team
+        /// <summary>
+        /// Type of a chat
+        /// Enum: Team
+        /// </summary>
         public string type;
 
-        /* Team access level */
+        /// <summary>
+        /// Team access level
+        /// </summary>
         public bool? @public;
 
-        /* Team name */
+        /// <summary>
+        /// Team name
+        /// </summary>
         public string name;
 
-        /* Team description */
+        /// <summary>
+        /// Team description
+        /// </summary>
         public string description;
 
-        /* Team status */
-        // Enum: Active, Archived
+        /// <summary>
+        /// Team status
+        /// Enum: Active, Archived
+        /// </summary>
         public string status;
 
-        /* Team creation datetime in ISO 8601 format */
+        /// <summary>
+        /// Team creation datetime in ISO 8601 format
+        /// </summary>
         public string creationTime;
 
-        /* Team last change datetime in ISO 8601 format */
+        /// <summary>
+        /// Team last change datetime in ISO 8601 format
+        /// </summary>
         public string lastModifiedTime;
     }
 }

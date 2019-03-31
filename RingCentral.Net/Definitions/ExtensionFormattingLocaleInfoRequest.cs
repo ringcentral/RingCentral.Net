@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class ExtensionFormattingLocaleInfoRequest
     {
-        /* Internal Identifier of a formatting language */
+        /// <summary>
+        /// Internal Identifier of a formatting language
+        /// </summary>
         public string id;
     }
 }

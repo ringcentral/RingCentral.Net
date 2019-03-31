@@ -2,14 +2,20 @@ namespace RingCentral
 {
     public class SyncInfoMessages
     {
-        /* Type of synchronization */
-        // Enum: FSync, ISync
+        /// <summary>
+        /// Type of synchronization
+        /// Enum: FSync, ISync
+        /// </summary>
         public string syncType;
 
-        /* Synchronization token */
+        /// <summary>
+        /// Synchronization token
+        /// </summary>
         public string syncToken;
 
-        /* Last synchronization datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z */
+        /// <summary>
+        /// Last synchronization datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// </summary>
         public string syncTime;
     }
 }

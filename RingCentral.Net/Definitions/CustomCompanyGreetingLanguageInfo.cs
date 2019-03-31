@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class CustomCompanyGreetingLanguageInfo
     {
-        /* Internal identifier of a greeting language */
+        /// <summary>
+        /// Internal identifier of a greeting language
+        /// </summary>
         public string id;
 
-        /* Link to a greeting language */
+        /// <summary>
+        /// Link to a greeting language
+        /// </summary>
         public string uri;
 
-        /* Name of a greeting language */
+        /// <summary>
+        /// Name of a greeting language
+        /// </summary>
         public string name;
 
-        /* Locale code of a greeting language */
+        /// <summary>
+        /// Locale code of a greeting language
+        /// </summary>
         public string localeCode;
     }
 }

@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class ExtensionLanguageInfoRequest
     {
-        /* internal Identifier of a language */
+        /// <summary>
+        /// internal Identifier of a language
+        /// </summary>
         public string id;
     }
 }

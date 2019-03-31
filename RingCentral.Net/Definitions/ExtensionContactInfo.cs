@@ -2,22 +2,34 @@ namespace RingCentral
 {
     public class ExtensionContactInfo
     {
-        /* For User extension type only. Extension user first name */
+        /// <summary>
+        /// For User extension type only. Extension user first name
+        /// </summary>
         public string firstName;
 
-        /* For User extension type only. Extension user last name */
+        /// <summary>
+        /// For User extension type only. Extension user last name
+        /// </summary>
         public string lastName;
 
-        /* Extension user company name */
+        /// <summary>
+        /// Extension user company name
+        /// </summary>
         public string company;
 
-        /* Email of extension user */
+        /// <summary>
+        /// Email of extension user
+        /// </summary>
         public string email;
 
-        /* Extension user contact phone number */
+        /// <summary>
+        /// Extension user contact phone number
+        /// </summary>
         public string businessPhone;
 
-        /* Business address of extension user company */
+        /// <summary>
+        /// Business address of extension user company
+        /// </summary>
         public ContactAddressInfo businessAddress;
     }
 }

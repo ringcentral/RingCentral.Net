@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class ContactList
     {
-        /* List of personal contacts from the extension address book */
+        /// <summary>
+        /// List of personal contacts from the extension address book
+        /// </summary>
         public PersonalContactResource[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public UserContactsNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public UserContactsPagingInfo paging;
     }
 }

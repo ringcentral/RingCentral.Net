@@ -2,9 +2,15 @@ namespace RingCentral
 {
     public class UserPatch
     {
-        /* patch operations list */
-        public PatchOperation[] Operations; // Required
+        /// <summary>
+        /// patch operations list
+        /// Required
+        /// </summary>
+        public PatchOperation[] Operations;
 
-        public string[] schemas; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public string[] schemas;
     }
 }

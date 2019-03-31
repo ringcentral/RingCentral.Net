@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CompanyAnsweringRuleCallersInfoRequest
     {
-        /* Phone number of a caller */
+        /// <summary>
+        /// Phone number of a caller
+        /// </summary>
         public string callerId;
 
-        /* Displayed name for a caller ID */
+        /// <summary>
+        /// Displayed name for a caller ID
+        /// </summary>
         public string name;
     }
 }

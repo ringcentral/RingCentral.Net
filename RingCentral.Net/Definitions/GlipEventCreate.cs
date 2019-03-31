@@ -2,48 +2,77 @@ namespace RingCentral
 {
     public class GlipEventCreate
     {
-        /* Internal identifier of an event */
+        /// <summary>
+        /// Internal identifier of an event
+        /// </summary>
         public string id;
 
-        /* Internal identifier of a person created an event */
+        /// <summary>
+        /// Internal identifier of a person created an event
+        /// </summary>
         public string creatorId;
 
-        /* Event title */
-        public string title; // Required
+        /// <summary>
+        /// Event title
+        /// Required
+        /// </summary>
+        public string title;
 
-        /* Datetime of starting an event */
-        public string startTime; // Required
+        /// <summary>
+        /// Datetime of starting an event
+        /// Required
+        /// </summary>
+        public string startTime;
 
-        /* Datetime of ending an event */
-        public string endTime; // Required
+        /// <summary>
+        /// Datetime of ending an event
+        /// Required
+        /// </summary>
+        public string endTime;
 
-        /* Indicates whether event has some specific time slot or lasts for whole day(s) */
+        /// <summary>
+        /// Indicates whether event has some specific time slot or lasts for whole day(s)
+        /// </summary>
         public bool? allDay;
 
-        /* Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year */
-        // Enum: None, Day, Weekday, Week, Month, Year
+        /// <summary>
+        /// Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
+        /// Enum: None, Day, Weekday, Week, Month, Year
+        /// </summary>
         public string recurrence;
 
-        /* Condition of ending */
+        /// <summary>
+        /// Condition of ending
+        /// </summary>
         public string endingCondition;
 
-        /* Count of iterations. For periodic events only. Value range is 1 - 10. Must be specified if 'endingCondition' is 'Count' */
+        /// <summary>
+        /// Count of iterations. For periodic events only. Value range is 1 - 10. Must be specified if 'endingCondition' is 'Count'
+        /// </summary>
         public long? endingAfter;
 
-        /* Iterations end datetime for periodic events. */
-        // Default: None
-        // Enum: None, Count, Date
+        /// <summary>
+        /// Iterations end datetime for periodic events.
+        /// Default: None
+        /// Enum: None, Count, Date
+        /// </summary>
         public string endingOn;
 
-        /* Color of Event title (including its presentation in Calendar) */
-        // Default: Black
-        // Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+        /// <summary>
+        /// Color of Event title (including its presentation in Calendar)
+        /// Default: Black
+        /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+        /// </summary>
         public string color;
 
-        /* Event location */
+        /// <summary>
+        /// Event location
+        /// </summary>
         public string location;
 
-        /* Event details */
+        /// <summary>
+        /// Event details
+        /// </summary>
         public string description;
     }
 }

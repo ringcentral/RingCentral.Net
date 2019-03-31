@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class ExtensionGreetingLanguageInfoRequest
     {
-        /* internal Identifier of a greeting language */
+        /// <summary>
+        /// internal Identifier of a greeting language
+        /// </summary>
         public string id;
     }
 }

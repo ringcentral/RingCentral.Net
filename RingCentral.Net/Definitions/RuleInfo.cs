@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class RuleInfo
     {
-        /* Forwarding number (or group) ordinal */
+        /// <summary>
+        /// Forwarding number (or group) ordinal
+        /// </summary>
         public long? index;
 
-        /* Number of rings for a forwarding number (or group) */
+        /// <summary>
+        /// Number of rings for a forwarding number (or group)
+        /// </summary>
         public long? ringCount;
 
-        /* Forwarding number status. Returned only if `showInactiveNumbers` is set to `true` */
+        /// <summary>
+        /// Forwarding number status. Returned only if `showInactiveNumbers` is set to `true`
+        /// </summary>
         public bool? enabled;
 
-        /* Forwarding number (or group) data */
+        /// <summary>
+        /// Forwarding number (or group) data
+        /// </summary>
         public ForwardingNumberInfoRules[] forwardingNumbers;
     }
 }

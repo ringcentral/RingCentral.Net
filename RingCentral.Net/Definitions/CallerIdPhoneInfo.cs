@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class CallerIdPhoneInfo
     {
-        /* Internal identifier of a phone number */
+        /// <summary>
+        /// Internal identifier of a phone number
+        /// </summary>
         public string id;
 
-        /* Link to a phone number resource */
+        /// <summary>
+        /// Link to a phone number resource
+        /// </summary>
         public string uri;
 
-        /* Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format */
+        /// <summary>
+        /// Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+        /// </summary>
         public string phoneNumber;
     }
 }

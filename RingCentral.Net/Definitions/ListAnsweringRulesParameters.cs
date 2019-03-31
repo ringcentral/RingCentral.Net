@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ListAnsweringRulesParameters
     {
-        // Default: 1
+        /// <summary>
+        /// Default: 1
+        /// </summary>
         public string page;
 
-        // Default: 100
+        /// <summary>
+        /// Default: 100
+        /// </summary>
         public string perPage;
     }
 }

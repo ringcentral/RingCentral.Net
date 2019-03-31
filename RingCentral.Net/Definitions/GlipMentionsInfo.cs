@@ -2,14 +2,20 @@ namespace RingCentral
 {
     public class GlipMentionsInfo
     {
-        /* Internal identifier of a user */
+        /// <summary>
+        /// Internal identifier of a user
+        /// </summary>
         public string id;
 
-        /* Type of mentions */
-        // Enum: Person, Team, File, Link, Event, Task, Note, Card
+        /// <summary>
+        /// Type of mentions
+        /// Enum: Person, Team, File, Link, Event, Task, Note, Card
+        /// </summary>
         public string type;
 
-        /* Name of a user */
+        /// <summary>
+        /// Name of a user
+        /// </summary>
         public string name;
     }
 }

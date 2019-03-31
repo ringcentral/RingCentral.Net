@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class OnDemandResource
     {
-        /* Flag for controlling OnDemand Call Recording settings */
+        /// <summary>
+        /// Flag for controlling OnDemand Call Recording settings
+        /// </summary>
         public bool? enabled;
     }
 }

@@ -2,36 +2,60 @@ namespace RingCentral
 {
     public class ContactInfo
     {
-        /* For User extension type only. Extension user first name */
-        public string firstName; // Required
+        /// <summary>
+        /// For User extension type only. Extension user first name
+        /// Required
+        /// </summary>
+        public string firstName;
 
-        /* For User extension type only. Extension user last name */
+        /// <summary>
+        /// For User extension type only. Extension user last name
+        /// </summary>
         public string lastName;
 
-        /* Extension user company name */
+        /// <summary>
+        /// Extension user company name
+        /// </summary>
         public string company;
 
+        /// <summary>
+        /// </summary>
         public string jobTitle;
 
-        /* Email of extension user */
-        public string email; // Required
+        /// <summary>
+        /// Email of extension user
+        /// Required
+        /// </summary>
+        public string email;
 
-        /* Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format */
+        /// <summary>
+        /// Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+        /// </summary>
         public string businessPhone;
 
-        /* Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format */
+        /// <summary>
+        /// Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+        /// </summary>
         public string mobilePhone;
 
-        /* Business address of extension user company */
+        /// <summary>
+        /// Business address of extension user company
+        /// </summary>
         public ContactBusinessAddressInfo businessAddress;
 
-        /* If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case. */
-        // Default: False
+        /// <summary>
+        /// If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
+        /// Default: False
+        /// </summary>
         public bool? emailAsLoginName;
 
+        /// <summary>
+        /// </summary>
         public PronouncedNameInfo pronouncedName;
 
-        /* Extension user department, if any */
+        /// <summary>
+        /// Extension user department, if any
+        /// </summary>
         public string department;
     }
 }

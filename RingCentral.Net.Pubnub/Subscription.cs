@@ -48,6 +48,7 @@ namespace RingCentral
                 throw new NotSupportedException(@"Package RingCentral.NET.Pubnub only supports .NET Framework. 
 Please install package RingCentral.Net.PubnubPCL instead.");
             }
+
             this.rc = rc;
             this.eventFilters = eventFilters;
             this.callback = callback;

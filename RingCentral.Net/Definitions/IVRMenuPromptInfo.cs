@@ -2,17 +2,25 @@ namespace RingCentral
 {
     public class IVRMenuPromptInfo
     {
-        /* Prompt mode: custom media or text */
-        // Enum: Audio, TextToSpeech
+        /// <summary>
+        /// Prompt mode: custom media or text
+        /// Enum: Audio, TextToSpeech
+        /// </summary>
         public string mode;
 
-        /* For 'Audio' mode only. Prompt media reference */
+        /// <summary>
+        /// For 'Audio' mode only. Prompt media reference
+        /// </summary>
         public PromptLanguageInfo audio;
 
-        /* For 'TextToSpeech' mode only. Prompt text */
+        /// <summary>
+        /// For 'TextToSpeech' mode only. Prompt text
+        /// </summary>
         public string text;
 
-        /* For 'TextToSpeech' mode only. Prompt language metadata */
+        /// <summary>
+        /// For 'TextToSpeech' mode only. Prompt language metadata
+        /// </summary>
         public AudioPromptInfo language;
     }
 }

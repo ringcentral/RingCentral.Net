@@ -2,16 +2,25 @@ namespace RingCentral
 {
     public class ModelInfo
     {
-        /* Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier */
+        /// <summary>
+        /// Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
+        /// </summary>
         public string id;
 
-        /* Device name */
+        /// <summary>
+        /// Device name
+        /// </summary>
         public string name;
 
-        /* Addons description */
-        public AddonInfo[] addons; // Required
+        /// <summary>
+        /// Addons description
+        /// Required
+        /// </summary>
+        public AddonInfo[] addons;
 
-        /* Device feature or multiple features supported */
+        /// <summary>
+        /// Device feature or multiple features supported
+        /// </summary>
         public string[] features;
     }
 }

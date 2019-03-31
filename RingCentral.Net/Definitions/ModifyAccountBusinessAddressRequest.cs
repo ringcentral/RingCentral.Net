@@ -2,13 +2,20 @@ namespace RingCentral
 {
     public class ModifyAccountBusinessAddressRequest
     {
-        /* Company business name */
+        /// <summary>
+        /// Company business name
+        /// </summary>
         public string company;
 
-        /* Company business email address */
+        /// <summary>
+        /// Company business email address
+        /// </summary>
         public string email;
 
-        /* Company business address */
-        public BusinessAddressInfo businessAddress; // Required
+        /// <summary>
+        /// Company business address
+        /// Required
+        /// </summary>
+        public BusinessAddressInfo businessAddress;
     }
 }

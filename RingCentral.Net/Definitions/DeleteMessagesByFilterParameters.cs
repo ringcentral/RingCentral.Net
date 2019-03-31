@@ -2,14 +2,20 @@ namespace RingCentral
 {
     public class DeleteMessagesByFilterParameters
     {
+        /// <summary>
+        /// </summary>
         public string[] conversationId;
 
-        /* Messages received earlier then the date specified will be deleted. The default value is 'Now' */
+        /// <summary>
+        /// Messages received earlier then the date specified will be deleted. The default value is 'Now'
+        /// </summary>
         public string dateTo;
 
-        /* Type of messages to be deleted */
-        // Default: All
-        // Enum: Fax, SMS, VoiceMail, Pager, Text, All
+        /// <summary>
+        /// Type of messages to be deleted
+        /// Default: All
+        /// Enum: Fax, SMS, VoiceMail, Pager, Text, All
+        /// </summary>
         public string type;
     }
 }

@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class TimezoneInfo
     {
-        /* Internal identifier of a timezone */
+        /// <summary>
+        /// Internal identifier of a timezone
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a timezone */
+        /// <summary>
+        /// Canonical URI of a timezone
+        /// </summary>
         public string uri;
 
-        /* Short name of a timezone */
+        /// <summary>
+        /// Short name of a timezone
+        /// </summary>
         public string name;
 
-        /* Meaningful description of the timezone */
+        /// <summary>
+        /// Meaningful description of the timezone
+        /// </summary>
         public string description;
     }
 }

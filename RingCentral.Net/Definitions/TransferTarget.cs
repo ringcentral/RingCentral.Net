@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class TransferTarget
     {
-        /* Phone number */
+        /// <summary>
+        /// Phone number
+        /// </summary>
         public string phoneNumber;
 
-        /* VM owner's extension id */
+        /// <summary>
+        /// VM owner's extension id
+        /// </summary>
         public string voicemail;
 
-        /* Park orbit id */
+        /// <summary>
+        /// Park orbit id
+        /// </summary>
         public string parkOrbit;
     }
 }

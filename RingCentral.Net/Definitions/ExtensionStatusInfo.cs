@@ -2,11 +2,15 @@ namespace RingCentral
 {
     public class ExtensionStatusInfo
     {
-        /* A free-form user comment, describing the status change reason */
+        /// <summary>
+        /// A free-form user comment, describing the status change reason
+        /// </summary>
         public string comment;
 
-        /* Type of suspension */
-        // Enum: Voluntarily, Involuntarily
+        /// <summary>
+        /// Type of suspension
+        /// Enum: Voluntarily, Involuntarily
+        /// </summary>
         public string reason;
     }
 }

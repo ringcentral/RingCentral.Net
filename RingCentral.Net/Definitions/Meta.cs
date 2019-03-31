@@ -3,14 +3,22 @@ namespace RingCentral
     // resource metadata
     public class Meta
     {
+        /// <summary>
+        /// </summary>
         public string created;
 
+        /// <summary>
+        /// </summary>
         public string lastModified;
 
-        /* resource location URI */
+        /// <summary>
+        /// resource location URI
+        /// </summary>
         public string location;
 
-        // Enum: User, Group
+        /// <summary>
+        /// Enum: User, Group
+        /// </summary>
         public string resourceType;
     }
 }

@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class GetPresenceStatusParameters
     {
-        /* Whether to return detailed telephony state */
+        /// <summary>
+        /// Whether to return detailed telephony state
+        /// </summary>
         public bool? detailedTelephonyState;
 
-        /* Whether to return SIP data */
+        /// <summary>
+        /// Whether to return SIP data
+        /// </summary>
         public bool? sipData;
     }
 }

@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class GetPresenceExtensionInfo
     {
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string id;
 
-        /* Canonical URI of an extension */
+        /// <summary>
+        /// Canonical URI of an extension
+        /// </summary>
         public string uri;
 
-        /* Extension number (usually 3 or 4 digits) */
+        /// <summary>
+        /// Extension number (usually 3 or 4 digits)
+        /// </summary>
         public string extensionNumber;
     }
 }

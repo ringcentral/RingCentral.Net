@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class CallSessionObject
     {
-        /* Internal identifier of a call session */
+        /// <summary>
+        /// Internal identifier of a call session
+        /// </summary>
         public string id;
 
-        /* Initial data of a call session */
+        /// <summary>
+        /// Initial data of a call session
+        /// </summary>
         public OriginInfo origin;
 
-        /* For calls of 'Conference' type only */
+        /// <summary>
+        /// For calls of 'Conference' type only
+        /// </summary>
         public string voiceCallToken;
 
-        /* Information on a party of a call session */
+        /// <summary>
+        /// Information on a party of a call session
+        /// </summary>
         public CallParty parties;
 
-        /* Date and time of the latest session update represented in Unix time format */
+        /// <summary>
+        /// Date and time of the latest session update represented in Unix time format
+        /// </summary>
         public string creationTime;
     }
 }

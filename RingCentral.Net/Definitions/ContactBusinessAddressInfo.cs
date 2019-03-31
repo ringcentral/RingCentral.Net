@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class ContactBusinessAddressInfo
     {
-        /* Country name of an extension user company */
+        /// <summary>
+        /// Country name of an extension user company
+        /// </summary>
         public string country;
 
-        /* State/province name of an extension user company. Mandatory for the USA, UK and Canada */
+        /// <summary>
+        /// State/province name of an extension user company. Mandatory for the USA, UK and Canada
+        /// </summary>
         public string state;
 
-        /* City name of an extension user company */
+        /// <summary>
+        /// City name of an extension user company
+        /// </summary>
         public string city;
 
-        /* Street address of an extension user company */
+        /// <summary>
+        /// Street address of an extension user company
+        /// </summary>
         public string street;
 
-        /* Zip code of an extension user company */
+        /// <summary>
+        /// Zip code of an extension user company
+        /// </summary>
         public string zip;
     }
 }

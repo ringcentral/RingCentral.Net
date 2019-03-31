@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class ParkInfo
     {
-        /* Call park identifier */
+        /// <summary>
+        /// Call park identifier
+        /// </summary>
         public string id;
     }
 }

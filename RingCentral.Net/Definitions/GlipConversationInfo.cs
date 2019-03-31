@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class GlipConversationInfo
     {
-        /* Internal identifier of a conversation */
+        /// <summary>
+        /// Internal identifier of a conversation
+        /// </summary>
         public string id;
 
-        /* Type of a conversation */
-        // Enum: Direct, Personal, Group
+        /// <summary>
+        /// Type of a conversation
+        /// Enum: Direct, Personal, Group
+        /// </summary>
         public string type;
 
-        /* Conversation creation datetime in ISO 8601 format */
+        /// <summary>
+        /// Conversation creation datetime in ISO 8601 format
+        /// </summary>
         public string creationTime;
 
-        /* Conversation last change datetime in ISO 8601 format */
+        /// <summary>
+        /// Conversation last change datetime in ISO 8601 format
+        /// </summary>
         public string lastModifiedTime;
 
+        /// <summary>
+        /// </summary>
         public GlipChatMemberInfo[] members;
     }
 }

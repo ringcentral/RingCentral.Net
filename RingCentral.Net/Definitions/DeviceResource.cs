@@ -2,56 +2,88 @@ namespace RingCentral
 {
     public class DeviceResource
     {
-        /* Internal identifier of a device */
+        /// <summary>
+        /// Internal identifier of a device
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a device */
+        /// <summary>
+        /// Canonical URI of a device
+        /// </summary>
         public string uri;
 
-        /* Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2' */
+        /// <summary>
+        /// Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
+        /// </summary>
         public string sku;
 
-        /* Device type */
-        // Default: HardPhone
-        // Enum: HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
+        /// <summary>
+        /// Device type
+        /// Default: HardPhone
+        /// Enum: HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
+        /// </summary>
         public string type;
 
-        /* Status of a device */
-        // Enum: Online, Offline
+        /// <summary>
+        /// Status of a device
+        /// Enum: Online, Offline
+        /// </summary>
         public string status;
 
-        /* Device name. Mandatory if ordering SoftPhone or OtherPhone . Optional for HardPhone . If not specified for HardPhone, then device model name is used as device name */
+        /// <summary>
+        /// Device name. Mandatory if ordering SoftPhone or OtherPhone . Optional for HardPhone . If not specified for HardPhone, then device model name is used as device name
+        /// </summary>
         public string name;
 
-        /* Serial number for HardPhone (is returned only when the phone is shipped and provisioned); endpoint_id for softphone and mobile applications */
+        /// <summary>
+        /// Serial number for HardPhone (is returned only when the phone is shipped and provisioned); endpoint_id for softphone and mobile applications
+        /// </summary>
         public string serial;
 
-        /* PC name for softphone */
+        /// <summary>
+        /// PC name for softphone
+        /// </summary>
         public string computerName;
 
-        /* HardPhone model information */
+        /// <summary>
+        /// HardPhone model information
+        /// </summary>
         public ModelInfo model;
 
-        /* This attribute can be omitted for unassigned devices */
+        /// <summary>
+        /// This attribute can be omitted for unassigned devices
+        /// </summary>
         public ExtensionResourceIntId extension;
 
-        /* Phone lines information */
+        /// <summary>
+        /// Phone lines information
+        /// </summary>
         public PhoneLineResource[] phoneLines;
 
-        /* Address for emergency cases. The same emergency address is assigned to all numbers of a single device , */
+        /// <summary>
+        /// Address for emergency cases. The same emergency address is assigned to all numbers of a single device ,
+        /// </summary>
         public EmergencyServiceAddressResource emergencyServiceAddress;
 
-        /* Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer */
+        /// <summary>
+        /// Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer
+        /// </summary>
         public ShippingResource shipping;
 
-        /* Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either  model structure, or boxBillingId must be specified for HardPhone */
+        /// <summary>
+        /// Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either  model structure, or boxBillingId must be specified for HardPhone
+        /// </summary>
         public long? boxBillingId;
 
-        /* Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None'] */
-        // Enum: Host, Guest, None
+        /// <summary>
+        /// Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
+        /// Enum: Host, Guest, None
+        /// </summary>
         public string linePooling;
 
-        /* Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone. */
+        /// <summary>
+        /// Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
+        /// </summary>
         public bool? useAsCommonPhone;
     }
 }

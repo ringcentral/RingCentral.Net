@@ -2,10 +2,15 @@ namespace RingCentral
 {
     public class CreateCallMonitoringGroupRequest
     {
-        /* Internal identifier of a group */
+        /// <summary>
+        /// Internal identifier of a group
+        /// </summary>
         public string id;
 
-        /* Name of a group */
-        public string name; // Required
+        /// <summary>
+        /// Name of a group
+        /// Required
+        /// </summary>
+        public string name;
     }
 }

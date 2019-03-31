@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class CallRecordingCustomGreeting
     {
-        // Enum: StartRecording, StopRecording, AutomaticRecording
+        /// <summary>
+        /// Enum: StartRecording, StopRecording, AutomaticRecording
+        /// </summary>
         public string type;
 
-        /* Custom greeting data */
+        /// <summary>
+        /// Custom greeting data
+        /// </summary>
         public CallRecordingCustomGreetingData custom;
 
-        /* Custom greeting language */
+        /// <summary>
+        /// Custom greeting language
+        /// </summary>
         public CallRecordingCustomGreetingLanguage language;
     }
 }

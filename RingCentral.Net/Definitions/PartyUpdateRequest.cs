@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class PartyUpdateRequest
     {
-        /* Party update data */
+        /// <summary>
+        /// Party update data
+        /// </summary>
         public PartyUpdateInfo party;
     }
 }

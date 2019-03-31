@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class APNSInfo
     {
-        /* Notification priority data */
+        /// <summary>
+        /// Notification priority data
+        /// </summary>
         public APSInfo aps;
     }
 }

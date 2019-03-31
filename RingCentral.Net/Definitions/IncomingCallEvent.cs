@@ -2,65 +2,105 @@ namespace RingCentral
 {
     public class IncomingCallEvent
     {
-        /* Apple Push Notification Service Info */
+        /// <summary>
+        /// Apple Push Notification Service Info
+        /// </summary>
         public APSInfo aps;
 
-        /* Event filter URI */
+        /// <summary>
+        /// Event filter URI
+        /// </summary>
         public string @event;
 
-        /* Universally unique identifier of a notification */
+        /// <summary>
+        /// Universally unique identifier of a notification
+        /// </summary>
         public string uuid;
 
-        /* Internal identifier of a subscription */
+        /// <summary>
+        /// Internal identifier of a subscription
+        /// </summary>
         public string subscriptionId;
 
-        /* The datetime of a call action in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z */
+        /// <summary>
+        /// The datetime of a call action in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// </summary>
         public string timestamp;
 
-        /* Internal identifier of an extension */
-        // Default: ~
+        /// <summary>
+        /// Internal identifier of an extension
+        /// Default: ~
+        /// </summary>
         public string extensionId;
 
-        /* Calling action, for example 'StartRing' */
+        /// <summary>
+        /// Calling action, for example 'StartRing'
+        /// </summary>
         public string action;
 
-        /* Identifier of a call session */
+        /// <summary>
+        /// Identifier of a call session
+        /// </summary>
         public string sessionId;
 
-        /* Identifier of a server */
+        /// <summary>
+        /// Identifier of a server
+        /// </summary>
         public string serverId;
 
-        /* Phone number of a caller. For GCM transport type '_from' property should be used */
+        /// <summary>
+        /// Phone number of a caller. For GCM transport type '_from' property should be used
+        /// </summary>
         public string from;
 
-        /* Caller name */
+        /// <summary>
+        /// Caller name
+        /// </summary>
         public string fromName;
 
-        /* Phone number of a callee */
+        /// <summary>
+        /// Phone number of a callee
+        /// </summary>
         public string to;
 
-        /* Callee name */
+        /// <summary>
+        /// Callee name
+        /// </summary>
         public string toName;
 
-        /* Unique identifier of a session */
+        /// <summary>
+        /// Unique identifier of a session
+        /// </summary>
         public string sid;
 
-        /* SIP proxy registration name */
+        /// <summary>
+        /// SIP proxy registration name
+        /// </summary>
         public string toUrl;
 
-        /* User data */
+        /// <summary>
+        /// User data
+        /// </summary>
         public string srvLvl;
 
-        /* User data */
+        /// <summary>
+        /// User data
+        /// </summary>
         public string srvLvlExt;
 
-        /* File containing recorded caller name */
+        /// <summary>
+        /// File containing recorded caller name
+        /// </summary>
         public string recUrl;
 
-        /* Notification lifetime value in seconds, the default value is 30 seconds */
+        /// <summary>
+        /// Notification lifetime value in seconds, the default value is 30 seconds
+        /// </summary>
         public long? pn_ttl;
 
-        /* Internal identifier of a subscription owner extension */
+        /// <summary>
+        /// Internal identifier of a subscription owner extension
+        /// </summary>
         public string ownerId;
     }
 }

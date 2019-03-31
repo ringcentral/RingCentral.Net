@@ -2,9 +2,14 @@ namespace RingCentral
 {
     public class GlipGroupList
     {
-        /* List of groups/teams/private chats */
-        public GlipGroupInfo[] records; // Required
+        /// <summary>
+        /// List of groups/teams/private chats
+        /// Required
+        /// </summary>
+        public GlipGroupInfo[] records;
 
+        /// <summary>
+        /// </summary>
         public GlipNavigationInfo navigation;
     }
 }

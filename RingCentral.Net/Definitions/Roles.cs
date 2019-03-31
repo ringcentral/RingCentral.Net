@@ -2,9 +2,13 @@ namespace RingCentral
 {
     public class Roles
     {
+        /// <summary>
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a role */
+        /// <summary>
+        /// Internal identifier of a role
+        /// </summary>
         public string id;
     }
 }

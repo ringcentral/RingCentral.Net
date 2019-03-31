@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class GetStateInfoResponse
     {
-        /* Internal identifier of a state */
+        /// <summary>
+        /// Internal identifier of a state
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a state */
+        /// <summary>
+        /// Canonical URI of a state
+        /// </summary>
         public string uri;
 
-        /* Information on a country the state belongs to */
+        /// <summary>
+        /// Information on a country the state belongs to
+        /// </summary>
         public GetCountryInfoState country;
 
-        /* Short code for a state (2-letter usually) */
+        /// <summary>
+        /// Short code for a state (2-letter usually)
+        /// </summary>
         public string isoCode;
 
-        /* Official name of a state */
+        /// <summary>
+        /// Official name of a state
+        /// </summary>
         public string name;
     }
 }

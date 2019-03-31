@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class UpdateDevicePhoneInfo
     {
-        /* Internal identifier of a phone number */
+        /// <summary>
+        /// Internal identifier of a phone number
+        /// </summary>
         public string id;
     }
 }

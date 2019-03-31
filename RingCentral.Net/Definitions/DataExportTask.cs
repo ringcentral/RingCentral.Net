@@ -2,23 +2,35 @@ namespace RingCentral
 {
     public class DataExportTask
     {
-        /* Canonical URI of a task */
+        /// <summary>
+        /// Canonical URI of a task
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a task */
+        /// <summary>
+        /// Internal identifier of a task
+        /// </summary>
         public string id;
 
-        /* Task creation datetime */
+        /// <summary>
+        /// Task creation datetime
+        /// </summary>
         public string creationTime;
 
-        /* Task last modification datetime */
+        /// <summary>
+        /// Task last modification datetime
+        /// </summary>
         public string lastModifiedTime;
 
-        /* Task status */
-        // Enum: Accepted, InProgress, Completed, Failed
+        /// <summary>
+        /// Task status
+        /// Enum: Accepted, InProgress, Completed, Failed
+        /// </summary>
         public string status;
 
-        /* Data collection archives. Returned by task ID */
+        /// <summary>
+        /// Data collection archives. Returned by task ID
+        /// </summary>
         public ExportTaskResultInfo[] result;
     }
 }

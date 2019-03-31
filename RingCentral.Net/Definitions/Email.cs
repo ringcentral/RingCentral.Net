@@ -2,9 +2,15 @@ namespace RingCentral
 {
     public class Email
     {
-        // Enum: work
-        public string type; // Required
+        /// <summary>
+        /// Required
+        /// Enum: work
+        /// </summary>
+        public string type;
 
-        public string value; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public string value;
     }
 }

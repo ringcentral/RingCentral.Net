@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class LanguageList
     {
-        /* Canonical URI of the language list resource */
+        /// <summary>
+        /// Canonical URI of the language list resource
+        /// </summary>
         public string uri;
 
-        /* Language data */
+        /// <summary>
+        /// Language data
+        /// </summary>
         public LanguageInfo[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public ProvisioningPagingInfo paging;
     }
 }

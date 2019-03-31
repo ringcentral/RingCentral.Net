@@ -2,32 +2,50 @@ namespace RingCentral
 {
     public class MessageStoreReport
     {
-        /* Internal identifier of a message store report task */
+        /// <summary>
+        /// Internal identifier of a message store report task
+        /// </summary>
         public string id;
 
-        /* Link to a task */
+        /// <summary>
+        /// Link to a task
+        /// </summary>
         public string uri;
 
-        /* Status of a message store report task */
-        // Enum: Accepted, Pending, InProgress, AttemptFailed, Failed, Completed, Cancelled
+        /// <summary>
+        /// Status of a message store report task
+        /// Enum: Accepted, Pending, InProgress, AttemptFailed, Failed, Completed, Cancelled
+        /// </summary>
         public string status;
 
-        /* Internal identifier of an account */
+        /// <summary>
+        /// Internal identifier of an account
+        /// </summary>
         public string accountId;
 
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string extensionId;
 
-        /* Task creation time */
+        /// <summary>
+        /// Task creation time
+        /// </summary>
         public string creationTime;
 
-        /* Time of the last task modification */
+        /// <summary>
+        /// Time of the last task modification
+        /// </summary>
         public string lastModifiedTime;
 
-        /* Ending time for collecting messages */
+        /// <summary>
+        /// Ending time for collecting messages
+        /// </summary>
         public string dateTo;
 
-        /* Starting time for collecting messages */
+        /// <summary>
+        /// Starting time for collecting messages
+        /// </summary>
         public string dateFrom;
     }
 }

@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class DisabledFilterInfo
     {
-        /* Event filter that is disabled for the user */
+        /// <summary>
+        /// Event filter that is disabled for the user
+        /// </summary>
         public string filter;
 
-        /* Reason why the filter is disabled for the user */
+        /// <summary>
+        /// Reason why the filter is disabled for the user
+        /// </summary>
         public string reason;
 
-        /* Error message */
+        /// <summary>
+        /// Error message
+        /// </summary>
         public string message;
     }
 }

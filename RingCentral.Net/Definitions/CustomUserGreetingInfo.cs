@@ -2,24 +2,36 @@ namespace RingCentral
 {
     public class CustomUserGreetingInfo
     {
-        /* Link to a custom user greeting */
+        /// <summary>
+        /// Link to a custom user greeting
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a custom user greeting */
+        /// <summary>
+        /// Internal identifier of a custom user greeting
+        /// </summary>
         public string id;
 
-        /* Type of a custom user greeting */
-        // Enum: Introductory, Announcement, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic
+        /// <summary>
+        /// Type of a custom user greeting
+        /// Enum: Introductory, Announcement, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic
+        /// </summary>
         public string type;
 
-        /* Content media type in WAV/MP3 format */
-        // Enum: WAV, MP3
+        /// <summary>
+        /// Content media type in WAV/MP3 format
+        /// Enum: WAV, MP3
+        /// </summary>
         public string contentType;
 
-        /* Link to a greeting content (audio file) */
+        /// <summary>
+        /// Link to a greeting content (audio file)
+        /// </summary>
         public string contentUri;
 
-        /* Information on an answering rule that the greeting is applied to */
+        /// <summary>
+        /// Information on an answering rule that the greeting is applied to
+        /// </summary>
         public CustomGreetingAnsweringRuleInfo answeringRule;
     }
 }

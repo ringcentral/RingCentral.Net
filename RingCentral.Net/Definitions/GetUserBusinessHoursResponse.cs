@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class GetUserBusinessHoursResponse
     {
-        /* Canonical URI of a business-hours resource */
+        /// <summary>
+        /// Canonical URI of a business-hours resource
+        /// </summary>
         public string uri;
 
-        /* Schedule when an answering rule is applied */
+        /// <summary>
+        /// Schedule when an answering rule is applied
+        /// </summary>
         public ScheduleInfoUserBusinessHours schedule;
     }
 }

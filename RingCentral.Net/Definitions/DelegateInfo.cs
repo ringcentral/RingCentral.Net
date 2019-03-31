@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class DelegateInfo
     {
-        /* Internal identifier of a Secretary extension */
+        /// <summary>
+        /// Internal identifier of a Secretary extension
+        /// </summary>
         public string id;
 
-        /* Custom name of a Secretary extension */
+        /// <summary>
+        /// Custom name of a Secretary extension
+        /// </summary>
         public string name;
     }
 }

@@ -2,14 +2,23 @@ namespace RingCentral
 {
     public class SuperviseCallSessionRequest
     {
-        /* Supervising mode */
-        // Enum: Listen
-        public string mode; // Required
+        /// <summary>
+        /// Supervising mode
+        /// Required
+        /// Enum: Listen
+        /// </summary>
+        public string mode;
 
-        /* Internal identifier of a supervisor's device */
-        public string deviceId; // Required
+        /// <summary>
+        /// Internal identifier of a supervisor's device
+        /// Required
+        /// </summary>
+        public string deviceId;
 
-        /* Extension number of a user that will be monitored */
-        public string extensionNumber; // Required
+        /// <summary>
+        /// Extension number of a user that will be monitored
+        /// Required
+        /// </summary>
+        public string extensionNumber;
     }
 }

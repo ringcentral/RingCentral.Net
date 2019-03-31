@@ -2,13 +2,22 @@ namespace RingCentral
 {
     public class GetTimezoneListResponse
     {
-        /* List of timezones */
-        public GetTimezoneInfoResponse[] records; // Required
+        /// <summary>
+        /// List of timezones
+        /// Required
+        /// </summary>
+        public GetTimezoneInfoResponse[] records;
 
-        /* Information on navigation */
-        public ProvisioningNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
-        public ProvisioningPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public ProvisioningPagingInfo paging;
     }
 }

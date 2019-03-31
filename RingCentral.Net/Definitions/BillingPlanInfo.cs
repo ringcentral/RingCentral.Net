@@ -2,21 +2,31 @@ namespace RingCentral
 {
     public class BillingPlanInfo
     {
-        /* Internal identifier of a billing plan */
+        /// <summary>
+        /// Internal identifier of a billing plan
+        /// </summary>
         public string id;
 
-        /* Billing plan name */
+        /// <summary>
+        /// Billing plan name
+        /// </summary>
         public string name;
 
-        /* Duration period */
-        // Enum: Month, Day
+        /// <summary>
+        /// Duration period
+        /// Enum: Month, Day
+        /// </summary>
         public string durationUnit;
 
-        /* Number of duration units */
+        /// <summary>
+        /// Number of duration units
+        /// </summary>
         public string duration;
 
-        /* Billing plan type */
-        // Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
+        /// <summary>
+        /// Billing plan type
+        /// Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
+        /// </summary>
         public string type;
     }
 }

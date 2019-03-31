@@ -2,10 +2,15 @@ namespace RingCentral
 {
     public class GlipPostPostBody
     {
-        /* Post text. */
-        public string text; // Required
+        /// <summary>
+        /// Post text.
+        /// Required
+        /// </summary>
+        public string text;
 
-        /* Identifier(s) of attachments. */
+        /// <summary>
+        /// Identifier(s) of attachments.
+        /// </summary>
         public object[] attachments;
     }
 }

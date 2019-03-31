@@ -2,9 +2,13 @@ namespace RingCentral
 {
     public class BlockedCallerGreetingInfo
     {
-        /* Type of a greeting */
+        /// <summary>
+        /// Type of a greeting
+        /// </summary>
         public string type;
 
+        /// <summary>
+        /// </summary>
         public PresetInfo preset;
     }
 }

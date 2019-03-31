@@ -2,39 +2,65 @@ namespace RingCentral
 {
     public class ExtensionUpdateRequest
     {
-        // Enum: Disabled, Enabled, NotActivated
+        /// <summary>
+        /// Enum: Disabled, Enabled, NotActivated
+        /// </summary>
         public string status;
 
+        /// <summary>
+        /// </summary>
         public ExtensionStatusInfo statusInfo;
 
-        /* Type of suspension */
+        /// <summary>
+        /// Type of suspension
+        /// </summary>
         public string reason;
 
-        /* Free Form user comment */
+        /// <summary>
+        /// Free Form user comment
+        /// </summary>
         public string comment;
 
-        /* Extension number available */
+        /// <summary>
+        /// Extension number available
+        /// </summary>
         public string extensionNumber;
 
+        /// <summary>
+        /// </summary>
         public ContactInfoUpdateRequest contact;
 
+        /// <summary>
+        /// </summary>
         public ExtensionRegionalSettingRequest regionalSettings;
 
-        // Enum: NotStarted, Incomplete, Completed
+        /// <summary>
+        /// Enum: NotStarted, Incomplete, Completed
+        /// </summary>
         public string setupWizardState;
 
-        /* Extension partner identifier */
+        /// <summary>
+        /// Extension partner identifier
+        /// </summary>
         public string partnerId;
 
-        /* IVR PIN */
+        /// <summary>
+        /// IVR PIN
+        /// </summary>
         public string ivrPin;
 
-        /* Password for extension */
+        /// <summary>
+        /// Password for extension
+        /// </summary>
         public string password;
 
-        /* For Department extension type only. Call queue settings */
+        /// <summary>
+        /// For Department extension type only. Call queue settings
+        /// </summary>
         public CallQueueInfoRequest callQueueInfo;
 
+        /// <summary>
+        /// </summary>
         public UserTransitionInfo[] transition;
     }
 }

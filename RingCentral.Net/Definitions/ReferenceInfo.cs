@@ -2,11 +2,15 @@ namespace RingCentral
 {
     public class ReferenceInfo
     {
-        /* Non-RC identifier of an extension */
+        /// <summary>
+        /// Non-RC identifier of an extension
+        /// </summary>
         public string @ref;
 
-        /* Type of external identifier */
-        // Enum: PartnerId, CustomerDirectoryId
+        /// <summary>
+        /// Type of external identifier
+        /// Enum: PartnerId, CustomerDirectoryId
+        /// </summary>
         public string type;
     }
 }

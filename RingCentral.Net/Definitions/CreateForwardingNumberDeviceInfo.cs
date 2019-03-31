@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class CreateForwardingNumberDeviceInfo
     {
-        /* Internal identifier of the other extension device */
+        /// <summary>
+        /// Internal identifier of the other extension device
+        /// </summary>
         public string id;
     }
 }

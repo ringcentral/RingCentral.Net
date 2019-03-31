@@ -2,25 +2,39 @@ namespace RingCentral
 {
     public class WeeklyScheduleInfo
     {
-        /* Time intervals for a particular day */
+        /// <summary>
+        /// Time intervals for a particular day
+        /// </summary>
         public TimeInterval[] monday;
 
-        /* Time intervals for a particular day */
+        /// <summary>
+        /// Time intervals for a particular day
+        /// </summary>
         public TimeInterval[] tuesday;
 
-        /* Time intervals for a particular day */
+        /// <summary>
+        /// Time intervals for a particular day
+        /// </summary>
         public TimeInterval[] wednesday;
 
-        /* Time intervals for a particular day */
+        /// <summary>
+        /// Time intervals for a particular day
+        /// </summary>
         public TimeInterval[] thursday;
 
-        /* Time intervals for a particular day */
+        /// <summary>
+        /// Time intervals for a particular day
+        /// </summary>
         public TimeInterval[] friday;
 
-        /* Time intervals for a particular day */
+        /// <summary>
+        /// Time intervals for a particular day
+        /// </summary>
         public TimeInterval[] saturday;
 
-        /* Time intervals for a particular day */
+        /// <summary>
+        /// Time intervals for a particular day
+        /// </summary>
         public TimeInterval[] sunday;
     }
 }

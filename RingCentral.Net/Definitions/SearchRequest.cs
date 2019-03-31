@@ -2,15 +2,23 @@ namespace RingCentral
 {
     public class SearchRequest
     {
-        /* page size */
+        /// <summary>
+        /// page size
+        /// </summary>
         public long? count;
 
-        /* only support 'userName' or 'email' filter expressions for now */
+        /// <summary>
+        /// only support 'userName' or 'email' filter expressions for now
+        /// </summary>
         public string filter;
 
+        /// <summary>
+        /// </summary>
         public string[] schemas;
 
-        /* start index (1-based) */
+        /// <summary>
+        /// start index (1-based)
+        /// </summary>
         public long? startIndex;
     }
 }

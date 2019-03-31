@@ -2,13 +2,22 @@ namespace RingCentral
 {
     public class GetExtensionGrantListResponse
     {
-        /* List of extension grants with details */
-        public GrantInfo[] records; // Required
+        /// <summary>
+        /// List of extension grants with details
+        /// Required
+        /// </summary>
+        public GrantInfo[] records;
 
-        /* Information on navigation */
-        public ProvisioningNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
-        public ProvisioningPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public ProvisioningPagingInfo paging;
     }
 }

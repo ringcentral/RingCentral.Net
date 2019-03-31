@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ConversationInfo
     {
-        /* Internal identifier of a conversation */
+        /// <summary>
+        /// Internal identifier of a conversation
+        /// </summary>
         public string id;
 
-        /* Deprecated. Link to a conversation resource */
+        /// <summary>
+        /// Deprecated. Link to a conversation resource
+        /// </summary>
         public string uri;
     }
 }

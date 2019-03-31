@@ -2,12 +2,19 @@ namespace RingCentral
 {
     public class PatchOperation
     {
-        // Enum: add, replace, remove
-        public string op; // Required
+        /// <summary>
+        /// Required
+        /// Enum: add, replace, remove
+        /// </summary>
+        public string op;
 
+        /// <summary>
+        /// </summary>
         public string path;
 
-        /* corresponding 'value' of that field specified by 'path' */
+        /// <summary>
+        /// corresponding 'value' of that field specified by 'path'
+        /// </summary>
         public string value;
     }
 }

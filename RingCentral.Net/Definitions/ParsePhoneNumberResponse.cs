@@ -2,13 +2,21 @@ namespace RingCentral
 {
     public class ParsePhoneNumberResponse
     {
-        /* Canonical URI of a resource */
+        /// <summary>
+        /// Canonical URI of a resource
+        /// </summary>
         public string uri;
 
-        /* Information on a user home country */
-        public GetCountryInfoNumberParser[] homeCountry; // Required
+        /// <summary>
+        /// Information on a user home country
+        /// Required
+        /// </summary>
+        public GetCountryInfoNumberParser[] homeCountry;
 
-        /* Parsed phone numbers data */
-        public PhoneNumberInfoNumberParser[] phoneNumbers; // Required
+        /// <summary>
+        /// Parsed phone numbers data
+        /// Required
+        /// </summary>
+        public PhoneNumberInfoNumberParser[] phoneNumbers;
     }
 }

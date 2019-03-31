@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class PresenceNavigationInfo
     {
-        /* Canonical URI for the first page of the list */
+        /// <summary>
+        /// Canonical URI for the first page of the list
+        /// </summary>
         public PresenceNavigationInfoURI firstPage;
 
-        /* Canonical URI for the next page of the list */
+        /// <summary>
+        /// Canonical URI for the next page of the list
+        /// </summary>
         public PresenceNavigationInfoURI nextPage;
 
-        /* Canonical URI for the previous page of the list */
+        /// <summary>
+        /// Canonical URI for the previous page of the list
+        /// </summary>
         public PresenceNavigationInfoURI previousPage;
 
-        /* Canonical URI for the last page of the list */
+        /// <summary>
+        /// Canonical URI for the last page of the list
+        /// </summary>
         public PresenceNavigationInfoURI lastPage;
     }
 }

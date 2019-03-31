@@ -2,20 +2,34 @@ namespace RingCentral
 {
     public class PresenceInfoResource
     {
-        // Enum: Offline, Busy, Available
+        /// <summary>
+        /// Enum: Offline, Busy, Available
+        /// </summary>
         public string userStatus;
 
-        // Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
+        /// <summary>
+        /// Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
+        /// </summary>
         public string dndStatus;
 
+        /// <summary>
+        /// </summary>
         public string message;
 
+        /// <summary>
+        /// </summary>
         public bool? allowSeeMyPresence;
 
+        /// <summary>
+        /// </summary>
         public bool? ringOnMonitoredCall;
 
+        /// <summary>
+        /// </summary>
         public bool? pickUpCallsOnHold;
 
+        /// <summary>
+        /// </summary>
         public ActiveCallInfo[] activeCalls;
     }
 }

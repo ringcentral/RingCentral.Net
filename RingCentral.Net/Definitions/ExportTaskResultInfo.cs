@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ExportTaskResultInfo
     {
-        /* Size of the collected data archive in bytes */
+        /// <summary>
+        /// Size of the collected data archive in bytes
+        /// </summary>
         public long? size;
 
-        /* Canonical URI for downloading an archive */
+        /// <summary>
+        /// Canonical URI for downloading an archive
+        /// </summary>
         public string uri;
     }
 }

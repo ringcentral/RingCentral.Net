@@ -3,15 +3,23 @@ namespace RingCentral
     // List of blocked or allowed phone numbers
     public class BlockedAllowedPhoneNumbersList
     {
-        /* Link to a list of blocked/allowed phone numbers resource */
+        /// <summary>
+        /// Link to a list of blocked/allowed phone numbers resource
+        /// </summary>
         public string uri;
 
+        /// <summary>
+        /// </summary>
         public BlockedAllowedPhoneNumberInfo[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public CallHandlingNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public CallHandlingPagingInfo paging;
     }
 }

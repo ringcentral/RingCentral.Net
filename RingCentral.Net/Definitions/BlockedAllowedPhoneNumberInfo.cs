@@ -3,20 +3,30 @@ namespace RingCentral
     // Information on a blocked/allowed phone number
     public class BlockedAllowedPhoneNumberInfo
     {
-        /* Link to a blocked/allowed phone number */
+        /// <summary>
+        /// Link to a blocked/allowed phone number
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a blocked/allowed phone number */
+        /// <summary>
+        /// Internal identifier of a blocked/allowed phone number
+        /// </summary>
         public string id;
 
-        /* A blocked/allowed phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format */
+        /// <summary>
+        /// A blocked/allowed phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format
+        /// </summary>
         public string phoneNumber;
 
-        /* Custom name of a blocked/allowed phone number */
+        /// <summary>
+        /// Custom name of a blocked/allowed phone number
+        /// </summary>
         public string label;
 
-        /* Status of a phone number */
-        // Enum: Blocked, Allowed
+        /// <summary>
+        /// Status of a phone number
+        /// Enum: Blocked, Allowed
+        /// </summary>
         public string status;
     }
 }

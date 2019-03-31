@@ -2,26 +2,40 @@ namespace RingCentral
 {
     public class ForwardingNumberInfo
     {
-        /* Internal identifier of a forwarding/call flip phone number */
+        /// <summary>
+        /// Internal identifier of a forwarding/call flip phone number
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a forwarding/call flip phone number */
+        /// <summary>
+        /// Canonical URI of a forwarding/call flip phone number
+        /// </summary>
         public string uri;
 
-        /* Forwarding/Call flip phone number */
+        /// <summary>
+        /// Forwarding/Call flip phone number
+        /// </summary>
         public string phoneNumber;
 
-        /* Forwarding/Call flip number title */
+        /// <summary>
+        /// Forwarding/Call flip number title
+        /// </summary>
         public string label;
 
-        /* Type of option this phone number is used for. Multiple values are accepted */
+        /// <summary>
+        /// Type of option this phone number is used for. Multiple values are accepted
+        /// </summary>
         public string[] features;
 
-        /* Number assigned to the call flip phone number, corresponds to the shortcut dial number */
+        /// <summary>
+        /// Number assigned to the call flip phone number, corresponds to the shortcut dial number
+        /// </summary>
         public long? flipNumber;
 
-        /* Forwarding phone number type */
-        // Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+        /// <summary>
+        /// Forwarding phone number type
+        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+        /// </summary>
         public string type;
     }
 }

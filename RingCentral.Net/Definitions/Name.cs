@@ -2,8 +2,14 @@ namespace RingCentral
 {
     public class Name
     {
-        public string familyName; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public string familyName;
 
-        public string givenName; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public string givenName;
     }
 }

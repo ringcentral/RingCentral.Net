@@ -2,14 +2,20 @@ namespace RingCentral
 {
     public class AccountStatusInfo
     {
-        /* A free-form user comment, describing the status change reason */
+        /// <summary>
+        /// A free-form user comment, describing the status change reason
+        /// </summary>
         public string comment;
 
-        /* Type of suspension */
-        // Enum: Voluntarily, Involuntarily
+        /// <summary>
+        /// Type of suspension
+        /// Enum: Voluntarily, Involuntarily
+        /// </summary>
         public string reason;
 
-        /* Date until which the account will get deleted. The default value is 30 days since current date */
+        /// <summary>
+        /// Date until which the account will get deleted. The default value is 30 days since current date
+        /// </summary>
         public string till;
     }
 }

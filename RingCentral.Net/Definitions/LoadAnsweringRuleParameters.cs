@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class LoadAnsweringRuleParameters
     {
-        /* Indicates whether inactive numbers should be returned or not */
+        /// <summary>
+        /// Indicates whether inactive numbers should be returned or not
+        /// </summary>
         public bool? showInactiveNumbers;
     }
 }

@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ForwardTarget
     {
-        /* Phone number */
+        /// <summary>
+        /// Phone number
+        /// </summary>
         public string phoneNumber;
 
-        /* VM owner's extension id */
+        /// <summary>
+        /// VM owner's extension id
+        /// </summary>
         public string voicemail;
     }
 }

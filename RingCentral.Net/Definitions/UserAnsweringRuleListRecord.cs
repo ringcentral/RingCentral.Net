@@ -2,20 +2,30 @@ namespace RingCentral
 {
     public class UserAnsweringRuleListRecord
     {
-        /* Canonical URI to an answering rule resource */
+        /// <summary>
+        /// Canonical URI to an answering rule resource
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of an asnwering rule */
+        /// <summary>
+        /// Internal identifier of an asnwering rule
+        /// </summary>
         public string id;
 
-        /* Type of an answering rule */
-        // Enum: BusinessHours, AfterHours, Custom
+        /// <summary>
+        /// Type of an answering rule
+        /// Enum: BusinessHours, AfterHours, Custom
+        /// </summary>
         public string type;
 
-        /* Name of an answering rule specified by user */
+        /// <summary>
+        /// Name of an answering rule specified by user
+        /// </summary>
         public string name;
 
-        /* Specifies if an answering rule is active or inactive */
+        /// <summary>
+        /// Specifies if an answering rule is active or inactive
+        /// </summary>
         public bool? enabled;
     }
 }

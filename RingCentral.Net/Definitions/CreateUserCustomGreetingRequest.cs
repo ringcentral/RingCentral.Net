@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class CreateUserCustomGreetingRequest
     {
-        /* Type of a greeting, specifying the case when the greeting is played. */
-        // Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
+        /// <summary>
+        /// Type of a greeting, specifying the case when the greeting is played.
+        /// Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
+        /// </summary>
         public string type;
 
-        /* Meida file to upload */
+        /// <summary>
+        /// Meida file to upload
+        /// </summary>
         public Attachment binary;
 
+        /// <summary>
+        /// </summary>
         public CustomGreetingAnsweringRuleInfoRequest answeringRule;
     }
 }

@@ -2,13 +2,21 @@ namespace RingCentral
 {
     public class PostGlipFile
     {
-        /* Internal identifier of a file */
-        public string id; // Required
+        /// <summary>
+        /// Internal identifier of a file
+        /// Required
+        /// </summary>
+        public string id;
 
-        /* Link to binary content */
-        public string contentUri; // Required
+        /// <summary>
+        /// Link to binary content
+        /// Required
+        /// </summary>
+        public string contentUri;
 
-        /* Name of a file */
+        /// <summary>
+        /// Name of a file
+        /// </summary>
         public string name;
     }
 }

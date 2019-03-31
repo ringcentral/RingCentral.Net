@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CallersInfoRequest
     {
-        /* Phone number of a caller */
+        /// <summary>
+        /// Phone number of a caller
+        /// </summary>
         public string callerId;
 
-        /* Contact name of a caller */
+        /// <summary>
+        /// Contact name of a caller
+        /// </summary>
         public string name;
     }
 }

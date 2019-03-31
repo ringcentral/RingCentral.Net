@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class MakeRingOutCoutryInfo
     {
-        /* Dialing plan country identifier */
+        /// <summary>
+        /// Dialing plan country identifier
+        /// </summary>
         public string id;
     }
 }

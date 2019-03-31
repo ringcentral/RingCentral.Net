@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class PagingGroupExtensionInfo
     {
-        /* Internal identifier of a paging group user extension */
+        /// <summary>
+        /// Internal identifier of a paging group user extension
+        /// </summary>
         public string id;
 
-        /* Link to a paging group user extension */
+        /// <summary>
+        /// Link to a paging group user extension
+        /// </summary>
         public string uri;
 
-        /* Extension number of a paging group user */
+        /// <summary>
+        /// Extension number of a paging group user
+        /// </summary>
         public string extensionNumber;
 
-        /* Name of a paging group user */
+        /// <summary>
+        /// Name of a paging group user
+        /// </summary>
         public string name;
     }
 }

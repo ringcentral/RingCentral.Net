@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class OwnerInfo
     {
-        /* Internal identifier of an account */
+        /// <summary>
+        /// Internal identifier of an account
+        /// </summary>
         public string accountId;
 
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string extensionId;
     }
 }

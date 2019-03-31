@@ -2,38 +2,64 @@ namespace RingCentral
 {
     public class EmergencyServiceAddressResource
     {
+        /// <summary>
+        /// </summary>
         public string street;
 
+        /// <summary>
+        /// </summary>
         public string street2;
 
+        /// <summary>
+        /// </summary>
         public string city;
 
+        /// <summary>
+        /// </summary>
         public string zip;
 
+        /// <summary>
+        /// </summary>
         public string customerName;
 
-        /* State/province name */
+        /// <summary>
+        /// State/province name
+        /// </summary>
         public string state;
 
-        /* Internal identifier of a state */
+        /// <summary>
+        /// Internal identifier of a state
+        /// </summary>
         public string stateId;
 
-        /* ISO code of a state */
+        /// <summary>
+        /// ISO code of a state
+        /// </summary>
         public string stateIsoCode;
 
-        /* Full name of a state */
+        /// <summary>
+        /// Full name of a state
+        /// </summary>
         public string stateName;
 
-        /* Internal identifier of a country */
+        /// <summary>
+        /// Internal identifier of a country
+        /// </summary>
         public string countryId;
 
-        /* ISO code of a country */
+        /// <summary>
+        /// ISO code of a country
+        /// </summary>
         public string countryIsoCode;
 
-        /* Country name */
+        /// <summary>
+        /// Country name
+        /// </summary>
         public string country;
 
-        /* Full name of a country */
+        /// <summary>
+        /// Full name of a country
+        /// </summary>
         public string countryName;
     }
 }

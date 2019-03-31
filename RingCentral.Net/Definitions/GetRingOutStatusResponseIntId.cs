@@ -2,12 +2,18 @@ namespace RingCentral
 {
     public class GetRingOutStatusResponseIntId
     {
-        /* Internal identifier of a RingOut call */
+        /// <summary>
+        /// Internal identifier of a RingOut call
+        /// </summary>
         public long? id;
 
+        /// <summary>
+        /// </summary>
         public string uri;
 
-        /* RingOut status information */
+        /// <summary>
+        /// RingOut status information
+        /// </summary>
         public RingOutStatusInfo status;
     }
 }

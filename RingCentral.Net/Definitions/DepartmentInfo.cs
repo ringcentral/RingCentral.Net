@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class DepartmentInfo
     {
-        /* Internal identifier of a department extension */
+        /// <summary>
+        /// Internal identifier of a department extension
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a department extension */
+        /// <summary>
+        /// Canonical URI of a department extension
+        /// </summary>
         public string uri;
 
-        /* Number of a department extension */
+        /// <summary>
+        /// Number of a department extension
+        /// </summary>
         public string extensionNumber;
     }
 }

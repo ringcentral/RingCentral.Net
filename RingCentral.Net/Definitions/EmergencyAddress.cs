@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class EmergencyAddress
     {
-        /* 'True' if specifying of emergency address is required */
+        /// <summary>
+        /// 'True' if specifying of emergency address is required
+        /// </summary>
         public bool? required;
 
-        /* 'True' if only local emergency address can be specified */
+        /// <summary>
+        /// 'True' if only local emergency address can be specified
+        /// </summary>
         public bool? localOnly;
     }
 }

@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ExtensionGrantListEventBody
     {
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string extensionId;
 
-        /* Internal identifier of a subscription owner extension */
+        /// <summary>
+        /// Internal identifier of a subscription owner extension
+        /// </summary>
         public string ownerId;
     }
 }

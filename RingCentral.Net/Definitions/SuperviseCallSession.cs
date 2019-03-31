@@ -2,27 +2,43 @@ namespace RingCentral
 {
     public class SuperviseCallSession
     {
-        /* Information about a call party that monitors a call */
+        /// <summary>
+        /// Information about a call party that monitors a call
+        /// </summary>
         public PartyInfo from;
 
-        /* Information about a call party that is monitored */
+        /// <summary>
+        /// Information about a call party that is monitored
+        /// </summary>
         public PartyInfo to;
 
-        /* Direction of a call */
-        // Enum: Outbound, Inbound
+        /// <summary>
+        /// Direction of a call
+        /// Enum: Outbound, Inbound
+        /// </summary>
         public string direction;
 
-        /* Internal identifier of a party that monitors a call */
+        /// <summary>
+        /// Internal identifier of a party that monitors a call
+        /// </summary>
         public string id;
 
-        /* Specifies if a call party is muted */
+        /// <summary>
+        /// Specifies if a call party is muted
+        /// </summary>
         public bool? muted;
 
+        /// <summary>
+        /// </summary>
         public OwnerInfo owner;
 
-        /* Specifies if a device is stand-alone */
+        /// <summary>
+        /// Specifies if a device is stand-alone
+        /// </summary>
         public bool? standAlone;
 
+        /// <summary>
+        /// </summary>
         public CallStatusInfo status;
     }
 }

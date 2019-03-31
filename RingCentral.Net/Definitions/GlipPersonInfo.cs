@@ -2,28 +2,45 @@ namespace RingCentral
 {
     public class GlipPersonInfo
     {
-        /* Internal identifier of a user */
-        public string id; // Required
+        /// <summary>
+        /// Internal identifier of a user
+        /// Required
+        /// </summary>
+        public string id;
 
-        /* First name of a user */
+        /// <summary>
+        /// First name of a user
+        /// </summary>
         public string firstName;
 
-        /* Last name of a user */
+        /// <summary>
+        /// Last name of a user
+        /// </summary>
         public string lastName;
 
-        /* Email of a user */
+        /// <summary>
+        /// Email of a user
+        /// </summary>
         public string email;
 
-        /* Photo of a user */
+        /// <summary>
+        /// Photo of a user
+        /// </summary>
         public string avatar;
 
-        /* Internal identifier of a company */
+        /// <summary>
+        /// Internal identifier of a company
+        /// </summary>
         public string companyId;
 
-        /* Time of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format */
+        /// <summary>
+        /// Time of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// </summary>
         public string creationTime;
 
-        /* Time of the last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format */
+        /// <summary>
+        /// Time of the last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// </summary>
         public string lastModifiedTime;
     }
 }

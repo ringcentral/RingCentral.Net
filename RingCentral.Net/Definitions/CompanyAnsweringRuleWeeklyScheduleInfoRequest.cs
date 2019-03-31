@@ -2,25 +2,39 @@ namespace RingCentral
 {
     public class CompanyAnsweringRuleWeeklyScheduleInfoRequest
     {
-        /* Time interval for a particular day */
+        /// <summary>
+        /// Time interval for a particular day
+        /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] monday;
 
-        /* Time interval for a particular day */
+        /// <summary>
+        /// Time interval for a particular day
+        /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] tuesday;
 
-        /* Time interval for a particular day */
+        /// <summary>
+        /// Time interval for a particular day
+        /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] wednesday;
 
-        /* Time interval for a particular day */
+        /// <summary>
+        /// Time interval for a particular day
+        /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] thursday;
 
-        /* Time interval for a particular day */
+        /// <summary>
+        /// Time interval for a particular day
+        /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] friday;
 
-        /* Time interval for a particular day */
+        /// <summary>
+        /// Time interval for a particular day
+        /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] saturday;
 
-        /* Time interval for a particular day */
+        /// <summary>
+        /// Time interval for a particular day
+        /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] sunday;
     }
 }

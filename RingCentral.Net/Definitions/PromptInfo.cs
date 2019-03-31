@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class PromptInfo
     {
-        /* Internal identifier of a prompt */
+        /// <summary>
+        /// Internal identifier of a prompt
+        /// </summary>
         public string uri;
 
-        /* Link to a prompt metadata */
+        /// <summary>
+        /// Link to a prompt metadata
+        /// </summary>
         public string id;
 
-        /* Type of a prompt media content */
+        /// <summary>
+        /// Type of a prompt media content
+        /// </summary>
         public string contentType;
 
-        /* Link to a prompt media content */
+        /// <summary>
+        /// Link to a prompt media content
+        /// </summary>
         public string contentUri;
 
-        /* Name of a prompt */
+        /// <summary>
+        /// Name of a prompt
+        /// </summary>
         public string filename;
     }
 }

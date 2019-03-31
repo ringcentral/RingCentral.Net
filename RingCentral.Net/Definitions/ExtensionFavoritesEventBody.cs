@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class ExtensionFavoritesEventBody
     {
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string extensionId;
 
-        /* Internal identifier of a subscription owner extension */
+        /// <summary>
+        /// Internal identifier of a subscription owner extension
+        /// </summary>
         public string ownerId;
     }
 }

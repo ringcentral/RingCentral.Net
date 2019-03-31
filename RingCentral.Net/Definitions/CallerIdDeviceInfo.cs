@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class CallerIdDeviceInfo
     {
-        /* Internal identifier of a device */
+        /// <summary>
+        /// Internal identifier of a device
+        /// </summary>
         public string id;
 
-        /* Link to a device resource */
+        /// <summary>
+        /// Link to a device resource
+        /// </summary>
         public string uri;
 
-        /* Name of a device */
+        /// <summary>
+        /// Name of a device
+        /// </summary>
         public string phoneNumber;
     }
 }

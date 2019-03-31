@@ -2,9 +2,13 @@ namespace RingCentral
 {
     public class Reference
     {
-        // Enum: PartnerId, CustomerDirectoryId
+        /// <summary>
+        /// Enum: PartnerId, CustomerDirectoryId
+        /// </summary>
         public string type;
 
+        /// <summary>
+        /// </summary>
         public string @ref;
     }
 }

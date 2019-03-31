@@ -3,13 +3,19 @@ namespace RingCentral
     // Linked message (Fax/Voicemail)
     public class CallLogRecordMessage
     {
-        /* Internal identifier of a message */
+        /// <summary>
+        /// Internal identifier of a message
+        /// </summary>
         public string id;
 
-        /* Type of a message */
+        /// <summary>
+        /// Type of a message
+        /// </summary>
         public string type;
 
-        /* Link to a message resource */
+        /// <summary>
+        /// Link to a message resource
+        /// </summary>
         public string uri;
     }
 }

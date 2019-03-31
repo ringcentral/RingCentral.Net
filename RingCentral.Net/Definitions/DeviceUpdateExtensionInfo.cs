@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class DeviceUpdateExtensionInfo
     {
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string id;
     }
 }

@@ -2,14 +2,20 @@ namespace RingCentral
 {
     public class MessageChanges
     {
-        /* Message type */
-        // Enum: Voicemail, SMS, Fax, Pager
+        /// <summary>
+        /// Message type
+        /// Enum: Voicemail, SMS, Fax, Pager
+        /// </summary>
         public string type;
 
-        /* The number of new messages. Can be omitted if the value is zero */
+        /// <summary>
+        /// The number of new messages. Can be omitted if the value is zero
+        /// </summary>
         public long? newCount;
 
-        /* The number of updated messages. Can be omitted if the value is zero */
+        /// <summary>
+        /// The number of updated messages. Can be omitted if the value is zero
+        /// </summary>
         public long? updatedCount;
     }
 }

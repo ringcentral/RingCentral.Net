@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class CreateGlipFileRequest
     {
-        /* The file (binary or multipart/form-data) to upload */
+        /// <summary>
+        /// The file (binary or multipart/form-data) to upload
+        /// </summary>
         public Attachment body;
     }
 }

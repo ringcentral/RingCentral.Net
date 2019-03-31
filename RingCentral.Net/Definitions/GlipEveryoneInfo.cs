@@ -2,23 +2,35 @@ namespace RingCentral
 {
     public class GlipEveryoneInfo
     {
-        /* Internal identifier of a chat */
+        /// <summary>
+        /// Internal identifier of a chat
+        /// </summary>
         public string id;
 
-        /* Type of a chat */
-        // Enum: Everyone
+        /// <summary>
+        /// Type of a chat
+        /// Enum: Everyone
+        /// </summary>
         public string type;
 
-        /* Chat name */
+        /// <summary>
+        /// Chat name
+        /// </summary>
         public string name;
 
-        /* Chat description */
+        /// <summary>
+        /// Chat description
+        /// </summary>
         public string description;
 
-        /* Chat creation datetime in ISO 8601 format */
+        /// <summary>
+        /// Chat creation datetime in ISO 8601 format
+        /// </summary>
         public string creationTime;
 
-        /* Chat last change datetime in ISO 8601 format */
+        /// <summary>
+        /// Chat last change datetime in ISO 8601 format
+        /// </summary>
         public string lastModifiedTime;
     }
 }

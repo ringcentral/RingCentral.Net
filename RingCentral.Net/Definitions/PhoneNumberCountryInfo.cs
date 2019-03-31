@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class PhoneNumberCountryInfo
     {
-        /* Internal identifier of a home country */
+        /// <summary>
+        /// Internal identifier of a home country
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a home country */
+        /// <summary>
+        /// Canonical URI of a home country
+        /// </summary>
         public string uri;
 
-        /* Official name of a home country */
+        /// <summary>
+        /// Official name of a home country
+        /// </summary>
         public string name;
     }
 }

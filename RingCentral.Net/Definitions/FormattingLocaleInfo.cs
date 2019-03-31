@@ -3,12 +3,18 @@ namespace RingCentral
     // Official name of a formatting language
     public class FormattingLocaleInfo
     {
-        /* Internal identifier of a formatting language */
+        /// <summary>
+        /// Internal identifier of a formatting language
+        /// </summary>
         public string id;
 
-        /* Localization code of a formatting language */
+        /// <summary>
+        /// Localization code of a formatting language
+        /// </summary>
         public string localeCode;
 
+        /// <summary>
+        /// </summary>
         public string name;
     }
 }

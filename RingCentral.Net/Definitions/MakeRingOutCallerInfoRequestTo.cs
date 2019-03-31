@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class MakeRingOutCallerInfoRequestTo
     {
-        /* Phone number in E.164 format */
+        /// <summary>
+        /// Phone number in E.164 format
+        /// </summary>
         public string phoneNumber;
     }
 }

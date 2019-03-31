@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class DeleteMessageParameters
     {
-        /* If the value is 'True', then the message is purged immediately with all the attachments */
+        /// <summary>
+        /// If the value is 'True', then the message is purged immediately with all the attachments
+        /// </summary>
         public bool? purge;
 
-        /* Internal identifier of a message thread */
+        /// <summary>
+        /// Internal identifier of a message thread
+        /// </summary>
         public long? conversationId;
     }
 }

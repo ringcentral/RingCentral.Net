@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class AutomaticRecordingResource
     {
-        /* Flag for controling Automatic Call Recording settings */
+        /// <summary>
+        /// Flag for controling Automatic Call Recording settings
+        /// </summary>
         public bool? enabled;
 
-        /* Flag for controlling 'Play Call Recording Announcement for Outbound Calls' settings */
+        /// <summary>
+        /// Flag for controlling 'Play Call Recording Announcement for Outbound Calls' settings
+        /// </summary>
         public bool? outboundCallTones;
 
-        /* Flag for controlling 'Play periodic tones for outbound calls' settings */
+        /// <summary>
+        /// Flag for controlling 'Play periodic tones for outbound calls' settings
+        /// </summary>
         public bool? outboundCallAnnouncement;
 
-        /* Flag for controlling 'Allow mute in auto call recording' settings */
+        /// <summary>
+        /// Flag for controlling 'Allow mute in auto call recording' settings
+        /// </summary>
         public bool? allowMute;
 
-        /* Total amount of extension that are used in call recordings */
+        /// <summary>
+        /// Total amount of extension that are used in call recordings
+        /// </summary>
         public long? extensionCount;
     }
 }

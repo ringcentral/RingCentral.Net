@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class DeviceUpdatePhoneLinesInfo
     {
-        /* Information on phone lines added to a device */
+        /// <summary>
+        /// Information on phone lines added to a device
+        /// </summary>
         public UpdateDevicePhoneInfo[] phoneLines;
     }
 }

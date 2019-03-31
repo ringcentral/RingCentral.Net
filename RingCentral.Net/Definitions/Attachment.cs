@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class Attachment
     {
-        // File name with extension, such as "example.png"
+        /// <summary>
+        /// File name with extension, such as "example.png"
+        /// </summary>
         public string fileName;
 
-        // Binary content of the file
+        /// <summary>
+        /// Binary content of the file
+        /// </summary>
         public byte[] bytes;
 
-        // Content tyle of the file, such as "image/png"
+        /// <summary>
+        /// Content tyle of the file, such as "image/png"
+        /// </summary>
         public string contentType;
     }
 }

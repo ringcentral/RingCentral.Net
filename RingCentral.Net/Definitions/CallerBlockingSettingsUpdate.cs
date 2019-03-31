@@ -3,19 +3,27 @@ namespace RingCentral
     // Returns the lists of blocked and allowed phone numbers
     public class CallerBlockingSettingsUpdate
     {
-        /* Call blocking options: either specific or all calls and faxes */
-        // Enum: Specific, All
+        /// <summary>
+        /// Call blocking options: either specific or all calls and faxes
+        /// Enum: Specific, All
+        /// </summary>
         public string mode;
 
-        /* Determines how to handle calls with no caller ID in 'Specific' mode */
-        // Enum: BlockCallsAndFaxes, BlockFaxes, Allow
+        /// <summary>
+        /// Determines how to handle calls with no caller ID in 'Specific' mode
+        /// Enum: BlockCallsAndFaxes, BlockFaxes, Allow
+        /// </summary>
         public string noCallerId;
 
-        /* Blocking settings for pay phones */
-        // Enum: Block, Allow
+        /// <summary>
+        /// Blocking settings for pay phones
+        /// Enum: Block, Allow
+        /// </summary>
         public string payPhones;
 
-        /* List of greetings played for blocked callers */
+        /// <summary>
+        /// List of greetings played for blocked callers
+        /// </summary>
         public BlockedCallerGreetingInfo[] greetings;
     }
 }

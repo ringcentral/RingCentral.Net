@@ -2,17 +2,25 @@ namespace RingCentral
 {
     public class ExtensionInfoGrants
     {
-        /* Internal identifier of an extension */
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
         public string id;
 
-        /* Canonical URI of an extension */
+        /// <summary>
+        /// Canonical URI of an extension
+        /// </summary>
         public string uri;
 
-        /* Extension short number (usually 3 or 4 digits) */
+        /// <summary>
+        /// Extension short number (usually 3 or 4 digits)
+        /// </summary>
         public string extensionNumber;
 
-        /* Extension type */
-        // Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, Park Location
+        /// <summary>
+        /// Extension type
+        /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, Park Location
+        /// </summary>
         public string type;
     }
 }

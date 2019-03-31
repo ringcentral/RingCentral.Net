@@ -2,19 +2,32 @@ namespace RingCentral
 {
     public class GlipCompany
     {
-        /* Internal identifier of an RC account/Glip company, or tilde (~) to indicate a company the current user belongs to */
-        public string id; // Required
+        /// <summary>
+        /// Internal identifier of an RC account/Glip company, or tilde (~) to indicate a company the current user belongs to
+        /// Required
+        /// </summary>
+        public string id;
 
-        /* Name of a company */
+        /// <summary>
+        /// Name of a company
+        /// </summary>
         public string name;
 
-        /* Domain name of a company */
+        /// <summary>
+        /// Domain name of a company
+        /// </summary>
         public string domain;
 
-        /* Datetime of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format */
-        public string creationTime; // Required
+        /// <summary>
+        /// Datetime of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// Required
+        /// </summary>
+        public string creationTime;
 
-        /* Datetime of last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format */
-        public string lastModifiedTime; // Required
+        /// <summary>
+        /// Datetime of last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// Required
+        /// </summary>
+        public string lastModifiedTime;
     }
 }

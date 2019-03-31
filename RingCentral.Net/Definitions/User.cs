@@ -4,31 +4,57 @@ namespace RingCentral
 {
     public class User
     {
-        /* user status */
+        /// <summary>
+        /// user status
+        /// </summary>
         public bool? active;
 
+        /// <summary>
+        /// </summary>
         public UserAddress[] addresses;
 
-        public Email[] emails; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public Email[] emails;
 
-        /* external unique resource id defined by provisioning client */
+        /// <summary>
+        /// external unique resource id defined by provisioning client
+        /// </summary>
         public string externalId;
 
-        /* unique resource id defined by RingCentral */
+        /// <summary>
+        /// unique resource id defined by RingCentral
+        /// </summary>
         public string id;
 
-        public Name name; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public Name name;
 
+        /// <summary>
+        /// </summary>
         public PhoneNumber[] phoneNumbers;
 
+        /// <summary>
+        /// </summary>
         public Photo[] photos;
 
-        public string[] schemas; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public string[] schemas;
 
+        /// <summary>
+        /// </summary>
         [JsonProperty("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User")]
         public EnterpriseUser urn_ietf_params_scim_schemas_extension_enterprise_2_0_User;
 
-        /* MUST be same as work type email address */
-        public string userName; // Required
+        /// <summary>
+        /// MUST be same as work type email address
+        /// Required
+        /// </summary>
+        public string userName;
     }
 }

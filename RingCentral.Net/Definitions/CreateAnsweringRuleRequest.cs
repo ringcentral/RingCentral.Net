@@ -2,48 +2,78 @@ namespace RingCentral
 {
     public class CreateAnsweringRuleRequest
     {
-        /* Specifies if the rule is active or inactive. The default value is 'True' */
+        /// <summary>
+        /// Specifies if the rule is active or inactive. The default value is 'True'
+        /// </summary>
         public bool? enabled;
 
-        /* Type of an answering rule. The 'Custom' value should be specified */
-        public string type; // Required
+        /// <summary>
+        /// Type of an answering rule. The 'Custom' value should be specified
+        /// Required
+        /// </summary>
+        public string type;
 
-        /* Name of an answering rule specified by user */
-        public string name; // Required
+        /// <summary>
+        /// Name of an answering rule specified by user
+        /// Required
+        /// </summary>
+        public string name;
 
-        /* Answering rule will be applied when calls are received from the specified caller(s) */
+        /// <summary>
+        /// Answering rule will be applied when calls are received from the specified caller(s)
+        /// </summary>
         public CallersInfoRequest[] callers;
 
-        /* Answering rules are applied when calling to selected number(s) */
+        /// <summary>
+        /// Answering rules are applied when calling to selected number(s)
+        /// </summary>
         public CalledNumberInfo[] calledNumbers;
 
-        /* Schedule when an answering rule should be applied */
+        /// <summary>
+        /// Schedule when an answering rule should be applied
+        /// </summary>
         public ScheduleInfo schedule;
 
-        /* Specifies how incoming calls are forwarded */
-        // Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly
+        /// <summary>
+        /// Specifies how incoming calls are forwarded
+        /// Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly
+        /// </summary>
         public string callHandlingAction;
 
-        /* Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded */
+        /// <summary>
+        /// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
+        /// </summary>
         public ForwardingInfo forwarding;
 
-        /* Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction' */
+        /// <summary>
+        /// Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
+        /// </summary>
         public UnconditionalForwardingInfo unconditionalForwarding;
 
-        /* Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action */
+        /// <summary>
+        /// Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
+        /// </summary>
         public QueueInfo queue;
 
-        /* Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action */
+        /// <summary>
+        /// Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
+        /// </summary>
         public TransferredExtensionInfo transfer;
 
-        /* Specifies whether to take a voicemail and who should do it */
+        /// <summary>
+        /// Specifies whether to take a voicemail and who should do it
+        /// </summary>
         public VoicemailInfo voicemail;
 
-        /* Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List */
+        /// <summary>
+        /// Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
+        /// </summary>
         public GreetingInfo[] greetings;
 
-        /* Call screening status. 'Off' - no call screening; 'NoCallerId' - if caller ID is missing, then callers are asked to say their name before connecting; 'UnknownCallerId' - if caller ID is not in contact list, then callers are asked to say their name before connecting; 'Always' - the callers are always asked to say their name before connecting. The default value is 'Off' */
-        // Enum: Off, NoCallerId, UnknownCallerId, Always
+        /// <summary>
+        /// Call screening status. 'Off' - no call screening; 'NoCallerId' - if caller ID is missing, then callers are asked to say their name before connecting; 'UnknownCallerId' - if caller ID is not in contact list, then callers are asked to say their name before connecting; 'Always' - the callers are always asked to say their name before connecting. The default value is 'Off'
+        /// Enum: Off, NoCallerId, UnknownCallerId, Always
+        /// </summary>
         public string screening;
     }
 }

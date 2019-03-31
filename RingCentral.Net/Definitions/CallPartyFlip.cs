@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class CallPartyFlip
     {
-        /* Call flip id */
+        /// <summary>
+        /// Call flip id
+        /// </summary>
         public string callFlipId;
     }
 }

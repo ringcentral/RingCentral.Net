@@ -2,9 +2,15 @@ namespace RingCentral
 {
     public class PhoneNumber
     {
-        // Enum: work, mobile, other
-        public string type; // Required
+        /// <summary>
+        /// Required
+        /// Enum: work, mobile, other
+        /// </summary>
+        public string type;
 
-        public string value; // Required
+        /// <summary>
+        /// Required
+        /// </summary>
+        public string value;
     }
 }

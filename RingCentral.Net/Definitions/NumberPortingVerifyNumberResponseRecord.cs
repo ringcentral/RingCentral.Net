@@ -2,17 +2,25 @@ namespace RingCentral
 {
     public class NumberPortingVerifyNumberResponseRecord
     {
-        /* The verified phone number. */
+        /// <summary>
+        /// The verified phone number.
+        /// </summary>
         public string phoneNumber;
 
-        /* Is phone number billing phone number or not. */
+        /// <summary>
+        /// Is phone number billing phone number or not.
+        /// </summary>
         public bool? isBillingNumber;
 
-        /* The result of phone number validation, can or not be ported the phone number. */
-        // Enum: Success, Failure
+        /// <summary>
+        /// The result of phone number validation, can or not be ported the phone number.
+        /// Enum: Success, Failure
+        /// </summary>
         public string validationStatus;
 
-        /* The reason why the corresponding phone number can`t be ported. */
+        /// <summary>
+        /// The reason why the corresponding phone number can`t be ported.
+        /// </summary>
         public string reason;
     }
 }

@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class CreateGlipCardParameters
     {
-        /* Internal identifier of a group where to create a post with the card */
+        /// <summary>
+        /// Internal identifier of a group where to create a post with the card
+        /// </summary>
         public long? groupId;
     }
 }

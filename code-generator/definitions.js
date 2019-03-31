@@ -55,24 +55,27 @@ const generateField = (m, f) => {
   } else {
     p = `public ${f.type} ${f.name};`
   }
-  if (m.required && m.required.includes(f.name)) {
-    p += ` // Required`
-  }
+
+  p = `/// </summary>\n        ${p}`
   if (f.enum) {
-    p = `// Enum: ${f.enum.join(', ')}\n        ${p}`
+    p = `/// Enum: ${f.enum.join(', ')}\n        ${p}`
   }
   if (f.default) {
-    p = `// Default: ${f.default}\n        ${p}`
+    p = `/// Default: ${f.default}\n        ${p}`
   }
   if (f.minimum) {
-    p = `// Minimum: ${f.minimum}\n        ${p}`
+    p = `/// Minimum: ${f.minimum}\n        ${p}`
   }
   if (f.maximum) {
-    p = `// Maximum: ${f.maximum}\n        ${p}`
+    p = `/// Maximum: ${f.maximum}\n        ${p}`
+  }
+  if (m.required && m.required.includes(f.name)) {
+    p = `/// Required\n        ${p}`
   }
   if (f.description) {
-    p = `/* ${f.description.trim()} */\n        ${p}`
+    p = `${f.description.trim().split('\n').map(l => `/// ${l}`).join('\n')}\n        ${p}`
   }
+  p = `/// <summary>\n        ${p}`
   return p
 }
 
@@ -141,13 +144,19 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.cs'), `namespace RingCentral
 {
     public class Attachment
     {
-        // File name with extension, such as "example.png"
+        /// <summary>
+        /// File name with extension, such as "example.png"
+        /// </summary>
         public string fileName;
 
-        // Binary content of the file
+        /// <summary>
+        /// Binary content of the file
+        /// </summary>
         public byte[] bytes;
 
-        // Content tyle of the file, such as "image/png"
+        /// <summary>
+        /// Content tyle of the file, such as "image/png"
+        /// </summary>
         public string contentType;
     }
 }`)

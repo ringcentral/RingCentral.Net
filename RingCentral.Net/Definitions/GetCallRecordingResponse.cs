@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class GetCallRecordingResponse
     {
-        /* Internal identifier of a call recording */
+        /// <summary>
+        /// Internal identifier of a call recording
+        /// </summary>
         public string id;
 
-        /* Link to a call recording binary content */
+        /// <summary>
+        /// Link to a call recording binary content
+        /// </summary>
         public string contentUri;
 
-        /* Call recording file format. Supported format is audio/x-wav */
+        /// <summary>
+        /// Call recording file format. Supported format is audio/x-wav
+        /// </summary>
         public string contentType;
 
-        /* Recorded call duration */
+        /// <summary>
+        /// Recorded call duration
+        /// </summary>
         public long? duration;
     }
 }

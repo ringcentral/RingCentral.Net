@@ -2,31 +2,49 @@ namespace RingCentral
 {
     public class SyncMessagesParameters
     {
-        /* Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only. */
+        /// <summary>
+        /// Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only.
+        /// </summary>
         public long? conversationId;
 
-        /* The start datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours */
+        /// <summary>
+        /// The start datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
+        /// </summary>
         public string dateFrom;
 
-        /* The end datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time */
+        /// <summary>
+        /// The end datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
+        /// </summary>
         public string dateTo;
 
-        /* Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted */
+        /// <summary>
+        /// Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
+        /// </summary>
         public string[] direction;
 
-        /* If 'True', then the latest messages per every conversation ID are returned */
+        /// <summary>
+        /// If 'True', then the latest messages per every conversation ID are returned
+        /// </summary>
         public bool? distinctConversations;
 
-        /* Type for the resulting messages. If not specified, all types of messages are returned. Multiple values are accepted */
+        /// <summary>
+        /// Type for the resulting messages. If not specified, all types of messages are returned. Multiple values are accepted
+        /// </summary>
         public string[] messageType;
 
-        /* Limits the number of records to be returned (works in combination with dateFrom and dateTo if specified) */
+        /// <summary>
+        /// Limits the number of records to be returned (works in combination with dateFrom and dateTo if specified)
+        /// </summary>
         public long? recordCount;
 
-        /* Value of syncToken property of last sync request response */
+        /// <summary>
+        /// Value of syncToken property of last sync request response
+        /// </summary>
         public string syncToken;
 
-        /* Type of message synchronization */
+        /// <summary>
+        /// Type of message synchronization
+        /// </summary>
         public string[] syncType;
     }
 }

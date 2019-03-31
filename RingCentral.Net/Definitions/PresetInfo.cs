@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class PresetInfo
     {
-        /* Link to a greeting resource */
+        /// <summary>
+        /// Link to a greeting resource
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a greeting */
+        /// <summary>
+        /// Internal identifier of a greeting
+        /// </summary>
         public string id;
 
-        /* Name of a greeting */
+        /// <summary>
+        /// Name of a greeting
+        /// </summary>
         public string name;
     }
 }

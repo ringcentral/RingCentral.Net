@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CustomGreetingAnsweringRuleInfo
     {
-        /* Canonical URI of an answering rule */
+        /// <summary>
+        /// Canonical URI of an answering rule
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of an answering rule */
+        /// <summary>
+        /// Internal identifier of an answering rule
+        /// </summary>
         public string id;
     }
 }

@@ -2,7 +2,9 @@ namespace RingCentral
 {
     public class GlipPatchPostBody
     {
-        /* Post text. */
+        /// <summary>
+        /// Post text.
+        /// </summary>
         public string text;
     }
 }

@@ -2,22 +2,34 @@ namespace RingCentral
 {
     public class TemplateInfo
     {
-        /* Link to a template */
+        /// <summary>
+        /// Link to a template
+        /// </summary>
         public string uri;
 
-        /* Internal identifier of a template */
+        /// <summary>
+        /// Internal identifier of a template
+        /// </summary>
         public string id;
 
-        // Enum: UserSettings, CallHandling
+        /// <summary>
+        /// Enum: UserSettings, CallHandling
+        /// </summary>
         public string type;
 
-        /* Name of a template */
+        /// <summary>
+        /// Name of a template
+        /// </summary>
         public string name;
 
-        /* Time of a template creation */
+        /// <summary>
+        /// Time of a template creation
+        /// </summary>
         public string creationTime;
 
-        /* Time of the last template modification */
+        /// <summary>
+        /// Time of the last template modification
+        /// </summary>
         public string lastModifiedTime;
     }
 }

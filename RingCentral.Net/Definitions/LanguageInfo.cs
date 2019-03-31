@@ -2,25 +2,39 @@ namespace RingCentral
 {
     public class LanguageInfo
     {
-        /* Internal identifier of a language */
+        /// <summary>
+        /// Internal identifier of a language
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a language */
+        /// <summary>
+        /// Canonical URI of a language
+        /// </summary>
         public string uri;
 
-        /* Indicates whether a language is available as greeting language */
+        /// <summary>
+        /// Indicates whether a language is available as greeting language
+        /// </summary>
         public bool? greeting;
 
-        /* Indicates whether a language is available as formatting locale */
+        /// <summary>
+        /// Indicates whether a language is available as formatting locale
+        /// </summary>
         public bool? formattingLocale;
 
-        /* Localization code of a language */
+        /// <summary>
+        /// Localization code of a language
+        /// </summary>
         public string localeCode;
 
-        /* Official name of a language */
+        /// <summary>
+        /// Official name of a language
+        /// </summary>
         public string name;
 
-        /* Indicates whether a language is available as UI language */
+        /// <summary>
+        /// Indicates whether a language is available as UI language
+        /// </summary>
         public bool? ui;
     }
 }

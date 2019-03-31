@@ -2,19 +2,29 @@ namespace RingCentral
 {
     public class ServiceInfo
     {
-        /* Canonical URI of a service info resource */
+        /// <summary>
+        /// Canonical URI of a service info resource
+        /// </summary>
         public string uri;
 
-        /* Information on account billing plan */
+        /// <summary>
+        /// Information on account billing plan
+        /// </summary>
         public BillingPlanInfo billingPlan;
 
-        /* Information on account brand */
+        /// <summary>
+        /// Information on account brand
+        /// </summary>
         public BrandInfo brand;
 
-        /* Information on account service plan */
+        /// <summary>
+        /// Information on account service plan
+        /// </summary>
         public ServicePlanInfo servicePlan;
 
-        /* Information on account target service plan */
+        /// <summary>
+        /// Information on account target service plan
+        /// </summary>
         public TargetServicePlanInfo targetServicePlan;
     }
 }

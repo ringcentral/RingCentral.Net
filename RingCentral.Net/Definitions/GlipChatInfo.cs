@@ -2,32 +2,50 @@ namespace RingCentral
 {
     public class GlipChatInfo
     {
-        /* Internal identifier of a chat */
+        /// <summary>
+        /// Internal identifier of a chat
+        /// </summary>
         public string id;
 
-        /* Type of a chat */
-        // Enum: Everyone, Team, Group, Direct, Personal
+        /// <summary>
+        /// Type of a chat
+        /// Enum: Everyone, Team, Group, Direct, Personal
+        /// </summary>
         public string type;
 
-        /* For 'Team' chat type only. Team access level. */
+        /// <summary>
+        /// For 'Team' chat type only. Team access level.
+        /// </summary>
         public bool? @public;
 
-        /* For 'Team','Everyone' chats types only. Chat name. */
+        /// <summary>
+        /// For 'Team','Everyone' chats types only. Chat name.
+        /// </summary>
         public string name;
 
-        /* For 'Team','Everyone' chats types only. Chat description. */
+        /// <summary>
+        /// For 'Team','Everyone' chats types only. Chat description.
+        /// </summary>
         public string description;
 
-        /* For 'Team' chat type only. Team status. */
-        // Enum: Active, Archived
+        /// <summary>
+        /// For 'Team' chat type only. Team status.
+        /// Enum: Active, Archived
+        /// </summary>
         public string status;
 
-        /* Chat creation datetime in ISO 8601 format */
+        /// <summary>
+        /// Chat creation datetime in ISO 8601 format
+        /// </summary>
         public string creationTime;
 
-        /* Chat last change datetime in ISO 8601 format */
+        /// <summary>
+        /// Chat last change datetime in ISO 8601 format
+        /// </summary>
         public string lastModifiedTime;
 
+        /// <summary>
+        /// </summary>
         public GlipChatMemberInfo[] members;
     }
 }

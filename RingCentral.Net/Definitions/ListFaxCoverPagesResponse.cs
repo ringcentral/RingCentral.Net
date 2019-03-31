@@ -2,14 +2,22 @@ namespace RingCentral
 {
     public class ListFaxCoverPagesResponse
     {
+        /// <summary>
+        /// </summary>
         public string uri;
 
+        /// <summary>
+        /// </summary>
         public FaxCoverPageInfo[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public MessagingNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public MessagingPagingInfo paging;
     }
 }

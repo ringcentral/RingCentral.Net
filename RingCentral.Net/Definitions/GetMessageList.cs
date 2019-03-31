@@ -2,13 +2,22 @@ namespace RingCentral
 {
     public class GetMessageList
     {
-        /* List of records with message information */
-        public GetMessageInfoResponse[] records; // Required
+        /// <summary>
+        /// List of records with message information
+        /// Required
+        /// </summary>
+        public GetMessageInfoResponse[] records;
 
-        /* Information on navigation */
-        public MessagingNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public MessagingNavigationInfo navigation;
 
-        /* Information on paging */
-        public MessagingPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public MessagingPagingInfo paging;
     }
 }

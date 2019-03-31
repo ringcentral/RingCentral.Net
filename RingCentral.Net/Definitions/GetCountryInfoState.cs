@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class GetCountryInfoState
     {
-        /* Internal identifier of a state */
+        /// <summary>
+        /// Internal identifier of a state
+        /// </summary>
         public string id;
 
-        /* Canonical URI of a state */
+        /// <summary>
+        /// Canonical URI of a state
+        /// </summary>
         public string uri;
     }
 }

@@ -2,10 +2,14 @@ namespace RingCentral
 {
     public class CompanyAnsweringRuleTimeIntervalRequest
     {
-        /* Time in format hh:mm */
+        /// <summary>
+        /// Time in format hh:mm
+        /// </summary>
         public string from;
 
-        /* Time in format hh:mm */
+        /// <summary>
+        /// Time in format hh:mm
+        /// </summary>
         public string to;
     }
 }

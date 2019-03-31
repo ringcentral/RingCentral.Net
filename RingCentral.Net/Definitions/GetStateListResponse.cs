@@ -2,13 +2,22 @@ namespace RingCentral
 {
     public class GetStateListResponse
     {
-        /* List of states */
-        public GetStateInfoResponse[] records; // Required
+        /// <summary>
+        /// List of states
+        /// Required
+        /// </summary>
+        public GetStateInfoResponse[] records;
 
-        /* Information on navigation */
-        public ProvisioningNavigationInfo navigation; // Required
+        /// <summary>
+        /// Information on navigation
+        /// Required
+        /// </summary>
+        public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
-        public ProvisioningPagingInfo paging; // Required
+        /// <summary>
+        /// Information on paging
+        /// Required
+        /// </summary>
+        public ProvisioningPagingInfo paging;
     }
 }

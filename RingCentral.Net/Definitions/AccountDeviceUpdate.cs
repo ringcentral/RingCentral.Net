@@ -2,16 +2,24 @@ namespace RingCentral
 {
     public class AccountDeviceUpdate
     {
-        /* Address for emergency cases. The same emergency address is assigned to all numbers of a single device */
+        /// <summary>
+        /// Address for emergency cases. The same emergency address is assigned to all numbers of a single device
+        /// </summary>
         public EmergencyAddressInfoRequest emergencyServiceAddress;
 
-        /* Information on extension that the device is assigned to */
+        /// <summary>
+        /// Information on extension that the device is assigned to
+        /// </summary>
         public DeviceUpdateExtensionInfo extension;
 
-        /* Information on phone lines added to a device */
+        /// <summary>
+        /// Information on phone lines added to a device
+        /// </summary>
         public DeviceUpdatePhoneLinesInfo phoneLines;
 
-        /* Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone. */
+        /// <summary>
+        /// Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
+        /// </summary>
         public bool? useAsCommonPhone;
     }
 }

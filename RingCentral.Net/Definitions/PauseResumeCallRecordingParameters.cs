@@ -2,8 +2,10 @@ namespace RingCentral
 {
     public class PauseResumeCallRecordingParameters
     {
-        /* Identifies a brand of a logged in user or a brand of a sign-up session */
-        // Default: ~
+        /// <summary>
+        /// Identifies a brand of a logged in user or a brand of a sign-up session
+        /// Default: ~
+        /// </summary>
         public string brandId;
     }
 }

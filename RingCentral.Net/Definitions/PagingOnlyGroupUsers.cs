@@ -2,13 +2,19 @@ namespace RingCentral
 {
     public class PagingOnlyGroupUsers
     {
-        /* List of users allowed to page this group */
+        /// <summary>
+        /// List of users allowed to page this group
+        /// </summary>
         public PagingGroupExtensionInfo[] records;
 
-        /* Information on navigation */
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
         public ProvisioningNavigationInfo navigation;
 
-        /* Information on paging */
+        /// <summary>
+        /// Information on paging
+        /// </summary>
         public ProvisioningPagingInfo paging;
     }
 }

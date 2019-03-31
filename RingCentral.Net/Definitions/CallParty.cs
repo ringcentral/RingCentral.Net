@@ -2,47 +2,73 @@ namespace RingCentral
 {
     public class CallParty
     {
-        /* Internal identifier of a party */
+        /// <summary>
+        /// Internal identifier of a party
+        /// </summary>
         public string id;
 
-        /* Status data of a call session */
+        /// <summary>
+        /// Status data of a call session
+        /// </summary>
         public CallStatusInfo status;
 
-        /* Specifies if a call participant is muted or not */
+        /// <summary>
+        /// Specifies if a call participant is muted or not
+        /// </summary>
         public bool? muted;
 
-        /* True if party is not connected to a session voice conference. False - otherwise */
+        /// <summary>
+        /// True if party is not connected to a session voice conference. False - otherwise
+        /// </summary>
         public bool? standAlone;
 
-        /* Call park information */
+        /// <summary>
+        /// Call park information
+        /// </summary>
         public ParkInfo park;
 
-        /* Data on a calling party */
+        /// <summary>
+        /// Data on a calling party
+        /// </summary>
         public PartyInfo from;
 
-        /* Data on a called party */
+        /// <summary>
+        /// Data on a called party
+        /// </summary>
         public PartyInfo to;
 
-        /* Data on a call owner */
+        /// <summary>
+        /// Data on a call owner
+        /// </summary>
         public OwnerInfo owner;
 
-        /* Direction of a call */
-        // Enum: Inbound, Outbound
+        /// <summary>
+        /// Direction of a call
+        /// Enum: Inbound, Outbound
+        /// </summary>
         public string direction;
 
-        /* A party's role in the conference scenarios. For calls of 'Conference' type only */
-        // Enum: Host, Participant
+        /// <summary>
+        /// A party's role in the conference scenarios. For calls of 'Conference' type only
+        /// Enum: Host, Participant
+        /// </summary>
         public string conferenceRole;
 
-        /* A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringout' type only */
-        // Enum: Initiator, Target
+        /// <summary>
+        /// A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringout' type only
+        /// Enum: Initiator, Target
+        /// </summary>
         public string ringOutRole;
 
-        /* A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringme' type only */
-        // Enum: Initiator, Target
+        /// <summary>
+        /// A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringme' type only
+        /// Enum: Initiator, Target
+        /// </summary>
         public string ringMeRole;
 
-        /* Active recordings list */
+        /// <summary>
+        /// Active recordings list
+        /// </summary>
         public RecordingInfo[] recordings;
     }
 }
