@@ -25,8 +25,10 @@ namespace RingCentral.Paths.Restapi.Account.Device
             return $"{parent.Path()}/device";
         }
 
-        // Operation: Get Device Info
-        // Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
+        /// <summary>
+        /// Operation: Get Device Info
+        /// Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
+        /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Get(LoadAccountDeviceParameters queryParams = null)
         {
             if (this.deviceId == null)
@@ -37,8 +39,10 @@ namespace RingCentral.Paths.Restapi.Account.Device
             return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path(), queryParams);
         }
 
-        // Operation: Update Device
-        // Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
+        /// <summary>
+        /// Operation: Update Device
+        /// Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
+        /// </summary>
         public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate)
         {
             if (this.deviceId == null)

@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Leave
             return $"{parent.Path()}/leave";
         }
 
-        // Operation: Leave Team
-        // Http Post /restapi/v1.0/glip/teams/{chatId}/leave
+        /// <summary>
+        /// Operation: Leave Team
+        /// Http Post /restapi/v1.0/glip/teams/{chatId}/leave
+        /// </summary>
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

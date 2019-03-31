@@ -25,31 +25,39 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
             return $"{parent.Path()}/profile-image";
         }
 
-        // Operation: Get User Profile Image
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// <summary>
+        /// Operation: Get User Profile Image
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// </summary>
         public async Task<byte[]> List()
         {
             return await rc.Get<byte[]>(this.Path(false));
         }
 
-        // Operation: Upload User Profile Image
-        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// <summary>
+        /// Operation: Upload User Profile Image
+        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// </summary>
         public async Task<string> Post(UploadProfileImageRequest uploadProfileImageRequest)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(uploadProfileImageRequest);
             return await rc.Post<string>(this.Path(false), multipartFormDataContent);
         }
 
-        // Operation: Update User Profile Image
-        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// <summary>
+        /// Operation: Update User Profile Image
+        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// </summary>
         public async Task<byte[]> Put(UpdateProfileImageRequest updateProfileImageRequest)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateProfileImageRequest);
             return await rc.Post<byte[]>(this.Path(false), multipartFormDataContent);
         }
 
-        // Operation: Get User Profile Image (Scaled)
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
+        /// <summary>
+        /// Operation: Get User Profile Image (Scaled)
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
+        /// </summary>
         public async Task<byte[]> Get()
         {
             if (this.scaleSize == null)

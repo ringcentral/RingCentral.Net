@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Department.Members
             return $"{parent.Path()}/members";
         }
 
-        // Operation: Get Department Member List
-        // Http Get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
+        /// <summary>
+        /// Operation: Get Department Member List
+        /// Http Get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
+        /// </summary>
         public async Task<RingCentral.DepartmentMemberList> Get(ListDepartmentMembersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.DepartmentMemberList>(this.Path(), queryParams);

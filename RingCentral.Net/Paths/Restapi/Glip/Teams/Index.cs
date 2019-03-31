@@ -25,22 +25,28 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return $"{parent.Path()}/teams";
         }
 
-        // Operation: Get Teams
-        // Http Get /restapi/v1.0/glip/teams
+        /// <summary>
+        /// Operation: Get Teams
+        /// Http Get /restapi/v1.0/glip/teams
+        /// </summary>
         public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams);
         }
 
-        // Operation: Create Team
-        // Http Post /restapi/v1.0/glip/teams
+        /// <summary>
+        /// Operation: Create Team
+        /// Http Post /restapi/v1.0/glip/teams
+        /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Post(RingCentral.GlipPostTeamBody glipPostTeamBody)
         {
             return await rc.Post<RingCentral.GlipTeamInfo>(this.Path(false), glipPostTeamBody);
         }
 
-        // Operation: Get Team
-        // Http Get /restapi/v1.0/glip/teams/{chatId}
+        /// <summary>
+        /// Operation: Get Team
+        /// Http Get /restapi/v1.0/glip/teams/{chatId}
+        /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Get()
         {
             if (this.chatId == null)
@@ -51,8 +57,10 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return await rc.Get<RingCentral.GlipTeamInfo>(this.Path());
         }
 
-        // Operation: Update Team
-        // Http Patch /restapi/v1.0/glip/teams/{chatId}
+        /// <summary>
+        /// Operation: Update Team
+        /// Http Patch /restapi/v1.0/glip/teams/{chatId}
+        /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody)
         {
             if (this.chatId == null)
@@ -63,8 +71,10 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             return await rc.Patch<RingCentral.GlipTeamInfo>(this.Path(), glipPatchTeamBody);
         }
 
-        // Operation: Delete Team
-        // Http Delete /restapi/v1.0/glip/teams/{chatId}
+        /// <summary>
+        /// Operation: Delete Team
+        /// Http Delete /restapi/v1.0/glip/teams/{chatId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.chatId == null)

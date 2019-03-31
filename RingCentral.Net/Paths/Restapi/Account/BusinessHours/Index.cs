@@ -18,15 +18,19 @@ namespace RingCentral.Paths.Restapi.Account.BusinessHours
             return $"{parent.Path()}/business-hours";
         }
 
-        // Operation: Get Company Business Hours
-        // Http Get /restapi/v1.0/account/{accountId}/business-hours
+        /// <summary>
+        /// Operation: Get Company Business Hours
+        /// Http Get /restapi/v1.0/account/{accountId}/business-hours
+        /// </summary>
         public async Task<RingCentral.CompanyBusinessHours> Get()
         {
             return await rc.Get<RingCentral.CompanyBusinessHours>(this.Path());
         }
 
-        // Operation: Update Company Business Hours
-        // Http Put /restapi/v1.0/account/{accountId}/business-hours
+        /// <summary>
+        /// Operation: Update Company Business Hours
+        /// Http Put /restapi/v1.0/account/{accountId}/business-hours
+        /// </summary>
         public async Task<RingCentral.CompanyBusinessHours> Put(
             RingCentral.CompanyBusinessHoursUpdateRequest companyBusinessHoursUpdateRequest)
         {

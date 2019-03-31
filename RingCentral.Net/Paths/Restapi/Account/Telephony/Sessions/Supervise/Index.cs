@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
             return $"{parent.Path()}/supervise";
         }
 
-        // Operation: Supervise Call
-        // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/supervise
+        /// <summary>
+        /// Operation: Supervise Call
+        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/supervise
+        /// </summary>
         public async Task<RingCentral.SuperviseCallSession> Post(
             RingCentral.SuperviseCallSessionRequest superviseCallSessionRequest)
         {

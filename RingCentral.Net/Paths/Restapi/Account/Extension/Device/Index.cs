@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
             return $"{parent.Path()}/device";
         }
 
-        // Operation: Get User Device Info
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
+        /// <summary>
+        /// Operation: Get User Device Info
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
+        /// </summary>
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(
             ListExtensionDevicesParameters queryParams = null)
         {

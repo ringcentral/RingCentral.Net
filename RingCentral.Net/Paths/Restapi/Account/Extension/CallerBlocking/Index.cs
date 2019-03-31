@@ -18,15 +18,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
             return $"{parent.Path()}/caller-blocking";
         }
 
-        // Operation: Get Caller Blocking Settings
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+        /// <summary>
+        /// Operation: Get Caller Blocking Settings
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+        /// </summary>
         public async Task<RingCentral.CallerBlockingSettings> Get()
         {
             return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path());
         }
 
-        // Operation: Update Caller Blocking Settings
-        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+        /// <summary>
+        /// Operation: Update Caller Blocking Settings
+        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+        /// </summary>
         public async Task<RingCentral.CallerBlockingSettings> Put(
             RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate)
         {

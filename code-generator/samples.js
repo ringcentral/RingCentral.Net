@@ -42,10 +42,10 @@ normalizedPaths.forEach(path => {
   const names = path.split('/').filter(name => name !== '' && !name.startsWith('{'))
   console.log(names)
   var gCode = fs.readFileSync(`../RingCentral.Net/Paths/${names.map(n => changeCase.pascalCase(n)).join('/')}/Index.cs`, 'utf-8')
-  const ms = gCode.match(/\/\/ Operation: .+?\n\s*.+?\s*\n\s*.+?\s*\n/g)
+  const ms = gCode.match(/\/\/\/ Operation: .+?\n\s*.+?\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?\s*\n/g)
     .map(f => {
       console.log(f)
-      const ms = f.match(/Operation: (.+?)\s*\n\s*\/\/ Http (.+?)\s*\n.+?(Get|List|Post|Put|Patch|Delete)\((.*?)\)/)
+      const ms = f.match(/Operation: (.+?)\s*\n\s*\/\/\/ Http (.+?)\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?(Get|List|Post|Put|Patch|Delete)\((.*?)\)/)
       const summary = ms[1]
       const endpoint = ms[2].split(' ')[1]
       const method = ms[3]

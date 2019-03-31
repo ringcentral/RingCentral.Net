@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
             return $"{parent.Path()}/fax";
         }
 
-        // Operation: Create Fax Message
-        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
+        /// <summary>
+        /// Operation: Create Fax Message
+        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
+        /// </summary>
         public async Task<RingCentral.FaxResponse> Post(SendFaxMessageRequest sendFaxMessageRequest)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(sendFaxMessageRequest);

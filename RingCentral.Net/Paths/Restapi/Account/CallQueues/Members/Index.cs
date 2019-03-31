@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
             return $"{parent.Path()}/members";
         }
 
-        // Operation: Get Call Queue Members
-        // Http Get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
+        /// <summary>
+        /// Operation: Get Call Queue Members
+        /// Http Get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
+        /// </summary>
         public async Task<RingCentral.CallQueueMembers> Get(ListCallQueueMembersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallQueueMembers>(this.Path(), queryParams);

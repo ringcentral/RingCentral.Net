@@ -18,15 +18,19 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
             return $"{parent.Path()}/business-address";
         }
 
-        // Operation: Get Company Business Address
-        // Http Get /restapi/v1.0/account/{accountId}/business-address
+        /// <summary>
+        /// Operation: Get Company Business Address
+        /// Http Get /restapi/v1.0/account/{accountId}/business-address
+        /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Get()
         {
             return await rc.Get<RingCentral.AccountBusinessAddressResource>(this.Path());
         }
 
-        // Operation: Update Company Business Address
-        // Http Put /restapi/v1.0/account/{accountId}/business-address
+        /// <summary>
+        /// Operation: Update Company Business Address
+        /// Http Put /restapi/v1.0/account/{accountId}/business-address
+        /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Put(
             RingCentral.ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest)
         {

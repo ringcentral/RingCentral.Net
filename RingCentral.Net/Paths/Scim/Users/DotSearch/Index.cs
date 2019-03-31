@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
             return $"{parent.Path()}/.search";
         }
 
-        // Operation: Search or List Users
-        // Http Post /scim/v2/Users/.search
+        /// <summary>
+        /// Operation: Search or List Users
+        /// Http Post /scim/v2/Users/.search
+        /// </summary>
         public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest)
         {
             return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest);

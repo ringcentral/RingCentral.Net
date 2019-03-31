@@ -23,15 +23,19 @@ namespace RingCentral.Paths.Restapi
             return "/restapi";
         }
 
-        // Operation: Get API Versions
-        // Http Get /restapi
+        /// <summary>
+        /// Operation: Get API Versions
+        /// Http Get /restapi
+        /// </summary>
         public async Task<RingCentral.GetVersionsResponse> List()
         {
             return await rc.Get<RingCentral.GetVersionsResponse>(this.Path(false));
         }
 
-        // Operation: Get Version Info
-        // Http Get /restapi/{apiVersion}
+        /// <summary>
+        /// Operation: Get Version Info
+        /// Http Get /restapi/{apiVersion}
+        /// </summary>
         public async Task<RingCentral.GetVersionResponse> Get()
         {
             if (this.apiVersion == null)

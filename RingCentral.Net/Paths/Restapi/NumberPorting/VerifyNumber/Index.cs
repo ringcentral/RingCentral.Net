@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.NumberPorting.VerifyNumber
             return $"{parent.Path()}/verify-number";
         }
 
-        // Operation: Number Porting Verify
-        // Http Post /restapi/v1.0/number-porting/verify-number
+        /// <summary>
+        /// Operation: Number Porting Verify
+        /// Http Post /restapi/v1.0/number-porting/verify-number
+        /// </summary>
         public async Task<RingCentral.NumberPortingVerifyNumberResponse> Post(
             RingCentral.NumberPortingVerifyNumberRequest numberPortingVerifyNumberRequest)
         {

@@ -25,16 +25,20 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
             return $"{parent.Path()}/custom-greetings";
         }
 
-        // Operation: Get Call Recording Custom Greetings
-        // Http Get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
+        /// <summary>
+        /// Operation: Get Call Recording Custom Greetings
+        /// Http Get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
+        /// </summary>
         public async Task<RingCentral.CallRecordingCustomGreetings> Get(
             ListCallRecordingCustomGreetingsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams);
         }
 
-        // Operation: Delete Call Recording Custom Greeting
-        // Http Delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
+        /// <summary>
+        /// Operation: Delete Call Recording Custom Greeting
+        /// Http Delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.greetingId == null)

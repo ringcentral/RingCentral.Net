@@ -25,15 +25,19 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
             return $"{parent.Path()}/ivr-menus";
         }
 
-        // Operation: Create IVR Menu
-        // Http Post /restapi/v1.0/account/{accountId}/ivr-menus
+        /// <summary>
+        /// Operation: Create IVR Menu
+        /// Http Post /restapi/v1.0/account/{accountId}/ivr-menus
+        /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Post(RingCentral.IVRMenuInfo iVRMenuInfo)
         {
             return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo);
         }
 
-        // Operation: Get IVR Menu
-        // Http Get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+        /// <summary>
+        /// Operation: Get IVR Menu
+        /// Http Get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+        /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Get()
         {
             if (this.ivrMenuId == null)
@@ -44,8 +48,10 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
             return await rc.Get<RingCentral.IVRMenuInfo>(this.Path());
         }
 
-        // Operation: Update IVR Menu
-        // Http Put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+        /// <summary>
+        /// Operation: Update IVR Menu
+        /// Http Put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+        /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo)
         {
             if (this.ivrMenuId == null)

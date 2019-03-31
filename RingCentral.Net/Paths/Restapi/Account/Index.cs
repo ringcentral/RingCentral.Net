@@ -25,8 +25,10 @@ namespace RingCentral.Paths.Restapi.Account
             return $"{parent.Path()}/account";
         }
 
-        // Operation: Get Company Info
-        // Http Get /restapi/v1.0/account/{accountId}
+        /// <summary>
+        /// Operation: Get Company Info
+        /// Http Get /restapi/v1.0/account/{accountId}
+        /// </summary>
         public async Task<RingCentral.GetAccountInfoResponse> Get()
         {
             if (this.accountId == null)

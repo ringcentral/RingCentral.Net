@@ -25,15 +25,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return $"{parent.Path()}/message-store";
         }
 
-        // Operation: Get Message List
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
+        /// <summary>
+        /// Operation: Get Message List
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
+        /// </summary>
         public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
         }
 
-        // Operation: Get Message(s)
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+        /// <summary>
+        /// Operation: Get Message(s)
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+        /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Get()
         {
             if (this.messageId == null)
@@ -44,8 +48,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path());
         }
 
-        // Operation: Update Message(s)
-        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+        /// <summary>
+        /// Operation: Update Message(s)
+        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+        /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest)
         {
             if (this.messageId == null)
@@ -56,8 +62,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
         }
 
-        // Operation: Delete Message(s)
-        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+        /// <summary>
+        /// Operation: Delete Message(s)
+        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+        /// </summary>
         public async Task<string> Delete(DeleteMessageParameters queryParams = null)
         {
             if (this.messageId == null)

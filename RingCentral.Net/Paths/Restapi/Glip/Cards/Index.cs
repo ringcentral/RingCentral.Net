@@ -25,8 +25,10 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return $"{parent.Path()}/cards";
         }
 
-        // Operation: Create Card
-        // Http Post /restapi/v1.0/glip/cards
+        /// <summary>
+        /// Operation: Create Card
+        /// Http Post /restapi/v1.0/glip/cards
+        /// </summary>
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
             RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
             CreateGlipCardParameters queryParams = null)
@@ -35,8 +37,10 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
                 glipMessageAttachmentInfoRequest, queryParams);
         }
 
-        // Operation: Get Card
-        // Http Get /restapi/v1.0/glip/cards/{cardId}
+        /// <summary>
+        /// Operation: Get Card
+        /// Http Get /restapi/v1.0/glip/cards/{cardId}
+        /// </summary>
         public async Task<RingCentral.GlipMessageAttachmentInfo> Get()
         {
             if (this.cardId == null)
@@ -47,8 +51,10 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return await rc.Get<RingCentral.GlipMessageAttachmentInfo>(this.Path());
         }
 
-        // Operation: Update Card
-        // Http Put /restapi/v1.0/glip/cards/{cardId}
+        /// <summary>
+        /// Operation: Update Card
+        /// Http Put /restapi/v1.0/glip/cards/{cardId}
+        /// </summary>
         public async Task<string> Put(RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest)
         {
             if (this.cardId == null)
@@ -59,8 +65,10 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
             return await rc.Put<string>(this.Path(), glipMessageAttachmentInfoRequest);
         }
 
-        // Operation: Delete Card
-        // Http Delete /restapi/v1.0/glip/cards/{cardId}
+        /// <summary>
+        /// Operation: Delete Card
+        /// Http Delete /restapi/v1.0/glip/cards/{cardId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.cardId == null)

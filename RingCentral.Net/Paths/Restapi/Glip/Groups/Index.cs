@@ -25,22 +25,28 @@ namespace RingCentral.Paths.Restapi.Glip.Groups
             return $"{parent.Path()}/groups";
         }
 
-        // Operation: Get User Groups
-        // Http Get /restapi/v1.0/glip/groups
+        /// <summary>
+        /// Operation: Get User Groups
+        /// Http Get /restapi/v1.0/glip/groups
+        /// </summary>
         public async Task<RingCentral.GlipGroupList> List(ListGlipGroupsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipGroupList>(this.Path(false), queryParams);
         }
 
-        // Operation: Create Group
-        // Http Post /restapi/v1.0/glip/groups
+        /// <summary>
+        /// Operation: Create Group
+        /// Http Post /restapi/v1.0/glip/groups
+        /// </summary>
         public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.GlipCreateGroup glipCreateGroup)
         {
             return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(false), glipCreateGroup);
         }
 
-        // Operation: Get Group
-        // Http Get /restapi/v1.0/glip/groups/{groupId}
+        /// <summary>
+        /// Operation: Get Group
+        /// Http Get /restapi/v1.0/glip/groups/{groupId}
+        /// </summary>
         public async Task<RingCentral.GlipGroupInfo> Get()
         {
             if (this.groupId == null)

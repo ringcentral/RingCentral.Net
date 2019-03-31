@@ -25,8 +25,10 @@ namespace RingCentral.Paths.Restapi.Account.Recording
             return $"{parent.Path()}/recording";
         }
 
-        // Operation: Get Call Recording(s)
-        // Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}
+        /// <summary>
+        /// Operation: Get Call Recording(s)
+        /// Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}
+        /// </summary>
         public async Task<RingCentral.GetCallRecordingResponse> Get()
         {
             if (this.recordingId == null)

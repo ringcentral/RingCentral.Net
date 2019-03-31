@@ -25,8 +25,10 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Archive
             return $"{parent.Path()}/archive";
         }
 
-        // Operation: Get Glip Data Archive
-        // Http Get /restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}
+        /// <summary>
+        /// Operation: Get Glip Data Archive
+        /// Http Get /restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}
+        /// </summary>
         public async Task<string> Get()
         {
             if (this.archiveId == null)

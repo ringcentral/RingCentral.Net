@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
             return $"{parent.Path()}/favorites";
         }
 
-        // Operation: Get Favorite Chats
-        // Http Get /restapi/v1.0/glip/favorites
+        /// <summary>
+        /// Operation: Get Favorite Chats
+        /// Http Get /restapi/v1.0/glip/favorites
+        /// </summary>
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(
             ListFavoriteChatsParameters queryParams = null)
         {

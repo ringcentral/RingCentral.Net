@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Department.BulkAssign
             return $"{parent.Path()}/bulk-assign";
         }
 
-        // Operation: Edit Department Members
-        // Http Post /restapi/v1.0/account/{accountId}/department/bulk-assign
+        /// <summary>
+        /// Operation: Edit Department Members
+        /// Http Post /restapi/v1.0/account/{accountId}/department/bulk-assign
+        /// </summary>
         public async Task<string> Post(RingCentral.DepartmentBulkAssignResource departmentBulkAssignResource)
         {
             return await rc.Post<string>(this.Path(), departmentBulkAssignResource);

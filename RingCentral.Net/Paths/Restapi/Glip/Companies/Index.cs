@@ -25,8 +25,10 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
             return $"{parent.Path()}/companies";
         }
 
-        // Operation: Get Company Info
-        // Http Get /restapi/v1.0/glip/companies/{companyId}
+        /// <summary>
+        /// Operation: Get Company Info
+        /// Http Get /restapi/v1.0/glip/companies/{companyId}
+        /// </summary>
         public async Task<RingCentral.GlipCompany> Get()
         {
             if (this.companyId == null)

@@ -25,22 +25,28 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return $"{parent.Path()}/events";
         }
 
-        // Operation: Get User Events List
-        // Http Get /restapi/v1.0/glip/events
+        /// <summary>
+        /// Operation: Get User Events List
+        /// Http Get /restapi/v1.0/glip/events
+        /// </summary>
         public async Task<RingCentral.GlipEventsInfo> List(LoadGlipEventsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
         }
 
-        // Operation: Create Event
-        // Http Post /restapi/v1.0/glip/events
+        /// <summary>
+        /// Operation: Create Event
+        /// Http Post /restapi/v1.0/glip/events
+        /// </summary>
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate)
         {
             return await rc.Post<RingCentral.GlipEventInfo>(this.Path(false), glipEventCreate);
         }
 
-        // Operation: Get Event
-        // Http Get /restapi/v1.0/glip/events/{eventId}
+        /// <summary>
+        /// Operation: Get Event
+        /// Http Get /restapi/v1.0/glip/events/{eventId}
+        /// </summary>
         public async Task<RingCentral.GlipEventInfo> Get()
         {
             if (this.eventId == null)
@@ -51,8 +57,10 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return await rc.Get<RingCentral.GlipEventInfo>(this.Path());
         }
 
-        // Operation: Update Event
-        // Http Put /restapi/v1.0/glip/events/{eventId}
+        /// <summary>
+        /// Operation: Update Event
+        /// Http Put /restapi/v1.0/glip/events/{eventId}
+        /// </summary>
         public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate)
         {
             if (this.eventId == null)
@@ -63,8 +71,10 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             return await rc.Put<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
         }
 
-        // Operation: Delete Event
-        // Http Delete /restapi/v1.0/glip/events/{eventId}
+        /// <summary>
+        /// Operation: Delete Event
+        /// Http Delete /restapi/v1.0/glip/events/{eventId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.eventId == null)

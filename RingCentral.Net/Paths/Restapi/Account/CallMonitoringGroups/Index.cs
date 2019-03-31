@@ -25,23 +25,29 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             return $"{parent.Path()}/call-monitoring-groups";
         }
 
-        // Operation: Create Call Monitoring Group
-        // Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups
+        /// <summary>
+        /// Operation: Create Call Monitoring Group
+        /// Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups
+        /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Post(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
         {
             return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest);
         }
 
-        // Operation: Get Call Monitoring Groups
-        // Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
+        /// <summary>
+        /// Operation: Get Call Monitoring Groups
+        /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
+        /// </summary>
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams);
         }
 
-        // Operation: Updates Call Monitoring Group
-        // Http Put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+        /// <summary>
+        /// Operation: Updates Call Monitoring Group
+        /// Http Put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+        /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Put(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
         {
@@ -53,8 +59,10 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest);
         }
 
-        // Operation: Remove Given Call Monitoring Group
-        // Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+        /// <summary>
+        /// Operation: Remove Given Call Monitoring Group
+        /// Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.groupId == null)

@@ -25,23 +25,29 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return $"{parent.Path()}/ivr-prompts";
         }
 
-        // Operation: Create IVR Prompts
-        // Http Post /restapi/v1.0/account/{accountId}/ivr-prompts
+        /// <summary>
+        /// Operation: Create IVR Prompts
+        /// Http Post /restapi/v1.0/account/{accountId}/ivr-prompts
+        /// </summary>
         public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIvrPromptRequest)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIvrPromptRequest);
             return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent);
         }
 
-        // Operation: Get IVR Prompts
-        // Http Get /restapi/v1.0/account/{accountId}/ivr-prompts
+        /// <summary>
+        /// Operation: Get IVR Prompts
+        /// Http Get /restapi/v1.0/account/{accountId}/ivr-prompts
+        /// </summary>
         public async Task<RingCentral.IVRPrompts> List()
         {
             return await rc.Get<RingCentral.IVRPrompts>(this.Path(false));
         }
 
-        // Operation: Get IVR Prompt
-        // Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+        /// <summary>
+        /// Operation: Get IVR Prompt
+        /// Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+        /// </summary>
         public async Task<RingCentral.PromptInfo> Get()
         {
             if (this.promptId == null)
@@ -52,8 +58,10 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return await rc.Get<RingCentral.PromptInfo>(this.Path());
         }
 
-        // Operation: Delete IVR Prompt
-        // Http Delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+        /// <summary>
+        /// Operation: Delete IVR Prompt
+        /// Http Delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.promptId == null)
@@ -64,8 +72,10 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             return await rc.Delete<string>(this.Path());
         }
 
-        // Operation: Update IVR Prompt
-        // Http Put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+        /// <summary>
+        /// Operation: Update IVR Prompt
+        /// Http Put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+        /// </summary>
         public async Task<string> Put()
         {
             if (this.promptId == null)

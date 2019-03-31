@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Forward
             return $"{parent.Path()}/forward";
         }
 
-        // Operation: Forward Call Party
-        // Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/forward
+        /// <summary>
+        /// Operation: Forward Call Party
+        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/forward
+        /// </summary>
         public async Task<RingCentral.CallParty> Post(RingCentral.ForwardTarget forwardTarget)
         {
             return await rc.Post<RingCentral.CallParty>(this.Path(), forwardTarget);

@@ -25,15 +25,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
             return $"{parent.Path()}/ring-out";
         }
 
-        // Operation: Make RingOut Call
-        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
+        /// <summary>
+        /// Operation: Make RingOut Call
+        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
+        /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest)
         {
             return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest);
         }
 
-        // Operation:  Get RingOut Call Status
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+        /// <summary>
+        /// Operation:  Get RingOut Call Status
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+        /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Get()
         {
             if (this.ringoutId == null)
@@ -44,8 +48,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
             return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path());
         }
 
-        // Operation: Cancel RingOut Call
-        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+        /// <summary>
+        /// Operation: Cancel RingOut Call
+        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.ringoutId == null)

@@ -18,15 +18,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
             return $"{parent.Path()}/caller-id";
         }
 
-        // Operation: Get Extension Caller ID
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+        /// <summary>
+        /// Operation: Get Extension Caller ID
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+        /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Get()
         {
             return await rc.Get<RingCentral.ExtensionCallerIdInfo>(this.Path());
         }
 
-        // Operation: Update Extension Caller ID
-        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+        /// <summary>
+        /// Operation: Update Extension Caller ID
+        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+        /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Put(
             RingCentral.ExtensionCallerIdInfo extensionCallerIdInfo)
         {

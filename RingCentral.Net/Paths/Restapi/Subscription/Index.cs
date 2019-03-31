@@ -25,23 +25,29 @@ namespace RingCentral.Paths.Restapi.Subscription
             return $"{parent.Path()}/subscription";
         }
 
-        // Operation: Get Subscriptions
-        // Http Get /restapi/v1.0/subscription
+        /// <summary>
+        /// Operation: Get Subscriptions
+        /// Http Get /restapi/v1.0/subscription
+        /// </summary>
         public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List()
         {
             return await rc.Get<RingCentral.RecordsCollectionResourceSubscriptionResponse>(this.Path(false));
         }
 
-        // Operation: Create Subscription
-        // Http Post /restapi/v1.0/subscription
+        /// <summary>
+        /// Operation: Create Subscription
+        /// Http Post /restapi/v1.0/subscription
+        /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(
             RingCentral.CreateSubscriptionRequest createSubscriptionRequest)
         {
             return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(false), createSubscriptionRequest);
         }
 
-        // Operation: Get Subscription
-        // Http Get /restapi/v1.0/subscription/{subscriptionId}
+        /// <summary>
+        /// Operation: Get Subscription
+        /// Http Get /restapi/v1.0/subscription/{subscriptionId}
+        /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Get()
         {
             if (this.subscriptionId == null)
@@ -52,8 +58,10 @@ namespace RingCentral.Paths.Restapi.Subscription
             return await rc.Get<RingCentral.SubscriptionInfo>(this.Path());
         }
 
-        // Operation: Renew Subscription / Update Event Filters
-        // Http Put /restapi/v1.0/subscription/{subscriptionId}
+        /// <summary>
+        /// Operation: Renew Subscription / Update Event Filters
+        /// Http Put /restapi/v1.0/subscription/{subscriptionId}
+        /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Put(
             RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
             UpdateSubscriptionParameters queryParams = null)
@@ -66,8 +74,10 @@ namespace RingCentral.Paths.Restapi.Subscription
             return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams);
         }
 
-        // Operation: Cancel Subscription
-        // Http Delete /restapi/v1.0/subscription/{subscriptionId}
+        /// <summary>
+        /// Operation: Cancel Subscription
+        /// Http Delete /restapi/v1.0/subscription/{subscriptionId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.subscriptionId == null)

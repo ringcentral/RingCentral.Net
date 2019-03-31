@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Unarchive
             return $"{parent.Path()}/unarchive";
         }
 
-        // Operation: Unarchive Team
-        // Http Post /restapi/v1.0/glip/teams/{chatId}/unarchive
+        /// <summary>
+        /// Operation: Unarchive Team
+        /// Http Post /restapi/v1.0/glip/teams/{chatId}/unarchive
+        /// </summary>
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

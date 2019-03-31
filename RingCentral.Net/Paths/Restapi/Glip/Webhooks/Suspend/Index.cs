@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks.Suspend
             return $"{parent.Path()}/suspend";
         }
 
-        // Operation: Suspend Webhook
-        // Http Post /restapi/v1.0/glip/webhooks/{webhookId}/suspend
+        /// <summary>
+        /// Operation: Suspend Webhook
+        /// Http Post /restapi/v1.0/glip/webhooks/{webhookId}/suspend
+        /// </summary>
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unread
             return $"{parent.Path()}/unread";
         }
 
-        // Operation: Mark Chat as Unread
-        // Http Post /restapi/v1.0/glip/chats/{chatId}/unread
+        /// <summary>
+        /// Operation: Mark Chat as Unread
+        /// Http Post /restapi/v1.0/glip/chats/{chatId}/unread
+        /// </summary>
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

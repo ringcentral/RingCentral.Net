@@ -18,16 +18,20 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
             return $"{parent.Path()}/conferencing";
         }
 
-        // Operation: Get User Conferencing Settings
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+        /// <summary>
+        /// Operation: Get User Conferencing Settings
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+        /// </summary>
         public async Task<RingCentral.GetConferencingInfoResponse> Get(
             LoadConferencingInfoParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
         }
 
-        // Operation: Update User Conferencing Settings
-        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+        /// <summary>
+        /// Operation: Update User Conferencing Settings
+        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+        /// </summary>
         public async Task<RingCentral.GetConferencingInfoResponse> Put(
             RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest)
         {

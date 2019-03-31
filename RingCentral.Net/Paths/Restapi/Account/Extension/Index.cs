@@ -25,23 +25,29 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return $"{parent.Path()}/extension";
         }
 
-        // Operation: Get Extension List
-        // Http Get /restapi/v1.0/account/{accountId}/extension
+        /// <summary>
+        /// Operation: Get Extension List
+        /// Http Get /restapi/v1.0/account/{accountId}/extension
+        /// </summary>
         public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams);
         }
 
-        // Operation: Create Extension
-        // Http Post /restapi/v1.0/account/{accountId}/extension
+        /// <summary>
+        /// Operation: Create Extension
+        /// Http Post /restapi/v1.0/account/{accountId}/extension
+        /// </summary>
         public async Task<RingCentral.ExtensionCreationResponse> Post(
             RingCentral.ExtensionCreationRequest extensionCreationRequest)
         {
             return await rc.Post<RingCentral.ExtensionCreationResponse>(this.Path(false), extensionCreationRequest);
         }
 
-        // Operation: Get Extension Info
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
+        /// <summary>
+        /// Operation: Get Extension Info
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
+        /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Get()
         {
             if (this.extensionId == null)
@@ -52,8 +58,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path());
         }
 
-        // Operation: Update Extension
-        // Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}
+        /// <summary>
+        /// Operation: Update Extension
+        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}
+        /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
             RingCentral.ExtensionUpdateRequest extensionUpdateRequest)
         {
@@ -65,8 +73,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest);
         }
 
-        // Operation: Delete Extension
-        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
+        /// <summary>
+        /// Operation: Delete Extension
+        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.extensionId == null)

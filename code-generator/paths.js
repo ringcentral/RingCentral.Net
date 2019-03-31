@@ -208,8 +208,10 @@ ${code}`
       }
       code += `
 
-      // Operation: ${operation.detail.summary || changeCase.titleCase(operation.detail.operationId)}
-      // Http ${method} ${operation.endpoint}
+      /// <summary>
+      /// Operation: ${operation.detail.summary || changeCase.titleCase(operation.detail.operationId)}
+      /// Http ${method} ${operation.endpoint}
+      /// </summary>
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
       {${withParam ? `
           if (this.${paramName} == null)

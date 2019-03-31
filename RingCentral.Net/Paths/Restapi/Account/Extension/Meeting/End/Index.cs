@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
             return $"{parent.Path()}/end";
         }
 
-        // Operation: End Meeting
-        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
+        /// <summary>
+        /// Operation: End Meeting
+        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
+        /// </summary>
         public async Task<string> Post()
         {
             return await rc.Post<string>(this.Path());

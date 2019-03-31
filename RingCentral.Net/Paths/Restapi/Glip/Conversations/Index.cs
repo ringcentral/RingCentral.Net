@@ -25,23 +25,29 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
             return $"{parent.Path()}/conversations";
         }
 
-        // Operation: Get Conversations
-        // Http Get /restapi/v1.0/glip/conversations
+        /// <summary>
+        /// Operation: Get Conversations
+        /// Http Get /restapi/v1.0/glip/conversations
+        /// </summary>
         public async Task<RingCentral.GlipConversationsList> List(ListGlipConversationsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams);
         }
 
-        // Operation: Create/Open Conversation
-        // Http Post /restapi/v1.0/glip/conversations
+        /// <summary>
+        /// Operation: Create/Open Conversation
+        /// Http Post /restapi/v1.0/glip/conversations
+        /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Post(
             RingCentral.CreateGlipConversationRequest createGlipConversationRequest)
         {
             return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), createGlipConversationRequest);
         }
 
-        // Operation: Get Conversation
-        // Http Get /restapi/v1.0/glip/conversations/{chatId}
+        /// <summary>
+        /// Operation: Get Conversation
+        /// Http Get /restapi/v1.0/glip/conversations/{chatId}
+        /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Get()
         {
             if (this.chatId == null)

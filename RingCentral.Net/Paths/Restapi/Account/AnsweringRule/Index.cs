@@ -25,23 +25,29 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return $"{parent.Path()}/answering-rule";
         }
 
-        // Operation: Create Company Call Handling Rule
-        // Http Post /restapi/v1.0/account/{accountId}/answering-rule
+        /// <summary>
+        /// Operation: Create Company Call Handling Rule
+        /// Http Post /restapi/v1.0/account/{accountId}/answering-rule
+        /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(
             RingCentral.CompanyAnsweringRuleRequest companyAnsweringRuleRequest)
         {
             return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest);
         }
 
-        // Operation: Get Company Call Handling Rules
-        // Http Get /restapi/v1.0/account/{accountId}/answering-rule
+        /// <summary>
+        /// Operation: Get Company Call Handling Rules
+        /// Http Get /restapi/v1.0/account/{accountId}/answering-rule
+        /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleList> List()
         {
             return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false));
         }
 
-        // Operation: Get Company Call Handling Rule
-        // Http Get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+        /// <summary>
+        /// Operation: Get Company Call Handling Rule
+        /// Http Get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+        /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Get()
         {
             if (this.ruleId == null)
@@ -52,8 +58,10 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return await rc.Get<RingCentral.CompanyAnsweringRuleInfo>(this.Path());
         }
 
-        // Operation: Update Company Call Handling Rule
-        // Http Put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+        /// <summary>
+        /// Operation: Update Company Call Handling Rule
+        /// Http Put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+        /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(
             RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate)
         {
@@ -65,8 +73,10 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate);
         }
 
-        // Operation: Delete Company Call Handling Rule
-        // Http Delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+        /// <summary>
+        /// Operation: Delete Company Call Handling Rule
+        /// Http Delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
+        /// </summary>
         public async Task<string> Delete()
         {
             if (this.ruleId == null)

@@ -25,8 +25,10 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
             return $"{parent.Path()}/persons";
         }
 
-        // Operation: Get Person
-        // Http Get /restapi/v1.0/glip/persons/{personId}
+        /// <summary>
+        /// Operation: Get Person
+        /// Http Get /restapi/v1.0/glip/persons/{personId}
+        /// </summary>
         public async Task<RingCentral.GlipPersonInfo> Get()
         {
             if (this.personId == null)

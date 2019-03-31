@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
             return $"{parent.Path()}/federation";
         }
 
-        // Operation: Get Account Federation
-        // Http Get /restapi/v1.0/account/{accountId}/directory/federation
+        /// <summary>
+        /// Operation: Get Account Federation
+        /// Http Get /restapi/v1.0/account/{accountId}/directory/federation
+        /// </summary>
         public async Task<RingCentral.FederationResource> Get()
         {
             return await rc.Get<RingCentral.FederationResource>(this.Path());

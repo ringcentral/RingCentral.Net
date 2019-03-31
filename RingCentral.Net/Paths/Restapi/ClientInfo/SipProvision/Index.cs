@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
             return $"{parent.Path()}/sip-provision";
         }
 
-        // Operation: Register SIP Device
-        // Http Post /restapi/v1.0/client-info/sip-provision
+        /// <summary>
+        /// Operation: Register SIP Device
+        /// Http Post /restapi/v1.0/client-info/sip-provision
+        /// </summary>
         public async Task<RingCentral.CreateSipRegistrationResponse> Post(
             RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest)
         {

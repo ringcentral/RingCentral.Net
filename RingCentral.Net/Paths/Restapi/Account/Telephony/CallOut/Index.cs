@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
             return $"{parent.Path()}/call-out";
         }
 
-        // Operation: Create CallOut Call Session
-        // Http Post /restapi/v1.0/account/{accountId}/telephony/call-out
+        /// <summary>
+        /// Operation: Create CallOut Call Session
+        /// Http Post /restapi/v1.0/account/{accountId}/telephony/call-out
+        /// </summary>
         public async Task<string> Post(RingCentral.MakeCallOutRequest makeCallOutRequest)
         {
             return await rc.Post<string>(this.Path(), makeCallOutRequest);

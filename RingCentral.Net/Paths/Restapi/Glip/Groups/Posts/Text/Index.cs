@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts.Text
             return $"{parent.Path()}/text";
         }
 
-        // Operation: Update Post
-        // Http Put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
+        /// <summary>
+        /// Operation: Update Post
+        /// Http Put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
+        /// </summary>
         public async Task<string> Put(string body)
         {
             return await rc.Put<string>(this.Path(), body);

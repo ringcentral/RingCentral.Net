@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
             return $"{parent.Path()}/service-info";
         }
 
-        // Operation: Get Meeting Service Info
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
+        /// <summary>
+        /// Operation: Get Meeting Service Info
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
+        /// </summary>
         public async Task<RingCentral.MeetingServiceInfoResource> Get()
         {
             return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path());

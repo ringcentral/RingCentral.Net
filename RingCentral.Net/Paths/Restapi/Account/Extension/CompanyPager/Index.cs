@@ -18,8 +18,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
             return $"{parent.Path()}/company-pager";
         }
 
-        // Operation: Create Internal Text Message
-        // Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
+        /// <summary>
+        /// Operation: Create Internal Text Message
+        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
+        /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Post(
             RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest)
         {

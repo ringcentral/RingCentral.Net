@@ -25,22 +25,28 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
             return $"{parent.Path()}/call-log";
         }
 
-        // Operation: Get User Call Log Records
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+        /// <summary>
+        /// Operation: Get User Call Log Records
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+        /// </summary>
         public async Task<RingCentral.UserCallLogResponse> List(LoadUserCallLogParameters queryParams = null)
         {
             return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams);
         }
 
-        // Operation: Delete User Call Log Records
-        // Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+        /// <summary>
+        /// Operation: Delete User Call Log Records
+        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+        /// </summary>
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null)
         {
             return await rc.Delete<string>(this.Path(false), queryParams);
         }
 
-        // Operation: Get User Call Record(s)
-        // Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
+        /// <summary>
+        /// Operation: Get User Call Record(s)
+        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
+        /// </summary>
         public async Task<RingCentral.UserCallLogRecord> Get(GetUserCallRecordParameters queryParams = null)
         {
             if (this.callRecordId == null)
