@@ -44,5 +44,4 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 
 ## Todo
 
-- Alert user if he/she installs the wrong PubNub library.
 - Use official comments style

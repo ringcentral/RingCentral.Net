@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -41,6 +42,12 @@ namespace RingCentral
 
         public Subscription(RestClient rc, string[] eventFilters, Action<string> callback)
         {
+            var frameworkDescription = RuntimeInformation.FrameworkDescription;
+            if (frameworkDescription.StartsWith(".NET Framework "))
+            {
+                throw new NotSupportedException(@"Package RingCentral.NET.PubnubPCL doesn't support .NET Framework. 
+Please install package RingCentral.Net.Pubnub instead.");
+            }
             this.rc = rc;
             this.eventFilters = eventFilters;
             this.callback = callback;
