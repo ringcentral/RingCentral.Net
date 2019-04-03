@@ -36,6 +36,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public bool? usePersonalMeetingId;
+
+        /// <summary>
+        /// </summary>
         public string[] audioOptions;
     }
 }

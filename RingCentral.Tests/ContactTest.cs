@@ -1,4 +1,5 @@
 using System;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -36,7 +37,7 @@ namespace RingCentral.Tests
                 var total = list.paging.totalElements;
 
                 // create
-                var contact = await addressBook.Contact().Post(new PersonalContactResource
+                var contact = await addressBook.Contact().Post(new PersonalContactRequest
                 {
                     firstName = "Tyler",
                     lastName = "Long",
@@ -56,7 +57,9 @@ namespace RingCentral.Tests
 
                 // update
                 contact.lastName = "Liu";
-                var contact2 = await addressBook.Contact(contactId).Put(contact);
+                var contactRequest =
+                    JsonConvert.DeserializeObject<PersonalContactRequest>(JsonConvert.SerializeObject(contact));
+                var contact2 = await addressBook.Contact(contactId).Put(contactRequest);
                 Assert.NotNull(contact2);
                 Assert.Equal("Liu", contact2.lastName);
 

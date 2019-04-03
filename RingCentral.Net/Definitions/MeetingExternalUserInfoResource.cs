@@ -21,5 +21,13 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string userToken;
+
+        /// <summary>
+        /// </summary>
+        public string hostKey;
+
+        /// <summary>
+        /// </summary>
+        public string personalMeetingId;
     }
 }

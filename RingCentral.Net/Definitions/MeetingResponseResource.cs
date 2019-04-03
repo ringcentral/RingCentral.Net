@@ -28,6 +28,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public string h323Password;
+
+        /// <summary>
+        /// </summary>
         public string status;
 
         /// <summary>
@@ -37,6 +41,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public MeetingScheduleResource schedule;
+
+        /// <summary>
+        /// </summary>
+        public HostInfoRequest host;
 
         /// <summary>
         /// </summary>

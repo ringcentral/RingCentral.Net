@@ -1,37 +1,7 @@
 namespace RingCentral
 {
-    public class PersonalContactResource
+    public class PersonalContactRequest
     {
-        /// <summary>
-        /// Canonical URI of the contact
-        /// </summary>
-        public string uri;
-
-        /// <summary>
-        /// This property has a special meaning only on Address Book Sync (e.g. a contact can be `Deleted`). For simple contact list reading it has always the default value - `Alive`
-        /// Enum: Alive, Deleted, Purged
-        /// </summary>
-        public string availability;
-
-        /// <summary>
-        /// Email of the contact
-        /// </summary>
-        public string email;
-
-        /// <summary>
-        /// </summary>
-        public string id;
-
-        /// <summary>
-        /// Notes for the contact
-        /// </summary>
-        public string notes;
-
-        /// <summary>
-        /// Company name of the contact
-        /// </summary>
-        public string company;
-
         /// <summary>
         /// First name of the contact
         /// </summary>
@@ -41,21 +11,6 @@ namespace RingCentral
         /// Last name of the contact
         /// </summary>
         public string lastName;
-
-        /// <summary>
-        /// Job title of the contact
-        /// </summary>
-        public string jobTitle;
-
-        /// <summary>
-        /// Date of birth of the contact
-        /// </summary>
-        public string birthday;
-
-        /// <summary>
-        /// The contact home page URL
-        /// </summary>
-        public string webPage;
 
         /// <summary>
         /// Middle name of the contact
@@ -68,6 +23,21 @@ namespace RingCentral
         public string nickName;
 
         /// <summary>
+        /// Company name of the contact
+        /// </summary>
+        public string company;
+
+        /// <summary>
+        /// Job title of the contact
+        /// </summary>
+        public string jobTitle;
+
+        /// <summary>
+        /// Email of the contact
+        /// </summary>
+        public string email;
+
+        /// <summary>
         /// 2nd email of the contact
         /// </summary>
         public string email2;
@@ -76,6 +46,21 @@ namespace RingCentral
         /// 3rd email of the contact
         /// </summary>
         public string email3;
+
+        /// <summary>
+        /// Date of birth of the contact
+        /// </summary>
+        public string birthday;
+
+        /// <summary>
+        /// The contact home page URL
+        /// </summary>
+        public string webPage;
+
+        /// <summary>
+        /// Notes for the contact
+        /// </summary>
+        public string notes;
 
         /// <summary>
         /// Home phone number of the contact in e.164 (with "+") format
@@ -139,11 +124,11 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public ContactAddressInfo businessAddress;
+        public ContactAddressInfo homeAddress;
 
         /// <summary>
         /// </summary>
-        public ContactAddressInfo homeAddress;
+        public ContactAddressInfo businessAddress;
 
         /// <summary>
         /// </summary>

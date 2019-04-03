@@ -722,7 +722,7 @@ HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Get(listDirectoryEntriesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
 }
 ```
 
@@ -752,6 +752,26 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-searchDirectoryEntries) in API Explorer.
+
+
+## Get Corporate Directory Entry
+
+HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries/{entryId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get();
+}
+```
+
+
+- `result` is of type [ContactResource](./RingCentral.Net/Definitions/ContactResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-loadDirectoryEntry) in API Explorer.
 
 
 ## Get Account Federation
@@ -948,11 +968,11 @@ HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-boo
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactResource, createContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters);
 }
 ```
 
-- Parameter `personalContactResource` is of type [PersonalContactResource](./RingCentral.Net/Definitions/PersonalContactResource.cs)
+- Parameter `personalContactRequest` is of type [PersonalContactRequest](./RingCentral.Net/Definitions/PersonalContactRequest.cs)
 - Parameter `createContactParameters` is of type [CreateContactParameters](./RingCentral.Net/Definitions/CreateContactParameters.cs)
 - `result` is of type [PersonalContactResource](./RingCentral.Net/Definitions/PersonalContactResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -991,11 +1011,11 @@ HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactResource, updateContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters);
 }
 ```
 
-- Parameter `personalContactResource` is of type [PersonalContactResource](./RingCentral.Net/Definitions/PersonalContactResource.cs)
+- Parameter `personalContactRequest` is of type [PersonalContactRequest](./RingCentral.Net/Definitions/PersonalContactRequest.cs)
 - Parameter `updateContactParameters` is of type [UpdateContactParameters](./RingCentral.Net/Definitions/UpdateContactParameters.cs)
 - `result` is of type [PersonalContactResource](./RingCentral.Net/Definitions/PersonalContactResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1837,7 +1857,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `meetingRequestResource` is of type [MeetingRequestResource](./RingCentral.Net/Definitions/MeetingRequestResource.cs)
-- `result` is an empty string
+- `result` is of type [MeetingResponseResource](./RingCentral.Net/Definitions/MeetingResponseResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
@@ -1948,6 +1968,48 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Active-Meetings-endMeeting) in API Explorer.
+
+
+## Get Assistants
+
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get();
+}
+```
+
+
+- `result` is of type [AssistantsResource](./RingCentral.Net/Definitions/AssistantsResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Configuration-loadAssistants) in API Explorer.
+
+
+## Get Assisted Users
+
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get();
+}
+```
+
+
+- `result` is of type [AssistedUsersResource](./RingCentral.Net/Definitions/AssistedUsersResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Configuration-loadAssistedUsers) in API Explorer.
 
 
 ## Get Message List
@@ -4789,7 +4851,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
 
 
-## Get Service Provider Configuration
+## Get Service Provider Config
 
 HTTP GET `/scim/v2/ServiceProviderConfig`
 

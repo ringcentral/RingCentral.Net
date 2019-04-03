@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
         }
 
         /// <summary>
-        /// Operation: Get Service Provider Configuration
+        /// Operation: Get Service Provider Config
         /// Http Get /scim/v2/ServiceProviderConfig
         /// </summary>
         public async Task<RingCentral.ServiceProviderConfig> Get()

@@ -4,6 +4,11 @@ import fs from 'fs'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
 
+// remove duplicate scim endpoints
+delete doc.paths['/scim/health']
+delete doc.paths['/scim/Users']
+delete doc.paths['/scim/ServiceProviderConfig']
+
 // Get rid of Binary: https://git.ringcentral.com/platform/api-metadata-specs/issues/22
 // delete doc.definitions.Binary
 // Object.keys(doc.paths).forEach(path => {
@@ -119,9 +124,9 @@ if (faxTo.items.type === 'string') {
 //   }
 // }
 
-// https://git.ringcentral.com/platform/api-metadata-specs/issues/45
-doc.paths['/restapi/v1.0/number-porting/verify-number'] = doc.paths['/v1.0/number-porting/verify-number']
-delete doc.paths['/v1.0/number-porting/verify-number']
+// // https://git.ringcentral.com/platform/api-metadata-specs/issues/45
+// doc.paths['/restapi/v1.0/number-porting/verify-number'] = doc.paths['/v1.0/number-porting/verify-number']
+// delete doc.paths['/v1.0/number-porting/verify-number']
 
 // https://git.ringcentral.com/platform/api-metadata-specs/issues/46
 const responses = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image'].get.responses
@@ -138,10 +143,6 @@ responses[200] = {
 doc.definitions['PersonalContactResource'].properties.id = {
   type: 'string'
 }
-
-// remove duplicate scim endpoints
-delete doc.paths['/scim/health']
-delete doc.paths['/scim/Users']
 
 // https://git.ringcentral.com/platform/api-metadata-specs/issues/48
 const p1 = doc.paths['/restapi/v1.0/account/{accountId}/greeting'].post
