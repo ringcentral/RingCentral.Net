@@ -6,6 +6,18 @@ This project is a complete rewrite of [ringcentral/ringcentral-csharp-client](ht
 - [RingCentral SDK for .NET Upgrade Guide](https://medium.com/ringcentral-developers/ringcentral-sdk-for-net-upgrade-guide-8ead6bcdaf99)
 
 
+## Installation
+
+Package is avaiable on NuGet: https://www.nuget.org/packages/RingCentral.Net
+
+You can install it just like you install any other NuGet packages.
+
+If you need PubNub feature, you also need to install one of the following packages:
+
+- If you want to target traditional .NET Framework: https://www.nuget.org/packages/RingCentral.Net.Pubnub
+- If you want to target .NET Core, Mono, Xamarin...etc: https://www.nuget.org/packages/RingCentral.Net.PubnubPCL
+
+
 ## Code samples
 
 You can find [sample code for all the endpoints](./samples.md).
