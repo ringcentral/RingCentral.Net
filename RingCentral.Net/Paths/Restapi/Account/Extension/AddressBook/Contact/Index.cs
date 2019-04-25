@@ -46,7 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Get Contact(s)
+        /// Operation: Get Contact
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Get()
@@ -60,7 +60,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Update Contact(s)
+        /// Operation: Update Contact
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Put(
@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Delete Contact(s)
+        /// Operation: Delete Contact
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
         public async Task<string> Delete()

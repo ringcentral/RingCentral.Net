@@ -38,7 +38,7 @@ namespace RingCentral.Tests
                     var bytes = await rc.Get<byte[]>(archive.uri);
                     File.WriteAllBytes($"{count}.zip", bytes);
                     count++;
-                }    
+                }
             }
         }
     }

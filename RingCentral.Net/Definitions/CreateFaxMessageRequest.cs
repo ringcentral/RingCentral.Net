@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SendFaxMessageRequest
+    public class CreateFaxMessageRequest
     {
         /// <summary>
         /// File to upload

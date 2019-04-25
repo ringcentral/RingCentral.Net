@@ -7,5 +7,10 @@ namespace RingCentral
         /// Phone number in E.164 format
         /// </summary>
         public string phoneNumber;
+
+        /// <summary>
+        /// Extension number
+        /// </summary>
+        public string extensionNumber;
     }
 }

@@ -29,7 +29,7 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         /// Operation: Get Company Call Log Records
         /// Http Get /restapi/v1.0/account/{accountId}/call-log
         /// </summary>
-        public async Task<RingCentral.AccountCallLogResponse> List(LoadCompanyCallLogParameters queryParams = null)
+        public async Task<RingCentral.AccountCallLogResponse> List(ReadCompanyCallLogParameters queryParams = null)
         {
             return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams);
         }

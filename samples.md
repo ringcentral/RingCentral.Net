@@ -16,7 +16,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 - `result` is of type [GetVersionsResponse](./RingCentral.Net/Definitions/GetVersionsResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#API-Info-getAllVersions) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersions) in API Explorer.
 
 
 ## Revoke Token
@@ -71,7 +71,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GetVersionResponse](./RingCentral.Net/Definitions/GetVersionResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#API-Info-getApiVersion) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersion) in API Explorer.
 
 
 ## Get Company Info
@@ -302,16 +302,16 @@ HTTP GET `/restapi/v1.0/account/{accountId}/call-log`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(loadCompanyCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters);
 }
 ```
 
-- Parameter `loadCompanyCallLogParameters` is of type [LoadCompanyCallLogParameters](./RingCentral.Net/Definitions/LoadCompanyCallLogParameters.cs)
+- Parameter `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./RingCentral.Net/Definitions/ReadCompanyCallLogParameters.cs)
 - `result` is of type [AccountCallLogResponse](./RingCentral.Net/Definitions/AccountCallLogResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-loadCompanyCallLog) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallLog) in API Explorer.
 
 
 ## Get Company Call Log Record(s)
@@ -331,7 +331,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-loadCompanyCallRecord) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallRecord) in API Explorer.
 
 
 ## Create Call Monitoring Group
@@ -771,7 +771,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-loadDirectoryEntry) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-readDirectoryEntry) in API Explorer.
 
 
 ## Get Account Federation
@@ -791,7 +791,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-loadAccountFederation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-readAccountFederation) in API Explorer.
 
 
 ## Get Extension List
@@ -982,7 +982,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-createContact) in API Explorer.
 
 
-## Get Contact(s)
+## Get Contact
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
@@ -1000,10 +1000,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-loadContact) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-readContact) in API Explorer.
 
 
-## Update Contact(s)
+## Update Contact
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
@@ -1025,7 +1025,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-updateContact) in API Explorer.
 
 
-## Delete Contact(s)
+## Delete Contact
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
@@ -1243,20 +1243,20 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(loadUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters);
 }
 ```
 
-- Parameter `loadUserCallLogParameters` is of type [LoadUserCallLogParameters](./RingCentral.Net/Definitions/LoadUserCallLogParameters.cs)
+- Parameter `readUserCallLogParameters` is of type [ReadUserCallLogParameters](./RingCentral.Net/Definitions/ReadUserCallLogParameters.cs)
 - `result` is of type [UserCallLogResponse](./RingCentral.Net/Definitions/UserCallLogResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-loadUserCallLog) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readUserCallLog) in API Explorer.
 
 
-## Delete User Call Log Records
+## Delete User Call Log
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
@@ -1298,7 +1298,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncUserCallLog) in API Explorer.
 
 
-## Get User Call Record(s)
+## Get User Call Record
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`
 
@@ -1306,17 +1306,17 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{ca
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(getUserCallRecordParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
 }
 ```
 
-- Parameter `getUserCallRecordParameters` is of type [GetUserCallRecordParameters](./RingCentral.Net/Definitions/GetUserCallRecordParameters.cs)
+- Parameter `readUserCallRecordParameters` is of type [ReadUserCallRecordParameters](./RingCentral.Net/Definitions/ReadUserCallRecordParameters.cs)
 - `result` is of type [UserCallLogRecord](./RingCentral.Net/Definitions/UserCallLogRecord.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-getUserCallRecord) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readUserCallRecord) in API Explorer.
 
 
 ## Get Caller Blocking Settings
@@ -1642,17 +1642,17 @@ HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(sendFaxMessageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
 }
 ```
 
-- Parameter `sendFaxMessageRequest` is of type [SendFaxMessageRequest](./RingCentral.Net/Definitions/SendFaxMessageRequest.cs)
+- Parameter `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./RingCentral.Net/Definitions/CreateFaxMessageRequest.cs)
 - `result` is of type [FaxResponse](./RingCentral.Net/Definitions/FaxResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-sendFaxMessage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Fax-createFaxMessage) in API Explorer.
 
 
 ## Get Forwarding Numbers
@@ -2033,7 +2033,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-listMessages) in API Explorer.
 
 
-## Get Message(s)
+## Get Message
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
@@ -2051,7 +2051,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-loadMessage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Fax-readMessage) in API Explorer.
 
 
 ## Update Message(s)
@@ -2075,7 +2075,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-updateMessage) in API Explorer.
 
 
-## Delete Message(s)
+## Delete Message
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
@@ -2096,7 +2096,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-deleteMessage) in API Explorer.
 
 
-## Get Message Attachment
+## Get Message Content
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`
 
@@ -2104,17 +2104,17 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-stor
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(getMessageAttachmentByIdParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
 }
 ```
 
-- Parameter `getMessageAttachmentByIdParameters` is of type [GetMessageAttachmentByIdParameters](./RingCentral.Net/Definitions/GetMessageAttachmentByIdParameters.cs)
+- Parameter `readMessageContentParameters` is of type [ReadMessageContentParameters](./RingCentral.Net/Definitions/ReadMessageContentParameters.cs)
 - `result` is of type `byte[]`
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-getMessageAttachmentById) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Fax-readMessageContent) in API Explorer.
 
 
 ## Sync Messages
@@ -2201,7 +2201,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listExtensionPhoneNumbers) in API Explorer.
 
 
-## Get User Status
+## Get User Presence Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
@@ -2209,20 +2209,20 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(getPresenceStatusParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
 }
 ```
 
-- Parameter `getPresenceStatusParameters` is of type [GetPresenceStatusParameters](./RingCentral.Net/Definitions/GetPresenceStatusParameters.cs)
+- Parameter `readUserPresenceStatusParameters` is of type [ReadUserPresenceStatusParameters](./RingCentral.Net/Definitions/ReadUserPresenceStatusParameters.cs)
 - `result` is of type [GetPresenceInfo](./RingCentral.Net/Definitions/GetPresenceInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Presence-getPresenceStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-readUserPresenceStatus) in API Explorer.
 
 
-## Update User Status
+## Update User Presence Status
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
@@ -2240,7 +2240,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Presence-updatePresenceStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-updateUserPresenceStatus) in API Explorer.
 
 
 ## Get User Profile Image
@@ -2261,7 +2261,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-downloadProfileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadProfileImage) in API Explorer.
 
 
 ## Upload User Profile Image
@@ -2272,17 +2272,17 @@ HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-ima
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(uploadProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createProfileImageRequest);
 }
 ```
 
-- Parameter `uploadProfileImageRequest` is of type [UploadProfileImageRequest](./RingCentral.Net/Definitions/UploadProfileImageRequest.cs)
+- Parameter `createProfileImageRequest` is of type [CreateProfileImageRequest](./RingCentral.Net/Definitions/CreateProfileImageRequest.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-uploadProfileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-createProfileImage) in API Explorer.
 
 
 ## Update User Profile Image
@@ -2298,7 +2298,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `updateProfileImageRequest` is of type [UpdateProfileImageRequest](./RingCentral.Net/Definitions/UpdateProfileImageRequest.cs)
-- `result` is of type `byte[]`
+- `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
@@ -2324,7 +2324,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-downloadScaledPofileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadScaledPofileImage) in API Explorer.
 
 
 ## Make RingOut Call
@@ -2345,10 +2345,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#RingOut-makeRingOutCall) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#RingOut-createRingOutCall) in API Explorer.
 
 
-##  Get RingOut Call Status
+## Get RingOut Call Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
@@ -2366,7 +2366,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#RingOut-getRingOutCallStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#RingOut-readRingOutCallStatus) in API Explorer.
 
 
 ## Cancel RingOut Call
@@ -2387,7 +2387,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#RingOut-cancelRingOutCall) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#RingOut-deleteRingOutCall) in API Explorer.
 
 
 ## Create SMS/MMS Message
@@ -2408,7 +2408,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-and-MMS-sendSMS) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-and-MMS-createSMSMessage) in API Explorer.
 
 
 ## Create Custom Company Greeting
@@ -2628,7 +2628,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-Configuration-loadMessageStoreConfiguration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-Configuration-readMessageStoreConfiguration) in API Explorer.
 
 
 ## Update Message Store Configuration
@@ -2831,7 +2831,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-loadAccountPhoneNumber) in API Explorer.
 
 
-## Get User Presence Statuses List
+## Get User Presence Status List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/presence`
 
@@ -2839,19 +2839,19 @@ HTTP GET `/restapi/v1.0/account/{accountId}/presence`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(accountPresenceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters);
 }
 ```
 
-- Parameter `accountPresenceParameters` is of type [AccountPresenceParameters](./RingCentral.Net/Definitions/AccountPresenceParameters.cs)
+- Parameter `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./RingCentral.Net/Definitions/ReadAccountPresenceParameters.cs)
 - `result` is of type [AccountPresenceInfo](./RingCentral.Net/Definitions/AccountPresenceInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Presence-accountPresence) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-readAccountPresence) in API Explorer.
 
 
-## Get Call Recording(s)
+## Get Call Recording
 
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}`
 
@@ -2868,7 +2868,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCallRecordings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCallRecording) in API Explorer.
 
 
 ## Get Call Recordings Data
@@ -2924,7 +2924,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `makeCallOutRequest` is of type [MakeCallOutRequest](./RingCentral.Net/Definitions/MakeCallOutRequest.cs)
-- `result` is an empty string
+- `result` is of type [CallSession](./RingCentral.Net/Definitions/CallSession.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -3192,7 +3192,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-superviseCallSession) in API Explorer.
 
 
-## Get Templates
+## Get User Templates
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates`
 
@@ -3200,19 +3200,19 @@ HTTP GET `/restapi/v1.0/account/{accountId}/templates`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listTemplatesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters);
 }
 ```
 
-- Parameter `listTemplatesParameters` is of type [ListTemplatesParameters](./RingCentral.Net/Definitions/ListTemplatesParameters.cs)
+- Parameter `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./RingCentral.Net/Definitions/ListUserTemplatesParameters.cs)
 - `result` is of type [UserTemplates](./RingCentral.Net/Definitions/UserTemplates.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listTemplates) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listUserTemplates) in API Explorer.
 
 
-## Get Template
+## Get User Template
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates/{templateId}`
 
@@ -3229,7 +3229,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-loadTemplate) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-loadUserTemplate) in API Explorer.
 
 
 ## Register SIP Device
@@ -3289,7 +3289,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-loadCountry) in API Explorer.
 
 
-## Get Available Fax Cover Pages
+## Get Fax Cover Page List
 
 HTTP GET `/restapi/v1.0/dictionary/fax-cover-page`
 
@@ -3613,7 +3613,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-favoriteGlipChat) in API Explorer.
 
 
-## Load Glip Posts
+## Get Posts
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts`
 
@@ -3632,7 +3632,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipPosts) in API Explorer.
 
 
-## Create Glip Post
+## Create Post
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/posts`
 
@@ -3667,10 +3667,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipPostByChatId) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipPost) in API Explorer.
 
 
-## Update Glip Post
+## Update Post
 
 HTTP PATCH `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
 
@@ -3689,7 +3689,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-updateGlipPost) in API Explorer.
 
 
-## Delete Glip Post
+## Delete Post
 
 HTTP DELETE `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
 
@@ -4048,26 +4048,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChats) in API Explorer.
-
-
-## Upload File
-
-HTTP POST `/restapi/v1.0/glip/files`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Files().Post(createGlipFileRequest, createGlipFileParameters);
-}
-```
-
-- Parameter `createGlipFileRequest` is of type [CreateGlipFileRequest](./RingCentral.Net/Definitions/CreateGlipFileRequest.cs)
-- Parameter `createGlipFileParameters` is of type [CreateGlipFileParameters](./RingCentral.Net/Definitions/CreateGlipFileParameters.cs)
-- `result` is of type [PostGlipFile](./RingCentral.Net/Definitions/PostGlipFile.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipFile) in API Explorer.
 
 
 ## Get User Groups
@@ -4733,7 +4713,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#API-Info-loadAPIStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIStatus) in API Explorer.
 
 
 ## Get Subscriptions

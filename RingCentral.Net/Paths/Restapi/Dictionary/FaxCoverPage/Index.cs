@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
         }
 
         /// <summary>
-        /// Operation: Get Available Fax Cover Pages
+        /// Operation: Get Fax Cover Page List
         /// Http Get /restapi/v1.0/dictionary/fax-cover-page
         /// </summary>
         public async Task<RingCentral.ListFaxCoverPagesResponse> Get(ListFaxCoverPagesParameters queryParams = null)

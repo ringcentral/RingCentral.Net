@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ListTemplatesParameters
+    public class ListUserTemplatesParameters
     {
         /// <summary>
         /// Enum: UserSettings, CallHandling

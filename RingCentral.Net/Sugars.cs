@@ -4,10 +4,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
 {
     public partial class Index
     {
-        public Task<FaxResponse> Post(SendFaxMessageRequest sendFaxMessageRequest, Attachment[] attachments)
+        public Task<FaxResponse> Post(CreateFaxMessageRequest createFaxMessageRequest, Attachment[] attachments)
         {
-            sendFaxMessageRequest.attachments = attachments;
-            return Post(sendFaxMessageRequest);
+            createFaxMessageRequest.attachments = attachments;
+            return Post(createFaxMessageRequest);
         }
     }
 }

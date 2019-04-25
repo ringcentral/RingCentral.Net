@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Load Glip Posts
+        /// Operation: Get Posts
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/posts
         /// </summary>
         public async Task<RingCentral.GlipPostsList> List(LoadGlipPostsParameters queryParams = null)
@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Create Glip Post
+        /// Operation: Create Post
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/posts
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipPostPostBody glipPostPostBody)
@@ -58,7 +58,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Update Glip Post
+        /// Operation: Update Post
         /// Http Patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Patch(RingCentral.GlipPatchPostBody glipPatchPostBody)
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Delete Glip Post
+        /// Operation: Delete Post
         /// Http Delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
         public async Task<string> Delete()

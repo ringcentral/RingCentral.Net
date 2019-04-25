@@ -27,7 +27,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                var sendFaxMessageRequest = new SendFaxMessageRequest
+                var sendFaxMessageRequest = new CreateFaxMessageRequest
                 {
                     to = new[]
                     {
@@ -74,7 +74,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                var sendFaxMessageRequest = new SendFaxMessageRequest
+                var sendFaxMessageRequest = new CreateFaxMessageRequest
                 {
                     to = new[]
                     {
@@ -122,7 +122,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var requestObj = new SendFaxMessageRequest
+                var requestObj = new CreateFaxMessageRequest
                 {
                     to = new[]
                     {

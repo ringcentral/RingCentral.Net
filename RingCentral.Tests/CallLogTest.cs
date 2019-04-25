@@ -20,7 +20,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var callLogResponse = await rc.Restapi().Account().CallLog().List(new LoadCompanyCallLogParameters
+                var callLogResponse = await rc.Restapi().Account().CallLog().List(new ReadCompanyCallLogParameters
                 {
                     perPage = 3,
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o")
@@ -45,7 +45,7 @@ namespace RingCentral.Tests
                 );
 
                 var callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(
-                    new LoadUserCallLogParameters
+                    new ReadUserCallLogParameters
                     {
                         perPage = 1,
                         dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o")
@@ -53,7 +53,7 @@ namespace RingCentral.Tests
                 Assert.Single(callLogResponse.records);
 
                 var fromNumber = callLogResponse.records[0].@from.phoneNumber;
-                callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new LoadUserCallLogParameters
+                callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new ReadUserCallLogParameters
                 {
                     perPage = 1,
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o"),
@@ -61,7 +61,7 @@ namespace RingCentral.Tests
                 });
                 Assert.Empty(callLogResponse.records);
 
-                callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new LoadUserCallLogParameters
+                callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new ReadUserCallLogParameters
                 {
                     perPage = 1,
                     dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o"),

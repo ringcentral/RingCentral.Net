@@ -26,10 +26,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         }
 
         /// <summary>
-        /// Operation: Get Message Attachment
+        /// Operation: Get Message Content
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
         /// </summary>
-        public async Task<byte[]> Get(GetMessageAttachmentByIdParameters queryParams = null)
+        public async Task<byte[]> Get(ReadMessageContentParameters queryParams = null)
         {
             if (this.attachmentId == null)
             {

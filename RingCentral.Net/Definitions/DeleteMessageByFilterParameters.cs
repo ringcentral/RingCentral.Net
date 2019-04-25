@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DeleteMessagesByFilterParameters
+    public class DeleteMessageByFilterParameters
     {
         /// <summary>
         /// </summary>

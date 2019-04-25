@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AccountPresenceParameters
+    public class ReadAccountPresenceParameters
     {
         /// <summary>
         /// Whether to return detailed telephony state

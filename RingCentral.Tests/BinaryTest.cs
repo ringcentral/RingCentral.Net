@@ -23,7 +23,7 @@ namespace RingCentral.Tests
                 );
                 var extension = rc.Restapi().Account().Extension();
 
-                var bytes2 = await extension.ProfileImage().Post(new UploadProfileImageRequest
+                var bytes2 = await extension.ProfileImage().Post(new CreateProfileImageRequest
                 {
                     image = new Attachment
                     {
@@ -118,7 +118,7 @@ namespace RingCentral.Tests
                 var account = rc.Restapi().Account();
 
                 // List call Logs
-                var queryParams = new LoadCompanyCallLogParameters
+                var queryParams = new ReadCompanyCallLogParameters
                 {
                     type = new[] {"Voice"},
                     view = "Detailed",

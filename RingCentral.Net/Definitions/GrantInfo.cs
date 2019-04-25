@@ -31,5 +31,10 @@ namespace RingCentral
         /// Specifies whether the current extension can delegate a call to the user referenced in extension object
         /// </summary>
         public bool? callDelegation;
+
+        /// <summary>
+        /// Specifies whether the current extension is allowed to call Paging Only group referenced to in extension object
+        /// </summary>
+        public bool? groupPaging;
     }
 }

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetMessageAttachmentByIdParameters
+    public class ReadMessageContentParameters
     {
         /// <summary>
         /// Content disposition of a response

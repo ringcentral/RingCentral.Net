@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         }
 
         /// <summary>
-        /// Operation:  Get RingOut Call Status
+        /// Operation: Get RingOut Call Status
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Get()
