@@ -26,10 +26,10 @@ namespace RingCentral.Paths.Restapi.Account.Device
         }
 
         /// <summary>
-        /// Operation: Get Device Info
+        /// Operation: Get Device
         /// Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// </summary>
-        public async Task<RingCentral.GetDeviceInfoResponse> Get(LoadAccountDeviceParameters queryParams = null)
+        public async Task<RingCentral.GetDeviceInfoResponse> Get(ReadDeviceParameters queryParams = null)
         {
             if (this.deviceId == null)
             {

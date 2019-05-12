@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UpdateProfileImageRequest
+    public class CreateUserProfileImageRequest
     {
         /// <summary>
         /// </summary>

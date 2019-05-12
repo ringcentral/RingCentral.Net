@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
         }
 
         /// <summary>
-        /// Operation: Edit Call Monitoring Group
+        /// Operation: Update Call Monitoring Group List
         /// Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
         /// </summary>
         public async Task<string> Post(RingCentral.CallMonitoringBulkAssign callMonitoringBulkAssign)

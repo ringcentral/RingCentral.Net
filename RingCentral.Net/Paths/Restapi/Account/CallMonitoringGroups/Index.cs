@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         /// <summary>
-        /// Operation: Get Call Monitoring Groups
+        /// Operation: Get Call Monitoring Groups List
         /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null)
@@ -60,7 +60,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         /// <summary>
-        /// Operation: Remove Given Call Monitoring Group
+        /// Operation: Delete Call Monitoring Group
         /// Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// </summary>
         public async Task<string> Delete()

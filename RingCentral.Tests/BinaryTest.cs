@@ -23,7 +23,7 @@ namespace RingCentral.Tests
                 );
                 var extension = rc.Restapi().Account().Extension();
 
-                var bytes2 = await extension.ProfileImage().Post(new CreateProfileImageRequest
+                var bytes2 = await extension.ProfileImage().Post(new CreateUserProfileImageRequest
                 {
                     image = new Attachment
                     {
@@ -35,7 +35,7 @@ namespace RingCentral.Tests
                 Assert.NotNull(bytes2);
                 Assert.Empty(bytes2);
 
-                var bytes3 = await extension.ProfileImage().Put(new UpdateProfileImageRequest
+                var bytes3 = await extension.ProfileImage().Put(new UpdateUserProfileImageRequest
                 {
                     image = new Attachment
                     {

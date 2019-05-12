@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Create Custom Call Handling Rules
+        /// Operation: Create Call Handling Rule
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Post(
@@ -48,7 +48,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// Operation: Get Call Handling Rule
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// </summary>
-        public async Task<RingCentral.AnsweringRuleInfo> Get(LoadAnsweringRuleParameters queryParams = null)
+        public async Task<RingCentral.AnsweringRuleInfo> Get(ReadAnsweringRuleParameters queryParams = null)
         {
             if (this.ruleId == null)
             {
@@ -59,7 +59,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Update Custom Call Handling Rule
+        /// Operation: Update Call Handling Rule
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Put(

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateUserCustomGreetingRequest
+    public class CreateCustomUserGreetingRequest
     {
         /// <summary>
         /// Type of a greeting, specifying the case when the greeting is played.

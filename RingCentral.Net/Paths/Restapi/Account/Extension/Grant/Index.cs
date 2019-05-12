@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         }
 
         /// <summary>
-        /// Operation: Get Extension Grants
+        /// Operation: Get Extension Grant List
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
         /// </summary>
         public async Task<RingCentral.GetExtensionGrantListResponse> Get(

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         }
 
         /// <summary>
-        /// Operation: Get User Templates
+        /// Operation: Get User Template List
         /// Http Get /restapi/v1.0/account/{accountId}/templates
         /// </summary>
         public async Task<RingCentral.UserTemplates> List(ListUserTemplatesParameters queryParams = null)

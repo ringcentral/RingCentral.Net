@@ -29,7 +29,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         /// Operation: Get Call Session Status
         /// Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}
         /// </summary>
-        public async Task<RingCentral.CallSessionObject> Get(GetCallSessionStatusParameters queryParams = null)
+        public async Task<RingCentral.CallSessionObject> Get(ReadCallSessionStatusParameters queryParams = null)
         {
             if (this.sessionId == null)
             {

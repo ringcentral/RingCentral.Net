@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         }
 
         /// <summary>
-        /// Operation: Get Call Recording Custom Greetings
+        /// Operation: Get Call Recording Custom Greeting List
         /// Http Get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
         /// </summary>
         public async Task<RingCentral.CallRecordingCustomGreetings> Get(

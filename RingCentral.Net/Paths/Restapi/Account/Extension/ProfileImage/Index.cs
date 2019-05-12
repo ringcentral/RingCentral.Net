@@ -38,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// Operation: Upload User Profile Image
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
-        public async Task<string> Post(CreateProfileImageRequest createProfileImageRequest)
+        public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest)
         {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createProfileImageRequest);
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createUserProfileImageRequest);
             return await rc.Post<string>(this.Path(false), multipartFormDataContent);
         }
 
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// Operation: Update User Profile Image
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
-        public async Task<string> Put(UpdateProfileImageRequest updateProfileImageRequest)
+        public async Task<string> Put(UpdateUserProfileImageRequest updateUserProfileImageRequest)
         {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateProfileImageRequest);
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateUserProfileImageRequest);
             return await rc.Post<string>(this.Path(false), multipartFormDataContent);
         }
 
         /// <summary>
-        /// Operation: Get User Profile Image (Scaled)
+        /// Operation: Get Scaled User Profile Image
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
         /// </summary>
         public async Task<byte[]> Get()

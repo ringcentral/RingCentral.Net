@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ListBlockedAllowedPhoneNumberParameters
+    public class ListBlockedAllowedNumbersParameters
     {
         /// <summary>
         /// </summary>

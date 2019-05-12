@@ -38,7 +38,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         /// Operation: Get Timezone
         /// Http Get /restapi/v1.0/dictionary/timezone/{timezoneId}
         /// </summary>
-        public async Task<RingCentral.GetTimezoneInfoResponse> Get(LoadTimezoneParameters queryParams = null)
+        public async Task<RingCentral.GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null)
         {
             if (this.timezoneId == null)
             {

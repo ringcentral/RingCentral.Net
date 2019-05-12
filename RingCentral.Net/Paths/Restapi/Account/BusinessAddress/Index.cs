@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         }
 
         /// <summary>
-        /// Operation: Get Company Business Address
+        /// Operation: Get Account Business Address
         /// Http Get /restapi/v1.0/account/{accountId}/business-address
         /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Get()

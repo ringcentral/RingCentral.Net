@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Get Company Call Handling Rules
+        /// Operation: Get Company Call Handling Rule List
         /// Http Get /restapi/v1.0/account/{accountId}/answering-rule
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleList> List()

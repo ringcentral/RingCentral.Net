@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GetCallSessionStatusParameters
+    public class ReadCallSessionStatusParameters
     {
         /// <summary>
         /// The date and time of a call session latest change

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         }
 
         /// <summary>
-        /// Operation: Get Standard Greetings
+        /// Operation: Get Standard Greeting List
         /// Http Get /restapi/v1.0/dictionary/greeting
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null)
@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         }
 
         /// <summary>
-        /// Operation: Get Greeting Info
+        /// Operation: Get Standard Greeting
         /// Http Get /restapi/v1.0/dictionary/greeting/{greetingId}
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingInfo> Get()

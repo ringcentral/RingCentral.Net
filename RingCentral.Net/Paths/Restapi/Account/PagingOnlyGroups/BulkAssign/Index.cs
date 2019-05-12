@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
         }
 
         /// <summary>
-        /// Operation: Edit Paging Group Users and Devices
+        /// Operation: Assign Paging Group Users and Devices
         /// Http Post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
         /// </summary>
         public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest)

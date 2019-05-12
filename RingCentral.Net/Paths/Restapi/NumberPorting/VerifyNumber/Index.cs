@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.NumberPorting.VerifyNumber
         }
 
         /// <summary>
-        /// Operation: Number Porting Verify
+        /// Operation: Verify Number
         /// Http Post /restapi/v1.0/number-porting/verify-number
         /// </summary>
         public async Task<RingCentral.NumberPortingVerifyNumberResponse> Post(

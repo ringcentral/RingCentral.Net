@@ -1,16 +1,16 @@
 namespace RingCentral
 {
-    public class LoadGlipPostsParameters
+    public class ReadGlipEventsParameters
     {
         /// <summary>
-        /// Max number of posts to be fetched by one request (Not more than 250).
+        /// Number of groups to be fetched by one request. The maximum value is 250, by default - 30.
         /// Maximum: 250
         /// Default: 30
         /// </summary>
         public long? recordCount;
 
         /// <summary>
-        /// Pagination token.
+        /// Token of a page to be returned
         /// </summary>
         public string pageToken;
     }

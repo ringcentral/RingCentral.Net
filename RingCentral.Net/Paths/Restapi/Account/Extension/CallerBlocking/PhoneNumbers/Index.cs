@@ -26,11 +26,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        /// Operation: Get Blocked/Allowed Numbers
+        /// Operation: Get Blocked/Allowed Phone Numbers
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(
-            ListBlockedAllowedPhoneNumberParameters queryParams = null)
+            ListBlockedAllowedNumbersParameters queryParams = null)
         {
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams);
         }
@@ -61,7 +61,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        /// Operation: Delete Blocked Number
+        /// Operation: Delete Blocked/Allowed Number
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// </summary>
         public async Task<string> Delete()

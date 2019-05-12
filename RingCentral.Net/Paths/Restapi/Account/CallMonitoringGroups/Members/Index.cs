@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
         }
 
         /// <summary>
-        /// Operation: Get Call Monitoring Group Members
+        /// Operation: Get Call Monitoring Group Member List
         /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroupMemberList> Get(

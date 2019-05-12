@@ -29,7 +29,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// Operation: Get Posts
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/posts
         /// </summary>
-        public async Task<RingCentral.GlipPostsList> List(LoadGlipPostsParameters queryParams = null)
+        public async Task<RingCentral.GlipPostsList> List(ReadGlipPostsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipPostsList>(this.Path(false), queryParams);
         }

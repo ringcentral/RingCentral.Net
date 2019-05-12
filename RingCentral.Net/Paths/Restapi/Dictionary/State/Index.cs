@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         }
 
         /// <summary>
-        /// Operation: Get State List
+        /// Operation: Get States List
         /// Http Get /restapi/v1.0/dictionary/state
         /// </summary>
         public async Task<RingCentral.GetStateListResponse> List(ListStatesParameters queryParams = null)

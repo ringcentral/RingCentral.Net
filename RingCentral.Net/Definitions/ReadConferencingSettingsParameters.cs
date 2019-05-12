@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LoadConferencingInfoParameters
+    public class ReadConferencingSettingsParameters
     {
         /// <summary>
         /// Internal identifier of a country. If not specified, the response is returned for the brand country

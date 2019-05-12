@@ -29,7 +29,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// Operation: Get User Events List
         /// Http Get /restapi/v1.0/glip/events
         /// </summary>
-        public async Task<RingCentral.GlipEventsInfo> List(LoadGlipEventsParameters queryParams = null)
+        public async Task<RingCentral.GlipEventsInfo> List(ReadGlipEventsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
         }

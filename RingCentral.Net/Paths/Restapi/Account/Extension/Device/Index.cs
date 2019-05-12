@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         }
 
         /// <summary>
-        /// Operation: Get User Device Info
+        /// Operation: Get Extension Device List
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
         /// </summary>
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(

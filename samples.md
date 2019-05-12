@@ -74,7 +74,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersion) in API Explorer.
 
 
-## Get Company Info
+## Get Account Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}`
 
@@ -91,7 +91,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Settings-loadAccount) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountInfo) in API Explorer.
 
 
 ## Get Company Active Calls
@@ -131,10 +131,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-createCompanyAnsweringRule) in API Explorer.
 
 
-## Get Company Call Handling Rules
+## Get Company Call Handling Rule List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule`
 
@@ -151,7 +151,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-listCompanyAnsweringRules) in API Explorer.
 
 
 ## Get Company Call Handling Rule
@@ -171,7 +171,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-readCompanyAnsweringRule) in API Explorer.
 
 
 ## Update Company Call Handling Rule
@@ -191,7 +191,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-updateCompanyAnsweringRule) in API Explorer.
 
 
 ## Delete Company Call Handling Rule
@@ -211,10 +211,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-deleteCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-deleteCompanyAnsweringRule) in API Explorer.
 
 
-## Get Company Business Address
+## Get Account Business Address
 
 HTTP GET `/restapi/v1.0/account/{accountId}/business-address`
 
@@ -231,7 +231,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Settings-loadAccountBusinessAddress) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountBusinessAddress) in API Explorer.
 
 
 ## Update Company Business Address
@@ -251,7 +251,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Settings-updateAccountBusinessAddress) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Company-updateAccountBusinessAddress) in API Explorer.
 
 
 ## Get Company Business Hours
@@ -271,7 +271,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadCompanyBusinessHours) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readCompanyBusinessHours) in API Explorer.
 
 
 ## Update Company Business Hours
@@ -291,7 +291,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCompanyBusinessHours) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateCompanyBusinessHours) in API Explorer.
 
 
 ## Get Company Call Log Records
@@ -354,7 +354,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-createCallMonitoringGroup) in API Explorer.
 
 
-## Get Call Monitoring Groups
+## Get Call Monitoring Groups List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
@@ -394,7 +394,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-updateCallMonitoringGroup) in API Explorer.
 
 
-## Remove Given Call Monitoring Group
+## Delete Call Monitoring Group
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
@@ -411,10 +411,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-removeCallMonitoringGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-deleteCallMonitoringGroup) in API Explorer.
 
 
-## Edit Call Monitoring Group
+## Update Call Monitoring Group List
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
 
@@ -431,10 +431,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-updateCallMonitoringGroups) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-updateCallMonitoringGroupList) in API Explorer.
 
 
-## Get Call Monitoring Group Members
+## Get Call Monitoring Group Member List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members`
 
@@ -471,10 +471,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listCallQueues) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueues) in API Explorer.
 
 
-## Edit Call Queue Members
+## Assign Multiple Call Queue Members
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign`
 
@@ -491,7 +491,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-assignCallQueueMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-assignMultipleCallQueueMembers) in API Explorer.
 
 
 ## Get Call Queue Members
@@ -511,7 +511,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listCallQueueMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueueMembers) in API Explorer.
 
 
 ## Get Call Recording Settings
@@ -531,7 +531,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadCallRecordingSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-readCallRecordingSettings) in API Explorer.
 
 
 ## Update Call Recording Settings
@@ -551,7 +551,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCallRecordingSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-updateCallRecordingSettings) in API Explorer.
 
 
 ## Update Call Recording Extension List
@@ -571,10 +571,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCallRecordingExtensionList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-updateCallRecordingExtensionList) in API Explorer.
 
 
-## Get Call Recording Custom Greetings
+## Get Call Recording Custom Greeting List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`
 
@@ -591,7 +591,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listCallRecordingCustomGreetings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-listCallRecordingCustomGreetings) in API Explorer.
 
 
 ## Delete Call Recording Custom Greeting
@@ -611,7 +611,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-deleteCallRecordingCustomGreeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-deleteCallRecordingCustomGreeting) in API Explorer.
 
 
 ## Get Call Recording Extension List
@@ -631,10 +631,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listCallRecordingExtensions) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-listCallRecordingExtensions) in API Explorer.
 
 
-## Edit Department Members
+## Assign Multiple Department Members
 
 HTTP POST `/restapi/v1.0/account/{accountId}/department/bulk-assign`
 
@@ -651,7 +651,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-bulkAssignDepartments) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-assignMultipleDepartmentMembers) in API Explorer.
 
 
 ## Get Department Member List
@@ -671,10 +671,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listDepartmentMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listDepartmentMembers) in API Explorer.
 
 
-## Get Device Info
+## Get Device
 
 HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
@@ -682,16 +682,16 @@ HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(loadAccountDeviceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters);
 }
 ```
 
-- Parameter `loadAccountDeviceParameters` is of type [LoadAccountDeviceParameters](./RingCentral.Net/Definitions/LoadAccountDeviceParameters.cs)
+- Parameter `readDeviceParameters` is of type [ReadDeviceParameters](./RingCentral.Net/Definitions/ReadDeviceParameters.cs)
 - `result` is of type [GetDeviceInfoResponse](./RingCentral.Net/Definitions/GetDeviceInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-loadAccountDevice) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-readDevice) in API Explorer.
 
 
 ## Update Device
@@ -711,7 +711,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-updateDevice) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-updateDevice) in API Explorer.
 
 
 ## Get Company Directory Entries
@@ -731,7 +731,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-listDirectoryEntries) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-listDirectoryEntries) in API Explorer.
 
 
 ## Search Company Directory Entries
@@ -751,7 +751,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-searchDirectoryEntries) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-searchDirectoryEntries) in API Explorer.
 
 
 ## Get Corporate Directory Entry
@@ -771,7 +771,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-readDirectoryEntry) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readDirectoryEntry) in API Explorer.
 
 
 ## Get Account Federation
@@ -791,7 +791,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Contacts-readAccountFederation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readAccountFederation) in API Explorer.
 
 
 ## Get Extension List
@@ -811,7 +811,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listExtensions) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-listExtensions) in API Explorer.
 
 
 ## Create Extension
@@ -831,10 +831,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-createExtension) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-createExtension) in API Explorer.
 
 
-## Get Extension Info
+## Get Extension
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
@@ -852,7 +852,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadExtensionInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtension) in API Explorer.
 
 
 ## Update Extension
@@ -936,7 +936,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-syncAddressBook) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-syncAddressBook) in API Explorer.
 
 
 ## Get Contact List
@@ -957,7 +957,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-listContacts) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-listContacts) in API Explorer.
 
 
 ## Create Contact
@@ -979,7 +979,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-createContact) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-createContact) in API Explorer.
 
 
 ## Get Contact
@@ -1000,7 +1000,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-readContact) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-readContact) in API Explorer.
 
 
 ## Update Contact
@@ -1022,7 +1022,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-updateContact) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateContact) in API Explorer.
 
 
 ## Delete Contact
@@ -1043,7 +1043,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-deleteContact) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-deleteContact) in API Explorer.
 
 
 ## Get Call Handling Rules
@@ -1064,10 +1064,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listAnsweringRules) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-listAnsweringRules) in API Explorer.
 
 
-## Create Custom Call Handling Rules
+## Create Call Handling Rule
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
@@ -1085,7 +1085,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-createAnsweringRule) in API Explorer.
 
 
 ## Get Call Handling Rule
@@ -1096,20 +1096,20 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-ru
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(loadAnsweringRuleParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
 }
 ```
 
-- Parameter `loadAnsweringRuleParameters` is of type [LoadAnsweringRuleParameters](./RingCentral.Net/Definitions/LoadAnsweringRuleParameters.cs)
+- Parameter `readAnsweringRuleParameters` is of type [ReadAnsweringRuleParameters](./RingCentral.Net/Definitions/ReadAnsweringRuleParameters.cs)
 - `result` is of type [AnsweringRuleInfo](./RingCentral.Net/Definitions/AnsweringRuleInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-readAnsweringRule) in API Explorer.
 
 
-## Update Custom Call Handling Rule
+## Update Call Handling Rule
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
@@ -1127,7 +1127,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-updateAnsweringRule) in API Explorer.
 
 
 ## Delete Call Handling Rule
@@ -1148,10 +1148,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-deleteAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-deleteAnsweringRule) in API Explorer.
 
 
-## Get User Permissions
+## Get Authorization Profile
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile`
 
@@ -1169,10 +1169,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Authorization-Profile-getAuthorizationProfile) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-readAuthorizationProfile) in API Explorer.
 
 
-## Check User Permissions
+## Check User Permission
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check`
 
@@ -1190,7 +1190,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Authorization-Profile-checkUserPermission) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-checkUserPermission) in API Explorer.
 
 
 ## Get User Business Hours
@@ -1211,7 +1211,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadUserBusinessHours) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readUserBusinessHours) in API Explorer.
 
 
 ## Update User Business Hours
@@ -1232,7 +1232,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateUserBusinessHours) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateUserBusinessHours) in API Explorer.
 
 
 ## Get User Call Log Records
@@ -1337,7 +1337,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadCallBlockingSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readCallerBlockingSettings) in API Explorer.
 
 
 ## Update Caller Blocking Settings
@@ -1358,10 +1358,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateCallBlockingSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings) in API Explorer.
 
 
-## Get Blocked/Allowed Numbers
+## Get Blocked/Allowed Phone Numbers
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
@@ -1369,17 +1369,17 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-block
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedPhoneNumberParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
 }
 ```
 
-- Parameter `listBlockedAllowedPhoneNumberParameters` is of type [ListBlockedAllowedPhoneNumberParameters](./RingCentral.Net/Definitions/ListBlockedAllowedPhoneNumberParameters.cs)
+- Parameter `listBlockedAllowedNumbersParameters` is of type [ListBlockedAllowedNumbersParameters](./RingCentral.Net/Definitions/ListBlockedAllowedNumbersParameters.cs)
 - `result` is of type [BlockedAllowedPhoneNumbersList](./RingCentral.Net/Definitions/BlockedAllowedPhoneNumbersList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listBlockedAllowedPhoneNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-listBlockedAllowedNumbers) in API Explorer.
 
 
 ## Add Blocked/Allowed Number
@@ -1400,7 +1400,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createBlockedAllowedPhoneNumberList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-createBlockedAllowedNumber) in API Explorer.
 
 
 ## Get Blocked/Allowed Number
@@ -1421,10 +1421,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadBlockedAllowedPhoneNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readBlockedAllowedNumber) in API Explorer.
 
 
-## Delete Blocked Number
+## Delete Blocked/Allowed Number
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
@@ -1442,7 +1442,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-deleteBlockedAllowedPhoneNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-deleteBlockedAllowedNumber) in API Explorer.
 
 
 ## Update Blocked/Allowed Number
@@ -1463,7 +1463,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateBlockedAllowedPhoneNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateBlockedAllowedNumber) in API Explorer.
 
 
 ## Get Extension Caller ID
@@ -1484,7 +1484,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadExtensionCallerId) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtensionCallerId) in API Explorer.
 
 
 ## Update Extension Caller ID
@@ -1526,7 +1526,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Internal-Messages-createInternalTextMessage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Pager-Messages-createInternalTextMessage) in API Explorer.
 
 
 ## Get User Conferencing Settings
@@ -1537,17 +1537,17 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(loadConferencingInfoParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
 }
 ```
 
-- Parameter `loadConferencingInfoParameters` is of type [LoadConferencingInfoParameters](./RingCentral.Net/Definitions/LoadConferencingInfoParameters.cs)
+- Parameter `readConferencingSettingsParameters` is of type [ReadConferencingSettingsParameters](./RingCentral.Net/Definitions/ReadConferencingSettingsParameters.cs)
 - `result` is of type [GetConferencingInfoResponse](./RingCentral.Net/Definitions/GetConferencingInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadConferencingInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readConferencingSettings) in API Explorer.
 
 
 ## Update User Conferencing Settings
@@ -1568,10 +1568,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateConferencingInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateConferencingSettings) in API Explorer.
 
 
-## Get User Device Info
+## Get Extension Device List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/device`
 
@@ -1589,7 +1589,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listExtensionDevices) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-listExtensionDevices) in API Explorer.
 
 
 ## Get Favorite Contact List
@@ -1610,7 +1610,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-listFavoriteContacts) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-listFavoriteContacts) in API Explorer.
 
 
 ## Update Favorite Contact List
@@ -1631,7 +1631,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Contacts-updateFavoriteContactList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateFavoriteContactList) in API Explorer.
 
 
 ## Create Fax Message
@@ -1655,7 +1655,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-createFaxMessage) in API Explorer.
 
 
-## Get Forwarding Numbers
+## Get Forwarding Number List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
@@ -1663,20 +1663,20 @@ HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-n
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listExtensionForwardingNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
 }
 ```
 
-- Parameter `listExtensionForwardingNumbersParameters` is of type [ListExtensionForwardingNumbersParameters](./RingCentral.Net/Definitions/ListExtensionForwardingNumbersParameters.cs)
+- Parameter `listForwardingNumbersParameters` is of type [ListForwardingNumbersParameters](./RingCentral.Net/Definitions/ListForwardingNumbersParameters.cs)
 - `result` is of type [GetExtensionForwardingNumberListResponse](./RingCentral.Net/Definitions/GetExtensionForwardingNumberListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listExtensionForwardingNumbers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-listForwardingNumbers) in API Explorer.
 
 
-## Create Forwarding Numbers
+## Create Forwarding Number
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
@@ -1694,7 +1694,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createExtensionForwardingNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-createForwardingNumber) in API Explorer.
 
 
 ## Get Forwarding Number
@@ -1715,10 +1715,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadExtensionForwardingNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-readForwardingNumber) in API Explorer.
 
 
-## Update Forwarding Numbers
+## Update Forwarding Number
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
@@ -1736,7 +1736,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateExtensionForwardingNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-updateForwardingNumber) in API Explorer.
 
 
 ## Delete Forwarding Number
@@ -1757,10 +1757,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-deleteExtensionForwardingNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-deleteForwardingNumber) in API Explorer.
 
 
-## Get Extension Grants
+## Get Extension Grant List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant`
 
@@ -1781,7 +1781,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-listExtensionGrants) in API Explorer.
 
 
-## Create User Custom Greeting
+## Create Custom User Greeting
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 
@@ -1789,20 +1789,20 @@ HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createUserCustomGreetingRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest);
 }
 ```
 
-- Parameter `createUserCustomGreetingRequest` is of type [CreateUserCustomGreetingRequest](./RingCentral.Net/Definitions/CreateUserCustomGreetingRequest.cs)
+- Parameter `createCustomUserGreetingRequest` is of type [CreateCustomUserGreetingRequest](./RingCentral.Net/Definitions/CreateCustomUserGreetingRequest.cs)
 - `result` is of type [CustomUserGreetingInfo](./RingCentral.Net/Definitions/CustomUserGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createUserCustomGreeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-createCustomUserGreeting) in API Explorer.
 
 
-## Get Custom Greeting Info
+## Get Custom Greeting
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`
 
@@ -1820,7 +1820,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadCustomGreeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-readCustomGreeting) in API Explorer.
 
 
 ## Get Scheduled Meetings
@@ -1841,7 +1841,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Upcoming-Meetings-listMeetings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-listMeetings) in API Explorer.
 
 
 ## Create Meetings
@@ -1862,7 +1862,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Upcoming-Meetings-createMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-createMeeting) in API Explorer.
 
 
 ## Get Meeting Service Info
@@ -1883,7 +1883,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Configuration-loadMeetingServiceInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Config-readMeetingServiceInfo) in API Explorer.
 
 
 ## Get Meeting Info
@@ -1904,7 +1904,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Upcoming-Meetings-loadMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-readMeeting) in API Explorer.
 
 
 ## Update Meeting
@@ -1925,7 +1925,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Upcoming-Meetings-updateMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-updateMeeting) in API Explorer.
 
 
 ## Delete Meeting
@@ -1946,7 +1946,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Upcoming-Meetings-deleteMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-deleteMeeting) in API Explorer.
 
 
 ## End Meeting
@@ -1967,7 +1967,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Active-Meetings-endMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Control-endMeeting) in API Explorer.
 
 
 ## Get Assistants
@@ -1988,7 +1988,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Configuration-loadAssistants) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Config-readAssistants) in API Explorer.
 
 
 ## Get Assisted Users
@@ -2009,7 +2009,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Configuration-loadAssistedUsers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Config-readAssistedUsers) in API Explorer.
 
 
 ## Get Message List
@@ -2030,7 +2030,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-listMessages) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-listMessages) in API Explorer.
 
 
 ## Get Message
@@ -2051,7 +2051,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-readMessage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessage) in API Explorer.
 
 
 ## Update Message(s)
@@ -2072,7 +2072,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-updateMessage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-updateMessage) in API Explorer.
 
 
 ## Delete Message
@@ -2093,7 +2093,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-deleteMessage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-deleteMessage) in API Explorer.
 
 
 ## Get Message Content
@@ -2114,7 +2114,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-readMessageContent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageContent) in API Explorer.
 
 
 ## Sync Messages
@@ -2135,7 +2135,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-syncMessages) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-syncMessages) in API Explorer.
 
 
 ## Get Notification Settings
@@ -2156,7 +2156,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadNotificationSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readNotificationSettings) in API Explorer.
 
 
 ## Update Notification Settings
@@ -2261,7 +2261,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadProfileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readUserProfileImage) in API Explorer.
 
 
 ## Upload User Profile Image
@@ -2272,17 +2272,17 @@ HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-ima
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest);
 }
 ```
 
-- Parameter `createProfileImageRequest` is of type [CreateProfileImageRequest](./RingCentral.Net/Definitions/CreateProfileImageRequest.cs)
+- Parameter `createUserProfileImageRequest` is of type [CreateUserProfileImageRequest](./RingCentral.Net/Definitions/CreateUserProfileImageRequest.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-createProfileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-createUserProfileImage) in API Explorer.
 
 
 ## Update User Profile Image
@@ -2293,20 +2293,20 @@ HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-imag
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest);
 }
 ```
 
-- Parameter `updateProfileImageRequest` is of type [UpdateProfileImageRequest](./RingCentral.Net/Definitions/UpdateProfileImageRequest.cs)
+- Parameter `updateUserProfileImageRequest` is of type [UpdateUserProfileImageRequest](./RingCentral.Net/Definitions/UpdateUserProfileImageRequest.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateProfileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateUserProfileImage) in API Explorer.
 
 
-## Get User Profile Image (Scaled)
+## Get Scaled User Profile Image
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
 
@@ -2324,7 +2324,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-loadScaledPofileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readScaledPofileImage) in API Explorer.
 
 
 ## Make RingOut Call
@@ -2408,10 +2408,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-and-MMS-createSMSMessage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-createSMSMessage) in API Explorer.
 
 
-## Create Custom Company Greeting
+## Create Company Greeting
 
 HTTP POST `/restapi/v1.0/account/{accountId}/greeting`
 
@@ -2428,7 +2428,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createCompanyGreeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-createCompanyGreeting) in API Explorer.
 
 
 ## Create IVR Menu
@@ -2448,7 +2448,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createIvrMenu) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-createIVRMenu) in API Explorer.
 
 
 ## Get IVR Menu
@@ -2468,7 +2468,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadIvrMenu) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-readIVRMenu) in API Explorer.
 
 
 ## Update IVR Menu
@@ -2488,7 +2488,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateIvrMenu) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-updateIVRMenu) in API Explorer.
 
 
 ## Create IVR Prompts
@@ -2508,10 +2508,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-createIvrPrompt) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-createIVRPrompt) in API Explorer.
 
 
-## Get IVR Prompts
+## Get IVR Prompt List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
@@ -2528,7 +2528,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listIvrPrompts) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-listIVRPrompts) in API Explorer.
 
 
 ## Get IVR Prompt
@@ -2548,7 +2548,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadIvrPrompt) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-readIVRPrompt) in API Explorer.
 
 
 ## Delete IVR Prompt
@@ -2568,7 +2568,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-deleteIvrPrompt) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-deleteIVRPrompt) in API Explorer.
 
 
 ## Update IVR Prompt
@@ -2588,7 +2588,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-updateIvrPrompt) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-updateIVRPrompt) in API Explorer.
 
 
 ## Get IVR Prompt Content
@@ -2608,7 +2608,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadIvrPromptContent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-readIVRPromptContent) in API Explorer.
 
 
 ## Get Message Store Configuration
@@ -2628,7 +2628,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-Configuration-readMessageStoreConfiguration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageStoreConfiguration) in API Explorer.
 
 
 ## Update Message Store Configuration
@@ -2648,7 +2648,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-Configuration-updateMessageStoreConfiguration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-updateMessageStoreConfiguration) in API Explorer.
 
 
 ## Create Message Store Report
@@ -2688,7 +2688,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-loadMessageStoreReportTask) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportTask) in API Explorer.
 
 
 ## Get Message Store Report Archive
@@ -2708,7 +2708,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-loadMessageStoreReportArchive) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchive) in API Explorer.
 
 
 ## Get Message Store Report Archive Content
@@ -2728,10 +2728,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-loadMessageStoreReportArchiveContent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchiveContent) in API Explorer.
 
 
-## Edit Paging Group Users and Devices
+## Assign Paging Group Users and Devices
 
 HTTP POST `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`
 
@@ -2748,10 +2748,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-bulkAssignPagingGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-assignMultiplePagingGroupUsersDevices) in API Explorer.
 
 
-## Get Paging Only Group Devices
+## Get Paging Group Devices
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`
 
@@ -2768,10 +2768,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listPagingGroupDevices) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-listPagingGroupDevices) in API Explorer.
 
 
-## Get Paging Only Group Users
+## Get Paging Group Users
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`
 
@@ -2788,7 +2788,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listPagingGroupUsers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-listPagingGroupUsers) in API Explorer.
 
 
 ## Get Company Phone Number List
@@ -2828,7 +2828,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-loadAccountPhoneNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-readAccountPhoneNumber) in API Explorer.
 
 
 ## Get User Presence Status List
@@ -2908,7 +2908,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-Settings-loadServiceInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Company-readAcountServiceInfo) in API Explorer.
 
 
 ## Create CallOut Call Session
@@ -2939,16 +2939,16 @@ HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Get(getCallSessionStatusParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(sessionId).Get(readCallSessionStatusParameters);
 }
 ```
 
-- Parameter `getCallSessionStatusParameters` is of type [GetCallSessionStatusParameters](./RingCentral.Net/Definitions/GetCallSessionStatusParameters.cs)
+- Parameter `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./RingCentral.Net/Definitions/ReadCallSessionStatusParameters.cs)
 - `result` is of type [CallSessionObject](./RingCentral.Net/Definitions/CallSessionObject.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-getCallSessionStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallSessionStatus) in API Explorer.
 
 
 ## Drop Call Session
@@ -2988,7 +2988,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-getCallPartyStatus) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallPartyStatus) in API Explorer.
 
 
 ## Update Call Party
@@ -3192,7 +3192,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-superviseCallSession) in API Explorer.
 
 
-## Get User Templates
+## Get User Template List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates`
 
@@ -3209,7 +3209,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listUserTemplates) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-listUserTemplates) in API Explorer.
 
 
 ## Get User Template
@@ -3229,7 +3229,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-loadUserTemplate) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-readUserTemplate) in API Explorer.
 
 
 ## Register SIP Device
@@ -3248,7 +3248,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [CreateSipRegistrationResponse](./RingCentral.Net/Definitions/CreateSipRegistrationResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Application-Settings-createSipRegistration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#SIP-createSIPRegistration) in API Explorer.
 
 
 ## Get Country List
@@ -3286,7 +3286,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GetCountryInfoDictionaryResponse](./RingCentral.Net/Definitions/GetCountryInfoDictionaryResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-loadCountry) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readCountry) in API Explorer.
 
 
 ## Get Fax Cover Page List
@@ -3308,7 +3308,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-listFaxCoverPages) in API Explorer.
 
 
-## Get Standard Greetings
+## Get Standard Greeting List
 
 HTTP GET `/restapi/v1.0/dictionary/greeting`
 
@@ -3324,10 +3324,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [DictionaryGreetingList](./RingCentral.Net/Definitions/DictionaryGreetingList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-listStandardGreetings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-listStandardGreetings) in API Explorer.
 
 
-## Get Greeting Info
+## Get Standard Greeting
 
 HTTP GET `/restapi/v1.0/dictionary/greeting/{greetingId}`
 
@@ -3343,7 +3343,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [DictionaryGreetingInfo](./RingCentral.Net/Definitions/DictionaryGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Settings-loadStandardGreeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-readStandardGreeting) in API Explorer.
 
 
 ## Get Language List
@@ -3381,7 +3381,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [LanguageInfo](./RingCentral.Net/Definitions/LanguageInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-loadLanguage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readLanguage) in API Explorer.
 
 
 ## Get Location List
@@ -3403,7 +3403,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLocations) in API Explorer.
 
 
-## Get State List
+## Get States List
 
 HTTP GET `/restapi/v1.0/dictionary/state`
 
@@ -3438,7 +3438,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GetStateInfoResponse](./RingCentral.Net/Definitions/GetStateInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-loadState) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readState) in API Explorer.
 
 
 ## Get Timezone List
@@ -3468,15 +3468,15 @@ HTTP GET `/restapi/v1.0/dictionary/timezone/{timezoneId}`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(loadTimezoneParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters);
 }
 ```
 
-- Parameter `loadTimezoneParameters` is of type [LoadTimezoneParameters](./RingCentral.Net/Definitions/LoadTimezoneParameters.cs)
+- Parameter `readTimezoneParameters` is of type [ReadTimezoneParameters](./RingCentral.Net/Definitions/ReadTimezoneParameters.cs)
 - `result` is of type [GetTimezoneInfoResponse](./RingCentral.Net/Definitions/GetTimezoneInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-loadTimezone) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readTimezone) in API Explorer.
 
 
 ## Create Card
@@ -3515,7 +3515,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipMessageAttachmentInfo](./RingCentral.Net/Definitions/GlipMessageAttachmentInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipCard) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipCard) in API Explorer.
 
 
 ## Update Card
@@ -3591,7 +3591,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipChatInfo](./RingCentral.Net/Definitions/GlipChatInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-loadGlipChat) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipChat) in API Explorer.
 
 
 ## Add Chat to Favorites
@@ -3621,15 +3621,15 @@ HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(loadGlipPostsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters);
 }
 ```
 
-- Parameter `loadGlipPostsParameters` is of type [LoadGlipPostsParameters](./RingCentral.Net/Definitions/LoadGlipPostsParameters.cs)
+- Parameter `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./RingCentral.Net/Definitions/ReadGlipPostsParameters.cs)
 - `result` is of type [GlipPostsList](./RingCentral.Net/Definitions/GlipPostsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipPosts) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPosts) in API Explorer.
 
 
 ## Create Post
@@ -3667,7 +3667,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-loadGlipPost) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPost) in API Explorer.
 
 
 ## Update Post
@@ -3686,7 +3686,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-updateGlipPost) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-patchGlipPost) in API Explorer.
 
 
 ## Delete Post
@@ -3781,7 +3781,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipCompany](./RingCentral.Net/Definitions/GlipCompany.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-loadGlipCompany) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipCompany) in API Explorer.
 
 
 ## Get Conversations
@@ -3838,7 +3838,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipConversationInfo](./RingCentral.Net/Definitions/GlipConversationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-loadGlipConversation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipConversation) in API Explorer.
 
 
 ## Create Data Export Task
@@ -3876,7 +3876,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [DataExportTask](./RingCentral.Net/Definitions/DataExportTask.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-loadDataExportTask) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readDataExportTask) in API Explorer.
 
 
 ## Get Glip Data Archive
@@ -3895,7 +3895,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-getComplianceArchiveStream) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readComplianceArchive) in API Explorer.
 
 
 ## Get User Events List
@@ -3906,15 +3906,15 @@ HTTP GET `/restapi/v1.0/glip/events`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().List(loadGlipEventsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters);
 }
 ```
 
-- Parameter `loadGlipEventsParameters` is of type [LoadGlipEventsParameters](./RingCentral.Net/Definitions/LoadGlipEventsParameters.cs)
+- Parameter `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./RingCentral.Net/Definitions/ReadGlipEventsParameters.cs)
 - `result` is of type [GlipEventsInfo](./RingCentral.Net/Definitions/GlipEventsInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-loadGlipEvents) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Events-readGlipEvents) in API Explorer.
 
 
 ## Create Event
@@ -3952,7 +3952,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-loadEvent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Events-readEvent) in API Explorer.
 
 
 ## Update Event
@@ -4009,7 +4009,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEveryoneInfo](./RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-loadGlipEveryone) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipEveryone) in API Explorer.
 
 
 ## Update Everyone Сhat
@@ -4028,7 +4028,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEveryoneInfo](./RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-updateGlipEveryone) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-patchGlipEveryone) in API Explorer.
 
 
 ## Get Favorite Chats
@@ -4104,7 +4104,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipGroupInfo](./RingCentral.Net/Definitions/GlipGroupInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-loadGlipGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipGroup) in API Explorer.
 
 
 ## Edit Group Members
@@ -4275,7 +4275,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipPersonInfo](./RingCentral.Net/Definitions/GlipPersonInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-loadGlipPerson) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipPerson) in API Explorer.
 
 
 ## Get Posts
@@ -4332,7 +4332,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipPreferencesInfo](./RingCentral.Net/Definitions/GlipPreferencesInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-loadGlipPreferences) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipPreferences) in API Explorer.
 
 
 ## Get Recent Chats
@@ -4408,7 +4408,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-loadGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipTeam) in API Explorer.
 
 
 ## Update Team
@@ -4427,7 +4427,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-updateGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-patchGlipTeam) in API Explorer.
 
 
 ## Delete Team
@@ -4598,7 +4598,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipWebhookList](./RingCentral.Net/Definitions/GlipWebhookList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-loadGlipWebhook) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-readGlipWebhook) in API Explorer.
 
 
 ## Delete Webhook
@@ -4678,7 +4678,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-parsePhoneNumber) in API Explorer.
 
 
-## Number Porting Verify
+## Verify Number
 
 HTTP POST `/restapi/v1.0/number-porting/verify-number`
 
@@ -4694,7 +4694,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [NumberPortingVerifyNumberResponse](./RingCentral.Net/Definitions/NumberPortingVerifyNumberResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Number-Porting-numberPortingVerify) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Number-Porting-verifyNumber) in API Explorer.
 
 
 ## Get Service Status
@@ -4770,7 +4770,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [SubscriptionInfo](./RingCentral.Net/Definitions/SubscriptionInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-loadSubscription) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-readSubscription) in API Explorer.
 
 
 ## Renew Subscription / Update Event Filters
@@ -4847,7 +4847,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [ServiceProviderConfig](./RingCentral.Net/Definitions/ServiceProviderConfig.cs)
 - Parameter `version` is optional with default value `v2`
 
-[Try it out](https://developer.ringcentral.com/api-reference#SCIM-getServiceProviderConfig2) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#SCIM-readServiceProviderConfig2) in API Explorer.
 
 
 ## Search or List Users
@@ -4923,7 +4923,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [UserResponse](./RingCentral.Net/Definitions/UserResponse.cs)
 - Parameter `version` is optional with default value `v2`
 
-[Try it out](https://developer.ringcentral.com/api-reference#SCIM-getUser2) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#SCIM-readUser2) in API Explorer.
 
 
 ## Update/Replace User

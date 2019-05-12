@@ -45,7 +45,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         /// <summary>
-        /// Operation: Get Extension Info
+        /// Operation: Get Extension
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Get()

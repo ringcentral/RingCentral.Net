@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
         /// </summary>
         public async Task<RingCentral.GetConferencingInfoResponse> Get(
-            LoadConferencingInfoParameters queryParams = null)
+            ReadConferencingSettingsParameters queryParams = null)
         {
             return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
         }

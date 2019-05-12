@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LoadTimezoneParameters
+    public class ReadTimezoneParameters
     {
         /// <summary>
         /// Indicates the page number to retrieve. Only positive number values are accepted

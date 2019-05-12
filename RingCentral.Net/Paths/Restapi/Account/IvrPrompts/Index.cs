@@ -29,14 +29,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// Operation: Create IVR Prompts
         /// Http Post /restapi/v1.0/account/{accountId}/ivr-prompts
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIvrPromptRequest)
+        public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIVRPromptRequest)
         {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIvrPromptRequest);
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
             return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent);
         }
 
         /// <summary>
-        /// Operation: Get IVR Prompts
+        /// Operation: Get IVR Prompt List
         /// Http Get /restapi/v1.0/account/{accountId}/ivr-prompts
         /// </summary>
         public async Task<RingCentral.IVRPrompts> List()

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LoadAccountDeviceParameters
+    public class ReadDeviceParameters
     {
         /// <summary>
         /// Specifies if emergency address should be synchronized or not

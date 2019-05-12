@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
         }
 
         /// <summary>
-        /// Operation: Get User Permissions
+        /// Operation: Get Authorization Profile
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
         /// </summary>
         public async Task<RingCentral.AuthProfileResource> Get()

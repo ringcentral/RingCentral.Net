@@ -71,7 +71,7 @@ namespace RingCentral.Tests
                 var extension = rc.Restapi().Account().Extension();
                 var userAnsweringRuleList = await extension.AnsweringRule().List();
                 var answeringRule = userAnsweringRuleList.records.Last();
-                var customGreetingInfo = await extension.Greeting().Post(new CreateUserCustomGreetingRequest
+                var customGreetingInfo = await extension.Greeting().Post(new CreateCustomUserGreetingRequest
                 {
                     type = "Voicemail",
                     answeringRule = new CustomGreetingAnsweringRuleInfoRequest

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account
         }
 
         /// <summary>
-        /// Operation: Get Company Info
+        /// Operation: Get Account Info
         /// Http Get /restapi/v1.0/account/{accountId}
         /// </summary>
         public async Task<RingCentral.GetAccountInfoResponse> Get()
