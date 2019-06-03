@@ -50,7 +50,7 @@ namespace RingCentral
             return multipartFormDataContent;
         }
 
-        public static string FormatRequest(HttpResponseMessage httpResponseMessage,
+        public static string FormatHttpMessage(HttpResponseMessage httpResponseMessage,
             HttpRequestMessage httpRequestMessage)
         {
             var message = $"Response:\n{httpResponseMessage.ToString()}";

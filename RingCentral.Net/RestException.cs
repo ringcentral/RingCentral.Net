@@ -8,7 +8,7 @@ namespace RingCentral
         public readonly HttpResponseMessage HttpResponseMessage;
 
         public RestException(HttpResponseMessage httpResponseMessage, HttpRequestMessage httpRequestMessage)
-            : base(Utils.FormatRequest(httpResponseMessage, httpRequestMessage))
+            : base(Utils.FormatHttpMessage(httpResponseMessage, httpRequestMessage))
         {
             HttpResponseMessage = httpResponseMessage;
         }

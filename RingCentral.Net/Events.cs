@@ -16,7 +16,7 @@ namespace RingCentral
 
         public override string ToString()
         {
-            return Utils.FormatRequest(httpResponseMessage, httpRequestMessage);
+            return Utils.FormatHttpMessage(httpResponseMessage, httpRequestMessage);
         }
     }
 

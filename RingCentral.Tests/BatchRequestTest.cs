@@ -22,7 +22,8 @@ namespace RingCentral.Tests
                 );
                 var contactList = await rc.Restapi().Account().Extension().AddressBook().Contact().List();
                 var ids = contactList.records.Select(c => c.id).Take(3);
-                var str = await rc.Get<string>(rc.Restapi().Account().Extension().AddressBook().Contact(string.Join(",", ids)).Path());
+                var str = await rc.Get<string>(rc.Restapi().Account().Extension().AddressBook()
+                    .Contact(string.Join(",", ids)).Path());
             }
         }
     }
