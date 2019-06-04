@@ -6,7 +6,8 @@
     "paths": "rm -rf ../RingCentral.Net/Paths/* && node -r @babel/register paths.js",
     "generate": "yarn adjust && yarn definitions && yarn paths && yarn samples && yarn samples-java",
     "samples": "node -r @babel/register samples.js",
-    "samples-java": "node -r @babel/register samples-java.js"
+    "samples-java": "node -r @babel/register samples-java.js",
+    "validate": "node -r @babel/register validate.js"
   },
   "dependencies": {
     "change-case": "^3.1.0",
