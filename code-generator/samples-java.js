@@ -64,7 +64,7 @@ HTTP ${changeCase.upperCase(method === 'List' ? 'Get' : method)} \`${endpoint}\`
 
 \`\`\`cs
 RestClient rc = new RestClient("clientID", "clientSecret", "serverURL");
-rc.Authorize("username", "extension", "password");
+rc.authorize("username", "extension", "password");
 var result = ${pathToCode(path).replace(/\.[A-Z]/g, (m) => m.toLowerCase())}.${method.toLowerCase()}(${parameters.map(p => changeCase.camelCase(p)).join(', ')});
 rc.revoke();
 \`\`\`
