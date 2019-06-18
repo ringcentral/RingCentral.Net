@@ -351,7 +351,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-createCallMonitoringGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-createCallMonitoringGroup) in API Explorer.
 
 
 ## Get Call Monitoring Groups List
@@ -371,7 +371,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listCallMonitoringGroups) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroups) in API Explorer.
 
 
 ## Updates Call Monitoring Group
@@ -391,7 +391,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-updateCallMonitoringGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroup) in API Explorer.
 
 
 ## Delete Call Monitoring Group
@@ -411,7 +411,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-deleteCallMonitoringGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-deleteCallMonitoringGroup) in API Explorer.
 
 
 ## Update Call Monitoring Group List
@@ -431,7 +431,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-updateCallMonitoringGroupList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroupList) in API Explorer.
 
 
 ## Get Call Monitoring Group Member List
@@ -451,7 +451,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-listCallMonitoringGroupMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroupMembers) in API Explorer.
 
 
 ## Get Call Queues
@@ -1841,7 +1841,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-listMeetings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-listMeetings) in API Explorer.
 
 
 ## Create Meetings
@@ -1862,7 +1862,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-createMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-createMeeting) in API Explorer.
 
 
 ## Get Meeting Service Info
@@ -1883,7 +1883,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Config-readMeetingServiceInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readMeetingServiceInfo) in API Explorer.
 
 
 ## Get Meeting Info
@@ -1904,7 +1904,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-readMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-readMeeting) in API Explorer.
 
 
 ## Update Meeting
@@ -1925,7 +1925,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-updateMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-updateMeeting) in API Explorer.
 
 
 ## Delete Meeting
@@ -1946,7 +1946,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Mgmt.-deleteMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-deleteMeeting) in API Explorer.
 
 
 ## End Meeting
@@ -1967,7 +1967,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Control-endMeeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-endMeeting) in API Explorer.
 
 
 ## Get Assistants
@@ -1988,7 +1988,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Config-readAssistants) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readAssistants) in API Explorer.
 
 
 ## Get Assisted Users
@@ -2009,7 +2009,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meetings-Config-readAssistedUsers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readAssistedUsers) in API Explorer.
 
 
 ## Get Message List
@@ -2868,7 +2868,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCallRecording) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecording) in API Explorer.
 
 
 ## Get Call Recordings Data
@@ -2888,7 +2888,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCallRecordingData) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-listCallRecordingData) in API Explorer.
 
 
 ## Get Account Service Info
@@ -2908,7 +2908,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-readAcountServiceInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountServiceInfo) in API Explorer.
 
 
 ## Create CallOut Call Session
@@ -3800,7 +3800,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipConversationsList](./RingCentral.Net/Definitions/GlipConversationsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-listGlipConversations) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Conversations-listGlipConversations) in API Explorer.
 
 
 ## Create/Open Conversation
@@ -3819,7 +3819,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipConversationInfo](./RingCentral.Net/Definitions/GlipConversationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-createGlipConversation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Conversations-createGlipConversation) in API Explorer.
 
 
 ## Get Conversation
@@ -3838,7 +3838,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipConversationInfo](./RingCentral.Net/Definitions/GlipConversationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipConversation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Conversations-readGlipConversation) in API Explorer.
 
 
 ## Create Data Export Task
@@ -3914,7 +3914,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEventsInfo](./RingCentral.Net/Definitions/GlipEventsInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-readGlipEvents) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readGlipEvents) in API Explorer.
 
 
 ## Create Event
@@ -3933,7 +3933,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-createEvent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEvent) in API Explorer.
 
 
 ## Get Event
@@ -3952,7 +3952,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-readEvent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readEvent) in API Explorer.
 
 
 ## Update Event
@@ -3971,7 +3971,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-updateEvent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-updateEvent) in API Explorer.
 
 
 ## Delete Event
@@ -3990,7 +3990,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-deleteEvent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-deleteEvent) in API Explorer.
 
 
 ## Get Everyone Chat
@@ -4009,7 +4009,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEveryoneInfo](./RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipEveryone) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryone) in API Explorer.
 
 
 ## Update Everyone Сhat
@@ -4028,7 +4028,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEveryoneInfo](./RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-patchGlipEveryone) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryone) in API Explorer.
 
 
 ## Get Favorite Chats
@@ -4142,7 +4142,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-createEventbyGroupId) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEventbyGroupId) in API Explorer.
 
 
 ## Get Group Events
@@ -4161,7 +4161,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Events-listGroupEvents) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-listGroupEvents) in API Explorer.
 
 
 ## Get Group Posts
@@ -4370,7 +4370,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipTeamsList](./RingCentral.Net/Definitions/GlipTeamsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-listGlipTeams) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-listGlipTeams) in API Explorer.
 
 
 ## Create Team
@@ -4389,7 +4389,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-createGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-createGlipTeam) in API Explorer.
 
 
 ## Get Team
@@ -4408,7 +4408,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipTeam) in API Explorer.
 
 
 ## Update Team
@@ -4427,7 +4427,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-patchGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipTeam) in API Explorer.
 
 
 ## Delete Team
@@ -4446,7 +4446,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-deleteGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-deleteGlipTeam) in API Explorer.
 
 
 ## Add Team Members
@@ -4465,7 +4465,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-addGlipTeamMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembers) in API Explorer.
 
 
 ## Archive Team
@@ -4484,7 +4484,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-archiveGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-archiveGlipTeam) in API Explorer.
 
 
 ## Join Team
@@ -4503,7 +4503,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-joinGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeam) in API Explorer.
 
 
 ## Leave Team
@@ -4522,7 +4522,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-leaveGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-leaveGlipTeam) in API Explorer.
 
 
 ## Remove Team Members
@@ -4541,7 +4541,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-removeGlipTeamMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-removeGlipTeamMembers) in API Explorer.
 
 
 ## Unarchive Team
@@ -4560,7 +4560,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-unarchiveGlipTeam) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-unarchiveGlipTeam) in API Explorer.
 
 
 ## Get Webhooks
@@ -4675,26 +4675,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - `result` is of type [ParsePhoneNumberResponse](./RingCentral.Net/Definitions/ParsePhoneNumberResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Account-Provisioning-parsePhoneNumber) in API Explorer.
-
-
-## Verify Number
-
-HTTP POST `/restapi/v1.0/number-porting/verify-number`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).NumberPorting().VerifyNumber().Post(numberPortingVerifyNumberRequest);
-}
-```
-
-- Parameter `numberPortingVerifyNumberRequest` is of type [NumberPortingVerifyNumberRequest](./RingCentral.Net/Definitions/NumberPortingVerifyNumberRequest.cs)
-- `result` is of type [NumberPortingVerifyNumberResponse](./RingCentral.Net/Definitions/NumberPortingVerifyNumberResponse.cs)
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Number-Porting-verifyNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-parsePhoneNumber) in API Explorer.
 
 
 ## Get Service Status

@@ -19,8 +19,9 @@ namespace RingCentral
         public string email;
 
         /// <summary>
+        /// Internal identifier of the contact
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// Notes for the contact

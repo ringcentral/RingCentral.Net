@@ -27,7 +27,7 @@ namespace RingCentral.Tests
                     {phoneNumber = new[] {phoneNumber}});
                 foreach (var item in listt.records)
                 {
-                    await addressBook.Contact(item.id).Delete();
+                    await addressBook.Contact(item.id.ToString()).Delete();
                 }
 
                 // list
@@ -59,18 +59,18 @@ namespace RingCentral.Tests
                 contact.lastName = "Liu";
                 var contactRequest =
                     JsonConvert.DeserializeObject<PersonalContactRequest>(JsonConvert.SerializeObject(contact));
-                var contact2 = await addressBook.Contact(contactId).Put(contactRequest);
+                var contact2 = await addressBook.Contact(contactId.ToString()).Put(contactRequest);
                 Assert.NotNull(contact2);
                 Assert.Equal("Liu", contact2.lastName);
 
                 // get
-                var contact3 = await addressBook.Contact(contactId).Get();
+                var contact3 = await addressBook.Contact(contactId.ToString()).Get();
                 Assert.NotNull(contact3);
                 Assert.Equal("Tyler", contact3.firstName);
                 Assert.Equal("Liu", contact3.lastName);
 
                 // delete
-                await addressBook.Contact(contactId).Delete();
+                await addressBook.Contact(contactId.ToString()).Delete();
 
                 // search again
                 list = await addressBook.Contact()

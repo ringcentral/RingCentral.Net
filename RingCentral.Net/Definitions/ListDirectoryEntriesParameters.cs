@@ -6,7 +6,7 @@ namespace RingCentral
         /// If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
         /// Default: true
         /// </summary>
-        public string showFederated;
+        public bool? showFederated;
 
         /// <summary>
         /// Type of an extension
@@ -25,7 +25,7 @@ namespace RingCentral
         /// Maximum: 2000
         /// Default: 1000
         /// </summary>
-        public string perPage;
+        public long? perPage;
 
         /// <summary>
         /// Internal identifier of the business site to which extensions belong

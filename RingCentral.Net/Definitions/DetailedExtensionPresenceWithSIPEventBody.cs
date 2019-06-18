@@ -15,7 +15,7 @@ namespace RingCentral
         public string telephonyStatus;
 
         /// <summary>
-        /// List of the latest 10 active calls on extension
+        /// List of the latest 7 active calls on extension
         /// </summary>
         public ActiveCallInfo[] activeCalls;
 
