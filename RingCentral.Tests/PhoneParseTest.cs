@@ -22,7 +22,7 @@ namespace RingCentral.Tests
 
                 var r = await rc.Restapi().NumberParser().Parse().Post(new ParsePhoneNumberRequest
                 {
-                    originalStrings = new []{ "+1650-666-8888", "+1650-666-9999" }
+                    originalStrings = new[] {"+1650-666-8888", "+1650-666-9999"}
                 });
                 Assert.NotNull(r);
             }

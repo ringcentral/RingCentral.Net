@@ -4,9 +4,9 @@
     "adjust": "node -r @babel/register adjust.js",
     "definitions": "rm -rf ../RingCentral.Net/Definitions/* && node -r @babel/register definitions.js",
     "paths": "rm -rf ../RingCentral.Net/Paths/* && node -r @babel/register paths.js",
-    "generate": "yarn adjust && yarn definitions && yarn paths && yarn samples && yarn samples-java",
     "samples": "node -r @babel/register samples.js",
     "samples-java": "node -r @babel/register samples-java.js",
+    "generate": "yarn adjust && yarn definitions && yarn paths && yarn samples && yarn samples-java",
     "validate": "node -r @babel/register validate.js"
   },
   "dependencies": {
