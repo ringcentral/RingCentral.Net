@@ -2,15 +2,14 @@
 
 ## HTTP GET but no response body
 
-- /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
-- /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
-- /restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}
+- /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
+- /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
 
 ## HTTP POST but no request body
 
+- /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
 
 ## HTTP PUT but no request body
 
-- /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
 
 ## HTTP PATCH but no request body
