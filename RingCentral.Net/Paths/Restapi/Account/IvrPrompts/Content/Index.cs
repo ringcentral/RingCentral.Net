@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts.Content
         /// Operation: Get IVR Prompt Content
         /// Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
         /// </summary>
-        public async Task<string> Get()
+        public async Task<byte[]> Get()
         {
-            return await rc.Get<string>(this.Path());
+            return await rc.Get<byte[]>(this.Path());
         }
     }
 }

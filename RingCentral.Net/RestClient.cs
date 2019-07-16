@@ -15,7 +15,7 @@ namespace RingCentral
         public string clientId;
         public string clientSecret;
         public Uri server;
-        public TokenInfo token;
+        public TokenResponse token;
         public string appName = "Unknown";
         public string appVersion = "0.0.1";
 
@@ -57,14 +57,14 @@ namespace RingCentral
             return httpResponseMessage;
         }
 
-        public async Task<TokenInfo> Authorize(GetTokenRequest getTokenRequest)
+        public async Task<TokenResponse> Authorize(GetTokenRequest getTokenRequest)
         {
             token = null; // force it to use basicAuth
             token = await Restapi(null).Oauth().Token().Post(getTokenRequest);
             return token;
         }
 
-        public Task<TokenInfo> Authorize(string username, string extension, string password)
+        public Task<TokenResponse> Authorize(string username, string extension, string password)
         {
             var getTokenRequest = new GetTokenRequest
             {
@@ -76,7 +76,7 @@ namespace RingCentral
             return Authorize(getTokenRequest);
         }
 
-        public Task<TokenInfo> Authorize(string authCode, string redirectUri)
+        public Task<TokenResponse> Authorize(string authCode, string redirectUri)
         {
             var getTokenRequest = new GetTokenRequest
             {
@@ -87,12 +87,12 @@ namespace RingCentral
             return Authorize(getTokenRequest);
         }
 
-        public Task<TokenInfo> Refresh(string refreshToken = null)
+        public Task<TokenResponse> Refresh(string refreshToken = null)
         {
             var tokenToRefresh = refreshToken ?? token?.refresh_token;
             if (tokenToRefresh == null)
             {
-                return Task.FromResult<TokenInfo>(null);
+                return System.Threading.Tasks.Task.FromResult<TokenResponse>(null);
             }
 
             var getTokenRequest = new GetTokenRequest
@@ -103,7 +103,7 @@ namespace RingCentral
             return Authorize(getTokenRequest);
         }
 
-        public async Task Revoke(string tokenToRevoke = null)
+        public async System.Threading.Tasks.Task Revoke(string tokenToRevoke = null)
         {
             if (tokenToRevoke == null && token == null) // nothing  to revoke
             {
@@ -123,7 +123,7 @@ namespace RingCentral
             await Revoke();
         }
 
-        public string AuthorizeUri(AuthorizeRequest request)
+        public string AuthorizeUri(GetAuthorizationLinkParameters request)
         {
             if (request.response_type == null)
             {
@@ -146,7 +146,7 @@ namespace RingCentral
 
         public string AuthorizeUri(string redirectUri, string state = "")
         {
-            return AuthorizeUri(new AuthorizeRequest
+            return AuthorizeUri(new GetAuthorizationLinkParameters
             {
                 redirect_uri = redirectUri,
                 state = state

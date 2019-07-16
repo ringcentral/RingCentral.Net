@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Scim.Health
         }
 
         /// <summary>
-        /// Operation: check health
+        /// Operation: Check Health
         /// Http Get /scim/v2/health
         /// </summary>
         public async Task<string> Get()

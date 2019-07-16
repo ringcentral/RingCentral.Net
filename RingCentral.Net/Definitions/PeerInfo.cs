@@ -9,6 +9,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public string telephonySessionId;
+
+        /// <summary>
+        /// </summary>
         public string partyId;
     }
 }

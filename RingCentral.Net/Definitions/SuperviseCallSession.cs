@@ -29,11 +29,12 @@ namespace RingCentral
         public bool? muted;
 
         /// <summary>
+        /// Data on a call owner
         /// </summary>
         public OwnerInfo owner;
 
         /// <summary>
-        /// Specifies if a device is stand-alone
+        /// If 'True' then the party is not connected to a session voice conference, 'False' means the party is connected to other parties in a session
         /// </summary>
         public bool? standAlone;
 

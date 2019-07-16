@@ -61,7 +61,7 @@ namespace RingCentral
         public PhoneLineResource[] phoneLines;
 
         /// <summary>
-        /// Address for emergency cases. The same emergency address is assigned to all numbers of a single device ,
+        /// Address for emergency cases. The same emergency address is assigned to all numbers of a single device
         /// </summary>
         public EmergencyServiceAddressResource emergencyServiceAddress;
 

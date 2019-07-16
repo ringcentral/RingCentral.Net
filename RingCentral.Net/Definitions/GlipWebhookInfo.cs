@@ -15,7 +15,7 @@ namespace RingCentral
         /// <summary>
         /// Internal identifiers of groups where a webhook has been created
         /// </summary>
-        public string[] groupsId;
+        public string[] groupIds;
 
         /// <summary>
         /// Webhook creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format

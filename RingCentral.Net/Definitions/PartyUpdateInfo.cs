@@ -3,12 +3,12 @@ namespace RingCentral
     public class PartyUpdateInfo
     {
         /// <summary>
-        /// True if the party is muted. False - otherwise
+        /// If 'True' the party is muted
         /// </summary>
         public bool? muted;
 
         /// <summary>
-        /// True if party is not connected to a session voice conference. False - otherwise
+        /// If 'True' then the party is not connected to a session voice conference, 'False' means the party is connected to other parties in a session
         /// </summary>
         public bool? standAlone;
     }

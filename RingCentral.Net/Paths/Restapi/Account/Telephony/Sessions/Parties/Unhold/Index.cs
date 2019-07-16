@@ -20,7 +20,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold
 
         /// <summary>
         /// Operation: Unhold Call Party
-        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/unhold
+        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold
         /// </summary>
         public async Task<RingCentral.CallParty> Post()
         {

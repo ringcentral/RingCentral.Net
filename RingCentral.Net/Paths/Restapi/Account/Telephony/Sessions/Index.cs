@@ -5,21 +5,21 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
     public partial class Index
     {
         public RestClient rc;
-        public string sessionId;
+        public string telephonySessionId;
         public Restapi.Account.Telephony.Index parent;
 
-        public Index(Restapi.Account.Telephony.Index parent, string sessionId = null)
+        public Index(Restapi.Account.Telephony.Index parent, string telephonySessionId = null)
         {
             this.parent = parent;
             this.rc = parent.rc;
-            this.sessionId = sessionId;
+            this.telephonySessionId = telephonySessionId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && sessionId != null)
+            if (withParameter && telephonySessionId != null)
             {
-                return $"{parent.Path()}/sessions/{sessionId}";
+                return $"{parent.Path()}/sessions/{telephonySessionId}";
             }
 
             return $"{parent.Path()}/sessions";
@@ -27,13 +27,13 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
 
         /// <summary>
         /// Operation: Get Call Session Status
-        /// Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}
+        /// Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
         /// </summary>
         public async Task<RingCentral.CallSessionObject> Get(ReadCallSessionStatusParameters queryParams = null)
         {
-            if (this.sessionId == null)
+            if (this.telephonySessionId == null)
             {
-                throw new System.ArgumentNullException("sessionId");
+                throw new System.ArgumentNullException("telephonySessionId");
             }
 
             return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams);
@@ -41,13 +41,13 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
 
         /// <summary>
         /// Operation: Drop Call Session
-        /// Http Delete /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}
+        /// Http Delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
         /// </summary>
         public async Task<string> Delete()
         {
-            if (this.sessionId == null)
+            if (this.telephonySessionId == null)
             {
-                throw new System.ArgumentNullException("sessionId");
+                throw new System.ArgumentNullException("telephonySessionId");
             }
 
             return await rc.Delete<string>(this.Path());
@@ -59,9 +59,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony
 {
     public partial class Index
     {
-        public Restapi.Account.Telephony.Sessions.Index Sessions(string sessionId = null)
+        public Restapi.Account.Telephony.Sessions.Index Sessions(string telephonySessionId = null)
         {
-            return new Restapi.Account.Telephony.Sessions.Index(this, sessionId);
+            return new Restapi.Account.Telephony.Sessions.Index(this, telephonySessionId);
         }
     }
 }

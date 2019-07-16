@@ -30,12 +30,13 @@ namespace RingCentral
                 _subscriptionInfo = value;
                 if (value == null || renewScheduled) return;
                 Debug.Assert(_subscriptionInfo.expiresIn != null, "subscriptionInfo.expiresIn != null");
-                Task.Delay((int) (_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(async action =>
-                {
-                    // 2 minutes before expiration
-                    renewScheduled = false;
-                    await Refresh();
-                });
+                System.Threading.Tasks.Task.Delay((int) (_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(
+                    async action =>
+                    {
+                        // 2 minutes before expiration
+                        renewScheduled = false;
+                        await Refresh();
+                    });
                 renewScheduled = true;
             }
         }

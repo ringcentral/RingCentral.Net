@@ -30,6 +30,6 @@ namespace RingCentral
         /// <summary>
         /// Business address of extension user company
         /// </summary>
-        public ContactAddressInfo businessAddress;
+        public ContactAddressInfoDevices businessAddress;
     }
 }

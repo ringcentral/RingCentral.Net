@@ -10,7 +10,7 @@ namespace RingCentral
         /// <summary>
         /// Information on a country the phone number belongs to
         /// </summary>
-        public GetCountryInfoNumberParser[] country;
+        public GetCountryInfoNumberParser country;
 
         /// <summary>
         /// Dialing format of a phone number

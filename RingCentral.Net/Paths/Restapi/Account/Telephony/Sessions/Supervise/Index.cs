@@ -20,7 +20,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
 
         /// <summary>
         /// Operation: Supervise Call
-        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/supervise
+        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise
         /// </summary>
         public async Task<RingCentral.SuperviseCallSession> Post(
             RingCentral.SuperviseCallSessionRequest superviseCallSessionRequest)

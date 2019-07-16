@@ -76,14 +76,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// Operation: Update IVR Prompt
         /// Http Put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// </summary>
-        public async Task<string> Put()
+        public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest)
         {
             if (this.promptId == null)
             {
                 throw new System.ArgumentNullException("promptId");
             }
 
-            return await rc.Put<string>(this.Path());
+            return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest);
         }
     }
 }

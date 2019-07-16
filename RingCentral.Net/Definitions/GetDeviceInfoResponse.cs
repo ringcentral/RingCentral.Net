@@ -52,7 +52,7 @@ namespace RingCentral
         /// <summary>
         /// Address for emergency cases. The same emergency address is assigned to all the numbers of one device
         /// </summary>
-        public EmergencyAddressInfo emergencyServiceAddress;
+        public DeviceEmergencyAddressInfo emergencyServiceAddress;
 
         /// <summary>
         /// Phone lines information
@@ -83,5 +83,10 @@ namespace RingCentral
         /// Site data
         /// </summary>
         public DeviceSiteInfo site;
+
+        /// <summary>
+        /// Datetime of receiving last location report in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z
+        /// </summary>
+        public string lastLocationReportTime;
     }
 }

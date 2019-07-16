@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EmergencyAddressInfoRequest
+    public class DeviceEmergencyAddressInfoRequest
     {
         /// <summary>
         /// Name of a customer

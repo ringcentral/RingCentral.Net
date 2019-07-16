@@ -9,7 +9,7 @@ namespace RingCentral
         public string code;
 
         /// <summary>
-        /// Peer session / party data. Valid in Gone state only
+        /// Peer session / party data.'Gone'state only
         /// </summary>
         public PeerInfo peerId;
 

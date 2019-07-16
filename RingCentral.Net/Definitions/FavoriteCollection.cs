@@ -4,10 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
-
-        /// <summary>
-        /// </summary>
         public FavoriteContactResource[] records;
     }
 }

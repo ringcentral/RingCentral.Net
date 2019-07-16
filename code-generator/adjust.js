@@ -28,14 +28,14 @@ p1.parameters = p1.parameters.filter(p => p.name !== 'answeringRuleId')
 p1.parameters.push({
   name: 'answeringRule',
   in: 'formData',
-  '$ref': '#/definitions/CustomCompanyGreetingAnsweringRuleInfo'
+  $ref: '#/definitions/CustomCompanyGreetingAnsweringRuleInfo'
 })
 const p2 = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting'].post
 p2.parameters = p2.parameters.filter(p => p.name !== 'answeringRuleId')
 p2.parameters.push({
   name: 'answeringRule',
   in: 'formData',
-  '$ref': '#/definitions/CustomGreetingAnsweringRuleInfoRequest'
+  $ref: '#/definitions/CustomGreetingAnsweringRuleInfoRequest'
 })
 doc.definitions['CustomCompanyGreetingAnsweringRuleInfo'] = doc.definitions['CustomGreetingAnsweringRuleInfoRequest'] = {
   type: 'object',
@@ -44,6 +44,11 @@ doc.definitions['CustomCompanyGreetingAnsweringRuleInfo'] = doc.definitions['Cus
       type: 'string'
     }
   }
+}
+
+// https://jira.ringcentral.com/browse/PLD-280
+if (!doc.definitions.NetworksList.properties || doc.definitions.NetworksList.properties === null) {
+  doc.definitions.NetworksList.properties = {}
 }
 
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))

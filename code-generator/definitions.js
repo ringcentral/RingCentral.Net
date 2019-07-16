@@ -95,6 +95,7 @@ const generateCode = (m, fields) => {
 
 models.forEach(m => {
   const properties = m.properties
+  console.log(m)
   const fields = Object.keys(properties)
     .map(k => ({ name: k, ...properties[k] }))
     .map(f => normalizeField(f))

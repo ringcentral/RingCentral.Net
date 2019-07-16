@@ -1,0 +1,41 @@
+using System.Threading.Tasks;
+
+namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users
+{
+    public partial class Index
+    {
+        public RestClient rc;
+        public Restapi.Account.EmergencyAddressAutoUpdate.Index parent;
+
+        public Index(Restapi.Account.EmergencyAddressAutoUpdate.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
+
+        public string Path()
+        {
+            return $"{parent.Path()}/users";
+        }
+
+        /// <summary>
+        /// Operation: Get Users
+        /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
+        /// </summary>
+        public async Task<string> Get(ReadAutomaticLocationUpdatesUsersParameters queryParams = null)
+        {
+            return await rc.Get<string>(this.Path(), queryParams);
+        }
+    }
+}
+
+namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate
+{
+    public partial class Index
+    {
+        public Restapi.Account.EmergencyAddressAutoUpdate.Users.Index Users()
+        {
+            return new Restapi.Account.EmergencyAddressAutoUpdate.Users.Index(this);
+        }
+    }
+}

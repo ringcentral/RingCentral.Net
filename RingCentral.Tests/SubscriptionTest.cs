@@ -69,7 +69,7 @@ namespace RingCentral.Tests
                 Assert.NotNull(subscription.subscriptionInfo);
                 Assert.Equal(eventFilters.Length, subscriptionInfo.eventFilters.Length);
                 await SendSms(rc);
-                await Task.Delay(20000);
+                await System.Threading.Tasks.Task.Delay(20000);
                 Assert.True(messages.Count >= 1);
                 Assert.True(messageStoreMessageCount >= 1);
                 Assert.Contains(messages, message => message.Contains("message-store"));

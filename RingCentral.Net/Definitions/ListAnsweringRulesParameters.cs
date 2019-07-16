@@ -4,13 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// Default: Simple
+        /// Enum: Detailed, Simple
         /// </summary>
         public string view;
 
         /// <summary>
-        /// Default: false
+        /// If true, then only active call handling rules are returned
         /// </summary>
-        public string enabledOnly;
+        public bool? enabledOnly;
 
         /// <summary>
         /// Default: 1

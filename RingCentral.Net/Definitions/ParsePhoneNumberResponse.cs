@@ -11,7 +11,7 @@ namespace RingCentral
         /// Information on a user home country
         /// Required
         /// </summary>
-        public GetCountryInfoNumberParser[] homeCountry;
+        public GetCountryInfoNumberParser homeCountry;
 
         /// <summary>
         /// Parsed phone numbers data

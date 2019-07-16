@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         }
 
         /// <summary>
-        /// Operation: Search or List Users
+        /// Operation: Search/List Users
         /// Http Post /scim/v2/Users/.search
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest)

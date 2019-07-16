@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         /// <summary>
-        /// Operation: Search or List Users
+        /// Operation: Search/List Users
         /// Http Get /scim/v2/Users
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null)

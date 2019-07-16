@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         /// Address for emergency cases. The same emergency address is assigned to all numbers of a single device
         /// </summary>
-        public EmergencyAddressInfoRequest emergencyServiceAddress;
+        public DeviceEmergencyAddressInfoRequest emergencyServiceAddress;
 
         /// <summary>
         /// Information on extension that the device is assigned to

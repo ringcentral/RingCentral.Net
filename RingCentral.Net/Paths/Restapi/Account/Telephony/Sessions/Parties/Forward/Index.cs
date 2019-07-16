@@ -20,7 +20,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Forward
 
         /// <summary>
         /// Operation: Forward Call Party
-        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/forward
+        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
         /// </summary>
         public async Task<RingCentral.CallParty> Post(RingCentral.ForwardTarget forwardTarget)
         {

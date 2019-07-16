@@ -13,7 +13,7 @@ namespace RingCentral.Demo.NetCore
     {
         static void Main()
         {
-            Task t = MainAsync();
+            System.Threading.Tasks.Task t = MainAsync();
             t.Wait();
         }
 
@@ -36,7 +36,7 @@ namespace RingCentral.Demo.NetCore
             });
         }
 
-        static async Task MainAsync()
+        static async System.Threading.Tasks.Task MainAsync()
         {
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -75,7 +75,7 @@ namespace RingCentral.Demo.NetCore
                 Debug.Assert(subscription.subscriptionInfo != null);
                 Debug.Assert(eventFilters.Length == subscriptionInfo.eventFilters.Length);
                 await SendSms(rc);
-                await Task.Delay(20000);
+                await System.Threading.Tasks.Task.Delay(20000);
                 Debug.Assert(messages.Count >= 1);
                 Debug.Assert(messageStoreMessageCount >= 1);
                 Debug.Assert(messages.Any(message => message.Contains("message-store")));
