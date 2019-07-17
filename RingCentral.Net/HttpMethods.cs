@@ -92,7 +92,14 @@ namespace RingCentral
                 return (T) (object) httpContent;
             }
 
-            return JsonConvert.DeserializeObject<T>(httpContent);
+            try
+            {
+                return JsonConvert.DeserializeObject<T>(httpContent);
+            }
+            catch (JsonReaderException jre)
+            {
+                throw new JsonDeserializeException($"Unable to deserialize json string to type {typeof(T)}\n\n{jre.Message}\n\nJson string: {httpContent}", jre);
+            }
         }
 
         public async Task<HttpResponseMessage> Post(string endpoint, object content = null, object queryParams = null)
