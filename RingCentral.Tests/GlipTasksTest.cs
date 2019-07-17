@@ -20,12 +20,6 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                rc.AfterHttpCall += (sender, args) =>
-                {
-                    var request = Utils.FormatHttpMessage(args.httpResponseMessage, args.httpRequestMessage);
-                    Console.WriteLine(request);
-                };
-
                 // Find the group with type "PersonalChat" where you can talk to yourself
                 var groups = await rc.Restapi().Glip().Groups().List(new ListGlipGroupsParameters
                 {
@@ -39,11 +33,9 @@ namespace RingCentral.Tests
                     subject = "This is a sample task"
                 });
 
-                // Get the task
-                task = await rc.Restapi().Glip().Tasks(task.id).Get();
-
                 // List all the tasks in the group
                 var tasks = await rc.Restapi().Glip().Chats(group.id).Tasks().Get();
+                Assert.True(tasks.records.Length > 0);
 
                 //  patch the task
                 await rc.Restapi().Glip().Tasks(task.id).Patch(new GlipUpdateTask
@@ -53,6 +45,13 @@ namespace RingCentral.Tests
 
                 // complete the task
                 await rc.Restapi().Glip().Tasks(task.id).Complete().Post(new GlipCompleteTask {status = "Complete"});
+                
+                // Get the task
+                task = await rc.Restapi().Glip().Tasks(task.id).Get();
+                
+                // Check data
+                Assert.Equal("This is the new task subject", task.subject);
+                Assert.Equal("Completed", task.status);
 
                 // delete the task
                 await rc.Restapi().Glip().Tasks(task.id).Delete();
