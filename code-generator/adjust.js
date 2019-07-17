@@ -46,9 +46,4 @@ doc.definitions['CustomCompanyGreetingAnsweringRuleInfo'] = doc.definitions['Cus
   }
 }
 
-// https://jira.ringcentral.com/browse/PLD-280
-if (!doc.definitions.NetworksList.properties || doc.definitions.NetworksList.properties === null) {
-  doc.definitions.NetworksList.properties = {}
-}
-
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
