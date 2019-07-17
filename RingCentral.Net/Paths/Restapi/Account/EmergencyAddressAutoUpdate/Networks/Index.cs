@@ -38,23 +38,23 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// Operation: Create Network
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// </summary>
-        public async Task<string> Post()
+        public async Task<RingCentral.NetworkInfo> Post(RingCentral.CreateNetworkRequest createNetworkRequest)
         {
-            return await rc.Post<string>(this.Path(false));
+            return await rc.Post<RingCentral.NetworkInfo>(this.Path(false), createNetworkRequest);
         }
 
         /// <summary>
         /// Operation: Get Network
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// </summary>
-        public async Task<string> Get()
+        public async Task<RingCentral.NetworkInfo> Get()
         {
             if (this.networkId == null)
             {
                 throw new System.ArgumentNullException("networkId");
             }
 
-            return await rc.Get<string>(this.Path());
+            return await rc.Get<RingCentral.NetworkInfo>(this.Path());
         }
 
         /// <summary>

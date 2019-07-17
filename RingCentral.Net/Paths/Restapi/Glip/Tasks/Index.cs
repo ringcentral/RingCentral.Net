@@ -29,28 +29,28 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// Operation: Get Task
         /// Http Get /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
-        public async Task<RingCentral.TaskList> Get()
+        public async Task<RingCentral.GlipTaskInfo> Get()
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.TaskList>(this.Path());
+            return await rc.Get<RingCentral.GlipTaskInfo>(this.Path());
         }
 
         /// <summary>
         /// Operation: Patch Task
         /// Http Patch /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
-        public async Task<RingCentral.TaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask)
+        public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Patch<RingCentral.TaskList>(this.Path(), glipUpdateTask);
+            return await rc.Patch<RingCentral.GlipTaskList>(this.Path(), glipUpdateTask);
         }
 
         /// <summary>

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ReadAutomaticLocationUpdatesUsersParameters
+    public class ListAutomaticLocationUpdatesUsersParameters
     {
         /// <summary>
         /// Extension type. Multiple values are supported

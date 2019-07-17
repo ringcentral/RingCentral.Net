@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class Task
+    public class GlipTaskInfo
     {
         /// <summary>
         /// Internal identifier of a task
@@ -34,8 +34,9 @@ namespace RingCentral
 
         /// <summary>
         /// Status of task execution
+        /// Enum: Pending, InProgress, Completed
         /// </summary>
-        public string[] status;
+        public string status;
 
         /// <summary>
         /// Name/subject of a task

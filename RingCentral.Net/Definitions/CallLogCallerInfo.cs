@@ -13,6 +13,11 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
+        public string extensionId;
+
+        /// <summary>
         /// Contains party location (city, state) if one can be determined from phoneNumber. This property is filled only when phoneNumber is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-free numbers)
         /// </summary>
         public string location;

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class UpdateNetworkRequest
+    public class NetworkInfo
     {
         /// <summary>
         /// </summary>

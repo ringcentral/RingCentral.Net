@@ -1,9 +1,9 @@
 namespace RingCentral
 {
-    public class TaskList
+    public class GlipTaskList
     {
         /// <summary>
         /// </summary>
-        public Task[] records;
+        public GlipTaskInfo[] records;
     }
 }

@@ -19,12 +19,13 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users
         }
 
         /// <summary>
-        /// Operation: Get Users
+        /// Operation: Get User List
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
         /// </summary>
-        public async Task<string> Get(ReadAutomaticLocationUpdatesUsersParameters queryParams = null)
+        public async Task<RingCentral.AutomaticLocationUpdatesUserList> Get(
+            ListAutomaticLocationUpdatesUsersParameters queryParams = null)
         {
-            return await rc.Get<string>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.AutomaticLocationUpdatesUserList>(this.Path(), queryParams);
         }
     }
 }

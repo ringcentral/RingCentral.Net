@@ -1,15 +1,15 @@
 namespace RingCentral
 {
-    public class NetworksList
+    public class AutomaticLocationUpdatesUserList
     {
         /// <summary>
-        /// Link to a networks resource
+        /// Link to the users list resource
         /// </summary>
         public string uri;
 
         /// <summary>
         /// </summary>
-        public NetworkInfo[] records;
+        public AutomaticLocationUpdatesUserInfo[] records;
 
         /// <summary>
         /// </summary>

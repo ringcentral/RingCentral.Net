@@ -862,12 +862,12 @@ HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/netwo
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest);
 }
 ```
 
-
-- `result` is an empty string
+- Parameter `createNetworkRequest` is of type [CreateNetworkRequest](./RingCentral.Net/Definitions/CreateNetworkRequest.cs)
+- `result` is of type [NetworkInfo](./RingCentral.Net/Definitions/NetworkInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -887,7 +887,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 
-- `result` is an empty string
+- `result` is of type [NetworkInfo](./RingCentral.Net/Definitions/NetworkInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -1094,7 +1094,27 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteSwitch) in API Explorer.
 
 
-## Get Users
+## Get Task
+
+HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get();
+}
+```
+
+
+- `result` is of type [AutomaticLocationUpdatesTaskInfo](./RingCentral.Net/Definitions/AutomaticLocationUpdatesTaskInfo.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readAutomaticLocationUpdatesTask) in API Explorer.
+
+
+## Get User List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users`
 
@@ -1102,16 +1122,16 @@ HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(readAutomaticLocationUpdatesUsersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters);
 }
 ```
 
-- Parameter `readAutomaticLocationUpdatesUsersParameters` is of type [ReadAutomaticLocationUpdatesUsersParameters](./RingCentral.Net/Definitions/ReadAutomaticLocationUpdatesUsersParameters.cs)
-- `result` is an empty string
+- Parameter `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./RingCentral.Net/Definitions/ListAutomaticLocationUpdatesUsersParameters.cs)
+- `result` is of type [AutomaticLocationUpdatesUserList](./RingCentral.Net/Definitions/AutomaticLocationUpdatesUserList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readAutomaticLocationUpdatesUsers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAutomaticLocationUpdatesUsers) in API Explorer.
 
 
 ## Enable Automatic Location Updates for Users
@@ -3511,6 +3531,26 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-updateCallParty) in API Explorer.
 
 
+## Call Flip on Party
+
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
+}
+```
+
+- Parameter `callPartyFlip` is of type [CallPartyFlip](./RingCentral.Net/Definitions/CallPartyFlip.cs)
+- `result` is an empty string
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.
+
+
 ## Forward Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward`
@@ -4220,7 +4260,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `listChatTasksParameters` is of type [ListChatTasksParameters](./RingCentral.Net/Definitions/ListChatTasksParameters.cs)
-- `result` is of type [TaskList](./RingCentral.Net/Definitions/TaskList.cs)
+- `result` is of type [GlipTaskList](./RingCentral.Net/Definitions/GlipTaskList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-listChatTasks) in API Explorer.
@@ -4239,7 +4279,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `glipCreateTask` is of type [GlipCreateTask](./RingCentral.Net/Definitions/GlipCreateTask.cs)
-- `result` is of type [TaskList](./RingCentral.Net/Definitions/TaskList.cs)
+- `result` is of type [GlipTaskInfo](./RingCentral.Net/Definitions/GlipTaskInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-createTask) in API Explorer.
@@ -4885,7 +4925,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 
-- `result` is of type [TaskList](./RingCentral.Net/Definitions/TaskList.cs)
+- `result` is of type [GlipTaskInfo](./RingCentral.Net/Definitions/GlipTaskInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-readTask) in API Explorer.
@@ -4904,7 +4944,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `glipUpdateTask` is of type [GlipUpdateTask](./RingCentral.Net/Definitions/GlipUpdateTask.cs)
-- `result` is of type [TaskList](./RingCentral.Net/Definitions/TaskList.cs)
+- `result` is of type [GlipTaskList](./RingCentral.Net/Definitions/GlipTaskList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-patchTask) in API Explorer.
@@ -4942,7 +4982,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `glipCompleteTask` is of type [GlipCompleteTask](./RingCentral.Net/Definitions/GlipCompleteTask.cs)
-- `result` is of type [TaskList](./RingCentral.Net/Definitions/TaskList.cs)
+- `result` is of type [GlipTaskList](./RingCentral.Net/Definitions/GlipTaskList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-completeTask) in API Explorer.
@@ -5575,22 +5615,3 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `version` is optional with default value `v2`
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-checkHealth2) in API Explorer.
-
-
-## Call Flip on Party
-
-HTTP POST `/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.V1_0().Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
-}
-```
-
-- Parameter `callPartyFlip` is of type [CallPartyFlip](./RingCentral.Net/Definitions/CallPartyFlip.cs)
-- `result` is an empty string
-- Parameter `accountId` is optional with default value `~`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.

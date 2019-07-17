@@ -13,5 +13,14 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string endIp;
+
+        /// <summary>
+        /// Network name
+        /// </summary>
+        public string name;
+
+        /// <summary>
+        /// </summary>
+        public LocationUpdatesEmergencyAddressInfo emergencyAddress;
     }
 }
