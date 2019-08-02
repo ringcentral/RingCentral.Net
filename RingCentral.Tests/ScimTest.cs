@@ -74,61 +74,61 @@ namespace RingCentral.Tests
             }
         }
 
-//        [Fact]
-//        public async void CreateUser()
-//        {
-//            using (var rc = new RestClient(
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-//            ))
-//            {
-//                await rc.Authorize(
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-//                );
-//
-//                // delete existing user first
-//                var searchRequest = new SearchRequest
-//                {
-//                    count = 1,
-//                    filter = "emails eq \"tyler.liu@ringcentral.com\""
-//                };
-//                var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
-//                if (userSearchResponse.Resources.Length == 1)
-//                {
-//                    await rc.Scim().Users(userSearchResponse.Resources[0].id).Delete();
-//                }
-//
-//                // create the user
-//                var user = new User
-//                {
-//                    emails = new[]
-//                    {
-//                        new Email
-//                        {
-//                            type = "work",
-//                            value = "tyler.liu@ringcentral.com"
-//                        }
-//                    },
-//                    name = new Name
-//                    {
-//                        familyName = "Liu",
-//                        givenName = "Tyler"
-//                    },
-//                    schemas = new[] {"urn:ietf:params:scim:schemas:core:2.0:User"},
-//                    userName = "tyler.liu@ringcentral.com"
-//                };
-//                var userResponse = await rc.Scim().Users().Post(user);
-//                Assert.Equal("Liu", userResponse.name.familyName);
-//                Assert.Equal("Tyler", userResponse.name.givenName);
-//
-//                // don't forget to delete it after testing
-//                var str = await rc.Scim().Users(userResponse.id).Delete();
-//                Assert.Equal("", str);
-//            }
-//        }
+        [Fact]
+        public async void CreateUser()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+
+                // delete existing user first
+                var searchRequest = new SearchRequest
+                {
+                    count = 1,
+                    filter = "emails eq \"tyler.liu@ringcentral.com\""
+                };
+                var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
+                if (userSearchResponse.Resources.Length == 1)
+                {
+                    await rc.Scim().Users(userSearchResponse.Resources[0].id).Delete();
+                }
+
+                // create the user
+                var user = new User
+                {
+                    emails = new[]
+                    {
+                        new Email
+                        {
+                            type = "work",
+                            value = "tyler.liu.test@ringcentral.com"
+                        }
+                    },
+                    name = new Name
+                    {
+                        familyName = "Liu",
+                        givenName = "Tyler"
+                    },
+                    schemas = new[] {"urn:ietf:params:scim:schemas:core:2.0:User"},
+                    userName = "tyler.liu.test@ringcentral.com"
+                };
+                var userResponse = await rc.Scim().Users().Post(user);
+                Assert.Equal("Liu", userResponse.name.familyName);
+                Assert.Equal("Tyler", userResponse.name.givenName);
+
+                // don't forget to delete it after testing
+                var str = await rc.Scim().Users(userResponse.id).Delete();
+                Assert.Equal("", str);
+            }
+        }
 
         [Fact]
         public async void SearchUser()
