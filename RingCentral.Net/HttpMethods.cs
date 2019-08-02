@@ -96,9 +96,16 @@ namespace RingCentral
             {
                 return JsonConvert.DeserializeObject<T>(httpContent);
             }
-            catch (JsonReaderException jre)
+            catch (Exception e)
             {
-                throw new JsonDeserializeException($"Unable to deserialize json string to type {typeof(T)}\n\n{jre.Message}\n\nJson string: {httpContent}", jre);
+                if (e is JsonReaderException || e is JsonSerializationException)
+                {
+                    throw new JsonDeserializeException(
+                        $"Unable to deserialize json string to type {typeof(T)}\n\n{e.Message}\n\nJson string: {httpContent}",
+                        e);
+                }
+
+                throw;
             }
         }
 

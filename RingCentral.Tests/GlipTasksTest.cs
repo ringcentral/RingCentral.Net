@@ -45,10 +45,10 @@ namespace RingCentral.Tests
 
                 // complete the task
                 await rc.Restapi().Glip().Tasks(task.id).Complete().Post(new GlipCompleteTask {status = "Complete"});
-                
+
                 // Get the task
                 task = await rc.Restapi().Glip().Tasks(task.id).Get();
-                
+
                 // Check data
                 Assert.Equal("This is the new task subject", task.subject);
                 Assert.Equal("Completed", task.status);

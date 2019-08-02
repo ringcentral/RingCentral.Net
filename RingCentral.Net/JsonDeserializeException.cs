@@ -1,9 +1,12 @@
+using System;
 using Newtonsoft.Json;
 
 namespace RingCentral
 {
-    public class JsonDeserializeException : JsonReaderException
+    public class JsonDeserializeException : Exception
     {
-        public JsonDeserializeException(string message, JsonReaderException inner) : base(message, inner) {}
+        public JsonDeserializeException(string message, Exception inner) : base(message, inner)
+        {
+        }
     }
 }
