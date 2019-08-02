@@ -6,6 +6,8 @@ namespace RingCentral.Tests
 {
     public class ScimTest
     {
+        private const string EMAIL = "tyler.liu.test@ringcentral.com";
+        
         [Fact]
         public async void GetServiceProviderConfig()
         {
@@ -93,7 +95,7 @@ namespace RingCentral.Tests
                 var searchRequest = new SearchRequest
                 {
                     count = 1,
-                    filter = "emails eq \"tyler.liu@ringcentral.com\""
+                    filter = $"emails eq \"{EMAIL}\""
                 };
                 var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
                 if (userSearchResponse.Resources.Length == 1)
@@ -109,7 +111,7 @@ namespace RingCentral.Tests
                         new Email
                         {
                             type = "work",
-                            value = "tyler.liu.test@ringcentral.com"
+                            value = EMAIL
                         }
                     },
                     name = new Name
@@ -118,7 +120,7 @@ namespace RingCentral.Tests
                         givenName = "Tyler"
                     },
                     schemas = new[] {"urn:ietf:params:scim:schemas:core:2.0:User"},
-                    userName = "tyler.liu.test@ringcentral.com"
+                    userName = EMAIL
                 };
                 var userResponse = await rc.Scim().Users().Post(user);
                 Assert.Equal("Liu", userResponse.name.familyName);
