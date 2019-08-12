@@ -103,6 +103,26 @@ namespace RingCentral
             return Authorize(getTokenRequest);
         }
 
+        private System.Timers.Timer _autoRefreshTimer = null;
+
+        public void AutoRefresh(double interval = 1000 * 60 * 30)
+        {
+            _autoRefreshTimer = new System.Timers.Timer();
+            _autoRefreshTimer.Elapsed += (sender, args) => { Refresh(); };
+            _autoRefreshTimer.Interval = interval;
+            _autoRefreshTimer.Start();
+        }
+
+        public void StopAutoRefresh()
+        {
+            if (_autoRefreshTimer != null)
+            {
+                _autoRefreshTimer.Stop();
+                _autoRefreshTimer.Dispose();
+                _autoRefreshTimer = null;
+            }
+        }
+
         public async System.Threading.Tasks.Task Revoke(string tokenToRevoke = null)
         {
             if (tokenToRevoke == null && token == null) // nothing  to revoke
