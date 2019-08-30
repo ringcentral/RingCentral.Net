@@ -46,4 +46,12 @@ doc.definitions['CustomCompanyGreetingAnsweringRuleInfo'] = doc.definitions['Cus
   }
 }
 
+// https://jira.ringcentral.com/browse/PLD-316
+doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer'] = doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/answer']
+delete doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/answer']
+doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/play'] = doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/play']
+delete doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/play']
+doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup'] = doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/pickup']
+delete doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/pickup']
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
