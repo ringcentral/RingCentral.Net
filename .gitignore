@@ -5,3 +5,7 @@ packages/
 .vs/
 *.nupkg
 .DS_Store
+
+
+VoiceMailNotificationTest.cs
+CallOutTest.cs
