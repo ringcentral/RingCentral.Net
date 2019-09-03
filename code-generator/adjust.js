@@ -19,7 +19,7 @@ faxAttachment.name = 'attachments'
 const faxTo = sendFaxParams.filter(p => p.name === 'to')[0]
 if (faxTo.items.type === 'string') {
   delete faxTo.items.type
-  faxTo.items['$ref'] = '#/definitions/MessageStoreCallerInfoRequest'
+  faxTo.items.$ref = '#/definitions/MessageStoreCallerInfoRequest'
 }
 
 // https://git.ringcentral.com/platform/api-metadata-specs/issues/48
@@ -37,7 +37,7 @@ p2.parameters.push({
   in: 'formData',
   $ref: '#/definitions/CustomGreetingAnsweringRuleInfoRequest'
 })
-doc.definitions['CustomCompanyGreetingAnsweringRuleInfo'] = doc.definitions['CustomGreetingAnsweringRuleInfoRequest'] = {
+doc.definitions.CustomCompanyGreetingAnsweringRuleInfo = doc.definitions.CustomGreetingAnsweringRuleInfoRequest = {
   type: 'object',
   properties: {
     id: {

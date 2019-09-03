@@ -36,7 +36,7 @@ const pathToCode = path => {
   return 'rc.' + names.join('.').replace(/\.\(/g, '(')
 }
 
-let md = `# RingCentral.Net SDK Code Samples`
+let md = '# RingCentral.Net SDK Code Samples'
 normalizedPaths.forEach(path => {
   console.log(path)
   const names = path.split('/').filter(name => name !== '' && !name.startsWith('{'))

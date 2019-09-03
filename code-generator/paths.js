@@ -180,7 +180,7 @@ ${code}`
             bodyClass = 'string'
             bodyParam = 'body'
           } else {
-            bodyClass = R.last(body.schema['$ref'].split('/'))
+            bodyClass = R.last(body.schema.$ref.split('/'))
             bodyParam = changeCase.lowerCaseFirst(bodyClass)
             bodyClass = 'RingCentral.' + bodyClass
           }
@@ -189,9 +189,9 @@ ${code}`
       if (formUrlEncoded || multipart) {
         bodyClass = `${changeCase.pascalCase(operation.detail.operationId)}Request`
         bodyParam = `${operation.detail.operationId}Request`
-        body = (operation.detail.parameters || []).filter(p => p.in === 'body' && p.schema && p.schema['$ref'])[0]
+        body = (operation.detail.parameters || []).filter(p => p.in === 'body' && p.schema && p.schema.$ref)[0]
         if (body) {
-          bodyClass = R.last(body.schema['$ref'].split('/'))
+          bodyClass = R.last(body.schema.$ref.split('/'))
           bodyParam = changeCase.lowerCaseFirst(bodyClass)
           bodyClass = 'RingCentral.' + bodyClass
         }
@@ -227,16 +227,16 @@ ${code}`
           var dict = new System.Collections.Generic.Dictionary<string, string>();
           RingCentral.Utils.GetPairs(${bodyParam})
             .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? `, queryParams` : ''});
+          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''});
       }`
       } else if (multipart) {
         code += `
           var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
-          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? `, queryParams` : ''});
+          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''});
       }`
       } else {
         code += `
-          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? `, queryParams` : ''});
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''});
       }`
       }
     })

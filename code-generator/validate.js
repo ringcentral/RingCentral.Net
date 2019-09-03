@@ -30,7 +30,7 @@ for (const path of cache.get) {
     continue
   }
   const responses = doc.paths[path].get.responses
-  const response = responses['200'] || responses['default']
+  const response = responses['200'] || responses.default
   if (!response.schema) {
     markdown += `\n- ${path}`
   }

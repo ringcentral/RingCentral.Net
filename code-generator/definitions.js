@@ -21,10 +21,10 @@ const normalizeType = f => {
   } else if (f.type === 'array') {
     return `${normalizeType(f.items)}[]`
   } else if (f.type === undefined || f.type === 'object') {
-    if (!f['$ref']) {
+    if (!f.$ref) {
       return 'object' // anonymous object
     }
-    return f['$ref'].split('/').slice(-1)[0]
+    return f.$ref.split('/').slice(-1)[0]
   } else if (f.type === 'boolean') {
     return 'bool?'
   } else if (f.type === 'file') {
@@ -113,8 +113,8 @@ Object.keys(doc.paths).forEach(p => {
       const fields = operation.parameters.filter(p => p.in === 'formData')
         .map(p => {
           p = normalizeField(p)
-          if (p['$ref']) {
-            p.type = p['$ref'].split('/').slice(-1)[0]
+          if (p.$ref) {
+            p.type = p.$ref.split('/').slice(-1)[0]
           }
           return generateField({}, p)
         })

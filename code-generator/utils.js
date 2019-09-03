@@ -20,8 +20,8 @@ export const getResponseType = responses => {
   if (responseSchema) {
     if (responseSchema.type === 'string' && responseSchema.format === 'binary') {
       responseType = 'byte[]'
-    } else if (responseSchema['$ref']) {
-      responseType = 'RingCentral.' + R.last(responseSchema['$ref'].split('/'))
+    } else if (responseSchema.$ref) {
+      responseType = 'RingCentral.' + R.last(responseSchema.$ref.split('/'))
     }
   }
   return responseType
