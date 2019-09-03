@@ -8,7 +8,7 @@ namespace RingCentral
         public string id;
 
         /// <summary>
-        /// Unique 48-bit identifier of the wireless access point that follows MAC address conventions
+        /// Unique 48-bit identifier of the wireless access point complying with MAC address conventions
         /// </summary>
         public string bssid;
 

@@ -47,7 +47,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public object recurrence;
+        public GlipTaskRecurrenceInfo recurrence;
 
         /// <summary>
         /// </summary>

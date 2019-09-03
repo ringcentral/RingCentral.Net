@@ -29,14 +29,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         /// Operation: Get Call Session Status
         /// Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
         /// </summary>
-        public async Task<RingCentral.CallSessionObject> Get(ReadCallSessionStatusParameters queryParams = null)
+        public async Task<RingCentral.CallSession> Get(ReadCallSessionStatusParameters queryParams = null)
         {
             if (this.telephonySessionId == null)
             {
                 throw new System.ArgumentNullException("telephonySessionId");
             }
 
-            return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.CallSession>(this.Path(), queryParams);
         }
 
         /// <summary>

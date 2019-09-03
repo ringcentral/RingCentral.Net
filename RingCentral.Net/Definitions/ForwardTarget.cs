@@ -8,7 +8,7 @@ namespace RingCentral
         public string phoneNumber;
 
         /// <summary>
-        /// VM owner's extension id
+        /// Voicemail owner extension identifier
         /// </summary>
         public string voicemail;
     }

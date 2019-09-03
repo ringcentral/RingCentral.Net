@@ -3,7 +3,7 @@ namespace RingCentral
     public class CreateSubscriptionRequest
     {
         /// <summary>
-        /// Collection of URIs to API resources. For APNS transport type only message event filter is available
+        /// Collection of URIs to API resources
         /// Required
         /// </summary>
         public string[] eventFilters;

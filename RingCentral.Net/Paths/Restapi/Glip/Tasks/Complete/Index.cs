@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
         /// Operation: Complete Task
         /// Http Post /restapi/v1.0/glip/tasks/{taskId}/complete
         /// </summary>
-        public async Task<RingCentral.GlipTaskList> Post(RingCentral.GlipCompleteTask glipCompleteTask)
+        public async Task<string> Post(RingCentral.GlipCompleteTask glipCompleteTask)
         {
-            return await rc.Post<RingCentral.GlipTaskList>(this.Path(), glipCompleteTask);
+            return await rc.Post<string>(this.Path(), glipCompleteTask);
         }
     }
 }

@@ -1,6 +1,24 @@
 # RingCentral.Net SDK Code Samples
 
 
+## Get Glip Data Archive
+
+HTTP GET `/media/v1/glip/data-export/{taskId}/archive/{archiveId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Media().V1().Glip().DataExport(taskId).Archive(archiveId).Get();
+}
+```
+
+
+- `result` is of type `byte[]`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readComplianceArchive) in API Explorer.
+
+
 ## Get API Versions
 
 HTTP GET `/restapi`
@@ -34,7 +52,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `revokeTokenRequest` is of type [RevokeTokenRequest](./RingCentral.Net/Definitions/RevokeTokenRequest.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Authentication-revokeToken) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-revokeToken) in API Explorer.
 
 
 ## Get Token
@@ -50,9 +68,9 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `getTokenRequest` is of type [GetTokenRequest](./RingCentral.Net/Definitions/GetTokenRequest.cs)
-- `result` is of type [TokenResponse](./RingCentral.Net/Definitions/TokenResponse.cs)
+- `result` is of type [TokenInfo](./RingCentral.Net/Definitions/TokenInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Authentication-getToken) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-getToken) in API Explorer.
 
 
 ## Get Version Info
@@ -312,6 +330,26 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallLog) in API Explorer.
+
+
+## Sync Company Call Log
+
+HTTP GET `/restapi/v1.0/account/{accountId}/call-log-sync`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
+}
+```
+
+- Parameter `syncAccountCallLogParameters` is of type [SyncAccountCallLogParameters](./RingCentral.Net/Definitions/SyncAccountCallLogParameters.cs)
+- `result` is of type [AccountCallLogSyncResponse](./RingCentral.Net/Definitions/AccountCallLogSyncResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncAccountCallLog) in API Explorer.
 
 
 ## Get Company Call Log Record(s)
@@ -1094,7 +1132,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteSwitch) in API Explorer.
 
 
-## Get Task
+## Get Emergency Map Configuration Task
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}`
 
@@ -1142,16 +1180,16 @@ HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(emergencyAddressAutoUpdateUsersBulkAssignResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticaLocationUpdatesUsers);
 }
 ```
 
-- Parameter `emergencyAddressAutoUpdateUsersBulkAssignResource` is of type [EmergencyAddressAutoUpdateUsersBulkAssignResource](./RingCentral.Net/Definitions/EmergencyAddressAutoUpdateUsersBulkAssignResource.cs)
+- Parameter `bulkAssignAutomaticaLocationUpdatesUsers` is of type [BulkAssignAutomaticaLocationUpdatesUsers](./RingCentral.Net/Definitions/BulkAssignAutomaticaLocationUpdatesUsers.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleUsersAutomaticaLocationUpdates) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleAutomaticaLocationUpdatesUsers) in API Explorer.
 
 
 ## Get Wireless Point List
@@ -2658,6 +2696,27 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-syncMessages) in API Explorer.
 
 
+## Create MMS Message
+
+HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createSmsMessage);
+}
+```
+
+- Parameter `createSmsMessage` is of type [CreateSMSMessage](./RingCentral.Net/Definitions/CreateSMSMessage.cs)
+- `result` is of type [GetMessageInfoResponse](./RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#MMS-createMMS) in API Explorer.
+
+
 ## Get Notification Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
@@ -2910,7 +2969,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-deleteRingOutCall) in API Explorer.
 
 
-## Create SMS/MMS Message
+## Send SMS
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`
 
@@ -3464,7 +3523,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./RingCentral.Net/Definitions/ReadCallSessionStatusParameters.cs)
-- `result` is of type [CallSessionObject](./RingCentral.Net/Definitions/CallSessionObject.cs)
+- `result` is of type [CallSession](./RingCentral.Net/Definitions/CallSession.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -3531,6 +3590,26 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-updateCallParty) in API Explorer.
 
 
+## Answer Call Party
+
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget);
+}
+```
+
+- Parameter `answerTarget` is of type [AnswerTarget](./RingCentral.Net/Definitions/AnswerTarget.cs)
+- `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-answerCallParty) in API Explorer.
+
+
 ## Call Flip on Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip`
@@ -3589,6 +3668,46 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty) in API Explorer.
+
+
+## Pickup Call
+
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget);
+}
+```
+
+- Parameter `pickupTarget` is of type [PickupTarget](./RingCentral.Net/Definitions/PickupTarget.cs)
+- `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pickupCallParty) in API Explorer.
+
+
+## Play audio files into a party.
+
+HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/play`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Play().Post(playTarget);
+}
+```
+
+- Parameter `playTarget` is of type [PlayTarget](./RingCentral.Net/Definitions/PlayTarget.cs)
+- `result` is an empty string
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-playCallParty) in API Explorer.
 
 
 ## Create Recording
@@ -4437,25 +4556,6 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readDataExportTask) in API Explorer.
 
 
-## Get Glip Data Archive
-
-HTTP GET `/restapi/v1.0/glip/data-export/{taskId}/archive/{archiveId}`
-
-```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Archive(archiveId).Get();
-}
-```
-
-
-- `result` is of type `byte[]`
-- Parameter `apiVersion` is optional with default value `v1.0`
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readComplianceArchive) in API Explorer.
-
-
 ## Get User Events List
 
 HTTP GET `/restapi/v1.0/glip/events`
@@ -4982,7 +5082,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `glipCompleteTask` is of type [GlipCompleteTask](./RingCentral.Net/Definitions/GlipCompleteTask.cs)
-- `result` is of type [GlipTaskList](./RingCentral.Net/Definitions/GlipTaskList.cs)
+- `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-completeTask) in API Explorer.

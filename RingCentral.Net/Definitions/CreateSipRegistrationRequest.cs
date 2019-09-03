@@ -6,7 +6,7 @@ namespace RingCentral
         /// Device unique description
         /// Required
         /// </summary>
-        public DeviceInfoRequest[] device;
+        public DeviceInfoRequest device;
 
         /// <summary>
         /// SIP settings for device

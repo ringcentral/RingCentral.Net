@@ -43,7 +43,7 @@ namespace RingCentral
         /// <summary>
         /// Extension to which the call is forwarded in 'Bypass' mode
         /// </summary>
-        public CompanyAnsweringRuleCallersInfoRequest extension;
+        public CompanyAnsweringRuleExtensionInfo extension;
 
         /// <summary>
         /// Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

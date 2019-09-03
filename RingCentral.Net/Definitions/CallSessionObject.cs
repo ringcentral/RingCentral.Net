@@ -18,9 +18,8 @@ namespace RingCentral
         public string voiceCallToken;
 
         /// <summary>
-        /// Information on a party of a call session
         /// </summary>
-        public CallParty parties;
+        public CallParty[] parties;
 
         /// <summary>
         /// Date and time of the latest session update represented in Unix time format

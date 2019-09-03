@@ -66,7 +66,7 @@ namespace RingCentral.Tests
                 Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
             }
 
-            var uri2 = rc.AuthorizeUri(new GetAuthorizationLinkParameters
+            var uri2 = rc.AuthorizeUri(new AuthorizeRequest
             {
                 redirect_uri = redirectUri,
                 client_id = rc.clientId, // optional
@@ -78,7 +78,7 @@ namespace RingCentral.Tests
             Assert.Contains("state=hello", uri2);
             Assert.Contains("ui_options=hide_logo", uri2);
 
-            var uri3 = rc.AuthorizeUri(new GetAuthorizationLinkParameters
+            var uri3 = rc.AuthorizeUri(new AuthorizeRequest
             {
                 redirect_uri = redirectUri,
                 state = "hello",
@@ -110,7 +110,7 @@ namespace RingCentral.Tests
             rc.token = null;
 
             // deserialize to get token
-            var token = JsonConvert.DeserializeObject<TokenResponse>(data);
+            var token = JsonConvert.DeserializeObject<TokenInfo>(data);
 
             // refresh by refresh token
             await rc.Refresh(token.refresh_token);
@@ -146,7 +146,7 @@ namespace RingCentral.Tests
             rc.token = null;
 
             // deserialize to get token
-            var token = JsonConvert.DeserializeObject<TokenResponse>(data);
+            var token = JsonConvert.DeserializeObject<TokenInfo>(data);
             rc.token = token;
 
             // refresh

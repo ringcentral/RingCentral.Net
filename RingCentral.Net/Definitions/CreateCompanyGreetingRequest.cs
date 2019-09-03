@@ -9,6 +9,11 @@ namespace RingCentral
         public string type;
 
         /// <summary>
+        /// Internal identifier of a language. See Get Language List
+        /// </summary>
+        public string languageId;
+
+        /// <summary>
         /// Meida file to upload
         /// </summary>
         public Attachment binary;

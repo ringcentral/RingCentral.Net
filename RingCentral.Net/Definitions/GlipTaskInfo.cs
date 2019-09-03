@@ -87,9 +87,8 @@ namespace RingCentral
         public string description;
 
         /// <summary>
-        /// Task details
         /// </summary>
-        public object recurrence;
+        public GlipTaskRecurrenceInfo recurrence;
 
         /// <summary>
         /// </summary>

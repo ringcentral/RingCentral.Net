@@ -3,18 +3,18 @@ namespace RingCentral
     public class NotificationDeliveryMode
     {
         /// <summary>
-        /// Notifications transportation provider name. 'APNS' (Apple Push Notifications Service)
-        /// Enum: PubNub, APNS, PubNub/APNS/VoIP
+        /// Notifications transportation provider name
+        /// Enum: PubNub, RC/APNS
         /// </summary>
         public string transportType;
 
         /// <summary>
-        /// Optional parameter. Specifies if the message will be encrypted or not. For APNS transport type the value is always  false
+        /// Optional parameter. Specifies if the message will be encrypted or not
         /// </summary>
         public bool? encryption;
 
         /// <summary>
-        /// PubNub channel name. For APNS transport type - internal identifier of a device  device_token
+        /// PubNub channel name
         /// </summary>
         public string address;
 

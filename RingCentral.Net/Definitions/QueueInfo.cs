@@ -25,12 +25,19 @@ namespace RingCentral
         public long? holdAudioInterruptionPeriod;
 
         /// <summary>
+        /// Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used
+        /// Default: Voicemail
+        /// Enum: TransferToExtension, Voicemail
+        /// </summary>
+        public string holdTimeExpirationAction;
+
+        /// <summary>
         /// Maximum time in seconds to wait for a call queue member before trying the next member
         /// </summary>
         public long? agentTimeout;
 
         /// <summary>
-        /// Minimum post-call wrap up time in seconds before agent status is automatically set
+        /// Minimum post-call wrap up time in seconds before agent status is automatically set; the value range is from 180 to 300
         /// </summary>
         public long? wrapUpTime;
 
@@ -40,7 +47,7 @@ namespace RingCentral
         public long? holdTime;
 
         /// <summary>
-        /// Maximum count of callers on hold
+        /// Maximum count of callers on hold; the limitation is 25 callers
         /// </summary>
         public long? maxCallers;
 

@@ -26,5 +26,10 @@ namespace RingCentral
         /// Dial-in phone number to connect to a conference
         /// </summary>
         public string phoneNumber;
+
+        /// <summary>
+        /// Indicates if the number is 'premium' (account phone number with the `ConferencingNumber` usageType)
+        /// </summary>
+        public bool? premium;
     }
 }

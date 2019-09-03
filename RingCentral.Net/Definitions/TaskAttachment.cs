@@ -19,7 +19,7 @@ namespace RingCentral
         public string name;
 
         /// <summary>
-        /// URI
+        /// Link to an attachment content
         /// </summary>
         public string contentUri;
     }

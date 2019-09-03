@@ -8,12 +8,12 @@ namespace RingCentral
         public string phoneNumber;
 
         /// <summary>
-        /// VM owner's extension id
+        /// Voicemail owner extension identifier
         /// </summary>
         public string voicemail;
 
         /// <summary>
-        /// Park orbit id
+        /// Park orbit identifier
         /// </summary>
         public string parkOrbit;
     }

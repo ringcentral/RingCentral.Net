@@ -3,33 +3,49 @@ namespace RingCentral
     public class GetTokenRequest
     {
         /// <summary>
-        /// <b>Phone number linked to account or extension in account in E.164 format with or without leading "+" sign</b>
+        /// Phone number linked to an account or extension in E.164 format with or without leading '+' sign
         /// </summary>
         public string username;
 
         /// <summary>
-        /// <b>User's password</b>
+        /// User's password
         /// </summary>
         public string password;
 
         /// <summary>
-        /// Optional. Extension short number. If company number is specified as a username, and "extension" is not specified, the server will attempt to authenticate client as main company administrator
+        /// Optional. Extension short number. If company number is specified as a username, and extension is not specified, the server will attempt to authenticate client as main company administrator
         /// </summary>
         public string extension;
 
         /// <summary>
-        /// <b>Must hold "password" value for Resource Owner Credentials flow</b>
+        /// Grant type
         /// Default: password
+        /// Enum: authorization_code, password, refresh_token, client_credentials
         /// </summary>
         public string grant_type;
 
         /// <summary>
-        /// Optional. Access token lifetime in seconds; the possible values are from 600 sec (10 min) to 3600 sec (1 hour). The default value is 3600 sec. If the value specified exceeds the default one, the default value is set. If the value specified is less than 600 seconds, the minimum value (600 sec) is set
+        /// Authorization code
+        /// </summary>
+        public string code;
+
+        /// <summary>
+        /// This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration
+        /// </summary>
+        public string redirect_uri;
+
+        /// <summary>
+        /// Access token lifetime in seconds
+        /// Maximum: 3600
+        /// Minimum: 600
+        /// Default: 3600
         /// </summary>
         public long? access_token_ttl;
 
         /// <summary>
-        /// Optional. Refresh token lifetime in seconds; default is 604800 sec (1 week). If the value specified exceeds the default one, the default value is set
+        /// Refresh token lifetime in seconds
+        /// Maximum: 604800
+        /// Default: 604800
         /// </summary>
         public long? refresh_token_ttl;
 
@@ -39,15 +55,12 @@ namespace RingCentral
         public string scope;
 
         /// <summary>
-        /// Previously issued refresh token. This is the only formData field used for the Refresh Token Flow. It is not used for the Resource Owner Password Credentials Flow
+        /// Previously issued refresh token. This is the only formData field used for the Refresh Token Flow.
         /// </summary>
         public string refresh_token;
 
         /// <summary>
-        /// </summary>
-        public string brand_id;
-
-        /// <summary>
+        /// The unique identifier of a client application. If not specified, the previously specified or auto generated value is used by default
         /// </summary>
         public string endpoint_id;
 
@@ -58,14 +71,6 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string client_id;
-
-        /// <summary>
-        /// </summary>
-        public string redirect_uri;
-
-        /// <summary>
-        /// </summary>
-        public string code;
 
         /// <summary>
         /// </summary>
@@ -86,5 +91,13 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string assertion;
+
+        /// <summary>
+        /// </summary>
+        public string brand_id;
+
+        /// <summary>
+        /// </summary>
+        public string code_verifier;
     }
 }

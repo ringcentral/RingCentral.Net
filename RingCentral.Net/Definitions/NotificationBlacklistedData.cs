@@ -9,7 +9,7 @@ namespace RingCentral
         public string blacklistedAt;
 
         /// <summary>
-        /// Reason of adding subscrition to a black list
+        /// Reason for adding subscrition to a black list
         /// </summary>
         public string reason;
     }

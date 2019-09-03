@@ -7,7 +7,7 @@ namespace RingCentral.Tests
     public class ScimTest
     {
         private const string EMAIL = "tyler.liu.test@ringcentral.com";
-        
+
         [Fact]
         public async void GetServiceProviderConfig()
         {
@@ -24,10 +24,10 @@ namespace RingCentral.Tests
                 );
                 var str = await rc.Get<string>("/scim/v2/ServiceProviderConfig");
                 Assert.Contains("urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig", str);
-                // todo: uncomment following code:
-//                var serviceProviderConfig = await rc.Scim().ServiceProviderConfig().Get();
-//                Assert.Equal(new[] {"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"},
-//                    serviceProviderConfig.schemas);
+
+                var serviceProviderConfig = await rc.Scim().ServiceProviderConfig().Get();
+                Assert.Equal(new[] {"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"},
+                    serviceProviderConfig.schemas);
             }
         }
 

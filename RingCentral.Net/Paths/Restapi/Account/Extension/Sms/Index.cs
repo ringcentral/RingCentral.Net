@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
         }
 
         /// <summary>
-        /// Operation: Create SMS/MMS Message
+        /// Operation: Send SMS
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage)

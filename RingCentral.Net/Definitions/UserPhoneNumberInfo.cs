@@ -50,8 +50,8 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Usage type of a phone number
-        /// Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber
+        /// Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
+        /// Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool
         /// </summary>
         public string usageType;
 

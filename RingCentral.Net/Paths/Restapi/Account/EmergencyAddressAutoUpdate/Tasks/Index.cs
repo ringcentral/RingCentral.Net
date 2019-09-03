@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
         }
 
         /// <summary>
-        /// Operation: Get Task
+        /// Operation: Get Emergency Map Configuration Task
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
         /// </summary>
         public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get()

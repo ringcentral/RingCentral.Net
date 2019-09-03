@@ -31,5 +31,10 @@ namespace RingCentral
         /// Site data
         /// </summary>
         public string site;
+
+        /// <summary>
+        /// Department name
+        /// </summary>
+        public string department;
     }
 }

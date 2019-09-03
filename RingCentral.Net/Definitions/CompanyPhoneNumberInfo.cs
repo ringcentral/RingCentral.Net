@@ -50,9 +50,19 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Usage type of a phone number
-        /// Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber
+        /// Usage type of a phone number. Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
+        /// Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool
         /// </summary>
         public string usageType;
+
+        /// <summary>
+        /// Temporary phone number, if any. Returned for phone numbers in `Pending` porting status only
+        /// </summary>
+        public TemporaryNumberInfo temporaryNumber;
+
+        /// <summary>
+        /// CCRN (Contact Center Routing Number) provider. If not specified then the default value 'InContact/North America' is used, its ID is '1'
+        /// </summary>
+        public ContactCenterProvider contactCenterProvider;
     }
 }

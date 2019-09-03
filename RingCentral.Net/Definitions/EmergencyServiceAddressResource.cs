@@ -61,5 +61,10 @@ namespace RingCentral
         /// Full name of a country
         /// </summary>
         public string countryName;
+
+        /// <summary>
+        /// Specifies if emergency address is out of country
+        /// </summary>
+        public bool? outOfCountry;
     }
 }

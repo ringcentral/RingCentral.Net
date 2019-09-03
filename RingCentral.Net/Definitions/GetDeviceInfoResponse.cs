@@ -52,7 +52,7 @@ namespace RingCentral
         /// <summary>
         /// Address for emergency cases. The same emergency address is assigned to all the numbers of one device
         /// </summary>
-        public DeviceEmergencyAddressInfo emergencyServiceAddress;
+        public EmergencyServiceAddressResource emergencyServiceAddress;
 
         /// <summary>
         /// Phone lines information

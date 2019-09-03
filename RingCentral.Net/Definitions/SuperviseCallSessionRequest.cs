@@ -10,15 +10,19 @@ namespace RingCentral
         public string mode;
 
         /// <summary>
-        /// Internal identifier of a supervisor's device
+        /// Internal identifier of a supervisor's device which will be used for call session monitoring
         /// Required
         /// </summary>
-        public string deviceId;
+        public string supervisorDeviceId;
 
         /// <summary>
-        /// Extension number of a user that will be monitored
-        /// Required
+        /// Extension number of the user that will be monitored
         /// </summary>
-        public string extensionNumber;
+        public string agentExtensionNumber;
+
+        /// <summary>
+        /// Extension identifier of the user that will be monitored
+        /// </summary>
+        public string agentExtensionId;
     }
 }

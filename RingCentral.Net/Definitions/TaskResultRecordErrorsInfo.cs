@@ -16,6 +16,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public string descriprion;
+        public string description;
     }
 }

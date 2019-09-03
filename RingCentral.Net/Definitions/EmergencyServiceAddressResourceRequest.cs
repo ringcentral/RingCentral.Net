@@ -1,31 +1,26 @@
 namespace RingCentral
 {
-    public class DeviceEmergencyAddressInfo
+    public class EmergencyServiceAddressResourceRequest
     {
         /// <summary>
-        /// Name of a customer
-        /// </summary>
-        public string customerName;
-
-        /// <summary>
-        /// Street address, line 1 - street address, P.O. box, company name, c/o
         /// </summary>
         public string street;
 
         /// <summary>
-        /// Street address, line 2 - apartment, suite, unit, building, floor, etc.
         /// </summary>
         public string street2;
 
         /// <summary>
-        /// City name
         /// </summary>
         public string city;
 
         /// <summary>
-        /// Zip code
         /// </summary>
         public string zip;
+
+        /// <summary>
+        /// </summary>
+        public string customerName;
 
         /// <summary>
         /// State/province name
@@ -66,11 +61,5 @@ namespace RingCentral
         /// Full name of a country
         /// </summary>
         public string countryName;
-
-        /// <summary>
-        /// Resulting status of emergency address synchronization. Returned for 'Get Device Info' request if `syncEmergencyAddress` parameter is set to 'True'
-        /// Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
-        /// </summary>
-        public string syncStatus;
     }
 }

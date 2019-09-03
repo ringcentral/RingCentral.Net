@@ -20,6 +20,6 @@ namespace RingCentral
         /// <summary>
         /// Forwarding number (or group) data
         /// </summary>
-        public ForwardingNumberInfoRules[] forwardingNumbers;
+        public CreateAnsweringRuleForwardingNumberInfo[] forwardingNumbers;
     }
 }
