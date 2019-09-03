@@ -24,3 +24,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
         }
     }
 }
+
+namespace RingCentral.Paths.Restapi.Account.Extension.Mms
+{
+    public partial class Index
+    {
+        public async Task<GetMessageInfoResponse> Post(CreateSMSMessage createSMSMessage, Attachment[] attachments)
+        {
+            var multipartFormDataContent =
+                Utils.GetMultipartFormDataContent(createSMSMessage, new {attachments = attachments});
+            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), multipartFormDataContent);
+        }
+    }
+}
