@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -62,7 +63,15 @@ namespace RingCentral
             message += $"\n\nRequest:\n{httpRequestMessage.ToString()}";
             if (httpRequestMessage.Content != null)
             {
-                message += $"\nContent: {httpRequestMessage.Content.ReadAsStringAsync().Result}";
+                try
+                {
+                    message += $"\nContent: {httpRequestMessage.Content.ReadAsStringAsync().Result}";
+                }
+                catch (ObjectDisposedException)
+                {
+                    message +=
+                        $"\nContent: <content has been disposed by HttpClient: https://github.com/dotnet/corefx/issues/1794>";
+                }
             }
 
             return message;

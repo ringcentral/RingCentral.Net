@@ -51,7 +51,7 @@ namespace RingCentral.Tests
                 Assert.Equal("SMS", messageInfo.type);
             }
         }
-        
+
         [Fact]
         public async void SendMms2()
         {
