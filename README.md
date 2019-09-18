@@ -43,7 +43,7 @@ cd RingCentral.Net.PubnubPCL
 dotnet pack
 ```
 
-Update version number in `RingCentral.Net.Pubnub\Properties\AssemblyInfo.css`
+Update version number in `RingCentral.Net.Pubnub\Properties\AssemblyInfo.cs`
 
 Rebuild solution
 

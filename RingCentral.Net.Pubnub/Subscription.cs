@@ -30,7 +30,7 @@ namespace RingCentral
                 _subscriptionInfo = value;
                 if (value == null || renewScheduled) return;
                 Debug.Assert(_subscriptionInfo.expiresIn != null, "subscriptionInfo.expiresIn != null");
-                System.Threading.Tasks.Task.Delay((int) (_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(
+                Task.Delay((int) (_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(
                     async action =>
                     {
                         // 2 minutes before expiration
@@ -68,7 +68,8 @@ Please install package RingCentral.Net.PubnubPCL instead.");
 
             var pnConfiguration = new PNConfiguration
             {
-                SubscribeKey = subscriptionInfo.deliveryMode.subscriberKey
+                SubscribeKey = subscriptionInfo.deliveryMode.subscriberKey,
+                ReconnectionPolicy = PNReconnectionPolicy.LINEAR
             };
             pubnub = new Pubnub(pnConfiguration);
             pubnub.AddListener(new SubscribeCallbackExt(
