@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -94,11 +95,23 @@ Please install package RingCentral.Net.PubnubPCL instead.");
 
         public async Task<HttpResponseMessage> Revoke()
         {
-            var r = await rc.Delete($"/restapi/v1.0/subscription/{_subscriptionInfo.id}");
             pubnub.Destroy();
             pubnub = null;
             subscriptionInfo = null;
-            return r;
+            try
+            {
+                var r = await rc.Delete($"/restapi/v1.0/subscription/{_subscriptionInfo.id}");
+                return r;
+            }
+            catch (RestException re)
+            {
+                if (re.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound) // already deleted
+                {
+                    return re.HttpResponseMessage;
+                }
+
+                throw;
+            }
         }
 
         private string Decrypt(string dataString)
