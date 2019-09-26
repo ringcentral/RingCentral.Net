@@ -95,9 +95,6 @@ Please install package RingCentral.Net.PubnubPCL instead.");
 
         public async Task<HttpResponseMessage> Revoke()
         {
-            pubnub.Destroy();
-            pubnub = null;
-            subscriptionInfo = null;
             try
             {
                 var r = await rc.Delete($"/restapi/v1.0/subscription/{_subscriptionInfo.id}");
@@ -111,6 +108,12 @@ Please install package RingCentral.Net.PubnubPCL instead.");
                 }
 
                 throw;
+            }
+            finally
+            {
+                pubnub.Destroy();
+                pubnub = null;
+                subscriptionInfo = null;
             }
         }
 
