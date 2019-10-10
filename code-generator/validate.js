@@ -62,7 +62,11 @@ for (const path of cache.post) {
     path.endsWith('/renew') ||
     path.endsWith('/hold') ||
     path.endsWith('/unhold') ||
-    path.endsWith('/reject')
+    path.endsWith('/reject') ||
+    path.endsWith('/lock') ||
+    path.endsWith('/unlock') ||
+    path.endsWith('/park') ||
+    path.endsWith('/publish')
   ) {
     continue
   }
