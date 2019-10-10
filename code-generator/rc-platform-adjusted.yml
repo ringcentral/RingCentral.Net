@@ -4925,7 +4925,7 @@ paths:
             Max number of notes to be fetched by one request; the value range is
             1-250.
           required: false
-          type: number
+          type: integer
           default: 30
           maximum: 250
       responses:
