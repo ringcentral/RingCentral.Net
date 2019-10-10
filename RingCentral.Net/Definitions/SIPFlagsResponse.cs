@@ -19,5 +19,21 @@ namespace RingCentral
         /// Enum: True, False
         /// </summary>
         public string outboundCallsEnabled;
+
+        /// <summary>
+        /// </summary>
+        public bool? dscpEnabled;
+
+        /// <summary>
+        /// </summary>
+        public long? dscpSignaling;
+
+        /// <summary>
+        /// </summary>
+        public long? dscpVoice;
+
+        /// <summary>
+        /// </summary>
+        public long? dscpVideo;
     }
 }

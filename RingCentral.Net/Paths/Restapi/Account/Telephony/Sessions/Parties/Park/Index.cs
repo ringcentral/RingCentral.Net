@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Play
+namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park
 {
     public partial class Index
     {
@@ -15,16 +15,16 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Play
 
         public string Path()
         {
-            return $"{parent.Path()}/play";
+            return $"{parent.Path()}/park";
         }
 
         /// <summary>
-        /// Operation: Play audio files into a party.
-        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/play
+        /// Operation: Call Park
+        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
         /// </summary>
-        public async Task<string> Post(RingCentral.PlayTarget playTarget)
+        public async Task<RingCentral.CallParty> Post()
         {
-            return await rc.Post<string>(this.Path(), playTarget);
+            return await rc.Post<RingCentral.CallParty>(this.Path());
         }
     }
 }
@@ -33,9 +33,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 {
     public partial class Index
     {
-        public Restapi.Account.Telephony.Sessions.Parties.Play.Index Play()
+        public Restapi.Account.Telephony.Sessions.Parties.Park.Index Park()
         {
-            return new Restapi.Account.Telephony.Sessions.Parties.Play.Index(this);
+            return new Restapi.Account.Telephony.Sessions.Parties.Park.Index(this);
         }
     }
 }

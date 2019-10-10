@@ -1,29 +1,29 @@
 namespace RingCentral
 {
-    public class UpdateSwitchInfo
+    public class WirelessPointInfoRequest
     {
         /// <summary>
-        /// internal identifier of a switch
+        /// Internal identifier of a wireless point
         /// </summary>
         public string id;
 
         /// <summary>
-        /// Unique identifier of a network switch. The supported formats are: XX:XX:XX:XX:XX:XX (symbols 0-9 and A-F) for MAC address and X.X.X.X for IP address (symbols 0-255)
+        /// Unique 48-bit identifier of the wireless access point complying with MAC address conventions
         /// </summary>
-        public string chassisId;
+        public string bssid;
 
         /// <summary>
-        /// Name of a network switch
+        /// Wireless access point name
         /// </summary>
         public string name;
 
         /// <summary>
-        /// Site data
+        /// Site data (internal identifier and custom name of a site)
         /// </summary>
-        public SwitchSiteInfo site;
+        public AutomaticLocationUpdatesSiteInfo site;
 
         /// <summary>
-        /// Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+        /// Emergency address assigned to the wireless point. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
         /// </summary>
         public LocationUpdatesEmergencyAddressInfoRequest emergencyAddress;
 

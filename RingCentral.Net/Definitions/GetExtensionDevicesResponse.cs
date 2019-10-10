@@ -6,7 +6,7 @@ namespace RingCentral
         /// List of extension devices
         /// Required
         /// </summary>
-        public GetDeviceInfoResponse[] records;
+        public ExtensionDeviceResponse[] records;
 
         /// <summary>
         /// Information on navigation

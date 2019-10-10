@@ -16,6 +16,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PrivateIpRangeInfo[] privateIpRanges;
+        public PrivateIpRangeInfoRequest[] privateIpRanges;
     }
 }

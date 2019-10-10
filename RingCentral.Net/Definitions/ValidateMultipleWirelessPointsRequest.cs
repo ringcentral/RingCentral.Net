@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public WirelessPointInfo[] records;
+        public WirelessPointInfoRequest[] records;
     }
 }

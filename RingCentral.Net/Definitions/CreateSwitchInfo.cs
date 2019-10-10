@@ -22,7 +22,7 @@ namespace RingCentral
         /// Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
         /// Required
         /// </summary>
-        public LocationUpdatesEmergencyAddressInfo emergencyAddress;
+        public LocationUpdatesEmergencyAddressInfoRequest emergencyAddress;
 
         /// <summary>
         /// Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned

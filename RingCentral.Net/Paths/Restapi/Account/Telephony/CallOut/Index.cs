@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
         }
 
         /// <summary>
-        /// Operation: Create CallOut Call Session
+        /// Operation: Make CallOut
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/call-out
         /// </summary>
         public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest)
