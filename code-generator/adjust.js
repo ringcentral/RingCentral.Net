@@ -46,8 +46,4 @@ doc.definitions.CustomCompanyGreetingAnsweringRuleInfo = doc.definitions.CustomG
   }
 }
 
-// https://jira.ringcentral.com/browse/PLD-339
-const p = doc.paths['/restapi/v1.0/glip/chats/{chatId}/notes'].get.parameters.filter(p => p.name === 'recordCount')[0]
-p.type = 'integer'
-
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
