@@ -42,7 +42,7 @@ markdown += `
 `
 const postOkPaths = [
   '/restapi/v1.0/glip/groups/{groupId}/webhooks',
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings',
+  '/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings',
   '/restapi/oauth/token',
   '/restapi/oauth/revoke'
 ]
