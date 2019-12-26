@@ -10,15 +10,15 @@
     "validate": "node -r @babel/register validate.js"
   },
   "dependencies": {
-    "change-case": "^3.1.0",
+    "change-case": "^4.1.1",
     "js-yaml": "^3.13.1",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
-    "standard": "^14.1.0",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "standard": "^14.3.1",
     "yarn-upgrade-all": "^0.5.2"
   }
 }
