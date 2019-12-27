@@ -1,7 +1,7 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
-import pascalCase from 'pascal-case'
+import { pascalCase } from 'change-case'
 
 const outputDir = '../RingCentral.Net/Definitions'
 

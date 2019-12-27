@@ -1,6 +1,6 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
-import changeCase from 'change-case'
+import { pascalCase, camelCase } from 'change-case'
 import * as R from 'ramda'
 
 import { normalizePath, deNormalizePath, getResponseType } from './utils'
@@ -19,7 +19,7 @@ const pathToCode = path => {
     if (name.startsWith('{')) {
       return `(${name.substring(1, name.length - 1)})`
     } else {
-      return changeCase.pascalCase(name)
+      return pascalCase(name)
     }
   })
   names = names.map((name, index) => {
@@ -41,7 +41,7 @@ normalizedPaths.forEach(path => {
   console.log(path)
   const names = path.split('/').filter(name => name !== '' && !name.startsWith('{'))
   console.log(names)
-  var gCode = fs.readFileSync(`../RingCentral.Net/Paths/${names.map(n => changeCase.pascalCase(n)).join('/')}/Index.cs`, 'utf-8')
+  var gCode = fs.readFileSync(`../RingCentral.Net/Paths/${names.map(n => pascalCase(n)).join('/')}/Index.cs`, 'utf-8')
   const ms = gCode.match(/\/\/\/ Operation: .+?\n\s*.+?\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?\s*\n/g)
     .map(f => {
       console.log(f)
@@ -60,19 +60,19 @@ normalizedPaths.forEach(path => {
 
 ## ${summary}
 
-HTTP ${changeCase.upperCase(method === 'List' ? 'Get' : method)} \`${endpoint}\`
+HTTP ${(method === 'List' ? 'Get' : method).toUpperCase()} \`${endpoint}\`
 
 \`\`\`cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await ${pathToCode(path)}.${method}(${parameters.map(p => changeCase.camelCase(p)).join(', ')});
+    var result = await ${pathToCode(path)}.${method}(${parameters.map(p => camelCase(p)).join(', ')});
 }
 \`\`\`
 
-${parameters.map(p => `- Parameter \`${changeCase.camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
+${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
 
-      const responses = doc.paths[endpoint][changeCase.lowerCase(method === 'List' ? 'Get' : method)].responses
+      const responses = doc.paths[endpoint][(method === 'List' ? 'Get' : method).toLowerCase()].responses
       const responseType = getResponseType(responses)
       if (!responseType) {
         code += '\n- `result` is an empty string'
@@ -95,7 +95,7 @@ ${parameters.map(p => `- Parameter \`${changeCase.camelCase(p)}\` is of type [${
       if (code.includes('.Scim(version)')) {
         code += '\n- Parameter `version` is optional with default value `v2`'
       }
-      const operation = doc.paths[endpoint][changeCase.lowerCase(method === 'List' ? 'Get' : method)]
+      const operation = doc.paths[endpoint][(method === 'List' ? 'Get' : method).toLowerCase()]
       code += `\n\n[Try it out](https://developer.ringcentral.com/api-reference#${operation.tags[0].replace(/ /g, '-')}-${operation.operationId}) in API Explorer.`
       md += code
     }

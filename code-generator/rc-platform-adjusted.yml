@@ -3117,6 +3117,8 @@ paths:
       x-metering-group: System
       x-app-permission: ReadPresence
       x-docs-level: Public
+      tags:
+        - Call Queues
     put:
       summary: Update Call Queue Presence
       description: Updates presence status of Call Queue members in particular queue
@@ -3153,6 +3155,8 @@ paths:
       x-docs-level: Public
       x-notifications:
         - $ref: '#/definitions/CallQueuePresenceEvent'
+      tags:
+        - Call Queues
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence':
     get:
       summary: Get Agent’s Call Queue Presence
@@ -3194,6 +3198,8 @@ paths:
       x-metering-group: System
       x-app-permission: ReadPresence
       x-docs-level: Public
+      tags:
+        - Call Queues
     put:
       summary: Update Agent’s Call Queue Presence
       description: Updates Agent’s availability for call queues
@@ -3231,6 +3237,8 @@ paths:
       x-docs-level: Public
       x-notifications:
         - $ref: '#/definitions/CallQueuePresenceEvent'
+      tags:
+        - Call Queues
   /restapi/v1.0/glip/chats:
     get:
       tags:
@@ -9675,6 +9683,8 @@ paths:
       x-user-permission: ReadExtensions
       x-throttling-group: Light
       x-docs-level: Public
+      tags:
+        - Call Queues
     put:
       operationId: updateCallQueueInfo
       summary: Update Call Queue
@@ -9707,6 +9717,8 @@ paths:
       x-user-permission: EditUserInfo
       x-throttling-group: Light
       x-docs-level: Public
+      tags:
+        - Call Queues
   '/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members':
     get:
       tags:
@@ -17672,19 +17684,36 @@ definitions:
     type: object
     properties:
       frequency:
-        $ref: '#/definitions/MeetingFrequency'
+        type: string
+        enum:
+          - Daily
+          - Weekly
+          - Monthly
       interval:
         type: integer
       weeklyByDays:
         type: array
-        items:
-          $ref: '#/definitions/WeekDay'
+        items: &ref_0
+          type: string
+          enum:
+            - Sunday
+            - Monday
+            - Tuesday
+            - Wednesday
+            - Thursday
+            - Friday
+            - Saturday
       monthlyByDay:
         type: integer
       monthlyByWeek:
-        $ref: '#/definitions/MonthlyWeek'
-      monthlyByWeekDay:
-        $ref: '#/definitions/WeekDay'
+        type: string
+        enum:
+          - Last
+          - First
+          - Second
+          - Third
+          - Fourth
+      monthlyByWeekDay: *ref_0
       count:
         type: integer
       until:
@@ -17730,30 +17759,6 @@ definitions:
       loginAllowed:
         type: boolean
         default: false
-  MeetingFrequency:
-    type: string
-    enum:
-      - Daily
-      - Weekly
-      - Monthly
-  WeekDay:
-    type: string
-    enum:
-      - Sunday
-      - Monday
-      - Tuesday
-      - Wednesday
-      - Thursday
-      - Friday
-      - Saturday
-  MonthlyWeek:
-    type: string
-    enum:
-      - Last
-      - First
-      - Second
-      - Third
-      - Fourth
   ModifySubscriptionRequest:
     type: object
     required:
@@ -24992,12 +24997,12 @@ definitions:
       uri:
         type: string
         description: Link for archive download
-  CustomGreetingAnsweringRuleInfoRequest: &ref_0
+  CustomGreetingAnsweringRuleInfoRequest: &ref_1
     type: object
     properties:
       id:
         type: string
-  CustomCompanyGreetingAnsweringRuleInfo: *ref_0
+  CustomCompanyGreetingAnsweringRuleInfo: *ref_1
 securityDefinitions:
   OAuth2:
     type: oauth2

@@ -1,7 +1,8 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
 import * as R from 'ramda'
-import changeCase from 'change-case'
+import { pascalCase, titleCase } from 'change-case'
+import { lowerCaseFirst } from 'lower-case-first'
 import path from 'path'
 
 import { normalizePath, deNormalizePath, getResponseType } from './utils'
@@ -17,7 +18,7 @@ const paths = Object.keys(doc.paths)
 const normalizedPaths = paths.map(p => normalizePath(p))
 
 const getRoutes = (prefix, name) => {
-  return [...prefix.split('/').filter(t => t !== '' && !t.startsWith('{')), name].map(t => changeCase.pascalCase(t))
+  return [...prefix.split('/').filter(t => t !== '' && !t.startsWith('{')), name].map(t => pascalCase(t))
 }
 const getFolderPath = (prefix, name) => {
   return path.join(outputDir, ...getRoutes(prefix, name))
@@ -157,7 +158,7 @@ ${code}`
     }
 
     operations.forEach(operation => {
-      const method = changeCase.pascalCase(operation.method)
+      const method = pascalCase(operation.method)
       const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
         R.any(o => o.method === 'get' && o.endpoint === operation.endpoint + `/{${paramName}}`)(operations)) ? 'List' : method
       const responses = operation.detail.responses
@@ -181,18 +182,18 @@ ${code}`
             bodyParam = 'body'
           } else {
             bodyClass = R.last(body.schema.$ref.split('/'))
-            bodyParam = changeCase.lowerCaseFirst(bodyClass)
+            bodyParam = lowerCaseFirst(bodyClass)
             bodyClass = 'RingCentral.' + bodyClass
           }
         }
       }
       if (formUrlEncoded || multipart) {
-        bodyClass = `${changeCase.pascalCase(operation.detail.operationId)}Request`
+        bodyClass = `${pascalCase(operation.detail.operationId)}Request`
         bodyParam = `${operation.detail.operationId}Request`
         body = (operation.detail.parameters || []).filter(p => p.in === 'body' && p.schema && p.schema.$ref)[0]
         if (body) {
           bodyClass = R.last(body.schema.$ref.split('/'))
-          bodyParam = changeCase.lowerCaseFirst(bodyClass)
+          bodyParam = lowerCaseFirst(bodyClass)
           bodyClass = 'RingCentral.' + bodyClass
         }
       }
@@ -204,12 +205,12 @@ ${code}`
         methodParams.push(`${bodyClass} ${bodyParam}`)
       }
       if (queryParams.length > 0) {
-        methodParams.push(`${changeCase.pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
+        methodParams.push(`${pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
       }
       code += `
 
       /// <summary>
-      /// Operation: ${operation.detail.summary || changeCase.titleCase(operation.detail.operationId)}
+      /// Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
       /// Http ${method} ${operation.endpoint}
       /// </summary>
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})

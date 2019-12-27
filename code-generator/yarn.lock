@@ -1615,6 +1615,13 @@ loose-envify@^1.0.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lower-case-first@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/lower-case-first/-/lower-case-first-2.0.1.tgz#ecd03e25d9abc32aeab8d52b5fd7072772dd0ccf"
+  integrity sha512-Z5fqHsaDN4FkWtPjTkhZDBy3uD4ir9L/ooqrNzOyyruDW6nCn/05AbC9HupxEIjlIoeT4bdrtChUllcU+cNgmg==
+  dependencies:
+    tslib "^1.10.0"
+
 lower-case@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-2.0.1.tgz#39eeb36e396115cc05e29422eaea9e692c9408c7"
