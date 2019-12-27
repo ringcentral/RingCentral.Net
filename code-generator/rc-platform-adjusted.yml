@@ -14162,76 +14162,6 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/supervise
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/supervise
       x-beta-api: true
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise':
-    post:
-      tags:
-        - Call Control
-      summary: Supervise Call Party
-      operationId: superviseCallParty
-      x-beta-api: true
-      description: >-
-        Allows to monitor a call party in 'Listen' mode. Input parameters are
-        extension number of a monitored user and internal identifier of a
-        supervisor's device. Call session and party identifiers should be
-        specified in path. Please note that for this method dual channel audio
-        flow is supported, which means that you need to make one more request
-        for monitoring the second participant of a call. And as a result of each
-        monitoring request the client recieves SIP invite with the following
-        header `p-rc-api-monitoring-ids` containing IDs of the monitored party
-        and session. The flow is supported for calls with no more than 2
-        participants.
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          type: string
-          default: '~'
-        - name: sessionId
-          in: path
-          description: Internal identifier of a call session
-          required: true
-          type: string
-        - name: partyId
-          in: path
-          description: Internal identifier of a call party
-          required: true
-          type: string
-        - in: body
-          name: body
-          description: JSON body
-          required: true
-          schema:
-            $ref: '#/definitions/PartySuperviseRequest'
-      responses:
-        '201':
-          description: Created
-          schema:
-            $ref: '#/definitions/PartySuperviseResponse'
-        '400':
-          description: Bad Request
-        '404':
-          description: Not Found
-        '409':
-          description: Conflict
-        '500':
-          description: Internal Server Error
-        '503':
-          description: Service Temporary Unavailable
-      x-api-group: telephony/sessions/parties/supervise
-      x-throttling-group: Light
-      x-internal-api: false
-      x-app-permission: CallControl
-      x-docs-level: Public
-      x-rewrite-uri-from: >-
-        /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/supervise
-      x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/supervise
   /restapi/v1.0/glip/data-export:
     post:
       tags:
@@ -14866,6 +14796,76 @@ paths:
       x-metering-group: System
       x-throttling-group: Auth
       x-docs-level: Public
+  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise':
+    post:
+      tags:
+        - Call Control
+      summary: Supervise Call Party
+      operationId: superviseCallParty
+      x-beta-api: true
+      description: >-
+        Allows to monitor a call party in 'Listen' mode. Input parameters are
+        extension number of a monitored user and internal identifier of a
+        supervisor's device. Call session and party identifiers should be
+        specified in path. Please note that for this method dual channel audio
+        flow is supported, which means that you need to make one more request
+        for monitoring the second participant of a call. And as a result of each
+        monitoring request the client recieves SIP invite with the following
+        header `p-rc-api-monitoring-ids` containing IDs of the monitored party
+        and session. The flow is supported for calls with no more than 2
+        participants.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          type: string
+          default: '~'
+        - name: sessionId
+          in: path
+          description: Internal identifier of a call session
+          required: true
+          type: string
+        - name: partyId
+          in: path
+          description: Internal identifier of a call party
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: JSON body
+          required: true
+          schema:
+            $ref: '#/definitions/PartySuperviseRequest'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/PartySuperviseResponse'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Temporary Unavailable
+      x-api-group: telephony/sessions/parties/supervise
+      x-throttling-group: Light
+      x-internal-api: false
+      x-app-permission: CallControl
+      x-docs-level: Public
+      x-rewrite-uri-from: >-
+        /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/supervise
+      x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/supervise
 definitions:
   GetVersionsResponse:
     type: object

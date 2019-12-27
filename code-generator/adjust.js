@@ -98,4 +98,8 @@ doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sto
 doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].put.responses['207'].schema = doc.definitions.GetMessageMultiResponse
 doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence'].get.responses['207'].schema = doc.definitions.UnifiedPresenceList
 
+// https://jira.ringcentral.com/browse/PLD-593
+doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise'] = doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
+delete doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
