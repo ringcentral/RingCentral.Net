@@ -38,7 +38,7 @@ const normalizeType = f => {
 
 const normalizeField = f => {
   f.type = normalizeType(f)
-  if (['event', 'delegate', 'ref', 'default', 'operator', 'public'].includes(f.name)) {
+  if (['event', 'delegate', 'ref', 'default', 'operator', 'public', 'params'].includes(f.name)) {
     f.name = `@${f.name}`
   }
   return f
