@@ -42,7 +42,8 @@ markdown += `
 `
 const postOkPaths = [
   '/restapi/v1.0/glip/groups/{groupId}/webhooks',
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings',
+  '/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/recordings', // other branches
+  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings', // docs branch
   '/restapi/oauth/token',
   '/restapi/oauth/revoke'
 ]
@@ -110,6 +111,26 @@ for (const path of cache.patch) {
     p.type === 'file'
   ).length === 0) {
     markdown += `\n- ${path}`
+  }
+}
+
+markdown += `
+
+## string type as definitions
+`
+for (const definition of Object.keys(doc.definitions)) {
+  if (doc.definitions[definition].type === 'string') {
+    markdown += `\n- ${definition}`
+  }
+}
+
+markdown += `
+
+## array type as definitions
+`
+for (const definition of Object.keys(doc.definitions)) {
+  if (doc.definitions[definition].type === 'array') {
+    markdown += `\n- ${definition}`
   }
 }
 

@@ -47,49 +47,55 @@ doc.definitions.CustomCompanyGreetingAnsweringRuleInfo = doc.definitions.CustomG
 }
 
 // https://jira.ringcentral.com/browse/PLD-590
-doc.definitions.MeetingRecurrenceResource.properties.frequency = {
-  type: 'string',
-  enum: [
-    'Daily',
-    'Weekly',
-    'Monthly'
-  ]
-}
-const weekDay = {
-  type: 'string',
-  enum: [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday'
-  ]
-}
-doc.definitions.MeetingRecurrenceResource.properties.weeklyByDays.items = weekDay
-doc.definitions.MeetingRecurrenceResource.properties.monthlyByWeekDay = weekDay
-doc.definitions.MeetingRecurrenceResource.properties.monthlyByWeek = {
-  type: 'string',
-  enum: [
-    'Last',
-    'First',
-    'Second',
-    'Third',
-    'Fourth'
-  ]
-}
+// doc.definitions.MeetingRecurrenceResource.properties.frequency = {
+//   type: 'string',
+//   enum: [
+//     'Daily',
+//     'Weekly',
+//     'Monthly'
+//   ]
+// }
+// const weekDay = {
+//   type: 'string',
+//   enum: [
+//     'Sunday',
+//     'Monday',
+//     'Tuesday',
+//     'Wednesday',
+//     'Thursday',
+//     'Friday',
+//     'Saturday'
+//   ]
+// }
+// doc.definitions.MeetingRecurrenceResource.properties.weeklyByDays.items = weekDay
+// doc.definitions.MeetingRecurrenceResource.properties.monthlyByWeekDay = weekDay
+// doc.definitions.MeetingRecurrenceResource.properties.monthlyByWeek = {
+//   type: 'string',
+//   enum: [
+//     'Last',
+//     'First',
+//     'Second',
+//     'Third',
+//     'Fourth'
+//   ]
+// }
 
-delete doc.definitions.MeetingFrequency
-delete doc.definitions.WeekDay
-delete doc.definitions.MonthlyWeek
+// delete doc.definitions.MeetingFrequency
+// delete doc.definitions.WeekDay
+// delete doc.definitions.MonthlyWeek
 
 // https://jira.ringcentral.com/browse/PLD-591
-doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}'].get.tags = ['Call Queues']
-doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}'].put.tags = ['Call Queues']
-doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence'].get.tags = ['Call Queues']
-doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence'].put.tags = ['Call Queues']
-doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence'].get.tags = ['Call Queues']
-doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence'].put.tags = ['Call Queues']
+// doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}'].get.tags = ['Call Queues']
+// doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}'].put.tags = ['Call Queues']
+// doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence'].get.tags = ['Call Queues']
+// doc.paths['/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence'].put.tags = ['Call Queues']
+// doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence'].get.tags = ['Call Queues']
+// doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence'].put.tags = ['Call Queues']
+
+// https://jira.ringcentral.com/browse/PLD-592
+// doc.definitions.PlayTarget.properties.resources = doc.definitions.PlayResources
+doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].get.responses['207'].schema = doc.definitions.GetMessageMultiResponse
+doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].put.responses['207'].schema = doc.definitions.GetMessageMultiResponse
+doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence'].get.responses['207'].schema = doc.definitions.UnifiedPresenceList
 
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
