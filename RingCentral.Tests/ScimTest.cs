@@ -104,7 +104,7 @@ namespace RingCentral.Tests
                 }
 
                 // create the user
-                var user = new User
+                var user = new CreateUser
                 {
                     emails = new[]
                     {
