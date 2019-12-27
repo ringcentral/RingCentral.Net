@@ -19922,7 +19922,7 @@ definitions:
         description: “List of glip members”
         type: array
         items:
-          $ref: '#/definitions/GlipMemberInfo'
+          type: string
       creationTime:
         type: string
         format: date-time
@@ -25141,9 +25141,6 @@ definitions:
       uri:
         type: string
         description: Canonical URI of an extension
-      account:
-        type: string
-        description: Internal identifier of an account
       contact:
         description: Contact detailed information
         $ref: '#/definitions/ContactInfo'

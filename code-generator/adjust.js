@@ -102,4 +102,10 @@ doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-pre
 doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise'] = doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
 delete doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
 
+// https://jira.ringcentral.com/browse/PLD-595
+delete doc.definitions.GetExtensionInfoResponse.properties.account
+
+// https://jira.ringcentral.com/browse/PLD-596
+doc.definitions.GlipGroupInfo.properties.members.items = { type: 'string' }
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
