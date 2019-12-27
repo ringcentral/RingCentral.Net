@@ -20,12 +20,12 @@ namespace RingCentral
         /// <summary>
         /// Device type
         /// Default: HardPhone
-        /// Enum: SoftPhone, OtherPhone, HardPhone
+        /// Enum: BLA, SoftPhone, OtherPhone, HardPhone, WebPhone, Paging
         /// </summary>
         public string type;
 
         /// <summary>
-        /// Device name. Mandatory if ordering  SoftPhone  or  OtherPhone . Optional for  HardPhone . If not specified for HardPhone, then device  model  name is used as device  name
+        /// Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name
         /// </summary>
         public string name;
 
@@ -33,6 +33,12 @@ namespace RingCentral
         /// Serial number for HardPhone (is returned only when the phone is shipped and provisioned); endpoint_id for softphone and mobile applications
         /// </summary>
         public string serial;
+
+        /// <summary>
+        /// Device status
+        /// Enum: Offline, Online
+        /// </summary>
+        public string status;
 
         /// <summary>
         /// PC name for softphone
@@ -88,5 +94,11 @@ namespace RingCentral
         /// Datetime of receiving last location report in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z
         /// </summary>
         public string lastLocationReportTime;
+
+        /// <summary>
+        /// Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
+        /// Enum: Host, Guest, None
+        /// </summary>
+        public string linePooling;
     }
 }

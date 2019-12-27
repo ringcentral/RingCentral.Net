@@ -15,6 +15,6 @@ namespace RingCentral
         /// <summary>
         /// Name of a device
         /// </summary>
-        public string phoneNumber;
+        public string name;
     }
 }

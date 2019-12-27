@@ -19,8 +19,8 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Content media type in WAV/MP3 format
-        /// Enum: WAV, MP3
+        /// Content media type
+        /// Enum: audio/mpeg, audio/wav
         /// </summary>
         public string contentType;
 

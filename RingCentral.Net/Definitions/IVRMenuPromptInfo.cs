@@ -11,7 +11,7 @@ namespace RingCentral
         /// <summary>
         /// For 'Audio' mode only. Prompt media reference
         /// </summary>
-        public PromptLanguageInfo audio;
+        public AudioPromptInfo audio;
 
         /// <summary>
         /// For 'TextToSpeech' mode only. Prompt text
@@ -21,6 +21,6 @@ namespace RingCentral
         /// <summary>
         /// For 'TextToSpeech' mode only. Prompt language metadata
         /// </summary>
-        public AudioPromptInfo language;
+        public PromptLanguageInfo language;
     }
 }

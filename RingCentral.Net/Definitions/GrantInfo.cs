@@ -36,5 +36,15 @@ namespace RingCentral
         /// Specifies whether the current extension is allowed to call Paging Only group referenced to in extension object
         /// </summary>
         public bool? groupPaging;
+
+        /// <summary>
+        /// Specifies whether the current extension is assigned as a Full-Access manager in the call queue referenced in extension object
+        /// </summary>
+        public bool? callQueueSetup;
+
+        /// <summary>
+        /// Specifies whether the current extension is assigned as a Members-Only manager in the call queue referenced in extension object
+        /// </summary>
+        public bool? callQueueMembersSetup;
     }
 }

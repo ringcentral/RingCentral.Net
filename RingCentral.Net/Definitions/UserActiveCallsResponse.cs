@@ -1,12 +1,17 @@
 namespace RingCentral
 {
-    public class ActiveCallsResponse
+    public class UserActiveCallsResponse
     {
+        /// <summary>
+        /// Link to the list of user active call records
+        /// </summary>
+        public string uri;
+
         /// <summary>
         /// List of call log records
         /// Required
         /// </summary>
-        public CallLogRecord[] records;
+        public UserCallLogRecord[] records;
 
         /// <summary>
         /// Information on navigation

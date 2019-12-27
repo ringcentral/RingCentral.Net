@@ -1,29 +1,21 @@
 namespace RingCentral
 {
-    public class MessageStoreCallerInfoResponse
+    public class MessageStoreCallerInfoResponseFrom
     {
         /// <summary>
         /// Extension short number (usually 3 or 4 digits). This property is filled when parties communicate by means of short internal numbers, for example when calling to other extension or sending/receiving Company Pager message
-        /// Required
         /// </summary>
         public string extensionNumber;
+
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
+        public string extensionId;
 
         /// <summary>
         /// Contains party location (city, state) if one can be determined from phoneNumber. This property is filled only when phoneNumber is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-free numbers)
         /// </summary>
         public string location;
-
-        /// <summary>
-        /// Status of a message. Returned for outbound fax messages only
-        /// Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
-        /// </summary>
-        public string messageStatus;
-
-        /// <summary>
-        /// Fax only. Error code returned in case of fax sending failure. Returned if messageStatus value is 'SendingFailed'
-        /// Enum: InternationalCallingDisabled, DestinationCountryDisabled, NoAnswer, LineBusy, CallerHungUp, UnknownCountryCode, InvalidNumber, NotAccepted, CallDeclined, TooManyCallsPerLine, NotEnoughCredits, SentPartially, CallFailed
-        /// </summary>
-        public string faxErrorCode;
 
         /// <summary>
         /// Symbolic name associated with a party. If the phone does not belong to the known extension, only the location is returned, the name is not determined then

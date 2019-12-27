@@ -3,6 +3,11 @@ namespace RingCentral
     public class PhoneLinesInfo
     {
         /// <summary>
+        /// Internal identifier of a phone line
+        /// </summary>
+        public string id;
+
+        /// <summary>
         /// Type of phone line
         /// Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
         /// </summary>
@@ -12,5 +17,9 @@ namespace RingCentral
         /// Phone number information
         /// </summary>
         public PhoneNumberInfoIntId phoneInfo;
+
+        /// <summary>
+        /// </summary>
+        public EmergencyAddress emergencyAddress;
     }
 }

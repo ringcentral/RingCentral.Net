@@ -23,6 +23,11 @@ namespace RingCentral
         public string countryName;
 
         /// <summary>
+        /// Customer name
+        /// </summary>
+        public string customerName;
+
+        /// <summary>
         /// State/Province name. Mandatory for the USA, the UK and Canada
         /// </summary>
         public string state;

@@ -3,6 +3,11 @@ namespace RingCentral
     public class GetCountryListResponse
     {
         /// <summary>
+        /// Link to the list of countries supported
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// List of countries with the country data
         /// Required
         /// </summary>

@@ -24,7 +24,8 @@ namespace RingCentral
         public string lastModifiedTime;
 
         /// <summary>
+        /// List of glip members
         /// </summary>
-        public GlipChatMemberInfo[] members;
+        public CreateGlipMember[] members;
     }
 }

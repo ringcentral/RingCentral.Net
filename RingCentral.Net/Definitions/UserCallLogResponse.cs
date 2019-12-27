@@ -6,7 +6,7 @@ namespace RingCentral
         /// List of call log records
         /// Required
         /// </summary>
-        public CallLogRecord[] records;
+        public UserCallLogRecord[] records;
 
         /// <summary>
         /// Information on navigation

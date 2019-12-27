@@ -4,8 +4,12 @@ namespace RingCentral
     {
         /// <summary>
         /// Extension identifier
-        /// Required
         /// </summary>
         public string extensionId;
+
+        /// <summary>
+        /// Extension number
+        /// </summary>
+        public string extensionNumber;
     }
 }

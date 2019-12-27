@@ -3,6 +3,11 @@ namespace RingCentral
     public class GetExtensionPhoneNumbersResponse
     {
         /// <summary>
+        /// Link to the user's phone number list resource
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// List of phone numbers
         /// Required
         /// </summary>

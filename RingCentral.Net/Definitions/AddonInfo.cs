@@ -12,6 +12,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public string count;
+        public long? count;
     }
 }

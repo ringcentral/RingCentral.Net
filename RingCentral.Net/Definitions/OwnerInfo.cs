@@ -3,12 +3,12 @@ namespace RingCentral
     public class OwnerInfo
     {
         /// <summary>
-        /// Internal identifier of an account
+        /// Internal identifier of an account that monitors a call
         /// </summary>
         public string accountId;
 
         /// <summary>
-        /// Internal identifier of an extension
+        /// Internal identifier of an extension that monitors a call
         /// </summary>
         public string extensionId;
     }

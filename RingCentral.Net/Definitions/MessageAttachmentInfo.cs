@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a message attachment
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// Canonical URI of a message attachment
@@ -31,11 +31,21 @@ namespace RingCentral
         /// <summary>
         /// Name of a file attached
         /// </summary>
-        public string filename;
+        public string fileName;
 
         /// <summary>
         /// Size of attachment in bytes
         /// </summary>
         public long? size;
+
+        /// <summary>
+        /// Attachment height in pixels if available
+        /// </summary>
+        public long? height;
+
+        /// <summary>
+        /// Attachment width in pixels if available
+        /// </summary>
+        public long? width;
     }
 }

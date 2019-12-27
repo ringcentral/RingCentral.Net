@@ -4,6 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallMonitoringExtensionUpdate[] updatedExtensions;
+        public CallMonitoringExtensionInfo[] addedExtensions;
+
+        /// <summary>
+        /// </summary>
+        public CallMonitoringExtensionInfo[] updatedExtensions;
+
+        /// <summary>
+        /// </summary>
+        public CallMonitoringExtensionInfo[] removedExtensions;
     }
 }

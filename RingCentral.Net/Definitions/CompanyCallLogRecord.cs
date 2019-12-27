@@ -18,6 +18,21 @@ namespace RingCentral
         public string sessionId;
 
         /// <summary>
+        /// </summary>
+        public ExtensionInfoCallLog extension;
+
+        /// <summary>
+        /// Telephony identifier of a call session
+        /// </summary>
+        public string telephonySessionId;
+
+        /// <summary>
+        /// Call transport
+        /// Enum: PSTN, VoIP
+        /// </summary>
+        public string transport;
+
+        /// <summary>
         /// Caller information
         /// </summary>
         public CallLogCallerInfo from;
@@ -62,7 +77,11 @@ namespace RingCentral
         public string reason;
 
         /// <summary>
-        /// The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// </summary>
+        public string reasonDescription;
+
+        /// <summary>
+        /// The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
         /// </summary>
         public string startTime;
 
@@ -75,5 +94,25 @@ namespace RingCentral
         /// Call recording data. Returned if a call is recorded
         /// </summary>
         public CallLogRecordingInfo recording;
+
+        /// <summary>
+        /// Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
+        /// </summary>
+        public bool? shortRecording;
+
+        /// <summary>
+        /// For 'Detailed' view only. Leg description
+        /// </summary>
+        public CallLogRecordLegInfo[] legs;
+
+        /// <summary>
+        /// Billing information related to the call. Returned for 'Detailed' view only
+        /// </summary>
+        public BillingInfo billing;
+
+        /// <summary>
+        /// For 'Detailed' view only. The datetime when the call log record was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// </summary>
+        public string lastModifiedTime;
     }
 }

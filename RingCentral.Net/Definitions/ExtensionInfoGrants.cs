@@ -18,8 +18,13 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
+        /// Name of extension
+        /// </summary>
+        public string name;
+
+        /// <summary>
         /// Extension type
-        /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, Park Location
+        /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation
         /// </summary>
         public string type;
     }

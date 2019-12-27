@@ -13,7 +13,7 @@ namespace RingCentral
         public string syncToken;
 
         /// <summary>
-        /// The start datetime for resulting records in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is the current moment
+        /// The start datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is the current moment
         /// </summary>
         public string dateFrom;
 
@@ -35,7 +35,7 @@ namespace RingCentral
         public string view;
 
         /// <summary>
-        /// Supproted for ISync. If 'True' then deleted call records are returned
+        /// Supported for ISync. If 'True' then deleted call records are returned
         /// </summary>
         public bool? showDeleted;
     }

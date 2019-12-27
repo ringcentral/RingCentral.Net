@@ -21,5 +21,9 @@ namespace RingCentral
         /// Meaningful description of the timezone
         /// </summary>
         public string description;
+
+        /// <summary>
+        /// </summary>
+        public string bias;
     }
 }

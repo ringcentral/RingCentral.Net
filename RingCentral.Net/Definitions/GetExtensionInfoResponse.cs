@@ -30,7 +30,7 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
-        /// Extension user name
+        /// Extension name. For user extension types the value is a combination of the specified first name and last name
         /// </summary>
         public string name;
 
@@ -76,9 +76,9 @@ namespace RingCentral
         public string setupWizardState;
 
         /// <summary>
-        /// Extension current state. If the status is 'Unassigned'. Returned for all extensions
+        /// Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
         /// Required
-        /// Enum: Enabled, Disabled, NotActivated, Unassigned
+        /// Enum: Enabled, Disabled, NotActivated, Unassigned, Frozen
         /// </summary>
         public string status;
 
@@ -90,18 +90,23 @@ namespace RingCentral
         /// <summary>
         /// Extension type
         /// Required
-        /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnlyGroup, IvrMenu, ApplicationExtension, ParkLocation
+        /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnlyGroup, IvrMenu, ApplicationExtension, ParkLocation, Bot, Limited, Site
         /// </summary>
         public string type;
 
         /// <summary>
         /// For Department extension type only. Call queue settings
         /// </summary>
-        public CallQueueExtensionInfo callQueueExtensionInfo;
+        public CallQueueExtensionInfo callQueueInfo;
 
         /// <summary>
         /// Hides extension from showing in company directory. Supported for extensions of User type only
         /// </summary>
         public bool? hidden;
+
+        /// <summary>
+        /// Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
+        /// </summary>
+        public AutomaticLocationUpdatesSiteInfo site;
     }
 }

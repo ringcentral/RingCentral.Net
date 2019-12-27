@@ -28,5 +28,14 @@ namespace RingCentral
         /// Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
         /// </summary>
         public string name;
+
+        /// <summary>
+        /// Answering rules are applied when calling to selected number(s)
+        /// </summary>
+        public CalledNumberInfo[] calledNumbers;
+
+        /// <summary>
+        /// </summary>
+        public CompanyAnsweringRuleExtensionInfo extension;
     }
 }

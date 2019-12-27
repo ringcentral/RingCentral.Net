@@ -3,6 +3,11 @@ namespace RingCentral
     public class CreateForwardingNumberRequest
     {
         /// <summary>
+        /// Number assigned to the call flip phone number, corresponds to the shortcut dial number
+        /// </summary>
+        public long? flipNumber;
+
+        /// <summary>
         /// Forwarding/Call flip phone number
         /// </summary>
         public string phoneNumber;

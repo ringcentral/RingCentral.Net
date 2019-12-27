@@ -46,6 +46,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public GlipChatMemberInfo[] members;
+        public GlipMemberInfo[] members;
     }
 }

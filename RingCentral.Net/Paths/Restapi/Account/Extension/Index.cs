@@ -77,14 +77,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// Operation: Delete Extension
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(DeleteExtensionParameters queryParams = null)
         {
             if (this.extensionId == null)
             {
                 throw new System.ArgumentNullException("extensionId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), queryParams);
         }
     }
 }

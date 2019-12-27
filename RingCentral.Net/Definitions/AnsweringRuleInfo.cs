@@ -45,7 +45,7 @@ namespace RingCentral
 
         /// <summary>
         /// Specifies how incoming calls are forwarded
-        /// Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly
+        /// Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly, SharedLines
         /// </summary>
         public string callHandlingAction;
 

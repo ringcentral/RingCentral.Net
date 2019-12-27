@@ -20,12 +20,12 @@ namespace RingCentral
         /// <summary>
         /// Device type
         /// Default: HardPhone
-        /// Enum: SoftPhone, OtherPhone, HardPhone
+        /// Enum: SoftPhone, OtherPhone, HardPhone, Paging
         /// </summary>
         public string type;
 
         /// <summary>
-        /// Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone . If not specified for HardPhone, then device model name is used as device name
+        /// Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name
         /// </summary>
         public string name;
 

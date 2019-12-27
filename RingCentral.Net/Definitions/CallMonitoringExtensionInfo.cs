@@ -1,9 +1,9 @@
 namespace RingCentral
 {
-    public class CallMonitoringExtensionUpdate
+    public class CallMonitoringExtensionInfo
     {
         /// <summary>
-        /// Only the following extension types are allowed: User, DigitalUser, VirtualUser, FaxUser, Limited
+        /// Internal identifier of an extension. Only the following extension types are allowed: User, DigitalUser, VirtualUser, FaxUser, Limited
         /// </summary>
         public string id;
 

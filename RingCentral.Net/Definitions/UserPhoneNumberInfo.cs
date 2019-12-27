@@ -3,9 +3,14 @@ namespace RingCentral
     public class UserPhoneNumberInfo
     {
         /// <summary>
+        /// Link to the user's phone number resource
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// Internal identifier of a phone number
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// Brief information on a phone number country
@@ -13,9 +18,14 @@ namespace RingCentral
         public CountryInfo country;
 
         /// <summary>
+        /// CCRN (Contact Center Routing Number) provider. If not specified then the default value 'InContact/North America' is used, its ID is '1'
+        /// </summary>
+        public ContactCenterProvider contactCenterProvider;
+
+        /// <summary>
         /// Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
         /// </summary>
-        public ExtensionInfo extension;
+        public UserPhoneNumberExtensionInfo extension;
 
         /// <summary>
         /// Custom user name of a phone number, if any

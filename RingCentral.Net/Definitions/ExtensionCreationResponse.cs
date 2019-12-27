@@ -23,7 +23,7 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
-        /// Extension user name
+        /// Extension name. For user extension types the value is a combination of the specified first name and last name
         /// </summary>
         public string name;
 
@@ -67,7 +67,7 @@ namespace RingCentral
         public string setupWizardState;
 
         /// <summary>
-        /// Extension current state. If the status is 'Unassigned'. Returned for all extensions
+        /// Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
         /// Enum: Enabled, Disabled, NotActivated, Unassigned
         /// </summary>
         public string status;

@@ -49,14 +49,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// Operation: Get Forwarding Number
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// </summary>
-        public async Task<RingCentral.ForwardingNumberResource> Get()
+        public async Task<RingCentral.ForwardingNumberInfo> Get()
         {
             if (this.forwardingNumberId == null)
             {
                 throw new System.ArgumentNullException("forwardingNumberId");
             }
 
-            return await rc.Get<RingCentral.ForwardingNumberResource>(this.Path());
+            return await rc.Get<RingCentral.ForwardingNumberInfo>(this.Path());
         }
 
         /// <summary>

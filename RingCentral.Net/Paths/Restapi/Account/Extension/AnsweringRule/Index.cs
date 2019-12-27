@@ -38,10 +38,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// Operation: Create Call Handling Rule
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// </summary>
-        public async Task<RingCentral.AnsweringRuleInfo> Post(
+        public async Task<RingCentral.CustomAnsweringRuleInfo> Post(
             RingCentral.CreateAnsweringRuleRequest createAnsweringRuleRequest)
         {
-            return await rc.Post<RingCentral.AnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest);
+            return await rc.Post<RingCentral.CustomAnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest);
         }
 
         /// <summary>

@@ -3,9 +3,9 @@ namespace RingCentral
     public class GlipPostMembersListBody
     {
         /// <summary>
-        /// Identifier(s) of chat member(s)
+        /// List of glip members
         /// Required
         /// </summary>
-        public object[] members;
+        public CreateGlipMember[] members;
     }
 }

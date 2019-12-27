@@ -3,6 +3,12 @@ namespace RingCentral
     public class ListExtensionPhoneNumbersParameters
     {
         /// <summary>
+        /// Status of a phone number. Multiple values are supported
+        /// Enum: Normal, Pending, PortedIn, Temporary
+        /// </summary>
+        public string status;
+
+        /// <summary>
         /// Usage type of a phone number
         /// </summary>
         public string[] usageType;

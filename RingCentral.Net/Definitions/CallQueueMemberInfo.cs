@@ -10,7 +10,7 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a call queue member
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// Extension number of a call queue member

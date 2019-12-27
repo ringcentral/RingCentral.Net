@@ -17,5 +17,10 @@ namespace RingCentral
         /// Required
         /// </summary>
         public BusinessAddressInfo businessAddress;
+
+        /// <summary>
+        /// Custom site name
+        /// </summary>
+        public string mainSiteName;
     }
 }

@@ -20,7 +20,7 @@ namespace RingCentral
         /// <summary>
         /// Device type
         /// Default: HardPhone
-        /// Enum: HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
+        /// Enum: BLA, HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
         /// </summary>
         public string type;
 
@@ -66,7 +66,7 @@ namespace RingCentral
         public EmergencyServiceAddressResource emergencyServiceAddress;
 
         /// <summary>
-        /// Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer
+        /// Shipping information, according to which devices (in case of HardPhone) or e911 stickers (in case of SoftPhone and OtherPhone) will be delivered to the customer
         /// </summary>
         public ShippingResource shipping;
 
@@ -85,5 +85,15 @@ namespace RingCentral
         /// Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
         /// </summary>
         public bool? useAsCommonPhone;
+
+        /// <summary>
+        /// Network location status. 'True' if device is located in the configured corporate network, in this case `bssid` or public/private IP addresses (`hostIp`) must be found in the corporate maps. If `bssid` is not found in the Wireless Access Points map, then the search is performed by public/private IP addresses in the IP Networks map. 'False' if network parameters are not found in corporate maps (`bssid` and public/private IP addresses for wi-fi or for Ethernet connection)
+        /// </summary>
+        public bool? inCompanyNet;
+
+        /// <summary>
+        /// Datetime of receiving last location report in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z
+        /// </summary>
+        public string lastLocationReportTime;
     }
 }

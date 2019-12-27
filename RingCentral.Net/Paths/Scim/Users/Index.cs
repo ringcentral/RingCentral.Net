@@ -38,9 +38,9 @@ namespace RingCentral.Paths.Scim.Users
         /// Operation: Create User
         /// Http Post /scim/v2/Users
         /// </summary>
-        public async Task<RingCentral.UserResponse> Post(RingCentral.User user)
+        public async Task<RingCentral.UserResponse> Post(RingCentral.CreateUser createUser)
         {
-            return await rc.Post<RingCentral.UserResponse>(this.Path(false), user);
+            return await rc.Post<RingCentral.UserResponse>(this.Path(false), createUser);
         }
 
         /// <summary>

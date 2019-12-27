@@ -19,8 +19,8 @@ namespace RingCentral
         public string description;
 
         /// <summary>
-        /// Identifier(s) of team members.
+        /// List of glip members
         /// </summary>
-        public object[] members;
+        public CreateGlipMember[] members;
     }
 }

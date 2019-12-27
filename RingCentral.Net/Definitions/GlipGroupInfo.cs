@@ -29,7 +29,7 @@ namespace RingCentral
         public string description;
 
         /// <summary>
-        /// Identifier(s) of group members
+        /// “List of glip members”
         /// </summary>
         public string[] members;
 

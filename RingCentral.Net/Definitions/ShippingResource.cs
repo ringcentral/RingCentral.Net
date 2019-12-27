@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public EmergencyServiceAddressResource address;
+        public ShippingAddressInfo address;
 
         /// <summary>
         /// </summary>

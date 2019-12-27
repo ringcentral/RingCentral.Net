@@ -18,6 +18,11 @@ namespace RingCentral
         public string sessionId;
 
         /// <summary>
+        /// Telephony identifier of a call session
+        /// </summary>
+        public string telephonySessionId;
+
+        /// <summary>
         /// </summary>
         public CallLogCallerInfo from;
 
@@ -26,10 +31,30 @@ namespace RingCentral
         public CallLogCallerInfo to;
 
         /// <summary>
+        /// </summary>
+        public ExtensionInfoCallLog extension;
+
+        /// <summary>
         /// Call type
         /// Enum: Voice, Fax
         /// </summary>
         public string type;
+
+        /// <summary>
+        /// For 'Detailed' view only. Call transport
+        /// Enum: PSTN, VoIP
+        /// </summary>
+        public string transport;
+
+        /// <summary>
+        /// For 'Detailed' view only. Leg description
+        /// </summary>
+        public CallLogRecordLegInfo[] legs;
+
+        /// <summary>
+        /// Billing information related to the call
+        /// </summary>
+        public BillingInfo billing;
 
         /// <summary>
         /// Call direction
@@ -38,7 +63,7 @@ namespace RingCentral
         public string direction;
 
         /// <summary>
-        /// The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
         /// </summary>
         public string startTime;
 
@@ -53,8 +78,18 @@ namespace RingCentral
         public long? duration;
 
         /// <summary>
+        /// For 'Detailed' view only. The datetime when the call log record was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// </summary>
+        public string lastModifiedTime;
+
+        /// <summary>
         /// </summary>
         public CallLogRecordingInfo recording;
+
+        /// <summary>
+        /// Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
+        /// </summary>
+        public bool? shortRecording;
 
         /// <summary>
         /// Action description of the call operation
@@ -64,7 +99,7 @@ namespace RingCentral
 
         /// <summary>
         /// Status description of the call operation
-        /// Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
+        /// Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Not Allowed, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
         /// </summary>
         public string result;
 
@@ -106,5 +141,9 @@ namespace RingCentral
         /// Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit, Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted, Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted, Number Not Allowed, Number Blocked, Number Disabled, Resource Error, Call Loop, Fax Not Received, Fax Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
         /// </summary>
         public string reason;
+
+        /// <summary>
+        /// </summary>
+        public string reasonDescription;
     }
 }

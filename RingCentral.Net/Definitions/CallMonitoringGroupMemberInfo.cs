@@ -18,9 +18,7 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
-        /// Call monitoring permission; mltiple values allowed: * "Monitoring" - User can monitor a group * "Monitored" - User can be monitored
-        /// Enum: Monitoring, Monitored
         /// </summary>
-        public string permissions;
+        public string[] permissions;
     }
 }

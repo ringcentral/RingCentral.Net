@@ -3,9 +3,14 @@ namespace RingCentral
     public class CompanyPhoneNumberInfo
     {
         /// <summary>
+        /// Link to a company phone number resource
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// Internal identifier of a phone number
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// Brief information on a phone number country

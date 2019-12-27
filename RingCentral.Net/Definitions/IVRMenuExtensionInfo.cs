@@ -11,5 +11,10 @@ namespace RingCentral
         /// Internal identifier of an extension
         /// </summary>
         public string id;
+
+        /// <summary>
+        /// Name of an extension
+        /// </summary>
+        public string name;
     }
 }

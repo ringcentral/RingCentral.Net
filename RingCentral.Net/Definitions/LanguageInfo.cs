@@ -28,6 +28,11 @@ namespace RingCentral
         public string localeCode;
 
         /// <summary>
+        /// Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+        /// </summary>
+        public string isoCode;
+
+        /// <summary>
         /// Official name of a language
         /// </summary>
         public string name;

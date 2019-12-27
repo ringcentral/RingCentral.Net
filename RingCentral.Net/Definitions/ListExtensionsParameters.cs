@@ -25,7 +25,7 @@ namespace RingCentral
         public long? perPage;
 
         /// <summary>
-        /// Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without extensionNumber are returned. If not specified, then all extensions are returned.
+        /// Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
         /// </summary>
         public string[] status;
 

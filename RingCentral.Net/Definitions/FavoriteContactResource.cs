@@ -12,6 +12,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public string accountId;
+
+        /// <summary>
+        /// </summary>
         public string contactId;
     }
 }

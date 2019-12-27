@@ -30,7 +30,12 @@ namespace RingCentral
         /// <summary>
         /// Number assigned to the call flip phone number, corresponds to the shortcut dial number
         /// </summary>
-        public long? flipNumber;
+        public string flipNumber;
+
+        /// <summary>
+        /// Forwarding device information
+        /// </summary>
+        public CreateForwardingNumberDeviceInfo device;
 
         /// <summary>
         /// Forwarding phone number type

@@ -53,5 +53,21 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public NotificationBlacklistedData blacklistedData;
+
+        /// <summary>
+        /// Notifications transportation provider name
+        /// Enum: PubNub, WebHook, RC/APNS, RC/GCM
+        /// </summary>
+        public string transportType;
+
+        /// <summary>
+        /// Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
+        /// </summary>
+        public string certificateName;
+
+        /// <summary>
+        /// Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
+        /// </summary>
+        public string registrationId;
     }
 }

@@ -6,6 +6,6 @@ namespace RingCentral
         /// Identifier(s) of chat members.
         /// Required
         /// </summary>
-        public object[] members;
+        public GlipMemberInfo[] members;
     }
 }

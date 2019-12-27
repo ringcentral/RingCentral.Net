@@ -22,5 +22,10 @@ namespace RingCentral
         /// Device feature or multiple features supported
         /// </summary>
         public string[] features;
+
+        /// <summary>
+        /// Max supported count of phone lines
+        /// </summary>
+        public long? lineCount;
     }
 }

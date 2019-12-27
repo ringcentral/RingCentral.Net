@@ -4,7 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// Schedule when an answering rule is applied
-        /// Required
         /// </summary>
         public UserBusinessHoursScheduleInfo schedule;
     }

@@ -4,7 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// For User extension type only. Extension user first name
-        /// Required
         /// </summary>
         public string firstName;
 

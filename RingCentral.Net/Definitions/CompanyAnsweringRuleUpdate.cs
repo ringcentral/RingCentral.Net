@@ -35,9 +35,16 @@ namespace RingCentral
         public string callHandlingAction;
 
         /// <summary>
-        /// Extension to which the call is forwarded in 'Bypass' mode
+        /// Type of an answering rule
+        /// Default: Custom
+        /// Enum: BusinessHours, AfterHours, Custom
         /// </summary>
-        public CompanyAnsweringRuleCallersInfoRequest extension;
+        public string type;
+
+        /// <summary>
+        /// Internal identifier of the extension the call is forwarded to. Supported for 'Bypass' mode only (that should be specified in `callHandlingAction` field)
+        /// </summary>
+        public string extension;
 
         /// <summary>
         /// Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

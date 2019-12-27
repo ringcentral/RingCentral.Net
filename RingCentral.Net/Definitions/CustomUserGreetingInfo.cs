@@ -14,13 +14,13 @@ namespace RingCentral
 
         /// <summary>
         /// Type of a custom user greeting
-        /// Enum: Introductory, Announcement, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic
+        /// Enum: Introductory, Announcement, InterruptPrompt, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic, PronouncedName
         /// </summary>
         public string type;
 
         /// <summary>
-        /// Content media type in WAV/MP3 format
-        /// Enum: WAV, MP3
+        /// Content media type
+        /// Enum: audio/mpeg, audio/wav
         /// </summary>
         public string contentType;
 

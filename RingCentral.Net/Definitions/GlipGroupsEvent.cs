@@ -29,9 +29,9 @@ namespace RingCentral
         public string description;
 
         /// <summary>
-        /// Identifier(s) of group members
+        /// “List of glip members”
         /// </summary>
-        public string[] members;
+        public GlipMemberInfo[] members;
 
         /// <summary>
         /// Group creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format

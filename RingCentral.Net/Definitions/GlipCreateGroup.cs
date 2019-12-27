@@ -25,8 +25,8 @@ namespace RingCentral
         public string description;
 
         /// <summary>
-        /// Identifier(s) of group members. For 'PrivateChat' group type 2 members only are supported
+        /// “List of glip members. For 'PrivateChat' group type 2 members only are supported”
         /// </summary>
-        public string[] members;
+        public GlipMemberInfo[] members;
     }
 }

@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// Canonical URI of an extension

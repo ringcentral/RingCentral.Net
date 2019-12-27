@@ -28,6 +28,11 @@ namespace RingCentral
         public bool? includeAttachment;
 
         /// <summary>
+        /// Specifies whether to add voicemail transcription or not
+        /// </summary>
+        public bool? includeTranscription;
+
+        /// <summary>
         /// Indicates whether email should be automatically marked as read
         /// </summary>
         public bool? markAsRead;

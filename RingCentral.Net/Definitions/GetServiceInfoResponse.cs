@@ -13,6 +13,21 @@ namespace RingCentral
         public string servicePlanName;
 
         /// <summary>
+        /// Information on account brand
+        /// </summary>
+        public BrandInfo brand;
+
+        /// <summary>
+        /// Information on account service plan
+        /// </summary>
+        public ServicePlanInfo servicePlan;
+
+        /// <summary>
+        /// Information on account billing plan
+        /// </summary>
+        public BillingPlanInfo billingPlan;
+
+        /// <summary>
         /// Service features information, see Service Feature List
         /// </summary>
         public ServiceFeatureInfo[] serviceFeatures;

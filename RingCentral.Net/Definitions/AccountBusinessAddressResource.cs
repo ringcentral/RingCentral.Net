@@ -17,5 +17,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string email;
+
+        /// <summary>
+        /// Custom site name
+        /// </summary>
+        public string mainSiteName;
     }
 }

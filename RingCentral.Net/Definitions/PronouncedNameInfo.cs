@@ -12,5 +12,9 @@ namespace RingCentral
         /// Custom text
         /// </summary>
         public string text;
+
+        /// <summary>
+        /// </summary>
+        public PronouncedNamePromptInfo prompt;
     }
 }

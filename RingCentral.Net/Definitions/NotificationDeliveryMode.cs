@@ -3,12 +3,6 @@ namespace RingCentral
     public class NotificationDeliveryMode
     {
         /// <summary>
-        /// Notifications transportation provider name
-        /// Enum: PubNub, RC/APNS
-        /// </summary>
-        public string transportType;
-
-        /// <summary>
         /// Optional parameter. Specifies if the message will be encrypted or not
         /// </summary>
         public bool? encryption;
@@ -37,5 +31,21 @@ namespace RingCentral
         /// Key for notification message decryption (for PubNub transport type only)
         /// </summary>
         public string encryptionKey;
+
+        /// <summary>
+        /// Notifications transportation provider name
+        /// Enum: PubNub, WebHook, RC/APNS, RC/GCM
+        /// </summary>
+        public string transportType;
+
+        /// <summary>
+        /// Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
+        /// </summary>
+        public string certificateName;
+
+        /// <summary>
+        /// Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
+        /// </summary>
+        public string registrationId;
     }
 }

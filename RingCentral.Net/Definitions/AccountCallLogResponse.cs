@@ -3,20 +3,22 @@ namespace RingCentral
     public class AccountCallLogResponse
     {
         /// <summary>
-        /// List of call log records
-        /// Required
+        /// Link to the list of company call log records
         /// </summary>
-        public CallLogRecord[] records;
+        public string uri;
+
+        /// <summary>
+        /// List of call log records
+        /// </summary>
+        public CompanyCallLogRecord[] records;
 
         /// <summary>
         /// Information on navigation
-        /// Required
         /// </summary>
         public CallLogNavigationInfo navigation;
 
         /// <summary>
         /// Information on paging
-        /// Required
         /// </summary>
         public CallLogPagingInfo paging;
     }

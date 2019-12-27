@@ -19,17 +19,17 @@ namespace RingCentral
         public bool? encryption;
 
         /// <summary>
-        /// For 'RC/APNS' and 'RC/GCM' transport types. Name of a certificate
+        /// Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
         /// </summary>
         public string certificateName;
 
         /// <summary>
-        /// For 'RC/APNS' and 'RC/GCM' transport types. Identifier of a registration
+        /// Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
         /// </summary>
         public string registrationId;
 
         /// <summary>
-        /// For 'Webhook' transport type. Subscription verification key ensuring data security
+        /// Verification key of a subscription ensuring data security. Supported for 'Webhook' transport type
         /// </summary>
         public string verificationToken;
     }
