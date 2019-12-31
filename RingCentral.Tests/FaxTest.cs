@@ -33,7 +33,7 @@ namespace RingCentral.Tests
                     {
                         new MessageStoreCalleeInfoRequest
                         {
-                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
+                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER"),
                             name = "The Receiver"
                         }
                     },
