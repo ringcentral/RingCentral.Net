@@ -16,7 +16,7 @@ namespace RingCentral
         /// <summary>
         /// To Phone Number
         /// </summary>
-        public MessageStoreCallerInfoRequest[] to;
+        public MessageStoreCalleeInfoRequest[] to;
 
         /// <summary>
         /// Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately

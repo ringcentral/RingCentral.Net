@@ -31,9 +31,10 @@ namespace RingCentral.Tests
                 {
                     to = new[]
                     {
-                        new MessageStoreCallerInfoRequest
+                        new MessageStoreCalleeInfoRequest
                         {
                             phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
+                            name = "The Receiver"
                         }
                     },
                     attachments = new[]
@@ -78,7 +79,7 @@ namespace RingCentral.Tests
                 {
                     to = new[]
                     {
-                        new MessageStoreCallerInfoRequest
+                        new MessageStoreCalleeInfoRequest
                         {
                             phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
                         }
@@ -126,7 +127,7 @@ namespace RingCentral.Tests
                 {
                     to = new[]
                     {
-                        new MessageStoreCallerInfoRequest
+                        new MessageStoreCalleeInfoRequest
                         {
                             phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
                         }

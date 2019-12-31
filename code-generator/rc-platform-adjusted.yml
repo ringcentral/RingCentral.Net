@@ -1310,7 +1310,7 @@ paths:
           required: true
           type: array
           items:
-            $ref: '#/definitions/MessageStoreCallerInfoRequest'
+            $ref: '#/definitions/MessageStoreCalleeInfoRequest'
         - name: sendTime
           in: formData
           description: >-
@@ -30018,6 +30018,15 @@ definitions:
         example: 8zXq6oaLT7WvwWITlGiA1A
       id_token:
         type: string
+  MessageStoreCalleeInfoRequest:
+    type: object
+    properties:
+      phoneNumber:
+        type: string
+        description: Phone number in E.164 format
+      name:
+        type: string
+        description: Name of the callee
   CustomGreetingAnsweringRuleInfoRequest: &ref_2
     type: object
     properties:

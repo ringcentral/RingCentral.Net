@@ -19,7 +19,23 @@ faxAttachment.name = 'attachments'
 const faxTo = sendFaxParams.filter(p => p.name === 'to')[0]
 if (faxTo.items.type === 'string') {
   delete faxTo.items.type
-  faxTo.items.$ref = '#/definitions/MessageStoreCallerInfoRequest'
+  faxTo.items.$ref = '#/definitions/MessageStoreCalleeInfoRequest'
+}
+
+// https://jira.ringcentral.com/browse/PLD-337?filter=-2
+// https://github.com/ringcentral/RingCentral.Net/issues/12
+doc.definitions.MessageStoreCalleeInfoRequest = {
+  type: 'object',
+  properties: {
+    phoneNumber: {
+      type: 'string',
+      description: 'Phone number in E.164 format'
+    },
+    name: {
+      type: 'string',
+      description: 'Name of the callee'
+    }
+  }
 }
 
 // https://git.ringcentral.com/platform/api-metadata-specs/issues/48
