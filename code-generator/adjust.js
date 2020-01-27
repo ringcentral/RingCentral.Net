@@ -114,14 +114,14 @@ doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sto
 doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].put.responses['207'].schema = doc.definitions.GetMessageMultiResponse
 doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence'].get.responses['207'].schema = doc.definitions.UnifiedPresenceList
 
-// https://jira.ringcentral.com/browse/PLD-593
-doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise'] = doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
-delete doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
+// // https://jira.ringcentral.com/browse/PLD-593
+// doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise'] = doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
+// delete doc.paths['/restapi/v1.0/account/{accountId}/telephony/sessions/{sessionId}/parties/{partyId}/supervise']
 
-// https://jira.ringcentral.com/browse/PLD-595
-delete doc.definitions.GetExtensionInfoResponse.properties.account
+// // https://jira.ringcentral.com/browse/PLD-595
+// delete doc.definitions.GetExtensionInfoResponse.properties.account
 
-// https://jira.ringcentral.com/browse/PLD-596
-doc.definitions.GlipGroupInfo.properties.members.items = { type: 'string' }
+// // https://jira.ringcentral.com/browse/PLD-596
+// doc.definitions.GlipGroupInfo.properties.members.items = { type: 'string' }
 
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))
