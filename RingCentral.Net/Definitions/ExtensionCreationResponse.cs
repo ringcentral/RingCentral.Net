@@ -67,8 +67,13 @@ namespace RingCentral
         public string setupWizardState;
 
         /// <summary>
+        /// Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
+        /// </summary>
+        public AutomaticLocationUpdatesSiteInfo site;
+
+        /// <summary>
         /// Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
-        /// Enum: Enabled, Disabled, NotActivated, Unassigned
+        /// Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status;
 
@@ -79,7 +84,7 @@ namespace RingCentral
 
         /// <summary>
         /// Extension type
-        /// Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnlyGroup, ParkLocation
+        /// Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, Limited
         /// </summary>
         public string type;
 

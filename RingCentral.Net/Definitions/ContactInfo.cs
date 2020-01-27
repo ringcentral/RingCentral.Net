@@ -24,7 +24,6 @@ namespace RingCentral
 
         /// <summary>
         /// Email of extension user
-        /// Required
         /// </summary>
         public string email;
 

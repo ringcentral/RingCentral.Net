@@ -69,5 +69,10 @@ namespace RingCentral
         /// CCRN (Contact Center Routing Number) provider. If not specified then the default value 'InContact/North America' is used, its ID is '1'
         /// </summary>
         public ContactCenterProvider contactCenterProvider;
+
+        /// <summary>
+        /// Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to request parameters nxx plus line or numberPattern
+        /// </summary>
+        public string vanityPattern;
     }
 }

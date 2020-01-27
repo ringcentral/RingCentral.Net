@@ -3,6 +3,11 @@ namespace RingCentral
     public class GetExtensionListResponse
     {
         /// <summary>
+        /// Link to the extension list resource
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// List of extensions with extension information
         /// Required
         /// </summary>
@@ -10,13 +15,11 @@ namespace RingCentral
 
         /// <summary>
         /// Information on navigation
-        /// Required
         /// </summary>
         public ProvisioningNavigationInfo navigation;
 
         /// <summary>
         /// Information on paging
-        /// Required
         /// </summary>
         public ProvisioningPagingInfo paging;
     }

@@ -3,6 +3,11 @@ namespace RingCentral
     public class SwitchInfo
     {
         /// <summary>
+        /// Link to the network switch resource
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// Internal identifier of a network switch
         /// </summary>
         public string id;

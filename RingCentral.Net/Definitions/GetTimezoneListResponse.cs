@@ -3,6 +3,11 @@ namespace RingCentral
     public class GetTimezoneListResponse
     {
         /// <summary>
+        /// Link to the timezone list resource
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// List of timezones
         /// Required
         /// </summary>

@@ -5,12 +5,17 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an account
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// Canonical URI of an account
         /// </summary>
         public string uri;
+
+        /// <summary>
+        /// Internal identifier of an account in the billing system
+        /// </summary>
+        public string bsid;
 
         /// <summary>
         /// Main phone number of the current account
@@ -33,14 +38,20 @@ namespace RingCentral
         public ServiceInfo serviceInfo;
 
         /// <summary>
-        /// Specifies account configuration wizard state (web service setup). The default value is 'NotStarted'
+        /// Specifies account configuration wizard state (web service setup)
+        /// Default: NotStarted
         /// Enum: NotStarted, Incomplete, Completed
         /// </summary>
         public string setupWizardState;
 
         /// <summary>
+        /// Account sign up data
+        /// </summary>
+        public SignupInfoResource signupInfo;
+
+        /// <summary>
         /// Status of the current account
-        /// Enum: Confirmed, Disabled
+        /// Enum: Initial, Confirmed, Unconfirmed, Disabled
         /// </summary>
         public string status;
 

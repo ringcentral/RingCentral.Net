@@ -28,8 +28,8 @@ namespace RingCentral
         public string nxx;
 
         /// <summary>
-        /// ID and URI of the state this location belongs to, see State Info
+        /// Information on the state this location belongs to
         /// </summary>
-        public string state;
+        public LocationStateInfo state;
     }
 }

@@ -15,6 +15,11 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
+        /// Account information
+        /// </summary>
+        public GetExtensionAccountInfo account;
+
+        /// <summary>
         /// Contact detailed information
         /// </summary>
         public ContactInfo contact;
@@ -45,7 +50,6 @@ namespace RingCentral
 
         /// <summary>
         /// Information on profile image
-        /// Required
         /// </summary>
         public ProfileImageInfo profileImage;
 
@@ -77,8 +81,7 @@ namespace RingCentral
 
         /// <summary>
         /// Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
-        /// Required
-        /// Enum: Enabled, Disabled, NotActivated, Unassigned, Frozen
+        /// Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status;
 
@@ -89,8 +92,7 @@ namespace RingCentral
 
         /// <summary>
         /// Extension type
-        /// Required
-        /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnlyGroup, IvrMenu, ApplicationExtension, ParkLocation, Bot, Limited, Site
+        /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site
         /// </summary>
         public string type;
 

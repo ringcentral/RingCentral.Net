@@ -36,6 +36,15 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         }
 
         /// <summary>
+        /// Operation: Get Data Export Task List
+        /// Http Get /restapi/v1.0/glip/data-export
+        /// </summary>
+        public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null)
+        {
+            return await rc.Get<RingCentral.DataExportTaskList>(this.Path(false), queryParams);
+        }
+
+        /// <summary>
         /// Operation: Get Data Export Task
         /// Http Get /restapi/v1.0/glip/data-export/{taskId}
         /// </summary>

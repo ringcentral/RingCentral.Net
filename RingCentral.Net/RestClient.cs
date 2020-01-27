@@ -18,7 +18,7 @@ namespace RingCentral
         public TokenInfo token;
         public string appName = "Unknown";
         public string appVersion = "0.0.1";
-        
+
         public static HttpClient httpClient = new HttpClient();
 
         private RestClient(string clientId, string clientSecret, Uri server, string appName = "Unknown",

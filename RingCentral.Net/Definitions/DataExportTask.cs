@@ -24,13 +24,23 @@ namespace RingCentral
 
         /// <summary>
         /// Task status
-        /// Enum: Accepted, InProgress, Completed, Failed
+        /// Enum: Accepted, InProgress, Completed, Failed, Canceled
         /// </summary>
         public string status;
 
         /// <summary>
-        /// Data collection archives. Returned by task ID
+        /// Internal identifier of a user
         /// </summary>
-        public ExportTaskResultInfo[] result;
+        public string creator;
+
+        /// <summary>
+        /// Information specififed in request
+        /// </summary>
+        public SpecificInfo specific;
+
+        /// <summary>
+        /// Data collection sets. Returned by task ID
+        /// </summary>
+        public ExportTaskResultInfo[] datasets;
     }
 }

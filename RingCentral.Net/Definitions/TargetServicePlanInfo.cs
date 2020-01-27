@@ -11,5 +11,10 @@ namespace RingCentral
         /// Name of a target service plan
         /// </summary>
         public string name;
+
+        /// <summary>
+        /// Edition of a service plan
+        /// </summary>
+        public string edition;
     }
 }

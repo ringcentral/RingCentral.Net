@@ -17,5 +17,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PresetInfo preset;
+
+        /// <summary>
+        /// </summary>
+        public CustomGreetingInfo custom;
     }
 }

@@ -21,12 +21,17 @@ namespace RingCentral
         /// <summary>
         /// Number of duration units
         /// </summary>
-        public string duration;
+        public long? duration;
 
         /// <summary>
         /// Billing plan type
         /// Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
         /// </summary>
         public string type;
+
+        /// <summary>
+        /// Included digital lines count
+        /// </summary>
+        public long? includedPhoneLines;
     }
 }

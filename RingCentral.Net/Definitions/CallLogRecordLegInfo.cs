@@ -46,7 +46,7 @@ namespace RingCentral
         public string legType;
 
         /// <summary>
-        /// The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z
+        /// The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
         /// </summary>
         public string startTime;
 

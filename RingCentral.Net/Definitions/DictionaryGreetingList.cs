@@ -11,5 +11,15 @@ namespace RingCentral
         /// List of greetings
         /// </summary>
         public DictionaryGreetingInfo[] records;
+
+        /// <summary>
+        /// Information on navigation
+        /// </summary>
+        public CallHandlingNavigationInfo navigation;
+
+        /// <summary>
+        /// Information on paging
+        /// </summary>
+        public CallHandlingPagingInfo paging;
     }
 }

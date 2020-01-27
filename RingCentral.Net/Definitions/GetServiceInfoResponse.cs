@@ -23,6 +23,10 @@ namespace RingCentral
         public ServicePlanInfo servicePlan;
 
         /// <summary>
+        /// </summary>
+        public ServicePlanInfo targetServicePlan;
+
+        /// <summary>
         /// Information on account billing plan
         /// </summary>
         public BillingPlanInfo billingPlan;
@@ -36,5 +40,9 @@ namespace RingCentral
         /// Limits which are effective for the account
         /// </summary>
         public AccountLimits limits;
+
+        /// <summary>
+        /// </summary>
+        public PackageInfo package;
     }
 }

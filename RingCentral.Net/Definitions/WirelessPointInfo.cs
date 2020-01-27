@@ -3,6 +3,11 @@ namespace RingCentral
     public class WirelessPointInfo
     {
         /// <summary>
+        /// Link to the wireless point resource
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// Internal identifier of a wireless point
         /// </summary>
         public string id;

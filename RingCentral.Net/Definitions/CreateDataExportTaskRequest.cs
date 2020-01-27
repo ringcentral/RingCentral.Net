@@ -3,22 +3,21 @@ namespace RingCentral
     public class CreateDataExportTaskRequest
     {
         /// <summary>
-        /// Starting time for data collection. The default value is current time minus 24 hours. If `dateTo` is not specified then its value is set to `dateFrom` plus 24 hours. The specified time range should not be greater than 7 days
+        /// Starting time for data collection. The default value is `timeTo` minus 24 hours. Max allowed time frame between `timeFrom` and `timeTo` is 6 months
         /// </summary>
-        public string dateFrom;
+        public string timeFrom;
 
         /// <summary>
-        /// Ending time for data collection. The default value is current time. If `dateFrom` is not specified then its value is set to `dateTo` minus 24 hours. The specified time range should not be greater than 7 days
+        /// Ending time for data collection. The default value is current time. Max allowed time frame between `timeFrom` and `timeTo` is 6 months
         /// </summary>
-        public string dateTo;
+        public string timeTo;
 
         /// <summary>
-        /// List of users which data is collected. The following data will be exported: posts, tasks, events, etc. posted by the user(s); posts addressing the user(s) via direct and @Mentions; tasks assigned to the listed user(s). The list of 30 users per request is supported.
         /// </summary>
-        public string[] userIds;
+        public DataExportTaskContactInfo[] contacts;
 
         /// <summary>
-        /// List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected
+        /// List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected. Maximum number of chats supported is 10
         /// </summary>
         public string[] chatIds;
     }

@@ -3,13 +3,18 @@ namespace RingCentral
     public class ExportTaskResultInfo
     {
         /// <summary>
-        /// Size of the collected data archive in bytes
+        /// Internal identifier of a dataset
         /// </summary>
-        public long? size;
+        public string id;
 
         /// <summary>
-        /// Canonical URI for downloading an archive
+        /// Link for downloading a dataset
         /// </summary>
         public string uri;
+
+        /// <summary>
+        /// Size of ta dataset in bytes
+        /// </summary>
+        public long? size;
     }
 }
