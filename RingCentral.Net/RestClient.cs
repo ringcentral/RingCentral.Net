@@ -45,7 +45,7 @@ namespace RingCentral
 
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
         {
-            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/2.3.0");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/2.3.1");
             httpRequestMessage.Headers.Authorization = token == null
                 ? new AuthenticationHeaderValue("Basic",
                     Convert.ToBase64String(
