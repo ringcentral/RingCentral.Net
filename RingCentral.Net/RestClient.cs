@@ -18,6 +18,8 @@ namespace RingCentral
         public TokenInfo token;
         public string appName = "Unknown";
         public string appVersion = "0.0.1";
+        
+        public static HttpClient httpClient = new HttpClient();
 
         private RestClient(string clientId, string clientSecret, Uri server, string appName = "Unknown",
             string appVersion = "0.0.1")
@@ -43,7 +45,6 @@ namespace RingCentral
 
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
         {
-            var httpClient = new HttpClient();
             httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/2.3.0");
             httpRequestMessage.Headers.Authorization = token == null
                 ? new AuthenticationHeaderValue("Basic",
