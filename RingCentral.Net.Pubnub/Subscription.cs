@@ -70,7 +70,8 @@ Please install package RingCentral.Net.PubnubPCL instead.");
             var pnConfiguration = new PNConfiguration
             {
                 SubscribeKey = subscriptionInfo.deliveryMode.subscriberKey,
-                ReconnectionPolicy = PNReconnectionPolicy.LINEAR
+                ReconnectionPolicy = PNReconnectionPolicy.LINEAR,
+                Origin = "ringcentral.pubnubapi.com"
             };
             pubnub = new Pubnub(pnConfiguration);
             pubnub.AddListener(new SubscribeCallbackExt(
