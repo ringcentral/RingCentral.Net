@@ -6,7 +6,7 @@ namespace RingCentral.Tests
 {
     public class ScimTest
     {
-        private const string EMAIL = "tyler.liu.test@ringcentral.com";
+        private const string EMAIL = "test.user@example.com";
 
         [Fact]
         public async void GetServiceProviderConfig()
@@ -116,15 +116,15 @@ namespace RingCentral.Tests
                     },
                     name = new Name
                     {
-                        familyName = "Liu",
-                        givenName = "Tyler"
+                        familyName = "LastName",
+                        givenName = "FirstName"
                     },
                     schemas = new[] {"urn:ietf:params:scim:schemas:core:2.0:User"},
                     userName = EMAIL
                 };
                 var userResponse = await rc.Scim().Users().Post(user);
-                Assert.Equal("Liu", userResponse.name.familyName);
-                Assert.Equal("Tyler", userResponse.name.givenName);
+                Assert.Equal("LastName", userResponse.name.familyName);
+                Assert.Equal("FirstName", userResponse.name.givenName);
 
                 // don't forget to delete it after testing
                 var str = await rc.Scim().Users(userResponse.id).Delete();
@@ -205,7 +205,7 @@ namespace RingCentral.Tests
                 var searchRequest = new SearchRequest
                 {
                     count = 1,
-                    filter = "emails eq \"tyler.liu@ringcentral.com\""
+                    filter = "emails eq \"test.user@example.com\""
                 };
                 var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
                 if (userSearchResponse.Resources.Length == 1)
@@ -215,7 +215,7 @@ namespace RingCentral.Tests
                     var guid = Guid.NewGuid().ToString();
                     user.name.familyName = guid;
                     var ur = await rc.Scim().Users(user.id).Put(user);
-                    Assert.Equal("tyler.liu@ringcentral.com", ur.emails[0].value);
+                    Assert.Equal("test.user@example.com", ur.emails[0].value);
                     Assert.Equal(guid, ur.name.familyName);
                 }
             }
@@ -239,7 +239,7 @@ namespace RingCentral.Tests
                 var searchRequest = new SearchRequest
                 {
                     count = 1,
-                    filter = "emails eq \"tyler.liu@ringcentral.com\""
+                    filter = "emails eq \"test.user@example.com\""
                 };
                 var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
                 if (userSearchResponse.Resources.Length == 1)
@@ -264,7 +264,7 @@ namespace RingCentral.Tests
                         }
                     };
                     var ur = await rc.Scim().Users(userResponse.id).Patch(userPatch);
-                    Assert.Equal("tyler.liu@ringcentral.com", ur.emails[0].value);
+                    Assert.Equal("test.user@example.com", ur.emails[0].value);
                     Assert.Equal(guid, ur.name.familyName);
                 }
             }
