@@ -243,7 +243,7 @@ namespace RingCentral.Tests
         }
 
         // Patch a SCIM user: HTTP PATCH /scim/v2/Users/{id}
-        // Patch is for update date fields by path
+        // Patch is for update data fields by path
         [Fact]
         public async void PatchUser()
         {
