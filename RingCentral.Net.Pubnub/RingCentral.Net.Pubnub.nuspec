@@ -7,7 +7,7 @@
     <authors>$author$</authors>
     <owners>$author$</owners>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/tylerlong/RingCentral.Nets</projectUrl>
+    <projectUrl>https://github.com/ringcentral/RingCentral.Net/tree/master/RingCentral.Net.Pubnub</projectUrl>
     <iconUrl>https://netstorage.ringcentral.com/dpw/apps/7gufiGT3T3CCuCP37hMDaQ/7a8e3042-67a9-477b-8300-39ecfddaef6a.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
