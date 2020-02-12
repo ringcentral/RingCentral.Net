@@ -39,12 +39,12 @@ namespace RingCentral.Tests
                 // create
                 var contact = await addressBook.Contact().Post(new PersonalContactRequest
                 {
-                    firstName = "Tyler",
-                    lastName = "Long",
+                    firstName = "FirstName",
+                    lastName = "LastName",
                     homePhone = phoneNumber
                 });
                 Assert.NotNull(contact);
-                Assert.Equal("Long", contact.lastName);
+                Assert.Equal("LastName", contact.lastName);
 
                 // list again
                 list = await addressBook.Contact().List();
@@ -56,18 +56,18 @@ namespace RingCentral.Tests
                 var contactId = list.records[0].id;
 
                 // update
-                contact.lastName = "Liu";
+                contact.lastName = "LastName2";
                 var contactRequest =
                     JsonConvert.DeserializeObject<PersonalContactRequest>(JsonConvert.SerializeObject(contact));
                 var contact2 = await addressBook.Contact(contactId.ToString()).Put(contactRequest);
                 Assert.NotNull(contact2);
-                Assert.Equal("Liu", contact2.lastName);
+                Assert.Equal("LastName2", contact2.lastName);
 
                 // get
                 var contact3 = await addressBook.Contact(contactId.ToString()).Get();
                 Assert.NotNull(contact3);
-                Assert.Equal("Tyler", contact3.firstName);
-                Assert.Equal("Liu", contact3.lastName);
+                Assert.Equal("FirstName", contact3.firstName);
+                Assert.Equal("LastName2", contact3.lastName);
 
                 // delete
                 await addressBook.Contact(contactId.ToString()).Delete();
