@@ -39,6 +39,7 @@ namespace RingCentral
         public bool? muted;
 
         /// <summary>
+        /// Deprecated. Infromation a call owner
         /// </summary>
         public OwnerInfo owner;
 

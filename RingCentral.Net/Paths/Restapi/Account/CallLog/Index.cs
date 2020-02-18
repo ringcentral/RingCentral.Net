@@ -38,14 +38,14 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         /// Operation: Get Company Call Log Record(s)
         /// Http Get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
         /// </summary>
-        public async Task<RingCentral.CompanyCallLogRecord> Get()
+        public async Task<RingCentral.CompanyCallLogRecord> Get(ReadCompanyCallRecordParameters queryParams = null)
         {
             if (this.callRecordId == null)
             {
                 throw new System.ArgumentNullException("callRecordId");
             }
 
-            return await rc.Get<RingCentral.CompanyCallLogRecord>(this.Path());
+            return await rc.Get<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams);
         }
     }
 }

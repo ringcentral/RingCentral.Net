@@ -49,7 +49,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        /// Operation: Update Message(s)
+        /// Operation: Update Message List
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest)

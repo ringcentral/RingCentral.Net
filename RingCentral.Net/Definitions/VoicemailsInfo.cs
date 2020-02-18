@@ -33,7 +33,7 @@ namespace RingCentral
         public bool? includeTranscription;
 
         /// <summary>
-        /// Indicates whether email should be automatically marked as read
+        /// Indicates whether a voicemail should be automatically marked as read
         /// </summary>
         public bool? markAsRead;
     }

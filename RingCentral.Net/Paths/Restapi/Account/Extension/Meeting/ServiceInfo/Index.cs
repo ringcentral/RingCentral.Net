@@ -26,6 +26,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         {
             return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path());
         }
+
+        /// <summary>
+        /// Operation: Update Meeting Service Info
+        /// Http Patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
+        /// </summary>
+        public async Task<RingCentral.MeetingServiceInfoResource> Patch(
+            RingCentral.MeetingServiceInfoRequest meetingServiceInfoRequest)
+        {
+            return await rc.Patch<RingCentral.MeetingServiceInfoResource>(this.Path(), meetingServiceInfoRequest);
+        }
     }
 }
 

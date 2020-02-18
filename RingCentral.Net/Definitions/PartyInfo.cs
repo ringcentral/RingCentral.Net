@@ -8,11 +8,6 @@ namespace RingCentral
         public string phoneNumber;
 
         /// <summary>
-        /// Internal identifier of an extension
-        /// </summary>
-        public string extensionId;
-
-        /// <summary>
         /// Displayed name of a party
         /// </summary>
         public string name;
@@ -21,5 +16,10 @@ namespace RingCentral
         /// Internal identifier of a device
         /// </summary>
         public string deviceId;
+
+        /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
+        public string extensionId;
     }
 }

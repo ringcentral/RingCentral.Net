@@ -16,5 +16,10 @@ namespace RingCentral
         /// Supported for SoftPhone only. Computer name
         /// </summary>
         public string computerName;
+
+        /// <summary>
+        /// Serial number for HardPhone; endpoint_id for softphone and mobile applications. Returned only when the phone is shipped and provisioned
+        /// </summary>
+        public string serial;
     }
 }

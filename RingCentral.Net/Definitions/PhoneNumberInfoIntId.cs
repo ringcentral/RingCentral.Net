@@ -15,7 +15,7 @@ namespace RingCentral
         /// <summary>
         /// Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
         /// </summary>
-        public ExtensionInfo extension;
+        public DeviceProvisioningExtensionInfo extension;
 
         /// <summary>
         /// Custom user name of a phone number, if any

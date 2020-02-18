@@ -28,7 +28,7 @@ namespace RingCentral
         public string scope;
 
         /// <summary>
-        /// Type of token. The only possible value supported is Bearer. This value should be used when specifying access token in Authorization header of subsequent API requests
+        /// Type of token. The only possible value supported is Bearer. This value should be used when specifying access token in `Authorization` header of subsequent API requests
         /// </summary>
         public string token_type;
 

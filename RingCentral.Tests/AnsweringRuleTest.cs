@@ -25,8 +25,8 @@ namespace RingCentral.Tests
                 Assert.NotNull(answeringRule);
                 Assert.True(answeringRules.records.Length > 1);
 
-                var answeringRules2 = await rc.Get<CompanyAnsweringRuleList>("/restapi/v1.0/account/~/answering-rule", 
-                    new { perPage = 1 });
+                var answeringRules2 = await rc.Get<CompanyAnsweringRuleList>("/restapi/v1.0/account/~/answering-rule",
+                    new {perPage = 1});
                 Assert.NotNull(answeringRules2);
                 Assert.True(answeringRules2.records.Length == 1);
 //                await rc.Patch(rc.Restapi().Account().AnsweringRule(answeringRule.id).Path(), new

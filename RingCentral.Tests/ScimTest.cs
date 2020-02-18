@@ -26,7 +26,7 @@ namespace RingCentral.Tests
                 // to get the whole response as a string
                 var str = await rc.Get<string>("/scim/v2/ServiceProviderConfig");
                 Assert.Contains("urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig", str);
-                
+
                 // to get the response as a C# object
                 var serviceProviderConfig = await rc.Scim().ServiceProviderConfig().Get();
                 Assert.Equal(new[] {"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"},
@@ -227,17 +227,17 @@ namespace RingCentral.Tests
                 if (userSearchResponse.Resources.Length == 1)
                 {
                     var userResponse = userSearchResponse.Resources[0];
-                    
+
                     // create a new use object by JSON serialization and deserialization
                     var user = JsonConvert.DeserializeObject<User>(JsonConvert.SerializeObject(userResponse));
                     var guid = Guid.NewGuid().ToString();
-                    
+
                     // update family name of the new user
                     user.name.familyName = guid;
                     var ur = await rc.Scim().Users(user.id).Put(user);
                     Assert.Equal("test.user@example.com", ur.emails[0].value);
                     // make sure user has new family name
-                    Assert.Equal(guid, ur.name.familyName); 
+                    Assert.Equal(guid, ur.name.familyName);
                 }
             }
         }
@@ -290,9 +290,9 @@ namespace RingCentral.Tests
                     // patch it
                     var ur = await rc.Scim().Users(userResponse.id).Patch(userPatch);
                     Assert.Equal("test.user@example.com", ur.emails[0].value);
-                    
+
                     // make sure data patched successfully
-                    Assert.Equal(guid, ur.name.familyName); 
+                    Assert.Equal(guid, ur.name.familyName);
                 }
             }
         }

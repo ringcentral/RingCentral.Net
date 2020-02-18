@@ -142,11 +142,11 @@ HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List();
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
 }
 ```
 
-
+- Parameter `listCompanyAnsweringRulesParameters` is of type [ListCompanyAnsweringRulesParameters](./RingCentral.Net/Definitions/ListCompanyAnsweringRulesParameters.cs)
 - `result` is of type [CompanyAnsweringRuleList](./RingCentral.Net/Definitions/CompanyAnsweringRuleList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -342,11 +342,11 @@ HTTP GET `/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters);
 }
 ```
 
-
+- Parameter `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./RingCentral.Net/Definitions/ReadCompanyCallRecordParameters.cs)
 - `result` is of type [CompanyCallLogRecord](./RingCentral.Net/Definitions/CompanyCallLogRecord.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -482,7 +482,7 @@ HTTP GET `/restapi/v1.0/account/{accountId}/call-queues`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().Get(listCallQueuesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
 }
 ```
 
@@ -492,6 +492,46 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueues) in API Explorer.
+
+
+## Get Call Queue
+
+HTTP GET `/restapi/v1.0/account/{accountId}/call-queues/{groupId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
+}
+```
+
+
+- `result` is of type [CallQueueDetails](./RingCentral.Net/Definitions/CallQueueDetails.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-readCallQueueInfo) in API Explorer.
+
+
+## Update Call Queue
+
+HTTP PUT `/restapi/v1.0/account/{accountId}/call-queues/{groupId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails);
+}
+```
+
+- Parameter `callQueueUpdateDetails` is of type [CallQueueUpdateDetails](./RingCentral.Net/Definitions/CallQueueUpdateDetails.cs)
+- `result` is of type [CallQueueDetails](./RingCentral.Net/Definitions/CallQueueDetails.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueInfo) in API Explorer.
 
 
 ## Assign Multiple Call Queue Members
@@ -532,6 +572,46 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueueMembers) in API Explorer.
+
+
+## Get Call Queue Presence
+
+HTTP GET `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
+}
+```
+
+
+- `result` is of type [CallQueuePresence](./RingCentral.Net/Definitions/CallQueuePresence.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-readCallQueuePresence) in API Explorer.
+
+
+## Update Call Queue Presence
+
+HTTP PUT `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
+}
+```
+
+- Parameter `callQueueUpdatePresence` is of type [CallQueueUpdatePresence](./RingCentral.Net/Definitions/CallQueueUpdatePresence.cs)
+- `result` is of type [CallQueuePresence](./RingCentral.Net/Definitions/CallQueuePresence.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-updateCallQueuePresence) in API Explorer.
 
 
 ## Get Call Recording Settings
@@ -652,6 +732,86 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Rule-Management-listCallRecordingExtensions) in API Explorer.
+
+
+## Create Custom Field
+
+HTTP POST `/restapi/v1.0/account/{accountId}/custom-fields`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
+}
+```
+
+- Parameter `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./RingCentral.Net/Definitions/CustomFieldCreateRequest.cs)
+- `result` is of type [CustomFieldResource](./RingCentral.Net/Definitions/CustomFieldResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-createCustomField) in API Explorer.
+
+
+## Get Custom Field List
+
+HTTP GET `/restapi/v1.0/account/{accountId}/custom-fields`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
+}
+```
+
+
+- `result` is of type [CustomFieldsResource](./RingCentral.Net/Definitions/CustomFieldsResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-listCustomFields) in API Explorer.
+
+
+## Update Сustom Field
+
+HTTP PUT `/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
+}
+```
+
+- Parameter `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./RingCentral.Net/Definitions/CustomFieldUpdateRequest.cs)
+- `result` is of type [CustomFieldResource](./RingCentral.Net/Definitions/CustomFieldResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-updateCustomField) in API Explorer.
+
+
+## Delete Custom Field
+
+HTTP DELETE `/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
+}
+```
+
+
+- `result` is an empty string
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-deleteCustomField) in API Explorer.
 
 
 ## Assign Multiple Department Members
@@ -1939,6 +2099,48 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readUserCallRecord) in API Explorer.
 
 
+## Get Agent’s Call Queue Presence
+
+HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters);
+}
+```
+
+- Parameter `readExtensionCallQueuePresenceParameters` is of type [ReadExtensionCallQueuePresenceParameters](./RingCentral.Net/Definitions/ReadExtensionCallQueuePresenceParameters.cs)
+- `result` is of type [ExtensionCallQueuePresenceList](./RingCentral.Net/Definitions/ExtensionCallQueuePresenceList.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-readExtensionCallQueuePresence) in API Explorer.
+
+
+## Update Call Queue Presence
+
+HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList);
+}
+```
+
+- Parameter `extensionCallQueueUpdatePresenceList` is of type [ExtensionCallQueueUpdatePresenceList](./RingCentral.Net/Definitions/ExtensionCallQueueUpdatePresenceList.cs)
+- `result` is of type [ExtensionCallQueuePresenceList](./RingCentral.Net/Definitions/ExtensionCallQueuePresenceList.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-updateExtensionCallQueuePresence) in API Explorer.
+
+
 ## Update User Call Queues
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues`
@@ -2569,6 +2771,27 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readMeetingServiceInfo) in API Explorer.
 
 
+## Update Meeting Service Info
+
+HTTP PATCH `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest);
+}
+```
+
+- Parameter `meetingServiceInfoRequest` is of type [MeetingServiceInfoRequest](./RingCentral.Net/Definitions/MeetingServiceInfoRequest.cs)
+- `result` is of type [MeetingServiceInfoResource](./RingCentral.Net/Definitions/MeetingServiceInfoResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-updateMeetingServiceInfo) in API Explorer.
+
+
 ## Get Meeting Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
@@ -2737,7 +2960,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessage) in API Explorer.
 
 
-## Update Message(s)
+## Update Message List
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 

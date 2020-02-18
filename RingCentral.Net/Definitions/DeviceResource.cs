@@ -8,7 +8,7 @@ namespace RingCentral
         public string id;
 
         /// <summary>
-        /// Canonical URI of a device
+        /// Link to a device resource
         /// </summary>
         public string uri;
 
@@ -29,6 +29,11 @@ namespace RingCentral
         /// Enum: Online, Offline
         /// </summary>
         public string status;
+
+        /// <summary>
+        /// Site data
+        /// </summary>
+        public DeviceSiteInfo site;
 
         /// <summary>
         /// Device name. Mandatory if ordering SoftPhone or OtherPhone . Optional for HardPhone . If not specified for HardPhone, then device model name is used as device name

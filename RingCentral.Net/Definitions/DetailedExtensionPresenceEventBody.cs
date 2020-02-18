@@ -37,6 +37,12 @@ namespace RingCentral
         public string userStatus;
 
         /// <summary>
+        /// Meetings presence status
+        /// Enum: Connected, Disconnected
+        /// </summary>
+        public string meetingStatus;
+
+        /// <summary>
         /// Extended DnD (Do not Disturb) status
         /// Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
         /// </summary>

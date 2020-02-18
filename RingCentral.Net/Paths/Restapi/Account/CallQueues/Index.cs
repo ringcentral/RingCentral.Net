@@ -29,9 +29,37 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         /// Operation: Get Call Queues
         /// Http Get /restapi/v1.0/account/{accountId}/call-queues
         /// </summary>
-        public async Task<RingCentral.CallQueues> Get(ListCallQueuesParameters queryParams = null)
+        public async Task<RingCentral.CallQueues> List(ListCallQueuesParameters queryParams = null)
         {
             return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams);
+        }
+
+        /// <summary>
+        /// Operation: Get Call Queue
+        /// Http Get /restapi/v1.0/account/{accountId}/call-queues/{groupId}
+        /// </summary>
+        public async Task<RingCentral.CallQueueDetails> Get()
+        {
+            if (this.groupId == null)
+            {
+                throw new System.ArgumentNullException("groupId");
+            }
+
+            return await rc.Get<RingCentral.CallQueueDetails>(this.Path());
+        }
+
+        /// <summary>
+        /// Operation: Update Call Queue
+        /// Http Put /restapi/v1.0/account/{accountId}/call-queues/{groupId}
+        /// </summary>
+        public async Task<RingCentral.CallQueueDetails> Put(RingCentral.CallQueueUpdateDetails callQueueUpdateDetails)
+        {
+            if (this.groupId == null)
+            {
+                throw new System.ArgumentNullException("groupId");
+            }
+
+            return await rc.Put<RingCentral.CallQueueDetails>(this.Path(), callQueueUpdateDetails);
         }
     }
 }

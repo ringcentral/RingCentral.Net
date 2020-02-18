@@ -34,7 +34,7 @@ namespace RingCentral
 
         /// <summary>
         /// Specifies how incoming calls are forwarded
-        /// Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly
+        /// Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly, SharedLines
         /// </summary>
         public string callHandlingAction;
 
@@ -65,7 +65,7 @@ namespace RingCentral
         public string screening;
 
         /// <summary>
-        /// Indicates whether inactive numbers should be returned or not.
+        /// Indicates whether inactive numbers should be returned or not
         /// </summary>
         public bool? showInactiveNumbers;
     }
