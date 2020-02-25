@@ -46,11 +46,12 @@ namespace RingCentral
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
         {
             httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/3.0.0");
-            httpRequestMessage.Headers.Authorization = token == null
-                ? new AuthenticationHeaderValue("Basic",
-                    Convert.ToBase64String(
-                        Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
-                : new AuthenticationHeaderValue("Bearer", token.access_token);
+            httpRequestMessage.Headers.Authorization =
+                httpRequestMessage.RequestUri.AbsolutePath.StartsWith("/restapi/oauth/")
+                    ? new AuthenticationHeaderValue("Basic",
+                        Convert.ToBase64String(
+                            Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
+                    : new AuthenticationHeaderValue("Bearer", token.access_token);
             var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
             if (!httpResponseMessage.IsSuccessStatusCode)
                 throw new RestException(httpResponseMessage, httpRequestMessage);
@@ -60,7 +61,6 @@ namespace RingCentral
 
         public async Task<TokenInfo> Authorize(GetTokenRequest getTokenRequest)
         {
-            token = null; // force it to use basicAuth
             token = await Restapi(null).Oauth().Token().Post(getTokenRequest);
             return token;
         }
@@ -132,11 +132,11 @@ namespace RingCentral
             }
 
             tokenToRevoke = tokenToRevoke ?? token.access_token ?? token.refresh_token;
-            token = null; // force it to use basicAuth
             await Restapi(null).Oauth().Revoke().Post(new RevokeTokenRequest
             {
                 token = tokenToRevoke
             });
+            token = null;
         }
 
         public async void Dispose()
