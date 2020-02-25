@@ -45,7 +45,7 @@ namespace RingCentral
 
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
         {
-            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/3.0.0");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/3.1.0-beta");
             httpRequestMessage.Headers.Authorization =
                 httpRequestMessage.RequestUri.AbsolutePath.StartsWith("/restapi/oauth/")
                     ? new AuthenticationHeaderValue("Basic",
