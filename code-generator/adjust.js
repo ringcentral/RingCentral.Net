@@ -22,7 +22,7 @@ if (faxTo.items.type === 'string') {
   faxTo.items.$ref = '#/definitions/MessageStoreCalleeInfoRequest'
 }
 
-// https://jira.ringcentral.com/browse/PLD-337?filter=-2
+// https://jira.ringcentral.com/browse/PLD-337
 // https://github.com/ringcentral/RingCentral.Net/issues/12
 doc.definitions.MessageStoreCalleeInfoRequest = {
   type: 'object',
@@ -63,9 +63,39 @@ doc.definitions.CustomCompanyGreetingAnsweringRuleInfo = doc.definitions.CustomG
 }
 
 // https://jira.ringcentral.com/browse/PLD-592
-// doc.definitions.PlayTarget.properties.resources = doc.definitions.PlayResources
 doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].get.responses['207'].schema = doc.definitions.GetMessageMultiResponse
 doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].put.responses['207'].schema = doc.definitions.GetMessageMultiResponse
 doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence'].get.responses['207'].schema = doc.definitions.UnifiedPresenceList
+
+// https://jira.ringcentral.com/browse/PLD-696
+console.log('Anonymous definitions:')
+for (const dKey of Object.keys(doc.definitions)) {
+  const properties = doc.definitions[dKey].properties
+  if (!properties) {
+    continue
+  }
+  for (const pKey of Object.keys(properties)) {
+    const property = properties[pKey]
+    if (property.properties) {
+      const newDefinitionName = `${dKey}${pKey.charAt(0).toUpperCase() + pKey.slice(1)}`
+      doc.definitions[newDefinitionName] = {
+        type: 'object',
+        properties: property.properties
+      }
+      delete property.properties
+      property.$ref = `#/definitions/${newDefinitionName}`
+      console.log(newDefinitionName)
+    } else if (property.items && property.items.properties) {
+      const newDefinitionName = `${dKey}${pKey.charAt(0).toUpperCase() + pKey.slice(1, -1)}`
+      doc.definitions[newDefinitionName] = {
+        type: 'object',
+        properties: property.items.properties
+      }
+      delete property.items.properties
+      property.items.$ref = `#/definitions/${newDefinitionName}`
+      console.log(newDefinitionName)
+    }
+  }
+}
 
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))

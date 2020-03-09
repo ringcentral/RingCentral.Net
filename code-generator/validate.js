@@ -139,7 +139,6 @@ markdown += `
 ## Anonymouse types
 `
 for (const dKey of Object.keys(doc.definitions)) {
-  console.log(dKey)
   const properties = doc.definitions[dKey].properties
   if (!properties) {
     continue

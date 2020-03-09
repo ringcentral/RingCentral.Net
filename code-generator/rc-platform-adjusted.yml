@@ -19837,10 +19837,7 @@ definitions:
         type: array
         items:
           type: object
-          properties:
-            id:
-              type: string
-              description: Internal identifier of an assignee
+          $ref: '#/definitions/GlipUpdateTaskAssignee'
       completenessCondition:
         type: string
         enum:
@@ -19879,10 +19876,7 @@ definitions:
         type: array
         items:
           type: object
-          properties:
-            id:
-              type: string
-              description: Internal identifier of a task
+          $ref: '#/definitions/GlipUpdateTaskAttachment'
   GlipGroupInfo:
     type: object
     properties:
@@ -20020,10 +20014,7 @@ definitions:
         type: array
         items:
           type: object
-          properties:
-            id:
-              type: string
-              description: Assignee Id
+          $ref: '#/definitions/GlipCreateTaskAssignee'
       completenessCondition:
         type: string
         default: Simple
@@ -20066,10 +20057,7 @@ definitions:
         type: array
         items:
           type: object
-          properties:
-            id:
-              type: string
-              description: Internal identifier of a file
+          $ref: '#/definitions/GlipCreateTaskAttachment'
   GlipTeamsList:
     type: object
     required:
@@ -20171,13 +20159,7 @@ definitions:
         type: array
         items:
           type: object
-          properties:
-            id:
-              type: string
-              description: >-
-                Internal identifier of an assignee (RC extension ID or Glip user
-                ID). 'Mandatory' if `completenessCondition` is set to
-                `AllAssignees`, otherwise 'Optional'
+          $ref: '#/definitions/GlipCompleteTaskAssignee'
       completenessPercentage:
         description: >-
           Current completeness percentage of a task with the 'Percentage'
@@ -20314,13 +20296,7 @@ definitions:
         type: array
         items:
           type: object
-          properties:
-            id:
-              type: string
-              description: Internal identifier of an attachment
-            type:
-              type: string
-              description: Attachment type
+          $ref: '#/definitions/GlipPostPostBodyAttachment'
   GlipMessageAttachmentInfoRequest:
     type: object
     properties:
@@ -20810,10 +20786,7 @@ definitions:
           - Task
       creator:
         type: object
-        properties:
-          id:
-            type: string
-            description: Internal identifier of a task
+        $ref: '#/definitions/GlipTaskInfoCreator'
       chatIds:
         type: array
         items:
@@ -20833,16 +20806,7 @@ definitions:
         type: array
         items:
           type: object
-          properties:
-            id:
-              type: string
-              description: Internal identifier of an assignee
-            status:
-              type: string
-              enum:
-                - Pending
-                - Completed
-              description: Status of the task execution by assignee
+          $ref: '#/definitions/GlipTaskInfoAssignee'
         description: Task name/subject
       completenessCondition:
         type: string
@@ -31264,6 +31228,66 @@ definitions:
       id:
         type: string
   CustomCompanyGreetingAnsweringRuleInfo: *ref_2
+  GlipUpdateTaskAssignee:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an assignee
+  GlipUpdateTaskAttachment:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a task
+  GlipCreateTaskAssignee:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Assignee Id
+  GlipCreateTaskAttachment:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a file
+  GlipCompleteTaskAssignee:
+    type: object
+    properties:
+      id:
+        type: string
+        description: >-
+          Internal identifier of an assignee (RC extension ID or Glip user ID).
+          'Mandatory' if `completenessCondition` is set to `AllAssignees`,
+          otherwise 'Optional'
+  GlipPostPostBodyAttachment:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an attachment
+      type:
+        type: string
+        description: Attachment type
+  GlipTaskInfoCreator:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a task
+  GlipTaskInfoAssignee:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an assignee
+      status:
+        type: string
+        enum:
+          - Pending
+          - Completed
+        description: Status of the task execution by assignee
 securityDefinitions:
   OAuth2:
     type: oauth2
