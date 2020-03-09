@@ -134,6 +134,24 @@ for (const definition of Object.keys(doc.definitions)) {
   }
 }
 
+markdown += `
+
+## Anonymouse types
+`
+for (const dKey of Object.keys(doc.definitions)) {
+  console.log(dKey)
+  const properties = doc.definitions[dKey].properties
+  if (!properties) {
+    continue
+  }
+  for (const pKey of Object.keys(properties)) {
+    const property = properties[pKey]
+    if (property.properties || (property.items && property.items.properties)) {
+      markdown += `\n- Definition: \`${dKey}\`; Property name: \`${pKey}\``
+    }
+  }
+}
+
 fs.writeFileSync('validate.md', markdown)
 
 console.log(markdown)
