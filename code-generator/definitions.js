@@ -21,9 +21,6 @@ const normalizeType = f => {
   } else if (f.type === 'array') {
     return `${normalizeType(f.items)}[]`
   } else if (f.type === undefined || f.type === 'object') {
-    if (!f.$ref) {
-      return 'object' // anonymous object
-    }
     return f.$ref.split('/').slice(-1)[0]
   } else if (f.type === 'boolean') {
     return 'bool?'
