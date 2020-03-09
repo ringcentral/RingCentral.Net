@@ -9,7 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public object[] assignees;
+        public GlipUpdateTaskAssignee[] assignees;
 
         /// <summary>
         /// Enum: Simple, AllAssignees, Percentage
@@ -47,6 +47,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public object[] attachments;
+        public GlipUpdateTaskAttachment[] attachments;
     }
 }

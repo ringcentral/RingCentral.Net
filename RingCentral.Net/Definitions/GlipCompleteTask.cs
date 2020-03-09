@@ -10,7 +10,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public object[] assignees;
+        public GlipCompleteTaskAssignee[] assignees;
 
         /// <summary>
         /// Current completeness percentage of a task with the 'Percentage' completeness condition. 'Mandatory' if `completenessCondition` is set to `Percentage`, otherwise 'Optional'
