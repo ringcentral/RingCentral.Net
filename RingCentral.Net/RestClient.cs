@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -43,7 +44,7 @@ namespace RingCentral
         {
         }
 
-        public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage)
+        public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage, int retriedTimes = 0)
         {
             httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/3.1.0-beta");
             httpRequestMessage.Headers.Authorization =
@@ -53,9 +54,21 @@ namespace RingCentral
                             Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
                     : new AuthenticationHeaderValue("Bearer", token.access_token);
             var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
-            if (!httpResponseMessage.IsSuccessStatusCode)
-                throw new RestException(httpResponseMessage, httpRequestMessage);
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
+            if (!httpResponseMessage.IsSuccessStatusCode)
+            {
+                if (!_autoRetry || retriedTimes > _maxRetryTimes || !_retryableHttpStatusCodes.Contains((int)httpResponseMessage.StatusCode))
+                {
+                    throw new RestException(httpResponseMessage, httpRequestMessage);
+                }
+                else
+                {
+                    var delayTime = 1 << retriedTimes * _retryBaseDelay;
+                    delayTime = (delayTime / 2) + _random.Next(0, delayTime / 2); // apply jitter
+                    await Task.Delay(delayTime);
+                    return await Request(httpRequestMessage, ++retriedTimes);
+                }
+            }
             return httpResponseMessage;
         }
 
@@ -123,6 +136,29 @@ namespace RingCentral
                 _autoRefreshTimer = null;
             }
         }
+
+        private bool _autoRetry = false;
+        private int _retryBaseDelay = 10000; // milliseconds
+        private int _maxRetryTimes = 10;
+        private int[] _retryableHttpStatusCodes = null;
+        private Random _random = new Random();
+        public void AutoRetry(int baseDelay = 10000, int maxRetryTimes = 10, int[] retryableHttpStatusCodes = null)
+        {
+            _autoRetry = true;
+            _retryBaseDelay = baseDelay;
+            _maxRetryTimes = maxRetryTimes;
+            _retryableHttpStatusCodes = retryableHttpStatusCodes;
+            if (_retryableHttpStatusCodes == null)
+            {
+                _retryableHttpStatusCodes = new[] {429};
+            }
+        }
+
+        public void StopAutoRetry()
+        {
+            _autoRetry = false;
+        }
+
 
         public async System.Threading.Tasks.Task Revoke(string tokenToRevoke = null)
         {
