@@ -57,7 +57,8 @@ namespace RingCentral
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
-                if (!_autoRetry || retriedTimes > _maxRetryTimes || !_retryableHttpStatusCodes.Contains((int)httpResponseMessage.StatusCode))
+                if (!_autoRetry || retriedTimes > _maxRetryTimes ||
+                    !_retryableHttpStatusCodes.Contains((int) httpResponseMessage.StatusCode))
                 {
                     throw new RestException(httpResponseMessage, httpRequestMessage);
                 }
@@ -69,6 +70,7 @@ namespace RingCentral
                     return await Request(httpRequestMessage, ++retriedTimes);
                 }
             }
+
             return httpResponseMessage;
         }
 
@@ -142,6 +144,7 @@ namespace RingCentral
         private int _maxRetryTimes = 10;
         private int[] _retryableHttpStatusCodes = null;
         private Random _random = new Random();
+
         public void AutoRetry(int baseDelay = 10000, int maxRetryTimes = 10, int[] retryableHttpStatusCodes = null)
         {
             _autoRetry = true;
