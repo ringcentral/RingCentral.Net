@@ -25,6 +25,22 @@ You can find [sample code for all the endpoints](./samples.md).
 There is also lots of useful code for your reference in our [test cases](./RingCentral.Tests).
 
 
+## Token auto refresh
+
+By default this SDK doesn't do token refresh. You are responsible to design and implement your own token management strategy.
+
+However, if you need a quick and dirty solution, you can try `rc.AuthoRefresh(interval: 1000 * 60 * 30);`. To disable it, use `rc.StopAutoRefresh();`.
+
+
+## API calls auto retry
+
+By default there is no API calls auto retry. If an API call fails, an exception will be thrown and you are supposed to catch and handle it.
+
+However, if you need a quick and dirty solution, you can try `rc.AutoRetry(baseDelay: 10000, maxRetryTimes: 10, retryableHttpStatusCodes: new[]{429});`.
+
+Above it's a sample to deal with [API rate limit](https://medium.com/ringcentral-developers/ringcentral-api-rate-limit-explained-2280fe53cb16). To disable it, use `rc.StopAutoRetry();`.
+
+
 ## For maintainers
 
 ### Release
