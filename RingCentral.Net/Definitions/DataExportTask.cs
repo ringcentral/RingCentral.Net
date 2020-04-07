@@ -31,7 +31,7 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a user
         /// </summary>
-        public string creator;
+        public CreatorInfo creator;
 
         /// <summary>
         /// Information specififed in request
