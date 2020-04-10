@@ -1,5 +1,7 @@
 # RingCentral.Net
 
+[![Build Status](https://travis-ci.org/ringcentral/RingCentral.Net.svg?branch=master)](https://travis-ci.org/ringcentral/RingCentral.Net)
+
 This project is a complete rewrite of [ringcentral/ringcentral-csharp-client](https://github.com/ringcentral/ringcentral-csharp-client).
 
 - [Announcing the New RingCentral SDK for .NET](https://medium.com/ringcentral-developers/new-ringcentral-sdk-for-net-a43417b2538c)
