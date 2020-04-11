@@ -4,5 +4,4 @@ dotnet: 2.1
 
 script:
   - dotnet restore
-  - dotnet build
   - dotnet test
