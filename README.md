@@ -71,3 +71,8 @@ nuget pack
 ```
 
 Reference: [Quickstart: Create and publish a package using Visual Studio (.NET Framework, Windows)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework)
+
+
+## Todo
+
+- Write doc about binary downloading. Especially, hostname should be `media.ringcentral.com`.
