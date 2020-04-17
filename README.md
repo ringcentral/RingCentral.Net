@@ -76,3 +76,7 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 ## Todo
 
 - Write doc about binary downloading. Especially, hostname should be `media.ringcentral.com`.
+- Wrong sample code: 
+    - binary downloading
+    - send mms
+- Make mms and fax api identical
