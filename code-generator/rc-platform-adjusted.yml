@@ -30940,21 +30940,6 @@ definitions:
         example: 8zXq6oaLT7WvwWITlGiA1A
       id_token:
         type: string
-  MessageStoreCalleeInfoRequest:
-    type: object
-    properties:
-      phoneNumber:
-        type: string
-        description: Phone number in E.164 format
-      name:
-        type: string
-        description: Name of the callee
-  CustomGreetingAnsweringRuleInfoRequest: &ref_2
-    type: object
-    properties:
-      id:
-        type: string
-  CustomCompanyGreetingAnsweringRuleInfo: *ref_2
   CreateMMSMessage:
     type: object
     required:
@@ -30988,6 +30973,21 @@ definitions:
         collectionFormat: multi
         items:
           type: file
+  MessageStoreCalleeInfoRequest:
+    type: object
+    properties:
+      phoneNumber:
+        type: string
+        description: Phone number in E.164 format
+      name:
+        type: string
+        description: Name of the callee
+  CustomGreetingAnsweringRuleInfoRequest: &ref_2
+    type: object
+    properties:
+      id:
+        type: string
+  CustomCompanyGreetingAnsweringRuleInfo: *ref_2
 securityDefinitions:
   OAuth2:
     type: oauth2
