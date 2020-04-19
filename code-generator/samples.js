@@ -99,8 +99,8 @@ ${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingC
       code += `\n\n[Try it out](https://developer.ringcentral.com/api-reference#${operation.tags[0].replace(/ /g, '-')}-${operation.operationId}) in API Explorer.`
 
       if (responseType === 'byte[]') {
-        code += `\n\n### Code sample above may not work
-\nPlease refer to [Binary content downloading](../README.md#Binary-content-downloading).`
+        code += `\n\n### ❗❗❗ Code sample above may not work
+\nPlease refer to [Binary content downloading](/README.md#Binary-content-downloading).`
       }
       md += code
     }
