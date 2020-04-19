@@ -78,9 +78,22 @@ doc.definitions.CustomCompanyGreetingAnsweringRuleInfo = doc.definitions.CustomG
 
 // // https://jira.ringcentral.com/browse/PLD-592
 // array as definitions
-doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].get.responses['207'].schema = doc.definitions.GetMessageMultiResponse
-doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}'].put.responses['207'].schema = doc.definitions.GetMessageMultiResponse
-doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence'].get.responses['207'].schema = doc.definitions.UnifiedPresenceList
+const arrayTypes = Object.keys(doc.definitions).filter(key => doc.definitions[key].type === 'array')
+for (const pathKey of Object.keys(doc.paths)) {
+  const path = doc.paths[pathKey]
+  for (const operationKey of Object.keys(path)) {
+    const operation = path[operationKey]
+    for (const responseKey of Object.keys(operation.responses)) {
+      const response = operation.responses[responseKey]
+      if (response.schema) {
+        const at = arrayTypes.filter(at => response.schema.$ref === `#/definitions/${at}`)
+        if (at.length > 0) {
+          response.schema = doc.definitions[at[0]]
+        }
+      }
+    }
+  }
+}
 
 // https://jira.ringcentral.com/browse/PLD-696
 // anonymous definitions
