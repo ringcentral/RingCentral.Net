@@ -2932,11 +2932,11 @@ HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createSmsMessage);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMmsMessage);
 }
 ```
 
-- Parameter `createSmsMessage` is of type [CreateSMSMessage](./RingCentral.Net/Definitions/CreateSMSMessage.cs)
+- Parameter `createMmsMessage` is of type [CreateMMSMessage](./RingCentral.Net/Definitions/CreateMMSMessage.cs)
 - `result` is of type [GetMessageInfoResponse](./RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`

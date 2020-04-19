@@ -62,53 +62,6 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async void SendFax2()
-        {
-            using (var rc = new RestClient(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-            ))
-            {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
-                );
-                var sendFaxMessageRequest = new CreateFaxMessageRequest
-                {
-                    to = new[]
-                    {
-                        new MessageStoreCalleeInfoRequest
-                        {
-                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
-                        }
-                    }
-                };
-                var attachments = new[]
-                {
-                    new Attachment
-                    {
-                        fileName = "rc.png",
-                        bytes = File.ReadAllBytes("./rc.png")
-                    },
-                    new Attachment
-                    {
-                        fileName = "glip.png",
-                        bytes = File.ReadAllBytes("./glip.png")
-                    },
-                    new Attachment
-                    {
-                        fileName = "hello.txt",
-                        bytes = Encoding.UTF8.GetBytes("Hello 888")
-                    }
-                };
-                var r = await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest, attachments);
-                Assert.Equal("High", r.faxResolution);
-            }
-        }
-
-        [Fact]
         public async void SendFaxComplicated()
         {
             using (var rc = new RestClient(

@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         /// Operation: Create MMS Message
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage)
+        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage)
         {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createSMSMessage);
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createMMSMessage);
             return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), multipartFormDataContent);
         }
     }

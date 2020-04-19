@@ -100,4 +100,17 @@ doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-pre
 //   }
 // }
 
+// MMS
+doc.definitions.CreateMMSMessage = JSON.parse(JSON.stringify(doc.definitions.CreateSMSMessage))
+doc.definitions.CreateMMSMessage.properties.attachments = {
+  description: 'Files to send',
+  type: 'array',
+  collectionFormat: 'multi',
+  items: {
+    type: 'file'
+  }
+}
+const faxBody = doc.paths['/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms'].post.parameters.filter(p => p.name === 'body')[0]
+faxBody.schema.$ref = '#/definitions/CreateMMSMessage'
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))

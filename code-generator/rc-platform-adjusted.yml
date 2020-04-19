@@ -1206,7 +1206,7 @@ paths:
           description: MMS envelope and content
           required: true
           schema:
-            $ref: '#/definitions/CreateSMSMessage'
+            $ref: '#/definitions/CreateMMSMessage'
       responses:
         default:
           description: MMS Message
@@ -30955,6 +30955,39 @@ definitions:
       id:
         type: string
   CustomCompanyGreetingAnsweringRuleInfo: *ref_2
+  CreateMMSMessage:
+    type: object
+    required:
+      - from
+      - text
+      - to
+    properties:
+      from:
+        description: >-
+          Sender of an SMS message. The phoneNumber property must be filled to
+          correspond to one of the account phone numbers which is allowed to
+          send SMS
+        $ref: '#/definitions/MessageStoreCallerInfoRequest'
+      to:
+        type: array
+        description: Receiver of an SMS message. The phoneNumber property must be filled
+        items:
+          $ref: '#/definitions/MessageStoreCallerInfoRequest'
+      text:
+        type: string
+        description: >-
+          Text of a message. Max length is 1000 symbols (2-byte UTF-16 encoded).
+          If a character is encoded in 4 bytes in UTF-16 it is treated as 2
+          characters, thus restricting the maximum message length to 500 symbols
+      country:
+        type: object
+        $ref: '#/definitions/SMSCountryInfo'
+      attachments:
+        description: Files to send
+        type: array
+        collectionFormat: multi
+        items:
+          type: file
 securityDefinitions:
   OAuth2:
     type: oauth2
