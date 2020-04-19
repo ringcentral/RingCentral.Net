@@ -2902,6 +2902,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageContent) in API Explorer.
 
+### Code sample above may not work
+
+Please refer to [Binary content downloading](../README.md#Binary-content-downloading).
+
 
 ## Sync Messages
 
@@ -3070,6 +3074,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readUserProfileImage) in API Explorer.
 
+### Code sample above may not work
+
+Please refer to [Binary content downloading](../README.md#Binary-content-downloading).
+
 
 ## Upload User Profile Image
 
@@ -3132,6 +3140,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readScaledPofileImage) in API Explorer.
+
+### Code sample above may not work
+
+Please refer to [Binary content downloading](../README.md#Binary-content-downloading).
 
 
 ## Make RingOut Call
@@ -3459,6 +3471,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Routing-readIVRPromptContent) in API Explorer.
 
+### Code sample above may not work
+
+Please refer to [Binary content downloading](../README.md#Binary-content-downloading).
+
 
 ## Get Account Meeting Recordings List
 
@@ -3758,6 +3774,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-listCallRecordingData) in API Explorer.
+
+### Code sample above may not work
+
+Please refer to [Binary content downloading](../README.md#Binary-content-downloading).
 
 
 ## Get Account Service Info
@@ -4980,6 +5000,10 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readDataExportTaskDataset) in API Explorer.
+
+### Code sample above may not work
+
+Please refer to [Binary content downloading](../README.md#Binary-content-downloading).
 
 
 ## Get User Events List

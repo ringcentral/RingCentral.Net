@@ -43,6 +43,33 @@ However, if you need a quick and dirty solution, you can try `rc.AutoRetry(baseD
 Above it's a sample to deal with [API rate limit](https://medium.com/ringcentral-developers/ringcentral-api-rate-limit-explained-2280fe53cb16). To disable it, use `rc.StopAutoRetry();`.
 
 
+## Binary content downloading
+
+Some [sample code](./samples.md) for binary content downloading may not work.
+
+Because RingCentral is gradually migrating binary content to CDN such as `media.ringcentral.com`.
+
+For example, to download the attachment of a fax:
+
+```cs
+// `message` is the fax message object
+var content = await rc.Get<byte[]>(message.attachments[0].uri);
+```
+
+The following does **NOT** work:
+
+```cs
+// `message` is the fax message object
+var content = await rc.Restapi().Account().Extension().MessageStore(message.id).Content(message.attachments[0].id).Get();
+```
+
+### Rule of thumb
+
+But not all binary content has been migrated to CDN.
+If the resource to download provides you with a CDN uri, use that CDN uri.
+If there is no CDN uri provided, contruct the uri as the [sample code](./samples.md) shows.
+
+
 ## For maintainers
 
 ### Release
@@ -75,9 +102,6 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 
 ## Todo
 
-- Write doc about binary downloading. Especially, hostname should be `media.ringcentral.com`.
-- Wrong sample code: 
-    - binary downloading
-- adjust script auto fix common issues:
+- adjust script AUTO fix common issues:
     - anonymous types
     - array types
