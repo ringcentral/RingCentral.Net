@@ -7,7 +7,7 @@ namespace RingCentral
         public string topic;
 
         /// <summary>
-        /// Enum: Scheduled, Instant, Recurring
+        /// Enum: Instant, Scheduled, ScheduledRecurring, Recurring
         /// </summary>
         public string meetingType;
 
@@ -42,5 +42,17 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string[] audioOptions;
+
+        /// <summary>
+        /// Recurrence settings
+        /// </summary>
+        public RecurrenceInfo recurrence;
+
+        /// <summary>
+        /// Automatic record type
+        /// Default: local
+        /// Enum: local, cloud, none
+        /// </summary>
+        public string autoRecordType;
     }
 }

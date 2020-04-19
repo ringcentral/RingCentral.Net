@@ -14,7 +14,6 @@ namespace RingCentral
 
         /// <summary>
         /// Company business address
-        /// Required
         /// </summary>
         public BusinessAddressInfo businessAddress;
 

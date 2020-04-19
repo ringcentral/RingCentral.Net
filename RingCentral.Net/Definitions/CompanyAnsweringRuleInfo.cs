@@ -13,7 +13,7 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// Specifies if the rule is active or inactive. The default value is 'True'
+        /// Specifies if the rule is active or inactive
         /// Default: true
         /// </summary>
         public bool? enabled;
@@ -54,7 +54,7 @@ namespace RingCentral
         /// <summary>
         /// Extension to which the call is forwarded in 'Bypass' mode
         /// </summary>
-        public CompanyAnsweringRuleCallersInfoRequest extension;
+        public CompanyAnsweringRuleExtensionInfoRequest extension;
 
         /// <summary>
         /// Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

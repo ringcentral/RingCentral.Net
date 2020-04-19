@@ -18,6 +18,10 @@ namespace RingCentral
         public ContactInfo contact;
 
         /// <summary>
+        /// </summary>
+        public CustomFieldInfo[] customFields;
+
+        /// <summary>
         /// Number of department extension
         /// </summary>
         public string extensionNumber;

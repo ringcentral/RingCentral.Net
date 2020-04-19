@@ -31,9 +31,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         /// Operation: Update User Presence Status
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
         /// </summary>
-        public async Task<RingCentral.PresenceInfoResource> Put(RingCentral.PresenceInfoResource presenceInfoResource)
+        public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoResource presenceInfoResource)
         {
-            return await rc.Put<RingCentral.PresenceInfoResource>(this.Path(), presenceInfoResource);
+            return await rc.Put<RingCentral.PresenceInfoResponse>(this.Path(), presenceInfoResource);
         }
     }
 }

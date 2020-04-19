@@ -80,3 +80,8 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
     - binary downloading
     - send mms
 - Make mms and fax api identical
+- adjust script auto fix common issues:
+    - anonymous types
+    - array types
+- Release new major release, remove unwanted things, breaking change
+    - Remove those sugar methods

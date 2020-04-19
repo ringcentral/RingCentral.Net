@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string id;
+        public long? id;
 
         /// <summary>
         /// </summary>

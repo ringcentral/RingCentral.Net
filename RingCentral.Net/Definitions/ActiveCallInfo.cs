@@ -37,6 +37,8 @@ namespace RingCentral
         public string startTime;
 
         /// <summary>
+        /// Telephony presence status
+        /// Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
         /// </summary>
         public string telephonyStatus;
 

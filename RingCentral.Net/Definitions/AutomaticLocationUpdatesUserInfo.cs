@@ -30,7 +30,7 @@ namespace RingCentral
         /// <summary>
         /// Site data
         /// </summary>
-        public string site;
+        public AutomaticLocationUpdatesSiteInfo site;
 
         /// <summary>
         /// Department name

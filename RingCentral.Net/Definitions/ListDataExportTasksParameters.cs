@@ -3,8 +3,8 @@ namespace RingCentral
     public class ListDataExportTasksParameters
     {
         /// <summary>
-        /// Status of the task(s) to be returned. Multiple values supported
-        /// Enum: Accepted, InProgress, Completed, Failed, Canceled
+        /// Status of the task(s) to be returned. Multiple values are supported
+        /// Enum: Accepted, InProgress, Completed, Failed, Canceled, Expired
         /// </summary>
         public string status;
 

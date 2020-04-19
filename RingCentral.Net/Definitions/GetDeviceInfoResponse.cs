@@ -56,6 +56,11 @@ namespace RingCentral
         public ExtensionInfoIntId extension;
 
         /// <summary>
+        /// Device emergency settings
+        /// </summary>
+        public DeviceEmergencyInfo emergency;
+
+        /// <summary>
         /// Address for emergency cases. The same emergency address is assigned to all the numbers of one device
         /// </summary>
         public EmergencyServiceAddressResource emergencyServiceAddress;
@@ -100,5 +105,10 @@ namespace RingCentral
         /// Enum: Host, Guest, None
         /// </summary>
         public string linePooling;
+
+        /// <summary>
+        /// Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'
+        /// </summary>
+        public BillingStatementInfo billingStatement;
     }
 }

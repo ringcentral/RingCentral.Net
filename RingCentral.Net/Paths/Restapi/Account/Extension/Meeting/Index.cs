@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        /// Operation: Create Meetings
+        /// Operation: Create Meeting
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Post(

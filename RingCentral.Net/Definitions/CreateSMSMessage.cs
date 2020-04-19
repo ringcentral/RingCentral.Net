@@ -19,5 +19,9 @@ namespace RingCentral
         /// Required
         /// </summary>
         public string text;
+
+        /// <summary>
+        /// </summary>
+        public SMSCountryInfo country;
     }
 }

@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public GlipTaskInfoCreator creator;
+        public CreatorInfo creator;
 
         /// <summary>
         /// Chat IDs where the task is posted or shared.
@@ -44,9 +44,8 @@ namespace RingCentral
         public string subject;
 
         /// <summary>
-        /// Task name/subject
         /// </summary>
-        public GlipTaskInfoAssignee[] assignees;
+        public TaskAssigneeInfo[] assignees;
 
         /// <summary>
         /// Specifies how to determine task completeness

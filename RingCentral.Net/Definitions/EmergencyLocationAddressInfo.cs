@@ -61,5 +61,10 @@ namespace RingCentral
         /// Postal (Zip) code
         /// </summary>
         public string zip;
+
+        /// <summary>
+        /// Customer name
+        /// </summary>
+        public string customerName;
     }
 }

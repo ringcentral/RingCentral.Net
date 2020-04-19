@@ -37,7 +37,7 @@ namespace RingCentral
         /// <summary>
         /// Site data
         /// </summary>
-        public string site;
+        public AutomaticLocationUpdatesSiteInfo site;
 
         /// <summary>
         /// Phone lines information

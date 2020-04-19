@@ -16,12 +16,14 @@ models.forEach(m => {
 })
 
 const normalizeType = f => {
-  if (f.type === 'integer') {
+  if (f.$ref) {
+    return f.$ref.split('/').slice(-1)[0]
+  } else if (f.type === 'number') {
+    return 'decimal?'
+  } else if (f.type === 'integer') {
     return 'long?'
   } else if (f.type === 'array') {
     return `${normalizeType(f.items)}[]`
-  } else if (f.type === undefined || f.type === 'object') {
-    return f.$ref.split('/').slice(-1)[0]
   } else if (f.type === 'boolean') {
     return 'bool?'
   } else if (f.type === 'file') {

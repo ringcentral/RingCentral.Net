@@ -3,7 +3,7 @@ namespace RingCentral
     public class ExtensionUpdateRequest
     {
         /// <summary>
-        /// Enum: Disabled, Enabled, NotActivated
+        /// Enum: Disabled, Enabled, NotActivated, Frozen
         /// </summary>
         public string status;
 
@@ -62,5 +62,25 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UserTransitionInfo[] transition;
+
+        /// <summary>
+        /// </summary>
+        public CustomFieldInfo[] customFields;
+
+        /// <summary>
+        /// Hides extension from showing in company directory. Supported for extensions of User type only
+        /// </summary>
+        public bool? hidden;
+
+        /// <summary>
+        /// Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
+        /// </summary>
+        public AutomaticLocationUpdatesSiteInfo site;
+
+        /// <summary>
+        /// Extension type
+        /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation
+        /// </summary>
+        public string type;
     }
 }

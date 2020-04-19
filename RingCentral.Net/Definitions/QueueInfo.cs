@@ -9,6 +9,15 @@ namespace RingCentral
         public string transferMode;
 
         /// <summary>
+        /// Call transfer information
+        /// </summary>
+        public TransferInfo[] transfer;
+
+        /// <summary>
+        /// </summary>
+        public string noAnswerAction;
+
+        /// <summary>
         /// Information on a call forwarding rule
         /// </summary>
         public FixedOrderAgents[] fixedOrderAgents;
@@ -27,7 +36,7 @@ namespace RingCentral
         /// <summary>
         /// Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used
         /// Default: Voicemail
-        /// Enum: TransferToExtension, Voicemail
+        /// Enum: TransferToExtension, UnconditionalForwarding, Voicemail
         /// </summary>
         public string holdTimeExpirationAction;
 
@@ -53,8 +62,12 @@ namespace RingCentral
 
         /// <summary>
         /// Action which should be taken if count of callers on hold exceeds the maximum
-        /// Enum: Voicemail, Announcement
+        /// Enum: Voicemail, Announcement, TransferToExtension, UnconditionalForwarding
         /// </summary>
         public string maxCallersAction;
+
+        /// <summary>
+        /// </summary>
+        public UnconditionalForwardingInfo[] unconditionalForwarding;
     }
 }

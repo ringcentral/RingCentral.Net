@@ -4,7 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// Sender of a pager message.
-        /// Required
         /// </summary>
         public PagerCallerInfoRequest from;
 

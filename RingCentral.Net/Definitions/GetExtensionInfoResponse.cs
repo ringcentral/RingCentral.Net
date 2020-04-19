@@ -4,13 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// Internal identifier of an extension
-        /// Required
         /// </summary>
         public long? id;
 
         /// <summary>
         /// Canonical URI of an extension
-        /// Required
         /// </summary>
         public string uri;
 
@@ -25,6 +23,10 @@ namespace RingCentral
         public ContactInfo contact;
 
         /// <summary>
+        /// </summary>
+        public CustomFieldInfo[] customFields;
+
+        /// <summary>
         /// Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
         /// </summary>
         public DepartmentInfo[] departments;
@@ -33,6 +35,10 @@ namespace RingCentral
         /// Number of department extension
         /// </summary>
         public string extensionNumber;
+
+        /// <summary>
+        /// </summary>
+        public string[] extensionNumbers;
 
         /// <summary>
         /// Extension name. For user extension types the value is a combination of the specified first name and last name

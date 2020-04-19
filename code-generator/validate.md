@@ -21,12 +21,3 @@
 - UnifiedPresenceList
 
 ## Anonymouse types
-
-- Definition: `GlipUpdateTask`; Property name: `assignees`
-- Definition: `GlipUpdateTask`; Property name: `attachments`
-- Definition: `GlipCreateTask`; Property name: `assignees`
-- Definition: `GlipCreateTask`; Property name: `attachments`
-- Definition: `GlipCompleteTask`; Property name: `assignees`
-- Definition: `GlipPostPostBody`; Property name: `attachments`
-- Definition: `GlipTaskInfo`; Property name: `creator`
-- Definition: `GlipTaskInfo`; Property name: `assignees`

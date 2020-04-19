@@ -3,9 +3,28 @@ namespace RingCentral
     public class ListEmergencyLocationsParameters
     {
         /// <summary>
-        /// Filters entries containing the specified substring in address fields. The characters range is 0-64; not case-sensitive. If empty then the filter is ignored
+        /// Filters entries containing the specified substring in address and name fields. The characters range is 0-64; not case-sensitive. If empty then the filter is ignored
         /// </summary>
         public string searchString;
+
+        /// <summary>
+        /// Internal identifier of a site for filtering. To filter by Main Site (Company) `main-site` value should be specified
+        /// </summary>
+        public string siteId;
+
+        /// <summary>
+        /// Enum: Valid, Invalid
+        /// </summary>
+        public string addressStatus;
+
+        /// <summary>
+        /// Enum: Active, Inactive
+        /// </summary>
+        public string usageStatus;
+
+        /// <summary>
+        /// </summary>
+        public string domesticCountryId;
 
         /// <summary>
         /// Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-' (descending order). Supported values: 'address'

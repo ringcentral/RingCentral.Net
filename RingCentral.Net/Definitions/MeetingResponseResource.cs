@@ -19,7 +19,7 @@ namespace RingCentral
         public string topic;
 
         /// <summary>
-        /// Enum: Scheduled, Instant, Recurring
+        /// Enum: Instant, Scheduled, ScheduledRecurring, Recurring
         /// </summary>
         public string meetingType;
 
@@ -62,5 +62,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string[] audioOptions;
+
+        /// <summary>
+        /// List of meeting occurrences
+        /// </summary>
+        public MeetingOccurrenceInfo[] occurrences;
     }
 }

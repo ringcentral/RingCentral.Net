@@ -43,14 +43,15 @@ namespace RingCentral.Paths.Restapi.Account.Device
         /// Operation: Update Device
         /// Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// </summary>
-        public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate)
+        public async Task<RingCentral.GetDeviceInfoResponse> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate,
+            UpdateDeviceParameters queryParams = null)
         {
             if (this.deviceId == null)
             {
                 throw new System.ArgumentNullException("deviceId");
             }
 
-            return await rc.Put<RingCentral.DeviceResource>(this.Path(), accountDeviceUpdate);
+            return await rc.Put<RingCentral.GetDeviceInfoResponse>(this.Path(), accountDeviceUpdate, queryParams);
         }
     }
 }

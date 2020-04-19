@@ -63,9 +63,18 @@ namespace RingCentral
         public string direction;
 
         /// <summary>
+        /// </summary>
+        public CallLogRecordMessage message;
+
+        /// <summary>
         /// The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
         /// </summary>
         public string startTime;
+
+        /// <summary>
+        /// Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
+        /// </summary>
+        public DelegateInfo @delegate;
 
         /// <summary>
         /// Indicates whether the record is deleted. Returned for deleted records, for ISync requests

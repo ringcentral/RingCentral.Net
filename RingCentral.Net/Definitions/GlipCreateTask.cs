@@ -11,7 +11,7 @@ namespace RingCentral
         /// <summary>
         /// Required
         /// </summary>
-        public GlipCreateTaskAssignee[] assignees;
+        public AssigneeInfo[] assignees;
 
         /// <summary>
         /// Default: Simple
@@ -51,6 +51,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public GlipCreateTaskAttachment[] attachments;
+        public GlipAttachmentInfoRequest[] attachments;
     }
 }

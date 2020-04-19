@@ -61,6 +61,11 @@ namespace RingCentral
         public EmergencyServiceAddressResource emergencyServiceAddress;
 
         /// <summary>
+        /// Device emergency settings
+        /// </summary>
+        public DeviceEmergencyInfo emergency;
+
+        /// <summary>
         /// Phone lines information
         /// </summary>
         public PhoneLinesInfo[] phoneLines;

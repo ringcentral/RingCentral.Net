@@ -13,6 +13,11 @@ namespace RingCentral
         public string city;
 
         /// <summary>
+        /// Country name
+        /// </summary>
+        public string country;
+
+        /// <summary>
         /// State/province name
         /// </summary>
         public string state;

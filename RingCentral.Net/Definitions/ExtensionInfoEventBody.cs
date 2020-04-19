@@ -14,7 +14,7 @@ namespace RingCentral
         public string eventType;
 
         /// <summary>
-        /// Returned for 'Update' event type only. The possible values are: /nAccountInfo - change of account parameters/nExtensionInfo - change of contact info, service features, departments, status/nPhoneNumber - change of phone numbers/nRole - change of permissions/nProfileImage - change of profile image
+        /// Returned for 'Update' event type only
         /// </summary>
         public string[] hints;
 

@@ -11,6 +11,6 @@ namespace RingCentral
         /// <summary>
         /// Identifier(s) of attachments.
         /// </summary>
-        public GlipPostPostBodyAttachment[] attachments;
+        public GlipAttachmentInfoRequest[] attachments;
     }
 }

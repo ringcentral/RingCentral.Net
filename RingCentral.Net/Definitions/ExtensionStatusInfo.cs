@@ -9,7 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// Type of suspension
-        /// Enum: Voluntarily, Involuntarily, SuspendedVoluntarily
+        /// Enum: Voluntarily, Involuntarily, SuspendedVoluntarily, SuspendedVoluntarily2
         /// </summary>
         public string reason;
     }

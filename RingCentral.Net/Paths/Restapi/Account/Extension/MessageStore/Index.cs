@@ -52,14 +52,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// Operation: Update Message List
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest)
+        public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest,
+            UpdateMessageParameters queryParams = null)
         {
             if (this.messageId == null)
             {
                 throw new System.ArgumentNullException("messageId");
             }
 
-            return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest);
+            return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest, queryParams);
         }
 
         /// <summary>

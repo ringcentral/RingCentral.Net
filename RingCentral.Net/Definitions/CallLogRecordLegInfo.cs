@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Action description of the call operation
-        /// Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, External Application, FindMe, FollowMe, Outgoing Fax, CallOut-CallMe, Call Return, Calling Card, Monitoring, Ring Directly, RingOut Web, Text Relay, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile
+        /// Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, External Application, FindMe, FollowMe, Outgoing Fax, CallOut-CallMe, Call Return, Calling Card, Monitoring, Ring Directly, RingOut Web, Text Relay, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile, MeetingsCall, SilentMonitoring
         /// </summary>
         public string action;
 
@@ -139,5 +139,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallLogRecordMessage message;
+
+        /// <summary>
+        /// Telephony identifier of a call session
+        /// </summary>
+        public string telephonySessionId;
     }
 }

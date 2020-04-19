@@ -3,6 +3,11 @@ namespace RingCentral
     public class UpdateAnsweringRuleRequest
     {
         /// <summary>
+        /// Identifier of an answering rule
+        /// </summary>
+        public string id;
+
+        /// <summary>
         /// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
         /// </summary>
         public ForwardingInfoCreateRuleRequest forwarding;
@@ -39,6 +44,12 @@ namespace RingCentral
         public string callHandlingAction;
 
         /// <summary>
+        /// Type of an answering rule
+        /// Enum: BusinessHours, AfterHours, Custom
+        /// </summary>
+        public string type;
+
+        /// <summary>
         /// Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
         /// </summary>
         public UnconditionalForwardingInfo unconditionalForwarding;
@@ -68,5 +79,10 @@ namespace RingCentral
         /// Indicates whether inactive numbers should be returned or not
         /// </summary>
         public bool? showInactiveNumbers;
+
+        /// <summary>
+        /// Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
+        /// </summary>
+        public TransferredExtensionInfo transfer;
     }
 }

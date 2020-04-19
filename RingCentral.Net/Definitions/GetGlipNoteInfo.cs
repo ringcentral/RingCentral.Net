@@ -30,7 +30,7 @@ namespace RingCentral
         /// <summary>
         /// Note creator information
         /// </summary>
-        public NoteCreatorInfo creator;
+        public CreatorInfo creator;
 
         /// <summary>
         /// Note last modification information

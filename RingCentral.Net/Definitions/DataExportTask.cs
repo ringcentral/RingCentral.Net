@@ -24,14 +24,14 @@ namespace RingCentral
 
         /// <summary>
         /// Task status
-        /// Enum: Accepted, InProgress, Completed, Failed, Canceled
+        /// Enum: Accepted, InProgress, Completed, Failed, Canceled, Expired
         /// </summary>
         public string status;
 
         /// <summary>
         /// Internal identifier of a user
         /// </summary>
-        public string creator;
+        public CreatorInfo creator;
 
         /// <summary>
         /// Information specififed in request

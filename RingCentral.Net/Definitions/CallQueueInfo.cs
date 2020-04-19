@@ -3,14 +3,14 @@ namespace RingCentral
     public class CallQueueInfo
     {
         /// <summary>
+        /// Link to a call queue
+        /// </summary>
+        public string uri;
+
+        /// <summary>
         /// Internal identifier of a call queue
         /// </summary>
         public string id;
-
-        /// <summary>
-        /// Name of a call queue
-        /// </summary>
-        public string name;
 
         /// <summary>
         /// Extension number of a call queue
@@ -18,8 +18,8 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
-        /// Flag allow members to change their queue status
+        /// Name of a call queue
         /// </summary>
-        public bool? editableMemberStatus;
+        public string name;
     }
 }
