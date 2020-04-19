@@ -78,9 +78,6 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 - Write doc about binary downloading. Especially, hostname should be `media.ringcentral.com`.
 - Wrong sample code: 
     - binary downloading
-    - send mms
 - adjust script auto fix common issues:
     - anonymous types
     - array types
-- Release new major release, remove unwanted things, breaking change
-    - Remove those sugar methods
