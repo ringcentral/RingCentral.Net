@@ -19,6 +19,7 @@ namespace RingCentral
 
         /// <summary>
         /// Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
+        /// Enum: Inbound, Outbound
         /// </summary>
         public string[] direction;
 
@@ -29,6 +30,7 @@ namespace RingCentral
 
         /// <summary>
         /// Type for the resulting messages. If not specified, all types of messages are returned. Multiple values are accepted
+        /// Enum: Fax, SMS, VoiceMail, Pager, Text
         /// </summary>
         public string[] messageType;
 
@@ -44,6 +46,7 @@ namespace RingCentral
 
         /// <summary>
         /// Type of message synchronization
+        /// Enum: FSync, ISync
         /// </summary>
         public string[] syncType;
     }

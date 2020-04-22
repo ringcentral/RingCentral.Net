@@ -16,10 +16,12 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
+        /// Enum: Voice, Fax
         /// </summary>
         public string[] type;
 
         /// <summary>
+        /// Enum: Inbound, Outbound
         /// </summary>
         public string[] direction;
 

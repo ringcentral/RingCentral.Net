@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
+        /// Enum: Inbound, Outbound
         /// </summary>
         public string[] direction;
 
@@ -16,6 +17,7 @@ namespace RingCentral
 
         /// <summary>
         /// Call type of a record. If not specified, all call types are returned. Multiple values are accepted
+        /// Enum: Voice, Fax
         /// </summary>
         public string[] type;
 

@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// Sorts results by the specified property
+        /// Enum: FirstName, LastName, Company
         /// </summary>
         public string[] sortBy;
 

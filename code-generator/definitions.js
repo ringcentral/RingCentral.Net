@@ -56,8 +56,8 @@ const generateField = (m, f) => {
   }
 
   p = `/// </summary>\n        ${p}`
-  if (f.enum) {
-    p = `/// Enum: ${f.enum.join(', ')}\n        ${p}`
+  if (f.enum || (f.items || {}).enum) {
+    p = `/// Enum: ${(f.enum || (f.items || {}).enum).join(', ')}\n        ${p}`
   }
   if (f.default) {
     p = `/// Default: ${f.default}\n        ${p}`

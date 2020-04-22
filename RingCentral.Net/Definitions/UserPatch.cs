@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         /// Required
+        /// Enum: urn:ietf:params:scim:api:messages:2.0:PatchOp
         /// </summary>
         public string[] schemas;
     }

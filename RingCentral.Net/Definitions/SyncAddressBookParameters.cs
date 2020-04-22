@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Type of synchronization
+        /// Enum: FSync, ISync
         /// </summary>
         public string[] syncType;
 

@@ -8,6 +8,7 @@ namespace RingCentral
         public string detail;
 
         /// <summary>
+        /// Enum: urn:ietf:params:scim:api:messages:2.0:Error
         /// </summary>
         public string[] schemas;
 

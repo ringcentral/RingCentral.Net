@@ -13,6 +13,7 @@ namespace RingCentral
         public string filter;
 
         /// <summary>
+        /// Enum: urn:ietf:params:scim:api:messages:2.0:SearchRequest
         /// </summary>
         public string[] schemas;
 

@@ -43,6 +43,7 @@ namespace RingCentral
 
         /// <summary>
         /// Required
+        /// Enum: urn:ietf:params:scim:schemas:core:2.0:User
         /// </summary>
         public string[] schemas;
 

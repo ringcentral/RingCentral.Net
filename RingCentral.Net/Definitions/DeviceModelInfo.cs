@@ -20,6 +20,7 @@ namespace RingCentral
 
         /// <summary>
         /// Device feature or multiple features supported
+        /// Enum: BLA, Intercom, Paging, HELD
         /// </summary>
         public string[] features;
     }

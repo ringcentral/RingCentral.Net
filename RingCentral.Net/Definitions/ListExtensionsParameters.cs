@@ -26,11 +26,13 @@ namespace RingCentral
 
         /// <summary>
         /// Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
+        /// Enum: Enabled, Disabled, NotActivated, Unassigned
         /// </summary>
         public string[] status;
 
         /// <summary>
         /// Extension type. Multiple values are supported
+        /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot
         /// </summary>
         public string[] type;
     }

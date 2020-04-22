@@ -7,6 +7,7 @@ namespace RingCentral
         public bool? tosAccepted;
 
         /// <summary>
+        /// Enum: AccountCreated, BillingEntered, CreditCardApproved, AccountConfirmed, PhoneVerificationRequired, PhoneVerificationPassed
         /// </summary>
         public string[] signupState;
 

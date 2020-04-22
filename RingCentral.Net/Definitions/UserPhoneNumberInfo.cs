@@ -67,6 +67,7 @@ namespace RingCentral
 
         /// <summary>
         /// List of features of a phone number
+        /// Enum: CallerId, SmsSender, MmsSender, InternationalSmsSender, Delegated
         /// </summary>
         public string[] features;
     }

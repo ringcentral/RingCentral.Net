@@ -12,6 +12,7 @@ namespace RingCentral
         public long? itemsPerPage;
 
         /// <summary>
+        /// Enum: urn:ietf:params:scim:api:messages:2.0:ListResponse
         /// </summary>
         public string[] schemas;
 

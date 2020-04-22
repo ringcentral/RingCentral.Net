@@ -18,6 +18,7 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
+        /// Enum: Monitoring, Monitored
         /// </summary>
         public string[] permissions;
     }

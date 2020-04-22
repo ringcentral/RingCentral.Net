@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         /// Usage type of a phone number
+        /// Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber
         /// </summary>
         public string[] usageType;
 

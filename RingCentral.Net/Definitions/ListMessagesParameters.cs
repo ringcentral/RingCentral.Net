@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Specifies the availability status for the resulting messages. Multiple values are accepted
+        /// Enum: Alive, Deleted, Purged
         /// </summary>
         public string[] availability;
 
@@ -24,6 +25,7 @@ namespace RingCentral
 
         /// <summary>
         /// The direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
+        /// Enum: Inbound, Outbound
         /// </summary>
         public string[] direction;
 
@@ -34,11 +36,13 @@ namespace RingCentral
 
         /// <summary>
         /// The type of the resulting messages. If not specified, all messages without message type filtering are returned. Multiple values are accepted
+        /// Enum: Fax, SMS, VoiceMail, Pager, Text
         /// </summary>
         public string[] messageType;
 
         /// <summary>
         /// The read status for the resulting messages. Multiple values are accepted
+        /// Enum: Read, Unread
         /// </summary>
         public string[] readStatus;
 

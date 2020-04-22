@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Type of synchronization
+        /// Enum: FSync, ISync
         /// </summary>
         public string[] syncType;
 
@@ -24,6 +25,7 @@ namespace RingCentral
 
         /// <summary>
         /// Type of calls to be returned. The default value is 'All'
+        /// Enum: Missed, All
         /// </summary>
         public string[] statusGroup;
 

@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// Set of call monitoring group permissions granted to the specified extension. In order to remove the specified extension from a call monitoring group use an empty value
+        /// Enum: Monitoring, Monitored
         /// </summary>
         public string[] permissions;
     }

@@ -20,6 +20,7 @@ namespace RingCentral
 
         /// <summary>
         /// Task execution status
+        /// Enum: Pending, InProgress, Completed
         /// </summary>
         public string[] status;
 

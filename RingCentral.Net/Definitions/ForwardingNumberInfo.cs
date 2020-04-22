@@ -24,6 +24,7 @@ namespace RingCentral
 
         /// <summary>
         /// Type of option this phone number is used for. Multiple values are accepted
+        /// Enum: CallFlip, CallForwarding
         /// </summary>
         public string[] features;
 
