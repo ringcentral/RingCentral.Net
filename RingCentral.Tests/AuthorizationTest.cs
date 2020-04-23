@@ -31,7 +31,16 @@ namespace RingCentral.Tests
 
             // refresh null token
             var temp = new RestClient("", "");
-            await temp.Refresh(); // refresh null token
+            try
+            {
+                await temp.Refresh(); // refresh null token
+                throw new Exception("Line above should throw");
+            }
+            catch (ArgumentNullException ane)
+            {
+                Assert.Equal("tokenToRefresh", ane.ParamName);
+            }
+
             Assert.Null(temp.token);
 
             // revoke null token

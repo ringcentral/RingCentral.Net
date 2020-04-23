@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -108,7 +107,7 @@ namespace RingCentral
             var tokenToRefresh = refreshToken ?? token?.refresh_token;
             if (tokenToRefresh == null)
             {
-                return System.Threading.Tasks.Task.FromResult<TokenInfo>(null);
+                throw new System.ArgumentNullException(nameof(tokenToRefresh));
             }
 
             var getTokenRequest = new GetTokenRequest
@@ -163,7 +162,7 @@ namespace RingCentral
         }
 
 
-        public async System.Threading.Tasks.Task Revoke(string tokenToRevoke = null)
+        public async Task Revoke(string tokenToRevoke = null)
         {
             if (tokenToRevoke == null && token == null) // nothing  to revoke
             {
