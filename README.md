@@ -70,6 +70,24 @@ If the resource to download provides you with a CDN uri, use that CDN uri.
 If there is no CDN uri provided, contruct the uri as the [sample code](./samples.md) shows.
 
 
+## How to access headers
+
+By default, the SDK doesn't return headers:
+
+```cs
+var extInfo = await rc.Restapi().Account("~").Extension("~").Get();
+```
+
+If you need headers:
+
+```cs
+var httpResponseMessage = await rc.Get(rc.Restapi().Account("~").Extension("~").Path(true));
+var headers = httpResponseMessage.Headers;
+var responseBodyStr = await httpResponseMessage.Content.ReadAsStringAsync();
+extInfo = JsonConvert.DeserializeObject<GetExtensionInfoResponse>(responseBodyStr);
+```
+
+
 ## For maintainers
 
 ### Release
