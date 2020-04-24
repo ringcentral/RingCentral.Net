@@ -19,7 +19,7 @@ const pathToCode = path => {
     if (name.startsWith('{')) {
       return `(${name.substring(1, name.length - 1)})`
     } else {
-      return pascalCase(name)
+      return camelCase(name)
     }
   })
   names = names.map((name, index) => {
@@ -63,14 +63,13 @@ normalizedPaths.forEach(path => {
 HTTP ${(method === 'List' ? 'Get' : method).toUpperCase()} \`${endpoint}\`
 
 \`\`\`ts
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await ${pathToCode(path)}.${method}(${parameters.map(p => camelCase(p)).join(', ')});
-}
+const rc = new RestClient(clientId, clientSecret, serverUrl)
+await rc.authorize(username, extension, password)
+const result = await ${pathToCode(path)}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')})
+await rc.revoke()
 \`\`\`
 
-${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
+${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/definitions/${p}.ts)`).join('\n')}`
 
       const responses = doc.paths[endpoint][(method === 'List' ? 'Get' : method).toLowerCase()].responses
       const responseType = getResponseType(responses)
@@ -78,21 +77,23 @@ ${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingC
         code += '\n- `result` is an empty string'
       } else if (responseType.startsWith('RingCentral.')) {
         const className = responseType.substring(12)
-        code += `\n- \`result\` is of type [${className}](./RingCentral.Net/Definitions/${className}.cs)`
+        code += `\n- \`result\` is of type [${className}](./src/definitions/${className}.ts)`
+      } else if (responseType === 'byte[]') {
+        code += '\n- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)'
       } else {
         code += `\n- \`result\` is of type \`${responseType}\``
       }
 
-      if (code.includes('.Restapi(apiVersion)')) {
+      if (code.includes('.restapi(apiVersion)')) {
         code += '\n- Parameter `apiVersion` is optional with default value `v1.0`'
       }
-      if (code.includes('.Account(accountId)')) {
+      if (code.includes('.account(accountId)')) {
         code += '\n- Parameter `accountId` is optional with default value `~`'
       }
-      if (code.includes('.Extension(extensionId)')) {
+      if (code.includes('.extension(extensionId)')) {
         code += '\n- Parameter `extensionId` is optional with default value `~`'
       }
-      if (code.includes('.Scim(version)')) {
+      if (code.includes('.scim(version)')) {
         code += '\n- Parameter `version` is optional with default value `v2`'
       }
       const operation = doc.paths[endpoint][(method === 'List' ? 'Get' : method).toLowerCase()]
