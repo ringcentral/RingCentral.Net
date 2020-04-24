@@ -84,7 +84,7 @@ If you need headers:
 var httpResponseMessage = await rc.Get(rc.Restapi().Account("~").Extension("~").Path(true));
 var headers = httpResponseMessage.Headers;
 var responseBodyStr = await httpResponseMessage.Content.ReadAsStringAsync();
-extInfo = JsonConvert.DeserializeObject<GetExtensionInfoResponse>(responseBodyStr);
+var extInfo = JsonConvert.DeserializeObject<GetExtensionInfoResponse>(responseBodyStr);
 ```
 
 
