@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadUserPhoneNumbers
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadUserPhoneNumbers
         /// </summary>
         public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(
             ListExtensionPhoneNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)

@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/meeting-recordings
         /// Rate Limit Group: Medium
-        /// App Permission Required: Meetings
-        /// User Permission Required: MeetingsRecordings
+        /// App Permission: Meetings
+        /// User Permission: MeetingsRecordings
         /// </summary>
         public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
             ListAccountMeetingRecordingsParameters queryParams = null, CancellationToken? cancellationToken = null)

@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
         /// Rate Limit Group: Heavy
-        /// App Permission Required: RingOut
-        /// User Permission Required: undefined
+        /// App Permission: RingOut
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest,
             CancellationToken? cancellationToken = null)
@@ -46,8 +46,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         /// Rate Limit Group: Light
-        /// App Permission Required: RingOut
-        /// User Permission Required: undefined
+        /// App Permission: RingOut
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Get(CancellationToken? cancellationToken = null)
         {
@@ -64,8 +64,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: RingOut
-        /// User Permission Required: undefined
+        /// App Permission: RingOut
+        /// User Permission: undefined
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

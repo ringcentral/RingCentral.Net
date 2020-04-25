@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadContacts
-        /// User Permission Required: ReadPersonalContacts
+        /// App Permission: ReadContacts
+        /// User Permission: ReadPersonalContacts
         /// </summary>
         public async Task<RingCentral.FavoriteContactList> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// Rate Limit Group: Medium
-        /// App Permission Required: Contacts
-        /// User Permission Required: EditPersonalContacts
+        /// App Permission: Contacts
+        /// User Permission: EditPersonalContacts
         /// </summary>
         public async Task<RingCentral.FavoriteContactList> Put(RingCentral.FavoriteCollection favoriteCollection,
             CancellationToken? cancellationToken = null)

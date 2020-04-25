@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/country
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetCountryListResponse> List(ListCountriesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/country/{countryId}
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get(CancellationToken? cancellationToken = null)
         {

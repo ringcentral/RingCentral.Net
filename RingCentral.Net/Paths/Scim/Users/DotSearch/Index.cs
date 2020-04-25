@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         /// HTTP Method: POST
         /// Endpoint: /scim/v2/Users/.search
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: undefined
+        /// App Permission: ReadAccounts
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest,
             CancellationToken? cancellationToken = null)

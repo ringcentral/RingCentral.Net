@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/subscription
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List(
             CancellationToken? cancellationToken = null)
@@ -46,8 +46,8 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/subscription
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(
             RingCentral.CreateSubscriptionRequest createSubscriptionRequest,
@@ -62,8 +62,8 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -80,8 +80,8 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Put(
             RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
@@ -101,8 +101,8 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

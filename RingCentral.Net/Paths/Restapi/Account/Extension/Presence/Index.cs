@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadPresence
-        /// User Permission Required: ReadPresenceStatus
+        /// App Permission: ReadPresence
+        /// User Permission: ReadPresenceStatus
         /// </summary>
         public async Task<RingCentral.GetPresenceInfo> Get(ReadUserPresenceStatusParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -38,8 +38,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditPresence
-        /// User Permission Required: undefined
+        /// App Permission: EditPresence
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoResource presenceInfoResource,
             CancellationToken? cancellationToken = null)

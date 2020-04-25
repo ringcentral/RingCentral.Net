@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: Groups
+        /// App Permission: EditExtensions
+        /// User Permission: Groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Post(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
@@ -47,8 +47,8 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadExtensions
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -61,8 +61,8 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: Groups
+        /// App Permission: EditExtensions
+        /// User Permission: Groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Put(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
@@ -82,8 +82,8 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: Groups
+        /// App Permission: EditExtensions
+        /// User Permission: Groups
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

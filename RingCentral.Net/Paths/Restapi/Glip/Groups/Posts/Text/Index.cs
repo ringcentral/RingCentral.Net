@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts.Text
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Put(string body, CancellationToken? cancellationToken = null)
         {

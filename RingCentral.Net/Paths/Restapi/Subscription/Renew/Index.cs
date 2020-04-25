@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}/renew
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(CancellationToken? cancellationToken = null)
         {

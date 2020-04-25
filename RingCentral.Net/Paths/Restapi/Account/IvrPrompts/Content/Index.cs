@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts.Content
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyGreetings
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyGreetings
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {

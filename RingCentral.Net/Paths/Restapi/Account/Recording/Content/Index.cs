@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Recording.Content
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadCallRecording
-        /// User Permission Required: ReadCallRecording
+        /// App Permission: ReadCallRecording
+        /// User Permission: ReadCallRecording
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {

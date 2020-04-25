@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unfavorite
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/unfavorite
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

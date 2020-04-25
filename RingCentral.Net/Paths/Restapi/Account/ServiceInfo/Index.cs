@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/service-info
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadServicePlanInfo
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadServicePlanInfo
         /// </summary>
         public async Task<RingCentral.GetServiceInfoResponse> Get(CancellationToken? cancellationToken = null)
         {

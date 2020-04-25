@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadMessages
-        /// User Permission Required: ReadMessageContent
+        /// App Permission: ReadMessages
+        /// User Permission: ReadMessageContent
         /// </summary>
         public async Task<byte[]> Get(ReadMessageContentParameters queryParams = null,
             CancellationToken? cancellationToken = null)

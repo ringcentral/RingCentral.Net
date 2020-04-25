@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/number-parser/parse
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.ParsePhoneNumberResponse> Post(
             RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest, ParsePhoneNumberParameters queryParams = null,

@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/chats
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipChatsList> List(ListGlipChatsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}
         /// Rate Limit Group: Light
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipChatInfo> Get(CancellationToken? cancellationToken = null)
         {

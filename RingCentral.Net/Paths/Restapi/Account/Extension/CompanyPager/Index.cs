@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
         /// Rate Limit Group: Medium
-        /// App Permission Required: InternalMessages
-        /// User Permission Required: InternalSMS
+        /// App Permission: InternalMessages
+        /// User Permission: InternalSMS
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Post(
             RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest,

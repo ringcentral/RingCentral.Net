@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.WirelessPointsList> List(ListWirelessPointsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Post(RingCentral.CreateWirelessPoint createWirelessPoint,
             CancellationToken? cancellationToken = null)
@@ -60,8 +60,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -78,8 +78,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Put(RingCentral.UpdateWirelessPoint updateWirelessPoint,
             CancellationToken? cancellationToken = null)
@@ -98,8 +98,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

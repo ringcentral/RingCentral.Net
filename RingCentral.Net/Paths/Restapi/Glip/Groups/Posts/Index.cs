@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/posts
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipPosts> Get(ListGlipGroupPostsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/posts
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost,
             CancellationToken? cancellationToken = null)

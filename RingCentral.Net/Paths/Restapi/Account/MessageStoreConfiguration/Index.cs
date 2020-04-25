@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-configuration
         /// Rate Limit Group: Light
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: AccountAdministration
+        /// App Permission: EditAccounts
+        /// User Permission: AccountAdministration
         /// </summary>
         public async Task<RingCentral.MessageStoreConfiguration> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-configuration
         /// Rate Limit Group: Light
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: AccountAdministration
+        /// App Permission: EditAccounts
+        /// User Permission: AccountAdministration
         /// </summary>
         public async Task<RingCentral.MessageStoreConfiguration> Put(
             RingCentral.MessageStoreConfiguration messageStoreConfiguration,

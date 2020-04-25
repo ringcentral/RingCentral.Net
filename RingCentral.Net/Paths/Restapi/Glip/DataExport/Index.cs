@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/data-export
         /// Rate Limit Group: Heavy
-        /// App Permission Required: Glip
-        /// User Permission Required: undefined
+        /// App Permission: Glip
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DataExportTask> Post(
             RingCentral.CreateDataExportTaskRequest createDataExportTaskRequest,
@@ -47,8 +47,8 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/data-export
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: undefined
+        /// App Permission: Glip
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -61,8 +61,8 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/data-export/{taskId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: undefined
+        /// App Permission: Glip
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DataExportTask> Get(CancellationToken? cancellationToken = null)
         {

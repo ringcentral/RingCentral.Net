@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: EditCompanyGreetings
+        /// App Permission: EditAccounts
+        /// User Permission: EditCompanyGreetings
         /// </summary>
         public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIVRPromptRequest,
             CancellationToken? cancellationToken = null)
@@ -47,8 +47,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyGreetings
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyGreetings
         /// </summary>
         public async Task<RingCentral.IVRPrompts> List(CancellationToken? cancellationToken = null)
         {
@@ -60,8 +60,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyGreetings
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyGreetings
         /// </summary>
         public async Task<RingCentral.PromptInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -78,8 +78,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: EditCompanyGreetings
+        /// App Permission: EditAccounts
+        /// User Permission: EditCompanyGreetings
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
@@ -96,8 +96,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: EditCompanyGreetings
+        /// App Permission: EditAccounts
+        /// User Permission: EditCompanyGreetings
         /// </summary>
         public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest,
             CancellationToken? cancellationToken = null)

@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/companies/{companyId}
         /// Rate Limit Group: Light
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipCompany> Get(CancellationToken? cancellationToken = null)
         {

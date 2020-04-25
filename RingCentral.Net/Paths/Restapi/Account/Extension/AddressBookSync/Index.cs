@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadContacts
-        /// User Permission Required: ReadPersonalContacts
+        /// App Permission: ReadContacts
+        /// User Permission: ReadPersonalContacts
         /// </summary>
         public async Task<RingCentral.AddressBookSync> Get(SyncAddressBookParameters queryParams = null,
             CancellationToken? cancellationToken = null)

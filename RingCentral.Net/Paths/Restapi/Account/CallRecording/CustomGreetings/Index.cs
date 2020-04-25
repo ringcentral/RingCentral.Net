@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyInfo
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<RingCentral.CallRecordingCustomGreetings> Get(
             ListCallRecordingCustomGreetingsParameters queryParams = null, CancellationToken? cancellationToken = null)
@@ -46,8 +46,8 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: EditCompanyInfo
+        /// App Permission: EditAccounts
+        /// User Permission: EditCompanyInfo
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

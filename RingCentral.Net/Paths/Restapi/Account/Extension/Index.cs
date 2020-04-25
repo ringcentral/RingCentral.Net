@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadExtensions
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: AddRemoveUsers
+        /// App Permission: EditAccounts
+        /// User Permission: AddRemoveUsers
         /// </summary>
         public async Task<RingCentral.ExtensionCreationResponse> Post(
             RingCentral.ExtensionCreationRequest extensionCreationRequest, CancellationToken? cancellationToken = null)
@@ -60,8 +60,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadExtensions
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Get(CancellationToken? cancellationToken = null)
         {
@@ -78,8 +78,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditUserInfo OR EditUserCredentials
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserInfo OR EditUserCredentials
         /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
             RingCentral.ExtensionUpdateRequest extensionUpdateRequest, CancellationToken? cancellationToken = null)
@@ -98,8 +98,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: AddRemoveUsers
+        /// App Permission: EditAccounts
+        /// User Permission: AddRemoveUsers
         /// </summary>
         public async Task<string> Delete(DeleteExtensionParameters queryParams = null,
             CancellationToken? cancellationToken = null)

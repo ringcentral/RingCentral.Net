@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCallerIDSettings
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCallerIDSettings
         /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditCallerIDSettings
+        /// App Permission: EditExtensions
+        /// User Permission: EditCallerIDSettings
         /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Put(
             RingCentral.ExtensionCallerIdInfo extensionCallerIdInfo, CancellationToken? cancellationToken = null)

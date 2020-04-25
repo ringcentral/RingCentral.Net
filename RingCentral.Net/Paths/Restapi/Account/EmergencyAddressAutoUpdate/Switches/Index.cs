@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.SwitchesList> List(ListAccountSwitchesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.SwitchInfo> Post(RingCentral.CreateSwitchInfo createSwitchInfo,
             CancellationToken? cancellationToken = null)
@@ -59,8 +59,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.SwitchInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -77,8 +77,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.SwitchInfo> Put(RingCentral.UpdateSwitchInfo updateSwitchInfo,
             CancellationToken? cancellationToken = null)
@@ -96,8 +96,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

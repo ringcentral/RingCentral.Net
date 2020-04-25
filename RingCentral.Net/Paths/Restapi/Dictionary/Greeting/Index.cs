@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/greeting
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/greeting/{greetingId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingInfo> Get(CancellationToken? cancellationToken = null)
         {

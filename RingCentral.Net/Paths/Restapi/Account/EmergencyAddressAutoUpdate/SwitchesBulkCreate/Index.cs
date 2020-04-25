@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ConfigureEmergencyMaps
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.CreateMultipleSwitchesResponse> Post(
             RingCentral.CreateMultipleSwitchesRequest createMultipleSwitchesRequest,

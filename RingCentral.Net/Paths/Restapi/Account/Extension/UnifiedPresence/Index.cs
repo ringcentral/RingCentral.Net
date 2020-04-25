@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadPresence
-        /// User Permission Required: ReadPresenceStatus
+        /// App Permission: ReadPresence
+        /// User Permission: ReadPresenceStatus
         /// </summary>
         public async Task<RingCentral.UnifiedPresence> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditPresence
-        /// User Permission Required: EditPresenceStatus
+        /// App Permission: EditPresence
+        /// User Permission: EditPresenceStatus
         /// </summary>
         public async Task<RingCentral.UnifiedPresence> Patch(RingCentral.UpdateUnifiedPresence updateUnifiedPresence,
             CancellationToken? cancellationToken = null)

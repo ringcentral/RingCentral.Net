@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadMessages
-        /// User Permission Required: ReadMessages
+        /// App Permission: ReadMessages
+        /// User Permission: ReadMessages
         /// </summary>
         public async Task<RingCentral.GetMessageSyncResponse> Get(SyncMessagesParameters queryParams = null,
             CancellationToken? cancellationToken = null)

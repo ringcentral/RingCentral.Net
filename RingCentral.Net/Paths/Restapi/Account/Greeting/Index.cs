@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/greeting
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: ReadUserInfo
+        /// App Permission: EditAccounts
+        /// User Permission: ReadUserInfo
         /// </summary>
         public async Task<RingCentral.CustomCompanyGreetingInfo> Post(
             CreateCompanyGreetingRequest createCompanyGreetingRequest, CancellationToken? cancellationToken = null)

@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Department.BulkAssign
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/department/bulk-assign
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: UserGroups
+        /// App Permission: EditAccounts
+        /// User Permission: UserGroups
         /// </summary>
         public async Task<string> Post(RingCentral.DepartmentBulkAssignResource departmentBulkAssignResource,
             CancellationToken? cancellationToken = null)

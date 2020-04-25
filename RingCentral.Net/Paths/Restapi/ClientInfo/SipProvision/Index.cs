@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/client-info/sip-provision
         /// Rate Limit Group: Heavy
-        /// App Permission Required: VoipCalling
-        /// User Permission Required: undefined
+        /// App Permission: VoipCalling
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CreateSipRegistrationResponse> Post(
             RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest,

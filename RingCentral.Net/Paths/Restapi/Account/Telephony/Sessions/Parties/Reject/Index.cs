@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
         /// Rate Limit Group: Light
-        /// App Permission Required: CallControl
-        /// User Permission Required: undefined
+        /// App Permission: CallControl
+        /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

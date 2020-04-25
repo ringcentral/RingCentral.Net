@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/federation
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyInfo
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<RingCentral.FederationResource> Get(CancellationToken? cancellationToken = null)
         {

@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/business-address
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyInfo
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/business-address
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: EditCompanyInfo
+        /// App Permission: EditAccounts
+        /// User Permission: EditCompanyInfo
         /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Put(
             RingCentral.ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest,

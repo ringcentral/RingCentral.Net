@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/teams
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/teams
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Post(RingCentral.GlipPostTeamBody glipPostTeamBody,
             CancellationToken? cancellationToken = null)
@@ -59,8 +59,8 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}
         /// Rate Limit Group: Light
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -77,8 +77,8 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody,
             CancellationToken? cancellationToken = null)
@@ -96,8 +96,8 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

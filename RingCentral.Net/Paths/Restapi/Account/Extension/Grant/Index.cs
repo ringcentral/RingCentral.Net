@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadExtensions
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.GetExtensionGrantListResponse> Get(
             ListExtensionGrantsParameters queryParams = null, CancellationToken? cancellationToken = null)

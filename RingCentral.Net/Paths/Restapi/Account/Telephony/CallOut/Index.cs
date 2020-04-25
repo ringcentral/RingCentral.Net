@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/call-out
         /// Rate Limit Group: Heavy
-        /// App Permission Required: CallControl
-        /// User Permission Required: undefined
+        /// App Permission: CallControl
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest,
             CancellationToken? cancellationToken = null)

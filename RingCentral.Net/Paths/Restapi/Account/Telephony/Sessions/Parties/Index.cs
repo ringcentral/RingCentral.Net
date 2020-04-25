@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// Rate Limit Group: Light
-        /// App Permission Required: CallControl
-        /// User Permission Required: undefined
+        /// App Permission: CallControl
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallParty> Get(CancellationToken? cancellationToken = null)
         {
@@ -49,8 +49,8 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// Rate Limit Group: Light
-        /// App Permission Required: CallControl
-        /// User Permission Required: undefined
+        /// App Permission: CallControl
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest,
             CancellationToken? cancellationToken = null)

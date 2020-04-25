@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadMessagesNotificationsSettings
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadMessagesNotificationsSettings
         /// </summary>
         public async Task<RingCentral.NotificationSettings> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditMessagesNotificationsSettings
+        /// App Permission: EditExtensions
+        /// User Permission: EditMessagesNotificationsSettings
         /// </summary>
         public async Task<RingCentral.NotificationSettings> Put(
             RingCentral.NotificationSettingsUpdateRequest notificationSettingsUpdateRequest,

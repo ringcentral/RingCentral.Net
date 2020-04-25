@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadMessages
-        /// User Permission Required: ReadMessages
+        /// App Permission: ReadMessages
+        /// User Permission: ReadMessages
         /// </summary>
         public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadMessages
-        /// User Permission Required: ReadMessages
+        /// App Permission: ReadMessages
+        /// User Permission: ReadMessages
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Get(CancellationToken? cancellationToken = null)
         {
@@ -63,8 +63,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditMessages
-        /// User Permission Required: EditMessages
+        /// App Permission: EditMessages
+        /// User Permission: EditMessages
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest,
             UpdateMessageParameters queryParams = null, CancellationToken? cancellationToken = null)
@@ -83,8 +83,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditMessages
-        /// User Permission Required: EditMessages
+        /// App Permission: EditMessages
+        /// User Permission: EditMessages
         /// </summary>
         public async Task<string> Delete(DeleteMessageParameters queryParams = null,
             CancellationToken? cancellationToken = null)

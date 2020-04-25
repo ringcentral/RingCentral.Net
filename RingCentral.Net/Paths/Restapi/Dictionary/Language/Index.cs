@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/language
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.LanguageList> List(CancellationToken? cancellationToken = null)
         {
@@ -44,8 +44,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/language/{languageId}
         /// Rate Limit Group: Light
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.LanguageInfo> Get(CancellationToken? cancellationToken = null)
         {

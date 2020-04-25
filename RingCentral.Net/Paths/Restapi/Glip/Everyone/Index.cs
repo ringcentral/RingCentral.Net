@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/everyone
         /// Rate Limit Group: Light
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/everyone
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Patch(
             RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest,

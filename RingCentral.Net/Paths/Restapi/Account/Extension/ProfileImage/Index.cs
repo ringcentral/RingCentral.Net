@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadExtensions
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
         public async Task<byte[]> List(CancellationToken? cancellationToken = null)
         {
@@ -44,8 +44,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditUserInfo
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserInfo
         /// </summary>
         public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest,
             CancellationToken? cancellationToken = null)
@@ -59,8 +59,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditUserInfo
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserInfo
         /// </summary>
         public async Task<string> Put(UpdateUserProfileImageRequest updateUserProfileImageRequest,
             CancellationToken? cancellationToken = null)
@@ -74,8 +74,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadExtensions
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {

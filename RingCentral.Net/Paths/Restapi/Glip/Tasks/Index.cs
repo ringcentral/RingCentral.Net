@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -49,8 +49,8 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask,
             CancellationToken? cancellationToken = null)
@@ -68,8 +68,8 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

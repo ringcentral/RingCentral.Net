@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unread
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/unread
         /// Rate Limit Group: Medium
-        /// App Permission Required: GlipInternal
-        /// User Permission Required: undefined
+        /// App Permission: GlipInternal
+        /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

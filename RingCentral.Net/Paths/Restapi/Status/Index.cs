@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Status
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/status
         /// Rate Limit Group: NoThrottling
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<string> Get(CancellationToken? cancellationToken = null)
         {

@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadBlockedNumbers
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadBlockedNumbers
         /// </summary>
         public async Task<RingCentral.CallerBlockingSettings> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
         /// Rate Limit Group: Light
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditBlockedNumbers
+        /// App Permission: EditExtensions
+        /// User Permission: EditBlockedNumbers
         /// </summary>
         public async Task<RingCentral.CallerBlockingSettings> Put(
             RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate,

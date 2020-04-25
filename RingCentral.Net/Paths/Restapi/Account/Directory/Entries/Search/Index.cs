@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/entries/search
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadExtensions
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.DirectoryResource> Post(
             RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest,

@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-menus
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: AutoReceptionist
+        /// App Permission: EditAccounts
+        /// User Permission: AutoReceptionist
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Post(RingCentral.IVRMenuInfo iVRMenuInfo,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: AutoReceptionist
+        /// App Permission: ReadAccounts
+        /// User Permission: AutoReceptionist
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -63,8 +63,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: AutoReceptionist
+        /// App Permission: ReadAccounts
+        /// User Permission: AutoReceptionist
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo,
             CancellationToken? cancellationToken = null)

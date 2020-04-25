@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadUserDevices
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadUserDevices
         /// </summary>
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(
             ListExtensionDevicesParameters queryParams = null, CancellationToken? cancellationToken = null)

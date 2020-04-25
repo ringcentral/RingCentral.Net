@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyInfo
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<RingCentral.CallRecordingSettingsResource> Get(CancellationToken? cancellationToken = null)
         {
@@ -37,8 +37,8 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: EditCompanyInfo
+        /// App Permission: EditAccounts
+        /// User Permission: EditCompanyInfo
         /// </summary>
         public async Task<RingCentral.CallRecordingSettingsResource> Put(
             RingCentral.CallRecordingSettingsResource callRecordingSettingsResource,

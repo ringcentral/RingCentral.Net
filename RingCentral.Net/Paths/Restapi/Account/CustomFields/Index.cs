@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
         /// Rate Limit Group: Light
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: Users
+        /// App Permission: EditAccounts
+        /// User Permission: Users
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Post(
             RingCentral.CustomFieldCreateRequest customFieldCreateRequest, CancellationToken? cancellationToken = null)
@@ -46,8 +46,8 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadUserInfo
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadUserInfo
         /// </summary>
         public async Task<RingCentral.CustomFieldsResource> Get(CancellationToken? cancellationToken = null)
         {
@@ -59,8 +59,8 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// Rate Limit Group: Light
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: Users
+        /// App Permission: EditAccounts
+        /// User Permission: Users
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Put(
             RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, CancellationToken? cancellationToken = null)
@@ -79,8 +79,8 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// Rate Limit Group: Light
-        /// App Permission Required: EditAccounts
-        /// User Permission Required: Users
+        /// App Permission: EditAccounts
+        /// User Permission: Users
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

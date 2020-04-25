@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/phone-number
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyPhoneNumbers
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyPhoneNumbers
         /// </summary>
         public async Task<RingCentral.AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyPhoneNumbers
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyPhoneNumbers
         /// </summary>
         public async Task<RingCentral.CompanyPhoneNumberInfo> Get(CancellationToken? cancellationToken = null)
         {

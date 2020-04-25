@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: Glip
-        /// User Permission Required: undefined
+        /// App Permission: Glip
+        /// User Permission: undefined
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {

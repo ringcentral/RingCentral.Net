@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/entries
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: undefined
+        /// App Permission: ReadAccounts
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DirectoryResource> List(ListDirectoryEntriesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: undefined
+        /// App Permission: ReadAccounts
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.ContactResource> Get(CancellationToken? cancellationToken = null)
         {

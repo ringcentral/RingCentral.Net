@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadCallLog
-        /// User Permission Required: ReadCallLog
+        /// App Permission: ReadCallLog
+        /// User Permission: ReadCallLog
         /// </summary>
         public async Task<RingCentral.UserCallLogResponse> List(ReadUserCallLogParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditCallLog
-        /// User Permission Required: EditCallLog
+        /// App Permission: EditCallLog
+        /// User Permission: EditCallLog
         /// </summary>
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -59,8 +59,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadCallLog
-        /// User Permission Required: ReadCallLog
+        /// App Permission: ReadCallLog
+        /// User Permission: ReadCallLog
         /// </summary>
         public async Task<RingCentral.UserCallLogRecord> Get(ReadUserCallRecordParameters queryParams = null,
             CancellationToken? cancellationToken = null)

@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadMessages
-        /// User Permission Required: Users
+        /// App Permission: ReadMessages
+        /// User Permission: Users
         /// </summary>
         public async Task<RingCentral.MessageStoreReportArchive> List(CancellationToken? cancellationToken = null)
         {
@@ -44,8 +44,8 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
         /// Rate Limit Group: Heavy
-        /// App Permission Required: ReadMessages
-        /// User Permission Required: Users
+        /// App Permission: ReadMessages
+        /// User Permission: Users
         /// </summary>
         public async Task<string> Get(CancellationToken? cancellationToken = null)
         {

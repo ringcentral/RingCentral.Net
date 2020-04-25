@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadCompanyDevices
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyDevices
         /// </summary>
         public async Task<RingCentral.PagingOnlyGroupDevices> Get(ListPagingGroupDevicesParameters queryParams = null,
             CancellationToken? cancellationToken = null)

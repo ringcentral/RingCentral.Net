@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
         /// Rate Limit Group: Heavy
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: Groups
+        /// App Permission: EditExtensions
+        /// User Permission: Groups
         /// </summary>
         public async Task<string> Post(RingCentral.CallQueueBulkAssignResource callQueueBulkAssignResource,
             CancellationToken? cancellationToken = null)

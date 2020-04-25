@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// Rate Limit Group: Medium
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadUserAnsweringRules
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.UserAnsweringRuleList> List(ListAnsweringRulesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -45,8 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditUserAnsweringRules
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.CustomAnsweringRuleInfo> Post(
             RingCentral.CreateAnsweringRuleRequest createAnsweringRuleRequest,
@@ -61,8 +61,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// Rate Limit Group: Light
-        /// App Permission Required: ReadAccounts
-        /// User Permission Required: ReadUserAnsweringRules
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Get(ReadAnsweringRuleParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -80,8 +80,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditUserAnsweringRules
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Put(
             RingCentral.UpdateAnsweringRuleRequest updateAnsweringRuleRequest,
@@ -101,8 +101,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: EditExtensions
-        /// User Permission Required: EditUserAnsweringRules
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserAnsweringRules
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

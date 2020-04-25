@@ -29,8 +29,8 @@ namespace RingCentral.Paths.Restapi
         /// HTTP Method: GET
         /// Endpoint: /restapi
         /// Rate Limit Group: NoThrottling
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetVersionsResponse> List(CancellationToken? cancellationToken = null)
         {
@@ -42,8 +42,8 @@ namespace RingCentral.Paths.Restapi
         /// HTTP Method: GET
         /// Endpoint: /restapi/{apiVersion}
         /// Rate Limit Group: NoThrottling
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetVersionResponse> Get(CancellationToken? cancellationToken = null)
         {

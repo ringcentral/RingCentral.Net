@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/cards
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
             RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
@@ -47,8 +47,8 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/cards/{cardId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipMessageAttachmentInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -65,8 +65,8 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/glip/cards/{cardId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Put(RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
             CancellationToken? cancellationToken = null)
@@ -84,8 +84,8 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/cards/{cardId}
         /// Rate Limit Group: Medium
-        /// App Permission Required: Glip
-        /// User Permission Required: Glip
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

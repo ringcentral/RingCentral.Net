@@ -26,8 +26,8 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         /// HTTP Method: POST
         /// Endpoint: /restapi/oauth/token
         /// Rate Limit Group: Auth
-        /// App Permission Required: undefined
-        /// User Permission Required: undefined
+        /// App Permission: undefined
+        /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest,
             CancellationToken? cancellationToken = null)
