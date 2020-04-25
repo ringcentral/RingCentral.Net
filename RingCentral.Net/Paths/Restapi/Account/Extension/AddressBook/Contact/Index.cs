@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Get Contact List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
+        /// App Permission Required: ReadContacts
+        /// User Permission Required: ReadPersonalContacts
         /// </summary>
         public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Create Contact
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
+        /// App Permission Required: Contacts
+        /// User Permission Required: EditPersonalContacts
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Post(
             RingCentral.PersonalContactRequest personalContactRequest, CreateContactParameters queryParams = null,
@@ -52,8 +58,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Get Contact
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+        /// App Permission Required: ReadContacts
+        /// User Permission Required: ReadPersonalContacts
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Get(CancellationToken? cancellationToken = null)
         {
@@ -67,8 +76,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Update Contact
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// Rate Limit Group: Heavy
-        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+        /// App Permission Required: Contacts
+        /// User Permission Required: EditPersonalContacts
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Put(
             RingCentral.PersonalContactRequest personalContactRequest, UpdateContactParameters queryParams = null,
@@ -85,8 +97,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Delete Contact
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// Rate Limit Group: Heavy
-        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+        /// App Permission Required: Contacts
+        /// User Permission Required: EditPersonalContacts
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

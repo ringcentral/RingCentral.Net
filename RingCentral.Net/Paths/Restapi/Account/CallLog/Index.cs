@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
 
         /// <summary>
         /// Operation: Get Company Call Log Records
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-log
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/call-log
+        /// App Permission Required: ReadCallLog
+        /// User Permission Required: FullCompanyCallLog
         /// </summary>
         public async Task<RingCentral.AccountCallLogResponse> List(ReadCompanyCallLogParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
 
         /// <summary>
         /// Operation: Get Company Call Log Record(s)
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
+        /// App Permission Required: ReadCallLog
+        /// User Permission Required: FullCompanyCallLog
         /// </summary>
         public async Task<RingCentral.CompanyCallLogRecord> Get(ReadCompanyCallRecordParameters queryParams = null,
             CancellationToken? cancellationToken = null)

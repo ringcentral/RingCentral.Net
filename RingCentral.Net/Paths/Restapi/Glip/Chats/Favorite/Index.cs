@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Favorite
 
         /// <summary>
         /// Operation: Add Chat to Favorites
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/favorite
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/chats/{chatId}/favorite
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

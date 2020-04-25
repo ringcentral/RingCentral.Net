@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise
 
         /// <summary>
         /// Operation: Supervise Call Party
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise
         /// Rate Limit Group: Light
-        /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise
+        /// App Permission Required: CallControl
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.PartySuperviseResponse> Post(
             RingCentral.PartySuperviseRequest partySuperviseRequest, CancellationToken? cancellationToken = null)

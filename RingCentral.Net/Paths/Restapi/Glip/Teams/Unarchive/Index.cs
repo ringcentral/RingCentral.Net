@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Unarchive
 
         /// <summary>
         /// Operation: Unarchive Team
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/unarchive
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/teams/{chatId}/unarchive
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

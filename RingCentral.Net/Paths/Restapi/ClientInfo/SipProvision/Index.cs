@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
 
         /// <summary>
         /// Operation: Register SIP Device
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/client-info/sip-provision
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/client-info/sip-provision
+        /// App Permission Required: VoipCalling
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.CreateSipRegistrationResponse> Post(
             RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest,

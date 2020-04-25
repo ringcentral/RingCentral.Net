@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Leave
 
         /// <summary>
         /// Operation: Leave Team
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/leave
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/teams/{chatId}/leave
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
 
         /// <summary>
         /// Operation: Get Webhooks
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/webhooks
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/webhooks
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipWebhookList> List(CancellationToken? cancellationToken = null)
         {
@@ -38,8 +41,11 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
 
         /// <summary>
         /// Operation: Get Webhook
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/webhooks/{webhookId}
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/webhooks/{webhookId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipWebhookList> Get(CancellationToken? cancellationToken = null)
         {
@@ -53,8 +59,11 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
 
         /// <summary>
         /// Operation: Delete Webhook
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/glip/webhooks/{webhookId}
         /// Rate Limit Group: Medium
-        /// Http Delete /restapi/v1.0/glip/webhooks/{webhookId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

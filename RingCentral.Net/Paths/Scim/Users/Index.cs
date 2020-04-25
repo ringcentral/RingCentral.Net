@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Search/List Users
+        /// HTTP Method: GET
+        /// Endpoint: /scim/v2/Users
         /// Rate Limit Group: Light
-        /// Http Get /scim/v2/Users
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Create User
+        /// HTTP Method: POST
+        /// Endpoint: /scim/v2/Users
         /// Rate Limit Group: Heavy
-        /// Http Post /scim/v2/Users
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.UserResponse> Post(RingCentral.CreateUser createUser,
             CancellationToken? cancellationToken = null)
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Get User
+        /// HTTP Method: GET
+        /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Light
-        /// Http Get /scim/v2/Users/{id}
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.UserResponse> Get(CancellationToken? cancellationToken = null)
         {
@@ -65,8 +74,11 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Update/Replace User
+        /// HTTP Method: PUT
+        /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Heavy
-        /// Http Put /scim/v2/Users/{id}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.UserResponse> Put(RingCentral.User user,
             CancellationToken? cancellationToken = null)
@@ -81,8 +93,11 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Delete User
+        /// HTTP Method: DELETE
+        /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Heavy
-        /// Http Delete /scim/v2/Users/{id}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
@@ -96,8 +111,11 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Update/Patch User
+        /// HTTP Method: PATCH
+        /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Heavy
-        /// Http Patch /scim/v2/Users/{id}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch,
             CancellationToken? cancellationToken = null)

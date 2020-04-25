@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
 
         /// <summary>
         /// Operation: Validate Multiple Wireless Points
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.ValidateMultipleWirelessPointsResponse> Post(
             RingCentral.ValidateMultipleWirelessPointsRequest validateMultipleWirelessPointsRequest,

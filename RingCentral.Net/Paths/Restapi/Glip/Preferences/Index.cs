@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
 
         /// <summary>
         /// Operation: Get Preferences
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/preferences
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/preferences
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipPreferencesInfo> Get(CancellationToken? cancellationToken = null)
         {

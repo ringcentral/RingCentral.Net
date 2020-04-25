@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Get Forwarding Number List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadUserForwardingFlipNumbers
         /// </summary>
         public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(
             ListForwardingNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)
@@ -40,8 +43,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Create Forwarding Number
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditUserForwardingFlipNumbers
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Post(
             RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest,
@@ -53,8 +59,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Get Forwarding Number
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadUserForwardingFlipNumbers
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -68,8 +77,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Update Forwarding Number
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditUserForwardingFlipNumbers
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Put(
             RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest,
@@ -86,8 +98,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Delete Forwarding Number
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// Rate Limit Group: Medium
-        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditUserForwardingFlipNumbers
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
 
         /// <summary>
         /// Operation: Validate Multiple Switches
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.ValidateMultipleSwitchesResponse> Post(
             RingCentral.ValidateMultipleSwitchesRequest validateMultipleSwitchesRequest,

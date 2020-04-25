@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
 
         /// <summary>
         /// Operation: Get Note
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/notes/{noteId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GetGlipNoteInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -43,8 +46,11 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
 
         /// <summary>
         /// Operation: Update Note
+        /// HTTP Method: PATCH
+        /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
         /// Rate Limit Group: Medium
-        /// Http Patch /restapi/v1.0/glip/notes/{noteId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
             CancellationToken? cancellationToken = null)
@@ -59,8 +65,11 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
 
         /// <summary>
         /// Operation: Delete Note
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
         /// Rate Limit Group: Medium
-        /// Http Delete /restapi/v1.0/glip/notes/{noteId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

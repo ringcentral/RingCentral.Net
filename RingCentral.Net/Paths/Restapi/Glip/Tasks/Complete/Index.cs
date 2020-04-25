@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
 
         /// <summary>
         /// Operation: Complete Task
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}/complete
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/tasks/{taskId}/complete
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<string> Post(RingCentral.GlipCompleteTask glipCompleteTask,
             CancellationToken? cancellationToken = null)

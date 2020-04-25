@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingRecordings
 
         /// <summary>
         /// Operation: Get User Meeting Recordings List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings
+        /// App Permission Required: Meetings
+        /// User Permission Required: MeetingsRecordings
         /// </summary>
         public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
             ListUserMeetingRecordingsParameters queryParams = null, CancellationToken? cancellationToken = null)

@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
 
         /// <summary>
         /// Operation: Get Person
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/persons/{personId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/glip/persons/{personId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipPersonInfo> Get(CancellationToken? cancellationToken = null)
         {

@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLogSync
 
         /// <summary>
         /// Operation: Sync User Call Log
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync
+        /// App Permission Required: ReadCallLog
+        /// User Permission Required: ReadCallLog
         /// </summary>
         public async Task<RingCentral.CallLogSync> Get(SyncUserCallLogParameters queryParams = null,
             CancellationToken? cancellationToken = null)

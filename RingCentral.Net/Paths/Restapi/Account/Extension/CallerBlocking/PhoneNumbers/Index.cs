@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Get Blocked/Allowed Phone Numbers
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadBlockedNumbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(
             ListBlockedAllowedNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)
@@ -40,8 +43,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Add Blocked/Allowed Number
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditBlockedNumbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
@@ -53,8 +59,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Get Blocked/Allowed Number
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadBlockedNumbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -68,8 +77,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Delete Blocked/Allowed Number
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// Rate Limit Group: Medium
-        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditBlockedNumbers
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
@@ -83,8 +95,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Update Blocked/Allowed Number
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditBlockedNumbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,

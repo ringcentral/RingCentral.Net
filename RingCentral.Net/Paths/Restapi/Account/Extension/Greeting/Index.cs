@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
 
         /// <summary>
         /// Operation: Create Custom User Greeting
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.CustomUserGreetingInfo> Post(
             CreateCustomUserGreetingRequest createCustomUserGreetingRequest,
@@ -42,8 +45,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
 
         /// <summary>
         /// Operation: Get Custom Greeting
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadUserInfo
         /// </summary>
         public async Task<RingCentral.CustomUserGreetingInfo> Get(CancellationToken? cancellationToken = null)
         {

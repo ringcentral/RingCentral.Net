@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
 
         /// <summary>
         /// Operation: Create Fax Message
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
+        /// App Permission Required: Faxes
+        /// User Permission Required: OutboundFaxes
         /// </summary>
         public async Task<RingCentral.FaxResponse> Post(CreateFaxMessageRequest createFaxMessageRequest,
             CancellationToken? cancellationToken = null)

@@ -23,14 +23,17 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
 
         /// <summary>
         /// Operation: Revoke Token
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/oauth/revoke
         /// Rate Limit Group: Auth
-        /// Http Post /restapi/oauth/revoke
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<string> Post(RevokeTokenRequest revokeTokenRequest,
             CancellationToken? cancellationToken = null)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
-            RingCentral.Utils.GetPairs(revokeTokenRequest)
+            Utils.GetPairs(revokeTokenRequest)
                 .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<string>(this.Path(), new FormUrlEncodedContent(dict), null, cancellationToken);
         }

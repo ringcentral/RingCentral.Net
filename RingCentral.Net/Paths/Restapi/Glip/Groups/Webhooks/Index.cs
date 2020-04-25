@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
 
         /// <summary>
         /// Operation: Create Webhook in Group
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/webhooks
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/groups/{groupId}/webhooks
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipWebhookInfo> Post(CancellationToken? cancellationToken = null)
         {
@@ -31,8 +34,11 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
 
         /// <summary>
         /// Operation: Get Webhooks in Group
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/webhooks
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/groups/{groupId}/webhooks
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipWebhookList> Get(CancellationToken? cancellationToken = null)
         {

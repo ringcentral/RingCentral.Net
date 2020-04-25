@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assi
 
         /// <summary>
         /// Operation: Get Assistants
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
+        /// App Permission Required: Meetings
+        /// User Permission Required: Meetings
         /// </summary>
         public async Task<RingCentral.AssistantsResource> Get(CancellationToken? cancellationToken = null)
         {

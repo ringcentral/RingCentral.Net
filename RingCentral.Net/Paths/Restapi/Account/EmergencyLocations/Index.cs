@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Add Emergency Location
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/emergency-locations
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Post(RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Get Emergency Location List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/emergency-locations
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.EmergencyLocationList> List(ListEmergencyLocationsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Get Emergency Location
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.EmergencyLocationInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -65,8 +74,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Update Emergency Location
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// Rate Limit Group: Heavy
-        /// Http Put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.EmergencyLocationInfo> Put(
             RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,

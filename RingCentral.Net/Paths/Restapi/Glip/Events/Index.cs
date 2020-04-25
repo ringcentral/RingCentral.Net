@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
 
         /// <summary>
         /// Operation: Get User Events List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/events
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/events
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipEventsInfo> List(ReadGlipEventsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
 
         /// <summary>
         /// Operation: Create Event
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/events
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/events
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
             CancellationToken? cancellationToken = null)
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
 
         /// <summary>
         /// Operation: Get Event
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/events/{eventId}
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/events/{eventId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -65,8 +74,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
 
         /// <summary>
         /// Operation: Update Event
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/glip/events/{eventId}
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/glip/events/{eventId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate,
             CancellationToken? cancellationToken = null)
@@ -81,8 +93,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
 
         /// <summary>
         /// Operation: Delete Event
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/glip/events/{eventId}
         /// Rate Limit Group: Medium
-        /// Http Delete /restapi/v1.0/glip/events/{eventId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

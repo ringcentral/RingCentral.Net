@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Get User Profile Image
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadExtensions
         /// </summary>
         public async Task<byte[]> List(CancellationToken? cancellationToken = null)
         {
@@ -38,8 +41,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Upload User Profile Image
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditUserInfo
         /// </summary>
         public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest,
             CancellationToken? cancellationToken = null)
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Update User Profile Image
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Heavy
-        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditUserInfo
         /// </summary>
         public async Task<string> Put(UpdateUserProfileImageRequest updateUserProfileImageRequest,
             CancellationToken? cancellationToken = null)
@@ -62,8 +71,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Get Scaled User Profile Image
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadExtensions
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {

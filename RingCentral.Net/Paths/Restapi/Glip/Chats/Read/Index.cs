@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Read
 
         /// <summary>
         /// Operation: Mark Chat as Read
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/read
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/chats/{chatId}/read
+        /// App Permission Required: GlipInternal
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

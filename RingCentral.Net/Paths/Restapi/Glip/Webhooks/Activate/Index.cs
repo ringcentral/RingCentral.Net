@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks.Activate
 
         /// <summary>
         /// Operation: Activate Webhook
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/webhooks/{webhookId}/activate
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/webhooks/{webhookId}/activate
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
         {

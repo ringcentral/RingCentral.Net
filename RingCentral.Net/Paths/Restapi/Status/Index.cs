@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Status
 
         /// <summary>
         /// Operation: Get Service Status
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/status
         /// Rate Limit Group: NoThrottling
-        /// Http Get /restapi/v1.0/status
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<string> Get(CancellationToken? cancellationToken = null)
         {

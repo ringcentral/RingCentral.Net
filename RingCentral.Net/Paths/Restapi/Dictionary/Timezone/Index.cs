@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 
         /// <summary>
         /// Operation: Get Timezone List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/dictionary/timezone
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/dictionary/timezone
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 
         /// <summary>
         /// Operation: Get Timezone
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/dictionary/timezone/{timezoneId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/dictionary/timezone/{timezoneId}
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null,
             CancellationToken? cancellationToken = null)

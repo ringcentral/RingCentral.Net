@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Device
 
         /// <summary>
         /// Operation: Get Device
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadCompanyDevices
         /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Get(ReadDeviceParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -44,8 +47,11 @@ namespace RingCentral.Paths.Restapi.Account.Device
 
         /// <summary>
         /// Operation: Update Device
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: EditCompanyDevices
         /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate,
             UpdateDeviceParameters queryParams = null, CancellationToken? cancellationToken = null)

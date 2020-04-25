@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Get Network Map
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.NetworksList> List(CancellationToken? cancellationToken = null)
         {
@@ -38,8 +41,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Create Network
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.NetworkInfo> Post(RingCentral.CreateNetworkRequest createNetworkRequest,
             CancellationToken? cancellationToken = null)
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Get Network
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.NetworkInfo> Get(CancellationToken? cancellationToken = null)
         {
@@ -65,8 +74,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Update Network
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// Rate Limit Group: Heavy
-        /// Http Put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Put(RingCentral.UpdateNetworkRequest updateNetworkRequest,
             CancellationToken? cancellationToken = null)
@@ -81,8 +93,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Delete Network
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// Rate Limit Group: Heavy
-        /// Http Delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

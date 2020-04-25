@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
         /// <summary>
         /// Operation: Get User Call Log Records
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+        /// App Permission Required: ReadCallLog
+        /// User Permission Required: ReadCallLog
         /// </summary>
         public async Task<RingCentral.UserCallLogResponse> List(ReadUserCallLogParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
         /// <summary>
         /// Operation: Delete User Call Log
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// Rate Limit Group: Heavy
-        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+        /// App Permission Required: EditCallLog
+        /// User Permission Required: EditCallLog
         /// </summary>
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
         /// <summary>
         /// Operation: Get User Call Record
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
+        /// App Permission Required: ReadCallLog
+        /// User Permission Required: ReadCallLog
         /// </summary>
         public async Task<RingCentral.UserCallLogRecord> Get(ReadUserCallRecordParameters queryParams = null,
             CancellationToken? cancellationToken = null)

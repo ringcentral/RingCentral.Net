@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
 
         /// <summary>
         /// Operation: Get Call Monitoring Group Member List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadExtensions
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroupMemberList> Get(
             ListCallMonitoringGroupMembersParameters queryParams = null, CancellationToken? cancellationToken = null)

@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
 
         /// <summary>
         /// Operation: Get Call Queue List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/call-queues
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadExtensions
         /// </summary>
         public async Task<RingCentral.CallQueues> Get(ListCallQueuesParameters queryParams = null,
             CancellationToken? cancellationToken = null)

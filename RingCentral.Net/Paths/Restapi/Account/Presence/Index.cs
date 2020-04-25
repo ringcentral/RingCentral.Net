@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Presence
 
         /// <summary>
         /// Operation: Get User Presence Status List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/presence
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/presence
+        /// App Permission Required: ReadPresence
+        /// User Permission Required: ReadPresenceStatus
         /// </summary>
         public async Task<RingCentral.AccountPresenceInfo> Get(ReadAccountPresenceParameters queryParams = null,
             CancellationToken? cancellationToken = null)

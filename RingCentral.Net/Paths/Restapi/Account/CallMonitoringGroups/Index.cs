@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Create Call Monitoring Group
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: Groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Post(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
@@ -41,8 +44,11 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Get Call Monitoring Groups List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadExtensions
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -52,8 +58,11 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Updates Call Monitoring Group
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: Groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Put(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
@@ -70,8 +79,11 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Delete Call Monitoring Group
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// Rate Limit Group: Medium
-        /// Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: Groups
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
 
         /// <summary>
         /// Operation: Update Call Recording Extension List
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadCompanyInfo
         /// </summary>
         public async Task<string> Post(RingCentral.BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource,
             CancellationToken? cancellationToken = null)

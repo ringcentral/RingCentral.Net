@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Get Scheduled Meetings
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
+        /// App Permission Required: Meetings
+        /// User Permission Required: Meetings
         /// </summary>
         public async Task<RingCentral.MeetingsResource> List(CancellationToken? cancellationToken = null)
         {
@@ -38,8 +41,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Create Meeting
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
+        /// App Permission Required: Meetings
+        /// User Permission Required: Meetings
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Post(
             RingCentral.MeetingRequestResource meetingRequestResource, CancellationToken? cancellationToken = null)
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Get Meeting Info
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+        /// App Permission Required: Meetings
+        /// User Permission Required: Meetings
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Get(CancellationToken? cancellationToken = null)
         {
@@ -65,8 +74,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Update Meeting
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+        /// App Permission Required: Meetings
+        /// User Permission Required: Meetings
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Put(
             RingCentral.MeetingRequestResource meetingRequestResource, CancellationToken? cancellationToken = null)
@@ -82,8 +94,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Delete Meeting
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// Rate Limit Group: Medium
-        /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+        /// App Permission Required: Meetings
+        /// User Permission Required: Meetings
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

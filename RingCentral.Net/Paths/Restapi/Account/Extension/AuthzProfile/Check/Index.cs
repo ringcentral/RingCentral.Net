@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
 
         /// <summary>
         /// Operation: Check User Permission
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null,
             CancellationToken? cancellationToken = null)

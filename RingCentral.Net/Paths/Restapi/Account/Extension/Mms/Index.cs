@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
 
         /// <summary>
         /// Operation: Create MMS Message
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
+        /// App Permission Required: SMS
+        /// User Permission Required: OutboundSMS
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage,
             CancellationToken? cancellationToken = null)

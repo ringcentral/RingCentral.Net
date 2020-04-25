@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
 
         /// <summary>
         /// Operation: Get User Conferencing Settings
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: OrganizeConference
         /// </summary>
         public async Task<RingCentral.GetConferencingInfoResponse> Get(
             ReadConferencingSettingsParameters queryParams = null, CancellationToken? cancellationToken = null)
@@ -32,8 +35,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
 
         /// <summary>
         /// Operation: Update User Conferencing Settings
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: OrganizeConference
         /// </summary>
         public async Task<RingCentral.GetConferencingInfoResponse> Put(
             RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest,

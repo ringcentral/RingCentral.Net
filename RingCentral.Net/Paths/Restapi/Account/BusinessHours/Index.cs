@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.BusinessHours
 
         /// <summary>
         /// Operation: Get Company Business Hours
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/business-hours
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/business-hours
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.CompanyBusinessHours> Get(CancellationToken? cancellationToken = null)
         {
@@ -31,8 +34,11 @@ namespace RingCentral.Paths.Restapi.Account.BusinessHours
 
         /// <summary>
         /// Operation: Update Company Business Hours
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/business-hours
         /// Rate Limit Group: Medium
-        /// Http Put /restapi/v1.0/account/{accountId}/business-hours
+        /// App Permission Required: EditExtensions
+        /// User Permission Required: EditUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.CompanyBusinessHours> Put(
             RingCentral.CompanyBusinessHoursUpdateRequest companyBusinessHoursUpdateRequest,

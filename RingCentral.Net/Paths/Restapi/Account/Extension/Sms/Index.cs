@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
 
         /// <summary>
         /// Operation: Send SMS
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
+        /// App Permission Required: SMS
+        /// User Permission Required: OutboundSMS
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage,
             CancellationToken? cancellationToken = null)

@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account
 
         /// <summary>
         /// Operation: Get Account Info
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadCompanyInfo
         /// </summary>
         public async Task<RingCentral.GetAccountInfoResponse> Get(CancellationToken? cancellationToken = null)
         {

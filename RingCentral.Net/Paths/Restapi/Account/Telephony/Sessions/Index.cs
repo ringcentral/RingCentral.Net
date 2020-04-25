@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
 
         /// <summary>
         /// Operation: Get Call Session Status
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
+        /// App Permission Required: CallControl
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.CallSession> Get(ReadCallSessionStatusParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -44,8 +47,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
 
         /// <summary>
         /// Operation: Drop Call Session
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
         /// Rate Limit Group: Light
-        /// Http Delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
+        /// App Permission Required: CallControl
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

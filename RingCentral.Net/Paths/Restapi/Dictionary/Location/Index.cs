@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
 
         /// <summary>
         /// Operation: Get Location List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/dictionary/location
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/dictionary/location
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null,
             CancellationToken? cancellationToken = null)

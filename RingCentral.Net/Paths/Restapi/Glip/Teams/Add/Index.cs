@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Add
 
         /// <summary>
         /// Operation: Add Team Members
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/add
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/teams/{chatId}/add
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<string> Post(RingCentral.GlipPostMembersListBody glipPostMembersListBody,
             CancellationToken? cancellationToken = null)

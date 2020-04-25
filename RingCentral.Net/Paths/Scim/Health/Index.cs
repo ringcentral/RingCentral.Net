@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Scim.Health
 
         /// <summary>
         /// Operation: Check Health
+        /// HTTP Method: GET
+        /// Endpoint: /scim/v2/health
         /// Rate Limit Group: NoThrottling
-        /// Http Get /scim/v2/health
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<string> Get(CancellationToken? cancellationToken = null)
         {

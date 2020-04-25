@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
 
         /// <summary>
         /// Operation: Create Message Store Report
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/message-store-report
+        /// App Permission Required: ReadMessages
+        /// User Permission Required: Users
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Post(
             RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest,
@@ -41,8 +44,11 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
 
         /// <summary>
         /// Operation: Get Message Store Report Task
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
+        /// App Permission Required: ReadMessages
+        /// User Permission Required: Users
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Get(CancellationToken? cancellationToken = null)
         {

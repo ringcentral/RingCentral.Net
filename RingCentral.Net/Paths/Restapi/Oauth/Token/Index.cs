@@ -23,14 +23,17 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
 
         /// <summary>
         /// Operation: Get Token
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/oauth/token
         /// Rate Limit Group: Auth
-        /// Http Post /restapi/oauth/token
+        /// App Permission Required: undefined
+        /// User Permission Required: undefined
         /// </summary>
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest,
             CancellationToken? cancellationToken = null)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
-            RingCentral.Utils.GetPairs(getTokenRequest)
+            Utils.GetPairs(getTokenRequest)
                 .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict), null,
                 cancellationToken);

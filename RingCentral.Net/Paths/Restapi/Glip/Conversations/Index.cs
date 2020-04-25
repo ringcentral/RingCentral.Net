@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
 
         /// <summary>
         /// Operation: Get Conversations
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/conversations
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/glip/conversations
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipConversationsList> List(ListGlipConversationsParameters queryParams = null,
             CancellationToken? cancellationToken = null)
@@ -39,8 +42,11 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
 
         /// <summary>
         /// Operation: Create/Open Conversation
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/conversations
         /// Rate Limit Group: Medium
-        /// Http Post /restapi/v1.0/glip/conversations
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Post(
             RingCentral.CreateGlipConversationRequest createGlipConversationRequest,
@@ -52,8 +58,11 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
 
         /// <summary>
         /// Operation: Get Conversation
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/conversations/{chatId}
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/glip/conversations/{chatId}
+        /// App Permission Required: Glip
+        /// User Permission Required: Glip
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Get(CancellationToken? cancellationToken = null)
         {

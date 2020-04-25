@@ -28,8 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Create Custom Field
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
         /// Rate Limit Group: Light
-        /// Http Post /restapi/v1.0/account/{accountId}/custom-fields
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: Users
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Post(
             RingCentral.CustomFieldCreateRequest customFieldCreateRequest, CancellationToken? cancellationToken = null)
@@ -40,8 +43,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Get Custom Field List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
         /// Rate Limit Group: Light
-        /// Http Get /restapi/v1.0/account/{accountId}/custom-fields
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadUserInfo
         /// </summary>
         public async Task<RingCentral.CustomFieldsResource> Get(CancellationToken? cancellationToken = null)
         {
@@ -50,8 +56,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Update Сustom Field
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// Rate Limit Group: Light
-        /// Http Put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: Users
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Put(
             RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, CancellationToken? cancellationToken = null)
@@ -67,8 +76,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Delete Custom Field
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// Rate Limit Group: Light
-        /// Http Delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: Users
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {

@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
 
         /// <summary>
         /// Operation: Assign Paging Group Users and Devices
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
         /// Rate Limit Group: Heavy
-        /// Http Post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
+        /// App Permission Required: EditAccounts
+        /// User Permission Required: Groups
         /// </summary>
         public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest,
             CancellationToken? cancellationToken = null)

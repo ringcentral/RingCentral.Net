@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.ActiveCalls
 
         /// <summary>
         /// Operation: Get Company Active Calls
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/active-calls
         /// Rate Limit Group: Heavy
-        /// Http Get /restapi/v1.0/account/{accountId}/active-calls
+        /// App Permission Required: ReadCallLog
+        /// User Permission Required: ReadCallLog
         /// </summary>
         public async Task<RingCentral.CompanyActiveCallsResponse> Get(
             ListCompanyActiveCallsParameters queryParams = null, CancellationToken? cancellationToken = null)

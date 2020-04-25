@@ -21,8 +21,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Features
 
         /// <summary>
         /// Operation: Get User Features
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/features
         /// Rate Limit Group: Medium
-        /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/features
+        /// App Permission Required: ReadAccounts
+        /// User Permission Required: ReadExtensions
         /// </summary>
         public async Task<RingCentral.FeatureList> Get(ReadUserFeaturesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
