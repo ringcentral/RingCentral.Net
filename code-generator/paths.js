@@ -212,8 +212,11 @@ const generate = (prefix = '/') => {
 
       /// <summary>
       /// Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
+      /// HTTP Method: ${method.toUpperCase()}
+      /// Endpoint: ${operation.endpoint}
       /// Rate Limit Group: ${operation.detail['x-throttling-group']}
-      /// Http ${method} ${operation.endpoint}
+      /// App Permission Required: ${operation.detail['x-app-permission']}
+      /// User Permission Required: ${operation.detail['x-user-permission']}
       /// </summary>
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
       {${withParam ? `
@@ -227,7 +230,7 @@ const generate = (prefix = '/') => {
         usings.add('using System.Net.Http;')
         code += `
           var dict = new System.Collections.Generic.Dictionary<string, string>();
-          RingCentral.Utils.GetPairs(${bodyParam})
+          Utils.GetPairs(${bodyParam})
             .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
           return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict), ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
       }`
