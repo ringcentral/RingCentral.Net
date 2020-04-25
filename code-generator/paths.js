@@ -212,6 +212,7 @@ const generate = (prefix = '/') => {
 
       /// <summary>
       /// Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
+      /// Rate Limit Group: ${operation.detail['x-throttling-group']}
       /// Http ${method} ${operation.endpoint}
       /// </summary>
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})

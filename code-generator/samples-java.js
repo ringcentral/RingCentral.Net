@@ -42,18 +42,19 @@ normalizedPaths.forEach(path => {
   const names = path.split('/').filter(name => name !== '' && !name.startsWith('{'))
   console.log(names)
   var gCode = fs.readFileSync(`../RingCentral.Net/Paths/${names.map(n => pascalCase(n)).join('/')}/Index.cs`, 'utf-8')
-  const ms = gCode.match(/\/\/\/ Operation: .+?\n\s*.+?\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?\s*\n/g)
+  const ms = gCode.match(/\/\/\/ Operation: .+?\n\s*.+?\s*\n\s*.+?\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?\s*\n/g)
     .map(f => {
       console.log(f)
-      const ms = f.match(/Operation: (.+?)\s*\n\s*\/\/\/ Http (.+?)\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?(Get|List|Post|Put|Patch|Delete)\((.*?)\)/)
+      const ms = f.match(/Operation: (.+?)\s*\n\s*\/\/\/ Rate Limit Group: (.+?)\s*\n\s*\/\/\/ Http (.+?)\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?(Get|List|Post|Put|Patch|Delete)\((.*?)\)/)
       const summary = ms[1]
-      const endpoint = ms[2].split(' ')[1]
-      const method = ms[3]
-      const parameters = ms[4].split(',').map(t => t.trim().split(' ').map(tt => tt.trim())[0]).filter(p => p !== '').map(p => R.last(p.split('.'))).filter(p => p !== 'CancellationToken?')
-      return { summary, endpoint, method, parameters }
+      const rateLimitGroup = ms[2]
+      const endpoint = ms[3].split(' ')[1]
+      const method = ms[4]
+      const parameters = ms[5].split(',').map(t => t.trim().split(' ').map(tt => tt.trim())[0]).filter(p => p !== '').map(p => R.last(p.split('.'))).filter(p => p !== 'CancellationToken?')
+      return { summary, endpoint, method, parameters, rateLimitGroup }
     })
   console.log(ms)
-  ms.forEach(({ summary, endpoint, method, parameters }) => {
+  ms.forEach(({ summary, endpoint, method, parameters, rateLimitGroup }) => {
     if (endpoint === deNormalizePath(path)) {
       let code = `
 
@@ -61,6 +62,8 @@ normalizedPaths.forEach(path => {
 ## ${summary}
 
 HTTP ${(method === 'List' ? 'Get' : method).toUpperCase()} \`${endpoint}\`
+
+Rate Limit Group: \`${rateLimitGroup}\`
 
 \`\`\`cs
 RestClient rc = new RestClient("clientID", "clientSecret", "serverURL");
