@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
 
         /// <summary>
         /// Operation: Get Message Store Report Archive
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
         /// </summary>
         public async Task<RingCentral.MessageStoreReportArchive> List(CancellationToken? cancellationToken = null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
 
         /// <summary>
         /// Operation: Get Message Store Report Archive Content
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
         /// </summary>
         public async Task<string> Get(CancellationToken? cancellationToken = null)

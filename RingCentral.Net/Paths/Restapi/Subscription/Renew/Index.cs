@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
 
         /// <summary>
         /// Operation: Renew Subscription
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/subscription/{subscriptionId}/renew
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(CancellationToken? cancellationToken = null)

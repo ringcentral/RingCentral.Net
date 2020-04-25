@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
 
         /// <summary>
         /// Operation: Create Data Export Task
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/glip/data-export
         /// </summary>
         public async Task<RingCentral.DataExportTask> Post(
@@ -40,6 +41,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
 
         /// <summary>
         /// Operation: Get Data Export Task List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/data-export
         /// </summary>
         public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null,
@@ -50,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
 
         /// <summary>
         /// Operation: Get Data Export Task
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/data-export/{taskId}
         /// </summary>
         public async Task<RingCentral.DataExportTask> Get(CancellationToken? cancellationToken = null)

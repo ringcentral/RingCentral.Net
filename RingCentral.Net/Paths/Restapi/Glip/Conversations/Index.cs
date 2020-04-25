@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
 
         /// <summary>
         /// Operation: Get Conversations
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/conversations
         /// </summary>
         public async Task<RingCentral.GlipConversationsList> List(ListGlipConversationsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
 
         /// <summary>
         /// Operation: Create/Open Conversation
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/conversations
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Post(
@@ -50,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
 
         /// <summary>
         /// Operation: Get Conversation
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/conversations/{chatId}
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Get(CancellationToken? cancellationToken = null)

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Pickup
 
         /// <summary>
         /// Operation: Pickup Call
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
         /// </summary>
         public async Task<RingCentral.CallParty> Post(RingCentral.PickupTarget pickupTarget,

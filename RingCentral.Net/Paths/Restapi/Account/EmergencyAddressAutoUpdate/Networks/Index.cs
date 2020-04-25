@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Get Network Map
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// </summary>
         public async Task<RingCentral.NetworksList> List(CancellationToken? cancellationToken = null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Create Network
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// </summary>
         public async Task<RingCentral.NetworkInfo> Post(RingCentral.CreateNetworkRequest createNetworkRequest,
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Get Network
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// </summary>
         public async Task<RingCentral.NetworkInfo> Get(CancellationToken? cancellationToken = null)
@@ -62,6 +65,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Update Network
+        /// Rate Limit Group: Heavy
         /// Http Put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// </summary>
         public async Task<string> Put(RingCentral.UpdateNetworkRequest updateNetworkRequest,
@@ -77,6 +81,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 
         /// <summary>
         /// Operation: Delete Network
+        /// Rate Limit Group: Heavy
         /// Http Delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

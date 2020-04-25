@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Join
 
         /// <summary>
         /// Operation: Join Team
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/teams/{chatId}/join
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)

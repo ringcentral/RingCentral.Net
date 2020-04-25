@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
 
         /// <summary>
         /// Operation: Make RingOut Call
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
         /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest,
@@ -39,6 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
 
         /// <summary>
         /// Operation: Get RingOut Call Status
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Get(CancellationToken? cancellationToken = null)
@@ -53,6 +55,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
 
         /// <summary>
         /// Operation: Cancel RingOut Call
+        /// Rate Limit Group: Heavy
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
 
         /// <summary>
         /// Operation: Get Language List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/language
         /// </summary>
         public async Task<RingCentral.LanguageList> List(CancellationToken? cancellationToken = null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
 
         /// <summary>
         /// Operation: Get Language
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/language/{languageId}
         /// </summary>
         public async Task<RingCentral.LanguageInfo> Get(CancellationToken? cancellationToken = null)

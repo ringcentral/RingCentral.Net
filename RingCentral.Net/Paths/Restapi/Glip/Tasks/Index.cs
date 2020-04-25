@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
 
         /// <summary>
         /// Operation: Get Task
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
         public async Task<RingCentral.GlipTaskInfo> Get(CancellationToken? cancellationToken = null)
@@ -42,6 +43,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
 
         /// <summary>
         /// Operation: Patch Task
+        /// Rate Limit Group: Medium
         /// Http Patch /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
         public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask,
@@ -57,6 +59,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
 
         /// <summary>
         /// Operation: Delete Task
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

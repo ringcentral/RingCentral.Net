@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
 
         /// <summary>
         /// Operation: Get Account Federation
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/directory/federation
         /// </summary>
         public async Task<RingCentral.FederationResource> Get(CancellationToken? cancellationToken = null)

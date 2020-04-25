@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
 
         /// <summary>
         /// Operation: Assign Paging Group Users and Devices
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
         /// </summary>
         public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest,

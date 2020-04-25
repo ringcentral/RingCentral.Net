@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
 
         /// <summary>
         /// Operation: Get Person
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/persons/{personId}
         /// </summary>
         public async Task<RingCentral.GlipPersonInfo> Get(CancellationToken? cancellationToken = null)

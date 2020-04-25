@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Add Emergency Location
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-locations
         /// </summary>
         public async Task<string> Post(RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Get Emergency Location List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-locations
         /// </summary>
         public async Task<RingCentral.EmergencyLocationList> List(ListEmergencyLocationsParameters queryParams = null,
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Get Emergency Location
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// </summary>
         public async Task<RingCentral.EmergencyLocationInfo> Get(CancellationToken? cancellationToken = null)
@@ -62,6 +65,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 
         /// <summary>
         /// Operation: Update Emergency Location
+        /// Rate Limit Group: Heavy
         /// Http Put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// </summary>
         public async Task<RingCentral.EmergencyLocationInfo> Put(

@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
         /// <summary>
         /// Operation: Get User Call Log Records
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// </summary>
         public async Task<RingCentral.UserCallLogResponse> List(ReadUserCallLogParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
         /// <summary>
         /// Operation: Delete User Call Log
+        /// Rate Limit Group: Heavy
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// </summary>
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null,
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
         /// <summary>
         /// Operation: Get User Call Record
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
         /// </summary>
         public async Task<RingCentral.UserCallLogRecord> Get(ReadUserCallRecordParameters queryParams = null,

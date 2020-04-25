@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
 
         /// <summary>
         /// Operation: Create Company Call Handling Rule
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/answering-rule
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(
@@ -40,6 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
 
         /// <summary>
         /// Operation: Get Company Call Handling Rule List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/answering-rule
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleList> List(
@@ -50,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
 
         /// <summary>
         /// Operation: Get Company Call Handling Rule
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Get(CancellationToken? cancellationToken = null)
@@ -64,6 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
 
         /// <summary>
         /// Operation: Update Company Call Handling Rule
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(
@@ -81,6 +85,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
 
         /// <summary>
         /// Operation: Delete Company Call Handling Rule
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

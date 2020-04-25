@@ -23,6 +23,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
 
         /// <summary>
         /// Operation: Get Token
+        /// Rate Limit Group: Auth
         /// Http Post /restapi/oauth/token
         /// </summary>
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest,

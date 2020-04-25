@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
 
         /// <summary>
         /// Operation: End Meeting
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)

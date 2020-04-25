@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Subscription
 
         /// <summary>
         /// Operation: Get Subscriptions
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/subscription
         /// </summary>
         public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List(
@@ -39,6 +40,7 @@ namespace RingCentral.Paths.Restapi.Subscription
 
         /// <summary>
         /// Operation: Create Subscription
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/subscription
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(
@@ -51,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Subscription
 
         /// <summary>
         /// Operation: Get Subscription
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/subscription/{subscriptionId}
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Get(CancellationToken? cancellationToken = null)
@@ -65,6 +68,7 @@ namespace RingCentral.Paths.Restapi.Subscription
 
         /// <summary>
         /// Operation: Renew Subscription / Update Event Filters
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/subscription/{subscriptionId}
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Put(
@@ -82,6 +86,7 @@ namespace RingCentral.Paths.Restapi.Subscription
 
         /// <summary>
         /// Operation: Cancel Subscription
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/subscription/{subscriptionId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

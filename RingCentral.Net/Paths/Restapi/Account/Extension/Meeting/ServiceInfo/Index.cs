@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
 
         /// <summary>
         /// Operation: Get Meeting Service Info
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
         /// </summary>
         public async Task<RingCentral.MeetingServiceInfoResource> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
 
         /// <summary>
         /// Operation: Update Meeting Service Info
+        /// Rate Limit Group: Medium
         /// Http Patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
         /// </summary>
         public async Task<RingCentral.MeetingServiceInfoResource> Patch(

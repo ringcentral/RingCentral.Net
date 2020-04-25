@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
 
         /// <summary>
         /// Operation: Search/List Users
+        /// Rate Limit Group: Light
         /// Http Post /scim/v2/Users/.search
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest,

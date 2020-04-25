@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
 
         /// <summary>
         /// Operation: Get Notification Settings
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// </summary>
         public async Task<RingCentral.NotificationSettings> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
 
         /// <summary>
         /// Operation: Update Notification Settings
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// </summary>
         public async Task<RingCentral.NotificationSettings> Put(

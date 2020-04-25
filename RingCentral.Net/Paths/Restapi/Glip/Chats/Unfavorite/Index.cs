@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unfavorite
 
         /// <summary>
         /// Operation: Remove Chat from Favorites
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/unfavorite
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)

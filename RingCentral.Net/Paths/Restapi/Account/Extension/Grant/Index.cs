@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
 
         /// <summary>
         /// Operation: Get Extension Grant List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
         /// </summary>
         public async Task<RingCentral.GetExtensionGrantListResponse> Get(

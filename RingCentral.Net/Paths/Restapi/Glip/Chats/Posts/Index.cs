@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
 
         /// <summary>
         /// Operation: Get Posts
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/posts
         /// </summary>
         public async Task<RingCentral.GlipPostsList> List(ReadGlipPostsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
 
         /// <summary>
         /// Operation: Create Post
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/posts
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipPostPostBody glipPostPostBody,
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
 
         /// <summary>
         /// Operation: Get Post
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Get(CancellationToken? cancellationToken = null)
@@ -62,6 +65,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
 
         /// <summary>
         /// Operation: Update Post
+        /// Rate Limit Group: Medium
         /// Http Patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Patch(RingCentral.GlipPatchPostBody glipPatchPostBody,
@@ -77,6 +81,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
 
         /// <summary>
         /// Operation: Delete Post
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

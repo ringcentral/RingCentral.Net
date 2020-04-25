@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLogSync
 
         /// <summary>
         /// Operation: Sync User Call Log
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync
         /// </summary>
         public async Task<RingCentral.CallLogSync> Get(SyncUserCallLogParameters queryParams = null,

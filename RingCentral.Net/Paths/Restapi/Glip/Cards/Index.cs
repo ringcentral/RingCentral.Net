@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
 
         /// <summary>
         /// Operation: Create Card
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/cards
         /// </summary>
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
@@ -40,6 +41,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
 
         /// <summary>
         /// Operation: Get Card
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/cards/{cardId}
         /// </summary>
         public async Task<RingCentral.GlipMessageAttachmentInfo> Get(CancellationToken? cancellationToken = null)
@@ -54,6 +56,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
 
         /// <summary>
         /// Operation: Update Card
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/glip/cards/{cardId}
         /// </summary>
         public async Task<string> Put(RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
@@ -69,6 +72,7 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
 
         /// <summary>
         /// Operation: Delete Card
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/glip/cards/{cardId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
 
         /// <summary>
         /// Operation: Get Favorite Contact List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// </summary>
         public async Task<RingCentral.FavoriteContactList> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
 
         /// <summary>
         /// Operation: Update Favorite Contact List
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// </summary>
         public async Task<RingCentral.FavoriteContactList> Put(RingCentral.FavoriteCollection favoriteCollection,

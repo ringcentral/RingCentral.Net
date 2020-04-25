@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Get Blocked/Allowed Phone Numbers
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(
@@ -39,6 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Add Blocked/Allowed Number
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(
@@ -51,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Get Blocked/Allowed Number
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get(CancellationToken? cancellationToken = null)
@@ -65,6 +68,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Delete Blocked/Allowed Number
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
@@ -79,6 +83,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
         /// <summary>
         /// Operation: Update Blocked/Allowed Number
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(

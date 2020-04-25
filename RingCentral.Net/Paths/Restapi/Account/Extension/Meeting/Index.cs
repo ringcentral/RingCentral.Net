@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Get Scheduled Meetings
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// </summary>
         public async Task<RingCentral.MeetingsResource> List(CancellationToken? cancellationToken = null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Create Meeting
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Post(
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Get Meeting Info
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Get(CancellationToken? cancellationToken = null)
@@ -62,6 +65,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Update Meeting
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Put(
@@ -78,6 +82,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 
         /// <summary>
         /// Operation: Delete Meeting
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

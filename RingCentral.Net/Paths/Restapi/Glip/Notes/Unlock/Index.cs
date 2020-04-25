@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Unlock
 
         /// <summary>
         /// Operation: Unlock Note
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/glip/notes/{noteId}/unlock
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)

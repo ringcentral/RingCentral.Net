@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
 
         /// <summary>
         /// Operation: Parse Phone Number
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/number-parser/parse
         /// </summary>
         public async Task<RingCentral.ParsePhoneNumberResponse> Post(

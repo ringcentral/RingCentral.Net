@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Create Call Monitoring Group
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Post(
@@ -40,6 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Get Call Monitoring Groups List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
@@ -50,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Updates Call Monitoring Group
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Put(
@@ -67,6 +70,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 
         /// <summary>
         /// Operation: Delete Call Monitoring Group
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
 
         /// <summary>
         /// Operation: Get Everyone Chat
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/everyone
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
 
         /// <summary>
         /// Operation: Update Everyone Сhat
+        /// Rate Limit Group: Medium
         /// Http Patch /restapi/v1.0/glip/everyone
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Patch(

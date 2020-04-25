@@ -23,6 +23,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
 
         /// <summary>
         /// Operation: Revoke Token
+        /// Rate Limit Group: Auth
         /// Http Post /restapi/oauth/revoke
         /// </summary>
         public async Task<string> Post(RevokeTokenRequest revokeTokenRequest,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
 
         /// <summary>
         /// Operation: Ignore Call in Queue
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
         /// </summary>
         public async Task<string> Post(RingCentral.IgnoreRequestBody ignoreRequestBody,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
 
         /// <summary>
         /// Operation: Reject Call Party
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)

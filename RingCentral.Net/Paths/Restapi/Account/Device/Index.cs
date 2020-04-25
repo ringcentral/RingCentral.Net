@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
 
         /// <summary>
         /// Operation: Get Device
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Get(ReadDeviceParameters queryParams = null,
@@ -43,6 +44,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
 
         /// <summary>
         /// Operation: Update Device
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate,

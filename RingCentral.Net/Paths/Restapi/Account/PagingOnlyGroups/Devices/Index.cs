@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
 
         /// <summary>
         /// Operation: Get Paging Group Devices
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
         /// </summary>
         public async Task<RingCentral.PagingOnlyGroupDevices> Get(ListPagingGroupDevicesParameters queryParams = null,

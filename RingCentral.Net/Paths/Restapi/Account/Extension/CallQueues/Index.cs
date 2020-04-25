@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueues
 
         /// <summary>
         /// Operation: Update User Call Queues
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
         /// </summary>
         public async Task<RingCentral.UserCallQueues> Put(RingCentral.UserCallQueues userCallQueues,

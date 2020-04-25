@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
 
         /// <summary>
         /// Operation: Complete Task
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/tasks/{taskId}/complete
         /// </summary>
         public async Task<string> Post(RingCentral.GlipCompleteTask glipCompleteTask,

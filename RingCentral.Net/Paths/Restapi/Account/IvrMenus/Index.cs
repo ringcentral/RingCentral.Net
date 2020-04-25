@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
 
         /// <summary>
         /// Operation: Create IVR Menu
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/ivr-menus
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Post(RingCentral.IVRMenuInfo iVRMenuInfo,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
 
         /// <summary>
         /// Operation: Get IVR Menu
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Get(CancellationToken? cancellationToken = null)
@@ -52,6 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
 
         /// <summary>
         /// Operation: Update IVR Menu
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users
 
         /// <summary>
         /// Operation: Get User List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
         /// </summary>
         public async Task<RingCentral.AutomaticLocationUpdatesUserList> Get(

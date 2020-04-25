@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
 
         /// <summary>
         /// Operation: Get Extension Device List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
         /// </summary>
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(

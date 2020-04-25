@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
 
         /// <summary>
         /// Operation: Get Webhooks
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/webhooks
         /// </summary>
         public async Task<RingCentral.GlipWebhookList> List(CancellationToken? cancellationToken = null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
 
         /// <summary>
         /// Operation: Get Webhook
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/webhooks/{webhookId}
         /// </summary>
         public async Task<RingCentral.GlipWebhookList> Get(CancellationToken? cancellationToken = null)
@@ -51,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
 
         /// <summary>
         /// Operation: Delete Webhook
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/glip/webhooks/{webhookId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

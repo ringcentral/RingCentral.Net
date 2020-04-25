@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks.Suspend
 
         /// <summary>
         /// Operation: Suspend Webhook
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/webhooks/{webhookId}/suspend
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)

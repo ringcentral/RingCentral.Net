@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
 
         /// <summary>
         /// Operation: Get Chat Tasks
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/tasks
         /// </summary>
         public async Task<RingCentral.GlipTaskList> Get(ListChatTasksParameters queryParams = null,
@@ -31,6 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
 
         /// <summary>
         /// Operation: Create Task
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/tasks
         /// </summary>
         public async Task<RingCentral.GlipTaskInfo> Post(RingCentral.GlipCreateTask glipCreateTask,

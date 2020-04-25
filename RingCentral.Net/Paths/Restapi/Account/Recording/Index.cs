@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Recording
 
         /// <summary>
         /// Operation: Get Call Recording
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}
         /// </summary>
         public async Task<RingCentral.GetCallRecordingResponse> Get(CancellationToken? cancellationToken = null)

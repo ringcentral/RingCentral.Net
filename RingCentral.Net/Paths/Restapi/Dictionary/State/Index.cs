@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
 
         /// <summary>
         /// Operation: Get States List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/state
         /// </summary>
         public async Task<RingCentral.GetStateListResponse> List(ListStatesParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
 
         /// <summary>
         /// Operation: Get State
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/state/{stateId}
         /// </summary>
         public async Task<RingCentral.GetStateInfoResponse> Get(CancellationToken? cancellationToken = null)

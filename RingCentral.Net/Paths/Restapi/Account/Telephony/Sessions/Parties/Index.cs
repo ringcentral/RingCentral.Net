@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 
         /// <summary>
         /// Operation: Get Call Party Status
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// </summary>
         public async Task<RingCentral.CallParty> Get(CancellationToken? cancellationToken = null)
@@ -42,6 +43,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 
         /// <summary>
         /// Operation: Update Call Party
+        /// Rate Limit Group: Light
         /// Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// </summary>
         public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
 
         /// <summary>
         /// Operation: Get User Active Calls
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls
         /// </summary>
         public async Task<RingCentral.UserActiveCallsResponse> Get(

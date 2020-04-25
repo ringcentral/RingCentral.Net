@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
 
         /// <summary>
         /// Operation: Get Call Recording Extension List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/call-recording/extensions
         /// </summary>
         public async Task<RingCentral.CallRecordingExtensions> Get(CancellationToken? cancellationToken = null)

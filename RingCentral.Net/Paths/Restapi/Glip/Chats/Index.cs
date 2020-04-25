@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
 
         /// <summary>
         /// Operation: Get Chats
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/chats
         /// </summary>
         public async Task<RingCentral.GlipChatsList> List(ListGlipChatsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
 
         /// <summary>
         /// Operation: Get Chat
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/chats/{chatId}
         /// </summary>
         public async Task<RingCentral.GlipChatInfo> Get(CancellationToken? cancellationToken = null)

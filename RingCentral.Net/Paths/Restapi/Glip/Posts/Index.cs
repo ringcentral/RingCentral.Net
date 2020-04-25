@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Posts
 
         /// <summary>
         /// Operation: Get Posts
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/posts
         /// </summary>
         public async Task<RingCentral.GlipPosts> Get(ListGlipPostsParameters queryParams = null,
@@ -31,6 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Posts
 
         /// <summary>
         /// Operation: Create Post
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/glip/posts
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost,

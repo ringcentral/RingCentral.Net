@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
 
         /// <summary>
         /// Operation: Get Call Handling Rules
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// </summary>
         public async Task<RingCentral.UserAnsweringRuleList> List(ListAnsweringRulesParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
 
         /// <summary>
         /// Operation: Create Call Handling Rule
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// </summary>
         public async Task<RingCentral.CustomAnsweringRuleInfo> Post(
@@ -50,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
 
         /// <summary>
         /// Operation: Get Call Handling Rule
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Get(ReadAnsweringRuleParameters queryParams = null,
@@ -65,6 +68,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
 
         /// <summary>
         /// Operation: Update Call Handling Rule
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Put(
@@ -82,6 +86,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
 
         /// <summary>
         /// Operation: Delete Call Handling Rule
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

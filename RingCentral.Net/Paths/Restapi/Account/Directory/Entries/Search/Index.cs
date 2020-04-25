@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
 
         /// <summary>
         /// Operation: Search Company Directory Entries
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/directory/entries/search
         /// </summary>
         public async Task<RingCentral.DirectoryResource> Post(

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
 
         /// <summary>
         /// Operation: Get Unified Presence
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// </summary>
         public async Task<RingCentral.UnifiedPresence> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
 
         /// <summary>
         /// Operation: Update Unified Presence
+        /// Rate Limit Group: Medium
         /// Http Patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// </summary>
         public async Task<RingCentral.UnifiedPresence> Patch(RingCentral.UpdateUnifiedPresence updateUnifiedPresence,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Scim.Health
 
         /// <summary>
         /// Operation: Check Health
+        /// Rate Limit Group: NoThrottling
         /// Http Get /scim/v2/health
         /// </summary>
         public async Task<string> Get(CancellationToken? cancellationToken = null)

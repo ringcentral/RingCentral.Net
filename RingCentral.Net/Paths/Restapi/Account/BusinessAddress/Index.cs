@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
 
         /// <summary>
         /// Operation: Get Account Business Address
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/business-address
         /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
 
         /// <summary>
         /// Operation: Update Company Business Address
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/business-address
         /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Put(

@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
 
         /// <summary>
         /// Operation: Get Call Queue List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/call-queues
         /// </summary>
         public async Task<RingCentral.CallQueues> Get(ListCallQueuesParameters queryParams = null,

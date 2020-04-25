@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 
         /// <summary>
         /// Operation: Get Extension List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/extension
         /// </summary>
         public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 
         /// <summary>
         /// Operation: Create Extension
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/extension
         /// </summary>
         public async Task<RingCentral.ExtensionCreationResponse> Post(
@@ -49,6 +51,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 
         /// <summary>
         /// Operation: Get Extension
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Get(CancellationToken? cancellationToken = null)
@@ -63,6 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 
         /// <summary>
         /// Operation: Update Extension
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
@@ -79,6 +83,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 
         /// <summary>
         /// Operation: Delete Extension
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
         public async Task<string> Delete(DeleteExtensionParameters queryParams = null,

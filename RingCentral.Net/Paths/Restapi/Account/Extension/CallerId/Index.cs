@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
 
         /// <summary>
         /// Operation: Get Extension Caller ID
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
 
         /// <summary>
         /// Operation: Update Extension Caller ID
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Put(

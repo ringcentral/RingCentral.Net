@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Department.Members
 
         /// <summary>
         /// Operation: Get Department Member List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
         /// </summary>
         public async Task<RingCentral.DepartmentMemberList> Get(ListDepartmentMembersParameters queryParams = null,

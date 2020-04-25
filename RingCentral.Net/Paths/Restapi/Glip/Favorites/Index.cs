@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
 
         /// <summary>
         /// Operation: Get Favorite Chats
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/favorites
         /// </summary>
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(

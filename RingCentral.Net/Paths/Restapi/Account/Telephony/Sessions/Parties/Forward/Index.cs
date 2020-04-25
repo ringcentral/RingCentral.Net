@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Forward
 
         /// <summary>
         /// Operation: Forward Call Party
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
         /// </summary>
         public async Task<RingCentral.CallParty> Post(RingCentral.ForwardTarget forwardTarget,

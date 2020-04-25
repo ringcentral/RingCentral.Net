@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
 
         /// <summary>
         /// Operation: Get Company Info
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/companies/{companyId}
         /// </summary>
         public async Task<RingCentral.GlipCompany> Get(CancellationToken? cancellationToken = null)

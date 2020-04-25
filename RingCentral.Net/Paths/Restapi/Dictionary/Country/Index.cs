@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
 
         /// <summary>
         /// Operation: Get Country List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/country
         /// </summary>
         public async Task<RingCentral.GetCountryListResponse> List(ListCountriesParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
 
         /// <summary>
         /// Operation: Get Country
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/country/{countryId}
         /// </summary>
         public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get(CancellationToken? cancellationToken = null)

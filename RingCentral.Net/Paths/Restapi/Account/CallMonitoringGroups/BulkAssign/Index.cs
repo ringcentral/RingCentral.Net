@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
 
         /// <summary>
         /// Operation: Update Call Monitoring Group List
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
         /// </summary>
         public async Task<string> Post(RingCentral.CallMonitoringBulkAssign callMonitoringBulkAssign,

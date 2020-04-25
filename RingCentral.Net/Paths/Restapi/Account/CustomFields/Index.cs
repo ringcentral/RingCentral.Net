@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Create Custom Field
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/custom-fields
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Post(
@@ -39,6 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Get Custom Field List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/custom-fields
         /// </summary>
         public async Task<RingCentral.CustomFieldsResource> Get(CancellationToken? cancellationToken = null)
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Update Сustom Field
+        /// Rate Limit Group: Light
         /// Http Put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Put(
@@ -64,6 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
 
         /// <summary>
         /// Operation: Delete Custom Field
+        /// Rate Limit Group: Light
         /// Http Delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

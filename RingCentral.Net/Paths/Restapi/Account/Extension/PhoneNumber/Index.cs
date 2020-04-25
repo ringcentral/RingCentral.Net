@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
 
         /// <summary>
         /// Operation: Get Extension Phone Number List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number
         /// </summary>
         public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(

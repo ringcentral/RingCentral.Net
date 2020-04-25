@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 
         /// <summary>
         /// Operation: Get Timezone List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/timezone
         /// </summary>
         public async Task<RingCentral.GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 
         /// <summary>
         /// Operation: Get Timezone
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/dictionary/timezone/{timezoneId}
         /// </summary>
         public async Task<RingCentral.GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null,

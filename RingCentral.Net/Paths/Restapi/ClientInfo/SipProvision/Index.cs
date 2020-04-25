@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
 
         /// <summary>
         /// Operation: Register SIP Device
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/client-info/sip-provision
         /// </summary>
         public async Task<RingCentral.CreateSipRegistrationResponse> Post(

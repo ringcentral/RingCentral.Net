@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Get User Profile Image
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
         public async Task<byte[]> List(CancellationToken? cancellationToken = null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Upload User Profile Image
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
         public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest,
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Update User Profile Image
+        /// Rate Limit Group: Heavy
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
         public async Task<string> Put(UpdateUserProfileImageRequest updateUserProfileImageRequest,
@@ -59,6 +62,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         /// Operation: Get Scaled User Profile Image
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)

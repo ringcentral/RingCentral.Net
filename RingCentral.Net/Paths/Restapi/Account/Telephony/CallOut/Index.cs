@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
 
         /// <summary>
         /// Operation: Make CallOut
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/call-out
         /// </summary>
         public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
 
         /// <summary>
         /// Operation: Get Device List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
         /// </summary>
         public async Task<RingCentral.ListDevicesAutomaticLocationUpdates> Get(

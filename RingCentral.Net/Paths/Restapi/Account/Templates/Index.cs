@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Templates
 
         /// <summary>
         /// Operation: Get User Template List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/templates
         /// </summary>
         public async Task<RingCentral.UserTemplates> List(ListUserTemplatesParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Templates
 
         /// <summary>
         /// Operation: Get User Template
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/templates/{templateId}
         /// </summary>
         public async Task<RingCentral.TemplateInfo> Get(CancellationToken? cancellationToken = null)

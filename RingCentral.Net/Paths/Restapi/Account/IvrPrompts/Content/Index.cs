@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts.Content
 
         /// <summary>
         /// Operation: Get IVR Prompt Content
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
 
         /// <summary>
         /// Operation: Send SMS
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
 
         /// <summary>
         /// Operation: Address Book Synchronization
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
         /// </summary>
         public async Task<RingCentral.AddressBookSync> Get(SyncAddressBookParameters queryParams = null,

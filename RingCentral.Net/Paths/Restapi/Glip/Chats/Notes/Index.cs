@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
 
         /// <summary>
         /// Operation: Create Note
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/notes
         /// </summary>
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate,
@@ -31,6 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
 
         /// <summary>
         /// Operation: Get Chat Notes
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/notes
         /// </summary>
         public async Task<RingCentral.GlipNotesInfo> Get(ListChatNotesParameters queryParams = null,

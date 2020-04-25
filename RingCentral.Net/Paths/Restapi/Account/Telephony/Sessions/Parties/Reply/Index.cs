@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reply
 
         /// <summary>
         /// Operation: Reply with Text
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply
         /// </summary>
         public async Task<RingCentral.ReplyParty> Post(RingCentral.CallPartyReply callPartyReply,

@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Get Forwarding Number List
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// </summary>
         public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(
@@ -39,6 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Create Forwarding Number
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Post(
@@ -51,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Get Forwarding Number
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Get(CancellationToken? cancellationToken = null)
@@ -65,6 +68,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Update Forwarding Number
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Put(
@@ -82,6 +86,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 
         /// <summary>
         /// Operation: Delete Forwarding Number
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

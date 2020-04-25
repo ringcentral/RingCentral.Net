@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users.Bul
 
         /// <summary>
         /// Operation: Enable Automatic Location Updates for Users
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign
         /// </summary>
         public async Task<string> Post(

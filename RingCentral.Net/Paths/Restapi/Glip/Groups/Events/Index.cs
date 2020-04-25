@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
 
         /// <summary>
         /// Operation: Create Event by Group ID
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/groups/{groupId}/events
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
@@ -31,6 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
 
         /// <summary>
         /// Operation: Get Group Events
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/groups/{groupId}/events
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Get(CancellationToken? cancellationToken = null)

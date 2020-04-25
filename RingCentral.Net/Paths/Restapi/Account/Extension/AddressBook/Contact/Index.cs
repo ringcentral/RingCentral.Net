@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Get Contact List
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// </summary>
         public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Create Contact
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Post(
@@ -50,6 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Get Contact
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Get(CancellationToken? cancellationToken = null)
@@ -64,6 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Update Contact
+        /// Rate Limit Group: Heavy
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Put(
@@ -81,6 +85,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 
         /// <summary>
         /// Operation: Delete Contact
+        /// Rate Limit Group: Heavy
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

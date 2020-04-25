@@ -26,6 +26,7 @@ namespace RingCentral.Paths.Restapi
 
         /// <summary>
         /// Operation: Get API Versions
+        /// Rate Limit Group: NoThrottling
         /// Http Get /restapi
         /// </summary>
         public async Task<RingCentral.GetVersionsResponse> List(CancellationToken? cancellationToken = null)
@@ -35,6 +36,7 @@ namespace RingCentral.Paths.Restapi
 
         /// <summary>
         /// Operation: Get Version Info
+        /// Rate Limit Group: NoThrottling
         /// Http Get /restapi/{apiVersion}
         /// </summary>
         public async Task<RingCentral.GetVersionResponse> Get(CancellationToken? cancellationToken = null)

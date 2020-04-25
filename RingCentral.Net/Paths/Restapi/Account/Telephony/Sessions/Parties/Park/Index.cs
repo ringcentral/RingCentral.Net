@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park
 
         /// <summary>
         /// Operation: Call Park
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
         /// </summary>
         public async Task<RingCentral.CallParty> Post(CancellationToken? cancellationToken = null)

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
 
         /// <summary>
         /// Operation: Supervise Call Session
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise
         /// </summary>
         public async Task<RingCentral.SuperviseCallSession> Post(

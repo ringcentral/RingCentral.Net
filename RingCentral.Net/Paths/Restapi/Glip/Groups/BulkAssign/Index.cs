@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.BulkAssign
 
         /// <summary>
         /// Operation: Edit Group Members
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
         /// </summary>
         public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.EditGroupRequest editGroupRequest,

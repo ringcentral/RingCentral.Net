@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
 
         /// <summary>
         /// Operation: Get Emergency Map Configuration Task
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
         /// </summary>
         public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get(CancellationToken? cancellationToken = null)

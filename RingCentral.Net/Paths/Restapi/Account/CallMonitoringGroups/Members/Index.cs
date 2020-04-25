@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
 
         /// <summary>
         /// Operation: Get Call Monitoring Group Member List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroupMemberList> Get(

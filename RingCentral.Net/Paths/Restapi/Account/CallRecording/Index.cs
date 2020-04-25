@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
 
         /// <summary>
         /// Operation: Get Call Recording Settings
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/call-recording
         /// </summary>
         public async Task<RingCentral.CallRecordingSettingsResource> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
 
         /// <summary>
         /// Operation: Update Call Recording Settings
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/call-recording
         /// </summary>
         public async Task<RingCentral.CallRecordingSettingsResource> Put(

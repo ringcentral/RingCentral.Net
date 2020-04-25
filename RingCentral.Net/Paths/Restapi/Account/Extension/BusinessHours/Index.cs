@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
 
         /// <summary>
         /// Operation: Get User Business Hours
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
         /// </summary>
         public async Task<RingCentral.GetUserBusinessHoursResponse> Get(CancellationToken? cancellationToken = null)
@@ -30,6 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
 
         /// <summary>
         /// Operation: Update User Business Hours
+        /// Rate Limit Group: Medium
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
         /// </summary>
         public async Task<RingCentral.UserBusinessHoursUpdateResponse> Put(

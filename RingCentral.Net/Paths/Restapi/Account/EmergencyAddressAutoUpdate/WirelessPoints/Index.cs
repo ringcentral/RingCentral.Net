@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
 
         /// <summary>
         /// Operation: Get Wireless Point List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
         /// </summary>
         public async Task<RingCentral.WirelessPointsList> List(ListWirelessPointsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
 
         /// <summary>
         /// Operation: Create Wireless Point
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Post(RingCentral.CreateWirelessPoint createWirelessPoint,
@@ -49,6 +51,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
 
         /// <summary>
         /// Operation: Get Wireless Point
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Get(CancellationToken? cancellationToken = null)
@@ -63,6 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
 
         /// <summary>
         /// Operation: Update Wireless Point
+        /// Rate Limit Group: Heavy
         /// Http Put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Put(RingCentral.UpdateWirelessPoint updateWirelessPoint,
@@ -79,6 +83,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
 
         /// <summary>
         /// Operation: Delete Wireless Point
+        /// Rate Limit Group: Heavy
         /// Http Delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

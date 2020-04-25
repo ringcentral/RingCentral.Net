@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
 
         /// <summary>
         /// Operation: Get Group Posts
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/groups/{groupId}/posts
         /// </summary>
         public async Task<RingCentral.GlipPosts> Get(ListGlipGroupPostsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
 
         /// <summary>
         /// Operation: Create Post in Group
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/groups/{groupId}/posts
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost,

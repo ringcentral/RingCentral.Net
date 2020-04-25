@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
 
         /// <summary>
         /// Operation: Get Recent Chats
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/recent/chats
         /// </summary>
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(ListRecentChatsParameters queryParams = null,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Publish
 
         /// <summary>
         /// Operation: Publish Note
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/notes/{noteId}/publish
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)

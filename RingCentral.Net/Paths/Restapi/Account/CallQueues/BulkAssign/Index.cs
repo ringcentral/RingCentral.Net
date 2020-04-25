@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
 
         /// <summary>
         /// Operation: Assign Multiple Call Queue Members
+        /// Rate Limit Group: Heavy
         /// Http Post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
         /// </summary>
         public async Task<string> Post(RingCentral.CallQueueBulkAssignResource callQueueBulkAssignResource,

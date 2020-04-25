@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
 
         /// <summary>
         /// Operation: Create Recording
+        /// Rate Limit Group: Light
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
         /// </summary>
         public async Task<string> Post(CancellationToken? cancellationToken = null)
@@ -37,6 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
 
         /// <summary>
         /// Operation: Pause/Resume Recording
+        /// Rate Limit Group: Light
         /// Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
         /// </summary>
         public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate,

@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
 
         /// <summary>
         /// Operation: Get Service Provider Config
+        /// Rate Limit Group: NoThrottling
         /// Http Get /scim/v2/ServiceProviderConfig
         /// </summary>
         public async Task<RingCentral.ServiceProviderConfig> Get(CancellationToken? cancellationToken = null)

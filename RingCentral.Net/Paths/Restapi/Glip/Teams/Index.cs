@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
 
         /// <summary>
         /// Operation: Get Teams
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/glip/teams
         /// </summary>
         public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
 
         /// <summary>
         /// Operation: Create Team
+        /// Rate Limit Group: Medium
         /// Http Post /restapi/v1.0/glip/teams
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Post(RingCentral.GlipPostTeamBody glipPostTeamBody,
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
 
         /// <summary>
         /// Operation: Get Team
+        /// Rate Limit Group: Light
         /// Http Get /restapi/v1.0/glip/teams/{chatId}
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Get(CancellationToken? cancellationToken = null)
@@ -62,6 +65,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
 
         /// <summary>
         /// Operation: Update Team
+        /// Rate Limit Group: Medium
         /// Http Patch /restapi/v1.0/glip/teams/{chatId}
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody,
@@ -77,6 +81,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
 
         /// <summary>
         /// Operation: Delete Team
+        /// Rate Limit Group: Medium
         /// Http Delete /restapi/v1.0/glip/teams/{chatId}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)

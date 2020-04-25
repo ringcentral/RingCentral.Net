@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Search/List Users
+        /// Rate Limit Group: Light
         /// Http Get /scim/v2/Users
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null,
@@ -38,6 +39,7 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Create User
+        /// Rate Limit Group: Heavy
         /// Http Post /scim/v2/Users
         /// </summary>
         public async Task<RingCentral.UserResponse> Post(RingCentral.CreateUser createUser,
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Get User
+        /// Rate Limit Group: Light
         /// Http Get /scim/v2/Users/{id}
         /// </summary>
         public async Task<RingCentral.UserResponse> Get(CancellationToken? cancellationToken = null)
@@ -62,6 +65,7 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Update/Replace User
+        /// Rate Limit Group: Heavy
         /// Http Put /scim/v2/Users/{id}
         /// </summary>
         public async Task<RingCentral.UserResponse> Put(RingCentral.User user,
@@ -77,6 +81,7 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Delete User
+        /// Rate Limit Group: Heavy
         /// Http Delete /scim/v2/Users/{id}
         /// </summary>
         public async Task<string> Delete(CancellationToken? cancellationToken = null)
@@ -91,6 +96,7 @@ namespace RingCentral.Paths.Scim.Users
 
         /// <summary>
         /// Operation: Update/Patch User
+        /// Rate Limit Group: Heavy
         /// Http Patch /scim/v2/Users/{id}
         /// </summary>
         public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch,

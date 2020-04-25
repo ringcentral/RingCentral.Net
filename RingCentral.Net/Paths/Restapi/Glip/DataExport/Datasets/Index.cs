@@ -28,6 +28,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
 
         /// <summary>
         /// Operation: Get Data Export Task Dataset
+        /// Rate Limit Group: Heavy
         /// Http Get /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
         /// </summary>
         public async Task<byte[]> Get(CancellationToken? cancellationToken = null)

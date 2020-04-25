@@ -21,6 +21,7 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
 
         /// <summary>
         /// Operation: Get Account Meeting Recordings List
+        /// Rate Limit Group: Medium
         /// Http Get /restapi/v1.0/account/{accountId}/meeting-recordings
         /// </summary>
         public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
