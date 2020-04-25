@@ -49,7 +49,7 @@ normalizedPaths.forEach(path => {
       const summary = ms[1]
       const endpoint = ms[2].split(' ')[1]
       const method = ms[3]
-      const parameters = ms[4].split(',').map(t => t.trim().split(' ').map(tt => tt.trim())[0]).filter(p => p !== '').map(p => R.last(p.split('.')))
+      const parameters = ms[4].split(',').map(t => t.trim().split(' ').map(tt => tt.trim())[0]).filter(p => p !== '').map(p => R.last(p.split('.'))).filter(p => p !== 'CancellationToken?')
       return { summary, endpoint, method, parameters }
     })
   console.log(ms)
