@@ -5,7 +5,7 @@
 
 HTTP GET `/restapi`
 
-Rate Limit Group: NoThrottling
+Rate Limit Group: `NoThrottling`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -25,7 +25,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/oauth/revoke`
 
-Rate Limit Group: Auth
+Rate Limit Group: `Auth`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -45,7 +45,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/oauth/token`
 
-Rate Limit Group: Auth
+Rate Limit Group: `Auth`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -65,7 +65,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/{apiVersion}`
 
-Rate Limit Group: NoThrottling
+Rate Limit Group: `NoThrottling`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -86,7 +86,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -108,7 +108,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/active-calls`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -130,7 +130,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/answering-rule`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -152,7 +152,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -174,7 +174,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -196,7 +196,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -218,7 +218,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -240,7 +240,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/business-address`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -262,7 +262,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-address`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -284,7 +284,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/business-hours`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -306,7 +306,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-hours`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -328,7 +328,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -350,7 +350,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log-sync`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -372,7 +372,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -394,7 +394,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -416,7 +416,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -438,7 +438,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -460,7 +460,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -482,7 +482,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -504,7 +504,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -526,7 +526,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -548,7 +548,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -570,7 +570,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -592,7 +592,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -614,7 +614,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-recording`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -636,7 +636,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-recording/bulk-assign`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -658,7 +658,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -680,7 +680,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -702,7 +702,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/extensions`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -724,7 +724,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/custom-fields`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -746,7 +746,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/custom-fields`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -768,7 +768,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -790,7 +790,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -812,7 +812,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/department/bulk-assign`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -834,7 +834,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/department/{departmentId}/members`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -856,7 +856,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -878,7 +878,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -901,7 +901,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -923,7 +923,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/directory/entries/search`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -945,7 +945,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries/{entryId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -967,7 +967,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/federation`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -989,7 +989,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1011,7 +1011,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1033,7 +1033,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1055,7 +1055,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1077,7 +1077,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1099,7 +1099,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1121,7 +1121,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1143,7 +1143,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1165,7 +1165,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1187,7 +1187,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1209,7 +1209,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1231,7 +1231,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1253,7 +1253,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1275,7 +1275,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1297,7 +1297,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1319,7 +1319,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1341,7 +1341,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1363,7 +1363,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1385,7 +1385,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1407,7 +1407,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1429,7 +1429,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1451,7 +1451,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1473,7 +1473,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1495,7 +1495,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1517,7 +1517,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1539,7 +1539,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1561,7 +1561,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-locations`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1583,7 +1583,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-locations`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1605,7 +1605,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1627,7 +1627,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1649,7 +1649,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1671,7 +1671,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1693,7 +1693,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1716,7 +1716,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1739,7 +1739,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1762,7 +1762,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1785,7 +1785,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1808,7 +1808,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1831,7 +1831,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1855,7 +1855,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1878,7 +1878,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1902,7 +1902,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1925,7 +1925,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1948,7 +1948,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1971,7 +1971,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1994,7 +1994,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2017,7 +2017,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2040,7 +2040,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2063,7 +2063,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2086,7 +2086,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2109,7 +2109,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2132,7 +2132,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2155,7 +2155,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2178,7 +2178,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2201,7 +2201,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2224,7 +2224,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2247,7 +2247,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2270,7 +2270,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2293,7 +2293,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2316,7 +2316,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2339,7 +2339,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2362,7 +2362,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2385,7 +2385,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2408,7 +2408,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2431,7 +2431,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2454,7 +2454,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2477,7 +2477,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2500,7 +2500,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2523,7 +2523,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/device`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2546,7 +2546,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2569,7 +2569,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2592,7 +2592,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2615,7 +2615,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/features`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2638,7 +2638,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2661,7 +2661,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2684,7 +2684,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2707,7 +2707,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2730,7 +2730,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2753,7 +2753,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2776,7 +2776,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2799,7 +2799,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2822,7 +2822,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2845,7 +2845,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2868,7 +2868,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2891,7 +2891,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2914,7 +2914,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2937,7 +2937,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2960,7 +2960,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2983,7 +2983,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3006,7 +3006,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3029,7 +3029,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3052,7 +3052,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3075,7 +3075,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3098,7 +3098,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3121,7 +3121,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3145,7 +3145,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3168,7 +3168,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3195,7 +3195,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3218,7 +3218,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3241,7 +3241,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3264,7 +3264,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3287,7 +3287,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3310,7 +3310,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3333,7 +3333,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3356,7 +3356,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3383,7 +3383,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3406,7 +3406,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3429,7 +3429,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3456,7 +3456,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3479,7 +3479,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3502,7 +3502,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3525,7 +3525,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3548,7 +3548,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3571,7 +3571,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3594,7 +3594,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/greeting`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3616,7 +3616,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-menus`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3638,7 +3638,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3660,7 +3660,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3682,7 +3682,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3704,7 +3704,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3726,7 +3726,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3748,7 +3748,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3770,7 +3770,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3792,7 +3792,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3818,7 +3818,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/account/{accountId}/meeting-recordings`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3840,7 +3840,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3862,7 +3862,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3884,7 +3884,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/message-store-report`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3906,7 +3906,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3928,7 +3928,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3950,7 +3950,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3972,7 +3972,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3994,7 +3994,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4016,7 +4016,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4038,7 +4038,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4060,7 +4060,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4082,7 +4082,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/presence`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4104,7 +4104,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4126,7 +4126,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}/content`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4152,7 +4152,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/account/{accountId}/service-info`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4174,7 +4174,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/call-out`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4196,7 +4196,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4218,7 +4218,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4240,7 +4240,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4262,7 +4262,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4284,7 +4284,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4306,7 +4306,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4328,7 +4328,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4350,7 +4350,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4372,7 +4372,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4394,7 +4394,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4416,7 +4416,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4438,7 +4438,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4460,7 +4460,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4483,7 +4483,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4505,7 +4505,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4527,7 +4527,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4549,7 +4549,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4571,7 +4571,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4593,7 +4593,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4615,7 +4615,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4637,7 +4637,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates/{templateId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4659,7 +4659,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/client-info/sip-provision`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4680,7 +4680,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/country`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4701,7 +4701,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/country/{countryId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4722,7 +4722,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/fax-cover-page`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4743,7 +4743,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/greeting`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4764,7 +4764,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/greeting/{greetingId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4785,7 +4785,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/language`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4806,7 +4806,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/language/{languageId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4827,7 +4827,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/location`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4848,7 +4848,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/state`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4869,7 +4869,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/state/{stateId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4890,7 +4890,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/timezone`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4911,7 +4911,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/dictionary/timezone/{timezoneId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4932,7 +4932,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/cards`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4954,7 +4954,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/cards/{cardId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4975,7 +4975,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/glip/cards/{cardId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4996,7 +4996,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/glip/cards/{cardId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5017,7 +5017,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/chats`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5038,7 +5038,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5059,7 +5059,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/favorite`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5080,7 +5080,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/notes`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5101,7 +5101,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/notes`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5122,7 +5122,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5143,7 +5143,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/posts`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5164,7 +5164,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5185,7 +5185,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5206,7 +5206,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5227,7 +5227,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/read`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5248,7 +5248,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/tasks`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5269,7 +5269,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/tasks`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5290,7 +5290,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unfavorite`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5311,7 +5311,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unread`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5332,7 +5332,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/companies/{companyId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5353,7 +5353,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/conversations`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5374,7 +5374,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/conversations`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5395,7 +5395,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/conversations/{chatId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5416,7 +5416,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/data-export`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5437,7 +5437,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/data-export`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5458,7 +5458,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5479,7 +5479,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5504,7 +5504,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/glip/events`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5525,7 +5525,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/events`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5546,7 +5546,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/events/{eventId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5567,7 +5567,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/glip/events/{eventId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5588,7 +5588,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/glip/events/{eventId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5609,7 +5609,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/everyone`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5630,7 +5630,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/glip/everyone`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5651,7 +5651,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/favorites`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5672,7 +5672,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/groups`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5693,7 +5693,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/groups`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5714,7 +5714,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5735,7 +5735,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/bulk-assign`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5756,7 +5756,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/events`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5777,7 +5777,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/events`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5798,7 +5798,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/posts`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5819,7 +5819,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/posts`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5840,7 +5840,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5861,7 +5861,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5882,7 +5882,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5903,7 +5903,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/notes/{noteId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5924,7 +5924,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/glip/notes/{noteId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5945,7 +5945,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/glip/notes/{noteId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5966,7 +5966,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/lock`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5987,7 +5987,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/publish`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6008,7 +6008,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/unlock`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6029,7 +6029,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/persons/{personId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6050,7 +6050,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/posts`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6071,7 +6071,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/posts`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6092,7 +6092,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/preferences`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6113,7 +6113,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/recent/chats`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6134,7 +6134,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/tasks/{taskId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6155,7 +6155,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/glip/tasks/{taskId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6176,7 +6176,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/glip/tasks/{taskId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6197,7 +6197,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/tasks/{taskId}/complete`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6218,7 +6218,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/teams`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6239,7 +6239,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/teams`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6260,7 +6260,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/teams/{chatId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6281,7 +6281,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/restapi/v1.0/glip/teams/{chatId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6302,7 +6302,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/glip/teams/{chatId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6323,7 +6323,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/add`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6344,7 +6344,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/archive`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6365,7 +6365,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/join`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6386,7 +6386,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/leave`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6407,7 +6407,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/remove`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6428,7 +6428,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/unarchive`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6449,7 +6449,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/webhooks`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6470,7 +6470,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/glip/webhooks/{webhookId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6491,7 +6491,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/glip/webhooks/{webhookId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6512,7 +6512,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/activate`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6533,7 +6533,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/suspend`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6554,7 +6554,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/number-parser/parse`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6576,7 +6576,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/status`
 
-Rate Limit Group: NoThrottling
+Rate Limit Group: `NoThrottling`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6597,7 +6597,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/subscription`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6618,7 +6618,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/subscription`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6639,7 +6639,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/restapi/v1.0/subscription/{subscriptionId}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6660,7 +6660,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/restapi/v1.0/subscription/{subscriptionId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6682,7 +6682,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/restapi/v1.0/subscription/{subscriptionId}`
 
-Rate Limit Group: Medium
+Rate Limit Group: `Medium`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6703,7 +6703,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/restapi/v1.0/subscription/{subscriptionId}/renew`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6724,7 +6724,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/scim/v2/ServiceProviderConfig`
 
-Rate Limit Group: NoThrottling
+Rate Limit Group: `NoThrottling`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6745,7 +6745,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/scim/v2/Users`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6766,7 +6766,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/scim/v2/Users`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6787,7 +6787,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP POST `/scim/v2/Users/.search`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6808,7 +6808,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/scim/v2/Users/{id}`
 
-Rate Limit Group: Light
+Rate Limit Group: `Light`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6829,7 +6829,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PUT `/scim/v2/Users/{id}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6850,7 +6850,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP DELETE `/scim/v2/Users/{id}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6871,7 +6871,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP PATCH `/scim/v2/Users/{id}`
 
-Rate Limit Group: Heavy
+Rate Limit Group: `Heavy`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6892,7 +6892,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 HTTP GET `/scim/v2/health`
 
-Rate Limit Group: NoThrottling
+Rate Limit Group: `NoThrottling`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
