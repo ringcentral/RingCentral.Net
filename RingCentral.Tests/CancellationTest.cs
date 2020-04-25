@@ -61,7 +61,7 @@ namespace RingCentral.Tests
                 {
                     var r = await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest, token);
                 }
-                catch (TaskCanceledException tce)
+                catch (TaskCanceledException)
                 {
                     taskCanceledException = true;
                 }
