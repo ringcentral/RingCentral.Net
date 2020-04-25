@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesBulkUpdate
 {
@@ -23,10 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update
         /// </summary>
         public async Task<RingCentral.UpdateMultipleSwitchesResponse> Post(
-            RingCentral.UpdateMultipleSwitchesRequest updateMultipleSwitchesRequest)
+            RingCentral.UpdateMultipleSwitchesRequest updateMultipleSwitchesRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.UpdateMultipleSwitchesResponse>(this.Path(),
-                updateMultipleSwitchesRequest);
+            return await rc.Post<RingCentral.UpdateMultipleSwitchesResponse>(this.Path(), updateMultipleSwitchesRequest,
+                null, cancellationToken);
         }
     }
 }

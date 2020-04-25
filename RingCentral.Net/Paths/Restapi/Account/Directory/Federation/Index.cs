@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Directory.Federation
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
         /// Operation: Get Account Federation
         /// Http Get /restapi/v1.0/account/{accountId}/directory/federation
         /// </summary>
-        public async Task<RingCentral.FederationResource> Get()
+        public async Task<RingCentral.FederationResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.FederationResource>(this.Path());
+            return await rc.Get<RingCentral.FederationResource>(this.Path(), null, cancellationToken);
         }
     }
 }

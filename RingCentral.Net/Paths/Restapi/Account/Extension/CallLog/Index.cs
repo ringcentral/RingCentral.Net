@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 {
@@ -29,32 +30,35 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         /// Operation: Get User Call Log Records
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// </summary>
-        public async Task<RingCentral.UserCallLogResponse> List(ReadUserCallLogParameters queryParams = null)
+        public async Task<RingCentral.UserCallLogResponse> List(ReadUserCallLogParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete User Call Log
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// </summary>
-        public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null)
+        public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Delete<string>(this.Path(false), queryParams);
+            return await rc.Delete<string>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get User Call Record
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
         /// </summary>
-        public async Task<RingCentral.UserCallLogRecord> Get(ReadUserCallRecordParameters queryParams = null)
+        public async Task<RingCentral.UserCallLogRecord> Get(ReadUserCallRecordParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.callRecordId == null)
             {
                 throw new System.ArgumentNullException("callRecordId");
             }
 
-            return await rc.Get<RingCentral.UserCallLogRecord>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.UserCallLogRecord>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
 {
@@ -23,9 +24,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
         /// </summary>
         public async Task<RingCentral.GetConferencingInfoResponse> Get(
-            ReadConferencingSettingsParameters queryParams = null)
+            ReadConferencingSettingsParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams, cancellationToken);
         }
 
         /// <summary>
@@ -33,9 +34,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
         /// </summary>
         public async Task<RingCentral.GetConferencingInfoResponse> Put(
-            RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest)
+            RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest);
+            return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest,
+                null, cancellationToken);
         }
     }
 }

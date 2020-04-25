@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Webhooks
 {
@@ -29,37 +30,37 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         /// Operation: Get Webhooks
         /// Http Get /restapi/v1.0/glip/webhooks
         /// </summary>
-        public async Task<RingCentral.GlipWebhookList> List()
+        public async Task<RingCentral.GlipWebhookList> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(false));
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Webhook
         /// Http Get /restapi/v1.0/glip/webhooks/{webhookId}
         /// </summary>
-        public async Task<RingCentral.GlipWebhookList> Get()
+        public async Task<RingCentral.GlipWebhookList> Get(CancellationToken? cancellationToken = null)
         {
             if (this.webhookId == null)
             {
                 throw new System.ArgumentNullException("webhookId");
             }
 
-            return await rc.Get<RingCentral.GlipWebhookList>(this.Path());
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Webhook
         /// Http Delete /restapi/v1.0/glip/webhooks/{webhookId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.webhookId == null)
             {
                 throw new System.ArgumentNullException("webhookId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

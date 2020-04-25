@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
         /// Operation: Reject Call Party
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
         /// </summary>
-        public async Task<string> Post()
+        public async Task<string> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path());
+            return await rc.Post<string>(this.Path(), null, cancellationToken);
         }
     }
 }

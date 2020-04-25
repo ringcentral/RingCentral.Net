@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Flip
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Flip
         /// Operation: Call Flip on Party
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
         /// </summary>
-        public async Task<string> Post(RingCentral.CallPartyFlip callPartyFlip)
+        public async Task<string> Post(RingCentral.CallPartyFlip callPartyFlip,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), callPartyFlip);
+            return await rc.Post<string>(this.Path(), callPartyFlip, null, cancellationToken);
         }
     }
 }

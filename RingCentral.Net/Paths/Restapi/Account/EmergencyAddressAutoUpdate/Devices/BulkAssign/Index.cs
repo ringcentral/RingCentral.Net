@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices.BulkAssign
 {
@@ -23,9 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices.B
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
         /// </summary>
         public async Task<string> Post(
-            RingCentral.AssignMultipleDevicesAutomaticLocationUpdates assignMultipleDevicesAutomaticLocationUpdates)
+            RingCentral.AssignMultipleDevicesAutomaticLocationUpdates assignMultipleDevicesAutomaticLocationUpdates,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), assignMultipleDevicesAutomaticLocationUpdates);
+            return await rc.Post<string>(this.Path(), assignMultipleDevicesAutomaticLocationUpdates, null,
+                cancellationToken);
         }
     }
 }

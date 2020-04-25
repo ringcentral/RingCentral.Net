@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Features
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Features
         /// Operation: Get User Features
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/features
         /// </summary>
-        public async Task<RingCentral.FeatureList> Get(ReadUserFeaturesParameters queryParams = null)
+        public async Task<RingCentral.FeatureList> Get(ReadUserFeaturesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.FeatureList>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.FeatureList>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

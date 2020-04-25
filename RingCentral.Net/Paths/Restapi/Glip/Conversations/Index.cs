@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Conversations
 {
@@ -29,9 +30,10 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// Operation: Get Conversations
         /// Http Get /restapi/v1.0/glip/conversations
         /// </summary>
-        public async Task<RingCentral.GlipConversationsList> List(ListGlipConversationsParameters queryParams = null)
+        public async Task<RingCentral.GlipConversationsList> List(ListGlipConversationsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
@@ -39,23 +41,25 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// Http Post /restapi/v1.0/glip/conversations
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Post(
-            RingCentral.CreateGlipConversationRequest createGlipConversationRequest)
+            RingCentral.CreateGlipConversationRequest createGlipConversationRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), createGlipConversationRequest);
+            return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), createGlipConversationRequest,
+                null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Conversation
         /// Http Get /restapi/v1.0/glip/conversations/{chatId}
         /// </summary>
-        public async Task<RingCentral.GlipConversationInfo> Get()
+        public async Task<RingCentral.GlipConversationInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.chatId == null)
             {
                 throw new System.ArgumentNullException("chatId");
             }
 
-            return await rc.Get<RingCentral.GlipConversationInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipConversationInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
 {
@@ -23,9 +24,9 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         /// Http Get /restapi/v1.0/account/{accountId}/meeting-recordings
         /// </summary>
         public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
-            ListAccountMeetingRecordingsParameters queryParams = null)
+            ListAccountMeetingRecordingsParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
 {
@@ -30,23 +31,25 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         /// Http Post /restapi/v1.0/account/{accountId}/message-store-report
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Post(
-            RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest)
+            RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest);
+            return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest,
+                null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Message Store Report Task
         /// Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
         /// </summary>
-        public async Task<RingCentral.MessageStoreReport> Get()
+        public async Task<RingCentral.MessageStoreReport> Get(CancellationToken? cancellationToken = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.MessageStoreReport>(this.Path());
+            return await rc.Get<RingCentral.MessageStoreReport>(this.Path(), null, cancellationToken);
         }
     }
 }

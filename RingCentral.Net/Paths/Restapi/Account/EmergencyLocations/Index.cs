@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 {
@@ -29,32 +30,34 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         /// Operation: Add Emergency Location
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-locations
         /// </summary>
-        public async Task<string> Post(RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest)
+        public async Task<string> Post(RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(false), emergencyLocationInfoRequest);
+            return await rc.Post<string>(this.Path(false), emergencyLocationInfoRequest, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Emergency Location List
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-locations
         /// </summary>
-        public async Task<RingCentral.EmergencyLocationList> List(ListEmergencyLocationsParameters queryParams = null)
+        public async Task<RingCentral.EmergencyLocationList> List(ListEmergencyLocationsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.EmergencyLocationList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.EmergencyLocationList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Emergency Location
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// </summary>
-        public async Task<RingCentral.EmergencyLocationInfo> Get()
+        public async Task<RingCentral.EmergencyLocationInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.locationId == null)
             {
                 throw new System.ArgumentNullException("locationId");
             }
 
-            return await rc.Get<RingCentral.EmergencyLocationInfo>(this.Path());
+            return await rc.Get<RingCentral.EmergencyLocationInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -62,14 +65,16 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         /// Http Put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// </summary>
         public async Task<RingCentral.EmergencyLocationInfo> Put(
-            RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest)
+            RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
+            CancellationToken? cancellationToken = null)
         {
             if (this.locationId == null)
             {
                 throw new System.ArgumentNullException("locationId");
             }
 
-            return await rc.Put<RingCentral.EmergencyLocationInfo>(this.Path(), emergencyLocationInfoRequest);
+            return await rc.Put<RingCentral.EmergencyLocationInfo>(this.Path(), emergencyLocationInfoRequest, null,
+                cancellationToken);
         }
     }
 }

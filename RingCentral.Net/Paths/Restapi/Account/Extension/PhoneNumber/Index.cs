@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
 {
@@ -23,9 +24,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number
         /// </summary>
         public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(
-            ListExtensionPhoneNumbersParameters queryParams = null)
+            ListExtensionPhoneNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetExtensionPhoneNumbersResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetExtensionPhoneNumbersResponse>(this.Path(), queryParams,
+                cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Read
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Read
         /// Operation: Mark Chat as Read
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/read
         /// </summary>
-        public async Task<string> Post()
+        public async Task<string> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path());
+            return await rc.Post<string>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
 {
@@ -29,23 +30,23 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         /// Operation: Get Message Store Report Archive
         /// Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
         /// </summary>
-        public async Task<RingCentral.MessageStoreReportArchive> List()
+        public async Task<RingCentral.MessageStoreReportArchive> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(false));
+            return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Message Store Report Archive Content
         /// Http Get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
         /// </summary>
-        public async Task<string> Get()
+        public async Task<string> Get(CancellationToken? cancellationToken = null)
         {
             if (this.archiveId == null)
             {
                 throw new System.ArgumentNullException("archiveId");
             }
 
-            return await rc.Get<string>(this.Path());
+            return await rc.Get<string>(this.Path(), null, cancellationToken);
         }
     }
 }

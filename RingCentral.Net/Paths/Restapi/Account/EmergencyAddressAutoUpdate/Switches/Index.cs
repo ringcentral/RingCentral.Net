@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
 {
@@ -29,60 +30,63 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// Operation: Get Account Switch List
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
         /// </summary>
-        public async Task<RingCentral.SwitchesList> List(ListAccountSwitchesParameters queryParams = null)
+        public async Task<RingCentral.SwitchesList> List(ListAccountSwitchesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.SwitchesList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.SwitchesList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Create Switch
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
         /// </summary>
-        public async Task<RingCentral.SwitchInfo> Post(RingCentral.CreateSwitchInfo createSwitchInfo)
+        public async Task<RingCentral.SwitchInfo> Post(RingCentral.CreateSwitchInfo createSwitchInfo,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.SwitchInfo>(this.Path(false), createSwitchInfo);
+            return await rc.Post<RingCentral.SwitchInfo>(this.Path(false), createSwitchInfo, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Switch
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         /// </summary>
-        public async Task<RingCentral.SwitchInfo> Get()
+        public async Task<RingCentral.SwitchInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.switchId == null)
             {
                 throw new System.ArgumentNullException("switchId");
             }
 
-            return await rc.Get<RingCentral.SwitchInfo>(this.Path());
+            return await rc.Get<RingCentral.SwitchInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Switch
         /// Http Put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         /// </summary>
-        public async Task<RingCentral.SwitchInfo> Put(RingCentral.UpdateSwitchInfo updateSwitchInfo)
+        public async Task<RingCentral.SwitchInfo> Put(RingCentral.UpdateSwitchInfo updateSwitchInfo,
+            CancellationToken? cancellationToken = null)
         {
             if (this.switchId == null)
             {
                 throw new System.ArgumentNullException("switchId");
             }
 
-            return await rc.Put<RingCentral.SwitchInfo>(this.Path(), updateSwitchInfo);
+            return await rc.Put<RingCentral.SwitchInfo>(this.Path(), updateSwitchInfo, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Switch
         /// Http Delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.switchId == null)
             {
                 throw new System.ArgumentNullException("switchId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

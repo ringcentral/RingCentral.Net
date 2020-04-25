@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 {
@@ -29,23 +30,25 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         /// Operation: Get Timezone List
         /// Http Get /restapi/v1.0/dictionary/timezone
         /// </summary>
-        public async Task<RingCentral.GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null)
+        public async Task<RingCentral.GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Timezone
         /// Http Get /restapi/v1.0/dictionary/timezone/{timezoneId}
         /// </summary>
-        public async Task<RingCentral.GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null)
+        public async Task<RingCentral.GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.timezoneId == null)
             {
                 throw new System.ArgumentNullException("timezoneId");
             }
 
-            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

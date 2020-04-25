@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 {
@@ -30,18 +31,21 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Post(
-            RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
+            RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest);
+            return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest,
+                null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Call Monitoring Groups List
         /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// </summary>
-        public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null)
+        public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
@@ -49,28 +53,30 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// Http Put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Put(
-            RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest)
+            RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
+            CancellationToken? cancellationToken = null)
         {
             if (this.groupId == null)
             {
                 throw new System.ArgumentNullException("groupId");
             }
 
-            return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest);
+            return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Call Monitoring Group
         /// Http Delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.groupId == null)
             {
                 throw new System.ArgumentNullException("groupId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
         /// Operation: Assign Multiple Call Queue Members
         /// Http Post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
         /// </summary>
-        public async Task<string> Post(RingCentral.CallQueueBulkAssignResource callQueueBulkAssignResource)
+        public async Task<string> Post(RingCentral.CallQueueBulkAssignResource callQueueBulkAssignResource,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), callQueueBulkAssignResource);
+            return await rc.Post<string>(this.Path(), callQueueBulkAssignResource, null, cancellationToken);
         }
     }
 }

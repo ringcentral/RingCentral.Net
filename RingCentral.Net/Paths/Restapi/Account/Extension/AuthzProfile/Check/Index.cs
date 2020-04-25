@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
         /// Operation: Check User Permission
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
         /// </summary>
-        public async Task<RingCentral.AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null)
+        public async Task<RingCentral.AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

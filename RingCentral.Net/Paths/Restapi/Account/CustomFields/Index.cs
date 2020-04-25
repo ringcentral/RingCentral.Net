@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CustomFields
 {
@@ -30,18 +31,19 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// Http Post /restapi/v1.0/account/{accountId}/custom-fields
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Post(
-            RingCentral.CustomFieldCreateRequest customFieldCreateRequest)
+            RingCentral.CustomFieldCreateRequest customFieldCreateRequest, CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CustomFieldResource>(this.Path(false), customFieldCreateRequest);
+            return await rc.Post<RingCentral.CustomFieldResource>(this.Path(false), customFieldCreateRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Custom Field List
         /// Http Get /restapi/v1.0/account/{accountId}/custom-fields
         /// </summary>
-        public async Task<RingCentral.CustomFieldsResource> Get()
+        public async Task<RingCentral.CustomFieldsResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CustomFieldsResource>(this.Path(false));
+            return await rc.Get<RingCentral.CustomFieldsResource>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
@@ -49,28 +51,29 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// Http Put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Put(
-            RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest)
+            RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, CancellationToken? cancellationToken = null)
         {
             if (this.fieldId == null)
             {
                 throw new System.ArgumentNullException("fieldId");
             }
 
-            return await rc.Put<RingCentral.CustomFieldResource>(this.Path(), customFieldUpdateRequest);
+            return await rc.Put<RingCentral.CustomFieldResource>(this.Path(), customFieldUpdateRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Custom Field
         /// Http Delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.fieldId == null)
             {
                 throw new System.ArgumentNullException("fieldId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

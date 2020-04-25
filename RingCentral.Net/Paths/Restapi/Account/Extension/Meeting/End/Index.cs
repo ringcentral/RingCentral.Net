@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
         /// Operation: End Meeting
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
         /// </summary>
-        public async Task<string> Post()
+        public async Task<string> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path());
+            return await rc.Post<string>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Groups.Posts.Text
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts.Text
         /// Operation: Update Post
         /// Http Put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
         /// </summary>
-        public async Task<string> Put(string body)
+        public async Task<string> Put(string body, CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<string>(this.Path(), body);
+            return await rc.Put<string>(this.Path(), body, null, cancellationToken);
         }
     }
 }

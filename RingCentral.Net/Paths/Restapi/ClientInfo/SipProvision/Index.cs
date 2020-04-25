@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
 {
@@ -23,9 +24,11 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         /// Http Post /restapi/v1.0/client-info/sip-provision
         /// </summary>
         public async Task<RingCentral.CreateSipRegistrationResponse> Post(
-            RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest)
+            RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CreateSipRegistrationResponse>(this.Path(), createSipRegistrationRequest);
+            return await rc.Post<RingCentral.CreateSipRegistrationResponse>(this.Path(), createSipRegistrationRequest,
+                null, cancellationToken);
         }
     }
 }

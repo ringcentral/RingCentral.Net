@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi
 {
@@ -27,23 +28,23 @@ namespace RingCentral.Paths.Restapi
         /// Operation: Get API Versions
         /// Http Get /restapi
         /// </summary>
-        public async Task<RingCentral.GetVersionsResponse> List()
+        public async Task<RingCentral.GetVersionsResponse> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetVersionsResponse>(this.Path(false));
+            return await rc.Get<RingCentral.GetVersionsResponse>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Version Info
         /// Http Get /restapi/{apiVersion}
         /// </summary>
-        public async Task<RingCentral.GetVersionResponse> Get()
+        public async Task<RingCentral.GetVersionResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.apiVersion == null)
             {
                 throw new System.ArgumentNullException("apiVersion");
             }
 
-            return await rc.Get<RingCentral.GetVersionResponse>(this.Path());
+            return await rc.Get<RingCentral.GetVersionResponse>(this.Path(), null, cancellationToken);
         }
     }
 }

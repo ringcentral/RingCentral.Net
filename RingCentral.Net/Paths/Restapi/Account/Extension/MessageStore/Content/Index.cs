@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
 {
@@ -29,14 +30,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         /// Operation: Get Message Content
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
         /// </summary>
-        public async Task<byte[]> Get(ReadMessageContentParameters queryParams = null)
+        public async Task<byte[]> Get(ReadMessageContentParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.attachmentId == null)
             {
                 throw new System.ArgumentNullException("attachmentId");
             }
 
-            return await rc.Get<byte[]>(this.Path(), queryParams);
+            return await rc.Get<byte[]>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

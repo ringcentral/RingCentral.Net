@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallRecording
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         /// Operation: Get Call Recording Settings
         /// Http Get /restapi/v1.0/account/{accountId}/call-recording
         /// </summary>
-        public async Task<RingCentral.CallRecordingSettingsResource> Get()
+        public async Task<RingCentral.CallRecordingSettingsResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path());
+            return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,9 +33,11 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         /// Http Put /restapi/v1.0/account/{accountId}/call-recording
         /// </summary>
         public async Task<RingCentral.CallRecordingSettingsResource> Put(
-            RingCentral.CallRecordingSettingsResource callRecordingSettingsResource)
+            RingCentral.CallRecordingSettingsResource callRecordingSettingsResource,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.CallRecordingSettingsResource>(this.Path(), callRecordingSettingsResource);
+            return await rc.Put<RingCentral.CallRecordingSettingsResource>(this.Path(), callRecordingSettingsResource,
+                null, cancellationToken);
         }
     }
 }

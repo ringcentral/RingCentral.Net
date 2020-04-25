@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Forward
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Forward
         /// Operation: Forward Call Party
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
         /// </summary>
-        public async Task<RingCentral.CallParty> Post(RingCentral.ForwardTarget forwardTarget)
+        public async Task<RingCentral.CallParty> Post(RingCentral.ForwardTarget forwardTarget,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CallParty>(this.Path(), forwardTarget);
+            return await rc.Post<RingCentral.CallParty>(this.Path(), forwardTarget, null, cancellationToken);
         }
     }
 }

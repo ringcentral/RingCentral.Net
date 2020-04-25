@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -15,7 +16,7 @@ namespace RingCentral
         };
 
         public async Task<HttpResponseMessage> Request(HttpMethod httpMethod, string endpoint,
-            object content = null, object queryParams = null)
+            object content = null, object queryParams = null, CancellationToken? cancellationToken = null)
         {
             HttpContent httpContent = null;
             if (content is HttpContent)
@@ -68,13 +69,13 @@ namespace RingCentral
                 RequestUri = uriBuilder.Uri,
                 Content = httpContent
             };
-            return await Request(httpRequestMessage);
+            return await Request(httpRequestMessage, 0, cancellationToken);
         }
 
         public async Task<T> Request<T>(HttpMethod httpMethod, string endpoint,
-            object content = null, object queryParams = null)
+            object content = null, object queryParams = null, CancellationToken? cancellationToken = null)
         {
-            var httpResponseMessage = await Request(httpMethod, endpoint, content, queryParams);
+            var httpResponseMessage = await Request(httpMethod, endpoint, content, queryParams, cancellationToken);
             if (typeof(T) == typeof(HttpResponseMessage))
             {
                 return (T) (object) httpResponseMessage;
@@ -109,54 +110,64 @@ namespace RingCentral
             }
         }
 
-        public async Task<HttpResponseMessage> Post(string endpoint, object content = null, object queryParams = null)
+        public async Task<HttpResponseMessage> Post(string endpoint, object content = null, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request(HttpMethod.Post, endpoint, content, queryParams);
+            return await Request(HttpMethod.Post, endpoint, content, queryParams, cancellationToken);
         }
 
-        public async Task<T> Post<T>(string endpoint, object content = null, object queryParams = null)
+        public async Task<T> Post<T>(string endpoint, object content = null, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request<T>(HttpMethod.Post, endpoint, content, queryParams);
+            return await Request<T>(HttpMethod.Post, endpoint, content, queryParams, cancellationToken);
         }
 
-        public async Task<HttpResponseMessage> Put(string endpoint, object content = null, object queryParams = null)
+        public async Task<HttpResponseMessage> Put(string endpoint, object content = null, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request(HttpMethod.Put, endpoint, content, queryParams);
+            return await Request(HttpMethod.Put, endpoint, content, queryParams, cancellationToken);
         }
 
-        public async Task<T> Put<T>(string endpoint, object content = null, object queryParams = null)
+        public async Task<T> Put<T>(string endpoint, object content = null, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request<T>(HttpMethod.Put, endpoint, content, queryParams);
+            return await Request<T>(HttpMethod.Put, endpoint, content, queryParams, cancellationToken);
         }
 
-        public async Task<HttpResponseMessage> Patch(string endpoint, object content = null, object queryParams = null)
+        public async Task<HttpResponseMessage> Patch(string endpoint, object content = null, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request(new HttpMethod("PATCH"), endpoint, content, queryParams);
+            return await Request(new HttpMethod("PATCH"), endpoint, content, queryParams, cancellationToken);
         }
 
-        public async Task<T> Patch<T>(string endpoint, object content = null, object queryParams = null)
+        public async Task<T> Patch<T>(string endpoint, object content = null, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request<T>(new HttpMethod("PATCH"), endpoint, content, queryParams);
+            return await Request<T>(new HttpMethod("PATCH"), endpoint, content, queryParams, cancellationToken);
         }
 
-        public async Task<HttpResponseMessage> Get(string endpoint, object queryParams = null)
+        public async Task<HttpResponseMessage> Get(string endpoint, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request(HttpMethod.Get, endpoint, null, queryParams);
+            return await Request(HttpMethod.Get, endpoint, null, queryParams, cancellationToken);
         }
 
-        public async Task<T> Get<T>(string endpoint, object queryParams = null)
+        public async Task<T> Get<T>(string endpoint, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request<T>(HttpMethod.Get, endpoint, null, queryParams);
+            return await Request<T>(HttpMethod.Get, endpoint, null, queryParams, cancellationToken);
         }
 
-        public async Task<HttpResponseMessage> Delete(string endpoint, object queryParams = null)
+        public async Task<HttpResponseMessage> Delete(string endpoint, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request(HttpMethod.Delete, endpoint, null, queryParams);
+            return await Request(HttpMethod.Delete, endpoint, null, queryParams, cancellationToken);
         }
 
-        public async Task<T> Delete<T>(string endpoint, object queryParams = null)
+        public async Task<T> Delete<T>(string endpoint, object queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await Request<T>(HttpMethod.Delete, endpoint, null, queryParams);
+            return await Request<T>(HttpMethod.Delete, endpoint, null, queryParams, cancellationToken);
         }
     }
 }

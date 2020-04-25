@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Teams.Add
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Add
         /// Operation: Add Team Members
         /// Http Post /restapi/v1.0/glip/teams/{chatId}/add
         /// </summary>
-        public async Task<string> Post(RingCentral.GlipPostMembersListBody glipPostMembersListBody)
+        public async Task<string> Post(RingCentral.GlipPostMembersListBody glipPostMembersListBody,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), glipPostMembersListBody);
+            return await rc.Post<string>(this.Path(), glipPostMembersListBody, null, cancellationToken);
         }
     }
 }

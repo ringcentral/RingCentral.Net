@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 {
@@ -29,28 +30,29 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// Operation: Get Call Party Status
         /// Http Get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// </summary>
-        public async Task<RingCentral.CallParty> Get()
+        public async Task<RingCentral.CallParty> Get(CancellationToken? cancellationToken = null)
         {
             if (this.partyId == null)
             {
                 throw new System.ArgumentNullException("partyId");
             }
 
-            return await rc.Get<RingCentral.CallParty>(this.Path());
+            return await rc.Get<RingCentral.CallParty>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Call Party
         /// Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// </summary>
-        public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest)
+        public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest,
+            CancellationToken? cancellationToken = null)
         {
             if (this.partyId == null)
             {
                 throw new System.ArgumentNullException("partyId");
             }
 
-            return await rc.Patch<RingCentral.CallParty>(this.Path(), partyUpdateRequest);
+            return await rc.Patch<RingCentral.CallParty>(this.Path(), partyUpdateRequest, null, cancellationToken);
         }
     }
 }

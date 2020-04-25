@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Mms
 {
@@ -22,10 +23,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         /// Operation: Create MMS Message
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage)
+        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage,
+            CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createMMSMessage);
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), multipartFormDataContent);
+            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), multipartFormDataContent, null,
+                cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
         /// Operation: Make CallOut
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/call-out
         /// </summary>
-        public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest)
+        public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CallSession>(this.Path(), makeCallOutRequest);
+            return await rc.Post<RingCentral.CallSession>(this.Path(), makeCallOutRequest, null, cancellationToken);
         }
     }
 }

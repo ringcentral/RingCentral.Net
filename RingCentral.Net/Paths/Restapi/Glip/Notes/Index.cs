@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Notes
 {
@@ -29,42 +30,43 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         /// Operation: Get Note
         /// Http Get /restapi/v1.0/glip/notes/{noteId}
         /// </summary>
-        public async Task<RingCentral.GetGlipNoteInfo> Get()
+        public async Task<RingCentral.GetGlipNoteInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.noteId == null)
             {
                 throw new System.ArgumentNullException("noteId");
             }
 
-            return await rc.Get<RingCentral.GetGlipNoteInfo>(this.Path());
+            return await rc.Get<RingCentral.GetGlipNoteInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Note
         /// Http Patch /restapi/v1.0/glip/notes/{noteId}
         /// </summary>
-        public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate)
+        public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
+            CancellationToken? cancellationToken = null)
         {
             if (this.noteId == null)
             {
                 throw new System.ArgumentNullException("noteId");
             }
 
-            return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate);
+            return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Note
         /// Http Delete /restapi/v1.0/glip/notes/{noteId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.noteId == null)
             {
                 throw new System.ArgumentNullException("noteId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

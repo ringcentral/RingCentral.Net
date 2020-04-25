@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         /// Operation: Get Chats
         /// Http Get /restapi/v1.0/glip/chats
         /// </summary>
-        public async Task<RingCentral.GlipChatsList> List(ListGlipChatsParameters queryParams = null)
+        public async Task<RingCentral.GlipChatsList> List(ListGlipChatsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Chat
         /// Http Get /restapi/v1.0/glip/chats/{chatId}
         /// </summary>
-        public async Task<RingCentral.GlipChatInfo> Get()
+        public async Task<RingCentral.GlipChatInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.chatId == null)
             {
                 throw new System.ArgumentNullException("chatId");
             }
 
-            return await rc.Get<RingCentral.GlipChatInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipChatInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

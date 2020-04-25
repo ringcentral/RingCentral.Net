@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Subscription
 {
@@ -29,9 +30,11 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// Operation: Get Subscriptions
         /// Http Get /restapi/v1.0/subscription
         /// </summary>
-        public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List()
+        public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List(
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.RecordsCollectionResourceSubscriptionResponse>(this.Path(false));
+            return await rc.Get<RingCentral.RecordsCollectionResourceSubscriptionResponse>(this.Path(false), null,
+                cancellationToken);
         }
 
         /// <summary>
@@ -39,23 +42,25 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// Http Post /restapi/v1.0/subscription
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(
-            RingCentral.CreateSubscriptionRequest createSubscriptionRequest)
+            RingCentral.CreateSubscriptionRequest createSubscriptionRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(false), createSubscriptionRequest);
+            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(false), createSubscriptionRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Subscription
         /// Http Get /restapi/v1.0/subscription/{subscriptionId}
         /// </summary>
-        public async Task<RingCentral.SubscriptionInfo> Get()
+        public async Task<RingCentral.SubscriptionInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.subscriptionId == null)
             {
                 throw new System.ArgumentNullException("subscriptionId");
             }
 
-            return await rc.Get<RingCentral.SubscriptionInfo>(this.Path());
+            return await rc.Get<RingCentral.SubscriptionInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -64,28 +69,29 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Put(
             RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
-            UpdateSubscriptionParameters queryParams = null)
+            UpdateSubscriptionParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
             if (this.subscriptionId == null)
             {
                 throw new System.ArgumentNullException("subscriptionId");
             }
 
-            return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams);
+            return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Cancel Subscription
         /// Http Delete /restapi/v1.0/subscription/{subscriptionId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.subscriptionId == null)
             {
                 throw new System.ArgumentNullException("subscriptionId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.AnsweringRule
 {
@@ -30,9 +31,11 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         /// Http Post /restapi/v1.0/account/{accountId}/answering-rule
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(
-            RingCentral.CompanyAnsweringRuleRequest companyAnsweringRuleRequest)
+            RingCentral.CompanyAnsweringRuleRequest companyAnsweringRuleRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest);
+            return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest,
+                null, cancellationToken);
         }
 
         /// <summary>
@@ -40,23 +43,23 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         /// Http Get /restapi/v1.0/account/{accountId}/answering-rule
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleList> List(
-            ListCompanyAnsweringRulesParameters queryParams = null)
+            ListCompanyAnsweringRulesParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Company Call Handling Rule
         /// Http Get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         /// </summary>
-        public async Task<RingCentral.CompanyAnsweringRuleInfo> Get()
+        public async Task<RingCentral.CompanyAnsweringRuleInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.ruleId == null)
             {
                 throw new System.ArgumentNullException("ruleId");
             }
 
-            return await rc.Get<RingCentral.CompanyAnsweringRuleInfo>(this.Path());
+            return await rc.Get<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -64,28 +67,30 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         /// Http Put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(
-            RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate)
+            RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate,
+            CancellationToken? cancellationToken = null)
         {
             if (this.ruleId == null)
             {
                 throw new System.ArgumentNullException("ruleId");
             }
 
-            return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate);
+            return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Company Call Handling Rule
         /// Http Delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.ruleId == null)
             {
                 throw new System.ArgumentNullException("ruleId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

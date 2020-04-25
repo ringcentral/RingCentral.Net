@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
 {
@@ -29,60 +30,63 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// Operation: Get Posts
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/posts
         /// </summary>
-        public async Task<RingCentral.GlipPostsList> List(ReadGlipPostsParameters queryParams = null)
+        public async Task<RingCentral.GlipPostsList> List(ReadGlipPostsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipPostsList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GlipPostsList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Create Post
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/posts
         /// </summary>
-        public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipPostPostBody glipPostPostBody)
+        public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipPostPostBody glipPostPostBody,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), glipPostPostBody);
+            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), glipPostPostBody, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Post
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
-        public async Task<RingCentral.GlipPostInfo> Get()
+        public async Task<RingCentral.GlipPostInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.postId == null)
             {
                 throw new System.ArgumentNullException("postId");
             }
 
-            return await rc.Get<RingCentral.GlipPostInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipPostInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Post
         /// Http Patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
-        public async Task<RingCentral.GlipPostInfo> Patch(RingCentral.GlipPatchPostBody glipPatchPostBody)
+        public async Task<RingCentral.GlipPostInfo> Patch(RingCentral.GlipPatchPostBody glipPatchPostBody,
+            CancellationToken? cancellationToken = null)
         {
             if (this.postId == null)
             {
                 throw new System.ArgumentNullException("postId");
             }
 
-            return await rc.Patch<RingCentral.GlipPostInfo>(this.Path(), glipPatchPostBody);
+            return await rc.Patch<RingCentral.GlipPostInfo>(this.Path(), glipPatchPostBody, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Post
         /// Http Delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.postId == null)
             {
                 throw new System.ArgumentNullException("postId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

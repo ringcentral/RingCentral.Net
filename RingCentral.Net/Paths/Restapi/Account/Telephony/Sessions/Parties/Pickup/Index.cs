@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Pickup
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Pickup
         /// Operation: Pickup Call
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
         /// </summary>
-        public async Task<RingCentral.CallParty> Post(RingCentral.PickupTarget pickupTarget)
+        public async Task<RingCentral.CallParty> Post(RingCentral.PickupTarget pickupTarget,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CallParty>(this.Path(), pickupTarget);
+            return await rc.Post<RingCentral.CallParty>(this.Path(), pickupTarget, null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.PhoneNumber
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         /// Operation: Get Company Phone Number List
         /// Http Get /restapi/v1.0/account/{accountId}/phone-number
         /// </summary>
-        public async Task<RingCentral.AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null)
+        public async Task<RingCentral.AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Phone Number
         /// Http Get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
         /// </summary>
-        public async Task<RingCentral.CompanyPhoneNumberInfo> Get()
+        public async Task<RingCentral.CompanyPhoneNumberInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.phoneNumberId == null)
             {
                 throw new System.ArgumentNullException("phoneNumberId");
             }
 
-            return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path());
+            return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Directory.Entries
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         /// Operation: Get Company Directory Entries
         /// Http Get /restapi/v1.0/account/{accountId}/directory/entries
         /// </summary>
-        public async Task<RingCentral.DirectoryResource> List(ListDirectoryEntriesParameters queryParams = null)
+        public async Task<RingCentral.DirectoryResource> List(ListDirectoryEntriesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.DirectoryResource>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.DirectoryResource>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Corporate Directory Entry
         /// Http Get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
         /// </summary>
-        public async Task<RingCentral.ContactResource> Get()
+        public async Task<RingCentral.ContactResource> Get(CancellationToken? cancellationToken = null)
         {
             if (this.entryId == null)
             {
                 throw new System.ArgumentNullException("entryId");
             }
 
-            return await rc.Get<RingCentral.ContactResource>(this.Path());
+            return await rc.Get<RingCentral.ContactResource>(this.Path(), null, cancellationToken);
         }
     }
 }

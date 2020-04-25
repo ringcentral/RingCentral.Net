@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Posts
 {
@@ -22,18 +23,20 @@ namespace RingCentral.Paths.Restapi.Glip.Posts
         /// Operation: Get Posts
         /// Http Get /restapi/v1.0/glip/posts
         /// </summary>
-        public async Task<RingCentral.GlipPosts> Get(ListGlipPostsParameters queryParams = null)
+        public async Task<RingCentral.GlipPosts> Get(ListGlipPostsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipPosts>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GlipPosts>(this.Path(), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Create Post
         /// Http Post /restapi/v1.0/glip/posts
         /// </summary>
-        public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost)
+        public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(), glipCreatePost);
+            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(), glipCreatePost, null, cancellationToken);
         }
     }
 }

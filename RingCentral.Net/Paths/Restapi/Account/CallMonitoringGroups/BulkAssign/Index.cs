@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
         /// Operation: Update Call Monitoring Group List
         /// Http Post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
         /// </summary>
-        public async Task<string> Post(RingCentral.CallMonitoringBulkAssign callMonitoringBulkAssign)
+        public async Task<string> Post(RingCentral.CallMonitoringBulkAssign callMonitoringBulkAssign,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), callMonitoringBulkAssign);
+            return await rc.Post<string>(this.Path(), callMonitoringBulkAssign, null, cancellationToken);
         }
     }
 }

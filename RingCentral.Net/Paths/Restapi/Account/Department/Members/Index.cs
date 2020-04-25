@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Department.Members
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Department.Members
         /// Operation: Get Department Member List
         /// Http Get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
         /// </summary>
-        public async Task<RingCentral.DepartmentMemberList> Get(ListDepartmentMembersParameters queryParams = null)
+        public async Task<RingCentral.DepartmentMemberList> Get(ListDepartmentMembersParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.DepartmentMemberList>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.DepartmentMemberList>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

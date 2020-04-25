@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.ActiveCalls
 {
@@ -23,9 +24,9 @@ namespace RingCentral.Paths.Restapi.Account.ActiveCalls
         /// Http Get /restapi/v1.0/account/{accountId}/active-calls
         /// </summary>
         public async Task<RingCentral.CompanyActiveCallsResponse> Get(
-            ListCompanyActiveCallsParameters queryParams = null)
+            ListCompanyActiveCallsParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CompanyActiveCallsResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.CompanyActiveCallsResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

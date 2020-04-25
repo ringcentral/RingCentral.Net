@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Teams.Remove
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Remove
         /// Operation: Remove Team Members
         /// Http Post /restapi/v1.0/glip/teams/{chatId}/remove
         /// </summary>
-        public async Task<string> Post(RingCentral.GlipPostMembersIdsListBody glipPostMembersIdsListBody)
+        public async Task<string> Post(RingCentral.GlipPostMembersIdsListBody glipPostMembersIdsListBody,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), glipPostMembersIdsListBody);
+            return await rc.Post<string>(this.Path(), glipPostMembersIdsListBody, null, cancellationToken);
         }
     }
 }

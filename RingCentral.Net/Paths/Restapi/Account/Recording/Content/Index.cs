@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Recording.Content
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Recording.Content
         /// Operation: Get Call Recordings Data
         /// Http Get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
         /// </summary>
-        public async Task<byte[]> Get()
+        public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<byte[]>(this.Path());
+            return await rc.Get<byte[]>(this.Path(), null, cancellationToken);
         }
     }
 }

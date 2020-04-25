@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Scim.ServiceProviderConfig
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
         /// Operation: Get Service Provider Config
         /// Http Get /scim/v2/ServiceProviderConfig
         /// </summary>
-        public async Task<RingCentral.ServiceProviderConfig> Get()
+        public async Task<RingCentral.ServiceProviderConfig> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.ServiceProviderConfig>(this.Path());
+            return await rc.Get<RingCentral.ServiceProviderConfig>(this.Path(), null, cancellationToken);
         }
     }
 }

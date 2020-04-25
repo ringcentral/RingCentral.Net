@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
 {
@@ -23,9 +24,9 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
         /// Http Get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroupMemberList> Get(
-            ListCallMonitoringGroupMembersParameters queryParams = null)
+            ListCallMonitoringGroupMembersParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

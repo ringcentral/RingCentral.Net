@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
         /// Operation: Get Authorization Profile
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
         /// </summary>
-        public async Task<RingCentral.AuthProfileResource> Get()
+        public async Task<RingCentral.AuthProfileResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AuthProfileResource>(this.Path());
+            return await rc.Get<RingCentral.AuthProfileResource>(this.Path(), null, cancellationToken);
         }
     }
 }

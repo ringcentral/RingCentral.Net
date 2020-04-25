@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Unread
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unread
         /// Operation: Mark Chat as Unread
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/unread
         /// </summary>
-        public async Task<string> Post()
+        public async Task<string> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path());
+            return await rc.Post<string>(this.Path(), null, cancellationToken);
         }
     }
 }

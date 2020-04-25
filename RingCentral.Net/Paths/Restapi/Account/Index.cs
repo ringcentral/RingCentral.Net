@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account
 {
@@ -29,14 +30,14 @@ namespace RingCentral.Paths.Restapi.Account
         /// Operation: Get Account Info
         /// Http Get /restapi/v1.0/account/{accountId}
         /// </summary>
-        public async Task<RingCentral.GetAccountInfoResponse> Get()
+        public async Task<RingCentral.GetAccountInfoResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.accountId == null)
             {
                 throw new System.ArgumentNullException("accountId");
             }
 
-            return await rc.Get<RingCentral.GetAccountInfoResponse>(this.Path());
+            return await rc.Get<RingCentral.GetAccountInfoResponse>(this.Path(), null, cancellationToken);
         }
     }
 }

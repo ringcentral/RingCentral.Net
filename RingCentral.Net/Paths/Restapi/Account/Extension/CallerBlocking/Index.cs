@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         /// Operation: Get Caller Blocking Settings
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
         /// </summary>
-        public async Task<RingCentral.CallerBlockingSettings> Get()
+        public async Task<RingCentral.CallerBlockingSettings> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path());
+            return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,9 +33,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
         /// </summary>
         public async Task<RingCentral.CallerBlockingSettings> Put(
-            RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate)
+            RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate);
+            return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate, null,
+                cancellationToken);
         }
     }
 }

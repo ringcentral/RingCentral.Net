@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Templates
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         /// Operation: Get User Template List
         /// Http Get /restapi/v1.0/account/{accountId}/templates
         /// </summary>
-        public async Task<RingCentral.UserTemplates> List(ListUserTemplatesParameters queryParams = null)
+        public async Task<RingCentral.UserTemplates> List(ListUserTemplatesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get User Template
         /// Http Get /restapi/v1.0/account/{accountId}/templates/{templateId}
         /// </summary>
-        public async Task<RingCentral.TemplateInfo> Get()
+        public async Task<RingCentral.TemplateInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.templateId == null)
             {
                 throw new System.ArgumentNullException("templateId");
             }
 
-            return await rc.Get<RingCentral.TemplateInfo>(this.Path());
+            return await rc.Get<RingCentral.TemplateInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

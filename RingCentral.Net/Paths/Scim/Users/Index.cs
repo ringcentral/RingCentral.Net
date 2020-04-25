@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Scim.Users
 {
@@ -29,74 +30,78 @@ namespace RingCentral.Paths.Scim.Users
         /// Operation: Search/List Users
         /// Http Get /scim/v2/Users
         /// </summary>
-        public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null)
+        public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Create User
         /// Http Post /scim/v2/Users
         /// </summary>
-        public async Task<RingCentral.UserResponse> Post(RingCentral.CreateUser createUser)
+        public async Task<RingCentral.UserResponse> Post(RingCentral.CreateUser createUser,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.UserResponse>(this.Path(false), createUser);
+            return await rc.Post<RingCentral.UserResponse>(this.Path(false), createUser, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get User
         /// Http Get /scim/v2/Users/{id}
         /// </summary>
-        public async Task<RingCentral.UserResponse> Get()
+        public async Task<RingCentral.UserResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Get<RingCentral.UserResponse>(this.Path());
+            return await rc.Get<RingCentral.UserResponse>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update/Replace User
         /// Http Put /scim/v2/Users/{id}
         /// </summary>
-        public async Task<RingCentral.UserResponse> Put(RingCentral.User user)
+        public async Task<RingCentral.UserResponse> Put(RingCentral.User user,
+            CancellationToken? cancellationToken = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Put<RingCentral.UserResponse>(this.Path(), user);
+            return await rc.Put<RingCentral.UserResponse>(this.Path(), user, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete User
         /// Http Delete /scim/v2/Users/{id}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update/Patch User
         /// Http Patch /scim/v2/Users/{id}
         /// </summary>
-        public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch)
+        public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch,
+            CancellationToken? cancellationToken = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch);
+            return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch, null, cancellationToken);
         }
     }
 }

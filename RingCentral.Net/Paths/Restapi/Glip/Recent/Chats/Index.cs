@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
 {
@@ -22,9 +23,11 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
         /// Operation: Get Recent Chats
         /// Http Get /restapi/v1.0/glip/recent/chats
         /// </summary>
-        public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(ListRecentChatsParameters queryParams = null)
+        public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(ListRecentChatsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams,
+                cancellationToken);
         }
     }
 }

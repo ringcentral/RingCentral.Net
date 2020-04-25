@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         /// Operation: Get Extension Caller ID
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// </summary>
-        public async Task<RingCentral.ExtensionCallerIdInfo> Get()
+        public async Task<RingCentral.ExtensionCallerIdInfo> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.ExtensionCallerIdInfo>(this.Path());
+            return await rc.Get<RingCentral.ExtensionCallerIdInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,9 +33,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Put(
-            RingCentral.ExtensionCallerIdInfo extensionCallerIdInfo)
+            RingCentral.ExtensionCallerIdInfo extensionCallerIdInfo, CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.ExtensionCallerIdInfo>(this.Path(), extensionCallerIdInfo);
+            return await rc.Put<RingCentral.ExtensionCallerIdInfo>(this.Path(), extensionCallerIdInfo, null,
+                cancellationToken);
         }
     }
 }

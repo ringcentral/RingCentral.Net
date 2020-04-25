@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Presence
 {
@@ -22,18 +23,21 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         /// Operation: Get User Presence Status
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
         /// </summary>
-        public async Task<RingCentral.GetPresenceInfo> Get(ReadUserPresenceStatusParameters queryParams = null)
+        public async Task<RingCentral.GetPresenceInfo> Get(ReadUserPresenceStatusParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update User Presence Status
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
         /// </summary>
-        public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoResource presenceInfoResource)
+        public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoResource presenceInfoResource,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.PresenceInfoResponse>(this.Path(), presenceInfoResource);
+            return await rc.Put<RingCentral.PresenceInfoResponse>(this.Path(), presenceInfoResource, null,
+                cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
 {
@@ -22,18 +23,20 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         /// Operation: Create Note
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/notes
         /// </summary>
-        public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate)
+        public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate);
+            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Chat Notes
         /// Http Get /restapi/v1.0/glip/chats/{chatId}/notes
         /// </summary>
-        public async Task<RingCentral.GlipNotesInfo> Get(ListChatNotesParameters queryParams = null)
+        public async Task<RingCentral.GlipNotesInfo> Get(ListChatNotesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

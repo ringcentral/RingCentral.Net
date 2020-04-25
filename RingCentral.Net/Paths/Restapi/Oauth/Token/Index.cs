@@ -1,6 +1,7 @@
+using System.Threading.Tasks;
+using System.Threading;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Oauth.Token
 {
@@ -24,12 +25,14 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         /// Operation: Get Token
         /// Http Post /restapi/oauth/token
         /// </summary>
-        public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest)
+        public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest,
+            CancellationToken? cancellationToken = null)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
             RingCentral.Utils.GetPairs(getTokenRequest)
                 .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict));
+            return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict), null,
+                cancellationToken);
         }
     }
 }

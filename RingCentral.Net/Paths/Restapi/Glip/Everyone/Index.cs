@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Everyone
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// Operation: Get Everyone Chat
         /// Http Get /restapi/v1.0/glip/everyone
         /// </summary>
-        public async Task<RingCentral.GlipEveryoneInfo> Get()
+        public async Task<RingCentral.GlipEveryoneInfo> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipEveryoneInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipEveryoneInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,9 +33,11 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// Http Patch /restapi/v1.0/glip/everyone
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Patch(
-            RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest)
+            RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Patch<RingCentral.GlipEveryoneInfo>(this.Path(), updateGlipEveryoneRequest);
+            return await rc.Patch<RingCentral.GlipEveryoneInfo>(this.Path(), updateGlipEveryoneRequest, null,
+                cancellationToken);
         }
     }
 }

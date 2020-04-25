@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Subscription.Renew
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
         /// Operation: Renew Subscription
         /// Http Post /restapi/v1.0/subscription/{subscriptionId}/renew
         /// </summary>
-        public async Task<RingCentral.SubscriptionInfo> Post()
+        public async Task<RingCentral.SubscriptionInfo> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path());
+            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

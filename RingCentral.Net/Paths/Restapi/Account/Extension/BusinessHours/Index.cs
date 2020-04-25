@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
         /// Operation: Get User Business Hours
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
         /// </summary>
-        public async Task<RingCentral.GetUserBusinessHoursResponse> Get()
+        public async Task<RingCentral.GetUserBusinessHoursResponse> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetUserBusinessHoursResponse>(this.Path());
+            return await rc.Get<RingCentral.GetUserBusinessHoursResponse>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,10 +33,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
         /// </summary>
         public async Task<RingCentral.UserBusinessHoursUpdateResponse> Put(
-            RingCentral.UserBusinessHoursUpdateRequest userBusinessHoursUpdateRequest)
+            RingCentral.UserBusinessHoursUpdateRequest userBusinessHoursUpdateRequest,
+            CancellationToken? cancellationToken = null)
         {
             return await rc.Put<RingCentral.UserBusinessHoursUpdateResponse>(this.Path(),
-                userBusinessHoursUpdateRequest);
+                userBusinessHoursUpdateRequest, null, cancellationToken);
         }
     }
 }

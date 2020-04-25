@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Cards
 {
@@ -31,52 +32,53 @@ namespace RingCentral.Paths.Restapi.Glip.Cards
         /// </summary>
         public async Task<RingCentral.GlipMessageAttachmentInfo> Post(
             RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
-            CreateGlipCardParameters queryParams = null)
+            CreateGlipCardParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
             return await rc.Post<RingCentral.GlipMessageAttachmentInfo>(this.Path(false),
-                glipMessageAttachmentInfoRequest, queryParams);
+                glipMessageAttachmentInfoRequest, queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Card
         /// Http Get /restapi/v1.0/glip/cards/{cardId}
         /// </summary>
-        public async Task<RingCentral.GlipMessageAttachmentInfo> Get()
+        public async Task<RingCentral.GlipMessageAttachmentInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.cardId == null)
             {
                 throw new System.ArgumentNullException("cardId");
             }
 
-            return await rc.Get<RingCentral.GlipMessageAttachmentInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipMessageAttachmentInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Card
         /// Http Put /restapi/v1.0/glip/cards/{cardId}
         /// </summary>
-        public async Task<string> Put(RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest)
+        public async Task<string> Put(RingCentral.GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest,
+            CancellationToken? cancellationToken = null)
         {
             if (this.cardId == null)
             {
                 throw new System.ArgumentNullException("cardId");
             }
 
-            return await rc.Put<string>(this.Path(), glipMessageAttachmentInfoRequest);
+            return await rc.Put<string>(this.Path(), glipMessageAttachmentInfoRequest, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Card
         /// Http Delete /restapi/v1.0/glip/cards/{cardId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.cardId == null)
             {
                 throw new System.ArgumentNullException("cardId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

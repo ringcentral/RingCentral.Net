@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Fax
 {
@@ -22,10 +23,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
         /// Operation: Create Fax Message
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
         /// </summary>
-        public async Task<RingCentral.FaxResponse> Post(CreateFaxMessageRequest createFaxMessageRequest)
+        public async Task<RingCentral.FaxResponse> Post(CreateFaxMessageRequest createFaxMessageRequest,
+            CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createFaxMessageRequest);
-            return await rc.Post<RingCentral.FaxResponse>(this.Path(), multipartFormDataContent);
+            return await rc.Post<RingCentral.FaxResponse>(this.Path(), multipartFormDataContent, null,
+                cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
         /// Operation: Assign Paging Group Users and Devices
         /// Http Post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
         /// </summary>
-        public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest)
+        public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), editPagingGroupRequest);
+            return await rc.Post<string>(this.Path(), editPagingGroupRequest, null, cancellationToken);
         }
     }
 }

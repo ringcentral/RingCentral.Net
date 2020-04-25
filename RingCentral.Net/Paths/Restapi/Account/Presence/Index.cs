@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Presence
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Presence
         /// Operation: Get User Presence Status List
         /// Http Get /restapi/v1.0/account/{accountId}/presence
         /// </summary>
-        public async Task<RingCentral.AccountPresenceInfo> Get(ReadAccountPresenceParameters queryParams = null)
+        public async Task<RingCentral.AccountPresenceInfo> Get(ReadAccountPresenceParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

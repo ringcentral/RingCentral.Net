@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Teams.Leave
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Leave
         /// Operation: Leave Team
         /// Http Post /restapi/v1.0/glip/teams/{chatId}/leave
         /// </summary>
-        public async Task<string> Post()
+        public async Task<string> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path());
+            return await rc.Post<string>(this.Path(), null, cancellationToken);
         }
     }
 }

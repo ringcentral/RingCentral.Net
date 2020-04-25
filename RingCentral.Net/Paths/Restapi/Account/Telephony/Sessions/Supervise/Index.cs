@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
 {
@@ -23,9 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise
         /// </summary>
         public async Task<RingCentral.SuperviseCallSession> Post(
-            RingCentral.SuperviseCallSessionRequest superviseCallSessionRequest)
+            RingCentral.SuperviseCallSessionRequest superviseCallSessionRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.SuperviseCallSession>(this.Path(), superviseCallSessionRequest);
+            return await rc.Post<RingCentral.SuperviseCallSession>(this.Path(), superviseCallSessionRequest, null,
+                cancellationToken);
         }
     }
 }

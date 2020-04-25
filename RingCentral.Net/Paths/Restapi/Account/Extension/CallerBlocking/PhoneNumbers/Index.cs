@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers
 {
@@ -30,9 +31,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(
-            ListBlockedAllowedNumbersParameters queryParams = null)
+            ListBlockedAllowedNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams,
+                cancellationToken);
         }
 
         /// <summary>
@@ -40,38 +42,39 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(
-            RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
+            RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
+            CancellationToken? cancellationToken = null)
         {
             return await rc.Post<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(false),
-                addBlockedAllowedPhoneNumber);
+                addBlockedAllowedPhoneNumber, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Blocked/Allowed Number
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// </summary>
-        public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get()
+        public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.blockedNumberId == null)
             {
                 throw new System.ArgumentNullException("blockedNumberId");
             }
 
-            return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path());
+            return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Blocked/Allowed Number
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.blockedNumberId == null)
             {
                 throw new System.ArgumentNullException("blockedNumberId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -79,14 +82,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(
-            RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber)
+            RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
+            CancellationToken? cancellationToken = null)
         {
             if (this.blockedNumberId == null)
             {
                 throw new System.ArgumentNullException("blockedNumberId");
             }
 
-            return await rc.Put<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), addBlockedAllowedPhoneNumber);
+            return await rc.Put<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), addBlockedAllowedPhoneNumber,
+                null, cancellationToken);
         }
     }
 }

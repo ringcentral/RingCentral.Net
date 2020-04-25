@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
 {
@@ -23,9 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Post(
-            RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest)
+            RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createInternalTextMessageRequest);
+            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createInternalTextMessageRequest,
+                null, cancellationToken);
         }
     }
 }

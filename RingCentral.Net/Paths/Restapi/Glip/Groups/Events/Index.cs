@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Groups.Events
 {
@@ -22,18 +23,19 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         /// Operation: Create Event by Group ID
         /// Http Post /restapi/v1.0/glip/groups/{groupId}/events
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate)
+        public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
+            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Group Events
         /// Http Get /restapi/v1.0/glip/groups/{groupId}/events
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Get()
+        public async Task<RingCentral.GlipEventInfo> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipEventInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

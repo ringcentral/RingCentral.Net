@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
 {
@@ -22,18 +23,20 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         /// Operation: Get Favorite Contact List
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// </summary>
-        public async Task<RingCentral.FavoriteContactList> Get()
+        public async Task<RingCentral.FavoriteContactList> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.FavoriteContactList>(this.Path());
+            return await rc.Get<RingCentral.FavoriteContactList>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Favorite Contact List
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// </summary>
-        public async Task<RingCentral.FavoriteContactList> Put(RingCentral.FavoriteCollection favoriteCollection)
+        public async Task<RingCentral.FavoriteContactList> Put(RingCentral.FavoriteCollection favoriteCollection,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.FavoriteContactList>(this.Path(), favoriteCollection);
+            return await rc.Put<RingCentral.FavoriteContactList>(this.Path(), favoriteCollection, null,
+                cancellationToken);
         }
     }
 }

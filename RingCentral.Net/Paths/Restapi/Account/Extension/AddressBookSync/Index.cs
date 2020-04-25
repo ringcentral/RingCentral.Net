@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
         /// Operation: Address Book Synchronization
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
         /// </summary>
-        public async Task<RingCentral.AddressBookSync> Get(SyncAddressBookParameters queryParams = null)
+        public async Task<RingCentral.AddressBookSync> Get(SyncAddressBookParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AddressBookSync>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.AddressBookSync>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

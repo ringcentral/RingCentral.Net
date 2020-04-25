@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.DataExport
 {
@@ -30,32 +31,35 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// Http Post /restapi/v1.0/glip/data-export
         /// </summary>
         public async Task<RingCentral.DataExportTask> Post(
-            RingCentral.CreateDataExportTaskRequest createDataExportTaskRequest)
+            RingCentral.CreateDataExportTaskRequest createDataExportTaskRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.DataExportTask>(this.Path(false), createDataExportTaskRequest);
+            return await rc.Post<RingCentral.DataExportTask>(this.Path(false), createDataExportTaskRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Data Export Task List
         /// Http Get /restapi/v1.0/glip/data-export
         /// </summary>
-        public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null)
+        public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.DataExportTaskList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.DataExportTaskList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Data Export Task
         /// Http Get /restapi/v1.0/glip/data-export/{taskId}
         /// </summary>
-        public async Task<RingCentral.DataExportTask> Get()
+        public async Task<RingCentral.DataExportTask> Get(CancellationToken? cancellationToken = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.DataExportTask>(this.Path());
+            return await rc.Get<RingCentral.DataExportTask>(this.Path(), null, cancellationToken);
         }
     }
 }

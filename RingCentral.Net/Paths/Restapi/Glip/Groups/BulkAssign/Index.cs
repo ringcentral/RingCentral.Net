@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Groups.BulkAssign
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.BulkAssign
         /// Operation: Edit Group Members
         /// Http Post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
         /// </summary>
-        public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.EditGroupRequest editGroupRequest)
+        public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.EditGroupRequest editGroupRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(), editGroupRequest);
+            return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(), editGroupRequest, null, cancellationToken);
         }
     }
 }

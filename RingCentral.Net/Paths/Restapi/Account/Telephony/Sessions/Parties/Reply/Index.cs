@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reply
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reply
         /// Operation: Reply with Text
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply
         /// </summary>
-        public async Task<RingCentral.ReplyParty> Post(RingCentral.CallPartyReply callPartyReply)
+        public async Task<RingCentral.ReplyParty> Post(RingCentral.CallPartyReply callPartyReply,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.ReplyParty>(this.Path(), callPartyReply);
+            return await rc.Post<RingCentral.ReplyParty>(this.Path(), callPartyReply, null, cancellationToken);
         }
     }
 }

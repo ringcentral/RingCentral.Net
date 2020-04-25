@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
 {
@@ -23,9 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
         /// </summary>
         public async Task<RingCentral.ListDevicesAutomaticLocationUpdates> Get(
-            ListDevicesAutomaticLocationUpdatesParameters queryParams = null)
+            ListDevicesAutomaticLocationUpdatesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.ListDevicesAutomaticLocationUpdates>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.ListDevicesAutomaticLocationUpdates>(this.Path(), queryParams,
+                cancellationToken);
         }
     }
 }

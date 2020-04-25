@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
         /// Operation: Get Fax Cover Page List
         /// Http Get /restapi/v1.0/dictionary/fax-cover-page
         /// </summary>
-        public async Task<RingCentral.ListFaxCoverPagesResponse> Get(ListFaxCoverPagesParameters queryParams = null)
+        public async Task<RingCentral.ListFaxCoverPagesResponse> Get(ListFaxCoverPagesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

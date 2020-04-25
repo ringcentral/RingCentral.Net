@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Location
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
         /// Operation: Get Location List
         /// Http Get /restapi/v1.0/dictionary/location
         /// </summary>
-        public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null)
+        public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

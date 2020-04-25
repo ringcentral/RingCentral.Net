@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
 {
@@ -30,9 +31,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// </summary>
         public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(
-            ListForwardingNumbersParameters queryParams = null)
+            ListForwardingNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams,
+                cancellationToken);
         }
 
         /// <summary>
@@ -40,23 +42,25 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Post(
-            RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest)
+            RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest);
+            return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest,
+                null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Forwarding Number
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// </summary>
-        public async Task<RingCentral.ForwardingNumberInfo> Get()
+        public async Task<RingCentral.ForwardingNumberInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.forwardingNumberId == null)
             {
                 throw new System.ArgumentNullException("forwardingNumberId");
             }
 
-            return await rc.Get<RingCentral.ForwardingNumberInfo>(this.Path());
+            return await rc.Get<RingCentral.ForwardingNumberInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -64,28 +68,30 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Put(
-            RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest)
+            RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest,
+            CancellationToken? cancellationToken = null)
         {
             if (this.forwardingNumberId == null)
             {
                 throw new System.ArgumentNullException("forwardingNumberId");
             }
 
-            return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest);
+            return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Forwarding Number
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.forwardingNumberId == null)
             {
                 throw new System.ArgumentNullException("forwardingNumberId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

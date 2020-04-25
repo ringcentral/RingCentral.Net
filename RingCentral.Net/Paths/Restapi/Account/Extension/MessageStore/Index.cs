@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// Operation: Get Message List
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
         /// </summary>
-        public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null)
+        public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Message
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Get()
+        public async Task<RingCentral.GetMessageInfoResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.messageId == null)
             {
                 throw new System.ArgumentNullException("messageId");
             }
 
-            return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path());
+            return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -53,28 +55,30 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest,
-            UpdateMessageParameters queryParams = null)
+            UpdateMessageParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
             if (this.messageId == null)
             {
                 throw new System.ArgumentNullException("messageId");
             }
 
-            return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest, queryParams);
+            return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest, queryParams,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Message
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// </summary>
-        public async Task<string> Delete(DeleteMessageParameters queryParams = null)
+        public async Task<string> Delete(DeleteMessageParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.messageId == null)
             {
                 throw new System.ArgumentNullException("messageId");
             }
 
-            return await rc.Delete<string>(this.Path(), queryParams);
+            return await rc.Delete<string>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

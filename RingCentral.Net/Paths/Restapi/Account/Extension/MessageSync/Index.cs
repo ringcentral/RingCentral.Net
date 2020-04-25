@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
         /// Operation: Sync Messages
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
         /// </summary>
-        public async Task<RingCentral.GetMessageSyncResponse> Get(SyncMessagesParameters queryParams = null)
+        public async Task<RingCentral.GetMessageSyncResponse> Get(SyncMessagesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

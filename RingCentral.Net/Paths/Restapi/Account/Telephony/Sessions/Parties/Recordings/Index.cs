@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recordings
 {
@@ -29,9 +30,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         /// Operation: Create Recording
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
         /// </summary>
-        public async Task<string> Post()
+        public async Task<string> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(false));
+            return await rc.Post<string>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
@@ -39,14 +40,15 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         /// Http Patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
         /// </summary>
         public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate,
-            PauseResumeCallRecordingParameters queryParams = null)
+            PauseResumeCallRecordingParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
             if (this.recordingId == null)
             {
                 throw new System.ArgumentNullException("recordingId");
             }
 
-            return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams);
+            return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams,
+                cancellationToken);
         }
     }
 }

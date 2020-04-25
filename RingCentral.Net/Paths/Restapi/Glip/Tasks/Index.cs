@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Tasks
 {
@@ -29,42 +30,43 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// Operation: Get Task
         /// Http Get /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
-        public async Task<RingCentral.GlipTaskInfo> Get()
+        public async Task<RingCentral.GlipTaskInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.GlipTaskInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipTaskInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Patch Task
         /// Http Patch /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
-        public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask)
+        public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask,
+            CancellationToken? cancellationToken = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Patch<RingCentral.GlipTaskList>(this.Path(), glipUpdateTask);
+            return await rc.Patch<RingCentral.GlipTaskList>(this.Path(), glipUpdateTask, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Task
         /// Http Delete /restapi/v1.0/glip/tasks/{taskId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

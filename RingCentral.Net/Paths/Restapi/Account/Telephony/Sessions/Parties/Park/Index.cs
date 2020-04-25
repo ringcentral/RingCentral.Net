@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park
         /// Operation: Call Park
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
         /// </summary>
-        public async Task<RingCentral.CallParty> Post()
+        public async Task<RingCentral.CallParty> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CallParty>(this.Path());
+            return await rc.Post<RingCentral.CallParty>(this.Path(), null, cancellationToken);
         }
     }
 }

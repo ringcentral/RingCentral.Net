@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
 {
@@ -29,9 +30,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// Operation: Get Contact List
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// </summary>
-        public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null)
+        public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
@@ -39,24 +41,25 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Post(
-            RingCentral.PersonalContactRequest personalContactRequest, CreateContactParameters queryParams = null)
+            RingCentral.PersonalContactRequest personalContactRequest, CreateContactParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             return await rc.Post<RingCentral.PersonalContactResource>(this.Path(false), personalContactRequest,
-                queryParams);
+                queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Contact
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
-        public async Task<RingCentral.PersonalContactResource> Get()
+        public async Task<RingCentral.PersonalContactResource> Get(CancellationToken? cancellationToken = null)
         {
             if (this.contactId == null)
             {
                 throw new System.ArgumentNullException("contactId");
             }
 
-            return await rc.Get<RingCentral.PersonalContactResource>(this.Path());
+            return await rc.Get<RingCentral.PersonalContactResource>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -64,28 +67,30 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Put(
-            RingCentral.PersonalContactRequest personalContactRequest, UpdateContactParameters queryParams = null)
+            RingCentral.PersonalContactRequest personalContactRequest, UpdateContactParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.contactId == null)
             {
                 throw new System.ArgumentNullException("contactId");
             }
 
-            return await rc.Put<RingCentral.PersonalContactResource>(this.Path(), personalContactRequest, queryParams);
+            return await rc.Put<RingCentral.PersonalContactResource>(this.Path(), personalContactRequest, queryParams,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Contact
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.contactId == null)
             {
                 throw new System.ArgumentNullException("contactId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

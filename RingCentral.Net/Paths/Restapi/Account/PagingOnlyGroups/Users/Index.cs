@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Users
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Users
         /// Operation: Get Paging Group Users
         /// Http Get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
         /// </summary>
-        public async Task<RingCentral.PagingOnlyGroupUsers> Get(ListPagingGroupUsersParameters queryParams = null)
+        public async Task<RingCentral.PagingOnlyGroupUsers> Get(ListPagingGroupUsersParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.PagingOnlyGroupUsers>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.PagingOnlyGroupUsers>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

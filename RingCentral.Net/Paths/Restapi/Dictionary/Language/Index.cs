@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Language
 {
@@ -29,23 +30,23 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         /// Operation: Get Language List
         /// Http Get /restapi/v1.0/dictionary/language
         /// </summary>
-        public async Task<RingCentral.LanguageList> List()
+        public async Task<RingCentral.LanguageList> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.LanguageList>(this.Path(false));
+            return await rc.Get<RingCentral.LanguageList>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Language
         /// Http Get /restapi/v1.0/dictionary/language/{languageId}
         /// </summary>
-        public async Task<RingCentral.LanguageInfo> Get()
+        public async Task<RingCentral.LanguageInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.languageId == null)
             {
                 throw new System.ArgumentNullException("languageId");
             }
 
-            return await rc.Get<RingCentral.LanguageInfo>(this.Path());
+            return await rc.Get<RingCentral.LanguageInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 {
@@ -29,43 +30,45 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// Operation: Get User Profile Image
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
-        public async Task<byte[]> List()
+        public async Task<byte[]> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<byte[]>(this.Path(false));
+            return await rc.Get<byte[]>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Upload User Profile Image
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
-        public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest)
+        public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest,
+            CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createUserProfileImageRequest);
-            return await rc.Post<string>(this.Path(false), multipartFormDataContent);
+            return await rc.Post<string>(this.Path(false), multipartFormDataContent, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update User Profile Image
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// </summary>
-        public async Task<string> Put(UpdateUserProfileImageRequest updateUserProfileImageRequest)
+        public async Task<string> Put(UpdateUserProfileImageRequest updateUserProfileImageRequest,
+            CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateUserProfileImageRequest);
-            return await rc.Post<string>(this.Path(false), multipartFormDataContent);
+            return await rc.Put<string>(this.Path(false), multipartFormDataContent, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Scaled User Profile Image
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
         /// </summary>
-        public async Task<byte[]> Get()
+        public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {
             if (this.scaleSize == null)
             {
                 throw new System.ArgumentNullException("scaleSize");
             }
 
-            return await rc.Get<byte[]>(this.Path());
+            return await rc.Get<byte[]>(this.Path(), null, cancellationToken);
         }
     }
 }

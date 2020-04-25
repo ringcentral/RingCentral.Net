@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CallQueues
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueues
         /// Operation: Update User Call Queues
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
         /// </summary>
-        public async Task<RingCentral.UserCallQueues> Put(RingCentral.UserCallQueues userCallQueues)
+        public async Task<RingCentral.UserCallQueues> Put(RingCentral.UserCallQueues userCallQueues,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.UserCallQueues>(this.Path(), userCallQueues);
+            return await rc.Put<RingCentral.UserCallQueues>(this.Path(), userCallQueues, null, cancellationToken);
         }
     }
 }

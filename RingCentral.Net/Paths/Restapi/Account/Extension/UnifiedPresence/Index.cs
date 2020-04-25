@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
 {
@@ -22,18 +23,20 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         /// Operation: Get Unified Presence
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// </summary>
-        public async Task<RingCentral.UnifiedPresence> Get()
+        public async Task<RingCentral.UnifiedPresence> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.UnifiedPresence>(this.Path());
+            return await rc.Get<RingCentral.UnifiedPresence>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Unified Presence
         /// Http Patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// </summary>
-        public async Task<RingCentral.UnifiedPresence> Patch(RingCentral.UpdateUnifiedPresence updateUnifiedPresence)
+        public async Task<RingCentral.UnifiedPresence> Patch(RingCentral.UpdateUnifiedPresence updateUnifiedPresence,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Patch<RingCentral.UnifiedPresence>(this.Path(), updateUnifiedPresence);
+            return await rc.Patch<RingCentral.UnifiedPresence>(this.Path(), updateUnifiedPresence, null,
+                cancellationToken);
         }
     }
 }

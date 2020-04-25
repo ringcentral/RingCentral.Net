@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallQueues
 {
@@ -29,9 +30,10 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         /// Operation: Get Call Queue List
         /// Http Get /restapi/v1.0/account/{accountId}/call-queues
         /// </summary>
-        public async Task<RingCentral.CallQueues> Get(ListCallQueuesParameters queryParams = null)
+        public async Task<RingCentral.CallQueues> Get(ListCallQueuesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams, cancellationToken);
         }
     }
 }

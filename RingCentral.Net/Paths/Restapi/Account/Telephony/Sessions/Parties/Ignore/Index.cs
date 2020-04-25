@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
         /// Operation: Ignore Call in Queue
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
         /// </summary>
-        public async Task<string> Post(RingCentral.IgnoreRequestBody ignoreRequestBody)
+        public async Task<string> Post(RingCentral.IgnoreRequestBody ignoreRequestBody,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), ignoreRequestBody);
+            return await rc.Post<string>(this.Path(), ignoreRequestBody, null, cancellationToken);
         }
     }
 }

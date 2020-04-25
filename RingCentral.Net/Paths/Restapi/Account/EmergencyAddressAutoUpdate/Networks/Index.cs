@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
 {
@@ -29,60 +30,63 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// Operation: Get Network Map
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// </summary>
-        public async Task<RingCentral.NetworksList> List()
+        public async Task<RingCentral.NetworksList> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.NetworksList>(this.Path(false));
+            return await rc.Get<RingCentral.NetworksList>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Create Network
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// </summary>
-        public async Task<RingCentral.NetworkInfo> Post(RingCentral.CreateNetworkRequest createNetworkRequest)
+        public async Task<RingCentral.NetworkInfo> Post(RingCentral.CreateNetworkRequest createNetworkRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.NetworkInfo>(this.Path(false), createNetworkRequest);
+            return await rc.Post<RingCentral.NetworkInfo>(this.Path(false), createNetworkRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Network
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// </summary>
-        public async Task<RingCentral.NetworkInfo> Get()
+        public async Task<RingCentral.NetworkInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.networkId == null)
             {
                 throw new System.ArgumentNullException("networkId");
             }
 
-            return await rc.Get<RingCentral.NetworkInfo>(this.Path());
+            return await rc.Get<RingCentral.NetworkInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Network
         /// Http Put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// </summary>
-        public async Task<string> Put(RingCentral.UpdateNetworkRequest updateNetworkRequest)
+        public async Task<string> Put(RingCentral.UpdateNetworkRequest updateNetworkRequest,
+            CancellationToken? cancellationToken = null)
         {
             if (this.networkId == null)
             {
                 throw new System.ArgumentNullException("networkId");
             }
 
-            return await rc.Put<string>(this.Path(), updateNetworkRequest);
+            return await rc.Put<string>(this.Path(), updateNetworkRequest, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Network
         /// Http Delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.networkId == null)
             {
                 throw new System.ArgumentNullException("networkId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

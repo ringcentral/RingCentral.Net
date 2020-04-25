@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
 {
@@ -29,37 +30,39 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// Operation: Make RingOut Call
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
         /// </summary>
-        public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest)
+        public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest);
+            return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get RingOut Call Status
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         /// </summary>
-        public async Task<RingCentral.GetRingOutStatusResponse> Get()
+        public async Task<RingCentral.GetRingOutStatusResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.ringoutId == null)
             {
                 throw new System.ArgumentNullException("ringoutId");
             }
 
-            return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path());
+            return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Cancel RingOut Call
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.ringoutId == null)
             {
                 throw new System.ArgumentNullException("ringoutId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

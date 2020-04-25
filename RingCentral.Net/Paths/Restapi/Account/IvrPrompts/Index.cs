@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.IvrPrompts
 {
@@ -29,61 +30,64 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// Operation: Create IVR Prompts
         /// Http Post /restapi/v1.0/account/{accountId}/ivr-prompts
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIVRPromptRequest)
+        public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIVRPromptRequest,
+            CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
-            return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent);
+            return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get IVR Prompt List
         /// Http Get /restapi/v1.0/account/{accountId}/ivr-prompts
         /// </summary>
-        public async Task<RingCentral.IVRPrompts> List()
+        public async Task<RingCentral.IVRPrompts> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.IVRPrompts>(this.Path(false));
+            return await rc.Get<RingCentral.IVRPrompts>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get IVR Prompt
         /// Http Get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Get()
+        public async Task<RingCentral.PromptInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.promptId == null)
             {
                 throw new System.ArgumentNullException("promptId");
             }
 
-            return await rc.Get<RingCentral.PromptInfo>(this.Path());
+            return await rc.Get<RingCentral.PromptInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete IVR Prompt
         /// Http Delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.promptId == null)
             {
                 throw new System.ArgumentNullException("promptId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update IVR Prompt
         /// Http Put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest)
+        public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest,
+            CancellationToken? cancellationToken = null)
         {
             if (this.promptId == null)
             {
                 throw new System.ArgumentNullException("promptId");
             }
 
-            return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest);
+            return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest, null, cancellationToken);
         }
     }
 }

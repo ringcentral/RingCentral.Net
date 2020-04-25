@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 {
@@ -29,9 +30,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// Operation: Get Scheduled Meetings
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// </summary>
-        public async Task<RingCentral.MeetingsResource> List()
+        public async Task<RingCentral.MeetingsResource> List(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.MeetingsResource>(this.Path(false));
+            return await rc.Get<RingCentral.MeetingsResource>(this.Path(false), null, cancellationToken);
         }
 
         /// <summary>
@@ -39,23 +40,24 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Post(
-            RingCentral.MeetingRequestResource meetingRequestResource)
+            RingCentral.MeetingRequestResource meetingRequestResource, CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.MeetingResponseResource>(this.Path(false), meetingRequestResource);
+            return await rc.Post<RingCentral.MeetingResponseResource>(this.Path(false), meetingRequestResource, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Meeting Info
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// </summary>
-        public async Task<RingCentral.MeetingResponseResource> Get()
+        public async Task<RingCentral.MeetingResponseResource> Get(CancellationToken? cancellationToken = null)
         {
             if (this.meetingId == null)
             {
                 throw new System.ArgumentNullException("meetingId");
             }
 
-            return await rc.Get<RingCentral.MeetingResponseResource>(this.Path());
+            return await rc.Get<RingCentral.MeetingResponseResource>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -63,28 +65,29 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Put(
-            RingCentral.MeetingRequestResource meetingRequestResource)
+            RingCentral.MeetingRequestResource meetingRequestResource, CancellationToken? cancellationToken = null)
         {
             if (this.meetingId == null)
             {
                 throw new System.ArgumentNullException("meetingId");
             }
 
-            return await rc.Put<RingCentral.MeetingResponseResource>(this.Path(), meetingRequestResource);
+            return await rc.Put<RingCentral.MeetingResponseResource>(this.Path(), meetingRequestResource, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Meeting
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.meetingId == null)
             {
                 throw new System.ArgumentNullException("meetingId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
         /// Operation: Transfer Call Party
         /// Http Post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
         /// </summary>
-        public async Task<RingCentral.CallParty> Post(RingCentral.TransferTarget transferTarget)
+        public async Task<RingCentral.CallParty> Post(RingCentral.TransferTarget transferTarget,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget);
+            return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget, null, cancellationToken);
         }
     }
 }

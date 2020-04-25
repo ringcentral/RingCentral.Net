@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         /// Operation: Get Message Store Configuration
         /// Http Get /restapi/v1.0/account/{accountId}/message-store-configuration
         /// </summary>
-        public async Task<RingCentral.MessageStoreConfiguration> Get()
+        public async Task<RingCentral.MessageStoreConfiguration> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path());
+            return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,9 +33,11 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         /// Http Put /restapi/v1.0/account/{accountId}/message-store-configuration
         /// </summary>
         public async Task<RingCentral.MessageStoreConfiguration> Put(
-            RingCentral.MessageStoreConfiguration messageStoreConfiguration)
+            RingCentral.MessageStoreConfiguration messageStoreConfiguration,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration);
+            return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration, null,
+                cancellationToken);
         }
     }
 }

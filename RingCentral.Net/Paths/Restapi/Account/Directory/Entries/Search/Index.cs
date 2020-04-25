@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
 {
@@ -23,9 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
         /// Http Post /restapi/v1.0/account/{accountId}/directory/entries/search
         /// </summary>
         public async Task<RingCentral.DirectoryResource> Post(
-            RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest)
+            RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest);
+            return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest, null,
+                cancellationToken);
         }
     }
 }

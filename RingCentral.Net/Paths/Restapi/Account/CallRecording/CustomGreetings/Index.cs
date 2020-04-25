@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
 {
@@ -30,23 +31,24 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         /// Http Get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
         /// </summary>
         public async Task<RingCentral.CallRecordingCustomGreetings> Get(
-            ListCallRecordingCustomGreetingsParameters queryParams = null)
+            ListCallRecordingCustomGreetingsParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Call Recording Custom Greeting
         /// Http Delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.greetingId == null)
             {
                 throw new System.ArgumentNullException("greetingId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

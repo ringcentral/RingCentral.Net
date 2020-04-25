@@ -151,10 +151,9 @@ const generate = (prefix = '/') => {
         })
       }
     })
+    const usings = new Set()
     if (operations.length > 0) {
-      code = `using System.Threading.Tasks;
-
-${code}`
+      usings.add('using System.Threading.Tasks;')
     }
 
     operations.forEach(operation => {
@@ -207,6 +206,8 @@ ${code}`
       if (queryParams.length > 0) {
         methodParams.push(`${pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
       }
+      methodParams.push('CancellationToken? cancellationToken = null')
+      usings.add('using System.Threading;')
       code += `
 
       /// <summary>
@@ -221,23 +222,22 @@ ${code}`
           }
 ` : ''}`
       if (formUrlEncoded) {
-        code = `using System.Linq;
-using System.Net.Http;
-${code}`
+        usings.add('using System.Linq;')
+        usings.add('using System.Net.Http;')
         code += `
           var dict = new System.Collections.Generic.Dictionary<string, string>();
           RingCentral.Utils.GetPairs(${bodyParam})
             .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''});
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict), ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
       }`
       } else if (multipart) {
         code += `
           var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
-          return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''});
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent, ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
       }`
       } else {
         code += `
-          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''});
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
       }`
       }
     })
@@ -273,6 +273,7 @@ namespace RingCentral.Paths.${R.init(routes).join('.')}
     }
 }`
     }
+    code = Array.from(usings).join('\n') + '\n\n' + code
     fs.writeFileSync(path.join(folderPath, 'Index.cs'), code)
 
     generate(`${prefix}${name}/`)

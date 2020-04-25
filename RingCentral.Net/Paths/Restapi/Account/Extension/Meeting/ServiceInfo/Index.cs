@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         /// Operation: Get Meeting Service Info
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
         /// </summary>
-        public async Task<RingCentral.MeetingServiceInfoResource> Get()
+        public async Task<RingCentral.MeetingServiceInfoResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path());
+            return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,9 +33,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         /// Http Patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
         /// </summary>
         public async Task<RingCentral.MeetingServiceInfoResource> Patch(
-            RingCentral.MeetingServiceInfoRequest meetingServiceInfoRequest)
+            RingCentral.MeetingServiceInfoRequest meetingServiceInfoRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Patch<RingCentral.MeetingServiceInfoResource>(this.Path(), meetingServiceInfoRequest);
+            return await rc.Patch<RingCentral.MeetingServiceInfoResource>(this.Path(), meetingServiceInfoRequest, null,
+                cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Device
 {
@@ -29,14 +30,15 @@ namespace RingCentral.Paths.Restapi.Account.Device
         /// Operation: Get Device
         /// Http Get /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// </summary>
-        public async Task<RingCentral.GetDeviceInfoResponse> Get(ReadDeviceParameters queryParams = null)
+        public async Task<RingCentral.GetDeviceInfoResponse> Get(ReadDeviceParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.deviceId == null)
             {
                 throw new System.ArgumentNullException("deviceId");
             }
 
-            return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path(), queryParams, cancellationToken);
         }
 
         /// <summary>
@@ -44,14 +46,15 @@ namespace RingCentral.Paths.Restapi.Account.Device
         /// Http Put /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate,
-            UpdateDeviceParameters queryParams = null)
+            UpdateDeviceParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
             if (this.deviceId == null)
             {
                 throw new System.ArgumentNullException("deviceId");
             }
 
-            return await rc.Put<RingCentral.GetDeviceInfoResponse>(this.Path(), accountDeviceUpdate, queryParams);
+            return await rc.Put<RingCentral.GetDeviceInfoResponse>(this.Path(), accountDeviceUpdate, queryParams,
+                cancellationToken);
         }
     }
 }

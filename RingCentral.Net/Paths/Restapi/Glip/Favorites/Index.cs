@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Favorites
 {
@@ -23,9 +24,10 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
         /// Http Get /restapi/v1.0/glip/favorites
         /// </summary>
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(
-            ListFavoriteChatsParameters queryParams = null)
+            ListFavoriteChatsParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams,
+                cancellationToken);
         }
     }
 }

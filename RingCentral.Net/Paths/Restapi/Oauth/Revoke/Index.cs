@@ -1,6 +1,7 @@
+using System.Threading.Tasks;
+using System.Threading;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Oauth.Revoke
 {
@@ -24,12 +25,13 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
         /// Operation: Revoke Token
         /// Http Post /restapi/oauth/revoke
         /// </summary>
-        public async Task<string> Post(RevokeTokenRequest revokeTokenRequest)
+        public async Task<string> Post(RevokeTokenRequest revokeTokenRequest,
+            CancellationToken? cancellationToken = null)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
             RingCentral.Utils.GetPairs(revokeTokenRequest)
                 .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<string>(this.Path(), new FormUrlEncodedContent(dict));
+            return await rc.Post<string>(this.Path(), new FormUrlEncodedContent(dict), null, cancellationToken);
         }
     }
 }

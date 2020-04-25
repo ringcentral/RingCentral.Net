@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
         /// Operation: Get Paging Group Devices
         /// Http Get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
         /// </summary>
-        public async Task<RingCentral.PagingOnlyGroupDevices> Get(ListPagingGroupDevicesParameters queryParams = null)
+        public async Task<RingCentral.PagingOnlyGroupDevices> Get(ListPagingGroupDevicesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.PagingOnlyGroupDevices>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.PagingOnlyGroupDevices>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

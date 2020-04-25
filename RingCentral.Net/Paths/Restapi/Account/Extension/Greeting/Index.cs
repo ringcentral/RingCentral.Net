@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
 {
@@ -30,24 +31,26 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
         /// </summary>
         public async Task<RingCentral.CustomUserGreetingInfo> Post(
-            CreateCustomUserGreetingRequest createCustomUserGreetingRequest)
+            CreateCustomUserGreetingRequest createCustomUserGreetingRequest,
+            CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest);
-            return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multipartFormDataContent);
+            return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multipartFormDataContent, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Custom Greeting
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
         /// </summary>
-        public async Task<RingCentral.CustomUserGreetingInfo> Get()
+        public async Task<RingCentral.CustomUserGreetingInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.greetingId == null)
             {
                 throw new System.ArgumentNullException("greetingId");
             }
 
-            return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path());
+            return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

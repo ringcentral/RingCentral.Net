@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
         /// Operation: Get Call Recording Extension List
         /// Http Get /restapi/v1.0/account/{accountId}/call-recording/extensions
         /// </summary>
-        public async Task<RingCentral.CallRecordingExtensions> Get()
+        public async Task<RingCentral.CallRecordingExtensions> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.CallRecordingExtensions>(this.Path());
+            return await rc.Get<RingCentral.CallRecordingExtensions>(this.Path(), null, cancellationToken);
         }
     }
 }

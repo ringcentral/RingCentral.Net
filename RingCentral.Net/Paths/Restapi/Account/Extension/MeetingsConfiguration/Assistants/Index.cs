@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assistants
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assi
         /// Operation: Get Assistants
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
         /// </summary>
-        public async Task<RingCentral.AssistantsResource> Get()
+        public async Task<RingCentral.AssistantsResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AssistantsResource>(this.Path());
+            return await rc.Get<RingCentral.AssistantsResource>(this.Path(), null, cancellationToken);
         }
     }
 }

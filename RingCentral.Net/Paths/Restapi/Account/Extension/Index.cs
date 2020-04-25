@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension
 {
@@ -29,9 +30,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// Operation: Get Extension List
         /// Http Get /restapi/v1.0/account/{accountId}/extension
         /// </summary>
-        public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null)
+        public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
@@ -39,23 +41,24 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// Http Post /restapi/v1.0/account/{accountId}/extension
         /// </summary>
         public async Task<RingCentral.ExtensionCreationResponse> Post(
-            RingCentral.ExtensionCreationRequest extensionCreationRequest)
+            RingCentral.ExtensionCreationRequest extensionCreationRequest, CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.ExtensionCreationResponse>(this.Path(false), extensionCreationRequest);
+            return await rc.Post<RingCentral.ExtensionCreationResponse>(this.Path(false), extensionCreationRequest,
+                null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Extension
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
-        public async Task<RingCentral.GetExtensionInfoResponse> Get()
+        public async Task<RingCentral.GetExtensionInfoResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.extensionId == null)
             {
                 throw new System.ArgumentNullException("extensionId");
             }
 
-            return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path());
+            return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -63,28 +66,30 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
-            RingCentral.ExtensionUpdateRequest extensionUpdateRequest)
+            RingCentral.ExtensionUpdateRequest extensionUpdateRequest, CancellationToken? cancellationToken = null)
         {
             if (this.extensionId == null)
             {
                 throw new System.ArgumentNullException("extensionId");
             }
 
-            return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest);
+            return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest, null,
+                cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Extension
         /// Http Delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
         /// </summary>
-        public async Task<string> Delete(DeleteExtensionParameters queryParams = null)
+        public async Task<string> Delete(DeleteExtensionParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.extensionId == null)
             {
                 throw new System.ArgumentNullException("extensionId");
             }
 
-            return await rc.Delete<string>(this.Path(), queryParams);
+            return await rc.Delete<string>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

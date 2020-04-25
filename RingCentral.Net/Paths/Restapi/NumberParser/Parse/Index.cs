@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.NumberParser.Parse
 {
@@ -23,10 +24,11 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
         /// Http Post /restapi/v1.0/number-parser/parse
         /// </summary>
         public async Task<RingCentral.ParsePhoneNumberResponse> Post(
-            RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest, ParsePhoneNumberParameters queryParams = null)
+            RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest, ParsePhoneNumberParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             return await rc.Post<RingCentral.ParsePhoneNumberResponse>(this.Path(), parsePhoneNumberRequest,
-                queryParams);
+                queryParams, cancellationToken);
         }
     }
 }

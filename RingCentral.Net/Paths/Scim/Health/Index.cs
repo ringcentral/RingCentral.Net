@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Scim.Health
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Scim.Health
         /// Operation: Check Health
         /// Http Get /scim/v2/health
         /// </summary>
-        public async Task<string> Get()
+        public async Task<string> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<string>(this.Path());
+            return await rc.Get<string>(this.Path(), null, cancellationToken);
         }
     }
 }

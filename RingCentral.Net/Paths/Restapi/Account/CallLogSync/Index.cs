@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallLogSync
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.CallLogSync
         /// Operation: Sync Company Call Log
         /// Http Get /restapi/v1.0/account/{accountId}/call-log-sync
         /// </summary>
-        public async Task<RingCentral.AccountCallLogSyncResponse> Get(SyncAccountCallLogParameters queryParams = null)
+        public async Task<RingCentral.AccountCallLogSyncResponse> Get(SyncAccountCallLogParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AccountCallLogSyncResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.AccountCallLogSyncResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

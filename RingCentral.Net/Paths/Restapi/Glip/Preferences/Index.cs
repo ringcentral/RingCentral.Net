@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Preferences
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
         /// Operation: Get Preferences
         /// Http Get /restapi/v1.0/glip/preferences
         /// </summary>
-        public async Task<RingCentral.GlipPreferencesInfo> Get()
+        public async Task<RingCentral.GlipPreferencesInfo> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipPreferencesInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipPreferencesInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

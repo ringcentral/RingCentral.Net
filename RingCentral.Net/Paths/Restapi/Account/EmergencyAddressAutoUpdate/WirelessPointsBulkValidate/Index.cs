@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessPointsBulkValidate
 {
@@ -23,10 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// Http Post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
         /// </summary>
         public async Task<RingCentral.ValidateMultipleWirelessPointsResponse> Post(
-            RingCentral.ValidateMultipleWirelessPointsRequest validateMultipleWirelessPointsRequest)
+            RingCentral.ValidateMultipleWirelessPointsRequest validateMultipleWirelessPointsRequest,
+            CancellationToken? cancellationToken = null)
         {
             return await rc.Post<RingCentral.ValidateMultipleWirelessPointsResponse>(this.Path(),
-                validateMultipleWirelessPointsRequest);
+                validateMultipleWirelessPointsRequest, null, cancellationToken);
         }
     }
 }

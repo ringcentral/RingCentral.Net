@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Country
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         /// Operation: Get Country List
         /// Http Get /restapi/v1.0/dictionary/country
         /// </summary>
-        public async Task<RingCentral.GetCountryListResponse> List(ListCountriesParameters queryParams = null)
+        public async Task<RingCentral.GetCountryListResponse> List(ListCountriesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Country
         /// Http Get /restapi/v1.0/dictionary/country/{countryId}
         /// </summary>
-        public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get()
+        public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.countryId == null)
             {
                 throw new System.ArgumentNullException("countryId");
             }
 
-            return await rc.Get<RingCentral.GetCountryInfoDictionaryResponse>(this.Path());
+            return await rc.Get<RingCentral.GetCountryInfoDictionaryResponse>(this.Path(), null, cancellationToken);
         }
     }
 }

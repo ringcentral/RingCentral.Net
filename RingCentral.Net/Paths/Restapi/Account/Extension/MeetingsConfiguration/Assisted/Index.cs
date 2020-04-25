@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assisted
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assi
         /// Operation: Get Assisted Users
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
         /// </summary>
-        public async Task<RingCentral.AssistedUsersResource> Get()
+        public async Task<RingCentral.AssistedUsersResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AssistedUsersResource>(this.Path());
+            return await rc.Get<RingCentral.AssistedUsersResource>(this.Path(), null, cancellationToken);
         }
     }
 }

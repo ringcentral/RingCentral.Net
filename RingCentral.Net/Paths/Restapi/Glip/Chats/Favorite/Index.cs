@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Favorite
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Favorite
         /// Operation: Add Chat to Favorites
         /// Http Post /restapi/v1.0/glip/chats/{chatId}/favorite
         /// </summary>
-        public async Task<string> Post()
+        public async Task<string> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path());
+            return await rc.Post<string>(this.Path(), null, cancellationToken);
         }
     }
 }

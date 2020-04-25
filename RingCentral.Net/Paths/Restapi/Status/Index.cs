@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Status
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Status
         /// Operation: Get Service Status
         /// Http Get /restapi/v1.0/status
         /// </summary>
-        public async Task<string> Get()
+        public async Task<string> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<string>(this.Path());
+            return await rc.Get<string>(this.Path(), null, cancellationToken);
         }
     }
 }

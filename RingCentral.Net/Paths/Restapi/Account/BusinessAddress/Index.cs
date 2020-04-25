@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.BusinessAddress
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         /// Operation: Get Account Business Address
         /// Http Get /restapi/v1.0/account/{accountId}/business-address
         /// </summary>
-        public async Task<RingCentral.AccountBusinessAddressResource> Get()
+        public async Task<RingCentral.AccountBusinessAddressResource> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AccountBusinessAddressResource>(this.Path());
+            return await rc.Get<RingCentral.AccountBusinessAddressResource>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,10 +33,11 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         /// Http Put /restapi/v1.0/account/{accountId}/business-address
         /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Put(
-            RingCentral.ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest)
+            RingCentral.ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest,
+            CancellationToken? cancellationToken = null)
         {
             return await rc.Put<RingCentral.AccountBusinessAddressResource>(this.Path(),
-                modifyAccountBusinessAddressRequest);
+                modifyAccountBusinessAddressRequest, null, cancellationToken);
         }
     }
 }

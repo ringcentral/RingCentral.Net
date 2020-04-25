@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Sms
 {
@@ -22,9 +23,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
         /// Operation: Send SMS
         /// Http Post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage)
+        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createSMSMessage);
+            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createSMSMessage, null,
+                cancellationToken);
         }
     }
 }

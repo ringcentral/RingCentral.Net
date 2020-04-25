@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
 {
@@ -22,9 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         /// Operation: Get Notification Settings
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// </summary>
-        public async Task<RingCentral.NotificationSettings> Get()
+        public async Task<RingCentral.NotificationSettings> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.NotificationSettings>(this.Path());
+            return await rc.Get<RingCentral.NotificationSettings>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
@@ -32,9 +33,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         /// Http Put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// </summary>
         public async Task<RingCentral.NotificationSettings> Put(
-            RingCentral.NotificationSettingsUpdateRequest notificationSettingsUpdateRequest)
+            RingCentral.NotificationSettingsUpdateRequest notificationSettingsUpdateRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Put<RingCentral.NotificationSettings>(this.Path(), notificationSettingsUpdateRequest);
+            return await rc.Put<RingCentral.NotificationSettings>(this.Path(), notificationSettingsUpdateRequest, null,
+                cancellationToken);
         }
     }
 }

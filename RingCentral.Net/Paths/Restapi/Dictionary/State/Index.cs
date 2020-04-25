@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Dictionary.State
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         /// Operation: Get States List
         /// Http Get /restapi/v1.0/dictionary/state
         /// </summary>
-        public async Task<RingCentral.GetStateListResponse> List(ListStatesParameters queryParams = null)
+        public async Task<RingCentral.GetStateListResponse> List(ListStatesParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get State
         /// Http Get /restapi/v1.0/dictionary/state/{stateId}
         /// </summary>
-        public async Task<RingCentral.GetStateInfoResponse> Get()
+        public async Task<RingCentral.GetStateInfoResponse> Get(CancellationToken? cancellationToken = null)
         {
             if (this.stateId == null)
             {
                 throw new System.ArgumentNullException("stateId");
             }
 
-            return await rc.Get<RingCentral.GetStateInfoResponse>(this.Path());
+            return await rc.Get<RingCentral.GetStateInfoResponse>(this.Path(), null, cancellationToken);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
 {
@@ -29,14 +30,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
         /// Operation: Get Emergency Map Configuration Task
         /// Http Get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
         /// </summary>
-        public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get()
+        public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.AutomaticLocationUpdatesTaskInfo>(this.Path());
+            return await rc.Get<RingCentral.AutomaticLocationUpdatesTaskInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

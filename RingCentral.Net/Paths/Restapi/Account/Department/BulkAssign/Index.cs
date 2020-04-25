@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Department.BulkAssign
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.Department.BulkAssign
         /// Operation: Assign Multiple Department Members
         /// Http Post /restapi/v1.0/account/{accountId}/department/bulk-assign
         /// </summary>
-        public async Task<string> Post(RingCentral.DepartmentBulkAssignResource departmentBulkAssignResource)
+        public async Task<string> Post(RingCentral.DepartmentBulkAssignResource departmentBulkAssignResource,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), departmentBulkAssignResource);
+            return await rc.Post<string>(this.Path(), departmentBulkAssignResource, null, cancellationToken);
         }
     }
 }

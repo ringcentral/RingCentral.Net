@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
 {
@@ -22,18 +23,18 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
         /// Operation: Create Webhook in Group
         /// Http Post /restapi/v1.0/glip/groups/{groupId}/webhooks
         /// </summary>
-        public async Task<RingCentral.GlipWebhookInfo> Post()
+        public async Task<RingCentral.GlipWebhookInfo> Post(CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipWebhookInfo>(this.Path());
+            return await rc.Post<RingCentral.GlipWebhookInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Webhooks in Group
         /// Http Get /restapi/v1.0/glip/groups/{groupId}/webhooks
         /// </summary>
-        public async Task<RingCentral.GlipWebhookList> Get()
+        public async Task<RingCentral.GlipWebhookList> Get(CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipWebhookList>(this.Path());
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, cancellationToken);
         }
     }
 }

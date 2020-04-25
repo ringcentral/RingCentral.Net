@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Companies
 {
@@ -29,14 +30,14 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         /// Operation: Get Company Info
         /// Http Get /restapi/v1.0/glip/companies/{companyId}
         /// </summary>
-        public async Task<RingCentral.GlipCompany> Get()
+        public async Task<RingCentral.GlipCompany> Get(CancellationToken? cancellationToken = null)
         {
             if (this.companyId == null)
             {
                 throw new System.ArgumentNullException("companyId");
             }
 
-            return await rc.Get<RingCentral.GlipCompany>(this.Path());
+            return await rc.Get<RingCentral.GlipCompany>(this.Path(), null, cancellationToken);
         }
     }
 }

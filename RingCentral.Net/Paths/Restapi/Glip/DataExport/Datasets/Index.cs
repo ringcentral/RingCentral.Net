@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
 {
@@ -29,14 +30,14 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         /// Operation: Get Data Export Task Dataset
         /// Http Get /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
         /// </summary>
-        public async Task<byte[]> Get()
+        public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
         {
             if (this.datasetId == null)
             {
                 throw new System.ArgumentNullException("datasetId");
             }
 
-            return await rc.Get<byte[]>(this.Path());
+            return await rc.Get<byte[]>(this.Path(), null, cancellationToken);
         }
     }
 }

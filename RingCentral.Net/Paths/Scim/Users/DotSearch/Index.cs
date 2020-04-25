@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Scim.Users.DotSearch
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         /// Operation: Search/List Users
         /// Http Post /scim/v2/Users/.search
         /// </summary>
-        public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest)
+        public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest);
+            return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest, null, cancellationToken);
         }
     }
 }

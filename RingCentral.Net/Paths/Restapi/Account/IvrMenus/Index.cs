@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.IvrMenus
 {
@@ -29,37 +30,39 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// Operation: Create IVR Menu
         /// Http Post /restapi/v1.0/account/{accountId}/ivr-menus
         /// </summary>
-        public async Task<RingCentral.IVRMenuInfo> Post(RingCentral.IVRMenuInfo iVRMenuInfo)
+        public async Task<RingCentral.IVRMenuInfo> Post(RingCentral.IVRMenuInfo iVRMenuInfo,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo);
+            return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get IVR Menu
         /// Http Get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// </summary>
-        public async Task<RingCentral.IVRMenuInfo> Get()
+        public async Task<RingCentral.IVRMenuInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.ivrMenuId == null)
             {
                 throw new System.ArgumentNullException("ivrMenuId");
             }
 
-            return await rc.Get<RingCentral.IVRMenuInfo>(this.Path());
+            return await rc.Get<RingCentral.IVRMenuInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update IVR Menu
         /// Http Put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// </summary>
-        public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo)
+        public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo,
+            CancellationToken? cancellationToken = null)
         {
             if (this.ivrMenuId == null)
             {
                 throw new System.ArgumentNullException("ivrMenuId");
             }
 
-            return await rc.Put<RingCentral.IVRMenuInfo>(this.Path(), iVRMenuInfo);
+            return await rc.Put<RingCentral.IVRMenuInfo>(this.Path(), iVRMenuInfo, null, cancellationToken);
         }
     }
 }

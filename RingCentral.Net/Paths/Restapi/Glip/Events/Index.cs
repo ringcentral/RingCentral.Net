@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Events
 {
@@ -29,60 +30,63 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// Operation: Get User Events List
         /// Http Get /restapi/v1.0/glip/events
         /// </summary>
-        public async Task<RingCentral.GlipEventsInfo> List(ReadGlipEventsParameters queryParams = null)
+        public async Task<RingCentral.GlipEventsInfo> List(ReadGlipEventsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GlipEventsInfo>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Create Event
         /// Http Post /restapi/v1.0/glip/events
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate)
+        public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(false), glipEventCreate);
+            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(false), glipEventCreate, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Event
         /// Http Get /restapi/v1.0/glip/events/{eventId}
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Get()
+        public async Task<RingCentral.GlipEventInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.eventId == null)
             {
                 throw new System.ArgumentNullException("eventId");
             }
 
-            return await rc.Get<RingCentral.GlipEventInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Update Event
         /// Http Put /restapi/v1.0/glip/events/{eventId}
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate)
+        public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate,
+            CancellationToken? cancellationToken = null)
         {
             if (this.eventId == null)
             {
                 throw new System.ArgumentNullException("eventId");
             }
 
-            return await rc.Put<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate);
+            return await rc.Put<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Delete Event
         /// Http Delete /restapi/v1.0/glip/events/{eventId}
         /// </summary>
-        public async Task<string> Delete()
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
         {
             if (this.eventId == null)
             {
                 throw new System.ArgumentNullException("eventId");
             }
 
-            return await rc.Delete<string>(this.Path());
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
         }
     }
 }

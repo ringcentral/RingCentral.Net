@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
 {
@@ -22,9 +23,10 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
         /// Operation: Update Call Recording Extension List
         /// Http Post /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
         /// </summary>
-        public async Task<string> Post(RingCentral.BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource)
+        public async Task<string> Post(RingCentral.BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource);
+            return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource, null, cancellationToken);
         }
     }
 }

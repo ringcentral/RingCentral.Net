@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Greeting
 {
@@ -29,23 +30,24 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         /// Operation: Get Standard Greeting List
         /// Http Get /restapi/v1.0/dictionary/greeting
         /// </summary>
-        public async Task<RingCentral.DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null)
+        public async Task<RingCentral.DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Standard Greeting
         /// Http Get /restapi/v1.0/dictionary/greeting/{greetingId}
         /// </summary>
-        public async Task<RingCentral.DictionaryGreetingInfo> Get()
+        public async Task<RingCentral.DictionaryGreetingInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.greetingId == null)
             {
                 throw new System.ArgumentNullException("greetingId");
             }
 
-            return await rc.Get<RingCentral.DictionaryGreetingInfo>(this.Path());
+            return await rc.Get<RingCentral.DictionaryGreetingInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

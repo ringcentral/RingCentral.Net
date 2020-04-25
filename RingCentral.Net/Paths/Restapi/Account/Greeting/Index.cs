@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Greeting
 {
@@ -23,10 +24,11 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
         /// Http Post /restapi/v1.0/account/{accountId}/greeting
         /// </summary>
         public async Task<RingCentral.CustomCompanyGreetingInfo> Post(
-            CreateCompanyGreetingRequest createCompanyGreetingRequest)
+            CreateCompanyGreetingRequest createCompanyGreetingRequest, CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCompanyGreetingRequest);
-            return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(), multipartFormDataContent);
+            return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(), multipartFormDataContent, null,
+                cancellationToken);
         }
     }
 }

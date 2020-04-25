@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Groups
 {
@@ -29,32 +30,34 @@ namespace RingCentral.Paths.Restapi.Glip.Groups
         /// Operation: Get User Groups
         /// Http Get /restapi/v1.0/glip/groups
         /// </summary>
-        public async Task<RingCentral.GlipGroupList> List(ListGlipGroupsParameters queryParams = null)
+        public async Task<RingCentral.GlipGroupList> List(ListGlipGroupsParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GlipGroupList>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.GlipGroupList>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Create Group
         /// Http Post /restapi/v1.0/glip/groups
         /// </summary>
-        public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.GlipCreateGroup glipCreateGroup)
+        public async Task<RingCentral.GlipGroupInfo> Post(RingCentral.GlipCreateGroup glipCreateGroup,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(false), glipCreateGroup);
+            return await rc.Post<RingCentral.GlipGroupInfo>(this.Path(false), glipCreateGroup, null, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Group
         /// Http Get /restapi/v1.0/glip/groups/{groupId}
         /// </summary>
-        public async Task<RingCentral.GlipGroupInfo> Get()
+        public async Task<RingCentral.GlipGroupInfo> Get(CancellationToken? cancellationToken = null)
         {
             if (this.groupId == null)
             {
                 throw new System.ArgumentNullException("groupId");
             }
 
-            return await rc.Get<RingCentral.GlipGroupInfo>(this.Path());
+            return await rc.Get<RingCentral.GlipGroupInfo>(this.Path(), null, cancellationToken);
         }
     }
 }

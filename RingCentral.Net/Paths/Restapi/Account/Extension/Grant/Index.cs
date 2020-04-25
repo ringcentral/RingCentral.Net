@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Grant
 {
@@ -23,9 +24,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         /// Http Get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
         /// </summary>
         public async Task<RingCentral.GetExtensionGrantListResponse> Get(
-            ListExtensionGrantsParameters queryParams = null)
+            ListExtensionGrantsParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.GetExtensionGrantListResponse>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.GetExtensionGrantListResponse>(this.Path(), queryParams, cancellationToken);
         }
     }
 }

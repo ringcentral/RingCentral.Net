@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Account.CallLog
 {
@@ -29,23 +30,25 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         /// Operation: Get Company Call Log Records
         /// Http Get /restapi/v1.0/account/{accountId}/call-log
         /// </summary>
-        public async Task<RingCentral.AccountCallLogResponse> List(ReadCompanyCallLogParameters queryParams = null)
+        public async Task<RingCentral.AccountCallLogResponse> List(ReadCompanyCallLogParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
-            return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams);
+            return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams, cancellationToken);
         }
 
         /// <summary>
         /// Operation: Get Company Call Log Record(s)
         /// Http Get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
         /// </summary>
-        public async Task<RingCentral.CompanyCallLogRecord> Get(ReadCompanyCallRecordParameters queryParams = null)
+        public async Task<RingCentral.CompanyCallLogRecord> Get(ReadCompanyCallRecordParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
         {
             if (this.callRecordId == null)
             {
                 throw new System.ArgumentNullException("callRecordId");
             }
 
-            return await rc.Get<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams);
+            return await rc.Get<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams, cancellationToken);
         }
     }
 }
