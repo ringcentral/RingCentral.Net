@@ -215,8 +215,8 @@ const generate = (prefix = '/') => {
       /// HTTP Method: ${method.toUpperCase()}
       /// Endpoint: ${operation.endpoint}
       /// Rate Limit Group: ${operation.detail['x-throttling-group']}
-      /// App Permission Required: ${operation.detail['x-app-permission']}
-      /// User Permission Required: ${operation.detail['x-user-permission']}
+      /// App Permission: ${operation.detail['x-app-permission']}
+      /// User Permission: ${operation.detail['x-user-permission']}
       /// </summary>
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
       {${withParam ? `

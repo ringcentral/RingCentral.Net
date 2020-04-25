@@ -3,13 +3,13 @@
 
 ## Get API Versions
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().GET();
+    var result = await rc.Restapi().List();
 }
 ```
 
@@ -21,13 +21,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Version Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/{apiVersion}</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/{apiVersion}</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().GET();
+    var result = await rc.Restapi().Get();
 }
 ```
 
@@ -39,13 +39,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Revoke Token
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/oauth/revoke</code></td></tr><tr><td>Rate Limit Group</td><td><code>Auth</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/oauth/revoke</code></td></tr><tr><td>Rate Limit Group</td><td><code>Auth</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Revoke().POST(revokeTokenRequest);
+    var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest);
 }
 ```
 
@@ -57,13 +57,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Token
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/oauth/token</code></td></tr><tr><td>Rate Limit Group</td><td><code>Auth</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/oauth/token</code></td></tr><tr><td>Rate Limit Group</td><td><code>Auth</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Token().POST(getTokenRequest);
+    var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest);
 }
 ```
 
@@ -75,13 +75,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get API Versions
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).GET();
+    var result = await rc.Restapi(apiVersion).List();
 }
 ```
 
@@ -94,13 +94,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Version Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/{apiVersion}</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/{apiVersion}</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).GET();
+    var result = await rc.Restapi(apiVersion).Get();
 }
 ```
 
@@ -113,13 +113,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Get();
 }
 ```
 
@@ -133,13 +133,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Active Calls
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/active-calls</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/active-calls</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().GET(listCompanyActiveCallsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters);
 }
 ```
 
@@ -153,13 +153,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().POST(companyAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
 }
 ```
 
@@ -173,13 +173,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().GET(listCompanyAnsweringRulesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
 }
 ```
 
@@ -193,13 +193,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Get();
 }
 ```
 
@@ -213,13 +213,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().PUT(companyAnsweringRuleUpdate);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Put(companyAnsweringRuleUpdate);
 }
 ```
 
@@ -233,13 +233,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Delete();
 }
 ```
 
@@ -253,13 +253,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).POST(companyAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Post(companyAnsweringRuleRequest);
 }
 ```
 
@@ -273,13 +273,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).GET(listCompanyAnsweringRulesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).List(listCompanyAnsweringRulesParameters);
 }
 ```
 
@@ -293,13 +293,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
 }
 ```
 
@@ -313,13 +313,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).PUT(companyAnsweringRuleUpdate);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
 }
 ```
 
@@ -333,13 +333,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
 }
 ```
 
@@ -353,13 +353,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Business Address
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-address</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-address</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
 }
 ```
 
@@ -373,13 +373,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Business Address
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-address</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-address</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().PUT(modifyAccountBusinessAddressRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
 }
 ```
 
@@ -393,13 +393,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Business Hours
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
 }
 ```
 
@@ -413,13 +413,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Business Hours
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().PUT(companyBusinessHoursUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
 }
 ```
 
@@ -433,13 +433,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Records
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().GET(readCompanyCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters);
 }
 ```
 
@@ -453,13 +453,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Record(s)
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().GET(readCompanyCallRecordParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().Get(readCompanyCallRecordParameters);
 }
 ```
 
@@ -473,13 +473,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Sync Company Call Log
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().GET(syncAccountCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
 }
 ```
 
@@ -493,13 +493,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Records
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).GET(readCompanyCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).List(readCompanyCallLogParameters);
 }
 ```
 
@@ -513,13 +513,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Record(s)
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).GET(readCompanyCallRecordParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters);
 }
 ```
 
@@ -533,13 +533,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().POST(createCallMonitoringGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
 }
 ```
 
@@ -553,13 +553,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Monitoring Groups List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().GET(listCallMonitoringGroupsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters);
 }
 ```
 
@@ -573,13 +573,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Updates Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().PUT(createCallMonitoringGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Put(createCallMonitoringGroupRequest);
 }
 ```
 
@@ -593,13 +593,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Delete();
 }
 ```
 
@@ -613,13 +613,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).POST(createCallMonitoringGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Post(createCallMonitoringGroupRequest);
 }
 ```
 
@@ -633,13 +633,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Monitoring Groups List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).GET(listCallMonitoringGroupsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Get(listCallMonitoringGroupsParameters);
 }
 ```
 
@@ -653,13 +653,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Updates Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).PUT(createCallMonitoringGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest);
 }
 ```
 
@@ -673,13 +673,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete();
 }
 ```
 
@@ -693,13 +693,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Monitoring Group List
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().POST(callMonitoringBulkAssign);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign);
 }
 ```
 
@@ -713,13 +713,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Monitoring Group Member List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().GET(listCallMonitoringGroupMembersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
 }
 ```
 
@@ -733,13 +733,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Queue List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().GET(listCallQueuesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().Get(listCallQueuesParameters);
 }
 ```
 
@@ -753,13 +753,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Assign Multiple Call Queue Members
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().POST(callQueueBulkAssignResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource);
 }
 ```
 
@@ -773,13 +773,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Queue Members
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().GET(listCallQueueMembersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
 }
 ```
 
@@ -793,13 +793,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Settings
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
 }
 ```
 
@@ -813,13 +813,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Recording Settings
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().PUT(callRecordingSettingsResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
 }
 ```
 
@@ -833,13 +833,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Recording Extension List
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().POST(bulkAccountCallRecordingsResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource);
 }
 ```
 
@@ -853,13 +853,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Custom Greeting List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().GET(listCallRecordingCustomGreetingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters);
 }
 ```
 
@@ -873,13 +873,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Recording Custom Greeting
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Delete();
 }
 ```
 
@@ -893,13 +893,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Custom Greeting List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).GET(listCallRecordingCustomGreetingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Get(listCallRecordingCustomGreetingsParameters);
 }
 ```
 
@@ -913,13 +913,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Recording Custom Greeting
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
 }
 ```
 
@@ -933,13 +933,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Extension List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/extensions</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/extensions</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();
 }
 ```
 
@@ -953,13 +953,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom Field
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().POST(customFieldCreateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
 }
 ```
 
@@ -973,13 +973,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Field List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
 }
 ```
 
@@ -993,13 +993,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Сustom Field
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().PUT(customFieldUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Put(customFieldUpdateRequest);
 }
 ```
 
@@ -1013,13 +1013,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Custom Field
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Delete();
 }
 ```
 
@@ -1033,13 +1033,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom Field
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).POST(customFieldCreateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Post(customFieldCreateRequest);
 }
 ```
 
@@ -1053,13 +1053,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Field List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Get();
 }
 ```
 
@@ -1073,13 +1073,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Сustom Field
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).PUT(customFieldUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
 }
 ```
 
@@ -1093,13 +1093,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Custom Field
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
 }
 ```
 
@@ -1113,13 +1113,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Assign Multiple Department Members
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/department/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>UserGroups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/department/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>UserGroups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Department().BulkAssign().POST(departmentBulkAssignResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Department().BulkAssign().Post(departmentBulkAssignResource);
 }
 ```
 
@@ -1133,13 +1133,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Department Member List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/department/{departmentId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/department/{departmentId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Department(departmentId).Members().GET(listDepartmentMembersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Department(departmentId).Members().Get(listDepartmentMembersParameters);
 }
 ```
 
@@ -1153,13 +1153,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Device
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/device/{deviceId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyDevices</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/device/{deviceId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).GET(readDeviceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters);
 }
 ```
 
@@ -1173,13 +1173,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Device
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/device/{deviceId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyDevices</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/device/{deviceId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).PUT(accountDeviceUpdate, updateDeviceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters);
 }
 ```
 
@@ -1194,13 +1194,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Directory Entries
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().GET(listDirectoryEntriesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
 }
 ```
 
@@ -1214,13 +1214,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Corporate Directory Entry
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/{entryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/{entryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Get();
 }
 ```
 
@@ -1234,13 +1234,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search Company Directory Entries
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/search</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/search</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().POST(searchDirectoryEntriesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest);
 }
 ```
 
@@ -1254,13 +1254,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Directory Entries
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).GET(listDirectoryEntriesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).List(listDirectoryEntriesParameters);
 }
 ```
 
@@ -1274,13 +1274,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Corporate Directory Entry
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/{entryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/{entryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get();
 }
 ```
 
@@ -1294,13 +1294,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Federation
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/federation</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/federation</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get();
 }
 ```
 
@@ -1314,13 +1314,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Device List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().GET(listDevicesAutomaticLocationUpdatesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters);
 }
 ```
 
@@ -1334,13 +1334,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Enable Automatic Location Updates for Devices
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().POST(assignMultipleDevicesAutomaticLocationUpdates);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates);
 }
 ```
 
@@ -1354,13 +1354,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network Map
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List();
 }
 ```
 
@@ -1374,13 +1374,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Network
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().POST(createNetworkRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest);
 }
 ```
 
@@ -1394,13 +1394,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Get();
 }
 ```
 
@@ -1414,13 +1414,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Network
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().PUT(updateNetworkRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Put(updateNetworkRequest);
 }
 ```
 
@@ -1434,13 +1434,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Network
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Delete();
 }
 ```
 
@@ -1454,13 +1454,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network Map
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).List();
 }
 ```
 
@@ -1474,13 +1474,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Network
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).POST(createNetworkRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Post(createNetworkRequest);
 }
 ```
 
@@ -1494,13 +1494,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get();
 }
 ```
 
@@ -1514,13 +1514,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Network
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).PUT(updateNetworkRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest);
 }
 ```
 
@@ -1534,13 +1534,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Network
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete();
 }
 ```
 
@@ -1554,13 +1554,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Switch List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().GET(listAccountSwitchesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters);
 }
 ```
 
@@ -1574,13 +1574,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Switch
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().POST(createSwitchInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo);
 }
 ```
 
@@ -1594,13 +1594,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Switch
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Get();
 }
 ```
 
@@ -1614,13 +1614,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Switch
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().PUT(updateSwitchInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Put(updateSwitchInfo);
 }
 ```
 
@@ -1634,13 +1634,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Switch
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Delete();
 }
 ```
 
@@ -1654,13 +1654,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Multiple Switches
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().POST(createMultipleSwitchesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest);
 }
 ```
 
@@ -1674,13 +1674,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Multiple Switches
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().POST(updateMultipleSwitchesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest);
 }
 ```
 
@@ -1694,13 +1694,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Validate Multiple Switches
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().POST(validateMultipleSwitchesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest);
 }
 ```
 
@@ -1714,13 +1714,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Switch List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).GET(listAccountSwitchesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).List(listAccountSwitchesParameters);
 }
 ```
 
@@ -1734,13 +1734,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Switch
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).POST(createSwitchInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Post(createSwitchInfo);
 }
 ```
 
@@ -1754,13 +1754,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Switch
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get();
 }
 ```
 
@@ -1774,13 +1774,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Switch
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).PUT(updateSwitchInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo);
 }
 ```
 
@@ -1794,13 +1794,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Switch
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete();
 }
 ```
 
@@ -1814,13 +1814,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Map Configuration Task
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get();
 }
 ```
 
@@ -1834,13 +1834,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().GET(listAutomaticLocationUpdatesUsersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters);
 }
 ```
 
@@ -1854,13 +1854,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Enable Automatic Location Updates for Users
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().POST(bulkAssignAutomaticaLocationUpdatesUsers);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticaLocationUpdatesUsers);
 }
 ```
 
@@ -1874,13 +1874,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().GET(listWirelessPointsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters);
 }
 ```
 
@@ -1894,13 +1894,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().POST(createWirelessPoint);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint);
 }
 ```
 
@@ -1914,13 +1914,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Get();
 }
 ```
 
@@ -1934,13 +1934,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().PUT(updateWirelessPoint);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Put(updateWirelessPoint);
 }
 ```
 
@@ -1954,13 +1954,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Delete();
 }
 ```
 
@@ -1974,13 +1974,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Multiple Wireless Points
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().POST(createMultipleWirelessPointsRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest);
 }
 ```
 
@@ -1994,13 +1994,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Multiple Wireless Points
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().POST(updateMultipleWirelessPointsRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest);
 }
 ```
 
@@ -2014,13 +2014,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Validate Multiple Wireless Points
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().POST(validateMultipleWirelessPointsRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest);
 }
 ```
 
@@ -2034,13 +2034,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).GET(listWirelessPointsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).List(listWirelessPointsParameters);
 }
 ```
 
@@ -2054,13 +2054,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).POST(createWirelessPoint);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Post(createWirelessPoint);
 }
 ```
 
@@ -2074,13 +2074,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get();
 }
 ```
 
@@ -2094,13 +2094,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).PUT(updateWirelessPoint);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint);
 }
 ```
 
@@ -2114,13 +2114,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Wireless Point
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete();
 }
 ```
 
@@ -2134,13 +2134,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Emergency Location
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().POST(emergencyLocationInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest);
 }
 ```
 
@@ -2154,13 +2154,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().GET(listEmergencyLocationsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters);
 }
 ```
 
@@ -2174,13 +2174,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Get();
 }
 ```
 
@@ -2194,13 +2194,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Emergency Location
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().PUT(emergencyLocationInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Put(emergencyLocationInfoRequest);
 }
 ```
 
@@ -2214,13 +2214,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Emergency Location
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).POST(emergencyLocationInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Post(emergencyLocationInfoRequest);
 }
 ```
 
@@ -2234,13 +2234,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).GET(listEmergencyLocationsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).List(listEmergencyLocationsParameters);
 }
 ```
 
@@ -2254,13 +2254,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get();
 }
 ```
 
@@ -2274,13 +2274,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Emergency Location
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).PUT(emergencyLocationInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);
 }
 ```
 
@@ -2294,13 +2294,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().GET(listExtensionsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters);
 }
 ```
 
@@ -2314,13 +2314,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Extension
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().POST(extensionCreationRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest);
 }
 ```
 
@@ -2334,13 +2334,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Get();
 }
 ```
 
@@ -2354,13 +2354,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Extension
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo OR EditUserCredentials</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserInfo OR EditUserCredentials</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().PUT(extensionUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Put(extensionUpdateRequest);
 }
 ```
 
@@ -2374,13 +2374,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Extension
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().DELETE(deleteExtensionParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Delete(deleteExtensionParameters);
 }
 ```
 
@@ -2394,13 +2394,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).GET(listExtensionsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).List(listExtensionsParameters);
 }
 ```
 
@@ -2415,13 +2415,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Extension
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).POST(extensionCreationRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Post(extensionCreationRequest);
 }
 ```
 
@@ -2436,13 +2436,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get();
 }
 ```
 
@@ -2457,13 +2457,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Extension
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo OR EditUserCredentials</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserInfo OR EditUserCredentials</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PUT(extensionUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest);
 }
 ```
 
@@ -2478,13 +2478,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Extension
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).DELETE(deleteExtensionParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete(deleteExtensionParameters);
 }
 ```
 
@@ -2499,13 +2499,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Active Calls
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().GET(listExtensionActiveCallsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
 }
 ```
 
@@ -2520,13 +2520,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Address Book Synchronization
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().GET(syncAddressBookParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters);
 }
 ```
 
@@ -2541,13 +2541,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().GET(listContactsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
 }
 ```
 
@@ -2562,13 +2562,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Contact
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Contacts</code></td></tr><tr><td>User Permission</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().POST(personalContactRequest, createContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters);
 }
 ```
 
@@ -2584,13 +2584,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Get();
 }
 ```
 
@@ -2605,13 +2605,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Contact
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Contacts</code></td></tr><tr><td>User Permission</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().PUT(personalContactRequest, updateContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Put(personalContactRequest, updateContactParameters);
 }
 ```
 
@@ -2627,13 +2627,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Contact
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Contacts</code></td></tr><tr><td>User Permission</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Delete();
 }
 ```
 
@@ -2648,13 +2648,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).GET(listContactsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).List(listContactsParameters);
 }
 ```
 
@@ -2669,13 +2669,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Contact
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Contacts</code></td></tr><tr><td>User Permission</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).POST(personalContactRequest, createContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Post(personalContactRequest, createContactParameters);
 }
 ```
 
@@ -2691,13 +2691,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
 }
 ```
 
@@ -2712,13 +2712,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Contact
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Contacts</code></td></tr><tr><td>User Permission</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).PUT(personalContactRequest, updateContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters);
 }
 ```
 
@@ -2734,13 +2734,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Contact
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Contacts</code></td></tr><tr><td>User Permission</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
 }
 ```
 
@@ -2755,13 +2755,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rules
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().GET(listAnsweringRulesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
 }
 ```
 
@@ -2776,13 +2776,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().POST(createAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest);
 }
 ```
 
@@ -2797,13 +2797,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().GET(readAnsweringRuleParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Get(readAnsweringRuleParameters);
 }
 ```
 
@@ -2818,13 +2818,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().PUT(updateAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Put(updateAnsweringRuleRequest);
 }
 ```
 
@@ -2839,13 +2839,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Delete();
 }
 ```
 
@@ -2860,13 +2860,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rules
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).GET(listAnsweringRulesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).List(listAnsweringRulesParameters);
 }
 ```
 
@@ -2881,13 +2881,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).POST(createAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Post(createAnsweringRuleRequest);
 }
 ```
 
@@ -2902,13 +2902,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).GET(readAnsweringRuleParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
 }
 ```
 
@@ -2923,13 +2923,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).PUT(updateAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest);
 }
 ```
 
@@ -2944,13 +2944,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
 }
 ```
 
@@ -2965,13 +2965,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Authorization Profile
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get();
 }
 ```
 
@@ -2986,13 +2986,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Check User Permission
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().GET(checkUserPermissionParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters);
 }
 ```
 
@@ -3007,13 +3007,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Business Hours
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get();
 }
 ```
 
@@ -3028,13 +3028,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Business Hours
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().PUT(userBusinessHoursUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest);
 }
 ```
 
@@ -3049,13 +3049,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Log Records
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().GET(readUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters);
 }
 ```
 
@@ -3070,13 +3070,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User Call Log
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>EditCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditCallLog</code></td></tr><tr><td>User Permission</td><td><code>EditCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().DELETE(deleteUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
 }
 ```
 
@@ -3091,13 +3091,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Record
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().GET(readUserCallRecordParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Get(readUserCallRecordParameters);
 }
 ```
 
@@ -3112,13 +3112,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Sync User Call Log
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().GET(syncUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters);
 }
 ```
 
@@ -3133,13 +3133,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Log Records
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).GET(readUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).List(readUserCallLogParameters);
 }
 ```
 
@@ -3154,13 +3154,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User Call Log
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>EditCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditCallLog</code></td></tr><tr><td>User Permission</td><td><code>EditCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).DELETE(deleteUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Delete(deleteUserCallLogParameters);
 }
 ```
 
@@ -3175,13 +3175,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Record
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).GET(readUserCallRecordParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
 }
 ```
 
@@ -3196,13 +3196,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Call Queues
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Accounts</code></td></tr><tr><td>User Permission Required</td><td><code>JoinLeaveCallQueue</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Accounts</code></td></tr><tr><td>User Permission</td><td><code>JoinLeaveCallQueue</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().PUT(userCallQueues);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues);
 }
 ```
 
@@ -3217,13 +3217,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Caller Blocking Settings
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();
 }
 ```
 
@@ -3238,13 +3238,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Caller Blocking Settings
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PUT(callerBlockingSettingsUpdate);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);
 }
 ```
 
@@ -3259,13 +3259,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Phone Numbers
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().GET(listBlockedAllowedNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
 }
 ```
 
@@ -3280,13 +3280,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().POST(addBlockedAllowedPhoneNumber);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber);
 }
 ```
 
@@ -3301,13 +3301,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Get();
 }
 ```
 
@@ -3322,13 +3322,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Delete();
 }
 ```
 
@@ -3343,13 +3343,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().PUT(addBlockedAllowedPhoneNumber);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Put(addBlockedAllowedPhoneNumber);
 }
 ```
 
@@ -3364,13 +3364,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Phone Numbers
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).GET(listBlockedAllowedNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).List(listBlockedAllowedNumbersParameters);
 }
 ```
 
@@ -3385,13 +3385,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).POST(addBlockedAllowedPhoneNumber);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Post(addBlockedAllowedPhoneNumber);
 }
 ```
 
@@ -3406,13 +3406,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get();
 }
 ```
 
@@ -3427,13 +3427,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
 }
 ```
 
@@ -3448,13 +3448,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).PUT(addBlockedAllowedPhoneNumber);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber);
 }
 ```
 
@@ -3469,13 +3469,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Caller ID
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallerIDSettings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCallerIDSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get();
 }
 ```
 
@@ -3490,13 +3490,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Extension Caller ID
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditCallerIDSettings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditCallerIDSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().PUT(extensionCallerIdInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfo);
 }
 ```
 
@@ -3511,13 +3511,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Internal Text Message
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>InternalMessages</code></td></tr><tr><td>User Permission Required</td><td><code>InternalSMS</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>InternalMessages</code></td></tr><tr><td>User Permission</td><td><code>InternalSMS</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().POST(createInternalTextMessageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest);
 }
 ```
 
@@ -3532,13 +3532,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Conferencing Settings
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>OrganizeConference</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>OrganizeConference</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().GET(readConferencingSettingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
 }
 ```
 
@@ -3553,13 +3553,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Conferencing Settings
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>OrganizeConference</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>OrganizeConference</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().PUT(updateConferencingInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest);
 }
 ```
 
@@ -3574,13 +3574,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Device List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/device</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserDevices</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/device</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().GET(listExtensionDevicesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
 }
 ```
 
@@ -3595,13 +3595,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Favorite Contact List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get();
 }
 ```
 
@@ -3616,13 +3616,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Favorite Contact List
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Contacts</code></td></tr><tr><td>User Permission</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().PUT(favoriteCollection);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
 }
 ```
 
@@ -3637,13 +3637,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Fax Message
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Faxes</code></td></tr><tr><td>User Permission Required</td><td><code>OutboundFaxes</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Faxes</code></td></tr><tr><td>User Permission</td><td><code>OutboundFaxes</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().POST(createFaxMessageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
 }
 ```
 
@@ -3658,13 +3658,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Features
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/features</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/features</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().GET(readUserFeaturesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readUserFeaturesParameters);
 }
 ```
 
@@ -3679,13 +3679,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().GET(listForwardingNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
 }
 ```
 
@@ -3700,13 +3700,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().POST(createForwardingNumberRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest);
 }
 ```
 
@@ -3721,13 +3721,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Get();
 }
 ```
 
@@ -3742,13 +3742,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().PUT(updateForwardingNumberRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Put(updateForwardingNumberRequest);
 }
 ```
 
@@ -3763,13 +3763,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Delete();
 }
 ```
 
@@ -3784,13 +3784,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).GET(listForwardingNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).List(listForwardingNumbersParameters);
 }
 ```
 
@@ -3805,13 +3805,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).POST(createForwardingNumberRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Post(createForwardingNumberRequest);
 }
 ```
 
@@ -3826,13 +3826,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
 }
 ```
 
@@ -3847,13 +3847,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).PUT(updateForwardingNumberRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest);
 }
 ```
 
@@ -3868,13 +3868,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Forwarding Number
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
 }
 ```
 
@@ -3889,13 +3889,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Grant List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().GET(listExtensionGrantsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
 }
 ```
 
@@ -3910,13 +3910,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom User Greeting
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().POST(createCustomUserGreetingRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest);
 }
 ```
 
@@ -3931,13 +3931,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Greeting
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Get();
 }
 ```
 
@@ -3952,13 +3952,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom User Greeting
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).POST(createCustomUserGreetingRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Post(createCustomUserGreetingRequest);
 }
 ```
 
@@ -3973,13 +3973,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Greeting
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get();
 }
 ```
 
@@ -3994,13 +3994,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scheduled Meetings
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List();
 }
 ```
 
@@ -4015,13 +4015,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Meeting
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().POST(meetingRequestResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource);
 }
 ```
 
@@ -4036,13 +4036,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Meeting Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Get();
 }
 ```
 
@@ -4057,13 +4057,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Meeting
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().PUT(meetingRequestResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Put(meetingRequestResource);
 }
 ```
 
@@ -4078,13 +4078,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Meeting
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Delete();
 }
 ```
 
@@ -4099,13 +4099,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Meeting Recordings List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>MeetingsRecordings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>MeetingsRecordings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().GET(listUserMeetingRecordingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters);
 }
 ```
 
@@ -4120,13 +4120,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Meeting Service Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get();
 }
 ```
 
@@ -4141,13 +4141,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Meeting Service Info
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().PATCH(meetingServiceInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest);
 }
 ```
 
@@ -4162,13 +4162,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scheduled Meetings
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).List();
 }
 ```
 
@@ -4183,13 +4183,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Meeting
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).POST(meetingRequestResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Post(meetingRequestResource);
 }
 ```
 
@@ -4204,13 +4204,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Meeting Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get();
 }
 ```
 
@@ -4225,13 +4225,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Meeting
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).PUT(meetingRequestResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource);
 }
 ```
 
@@ -4246,13 +4246,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Meeting
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete();
 }
 ```
 
@@ -4267,13 +4267,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## End Meeting
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().POST();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post();
 }
 ```
 
@@ -4288,13 +4288,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Assistants
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get();
 }
 ```
 
@@ -4309,13 +4309,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Assisted Users
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get();
 }
 ```
 
@@ -4330,13 +4330,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().GET(listMessagesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters);
 }
 ```
 
@@ -4351,13 +4351,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().Get();
 }
 ```
 
@@ -4372,13 +4372,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Message List
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditMessages</code></td></tr><tr><td>User Permission</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().PUT(updateMessageRequest, updateMessageParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().Put(updateMessageRequest, updateMessageParameters);
 }
 ```
 
@@ -4394,13 +4394,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Message
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditMessages</code></td></tr><tr><td>User Permission</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().DELETE(deleteMessageParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().Delete(deleteMessageParameters);
 }
 ```
 
@@ -4415,13 +4415,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).GET(listMessagesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).List(listMessagesParameters);
 }
 ```
 
@@ -4436,13 +4436,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
 }
 ```
 
@@ -4457,13 +4457,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Message List
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditMessages</code></td></tr><tr><td>User Permission</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).PUT(updateMessageRequest, updateMessageParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest, updateMessageParameters);
 }
 ```
 
@@ -4479,13 +4479,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Message
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditMessages</code></td></tr><tr><td>User Permission</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).DELETE(deleteMessageParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters);
 }
 ```
 
@@ -4500,13 +4500,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Content
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessageContent</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>ReadMessageContent</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).GET(readMessageContentParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
 }
 ```
 
@@ -4525,13 +4525,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Sync Messages
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().GET(syncMessagesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters);
 }
 ```
 
@@ -4546,13 +4546,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create MMS Message
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>SMS</code></td></tr><tr><td>User Permission Required</td><td><code>OutboundSMS</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>SMS</code></td></tr><tr><td>User Permission</td><td><code>OutboundSMS</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().POST(createMmsMessage);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMmsMessage);
 }
 ```
 
@@ -4567,13 +4567,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Notification Settings
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessagesNotificationsSettings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadMessagesNotificationsSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get();
 }
 ```
 
@@ -4588,13 +4588,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Notification Settings
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessagesNotificationsSettings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditMessagesNotificationsSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().PUT(notificationSettingsUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest);
 }
 ```
 
@@ -4609,13 +4609,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Phone Number List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserPhoneNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().GET(listExtensionPhoneNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters);
 }
 ```
 
@@ -4630,13 +4630,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Presence Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPresenceStatus</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission</td><td><code>ReadPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().GET(readUserPresenceStatusParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
 }
 ```
 
@@ -4651,13 +4651,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Presence Status
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditPresence</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditPresence</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().PUT(presenceInfoResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoResource);
 }
 ```
 
@@ -4672,13 +4672,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List();
 }
 ```
 
@@ -4697,13 +4697,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Upload User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().POST(createUserProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest);
 }
 ```
 
@@ -4718,13 +4718,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().PUT(updateUserProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest);
 }
 ```
 
@@ -4739,13 +4739,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scaled User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Get();
 }
 ```
 
@@ -4764,13 +4764,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).List();
 }
 ```
 
@@ -4789,13 +4789,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Upload User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).POST(createUserProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Post(createUserProfileImageRequest);
 }
 ```
 
@@ -4810,13 +4810,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).PUT(updateUserProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Put(updateUserProfileImageRequest);
 }
 ```
 
@@ -4831,13 +4831,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scaled User Profile Image
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
 }
 ```
 
@@ -4856,13 +4856,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().POST(makeRingOutRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest);
 }
 ```
 
@@ -4877,13 +4877,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Get();
 }
 ```
 
@@ -4898,13 +4898,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Delete();
 }
 ```
 
@@ -4919,13 +4919,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).POST(makeRingOutRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Post(makeRingOutRequest);
 }
 ```
 
@@ -4940,13 +4940,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get();
 }
 ```
 
@@ -4961,13 +4961,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
 }
 ```
 
@@ -4982,13 +4982,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout().POST(makeRingOutRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout().Post(makeRingOutRequest);
 }
 ```
 
@@ -5003,13 +5003,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout().Get();
 }
 ```
 
@@ -5024,13 +5024,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout().Delete();
 }
 ```
 
@@ -5045,13 +5045,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout(ringoutId).POST(makeRingOutRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout(ringoutId).Post(makeRingOutRequest);
 }
 ```
 
@@ -5066,13 +5066,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout(ringoutId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout(ringoutId).Get();
 }
 ```
 
@@ -5087,13 +5087,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>RingOut</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout(ringoutId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Ringout(ringoutId).Delete();
 }
 ```
 
@@ -5108,13 +5108,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Send SMS
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>SMS</code></td></tr><tr><td>User Permission Required</td><td><code>OutboundSMS</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>SMS</code></td></tr><tr><td>User Permission</td><td><code>OutboundSMS</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().POST(createSmsMessage);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSmsMessage);
 }
 ```
 
@@ -5129,13 +5129,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Unified Presence
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPresenceStatus</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission</td><td><code>ReadPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get();
 }
 ```
 
@@ -5150,13 +5150,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Unified Presence
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditPresence</code></td></tr><tr><td>User Permission Required</td><td><code>EditPresenceStatus</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditPresence</code></td></tr><tr><td>User Permission</td><td><code>EditPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().PATCH(updateUnifiedPresence);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence);
 }
 ```
 
@@ -5171,13 +5171,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Company Greeting
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().POST(createCompanyGreetingRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest);
 }
 ```
 
@@ -5191,13 +5191,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Menu
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().POST(ivrMenuInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(ivrMenuInfo);
 }
 ```
 
@@ -5211,13 +5211,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Menu
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Get();
 }
 ```
 
@@ -5231,13 +5231,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Menu
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().PUT(ivrMenuInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Put(ivrMenuInfo);
 }
 ```
 
@@ -5251,13 +5251,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Menu
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).POST(ivrMenuInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Post(ivrMenuInfo);
 }
 ```
 
@@ -5271,13 +5271,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Menu
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get();
 }
 ```
 
@@ -5291,13 +5291,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Menu
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).PUT(ivrMenuInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(ivrMenuInfo);
 }
 ```
 
@@ -5311,13 +5311,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Prompts
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().POST(createIvrPromptRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIvrPromptRequest);
 }
 ```
 
@@ -5331,13 +5331,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
 }
 ```
 
@@ -5351,13 +5351,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Get();
 }
 ```
 
@@ -5371,13 +5371,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete IVR Prompt
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Delete();
 }
 ```
 
@@ -5391,13 +5391,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Prompt
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().PUT(updateIvrPromptRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Put(updateIvrPromptRequest);
 }
 ```
 
@@ -5411,13 +5411,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Prompts
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).POST(createIvrPromptRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Post(createIvrPromptRequest);
 }
 ```
 
@@ -5431,13 +5431,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).List();
 }
 ```
 
@@ -5451,13 +5451,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
 }
 ```
 
@@ -5471,13 +5471,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete IVR Prompt
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
 }
 ```
 
@@ -5491,13 +5491,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Prompt
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).PUT(updateIvrPromptRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIvrPromptRequest);
 }
 ```
 
@@ -5511,13 +5511,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt Content
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get();
 }
 ```
 
@@ -5535,13 +5535,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get Account Meeting Recordings List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/meeting-recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>MeetingsRecordings</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/meeting-recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Meetings</code></td></tr><tr><td>User Permission</td><td><code>MeetingsRecordings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().GET(listAccountMeetingRecordingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters);
 }
 ```
 
@@ -5555,13 +5555,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Configuration
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-configuration</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AccountAdministration</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-configuration</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AccountAdministration</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get();
 }
 ```
 
@@ -5575,13 +5575,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Message Store Configuration
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-configuration</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AccountAdministration</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-configuration</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>AccountAdministration</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().PUT(messageStoreConfiguration);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
 }
 ```
 
@@ -5595,13 +5595,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Message Store Report
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().POST(createMessageStoreReportRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest);
 }
 ```
 
@@ -5615,13 +5615,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Task
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Get();
 }
 ```
 
@@ -5635,13 +5635,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Message Store Report
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).POST(createMessageStoreReportRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Post(createMessageStoreReportRequest);
 }
 ```
 
@@ -5655,13 +5655,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Task
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get();
 }
 ```
 
@@ -5675,13 +5675,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List();
 }
 ```
 
@@ -5695,13 +5695,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive Content
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().Get();
 }
 ```
 
@@ -5715,13 +5715,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).List();
 }
 ```
 
@@ -5735,13 +5735,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive Content
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
 }
 ```
 
@@ -5755,13 +5755,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Assign Paging Group Users and Devices
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().POST(editPagingGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest);
 }
 ```
 
@@ -5775,13 +5775,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Paging Group Devices
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyDevices</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().GET(listPagingGroupDevicesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
 }
 ```
 
@@ -5795,13 +5795,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Paging Group Users
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().GET(listPagingGroupUsersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters);
 }
 ```
 
@@ -5815,13 +5815,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Phone Number List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().GET(listAccountPhoneNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
 }
 ```
 
@@ -5835,13 +5835,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Phone Number
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().Get();
 }
 ```
 
@@ -5855,13 +5855,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Phone Number List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).GET(listAccountPhoneNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).List(listAccountPhoneNumbersParameters);
 }
 ```
 
@@ -5875,13 +5875,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Phone Number
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
 }
 ```
 
@@ -5895,13 +5895,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Presence Status List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPresenceStatus</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission</td><td><code>ReadPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().GET(readAccountPresenceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters);
 }
 ```
 
@@ -5915,13 +5915,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/recording/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallRecording</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallRecording</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/recording/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallRecording</code></td></tr><tr><td>User Permission</td><td><code>ReadCallRecording</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get();
 }
 ```
 
@@ -5935,13 +5935,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recordings Data
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/recording/{recordingId}/content</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallRecording</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallRecording</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/recording/{recordingId}/content</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>ReadCallRecording</code></td></tr><tr><td>User Permission</td><td><code>ReadCallRecording</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get();
 }
 ```
 
@@ -5959,13 +5959,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get Account Service Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadServicePlanInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadServicePlanInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
 }
 ```
 
@@ -5979,13 +5979,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make CallOut
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/call-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/call-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().POST(makeCallOutRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest);
 }
 ```
 
@@ -5999,13 +5999,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Session Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).GET(readCallSessionStatusParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters);
 }
 ```
 
@@ -6019,13 +6019,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Drop Call Session
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).DELETE();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete();
 }
 ```
 
@@ -6039,13 +6039,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Party Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get();
 }
 ```
 
@@ -6059,13 +6059,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Party
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).PATCH(partyUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest);
 }
 ```
 
@@ -6079,13 +6079,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Answer Call Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().POST(answerTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget);
 }
 ```
 
@@ -6099,13 +6099,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Call Flip on Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().POST(callPartyFlip);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
 }
 ```
 
@@ -6119,13 +6119,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Forward Call Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().POST(forwardTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget);
 }
 ```
 
@@ -6139,13 +6139,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Hold Call Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().POST();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post();
 }
 ```
 
@@ -6159,13 +6159,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Ignore Call in Queue
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().POST(ignoreRequestBody);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody);
 }
 ```
 
@@ -6179,13 +6179,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Call Park
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().POST();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();
 }
 ```
 
@@ -6199,13 +6199,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Pickup Call
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().POST(pickupTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget);
 }
 ```
 
@@ -6219,13 +6219,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Recording
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().POST();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post();
 }
 ```
 
@@ -6239,13 +6239,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Pause/Resume Recording
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().PATCH(callRecordingUpdate, pauseResumeCallRecordingParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
 }
 ```
 
@@ -6260,13 +6260,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Recording
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).POST();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Post();
 }
 ```
 
@@ -6280,13 +6280,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Pause/Resume Recording
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).PATCH(callRecordingUpdate, pauseResumeCallRecordingParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
 }
 ```
 
@@ -6301,13 +6301,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Reject Call Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().POST();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post();
 }
 ```
 
@@ -6321,13 +6321,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Reply with Text
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().POST(callPartyReply);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply);
 }
 ```
 
@@ -6341,13 +6341,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Supervise Call Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().POST(partySuperviseRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest);
 }
 ```
 
@@ -6361,13 +6361,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Transfer Call Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().POST(transferTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget);
 }
 ```
 
@@ -6381,13 +6381,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Unhold Call Party
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().POST();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post();
 }
 ```
 
@@ -6401,13 +6401,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Supervise Call Session
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>CallControl</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().POST(superviseCallSessionRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest);
 }
 ```
 
@@ -6421,13 +6421,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().GET(listUserTemplatesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters);
 }
 ```
 
@@ -6441,13 +6441,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates/{templateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates/{templateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().Get();
 }
 ```
 
@@ -6461,13 +6461,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).GET(listUserTemplatesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).List(listUserTemplatesParameters);
 }
 ```
 
@@ -6481,13 +6481,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates/{templateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates/{templateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).GET();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get();
 }
 ```
 
@@ -6501,13 +6501,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Register SIP Device
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/client-info/sip-provision</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>VoipCalling</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/client-info/sip-provision</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>VoipCalling</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().POST(createSipRegistrationRequest);
+    var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest);
 }
 ```
 
@@ -6520,13 +6520,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country().GET(listCountriesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
 }
 ```
 
@@ -6539,13 +6539,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country/{countryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country/{countryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country().GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Country().Get();
 }
 ```
 
@@ -6558,13 +6558,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).GET(listCountriesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).List(listCountriesParameters);
 }
 ```
 
@@ -6577,13 +6577,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country/{countryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country/{countryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
 }
 ```
 
@@ -6596,13 +6596,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Fax Cover Page List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/fax-cover-page</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/fax-cover-page</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().GET(listFaxCoverPagesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
 }
 ```
 
@@ -6615,13 +6615,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().GET(listStandardGreetingsParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
 }
 ```
 
@@ -6634,13 +6634,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().Get();
 }
 ```
 
@@ -6653,13 +6653,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).GET(listStandardGreetingsParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).List(listStandardGreetingsParameters);
 }
 ```
 
@@ -6672,13 +6672,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
 }
 ```
 
@@ -6691,13 +6691,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language().GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
 }
 ```
 
@@ -6710,13 +6710,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language/{languageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language/{languageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language().GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Language().Get();
 }
 ```
 
@@ -6729,13 +6729,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).List();
 }
 ```
 
@@ -6748,13 +6748,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language/{languageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language/{languageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
 }
 ```
 
@@ -6767,13 +6767,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Location List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/location</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/location</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Location().GET(listLocationsParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
 }
 ```
 
@@ -6786,13 +6786,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get States List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State().GET(listStatesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters);
 }
 ```
 
@@ -6805,13 +6805,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get State
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state/{stateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state/{stateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State().GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().State().Get();
 }
 ```
 
@@ -6824,13 +6824,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get States List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).GET(listStatesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).List(listStatesParameters);
 }
 ```
 
@@ -6843,13 +6843,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get State
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state/{stateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state/{stateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).GET();
+    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get();
 }
 ```
 
@@ -6862,13 +6862,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().GET(listTimezonesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
 }
 ```
 
@@ -6881,13 +6881,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone/{timezoneId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone/{timezoneId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().GET(readTimezoneParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().Get(readTimezoneParameters);
 }
 ```
 
@@ -6900,13 +6900,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).GET(listTimezonesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).List(listTimezonesParameters);
 }
 ```
 
@@ -6919,13 +6919,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone/{timezoneId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone/{timezoneId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).GET(readTimezoneParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters);
 }
 ```
 
@@ -6938,13 +6938,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Card
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards().POST(glipMessageAttachmentInfoRequest, createGlipCardParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Cards().Post(glipMessageAttachmentInfoRequest, createGlipCardParameters);
 }
 ```
 
@@ -6958,13 +6958,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Card
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Cards().Get();
 }
 ```
 
@@ -6977,13 +6977,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Card
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards().PUT(glipMessageAttachmentInfoRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Cards().Put(glipMessageAttachmentInfoRequest);
 }
 ```
 
@@ -6996,13 +6996,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Card
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards().DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Cards().Delete();
 }
 ```
 
@@ -7015,13 +7015,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Card
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).POST(glipMessageAttachmentInfoRequest, createGlipCardParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).Post(glipMessageAttachmentInfoRequest, createGlipCardParameters);
 }
 ```
 
@@ -7035,13 +7035,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Card
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).Get();
 }
 ```
 
@@ -7054,13 +7054,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Card
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).PUT(glipMessageAttachmentInfoRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).Put(glipMessageAttachmentInfoRequest);
 }
 ```
 
@@ -7073,13 +7073,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Card
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Cards(cardId).Delete();
 }
 ```
 
@@ -7092,13 +7092,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chats
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats().GET(listGlipChatsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters);
 }
 ```
 
@@ -7111,13 +7111,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Chats().Get();
 }
 ```
 
@@ -7130,13 +7130,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chats
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).GET(listGlipChatsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).List(listGlipChatsParameters);
 }
 ```
 
@@ -7149,13 +7149,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get();
 }
 ```
 
@@ -7168,13 +7168,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Chat to Favorites
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post();
 }
 ```
 
@@ -7187,13 +7187,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Note
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/notes</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/notes</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().POST(glipNoteCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Post(glipNoteCreate);
 }
 ```
 
@@ -7206,13 +7206,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat Notes
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/notes</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/notes</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().GET(listChatNotesParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Get(listChatNotesParameters);
 }
 ```
 
@@ -7225,13 +7225,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Posts
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().GET(readGlipPostsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters);
 }
 ```
 
@@ -7244,13 +7244,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().POST(glipPostPostBody);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(glipPostPostBody);
 }
 ```
 
@@ -7263,13 +7263,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Post
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Get();
 }
 ```
 
@@ -7282,13 +7282,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Post
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().PATCH(glipPatchPostBody);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Patch(glipPatchPostBody);
 }
 ```
 
@@ -7301,13 +7301,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Post
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Delete();
 }
 ```
 
@@ -7320,13 +7320,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Posts
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).GET(readGlipPostsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).List(readGlipPostsParameters);
 }
 ```
 
@@ -7339,13 +7339,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).POST(glipPostPostBody);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Post(glipPostPostBody);
 }
 ```
 
@@ -7358,13 +7358,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Post
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get();
 }
 ```
 
@@ -7377,13 +7377,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Post
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).PATCH(glipPatchPostBody);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody);
 }
 ```
 
@@ -7396,13 +7396,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Post
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete();
 }
 ```
 
@@ -7415,13 +7415,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Mark Chat as Read
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/read</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>GlipInternal</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/read</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>GlipInternal</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post();
 }
 ```
 
@@ -7434,13 +7434,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat Tasks
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/tasks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/tasks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().GET(listChatTasksParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Get(listChatTasksParameters);
 }
 ```
 
@@ -7453,13 +7453,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Task
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/tasks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/tasks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().POST(glipCreateTask);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Post(glipCreateTask);
 }
 ```
 
@@ -7472,13 +7472,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Remove Chat from Favorites
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/unfavorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/unfavorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post();
 }
 ```
 
@@ -7491,13 +7491,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Mark Chat as Unread
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/unread</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>GlipInternal</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/unread</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>GlipInternal</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post();
 }
 ```
 
@@ -7510,13 +7510,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Info
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/companies/{companyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/companies/{companyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get();
 }
 ```
 
@@ -7529,13 +7529,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversations
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().GET(listGlipConversationsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters);
 }
 ```
 
@@ -7548,13 +7548,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create/Open Conversation
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().POST(createGlipConversationRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest);
 }
 ```
 
@@ -7567,13 +7567,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversation
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().Get();
 }
 ```
 
@@ -7586,13 +7586,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversations
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).GET(listGlipConversationsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).List(listGlipConversationsParameters);
 }
 ```
 
@@ -7605,13 +7605,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create/Open Conversation
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).POST(createGlipConversationRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Post(createGlipConversationRequest);
 }
 ```
 
@@ -7624,13 +7624,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversation
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get();
 }
 ```
 
@@ -7643,13 +7643,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Data Export Task
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().POST(createDataExportTaskRequest);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest);
 }
 ```
 
@@ -7662,13 +7662,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().GET(listDataExportTasksParameters);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport().List(listDataExportTasksParameters);
 }
 ```
 
@@ -7681,13 +7681,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().GET();
+    var result = await rc.Restapi(apiVersion).Glip().DataExport().Get();
 }
 ```
 
@@ -7700,13 +7700,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Data Export Task
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).POST(createDataExportTaskRequest);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Post(createDataExportTaskRequest);
 }
 ```
 
@@ -7719,13 +7719,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).GET(listDataExportTasksParameters);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).List(listDataExportTasksParameters);
 }
 ```
 
@@ -7738,13 +7738,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get();
 }
 ```
 
@@ -7757,13 +7757,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task Dataset
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).Get();
 }
 ```
 
@@ -7780,13 +7780,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get User Events List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().GET(readGlipEventsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters);
 }
 ```
 
@@ -7799,13 +7799,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Event
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().POST(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate);
 }
 ```
 
@@ -7818,13 +7818,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Event
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Events().Get();
 }
 ```
 
@@ -7837,13 +7837,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Event
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().PUT(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Events().Put(glipEventCreate);
 }
 ```
 
@@ -7856,13 +7856,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Event
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Events().Delete();
 }
 ```
 
@@ -7875,13 +7875,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Events List
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).GET(readGlipEventsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).List(readGlipEventsParameters);
 }
 ```
 
@@ -7894,13 +7894,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Event
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).POST(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Post(glipEventCreate);
 }
 ```
 
@@ -7913,13 +7913,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Event
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get();
 }
 ```
 
@@ -7932,13 +7932,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Event
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).PUT(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate);
 }
 ```
 
@@ -7951,13 +7951,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Event
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete();
 }
 ```
 
@@ -7970,13 +7970,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Everyone Chat
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/everyone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/everyone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Everyone().Get();
 }
 ```
 
@@ -7989,13 +7989,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Everyone Сhat
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/everyone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/everyone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().PATCH(updateGlipEveryoneRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest);
 }
 ```
 
@@ -8008,13 +8008,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Favorite Chats
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/favorites</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/favorites</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Favorites().GET(listFavoriteChatsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters);
 }
 ```
 
@@ -8027,13 +8027,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Groups
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups().GET(listGlipGroupsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Groups().List(listGlipGroupsParameters);
 }
 ```
 
@@ -8046,13 +8046,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Group
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups().POST(glipCreateGroup);
+    var result = await rc.Restapi(apiVersion).Glip().Groups().Post(glipCreateGroup);
 }
 ```
 
@@ -8065,13 +8065,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Groups().Get();
 }
 ```
 
@@ -8084,13 +8084,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Groups
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).GET(listGlipGroupsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).List(listGlipGroupsParameters);
 }
 ```
 
@@ -8103,13 +8103,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Group
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).POST(glipCreateGroup);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Post(glipCreateGroup);
 }
 ```
 
@@ -8122,13 +8122,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Get();
 }
 ```
 
@@ -8141,13 +8141,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Edit Group Members
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).BulkAssign().POST(editGroupRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).BulkAssign().Post(editGroupRequest);
 }
 ```
 
@@ -8160,13 +8160,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Event by Group ID
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().POST(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate);
 }
 ```
 
@@ -8179,13 +8179,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group Events
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get();
 }
 ```
 
@@ -8198,13 +8198,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group Posts
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().GET(listGlipGroupPostsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().Get(listGlipGroupPostsParameters);
 }
 ```
 
@@ -8217,13 +8217,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post in Group
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().POST(glipCreatePost);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().Post(glipCreatePost);
 }
 ```
 
@@ -8236,13 +8236,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Post
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts(postId).Text().PUT(string);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts(postId).Text().Put(string);
 }
 ```
 
@@ -8255,13 +8255,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Webhook in Group
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post();
 }
 ```
 
@@ -8274,13 +8274,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhooks in Group
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get();
 }
 ```
 
@@ -8293,13 +8293,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Note
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get();
 }
 ```
 
@@ -8312,13 +8312,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Note
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).PATCH(glipNoteCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate);
 }
 ```
 
@@ -8331,13 +8331,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Note
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete();
 }
 ```
 
@@ -8350,13 +8350,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Lock Note
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/lock</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/lock</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post();
 }
 ```
 
@@ -8369,13 +8369,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Publish Note
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/publish</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/publish</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post();
 }
 ```
 
@@ -8388,13 +8388,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Unlock Note
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/unlock</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/unlock</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post();
 }
 ```
 
@@ -8407,13 +8407,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Person
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/persons/{personId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/persons/{personId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Persons(personId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get();
 }
 ```
 
@@ -8426,13 +8426,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Posts
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Posts().GET(listGlipPostsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Posts().Get(listGlipPostsParameters);
 }
 ```
 
@@ -8445,13 +8445,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Posts().POST(glipCreatePost);
+    var result = await rc.Restapi(apiVersion).Glip().Posts().Post(glipCreatePost);
 }
 ```
 
@@ -8464,13 +8464,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Preferences
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/preferences</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/preferences</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Preferences().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Preferences().Get();
 }
 ```
 
@@ -8483,13 +8483,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Recent Chats
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/recent/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/recent/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().GET(listRecentChatsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters);
 }
 ```
 
@@ -8502,13 +8502,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Task
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Get();
 }
 ```
 
@@ -8521,13 +8521,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Patch Task
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).PATCH(glipUpdateTask);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Patch(glipUpdateTask);
 }
 ```
 
@@ -8540,13 +8540,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Task
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Delete();
 }
 ```
 
@@ -8559,13 +8559,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Complete Task
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}/complete</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}/complete</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().POST(glipCompleteTask);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().Post(glipCompleteTask);
 }
 ```
 
@@ -8578,13 +8578,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Teams
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().GET(listGlipTeamsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters);
 }
 ```
 
@@ -8597,13 +8597,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Team
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().POST(glipPostTeamBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody);
 }
 ```
 
@@ -8616,13 +8616,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Team
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Teams().Get();
 }
 ```
 
@@ -8635,13 +8635,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Team
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().PATCH(glipPatchTeamBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams().Patch(glipPatchTeamBody);
 }
 ```
 
@@ -8654,13 +8654,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Team
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Teams().Delete();
 }
 ```
 
@@ -8673,13 +8673,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Teams
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).GET(listGlipTeamsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).List(listGlipTeamsParameters);
 }
 ```
 
@@ -8692,13 +8692,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Team
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).POST(glipPostTeamBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Post(glipPostTeamBody);
 }
 ```
 
@@ -8711,13 +8711,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Team
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get();
 }
 ```
 
@@ -8730,13 +8730,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Team
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).PATCH(glipPatchTeamBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody);
 }
 ```
 
@@ -8749,13 +8749,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Team
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete();
 }
 ```
 
@@ -8768,13 +8768,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Team Members
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/add</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/add</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().POST(glipPostMembersListBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody);
 }
 ```
 
@@ -8787,13 +8787,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Archive Team
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post();
 }
 ```
 
@@ -8806,13 +8806,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Join Team
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/join</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/join</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post();
 }
 ```
 
@@ -8825,13 +8825,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Leave Team
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/leave</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/leave</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post();
 }
 ```
 
@@ -8844,13 +8844,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Remove Team Members
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/remove</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/remove</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().POST(glipPostMembersIdsListBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody);
 }
 ```
 
@@ -8863,13 +8863,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Unarchive Team
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/unarchive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/unarchive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post();
 }
 ```
 
@@ -8882,13 +8882,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhooks
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks().List();
 }
 ```
 
@@ -8901,13 +8901,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhook
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks().GET();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks().Get();
 }
 ```
 
@@ -8920,13 +8920,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Webhook
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks().DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks().Delete();
 }
 ```
 
@@ -8939,13 +8939,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhooks
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).List();
 }
 ```
 
@@ -8958,13 +8958,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhook
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).GET();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get();
 }
 ```
 
@@ -8977,13 +8977,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Webhook
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).DELETE();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete();
 }
 ```
 
@@ -8996,13 +8996,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Activate Webhook
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}/activate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}/activate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post();
 }
 ```
 
@@ -9015,13 +9015,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Suspend Webhook
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}/suspend</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}/suspend</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>Glip</code></td></tr><tr><td>User Permission</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().POST();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post();
 }
 ```
 
@@ -9034,13 +9034,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Parse Phone Number
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/number-parser/parse</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/number-parser/parse</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).NumberParser().Parse().POST(parsePhoneNumberRequest, parsePhoneNumberParameters);
+    var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
 }
 ```
 
@@ -9054,13 +9054,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Service Status
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/status</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/status</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Status().GET();
+    var result = await rc.Restapi(apiVersion).Status().Get();
 }
 ```
 
@@ -9073,13 +9073,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscriptions
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().GET();
+    var result = await rc.Restapi(apiVersion).Subscription().List();
 }
 ```
 
@@ -9092,13 +9092,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Subscription
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().POST(createSubscriptionRequest);
+    var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest);
 }
 ```
 
@@ -9111,13 +9111,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscription
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().GET();
+    var result = await rc.Restapi(apiVersion).Subscription().Get();
 }
 ```
 
@@ -9130,13 +9130,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Renew Subscription / Update Event Filters
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().PUT(modifySubscriptionRequest, updateSubscriptionParameters);
+    var result = await rc.Restapi(apiVersion).Subscription().Put(modifySubscriptionRequest, updateSubscriptionParameters);
 }
 ```
 
@@ -9150,13 +9150,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel Subscription
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().DELETE();
+    var result = await rc.Restapi(apiVersion).Subscription().Delete();
 }
 ```
 
@@ -9169,13 +9169,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscriptions
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).GET();
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).List();
 }
 ```
 
@@ -9188,13 +9188,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Subscription
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).POST(createSubscriptionRequest);
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Post(createSubscriptionRequest);
 }
 ```
 
@@ -9207,13 +9207,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscription
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).GET();
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get();
 }
 ```
 
@@ -9226,13 +9226,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Renew Subscription / Update Event Filters
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).PUT(modifySubscriptionRequest, updateSubscriptionParameters);
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest, updateSubscriptionParameters);
 }
 ```
 
@@ -9246,13 +9246,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel Subscription
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).DELETE();
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete();
 }
 ```
 
@@ -9265,13 +9265,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Renew Subscription
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}/renew</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}/renew</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().POST();
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
 }
 ```
 
@@ -9284,13 +9284,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Service Provider Config
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/ServiceProviderConfig</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/ServiceProviderConfig</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).ServiceProviderConfig().GET();
+    var result = await rc.Scim(version).ServiceProviderConfig().Get();
 }
 ```
 
@@ -9303,13 +9303,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search/List Users
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().GET(searchViaGet2Parameters);
+    var result = await rc.Scim(version).Users().List(searchViaGet2Parameters);
 }
 ```
 
@@ -9322,13 +9322,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create User
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().POST(createUser);
+    var result = await rc.Scim(version).Users().Post(createUser);
 }
 ```
 
@@ -9341,13 +9341,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().GET();
+    var result = await rc.Scim(version).Users().Get();
 }
 ```
 
@@ -9360,13 +9360,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Replace User
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().PUT(user);
+    var result = await rc.Scim(version).Users().Put(user);
 }
 ```
 
@@ -9379,13 +9379,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().DELETE();
+    var result = await rc.Scim(version).Users().Delete();
 }
 ```
 
@@ -9398,13 +9398,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Patch User
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().PATCH(userPatch);
+    var result = await rc.Scim(version).Users().Patch(userPatch);
 }
 ```
 
@@ -9417,13 +9417,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search/List Users
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/.search</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/.search</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().DotSearch().POST(searchRequest);
+    var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest);
 }
 ```
 
@@ -9436,13 +9436,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search/List Users
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).GET(searchViaGet2Parameters);
+    var result = await rc.Scim(version).Users(id).List(searchViaGet2Parameters);
 }
 ```
 
@@ -9455,13 +9455,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create User
 
-<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).POST(createUser);
+    var result = await rc.Scim(version).Users(id).Post(createUser);
 }
 ```
 
@@ -9474,13 +9474,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).GET();
+    var result = await rc.Scim(version).Users(id).Get();
 }
 ```
 
@@ -9493,13 +9493,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Replace User
 
-<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).PUT(user);
+    var result = await rc.Scim(version).Users(id).Put(user);
 }
 ```
 
@@ -9512,13 +9512,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User
 
-<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).DELETE();
+    var result = await rc.Scim(version).Users(id).Delete();
 }
 ```
 
@@ -9531,13 +9531,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Patch User
 
-<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).PATCH(userPatch);
+    var result = await rc.Scim(version).Users(id).Patch(userPatch);
 }
 ```
 
@@ -9550,13 +9550,13 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Check Health
 
-<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/health</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/health</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission</td><td><code>N/A</code></td></tr><tr><td>User Permission</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Health().GET();
+    var result = await rc.Scim(version).Health().Get();
 }
 ```
 
