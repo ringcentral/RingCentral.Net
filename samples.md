@@ -3,7 +3,7 @@
 
 ## Get API Versions
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi`</td></tr><tr><td>Rate Limit Group</td><td>`NoThrottling`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -21,7 +21,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Version Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/{apiVersion}`</td></tr><tr><td>Rate Limit Group</td><td>`NoThrottling`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/{apiVersion}</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -39,7 +39,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Revoke Token
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/oauth/revoke`</td></tr><tr><td>Rate Limit Group</td><td>`Auth`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/oauth/revoke</code></td></tr><tr><td>Rate Limit Group</td><td><code>Auth</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -57,7 +57,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Token
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/oauth/token`</td></tr><tr><td>Rate Limit Group</td><td>`Auth`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/oauth/token</code></td></tr><tr><td>Rate Limit Group</td><td><code>Auth</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -75,7 +75,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get API Versions
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi`</td></tr><tr><td>Rate Limit Group</td><td>`NoThrottling`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -94,7 +94,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Version Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/{apiVersion}`</td></tr><tr><td>Rate Limit Group</td><td>`NoThrottling`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/{apiVersion}</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -113,7 +113,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -133,7 +133,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Active Calls
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/active-calls`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/active-calls</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -153,7 +153,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -173,7 +173,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -193,7 +193,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -213,7 +213,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -233,7 +233,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -253,7 +253,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -273,7 +273,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -293,7 +293,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -313,7 +313,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -333,7 +333,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Company Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -353,7 +353,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Business Address
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/business-address`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-address</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -373,7 +373,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Business Address
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/business-address`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-address</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -393,7 +393,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Business Hours
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/business-hours`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -413,7 +413,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Company Business Hours
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/business-hours`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -433,7 +433,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Records
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-log`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`FullCompanyCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -453,7 +453,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Record(s)
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`FullCompanyCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -473,7 +473,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Sync Company Call Log
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-log-sync`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -493,7 +493,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Records
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-log`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`FullCompanyCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -513,7 +513,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Call Log Record(s)
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`FullCompanyCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>FullCompanyCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -533,7 +533,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -553,7 +553,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Monitoring Groups List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -573,7 +573,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Updates Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -593,7 +593,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -613,7 +613,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -633,7 +633,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Monitoring Groups List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -653,7 +653,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Updates Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -673,7 +673,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Monitoring Group
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -693,7 +693,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Monitoring Group List
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -713,7 +713,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Monitoring Group Member List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -733,7 +733,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Queue List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-queues`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -753,7 +753,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Assign Multiple Call Queue Members
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -773,7 +773,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Queue Members
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -793,7 +793,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Settings
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -813,7 +813,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Recording Settings
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -833,7 +833,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Recording Extension List
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -853,7 +853,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Custom Greeting List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -873,7 +873,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Recording Custom Greeting
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -893,7 +893,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Custom Greeting List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -913,7 +913,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Recording Custom Greeting
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -933,7 +933,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording Extension List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/call-recording/extensions`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/call-recording/extensions</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -953,7 +953,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom Field
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -973,7 +973,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Field List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -993,7 +993,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Сustom Field
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1013,7 +1013,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Custom Field
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1033,7 +1033,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom Field
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1053,7 +1053,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Field List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1073,7 +1073,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Сustom Field
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1093,7 +1093,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Custom Field
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1113,7 +1113,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Assign Multiple Department Members
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/department/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`UserGroups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/department/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>UserGroups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1133,7 +1133,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Department Member List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/department/{departmentId}/members`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/department/{departmentId}/members</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1153,7 +1153,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Device
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/device/{deviceId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyDevices`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/device/{deviceId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1173,7 +1173,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Device
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/device/{deviceId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyDevices`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/device/{deviceId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1194,7 +1194,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Directory Entries
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/directory/entries`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1214,7 +1214,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Corporate Directory Entry
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/directory/entries/{entryId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/{entryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1234,7 +1234,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search Company Directory Entries
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/directory/entries/search`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/search</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1254,7 +1254,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Directory Entries
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/directory/entries`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1274,7 +1274,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Corporate Directory Entry
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/directory/entries/{entryId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/entries/{entryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1294,7 +1294,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Federation
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/directory/federation`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/directory/federation</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1314,7 +1314,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Device List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1334,7 +1334,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Enable Automatic Location Updates for Devices
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1354,7 +1354,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network Map
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1374,7 +1374,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Network
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1394,7 +1394,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1414,7 +1414,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Network
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1434,7 +1434,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Network
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1454,7 +1454,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network Map
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1474,7 +1474,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Network
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1494,7 +1494,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Network
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1514,7 +1514,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Network
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1534,7 +1534,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Network
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1554,7 +1554,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Switch List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1574,7 +1574,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Switch
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1594,7 +1594,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Switch
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1614,7 +1614,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Switch
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1634,7 +1634,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Switch
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1654,7 +1654,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Multiple Switches
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1674,7 +1674,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Multiple Switches
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1694,7 +1694,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Validate Multiple Switches
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1714,7 +1714,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Account Switch List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1734,7 +1734,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Switch
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1754,7 +1754,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Switch
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1774,7 +1774,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Switch
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1794,7 +1794,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Switch
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1814,7 +1814,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Map Configuration Task
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1834,7 +1834,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1854,7 +1854,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Enable Automatic Location Updates for Users
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1874,7 +1874,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1894,7 +1894,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1914,7 +1914,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1934,7 +1934,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1954,7 +1954,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1974,7 +1974,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Multiple Wireless Points
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -1994,7 +1994,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Multiple Wireless Points
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2014,7 +2014,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Validate Multiple Wireless Points
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2034,7 +2034,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2054,7 +2054,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2074,7 +2074,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2094,7 +2094,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2114,7 +2114,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Wireless Point
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2134,7 +2134,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Emergency Location
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2154,7 +2154,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2174,7 +2174,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2194,7 +2194,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Emergency Location
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2214,7 +2214,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Emergency Location
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2234,7 +2234,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2254,7 +2254,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Emergency Location
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2274,7 +2274,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Emergency Location
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ConfigureEmergencyMaps`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ConfigureEmergencyMaps</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2294,7 +2294,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2314,7 +2314,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Extension
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AddRemoveUsers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2334,7 +2334,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2354,7 +2354,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Extension
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserInfo OR EditUserCredentials`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo OR EditUserCredentials</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2374,7 +2374,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Extension
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AddRemoveUsers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2394,7 +2394,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2415,7 +2415,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Extension
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AddRemoveUsers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2436,7 +2436,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2457,7 +2457,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Extension
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserInfo OR EditUserCredentials`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo OR EditUserCredentials</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2478,7 +2478,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Extension
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AddRemoveUsers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AddRemoveUsers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2499,7 +2499,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Active Calls
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2520,7 +2520,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Address Book Synchronization
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadContacts`</td></tr><tr><td>User Permission Required</td><td>`ReadPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2541,7 +2541,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadContacts`</td></tr><tr><td>User Permission Required</td><td>`ReadPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2562,7 +2562,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Contact
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Contacts`</td></tr><tr><td>User Permission Required</td><td>`EditPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2584,7 +2584,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadContacts`</td></tr><tr><td>User Permission Required</td><td>`ReadPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2605,7 +2605,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Contact
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Contacts`</td></tr><tr><td>User Permission Required</td><td>`EditPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2627,7 +2627,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Contact
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Contacts`</td></tr><tr><td>User Permission Required</td><td>`EditPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2648,7 +2648,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadContacts`</td></tr><tr><td>User Permission Required</td><td>`ReadPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2669,7 +2669,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Contact
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Contacts`</td></tr><tr><td>User Permission Required</td><td>`EditPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2691,7 +2691,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Contact
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadContacts`</td></tr><tr><td>User Permission Required</td><td>`ReadPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2712,7 +2712,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Contact
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Contacts`</td></tr><tr><td>User Permission Required</td><td>`EditPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2734,7 +2734,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Contact
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Contacts`</td></tr><tr><td>User Permission Required</td><td>`EditPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2755,7 +2755,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rules
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2776,7 +2776,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2797,7 +2797,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2818,7 +2818,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2839,7 +2839,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2860,7 +2860,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rules
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2881,7 +2881,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2902,7 +2902,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2923,7 +2923,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2944,7 +2944,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Call Handling Rule
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2965,7 +2965,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Authorization Profile
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -2986,7 +2986,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Check User Permission
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3007,7 +3007,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Business Hours
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3028,7 +3028,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Business Hours
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3049,7 +3049,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Log Records
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3070,7 +3070,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User Call Log
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditCallLog`</td></tr><tr><td>User Permission Required</td><td>`EditCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>EditCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3091,7 +3091,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Record
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3112,7 +3112,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Sync User Call Log
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3133,7 +3133,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Log Records
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3154,7 +3154,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User Call Log
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditCallLog`</td></tr><tr><td>User Permission Required</td><td>`EditCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>EditCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3175,7 +3175,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Call Record
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallLog`</td></tr><tr><td>User Permission Required</td><td>`ReadCallLog`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallLog</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallLog</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3196,7 +3196,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Call Queues
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Accounts`</td></tr><tr><td>User Permission Required</td><td>`JoinLeaveCallQueue`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Accounts</code></td></tr><tr><td>User Permission Required</td><td><code>JoinLeaveCallQueue</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3217,7 +3217,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Caller Blocking Settings
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3238,7 +3238,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Caller Blocking Settings
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3259,7 +3259,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Phone Numbers
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3280,7 +3280,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3301,7 +3301,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3322,7 +3322,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3343,7 +3343,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3364,7 +3364,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Phone Numbers
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3385,7 +3385,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3406,7 +3406,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3427,7 +3427,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3448,7 +3448,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Blocked/Allowed Number
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditBlockedNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditBlockedNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3469,7 +3469,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Caller ID
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCallerIDSettings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallerIDSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3490,7 +3490,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Extension Caller ID
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditCallerIDSettings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditCallerIDSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3511,7 +3511,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Internal Text Message
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`InternalMessages`</td></tr><tr><td>User Permission Required</td><td>`InternalSMS`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>InternalMessages</code></td></tr><tr><td>User Permission Required</td><td><code>InternalSMS</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3532,7 +3532,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Conferencing Settings
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`OrganizeConference`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>OrganizeConference</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3553,7 +3553,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Conferencing Settings
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`OrganizeConference`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>OrganizeConference</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3574,7 +3574,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Device List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/device`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserDevices`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/device</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3595,7 +3595,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Favorite Contact List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadContacts`</td></tr><tr><td>User Permission Required</td><td>`ReadPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadContacts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3616,7 +3616,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Favorite Contact List
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Contacts`</td></tr><tr><td>User Permission Required</td><td>`EditPersonalContacts`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Contacts</code></td></tr><tr><td>User Permission Required</td><td><code>EditPersonalContacts</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3637,7 +3637,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Fax Message
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Faxes`</td></tr><tr><td>User Permission Required</td><td>`OutboundFaxes`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Faxes</code></td></tr><tr><td>User Permission Required</td><td><code>OutboundFaxes</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3658,7 +3658,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Features
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/features`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/features</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3679,7 +3679,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3700,7 +3700,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3721,7 +3721,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3742,7 +3742,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3763,7 +3763,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3784,7 +3784,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3805,7 +3805,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3826,7 +3826,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3847,7 +3847,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3868,7 +3868,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Forwarding Number
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserForwardingFlipNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserForwardingFlipNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3889,7 +3889,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Grant List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3910,7 +3910,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom User Greeting
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3931,7 +3931,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Greeting
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3952,7 +3952,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Custom User Greeting
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserAnsweringRules`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserAnsweringRules</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3973,7 +3973,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Custom Greeting
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -3994,7 +3994,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scheduled Meetings
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4015,7 +4015,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Meeting
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4036,7 +4036,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Meeting Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4057,7 +4057,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Meeting
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4078,7 +4078,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Meeting
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4099,7 +4099,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Meeting Recordings List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`MeetingsRecordings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>MeetingsRecordings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4120,7 +4120,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Meeting Service Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4141,7 +4141,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Meeting Service Info
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4162,7 +4162,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scheduled Meetings
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4183,7 +4183,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Meeting
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4204,7 +4204,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Meeting Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4225,7 +4225,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Meeting
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4246,7 +4246,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Meeting
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4267,7 +4267,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## End Meeting
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4288,7 +4288,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Assistants
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4309,7 +4309,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Assisted Users
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`Meetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>Meetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4330,7 +4330,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`ReadMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4351,7 +4351,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`ReadMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4372,7 +4372,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Message List
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditMessages`</td></tr><tr><td>User Permission Required</td><td>`EditMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4394,7 +4394,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Message
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditMessages`</td></tr><tr><td>User Permission Required</td><td>`EditMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4415,7 +4415,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`ReadMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4436,7 +4436,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`ReadMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4457,7 +4457,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Message List
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditMessages`</td></tr><tr><td>User Permission Required</td><td>`EditMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4479,7 +4479,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Message
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditMessages`</td></tr><tr><td>User Permission Required</td><td>`EditMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditMessages</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4500,7 +4500,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Content
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`ReadMessageContent`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessageContent</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4525,7 +4525,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Sync Messages
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`ReadMessages`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessages</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4546,7 +4546,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create MMS Message
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`SMS`</td></tr><tr><td>User Permission Required</td><td>`OutboundSMS`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>SMS</code></td></tr><tr><td>User Permission Required</td><td><code>OutboundSMS</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4567,7 +4567,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Notification Settings
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadMessagesNotificationsSettings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadMessagesNotificationsSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4588,7 +4588,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Notification Settings
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditMessagesNotificationsSettings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditMessagesNotificationsSettings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4609,7 +4609,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Extension Phone Number List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserPhoneNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4630,7 +4630,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Presence Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadPresence`</td></tr><tr><td>User Permission Required</td><td>`ReadPresenceStatus`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4651,7 +4651,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Presence Status
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditPresence`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditPresence</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4672,7 +4672,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4697,7 +4697,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Upload User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4718,7 +4718,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4739,7 +4739,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scaled User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4764,7 +4764,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4789,7 +4789,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Upload User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4810,7 +4810,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditExtensions`</td></tr><tr><td>User Permission Required</td><td>`EditUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditExtensions</code></td></tr><tr><td>User Permission Required</td><td><code>EditUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4831,7 +4831,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Scaled User Profile Image
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadExtensions`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadExtensions</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4856,7 +4856,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4877,7 +4877,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4898,7 +4898,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4919,7 +4919,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4940,7 +4940,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4961,7 +4961,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -4982,7 +4982,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5003,7 +5003,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5024,7 +5024,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5045,7 +5045,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5066,7 +5066,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get RingOut Call Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5087,7 +5087,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel RingOut Call
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`RingOut`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>RingOut</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5108,7 +5108,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Send SMS
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`SMS`</td></tr><tr><td>User Permission Required</td><td>`OutboundSMS`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>SMS</code></td></tr><tr><td>User Permission Required</td><td><code>OutboundSMS</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5129,7 +5129,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Unified Presence
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadPresence`</td></tr><tr><td>User Permission Required</td><td>`ReadPresenceStatus`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5150,7 +5150,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Unified Presence
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditPresence`</td></tr><tr><td>User Permission Required</td><td>`EditPresenceStatus`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditPresence</code></td></tr><tr><td>User Permission Required</td><td><code>EditPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5171,7 +5171,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Company Greeting
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/greeting`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5191,7 +5191,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Menu
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-menus`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AutoReceptionist`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5211,7 +5211,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Menu
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`AutoReceptionist`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5231,7 +5231,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Menu
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`AutoReceptionist`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5251,7 +5251,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Menu
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-menus`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AutoReceptionist`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5271,7 +5271,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Menu
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`AutoReceptionist`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5291,7 +5291,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Menu
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`AutoReceptionist`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AutoReceptionist</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5311,7 +5311,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Prompts
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5331,7 +5331,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5351,7 +5351,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5371,7 +5371,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete IVR Prompt
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5391,7 +5391,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Prompt
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5411,7 +5411,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create IVR Prompts
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5431,7 +5431,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5451,7 +5451,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5471,7 +5471,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete IVR Prompt
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5491,7 +5491,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update IVR Prompt
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`EditCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>EditCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5511,7 +5511,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get IVR Prompt Content
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyGreetings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyGreetings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5535,7 +5535,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get Account Meeting Recordings List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/meeting-recordings`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Meetings`</td></tr><tr><td>User Permission Required</td><td>`MeetingsRecordings`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/meeting-recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Meetings</code></td></tr><tr><td>User Permission Required</td><td><code>MeetingsRecordings</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5555,7 +5555,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Configuration
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-configuration`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AccountAdministration`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-configuration</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AccountAdministration</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5575,7 +5575,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Message Store Configuration
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-configuration`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`AccountAdministration`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-configuration</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>AccountAdministration</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5595,7 +5595,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Message Store Report
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5615,7 +5615,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Task
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5635,7 +5635,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Message Store Report
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5655,7 +5655,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Task
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5675,7 +5675,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5695,7 +5695,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive Content
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5715,7 +5715,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5735,7 +5735,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Message Store Report Archive Content
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadMessages`</td></tr><tr><td>User Permission Required</td><td>`Users`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadMessages</code></td></tr><tr><td>User Permission Required</td><td><code>Users</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5755,7 +5755,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Assign Paging Group Users and Devices
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`Groups`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>Groups</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5775,7 +5775,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Paging Group Devices
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyDevices`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyDevices</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5795,7 +5795,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Paging Group Users
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadUserInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadUserInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5815,7 +5815,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Phone Number List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/phone-number`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyPhoneNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5835,7 +5835,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Phone Number
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyPhoneNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5855,7 +5855,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Phone Number List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/phone-number`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyPhoneNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5875,7 +5875,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Phone Number
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyPhoneNumbers`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyPhoneNumbers</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5895,7 +5895,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Presence Status List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/presence`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadPresence`</td></tr><tr><td>User Permission Required</td><td>`ReadPresenceStatus`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/presence</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadPresence</code></td></tr><tr><td>User Permission Required</td><td><code>ReadPresenceStatus</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5915,7 +5915,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recording
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/recording/{recordingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallRecording`</td></tr><tr><td>User Permission Required</td><td>`ReadCallRecording`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/recording/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallRecording</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallRecording</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5935,7 +5935,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Recordings Data
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/recording/{recordingId}/content`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`ReadCallRecording`</td></tr><tr><td>User Permission Required</td><td>`ReadCallRecording`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/recording/{recordingId}/content</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>ReadCallRecording</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCallRecording</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5959,7 +5959,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get Account Service Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/service-info`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadServicePlanInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/service-info</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadServicePlanInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5979,7 +5979,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Make CallOut
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/call-out`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/call-out</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -5999,7 +5999,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Session Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6019,7 +6019,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Drop Call Session
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6039,7 +6039,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Call Party Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6059,7 +6059,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Call Party
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6079,7 +6079,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Answer Call Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6099,7 +6099,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Call Flip on Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6119,7 +6119,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Forward Call Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6139,7 +6139,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Hold Call Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6159,7 +6159,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Ignore Call in Queue
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6179,7 +6179,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Call Park
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6199,7 +6199,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Pickup Call
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6219,7 +6219,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Recording
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6239,7 +6239,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Pause/Resume Recording
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6260,7 +6260,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Recording
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6280,7 +6280,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Pause/Resume Recording
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6301,7 +6301,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Reject Call Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6321,7 +6321,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Reply with Text
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6341,7 +6341,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Supervise Call Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6361,7 +6361,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Transfer Call Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6381,7 +6381,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Unhold Call Party
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6401,7 +6401,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Supervise Call Session
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`CallControl`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>CallControl</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6421,7 +6421,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/templates`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6441,7 +6441,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/templates/{templateId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates/{templateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6461,7 +6461,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/templates`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6481,7 +6481,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Template
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/account/{accountId}/templates/{templateId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`ReadCompanyInfo`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/account/{accountId}/templates/{templateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>ReadCompanyInfo</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6501,7 +6501,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Register SIP Device
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/client-info/sip-provision`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`VoipCalling`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/client-info/sip-provision</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>VoipCalling</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6520,7 +6520,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/country`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6539,7 +6539,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/country/{countryId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country/{countryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6558,7 +6558,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/country`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6577,7 +6577,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Country
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/country/{countryId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/country/{countryId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6596,7 +6596,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Fax Cover Page List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/fax-cover-page`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/fax-cover-page</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6615,7 +6615,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/greeting`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6634,7 +6634,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/greeting/{greetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6653,7 +6653,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/greeting`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6672,7 +6672,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Standard Greeting
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/greeting/{greetingId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/greeting/{greetingId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6691,7 +6691,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/language`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6710,7 +6710,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/language/{languageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language/{languageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6729,7 +6729,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/language`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6748,7 +6748,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Language
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/language/{languageId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/language/{languageId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6767,7 +6767,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Location List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/location`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/location</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6786,7 +6786,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get States List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/state`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6805,7 +6805,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get State
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/state/{stateId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state/{stateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6824,7 +6824,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get States List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/state`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6843,7 +6843,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get State
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/state/{stateId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/state/{stateId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6862,7 +6862,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/timezone`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6881,7 +6881,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/timezone/{timezoneId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone/{timezoneId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6900,7 +6900,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/timezone`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6919,7 +6919,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Timezone
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/dictionary/timezone/{timezoneId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/dictionary/timezone/{timezoneId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6938,7 +6938,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Card
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6958,7 +6958,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Card
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards/{cardId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6977,7 +6977,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Card
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards/{cardId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -6996,7 +6996,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Card
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards/{cardId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7015,7 +7015,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Card
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7035,7 +7035,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Card
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards/{cardId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7054,7 +7054,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Card
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards/{cardId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7073,7 +7073,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Card
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/cards/{cardId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/cards/{cardId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7092,7 +7092,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chats
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7111,7 +7111,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7130,7 +7130,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chats
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7149,7 +7149,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7168,7 +7168,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Chat to Favorites
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/favorite`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/favorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7187,7 +7187,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Note
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/notes`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/notes</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7206,7 +7206,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat Notes
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/notes`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/notes</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7225,7 +7225,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Posts
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7244,7 +7244,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7263,7 +7263,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Post
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7282,7 +7282,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Post
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7301,7 +7301,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Post
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7320,7 +7320,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Posts
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7339,7 +7339,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7358,7 +7358,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Post
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7377,7 +7377,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Post
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7396,7 +7396,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Post
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/posts/{postId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7415,7 +7415,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Mark Chat as Read
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/read`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`GlipInternal`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/read</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>GlipInternal</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7434,7 +7434,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Chat Tasks
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/tasks`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/tasks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7453,7 +7453,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Task
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/tasks`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/tasks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7472,7 +7472,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Remove Chat from Favorites
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/unfavorite`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/unfavorite</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7491,7 +7491,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Mark Chat as Unread
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/chats/{chatId}/unread`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`GlipInternal`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/chats/{chatId}/unread</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>GlipInternal</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7510,7 +7510,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Company Info
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/companies/{companyId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/companies/{companyId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7529,7 +7529,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversations
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/conversations`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7548,7 +7548,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create/Open Conversation
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/conversations`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7567,7 +7567,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversation
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/conversations/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7586,7 +7586,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversations
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/conversations`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7605,7 +7605,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create/Open Conversation
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/conversations`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7624,7 +7624,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Conversation
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/conversations/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/conversations/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7643,7 +7643,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Data Export Task
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/data-export`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7662,7 +7662,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/data-export`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7681,7 +7681,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/data-export/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7700,7 +7700,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Data Export Task
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/data-export`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7719,7 +7719,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/data-export`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7738,7 +7738,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/data-export/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7757,7 +7757,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Data Export Task Dataset
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7780,7 +7780,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 ## Get User Events List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7799,7 +7799,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Event
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7818,7 +7818,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Event
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events/{eventId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7837,7 +7837,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Event
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events/{eventId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7856,7 +7856,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Event
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events/{eventId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7875,7 +7875,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Events List
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7894,7 +7894,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Event
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7913,7 +7913,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Event
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events/{eventId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7932,7 +7932,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Event
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events/{eventId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7951,7 +7951,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Event
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/events/{eventId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/events/{eventId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7970,7 +7970,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Everyone Chat
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/everyone`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/everyone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -7989,7 +7989,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Everyone Сhat
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/everyone`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/everyone</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8008,7 +8008,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Favorite Chats
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/favorites`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/favorites</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8027,7 +8027,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Groups
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8046,7 +8046,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Group
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8065,7 +8065,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8084,7 +8084,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User Groups
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8103,7 +8103,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Group
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8122,7 +8122,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8141,7 +8141,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Edit Group Members
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/bulk-assign`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/bulk-assign</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8160,7 +8160,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Event by Group ID
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/events`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8179,7 +8179,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group Events
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/events`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/events</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8198,7 +8198,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Group Posts
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8217,7 +8217,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post in Group
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8236,7 +8236,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Post
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8255,7 +8255,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Webhook in Group
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/webhooks`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8274,7 +8274,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhooks in Group
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/groups/{groupId}/webhooks`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/groups/{groupId}/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8293,7 +8293,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Note
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/notes/{noteId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8312,7 +8312,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Note
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/notes/{noteId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8331,7 +8331,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Note
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/notes/{noteId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8350,7 +8350,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Lock Note
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/notes/{noteId}/lock`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/lock</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8369,7 +8369,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Publish Note
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/notes/{noteId}/publish`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/publish</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8388,7 +8388,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Unlock Note
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/notes/{noteId}/unlock`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/notes/{noteId}/unlock</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8407,7 +8407,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Person
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/persons/{personId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/persons/{personId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8426,7 +8426,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Posts
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8445,7 +8445,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Post
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/posts`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/posts</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8464,7 +8464,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Preferences
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/preferences`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/preferences</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8483,7 +8483,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Recent Chats
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/recent/chats`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/recent/chats</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8502,7 +8502,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Task
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/tasks/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8521,7 +8521,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Patch Task
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/tasks/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8540,7 +8540,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Task
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/tasks/{taskId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8559,7 +8559,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Complete Task
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/tasks/{taskId}/complete`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/tasks/{taskId}/complete</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8578,7 +8578,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Teams
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8597,7 +8597,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Team
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8616,7 +8616,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Team
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8635,7 +8635,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Team
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8654,7 +8654,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Team
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8673,7 +8673,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Teams
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8692,7 +8692,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Team
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8711,7 +8711,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Team
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8730,7 +8730,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update Team
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8749,7 +8749,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Team
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8768,7 +8768,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Add Team Members
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}/add`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/add</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8787,7 +8787,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Archive Team
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}/archive`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/archive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8806,7 +8806,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Join Team
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}/join`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/join</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8825,7 +8825,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Leave Team
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}/leave`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/leave</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8844,7 +8844,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Remove Team Members
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}/remove`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/remove</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8863,7 +8863,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Unarchive Team
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/teams/{chatId}/unarchive`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/teams/{chatId}/unarchive</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8882,7 +8882,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhooks
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8901,7 +8901,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhook
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks/{webhookId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8920,7 +8920,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Webhook
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks/{webhookId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8939,7 +8939,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhooks
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8958,7 +8958,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Webhook
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks/{webhookId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8977,7 +8977,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete Webhook
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks/{webhookId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -8996,7 +8996,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Activate Webhook
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks/{webhookId}/activate`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}/activate</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9015,7 +9015,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Suspend Webhook
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/glip/webhooks/{webhookId}/suspend`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`Glip`</td></tr><tr><td>User Permission Required</td><td>`Glip`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/glip/webhooks/{webhookId}/suspend</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>Glip</code></td></tr><tr><td>User Permission Required</td><td><code>Glip</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9034,7 +9034,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Parse Phone Number
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/number-parser/parse`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/number-parser/parse</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9054,7 +9054,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Service Status
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/status`</td></tr><tr><td>Rate Limit Group</td><td>`NoThrottling`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/status</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9073,7 +9073,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscriptions
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9092,7 +9092,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Subscription
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9111,7 +9111,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscription
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription/{subscriptionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9130,7 +9130,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Renew Subscription / Update Event Filters
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription/{subscriptionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9150,7 +9150,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel Subscription
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription/{subscriptionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9169,7 +9169,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscriptions
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9188,7 +9188,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create Subscription
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9207,7 +9207,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Subscription
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription/{subscriptionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9226,7 +9226,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Renew Subscription / Update Event Filters
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription/{subscriptionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9246,7 +9246,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Cancel Subscription
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription/{subscriptionId}`</td></tr><tr><td>Rate Limit Group</td><td>`Medium`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Medium</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9265,7 +9265,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Renew Subscription
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/restapi/v1.0/subscription/{subscriptionId}/renew`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/restapi/v1.0/subscription/{subscriptionId}/renew</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9284,7 +9284,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get Service Provider Config
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/ServiceProviderConfig`</td></tr><tr><td>Rate Limit Group</td><td>`NoThrottling`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/ServiceProviderConfig</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9303,7 +9303,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search/List Users
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9322,7 +9322,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create User
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9341,7 +9341,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9360,7 +9360,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Replace User
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9379,7 +9379,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9398,7 +9398,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Patch User
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9417,7 +9417,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search/List Users
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/.search`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/.search</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9436,7 +9436,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Search/List Users
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9455,7 +9455,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Create User
 
-<table><tr><td>HTTP Method</td><td>`POST`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>POST</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9474,7 +9474,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Get User
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Light`</td></tr><tr><td>App Permission Required</td><td>`ReadAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Light</code></td></tr><tr><td>App Permission Required</td><td><code>ReadAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9493,7 +9493,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Replace User
 
-<table><tr><td>HTTP Method</td><td>`PUT`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PUT</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9512,7 +9512,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Delete User
 
-<table><tr><td>HTTP Method</td><td>`DELETE`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>DELETE</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9531,7 +9531,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Update/Patch User
 
-<table><tr><td>HTTP Method</td><td>`PATCH`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/Users/{id}`</td></tr><tr><td>Rate Limit Group</td><td>`Heavy`</td></tr><tr><td>App Permission Required</td><td>`EditAccounts`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>PATCH</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/Users/{id}</code></td></tr><tr><td>Rate Limit Group</td><td><code>Heavy</code></td></tr><tr><td>App Permission Required</td><td><code>EditAccounts</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -9550,7 +9550,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 ## Check Health
 
-<table><tr><td>HTTP Method</td><td>`GET`</td></tr><tr><td>Endpoint</td><td>`/scim/v2/health`</td></tr><tr><td>Rate Limit Group</td><td>`NoThrottling`</td></tr><tr><td>App Permission Required</td><td>`N/A`</td></tr><tr><td>User Permission Required</td><td>`N/A`</td></tr></table>
+<table><tr><td>HTTP Method</td><td><code>GET</code></td></tr><tr><td>Endpoint</td><td><code>/scim/v2/health</code></td></tr><tr><td>Rate Limit Group</td><td><code>NoThrottling</code></td></tr><tr><td>App Permission Required</td><td><code>N/A</code></td></tr><tr><td>User Permission Required</td><td><code>N/A</code></td></tr></table>
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
