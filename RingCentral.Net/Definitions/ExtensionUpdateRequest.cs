@@ -40,7 +40,7 @@ namespace RingCentral
         public string setupWizardState;
 
         /// <summary>
-        /// Extension partner identifier
+        /// Additional extension identifier, created by partner application and applied on client side
         /// </summary>
         public string partnerId;
 

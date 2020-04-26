@@ -16,5 +16,13 @@ namespace RingCentral
         /// Name of invalid parameter
         /// </summary>
         public string parameterName;
+
+        /// <summary>
+        /// </summary>
+        public string featureName;
+
+        /// <summary>
+        /// </summary>
+        public string parameterValue;
     }
 }

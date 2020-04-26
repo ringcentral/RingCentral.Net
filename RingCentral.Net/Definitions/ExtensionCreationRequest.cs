@@ -4,7 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// Contact Information
-        /// Required
         /// </summary>
         public ContactInfoCreationRequest contact;
 
@@ -12,6 +11,10 @@ namespace RingCentral
         /// Number of extension
         /// </summary>
         public string extensionNumber;
+
+        /// <summary>
+        /// </summary>
+        public CustomFieldInfo[] customFields;
 
         /// <summary>
         /// Password for extension. If not specified, the password is auto-generated
@@ -33,6 +36,16 @@ namespace RingCentral
         public RegionalSettings regionalSettings;
 
         /// <summary>
+        /// Additional extension identifier, created by partner application and applied on client side
+        /// </summary>
+        public string partnerId;
+
+        /// <summary>
+        /// IVR PIN
+        /// </summary>
+        public string ivrPin;
+
+        /// <summary>
         /// Specifies extension configuration wizard state (web service setup).
         /// Default: NotStarted
         /// Enum: NotStarted, Incomplete, Completed
@@ -40,8 +53,12 @@ namespace RingCentral
         public string setupWizardState;
 
         /// <summary>
+        /// </summary>
+        public SiteInfo site;
+
+        /// <summary>
         /// Extension current state
-        /// Enum: Enabled, Disabled, NotActivated, Unassigned
+        /// Enum: Enabled, Disabled, NotActivated, Unassigned, Frozen
         /// </summary>
         public string status;
 
@@ -52,8 +69,7 @@ namespace RingCentral
 
         /// <summary>
         /// Extension type
-        /// Required
-        /// Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation
+        /// Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, Limited
         /// </summary>
         public string type;
 

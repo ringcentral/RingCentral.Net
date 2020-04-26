@@ -9,7 +9,6 @@ namespace RingCentral
 
         /// <summary>
         /// For User extension type only. Extension user last name
-        /// Required
         /// </summary>
         public string lastName;
 
@@ -24,7 +23,6 @@ namespace RingCentral
 
         /// <summary>
         /// Email of extension user
-        /// Required
         /// </summary>
         public string email;
 

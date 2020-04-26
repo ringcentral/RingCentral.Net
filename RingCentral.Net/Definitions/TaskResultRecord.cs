@@ -24,6 +24,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public TaskResultRecordErrorsInfo errors;
+        public TaskResultRecordErrorsInfo[] errors;
     }
 }

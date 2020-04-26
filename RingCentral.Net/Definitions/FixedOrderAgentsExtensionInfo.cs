@@ -1,11 +1,11 @@
 namespace RingCentral
 {
-    public class FixOrderAgentsExtensionInfo
+    public class FixedOrderAgentsExtensionInfo
     {
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public long? id;
+        public string id;
 
         /// <summary>
         /// Canonical URI of an extension

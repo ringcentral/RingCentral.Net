@@ -12,5 +12,9 @@ namespace RingCentral
         /// Reason description
         /// </summary>
         public string message;
+
+        /// <summary>
+        /// </summary>
+        public string permission;
     }
 }

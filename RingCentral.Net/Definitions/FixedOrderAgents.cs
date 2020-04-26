@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public FixOrderAgentsExtensionInfo extension;
+        public FixedOrderAgentsExtensionInfo extension;
 
         /// <summary>
         /// Ordinal of an agent (call queue member)

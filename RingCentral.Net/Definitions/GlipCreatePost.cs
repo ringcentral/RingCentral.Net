@@ -3,6 +3,10 @@ namespace RingCentral
     public class GlipCreatePost
     {
         /// <summary>
+        /// </summary>
+        public string activity;
+
+        /// <summary>
         /// Title of a message. (Can be set for bot's messages only).
         /// </summary>
         public string title;
@@ -22,5 +26,13 @@ namespace RingCentral
         /// List of attachments to be posted
         /// </summary>
         public GlipMessageAttachmentInfoRequest[] attachments;
+
+        /// <summary>
+        /// </summary>
+        public string[] personIds;
+
+        /// <summary>
+        /// </summary>
+        public bool? system;
     }
 }

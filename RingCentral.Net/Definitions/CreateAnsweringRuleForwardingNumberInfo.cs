@@ -21,5 +21,11 @@ namespace RingCentral
         /// Forwarding/Call flip number title
         /// </summary>
         public string label;
+
+        /// <summary>
+        /// Type of a forwarding number
+        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+        /// </summary>
+        public string type;
     }
 }

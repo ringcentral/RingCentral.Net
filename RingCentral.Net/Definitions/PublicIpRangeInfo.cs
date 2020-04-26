@@ -13,5 +13,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string endIp;
+
+        /// <summary>
+        /// </summary>
+        public bool? matched;
     }
 }
