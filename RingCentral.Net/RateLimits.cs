@@ -27,36 +27,32 @@ namespace RingCentral
 
         public void Update(HttpResponseHeaders headers)
         {
-            var group = headers.GetValues("X-Rate-Limit-Group").FirstOrDefault();
-            if (group == default(string))
+            if (!headers.Contains("X-Rate-Limit-Group"))
             {
-                return; // there is no X-Rate-Limit-Group header
+                return;
             }
 
-            group = group.ToLower();
+            var group = headers.GetValues("X-Rate-Limit-Group").First().ToLower();
 
             if (!rateLimits.ContainsKey(group))
             {
                 return; // unknown group
             }
 
-            RateLimit rateLimit = rateLimits[group];
-            var limit = headers.GetValues("X-Rate-Limit-Limit").FirstOrDefault();
-            if (limit != default(string))
+            var rateLimit = rateLimits[group];
+            if (headers.Contains("X-Rate-Limit-Limit"))
             {
-                rateLimit.limit = int.Parse(limit);
+                rateLimit.limit = int.Parse(headers.GetValues("X-Rate-Limit-Limit").First());
             }
 
-            var remaining = headers.GetValues("X-Rate-Limit-Remaining").FirstOrDefault();
-            if (remaining != default(string))
+            if (headers.Contains("X-Rate-Limit-Remaining"))
             {
-                rateLimit.remaining = int.Parse(remaining);
+                rateLimit.remaining = int.Parse(headers.GetValues("X-Rate-Limit-Remaining").First());
             }
 
-            var window = headers.GetValues("X-Rate-Limit-Window").FirstOrDefault();
-            if (window != default(string))
+            if (headers.Contains("X-Rate-Limit-Window"))
             {
-                rateLimit.window = int.Parse(window);
+                rateLimit.window = int.Parse(headers.GetValues("X-Rate-Limit-Window").First());
             }
 
             rateLimit.updatedAt = DateTime.Now;
