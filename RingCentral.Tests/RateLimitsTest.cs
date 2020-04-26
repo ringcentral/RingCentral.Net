@@ -19,10 +19,10 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                
+
                 Assert.Null(rc.rateLimits.medium.updatedAt);
                 Assert.Null(rc.rateLimits.medium.remaining);
-                
+
                 await rc.Restapi().Account().Extension().Sms().Post(new CreateSMSMessage
                 {
                     from = new MessageStoreCallerInfoRequest
@@ -38,7 +38,7 @@ namespace RingCentral.Tests
                     },
                     text = "Hello world"
                 });
-                
+
                 Assert.NotNull(rc.rateLimits.medium.updatedAt);
                 Assert.NotNull(rc.rateLimits.medium.remaining);
                 Assert.True(rc.rateLimits.medium.remaining > 0);
