@@ -23,25 +23,57 @@ namespace RingCentral.Tests
                 );
 
                 var messages = await rc.Restapi().Account().Extension().MessageStore().List();
-                var ids = "7897036116," + string.Join(",", messages.records.Take(3).Select(m => m.id)) + ",7897036115";
-                // var ids = string.Join(",", messages.records.Take(3).Select(m => m.id));
+                var validId1 = messages.records[0].id;
+                var validId2 = messages.records[1].id;
+                var invalidId = "7897036116";
+                var batchResponses = await rc.BatchGet<GetMessageInfoResponse>(rc.Restapi().Account().Extension()
+                    .MessageStore($"{validId1},{invalidId},{validId2}").Path());
+                Assert.Equal(3, batchResponses.Length);
 
-                void EventHandler(object sender, HttpCallEventArgs eventArgs)
-                {
-                    var message = Utils.FormatHttpMessage(eventArgs.httpResponseMessage, eventArgs.httpRequestMessage);
-                }
+                var firstResponse = batchResponses[0];
+                Assert.Equal(validId1, firstResponse.content.id);
+                Assert.Equal(200, firstResponse.summary.status);
+                Assert.Null(firstResponse.error);
+                Assert.False(firstResponse.summary.isError);
 
-                rc.AfterHttpCall += EventHandler;
+                var secondResponse = batchResponses[1];
+                Assert.True(secondResponse.summary.isError);
+                Assert.Null(secondResponse.content);
+                Assert.NotNull(secondResponse.error);
+                Assert.Equal(404, secondResponse.summary.status);
 
-                var r = await rc.Get<string>(rc.Restapi().Account().Extension().MessageStore(ids).Path());
-                Assert.NotNull(r);
+                var thirdResponse = batchResponses[2];
+                Assert.Equal(validId2, thirdResponse.content.id);
+                Assert.Equal(200, thirdResponse.summary.status);
+                Assert.Null(thirdResponse.error);
+                Assert.False(thirdResponse.summary.isError);
+            }
+        }
 
-                var r2 = await rc.BatchGet<GetMessageInfoResponse>(rc.Restapi().Account().Extension().MessageStore(ids)
-                    .Path());
-                foreach (var batchResponse in r2)
-                {
-                    Console.WriteLine(batchResponse.summary.status);
-                }
+        [Fact]
+        public async void GetCallLogs()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+
+                var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
+                    .List(new ReadUserCallLogParameters {perPage = 3});
+                var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
+
+                var batchResponses =
+                    await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
+
+                Assert.Equal(3, batchResponses.Length);
+                Assert.Equal(callLogIds, string.Join(',', batchResponses.Select(br => br.content.id)));
             }
         }
     }

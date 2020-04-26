@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -10,8 +11,8 @@ namespace RingCentral
     public class BatchResponse<T>
     {
         public BatchSummary summary;
-        public ErrorResponse errorResponse;
-        public T normalResponse;
+        public ErrorResponse error;
+        public T content;
     }
 
     public class BatchSummary
@@ -33,32 +34,32 @@ namespace RingCentral
         public async Task<BatchResponse<T>[]> BatchGet<T>(string endpoint, object queryParams = null,
             CancellationToken? cancellationToken = null)
         {
-            // todo: what if only one id?
+            // if no multiple IDs specified
+            if (!endpoint.Split(new char[] {'/'}).Any(t => t.Contains(",")))
+            {
+                throw new ArgumentException(
+                    "In order to make a batchGet, endpoint should contains multiple IDs delimited by ','");
+            }
 
             var httpResponseMessage = await Get<HttpResponseMessage>(endpoint, queryParams, cancellationToken);
             var multipart = await httpResponseMessage.Content.ReadAsMultipartAsync();
-            var batchSummaries =
-                JsonConvert.DeserializeObject<BatchSummaries>(await multipart.Contents.First().ReadAsStringAsync());
-
+            var summariesString = await multipart.Contents.First().ReadAsStringAsync();
+            var batchSummaries = JsonConvert.DeserializeObject<BatchSummaries>(summariesString);
             var result = new List<BatchResponse<T>>();
-            var index = 0;
-            foreach (var batchSummary in batchSummaries.response)
+            for (var i = 0; i < batchSummaries.response.Length; i++)
             {
-                index += 1;
+                var batchSummary = batchSummaries.response[i];
                 var batchResponse = new BatchResponse<T> {summary = batchSummary};
+                result.Add(batchResponse);
+                var responseString = await multipart.Contents[i + 1].ReadAsStringAsync();
                 if (batchSummary.isError)
                 {
-                    batchResponse.errorResponse =
-                        JsonConvert.DeserializeObject<ErrorResponse>(
-                            await multipart.Contents[index].ReadAsStringAsync());
+                    batchResponse.error = JsonConvert.DeserializeObject<ErrorResponse>(responseString);
                 }
                 else
                 {
-                    batchResponse.normalResponse =
-                        JsonConvert.DeserializeObject<T>(await multipart.Contents[index].ReadAsStringAsync());
+                    batchResponse.content = JsonConvert.DeserializeObject<T>(responseString);
                 }
-
-                result.Add(batchResponse);
             }
 
             return result.ToArray();
