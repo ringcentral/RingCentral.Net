@@ -22,6 +22,8 @@ namespace RingCentral
 
         public static HttpClient httpClient = new HttpClient();
 
+        public RateLimits rateLimits = new RateLimits();
+
         private RestClient(string clientId, string clientSecret, Uri server, string appName = "Unknown",
             string appVersion = "0.0.1")
         {
@@ -64,6 +66,7 @@ namespace RingCentral
                 httpResponseMessage = await httpClient.SendAsync(httpRequestMessage, cancellationToken.Value);
             }
 
+            rateLimits.Update(httpResponseMessage.Headers);
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
