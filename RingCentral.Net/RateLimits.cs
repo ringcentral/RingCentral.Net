@@ -11,7 +11,7 @@ namespace RingCentral
         public RateLimit medium;
         public RateLimit light;
         public RateLimit auth;
-        private Dictionary<string, RateLimit> _rateLimits;
+        private Dictionary<string, RateLimit> rateLimits;
 
         public RateLimits()
         {
@@ -19,7 +19,7 @@ namespace RingCentral
             medium = new RateLimit("medium");
             light = new RateLimit("light");
             auth = new RateLimit("auth");
-            _rateLimits = new Dictionary<string, RateLimit>
+            rateLimits = new Dictionary<string, RateLimit>
             {
                 {"heavy", heavy}, {"medium", medium}, {"light", light}, {"auth", auth}
             };
@@ -33,12 +33,14 @@ namespace RingCentral
                 return; // there is no X-Rate-Limit-Group header
             }
 
-            if (!_rateLimits.ContainsKey(group.ToLower()))
+            group = group.ToLower();
+
+            if (!rateLimits.ContainsKey(group))
             {
                 return; // unknown group
             }
 
-            RateLimit rateLimit = _rateLimits[group.ToLower()];
+            RateLimit rateLimit = rateLimits[group];
             var limit = headers.GetValues("X-Rate-Limit-Limit").FirstOrDefault();
             if (limit != default(string))
             {
@@ -69,9 +71,9 @@ namespace RingCentral
         }
 
         public string group;
-        public int limit;
-        public int remaining;
-        public int window;
-        public DateTime updatedAt;
+        public int? limit;
+        public int? remaining;
+        public int? window;
+        public DateTime? updatedAt;
     }
 }
