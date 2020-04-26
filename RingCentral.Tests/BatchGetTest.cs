@@ -76,5 +76,42 @@ namespace RingCentral.Tests
                 Assert.Equal(callLogIds, string.Join(',', batchResponses.Select(br => br.content.id)));
             }
         }
+
+        [Fact]
+        public async void OnlyOneId()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+
+                var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
+                    .List(new ReadUserCallLogParameters {perPage = 1});
+                var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
+                ArgumentException argumentException = null;
+                try
+                {
+                    var batchResponses =
+                        await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds)
+                            .Path());
+                }
+                catch (ArgumentException ae)
+                {
+                    argumentException = ae;
+                }
+                finally
+                {
+                    Assert.NotNull(argumentException);
+                    Assert.Contains("should contain multiple IDs", argumentException.Message);
+                }
+            }
+        }
     }
 }
