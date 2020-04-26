@@ -1,9 +1,8 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
 import { pascalCase, camelCase } from 'change-case'
-import * as R from 'ramda'
 
-import { normalizePath, deNormalizePath, getResponseType } from './utils'
+import { normalizePath, getResponseType } from './utils'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform-adjusted.yml', 'utf8'))
 
@@ -12,14 +11,13 @@ delete doc.paths['/restapi/oauth/authorize']
 
 const paths = Object.keys(doc.paths)
 const normalizedPaths = paths.map(p => normalizePath(p)).sort()
-console.log(normalizedPaths)
 
 const pathToCode = path => {
   let names = path.split('/').filter(name => name !== '').map(name => {
     if (name.startsWith('{')) {
       return `(${name.substring(1, name.length - 1)})`
     } else {
-      return camelCase(name)
+      return pascalCase(name)
     }
   })
   names = names.map((name, index) => {
@@ -40,75 +38,61 @@ let md = '# RingCentral TypeScript SDK Code Samples'
 normalizedPaths.forEach(path => {
   console.log(path)
   const names = path.split('/').filter(name => name !== '' && !name.startsWith('{'))
-  console.log(names)
-  var gCode = fs.readFileSync(`../RingCentral.Net/Paths/${names.map(n => pascalCase(n)).join('/')}/Index.cs`, 'utf-8')
-  const ms = gCode.match(/\/\/\/ Operation: .+?\n\s*.+?\s*\n\s*.+?\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?\s*\n/g)
-    .map(f => {
-      console.log(f)
-      const ms = f.match(/Operation: (.+?)\s*\n\s*\/\/\/ Rate Limit Group: (.+?)\s*\n\s*\/\/\/ Http (.+?)\s*\n\s*\/\/\/ <\/summary>\s*\n\s*.+?(Get|List|Post|Put|Patch|Delete)\((.*?)\)/)
-      const summary = ms[1]
-      const rateLimitGroup = ms[2]
-      const endpoint = ms[3].split(' ')[1]
-      const method = ms[4]
-      const parameters = ms[5].split(',').map(t => t.trim().split(' ').map(tt => tt.trim())[0]).filter(p => p !== '').map(p => R.last(p.split('.'))).filter(p => p !== 'CancellationToken?')
-      return { summary, endpoint, method, parameters, rateLimitGroup }
-    })
-  console.log(ms)
-  ms.forEach(({ summary, endpoint, method, parameters, rateLimitGroup }) => {
-    if (endpoint === deNormalizePath(path)) {
-      let code = `
-
-
-## ${summary}
-
-HTTP ${(method === 'List' ? 'Get' : method).toUpperCase()} \`${endpoint}\`
-
-Rate Limit Group: \`${rateLimitGroup}\`
-
+  const gCode = fs.readFileSync(`../RingCentral.Net/Paths/${names.map(n => pascalCase(n)).join('/')}/Index.cs`, 'utf-8')
+  const summaries = gCode.match(/\/\/\/ <summary>[\s\S]+?\/\/\/ <\/summary>[\s\S]+?\([\s\S]+?\)/g)
+  for (const summary of summaries) {
+    const comments = summary.match(/\/\/\/ <summary>([\s\S]+?)\/\/\/ <\/summary>/)[1].trim().split('\n').map(l => l.trim().split(': ').map(t => t.trim()))
+    const title = comments.shift()[1]
+    let code = `\n\n\n## ${title}\n
+<table>${comments.map(c => `<tr><td>${c[0].substring(4)}</td><td><code>${c[1] === 'undefined' ? 'N/A' : c[1]}</code></td></tr>`).join('')}</table>
+`
+    const match = summary.match(/\/\/\/ <\/summary>[\s\S]+?(\S+?)\(([\s\S]+?)\)/)
+    const method = match[1]
+    const parameters = match[2].split(', ').map(p => p.split(' ')[0].trim())
+      .filter(p => p !== 'CancellationToken?').map(p => p.startsWith('RingCentral.') ? p.substring(12) : p)
+    code += `
 \`\`\`ts
-const rc = new RestClient(clientId, clientSecret, serverUrl)
+const rc = new RestClient(clientId, clientSecret, serverURL)
 await rc.authorize(username, extension, password)
 const result = await ${pathToCode(path)}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')})
 await rc.revoke()
 \`\`\`
-
 ${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/definitions/${p}.ts)`).join('\n')}`
-
-      const responses = doc.paths[endpoint][(method === 'List' ? 'Get' : method).toLowerCase()].responses
-      const responseType = getResponseType(responses)
-      if (!responseType) {
-        code += '\n- `result` is an empty string'
-      } else if (responseType.startsWith('RingCentral.')) {
-        const className = responseType.substring(12)
-        code += `\n- \`result\` is of type [${className}](./src/definitions/${className}.ts)`
-      } else if (responseType === 'byte[]') {
-        code += '\n- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)'
-      } else {
-        code += `\n- \`result\` is of type \`${responseType}\``
-      }
-
-      if (code.includes('.restapi(apiVersion)')) {
-        code += '\n- Parameter `apiVersion` is optional with default value `v1.0`'
-      }
-      if (code.includes('.account(accountId)')) {
-        code += '\n- Parameter `accountId` is optional with default value `~`'
-      }
-      if (code.includes('.extension(extensionId)')) {
-        code += '\n- Parameter `extensionId` is optional with default value `~`'
-      }
-      if (code.includes('.scim(version)')) {
-        code += '\n- Parameter `version` is optional with default value `v2`'
-      }
-      const operation = doc.paths[endpoint][(method === 'List' ? 'Get' : method).toLowerCase()]
-      code += `\n\n[Try it out](https://developer.ringcentral.com/api-reference#${operation.tags[0].replace(/ /g, '-')}-${operation.operationId}) in API Explorer.`
-
-      if (responseType === 'byte[]') {
-        code += `\n\n### ❗❗❗ Code sample above may not work
-\nPlease refer to [Binary content downloading](/README.md#Binary-content-downloading).`
-      }
-      md += code
+    const httpMethod = comments.shift()[1]
+    const endpoint = comments.shift()[1]
+    const responses = doc.paths[endpoint][httpMethod.toLowerCase()].responses
+    const responseType = getResponseType(responses)
+    if (!responseType) {
+      code += '\n- `result` is an empty string'
+    } else if (responseType.startsWith('RingCentral.')) {
+      const className = responseType.substring(12)
+      code += `\n- \`result\` is of type [${className}](./src/definitions/${className}.ts)`
+    } else if (responseType === 'byte[]') {
+      code += '\n- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)'
+    } else {
+      code += `\n- \`result\` is of type \`${responseType}\``
     }
-  })
+    if (code.includes('.restapi(apiVersion)')) {
+      code += '\n- Parameter `apiVersion` is optional with default value `v1.0`'
+    }
+    if (code.includes('.account(accountId)')) {
+      code += '\n- Parameter `accountId` is optional with default value `~`'
+    }
+    if (code.includes('.extension(extensionId)')) {
+      code += '\n- Parameter `extensionId` is optional with default value `~`'
+    }
+    if (code.includes('.scim(version)')) {
+      code += '\n- Parameter `version` is optional with default value `v2`'
+    }
+    const operation = doc.paths[endpoint][httpMethod.toLowerCase()]
+    code += `\n\n[Try it out](https://developer.ringcentral.com/api-reference#${operation.tags[0].replace(/ /g, '-')}-${operation.operationId}) in API Explorer.`
+
+    if (responseType === 'byte[]') {
+      code += `\n\n### ❗❗❗ Code sample above may not work
+\nPlease refer to [Binary content downloading](/README.md#Binary-content-downloading).`
+    }
+    md += code
+  }
 })
 
 fs.writeFileSync('/Users/tyler.liu/src/ts/ringcentral-typescript/samples.md', md)
