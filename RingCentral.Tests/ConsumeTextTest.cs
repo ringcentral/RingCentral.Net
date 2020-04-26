@@ -19,13 +19,33 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                var groupId = (await rc.Restapi().Glip().Groups().List()).records[0].id;
 
-                // todo: test the following
-//                var postId = (await rc.Restapi().Glip().Groups(groupId).Posts().Get()).records[0].id;
-//                var newText = Guid.NewGuid().ToString();
-//                var r = await rc.Restapi().Glip().Groups(groupId).Posts(postId).Text().Put(newText);
-//                Assert.Equal(r, newText);
+                var currentExtension = await rc.Restapi().Account().Extension().Get();
+
+                var foundIt = false;
+                foreach (var group in (await rc.Restapi().Glip().Groups().List()).records)
+                {
+                    foreach (var post in (await rc.Restapi().Glip().Groups(group.id).Posts().Get()).records)
+                    {
+                        if (post.creatorId == currentExtension.id.ToString() && post.text != null)
+                        {
+                            foundIt = true;
+
+                            var newText = Guid.NewGuid().ToString();
+                            var r = await rc.Restapi().Glip().Groups(group.id).Posts(post.id).Text().Put(newText);
+                            Assert.Equal(r, newText);
+
+                            break;
+                        }
+                    }
+
+                    if (foundIt)
+                    {
+                        break;
+                    }
+                }
+
+                Assert.True(foundIt);
             }
         }
     }
