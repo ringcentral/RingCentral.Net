@@ -72,6 +72,24 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 
             return await rc.Get<RingCentral.UserCallLogRecord>(this.Path(), queryParams, cancellationToken);
         }
+
+        public async Task<BatchResponse<RingCentral.UserCallLogRecord>[]> BatchGet(
+            ReadUserCallRecordParameters queryParams = null,
+            CancellationToken? cancellationToken = null)
+        {
+            if (this.callRecordId == null)
+            {
+                throw new System.ArgumentNullException("callRecordId");
+            }
+
+            if (!this.callRecordId.Contains(","))
+            {
+                throw new System.ArgumentException(
+                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
+            }
+
+            return await rc.BatchGet<RingCentral.UserCallLogRecord>(this.Path(), queryParams, cancellationToken);
+        }
     }
 }
 

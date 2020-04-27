@@ -38,7 +38,7 @@ namespace RingCentral
             if (!endpoint.Split(new char[] {'/'}).Any(t => t.Contains(",")))
             {
                 throw new ArgumentException(
-                    "In order to make a batchGet, endpoint should contain multiple IDs delimited by ','");
+                    "In order to make a BatchGet, endpoint should contain multiple IDs delimited by ','");
             }
 
             var httpResponseMessage = await Get<HttpResponseMessage>(endpoint, queryParams, cancellationToken);

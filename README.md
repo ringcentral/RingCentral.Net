@@ -116,3 +116,8 @@ nuget pack
 ```
 
 Reference: [Quickstart: Create and publish a package using Visual Studio (.NET Framework, Windows)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework)
+
+
+## Todo
+
+- Write a script to generate swagger spec

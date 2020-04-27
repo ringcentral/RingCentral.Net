@@ -69,6 +69,35 @@ namespace RingCentral.Tests
                     .List(new ReadUserCallLogParameters {perPage = 3});
                 var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
 
+                var batchResponses = await rc.Restapi().Account().Extension().CallLog(callLogIds).BatchGet();
+
+                Assert.Equal(3, batchResponses.Length);
+                var callLog = batchResponses[0].content;
+                Assert.NotNull(callLog);
+                Assert.NotNull(callLog.id);
+                Assert.Equal(callLogIds, string.Join(',', batchResponses.Select(br => br.content.id)));
+            }
+        }
+
+        [Fact]
+        public async void GetCallLogs2()
+        {
+            using (var rc = new RestClient(
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+            ))
+            {
+                await rc.Authorize(
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                );
+
+                var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
+                    .List(new ReadUserCallLogParameters {perPage = 3});
+                var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
+
                 var batchResponses =
                     await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
 
