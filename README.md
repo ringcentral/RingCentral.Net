@@ -121,3 +121,5 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 ## Todo
 
 - Write a script to generate swagger spec
+- Sample code generation should not throw after code formatting
+- Add batch get to auto generated sample code
