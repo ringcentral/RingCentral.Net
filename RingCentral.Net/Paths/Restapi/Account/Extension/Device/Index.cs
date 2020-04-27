@@ -32,6 +32,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         {
             return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams, cancellationToken);
         }
+
+        public async Task<BatchResponse<RingCentral.GetExtensionDevicesResponse>[]> BatchGet(
+            ListExtensionDevicesParameters queryParams = null, CancellationToken? cancellationToken = null)
+        {
+            if (!this.Path().Contains(","))
+            {
+                throw new System.ArgumentException(
+                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
+            }
+
+            return await rc.BatchGet<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams,
+                cancellationToken);
+        }
     }
 }
 

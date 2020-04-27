@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace RingCentral.Tests

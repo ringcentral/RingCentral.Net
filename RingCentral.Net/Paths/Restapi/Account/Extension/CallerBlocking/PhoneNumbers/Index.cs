@@ -75,6 +75,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, cancellationToken);
         }
 
+        public async Task<BatchResponse<RingCentral.BlockedAllowedPhoneNumberInfo>[]> BatchGet(
+            CancellationToken? cancellationToken = null)
+        {
+            if (!this.Path().Contains(","))
+            {
+                throw new System.ArgumentException(
+                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
+            }
+
+            return await rc.BatchGet<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, cancellationToken);
+        }
+
         /// <summary>
         /// Operation: Delete Blocked/Allowed Number
         /// HTTP Method: DELETE

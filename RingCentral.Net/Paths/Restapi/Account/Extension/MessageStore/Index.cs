@@ -58,6 +58,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path(), null, cancellationToken);
         }
 
+        public async Task<BatchResponse<RingCentral.GetMessageInfoResponse>[]> BatchGet(
+            CancellationToken? cancellationToken = null)
+        {
+            if (!this.Path().Contains(","))
+            {
+                throw new System.ArgumentException(
+                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
+            }
+
+            return await rc.BatchGet<RingCentral.GetMessageInfoResponse>(this.Path(), null, cancellationToken);
+        }
+
         /// <summary>
         /// Operation: Update Message List
         /// HTTP Method: PUT

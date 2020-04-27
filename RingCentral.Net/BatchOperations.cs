@@ -35,7 +35,7 @@ namespace RingCentral
             CancellationToken? cancellationToken = null)
         {
             // if no multiple IDs specified
-            if (!endpoint.Split(new char[] {'/'}).Any(t => t.Contains(",")))
+            if (!endpoint.Contains(","))
             {
                 throw new ArgumentException(
                     "In order to make a BatchGet, endpoint should contain multiple IDs delimited by ','");

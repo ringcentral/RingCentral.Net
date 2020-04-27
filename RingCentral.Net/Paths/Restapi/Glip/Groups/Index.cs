@@ -71,6 +71,18 @@ namespace RingCentral.Paths.Restapi.Glip.Groups
 
             return await rc.Get<RingCentral.GlipGroupInfo>(this.Path(), null, cancellationToken);
         }
+
+        public async Task<BatchResponse<RingCentral.GlipGroupInfo>[]> BatchGet(
+            CancellationToken? cancellationToken = null)
+        {
+            if (!this.Path().Contains(","))
+            {
+                throw new System.ArgumentException(
+                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
+            }
+
+            return await rc.BatchGet<RingCentral.GlipGroupInfo>(this.Path(), null, cancellationToken);
+        }
     }
 }
 
