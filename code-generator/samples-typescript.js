@@ -44,7 +44,7 @@ normalizedPaths.forEach(path => {
     const comments = summary.match(/\/\/\/ <summary>([\s\S]+?)\/\/\/ <\/summary>/)[1].trim().split('\n').map(l => l.trim().split(': ').map(t => t.trim()))
     const title = comments.shift()[1]
     let code = `\n\n\n## ${title}\n
-<table>${comments.map(c => `<tr><td>${c[0].substring(4)}</td><td><code>${c[1] === 'undefined' ? 'N/A' : c[1]}</code></td></tr>`).join('')}</table>
+Name|Value\n-|-\n${comments.map(c => `${c[0].substring(4)}|\`${c[1] === 'undefined' ? 'N/A' : c[1]}\``).join('\n')}
 `
     const match = summary.match(/\/\/\/ <\/summary>[\s\S]+?(\S+?)\(([\s\S]+?)\)/)
     const method = match[1]
