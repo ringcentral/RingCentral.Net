@@ -17,7 +17,7 @@ const pathToCode = path => {
     if (name.startsWith('{')) {
       return `(${name.substring(1, name.length - 1)})`
     } else {
-      return pascalCase(name)
+      return camelCase(name)
     }
   })
   names = names.map((name, index) => {
