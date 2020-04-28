@@ -48,7 +48,7 @@ normalizedPaths.forEach(path => {
 `
     const match = summary.match(/\/\/\/ <\/summary>[\s\S]+?(\S+?)\(([\s\S]+?)\)/)
     const method = match[1]
-    const parameters = match[2].split(', ').map(p => p.split(' ')[0].trim())
+    const parameters = match[2].trim().split(/,\s+/).map(p => p.split(' ')[0].trim())
       .filter(p => p !== 'CancellationToken?').map(p => p.startsWith('RingCentral.') ? p.substring(12) : p)
     code += `
 \`\`\`java
