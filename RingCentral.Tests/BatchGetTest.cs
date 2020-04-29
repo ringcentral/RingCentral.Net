@@ -25,8 +25,8 @@ namespace RingCentral.Tests
                 var validId1 = messages.records[0].id;
                 var validId2 = messages.records[1].id;
                 var invalidId = "7897036116";
-                var batchResponses = await rc.BatchGet<GetMessageInfoResponse>(rc.Restapi().Account().Extension()
-                    .MessageStore($"{validId1},{invalidId},{validId2}").Path());
+                var batchResponses = await rc.Restapi().Account().Extension()
+                    .MessageStore($"{validId1},{invalidId},{validId2}").BatchGet();
                 Assert.Equal(3, batchResponses.Length);
 
                 var firstResponse = batchResponses[0];
