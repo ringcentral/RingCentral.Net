@@ -60,36 +60,39 @@ rc.revoke();
 ${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/main/java/com/ringcentral/definitions/${p}.java)`).join('\n')}`
     const httpMethod = comments.shift()[1]
     const endpoint = comments.shift()[1]
-    const responses = doc.paths[endpoint][httpMethod.toLowerCase()].responses
-    const responseType = getResponseType(responses)
-    if (!responseType) {
-      code += '\n- `result` is `null`'
-    } else if (responseType.startsWith('RingCentral.')) {
-      const className = responseType.substring(12)
-      code += `\n- \`result\` is of type [${className}](./src/main/java/com/ringcentral/definitions/${className}.java)`
-    } else {
-      code += `\n- \`result\` is of type \`${responseType}\``
-    }
-    if (code.includes('.restapi(apiVersion)')) {
-      code += '\n- Parameter `apiVersion` is optional with default value `v1.0`'
-    }
-    if (code.includes('.account(accountId)')) {
-      code += '\n- Parameter `accountId` is optional with default value `~`'
-    }
-    if (code.includes('.extension(extensionId)')) {
-      code += '\n- Parameter `extensionId` is optional with default value `~`'
-    }
-    if (code.includes('.scim(version)')) {
-      code += '\n- Parameter `version` is optional with default value `v2`'
-    }
-    const operation = doc.paths[endpoint][httpMethod.toLowerCase()]
-    code += `\n\n[Try it out](https://developer.ringcentral.com/api-reference#${operation.tags[0].replace(/ /g, '-')}-${operation.operationId}) in API Explorer.`
+    // because `.../message-store` and `.../message-store/{messageId}` are in the same file
+    if (endpoint.endsWith('}') === path.endsWith('}')) {
+      const responses = doc.paths[endpoint][httpMethod.toLowerCase()].responses
+      const responseType = getResponseType(responses)
+      if (!responseType) {
+        code += '\n- `result` is `null`'
+      } else if (responseType.startsWith('RingCentral.')) {
+        const className = responseType.substring(12)
+        code += `\n- \`result\` is of type [${className}](./src/main/java/com/ringcentral/definitions/${className}.java)`
+      } else {
+        code += `\n- \`result\` is of type \`${responseType}\``
+      }
+      if (code.includes('.restapi(apiVersion)')) {
+        code += '\n- Parameter `apiVersion` is optional with default value `v1.0`'
+      }
+      if (code.includes('.account(accountId)')) {
+        code += '\n- Parameter `accountId` is optional with default value `~`'
+      }
+      if (code.includes('.extension(extensionId)')) {
+        code += '\n- Parameter `extensionId` is optional with default value `~`'
+      }
+      if (code.includes('.scim(version)')) {
+        code += '\n- Parameter `version` is optional with default value `v2`'
+      }
+      const operation = doc.paths[endpoint][httpMethod.toLowerCase()]
+      code += `\n\n[Try it out](https://developer.ringcentral.com/api-reference#${operation.tags[0].replace(/ /g, '-')}-${operation.operationId}) in API Explorer.`
 
-    if (responseType === 'byte[]') {
-      code += `\n\n### ❗❗❗ Code sample above may not work
+      if (responseType === 'byte[]') {
+        code += `\n\n### ❗❗❗ Code sample above may not work
 \nPlease refer to [Binary content downloading](/README.md#Binary-content-downloading).`
+      }
+      md += code
     }
-    md += code
   }
 })
 
