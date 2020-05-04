@@ -52,8 +52,8 @@ Name|Value\n-|-\n${comments.map(c => `${c[0].substring(4)}|\`${c[1] === 'undefin
       .filter(p => p !== 'CancellationToken?').map(p => p.startsWith('RingCentral.') ? p.substring(12) : p)
     code += `
 \`\`\`ts
-const rc = new RestClient(clientId, clientSecret, serverURL)
-await rc.authorize(username, extension, password)
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await ${pathToCode(path)}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')})
 await rc.revoke()
 \`\`\`
