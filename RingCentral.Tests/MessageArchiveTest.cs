@@ -24,7 +24,7 @@ namespace RingCentral.Tests
 //                var messageStoreReport = await rc.Restapi().Account().MessageStoreReport().Post(
 //                    new CreateMessageStoreReportRequest
 //                    {
-//                        dateFrom = DateTime.Now.AddDays(-30).ToString("O")
+//                        dateFrom = DateTime.Now.AddDays(-30).ToString("o")
 //                    });
 //                var reportId = messageStoreReport.id;
 //                var reportId = "130829004-130829004-460fbdfb75a744b9b5ca4551c8e23bad";
