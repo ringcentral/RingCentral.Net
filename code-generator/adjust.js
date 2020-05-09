@@ -120,4 +120,8 @@ for (const dKey of Object.keys(doc.definitions)) {
   }
 }
 
+// https://jira.ringcentral.com/browse/PLD-749
+// Add "WebSocket" to NotificationDeliveryModeRequest.transportType
+doc.definitions.NotificationDeliveryModeRequest.properties.transportType.enum.push('WebSocket')
+
 fs.writeFileSync('rc-platform-adjusted.yml', yaml.safeDump(doc))

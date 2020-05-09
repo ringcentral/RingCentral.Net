@@ -122,3 +122,4 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 
 - Write a script to generate swagger spec
 - Add batch get to auto generated sample code
+- How to handle deprecated endpoints?

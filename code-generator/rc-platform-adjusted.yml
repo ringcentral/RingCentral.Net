@@ -21758,6 +21758,7 @@ definitions:
           - WebHook
           - RC/APNS
           - RC/GCM
+          - WebSocket
       address:
         type: string
         description: >-
