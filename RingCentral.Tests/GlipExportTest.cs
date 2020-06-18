@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -19,17 +21,17 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-//                // can only be done once per day
-//                var r = await rc.Restapi().Glip().DataExport().Post(new CreateDataExportTaskRequest());
-//                Assert.Equal("Accepted", r.status);
-//                
-//                await Task.Delay(60000);
-//                var r2 = await rc.Restapi().Glip().DataExport(r.id).Get();
-//                Assert.Equal("Completed", r2.status);
-//
-//                var content = await rc.Get<byte[]>(r2.result[0].uri);
-//                Assert.True(content.Length > 0);
-//                File.WriteAllBytes("test.zip", content);
+                // // can only be done once per day
+                // var r = await rc.Restapi().Glip().DataExport().Post(new CreateDataExportTaskRequest());
+                // Assert.Equal("Accepted", r.status);
+                //
+                // await Task.Delay(60000);
+                // var r2 = await rc.Restapi().Glip().DataExport(r.id).Get();
+                // Assert.Equal("Completed", r2.status);
+                //
+                // var content = await rc.Get<byte[]>(r2.datasets[0].uri);
+                // Assert.True(content.Length > 0);
+                // File.WriteAllBytes("test.zip", content);
             }
         }
 

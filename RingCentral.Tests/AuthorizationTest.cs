@@ -148,7 +148,7 @@ namespace RingCentral.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
             );
 
-            // suppose data is read form file
+            // suppose data is read from file
             var data = JsonConvert.SerializeObject(rc.token);
 
             // suppose token is null (not logged in)
