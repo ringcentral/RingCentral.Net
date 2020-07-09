@@ -133,7 +133,6 @@ namespace RingCentral.Tests
             await rc.Revoke();
         }
 
-
         [Fact]
         public async void LoadTokenTest()
         {
