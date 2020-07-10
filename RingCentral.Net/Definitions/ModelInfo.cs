@@ -3,7 +3,7 @@ namespace RingCentral
     public class ModelInfo
     {
         /// <summary>
-        /// Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
+        /// Internal identifier of a HardPhone device model
         /// </summary>
         public string id;
 
@@ -14,13 +14,12 @@ namespace RingCentral
 
         /// <summary>
         /// Addons description
-        /// Required
         /// </summary>
         public AddonInfo[] addons;
 
         /// <summary>
         /// Device feature or multiple features supported
-        /// Enum: BLA, Intercom, Paging, HELD
+        /// Enum: BLA, CommonPhone, Intercom, Paging, HELD
         /// </summary>
         public string[] features;
 

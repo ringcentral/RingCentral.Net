@@ -24,12 +24,12 @@ namespace RingCentral
 
         /// <summary>
         /// Task status
-        /// Enum: Accepted, InProgress, Completed, Failed, Canceled, Expired
+        /// Enum: Accepted, InProgress, Completed, Failed, Expired
         /// </summary>
         public string status;
 
         /// <summary>
-        /// Internal identifier of a user
+        /// Task creator information
         /// </summary>
         public CreatorInfo creator;
 

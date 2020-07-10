@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class MeetingRecordings
+    public class MeetingRecording
     {
         /// <summary>
         /// </summary>
@@ -8,6 +8,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public MeetingRecordingInfo[] recordings;
+        public MeetingRecordingInfo[] recording;
     }
 }

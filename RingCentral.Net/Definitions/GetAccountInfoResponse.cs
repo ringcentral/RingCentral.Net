@@ -63,7 +63,7 @@ namespace RingCentral
         /// <summary>
         /// Account level region data (web service Auto-Receptionist settings)
         /// </summary>
-        public RegionalSettings regionalSettings;
+        public AccountRegionalSettings regionalSettings;
 
         /// <summary>
         /// Specifies whether an account is included into any federation of accounts or not

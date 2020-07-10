@@ -59,6 +59,11 @@ namespace RingCentral
         public DeviceEmergencyServiceAddressResource emergencyServiceAddress;
 
         /// <summary>
+        /// Device mergency response location settings
+        /// </summary>
+        public SipRegistrationDeviceEmergencyInfo emergency;
+
+        /// <summary>
         /// Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer
         /// </summary>
         public Shipping shipping;

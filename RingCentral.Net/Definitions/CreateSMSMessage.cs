@@ -3,13 +3,13 @@ namespace RingCentral
     public class CreateSMSMessage
     {
         /// <summary>
-        /// Sender of an SMS message. The phoneNumber property must be filled to correspond to one of the account phone numbers which is allowed to send SMS
+        /// Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send text messages
         /// Required
         /// </summary>
         public MessageStoreCallerInfoRequest from;
 
         /// <summary>
-        /// Receiver of an SMS message. The phoneNumber property must be filled
+        /// Message receiver(s) information. The `phoneNumber` value is required
         /// Required
         /// </summary>
         public MessageStoreCallerInfoRequest[] to;
@@ -22,6 +22,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public SMSCountryInfo country;
+        public MessageCountryInfo country;
     }
 }

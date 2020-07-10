@@ -8,6 +8,11 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
+        /// List of extensions specified as email notification recipients. Returned only for call queues where queue managers are assigned as user extensions.
+        /// </summary>
+        public EmailRecipientInfo[] emailRecipients;
+
+        /// <summary>
         /// List of notification recipient email addresses
         /// </summary>
         public string[] emailAddresses;

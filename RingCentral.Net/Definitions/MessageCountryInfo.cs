@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class SMSCountryInfo
+    public class MessageCountryInfo
     {
         /// <summary>
         /// Internal identifier of a country

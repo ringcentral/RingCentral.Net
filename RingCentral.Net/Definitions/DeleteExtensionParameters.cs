@@ -7,6 +7,7 @@ namespace RingCentral
         public bool? savePhoneLines;
 
         /// <summary>
+        /// Default: true
         /// </summary>
         public bool? savePhoneNumbers;
     }

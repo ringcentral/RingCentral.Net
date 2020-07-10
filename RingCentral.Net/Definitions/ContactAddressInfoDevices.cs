@@ -1,34 +1,29 @@
 namespace RingCentral
 {
-    public class EmergencyLocationAddressInfoRequest
+    public class ContactAddressInfoDevices
     {
         /// <summary>
-        /// Country name
+        /// Country name of extension user company. Not returned for Address Book
         /// </summary>
         public string country;
 
         /// <summary>
-        /// State/Province name. Mandatory for the USA, the UK and Canada
+        /// State/province name of extension user company
         /// </summary>
         public string state;
 
         /// <summary>
-        /// City name
+        /// City name of extension user company
         /// </summary>
         public string city;
 
         /// <summary>
-        /// First line address
+        /// Street address of extension user company
         /// </summary>
         public string street;
 
         /// <summary>
-        /// Second line address (apartment, suite, unit, building, floor, etc.)
-        /// </summary>
-        public string street2;
-
-        /// <summary>
-        /// Postal (Zip) code
+        /// Zip code of extension user company
         /// </summary>
         public string zip;
     }

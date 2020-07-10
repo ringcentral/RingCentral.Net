@@ -45,6 +45,24 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         }
 
         /// <summary>
+        /// Operation: Delete Call Party
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
+        /// Rate Limit Group: Light
+        /// App Permission: TelephonySessions
+        /// User Permission: undefined
+        /// </summary>
+        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        {
+            if (this.partyId == null)
+            {
+                throw new System.ArgumentNullException("partyId");
+            }
+
+            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+        }
+
+        /// <summary>
         /// Operation: Update Call Party
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}

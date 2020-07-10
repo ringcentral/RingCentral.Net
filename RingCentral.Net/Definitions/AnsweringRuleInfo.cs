@@ -84,5 +84,10 @@ namespace RingCentral
         /// Enum: Off, NoCallerId, UnknownCallerId, Always
         /// </summary>
         public string screening;
+
+        /// <summary>
+        /// SharedLines call handling action settings
+        /// </summary>
+        public SharedLinesInfo sharedLines;
     }
 }

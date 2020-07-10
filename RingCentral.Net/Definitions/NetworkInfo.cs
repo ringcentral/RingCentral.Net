@@ -27,5 +27,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PrivateIpRangeInfo[] privateIpRanges;
+
+        /// <summary>
+        /// Emergency response location information
+        /// </summary>
+        public ERLLocationInfo emergencyLocation;
     }
 }

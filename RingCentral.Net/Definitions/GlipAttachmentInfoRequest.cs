@@ -9,7 +9,8 @@ namespace RingCentral
 
         /// <summary>
         /// Type of an attachment
+        /// Enum: Event, File, Note, Task
         /// </summary>
-        public string attachmentType;
+        public string type;
     }
 }

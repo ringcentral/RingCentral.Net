@@ -26,5 +26,10 @@ namespace RingCentral
         /// Information on account target service plan
         /// </summary>
         public TargetServicePlanInfo targetServicePlan;
+
+        /// <summary>
+        /// Information on the contracted country of account
+        /// </summary>
+        public ContractedCountryInfo contractedCountry;
     }
 }

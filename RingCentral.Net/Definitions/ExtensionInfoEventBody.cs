@@ -15,7 +15,7 @@ namespace RingCentral
 
         /// <summary>
         /// Returned for 'Update' event type only
-        /// Enum: LimitsFeatures, AccountSettings, CompanyNumbers, AccountStatus, DialingPlan, Permissions, ProfileImage, ExtensionInfo, VideoConfiguration
+        /// Enum: AccountSettings, AccountStatus, AnsweringRules, CompanyNumbers, DialingPlan, ExtensionInfo, Features, Limits, Permissions, ProfileImage, VideoConfiguration
         /// </summary>
         public string[] hints;
 

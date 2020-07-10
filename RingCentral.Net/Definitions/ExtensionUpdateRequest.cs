@@ -82,5 +82,10 @@ namespace RingCentral
         /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation
         /// </summary>
         public string type;
+
+        /// <summary>
+        /// List of non-RC internal identifiers assigned to an extension
+        /// </summary>
+        public ReferenceInfo[] references;
     }
 }

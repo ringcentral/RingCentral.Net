@@ -72,5 +72,35 @@ namespace RingCentral
         /// Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus;
+
+        /// <summary>
+        /// Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
+        /// </summary>
+        public string additionalCustomerName;
+
+        /// <summary>
+        /// Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia.
+        /// </summary>
+        public string customerEmail;
+
+        /// <summary>
+        /// Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
+        /// </summary>
+        public string additionalCustomerEmail;
+
+        /// <summary>
+        /// Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia
+        /// </summary>
+        public string customerPhone;
+
+        /// <summary>
+        /// Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK & Australia.
+        /// </summary>
+        public string additionalCustomerPhone;
+
+        /// <summary>
+        /// Internal identifier of a tax
+        /// </summary>
+        public string taxId;
     }
 }

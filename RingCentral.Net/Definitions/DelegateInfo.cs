@@ -3,13 +3,17 @@ namespace RingCentral
     public class DelegateInfo
     {
         /// <summary>
-        /// Internal identifier of a Secretary extension
         /// </summary>
-        public string id;
+        public DelegateExtensionInfo extension;
 
         /// <summary>
-        /// Custom name of a Secretary extension
+        /// Specifies whether Secretary is permitted to pickup calls on behalf of Boss
         /// </summary>
-        public string name;
+        public bool? callPickup;
+
+        /// <summary>
+        /// Specifies whether Secretary is permitted to organize conference on behalf of Boss
+        /// </summary>
+        public bool? conferencing;
     }
 }

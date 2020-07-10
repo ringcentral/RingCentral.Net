@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class BulkAssignAutomaticaLocationUpdatesUsers
+    public class BulkAssignAutomaticLocationUpdatesUsers
     {
         /// <summary>
         /// </summary>

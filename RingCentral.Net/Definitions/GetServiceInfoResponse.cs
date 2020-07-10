@@ -18,13 +18,18 @@ namespace RingCentral
         public BrandInfo brand;
 
         /// <summary>
+        /// Information on the contracted country of account
+        /// </summary>
+        public ContractedCountryInfo contractedCountry;
+
+        /// <summary>
         /// Information on account service plan
         /// </summary>
         public ServicePlanInfo servicePlan;
 
         /// <summary>
         /// </summary>
-        public ServicePlanInfo targetServicePlan;
+        public TargetServicePlanInfo targetServicePlan;
 
         /// <summary>
         /// Information on account billing plan

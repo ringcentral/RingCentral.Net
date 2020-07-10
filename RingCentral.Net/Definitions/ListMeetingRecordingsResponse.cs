@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public MeetingRecordings[] records;
+        public MeetingRecording[] records;
 
         /// <summary>
         /// </summary>

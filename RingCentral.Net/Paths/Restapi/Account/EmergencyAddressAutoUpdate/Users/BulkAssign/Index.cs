@@ -28,11 +28,10 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users.Bul
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Post(
-            RingCentral.BulkAssignAutomaticaLocationUpdatesUsers bulkAssignAutomaticaLocationUpdatesUsers,
+            RingCentral.BulkAssignAutomaticLocationUpdatesUsers bulkAssignAutomaticLocationUpdatesUsers,
             CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<string>(this.Path(), bulkAssignAutomaticaLocationUpdatesUsers, null,
-                cancellationToken);
+            return await rc.Post<string>(this.Path(), bulkAssignAutomaticLocationUpdatesUsers, null, cancellationToken);
         }
     }
 }

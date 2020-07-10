@@ -16,5 +16,10 @@ namespace RingCentral
         /// Edition of a service plan
         /// </summary>
         public string edition;
+
+        /// <summary>
+        /// Enum: Freyja, Phoenix
+        /// </summary>
+        public string freemiumProductType;
     }
 }

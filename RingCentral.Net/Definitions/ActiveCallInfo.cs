@@ -51,6 +51,21 @@ namespace RingCentral
         public string sessionId;
 
         /// <summary>
+        /// Telephony identifier of a call session
+        /// </summary>
+        public string telephonySessionId;
+
+        /// <summary>
+        /// Extension ID of the call owner on whose behalf a call is performed
+        /// </summary>
+        public string onBehalfOf;
+
+        /// <summary>
+        /// Internal identifier of a call party
+        /// </summary>
+        public string partyId;
+
+        /// <summary>
         /// </summary>
         public string terminationType;
 

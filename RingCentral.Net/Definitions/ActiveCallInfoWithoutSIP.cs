@@ -34,9 +34,19 @@ namespace RingCentral
         public string toName;
 
         /// <summary>
+        /// Internal identifier of a call party
+        /// </summary>
+        public string partyId;
+
+        /// <summary>
         /// Time when the call is actually started
         /// </summary>
         public string startTime;
+
+        /// <summary>
+        /// Internal identifier of a call session
+        /// </summary>
+        public string sessionId;
 
         /// <summary>
         /// Telephony call status
@@ -45,9 +55,9 @@ namespace RingCentral
         public string telephonyStatus;
 
         /// <summary>
-        /// Internal identifier of a call session
+        /// Telephony identifier of a call session
         /// </summary>
-        public string sessionId;
+        public string telephonySessionId;
 
         /// <summary>
         /// Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices

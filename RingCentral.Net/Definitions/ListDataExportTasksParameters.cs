@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Status of the task(s) to be returned. Multiple values are supported
-        /// Enum: Accepted, InProgress, Completed, Failed, Canceled, Expired
+        /// Enum: Accepted, InProgress, Completed, Failed, Expired
         /// </summary>
         public string status;
 

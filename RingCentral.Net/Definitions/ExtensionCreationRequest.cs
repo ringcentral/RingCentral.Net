@@ -27,10 +27,6 @@ namespace RingCentral
         public ReferenceInfo[] references;
 
         /// <summary>
-        /// </summary>
-        public Roles[] roles;
-
-        /// <summary>
         /// Extension region data (timezone, home country, language)
         /// </summary>
         public RegionalSettings regionalSettings;

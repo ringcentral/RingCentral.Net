@@ -28,8 +28,13 @@ namespace RingCentral
         public LocationUpdatesEmergencyAddressInfoRequest emergencyAddress;
 
         /// <summary>
-        /// Internal identifier of the emergency response location (address). Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+        /// Deprecated. Internal identifier of the emergency response location (address). Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
         /// </summary>
         public string emergencyLocationId;
+
+        /// <summary>
+        /// Emergency response location information
+        /// </summary>
+        public ERLLocationInfo emergencyLocation;
     }
 }

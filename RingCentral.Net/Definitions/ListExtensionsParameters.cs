@@ -3,9 +3,9 @@ namespace RingCentral
     public class ListExtensionsParameters
     {
         /// <summary>
-        /// Extension number to retrieve
+        /// Number of extension to be retrieved
         /// </summary>
-        public string extensionId;
+        public string extensionNumber;
 
         /// <summary>
         /// Extension email address

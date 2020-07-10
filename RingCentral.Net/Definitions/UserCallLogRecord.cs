@@ -92,6 +92,7 @@ namespace RingCentral
         public string lastModifiedTime;
 
         /// <summary>
+        /// Call recording data. Returned if a call is recorded
         /// </summary>
         public CallLogRecordingInfo recording;
 

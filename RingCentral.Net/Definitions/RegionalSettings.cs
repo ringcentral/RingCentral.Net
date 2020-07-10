@@ -32,9 +32,5 @@ namespace RingCentral
         /// Enum: 12h, 24h
         /// </summary>
         public string timeFormat;
-
-        /// <summary>
-        /// </summary>
-        public string bias;
     }
 }

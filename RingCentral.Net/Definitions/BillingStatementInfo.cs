@@ -17,6 +17,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public decimal? totalCharged;
+
+        /// <summary>
+        /// </summary>
         public decimal? totalCharges;
 
         /// <summary>

@@ -27,5 +27,10 @@ namespace RingCentral
         /// Specifies if an answering rule is active or inactive
         /// </summary>
         public bool? enabled;
+
+        /// <summary>
+        /// SharedLines call handling action settings
+        /// </summary>
+        public SharedLinesInfo sharedLines;
     }
 }
