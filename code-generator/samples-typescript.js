@@ -98,4 +98,4 @@ ${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/d
   }
 })
 
-fs.writeFileSync('/Users/tyler.liu/src/ts/ringcentral-typescript/samples.md', md)
+fs.writeFileSync('/Users/tyler.liu/src/ts/ringcentral-extensible/samples.md', md)
