@@ -17,7 +17,7 @@
 
 ## array type as definitions
 
-- GetMessageMultiResponse
 - UnifiedPresenceList
+- GetMessageMultiResponse
 
 ## Anonymouse types

@@ -23,17 +23,18 @@ namespace RingCentral.Tests
                 var currentExtension = await rc.Restapi().Account().Extension().Get();
 
                 var foundIt = false;
-                foreach (var group in (await rc.Restapi().Glip().Groups().List()).records)
+                foreach (var group in (await rc.Restapi().Glip().Chats().List()).records)
                 {
-                    foreach (var post in (await rc.Restapi().Glip().Groups(group.id).Posts().Get()).records)
+                    foreach (var post in (await rc.Restapi().Glip().Chats(group.id).Posts().List()).records)
                     {
                         if (post.creatorId == currentExtension.id.ToString() && post.text != null)
                         {
                             foundIt = true;
 
                             var newText = Guid.NewGuid().ToString();
-                            var r = await rc.Restapi().Glip().Groups(group.id).Posts(post.id).Text().Put(newText);
-                            Assert.Equal(r, newText);
+                            var r = await rc.Restapi().Glip().Chats(group.id).Posts(post.id)
+                                .Patch(new GlipPatchPostBody {text = newText});
+                            Assert.Equal(r.text, newText);
 
                             break;
                         }

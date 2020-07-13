@@ -1583,52 +1583,6 @@ paths:
       x-rewrite-uri-to: /glip/v1/chats/$1/posts
       x-throttling-group: Medium
   '/restapi/v1.0/glip/groups/{groupId}/posts':
-    get:
-      tags:
-        - Posts
-      deprecated: true
-      operationId: listGlipGroupPosts
-      summary: Get Group Posts
-      description: Returns posts which are available for the current user by group ID.
-      produces:
-        - application/json
-      parameters:
-        - name: groupId
-          in: path
-          description: Internal identifier of a group
-          required: true
-          type: string
-        - name: recordCount
-          in: query
-          description: Max number of records to be returned
-          required: false
-          type: integer
-          default: 30
-          maximum: 250
-        - name: pageToken
-          in: query
-          description: Pagination token
-          required: false
-          type: string
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/GlipPosts'
-        '404':
-          description: Group with specified ID is not found.
-      x-api-group: glip/posts
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/posts'
-      x-rewrite-uri-to: /glip/v1/groups/$1/posts
-      x-docs-level: Public
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-notifications:
-        - $ref: '#/definitions/GlipPostEvent'
-      x-throttling-group: Medium
     post:
       tags:
         - Posts
@@ -1665,202 +1619,6 @@ paths:
       x-metering-group: System
       x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/posts'
       x-rewrite-uri-to: /glip/v1/groups/$1/posts
-      x-docs-level: Public
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-throttling-group: Medium
-  '/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text':
-    put:
-      tags:
-        - Posts
-      deprecated: true
-      summary: Update Post
-      operationId: updateGlipPostText
-      description: Modifies text of a post.
-      produces:
-        - text/plain
-        - application/json
-      consumes:
-        - text/*
-      parameters:
-        - name: groupId
-          in: path
-          description: Internal identifier of a group
-          required: true
-          type: string
-        - name: postId
-          in: path
-          description: Internal identifier of a post
-          required: true
-          type: string
-        - name: text
-          in: body
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: OK
-          schema:
-            type: string
-        '400':
-          description: Some of parameters are missing or have invalid format.
-        '403':
-          description: Forbidden
-      x-api-group: glip/posts
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/posts/([0-9]+)/text'
-      x-rewrite-uri-to: /glip/v1/groups/$1/posts/$2/text
-      x-docs-level: Public
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-throttling-group: Medium
-  /restapi/v1.0/glip/cards:
-    post:
-      tags:
-        - Posts
-      deprecated: true
-      operationId: createGlipCard
-      summary: Create Card
-      description: Creates a new message.
-      produces:
-        - application/json
-      consumes:
-        - application/json
-      parameters:
-        - name: body
-          in: body
-          required: true
-          schema:
-            $ref: '#/definitions/GlipMessageAttachmentInfoRequest'
-        - name: groupId
-          in: query
-          description: Internal identifier of a group where to create a post with the card
-          type: integer
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/GlipMessageAttachmentInfo'
-        '400':
-          description: Some of parameters are missing or have invalid format.
-      x-api-group: glip/cards
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: /restapi/v1.0/glip/cards
-      x-rewrite-uri-to: /glip/v1/cards
-      x-docs-level: Public
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-throttling-group: Medium
-  '/restapi/v1.0/glip/cards/{cardId}':
-    get:
-      tags:
-        - Posts
-      deprecated: true
-      operationId: readGlipCard
-      summary: Get Card
-      description: Returns card(s) with given id(s).
-      produces:
-        - application/json
-        - multipart/mixed
-      parameters:
-        - name: cardId
-          in: path
-          description: Internal identifier of a card or comma separated list of card IDs.
-          required: true
-          type: array
-          items:
-            type: string
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/GlipMessageAttachmentInfo'
-        '400':
-          description: Some of parameters are missing or have invalid format.
-        '404':
-          description: Card not found.
-      x-api-group: glip/cards
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: /restapi/v1.0/glip/cards/(.*)
-      x-rewrite-uri-to: /glip/v1/cards/$1
-      x-docs-level: Public
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-throttling-group: Medium
-    put:
-      tags:
-        - Posts
-      deprecated: true
-      summary: Update Card
-      operationId: updateGlipCard
-      description: Updates a card.
-      produces:
-        - application/json
-      consumes:
-        - application/json
-      parameters:
-        - name: cardId
-          in: path
-          description: Internal identifier of a card
-          required: true
-          type: string
-        - name: body
-          in: body
-          required: true
-          schema:
-            $ref: '#/definitions/GlipMessageAttachmentInfoRequest'
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Some of parameters are missing or have invalid format.
-        '404':
-          description: Card for update does not exist.
-      x-api-group: glip/cards
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: /restapi/v1.0/glip/cards/(.*)
-      x-rewrite-uri-to: /glip/v1/cards/$1
-      x-docs-level: Public
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-throttling-group: Medium
-    delete:
-      tags:
-        - Posts
-      deprecated: true
-      summary: Delete Card
-      operationId: deleteGlipCard
-      description: Deletes a card by ID.
-      produces:
-        - text/plain
-      parameters:
-        - name: cardId
-          in: path
-          description: Card ID to be deleted.
-          required: true
-          type: string
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Some of parameters are missing or have invalid format.
-        '404':
-          description: Card not found.
-      x-api-group: glip/cards
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: /restapi/v1.0/glip/cards/(.*)
-      x-rewrite-uri-to: /glip/v1/cards/$1
       x-docs-level: Public
       x-app-permission: Glip
       x-user-permission: Glip
@@ -3071,278 +2829,6 @@ paths:
       x-user-permission: Glip
       x-feature: Glip
       x-throttling-group: Medium
-  /restapi/v1.0/glip/groups:
-    get:
-      deprecated: true
-      tags:
-        - Chats
-      operationId: listGlipGroups
-      summary: Get User Groups
-      description: Returns the list of groups where the user is a member.
-      produces:
-        - application/json
-      parameters:
-        - name: type
-          in: query
-          description: >-
-            Type of groups to be fetched (by default all type of groups will be
-            fetched)
-          required: false
-          type: string
-          enum:
-            - Group
-            - Team
-            - PrivateChat
-            - PersonalChat
-        - name: recordCount
-          in: query
-          description: >-
-            Number of groups to be fetched by one request. The maximum value is
-            250, by default - 30
-          required: false
-          type: integer
-          default: 30
-          maximum: 250
-        - name: pageToken
-          in: query
-          description: Pagination token.
-          required: false
-          type: string
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/GlipGroupList'
-        '404':
-          description: Group with the specified ID is not found.
-      x-api-group: glip/groups
-      x-metered-api: true
-      x-metering-group: System
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-docs-level: Public
-      x-throttling-group: Medium
-      x-notifications:
-        - $ref: '#/definitions/GlipGroupsEvent'
-      x-rewrite-uri-from: /restapi/v1.0/glip/groups
-      x-rewrite-uri-to: /glip/v1/groups
-    post:
-      deprecated: true
-      tags:
-        - Chats
-      summary: Create Group
-      operationId: createGlipGroup
-      description: Creates a new private chat/team.
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: body
-          in: body
-          description: JSON body
-          schema:
-            $ref: '#/definitions/GlipCreateGroup'
-          required: true
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/GlipGroupInfo'
-        '400':
-          description: Some of parameters are missing or have invalid format.
-        '403':
-          description: Forbidden
-      x-api-group: glip/groups
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: /restapi/v1.0/glip/groups
-      x-rewrite-uri-to: /glip/v1/groups
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-throttling-group: Medium
-      x-docs-level: Public
-  '/restapi/v1.0/glip/groups/{groupId}':
-    get:
-      deprecated: true
-      tags:
-        - Chats
-      summary: Get Group
-      operationId: readGlipGroup
-      description: >-
-        Returns information about a group or multiple groups by their ID(s).
-        Batch request is supported.
-      consumes:
-        - application/json
-      produces:
-        - application/json
-        - multipart/mixed
-      parameters:
-        - name: groupId
-          in: path
-          type: array
-          items:
-            type: string
-          description: >-
-            Internal identifier of a group to be returned, the maximum number of
-            IDs is 30
-          required: true
-      responses:
-        '200':
-          description: Success
-          schema:
-            $ref: '#/definitions/GlipGroupInfo'
-        '207':
-          description: Mixed Result
-        '403':
-          description: You do not have permissions to get such kind of information.
-        '404':
-          description: Person Not Found.
-      x-api-group: glip/groups
-      x-throttling-group: Light
-      x-metered-api: true
-      x-metering-group: System
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-rewrite-uri-from: /restapi/v1.0/glip/groups/(.*)
-      x-rewrite-uri-to: /glip/v1/groups/$1
-      x-docs-level: Public
-  '/restapi/v1.0/glip/groups/{groupId}/bulk-assign':
-    post:
-      deprecated: true
-      tags:
-        - Chats
-      summary: Edit Group Members
-      operationId: assignGlipGroupMembers
-      description: >-
-        Updates group members. **Please note:** Only groups of 'Team' type can
-        be updated. Currently only one operation at a time (either adding or
-        removal) is supported.
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: groupId
-          type: string
-          in: path
-          description: Internal identifier of a group
-          required: true
-        - name: body
-          in: body
-          description: JSON body
-          schema:
-            $ref: '#/definitions/EditGroupRequest'
-          required: true
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/GlipGroupInfo'
-        '400':
-          description: Some of parameters are missing or have invalid format.
-        '403':
-          description: Forbidden
-      x-api-group: glip/groups
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/bulk-assign'
-      x-rewrite-uri-to: /glip/v1/groups/$1/bulk-assign
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-docs-level: Public
-      x-throttling-group: Medium
-  /restapi/v1.0/glip/posts:
-    get:
-      tags:
-        - Posts
-      summary: Get Posts
-      operationId: listGlipPosts
-      deprecated: true
-      description: Returns posts available for the current user by group ID.
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: groupId
-          type: string
-          in: query
-          description: Identifier of a group to filter posts
-          required: false
-        - name: pageToken
-          type: string
-          in: query
-          description: Token of a page to be returned
-          required: false
-        - name: recordCount
-          type: integer
-          format: int64
-          in: query
-          description: >-
-            Number of records to be returned. The maximum value is 250, by
-            default - 30
-          default: 30
-          maximum: 250
-          required: false
-      responses:
-        '200':
-          description: Success
-          schema:
-            $ref: '#/definitions/GlipPosts'
-        '404':
-          description: Group with the specified ID is not found.
-      x-api-group: glip/posts
-      x-throttling-group: Light
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: /restapi/v1.0/glip/posts
-      x-rewrite-uri-to: /glip/v1/posts
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-docs-level: Public
-    post:
-      tags:
-        - Posts
-      summary: Create Post
-      operationId: createPost
-      deprecated: true
-      description: Creates a post.
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: body
-          in: body
-          description: JSON body
-          schema:
-            $ref: '#/definitions/GlipCreatePost'
-          required: true
-      responses:
-        '200':
-          description: Success
-          schema:
-            $ref: '#/definitions/GlipPostInfo'
-        '400':
-          description: Some of parameters are missing or have invalid format.
-        '404':
-          description: Group not found.
-      x-api-group: glip/posts
-      x-throttling-group: Light
-      x-metered-api: true
-      x-metering-group: System
-      x-rewrite-uri-from: /restapi/v1.0/glip/posts
-      x-rewrite-uri-to: /glip/v1/posts
-      x-app-permission: Glip
-      x-user-permission: Glip
-      x-feature: Glip
-      x-docs-level: Public
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence':
     get:
       tags:
@@ -3373,8 +2859,11 @@ paths:
             $ref: '#/definitions/UnifiedPresence'
         '207':
           description: Multi-Status
-          schema:
-            $ref: '#/definitions/UnifiedPresenceList'
+          schema: &ref_2
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/UnifiedPresenceListEntry'
         '400':
           description: Some of parameters are missing or have invalid format.
         '404':
@@ -8978,8 +8467,11 @@ paths:
             $ref: '#/definitions/GetMessageInfoResponse'
         '207':
           description: Multi-Status
-          schema:
-            $ref: '#/definitions/GetMessageMultiResponse'
+          schema: &ref_0
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/GetMessageInfoMultiResponse'
       x-api-group: extension/message-store
       x-throttling-group: Light
       x-metered-api: true
@@ -9056,8 +8548,7 @@ paths:
             $ref: '#/definitions/GetMessageInfoResponse'
         '207':
           description: Multi-Status
-          schema:
-            $ref: '#/definitions/GetMessageMultiResponse'
+          schema: *ref_0
       x-api-group: extension/message-store
       x-throttling-group: Medium
       x-metered-api: true
@@ -12792,103 +12283,6 @@ paths:
       x-app-permission: Accounts
       x-docs-level: Public
       x-internal-api: false
-  '/restapi/v1.0/account/{accountId}/department/{departmentId}/members':
-    get:
-      deprecated: true
-      tags:
-        - Call Queues
-      summary: Get Department Member List
-      description: >-
-        Viewing user account info (including name, business name, address and
-        phone number/account number)
-      operationId: listDepartmentMembers
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          type: string
-          default: '~'
-        - name: departmentId
-          in: path
-          description: >-
-            Internal identifier of a Department extension (same as extensionId
-            but only the ID of a department extension is valid)
-          required: true
-          type: integer
-        - name: page
-          in: query
-          description: >-
-            Indicates the page number to retrieve. Only positive number values
-            are accepted
-          default: 1
-          required: false
-          type: integer
-        - name: perPage
-          in: query
-          description: Indicates the page size (number of items)
-          default: 100
-          required: false
-          type: integer
-      responses:
-        default:
-          description: Success
-          schema:
-            $ref: '#/definitions/DepartmentMemberList'
-      x-api-group: account/department/members
-      x-throttling-group: Light
-      x-metered-api: true
-      x-metering-group: System
-      x-app-permission: ReadAccounts
-      x-user-permission: ReadExtensions
-      x-feature: ReadExtensions
-      x-docs-level: Public
-      x-availability: High
-      x-service-level: 1000
-  '/restapi/v1.0/account/{accountId}/department/bulk-assign':
-    post:
-      deprecated: true
-      tags:
-        - Call Queues
-      summary: Assign Multiple Department Members
-      description: Adds and/or removes multiple call queue members
-      operationId: assignMultipleDepartmentMembers
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - in: body
-          name: body
-          required: false
-          schema:
-            $ref: '#/definitions/DepartmentBulkAssignResource'
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          type: string
-          default: '~'
-      responses:
-        default:
-          description: successful operation
-      x-api-group: account/department
-      x-throttling-group: Heavy
-      x-metered-api: true
-      x-metering-group: System
-      x-app-permission: EditAccounts
-      x-user-permission: UserGroups
-      x-feature: EditUserGroups
-      x-docs-level: Public
-      x-service-level: 1000
   '/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users':
     get:
       tags:
@@ -13572,142 +12966,6 @@ paths:
       responses:
         default:
           description: Success
-      x-api-group: extension/ringout
-      x-throttling-group: Heavy
-      x-metered-api: true
-      x-metering-group: Time-based
-      x-app-permission: RingOut
-      x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/ringout':
-    post:
-      tags:
-        - RingOut
-      summary: Make RingOut Call
-      deprecated: true
-      description: Makes a 2-leg RingOut call.
-      operationId: createRingOutCallDeprecated
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          type: string
-          default: '~'
-        - name: extensionId
-          in: path
-          description: >-
-            Internal identifier of an extension or tilde (~) to indicate the
-            extension assigned to the account logged-in within the current
-            session
-          required: true
-          type: string
-          default: '~'
-        - name: body
-          in: body
-          description: JSON body
-          required: true
-          schema:
-            $ref: '#/definitions/MakeRingOutRequest'
-      responses:
-        default:
-          description: Success
-          schema:
-            $ref: '#/definitions/GetRingOutStatusResponseIntId'
-      x-api-group: extension/ringout
-      x-throttling-group: Heavy
-      x-metered-api: true
-      x-metering-group: Time-based
-      x-app-permission: RingOut
-      x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/ringout/{ringoutId}':
-    get:
-      tags:
-        - RingOut
-      deprecated: true
-      summary: Get RingOut Call Status
-      description: Returns status of a 2-leg RingOut call.
-      operationId: readRingOutCallStatusDeprecated
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          type: string
-          default: '~'
-        - name: extensionId
-          in: path
-          description: >-
-            Internal identifier of an extension or tilde (~) to indicate the
-            extension assigned to the account logged-in within the current
-            session
-          required: true
-          type: string
-          default: '~'
-        - name: ringoutId
-          in: path
-          description: Internal identifier of a RingOut call
-          required: true
-          type: integer
-      responses:
-        default:
-          description: Success
-          schema:
-            $ref: '#/definitions/GetRingOutStatusResponse'
-      x-api-group: extension/ringout
-      x-throttling-group: Light
-      x-metered-api: true
-      x-metering-group: Time-based
-      x-app-permission: RingOut
-      x-docs-level: Public
-    delete:
-      tags:
-        - RingOut
-      deprecated: true
-      summary: Cancel RingOut Call
-      description: Cancels a 2-leg RingOut call.
-      operationId: deleteRingOutCallDeprecated
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          type: string
-          default: '~'
-        - name: extensionId
-          in: path
-          description: >-
-            Internal identifier of an extension or tilde (~) to indicate the
-            extension assigned to the account logged-in within the current
-            session
-          required: true
-          type: string
-          default: '~'
-        - name: ringoutId
-          in: path
-          description: Internal identifier of a RingOut call
-          required: true
-          type: integer
-      responses:
-        '204':
-          description: No Content
       x-api-group: extension/ringout
       x-throttling-group: Heavy
       x-metered-api: true
@@ -17122,112 +16380,6 @@ definitions:
         description: >-
           Datetime of last modification in [ISO
           8601](https://en.wikipedia.org/wiki/ISO_8601) format
-  GlipGroupList:
-    type: object
-    required:
-      - records
-    properties:
-      records:
-        type: array
-        items:
-          $ref: '#/definitions/GlipGroupInfo'
-        description: List of groups/teams/private chats
-      navigation:
-        $ref: '#/definitions/GlipNavigationInfo'
-  GlipGroupInfo:
-    type: object
-    properties:
-      id:
-        type: string
-        description: Internal identifier of a group
-      type:
-        type: string
-        description: >-
-          Type of a group. 'PrivateChat' is a group of 2 members. 'Group' is a
-          chat of 2 and more participants, the membership cannot be changed
-          after group creation. 'Team' is a chat of 1 and more participants, the
-          membership can be modified in future. 'PersonalChat' is a private chat
-          thread of a user
-        enum:
-          - PrivateChat
-          - Group
-          - Team
-          - PersonalChat
-      isPublic:
-        type: boolean
-        description: For 'Team' group type only. Team access level
-      name:
-        type: string
-        description: For 'Team' group type only. Team name
-      description:
-        type: string
-        description: For 'Team' group type only. Team description
-      members:
-        description: “List of glip members”
-        type: array
-        items:
-          type: string
-          description: Internal identifier of a member
-      creationTime:
-        type: string
-        format: date-time
-        description: >-
-          Group creation datetime in [ISO
-          8601](https://en.wikipedia.org/wiki/ISO_8601) format
-      lastModifiedTime:
-        type: string
-        format: date-time
-        description: >-
-          Group last change datetime in [ISO
-          8601](https://en.wikipedia.org/wiki/ISO_8601) format
-  GlipCreateGroup:
-    type: object
-    required:
-      - type
-    properties:
-      type:
-        type: string
-        enum:
-          - PrivateChat
-          - Team
-        description: >-
-          Type of a group to be created. 'PrivateChat' is a group of 2 members.
-          'Team' is a chat of 1 and more participants, the membership can be
-          modified in future. 'PersonalChat' is a private chat thread of a user
-      isPublic:
-        type: boolean
-        description: For 'Team' group type only. Team access level
-      name:
-        type: string
-        description: For 'Team' group type only. Team name
-      description:
-        type: string
-        description: For 'Team' group type only. Team description
-      members:
-        description: >-
-          “List of glip members. For 'PrivateChat' group type 2 members only are
-          supported”
-        type: array
-        items:
-          $ref: '#/definitions/GlipMemberInfo'
-  EditGroupRequest:
-    type: object
-    properties:
-      addedPersonIds:
-        type: array
-        items:
-          type: string
-        description: List of users to be added to a team
-      addedPersonEmails:
-        type: array
-        items:
-          type: string
-        description: List of user email addresses to be added to a team (i.e. as guests)
-      removedPersonIds:
-        type: array
-        items:
-          type: string
-        description: List of users to be removed from a team
   GlipCreatePost:
     type: object
     properties:
@@ -17254,7 +16406,7 @@ definitions:
           type: string
       system:
         type: boolean
-  GlipMessageAttachmentInfoRequest:
+  GlipMessageAttachmentInfoRequest: &ref_1
     type: object
     properties:
       type:
@@ -17482,32 +16634,7 @@ definitions:
         enum:
           - Short
           - Long
-  GlipAttachmentInfoRequest:
-    type: object
-    properties:
-      id:
-        type: string
-        description: Internal identifier of an attachment
-      type:
-        type: string
-        description: Type of an attachment
-        enum:
-          - Event
-          - File
-          - Note
-          - Task
-  GlipPosts:
-    type: object
-    required:
-      - records
-    properties:
-      records:
-        type: array
-        items:
-          $ref: '#/definitions/GlipPostInfo'
-        description: List of posts
-      navigation:
-        $ref: '#/definitions/GlipNavigationInfo'
+  GlipAttachmentInfoRequest: *ref_1
   GlipPostInfo:
     type: object
     properties:
@@ -17649,127 +16776,6 @@ definitions:
           - Active
           - Suspended
           - Deleted
-  GlipGroupsEvent:
-    type: object
-    properties:
-      id:
-        type: string
-        description: Internal identifier of a group
-      type:
-        type: string
-        description: >-
-          Type of a group. 'PrivateChat' is a group of 2 members. 'Group' is a
-          chat of 2 and more participants, the membership cannot be changed
-          after group creation. 'Team' is a chat of 1 and more participants, the
-          membership can be modified in future. 'PersonalChat' is a private chat
-          thread of a user
-        enum:
-          - PrivateChat
-          - Group
-          - Team
-          - PersonalChat
-      isPublic:
-        type: boolean
-        description: For 'Team' group type only. Team access level
-      name:
-        type: string
-        description: For 'Team' group type only. Team name
-      description:
-        type: string
-        description: For 'Team' group type only. Team description
-      members:
-        description: “List of glip members”
-        type: array
-        items:
-          $ref: '#/definitions/GlipMemberInfo'
-      creationTime:
-        type: string
-        format: date-time
-        description: >-
-          Group creation datetime in [ISO
-          8601](https://en.wikipedia.org/wiki/ISO_8601) format
-      lastModifiedTime:
-        type: string
-        format: date-time
-        description: >-
-          Group last change datetime in [ISO
-          8601](https://en.wikipedia.org/wiki/ISO_8601) format
-      eventType:
-        type: string
-        description: >-
-          Type of a group event. Only the person who joined/was added to a group
-          will receive 'GroupJoined' notification. Only the person who left/was
-          removed from a group will receive 'GroupLeft' notification
-        enum:
-          - GroupRenamed
-          - GroupJoined
-          - GroupLeft
-          - GroupChanged
-  GlipPostEvent:
-    type: object
-    properties:
-      id:
-        type: string
-        description: Internal identifier of a post
-      eventType:
-        type: string
-        description: Type of a post event
-        enum:
-          - PostAdded
-          - PostChanged
-          - PostRemoved
-      groupId:
-        type: string
-        description: Internal identifier of a group a post belongs to
-      type:
-        type: string
-        description: >-
-          Type of a post. 'TextMessage' - an incoming text message;
-          'PersonJoined' - a message notifying that person has joined a
-          conversation; 'PersonsAdded' - a message notifying that a person(s)
-          were added to a conversation
-        enum:
-          - TextMessage
-          - PersonJoined
-          - PersonsAdded
-          - Card
-      text:
-        type: string
-        description: For 'TextMessage' post type only. Message text
-      creatorId:
-        type: string
-        description: Internal identifier of a user - author of a post
-      addedPersonIds:
-        type: array
-        description: >-
-          For PersonsAdded post type only. Identifiers of persons added to a
-          group
-        items:
-          type: string
-      removedPersonIds:
-        type: array
-        description: >-
-          For PersonsRemoved post type only. Identifiers of persons removed from
-          a group
-        items:
-          type: string
-      mentions:
-        type: array
-        description: List of at mentions in post text with names.
-        items:
-          $ref: '#/definitions/GlipMentionsInfo'
-      creationTime:
-        type: string
-        format: date-time
-        description: >-
-          Post creation datetime in [ISO
-          8601](https://en.wikipedia.org/wiki/ISO_8601) format
-      lastModifiedTime:
-        type: string
-        format: date-time
-        description: >-
-          Post last change datetime in [ISO
-          8601](https://en.wikipedia.org/wiki/ISO_8601) format
   GlipChatsListWithoutNavigation:
     type: object
     required:
@@ -18365,11 +17371,7 @@ definitions:
         type: integer
         minimum: 0
         maximum: 100
-  UnifiedPresenceList:
-    type: array
-    items:
-      type: object
-      $ref: '#/definitions/UnifiedPresenceListEntry'
+  UnifiedPresenceList: *ref_2
   UnifiedPresenceListEntry:
     type: object
     properties:
@@ -25050,11 +24052,7 @@ definitions:
         description: >-
           Cover page text, entered by the fax sender and printed on the cover
           page. Maximum length is limited to 1024 symbols
-  GetMessageMultiResponse:
-    type: array
-    items:
-      type: object
-      $ref: '#/definitions/GetMessageInfoMultiResponse'
+  GetMessageMultiResponse: *ref_0
   GetMessageInfoMultiResponse:
     type: object
     properties:
@@ -29230,43 +28228,6 @@ definitions:
       id:
         type: string
         description: Internal identifier of a role
-  DepartmentMemberList:
-    type: object
-    properties:
-      uri:
-        type: string
-        description: Link to the list of department members
-      records:
-        type: array
-        description: List of department members extensions
-        items:
-          $ref: '#/definitions/ExtensionInfo'
-      navigation:
-        description: Information on navigation
-        $ref: '#/definitions/ProvisioningNavigationInfo'
-      paging:
-        description: Information on paging
-        $ref: '#/definitions/ProvisioningPagingInfo'
-  DepartmentBulkAssignResource:
-    type: object
-    properties:
-      items:
-        type: array
-        items:
-          $ref: '#/definitions/BulkAssignItem'
-  BulkAssignItem:
-    type: object
-    properties:
-      departmentId:
-        type: string
-      addedExtensionIds:
-        type: array
-        items:
-          type: string
-      removedExtensionIds:
-        type: array
-        items:
-          type: string
   PagingOnlyGroupUsers:
     type: object
     properties:
@@ -30833,18 +29794,6 @@ definitions:
       status:
         description: RingOut status information
         $ref: '#/definitions/RingOutStatusInfo'
-  GetRingOutStatusResponseIntId:
-    type: object
-    properties:
-      id:
-        type: integer
-        format: int64
-        description: Internal identifier of a RingOut call
-      uri:
-        type: string
-      status:
-        description: RingOut status information
-        $ref: '#/definitions/RingOutStatusInfo'
   MakeRingOutCallerInfoRequestFrom:
     type: object
     properties:
@@ -31927,9 +30876,9 @@ definitions:
       name:
         type: string
         description: Name of the callee
-  CustomGreetingAnsweringRuleInfoRequest: &ref_0
+  CustomGreetingAnsweringRuleInfoRequest: &ref_3
     type: object
     properties:
       id:
         type: string
-  CustomCompanyGreetingAnsweringRuleInfo: *ref_0
+  CustomCompanyGreetingAnsweringRuleInfo: *ref_3
