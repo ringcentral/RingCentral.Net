@@ -10,7 +10,7 @@ This project is a complete rewrite of [ringcentral/ringcentral-csharp-client](ht
 
 ## Installation
 
-Package is avaiable on NuGet: https://www.nuget.org/packages/RingCentral.Net
+Package is available on NuGet: https://www.nuget.org/packages/RingCentral.Net
 
 You can install it just like you install any other NuGet packages.
 
@@ -31,7 +31,7 @@ There is also lots of useful code for your reference in our [test cases](./RingC
 
 By default this SDK doesn't do token refresh. You are responsible to design and implement your own token management strategy.
 
-However, if you need a quick and dirty solution, you can try `rc.AuthoRefresh(interval: 1000 * 60 * 30);`. To disable it, use `rc.StopAutoRefresh();`.
+However, if you need a quick and dirty solution, you can try `rc.AutoRefresh(interval: 1000 * 60 * 30);`. To disable it, use `rc.StopAutoRefresh();`.
 
 
 ## API calls auto retry
@@ -67,7 +67,7 @@ var content = await rc.Restapi().Account().Extension().MessageStore(message.id).
 
 But not all binary content has been migrated to CDN.
 If the resource to download provides you with a CDN uri, use that CDN uri.
-If there is no CDN uri provided, contruct the uri as the [sample code](./samples.md) shows.
+If there is no CDN uri provided, construct the uri as the [sample code](./samples.md) shows.
 
 
 ## How to access headers
