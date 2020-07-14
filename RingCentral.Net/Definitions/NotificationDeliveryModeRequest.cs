@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Notifications transportation provider name
-        /// Enum: PubNub, WebHook, RC/APNS, RC/GCM
+        /// Enum: PubNub, WebHook, RC/APNS, RC/GCM, WebSocket
         /// </summary>
         public string transportType;
 

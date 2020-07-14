@@ -15647,6 +15647,7 @@ definitions:
           - WebHook
           - RC/APNS
           - RC/GCM
+          - WebSocket
       address:
         type: string
         description: >-
@@ -24758,14 +24759,14 @@ definitions:
   CreateMMSMessage:
     type: object
     required:
+      - attachments
       - from
-      - text
       - to
     properties:
       from:
         description: >-
           Message sender information. The `phoneNumber` value should be one the
-          account phone numbers allowed to send text messages
+          account phone numbers allowed to send media messages
         $ref: '#/definitions/MessageStoreCallerInfoRequest'
       to:
         type: array
