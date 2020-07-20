@@ -91,12 +91,13 @@ namespace RingCentral.Tests
 
                 // fax
                 message = messages.LastOrDefault(m => m.type == "Fax" && m.messageStatus != "SendingFailed" &&
-                                             m.attachments != null &&
-                                             m.attachments.Length > 0);
+                                                      m.attachments != null &&
+                                                      m.attachments.Length > 0);
                 if (message == null)
                 {
                     return;
                 }
+
 //                content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
                 content = await rc.Get<byte[]>(message.attachments[0].uri);
                 Assert.NotNull(content);
