@@ -57,7 +57,7 @@ await rc.authorize({ username, extension, password });
 const result = await ${pathToCode(path)}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')});
 await rc.revoke();
 \`\`\`
-${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/definitions/${p}.ts)`).join('\n')}`
+${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./packages/core/definitions/${p}.ts)`).join('\n')}`
     const httpMethod = comments.shift()[1]
     const endpoint = comments.shift()[1]
     // because `.../message-store` and `.../message-store/{messageId}` are in the same file
@@ -68,7 +68,7 @@ ${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/d
         code += '\n- `result` is an empty string'
       } else if (responseType.startsWith('RingCentral.')) {
         const className = responseType.substring(12)
-        code += `\n- \`result\` is of type [${className}](./src/definitions/${className}.ts)`
+        code += `\n- \`result\` is of type [${className}](./packages/core/definitions/${className}.ts)`
       } else if (responseType === 'byte[]') {
         code += '\n- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)'
       } else {
