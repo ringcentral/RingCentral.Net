@@ -2,3 +2,4 @@
 --ignore-dir=bin
 --ignore-dir=.idea
 --ignore-dir=packages
+--ignore-file=match:/yarn\.lock$/

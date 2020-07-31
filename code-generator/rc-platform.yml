@@ -29788,7 +29788,7 @@ definitions:
     type: object
     properties:
       id:
-        type: integer
+        type: string
         description: Internal identifier of a RingOut call
       uri:
         type: string

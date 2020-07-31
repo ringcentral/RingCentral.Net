@@ -13,12 +13,12 @@
     "change-case": "^4.1.1",
     "js-yaml": "^3.14.0",
     "lower-case-first": "^2.0.1",
-    "ramda": "^0.27.0"
+    "ramda": "^0.27.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/register": "^7.10.4",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
     "standard": "^14.3.4",
     "yarn-upgrade-all": "^0.5.4"
   }

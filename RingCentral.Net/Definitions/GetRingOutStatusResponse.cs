@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a RingOut call
         /// </summary>
-        public long? id;
+        public string id;
 
         /// <summary>
         /// </summary>

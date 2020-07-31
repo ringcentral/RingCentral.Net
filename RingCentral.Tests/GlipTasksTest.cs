@@ -20,10 +20,10 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                // Find the group with type "PersonalChat" where you can talk to yourself
+                // Find the group with type "Personal" where you can talk to yourself
                 var groups = await rc.Restapi().Glip().Chats().List(new ListGlipChatsParameters
                 {
-                    type = new string[] {"PersonalChat"}
+                    type = new string[] {"Personal"}
                 });
                 var group = groups.records[0];
 
