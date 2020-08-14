@@ -15605,6 +15605,39 @@ definitions:
       name:
         type: string
         description: Name of a call queue
+  CallQueuePresenceEvent:
+    type: object
+    properties:
+      uuid:
+        type: string
+        description: Universally unique identifier of a notification
+      event:
+        type: string
+        description: Event filter URI
+      timestamp:
+        type: string
+        description: >-
+          Datetime of sending a notification in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      subscriptionId:
+        type: string
+        description: Internal identifier of a subscription
+      body:
+        description: Notification payload body
+        $ref: '#/definitions/CallQueuePresenceEventBody'
+  CallQueuePresenceEventBody:
+    type: object
+    properties:
+      extensionId:
+        type: string
+        description: Agent extension ID
+      callQueueId:
+        type: string
+        description: Call queue extension ID
+      acceptCalls:
+        type: boolean
+        description: Call queue agent availability for calls of this queue
   RecordsCollectionResourceSubscriptionResponse:
     type: object
     properties:
@@ -16777,6 +16810,245 @@ definitions:
           - Active
           - Suspended
           - Deleted
+  GlipGroupsEvent:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a group
+      type:
+        type: string
+        description: >-
+          Type of a group. 'PrivateChat' is a group of 2 members. 'Group' is a
+          chat of 2 and more participants, the membership cannot be changed
+          after group creation. 'Team' is a chat of 1 and more participants, the
+          membership can be modified in future. 'PersonalChat' is a private chat
+          thread of a user
+        enum:
+          - PrivateChat
+          - Group
+          - Team
+          - PersonalChat
+      isPublic:
+        type: boolean
+        description: For 'Team' group type only. Team access level
+      name:
+        type: string
+        description: For 'Team' group type only. Team name
+      description:
+        type: string
+        description: For 'Team' group type only. Team description
+      members:
+        description: “List of glip members”
+        type: array
+        items:
+          $ref: '#/definitions/GlipMemberInfo'
+      creationTime:
+        type: string
+        format: date-time
+        description: >-
+          Group creation datetime in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format
+      lastModifiedTime:
+        type: string
+        format: date-time
+        description: >-
+          Group last change datetime in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format
+      eventType:
+        type: string
+        description: >-
+          Type of a group event. Only the person who joined/was added to a group
+          will receive 'GroupJoined' notification. Only the person who left/was
+          removed from a group will receive 'GroupLeft' notification
+        enum:
+          - GroupRenamed
+          - GroupJoined
+          - GroupLeft
+          - GroupChanged
+  GlipPostEvent:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a post
+      eventType:
+        type: string
+        description: Type of a post event
+        enum:
+          - PostAdded
+          - PostChanged
+          - PostRemoved
+      groupId:
+        type: string
+        description: Internal identifier of a group a post belongs to
+      type:
+        type: string
+        description: >-
+          Type of a post. 'TextMessage' - an incoming text message;
+          'PersonJoined' - a message notifying that person has joined a
+          conversation; 'PersonsAdded' - a message notifying that a person(s)
+          were added to a conversation
+        enum:
+          - TextMessage
+          - PersonJoined
+          - PersonsAdded
+          - Card
+      text:
+        type: string
+        description: For 'TextMessage' post type only. Message text
+      creatorId:
+        type: string
+        description: Internal identifier of a user - author of a post
+      addedPersonIds:
+        type: array
+        description: >-
+          For PersonsAdded post type only. Identifiers of persons added to a
+          group
+        items:
+          type: string
+      removedPersonIds:
+        type: array
+        description: >-
+          For PersonsRemoved post type only. Identifiers of persons removed from
+          a group
+        items:
+          type: string
+      mentions:
+        type: array
+        description: List of at mentions in post text with names.
+        items:
+          $ref: '#/definitions/GlipMentionsInfo'
+      creationTime:
+        type: string
+        format: date-time
+        description: >-
+          Post creation datetime in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format
+      lastModifiedTime:
+        type: string
+        format: date-time
+        description: >-
+          Post last change datetime in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format
+  GlipUnreadMessageCountEvent:
+    type: object
+    properties:
+      uuid:
+        type: string
+        description: Universally unique identifier of a notification
+      pn_apns:
+        description: Apple notification data
+        $ref: '#/definitions/GlipAPNSInfo'
+      pn_gcm:
+        description: GCM data
+        $ref: '#/definitions/GCMInfo'
+      ownerId:
+        type: string
+        description: Internal identifier of a subscription owner extension
+  GlipAPNSInfo:
+    type: object
+    properties:
+      aps:
+        description: Apple Push Notification Service Info
+        $ref: '#/definitions/APSInfo'
+      timestamp:
+        type: string
+        format: date-time
+        description: >-
+          Datetime of a call action in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example 2016-03-10T18:07:52.534Z
+      uuid:
+        type: string
+        description: Universally unique identifier of a notification
+      event:
+        type: string
+        description: Event filter URI
+      subscriptionId:
+        type: string
+        description: Internal identifier of a subscription
+      body:
+        description: Unread messages data
+        $ref: '#/definitions/GlipUnreadMessageCountInfo'
+  GlipUnreadMessageCountInfo:
+    type: object
+    properties:
+      unread:
+        type: integer
+        description: Count of glip unread messages
+  GCMInfo:
+    type: object
+    properties:
+      priority:
+        type: string
+        description: >-
+          Notification priority, if the value is 'high' then notification is
+          turned on even if the application is in background
+        enum:
+          - high
+          - normal
+      time_to_live:
+        type: integer
+        description: >-
+          Notification lifetime value in seconds, the default value is 30
+          seconds
+      data:
+        description: GCM data
+        $ref: '#/definitions/GCMData'
+  GCMData:
+    type: object
+    properties:
+      event:
+        type: string
+        description: Event filter URI
+      subscriptionId:
+        type: string
+        description: Internal identifier of a subscription
+      timestamp:
+        type: string
+        description: >-
+          The datetime of a call action in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example 2016-03-10T18:07:52.534Z
+        format: date-time
+      extensionId:
+        type: string
+        description: Internal identifier of an extension
+        default: '~'
+      action:
+        type: string
+        description: 'Calling action, for example ''StartRing'''
+      sessionId:
+        type: string
+        description: Identifier of a call session
+      serverId:
+        type: string
+        description: Identifier of a server
+      _from:
+        type: string
+        description: Phone number of a caller
+      fromName:
+        type: string
+        description: Caller name
+      to:
+        type: string
+        description: Phone number of a callee
+      toName:
+        type: string
+        description: Callee name
+      sid:
+        type: string
+        description: Unique identifier of a session
+      toUrl:
+        type: string
+        description: SIP proxy registration name
+      srvLvl:
+        type: string
+        description: User data
+      srvLvlExt:
+        type: string
+        description: User data
   GlipChatsListWithoutNavigation:
     type: object
     required:
@@ -18238,6 +18510,107 @@ definitions:
         type: string
       uri:
         type: string
+  ContactDirectoryEvent:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an extension
+      eventType:
+        type: string
+        description: Type of change
+      type:
+        type: string
+        description: Extension Type
+      status:
+        type: string
+        description: Status of an extension
+        enum:
+          - Disabled
+          - Enabled
+          - NotActivated
+      firstName:
+        type: string
+        description: First name of an extension user
+      lastName:
+        type: string
+        description: Last name of an extension user
+      department:
+        type: string
+        description: Department Name
+      email:
+        type: string
+        description: Email of an extension user
+      extensionNumber:
+        type: string
+        description: Extension number
+      account:
+        description: Account data of an extension
+        $ref: '#/definitions/CompanyDirectoryAccountInfo'
+      phoneNumbers:
+        description: Extension phone number information
+        $ref: '#/definitions/CompanyDirectoryPhoneNumberInfo'
+      site:
+        description: Site Data
+        $ref: '#/definitions/ContactDirectorySiteInfo'
+      profileImage:
+        description: >-
+          Extension profile image information. Not returned if profile images
+          are absent for an extension
+        $ref: '#/definitions/CompanyDirectoryProfileImageInfo'
+      ownerId:
+        type: string
+        description: Internal identifier of a subscription owner extension
+  CompanyDirectoryAccountInfo:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an account
+  CompanyDirectoryPhoneNumberInfo:
+    type: object
+    properties:
+      phoneNumber:
+        type: string
+        description: Extension phone number in E.164 format
+      type:
+        type: string
+        enum:
+          - VoiceFax
+          - FaxOnly
+          - VoiceOnly
+        description: Type of a phone number
+      hidden:
+        type: boolean
+        description: >-
+          Specifies if a phone number should be hidden or not. Returned only if
+          the value is 'True'
+      usageType:
+        type: string
+        enum:
+          - MobileNumber
+          - ContactNumber
+          - DirectNumber
+          - ForwardedNumber
+        description: Usage type of a phone number
+  CompanyDirectoryProfileImageInfo:
+    type: object
+    properties:
+      uri:
+        type: string
+        description: Link to a profile image resource
+      etag:
+        type: string
+        description: Internal identifier of an image
+  ContactDirectorySiteInfo:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal Identifier of a site
+      name:
+        type: string
+        description: Custom name of a site
   SearchDirectoryEntriesRequest:
     type: object
     properties:
@@ -18302,6 +18675,82 @@ definitions:
         enum:
           - Asc
           - Desc
+  CompanyDirectoryEvent:
+    type: object
+    properties:
+      uuid:
+        type: string
+        description: Universally unique identifier of a notification
+      event:
+        type: string
+        description: Event filter URI
+      timestamp:
+        type: string
+        description: >-
+          Datetime of sending a notification in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      subscriptionId:
+        type: string
+        description: Internal identifier of a subscription
+      ownerId:
+        type: string
+        description: Internal identifier of a subscription owner extension
+      body:
+        description: Notification payload body
+        $ref: '#/definitions/CompanyDirectoryEventBody'
+  CompanyDirectoryEventBody:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an extension
+      eventType:
+        type: string
+        description: Type of change
+      type:
+        type: string
+        description: Type of extension
+      status:
+        type: string
+        description: Status of an extension
+        enum:
+          - Enabled
+          - NotActivated
+          - Disabled
+      firstName:
+        type: string
+        description: First name of a user extension
+      lastName:
+        type: string
+        description: Last name of a user extension
+      name:
+        type: string
+        description: 'Name of a contact, for non-user extensions'
+      department:
+        type: string
+        description: Department name
+      email:
+        type: string
+      extensionNumber:
+        type: string
+      account:
+        type: object
+        $ref: '#/definitions/CompanyDirectoryAccountInfo'
+      phoneNumbers:
+        type: array
+        items:
+          $ref: '#/definitions/CompanyDirectoryPhoneNumberInfo'
+      site:
+        type: object
+        description: Site data
+        $ref: '#/definitions/ContactDirectorySiteInfo'
+      profileImage:
+        type: object
+        description: >-
+          Extension profile image information. Not returned if profile images
+          are absent for an extension
+        $ref: '#/definitions/CompanyDirectoryProfileImageInfo'
   AnsweringRuleInfo:
     type: object
     properties:
@@ -25204,6 +25653,128 @@ definitions:
         description: >-
           Specifies if a voicemail message transcription is already completed or
           not
+  FaxMessageEvent:
+    type: object
+    properties:
+      uuid:
+        type: string
+        description: Universally unique identifier of a notification
+      event:
+        type: string
+        description: Event filter URI
+      timestamp:
+        type: string
+        description: >-
+          Datetime of sending a notification in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      subscriptionId:
+        type: string
+        description: Internal identifier of a subscription
+      ownerId:
+        type: string
+        description: Internal identifier of a subscription owner extension
+      body:
+        description: Notification payload body
+        $ref: '#/definitions/FaxMessageEventBody'
+  FaxMessageEventBody:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a message
+      to:
+        type: array
+        items:
+          $ref: '#/definitions/NotificationRecipientInfo'
+      from:
+        type: object
+        $ref: '#/definitions/SenderInfo'
+      type:
+        type: string
+        description: Type of a message
+        enum:
+          - Fax
+      creationTime:
+        type: string
+        description: >-
+          Message creation datetime in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      lastModifiedTime:
+        type: string
+        description: >-
+          Datetime when the message was modified in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      readStatus:
+        type: string
+        description: Status of a message
+        default: Unread
+      priority:
+        type: string
+        default: Normal
+      attachments:
+        description: Message attachment data
+        type: array
+        items:
+          $ref: '#/definitions/FaxMessageAttachment'
+      direction:
+        type: string
+        default: Inbound
+        description: Message direction
+      availability:
+        type: string
+        default: Alive
+        description: Message availability status
+      subject:
+        type: string
+        description: >-
+          Message subject. It replicates message text which is also returned as
+          an attachment
+      messageStatus:
+        type: string
+        description: Status of a message
+        default: Received
+      conversationId:
+        type: string
+        description: Internal identifier of a conversation this message belongs to
+      faxResolution:
+        type: string
+        description: >-
+          Resolution of a fax message. ('High' for black and white image scanned
+          at 200 dpi, 'Low' for black and white image scanned at 100 dpi)
+      faxPageCount:
+        type: integer
+        description: Page count of a fax message
+  FaxMessageAttachment:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a message attachment
+      uri:
+        type: string
+        description: Canonical URI of a message attachment
+      type:
+        type: string
+        description: Type of message attachment
+        enum:
+          - AudioRecording
+          - AudioTranscription
+          - Text
+          - SourceDocument
+          - RenderedDocument
+          - MmsAttachment
+      contentType:
+        type: string
+        description: 'MIME type for a given attachment, for instance ''audio/wav'''
+      filename:
+        type: string
+        description: Name of a file attached
+      size:
+        type: integer
+        description: Size of attachment in bytes
   MessageCountryInfo:
     type: object
     properties:
@@ -30868,6 +31439,157 @@ definitions:
         enum:
           - Inbound
           - Outbound
+  AccountTelephonySessionsEvent:
+    type: object
+    properties:
+      uuid:
+        type: string
+        description: Universally unique identifier of a notification
+      event:
+        type: string
+        description: Event filter URI
+      timestamp:
+        type: string
+        description: >-
+          Datetime of sending a notification in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      subscriptionId:
+        type: string
+        description: Internal identifier of a subscription
+      ownerId:
+        type: string
+        description: Internal identifier of a subscription owner extension
+      body:
+        description: Notification payload body
+        $ref: '#/definitions/TelephonySessionsEventBody'
+  ExtensionTelephonySessionsEvent:
+    type: object
+    properties:
+      uuid:
+        type: string
+        description: Universally unique identifier of a notification
+      event:
+        type: string
+        description: Event filter URI
+      timestamp:
+        type: string
+        description: >-
+          Datetime of sending a notification in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      subscriptionId:
+        type: string
+        description: Internal identifier of a subscription
+      ownerId:
+        type: string
+        description: Internal identifier of a subscription owner extension
+      body:
+        description: Notification payload body
+        $ref: '#/definitions/TelephonySessionsEventBody'
+  TelephonySessionsEventBody:
+    type: object
+    properties:
+      sequence:
+        type: integer
+        description: Order number of a notification to state the chronology
+      sessionId:
+        type: string
+        description: Legacy identifier of a call session
+      telephonySessionId:
+        type: string
+        description: 'Call session identifier, required for Telephony API'
+      serverId:
+        type: string
+        description: Identifier of a server
+      eventTime:
+        type: string
+        description: >-
+          The call start datetime in [ISO
+          8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+          timezone, for example *2016-03-10T18:07:52.534Z*
+      origin:
+        description: Session origin details
+        $ref: '#/definitions/OriginInfo'
+      parties:
+        description: Call participants details
+        type: array
+        items:
+          $ref: '#/definitions/TelephonySessionsEventPartyInfo'
+  TelephonySessionsEventPartyInfo:
+    type: object
+    properties:
+      accountId:
+        type: string
+      extensionId:
+        type: string
+      id:
+        type: string
+      direction:
+        type: string
+        enum:
+          - Inbound
+          - Outbound
+      to:
+        type: object
+        $ref: '#/definitions/CallPartyInfo'
+      from:
+        type: object
+        $ref: '#/definitions/CallPartyInfo'
+      status:
+        type: object
+        $ref: '#/definitions/CallSessionStatusInfo'
+  CallPartyInfo:
+    type: object
+    properties:
+      phoneNumber:
+        type: string
+        description: >-
+          Call party phone number in
+          [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)(with '+' sign)
+          format
+      name:
+        type: string
+        description: Call party name
+      extensionId:
+        type: string
+        description: Internal identifier of a call party extensionId
+  CallSessionStatusInfo:
+    type: object
+    properties:
+      code:
+        type: string
+      reason:
+        type: string
+      parkData:
+        type: string
+      peerId:
+        type: object
+        description: Contains details of the 'linked' Session. Appears in 'Gone' State Code
+        $ref: '#/definitions/PeerInfo'
+      mobilePickupData:
+        type: object
+        $ref: '#/definitions/MobilePickupData'
+  MobilePickupData:
+    type: object
+    properties:
+      ccMailboxes:
+        type: string
+        description: >-
+          The list of extension IDs, configured to pick a call from
+          Desktop/Mobile applications
+      to:
+        type: string
+        description: SIP proxy registration name
+      sid:
+        type: string
+        description: User data
+      srvlvl:
+        type: string
+        description: User data
+      srvLvlExt:
+        type: string
+        description: User data
   MessageStoreCalleeInfoRequest:
     type: object
     properties:
