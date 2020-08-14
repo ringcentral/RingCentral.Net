@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="PubnubPCL" Version="4.5.0" />
+        <PackageReference Include="PubnubPCL" Version="4.10.0" />
     </ItemGroup>
 
 </Project>
