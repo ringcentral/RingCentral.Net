@@ -19,7 +19,14 @@ If you need PubNub feature, you also need to install one of the following packag
 - If you want to target traditional .NET Framework: https://www.nuget.org/packages/RingCentral.Net.Pubnub
 - If you want to target .NET Core, Mono, Xamarin...etc: https://www.nuget.org/packages/RingCentral.Net.PubnubPCL
 
+### Compatibility issue
 
+- RingCentral.Net 4.x is compatible with RingCentral.Net.Pubnub/RingCentral.Net.PubnubPCL 1.4 or later versions.
+- RingCentral.Net 3.x is compatible with RingCentral.Net.Pubnub/RingCentral.Net.PubnubPCL 1.3.1 or earlier versions.
+
+If wrong combination is installed, there will be [System.MissingMethodException](https://github.com/ringcentral/RingCentral.Net/issues/22).
+
+x
 ## Code samples
 
 You can find [sample code for all the endpoints](./samples.md).
