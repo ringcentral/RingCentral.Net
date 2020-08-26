@@ -1664,13 +1664,11 @@ paths:
         - name: chatId
           in: path
           type: string
-          description: Internal identifier of a chat.
+          description: Internal identifier of a chat
           required: true
         - name: recordCount
           in: query
-          description: >-
-            Max number of posts to be fetched by one request (Not more than
-            250).
+          description: Max number of posts to be fetched by one request (not more than 250)
           required: false
           type: integer
           default: 30
@@ -1699,24 +1697,14 @@ paths:
       tags:
         - Posts
       operationId: createGlipPost
-      description: Creates a post within the specified chat. Attachments are supported.
-      summary: Create Post
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: chatId
-          in: path
-          type: string
-          description: Internal identifier of a chat.
-          required: true
-        - name: body
-          in: body
-          description: JSON body
-          schema:
-            $ref: '#/definitions/GlipPostPostBody'
-          required: true
+      description: >-
+        Creates a post within the specified chat. Attachments are supported only
+        for Card type. All other atatchment types (File, Task, Event and Note)
+        should be first created via the corresponding method summary: Create
+        Post consumes: - application/json produces: - application/json
+        parameters: - name: chatId in: path type: string description: Internal
+        identifier of a chat. required: true - name: body required: true in:
+        body description: JSON body schema: $ref: 
       responses:
         '201':
           description: Success
@@ -10923,9 +10911,9 @@ paths:
           schema:
             $ref: '#/definitions/EmergencyLocationList'
       x-api-group: account/emergency-locations
-      x-app-permission: EditAccounts
+      x-app-permission: ReadAccounts
       x-user-permission: ConfigureEmergencyMaps
-      x-feature: EditSoftPhoneAutoLocationUpdate OR EditHardPhoneAutoLocationUpdate
+      x-feature: ReadCompanyInfo
       x-throttling-group: Light
       x-availability: High
       x-team: PLA Inno
@@ -16925,7 +16913,9 @@ definitions:
         enum:
           - Card
           - Event
+          - File
           - Note
+          - Task
         default: Card
       fallback:
         type: string
@@ -17707,20 +17697,6 @@ definitions:
       text:
         type: string
         description: Post text.
-  GlipPostPostBody:
-    type: object
-    required:
-      - text
-    properties:
-      text:
-        type: string
-        description: Post text.
-      attachments:
-        description: Identifier(s) of attachments.
-        type: array
-        items:
-          type: object
-          $ref: '#/definitions/GlipAttachmentInfoRequest'
   GlipPostsList:
     type: object
     required:
@@ -22921,7 +22897,7 @@ definitions:
       authorizationId:
         type: string
         description: Identifier for SIP authorization
-      omain:
+      domain:
         type: string
         description: SIP domain
       outboundProxy:
