@@ -172,6 +172,160 @@ paths:
       x-docs-level: Public
       x-notifications:
         - $ref: '#/definitions/AccountPresenceEvent'
+  '/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence':
+    get:
+      summary: Get Call Queue Presence
+      description: Returns presence status of the call queue members.
+      operationId: readCallQueuePresence
+      tags:
+        - Presence
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          type: string
+          default: '~'
+        - name: groupId
+          in: path
+          description: Internal identifier of an call queue extension
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/CallQueuePresence'
+      x-api-group: call-queues/presence
+      x-throttling-group: Light
+      x-metered-api: true
+      x-metering-group: System
+      x-app-permission: ReadPresence
+      x-docs-level: Public
+    put:
+      summary: Update Call Queue Presence
+      description: >-
+        Updates presence status of the call queue members in the specified
+        queue.
+      operationId: updateCallQueuePresence
+      tags:
+        - Presence
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          type: string
+          default: '~'
+        - name: groupId
+          in: path
+          description: Internal identifier of a call queue extension
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/CallQueueUpdatePresence'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/CallQueuePresence'
+      x-api-group: call-queues/presence
+      x-throttling-group: Medium
+      x-metered-api: true
+      x-metering-group: System
+      x-app-permission: EditPresence
+      x-docs-level: Public
+      x-notifications:
+        - $ref: '#/definitions/CallQueuePresenceEvent'
+  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence':
+    get:
+      summary: Get Agent’s Call Queue Presence
+      description: >-
+        Returns a list of agent's call queues with the agent presence status
+        (per queue)
+      operationId: readExtensionCallQueuePresence
+      tags:
+        - Presence
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          type: string
+          default: '~'
+        - name: extensionId
+          in: path
+          description: Internal identifier of an extension
+          required: true
+          type: string
+          default: '~'
+        - name: editableMemberStatus
+          in: query
+          description: >-
+            Filtering by the flag 'Allow members to change their Queue Status'.
+            If 'true' only queues where user can change his availability status
+            are returned
+          required: false
+          type: boolean
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/ExtensionCallQueuePresenceList'
+      x-api-group: extension/call-queue-presence
+      x-throttling-group: Light
+      x-metered-api: true
+      x-metering-group: System
+      x-app-permission: ReadPresence
+      x-docs-level: Public
+    put:
+      summary: Update Call Queue Presence
+      description: Updates availability of the agent for the call queues.
+      operationId: updateExtensionCallQueuePresence
+      tags:
+        - Presence
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          type: string
+          default: '~'
+        - name: extensionId
+          in: path
+          description: Internal identifier of an extension
+          required: true
+          type: string
+          default: '~'
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ExtensionCallQueueUpdatePresenceList'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/ExtensionCallQueuePresenceList'
+      x-api-group: extension/call-queue-presence
+      x-throttling-group: Medium
+      x-metered-api: true
+      x-metering-group: System
+      x-app-permission: EditPresence
+      x-docs-level: Public
+      x-notifications:
+        - $ref: '#/definitions/CallQueuePresenceEvent'
   /restapi/v1.0/subscription:
     get:
       tags:
@@ -7533,7 +7687,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/user-settings':
     get:
       tags:
-        - Meeting Management
+        - Meeting Configuration
       summary: Get Meeting User Settings
       operationId: GetUserSetting
       description: Returns user settings for meetings.
@@ -7569,6 +7723,35 @@ paths:
       x-app-permission: Meetings
       x-user-permission: Meetings
       x-feature: Meetings
+      x-docs-level: Public
+  '/restapi/v1.0/account/{accountId}/meeting/locked-settings':
+    get:
+      tags:
+        - Meeting Configuration
+      summary: Get Locked Meeting Settings
+      description: >-
+        Returns information on user meeting settings that are locked on account
+        level and therefore cannot be changed by user.
+      operationId: GetAccountLockedSetting
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of an account or tilde (~) to indicate the
+            account logged-in within the current session
+          required: true
+          type: string
+      responses:
+        '200':
+          description: 'OK: Account Locked Meeting Settings'
+          schema:
+            $ref: '#/definitions/AccountLockedSettingResponse'
+      x-api-group: account/meeting/locked-settings
+      x-throttling-group: Light
+      x-metered-api: true
+      x-metering-group: System
+      x-app-permission: Meetings
+      x-user-permission: Meetings
       x-docs-level: Public
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}':
     get:
@@ -7911,6 +8094,46 @@ paths:
       x-app-permission: Meetings
       x-user-permission: Meetings
       x-feature: Meetings
+      x-docs-level: Public
+  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/invitation':
+    get:
+      tags:
+        - Meeting Management
+      summary: Get Meeting Invitation
+      description: Returns a meeting invitation by ID.
+      operationId: readMeetingInvitation
+      parameters:
+        - name: meetingId
+          in: path
+          description: Internal identifier of a RingCentral meeting
+          required: true
+          type: integer
+        - name: extensionId
+          in: path
+          description: >-
+            Internal identifier of an extension or tilde (~) to indicate the
+            extension assigned to the account logged-in within the current
+            session
+          required: true
+          type: string
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of an account or tilde (~) to indicate the
+            account logged-in within the current session
+          required: true
+          type: string
+      responses:
+        '200':
+          description: 'OK: Meeting Invitation'
+          schema:
+            $ref: '#/definitions/PublicMeetingInvitationResponse'
+      x-api-group: extension/meeting
+      x-throttling-group: Light
+      x-metered-api: true
+      x-metering-group: System
+      x-app-permission: Meetings
+      x-user-permission: Meetings
       x-docs-level: Public
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms':
     post:
@@ -8930,8 +9153,8 @@ paths:
       tags:
         - Message Exports
       description: >-
-        Creates a task to collect all account messages for a specified time
-        interval.
+        Creates a task to collect all account messages within the specified time
+        interval. Maximum number of simaltaneous tasks per account is 2.
       summary: Create Message Store Report
       operationId: createMessageStoreReport
       parameters:
@@ -9107,6 +9330,7 @@ paths:
               - CompanyFaxNumber
               - ForwardedNumber
               - ForwardedCompanyNumber
+              - BusinessMobileNumber
           collectionFormat: multi
         - name: page
           in: query
@@ -11718,6 +11942,7 @@ paths:
               - ContactCenterNumber
               - ConferencingNumber
               - MeetingsNumber
+              - BusinessMobileNumber
           collectionFormat: multi
         - name: status
           in: query
@@ -11868,6 +12093,7 @@ paths:
               - ParkLocation
               - Limited
               - Bot
+              - ProxyAdmin
           collectionFormat: multi
           allowEmptyValue: true
           in: query
@@ -12140,6 +12366,72 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-availability: High
+  '/restapi/v1.0/account/{accountId}/call-queues/{groupId}':
+    get:
+      tags:
+        - Call Queues
+      operationId: readCallQueueInfo
+      summary: Get Call Queue
+      description: Returns basic information on a call queue group extension.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Call Queue Info
+          schema:
+            $ref: '#/definitions/CallQueueDetails'
+      x-api-group: account/call-queues
+      x-app-permission: ReadAccounts
+      x-user-permission: ReadExtensions
+      x-throttling-group: Light
+      x-docs-level: Public
+      x-feature: ReadExtensions
+    put:
+      tags:
+        - Call Queues
+      operationId: updateCallQueueInfo
+      summary: Update Call Queue
+      description: Updates information on a call queue group extension.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/CallQueueUpdateDetails'
+      responses:
+        '200':
+          description: Updated Call Queue Info
+          schema:
+            $ref: '#/definitions/CallQueueDetails'
+      x-api-group: account/call-queues
+      x-app-permission: EditExtensions
+      x-user-permission: EditUserInfo
+      x-throttling-group: Light
+      x-docs-level: Public
+      x-feature: EditExtensionInfo
   '/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members':
     get:
       tags:
@@ -15590,6 +15882,102 @@ definitions:
       aps:
         description: Notification priority data
         $ref: '#/definitions/APSInfo'
+  CallQueuePresence:
+    type: object
+    properties:
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/CallQueueMemberPresence'
+  CallQueueUpdatePresence:
+    type: object
+    properties:
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/CallQueueUpdateMemberPresence'
+  ExtensionCallQueuePresenceList:
+    type: object
+    properties:
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/ExtensionCallQueuePresence'
+  ExtensionCallQueueUpdatePresenceList:
+    type: object
+    properties:
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/ExtensionCallQueueUpdatePresence'
+  CallQueueMemberPresence:
+    type: object
+    properties:
+      member:
+        description: Call queue member information
+        $ref: '#/definitions/CallQueueMember'
+      acceptQueueCalls:
+        type: boolean
+        description: >-
+          Private member telephony availability status applied to calls of all
+          queues
+      acceptCurrentQueueCalls:
+        type: boolean
+        description: Call queue member availability in this particular queue
+  CallQueueUpdateMemberPresence:
+    type: object
+    properties:
+      member:
+        description: Call queue member information
+        $ref: '#/definitions/CallQueueMemberId'
+      acceptCurrentQueueCalls:
+        type: boolean
+        description: Call queue member availability for calls of this queue
+  ExtensionCallQueuePresence:
+    type: object
+    properties:
+      callQueue:
+        description: Call queue information
+        $ref: '#/definitions/CallQueueInfo'
+      acceptCalls:
+        type: boolean
+        description: Call queue agent availability for calls of this queue
+  ExtensionCallQueueUpdatePresence:
+    type: object
+    properties:
+      callQueue:
+        description: Call queue information
+        $ref: '#/definitions/CallQueueId'
+      acceptCalls:
+        type: boolean
+        description: Call queue agent availability for calls of this queue
+  CallQueueMemberId:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an extension - queue member
+  CallQueueId:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a call queue
+  CallQueueMember:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of an extension
+      name:
+        type: string
+        description: Extension full name
+      extensionNumber:
+        type: string
+        description: Extension number
+      site:
+        description: Extension site
+        $ref: '#/definitions/SiteResource'
   CallQueueInfo:
     type: object
     properties:
@@ -15605,6 +15993,15 @@ definitions:
       name:
         type: string
         description: Name of a call queue
+  SiteResource:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Site extension identifier
+      name:
+        type: string
+        description: Site extension name
   CallQueuePresenceEvent:
     type: object
     properties:
@@ -18619,7 +19016,25 @@ definitions:
         description: >-
           String value to filter the contacts. The value specified is searched
           through the following fields: `firstName`, `lastName`,
-          `extensionNumber`, `phoneNumber`, `email`
+          `extensionNumber`, `phoneNumber`, `email`, `jobTitle`, `department`
+      searchFields:
+        type: array
+        items:
+          type: string
+          enum:
+            - firstName
+            - lastName
+            - extensionNumber
+            - phoneNumber
+            - email
+            - jobTitle
+            - department
+        default:
+          - firstName
+          - lastName
+          - extensionNumber
+          - phoneNumber
+          - email
       showFederated:
         description: >-
           If 'True' then contacts of all accounts in federation are returned. If
@@ -18643,6 +19058,7 @@ definitions:
           - ApplicationExtension
           - Site
           - Bot
+          - ProxyAdmin
       orderBy:
         type: array
         description: Sorting settings
@@ -18669,6 +19085,8 @@ definitions:
           - extensionNumber
           - phoneNumber
           - email
+          - jobTitle
+          - department
       direction:
         type: string
         description: Sorting direction
@@ -19751,6 +20169,8 @@ definitions:
       label:
         type: string
         description: Forwarding/Call flip number title
+        enum:
+          - Business Mobile Phone
       features:
         type: array
         description: >-
@@ -19780,6 +20200,7 @@ definitions:
           - PhoneLine
           - Outage
           - Other
+          - BusinessMobilePhone
   CreateAnsweringRuleForwardingNumberInfo:
     type: object
     properties:
@@ -19795,6 +20216,8 @@ definitions:
       label:
         type: string
         description: Forwarding/Call flip number title
+        enum:
+          - Business Mobile Phone
       type:
         type: string
         description: Type of a forwarding number
@@ -19805,6 +20228,7 @@ definitions:
           - PhoneLine
           - Outage
           - Other
+          - BusinessMobilePhone
   ForwardingNumberInfoRulesCreateRuleRequest:
     type: object
     properties:
@@ -19821,6 +20245,7 @@ definitions:
           - PhoneLine
           - Outage
           - Other
+          - BusinessMobilePhone
       uri:
         type: string
         description: Canonical URI of a forwarding/call flip phone number
@@ -19830,6 +20255,8 @@ definitions:
       label:
         type: string
         description: Forwarding/Call flip number title
+        enum:
+          - Business Mobile Phone
   GetExtensionForwardingNumberListResponse:
     type: object
     properties:
@@ -20183,6 +20610,17 @@ definitions:
           $ref: '#/definitions/TransferInfo'
       noAnswerAction:
         type: string
+        enum:
+          - WaitPrimaryMembers
+          - WaitPrimaryAndOverflowMembers
+          - Voicemail
+          - TransferToExtension
+          - UnconditionalForwarding
+        description: >-
+          Specifies the type of action to be taken if: members are available but
+          no one answers, or all members are busy/unavailable. This option is
+          available for Business hours only. For simultaneous transfer mode only
+          'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
       fixedOrderAgents:
         type: array
         description: Information on a call forwarding rule
@@ -20205,6 +20643,7 @@ definitions:
           for an available call queue member) expires. If 'TransferToExtension'
           option is selected, the extension specified in `transfer` field is
           used. The default value is `Voicemail`
+        default: Voicemail
         enum:
           - TransferToExtension
           - UnconditionalForwarding
@@ -20230,8 +20669,8 @@ definitions:
       maxCallersAction:
         type: string
         description: >-
-          Action which should be taken if count of callers on hold exceeds the
-          maximum
+          Specifies the type of action to be taken if count of callers on hold
+          exceeds the supported maximum
         enum:
           - Voicemail
           - Announcement
@@ -20250,6 +20689,11 @@ definitions:
         $ref: '#/definitions/TransferExtensionInfo'
       action:
         type: string
+        description: Event that initiates transferring to the specified extension
+        enum:
+          - HoldTimeExpiration
+          - MaxCallers
+          - NoAnswer
   TransferExtensionInfo:
     type: object
     properties:
@@ -20379,6 +20823,11 @@ definitions:
           phone number in e.164 format (without '+' sign)
       action:
         type: string
+        description: Event that initiates forwarding to the specified phone number
+        enum:
+          - HoldTimeExpiration
+          - MaxCallers
+          - NoAnswer
   UpdateAnsweringRuleRequest:
     type: object
     properties:
@@ -20483,6 +20932,8 @@ definitions:
       label:
         type: string
         description: Forwarding/Call flip number title
+        enum:
+          - Business Mobile Phone
       flipNumber:
         type: string
         description: >-
@@ -20498,6 +20949,7 @@ definitions:
           - PhoneLine
           - Outage
           - Other
+          - BusinessMobilePhone
   UserBusinessHoursScheduleInfo:
     type: object
     properties:
@@ -22153,10 +22605,9 @@ definitions:
         items:
           $ref: '#/definitions/SIPInfoResponse'
       sipFlags:
-        type: array
+        type: object
         description: SIP flags data
-        items:
-          $ref: '#/definitions/SIPFlagsResponse'
+        $ref: '#/definitions/SIPFlagsResponse'
       sipErrorCodes:
         type: array
         items:
@@ -22218,7 +22669,7 @@ definitions:
           all the numbers of one device
         $ref: '#/definitions/DeviceEmergencyServiceAddressResource'
       emergency:
-        description: Device mergency response location settings
+        description: Emergency response location settings of a device
         $ref: '#/definitions/SipRegistrationDeviceEmergencyInfo'
       shipping:
         description: >-
@@ -22470,12 +22921,21 @@ definitions:
       authorizationId:
         type: string
         description: Identifier for SIP authorization
-      domain:
+      omain:
         type: string
         description: SIP domain
       outboundProxy:
         type: string
         description: SIP outbound proxy
+      outboundProxyIPv6:
+        type: string
+        description: SIP outbound IPv6 proxy
+      outboundProxyBackup:
+        type: string
+        description: SIP outbound proxy backup
+      outboundProxyIPv6Backup:
+        type: string
+        description: SIP outbound IPv6 proxy backup
       transport:
         type: string
         description: >-
@@ -23956,6 +24416,21 @@ definitions:
         description: >-
           The total number of elements in a dataset. May be omitted for some
           resource due to performance reasons
+  AccountLockedSettingResponse:
+    type: object
+    properties:
+      scheduleMeeting:
+        description: Scheduling meeting settings locked on account level
+        $ref: '#/definitions/ScheduleUserMeetingInfo'
+      recording:
+        $ref: '#/definitions/UserMeetingRecordingSetting'
+        description: Meeting recording settings locked on account level
+  PublicMeetingInvitationResponse:
+    type: object
+    properties:
+      invitation:
+        type: string
+        description: Meeting invitation
   MeetingsResource:
     type: object
     properties:
@@ -24294,6 +24769,77 @@ definitions:
     properties:
       recording:
         $ref: '#/definitions/UserMeetingRecordingSetting'
+      scheduleMeeting:
+        $ref: '#/definitions/ScheduleUserMeetingInfo'
+        description: Settings defining how to schedule user meetings
+  ScheduleUserMeetingInfo:
+    type: object
+    properties:
+      startHostVideo:
+        type: boolean
+        description: Starting meetings with host video on/off (true/false)
+      startParticipantsVideo:
+        type: boolean
+        description: Starting meetings with participant video on/off (true/false)
+      audioOptions:
+        type: array
+        description: Determines how participants can join the audio channel of a meeting
+        items:
+          type: string
+          enum:
+            - Phone
+            - ComputerAudio
+      allowJoinBeforeHost:
+        type: boolean
+        description: Allows participants to join the meeting before the host arrives
+      usePmiForScheduledMeetings:
+        type: boolean
+        description: >-
+          Determines whether to use Personal Meeting ID (PMI) when scheduling a
+          meeting
+      usePmiForInstantMeetings:
+        type: boolean
+        description: >-
+          Determines whether to use Personal Meeting ID (PMI) when starting an
+          instant meeting
+      requirePasswordForSchedulingNewMeetings:
+        type: boolean
+        description: >-
+          A password will be generated when scheduling a meeting and
+          participants will require password to join a meeting. The Personal
+          Meeting ID (PMI) meetings are not included
+      requirePasswordForScheduledMeetings:
+        type: boolean
+        description: >-
+          Specifies whether to require a password for meetings which have
+          already been scheduled
+      defaultPasswordForScheduledMeetings:
+        type: string
+        description: Password for already scheduled meetings. Users can set it individually
+      requirePasswordForInstantMeetings:
+        type: boolean
+        description: >-
+          A random password will be generated for an instant meeting, if set to
+          'True'. If you use PMI for your instant meetings, this option will be
+          disabled
+      requirePasswordForPmiMeetings:
+        type: string
+        description: >-
+          Specifies whether to require a password for meetings using Personal
+          Meeting ID (PMI). The supported values are: 'none', 'all' and
+          'jbhOnly' (joined before host only)
+        enum:
+          - all
+          - none
+          - jbhOnly
+      pmiPassword:
+        type: string
+        description: The default password for Personal Meeting ID (PMI) meetings
+      pstnPasswordProtected:
+        type: boolean
+        description: >-
+          Specifies whether to generate and require a password for participants
+          joining by phone
   UserMeetingRecordingSetting:
     type: object
     properties:
@@ -26241,6 +26787,7 @@ definitions:
           - External
           - TollFree
           - Local
+          - BusinessMobileNumberProvider
       phoneNumber:
         type: string
         description: Phone number
@@ -26273,6 +26820,7 @@ definitions:
           - ContactCenterNumber
           - ConferencingNumber
           - NumberPool
+          - BusinessMobileNumber
       features:
         type: array
         description: List of features of a phone number
@@ -26317,6 +26865,7 @@ definitions:
           - External
           - TollFree
           - Local
+          - BusinessMobileNumberProvider
       phoneNumber:
         type: string
         description: Phone number
@@ -26350,6 +26899,7 @@ definitions:
           - ConferencingNumber
           - MeetingsNumber
           - NumberPool
+          - BusinessMobileNumber
       temporaryNumber:
         description: >-
           Temporary phone number, if any. Returned for phone numbers in
@@ -26765,6 +27315,7 @@ definitions:
           - Room
           - Limited
           - Site
+          - ProxyAdmin
       callQueueInfo:
         description: For Department extension type only. Call queue settings
         $ref: '#/definitions/CallQueueExtensionInfo'
@@ -28979,7 +29530,7 @@ definitions:
           - Verified
           - Updated
           - Deleted
-          - NotRequired
+          - ActivationProcess
           - Unsupported
           - Failed
       visibility:
@@ -30271,6 +30822,63 @@ definitions:
         description: Reason description
       permission:
         type: string
+  CallQueueDetails:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a call queue
+      name:
+        type: string
+        description: Call queue name
+      extensionNumber:
+        type: string
+        description: Call queue extension number
+      status:
+        type: string
+        enum:
+          - Enabled
+          - Disabled
+          - NotActivated
+        description: Call queue status
+      serviceLevelSettings:
+        description: Call queue service level settings
+        $ref: '#/definitions/CallQueueServiceLevelSettings'
+      editableMemberStatus:
+        type: boolean
+        description: Allows members to change their queue status
+  CallQueueServiceLevelSettings:
+    type: object
+    properties:
+      slaGoal:
+        type: integer
+        description: >-
+          Target percentage of calls that must be answered by agents within the
+          service level time threshold
+      slaThresholdSeconds:
+        type: integer
+        description: >-
+          The period of time in seconds that is considered to be an acceptable
+          service level
+      includeAbandonedCalls:
+        type: boolean
+        description: >-
+          Includes abandoned calls (when callers hang up prior to being served
+          by an agent) into service-level calculation
+      abandonedThresholdSeconds:
+        type: integer
+        description: >-
+          Abandoned calls that are shorter than the defined period of time in
+          seconds will not be included into the calculation of Service Level
+  CallQueueUpdateDetails:
+    type: object
+    properties:
+      serviceLevelSettings:
+        description: Call queue service level settings
+        $ref: '#/definitions/CallQueueServiceLevelSettings'
+      editableMemberStatus:
+        type: boolean
+        description: Allows members to change their queue status
   DelegateExtensionInfo:
     type: object
     properties:
@@ -31321,7 +31929,6 @@ definitions:
     type: object
     required:
       - mode
-      - deviceId
       - supervisorDeviceId
     properties:
       mode:
