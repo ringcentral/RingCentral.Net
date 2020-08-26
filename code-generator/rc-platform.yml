@@ -3180,6 +3180,9 @@ paths:
         - name: code_challenge_method
           type: string
           in: formData
+          enum:
+            - plain
+            - S256
       responses:
         '302':
           description: Found
