@@ -26,12 +26,31 @@ If you need PubNub feature, you also need to install one of the following packag
 
 If wrong combination is installed, there will be [System.MissingMethodException](https://github.com/ringcentral/RingCentral.Net/issues/22).
 
-x
+
 ## Code samples
 
 You can find [sample code for all the endpoints](./samples.md).
 
 There is also lots of useful code for your reference in our [test cases](./RingCentral.Tests).
+
+
+## PubNub notification delay issue
+
+If you create multiple subscriptions in a single app and run the app in .NET Framework environment, you may experience notifications delay. Delay time is around 4 montes and 30 seconds.
+
+A solution/workaround is to add the following to your `app.config` file:
+
+```xml
+<system.net>
+<connectionManagement>
+<add address = "*" maxconnection = "999" />
+</connectionManagement>
+</system.net>
+```
+
+Notes: 
+- If you run your app in .NET Core environment, you will not have this issue. 
+- If you only create on subscription in your code, you will not have this issue either.
 
 
 ## Token auto refresh
