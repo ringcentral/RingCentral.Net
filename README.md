@@ -50,7 +50,7 @@ A solution/workaround is to add the following to your `app.config` file:
 
 Notes: 
 - If you run your app in .NET Core environment, you will not have this issue. 
-- If you only create on subscription in your code, you will not have this issue either.
+- If you only create one subscription in your code, you will not have this issue either.
 - This is because [by default only 2 connections to a server is allowed](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings).
 - More information FYI: https://stackoverflow.com/a/49868185/862862
 
