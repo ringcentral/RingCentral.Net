@@ -48,6 +48,6 @@ namespace RingCentral
         /// Type of message synchronization
         /// Enum: FSync, ISync
         /// </summary>
-        public string[] syncType;
+        public string syncType;
     }
 }

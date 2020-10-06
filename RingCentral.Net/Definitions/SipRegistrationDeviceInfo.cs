@@ -59,7 +59,7 @@ namespace RingCentral
         public DeviceEmergencyServiceAddressResource emergencyServiceAddress;
 
         /// <summary>
-        /// Device mergency response location settings
+        /// Emergency response location settings of a device
         /// </summary>
         public SipRegistrationDeviceEmergencyInfo emergency;
 

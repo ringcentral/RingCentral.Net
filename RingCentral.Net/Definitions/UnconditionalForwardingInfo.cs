@@ -8,6 +8,8 @@ namespace RingCentral
         public string phoneNumber;
 
         /// <summary>
+        /// Event that initiates forwarding to the specified phone number
+        /// Enum: HoldTimeExpiration, MaxCallers, NoAnswer
         /// </summary>
         public string action;
     }

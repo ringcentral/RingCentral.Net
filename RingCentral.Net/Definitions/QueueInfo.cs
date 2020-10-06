@@ -14,6 +14,8 @@ namespace RingCentral
         public TransferInfo[] transfer;
 
         /// <summary>
+        /// Specifies the type of action to be taken if: members are available but no one answers, or all members are busy/unavailable. This option is available for Business hours only. For simultaneous transfer mode only 'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
+        /// Enum: WaitPrimaryMembers, WaitPrimaryAndOverflowMembers, Voicemail, TransferToExtension, UnconditionalForwarding
         /// </summary>
         public string noAnswerAction;
 
@@ -35,6 +37,7 @@ namespace RingCentral
 
         /// <summary>
         /// Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used. The default value is `Voicemail`
+        /// Default: Voicemail
         /// Enum: TransferToExtension, UnconditionalForwarding, Voicemail
         /// </summary>
         public string holdTimeExpirationAction;
@@ -60,7 +63,7 @@ namespace RingCentral
         public long? maxCallers;
 
         /// <summary>
-        /// Action which should be taken if count of callers on hold exceeds the maximum
+        /// Specifies the type of action to be taken if count of callers on hold exceeds the supported maximum
         /// Enum: Voicemail, Announcement, TransferToExtension, UnconditionalForwarding
         /// </summary>
         public string maxCallersAction;

@@ -25,7 +25,7 @@ namespace RingCentral
         /// <summary>
         /// Operator's extension information. This extension will receive all calls and messages intended for the operator
         /// </summary>
-        public GetExtensionInfoResponse @operator;
+        public AccountOperatorInfo @operator;
 
         /// <summary>
         /// Additional account identifier, created by partner application and applied on client side

@@ -34,10 +34,48 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.CallQueues> Get(ListCallQueuesParameters queryParams = null,
+        public async Task<RingCentral.CallQueues> List(ListCallQueuesParameters queryParams = null,
             CancellationToken? cancellationToken = null)
         {
             return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams, cancellationToken);
+        }
+
+        /// <summary>
+        /// Operation: Get Call Queue
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues/{groupId}
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
+        /// </summary>
+        public async Task<RingCentral.CallQueueDetails> Get(CancellationToken? cancellationToken = null)
+        {
+            if (this.groupId == null)
+            {
+                throw new System.ArgumentNullException("groupId");
+            }
+
+            return await rc.Get<RingCentral.CallQueueDetails>(this.Path(), null, cancellationToken);
+        }
+
+        /// <summary>
+        /// Operation: Update Call Queue
+        /// HTTP Method: PUT
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues/{groupId}
+        /// Rate Limit Group: Light
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserInfo
+        /// </summary>
+        public async Task<RingCentral.CallQueueDetails> Put(RingCentral.CallQueueUpdateDetails callQueueUpdateDetails,
+            CancellationToken? cancellationToken = null)
+        {
+            if (this.groupId == null)
+            {
+                throw new System.ArgumentNullException("groupId");
+            }
+
+            return await rc.Put<RingCentral.CallQueueDetails>(this.Path(), callQueueUpdateDetails, null,
+                cancellationToken);
         }
     }
 }

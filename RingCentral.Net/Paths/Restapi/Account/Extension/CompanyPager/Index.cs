@@ -27,12 +27,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         /// App Permission: InternalMessages
         /// User Permission: InternalSMS
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Post(
+        public async Task<RingCentral.GetInternalTextMessageInfoResponse> Post(
             RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest,
             CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createInternalTextMessageRequest,
-                null, cancellationToken);
+            return await rc.Post<RingCentral.GetInternalTextMessageInfoResponse>(this.Path(),
+                createInternalTextMessageRequest, null, cancellationToken);
         }
     }
 }

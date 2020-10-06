@@ -4,9 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// Type of synchronization
+        /// Default: FSync
         /// Enum: FSync, ISync
         /// </summary>
-        public string[] syncType;
+        public string syncType;
 
         /// <summary>
         /// Value of syncToken property of last sync request response

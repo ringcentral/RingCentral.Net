@@ -7,6 +7,8 @@ namespace RingCentral
         public TransferExtensionInfo extension;
 
         /// <summary>
+        /// Event that initiates transferring to the specified extension
+        /// Enum: HoldTimeExpiration, MaxCallers, NoAnswer
         /// </summary>
         public string action;
     }

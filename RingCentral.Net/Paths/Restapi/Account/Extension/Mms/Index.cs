@@ -20,18 +20,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         }
 
         /// <summary>
-        /// Operation: Create MMS Message
+        /// Operation: Send MMS
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
         /// Rate Limit Group: Medium
         /// App Permission: SMS
         /// User Permission: OutboundSMS
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage,
+        public async Task<RingCentral.GetSMSMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage,
             CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createMMSMessage);
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), multipartFormDataContent, null,
+            return await rc.Post<RingCentral.GetSMSMessageInfoResponse>(this.Path(), multipartFormDataContent, null,
                 cancellationToken);
         }
     }

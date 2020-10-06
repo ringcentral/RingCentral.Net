@@ -10,7 +10,7 @@ namespace RingCentral
         /// <summary>
         /// Type of an attachment
         /// Default: Card
-        /// Enum: Card, Event, Note
+        /// Enum: Card, Event, File, Note, Task
         /// </summary>
         public string type;
 

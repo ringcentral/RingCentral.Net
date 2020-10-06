@@ -3,7 +3,7 @@ namespace RingCentral
     public class DeviceInfoRequest
     {
         /// <summary>
-        /// Device unique identifier, retrieved on previous session (if any)
+        /// Device unique identifier, retrieved at previous session (if any)
         /// </summary>
         public string id;
 
@@ -18,7 +18,7 @@ namespace RingCentral
         public string computerName;
 
         /// <summary>
-        /// Serial number for HardPhone; endpoint_id for softphone and mobile applications. Returned only when the phone is shipped and provisioned
+        /// Serial number for HardPhone; `endpoint_id` for softphone and mobile applications. Returned only when the phone is shipped and provisioned
         /// </summary>
         public string serial;
     }

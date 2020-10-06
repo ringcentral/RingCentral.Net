@@ -9,7 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// Field name by which to sort the contacts
-        /// Enum: firstName, lastName, extensionNumber, phoneNumber, email
+        /// Enum: firstName, lastName, extensionNumber, phoneNumber, email, jobTitle, department
         /// </summary>
         public string fieldName;
 

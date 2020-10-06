@@ -6,7 +6,7 @@ namespace RingCentral
         /// Type of synchronization
         /// Enum: FSync, ISync
         /// </summary>
-        public string[] syncType;
+        public string syncType;
 
         /// <summary>
         /// Value of syncToken property of the last sync request response

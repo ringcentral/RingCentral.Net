@@ -27,10 +27,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
         /// App Permission: SMS
         /// User Permission: OutboundSMS
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage,
+        public async Task<RingCentral.GetSMSMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage,
             CancellationToken? cancellationToken = null)
         {
-            return await rc.Post<RingCentral.GetMessageInfoResponse>(this.Path(), createSMSMessage, null,
+            return await rc.Post<RingCentral.GetSMSMessageInfoResponse>(this.Path(), createSMSMessage, null,
                 cancellationToken);
         }
     }

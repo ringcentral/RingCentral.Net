@@ -20,7 +20,7 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         }
 
         /// <summary>
-        /// Operation: Register SIP Device
+        /// Operation: Register Device
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/client-info/sip-provision
         /// Rate Limit Group: Heavy

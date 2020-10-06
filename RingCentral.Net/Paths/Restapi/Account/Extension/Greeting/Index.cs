@@ -36,11 +36,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         /// </summary>
         public async Task<RingCentral.CustomUserGreetingInfo> Post(
             CreateCustomUserGreetingRequest createCustomUserGreetingRequest,
-            CancellationToken? cancellationToken = null)
+            CreateCustomUserGreetingParameters queryParams = null, CancellationToken? cancellationToken = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest);
-            return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multipartFormDataContent, null,
-                cancellationToken);
+            return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multipartFormDataContent,
+                queryParams, cancellationToken);
         }
 
         /// <summary>

@@ -17,7 +17,7 @@ namespace RingCentral.Demo.NetFramework
             t.Wait();
         }
 
-        private static Task<GetMessageInfoResponse> SendSms(RestClient rc)
+        private static Task<GetSMSMessageInfoResponse> SendSms(RestClient rc)
         {
             return rc.Restapi().Account().Extension().Sms().Post(new CreateSMSMessage
             {

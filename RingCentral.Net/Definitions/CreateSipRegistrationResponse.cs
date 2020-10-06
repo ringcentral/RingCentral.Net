@@ -21,7 +21,7 @@ namespace RingCentral
         /// SIP flags data
         /// Required
         /// </summary>
-        public SIPFlagsResponse[] sipFlags;
+        public SIPFlagsResponse sipFlags;
 
         /// <summary>
         /// </summary>

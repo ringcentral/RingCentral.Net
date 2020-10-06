@@ -7,11 +7,12 @@ namespace RingCentral
         public string id;
 
         /// <summary>
+        /// Link for recording file download
         /// </summary>
         public string contentDownloadUri;
 
         /// <summary>
-        /// Enum: video/mp4, audio/m4a, text/vtt
+        /// Enum: video/mp4, audio/m4a, text/plain
         /// </summary>
         public string contentType;
 

@@ -3,9 +3,15 @@ namespace RingCentral
     public class SearchDirectoryEntriesRequest
     {
         /// <summary>
-        /// String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`
+        /// String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`, `jobTitle`, `department`
         /// </summary>
         public string searchString;
+
+        /// <summary>
+        /// Default: firstName,lastName,extensionNumber,phoneNumber,email
+        /// Enum: firstName, lastName, extensionNumber, phoneNumber, email, jobTitle, department
+        /// </summary>
+        public string[] searchFields;
 
         /// <summary>
         /// If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
@@ -15,7 +21,7 @@ namespace RingCentral
 
         /// <summary>
         /// Type of extension to filter the contacts
-        /// Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot
+        /// Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, ProxyAdmin
         /// </summary>
         public string extensionType;
 

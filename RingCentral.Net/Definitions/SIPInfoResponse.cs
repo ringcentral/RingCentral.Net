@@ -28,6 +28,21 @@ namespace RingCentral
         public string outboundProxy;
 
         /// <summary>
+        /// SIP outbound IPv6 proxy
+        /// </summary>
+        public string outboundProxyIPv6;
+
+        /// <summary>
+        /// SIP outbound proxy backup
+        /// </summary>
+        public string outboundProxyBackup;
+
+        /// <summary>
+        /// SIP outbound IPv6 proxy backup
+        /// </summary>
+        public string outboundProxyIPv6Backup;
+
+        /// <summary>
         /// Preferred transport. SIP info will be returned for this transport if supported
         /// Enum: UDP, TCP, TLS, WS, WSS
         /// </summary>

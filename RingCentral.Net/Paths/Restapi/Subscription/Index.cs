@@ -27,7 +27,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         /// <summary>
-        /// Operation: Get Subscriptions
+        /// Operation: Get Subscription List
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/subscription
         /// Rate Limit Group: Light
@@ -76,7 +76,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         /// <summary>
-        /// Operation: Renew Subscription / Update Event Filters
+        /// Operation: Update Subscription
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}
         /// Rate Limit Group: Medium

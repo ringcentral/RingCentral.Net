@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// Forwarding/Call flip number title
+        /// Enum: Business Mobile Phone
         /// </summary>
         public string label;
 
@@ -19,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         /// Forwarding phone number type
-        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone
         /// </summary>
         public string type;
     }

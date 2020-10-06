@@ -45,7 +45,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
         /// Rate Limit Group: Light
-        /// App Permission: EditAccounts
+        /// App Permission: ReadAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.EmergencyLocationList> List(ListEmergencyLocationsParameters queryParams = null,

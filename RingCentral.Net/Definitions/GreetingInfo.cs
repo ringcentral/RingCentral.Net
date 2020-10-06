@@ -20,6 +20,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CustomGreetingInfo custom;
+        public CustomGreetingInfoRequest custom;
     }
 }

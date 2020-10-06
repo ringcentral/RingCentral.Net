@@ -10,7 +10,7 @@ namespace RingCentral.Tests
 {
     public class SubscriptionTest
     {
-        private Task<GetMessageInfoResponse> SendSms(RestClient rc)
+        private Task<GetSMSMessageInfoResponse> SendSms(RestClient rc)
         {
             return rc.Restapi().Account().Extension().Sms().Post(new CreateSMSMessage
             {

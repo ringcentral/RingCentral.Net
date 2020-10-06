@@ -81,6 +81,7 @@ namespace RingCentral
         public string code_challenge;
 
         /// <summary>
+        /// Enum: plain, S256
         /// </summary>
         public string code_challenge_method;
     }

@@ -34,7 +34,7 @@ namespace RingCentral
 
         /// <summary>
         /// Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
-        /// Enum: External, TollFree, Local
+        /// Enum: External, TollFree, Local, BusinessMobileNumberProvider
         /// </summary>
         public string paymentType;
 
@@ -56,7 +56,7 @@ namespace RingCentral
 
         /// <summary>
         /// Usage type of a phone number. Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
-        /// Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool
+        /// Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber
         /// </summary>
         public string usageType;
 

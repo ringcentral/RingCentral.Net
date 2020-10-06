@@ -1,12 +1,7 @@
 namespace RingCentral
 {
-    public class CustomGreetingInfo
+    public class CustomGreetingInfoRequest
     {
-        /// <summary>
-        /// Link to a custom user greeting
-        /// </summary>
-        public string uri;
-
         /// <summary>
         /// Internal identifier of a custom user greeting
         /// </summary>

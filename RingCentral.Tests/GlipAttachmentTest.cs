@@ -24,11 +24,11 @@ namespace RingCentral.Tests
                 {
                     var request = args.ToString();
                 };
-                var postInfo = await rc.Restapi().Glip().Chats(groupId).Posts().Post(new GlipPostPostBody
+                var postInfo = await rc.Restapi().Glip().Groups(groupId).Posts().Post(new GlipCreatePost
                 {
                     attachments = new[]
                     {
-                        new GlipAttachmentInfoRequest
+                        new GlipMessageAttachmentInfoRequest
                         {
                             type = "Card",
                             fallback = "fallback",
