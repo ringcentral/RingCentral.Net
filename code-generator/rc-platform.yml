@@ -330,11 +330,11 @@ paths:
     get:
       tags:
         - Subscriptions
-      summary: Get Subscriptions
+      summary: Get Subscription List
       operationId: listSubscriptions
       description: >-
-        Returns a list of subscriptions created by a particular user on a
-        particular client app.
+        Returns the list of subscriptions created by the logged-in user for the
+        currently authorized client application.
       consumes:
         - application/json
       produces:
@@ -382,7 +382,7 @@ paths:
       tags:
         - Subscriptions
       summary: Get Subscription
-      description: Returns the requested subscription.
+      description: Returns the requested subscription by ID.
       operationId: readSubscription
       consumes:
         - application/json
@@ -407,13 +407,14 @@ paths:
     put:
       tags:
         - Subscriptions
-      summary: Renew Subscription / Update Event Filters
+      summary: Update Subscription
       description: >-
-        Renews the existent subscription if the request body is empty. If event
-        filters are specified, calling this method modifies the event filters
-        for the existing subscription. The client application can extend or
-        narrow the events for which it receives notifications in the frame of
-        one subscription.
+        Updates the existent subscription. The client application can
+        extend/narrow the events for which it receives notifications within the
+        frame of one subscription. If event filters are specified, calling this
+        method modifies them for the existing subscription. If the request body
+        is empty then the specified subscription will be just renewed without
+        any event filter change.
       operationId: updateSubscription
       consumes:
         - application/json
@@ -477,9 +478,7 @@ paths:
       tags:
         - Subscriptions
       summary: Renew Subscription
-      description: >-
-        Renews an existent subscription by ID by posting request with an empty
-        body.
+      description: Renews an existent subscription by posting request with an empty body.
       operationId: renewSubscription
       consumes:
         - application/json
@@ -492,7 +491,7 @@ paths:
           type: string
       responses:
         '200':
-          description: Updated Subscription
+          description: Renewed Subscription
           schema:
             $ref: '#/definitions/SubscriptionInfo'
       x-api-group: subscription
@@ -3698,13 +3697,10 @@ paths:
           in: query
           description: Type of synchronization
           required: false
-          type: array
-          items:
-            type: string
-            enum:
-              - FSync
-              - ISync
-          collectionFormat: multi
+          type: string
+          enum:
+            - FSync
+            - ISync
         - name: syncToken
           in: query
           description: Value of syncToken property of the last sync request response
@@ -4130,10 +4126,12 @@ paths:
         - Business Hours
       summary: Get User Business Hours
       description: >-
-        Returns the user hours when the call handling rules are applied.
-        **Please note:** If user hours are set to 'Custom hours' then a
-        particular schedule is returned; however if set to '24 hours/7 days a
-        week' an empty schedule is returned.
+        Returns the user business hours schedule. Business hours (and After
+        hours - all the remaining time) schedules are commonly used for setting
+        call handling rules - `business-hours-rule` and `after-hours-rule`
+        correspondingly. **Please note:** If the user business hours are set to
+        'Custom hours' then a particular schedule is returned; however if set to
+        '24 hours/7 days a week' the schedule will be empty.
       operationId: readUserBusinessHours
       consumes:
         - application/json
@@ -4176,7 +4174,7 @@ paths:
         - Business Hours
       summary: Update User Business Hours
       operationId: updateUserBusinessHours
-      description: Updates the extension user hours when answering rules are to be applied.
+      description: Updates the user business hours schedule.
       consumes:
         - application/json
       produces:
@@ -4223,7 +4221,11 @@ paths:
       tags:
         - Business Hours
       summary: Get Company Business Hours
-      description: Returns company hours when answering rules are to be applied.
+      description: >-
+        Returns the company business hours schedule. Business hours (and After
+        hours - all the remaining time) schedules are commonly used for setting
+        call handling rules - `business-hours-rule` and `after-hours-rule`
+        correspondingly.
       operationId: readCompanyBusinessHours
       consumes:
         - application/json
@@ -4256,7 +4258,7 @@ paths:
       tags:
         - Business Hours
       summary: Update Company Business Hours
-      description: Updates company hours when answering rules are to be applied.
+      description: Updates the company business hours schedule.
       operationId: updateCompanyBusinessHours
       consumes:
         - application/json
@@ -4795,9 +4797,9 @@ paths:
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule':
     get:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Get Call Handling Rules
-      description: Returns the extension answering rules.
+      description: Returns call handling rules of an extension.
       operationId: listAnsweringRules
       consumes:
         - application/json
@@ -4861,9 +4863,9 @@ paths:
       x-availability: High
     post:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Create Call Handling Rule
-      description: Creates a custom answering rule for a particular caller ID.
+      description: Creates a custom call handling rule for a particular caller ID.
       operationId: createAnsweringRule
       consumes:
         - application/json
@@ -4909,10 +4911,10 @@ paths:
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}':
     get:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Get Call Handling Rule
       operationId: readAnsweringRule
-      description: Returns an answering rule by ID.
+      description: Returns an call handling rule by ID.
       consumes:
         - application/json
       produces:
@@ -4965,9 +4967,9 @@ paths:
       x-availability: High
     put:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Update Call Handling Rule
-      description: Updates a custom answering rule for a particular caller ID.
+      description: Updates a custom call handling rule for a particular caller ID.
       operationId: updateAnsweringRule
       consumes:
         - application/json
@@ -5017,10 +5019,10 @@ paths:
       x-docs-level: Public
     delete:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Delete Call Handling Rule
       operationId: deleteAnsweringRule
-      description: Deletes a custom answering rule by a particular ID.
+      description: Deletes a custom call handling rule by a particular ID.
       consumes:
         - application/json
       produces:
@@ -5062,10 +5064,10 @@ paths:
   '/restapi/v1.0/account/{accountId}/answering-rule':
     post:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Create Company Call Handling Rule
       operationId: createCompanyAnsweringRule
-      description: Creates a company answering rule for a particular caller ID.
+      description: Creates call handling rule on account level.
       consumes:
         - application/json
       produces:
@@ -5100,10 +5102,10 @@ paths:
       x-docs-level: Public
     get:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Get Company Call Handling Rule List
       operationId: listCompanyAnsweringRules
-      description: Returns a list of company answering rules.
+      description: Returns a list of company call handling rules.
       consumes:
         - application/json
       produces:
@@ -5148,10 +5150,10 @@ paths:
   '/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}':
     get:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Get Company Call Handling Rule
       operationId: readCompanyAnsweringRule
-      description: Returns a company answering rule by ID.
+      description: Returns a company call handling rule by ID.
       consumes:
         - application/json
       produces:
@@ -5189,10 +5191,10 @@ paths:
       x-availability: High
     put:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Update Company Call Handling Rule
       operationId: updateCompanyAnsweringRule
-      description: Updates a company answering rule.
+      description: Updates a company call handling rule.
       consumes:
         - application/json
       produces:
@@ -5235,10 +5237,10 @@ paths:
       x-docs-level: Public
     delete:
       tags:
-        - Rule Management
+        - Call Handling Rules
       summary: Delete Company Call Handling Rule
       operationId: deleteCompanyAnsweringRule
-      description: Deletes a company custom answering rule by a particular ID.
+      description: Deletes a company custom call handling rule by a particular ID.
       consumes:
         - application/json
       produces:
@@ -5271,7 +5273,7 @@ paths:
   /restapi/v1.0/dictionary/greeting:
     get:
       tags:
-        - Rule Management
+        - Greetings
       summary: Get Standard Greeting List
       description: >-
         Returns the list of predefined standard greetings. Custom greetings
@@ -5340,7 +5342,7 @@ paths:
   '/restapi/v1.0/dictionary/greeting/{greetingId}':
     get:
       tags:
-        - Rule Management
+        - Greetings
       summary: Get Standard Greeting
       description: Returns a standard greeting by ID.
       operationId: readStandardGreeting
@@ -5367,7 +5369,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/greeting':
     post:
       tags:
-        - Rule Management
+        - Greetings
       summary: Create Company Greeting
       operationId: createCompanyGreeting
       description: Creates a custom company greeting.
@@ -5423,7 +5425,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting':
     post:
       tags:
-        - Rule Management
+        - Greetings
       summary: Create Custom User Greeting
       operationId: createCustomUserGreeting
       description: Creates custom greeting for an extension user.
@@ -5463,6 +5465,14 @@ paths:
             - Unavailable
             - HoldMusic
           required: true
+        - name: apply
+          in: query
+          description: >-
+            Specifies whether to apply an answering rule or not. If set to true
+            then `answeringRule` parameter is mandatory. If set to false, then
+            the answering rule is not applied even if specified
+          type: boolean
+          default: true
         - name: binary
           in: formData
           type: file
@@ -5487,7 +5497,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}':
     get:
       tags:
-        - Rule Management
+        - Greetings
       summary: Get Custom Greeting
       operationId: readCustomGreeting
       description: Returns a custom user greeting by ID.
@@ -5535,7 +5545,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/ivr-prompts':
     post:
       tags:
-        - Call Routing
+        - IVR
       summary: Create IVR Prompts
       operationId: createIVRPrompt
       description: Creates an IVR prompt.
@@ -5575,7 +5585,7 @@ paths:
       x-docs-level: Public
     get:
       tags:
-        - Call Routing
+        - IVR
       summary: Get IVR Prompt List
       operationId: listIVRPrompts
       description: Returns the list of IVR prompts.
@@ -5605,7 +5615,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}':
     get:
       tags:
-        - Call Routing
+        - IVR
       summary: Get IVR Prompt
       operationId: readIVRPrompt
       description: Returns an IVR prompt by ID.
@@ -5638,7 +5648,7 @@ paths:
       x-availability: High
     delete:
       tags:
-        - Call Routing
+        - IVR
       summary: Delete IVR Prompt
       operationId: deleteIVRPrompt
       description: Deletes an IVR prompt by ID.
@@ -5668,7 +5678,7 @@ paths:
       x-docs-level: Public
     put:
       tags:
-        - Call Routing
+        - IVR
       operationId: updateIVRPrompt
       summary: Update IVR Prompt
       description: Updates an IVR prompt by ID
@@ -5706,7 +5716,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content':
     get:
       tags:
-        - Call Routing
+        - IVR
       summary: Get IVR Prompt Content
       operationId: readIVRPromptContent
       description: Returns media content of an IVR prompt by ID.
@@ -5741,7 +5751,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/ivr-menus':
     post:
       tags:
-        - Call Routing
+        - IVR
       operationId: createIVRMenu
       summary: Create IVR Menu
       description: Creates a company IVR menu.
@@ -5776,7 +5786,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}':
     get:
       tags:
-        - Call Routing
+        - IVR
       summary: Get IVR Menu
       operationId: readIVRMenu
       description: Returns a company IVR menu by ID.
@@ -5809,7 +5819,7 @@ paths:
       x-availability: High
     put:
       tags:
-        - Call Routing
+        - IVR
       summary: Update IVR Menu
       operationId: updateIVRMenu
       description: Updates a company IVR menu by ID.
@@ -5848,7 +5858,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/call-recording':
     get:
       tags:
-        - Rule Management
+        - Call Recording Settings
       operationId: readCallRecordingSettings
       description: Returns call recording settings.
       summary: Get Call Recording Settings
@@ -5875,7 +5885,7 @@ paths:
       x-availability: High
     put:
       tags:
-        - Rule Management
+        - Call Recording Settings
       operationId: updateCallRecordingSettings
       description: Updates current call recording settings.
       summary: Update Call Recording Settings
@@ -5906,7 +5916,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/call-recording/extensions':
     get:
       tags:
-        - Rule Management
+        - Call Recording Settings
       operationId: listCallRecordingExtensions
       description: Returns the list of extensions to be recorded.
       summary: Get Call Recording Extension List
@@ -5934,7 +5944,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/call-recording/bulk-assign':
     post:
       tags:
-        - Rule Management
+        - Call Recording Settings
       operationId: updateCallRecordingExtensionList
       description: Creates or updates the list of extensions to be recorded.
       summary: Update Call Recording Extension List
@@ -5964,7 +5974,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/call-recording/custom-greetings':
     get:
       tags:
-        - Rule Management
+        - Call Recording Settings
       operationId: listCallRecordingCustomGreetings
       summary: Get Call Recording Custom Greeting List
       description: Returns call recording custom greetings.
@@ -6002,7 +6012,7 @@ paths:
       x-availability: High
     delete:
       tags:
-        - Rule Management
+        - Call Recording Settings
       operationId: deleteCallRecordingCustomGreetingList
       summary: Delete Call Recording Custom Greeting List
       description: Deletes call recording custom greetings.
@@ -6029,7 +6039,7 @@ paths:
   '/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}':
     delete:
       tags:
-        - Rule Management
+        - Call Recording Settings
       operationId: deleteCallRecordingCustomGreeting
       description: Deletes call recording custom greeting(s).
       summary: Delete Call Recording Custom Greeting
@@ -6108,25 +6118,6 @@ paths:
       x-metered-api: true
       x-metering-group: Free
       x-docs-level: Public
-  /restapi/v1.0/status:
-    get:
-      tags:
-        - API Info
-      summary: Get Service Status
-      description: Returns current PAS service status.
-      operationId: readAPIStatus
-      responses:
-        '200':
-          description: OK
-        '503':
-          description: VoIP-only Mode
-      x-api-group: restapi/status
-      x-auth-required: false
-      x-throttling-group: NoThrottling
-      x-metered-api: true
-      x-metering-group: Free
-      x-docs-level: Public
-      x-availability: Limited
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log':
     get:
       tags:
@@ -6421,14 +6412,12 @@ paths:
         - name: syncType
           in: query
           description: Type of synchronization
+          default: FSync
           required: false
-          type: array
-          collectionFormat: multi
-          items:
-            type: string
-            enum:
-              - FSync
-              - ISync
+          type: string
+          enum:
+            - FSync
+            - ISync
         - name: syncToken
           in: query
           description: Value of syncToken property of last sync request response
@@ -6816,15 +6805,13 @@ paths:
           default: '~'
         - name: syncType
           in: query
-          description: Type of synchronization. 'FSync' is a default value
+          description: Type of synchronization.
           required: false
-          type: array
+          default: FSync
+          type: string
           enum:
             - FSync
             - ISync
-          collectionFormat: multi
-          items:
-            type: string
         - name: syncToken
           in: query
           description: Value of syncToken property of last sync request response
@@ -7126,11 +7113,11 @@ paths:
   /restapi/v1.0/client-info/sip-provision:
     post:
       tags:
-        - SIP
-      summary: Register SIP Device
+        - Device SIP Registration
+      summary: Register Device
       description: >-
         Creates SIP registration of a device/application (WebPhone, Mobile,
-        softphone)
+        softphone).
       operationId: createSIPRegistration
       consumes:
         - application/json
@@ -7596,8 +7583,8 @@ paths:
       summary: Get Scheduled Meetings
       operationId: listMeetings
       description: >-
-        Returns a list of meetings for a particular extension. The list of
-        meetings does not include meetings of 'Instant' type.
+        Returns a list of user meetings scheduled for the future (meetings of
+        'Instant' type are not included).
       consumes:
         - application/json
       produces:
@@ -8170,10 +8157,10 @@ paths:
           schema:
             $ref: '#/definitions/CreateSMSMessage'
       responses:
-        default:
-          description: Success
+        '200':
+          description: Message information
           schema:
-            $ref: '#/definitions/GetMessageInfoResponse'
+            $ref: '#/definitions/GetSMSMessageInfoResponse'
       x-api-group: extension/sms
       x-throttling-group: Medium
       x-metered-api: true
@@ -8186,8 +8173,8 @@ paths:
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms':
     post:
       tags:
-        - MMS
-      summary: Create MMS Message
+        - SMS
+      summary: Send MMS
       description: >-
         Creates and sends media messages. Sending MMS messages simultaneously to
         different recipients is limited up to 50 requests per minute; relevant
@@ -8226,7 +8213,7 @@ paths:
         default:
           description: MMS Message
           schema:
-            $ref: '#/definitions/GetMessageInfoResponse'
+            $ref: '#/definitions/GetSMSMessageInfoResponse'
       x-api-group: extension/sms
       x-throttling-group: Medium
       x-metered-api: true
@@ -8275,7 +8262,7 @@ paths:
         '200':
           description: Created Text Message
           schema:
-            $ref: '#/definitions/GetMessageInfoResponse'
+            $ref: '#/definitions/GetInternalTextMessageInfoResponse'
       x-api-group: extension/company-pager
       x-throttling-group: Medium
       x-metered-api: true
@@ -9007,13 +8994,10 @@ paths:
           in: query
           description: Type of message synchronization
           required: false
-          type: array
-          items:
-            type: string
-            enum:
-              - FSync
-              - ISync
-          collectionFormat: multi
+          type: string
+          enum:
+            - FSync
+            - ISync
       responses:
         default:
           description: Success
@@ -10773,7 +10757,7 @@ paths:
         Returns results of the task created within the frame of Automatic
         Location Updates feature. Currently four task types are supported:
         'Wireless Points Bulk Create', 'Wireless Points Bulk Update', 'Switches
-        Bulk Create', 'Switches Bulk Update'
+        Bulk Create', 'Switches Bulk Update'.
       operationId: readAutomaticLocationUpdatesTask
       consumes:
         - application/json
@@ -10798,7 +10782,6 @@ paths:
           schema:
             $ref: '#/definitions/AutomaticLocationUpdatesTaskInfo'
       x-api-group: account/emergency-address-auto-update/tasks
-      x-access-level: Internal
       x-app-permission: EditAccounts
       x-user-permission: ConfigureEmergencyMaps
       x-feature: EditSoftPhoneAutoLocationUpdate OR EditHardPhoneAutoLocationUpdate
@@ -10806,6 +10789,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-team: PLA Inno
+      x-beta-api: true
   '/restapi/v1.0/account/{accountId}/emergency-locations':
     post:
       tags:
@@ -13630,7 +13614,10 @@ paths:
         - Call Control
       x-beta-api: true
       summary: Make CallOut
-      description: Creates a new outbound call out session.
+      description: >-
+        Creates a new outbound call out session. Currently this method is
+        supported for Softphone/Hardphone only, since device IDs for
+        WebRTC/Mobile apps cannot be obtained.
       operationId: createCallOutCallSession
       externalDocs:
         description: Find more info about body and response format
@@ -13670,6 +13657,52 @@ paths:
       x-failover-strategy: Hardening
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/call-out
       x-rewrite-uri-to: /telephony/v1/account/$1/call-out
+  '/restapi/v1.0/account/{accountId}/telephony/conference':
+    post:
+      tags:
+        - Call Control
+      summary: Start Conference Call Session
+      description: Initiates a conference call session.
+      operationId: createConferenceCallSession
+      externalDocs:
+        description: Find more info about body and response format
+        url: >-
+          https://wiki.ringcentral.com/display/TA/Telephony+Platform+API+-+TAS+10.2#/Sessions/op_session_add_Conference
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          type: string
+          default: '~'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/CallSessionObject'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Temporary Unavailable
+      x-api-group: telephony/conference
+      x-throttling-group: Heavy
+      x-internal-api: false
+      x-app-permission: TelephonySessions
+      x-failover-strategy: Hardening
+      x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/conference
+      x-rewrite-uri-to: /telephony/v1/account/$1/conference
+      x-docs-level: Public
+      x-beta-api: true
   '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}':
     get:
       tags:
@@ -14507,12 +14540,76 @@ paths:
       x-app-permission: CallControl
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/park
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/park
+  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in':
+    post:
+      tags:
+        - Call Control
+      summary: Bring-In Call Party
+      description: >-
+        Adds a new party to the call session by bringing-in an established SIP
+        call connection. The maximum number of parties to bring-in is 10; only 1
+        call party can be added per request. Currently the method is supported
+        for sessions of 'Conference' origin only.
+      operationId: createCallPartyWithBringIn
+      externalDocs:
+        description: Find more info about body and response format
+        url: >-
+          https://wiki.ringcentral.com/display/TA/Telephony+Platform+API+-+TAS+10.2#/Add_Party/op_parties_add_bringIn
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          type: string
+          default: '~'
+        - name: telephonySessionId
+          in: path
+          description: Internal identifier of a call session
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: JSON body
+          required: true
+          schema:
+            $ref: '#/definitions/AddPartyRequest'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/CallParty'
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Temporary Unavailable
+      x-api-group: telephony/sessions/parties/bring-in
+      x-throttling-group: Light
+      x-internal-api: false
+      x-docs-level: Public
+      x-app-permission: TelephonySessions
+      x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/bring-in
+      x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/bring-in
+      x-beta-api: true
   '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}':
     get:
       tags:
         - Call Control
       summary: Get Call Party Status
-      description: Returns a party status of a call session by ID.
+      description: Returns a call party status by ID.
       operationId: readCallPartyStatus
       externalDocs:
         description: Find more info about response format
@@ -14566,8 +14663,9 @@ paths:
         - Call Control
       summary: Delete Call Party
       description: >-
-        Deletes a party of a call session by ID. It is possible to delete only
-        one conference participant per request.
+        Removes a party from a call session by ID. A party can be deleted only
+        if supervised or parked. It is possible to delete only one conference
+        participant per request.
       operationId: deleteCallParty
       consumes:
         - application/json
@@ -14615,11 +14713,11 @@ paths:
         - Call Control
       summary: Update Call Party
       description: >-
-        Modify the party of a call session by ID. There is a known limitation
-        for Mute scenario - mute via REST API doesn't work with mute placed via
+        Modifies a call party by ID. There is a known limitation for Mute
+        scenario - mute via REST API doesn't work with mute placed via
         RingCentral apps or HardPhone. It means that if you muted participant
         via Call Control API and Ringcentral Desktop app you need to unmute both
-        endpoints to bring media back. 
+        endpoints to bring the media back.
       operationId: updateCallParty
       consumes:
         - application/json
@@ -14817,10 +14915,12 @@ paths:
       description: >-
         Allows to monitor a call session in 'Listen' mode. Input parameters
         should contain internal identifiers of a monitored user and a
-        supervisor's device. Call session should be specified in path.  Please
+        supervisor's device. Call session should be specified in path. Please
         note that this method supports single channel audio flow, which means
         that audio of both call participants is mixed and delivered to the
-        supervisor in single audio channel.
+        supervisor in single audio channel. Currently this method is supported
+        for Softphone/Hardphone only, since device IDs for WebRTC/Mobile apps
+        cannot be obtained.
       operationId: superviseCallSession
       consumes:
         - application/json
@@ -14883,7 +14983,8 @@ paths:
         monitoring request the client recieves SIP invite with the following
         header `p-rc-api-monitoring-ids` containing IDs of the monitored party
         and session. The flow is supported for calls with no more than 2
-        participants.
+        participants. Currently this method is supported for Softphone/Hardphone
+        only, since device IDs for WebRTC/Mobile apps cannot be obtained.
       consumes:
         - application/json
       produces:
@@ -20322,7 +20423,7 @@ definitions:
       preset:
         $ref: '#/definitions/PresetInfo'
       custom:
-        $ref: '#/definitions/CustomGreetingInfo'
+        $ref: '#/definitions/CustomGreetingInfoRequest'
   IVRMenuActionsInfo:
     type: object
     properties:
@@ -21297,12 +21398,9 @@ definitions:
       id:
         type: string
         description: Internal identifier of a custom company greeting
-  CustomGreetingInfo:
+  CustomGreetingInfoRequest:
     type: object
     properties:
-      uri:
-        type: string
-        description: Link to a custom user greeting
       id:
         type: string
         description: Internal identifier of a custom user greeting
@@ -22941,19 +23039,20 @@ definitions:
     properties:
       device:
         type: object
-        description: Device unique description
+        description: Device information
         $ref: '#/definitions/DeviceInfoRequest'
       sipInfo:
         type: array
         description: SIP settings for device
         items:
+          type: object
           $ref: '#/definitions/SIPInfoRequest'
   DeviceInfoRequest:
     type: object
     properties:
       id:
         type: string
-        description: 'Device unique identifier, retrieved on previous session (if any)'
+        description: 'Device unique identifier, retrieved at previous session (if any)'
       appExternalId:
         type: string
         description: >-
@@ -22965,7 +23064,7 @@ definitions:
       serial:
         type: string
         description: >-
-          Serial number for HardPhone; endpoint_id for softphone and mobile
+          Serial number for HardPhone; `endpoint_id` for softphone and mobile
           applications. Returned only when the phone is shipped and provisioned
   SIPInfoRequest:
     type: object
@@ -24320,12 +24419,13 @@ definitions:
         type: string
       contentDownloadUri:
         type: string
+        description: Link for recording file download
       contentType:
         type: string
         enum:
           - video/mp4
           - audio/m4a
-          - text/vtt
+          - text/plain
       size:
         type: integer
         format: int32
@@ -24430,12 +24530,16 @@ definitions:
       uri:
         type: string
         format: uri
+        description: Link to a meeting resource
       uuid:
         type: string
+        description: Universally unique identifier of a meeting"
       id:
         type: string
+        description: Internal identifier of a meeting
       topic:
         type: string
+        description: Custom topic of a meeting
       meetingType:
         type: string
         enum:
@@ -24445,50 +24549,66 @@ definitions:
           - Recurring
       password:
         type: string
+        description: Meeting password
       h323Password:
         type: string
       status:
         type: string
+        description: Status of a meeting
       links:
         $ref: '#/definitions/MeetingLinks'
+        description: Meeting links
       schedule:
         $ref: '#/definitions/MeetingScheduleResource'
+        description: Meeting schedule information
       host:
         $ref: '#/definitions/HostInfoRequest'
+        description: Meeting host information
       allowJoinBeforeHost:
         type: boolean
         default: false
+        description: 'If true, then participants can join the meeting before host arrives'
       startHostVideo:
         type: boolean
         default: false
+        description: Starting meetings with host video on/off (true/false)
       startParticipantsVideo:
         type: boolean
+        description: Starting meetings with participant video on/off (true/false)
         default: false
       audioOptions:
         type: array
         items:
           type: string
-      occurrences:
+          enum:
+            - Phone
+            - ComputerAudio
+      reccurence:
+        type: object
+        description: Meeting recurrence information
+        $ref: '#/definitions/RecurrenceInfo'
+      autoRecordType:
+        type: string
+        description: Automatic record type
+        enum:
+          - local
+          - cloud
+          - none
+        default: none
+      enforceLogin:
+        type: boolean
+        description: 'If true, then only signed-in users can join this meeting'
+      muteParticipantsOnEntry:
+        type: boolean
+        description: 'If true, then participants are muted on entry'
+      enableWaitingRoom:
+        type: boolean
+        description: 'If true, then the waiting room for participants is enabled'
+      globalDialInCountries:
         type: array
-        description: List of meeting occurrences
+        description: 'List of global dial-in countries (eg. US, UK, AU, etc.)'
         items:
-          type: object
-          $ref: '#/definitions/MeetingOccurrenceInfo'
-  MeetingOccurrenceInfo:
-    type: object
-    properties:
-      id:
-        type: string
-        description: Identifier of a meeting occurrence
-      startTime:
-        type: string
-        description: Starting time of a meeting occurrence
-      durationInMinutes:
-        type: integer
-        description: Duration of a meeting occurrence
-      status:
-        type: string
-        description: Status of a meeting occurrence
+          type: string
   MeetingLinks:
     type: object
     properties:
@@ -24528,6 +24648,7 @@ definitions:
     properties:
       topic:
         type: string
+        description: Custom topic of a meeting
       meetingType:
         type: string
         enum:
@@ -24537,10 +24658,13 @@ definitions:
           - Recurring
       schedule:
         $ref: '#/definitions/MeetingScheduleResource'
+        description: Timing of a meeting
       password:
         type: string
+        description: Meeting password
       host:
         $ref: '#/definitions/HostInfoRequest'
+        description: Meeting host information
       allowJoinBeforeHost:
         type: boolean
         default: false
@@ -24550,12 +24674,19 @@ definitions:
       startParticipantsVideo:
         type: boolean
         default: false
+        description: Starting meetings with participant video on/off (true/false)
       usePersonalMeetingId:
         type: boolean
+        description: >-
+          If true, then personal user's meeting ID is applied for creation of
+          this meeting
       audioOptions:
         type: array
         items:
           type: string
+          enum:
+            - Phone
+            - ComputerAudio
       recurrence:
         type: object
         description: Recurrence settings
@@ -24567,7 +24698,21 @@ definitions:
           - local
           - cloud
           - none
-        default: local
+        default: none
+      enforceLogin:
+        type: boolean
+        description: 'If true, then only signed-in users can join this meeting'
+      muteParticipantsOnEntry:
+        type: boolean
+        description: 'If true, then participants are muted on entry'
+      enableWaitingRoom:
+        type: boolean
+        description: 'If true, then the waiting room for participants is enabled'
+      globalDialInCountries:
+        type: array
+        description: 'List of global dial-in countries (eg. US, UK, AU, etc.)'
+        items:
+          type: string
   RecurrenceInfo:
     type: object
     properties:
@@ -24594,6 +24739,14 @@ definitions:
           - Fourth
       weeklyByDay:
         type: string
+        description: >-
+          This field is used only if you're scheduling a recurring meeting of
+          type `3` to state which day in a month the meeting should recur. The
+          value range is 1 - 31. For instance, if the meeting should recur each
+          month on 23rd, provide `23` as the value of this field and `1` as the
+          value of the recurrence `interval` field. And if the meeting should
+          recur every three months, on 23rd of the month, change the value of
+          the recurrence `interval` field to `3`.
         enum:
           - Sunday
           - Monday
@@ -24604,7 +24757,12 @@ definitions:
           - Saturday
       weeklyByDays:
         type: string
-        description: 'Multiple values are supported, should be specified separated by comma'
+        description: >-
+          This field is used only if you're scheduling a recurring meeting of
+          type `2` to state which day(s) of the week the meeting should recur.
+          The values are: 1 - Sunday; 2 - Monday; 3- Tuesday; 4 - Wednesday; 5 -
+          Thursday; 6 - Friday; 7 - Saturday. Multiple values are supported,
+          should be specified separated by comma
         enum:
           - Sunday
           - Monday
@@ -24616,9 +24774,17 @@ definitions:
       monthlyByDay:
         type: integer
         description: The supported range is 1-31
+      monthlyByWeekDay:
+        type: integer
+        description: >-
+          This field is used only if you're scheduling a recurring meeting of
+          type `3` to state a specific day in a week when the monthly meeting
+          should recur; it works together with `MonthlyByWeek` field. The values
+          are: 1 - Sunday; 2 - Monday; 3 - Tuesday; 4 - Wednesday; 5 - Thursday;
+          6 - Friday; 7- Saturday
       count:
         type: integer
-        description: Number of occurences
+        description: Number of meeting occurrences
       until:
         type: string
         description: Meeting expiration datetime
@@ -25027,6 +25193,237 @@ definitions:
         description: >-
           Cover page text, entered by the fax sender and printed on the cover
           page. Maximum length is limited to 1024 symbols
+  GetInternalTextMessageInfoResponse:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Internal identifier of a message
+      uri:
+        type: string
+        description: Canonical URI of a message
+      attachments:
+        type: array
+        description: The list of message attachments
+        items:
+          $ref: '#/definitions/MessageAttachmentInfo'
+      availability:
+        type: string
+        description: >-
+          Message availability status. Message in 'Deleted' state is still
+          preserved with all its attachments and can be restored. 'Purged' means
+          that all attachments are already deleted and the message itself is
+          about to be physically deleted shortly
+        enum:
+          - Alive
+          - Deleted
+          - Purged
+      conversationId:
+        type: integer
+        description: >-
+          SMS and Pager only. Identifier of a conversation the message belongs
+          to
+      conversation:
+        description: >-
+          SMS and Pager only. Identifier of a conversation the message belongs
+          to
+        $ref: '#/definitions/ConversationInfo'
+      creationTime:
+        type: string
+        format: date-time
+        description: >-
+          Message creation datetime in ISO 8601 format including timezone, for
+          example 2016-03-10T18:07:52.534Z
+      direction:
+        type: string
+        description: >-
+          Message direction. Note that for some message types not all directions
+          are allowed. For example voicemail messages can be only inbound
+        enum:
+          - Inbound
+          - Outbound
+      from:
+        description: Sender information
+        $ref: '#/definitions/MessageStoreCallerInfoResponseFrom'
+      lastModifiedTime:
+        type: string
+        format: date-time
+        description: >-
+          The datetime when the message was modified on server in ISO 8601
+          format including timezone, for example 2016-03-10T18:07:52.534Z
+      messageStatus:
+        type: string
+        description: >-
+          Message status. Different message types may have different allowed
+          status values. For outbound faxes the aggregated message status is
+          returned: If status for at least one recipient is 'Queued', then
+          'Queued' value is returned If status for at least one recipient is
+          'SendingFailed', then 'SendingFailed' value is returned In other cases
+          Sent status is returned
+        enum:
+          - Queued
+          - Sent
+          - Delivered
+          - DeliveryFailed
+          - SendingFailed
+          - Received
+      pgToDepartment:
+        type: boolean
+        description: >-
+          'Pager' only. 'True' if at least one of the message recipients is
+          'Department' extension
+      priority:
+        type: string
+        description: Message priority
+        enum:
+          - Normal
+          - High
+      readStatus:
+        type: string
+        description: Message read status
+        enum:
+          - Read
+          - Unread
+      subject:
+        type: string
+        description: >-
+          Message subject. For SMS and Pager messages it replicates message text
+          which is also returned as an attachment
+      to:
+        type: array
+        description: Recipient information
+        items:
+          $ref: '#/definitions/MessageStoreCallerInfoResponseTo'
+      type:
+        type: string
+        description: Message type
+        enum:
+          - Fax
+          - SMS
+          - VoiceMail
+          - Pager
+          - Text
+  GetSMSMessageInfoResponse:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Internal identifier of a message
+      uri:
+        type: string
+        description: Canonical URI of a message
+      attachments:
+        type: array
+        description: The list of message attachments
+        items:
+          $ref: '#/definitions/MessageAttachmentInfo'
+      availability:
+        type: string
+        description: >-
+          Message availability status. Message in 'Deleted' state is still
+          preserved with all its attachments and can be restored. 'Purged' means
+          that all attachments are already deleted and the message itself is
+          about to be physically deleted shortly
+        enum:
+          - Alive
+          - Deleted
+          - Purged
+      conversationId:
+        type: integer
+        description: >-
+          SMS and Pager only. Identifier of a conversation the message belongs
+          to
+      conversation:
+        description: >-
+          SMS and Pager only. Identifier of a conversation the message belongs
+          to
+        $ref: '#/definitions/ConversationInfo'
+      creationTime:
+        type: string
+        format: date-time
+        description: >-
+          Message creation datetime in ISO 8601 format including timezone, for
+          example 2016-03-10T18:07:52.534Z
+      deliveryErrorCode:
+        type: string
+        description: SMS only. Delivery error code returned by gateway
+      direction:
+        type: string
+        description: >-
+          Message direction. Note that for some message types not all directions
+          are allowed. For example voicemail messages can be only inbound
+        enum:
+          - Inbound
+          - Outbound
+      from:
+        description: Sender information
+        $ref: '#/definitions/MessageStoreCallerInfoResponseFrom'
+      lastModifiedTime:
+        type: string
+        format: date-time
+        description: >-
+          The datetime when the message was modified on server in ISO 8601
+          format including timezone, for example 2016-03-10T18:07:52.534Z
+      messageStatus:
+        type: string
+        description: >-
+          Message status. Different message types may have different allowed
+          status values. For outbound faxes the aggregated message status is
+          returned: If status for at least one recipient is 'Queued', then
+          'Queued' value is returned If status for at least one recipient is
+          'SendingFailed', then 'SendingFailed' value is returned In other cases
+          Sent status is returned
+        enum:
+          - Queued
+          - Sent
+          - Delivered
+          - DeliveryFailed
+          - SendingFailed
+          - Received
+      priority:
+        type: string
+        description: Message priority
+        enum:
+          - Normal
+          - High
+      readStatus:
+        type: string
+        description: Message read status
+        enum:
+          - Read
+          - Unread
+      smsDeliveryTime:
+        type: string
+        format: date-time
+        description: >-
+          SMS only. The datetime when outbound SMS was delivered to recipient's
+          handset in ISO 8601 format including timezone, for example
+          2016-03-10T18:07:52.534Z. It is filled only if the carrier sends a
+          delivery receipt to RingCentral
+      smsSendingAttemptsCount:
+        type: integer
+        description: >-
+          SMS only. Number of attempts made to send an outbound SMS to the
+          gateway (if gateway is temporary unavailable)
+      subject:
+        type: string
+        description: >-
+          Message subject. For SMS and Pager messages it replicates message text
+          which is also returned as an attachment
+      to:
+        type: array
+        description: Recipient information
+        items:
+          $ref: '#/definitions/MessageStoreCallerInfoResponseTo'
+      type:
+        type: string
+        description: Message type
+        enum:
+          - Fax
+          - SMS
+          - VoiceMail
+          - Pager
+          - Text
   GetMessageMultiResponse: *ref_0
   GetMessageInfoMultiResponse:
     type: object
@@ -28650,7 +29047,7 @@ definitions:
         description: >-
           Operator's extension information. This extension will receive all
           calls and messages intended for the operator
-        $ref: '#/definitions/GetExtensionInfoResponse'
+        $ref: '#/definitions/AccountOperatorInfo'
       partnerId:
         type: string
         description: >-
@@ -28874,8 +29271,10 @@ definitions:
     properties:
       version:
         type: string
+        description: Billing package version
       id:
         type: string
+        description: Billing package identifier
   AccountLimits:
     type: object
     properties:
@@ -29305,6 +29704,19 @@ definitions:
       minorSymbol:
         type: string
         description: Minor graphic symbol of a currency
+  AccountOperatorInfo:
+    type: object
+    description: Operator extension information
+    properties:
+      uri:
+        type: string
+        description: Link to an operator extension resource
+      id:
+        type: integer
+        description: Internal identifier of an operator extension
+      extensionNumber:
+        type: string
+        description: Number of an operator extension
   AccountPhoneNumbers:
     type: object
     properties:
@@ -31774,6 +32186,20 @@ definitions:
           conference, 'False' means the party is connected to other parties in a
           session
         type: boolean
+  AddPartyRequest:
+    type: object
+    required:
+      - sessionId
+      - partyId
+    properties:
+      sessionId:
+        description: Internal identifier of a call session
+        type: string
+      partyId:
+        description: >-
+          Internal identifier of a party that should be added to the call
+          session
+        type: string
   AnswerTarget:
     type: object
     properties:
