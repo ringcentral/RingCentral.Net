@@ -71,7 +71,7 @@ for (const path of cache.post) {
   ) {
     continue
   }
-  if (doc.paths[path].post.parameters.filter(
+  if (!doc.paths[path].post.parameters || doc.paths[path].post.parameters.filter(
     p => p.name === 'body' ||
     p.name === 'attachments' ||
     p.name === 'attachment' ||
