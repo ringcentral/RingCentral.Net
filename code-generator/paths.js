@@ -1,7 +1,7 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
 import * as R from 'ramda'
-import { pascalCase, titleCase } from 'change-case'
+import { pascalCase, capitalCase } from 'change-case'
 import { lowerCaseFirst } from 'lower-case-first'
 import path from 'path'
 
@@ -211,7 +211,7 @@ const generate = (prefix = '/') => {
       code += `
 
       /// <summary>
-      /// Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
+      /// Operation: ${operation.detail.summary || capitalCase(operation.detail.operationId)}
       /// HTTP Method: ${method.toUpperCase()}
       /// Endpoint: ${operation.endpoint}
       /// Rate Limit Group: ${operation.detail['x-throttling-group']}
