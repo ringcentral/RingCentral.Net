@@ -69,7 +69,7 @@ namespace RingCentral
                 RequestUri = uriBuilder.Uri,
                 Content = httpContent
             };
-            return await Request(httpRequestMessage, 0, cancellationToken);
+            return await ExtensibleRequest(httpRequestMessage, 0, cancellationToken);
         }
 
         public async Task<T> Request<T>(HttpMethod httpMethod, string endpoint,

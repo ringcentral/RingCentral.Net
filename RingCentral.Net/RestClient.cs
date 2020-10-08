@@ -32,6 +32,7 @@ namespace RingCentral
             this.server = server;
             this.appName = appName;
             this.appVersion = appVersion;
+            this.ExtensibleRequest = Request;
         }
 
         public RestClient(string clientId, string clientSecret, string server, string appName = "Unknown",
@@ -45,6 +46,8 @@ namespace RingCentral
             : this(clientId, clientSecret, production ? ProductionServer : SandboxServer, appName, appVersion)
         {
         }
+
+        public Func<HttpRequestMessage, int, CancellationToken?, Task<HttpResponseMessage>> ExtensibleRequest;
 
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage, int retriedTimes = 0,
             CancellationToken? cancellationToken = null)
