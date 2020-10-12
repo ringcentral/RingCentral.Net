@@ -22,6 +22,7 @@ namespace RingCentral.Tests.Extensions
                 );
                 var debugExtension = new DebugExtension();
                 rc.InstallExtension(debugExtension);
+                debugExtension.enabled = false; // remove this line to enable debug mode
                 var extInfo = await rc.Restapi().Account().Extension().Get();
                 Assert.NotNull(extInfo);
                 Assert.NotNull(extInfo.id);

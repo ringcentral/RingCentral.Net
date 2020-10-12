@@ -10,8 +10,11 @@ namespace RingCentral.Net.Debug
             rc.extensibleRequest = async (httpRequestMessage, retriedTimes, cancellationToken) =>
             {
                 var result = await extensibleRequest(httpRequestMessage, retriedTimes, cancellationToken);
-                var debugMessage = Utils.FormatHttpMessage(result, httpRequestMessage);
-                Console.WriteLine(debugMessage);
+                if (enabled)
+                {
+                    var debugMessage = Utils.FormatHttpMessage(result, httpRequestMessage);
+                    Console.WriteLine(debugMessage);
+                }
                 return result;
             };
         }
