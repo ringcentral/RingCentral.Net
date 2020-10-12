@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RingCentral.Net.PubnubPCL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net.Pubnub", "RingCentral.Net.Pubnub\RingCentral.Net.Pubnub.csproj", "{FCBB6D8C-8A1A-4D34-A864-100F585C26E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net.Debug", "RingCentral.Net.Debug\RingCentral.Net.Debug.csproj", "{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,26 @@ Global
 		{FCBB6D8C-8A1A-4D34-A864-100F585C26E0}.Release|x64.Build.0 = Release|Any CPU
 		{FCBB6D8C-8A1A-4D34-A864-100F585C26E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{FCBB6D8C-8A1A-4D34-A864-100F585C26E0}.Release|x86.Build.0 = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|x64.Build.0 = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Debug|x86.Build.0 = Debug|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|ARM.Build.0 = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|ARM64.Build.0 = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|x64.ActiveCfg = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|x64.Build.0 = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|x86.ActiveCfg = Release|Any CPU
+		{5AE480AA-8C2E-48E2-8B85-F7B50500CC6E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

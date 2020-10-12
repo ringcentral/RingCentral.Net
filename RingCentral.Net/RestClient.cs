@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -24,6 +25,14 @@ namespace RingCentral
 
         public RateLimits rateLimits = new RateLimits();
 
+        public List<SdkExtension> sdkExtensions = new List<SdkExtension>();
+
+        public void InstallExtension(SdkExtension sdkExtension)
+        {
+            sdkExtensions.Add(sdkExtension);
+            sdkExtension.Install(this);
+        }
+
         private RestClient(string clientId, string clientSecret, Uri server, string appName = "Unknown",
             string appVersion = "0.0.1")
         {
@@ -32,7 +41,7 @@ namespace RingCentral
             this.server = server;
             this.appName = appName;
             this.appVersion = appVersion;
-            this.ExtensibleRequest = Request;
+            this.extensibleRequest = Request;
         }
 
         public RestClient(string clientId, string clientSecret, string server, string appName = "Unknown",
@@ -47,7 +56,7 @@ namespace RingCentral
         {
         }
 
-        public Func<HttpRequestMessage, int, CancellationToken?, Task<HttpResponseMessage>> ExtensibleRequest;
+        public Func<HttpRequestMessage, int, CancellationToken?, Task<HttpResponseMessage>> extensibleRequest;
 
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage, int retriedTimes = 0,
             CancellationToken? cancellationToken = null)
