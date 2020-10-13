@@ -72,7 +72,7 @@ namespace RingCentral.Tests
             }
             catch (RestException re)
             {
-                Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
+                Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
             }
 
             var uri2 = rc.AuthorizeUri(new AuthorizeRequest

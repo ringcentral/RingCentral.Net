@@ -98,8 +98,8 @@ namespace RingCentral.Tests
                 }
                 catch (RestException re)
                 {
-                    Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
-                    var content = await re.HttpResponseMessage.Content.ReadAsStringAsync();
+                    Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
+                    var content = await re.httpResponseMessage.Content.ReadAsStringAsync();
                     Assert.Contains("Unsupported response type", content);
                 }
             }

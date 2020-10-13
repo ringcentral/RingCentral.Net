@@ -1,5 +1,7 @@
 using System;
 using System.Linq;
+using System.Net.Http;
+using RingCentral.Net.Events;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -21,23 +23,27 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
+                var eventsExtension = new EventsExtension();
+                rc.InstallExtension(eventsExtension);
 
-                void EventHandler(object sender, HttpCallEventArgs eventArgs)
+                var count = 0;
+
+                void EventHandler(object sender, HttpMessages httpMessages)
                 {
-                    var re = new RestException(eventArgs.httpResponseMessage, eventArgs.httpRequestMessage);
-                    var str = re.ToString();
-                    var userAgent = eventArgs.httpRequestMessage.Headers
+                    var userAgent = httpMessages.httpRequestMessage.Headers
                         .First(i => i.Key == "X-User-Agent").Value.ToArray();
                     Assert.Single(userAgent);
                     Assert.StartsWith("Unknown/0.0.1 RingCentral.Net/", userAgent[0]);
+                    count += 1;
                 }
 
-                rc.AfterHttpCall += EventHandler;
+                eventsExtension.RequestSuccess += EventHandler;
 
                 var china = await rc.Restapi().Dictionary().Country("46").Get();
                 Assert.Equal("China", china.name);
+                Assert.Equal(1, count);
 
-                rc.AfterHttpCall -= EventHandler;
+                eventsExtension.RequestSuccess -= EventHandler;
             }
         }
     }

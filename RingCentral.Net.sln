@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net.Retry", "Ri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net.RateLimit", "RingCentral.Net.RateLimit\RingCentral.Net.RateLimit.csproj", "{DC70D9F9-5C7E-479F-B58D-B73B3B939D73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingCentral.Net.Events", "RingCentral.Net.Events\RingCentral.Net.Events.csproj", "{5C8415BC-A8AD-4749-8094-8E45D28ECADE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,26 @@ Global
 		{DC70D9F9-5C7E-479F-B58D-B73B3B939D73}.Release|x64.Build.0 = Release|Any CPU
 		{DC70D9F9-5C7E-479F-B58D-B73B3B939D73}.Release|x86.ActiveCfg = Release|Any CPU
 		{DC70D9F9-5C7E-479F-B58D-B73B3B939D73}.Release|x86.Build.0 = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|x64.Build.0 = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Debug|x86.Build.0 = Debug|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|ARM.Build.0 = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|ARM64.Build.0 = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|x64.ActiveCfg = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|x64.Build.0 = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C8415BC-A8AD-4749-8094-8E45D28ECADE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

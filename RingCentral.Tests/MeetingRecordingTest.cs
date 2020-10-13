@@ -34,7 +34,7 @@ namespace RingCentral.Tests
                 catch (RestException re)
                 {
                     // todo: https://jira.ringcentral.com/browse/PLA-49859
-                    Assert.Equal(HttpStatusCode.Forbidden, re.HttpResponseMessage.StatusCode);
+                    Assert.Equal(HttpStatusCode.Forbidden, re.httpResponseMessage.StatusCode);
                 }
             }
         }

@@ -5,12 +5,14 @@ namespace RingCentral
 {
     public class RestException : Exception
     {
-        public readonly HttpResponseMessage HttpResponseMessage;
+        public readonly HttpResponseMessage httpResponseMessage;
+        public readonly HttpRequestMessage httpRequestMessage;
 
         public RestException(HttpResponseMessage httpResponseMessage, HttpRequestMessage httpRequestMessage)
             : base(Utils.FormatHttpMessage(httpResponseMessage, httpRequestMessage))
         {
-            HttpResponseMessage = httpResponseMessage;
+            this.httpResponseMessage = httpResponseMessage;
+            this.httpRequestMessage = httpRequestMessage;
         }
     }
 }

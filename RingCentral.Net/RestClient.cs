@@ -74,7 +74,6 @@ namespace RingCentral
                 await httpClient.SendAsync(httpRequestMessage, restRequestConfig.cancellationToken);
 
             rateLimits.Update(httpResponseMessage.Headers);
-            AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
                 throw new RestException(httpResponseMessage, httpRequestMessage);

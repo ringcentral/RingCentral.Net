@@ -23,6 +23,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj" />
+        <ProjectReference Include="..\RingCentral.Net.Events\RingCentral.Net.Events.csproj" />
         <ProjectReference Include="..\RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj" />
         <ProjectReference Include="..\RingCentral.Net.RateLimit\RingCentral.Net.RateLimit.csproj" />
         <ProjectReference Include="..\RingCentral.Net.Retry\RingCentral.Net.Retry.csproj" />

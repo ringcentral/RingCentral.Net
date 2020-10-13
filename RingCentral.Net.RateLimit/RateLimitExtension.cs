@@ -8,11 +8,11 @@ namespace RingCentral.Net.RateLimit
     public class RateLimitExtension : RetryExtension
     {
         public RateLimitExtension(int maxRetries = 3, int rateLimitWindow = 60) : base(
-            (restException, retriesAttempted) => restException.HttpResponseMessage.StatusCode == (HttpStatusCode) 429 &&
+            (restException, retriesAttempted) => restException.httpResponseMessage.StatusCode == (HttpStatusCode) 429 &&
                                                  retriesAttempted < maxRetries,
             (restException, retriesAttempted) =>
             {
-                var rateLimitWindowHeader = restException.HttpResponseMessage.Headers.GetValues("x-rate-limit-window")
+                var rateLimitWindowHeader = restException.httpResponseMessage.Headers.GetValues("x-rate-limit-window")
                     .FirstOrDefault();
                 if (rateLimitWindowHeader != default)
                 {

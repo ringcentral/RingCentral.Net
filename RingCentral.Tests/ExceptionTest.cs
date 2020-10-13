@@ -22,7 +22,7 @@ namespace RingCentral.Tests
                     "wrong-password"
                 );
             });
-            Assert.Equal(HttpStatusCode.BadRequest, re.HttpResponseMessage.StatusCode);
+            Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
             Assert.Contains("invalid_grant", re.Message);
         }
     }

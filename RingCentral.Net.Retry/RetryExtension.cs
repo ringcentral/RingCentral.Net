@@ -14,7 +14,7 @@ namespace RingCentral.Net.Retry
         {
             this._shouldRetry = shouldRetry ?? ((restException, retriesAttempted) => retriesAttempted < 3 &&
                 Array.Exists(new[] {429, 503},
-                    element => (HttpStatusCode) element == restException.HttpResponseMessage.StatusCode));
+                    element => (HttpStatusCode) element == restException.httpResponseMessage.StatusCode));
             this._retryInterval = retryInterval ?? ((restException, retriesAttempted) =>
                 (int) (60 * 1000 * Math.Pow(2, retriesAttempted))); // exponential back off
         }

@@ -20,10 +20,6 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var groupId = (await rc.Restapi().Glip().Chats().List()).records[0].id;
-                rc.AfterHttpCall += (sender, args) =>
-                {
-                    var request = args.ToString();
-                };
                 var postInfo = await rc.Restapi().Glip().Groups(groupId).Posts().Post(new GlipCreatePost
                 {
                     attachments = new[]

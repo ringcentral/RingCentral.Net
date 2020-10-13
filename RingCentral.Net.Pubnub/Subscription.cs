@@ -103,9 +103,9 @@ Please install package RingCentral.Net.PubnubPCL instead.");
             }
             catch (RestException re)
             {
-                if (re.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound) // already deleted
+                if (re.httpResponseMessage.StatusCode == HttpStatusCode.NotFound) // already deleted
                 {
-                    return re.HttpResponseMessage;
+                    return re.httpResponseMessage;
                 }
 
                 throw;
