@@ -22,8 +22,6 @@ namespace RingCentral
 
         public static HttpClient httpClient = new HttpClient();
 
-        public RateLimits rateLimits = new RateLimits();
-
         public List<SdkExtension> sdkExtensions = new List<SdkExtension>();
 
         public void InstallExtension(SdkExtension sdkExtension)
@@ -72,13 +70,10 @@ namespace RingCentral
 
             var httpResponseMessage =
                 await httpClient.SendAsync(httpRequestMessage, restRequestConfig.cancellationToken);
-
-            rateLimits.Update(httpResponseMessage.Headers);
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
                 throw new RestException(httpResponseMessage, httpRequestMessage);
             }
-
             return httpResponseMessage;
         }
 
