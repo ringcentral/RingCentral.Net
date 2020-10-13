@@ -36,10 +36,10 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// </summary>
         public async Task<RingCentral.DataExportTask> Post(
             RingCentral.CreateDataExportTaskRequest createDataExportTaskRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.DataExportTask>(this.Path(false), createDataExportTaskRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.DataExportTaskList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.DataExportTaskList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -64,14 +64,14 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// App Permission: Glip
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.DataExportTask> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.DataExportTask> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.DataExportTask>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.DataExportTask>(this.Path(), null, restRequestConfig);
         }
     }
 }

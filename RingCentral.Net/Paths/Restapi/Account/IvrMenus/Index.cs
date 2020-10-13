@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// User Permission: AutoReceptionist
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Post(RingCentral.IVRMenuInfo iVRMenuInfo,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo, null, cancellationToken);
+            return await rc.Post<RingCentral.IVRMenuInfo>(this.Path(false), iVRMenuInfo, null, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// App Permission: ReadAccounts
         /// User Permission: AutoReceptionist
         /// </summary>
-        public async Task<RingCentral.IVRMenuInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.IVRMenuInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.ivrMenuId == null)
             {
                 throw new System.ArgumentNullException("ivrMenuId");
             }
 
-            return await rc.Get<RingCentral.IVRMenuInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.IVRMenuInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -67,14 +67,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// User Permission: AutoReceptionist
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.ivrMenuId == null)
             {
                 throw new System.ArgumentNullException("ivrMenuId");
             }
 
-            return await rc.Put<RingCentral.IVRMenuInfo>(this.Path(), iVRMenuInfo, null, cancellationToken);
+            return await rc.Put<RingCentral.IVRMenuInfo>(this.Path(), iVRMenuInfo, null, restRequestConfig);
         }
     }
 }

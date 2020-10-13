@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.WirelessPointsList> List(ListWirelessPointsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.WirelessPointsList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.WirelessPointsList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,10 +49,10 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Post(RingCentral.CreateWirelessPoint createWirelessPoint,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.WirelessPointInfo>(this.Path(false), createWirelessPoint, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -63,14 +63,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.WirelessPointInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.WirelessPointInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.pointId == null)
             {
                 throw new System.ArgumentNullException("pointId");
             }
 
-            return await rc.Get<RingCentral.WirelessPointInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.WirelessPointInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Put(RingCentral.UpdateWirelessPoint updateWirelessPoint,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.pointId == null)
             {
@@ -90,7 +90,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
             }
 
             return await rc.Put<RingCentral.WirelessPointInfo>(this.Path(), updateWirelessPoint, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -101,14 +101,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.pointId == null)
             {
                 throw new System.ArgumentNullException("pointId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

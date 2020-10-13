@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

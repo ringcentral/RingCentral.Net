@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.CallLogSync
         /// User Permission: ReadCallLog
         /// </summary>
         public async Task<RingCentral.AccountCallLogSyncResponse> Get(SyncAccountCallLogParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountCallLogSyncResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.AccountCallLogSyncResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

@@ -35,14 +35,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallSession> Get(ReadCallSessionStatusParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.telephonySessionId == null)
             {
                 throw new System.ArgumentNullException("telephonySessionId");
             }
 
-            return await rc.Get<RingCentral.CallSession>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.CallSession>(this.Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -53,14 +53,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         /// App Permission: CallControl
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.telephonySessionId == null)
             {
                 throw new System.ArgumentNullException("telephonySessionId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipWebhookInfo> Post(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipWebhookInfo> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipWebhookInfo>(this.Path(), null, cancellationToken);
+            return await rc.Post<RingCentral.GlipWebhookInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -40,9 +40,9 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipWebhookList> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipWebhookList> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, restRequestConfig);
         }
     }
 }

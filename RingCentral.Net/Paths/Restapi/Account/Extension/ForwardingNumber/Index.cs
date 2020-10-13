@@ -35,10 +35,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
         public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(
-            ListForwardingNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListForwardingNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -51,10 +51,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Post(
             RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -65,14 +65,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
-        public async Task<RingCentral.ForwardingNumberInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.ForwardingNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.forwardingNumberId == null)
             {
                 throw new System.ArgumentNullException("forwardingNumberId");
             }
 
-            return await rc.Get<RingCentral.ForwardingNumberInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.ForwardingNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Put(
             RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.forwardingNumberId == null)
             {
@@ -93,7 +93,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             }
 
             return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -104,14 +104,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// App Permission: EditExtensions
         /// User Permission: EditUserForwardingFlipNumbers
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.forwardingNumberId == null)
             {
                 throw new System.ArgumentNullException("forwardingNumberId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -28,13 +28,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         /// User Permission: ReadPresenceStatus
         /// </summary>
         public async Task<RingCentral.GetPresenceInfo> Get(ReadUserPresenceStatusParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.GetPresenceInfo>[]> BatchGet(
-            ReadUserPresenceStatusParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ReadUserPresenceStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -42,7 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.GetPresenceInfo>(this.Path(), queryParams, cancellationToken);
+            return await rc.BatchGet<RingCentral.GetPresenceInfo>(this.Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoResource presenceInfoResource,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.PresenceInfoResponse>(this.Path(), presenceInfoResource, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

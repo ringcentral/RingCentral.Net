@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
         /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.CallQueueMembers> Get(ListCallQueueMembersParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallQueueMembers>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.CallQueueMembers>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

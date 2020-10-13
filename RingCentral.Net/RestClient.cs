@@ -56,11 +56,16 @@ namespace RingCentral
         {
         }
 
-        public Func<HttpRequestMessage, int, CancellationToken?, Task<HttpResponseMessage>> extensibleRequest;
+        public Func<HttpRequestMessage, RestRequestConfig, Task<HttpResponseMessage>> extensibleRequest;
 
-        public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage, int retriedTimes = 0,
-            CancellationToken? cancellationToken = null)
+        public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
+            RestRequestConfig restRequestConfig = null)
         {
+            if (restRequestConfig == null)
+            {
+                restRequestConfig = RestRequestConfig.DefaultInstance;
+            }
+
             httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/4.1.0");
             httpRequestMessage.Headers.Authorization =
                 httpRequestMessage.RequestUri.AbsolutePath.StartsWith("/restapi/oauth/")
@@ -69,30 +74,32 @@ namespace RingCentral
                             Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
                     : new AuthenticationHeaderValue("Bearer", token.access_token);
             HttpResponseMessage httpResponseMessage;
-            if (cancellationToken == null)
+            if (restRequestConfig.cancellationToken == null)
             {
                 httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
             }
             else
             {
-                httpResponseMessage = await httpClient.SendAsync(httpRequestMessage, cancellationToken.Value);
+                httpResponseMessage =
+                    await httpClient.SendAsync(httpRequestMessage, restRequestConfig.cancellationToken.Value);
             }
 
             rateLimits.Update(httpResponseMessage.Headers);
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
-                if (!_autoRetry || retriedTimes > _maxRetryTimes ||
+                if (!_autoRetry || restRequestConfig.retriesAttempted > _maxRetryTimes ||
                     !_retryableHttpStatusCodes.Contains((int) httpResponseMessage.StatusCode))
                 {
                     throw new RestException(httpResponseMessage, httpRequestMessage);
                 }
                 else
                 {
-                    var delayTime = 1 << retriedTimes * _retryBaseDelay;
+                    var delayTime = 1 << restRequestConfig.retriesAttempted * _retryBaseDelay;
                     delayTime = (delayTime / 2) + _random.Next(0, delayTime / 2); // apply jitter
                     await Task.Delay(delayTime);
-                    return await Request(httpRequestMessage, ++retriedTimes, cancellationToken);
+                    restRequestConfig.retriesAttempted += 1;
+                    return await Request(httpRequestMessage, restRequestConfig);
                 }
             }
 

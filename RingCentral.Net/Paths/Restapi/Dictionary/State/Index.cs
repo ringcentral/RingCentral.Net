@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetStateListResponse> List(ListStatesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.GetStateInfoResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetStateInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.stateId == null)
             {
                 throw new System.ArgumentNullException("stateId");
             }
 
-            return await rc.Get<RingCentral.GetStateInfoResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetStateInfoResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

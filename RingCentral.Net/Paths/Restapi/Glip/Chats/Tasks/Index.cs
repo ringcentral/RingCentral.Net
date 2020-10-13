@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskList> Get(ListChatTasksParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipTaskList>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GlipTaskList>(this.Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -42,9 +42,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskInfo> Post(RingCentral.GlipCreateTask glipCreateTask,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipTaskInfo>(this.Path(), glipCreateTask, null, cancellationToken);
+            return await rc.Post<RingCentral.GlipTaskInfo>(this.Path(), glipCreateTask, null, restRequestConfig);
         }
     }
 }

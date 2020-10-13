@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
         /// App Permission: TelephonySessions
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.CallSessionObject> Post(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallSessionObject> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CallSessionObject>(this.Path(), null, cancellationToken);
+            return await rc.Post<RingCentral.CallSessionObject>(this.Path(), null, restRequestConfig);
         }
     }
 }

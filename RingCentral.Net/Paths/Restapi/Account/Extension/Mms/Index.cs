@@ -28,11 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         /// User Permission: OutboundSMS
         /// </summary>
         public async Task<RingCentral.GetSMSMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createMMSMessage);
             return await rc.Post<RingCentral.GetSMSMessageInfoResponse>(this.Path(), multipartFormDataContent, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

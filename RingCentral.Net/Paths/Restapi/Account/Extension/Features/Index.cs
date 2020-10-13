@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Features
         /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.FeatureList> Get(ReadUserFeaturesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.FeatureList>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.FeatureList>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.UserVideoConfiguration> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.UserVideoConfiguration> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserVideoConfiguration>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.UserVideoConfiguration>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,10 +41,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.UserVideoConfiguration> Put(
-            RingCentral.UserVideoConfiguration userVideoConfiguration, CancellationToken? cancellationToken = null)
+            RingCentral.UserVideoConfiguration userVideoConfiguration, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.UserVideoConfiguration>(this.Path(), userVideoConfiguration, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

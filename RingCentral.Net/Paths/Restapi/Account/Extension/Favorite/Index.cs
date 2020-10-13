@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         /// App Permission: ReadContacts
         /// User Permission: ReadPersonalContacts
         /// </summary>
-        public async Task<RingCentral.FavoriteContactList> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.FavoriteContactList> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.FavoriteContactList>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.FavoriteContactList>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,10 +41,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         /// User Permission: EditPersonalContacts
         /// </summary>
         public async Task<RingCentral.FavoriteContactList> Put(RingCentral.FavoriteCollection favoriteCollection,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.FavoriteContactList>(this.Path(), favoriteCollection, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

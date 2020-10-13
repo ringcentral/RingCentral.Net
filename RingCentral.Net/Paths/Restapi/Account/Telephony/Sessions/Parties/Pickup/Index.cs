@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Pickup
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallParty> Post(RingCentral.PickupTarget pickupTarget,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CallParty>(this.Path(), pickupTarget, null, cancellationToken);
+            return await rc.Post<RingCentral.CallParty>(this.Path(), pickupTarget, null, restRequestConfig);
         }
     }
 }

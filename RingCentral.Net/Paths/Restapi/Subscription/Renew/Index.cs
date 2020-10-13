@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.SubscriptionInfo> Post(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.SubscriptionInfo> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(), null, cancellationToken);
+            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

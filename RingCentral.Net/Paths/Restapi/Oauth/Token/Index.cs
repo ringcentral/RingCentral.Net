@@ -30,13 +30,13 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             var dict = new System.Collections.Generic.Dictionary<string, string>();
             Utils.GetPairs(getTokenRequest)
                 .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict), null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

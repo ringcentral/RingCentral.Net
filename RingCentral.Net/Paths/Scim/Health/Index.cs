@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Scim.Health
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Get(CancellationToken? cancellationToken = null)
+        public async Task<string> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<string>(this.Path(), null, cancellationToken);
+            return await rc.Get<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

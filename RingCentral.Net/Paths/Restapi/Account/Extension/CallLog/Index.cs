@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         /// User Permission: ReadCallLog
         /// </summary>
         public async Task<RingCentral.UserCallLogResponse> List(ReadUserCallLogParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.UserCallLogResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         /// User Permission: EditCallLog
         /// </summary>
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Delete<string>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -63,18 +63,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         /// User Permission: ReadCallLog
         /// </summary>
         public async Task<RingCentral.UserCallLogRecord> Get(ReadUserCallRecordParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.callRecordId == null)
             {
                 throw new System.ArgumentNullException("callRecordId");
             }
 
-            return await rc.Get<RingCentral.UserCallLogRecord>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.UserCallLogRecord>(this.Path(), queryParams, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.UserCallLogRecord>[]> BatchGet(
-            ReadUserCallRecordParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ReadUserCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -82,7 +82,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.UserCallLogRecord>(this.Path(), queryParams, cancellationToken);
+            return await rc.BatchGet<RingCentral.UserCallLogRecord>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

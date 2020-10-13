@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallParty> Post(RingCentral.TransferTarget transferTarget,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget, null, cancellationToken);
+            return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget, null, restRequestConfig);
         }
     }
 }

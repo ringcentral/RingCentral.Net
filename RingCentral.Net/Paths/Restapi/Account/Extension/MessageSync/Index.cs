@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
         /// User Permission: ReadMessages
         /// </summary>
         public async Task<RingCentral.GetMessageSyncResponse> Get(SyncMessagesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

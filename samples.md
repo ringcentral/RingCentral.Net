@@ -15,11 +15,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().List();
+    var result = await rc.Restapi().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetVersionsResponse](./RingCentral.Net/Definitions/GetVersionsResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersions) in API Explorer.
@@ -39,11 +39,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest);
+    var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest, restRequestConfig);
 }
 ```
 
 - Parameter `revokeTokenRequest` is of type [RevokeTokenRequest](./RingCentral.Net/Definitions/RevokeTokenRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-revokeToken) in API Explorer.
@@ -63,11 +64,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest);
+    var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest, restRequestConfig);
 }
 ```
 
 - Parameter `getTokenRequest` is of type [GetTokenRequest](./RingCentral.Net/Definitions/GetTokenRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [TokenInfo](./RingCentral.Net/Definitions/TokenInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-getToken) in API Explorer.
@@ -87,11 +89,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Get();
+    var result = await rc.Restapi(apiVersion).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetVersionResponse](./RingCentral.Net/Definitions/GetVersionResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -112,11 +114,11 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetAccountInfoResponse](./RingCentral.Net/Definitions/GetAccountInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -138,11 +140,12 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCompanyActiveCallsParameters` is of type [ListCompanyActiveCallsParameters](./RingCentral.Net/Definitions/ListCompanyActiveCallsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyActiveCallsResponse](./RingCentral.Net/Definitions/CompanyActiveCallsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -164,11 +167,12 @@ User Permission|`EditCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest, restRequestConfig);
 }
 ```
 
 - Parameter `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./RingCentral.Net/Definitions/CompanyAnsweringRuleRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyAnsweringRuleInfo](./RingCentral.Net/Definitions/CompanyAnsweringRuleInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -190,11 +194,12 @@ User Permission|`ReadCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCompanyAnsweringRulesParameters` is of type [ListCompanyAnsweringRulesParameters](./RingCentral.Net/Definitions/ListCompanyAnsweringRulesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyAnsweringRuleList](./RingCentral.Net/Definitions/CompanyAnsweringRuleList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -216,11 +221,11 @@ User Permission|`ReadCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyAnsweringRuleInfo](./RingCentral.Net/Definitions/CompanyAnsweringRuleInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -242,11 +247,12 @@ User Permission|`EditCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate, restRequestConfig);
 }
 ```
 
 - Parameter `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./RingCentral.Net/Definitions/CompanyAnsweringRuleUpdate.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyAnsweringRuleInfo](./RingCentral.Net/Definitions/CompanyAnsweringRuleInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -268,11 +274,11 @@ User Permission|`EditCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -294,11 +300,11 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AccountBusinessAddressResource](./RingCentral.Net/Definitions/AccountBusinessAddressResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -320,11 +326,12 @@ User Permission|`EditCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest, restRequestConfig);
 }
 ```
 
 - Parameter `modifyAccountBusinessAddressRequest` is of type [ModifyAccountBusinessAddressRequest](./RingCentral.Net/Definitions/ModifyAccountBusinessAddressRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AccountBusinessAddressResource](./RingCentral.Net/Definitions/AccountBusinessAddressResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -346,11 +353,11 @@ User Permission|`ReadUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyBusinessHours](./RingCentral.Net/Definitions/CompanyBusinessHours.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -372,11 +379,12 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest, restRequestConfig);
 }
 ```
 
 - Parameter `companyBusinessHoursUpdateRequest` is of type [CompanyBusinessHoursUpdateRequest](./RingCentral.Net/Definitions/CompanyBusinessHoursUpdateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyBusinessHours](./RingCentral.Net/Definitions/CompanyBusinessHours.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -398,11 +406,12 @@ User Permission|`FullCompanyCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./RingCentral.Net/Definitions/ReadCompanyCallLogParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AccountCallLogResponse](./RingCentral.Net/Definitions/AccountCallLogResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -424,11 +433,12 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters, restRequestConfig);
 }
 ```
 
 - Parameter `syncAccountCallLogParameters` is of type [SyncAccountCallLogParameters](./RingCentral.Net/Definitions/SyncAccountCallLogParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AccountCallLogSyncResponse](./RingCentral.Net/Definitions/AccountCallLogSyncResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -450,11 +460,12 @@ User Permission|`FullCompanyCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./RingCentral.Net/Definitions/ReadCompanyCallRecordParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyCallLogRecord](./RingCentral.Net/Definitions/CompanyCallLogRecord.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -476,11 +487,12 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./RingCentral.Net/Definitions/CreateCallMonitoringGroupRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallMonitoringGroup](./RingCentral.Net/Definitions/CallMonitoringGroup.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -502,11 +514,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCallMonitoringGroupsParameters` is of type [ListCallMonitoringGroupsParameters](./RingCentral.Net/Definitions/ListCallMonitoringGroupsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallMonitoringGroups](./RingCentral.Net/Definitions/CallMonitoringGroups.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -528,11 +541,12 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./RingCentral.Net/Definitions/CreateCallMonitoringGroupRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallMonitoringGroup](./RingCentral.Net/Definitions/CallMonitoringGroup.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -554,11 +568,11 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -580,11 +594,12 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign, restRequestConfig);
 }
 ```
 
 - Parameter `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./RingCentral.Net/Definitions/CallMonitoringBulkAssign.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -606,11 +621,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCallMonitoringGroupMembersParameters` is of type [ListCallMonitoringGroupMembersParameters](./RingCentral.Net/Definitions/ListCallMonitoringGroupMembersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallMonitoringGroupMemberList](./RingCentral.Net/Definitions/CallMonitoringGroupMemberList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -632,11 +648,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCallQueuesParameters` is of type [ListCallQueuesParameters](./RingCentral.Net/Definitions/ListCallQueuesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallQueues](./RingCentral.Net/Definitions/CallQueues.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -658,11 +675,11 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallQueueDetails](./RingCentral.Net/Definitions/CallQueueDetails.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -684,11 +701,12 @@ User Permission|`EditUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails, restRequestConfig);
 }
 ```
 
 - Parameter `callQueueUpdateDetails` is of type [CallQueueUpdateDetails](./RingCentral.Net/Definitions/CallQueueUpdateDetails.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallQueueDetails](./RingCentral.Net/Definitions/CallQueueDetails.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -710,11 +728,12 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource, restRequestConfig);
 }
 ```
 
 - Parameter `callQueueBulkAssignResource` is of type [CallQueueBulkAssignResource](./RingCentral.Net/Definitions/CallQueueBulkAssignResource.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -736,11 +755,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCallQueueMembersParameters` is of type [ListCallQueueMembersParameters](./RingCentral.Net/Definitions/ListCallQueueMembersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallQueueMembers](./RingCentral.Net/Definitions/CallQueueMembers.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -762,11 +782,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallQueuePresence](./RingCentral.Net/Definitions/CallQueuePresence.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -788,11 +808,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence, restRequestConfig);
 }
 ```
 
 - Parameter `callQueueUpdatePresence` is of type [CallQueueUpdatePresence](./RingCentral.Net/Definitions/CallQueueUpdatePresence.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallQueuePresence](./RingCentral.Net/Definitions/CallQueuePresence.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -814,11 +835,11 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallRecordingSettingsResource](./RingCentral.Net/Definitions/CallRecordingSettingsResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -840,11 +861,12 @@ User Permission|`EditCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource, restRequestConfig);
 }
 ```
 
 - Parameter `callRecordingSettingsResource` is of type [CallRecordingSettingsResource](./RingCentral.Net/Definitions/CallRecordingSettingsResource.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallRecordingSettingsResource](./RingCentral.Net/Definitions/CallRecordingSettingsResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -866,11 +888,12 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource, restRequestConfig);
 }
 ```
 
 - Parameter `bulkAccountCallRecordingsResource` is of type [BulkAccountCallRecordingsResource](./RingCentral.Net/Definitions/BulkAccountCallRecordingsResource.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -892,11 +915,12 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCallRecordingCustomGreetingsParameters` is of type [ListCallRecordingCustomGreetingsParameters](./RingCentral.Net/Definitions/ListCallRecordingCustomGreetingsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallRecordingCustomGreetings](./RingCentral.Net/Definitions/CallRecordingCustomGreetings.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -918,11 +942,11 @@ User Permission|`EditCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -944,11 +968,11 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallRecordingExtensions](./RingCentral.Net/Definitions/CallRecordingExtensions.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -970,11 +994,12 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest, restRequestConfig);
 }
 ```
 
 - Parameter `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./RingCentral.Net/Definitions/CustomFieldCreateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CustomFieldResource](./RingCentral.Net/Definitions/CustomFieldResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -996,11 +1021,11 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CustomFieldsResource](./RingCentral.Net/Definitions/CustomFieldsResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1022,11 +1047,12 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest, restRequestConfig);
 }
 ```
 
 - Parameter `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./RingCentral.Net/Definitions/CustomFieldUpdateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CustomFieldResource](./RingCentral.Net/Definitions/CustomFieldResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1048,11 +1074,11 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1074,11 +1100,12 @@ User Permission|`ReadCompanyDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readDeviceParameters` is of type [ReadDeviceParameters](./RingCentral.Net/Definitions/ReadDeviceParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetDeviceInfoResponse](./RingCentral.Net/Definitions/GetDeviceInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1100,12 +1127,13 @@ User Permission|`EditCompanyDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters, restRequestConfig);
 }
 ```
 
 - Parameter `accountDeviceUpdate` is of type [AccountDeviceUpdate](./RingCentral.Net/Definitions/AccountDeviceUpdate.cs)
 - Parameter `updateDeviceParameters` is of type [UpdateDeviceParameters](./RingCentral.Net/Definitions/UpdateDeviceParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetDeviceInfoResponse](./RingCentral.Net/Definitions/GetDeviceInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1127,11 +1155,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listDirectoryEntriesParameters` is of type [ListDirectoryEntriesParameters](./RingCentral.Net/Definitions/ListDirectoryEntriesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [DirectoryResource](./RingCentral.Net/Definitions/DirectoryResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1153,11 +1182,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest, restRequestConfig);
 }
 ```
 
 - Parameter `searchDirectoryEntriesRequest` is of type [SearchDirectoryEntriesRequest](./RingCentral.Net/Definitions/SearchDirectoryEntriesRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [DirectoryResource](./RingCentral.Net/Definitions/DirectoryResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1179,11 +1209,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ContactResource](./RingCentral.Net/Definitions/ContactResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1205,11 +1235,11 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [FederationResource](./RingCentral.Net/Definitions/FederationResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1231,11 +1261,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listDevicesAutomaticLocationUpdatesParameters` is of type [ListDevicesAutomaticLocationUpdatesParameters](./RingCentral.Net/Definitions/ListDevicesAutomaticLocationUpdatesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ListDevicesAutomaticLocationUpdates](./RingCentral.Net/Definitions/ListDevicesAutomaticLocationUpdates.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1257,11 +1288,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates, restRequestConfig);
 }
 ```
 
 - Parameter `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./RingCentral.Net/Definitions/AssignMultipleDevicesAutomaticLocationUpdates.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1283,11 +1315,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [NetworksList](./RingCentral.Net/Definitions/NetworksList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1309,11 +1341,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createNetworkRequest` is of type [CreateNetworkRequest](./RingCentral.Net/Definitions/CreateNetworkRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [NetworkInfo](./RingCentral.Net/Definitions/NetworkInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1335,11 +1368,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [NetworkInfo](./RingCentral.Net/Definitions/NetworkInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1361,11 +1394,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateNetworkRequest` is of type [UpdateNetworkRequest](./RingCentral.Net/Definitions/UpdateNetworkRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1387,11 +1421,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1413,11 +1447,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listAccountSwitchesParameters` is of type [ListAccountSwitchesParameters](./RingCentral.Net/Definitions/ListAccountSwitchesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SwitchesList](./RingCentral.Net/Definitions/SwitchesList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1439,11 +1474,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo, restRequestConfig);
 }
 ```
 
 - Parameter `createSwitchInfo` is of type [CreateSwitchInfo](./RingCentral.Net/Definitions/CreateSwitchInfo.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SwitchInfo](./RingCentral.Net/Definitions/SwitchInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1465,11 +1501,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./RingCentral.Net/Definitions/CreateMultipleSwitchesRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CreateMultipleSwitchesResponse](./RingCentral.Net/Definitions/CreateMultipleSwitchesResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1491,11 +1528,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateMultipleSwitchesRequest` is of type [UpdateMultipleSwitchesRequest](./RingCentral.Net/Definitions/UpdateMultipleSwitchesRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UpdateMultipleSwitchesResponse](./RingCentral.Net/Definitions/UpdateMultipleSwitchesResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1517,11 +1555,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest, restRequestConfig);
 }
 ```
 
 - Parameter `validateMultipleSwitchesRequest` is of type [ValidateMultipleSwitchesRequest](./RingCentral.Net/Definitions/ValidateMultipleSwitchesRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ValidateMultipleSwitchesResponse](./RingCentral.Net/Definitions/ValidateMultipleSwitchesResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1543,11 +1582,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SwitchInfo](./RingCentral.Net/Definitions/SwitchInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1569,11 +1608,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo, restRequestConfig);
 }
 ```
 
 - Parameter `updateSwitchInfo` is of type [UpdateSwitchInfo](./RingCentral.Net/Definitions/UpdateSwitchInfo.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SwitchInfo](./RingCentral.Net/Definitions/SwitchInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1595,11 +1635,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1621,11 +1661,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AutomaticLocationUpdatesTaskInfo](./RingCentral.Net/Definitions/AutomaticLocationUpdatesTaskInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1647,11 +1687,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./RingCentral.Net/Definitions/ListAutomaticLocationUpdatesUsersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AutomaticLocationUpdatesUserList](./RingCentral.Net/Definitions/AutomaticLocationUpdatesUserList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1673,11 +1714,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticLocationUpdatesUsers);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticLocationUpdatesUsers, restRequestConfig);
 }
 ```
 
 - Parameter `bulkAssignAutomaticLocationUpdatesUsers` is of type [BulkAssignAutomaticLocationUpdatesUsers](./RingCentral.Net/Definitions/BulkAssignAutomaticLocationUpdatesUsers.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1699,11 +1741,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listWirelessPointsParameters` is of type [ListWirelessPointsParameters](./RingCentral.Net/Definitions/ListWirelessPointsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [WirelessPointsList](./RingCentral.Net/Definitions/WirelessPointsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1725,11 +1768,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint, restRequestConfig);
 }
 ```
 
 - Parameter `createWirelessPoint` is of type [CreateWirelessPoint](./RingCentral.Net/Definitions/CreateWirelessPoint.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [WirelessPointInfo](./RingCentral.Net/Definitions/WirelessPointInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1751,11 +1795,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createMultipleWirelessPointsRequest` is of type [CreateMultipleWirelessPointsRequest](./RingCentral.Net/Definitions/CreateMultipleWirelessPointsRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CreateMultipleWirelessPointsResponse](./RingCentral.Net/Definitions/CreateMultipleWirelessPointsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1777,11 +1822,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateMultipleWirelessPointsRequest` is of type [UpdateMultipleWirelessPointsRequest](./RingCentral.Net/Definitions/UpdateMultipleWirelessPointsRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UpdateMultipleWirelessPointsResponse](./RingCentral.Net/Definitions/UpdateMultipleWirelessPointsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1803,11 +1849,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest, restRequestConfig);
 }
 ```
 
 - Parameter `validateMultipleWirelessPointsRequest` is of type [ValidateMultipleWirelessPointsRequest](./RingCentral.Net/Definitions/ValidateMultipleWirelessPointsRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ValidateMultipleWirelessPointsResponse](./RingCentral.Net/Definitions/ValidateMultipleWirelessPointsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1829,11 +1876,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [WirelessPointInfo](./RingCentral.Net/Definitions/WirelessPointInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1855,11 +1902,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint, restRequestConfig);
 }
 ```
 
 - Parameter `updateWirelessPoint` is of type [UpdateWirelessPoint](./RingCentral.Net/Definitions/UpdateWirelessPoint.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [WirelessPointInfo](./RingCentral.Net/Definitions/WirelessPointInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1881,11 +1929,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1907,11 +1955,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest, restRequestConfig);
 }
 ```
 
 - Parameter `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./RingCentral.Net/Definitions/EmergencyLocationInfoRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1933,11 +1982,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listEmergencyLocationsParameters` is of type [ListEmergencyLocationsParameters](./RingCentral.Net/Definitions/ListEmergencyLocationsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [EmergencyLocationList](./RingCentral.Net/Definitions/EmergencyLocationList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1959,11 +2009,11 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [EmergencyLocationInfo](./RingCentral.Net/Definitions/EmergencyLocationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -1985,11 +2035,12 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest, restRequestConfig);
 }
 ```
 
 - Parameter `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./RingCentral.Net/Definitions/EmergencyLocationInfoRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [EmergencyLocationInfo](./RingCentral.Net/Definitions/EmergencyLocationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2011,11 +2062,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listExtensionsParameters` is of type [ListExtensionsParameters](./RingCentral.Net/Definitions/ListExtensionsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetExtensionListResponse](./RingCentral.Net/Definitions/GetExtensionListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2037,11 +2089,12 @@ User Permission|`AddRemoveUsers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest, restRequestConfig);
 }
 ```
 
 - Parameter `extensionCreationRequest` is of type [ExtensionCreationRequest](./RingCentral.Net/Definitions/ExtensionCreationRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ExtensionCreationResponse](./RingCentral.Net/Definitions/ExtensionCreationResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2063,11 +2116,11 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetExtensionInfoResponse](./RingCentral.Net/Definitions/GetExtensionInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2090,11 +2143,12 @@ User Permission|`EditUserInfo OR EditUserCredentials`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest, restRequestConfig);
 }
 ```
 
 - Parameter `extensionUpdateRequest` is of type [ExtensionUpdateRequest](./RingCentral.Net/Definitions/ExtensionUpdateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetExtensionInfoResponse](./RingCentral.Net/Definitions/GetExtensionInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2117,11 +2171,12 @@ User Permission|`AddRemoveUsers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete(deleteExtensionParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete(deleteExtensionParameters, restRequestConfig);
 }
 ```
 
 - Parameter `deleteExtensionParameters` is of type [DeleteExtensionParameters](./RingCentral.Net/Definitions/DeleteExtensionParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2144,11 +2199,12 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listExtensionActiveCallsParameters` is of type [ListExtensionActiveCallsParameters](./RingCentral.Net/Definitions/ListExtensionActiveCallsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserActiveCallsResponse](./RingCentral.Net/Definitions/UserActiveCallsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2171,11 +2227,12 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters, restRequestConfig);
 }
 ```
 
 - Parameter `syncAddressBookParameters` is of type [SyncAddressBookParameters](./RingCentral.Net/Definitions/SyncAddressBookParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AddressBookSync](./RingCentral.Net/Definitions/AddressBookSync.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2198,11 +2255,12 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listContactsParameters` is of type [ListContactsParameters](./RingCentral.Net/Definitions/ListContactsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ContactList](./RingCentral.Net/Definitions/ContactList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2225,12 +2283,13 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters, restRequestConfig);
 }
 ```
 
 - Parameter `personalContactRequest` is of type [PersonalContactRequest](./RingCentral.Net/Definitions/PersonalContactRequest.cs)
 - Parameter `createContactParameters` is of type [CreateContactParameters](./RingCentral.Net/Definitions/CreateContactParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PersonalContactResource](./RingCentral.Net/Definitions/PersonalContactResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2253,11 +2312,11 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PersonalContactResource](./RingCentral.Net/Definitions/PersonalContactResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2280,12 +2339,13 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters, restRequestConfig);
 }
 ```
 
 - Parameter `personalContactRequest` is of type [PersonalContactRequest](./RingCentral.Net/Definitions/PersonalContactRequest.cs)
 - Parameter `updateContactParameters` is of type [UpdateContactParameters](./RingCentral.Net/Definitions/UpdateContactParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PersonalContactResource](./RingCentral.Net/Definitions/PersonalContactResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2308,11 +2368,11 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2335,11 +2395,12 @@ User Permission|`ReadUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listAnsweringRulesParameters` is of type [ListAnsweringRulesParameters](./RingCentral.Net/Definitions/ListAnsweringRulesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserAnsweringRuleList](./RingCentral.Net/Definitions/UserAnsweringRuleList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2362,11 +2423,12 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createAnsweringRuleRequest` is of type [CreateAnsweringRuleRequest](./RingCentral.Net/Definitions/CreateAnsweringRuleRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CustomAnsweringRuleInfo](./RingCentral.Net/Definitions/CustomAnsweringRuleInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2389,11 +2451,12 @@ User Permission|`ReadUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readAnsweringRuleParameters` is of type [ReadAnsweringRuleParameters](./RingCentral.Net/Definitions/ReadAnsweringRuleParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AnsweringRuleInfo](./RingCentral.Net/Definitions/AnsweringRuleInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2416,11 +2479,12 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateAnsweringRuleRequest` is of type [UpdateAnsweringRuleRequest](./RingCentral.Net/Definitions/UpdateAnsweringRuleRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AnsweringRuleInfo](./RingCentral.Net/Definitions/AnsweringRuleInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2443,11 +2507,11 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2470,11 +2534,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AuthProfileResource](./RingCentral.Net/Definitions/AuthProfileResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2497,11 +2561,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters, restRequestConfig);
 }
 ```
 
 - Parameter `checkUserPermissionParameters` is of type [CheckUserPermissionParameters](./RingCentral.Net/Definitions/CheckUserPermissionParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AuthProfileCheckResource](./RingCentral.Net/Definitions/AuthProfileCheckResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2524,11 +2589,11 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetUserBusinessHoursResponse](./RingCentral.Net/Definitions/GetUserBusinessHoursResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2551,11 +2616,12 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest, restRequestConfig);
 }
 ```
 
 - Parameter `userBusinessHoursUpdateRequest` is of type [UserBusinessHoursUpdateRequest](./RingCentral.Net/Definitions/UserBusinessHoursUpdateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserBusinessHoursUpdateResponse](./RingCentral.Net/Definitions/UserBusinessHoursUpdateResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2578,11 +2644,12 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readUserCallLogParameters` is of type [ReadUserCallLogParameters](./RingCentral.Net/Definitions/ReadUserCallLogParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserCallLogResponse](./RingCentral.Net/Definitions/UserCallLogResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2605,11 +2672,12 @@ User Permission|`EditCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters, restRequestConfig);
 }
 ```
 
 - Parameter `deleteUserCallLogParameters` is of type [DeleteUserCallLogParameters](./RingCentral.Net/Definitions/DeleteUserCallLogParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2632,11 +2700,12 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters, restRequestConfig);
 }
 ```
 
 - Parameter `syncUserCallLogParameters` is of type [SyncUserCallLogParameters](./RingCentral.Net/Definitions/SyncUserCallLogParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallLogSync](./RingCentral.Net/Definitions/CallLogSync.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2659,11 +2728,12 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readUserCallRecordParameters` is of type [ReadUserCallRecordParameters](./RingCentral.Net/Definitions/ReadUserCallRecordParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserCallLogRecord](./RingCentral.Net/Definitions/UserCallLogRecord.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2686,11 +2756,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readExtensionCallQueuePresenceParameters` is of type [ReadExtensionCallQueuePresenceParameters](./RingCentral.Net/Definitions/ReadExtensionCallQueuePresenceParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ExtensionCallQueuePresenceList](./RingCentral.Net/Definitions/ExtensionCallQueuePresenceList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2713,11 +2784,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList, restRequestConfig);
 }
 ```
 
 - Parameter `extensionCallQueueUpdatePresenceList` is of type [ExtensionCallQueueUpdatePresenceList](./RingCentral.Net/Definitions/ExtensionCallQueueUpdatePresenceList.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ExtensionCallQueuePresenceList](./RingCentral.Net/Definitions/ExtensionCallQueuePresenceList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2740,11 +2812,12 @@ User Permission|`JoinLeaveCallQueue`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues, restRequestConfig);
 }
 ```
 
 - Parameter `userCallQueues` is of type [UserCallQueues](./RingCentral.Net/Definitions/UserCallQueues.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserCallQueues](./RingCentral.Net/Definitions/UserCallQueues.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2767,11 +2840,11 @@ User Permission|`ReadBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallerBlockingSettings](./RingCentral.Net/Definitions/CallerBlockingSettings.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2794,11 +2867,12 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate, restRequestConfig);
 }
 ```
 
 - Parameter `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./RingCentral.Net/Definitions/CallerBlockingSettingsUpdate.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallerBlockingSettings](./RingCentral.Net/Definitions/CallerBlockingSettings.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2821,11 +2895,12 @@ User Permission|`ReadBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listBlockedAllowedNumbersParameters` is of type [ListBlockedAllowedNumbersParameters](./RingCentral.Net/Definitions/ListBlockedAllowedNumbersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [BlockedAllowedPhoneNumbersList](./RingCentral.Net/Definitions/BlockedAllowedPhoneNumbersList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2848,11 +2923,12 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber, restRequestConfig);
 }
 ```
 
 - Parameter `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./RingCentral.Net/Definitions/AddBlockedAllowedPhoneNumber.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./RingCentral.Net/Definitions/BlockedAllowedPhoneNumberInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2875,11 +2951,11 @@ User Permission|`ReadBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./RingCentral.Net/Definitions/BlockedAllowedPhoneNumberInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2902,11 +2978,11 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2929,11 +3005,12 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber, restRequestConfig);
 }
 ```
 
 - Parameter `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./RingCentral.Net/Definitions/AddBlockedAllowedPhoneNumber.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./RingCentral.Net/Definitions/BlockedAllowedPhoneNumberInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2956,11 +3033,11 @@ User Permission|`ReadCallerIDSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ExtensionCallerIdInfo](./RingCentral.Net/Definitions/ExtensionCallerIdInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -2983,11 +3060,12 @@ User Permission|`EditCallerIDSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfo, restRequestConfig);
 }
 ```
 
 - Parameter `extensionCallerIdInfo` is of type [ExtensionCallerIdInfo](./RingCentral.Net/Definitions/ExtensionCallerIdInfo.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ExtensionCallerIdInfo](./RingCentral.Net/Definitions/ExtensionCallerIdInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3010,11 +3088,12 @@ User Permission|`InternalSMS`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createInternalTextMessageRequest` is of type [CreateInternalTextMessageRequest](./RingCentral.Net/Definitions/CreateInternalTextMessageRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetInternalTextMessageInfoResponse](./RingCentral.Net/Definitions/GetInternalTextMessageInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3037,11 +3116,12 @@ User Permission|`OrganizeConference`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readConferencingSettingsParameters` is of type [ReadConferencingSettingsParameters](./RingCentral.Net/Definitions/ReadConferencingSettingsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetConferencingInfoResponse](./RingCentral.Net/Definitions/GetConferencingInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3064,11 +3144,12 @@ User Permission|`OrganizeConference`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateConferencingInfoRequest` is of type [UpdateConferencingInfoRequest](./RingCentral.Net/Definitions/UpdateConferencingInfoRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetConferencingInfoResponse](./RingCentral.Net/Definitions/GetConferencingInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3091,11 +3172,12 @@ User Permission|`ReadUserDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listExtensionDevicesParameters` is of type [ListExtensionDevicesParameters](./RingCentral.Net/Definitions/ListExtensionDevicesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetExtensionDevicesResponse](./RingCentral.Net/Definitions/GetExtensionDevicesResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3118,11 +3200,11 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [FavoriteContactList](./RingCentral.Net/Definitions/FavoriteContactList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3145,11 +3227,12 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection, restRequestConfig);
 }
 ```
 
 - Parameter `favoriteCollection` is of type [FavoriteCollection](./RingCentral.Net/Definitions/FavoriteCollection.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [FavoriteContactList](./RingCentral.Net/Definitions/FavoriteContactList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3172,11 +3255,12 @@ User Permission|`OutboundFaxes`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./RingCentral.Net/Definitions/CreateFaxMessageRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [FaxResponse](./RingCentral.Net/Definitions/FaxResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3199,11 +3283,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readUserFeaturesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readUserFeaturesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readUserFeaturesParameters` is of type [ReadUserFeaturesParameters](./RingCentral.Net/Definitions/ReadUserFeaturesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [FeatureList](./RingCentral.Net/Definitions/FeatureList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3226,11 +3311,12 @@ User Permission|`ReadUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listForwardingNumbersParameters` is of type [ListForwardingNumbersParameters](./RingCentral.Net/Definitions/ListForwardingNumbersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetExtensionForwardingNumberListResponse](./RingCentral.Net/Definitions/GetExtensionForwardingNumberListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3253,11 +3339,12 @@ User Permission|`EditUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createForwardingNumberRequest` is of type [CreateForwardingNumberRequest](./RingCentral.Net/Definitions/CreateForwardingNumberRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ForwardingNumberInfo](./RingCentral.Net/Definitions/ForwardingNumberInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3280,11 +3367,11 @@ User Permission|`ReadUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ForwardingNumberInfo](./RingCentral.Net/Definitions/ForwardingNumberInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3307,11 +3394,12 @@ User Permission|`EditUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateForwardingNumberRequest` is of type [UpdateForwardingNumberRequest](./RingCentral.Net/Definitions/UpdateForwardingNumberRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ForwardingNumberInfo](./RingCentral.Net/Definitions/ForwardingNumberInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3334,11 +3422,11 @@ User Permission|`EditUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3361,11 +3449,12 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listExtensionGrantsParameters` is of type [ListExtensionGrantsParameters](./RingCentral.Net/Definitions/ListExtensionGrantsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetExtensionGrantListResponse](./RingCentral.Net/Definitions/GetExtensionGrantListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3388,12 +3477,13 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest, createCustomUserGreetingParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest, createCustomUserGreetingParameters, restRequestConfig);
 }
 ```
 
 - Parameter `createCustomUserGreetingRequest` is of type [CreateCustomUserGreetingRequest](./RingCentral.Net/Definitions/CreateCustomUserGreetingRequest.cs)
 - Parameter `createCustomUserGreetingParameters` is of type [CreateCustomUserGreetingParameters](./RingCentral.Net/Definitions/CreateCustomUserGreetingParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CustomUserGreetingInfo](./RingCentral.Net/Definitions/CustomUserGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3416,11 +3506,11 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CustomUserGreetingInfo](./RingCentral.Net/Definitions/CustomUserGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3443,11 +3533,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MeetingsResource](./RingCentral.Net/Definitions/MeetingsResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3470,11 +3560,12 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource, restRequestConfig);
 }
 ```
 
 - Parameter `meetingRequestResource` is of type [MeetingRequestResource](./RingCentral.Net/Definitions/MeetingRequestResource.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MeetingResponseResource](./RingCentral.Net/Definitions/MeetingResponseResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3497,11 +3588,12 @@ User Permission|`MeetingsRecordings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./RingCentral.Net/Definitions/ListUserMeetingRecordingsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ListMeetingRecordingsResponse](./RingCentral.Net/Definitions/ListMeetingRecordingsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3524,11 +3616,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MeetingServiceInfoResource](./RingCentral.Net/Definitions/MeetingServiceInfoResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3551,11 +3643,12 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest, restRequestConfig);
 }
 ```
 
 - Parameter `meetingServiceInfoRequest` is of type [MeetingServiceInfoRequest](./RingCentral.Net/Definitions/MeetingServiceInfoRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MeetingServiceInfoResource](./RingCentral.Net/Definitions/MeetingServiceInfoResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3578,11 +3671,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().UserSettings().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().UserSettings().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MeetingUserSettingsResponse](./RingCentral.Net/Definitions/MeetingUserSettingsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3605,11 +3698,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MeetingResponseResource](./RingCentral.Net/Definitions/MeetingResponseResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3632,11 +3725,12 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource, restRequestConfig);
 }
 ```
 
 - Parameter `meetingRequestResource` is of type [MeetingRequestResource](./RingCentral.Net/Definitions/MeetingRequestResource.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MeetingResponseResource](./RingCentral.Net/Definitions/MeetingResponseResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3659,11 +3753,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3686,11 +3780,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3713,11 +3807,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Invitation().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Invitation().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PublicMeetingInvitationResponse](./RingCentral.Net/Definitions/PublicMeetingInvitationResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3740,11 +3834,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AssistantsResource](./RingCentral.Net/Definitions/AssistantsResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3767,11 +3861,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AssistedUsersResource](./RingCentral.Net/Definitions/AssistedUsersResource.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3794,11 +3888,12 @@ User Permission|`ReadMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listMessagesParameters` is of type [ListMessagesParameters](./RingCentral.Net/Definitions/ListMessagesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetMessageList](./RingCentral.Net/Definitions/GetMessageList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3821,11 +3916,11 @@ User Permission|`ReadMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetMessageInfoResponse](./RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3848,12 +3943,13 @@ User Permission|`EditMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest, updateMessageParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest, updateMessageParameters, restRequestConfig);
 }
 ```
 
 - Parameter `updateMessageRequest` is of type [UpdateMessageRequest](./RingCentral.Net/Definitions/UpdateMessageRequest.cs)
 - Parameter `updateMessageParameters` is of type [UpdateMessageParameters](./RingCentral.Net/Definitions/UpdateMessageParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetMessageInfoResponse](./RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3876,11 +3972,12 @@ User Permission|`EditMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters, restRequestConfig);
 }
 ```
 
 - Parameter `deleteMessageParameters` is of type [DeleteMessageParameters](./RingCentral.Net/Definitions/DeleteMessageParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3903,11 +4000,12 @@ User Permission|`ReadMessageContent`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readMessageContentParameters` is of type [ReadMessageContentParameters](./RingCentral.Net/Definitions/ReadMessageContentParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type `byte[]`
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3934,11 +4032,12 @@ User Permission|`ReadMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `syncMessagesParameters` is of type [SyncMessagesParameters](./RingCentral.Net/Definitions/SyncMessagesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetMessageSyncResponse](./RingCentral.Net/Definitions/GetMessageSyncResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3961,11 +4060,12 @@ User Permission|`OutboundSMS`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMmsMessage);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMmsMessage, restRequestConfig);
 }
 ```
 
 - Parameter `createMmsMessage` is of type [CreateMMSMessage](./RingCentral.Net/Definitions/CreateMMSMessage.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetSMSMessageInfoResponse](./RingCentral.Net/Definitions/GetSMSMessageInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -3988,11 +4088,11 @@ User Permission|`ReadMessagesNotificationsSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [NotificationSettings](./RingCentral.Net/Definitions/NotificationSettings.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4015,11 +4115,12 @@ User Permission|`EditMessagesNotificationsSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest, restRequestConfig);
 }
 ```
 
 - Parameter `notificationSettingsUpdateRequest` is of type [NotificationSettingsUpdateRequest](./RingCentral.Net/Definitions/NotificationSettingsUpdateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [NotificationSettings](./RingCentral.Net/Definitions/NotificationSettings.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4042,11 +4143,12 @@ User Permission|`ReadUserPhoneNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listExtensionPhoneNumbersParameters` is of type [ListExtensionPhoneNumbersParameters](./RingCentral.Net/Definitions/ListExtensionPhoneNumbersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetExtensionPhoneNumbersResponse](./RingCentral.Net/Definitions/GetExtensionPhoneNumbersResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4069,11 +4171,12 @@ User Permission|`ReadPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readUserPresenceStatusParameters` is of type [ReadUserPresenceStatusParameters](./RingCentral.Net/Definitions/ReadUserPresenceStatusParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetPresenceInfo](./RingCentral.Net/Definitions/GetPresenceInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4096,11 +4199,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoResource);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoResource, restRequestConfig);
 }
 ```
 
 - Parameter `presenceInfoResource` is of type [PresenceInfoResource](./RingCentral.Net/Definitions/PresenceInfoResource.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PresenceInfoResponse](./RingCentral.Net/Definitions/PresenceInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4123,11 +4227,11 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type `byte[]`
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4154,11 +4258,12 @@ User Permission|`EditUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createUserProfileImageRequest` is of type [CreateUserProfileImageRequest](./RingCentral.Net/Definitions/CreateUserProfileImageRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4181,11 +4286,12 @@ User Permission|`EditUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateUserProfileImageRequest` is of type [UpdateUserProfileImageRequest](./RingCentral.Net/Definitions/UpdateUserProfileImageRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4208,11 +4314,11 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type `byte[]`
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4239,11 +4345,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest, restRequestConfig);
 }
 ```
 
 - Parameter `makeRingOutRequest` is of type [MakeRingOutRequest](./RingCentral.Net/Definitions/MakeRingOutRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetRingOutStatusResponse](./RingCentral.Net/Definitions/GetRingOutStatusResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4266,11 +4373,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetRingOutStatusResponse](./RingCentral.Net/Definitions/GetRingOutStatusResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4293,11 +4400,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4320,11 +4427,12 @@ User Permission|`OutboundSMS`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSmsMessage);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSmsMessage, restRequestConfig);
 }
 ```
 
 - Parameter `createSmsMessage` is of type [CreateSMSMessage](./RingCentral.Net/Definitions/CreateSMSMessage.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetSMSMessageInfoResponse](./RingCentral.Net/Definitions/GetSMSMessageInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4347,11 +4455,11 @@ User Permission|`ReadPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UnifiedPresence](./RingCentral.Net/Definitions/UnifiedPresence.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4374,11 +4482,12 @@ User Permission|`EditPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence, restRequestConfig);
 }
 ```
 
 - Parameter `updateUnifiedPresence` is of type [UpdateUnifiedPresence](./RingCentral.Net/Definitions/UpdateUnifiedPresence.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UnifiedPresence](./RingCentral.Net/Definitions/UnifiedPresence.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4401,11 +4510,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserVideoConfiguration](./RingCentral.Net/Definitions/UserVideoConfiguration.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4428,11 +4537,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Put(userVideoConfiguration);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Put(userVideoConfiguration, restRequestConfig);
 }
 ```
 
 - Parameter `userVideoConfiguration` is of type [UserVideoConfiguration](./RingCentral.Net/Definitions/UserVideoConfiguration.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserVideoConfiguration](./RingCentral.Net/Definitions/UserVideoConfiguration.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4455,11 +4565,12 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./RingCentral.Net/Definitions/CreateCompanyGreetingRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CustomCompanyGreetingInfo](./RingCentral.Net/Definitions/CustomCompanyGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4481,11 +4592,12 @@ User Permission|`AutoReceptionist`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(ivrMenuInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(ivrMenuInfo, restRequestConfig);
 }
 ```
 
 - Parameter `ivrMenuInfo` is of type [IVRMenuInfo](./RingCentral.Net/Definitions/IVRMenuInfo.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [IVRMenuInfo](./RingCentral.Net/Definitions/IVRMenuInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4507,11 +4619,11 @@ User Permission|`AutoReceptionist`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [IVRMenuInfo](./RingCentral.Net/Definitions/IVRMenuInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4533,11 +4645,12 @@ User Permission|`AutoReceptionist`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(ivrMenuInfo);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(ivrMenuInfo, restRequestConfig);
 }
 ```
 
 - Parameter `ivrMenuInfo` is of type [IVRMenuInfo](./RingCentral.Net/Definitions/IVRMenuInfo.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [IVRMenuInfo](./RingCentral.Net/Definitions/IVRMenuInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4559,11 +4672,12 @@ User Permission|`EditCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIvrPromptRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIvrPromptRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createIvrPromptRequest` is of type [CreateIvrPromptRequest](./RingCentral.Net/Definitions/CreateIvrPromptRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PromptInfo](./RingCentral.Net/Definitions/PromptInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4585,11 +4699,11 @@ User Permission|`ReadCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [IVRPrompts](./RingCentral.Net/Definitions/IVRPrompts.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4611,11 +4725,11 @@ User Permission|`ReadCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PromptInfo](./RingCentral.Net/Definitions/PromptInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4637,11 +4751,11 @@ User Permission|`EditCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4663,11 +4777,12 @@ User Permission|`EditCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIvrPromptRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIvrPromptRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateIvrPromptRequest` is of type [UpdateIVRPromptRequest](./RingCentral.Net/Definitions/UpdateIVRPromptRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PromptInfo](./RingCentral.Net/Definitions/PromptInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4689,11 +4804,11 @@ User Permission|`ReadCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type `byte[]`
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4719,11 +4834,12 @@ User Permission|`MeetingsRecordings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./RingCentral.Net/Definitions/ListAccountMeetingRecordingsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ListMeetingRecordingsResponse](./RingCentral.Net/Definitions/ListMeetingRecordingsResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4745,11 +4861,11 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Meeting().LockedSettings().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Meeting().LockedSettings().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AccountLockedSettingResponse](./RingCentral.Net/Definitions/AccountLockedSettingResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4771,11 +4887,11 @@ User Permission|`AccountAdministration`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MessageStoreConfiguration](./RingCentral.Net/Definitions/MessageStoreConfiguration.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4797,11 +4913,12 @@ User Permission|`AccountAdministration`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration, restRequestConfig);
 }
 ```
 
 - Parameter `messageStoreConfiguration` is of type [MessageStoreConfiguration](./RingCentral.Net/Definitions/MessageStoreConfiguration.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MessageStoreConfiguration](./RingCentral.Net/Definitions/MessageStoreConfiguration.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4823,11 +4940,12 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createMessageStoreReportRequest` is of type [CreateMessageStoreReportRequest](./RingCentral.Net/Definitions/CreateMessageStoreReportRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MessageStoreReport](./RingCentral.Net/Definitions/MessageStoreReport.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4849,11 +4967,11 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MessageStoreReport](./RingCentral.Net/Definitions/MessageStoreReport.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4875,11 +4993,11 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [MessageStoreReportArchive](./RingCentral.Net/Definitions/MessageStoreReportArchive.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4901,11 +5019,11 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4927,11 +5045,12 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest, restRequestConfig);
 }
 ```
 
 - Parameter `editPagingGroupRequest` is of type [EditPagingGroupRequest](./RingCentral.Net/Definitions/EditPagingGroupRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4953,11 +5072,12 @@ User Permission|`ReadCompanyDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listPagingGroupDevicesParameters` is of type [ListPagingGroupDevicesParameters](./RingCentral.Net/Definitions/ListPagingGroupDevicesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PagingOnlyGroupDevices](./RingCentral.Net/Definitions/PagingOnlyGroupDevices.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -4979,11 +5099,12 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listPagingGroupUsersParameters` is of type [ListPagingGroupUsersParameters](./RingCentral.Net/Definitions/ListPagingGroupUsersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PagingOnlyGroupUsers](./RingCentral.Net/Definitions/PagingOnlyGroupUsers.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5005,11 +5126,12 @@ User Permission|`ReadCompanyPhoneNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listAccountPhoneNumbersParameters` is of type [ListAccountPhoneNumbersParameters](./RingCentral.Net/Definitions/ListAccountPhoneNumbersParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AccountPhoneNumbers](./RingCentral.Net/Definitions/AccountPhoneNumbers.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5031,11 +5153,11 @@ User Permission|`ReadCompanyPhoneNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CompanyPhoneNumberInfo](./RingCentral.Net/Definitions/CompanyPhoneNumberInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5057,11 +5179,12 @@ User Permission|`ReadPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./RingCentral.Net/Definitions/ReadAccountPresenceParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [AccountPresenceInfo](./RingCentral.Net/Definitions/AccountPresenceInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5083,11 +5206,11 @@ User Permission|`ReadCallRecording`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetCallRecordingResponse](./RingCentral.Net/Definitions/GetCallRecordingResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5109,11 +5232,11 @@ User Permission|`ReadCallRecording`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type `byte[]`
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5139,11 +5262,11 @@ User Permission|`ReadServicePlanInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetServiceInfoResponse](./RingCentral.Net/Definitions/GetServiceInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5165,11 +5288,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest, restRequestConfig);
 }
 ```
 
 - Parameter `makeCallOutRequest` is of type [MakeCallOutRequest](./RingCentral.Net/Definitions/MakeCallOutRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallSession](./RingCentral.Net/Definitions/CallSession.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5191,11 +5315,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Conference().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Conference().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallSessionObject](./RingCentral.Net/Definitions/CallSessionObject.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5217,11 +5341,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./RingCentral.Net/Definitions/ReadCallSessionStatusParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallSession](./RingCentral.Net/Definitions/CallSession.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5243,11 +5368,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5269,11 +5394,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().BringIn().Post(addPartyRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().BringIn().Post(addPartyRequest, restRequestConfig);
 }
 ```
 
 - Parameter `addPartyRequest` is of type [AddPartyRequest](./RingCentral.Net/Definitions/AddPartyRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5295,11 +5421,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5321,11 +5447,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5347,11 +5473,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest, restRequestConfig);
 }
 ```
 
 - Parameter `partyUpdateRequest` is of type [PartyUpdateRequest](./RingCentral.Net/Definitions/PartyUpdateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5373,11 +5500,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget, restRequestConfig);
 }
 ```
 
 - Parameter `answerTarget` is of type [AnswerTarget](./RingCentral.Net/Definitions/AnswerTarget.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5399,11 +5527,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Bridge().Post(bridgeTargetRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Bridge().Post(bridgeTargetRequest, restRequestConfig);
 }
 ```
 
 - Parameter `bridgeTargetRequest` is of type [BridgeTargetRequest](./RingCentral.Net/Definitions/BridgeTargetRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5425,11 +5554,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip, restRequestConfig);
 }
 ```
 
 - Parameter `callPartyFlip` is of type [CallPartyFlip](./RingCentral.Net/Definitions/CallPartyFlip.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5451,11 +5581,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget, restRequestConfig);
 }
 ```
 
 - Parameter `forwardTarget` is of type [ForwardTarget](./RingCentral.Net/Definitions/ForwardTarget.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5477,11 +5608,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5503,11 +5634,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody, restRequestConfig);
 }
 ```
 
 - Parameter `ignoreRequestBody` is of type [IgnoreRequestBody](./RingCentral.Net/Definitions/IgnoreRequestBody.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5529,11 +5661,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5555,11 +5687,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget, restRequestConfig);
 }
 ```
 
 - Parameter `pickupTarget` is of type [PickupTarget](./RingCentral.Net/Definitions/PickupTarget.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5581,11 +5714,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5607,12 +5740,13 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters, restRequestConfig);
 }
 ```
 
 - Parameter `callRecordingUpdate` is of type [CallRecordingUpdate](./RingCentral.Net/Definitions/CallRecordingUpdate.cs)
 - Parameter `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./RingCentral.Net/Definitions/PauseResumeCallRecordingParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallRecording](./RingCentral.Net/Definitions/CallRecording.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5634,11 +5768,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5660,11 +5794,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply, restRequestConfig);
 }
 ```
 
 - Parameter `callPartyReply` is of type [CallPartyReply](./RingCentral.Net/Definitions/CallPartyReply.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ReplyParty](./RingCentral.Net/Definitions/ReplyParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5686,11 +5821,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest, restRequestConfig);
 }
 ```
 
 - Parameter `partySuperviseRequest` is of type [PartySuperviseRequest](./RingCentral.Net/Definitions/PartySuperviseRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [PartySuperviseResponse](./RingCentral.Net/Definitions/PartySuperviseResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5712,11 +5848,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget, restRequestConfig);
 }
 ```
 
 - Parameter `transferTarget` is of type [TransferTarget](./RingCentral.Net/Definitions/TransferTarget.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5738,11 +5875,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CallParty](./RingCentral.Net/Definitions/CallParty.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5764,11 +5901,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest, restRequestConfig);
 }
 ```
 
 - Parameter `superviseCallSessionRequest` is of type [SuperviseCallSessionRequest](./RingCentral.Net/Definitions/SuperviseCallSessionRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SuperviseCallSession](./RingCentral.Net/Definitions/SuperviseCallSession.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5790,11 +5928,12 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./RingCentral.Net/Definitions/ListUserTemplatesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserTemplates](./RingCentral.Net/Definitions/UserTemplates.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5816,11 +5955,11 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get();
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [TemplateInfo](./RingCentral.Net/Definitions/TemplateInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -5842,11 +5981,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest);
+    var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createSipRegistrationRequest` is of type [CreateSipRegistrationRequest](./RingCentral.Net/Definitions/CreateSipRegistrationRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [CreateSipRegistrationResponse](./RingCentral.Net/Definitions/CreateSipRegistrationResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -5867,11 +6007,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listCountriesParameters` is of type [ListCountriesParameters](./RingCentral.Net/Definitions/ListCountriesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetCountryListResponse](./RingCentral.Net/Definitions/GetCountryListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -5892,11 +6033,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
+    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetCountryInfoDictionaryResponse](./RingCentral.Net/Definitions/GetCountryInfoDictionaryResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -5917,11 +6058,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listFaxCoverPagesParameters` is of type [ListFaxCoverPagesParameters](./RingCentral.Net/Definitions/ListFaxCoverPagesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ListFaxCoverPagesResponse](./RingCentral.Net/Definitions/ListFaxCoverPagesResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -5942,11 +6084,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listStandardGreetingsParameters` is of type [ListStandardGreetingsParameters](./RingCentral.Net/Definitions/ListStandardGreetingsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [DictionaryGreetingList](./RingCentral.Net/Definitions/DictionaryGreetingList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -5967,11 +6110,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [DictionaryGreetingInfo](./RingCentral.Net/Definitions/DictionaryGreetingInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -5992,11 +6135,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
+    var result = await rc.Restapi(apiVersion).Dictionary().Language().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [LanguageList](./RingCentral.Net/Definitions/LanguageList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6017,11 +6160,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
+    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [LanguageInfo](./RingCentral.Net/Definitions/LanguageInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6042,11 +6185,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listLocationsParameters` is of type [ListLocationsParameters](./RingCentral.Net/Definitions/ListLocationsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetLocationListResponse](./RingCentral.Net/Definitions/GetLocationListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6067,11 +6211,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listStatesParameters` is of type [ListStatesParameters](./RingCentral.Net/Definitions/ListStatesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetStateListResponse](./RingCentral.Net/Definitions/GetStateListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6092,11 +6237,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get();
+    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetStateInfoResponse](./RingCentral.Net/Definitions/GetStateInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6117,11 +6262,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listTimezonesParameters` is of type [ListTimezonesParameters](./RingCentral.Net/Definitions/ListTimezonesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetTimezoneListResponse](./RingCentral.Net/Definitions/GetTimezoneListResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6142,11 +6288,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readTimezoneParameters` is of type [ReadTimezoneParameters](./RingCentral.Net/Definitions/ReadTimezoneParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetTimezoneInfoResponse](./RingCentral.Net/Definitions/GetTimezoneInfoResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6167,11 +6314,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listGlipChatsParameters` is of type [ListGlipChatsParameters](./RingCentral.Net/Definitions/ListGlipChatsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipChatsList](./RingCentral.Net/Definitions/GlipChatsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6192,11 +6340,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipChatInfo](./RingCentral.Net/Definitions/GlipChatInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6217,11 +6365,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6242,11 +6390,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Post(glipNoteCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Post(glipNoteCreate, restRequestConfig);
 }
 ```
 
 - Parameter `glipNoteCreate` is of type [GlipNoteCreate](./RingCentral.Net/Definitions/GlipNoteCreate.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6267,11 +6416,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Get(listChatNotesParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Get(listChatNotesParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listChatNotesParameters` is of type [ListChatNotesParameters](./RingCentral.Net/Definitions/ListChatNotesParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipNotesInfo](./RingCentral.Net/Definitions/GlipNotesInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6292,11 +6442,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./RingCentral.Net/Definitions/ReadGlipPostsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPostsList](./RingCentral.Net/Definitions/GlipPostsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6317,11 +6468,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6342,11 +6493,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6367,11 +6518,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody, restRequestConfig);
 }
 ```
 
 - Parameter `glipPatchPostBody` is of type [GlipPatchPostBody](./RingCentral.Net/Definitions/GlipPatchPostBody.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6392,11 +6544,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6417,11 +6569,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6442,11 +6594,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Get(listChatTasksParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Get(listChatTasksParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listChatTasksParameters` is of type [ListChatTasksParameters](./RingCentral.Net/Definitions/ListChatTasksParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTaskList](./RingCentral.Net/Definitions/GlipTaskList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6467,11 +6620,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Post(glipCreateTask);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Post(glipCreateTask, restRequestConfig);
 }
 ```
 
 - Parameter `glipCreateTask` is of type [GlipCreateTask](./RingCentral.Net/Definitions/GlipCreateTask.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTaskInfo](./RingCentral.Net/Definitions/GlipTaskInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6492,11 +6646,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6517,11 +6671,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6542,11 +6696,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipCompany](./RingCentral.Net/Definitions/GlipCompany.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6567,11 +6721,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listGlipConversationsParameters` is of type [ListGlipConversationsParameters](./RingCentral.Net/Definitions/ListGlipConversationsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipConversationsList](./RingCentral.Net/Definitions/GlipConversationsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6592,11 +6747,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createGlipConversationRequest` is of type [CreateGlipConversationRequest](./RingCentral.Net/Definitions/CreateGlipConversationRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipConversationInfo](./RingCentral.Net/Definitions/GlipConversationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6617,11 +6773,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipConversationInfo](./RingCentral.Net/Definitions/GlipConversationInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6642,11 +6798,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./RingCentral.Net/Definitions/CreateDataExportTaskRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [DataExportTask](./RingCentral.Net/Definitions/DataExportTask.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6667,11 +6824,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().List(listDataExportTasksParameters);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport().List(listDataExportTasksParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listDataExportTasksParameters` is of type [ListDataExportTasksParameters](./RingCentral.Net/Definitions/ListDataExportTasksParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [DataExportTaskList](./RingCentral.Net/Definitions/DataExportTaskList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6692,11 +6850,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [DataExportTask](./RingCentral.Net/Definitions/DataExportTask.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6717,11 +6875,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type `byte[]`
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6746,11 +6904,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./RingCentral.Net/Definitions/ReadGlipEventsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEventsInfo](./RingCentral.Net/Definitions/GlipEventsInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6771,11 +6930,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate, restRequestConfig);
 }
 ```
 
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./RingCentral.Net/Definitions/GlipEventCreate.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6796,11 +6956,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6821,11 +6981,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate, restRequestConfig);
 }
 ```
 
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./RingCentral.Net/Definitions/GlipEventCreate.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6846,11 +7007,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete();
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6871,11 +7032,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().Get();
+    var result = await rc.Restapi(apiVersion).Glip().Everyone().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEveryoneInfo](./RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6896,11 +7057,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest);
+    var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest, restRequestConfig);
 }
 ```
 
 - Parameter `updateGlipEveryoneRequest` is of type [UpdateGlipEveryoneRequest](./RingCentral.Net/Definitions/UpdateGlipEveryoneRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEveryoneInfo](./RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6921,11 +7083,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listFavoriteChatsParameters` is of type [ListFavoriteChatsParameters](./RingCentral.Net/Definitions/ListFavoriteChatsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipChatsListWithoutNavigation](./RingCentral.Net/Definitions/GlipChatsListWithoutNavigation.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6946,11 +7109,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate, restRequestConfig);
 }
 ```
 
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./RingCentral.Net/Definitions/GlipEventCreate.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6971,11 +7135,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get();
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipEventInfo](./RingCentral.Net/Definitions/GlipEventInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -6996,11 +7160,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().Post(glipCreatePost);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Posts().Post(glipCreatePost, restRequestConfig);
 }
 ```
 
 - Parameter `glipCreatePost` is of type [GlipCreatePost](./RingCentral.Net/Definitions/GlipCreatePost.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7021,11 +7186,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipWebhookInfo](./RingCentral.Net/Definitions/GlipWebhookInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7046,11 +7211,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get();
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipWebhookList](./RingCentral.Net/Definitions/GlipWebhookList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7071,11 +7236,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GetGlipNoteInfo](./RingCentral.Net/Definitions/GetGlipNoteInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7096,11 +7261,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate, restRequestConfig);
 }
 ```
 
 - Parameter `glipNoteCreate` is of type [GlipNoteCreate](./RingCentral.Net/Definitions/GlipNoteCreate.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipNoteInfo](./RingCentral.Net/Definitions/GlipNoteInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7121,11 +7287,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7146,11 +7312,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7171,11 +7337,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7196,11 +7362,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7221,11 +7387,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPersonInfo](./RingCentral.Net/Definitions/GlipPersonInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7246,11 +7412,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Preferences().Get();
+    var result = await rc.Restapi(apiVersion).Glip().Preferences().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPreferencesInfo](./RingCentral.Net/Definitions/GlipPreferencesInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7271,11 +7437,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listRecentChatsParameters` is of type [ListRecentChatsParameters](./RingCentral.Net/Definitions/ListRecentChatsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipChatsListWithoutNavigation](./RingCentral.Net/Definitions/GlipChatsListWithoutNavigation.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7296,11 +7463,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTaskInfo](./RingCentral.Net/Definitions/GlipTaskInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7321,11 +7488,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Patch(glipUpdateTask);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Patch(glipUpdateTask, restRequestConfig);
 }
 ```
 
 - Parameter `glipUpdateTask` is of type [GlipUpdateTask](./RingCentral.Net/Definitions/GlipUpdateTask.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTaskList](./RingCentral.Net/Definitions/GlipTaskList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7346,11 +7514,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Delete();
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7371,11 +7539,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().Post(glipCompleteTask);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().Post(glipCompleteTask, restRequestConfig);
 }
 ```
 
 - Parameter `glipCompleteTask` is of type [GlipCompleteTask](./RingCentral.Net/Definitions/GlipCompleteTask.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7396,11 +7565,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters);
+    var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters, restRequestConfig);
 }
 ```
 
 - Parameter `listGlipTeamsParameters` is of type [ListGlipTeamsParameters](./RingCentral.Net/Definitions/ListGlipTeamsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTeamsList](./RingCentral.Net/Definitions/GlipTeamsList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7421,11 +7591,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody, restRequestConfig);
 }
 ```
 
 - Parameter `glipPostTeamBody` is of type [GlipPostTeamBody](./RingCentral.Net/Definitions/GlipPostTeamBody.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7446,11 +7617,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7471,11 +7642,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody, restRequestConfig);
 }
 ```
 
 - Parameter `glipPatchTeamBody` is of type [GlipPatchTeamBody](./RingCentral.Net/Definitions/GlipPatchTeamBody.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipTeamInfo](./RingCentral.Net/Definitions/GlipTeamInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7496,11 +7668,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7521,11 +7693,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody, restRequestConfig);
 }
 ```
 
 - Parameter `glipPostMembersListBody` is of type [GlipPostMembersListBody](./RingCentral.Net/Definitions/GlipPostMembersListBody.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7546,11 +7719,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7571,11 +7744,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7596,11 +7769,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7621,11 +7794,12 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody, restRequestConfig);
 }
 ```
 
 - Parameter `glipPostMembersIdsListBody` is of type [GlipPostMembersIdsListBody](./RingCentral.Net/Definitions/GlipPostMembersIdsListBody.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7646,11 +7820,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7671,11 +7845,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks().List();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipWebhookList](./RingCentral.Net/Definitions/GlipWebhookList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7696,11 +7870,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipWebhookList](./RingCentral.Net/Definitions/GlipWebhookList.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7721,11 +7895,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7746,11 +7920,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7771,11 +7945,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post();
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7796,12 +7970,13 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
+    var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters, restRequestConfig);
 }
 ```
 
 - Parameter `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./RingCentral.Net/Definitions/ParsePhoneNumberRequest.cs)
 - Parameter `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./RingCentral.Net/Definitions/ParsePhoneNumberParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ParsePhoneNumberResponse](./RingCentral.Net/Definitions/ParsePhoneNumberResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7822,11 +7997,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().List();
+    var result = await rc.Restapi(apiVersion).Subscription().List(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [RecordsCollectionResourceSubscriptionResponse](./RingCentral.Net/Definitions/RecordsCollectionResourceSubscriptionResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7847,11 +8022,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest);
+    var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest, restRequestConfig);
 }
 ```
 
 - Parameter `createSubscriptionRequest` is of type [CreateSubscriptionRequest](./RingCentral.Net/Definitions/CreateSubscriptionRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SubscriptionInfo](./RingCentral.Net/Definitions/SubscriptionInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7872,11 +8048,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get();
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SubscriptionInfo](./RingCentral.Net/Definitions/SubscriptionInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7897,12 +8073,13 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest, updateSubscriptionParameters);
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest, updateSubscriptionParameters, restRequestConfig);
 }
 ```
 
 - Parameter `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./RingCentral.Net/Definitions/ModifySubscriptionRequest.cs)
 - Parameter `updateSubscriptionParameters` is of type [UpdateSubscriptionParameters](./RingCentral.Net/Definitions/UpdateSubscriptionParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SubscriptionInfo](./RingCentral.Net/Definitions/SubscriptionInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7923,11 +8100,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete();
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7948,11 +8125,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [SubscriptionInfo](./RingCentral.Net/Definitions/SubscriptionInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
@@ -7973,11 +8150,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).ServiceProviderConfig().Get();
+    var result = await rc.Scim(version).ServiceProviderConfig().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [ServiceProviderConfig](./RingCentral.Net/Definitions/ServiceProviderConfig.cs)
 - Parameter `version` is optional with default value `v2`
 
@@ -7998,11 +8175,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().List(searchViaGet2Parameters);
+    var result = await rc.Scim(version).Users().List(searchViaGet2Parameters, restRequestConfig);
 }
 ```
 
 - Parameter `searchViaGet2Parameters` is of type [SearchViaGet2Parameters](./RingCentral.Net/Definitions/SearchViaGet2Parameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserSearchResponse](./RingCentral.Net/Definitions/UserSearchResponse.cs)
 - Parameter `version` is optional with default value `v2`
 
@@ -8023,11 +8201,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().Post(createUser);
+    var result = await rc.Scim(version).Users().Post(createUser, restRequestConfig);
 }
 ```
 
 - Parameter `createUser` is of type [CreateUser](./RingCentral.Net/Definitions/CreateUser.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserResponse](./RingCentral.Net/Definitions/UserResponse.cs)
 - Parameter `version` is optional with default value `v2`
 
@@ -8048,11 +8227,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest);
+    var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest, restRequestConfig);
 }
 ```
 
 - Parameter `searchRequest` is of type [SearchRequest](./RingCentral.Net/Definitions/SearchRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserSearchResponse](./RingCentral.Net/Definitions/UserSearchResponse.cs)
 - Parameter `version` is optional with default value `v2`
 
@@ -8073,11 +8253,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Get();
+    var result = await rc.Scim(version).Users(id).Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserResponse](./RingCentral.Net/Definitions/UserResponse.cs)
 - Parameter `version` is optional with default value `v2`
 
@@ -8098,11 +8278,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Put(user);
+    var result = await rc.Scim(version).Users(id).Put(user, restRequestConfig);
 }
 ```
 
 - Parameter `user` is of type [User](./RingCentral.Net/Definitions/User.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserResponse](./RingCentral.Net/Definitions/UserResponse.cs)
 - Parameter `version` is optional with default value `v2`
 
@@ -8123,11 +8304,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Delete();
+    var result = await rc.Scim(version).Users(id).Delete(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `version` is optional with default value `v2`
 
@@ -8148,11 +8329,12 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Patch(userPatch);
+    var result = await rc.Scim(version).Users(id).Patch(userPatch, restRequestConfig);
 }
 ```
 
 - Parameter `userPatch` is of type [UserPatch](./RingCentral.Net/Definitions/UserPatch.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [UserResponse](./RingCentral.Net/Definitions/UserResponse.cs)
 - Parameter `version` is optional with default value `v2`
 
@@ -8173,11 +8355,11 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Health().Get();
+    var result = await rc.Scim(version).Health().Get(restRequestConfig);
 }
 ```
 
-
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is an empty string
 - Parameter `version` is optional with default value `v2`
 

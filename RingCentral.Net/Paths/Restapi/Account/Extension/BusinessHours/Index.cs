@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.GetUserBusinessHoursResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetUserBusinessHoursResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetUserBusinessHoursResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetUserBusinessHoursResponse>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -42,10 +42,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
         /// </summary>
         public async Task<RingCentral.UserBusinessHoursUpdateResponse> Put(
             RingCentral.UserBusinessHoursUpdateRequest userBusinessHoursUpdateRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.UserBusinessHoursUpdateResponse>(this.Path(),
-                userBusinessHoursUpdateRequest, null, cancellationToken);
+                userBusinessHoursUpdateRequest, null, restRequestConfig);
         }
     }
 }

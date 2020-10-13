@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Posts
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipCreatePost glipCreatePost,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(), glipCreatePost, null, cancellationToken);
+            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(), glipCreatePost, null, restRequestConfig);
         }
     }
 }

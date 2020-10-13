@@ -28,11 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
         /// User Permission: OutboundFaxes
         /// </summary>
         public async Task<RingCentral.FaxResponse> Post(CreateFaxMessageRequest createFaxMessageRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createFaxMessageRequest);
             return await rc.Post<RingCentral.FaxResponse>(this.Path(), multipartFormDataContent, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

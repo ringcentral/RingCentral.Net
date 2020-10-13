@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
         /// User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<string> Post(RingCentral.BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource, null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.AccountBusinessAddressResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.AccountBusinessAddressResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountBusinessAddressResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.AccountBusinessAddressResource>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -42,10 +42,10 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         /// </summary>
         public async Task<RingCentral.AccountBusinessAddressResource> Put(
             RingCentral.ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.AccountBusinessAddressResource>(this.Path(),
-                modifyAccountBusinessAddressRequest, null, cancellationToken);
+                modifyAccountBusinessAddressRequest, null, restRequestConfig);
         }
     }
 }

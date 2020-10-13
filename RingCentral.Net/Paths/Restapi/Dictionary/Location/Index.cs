@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

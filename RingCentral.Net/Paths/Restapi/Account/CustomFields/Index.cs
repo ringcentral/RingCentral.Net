@@ -35,10 +35,10 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// User Permission: Users
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Post(
-            RingCentral.CustomFieldCreateRequest customFieldCreateRequest, CancellationToken? cancellationToken = null)
+            RingCentral.CustomFieldCreateRequest customFieldCreateRequest, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.CustomFieldResource>(this.Path(false), customFieldCreateRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserInfo
         /// </summary>
-        public async Task<RingCentral.CustomFieldsResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CustomFieldsResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CustomFieldsResource>(this.Path(false), null, cancellationToken);
+            return await rc.Get<RingCentral.CustomFieldsResource>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// User Permission: Users
         /// </summary>
         public async Task<RingCentral.CustomFieldResource> Put(
-            RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, CancellationToken? cancellationToken = null)
+            RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, RestRequestConfig restRequestConfig = null)
         {
             if (this.fieldId == null)
             {
@@ -71,7 +71,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
             }
 
             return await rc.Put<RingCentral.CustomFieldResource>(this.Path(), customFieldUpdateRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -82,14 +82,14 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// App Permission: EditAccounts
         /// User Permission: Users
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.fieldId == null)
             {
                 throw new System.ArgumentNullException("fieldId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -35,11 +35,11 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// User Permission: EditCompanyGreetings
         /// </summary>
         public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIVRPromptRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
             return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -50,9 +50,9 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyGreetings
         /// </summary>
-        public async Task<RingCentral.IVRPrompts> List(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.IVRPrompts> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.IVRPrompts>(this.Path(false), null, cancellationToken);
+            return await rc.Get<RingCentral.IVRPrompts>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -63,14 +63,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyGreetings
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.PromptInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.promptId == null)
             {
                 throw new System.ArgumentNullException("promptId");
             }
 
-            return await rc.Get<RingCentral.PromptInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.PromptInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -81,14 +81,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyGreetings
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.promptId == null)
             {
                 throw new System.ArgumentNullException("promptId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -100,14 +100,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// User Permission: EditCompanyGreetings
         /// </summary>
         public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.promptId == null)
             {
                 throw new System.ArgumentNullException("promptId");
             }
 
-            return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest, null, cancellationToken);
+            return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest, null, restRequestConfig);
         }
     }
 }

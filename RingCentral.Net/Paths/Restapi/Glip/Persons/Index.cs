@@ -34,18 +34,18 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipPersonInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipPersonInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.personId == null)
             {
                 throw new System.ArgumentNullException("personId");
             }
 
-            return await rc.Get<RingCentral.GlipPersonInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipPersonInfo>(this.Path(), null, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.GlipPersonInfo>[]> BatchGet(
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -53,7 +53,7 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.GlipPersonInfo>(this.Path(), null, cancellationToken);
+            return await rc.BatchGet<RingCentral.GlipPersonInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

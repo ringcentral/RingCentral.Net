@@ -34,14 +34,14 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         /// App Permission: Glip
         /// User Permission: undefined
         /// </summary>
-        public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
+        public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.datasetId == null)
             {
                 throw new System.ArgumentNullException("datasetId");
             }
 
-            return await rc.Get<byte[]>(this.Path(), null, cancellationToken);
+            return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }
 }

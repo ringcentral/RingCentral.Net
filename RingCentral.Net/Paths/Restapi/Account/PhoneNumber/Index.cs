@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         /// User Permission: ReadCompanyPhoneNumbers
         /// </summary>
         public async Task<RingCentral.AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,18 +48,18 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyPhoneNumbers
         /// </summary>
-        public async Task<RingCentral.CompanyPhoneNumberInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CompanyPhoneNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.phoneNumberId == null)
             {
                 throw new System.ArgumentNullException("phoneNumberId");
             }
 
-            return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.CompanyPhoneNumberInfo>[]> BatchGet(
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -67,7 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, cancellationToken);
+            return await rc.BatchGet<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace RingCentral
         };
 
         public async Task<HttpResponseMessage> Request(HttpMethod httpMethod, string endpoint,
-            object content = null, object queryParams = null, CancellationToken? cancellationToken = null)
+            object content = null, object queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             HttpContent httpContent = null;
             if (content is HttpContent)
@@ -69,13 +69,13 @@ namespace RingCentral
                 RequestUri = uriBuilder.Uri,
                 Content = httpContent
             };
-            return await extensibleRequest(httpRequestMessage, 0, cancellationToken);
+            return await extensibleRequest(httpRequestMessage, restRequestConfig ?? RestRequestConfig.DefaultInstance);
         }
 
         public async Task<T> Request<T>(HttpMethod httpMethod, string endpoint,
-            object content = null, object queryParams = null, CancellationToken? cancellationToken = null)
+            object content = null, object queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            var httpResponseMessage = await Request(httpMethod, endpoint, content, queryParams, cancellationToken);
+            var httpResponseMessage = await Request(httpMethod, endpoint, content, queryParams, restRequestConfig);
             if (typeof(T) == typeof(HttpResponseMessage))
             {
                 return (T) (object) httpResponseMessage;
@@ -111,63 +111,63 @@ namespace RingCentral
         }
 
         public async Task<HttpResponseMessage> Post(string endpoint, object content = null, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request(HttpMethod.Post, endpoint, content, queryParams, cancellationToken);
+            return await Request(HttpMethod.Post, endpoint, content, queryParams, restRequestConfig);
         }
 
         public async Task<T> Post<T>(string endpoint, object content = null, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request<T>(HttpMethod.Post, endpoint, content, queryParams, cancellationToken);
+            return await Request<T>(HttpMethod.Post, endpoint, content, queryParams, restRequestConfig);
         }
 
         public async Task<HttpResponseMessage> Put(string endpoint, object content = null, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request(HttpMethod.Put, endpoint, content, queryParams, cancellationToken);
+            return await Request(HttpMethod.Put, endpoint, content, queryParams, restRequestConfig);
         }
 
         public async Task<T> Put<T>(string endpoint, object content = null, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request<T>(HttpMethod.Put, endpoint, content, queryParams, cancellationToken);
+            return await Request<T>(HttpMethod.Put, endpoint, content, queryParams, restRequestConfig);
         }
 
         public async Task<HttpResponseMessage> Patch(string endpoint, object content = null, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request(new HttpMethod("PATCH"), endpoint, content, queryParams, cancellationToken);
+            return await Request(new HttpMethod("PATCH"), endpoint, content, queryParams, restRequestConfig);
         }
 
         public async Task<T> Patch<T>(string endpoint, object content = null, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request<T>(new HttpMethod("PATCH"), endpoint, content, queryParams, cancellationToken);
+            return await Request<T>(new HttpMethod("PATCH"), endpoint, content, queryParams, restRequestConfig);
         }
 
         public async Task<HttpResponseMessage> Get(string endpoint, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request(HttpMethod.Get, endpoint, null, queryParams, cancellationToken);
+            return await Request(HttpMethod.Get, endpoint, null, queryParams, restRequestConfig);
         }
 
         public async Task<T> Get<T>(string endpoint, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request<T>(HttpMethod.Get, endpoint, null, queryParams, cancellationToken);
+            return await Request<T>(HttpMethod.Get, endpoint, null, queryParams, restRequestConfig);
         }
 
         public async Task<HttpResponseMessage> Delete(string endpoint, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request(HttpMethod.Delete, endpoint, null, queryParams, cancellationToken);
+            return await Request(HttpMethod.Delete, endpoint, null, queryParams, restRequestConfig);
         }
 
         public async Task<T> Delete<T>(string endpoint, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await Request<T>(HttpMethod.Delete, endpoint, null, queryParams, cancellationToken);
+            return await Request<T>(HttpMethod.Delete, endpoint, null, queryParams, restRequestConfig);
         }
     }
 }

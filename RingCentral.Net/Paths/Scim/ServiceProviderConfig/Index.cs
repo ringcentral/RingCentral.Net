@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.ServiceProviderConfig> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.ServiceProviderConfig> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ServiceProviderConfig>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.ServiceProviderConfig>(this.Path(), null, restRequestConfig);
         }
     }
 }

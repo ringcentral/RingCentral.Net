@@ -34,14 +34,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// App Permission: CallControl
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.CallParty> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallParty> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.partyId == null)
             {
                 throw new System.ArgumentNullException("partyId");
             }
 
-            return await rc.Get<RingCentral.CallParty>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CallParty>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -52,14 +52,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// App Permission: TelephonySessions
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.partyId == null)
             {
                 throw new System.ArgumentNullException("partyId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -71,14 +71,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.partyId == null)
             {
                 throw new System.ArgumentNullException("partyId");
             }
 
-            return await rc.Patch<RingCentral.CallParty>(this.Path(), partyUpdateRequest, null, cancellationToken);
+            return await rc.Patch<RingCentral.CallParty>(this.Path(), partyUpdateRequest, null, restRequestConfig);
         }
     }
 }

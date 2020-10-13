@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
         /// </summary>
         public async Task<RingCentral.DirectoryResource> Post(
             RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

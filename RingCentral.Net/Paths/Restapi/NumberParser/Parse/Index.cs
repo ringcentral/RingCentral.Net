@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
         /// </summary>
         public async Task<RingCentral.ParsePhoneNumberResponse> Post(
             RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest, ParsePhoneNumberParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.ParsePhoneNumberResponse>(this.Path(), parsePhoneNumberRequest,
-                queryParams, cancellationToken);
+                queryParams, restRequestConfig);
         }
     }
 }

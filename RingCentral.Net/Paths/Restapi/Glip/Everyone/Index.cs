@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipEveryoneInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipEveryoneInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipEveryoneInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipEveryoneInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,11 +41,10 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Patch(
-            RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest,
-            CancellationToken? cancellationToken = null)
+            RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Patch<RingCentral.GlipEveryoneInfo>(this.Path(), updateGlipEveryoneRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

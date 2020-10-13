@@ -29,9 +29,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users.Bul
         /// </summary>
         public async Task<string> Post(
             RingCentral.BulkAssignAutomaticLocationUpdatesUsers bulkAssignAutomaticLocationUpdatesUsers,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), bulkAssignAutomaticLocationUpdatesUsers, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), bulkAssignAutomaticLocationUpdatesUsers, null, restRequestConfig);
         }
     }
 }

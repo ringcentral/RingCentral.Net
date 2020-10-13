@@ -35,14 +35,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         /// User Permission: ReadMessageContent
         /// </summary>
         public async Task<byte[]> Get(ReadMessageContentParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.attachmentId == null)
             {
                 throw new System.ArgumentNullException("attachmentId");
             }
 
-            return await rc.Get<byte[]>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<byte[]>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

@@ -34,9 +34,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.MeetingsResource> List(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.MeetingsResource> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.MeetingsResource>(this.Path(false), null, cancellationToken);
+            return await rc.Get<RingCentral.MeetingsResource>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -48,10 +48,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// User Permission: Meetings
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Post(
-            RingCentral.MeetingRequestResource meetingRequestResource, CancellationToken? cancellationToken = null)
+            RingCentral.MeetingRequestResource meetingRequestResource, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.MeetingResponseResource>(this.Path(false), meetingRequestResource, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.MeetingResponseResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.MeetingResponseResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.meetingId == null)
             {
                 throw new System.ArgumentNullException("meetingId");
             }
 
-            return await rc.Get<RingCentral.MeetingResponseResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.MeetingResponseResource>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// User Permission: Meetings
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Put(
-            RingCentral.MeetingRequestResource meetingRequestResource, CancellationToken? cancellationToken = null)
+            RingCentral.MeetingRequestResource meetingRequestResource, RestRequestConfig restRequestConfig = null)
         {
             if (this.meetingId == null)
             {
@@ -89,7 +89,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
             }
 
             return await rc.Put<RingCentral.MeetingResponseResource>(this.Path(), meetingRequestResource, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -100,14 +100,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.meetingId == null)
             {
                 throw new System.ArgumentNullException("meetingId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

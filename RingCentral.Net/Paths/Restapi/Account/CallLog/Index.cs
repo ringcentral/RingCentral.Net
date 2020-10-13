@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         /// User Permission: FullCompanyCallLog
         /// </summary>
         public async Task<RingCentral.AccountCallLogResponse> List(ReadCompanyCallLogParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.AccountCallLogResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,18 +49,18 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         /// User Permission: FullCompanyCallLog
         /// </summary>
         public async Task<RingCentral.CompanyCallLogRecord> Get(ReadCompanyCallRecordParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.callRecordId == null)
             {
                 throw new System.ArgumentNullException("callRecordId");
             }
 
-            return await rc.Get<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.CompanyCallLogRecord>[]> BatchGet(
-            ReadCompanyCallRecordParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ReadCompanyCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -68,7 +68,7 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams, cancellationToken);
+            return await rc.BatchGet<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

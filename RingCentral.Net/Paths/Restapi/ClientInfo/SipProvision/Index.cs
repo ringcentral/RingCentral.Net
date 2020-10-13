@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         /// </summary>
         public async Task<RingCentral.CreateSipRegistrationResponse> Post(
             RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.CreateSipRegistrationResponse>(this.Path(), createSipRegistrationRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
     }
 }

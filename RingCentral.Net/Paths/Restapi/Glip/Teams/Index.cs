@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipTeamsList> List(ListGlipTeamsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GlipTeamsList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Post(RingCentral.GlipPostTeamBody glipPostTeamBody,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipTeamInfo>(this.Path(false), glipPostTeamBody, null, cancellationToken);
+            return await rc.Post<RingCentral.GlipTeamInfo>(this.Path(false), glipPostTeamBody, null, restRequestConfig);
         }
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipTeamInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipTeamInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.chatId == null)
             {
                 throw new System.ArgumentNullException("chatId");
             }
 
-            return await rc.Get<RingCentral.GlipTeamInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipTeamInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -81,14 +81,14 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.chatId == null)
             {
                 throw new System.ArgumentNullException("chatId");
             }
 
-            return await rc.Patch<RingCentral.GlipTeamInfo>(this.Path(), glipPatchTeamBody, null, cancellationToken);
+            return await rc.Patch<RingCentral.GlipTeamInfo>(this.Path(), glipPatchTeamBody, null, restRequestConfig);
         }
 
         /// <summary>
@@ -99,14 +99,14 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.chatId == null)
             {
                 throw new System.ArgumentNullException("chatId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

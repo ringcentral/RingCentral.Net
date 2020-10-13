@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipConversationsList> List(ListGlipConversationsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -50,10 +50,10 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Post(
             RingCentral.CreateGlipConversationRequest createGlipConversationRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), createGlipConversationRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -64,14 +64,14 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipConversationInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipConversationInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.chatId == null)
             {
                 throw new System.ArgumentNullException("chatId");
             }
 
-            return await rc.Get<RingCentral.GlipConversationInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipConversationInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

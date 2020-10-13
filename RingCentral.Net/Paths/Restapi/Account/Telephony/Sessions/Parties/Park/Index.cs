@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park
         /// App Permission: CallControl
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.CallParty> Post(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallParty> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CallParty>(this.Path(), null, cancellationToken);
+            return await rc.Post<RingCentral.CallParty>(this.Path(), null, restRequestConfig);
         }
     }
 }

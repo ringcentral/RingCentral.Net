@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate, null, cancellationToken);
+            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate, null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

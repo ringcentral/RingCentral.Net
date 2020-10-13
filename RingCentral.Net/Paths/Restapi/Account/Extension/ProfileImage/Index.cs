@@ -34,9 +34,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<byte[]> List(CancellationToken? cancellationToken = null)
+        public async Task<byte[]> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<byte[]>(this.Path(false), null, cancellationToken);
+            return await rc.Get<byte[]>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -48,10 +48,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// User Permission: EditUserInfo
         /// </summary>
         public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createUserProfileImageRequest);
-            return await rc.Post<string>(this.Path(false), multipartFormDataContent, null, cancellationToken);
+            return await rc.Post<string>(this.Path(false), multipartFormDataContent, null, restRequestConfig);
         }
 
         /// <summary>
@@ -63,10 +63,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// User Permission: EditUserInfo
         /// </summary>
         public async Task<string> Put(UpdateUserProfileImageRequest updateUserProfileImageRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateUserProfileImageRequest);
-            return await rc.Put<string>(this.Path(false), multipartFormDataContent, null, cancellationToken);
+            return await rc.Put<string>(this.Path(false), multipartFormDataContent, null, restRequestConfig);
         }
 
         /// <summary>
@@ -77,14 +77,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
+        public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.scaleSize == null)
             {
                 throw new System.ArgumentNullException("scaleSize");
             }
 
-            return await rc.Get<byte[]>(this.Path(), null, cancellationToken);
+            return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }
 }

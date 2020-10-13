@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
         /// User Permission: ReadPersonalContacts
         /// </summary>
         public async Task<RingCentral.AddressBookSync> Get(SyncAddressBookParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AddressBookSync>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.AddressBookSync>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

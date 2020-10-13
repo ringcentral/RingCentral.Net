@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
         /// User Permission: ReadCompanyDevices
         /// </summary>
         public async Task<RingCentral.PagingOnlyGroupDevices> Get(ListPagingGroupDevicesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.PagingOnlyGroupDevices>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.PagingOnlyGroupDevices>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

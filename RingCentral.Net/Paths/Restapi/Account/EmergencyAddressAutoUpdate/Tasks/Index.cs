@@ -34,14 +34,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.AutomaticLocationUpdatesTaskInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.AutomaticLocationUpdatesTaskInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         /// App Permission: ReadAccounts
         /// User Permission: ReadCallerIDSettings
         /// </summary>
-        public async Task<RingCentral.ExtensionCallerIdInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.ExtensionCallerIdInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ExtensionCallerIdInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.ExtensionCallerIdInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,10 +41,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         /// User Permission: EditCallerIDSettings
         /// </summary>
         public async Task<RingCentral.ExtensionCallerIdInfo> Put(
-            RingCentral.ExtensionCallerIdInfo extensionCallerIdInfo, CancellationToken? cancellationToken = null)
+            RingCentral.ExtensionCallerIdInfo extensionCallerIdInfo, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.ExtensionCallerIdInfo>(this.Path(), extensionCallerIdInfo, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

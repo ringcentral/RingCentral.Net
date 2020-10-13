@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Scim.Users
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> List(SearchViaGet2Parameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace RingCentral.Paths.Scim.Users
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.UserResponse> Post(RingCentral.CreateUser createUser,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.UserResponse>(this.Path(false), createUser, null, cancellationToken);
+            return await rc.Post<RingCentral.UserResponse>(this.Path(false), createUser, null, restRequestConfig);
         }
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace RingCentral.Paths.Scim.Users
         /// App Permission: ReadAccounts
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.UserResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.UserResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Get<RingCentral.UserResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.UserResponse>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -81,14 +81,14 @@ namespace RingCentral.Paths.Scim.Users
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.UserResponse> Put(RingCentral.User user,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Put<RingCentral.UserResponse>(this.Path(), user, null, cancellationToken);
+            return await rc.Put<RingCentral.UserResponse>(this.Path(), user, null, restRequestConfig);
         }
 
         /// <summary>
@@ -99,14 +99,14 @@ namespace RingCentral.Paths.Scim.Users
         /// App Permission: EditAccounts
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -118,14 +118,14 @@ namespace RingCentral.Paths.Scim.Users
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.id == null)
             {
                 throw new System.ArgumentNullException("id");
             }
 
-            return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch, null, cancellationToken);
+            return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch, null, restRequestConfig);
         }
     }
 }

@@ -32,9 +32,9 @@ namespace RingCentral.Paths.Restapi
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.GetVersionsResponse> List(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetVersionsResponse> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetVersionsResponse>(this.Path(false), null, cancellationToken);
+            return await rc.Get<RingCentral.GetVersionsResponse>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -45,14 +45,14 @@ namespace RingCentral.Paths.Restapi
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.GetVersionResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetVersionResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.apiVersion == null)
             {
                 throw new System.ArgumentNullException("apiVersion");
             }
 
-            return await rc.Get<RingCentral.GetVersionResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetVersionResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

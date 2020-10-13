@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
         /// User Permission: ReadCallLog
         /// </summary>
         public async Task<RingCentral.UserActiveCallsResponse> Get(
-            ListExtensionActiveCallsParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListExtensionActiveCallsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserActiveCallsResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.UserActiveCallsResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

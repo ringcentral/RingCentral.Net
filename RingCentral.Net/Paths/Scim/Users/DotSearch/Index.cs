@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest, null, cancellationToken);
+            return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest, null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         /// App Permission: ReadAccounts
         /// User Permission: ReadBlockedNumbers
         /// </summary>
-        public async Task<RingCentral.CallerBlockingSettings> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallerBlockingSettings> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -42,10 +42,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         /// </summary>
         public async Task<RingCentral.CallerBlockingSettings> Put(
             RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

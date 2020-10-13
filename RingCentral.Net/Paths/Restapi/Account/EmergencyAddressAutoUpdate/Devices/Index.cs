@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
         /// </summary>
         public async Task<RingCentral.ListDevicesAutomaticLocationUpdates> Get(
             ListDevicesAutomaticLocationUpdatesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.ListDevicesAutomaticLocationUpdates>(this.Path(), queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         /// </summary>
         public async Task<RingCentral.GetInternalTextMessageInfoResponse> Post(
             RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.GetInternalTextMessageInfoResponse>(this.Path(),
-                createInternalTextMessageRequest, null, cancellationToken);
+                createInternalTextMessageRequest, null, restRequestConfig);
         }
     }
 }

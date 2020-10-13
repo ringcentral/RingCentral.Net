@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(RingCentral.GlipCompleteTask glipCompleteTask,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), glipCompleteTask, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), glipCompleteTask, null, restRequestConfig);
         }
     }
 }

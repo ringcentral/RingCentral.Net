@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.GetExtensionListResponse> List(ListExtensionsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,10 +49,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// User Permission: AddRemoveUsers
         /// </summary>
         public async Task<RingCentral.ExtensionCreationResponse> Post(
-            RingCentral.ExtensionCreationRequest extensionCreationRequest, CancellationToken? cancellationToken = null)
+            RingCentral.ExtensionCreationRequest extensionCreationRequest, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.ExtensionCreationResponse>(this.Path(false), extensionCreationRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -63,14 +63,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.GetExtensionInfoResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetExtensionInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.extensionId == null)
             {
                 throw new System.ArgumentNullException("extensionId");
             }
 
-            return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// User Permission: EditUserInfo OR EditUserCredentials
         /// </summary>
         public async Task<RingCentral.GetExtensionInfoResponse> Put(
-            RingCentral.ExtensionUpdateRequest extensionUpdateRequest, CancellationToken? cancellationToken = null)
+            RingCentral.ExtensionUpdateRequest extensionUpdateRequest, RestRequestConfig restRequestConfig = null)
         {
             if (this.extensionId == null)
             {
@@ -90,7 +90,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             }
 
             return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -102,14 +102,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         /// User Permission: AddRemoveUsers
         /// </summary>
         public async Task<string> Delete(DeleteExtensionParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.extensionId == null)
             {
                 throw new System.ArgumentNullException("extensionId");
             }
 
-            return await rc.Delete<string>(this.Path(), queryParams, cancellationToken);
+            return await rc.Delete<string>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

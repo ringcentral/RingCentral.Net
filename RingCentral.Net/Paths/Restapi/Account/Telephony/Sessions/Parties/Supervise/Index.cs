@@ -28,10 +28,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.PartySuperviseResponse> Post(
-            RingCentral.PartySuperviseRequest partySuperviseRequest, CancellationToken? cancellationToken = null)
+            RingCentral.PartySuperviseRequest partySuperviseRequest, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.PartySuperviseResponse>(this.Path(), partySuperviseRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

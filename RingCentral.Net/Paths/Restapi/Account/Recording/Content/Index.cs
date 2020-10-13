@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Recording.Content
         /// App Permission: ReadCallRecording
         /// User Permission: ReadCallRecording
         /// </summary>
-        public async Task<byte[]> Get(CancellationToken? cancellationToken = null)
+        public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<byte[]>(this.Path(), null, cancellationToken);
+            return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }
 }

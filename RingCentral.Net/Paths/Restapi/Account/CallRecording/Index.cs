@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.CallRecordingSettingsResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallRecordingSettingsResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -42,10 +42,10 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         /// </summary>
         public async Task<RingCentral.CallRecordingSettingsResource> Put(
             RingCentral.CallRecordingSettingsResource callRecordingSettingsResource,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.CallRecordingSettingsResource>(this.Path(), callRecordingSettingsResource,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
     }
 }

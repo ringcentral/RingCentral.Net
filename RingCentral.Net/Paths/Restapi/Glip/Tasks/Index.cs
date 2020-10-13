@@ -34,14 +34,14 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.GlipTaskInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.GlipTaskInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipTaskInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -53,14 +53,14 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Patch<RingCentral.GlipTaskList>(this.Path(), glipUpdateTask, null, cancellationToken);
+            return await rc.Patch<RingCentral.GlipTaskList>(this.Path(), glipUpdateTask, null, restRequestConfig);
         }
 
         /// <summary>
@@ -71,14 +71,14 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

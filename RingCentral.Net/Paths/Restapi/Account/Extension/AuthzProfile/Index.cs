@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.AuthProfileResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.AuthProfileResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AuthProfileResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.AuthProfileResource>(this.Path(), null, restRequestConfig);
         }
     }
 }

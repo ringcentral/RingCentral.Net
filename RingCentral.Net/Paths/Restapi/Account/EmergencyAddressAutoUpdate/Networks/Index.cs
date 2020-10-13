@@ -34,9 +34,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.NetworksList> List(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.NetworksList> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.NetworksList>(this.Path(false), null, cancellationToken);
+            return await rc.Get<RingCentral.NetworksList>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -48,10 +48,10 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.NetworkInfo> Post(RingCentral.CreateNetworkRequest createNetworkRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.NetworkInfo>(this.Path(false), createNetworkRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.NetworkInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.NetworkInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.networkId == null)
             {
                 throw new System.ArgumentNullException("networkId");
             }
 
-            return await rc.Get<RingCentral.NetworkInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.NetworkInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -81,14 +81,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Put(RingCentral.UpdateNetworkRequest updateNetworkRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.networkId == null)
             {
                 throw new System.ArgumentNullException("networkId");
             }
 
-            return await rc.Put<string>(this.Path(), updateNetworkRequest, null, cancellationToken);
+            return await rc.Put<string>(this.Path(), updateNetworkRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -99,14 +99,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.networkId == null)
             {
                 throw new System.ArgumentNullException("networkId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

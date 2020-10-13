@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
         /// User Permission: Groups
         /// </summary>
         public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), editPagingGroupRequest, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), editPagingGroupRequest, null, restRequestConfig);
         }
     }
 }

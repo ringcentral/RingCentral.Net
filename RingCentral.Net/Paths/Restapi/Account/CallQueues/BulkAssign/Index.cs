@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
         /// User Permission: Groups
         /// </summary>
         public async Task<string> Post(RingCentral.CallQueueBulkAssignResource callQueueBulkAssignResource,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), callQueueBulkAssignResource, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), callQueueBulkAssignResource, null, restRequestConfig);
         }
     }
 }

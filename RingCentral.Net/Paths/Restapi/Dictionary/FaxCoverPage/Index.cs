@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.ListFaxCoverPagesResponse> Get(ListFaxCoverPagesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

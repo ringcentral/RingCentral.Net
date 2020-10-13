@@ -34,14 +34,14 @@ namespace RingCentral.Paths.Restapi.Account
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.GetAccountInfoResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetAccountInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.accountId == null)
             {
                 throw new System.ArgumentNullException("accountId");
             }
 
-            return await rc.Get<RingCentral.GetAccountInfoResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetAccountInfoResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

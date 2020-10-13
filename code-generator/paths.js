@@ -206,7 +206,7 @@ const generate = (prefix = '/') => {
       if (queryParams.length > 0) {
         methodParams.push(`${pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
       }
-      methodParams.push('CancellationToken? cancellationToken = null')
+      methodParams.push('RestRequestConfig restRequestConfig = null')
       usings.add('using System.Threading;')
       code += `
 
@@ -232,16 +232,16 @@ const generate = (prefix = '/') => {
           var dict = new System.Collections.Generic.Dictionary<string, string>();
           Utils.GetPairs(${bodyParam})
             .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict), ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict), ${queryParams.length > 0 ? 'queryParams' : 'null'}, restRequestConfig);
       }`
       } else if (multipart) {
         code += `
           var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
-          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent, ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent, ${queryParams.length > 0 ? 'queryParams' : 'null'}, restRequestConfig);
       }`
       } else {
         code += `
-          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
+          return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'null'}, restRequestConfig);
       }`
       }
 
@@ -258,7 +258,7 @@ const generate = (prefix = '/') => {
               throw new System.ArgumentException(
                   "In order to make a BatchGet, please specify multiple IDs delimited by ','");
           }
-          return await rc.BatchGet<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), ${queryParams.length > 0 ? 'queryParams' : 'null'}, cancellationToken);
+          return await rc.BatchGet<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), ${queryParams.length > 0 ? 'queryParams' : 'null'}, restRequestConfig);
       }`
       }
     })

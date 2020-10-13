@@ -36,10 +36,10 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Post(
             RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -50,14 +50,14 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         /// App Permission: ReadMessages
         /// User Permission: Users
         /// </summary>
-        public async Task<RingCentral.MessageStoreReport> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.MessageStoreReport> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.taskId == null)
             {
                 throw new System.ArgumentNullException("taskId");
             }
 
-            return await rc.Get<RingCentral.MessageStoreReport>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.MessageStoreReport>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipPostsList> List(ReadGlipPostsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipPostsList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GlipPostsList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipPostInfo> Post(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipPostInfo> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), null, cancellationToken);
+            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -61,14 +61,14 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipPostInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipPostInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.postId == null)
             {
                 throw new System.ArgumentNullException("postId");
             }
 
-            return await rc.Get<RingCentral.GlipPostInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipPostInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -80,14 +80,14 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Patch(RingCentral.GlipPatchPostBody glipPatchPostBody,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.postId == null)
             {
                 throw new System.ArgumentNullException("postId");
             }
 
-            return await rc.Patch<RingCentral.GlipPostInfo>(this.Path(), glipPatchPostBody, null, cancellationToken);
+            return await rc.Patch<RingCentral.GlipPostInfo>(this.Path(), glipPatchPostBody, null, restRequestConfig);
         }
 
         /// <summary>
@@ -98,14 +98,14 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.postId == null)
             {
                 throw new System.ArgumentNullException("postId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

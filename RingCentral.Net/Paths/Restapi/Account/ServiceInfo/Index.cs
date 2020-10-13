@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
         /// App Permission: ReadAccounts
         /// User Permission: ReadServicePlanInfo
         /// </summary>
-        public async Task<RingCentral.GetServiceInfoResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetServiceInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetServiceInfoResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetServiceInfoResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

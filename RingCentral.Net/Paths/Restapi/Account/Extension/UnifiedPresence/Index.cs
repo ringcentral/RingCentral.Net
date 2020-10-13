@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         /// App Permission: ReadPresence
         /// User Permission: ReadPresenceStatus
         /// </summary>
-        public async Task<RingCentral.UnifiedPresence> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.UnifiedPresence> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UnifiedPresence>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.UnifiedPresence>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,10 +41,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         /// User Permission: EditPresenceStatus
         /// </summary>
         public async Task<RingCentral.UnifiedPresence> Patch(RingCentral.UpdateUnifiedPresence updateUnifiedPresence,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Patch<RingCentral.UnifiedPresence>(this.Path(), updateUnifiedPresence, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

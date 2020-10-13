@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueues
         /// User Permission: JoinLeaveCallQueue
         /// </summary>
         public async Task<RingCentral.UserCallQueues> Put(RingCentral.UserCallQueues userCallQueues,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.UserCallQueues>(this.Path(), userCallQueues, null, cancellationToken);
+            return await rc.Put<RingCentral.UserCallQueues>(this.Path(), userCallQueues, null, restRequestConfig);
         }
     }
 }

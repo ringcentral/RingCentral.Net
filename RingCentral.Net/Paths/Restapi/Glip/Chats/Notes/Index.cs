@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, cancellationToken);
+            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, restRequestConfig);
         }
 
         /// <summary>
@@ -42,9 +42,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipNotesInfo> Get(ListChatNotesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

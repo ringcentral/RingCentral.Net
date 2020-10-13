@@ -34,9 +34,9 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         /// App Permission: ReadMessages
         /// User Permission: Users
         /// </summary>
-        public async Task<RingCentral.MessageStoreReportArchive> List(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.MessageStoreReportArchive> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(false), null, cancellationToken);
+            return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -47,14 +47,14 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         /// App Permission: ReadMessages
         /// User Permission: Users
         /// </summary>
-        public async Task<string> Get(CancellationToken? cancellationToken = null)
+        public async Task<string> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.archiveId == null)
             {
                 throw new System.ArgumentNullException("archiveId");
             }
 
-            return await rc.Get<string>(this.Path(), null, cancellationToken);
+            return await rc.Get<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

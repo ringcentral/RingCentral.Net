@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
         /// </summary>
         public async Task<RingCentral.SuperviseCallSession> Post(
             RingCentral.SuperviseCallSessionRequest superviseCallSessionRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.SuperviseCallSession>(this.Path(), superviseCallSessionRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.DictionaryGreetingList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.DictionaryGreetingInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.DictionaryGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.greetingId == null)
             {
                 throw new System.ArgumentNullException("greetingId");
             }
 
-            return await rc.Get<RingCentral.DictionaryGreetingInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.DictionaryGreetingInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

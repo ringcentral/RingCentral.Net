@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Flip
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(RingCentral.CallPartyFlip callPartyFlip,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), callPartyFlip, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), callPartyFlip, null, restRequestConfig);
         }
     }
 }

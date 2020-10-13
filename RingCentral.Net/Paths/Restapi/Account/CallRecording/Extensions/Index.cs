@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.CallRecordingExtensions> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallRecordingExtensions> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallRecordingExtensions>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CallRecordingExtensions>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<string> Post(CancellationToken? cancellationToken = null)
+        public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), null, cancellationToken);
+            return await rc.Post<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.MeetingServiceInfoResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.MeetingServiceInfoResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,11 +41,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         /// User Permission: Meetings
         /// </summary>
         public async Task<RingCentral.MeetingServiceInfoResource> Patch(
-            RingCentral.MeetingServiceInfoRequest meetingServiceInfoRequest,
-            CancellationToken? cancellationToken = null)
+            RingCentral.MeetingServiceInfoRequest meetingServiceInfoRequest, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Patch<RingCentral.MeetingServiceInfoResource>(this.Path(), meetingServiceInfoRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

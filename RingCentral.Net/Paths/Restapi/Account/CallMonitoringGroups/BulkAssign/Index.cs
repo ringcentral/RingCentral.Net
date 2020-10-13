@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
         /// User Permission: Groups
         /// </summary>
         public async Task<string> Post(RingCentral.CallMonitoringBulkAssign callMonitoringBulkAssign,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), callMonitoringBulkAssign, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), callMonitoringBulkAssign, null, restRequestConfig);
         }
     }
 }

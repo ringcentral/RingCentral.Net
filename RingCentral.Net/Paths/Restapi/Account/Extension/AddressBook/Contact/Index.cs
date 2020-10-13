@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// User Permission: ReadPersonalContacts
         /// </summary>
         public async Task<RingCentral.ContactList> List(ListContactsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.ContactList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -50,10 +50,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Post(
             RingCentral.PersonalContactRequest personalContactRequest, CreateContactParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.PersonalContactResource>(this.Path(false), personalContactRequest,
-                queryParams, cancellationToken);
+                queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -64,18 +64,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// App Permission: ReadContacts
         /// User Permission: ReadPersonalContacts
         /// </summary>
-        public async Task<RingCentral.PersonalContactResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.PersonalContactResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.contactId == null)
             {
                 throw new System.ArgumentNullException("contactId");
             }
 
-            return await rc.Get<RingCentral.PersonalContactResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.PersonalContactResource>(this.Path(), null, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.PersonalContactResource>[]> BatchGet(
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -83,7 +83,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.PersonalContactResource>(this.Path(), null, cancellationToken);
+            return await rc.BatchGet<RingCentral.PersonalContactResource>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Put(
             RingCentral.PersonalContactRequest personalContactRequest, UpdateContactParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.contactId == null)
             {
@@ -104,7 +104,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             }
 
             return await rc.Put<RingCentral.PersonalContactResource>(this.Path(), personalContactRequest, queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -115,14 +115,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// App Permission: Contacts
         /// User Permission: EditPersonalContacts
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.contactId == null)
             {
                 throw new System.ArgumentNullException("contactId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// </summary>
         public async Task<RingCentral.UpdateMultipleWirelessPointsResponse> Post(
             RingCentral.UpdateMultipleWirelessPointsRequest updateMultipleWirelessPointsRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.UpdateMultipleWirelessPointsResponse>(this.Path(),
-                updateMultipleWirelessPointsRequest, null, cancellationToken);
+                updateMultipleWirelessPointsRequest, null, restRequestConfig);
         }
     }
 }

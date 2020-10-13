@@ -7,14 +7,15 @@ namespace RingCentral.Net.Debug
         public override void Install(RestClient rc)
         {
             var extensibleRequest = rc.extensibleRequest;
-            rc.extensibleRequest = async (httpRequestMessage, retriedTimes, cancellationToken) =>
+            rc.extensibleRequest = async (httpRequestMessage, restRequestConfig) =>
             {
-                var result = await extensibleRequest(httpRequestMessage, retriedTimes, cancellationToken);
+                var result = await extensibleRequest(httpRequestMessage, restRequestConfig);
                 if (enabled)
                 {
                     var debugMessage = Utils.FormatHttpMessage(result, httpRequestMessage);
                     Console.WriteLine(debugMessage);
                 }
+
                 return result;
             };
         }

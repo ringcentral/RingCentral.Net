@@ -36,10 +36,10 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Post(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// </summary>
         public async Task<RingCentral.CallMonitoringGroup> Put(
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.groupId == null)
             {
@@ -74,7 +74,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             }
 
             return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -85,14 +85,14 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// App Permission: EditExtensions
         /// User Permission: Groups
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.groupId == null)
             {
                 throw new System.ArgumentNullException("groupId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

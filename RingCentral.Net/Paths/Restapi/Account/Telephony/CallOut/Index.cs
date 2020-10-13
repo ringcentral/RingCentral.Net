@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CallSession>(this.Path(), makeCallOutRequest, null, cancellationToken);
+            return await rc.Post<RingCentral.CallSession>(this.Path(), makeCallOutRequest, null, restRequestConfig);
         }
     }
 }

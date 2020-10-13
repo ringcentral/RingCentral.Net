@@ -34,14 +34,14 @@ namespace RingCentral.Paths.Restapi.Account.Recording
         /// App Permission: ReadCallRecording
         /// User Permission: ReadCallRecording
         /// </summary>
-        public async Task<RingCentral.GetCallRecordingResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetCallRecordingResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.recordingId == null)
             {
                 throw new System.ArgumentNullException("recordingId");
             }
 
-            return await rc.Get<RingCentral.GetCallRecordingResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetCallRecordingResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

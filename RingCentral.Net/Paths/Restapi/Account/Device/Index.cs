@@ -35,14 +35,14 @@ namespace RingCentral.Paths.Restapi.Account.Device
         /// User Permission: ReadCompanyDevices
         /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Get(ReadDeviceParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.deviceId == null)
             {
                 throw new System.ArgumentNullException("deviceId");
             }
 
-            return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetDeviceInfoResponse>(this.Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
         /// User Permission: EditCompanyDevices
         /// </summary>
         public async Task<RingCentral.GetDeviceInfoResponse> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate,
-            UpdateDeviceParameters queryParams = null, CancellationToken? cancellationToken = null)
+            UpdateDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (this.deviceId == null)
             {
@@ -62,7 +62,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
             }
 
             return await rc.Put<RingCentral.GetDeviceInfoResponse>(this.Path(), accountDeviceUpdate, queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

@@ -28,13 +28,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         /// User Permission: ReadUserDevices
         /// </summary>
         public async Task<RingCentral.GetExtensionDevicesResponse> Get(
-            ListExtensionDevicesParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListExtensionDevicesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.GetExtensionDevicesResponse>[]> BatchGet(
-            ListExtensionDevicesParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListExtensionDevicesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -43,7 +43,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
             }
 
             return await rc.BatchGet<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

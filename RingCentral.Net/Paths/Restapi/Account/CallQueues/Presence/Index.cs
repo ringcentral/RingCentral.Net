@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Presence
         /// App Permission: ReadPresence
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.CallQueuePresence> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallQueuePresence> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallQueuePresence>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CallQueuePresence>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,10 +41,10 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Presence
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallQueuePresence> Put(
-            RingCentral.CallQueueUpdatePresence callQueueUpdatePresence, CancellationToken? cancellationToken = null)
+            RingCentral.CallQueueUpdatePresence callQueueUpdatePresence, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.CallQueuePresence>(this.Path(), callQueueUpdatePresence, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

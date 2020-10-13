@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(RingCentral.IgnoreRequestBody ignoreRequestBody,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), ignoreRequestBody, null, cancellationToken);
+            return await rc.Post<string>(this.Path(), ignoreRequestBody, null, restRequestConfig);
         }
     }
 }

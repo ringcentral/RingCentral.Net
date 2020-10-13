@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.SwitchesList> List(ListAccountSwitchesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.SwitchesList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.SwitchesList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.SwitchInfo> Post(RingCentral.CreateSwitchInfo createSwitchInfo,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.SwitchInfo>(this.Path(false), createSwitchInfo, null, cancellationToken);
+            return await rc.Post<RingCentral.SwitchInfo>(this.Path(false), createSwitchInfo, null, restRequestConfig);
         }
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.SwitchInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.SwitchInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.switchId == null)
             {
                 throw new System.ArgumentNullException("switchId");
             }
 
-            return await rc.Get<RingCentral.SwitchInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.SwitchInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -81,14 +81,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.SwitchInfo> Put(RingCentral.UpdateSwitchInfo updateSwitchInfo,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.switchId == null)
             {
                 throw new System.ArgumentNullException("switchId");
             }
 
-            return await rc.Put<RingCentral.SwitchInfo>(this.Path(), updateSwitchInfo, null, cancellationToken);
+            return await rc.Put<RingCentral.SwitchInfo>(this.Path(), updateSwitchInfo, null, restRequestConfig);
         }
 
         /// <summary>
@@ -99,14 +99,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.switchId == null)
             {
                 throw new System.ArgumentNullException("switchId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

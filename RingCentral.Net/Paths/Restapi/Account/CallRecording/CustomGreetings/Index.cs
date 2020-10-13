@@ -35,10 +35,10 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         /// User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<RingCentral.CallRecordingCustomGreetings> Get(
-            ListCallRecordingCustomGreetingsParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListCallRecordingCustomGreetingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -49,14 +49,14 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyInfo
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.greetingId == null)
             {
                 throw new System.ArgumentNullException("greetingId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

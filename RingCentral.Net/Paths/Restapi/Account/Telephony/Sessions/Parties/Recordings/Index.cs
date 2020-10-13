@@ -34,9 +34,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         /// App Permission: CallControl
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Post(CancellationToken? cancellationToken = null)
+        public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(false), null, cancellationToken);
+            return await rc.Post<string>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate,
-            PauseResumeCallRecordingParameters queryParams = null, CancellationToken? cancellationToken = null)
+            PauseResumeCallRecordingParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (this.recordingId == null)
             {
@@ -56,7 +56,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
             }
 
             return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

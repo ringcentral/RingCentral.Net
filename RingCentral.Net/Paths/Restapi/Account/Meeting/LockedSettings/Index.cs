@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Meeting.LockedSettings
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.AccountLockedSettingResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.AccountLockedSettingResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountLockedSettingResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.AccountLockedSettingResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

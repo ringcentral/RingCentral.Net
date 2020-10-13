@@ -35,10 +35,10 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List(
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.RecordsCollectionResourceSubscriptionResponse>(this.Path(false), null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -50,11 +50,10 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(
-            RingCentral.CreateSubscriptionRequest createSubscriptionRequest,
-            CancellationToken? cancellationToken = null)
+            RingCentral.CreateSubscriptionRequest createSubscriptionRequest, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(false), createSubscriptionRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -65,14 +64,14 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.SubscriptionInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.SubscriptionInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.subscriptionId == null)
             {
                 throw new System.ArgumentNullException("subscriptionId");
             }
 
-            return await rc.Get<RingCentral.SubscriptionInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.SubscriptionInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -85,7 +84,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Put(
             RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
-            UpdateSubscriptionParameters queryParams = null, CancellationToken? cancellationToken = null)
+            UpdateSubscriptionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (this.subscriptionId == null)
             {
@@ -93,7 +92,7 @@ namespace RingCentral.Paths.Restapi.Subscription
             }
 
             return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -104,14 +103,14 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.subscriptionId == null)
             {
                 throw new System.ArgumentNullException("subscriptionId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

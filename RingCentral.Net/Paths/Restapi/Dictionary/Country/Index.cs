@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetCountryListResponse> List(ListCountriesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetCountryListResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         /// App Permission: undefined
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.countryId == null)
             {
                 throw new System.ArgumentNullException("countryId");
             }
 
-            return await rc.Get<RingCentral.GetCountryInfoDictionaryResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetCountryInfoDictionaryResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

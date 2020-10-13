@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.FederationResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.FederationResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.FederationResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.FederationResource>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assi
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.AssistedUsersResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.AssistedUsersResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AssistedUsersResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.AssistedUsersResource>(this.Path(), null, restRequestConfig);
         }
     }
 }

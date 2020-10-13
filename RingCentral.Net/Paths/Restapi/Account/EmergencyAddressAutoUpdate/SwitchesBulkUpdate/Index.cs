@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
         /// </summary>
         public async Task<RingCentral.UpdateMultipleSwitchesResponse> Post(
             RingCentral.UpdateMultipleSwitchesRequest updateMultipleSwitchesRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.UpdateMultipleSwitchesResponse>(this.Path(), updateMultipleSwitchesRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
     }
 }

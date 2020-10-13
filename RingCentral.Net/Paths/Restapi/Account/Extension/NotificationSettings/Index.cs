@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         /// App Permission: ReadAccounts
         /// User Permission: ReadMessagesNotificationsSettings
         /// </summary>
-        public async Task<RingCentral.NotificationSettings> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.NotificationSettings> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.NotificationSettings>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.NotificationSettings>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -42,10 +42,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         /// </summary>
         public async Task<RingCentral.NotificationSettings> Put(
             RingCentral.NotificationSettingsUpdateRequest notificationSettingsUpdateRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.NotificationSettings>(this.Path(), notificationSettingsUpdateRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

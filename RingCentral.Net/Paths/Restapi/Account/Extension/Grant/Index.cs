@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.GetExtensionGrantListResponse> Get(
-            ListExtensionGrantsParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListExtensionGrantsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetExtensionGrantListResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetExtensionGrantListResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

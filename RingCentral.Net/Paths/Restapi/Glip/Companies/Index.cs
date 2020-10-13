@@ -34,14 +34,14 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipCompany> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipCompany> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.companyId == null)
             {
                 throw new System.ArgumentNullException("companyId");
             }
 
-            return await rc.Get<RingCentral.GlipCompany>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipCompany>(this.Path(), null, restRequestConfig);
         }
     }
 }

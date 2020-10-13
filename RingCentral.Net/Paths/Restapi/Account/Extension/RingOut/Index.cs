@@ -35,10 +35,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -49,14 +49,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// App Permission: RingOut
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.GetRingOutStatusResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetRingOutStatusResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.ringoutId == null)
             {
                 throw new System.ArgumentNullException("ringoutId");
             }
 
-            return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -67,14 +67,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// App Permission: RingOut
         /// User Permission: undefined
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.ringoutId == null)
             {
                 throw new System.ArgumentNullException("ringoutId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

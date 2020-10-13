@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipChatsList> List(ListGlipChatsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GlipChatsList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipChatInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipChatInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.chatId == null)
             {
                 throw new System.ArgumentNullException("chatId");
             }
 
-            return await rc.Get<RingCentral.GlipChatInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipChatInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

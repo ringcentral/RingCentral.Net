@@ -36,11 +36,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         /// </summary>
         public async Task<RingCentral.CustomUserGreetingInfo> Post(
             CreateCustomUserGreetingRequest createCustomUserGreetingRequest,
-            CreateCustomUserGreetingParameters queryParams = null, CancellationToken? cancellationToken = null)
+            CreateCustomUserGreetingParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest);
             return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multipartFormDataContent,
-                queryParams, cancellationToken);
+                queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -51,14 +51,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserInfo
         /// </summary>
-        public async Task<RingCentral.CustomUserGreetingInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CustomUserGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.greetingId == null)
             {
                 throw new System.ArgumentNullException("greetingId");
             }
 
-            return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

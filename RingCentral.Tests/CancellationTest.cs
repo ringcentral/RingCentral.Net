@@ -39,12 +39,12 @@ namespace RingCentral.Tests
                         new Attachment
                         {
                             fileName = "rc.png",
-                            bytes = File.ReadAllBytes("./rc.png")
+                            bytes = await File.ReadAllBytesAsync("./rc.png")
                         },
                         new Attachment
                         {
                             fileName = "glip.png",
-                            bytes = File.ReadAllBytes("./glip.png")
+                            bytes = await File.ReadAllBytesAsync("./glip.png")
                         },
                         new Attachment
                         {
@@ -59,7 +59,10 @@ namespace RingCentral.Tests
                 var taskCanceledException = false;
                 try
                 {
-                    var r = await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest, token);
+                    await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest, new RestRequestConfig
+                    {
+                        cancellationToken = token
+                    });
                 }
                 catch (TaskCanceledException)
                 {

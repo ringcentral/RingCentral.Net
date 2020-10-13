@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         /// User Permission: ReadExtensions
         /// </summary>
         public async Task<RingCentral.CallQueues> List(ListCallQueuesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.CallQueues>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.CallQueueDetails> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.CallQueueDetails> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.groupId == null)
             {
                 throw new System.ArgumentNullException("groupId");
             }
 
-            return await rc.Get<RingCentral.CallQueueDetails>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.CallQueueDetails>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         /// User Permission: EditUserInfo
         /// </summary>
         public async Task<RingCentral.CallQueueDetails> Put(RingCentral.CallQueueUpdateDetails callQueueUpdateDetails,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.groupId == null)
             {
@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
             }
 
             return await rc.Put<RingCentral.CallQueueDetails>(this.Path(), callQueueUpdateDetails, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

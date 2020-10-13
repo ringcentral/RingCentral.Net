@@ -32,7 +32,7 @@ namespace RingCentral
     partial class RestClient
     {
         public async Task<BatchResponse<T>[]> BatchGet<T>(string endpoint, object queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             // if no multiple IDs specified
             if (!endpoint.Contains(","))
@@ -41,7 +41,7 @@ namespace RingCentral
                     "In order to make a BatchGet, endpoint should contain multiple IDs delimited by ','");
             }
 
-            var httpResponseMessage = await Get<HttpResponseMessage>(endpoint, queryParams, cancellationToken);
+            var httpResponseMessage = await Get<HttpResponseMessage>(endpoint, queryParams, restRequestConfig);
             var multipart = await httpResponseMessage.Content.ReadAsMultipartAsync();
             var summariesString = await multipart.Contents.First().ReadAsStringAsync();
             var batchSummaries = JsonConvert.DeserializeObject<BatchSummaries>(summariesString);

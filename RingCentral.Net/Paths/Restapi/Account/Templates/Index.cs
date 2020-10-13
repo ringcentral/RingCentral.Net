@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         /// User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<RingCentral.UserTemplates> List(ListUserTemplatesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.UserTemplates>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.TemplateInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.TemplateInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.templateId == null)
             {
                 throw new System.ArgumentNullException("templateId");
             }
 
-            return await rc.Get<RingCentral.TemplateInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.TemplateInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

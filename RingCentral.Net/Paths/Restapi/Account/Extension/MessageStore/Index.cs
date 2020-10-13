@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// User Permission: ReadMessages
         /// </summary>
         public async Task<RingCentral.GetMessageList> List(ListMessagesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetMessageList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,18 +48,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// App Permission: ReadMessages
         /// User Permission: ReadMessages
         /// </summary>
-        public async Task<RingCentral.GetMessageInfoResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GetMessageInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.messageId == null)
             {
                 throw new System.ArgumentNullException("messageId");
             }
 
-            return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path(), null, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.GetMessageInfoResponse>[]> BatchGet(
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -67,7 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.GetMessageInfoResponse>(this.Path(), null, cancellationToken);
+            return await rc.BatchGet<RingCentral.GetMessageInfoResponse>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// User Permission: EditMessages
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest,
-            UpdateMessageParameters queryParams = null, CancellationToken? cancellationToken = null)
+            UpdateMessageParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (this.messageId == null)
             {
@@ -87,7 +87,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             }
 
             return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest, queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -99,14 +99,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// User Permission: EditMessages
         /// </summary>
         public async Task<string> Delete(DeleteMessageParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.messageId == null)
             {
                 throw new System.ArgumentNullException("messageId");
             }
 
-            return await rc.Delete<string>(this.Path(), queryParams, cancellationToken);
+            return await rc.Delete<string>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

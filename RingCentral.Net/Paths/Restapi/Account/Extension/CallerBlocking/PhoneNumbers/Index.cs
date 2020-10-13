@@ -35,10 +35,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// User Permission: ReadBlockedNumbers
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumbersList> List(
-            ListBlockedAllowedNumbersParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListBlockedAllowedNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumbersList>(this.Path(false), queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -51,10 +51,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Post(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(false),
-                addBlockedAllowedPhoneNumber, null, cancellationToken);
+                addBlockedAllowedPhoneNumber, null, restRequestConfig);
         }
 
         /// <summary>
@@ -65,18 +65,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// App Permission: ReadAccounts
         /// User Permission: ReadBlockedNumbers
         /// </summary>
-        public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.blockedNumberId == null)
             {
                 throw new System.ArgumentNullException("blockedNumberId");
             }
 
-            return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
         public async Task<BatchResponse<RingCentral.BlockedAllowedPhoneNumberInfo>[]> BatchGet(
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (!this.Path().Contains(","))
             {
@@ -84,7 +84,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
                     "In order to make a BatchGet, please specify multiple IDs delimited by ','");
             }
 
-            return await rc.BatchGet<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, cancellationToken);
+            return await rc.BatchGet<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -95,14 +95,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// App Permission: EditExtensions
         /// User Permission: EditBlockedNumbers
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.blockedNumberId == null)
             {
                 throw new System.ArgumentNullException("blockedNumberId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Put(
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.blockedNumberId == null)
             {
@@ -123,7 +123,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             }
 
             return await rc.Put<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), addBlockedAllowedPhoneNumber,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
     }
 }

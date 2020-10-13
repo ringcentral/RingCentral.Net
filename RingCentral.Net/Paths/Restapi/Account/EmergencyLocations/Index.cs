@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Post(RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(false), emergencyLocationInfoRequest, null, cancellationToken);
+            return await rc.Post<string>(this.Path(false), emergencyLocationInfoRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<RingCentral.EmergencyLocationList> List(ListEmergencyLocationsParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.EmergencyLocationList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.EmergencyLocationList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.EmergencyLocationInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.EmergencyLocationInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.locationId == null)
             {
                 throw new System.ArgumentNullException("locationId");
             }
 
-            return await rc.Get<RingCentral.EmergencyLocationInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.EmergencyLocationInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         /// </summary>
         public async Task<RingCentral.EmergencyLocationInfo> Put(
             RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.locationId == null)
             {
@@ -90,7 +90,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
             }
 
             return await rc.Put<RingCentral.EmergencyLocationInfo>(this.Path(), emergencyLocationInfoRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

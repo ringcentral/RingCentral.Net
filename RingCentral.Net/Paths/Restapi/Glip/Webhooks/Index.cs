@@ -34,9 +34,9 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipWebhookList> List(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipWebhookList> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(false), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -47,14 +47,14 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipWebhookList> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipWebhookList> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.webhookId == null)
             {
                 throw new System.ArgumentNullException("webhookId");
             }
 
-            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -65,14 +65,14 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.webhookId == null)
             {
                 throw new System.ArgumentNullException("webhookId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

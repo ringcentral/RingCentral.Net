@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.Presence
         /// User Permission: ReadPresenceStatus
         /// </summary>
         public async Task<RingCentral.AccountPresenceInfo> Get(ReadAccountPresenceParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.AccountPresenceInfo>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

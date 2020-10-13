@@ -28,9 +28,9 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         /// User Permission: MeetingsRecordings
         /// </summary>
         public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
-            ListAccountMeetingRecordingsParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListAccountMeetingRecordingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

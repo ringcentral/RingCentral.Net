@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices.B
         /// </summary>
         public async Task<string> Post(
             RingCentral.AssignMultipleDevicesAutomaticLocationUpdates assignMultipleDevicesAutomaticLocationUpdates,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<string>(this.Path(), assignMultipleDevicesAutomaticLocationUpdates, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

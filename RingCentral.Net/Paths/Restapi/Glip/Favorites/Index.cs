@@ -28,10 +28,10 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
         /// User Permission: Glip
         /// </summary>
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(
-            ListFavoriteChatsParameters queryParams = null, CancellationToken? cancellationToken = null)
+            ListFavoriteChatsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.GlipChatsListWithoutNavigation>(this.Path(), queryParams,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }

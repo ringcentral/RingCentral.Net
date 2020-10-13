@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipPreferencesInfo> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.GlipPreferencesInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipPreferencesInfo>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.GlipPreferencesInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.Invitation
         /// App Permission: Meetings
         /// User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.PublicMeetingInvitationResponse> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.PublicMeetingInvitationResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.PublicMeetingInvitationResponse>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.PublicMeetingInvitationResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }

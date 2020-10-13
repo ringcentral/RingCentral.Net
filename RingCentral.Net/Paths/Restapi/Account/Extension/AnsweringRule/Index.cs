@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// User Permission: ReadUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.UserAnsweringRuleList> List(ListAnsweringRulesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -50,10 +50,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// </summary>
         public async Task<RingCentral.CustomAnsweringRuleInfo> Post(
             RingCentral.CreateAnsweringRuleRequest createAnsweringRuleRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.CustomAnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest,
-                null, cancellationToken);
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -65,14 +65,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// User Permission: ReadUserAnsweringRules
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Get(ReadAnsweringRuleParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.ruleId == null)
             {
                 throw new System.ArgumentNullException("ruleId");
             }
 
-            return await rc.Get<RingCentral.AnsweringRuleInfo>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.AnsweringRuleInfo>(this.Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// </summary>
         public async Task<RingCentral.AnsweringRuleInfo> Put(
             RingCentral.UpdateAnsweringRuleRequest updateAnsweringRuleRequest,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.ruleId == null)
             {
@@ -93,7 +93,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
             }
 
             return await rc.Put<RingCentral.AnsweringRuleInfo>(this.Path(), updateAnsweringRuleRequest, null,
-                cancellationToken);
+                restRequestConfig);
         }
 
         /// <summary>
@@ -104,14 +104,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         /// App Permission: EditExtensions
         /// User Permission: EditUserAnsweringRules
         /// </summary>
-        public async Task<string> Delete(CancellationToken? cancellationToken = null)
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (this.ruleId == null)
             {
                 throw new System.ArgumentNullException("ruleId");
             }
 
-            return await rc.Delete<string>(this.Path(), null, cancellationToken);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

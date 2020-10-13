@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -49,14 +49,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
             if (this.timezoneId == null)
             {
                 throw new System.ArgumentNullException("timezoneId");
             }
 
-            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }

@@ -35,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DirectoryResource> List(ListDirectoryEntriesParameters queryParams = null,
-            CancellationToken? cancellationToken = null)
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.DirectoryResource>(this.Path(false), queryParams, cancellationToken);
+            return await rc.Get<RingCentral.DirectoryResource>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         /// App Permission: ReadAccounts
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.ContactResource> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.ContactResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.entryId == null)
             {
                 throw new System.ArgumentNullException("entryId");
             }
 
-            return await rc.Get<RingCentral.ContactResource>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.ContactResource>(this.Path(), null, restRequestConfig);
         }
     }
 }

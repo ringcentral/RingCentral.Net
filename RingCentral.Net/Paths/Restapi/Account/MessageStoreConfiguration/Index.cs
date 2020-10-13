@@ -27,9 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         /// App Permission: EditAccounts
         /// User Permission: AccountAdministration
         /// </summary>
-        public async Task<RingCentral.MessageStoreConfiguration> Get(CancellationToken? cancellationToken = null)
+        public async Task<RingCentral.MessageStoreConfiguration> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path(), null, cancellationToken);
+            return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,11 +41,10 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         /// User Permission: AccountAdministration
         /// </summary>
         public async Task<RingCentral.MessageStoreConfiguration> Put(
-            RingCentral.MessageStoreConfiguration messageStoreConfiguration,
-            CancellationToken? cancellationToken = null)
+            RingCentral.MessageStoreConfiguration messageStoreConfiguration, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration, null,
-                cancellationToken);
+                restRequestConfig);
         }
     }
 }
