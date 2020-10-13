@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace RingCentral
@@ -88,21 +87,8 @@ namespace RingCentral
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
-                if (!_autoRetry || restRequestConfig.retriesAttempted > _maxRetryTimes ||
-                    !_retryableHttpStatusCodes.Contains((int) httpResponseMessage.StatusCode))
-                {
-                    throw new RestException(httpResponseMessage, httpRequestMessage);
-                }
-                else
-                {
-                    var delayTime = 1 << restRequestConfig.retriesAttempted * _retryBaseDelay;
-                    delayTime = (delayTime / 2) + _random.Next(0, delayTime / 2); // apply jitter
-                    await Task.Delay(delayTime);
-                    restRequestConfig.retriesAttempted += 1;
-                    return await Request(httpRequestMessage, restRequestConfig);
-                }
+                throw new RestException(httpResponseMessage, httpRequestMessage);
             }
-
             return httpResponseMessage;
         }
 
@@ -170,30 +156,6 @@ namespace RingCentral
                 _autoRefreshTimer = null;
             }
         }
-
-        private bool _autoRetry = false;
-        private int _retryBaseDelay = 10000; // milliseconds
-        private int _maxRetryTimes = 10;
-        private int[] _retryableHttpStatusCodes = null;
-        private Random _random = new Random();
-
-        public void AutoRetry(int baseDelay = 10000, int maxRetryTimes = 10, int[] retryableHttpStatusCodes = null)
-        {
-            _autoRetry = true;
-            _retryBaseDelay = baseDelay;
-            _maxRetryTimes = maxRetryTimes;
-            _retryableHttpStatusCodes = retryableHttpStatusCodes;
-            if (_retryableHttpStatusCodes == null)
-            {
-                _retryableHttpStatusCodes = new[] {429};
-            }
-        }
-
-        public void StopAutoRetry()
-        {
-            _autoRetry = false;
-        }
-
 
         public async Task Revoke(string tokenToRevoke = null)
         {

@@ -66,9 +66,7 @@ However, if you need a quick and dirty solution, you can try `rc.AutoRefresh(int
 
 By default there is no API calls auto retry. If an API call fails, an exception will be thrown and you are supposed to catch and handle it.
 
-However, if you need a quick and dirty solution, you can try `rc.AutoRetry(baseDelay: 10000, maxRetryTimes: 10, retryableHttpStatusCodes: new[]{429});`.
-
-Above it's a sample to deal with [API rate limit](https://medium.com/ringcentral-developers/ringcentral-api-rate-limit-explained-2280fe53cb16). To disable it, use `rc.StopAutoRetry();`.
+Use [Retry extension](https://github.com/ringcentral/RingCentral.Net/tree/master/RingCentral.Net.Retry) if you need a out-of-box solution.
 
 
 ## Binary content downloading
