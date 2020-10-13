@@ -89,6 +89,7 @@ namespace RingCentral
             {
                 throw new RestException(httpResponseMessage, httpRequestMessage);
             }
+
             return httpResponseMessage;
         }
 
