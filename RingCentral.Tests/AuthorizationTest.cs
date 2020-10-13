@@ -51,54 +51,6 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        public async void AuthorizeUri()
-        {
-            var rc = new RestClient(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-            );
-
-            var redirectUri = "http://localhost:3000/callback";
-
-            var uri = rc.AuthorizeUri(redirectUri, "myState");
-            Assert.NotNull(uri);
-            Assert.Contains("state=myState", uri);
-
-            try
-            {
-                await rc.Authorize("fakeCode", redirectUri);
-                throw new Exception("Code above should throw");
-            }
-            catch (RestException re)
-            {
-                Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
-            }
-
-            var uri2 = rc.AuthorizeUri(new AuthorizeRequest
-            {
-                redirect_uri = redirectUri,
-                client_id = rc.clientId, // optional
-                response_type = "code", // optional
-                state = "hello",
-                ui_options = "hide_logo"
-            });
-            Assert.NotNull(uri2);
-            Assert.Contains("state=hello", uri2);
-            Assert.Contains("ui_options=hide_logo", uri2);
-
-            var uri3 = rc.AuthorizeUri(new AuthorizeRequest
-            {
-                redirect_uri = redirectUri,
-                state = "hello",
-                ui_options = "hide_logo"
-            });
-            Assert.NotNull(uri3);
-            Assert.Contains("response_type=code", uri3);
-            Assert.Contains($"client_id={rc.clientId}", uri3);
-        }
-
-        [Fact]
         public async void TestRefreshWithTokenAsParameter()
         {
             var rc = new RestClient(

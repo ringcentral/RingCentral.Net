@@ -74,6 +74,7 @@ namespace RingCentral
             {
                 throw new RestException(httpResponseMessage, httpRequestMessage);
             }
+
             return httpResponseMessage;
         }
 
@@ -160,36 +161,6 @@ namespace RingCentral
         public async void Dispose()
         {
             await Revoke();
-        }
-
-        public string AuthorizeUri(AuthorizeRequest request)
-        {
-            if (request.response_type == null)
-            {
-                request.response_type = "code";
-            }
-
-            if (request.client_id == null)
-            {
-                request.client_id = clientId;
-            }
-
-            var uriBuilder = new UriBuilder(server)
-            {
-                Path = "/restapi/oauth/authorize",
-                Query = string.Join("&",
-                    Utils.GetPairs(request).Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"))
-            };
-            return uriBuilder.Uri.ToString();
-        }
-
-        public string AuthorizeUri(string redirectUri, string state = "")
-        {
-            return AuthorizeUri(new AuthorizeRequest
-            {
-                redirect_uri = redirectUri,
-                state = state
-            });
         }
     }
 }
