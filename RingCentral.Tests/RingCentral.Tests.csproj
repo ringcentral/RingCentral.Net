@@ -24,6 +24,7 @@
     <ItemGroup>
         <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj" />
         <ProjectReference Include="..\RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj" />
+        <ProjectReference Include="..\RingCentral.Net.Retry\RingCentral.Net.Retry.csproj" />
         <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
     </ItemGroup>
 
