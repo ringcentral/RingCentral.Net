@@ -4,7 +4,7 @@ namespace RingCentral
 {
     public class RestRequestConfig
     {
-        public CancellationToken? cancellationToken = null;
+        public CancellationToken cancellationToken = CancellationToken.None;
 
         // for Retry extension
         public int retriesAttempted = 0;

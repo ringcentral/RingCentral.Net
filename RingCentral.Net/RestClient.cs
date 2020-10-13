@@ -60,10 +60,7 @@ namespace RingCentral
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
             RestRequestConfig restRequestConfig = null)
         {
-            if (restRequestConfig == null)
-            {
-                restRequestConfig = RestRequestConfig.DefaultInstance;
-            }
+            restRequestConfig = restRequestConfig ?? RestRequestConfig.DefaultInstance;
 
             httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/4.1.0");
             httpRequestMessage.Headers.Authorization =
@@ -72,16 +69,9 @@ namespace RingCentral
                         Convert.ToBase64String(
                             Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
                     : new AuthenticationHeaderValue("Bearer", token.access_token);
-            HttpResponseMessage httpResponseMessage;
-            if (restRequestConfig.cancellationToken == null)
-            {
-                httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
-            }
-            else
-            {
-                httpResponseMessage =
-                    await httpClient.SendAsync(httpRequestMessage, restRequestConfig.cancellationToken.Value);
-            }
+
+            var httpResponseMessage =
+                await httpClient.SendAsync(httpRequestMessage, restRequestConfig.cancellationToken);
 
             rateLimits.Update(httpResponseMessage.Headers);
             AfterHttpCall?.Invoke(this, new HttpCallEventArgs(httpResponseMessage, httpRequestMessage));
