@@ -44,7 +44,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                
+
                 var pubNubExtension = new PubNubExtension();
                 rc.InstallExtension(pubNubExtension);
 
@@ -68,9 +68,9 @@ namespace RingCentral.Tests
                         Assert.NotNull(messageEvent.body);
                     }
                 });
-                var subscriptionInfo = subscription.subscriptionInfo;
+                var subscriptionInfo = subscription.SubscriptionInfo;
                 Assert.NotNull(subscriptionInfo);
-                Assert.NotNull(subscription.subscriptionInfo);
+                Assert.NotNull(subscription.SubscriptionInfo);
                 Assert.Equal(eventFilters.Length, subscriptionInfo.eventFilters.Length);
                 await SendSms(rc);
                 await System.Threading.Tasks.Task.Delay(20000);
@@ -79,10 +79,10 @@ namespace RingCentral.Tests
                 Assert.Contains(messages, message => message.Contains("message-store"));
                 subscriptionInfo = await subscription.Refresh();
                 Assert.NotNull(subscriptionInfo);
-                Assert.NotNull(subscription.subscriptionInfo);
+                Assert.NotNull(subscription.SubscriptionInfo);
                 Assert.Equal(eventFilters.Length, subscriptionInfo.eventFilters.Length);
                 await subscription.Revoke();
-                Assert.Null(subscription.subscriptionInfo);
+                Assert.Null(subscription.SubscriptionInfo);
             }
         }
     }

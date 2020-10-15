@@ -55,30 +55,30 @@ Please install package RingCentral.Net.Pubnub instead.");
 
     public class Subscription
     {
-        public PubNubExtension pne;
-        public string[] eventFilters;
+        public readonly PubNubExtension pne;
+        public readonly string[] eventFilters;
         public Action<string> callback;
-        private Pubnub pubnub;
+        private Pubnub _pubnub;
 
-        private bool renewScheduled;
+        private bool _renewScheduled;
         private SubscriptionInfo _subscriptionInfo;
 
-        public SubscriptionInfo subscriptionInfo
+        public SubscriptionInfo SubscriptionInfo
         {
             get => _subscriptionInfo;
-            set
+            private set
             {
                 _subscriptionInfo = value;
-                if (value == null || renewScheduled) return;
+                if (value == null || _renewScheduled) return;
                 Debug.Assert(_subscriptionInfo.expiresIn != null, "subscriptionInfo.expiresIn != null");
                 Task.Delay((int) (_subscriptionInfo.expiresIn.Value - 120) * 1000).ContinueWith(
                     async action =>
                     {
                         // 2 minutes before expiration
-                        renewScheduled = false;
+                        _renewScheduled = false;
                         await Refresh();
                     });
-                renewScheduled = true;
+                _renewScheduled = true;
             }
         }
 
@@ -98,33 +98,33 @@ Please install package RingCentral.Net.Pubnub instead.");
             };
             var httpContent = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8,
                 "application/json");
-            subscriptionInfo = await pne.rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", httpContent);
+            SubscriptionInfo = await pne.rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", httpContent);
 
             var pnConfiguration = new PNConfiguration
             {
-                SubscribeKey = subscriptionInfo.deliveryMode.subscriberKey,
+                SubscribeKey = SubscriptionInfo.deliveryMode.subscriberKey,
                 ReconnectionPolicy = PNReconnectionPolicy.LINEAR,
                 Origin = "ringcentral.pubnubapi.com"
             };
-            pubnub = new Pubnub(pnConfiguration);
-            pubnub.AddListener(new SubscribeCallbackExt(
+            _pubnub = new Pubnub(pnConfiguration);
+            _pubnub.AddListener(new SubscribeCallbackExt(
                 (pubnubObj, message) => { callback(Decrypt(message.Message.ToString())); },
                 (pubnubObj, presence) => { },
                 (pubnubObj, status) => { }
             ));
-            pubnub.Subscribe<string>().Channels(new[]
+            _pubnub.Subscribe<string>().Channels(new[]
             {
-                subscriptionInfo.deliveryMode.address
+                SubscriptionInfo.deliveryMode.address
             }).Execute();
 
-            return subscriptionInfo;
+            return SubscriptionInfo;
         }
 
         public async Task<SubscriptionInfo> Refresh()
         {
-            subscriptionInfo =
-                await pne.rc.Post<SubscriptionInfo>($"/restapi/v1.0/subscription/{subscriptionInfo.id}/renew", null);
-            return subscriptionInfo;
+            SubscriptionInfo =
+                await pne.rc.Post<SubscriptionInfo>($"/restapi/v1.0/subscription/{SubscriptionInfo.id}/renew");
+            return SubscriptionInfo;
         }
 
         public async Task<HttpResponseMessage> Revoke()
@@ -145,15 +145,15 @@ Please install package RingCentral.Net.Pubnub instead.");
             }
             finally
             {
-                pubnub.Destroy();
-                pubnub = null;
-                subscriptionInfo = null;
+                _pubnub.Destroy();
+                _pubnub = null;
+                SubscriptionInfo = null;
             }
         }
 
         private string Decrypt(string dataString)
         {
-            var key = Convert.FromBase64String(subscriptionInfo.deliveryMode.encryptionKey);
+            var key = Convert.FromBase64String(SubscriptionInfo.deliveryMode.encryptionKey);
             var keyParameter = ParameterUtilities.CreateKeyParameter("AES", key);
             var cipher = CipherUtilities.GetCipher("AES/ECB/PKCS7Padding");
             cipher.Init(false, keyParameter);
@@ -164,7 +164,7 @@ Please install package RingCentral.Net.Pubnub instead.");
 
             const int bufferSize = 1024;
             var buffer = new byte[bufferSize];
-            var length = 0;
+            int length;
             var resultStream = new MemoryStream();
             while ((length = cipherStream.Read(buffer, 0, bufferSize)) > 0)
             {
