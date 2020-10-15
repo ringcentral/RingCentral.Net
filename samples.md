@@ -126,6 +126,139 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountInfo) in API Explorer.
 
 
+## Send A2P SMS
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/batch`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch().Post(messageBatchCreateRequest, restRequestConfig);
+}
+```
+
+- Parameter `messageBatchCreateRequest` is of type [MessageBatchCreateRequest](./RingCentral.Net/Definitions/MessageBatchCreateRequest.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
+- `result` is of type [MessageBatchResponse](./RingCentral.Net/Definitions/MessageBatchResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-createA2PSMS) in API Explorer.
+
+
+## Get A2P SMS Batch
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch(batchId).Get(restRequestConfig);
+}
+```
+
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
+- `result` is of type [MessageBatchResponse](./RingCentral.Net/Definitions/MessageBatchResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PBatch) in API Explorer.
+
+
+## Get A2P SMS List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/messages`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PsmsParameters, restRequestConfig);
+}
+```
+
+- Parameter `listA2PsmsParameters` is of type [ListA2PsmsParameters](./RingCentral.Net/Definitions/ListA2PsmsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
+- `result` is of type [MessageListResponse](./RingCentral.Net/Definitions/MessageListResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PSMS) in API Explorer.
+
+
+## Get A2P SMS
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get(restRequestConfig);
+}
+```
+
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
+- `result` is of type [MessageDetailsResponse](./RingCentral.Net/Definitions/MessageDetailsResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMS) in API Explorer.
+
+
+## Get Opted Out Numbers
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/opt-outs`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().OptOuts().Get(readA2PsmsOptOutsParameters, restRequestConfig);
+}
+```
+
+- Parameter `readA2PsmsOptOutsParameters` is of type [ReadA2PsmsOptOutsParameters](./RingCentral.Net/Definitions/ReadA2PsmsOptOutsParameters.cs)
+- Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
+- `result` is of type [OptOutListResponse](./RingCentral.Net/Definitions/OptOutListResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMSOptOuts) in API Explorer.
+
+
 ## Get Company Active Calls
 
 Name|Value
@@ -6454,7 +6587,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPosts) in API Explorer.
 
 
-## Create Glip Post
+## Create Post
 
 Name|Value
 -|-
@@ -6468,10 +6601,11 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(glipPostPostBody, restRequestConfig);
 }
 ```
 
+- Parameter `glipPostPostBody` is of type [GlipPostPostBody](./RingCentral.Net/Definitions/GlipPostPostBody.cs)
 - Parameter `restRequestConfig` is of type [RestRequestConfig](./RingCentral.Net/Definitions/RestRequestConfig.cs)
 - `result` is of type [GlipPostInfo](./RingCentral.Net/Definitions/GlipPostInfo.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`

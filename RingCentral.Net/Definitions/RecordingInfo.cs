@@ -3,7 +3,7 @@ namespace RingCentral
     public class RecordingInfo
     {
         /// <summary>
-        /// Internal identifier of a Recording resource
+        /// Internal identifier of a recording resource
         /// </summary>
         public string id;
 

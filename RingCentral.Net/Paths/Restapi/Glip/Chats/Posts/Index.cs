@@ -41,16 +41,17 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Create Glip Post
+        /// Operation: Create Post
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts
         /// Rate Limit Group: Medium
         /// App Permission: Glip
         /// User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipPostInfo> Post(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipPostPostBody glipPostPostBody,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), null, restRequestConfig);
+            return await rc.Post<RingCentral.GlipPostInfo>(this.Path(false), glipPostPostBody, null, restRequestConfig);
         }
 
         /// <summary>

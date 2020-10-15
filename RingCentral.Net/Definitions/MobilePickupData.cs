@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         /// The list of extension IDs, configured to pick a call from Desktop/Mobile applications
         /// </summary>
-        public string ccMailboxes;
+        public string[] ccMailboxes;
 
         /// <summary>
         /// SIP proxy registration name

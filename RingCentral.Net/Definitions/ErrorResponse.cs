@@ -1,11 +1,16 @@
 namespace RingCentral
 {
-    // Format of response in case that any error occured during request processing
+    // Error response
     public class ErrorResponse
     {
         /// <summary>
-        /// Collection of all gathered errors
+        /// Error code
         /// </summary>
-        public Error[] errors;
+        public string errorCode;
+
+        /// <summary>
+        /// Human-readable description of an error. Not suitable for end users
+        /// </summary>
+        public string description;
     }
 }
