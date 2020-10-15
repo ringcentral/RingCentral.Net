@@ -46,7 +46,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
 
         public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
         {
-            var subscription = new Subscription(this.rc, eventFilters, callback);
+            var subscription = new Subscription(this, eventFilters, callback);
             await subscription.Subscribe();
             this.subscriptions.Add(subscription);
             return subscription;
@@ -54,7 +54,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
     }
     public class Subscription
     {
-        public RestClient rc;
+        public PubNubExtension pne;
         public string[] eventFilters;
         public Action<string> callback;
         private Pubnub pubnub;
@@ -81,9 +81,9 @@ Please install package RingCentral.Net.PubnubPCL instead.");
             }
         }
 
-        public Subscription(RestClient rc, string[] eventFilters, Action<string> callback)
+        internal Subscription(PubNubExtension pne, string[] eventFilters, Action<string> callback)
         {
-            this.rc = rc;
+            this.pne = pne;
             this.eventFilters = eventFilters;
             this.callback = callback;
         }
@@ -97,7 +97,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
             };
             var httpContent = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8,
                 "application/json");
-            subscriptionInfo = await rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", httpContent);
+            subscriptionInfo = await pne.rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", httpContent);
 
             var pnConfiguration = new PNConfiguration
             {
@@ -122,7 +122,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
         public async Task<SubscriptionInfo> Refresh()
         {
             subscriptionInfo =
-                await rc.Post<SubscriptionInfo>($"/restapi/v1.0/subscription/{subscriptionInfo.id}/renew", null);
+                await pne.rc.Post<SubscriptionInfo>($"/restapi/v1.0/subscription/{subscriptionInfo.id}/renew", null);
             return subscriptionInfo;
         }
 
@@ -130,7 +130,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
         {
             try
             {
-                var r = await rc.Delete($"/restapi/v1.0/subscription/{_subscriptionInfo.id}");
+                var r = await pne.rc.Delete($"/restapi/v1.0/subscription/{_subscriptionInfo.id}");
                 return r;
             }
             catch (RestException re)
