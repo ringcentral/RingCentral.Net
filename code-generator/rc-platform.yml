@@ -1699,11 +1699,24 @@ paths:
       description: >-
         Creates a post within the specified chat. Attachments are supported only
         for Card type. All other atatchment types (File, Task, Event and Note)
-        should be first created via the corresponding method summary: Create
-        Post consumes: - application/json produces: - application/json
-        parameters: - name: chatId in: path type: string description: Internal
-        identifier of a chat. required: true - name: body required: true in:
-        body description: JSON body schema: $ref: 
+        should be first created via the corresponding method.
+      summary: Create Post
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: chatId
+          in: path
+          type: string
+          description: Internal identifier of a chat.
+          required: true
+        - name: body
+          required: true
+          in: body
+          description: JSON body
+          schema:
+            $ref: '#/definitions/GlipPostPostBody'
       responses:
         '201':
           description: Success
@@ -6118,6 +6131,280 @@ paths:
       x-metered-api: true
       x-metering-group: Free
       x-docs-level: Public
+  '/restapi/v1.0/account/{accountId}/a2p-sms/batch':
+    post:
+      tags:
+        - High Volume SMS
+      summary: Send A2P SMS
+      operationId: createA2PSMS
+      description: >-
+        Allows to send high volume of A2P (Application-to-Person) SMS messages
+        (in message batches). Only phone number with the `A2PSmsSender` feature
+        can be used as a sender.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          type: string
+        - name: body
+          in: body
+          description: SMS batch payload
+          schema:
+            $ref: '#/definitions/MessageBatchCreateRequest'
+          required: true
+      responses:
+        '201':
+          description: Message batch created
+          schema:
+            $ref: '#/definitions/MessageBatchResponse'
+        '400':
+          description: 'Validation Failed, Invalid Request'
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: Unauthorized error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: Service is not available
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      x-docs-level: Public
+      x-throttling-group: Light
+  '/restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}':
+    get:
+      operationId: readA2PSMS
+      description: Returns the details of an A2P SMS message by ID.
+      summary: Get A2P SMS
+      tags:
+        - High Volume SMS
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          type: string
+        - name: messageId
+          in: path
+          required: true
+          description: Internal identifier of a message to be retrieved
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: Message Infomation
+          schema:
+            $ref: '#/definitions/MessageDetailsResponse'
+        '400':
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: Unauthorized error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '404':
+          description: The message is not found
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: Service is not available
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      x-docs-level: Public
+      x-throttling-group: Light
+  '/restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}':
+    get:
+      tags:
+        - High Volume SMS
+      summary: Get A2P SMS Batch
+      description: Returns information on a batch of A2P SMS messages by the specified ID.
+      operationId: readA2PBatch
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          type: string
+        - name: batchId
+          in: path
+          required: true
+          description: Internal identifier of a message batch to be retrieved
+          type: string
+      responses:
+        '200':
+          description: Message batch information
+          schema:
+            $ref: '#/definitions/MessageBatchResponse'
+        '400':
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: Unauthorized error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '404':
+          description: The batch is not found
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: Service is unavailable
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      x-docs-level: Public
+      x-throttling-group: Light
+  '/restapi/v1.0/account/{accountId}/a2p-sms/messages':
+    get:
+      tags:
+        - High Volume SMS
+      description: >-
+        Returns the list of outbound/inbound A2P messages sent from/to A2P phone
+        numbers of the current account. The list can be filtered by message
+        batch ID and/or phone number.
+      summary: Get A2P SMS List
+      operationId: listA2PSMS
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          type: string
+        - name: pageToken
+          in: query
+          required: false
+          description: Token of a page to be retrieved
+          type: string
+        - name: perPage
+          in: query
+          required: false
+          description: Number of messages to be returned per request
+          type: integer
+          format: int64
+          default: 1000
+      responses:
+        '200':
+          description: A2P SMS Message List
+          schema:
+            $ref: '#/definitions/MessageListResponse'
+        '400':
+          description: Invalid Request
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '404':
+          description: No resource found for the account.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      x-docs-level: Public
+      x-throttling-group: Light
+  '/restapi/v1.0/account/{accountId}/a2p-sms/opt-outs':
+    get:
+      tags:
+        - High Volume SMS
+      description: >-
+        Returns the list of numbers opted out from the account. The list can be
+        filtered by `to`/`from` phone number query parameters. Specifying
+        `text/csv` in the Accept header downloads the data in CSV format.
+      operationId: readA2PSMSOptOuts
+      summary: Get Opted Out Numbers
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          type: string
+        - name: from
+          in: query
+          required: false
+          description: >-
+            The sender's phone number (`from` field) in
+            [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for
+            filtering messages
+          type: string
+        - name: to
+          in: query
+          required: false
+          description: >-
+            The reciever's phone number (`to` field) in
+            [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for
+            filtering messages
+          type: string
+        - name: pageToken
+          in: query
+          required: false
+          description: Token of the page to be retrieved
+          type: string
+        - name: perPage
+          in: query
+          required: false
+          description: Number of records to be returned for the page
+          default: 1000
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: >-
+            The list of opt records for the account filtered by the search
+            criteria provided as query param
+          schema:
+            $ref: '#/definitions/OptOutListResponse'
+        '400':
+          description: Invalid Request
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '404':
+          description: No resource found for the account
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      x-docs-level: Public
+      x-throttling-group: Light
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log':
     get:
       tags:
@@ -8181,6 +8468,7 @@ paths:
         for all client applications.
       operationId: createMMS
       consumes:
+        - application/json
         - multipart/mixed
         - multipart/formdata
       produces:
@@ -17801,6 +18089,20 @@ definitions:
       text:
         type: string
         description: Post text.
+  GlipPostPostBody:
+    type: object
+    required:
+      - text
+    properties:
+      text:
+        type: string
+        description: Post text.
+      attachments:
+        description: Identifier(s) of attachments.
+        type: array
+        items:
+          type: object
+          $ref: '#/definitions/GlipAttachmentInfoRequest'
   GlipPostsList:
     type: object
     required:
@@ -18801,77 +19103,18 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/ContactResource'
-  Error:
+  ErrorResponse:
     type: object
+    description: Error response
     properties:
       errorCode:
         type: string
-        description: >-
-          Code that characterizes this error. Code uniqly identifies the source
-          of the error.
-        readOnly: true
-        enum:
-          - >-
-            ErrorCode{code='ADG-000', httpStatus=503, description='Service
-            temporary unavailable.'}
-          - >-
-            ErrorCode{code='ADG-010', httpStatus=503, description='Federation
-            data temporary unavailable.'}
-          - >-
-            ErrorCode{code='ADG-001', httpStatus=500, description='Service
-            internal error.'}
-          - >-
-            ErrorCode{code='ADG-100', httpStatus=403, description='Insufficient
-            permissions.'}
-          - >-
-            ErrorCode{code='ADG-101', httpStatus=403, description='Unauthorized
-            access.'}
-          - >-
-            ErrorCode{code='ADG-102', httpStatus=405, description='Method not
-            allowed.'}
-          - >-
-            ErrorCode{code='ADG-111', httpStatus=400, description='Need
-            Content-Type header.'}
-          - >-
-            ErrorCode{code='ADG-112', httpStatus=400, description='Request body
-            is invalid.'}
-          - >-
-            ErrorCode{code='ADG-121', httpStatus=400, description='Parameter
-            [${paramName}] is invalid. ${additionalInfo:-}'}
-          - >-
-            ErrorCode{code='ADG-115', httpStatus=415, description='Unsupported
-            Media Type.'}
-          - >-
-            ErrorCode{code='ADG-105', httpStatus=404, description='Current
-            account is not linked to any federation.'}
-          - >-
-            ErrorCode{code='ADG-107', httpStatus=404, description='Account not
-            found.'}
-          - >-
-            ErrorCode{code='ADG-122', httpStatus=404, description='Contact not
-            found.'}
-          - >-
-            ErrorCode{code=''ADG-200'', httpStatus=404, description=''Invalid
-            URI''}
-      message:
+        description: Error code
+        example: ASG-101
+      description:
         type: string
-        description: Message that describes the error. This message can be used in UI.
-        readOnly: true
-    description: >-
-      Description of an error occurred during request processing. This data type
-      can be used only in readonly mode, no writing is allowed
-  ErrorResponse:
-    type: object
-    properties:
-      errors:
-        type: array
-        description: Collection of all gathered errors
-        readOnly: true
-        items:
-          $ref: '#/definitions/Error'
-    description: >-
-      Format of response in case that any error occured during request
-      processing
+        description: Human-readable description of an error. Not suitable for end users
+        example: AccountId 1234 is invalid
   FederatedAccountResource:
     type: object
     properties:
@@ -21626,6 +21869,311 @@ definitions:
         versionString: 1.0.34
         releaseDate: '2018-02-09T00:00:00.000Z'
         uriString: v1.0
+  MessageBatchCreateRequest:
+    type: object
+    description: >-
+      Batch of A2P SMS messages. This object provides specification to send
+      message(s) to many recipients. It contains top-level attributes, such as
+      `text`, `expiresIn`, `scheduledAt` which apply to all `messages`. In
+      addition to that, it is possible to override this attribute for each
+      message. This way a single API call may be used to send individual
+      messages to many recipients.
+    required:
+      - from
+      - messages
+    properties:
+      from:
+        type: string
+        description: >-
+          Sender's phone number in
+          [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format.
+        example: '+15551234567'
+      text:
+        type: string
+        description: >-
+          Text to send to `messages.to` phone numbers. Can be overridden on a
+          per-message basis
+        example: 'Hello, World!'
+      scheduledAt:
+        type: string
+        format: date-time
+        description: >-
+          Default scheduled time to send messages. Can be overridden on a
+          per-message basis. If not present, message(s) are sent as soon as
+          possible.
+      expiresIn:
+        type: integer
+        description: >-
+          Number of seconds since `scheduledAt` this message is relevant for. If
+          more time than `expiresIn` has passed since `scheduledAt` (or current
+          time, if no scheduled time specified) and the message has not been
+          sent yet, it becomes discarded. Can be overridden on a per-message
+          basis.
+        example: 300
+      messages:
+        type: array
+        description: Individual messages
+        items:
+          $ref: '#/definitions/MessageCreateRequest'
+  MessageBatchResponse:
+    type: object
+    description: >-
+      Batch of A2P SMS messages. This object provides a specification to send
+      message(s) to many recipients. It contains top-level attributes, such as
+      `text`, `expiresIn`, `scheduledAt` which apply to all `messages`. In
+      addition to that, it is possible to override this attribute for each
+      message. This way a single API call may be used to send individual
+      messages to many recipients
+    required:
+      - from
+      - messages
+    properties:
+      id:
+        type: string
+        description: Unique identifier of the message batch
+        example: '12345'
+        readOnly: true
+      from:
+        type: string
+        description: >-
+          Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+          format from which the messages are going to be sent
+        example: '+15551234567'
+      batchSize:
+        type: integer
+        description: Total number of messages in the accepted batch
+        example: '5'
+      processedCount:
+        type: integer
+        description: Total number of messages currently processed in the batch
+        example: '1'
+      lastUpdatedAt:
+        type: string
+        format: date-time
+        description: Time of message batch last processing
+      status:
+        type: string
+        enum:
+          - Processing
+          - Completed
+        description: Current status of a message batch
+        example: Processing
+      createdAt:
+        type: string
+        format: date-time
+        description: Time of message batch creation
+  MessageCreateRequest:
+    type: object
+    description: Single individual SMS resource
+    required:
+      - to
+    properties:
+      to:
+        type: array
+        items:
+          type: string
+        description: >-
+          List of phone numbers in
+          [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format,
+          recipients of this message. Currently only one number is supported
+        example: '+15551234567'
+      text:
+        type: string
+        description: Text to send
+        example: 'Hello, World!'
+      scheduledAt:
+        type: string
+        format: date-time
+        description: >-
+          Scheduled time to send this message. Overrides batch's `scheduledAt`
+          attribute when sending
+      expiresIn:
+        type: integer
+        description: >-
+          Number of seconds since `scheduledAt` this message is relevant for. If
+          more time than `expiresIn` has passed since `scheduledAt` (or current
+          time, if no scheduled time specified) and the message has not been
+          sent yet, it becomes discarded.
+        example: 200
+  MessageDetailsResponse:
+    type: object
+    description: Detailed information on a message
+    properties:
+      id:
+        type: string
+        description: Internal identifier of a message
+        example: 1234
+      from:
+        type: string
+        description: >-
+          Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+          format from which the message was sent
+        example: '+15551234567'
+      to:
+        type: array
+        items:
+          type: string
+        description: >-
+          List of phone numbers in
+          [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format to which
+          the message was sent
+        example: '+15551234567'
+      text:
+        type: string
+        description: Text of a message
+        example: 'Hello, World!'
+      scheduledAt:
+        type: string
+        format: date-time
+        description: Time at which the message is scheduled to be sent
+      expiresAt:
+        type: string
+        format: date-time
+        description: >-
+          Time when this message will not be attempted to be sent, returned if a
+          message is scheduled or in the 'Queued' state
+      createdAt:
+        type: string
+        format: date-time
+        description: Time of message creation
+      lastUpdatedAt:
+        type: string
+        format: date-time
+        description: Time а a message last update
+      messageStatus:
+        type: string
+        enum:
+          - Queued
+          - Delivered
+          - Sent
+          - SendingFailed
+          - DeliveryFailed
+        description: Current status of a message
+        example: Queued
+      segmentCount:
+        type: integer
+        format: int64
+        description: Number of segments of a message
+        example: 1
+      cost:
+        type: number
+        format: double
+        description: Cost of a message
+        example: 0.007
+  MessageListResponse:
+    type: object
+    description: >-
+      List of messages retrieved for an account and other filter criteria such
+      as `batchId` and `fromPhoneNumber` specified in the request
+    properties:
+      records:
+        type: array
+        description: An array containing individual messages
+        items:
+          $ref: '#/definitions/MessageListMessageResponse'
+      paging:
+        $ref: '#/definitions/PagingResource'
+  MessageListMessageResponse:
+    type: object
+    description: Infommation on a message returned within the specified batch
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: Internal identifier of a message
+        example: 1234
+      batchId:
+        type: string
+        description: Internal identifier of a batch the message was submitted in
+        example: 12345
+      from:
+        type: string
+        description: >-
+          Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+          format from which the message is sent
+        example: '+15551234567'
+      to:
+        type: array
+        items:
+          type: string
+        description: >-
+          Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+          format to which a message is sent
+        example: '+15551234567'
+      createdAt:
+        type: string
+        format: date-time
+        description: Time of message creation
+      lastUpdatedAt:
+        type: string
+        format: date-time
+        description: Time of the message(s) last update
+      messageStatus:
+        type: string
+        description: Current status of a message
+        example: Queued
+      segmentCount:
+        type: integer
+        description: Number of segments of a message
+        format: int64
+        example: 1
+      cost:
+        type: number
+        format: double
+        description: Cost of a message
+        example: 0.007
+  OptOutListResponse:
+    type: object
+    description: Opt-out phone numbers information
+    properties:
+      records:
+        type: array
+        description: List of individual opt-out number records
+        items:
+          $ref: '#/definitions/OptOutResponse'
+      paging:
+        $ref: '#/definitions/PagingResource'
+  OptOutResponse:
+    type: object
+    description: Opt-out record
+    properties:
+      from:
+        type: string
+        description: >-
+          Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+          format from which the recipient has opted out
+        example: '+15551234567'
+      to:
+        type: string
+        description: >-
+          Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+          format which is opted out
+        example: '+15551234567'
+  PagingResource:
+    type: object
+    description: Pagination details
+    properties:
+      pageToken:
+        type: string
+        description: Page token of the current response list
+        example: pgt1
+      perPage:
+        type: integer
+        description: Number of records per page
+        example: 3
+        default: 1000
+      firstPageToken:
+        type: string
+        description: First page token of the current filter criteria
+        example: fpgt1
+      previousPageToken:
+        type: string
+        description: Previous page token of the current filter criteria
+        example: lpgt1
+      nextPageToken:
+        type: string
+        description: Next page token of the current filter criteria
+        example: npgt1
   UserCallLogResponse:
     type: object
     required:
@@ -32062,7 +32610,7 @@ definitions:
     properties:
       id:
         type: string
-        description: Internal identifier of a Recording resource
+        description: Internal identifier of a recording resource
       active:
         type: boolean
         description: True if the recording is active. False if the recording is paused.
@@ -32189,10 +32737,10 @@ definitions:
   AddPartyRequest:
     type: object
     required:
-      - sessionId
+      - telephonySessionId
       - partyId
     properties:
-      sessionId:
+      telephonySessionId:
         description: Internal identifier of a call session
         type: string
       partyId:
@@ -32586,10 +33134,12 @@ definitions:
     type: object
     properties:
       ccMailboxes:
-        type: string
+        type: array
         description: >-
           The list of extension IDs, configured to pick a call from
           Desktop/Mobile applications
+        items:
+          type: string
       to:
         type: string
         description: SIP proxy registration name
