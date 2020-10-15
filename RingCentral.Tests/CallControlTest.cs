@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json.Linq;
+using RingCentral.Net.PubNub;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -20,11 +21,13 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
+                var pubNubExtension = new PubNubExtension();
+                rc.InstallExtension(pubNubExtension);
                 var eventFilters = new[]
                 {
                     "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true",
                 };
-                var subscription = new Subscription(rc, eventFilters, async message =>
+                var subscription = await pubNubExtension.Subscribe(eventFilters, async message =>
                 {
                     dynamic jObject = JObject.Parse(message);
                     var activeCall = jObject.body.activeCalls[0];
@@ -45,7 +48,6 @@ namespace RingCentral.Tests
                         }
                     }
                 });
-                await subscription.Subscribe();
                 // await Task.Delay(120000);
             }
         }

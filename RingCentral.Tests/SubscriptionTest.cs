@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using RingCentral.Net.PubNub;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -43,6 +44,9 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
+                
+                var pubNubExtension = new PubNubExtension();
+                rc.InstallExtension(pubNubExtension);
 
                 var eventFilters = new[]
                 {
@@ -51,7 +55,7 @@ namespace RingCentral.Tests
                 };
                 var messages = new List<string>();
                 var messageStoreMessageCount = 0;
-                var subscription = new Subscription(rc, eventFilters, message =>
+                var subscription = await pubNubExtension.Subscribe(eventFilters, message =>
                 {
                     messages.Add(message);
                     dynamic jObject = JObject.Parse(message);
@@ -64,7 +68,7 @@ namespace RingCentral.Tests
                         Assert.NotNull(messageEvent.body);
                     }
                 });
-                var subscriptionInfo = await subscription.Subscribe();
+                var subscriptionInfo = subscription.subscriptionInfo;
                 Assert.NotNull(subscriptionInfo);
                 Assert.NotNull(subscription.subscriptionInfo);
                 Assert.Equal(eventFilters.Length, subscriptionInfo.eventFilters.Length);

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -11,8 +12,47 @@ using Org.BouncyCastle.Crypto.IO;
 using Org.BouncyCastle.Security;
 using PubnubApi;
 
-namespace RingCentral
+namespace RingCentral.Net.PubNub
 {
+    public class PubNubExtension : SdkExtension
+    {
+        public RestClient rc;
+        public readonly List<Subscription> subscriptions = new List<Subscription>();
+
+        public PubNubExtension()
+        {
+            var frameworkDescription = RuntimeInformation.FrameworkDescription;
+            if (frameworkDescription.StartsWith(".NET Framework "))
+            {
+                throw new NotSupportedException(@"Package RingCentral.NET.PubnubPCL doesn't support .NET Framework. 
+Please install package RingCentral.Net.Pubnub instead.");
+            }
+        }
+
+        public override void Install(RestClient restClient)
+        {
+            this.rc = restClient;
+        }
+
+        public async void Revoke()
+        {
+            foreach (var subscription in subscriptions)
+            {
+                await subscription.Revoke();
+            }
+
+            this.subscriptions.Clear();
+        }
+
+        public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
+        {
+            var subscription = new Subscription(this.rc, eventFilters, callback);
+            await subscription.Subscribe();
+            this.subscriptions.Add(subscription);
+            return subscription;
+        }
+    }
+
     public class Subscription
     {
         public RestClient rc;
@@ -44,19 +84,12 @@ namespace RingCentral
 
         public Subscription(RestClient rc, string[] eventFilters, Action<string> callback)
         {
-            var frameworkDescription = RuntimeInformation.FrameworkDescription;
-            if (frameworkDescription.StartsWith(".NET Framework "))
-            {
-                throw new NotSupportedException(@"Package RingCentral.NET.PubnubPCL doesn't support .NET Framework. 
-Please install package RingCentral.Net.Pubnub instead.");
-            }
-
             this.rc = rc;
             this.eventFilters = eventFilters;
             this.callback = callback;
         }
 
-        public async Task<SubscriptionInfo> Subscribe()
+        internal async Task<SubscriptionInfo> Subscribe()
         {
             var requestBody = new
             {

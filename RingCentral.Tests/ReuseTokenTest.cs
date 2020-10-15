@@ -1,4 +1,5 @@
 using System;
+using RingCentral.Net.PubNub;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -19,6 +20,8 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
+                var pubNubExtension = new PubNubExtension();
+                rc.InstallExtension(pubNubExtension);
 
                 var cachedToken = rc.token;
 
@@ -28,10 +31,9 @@ namespace RingCentral.Tests
                 Assert.NotNull(ext.id);
 
                 // create a subscription
-                var subscription = new Subscription(rc,
+                var subscription = await pubNubExtension.Subscribe(
                     new string[] {"/restapi/v1.0/account/~/extension/~/message-store"},
                     message => { Console.WriteLine(message); });
-                await subscription.Subscribe();
 
                 // use the token again to make API call
                 rc.token = cachedToken;
