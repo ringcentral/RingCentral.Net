@@ -169,7 +169,7 @@ const generate = (prefix = '/') => {
       let body, bodyClass, bodyParam, formUrlEncoded, multipart
       if (operation.detail.consumes && operation.detail.consumes[0] === 'application/x-www-form-urlencoded') {
         formUrlEncoded = true
-      } else if (operation.detail.consumes && operation.detail.consumes[0].startsWith('multipart/')) {
+      } else if (R.any(item => item.startsWith('multipart/'), operation.detail.consumes ?? [])) {
         multipart = true
       } else if (operation.detail.consumes && !operation.detail.consumes.some(c => c === 'application/json') && !operation.detail.consumes.some(c => c.startsWith('text/'))) {
         throw new Error(`Unsupported consume content type: ${operation.detail.consumes.join(', ')}`)

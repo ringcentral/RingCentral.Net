@@ -30,7 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
         public async Task<RingCentral.GetSMSMessageInfoResponse> Post(RingCentral.CreateSMSMessage createSMSMessage,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GetSMSMessageInfoResponse>(this.Path(), createSMSMessage, null,
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createSMSMessage);
+            return await rc.Post<RingCentral.GetSMSMessageInfoResponse>(this.Path(), multipartFormDataContent, null,
                 restRequestConfig);
         }
     }
