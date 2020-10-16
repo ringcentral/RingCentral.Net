@@ -24,16 +24,6 @@ namespace RingCentral
         public string text;
 
         /// <summary>
-        /// Time at which the message is scheduled to be sent
-        /// </summary>
-        public string scheduledAt;
-
-        /// <summary>
-        /// Time when this message will not be attempted to be sent, returned if a message is scheduled or in the 'Queued' state
-        /// </summary>
-        public string expiresAt;
-
-        /// <summary>
         /// Time of message creation
         /// </summary>
         public string createdAt;

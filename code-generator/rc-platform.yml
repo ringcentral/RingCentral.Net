@@ -6231,7 +6231,7 @@ paths:
       tags:
         - High Volume SMS
       summary: Get A2P SMS Batch
-      description: Returns information on a batch of A2P SMS messages by the specified ID.
+      description: Returns information on a message batch.
       operationId: readA2PBatch
       consumes:
         - application/json
@@ -6294,6 +6294,11 @@ paths:
           description: >-
             Internal identifier of a RingCentral account or tilde (~) to
             indicate the account logged-in within the current session
+          type: string
+        - name: batchId
+          in: query
+          required: false
+          description: Internal identifier of a message batch used for filtering records
           type: string
         - name: pageToken
           in: query
@@ -21874,10 +21879,9 @@ definitions:
     description: >-
       Batch of A2P SMS messages. This object provides specification to send
       message(s) to many recipients. It contains top-level attributes, such as
-      `text`, `expiresIn`, `scheduledAt` which apply to all `messages`. In
-      addition to that, it is possible to override this attribute for each
-      message. This way a single API call may be used to send individual
-      messages to many recipients.
+      `text` which apply to all `messages`. In addition to that, it is possible
+      to override this attribute for each message. This way a single API call
+      may be used to send individual messages to many recipients.
     required:
       - from
       - messages
@@ -21894,22 +21898,6 @@ definitions:
           Text to send to `messages.to` phone numbers. Can be overridden on a
           per-message basis
         example: 'Hello, World!'
-      scheduledAt:
-        type: string
-        format: date-time
-        description: >-
-          Default scheduled time to send messages. Can be overridden on a
-          per-message basis. If not present, message(s) are sent as soon as
-          possible.
-      expiresIn:
-        type: integer
-        description: >-
-          Number of seconds since `scheduledAt` this message is relevant for. If
-          more time than `expiresIn` has passed since `scheduledAt` (or current
-          time, if no scheduled time specified) and the message has not been
-          sent yet, it becomes discarded. Can be overridden on a per-message
-          basis.
-        example: 300
       messages:
         type: array
         description: Individual messages
@@ -21981,20 +21969,6 @@ definitions:
         type: string
         description: Text to send
         example: 'Hello, World!'
-      scheduledAt:
-        type: string
-        format: date-time
-        description: >-
-          Scheduled time to send this message. Overrides batch's `scheduledAt`
-          attribute when sending
-      expiresIn:
-        type: integer
-        description: >-
-          Number of seconds since `scheduledAt` this message is relevant for. If
-          more time than `expiresIn` has passed since `scheduledAt` (or current
-          time, if no scheduled time specified) and the message has not been
-          sent yet, it becomes discarded.
-        example: 200
   MessageDetailsResponse:
     type: object
     description: Detailed information on a message
@@ -22022,16 +21996,6 @@ definitions:
         type: string
         description: Text of a message
         example: 'Hello, World!'
-      scheduledAt:
-        type: string
-        format: date-time
-        description: Time at which the message is scheduled to be sent
-      expiresAt:
-        type: string
-        format: date-time
-        description: >-
-          Time when this message will not be attempted to be sent, returned if a
-          message is scheduled or in the 'Queued' state
       createdAt:
         type: string
         format: date-time
