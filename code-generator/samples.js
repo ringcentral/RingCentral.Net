@@ -59,7 +59,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 }
 \`\`\`
 
-${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
+${parameters.filter(p => p !== 'RestRequestConfig').map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
     const httpMethod = comments.shift()[1]
     const endpoint = comments.shift()[1]
     // because `.../message-store` and `.../message-store/{messageId}` are in the same file

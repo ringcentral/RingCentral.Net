@@ -57,7 +57,7 @@ await rc.authorize({ username, extension, password });
 const result = await ${pathToCode(path)}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')});
 await rc.revoke();
 \`\`\`
-${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./packages/core/definitions/${p}.ts)`).join('\n')}`
+${parameters.filter(p => p !== 'RestRequestConfig').map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./packages/core/definitions/${p}.ts)`).join('\n')}`
     const httpMethod = comments.shift()[1]
     const endpoint = comments.shift()[1]
     // because `.../message-store` and `.../message-store/{messageId}` are in the same file
