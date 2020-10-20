@@ -57,7 +57,7 @@ rc.authorize(username, extension, password);
 var result = ${pathToCode(path).replace(/\.[A-Z]/g, (m) => m.toLowerCase())}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')});
 rc.revoke();
 \`\`\`
-${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/main/java/com/ringcentral/definitions/${p}.java)`).join('\n')}`
+${parameters.filter(p => p !== 'RestRequestConfig').map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/main/java/com/ringcentral/definitions/${p}.java)`).join('\n')}`
     const httpMethod = comments.shift()[1]
     const endpoint = comments.shift()[1]
     // because `.../message-store` and `.../message-store/{messageId}` are in the same file
