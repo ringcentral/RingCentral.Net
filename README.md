@@ -2,29 +2,28 @@
 
 [![Build Status](https://travis-ci.org/ringcentral/RingCentral.Net.svg?branch=master)](https://travis-ci.org/ringcentral/RingCentral.Net)
 
-This project is a complete rewrite of [ringcentral/ringcentral-csharp-client](https://github.com/ringcentral/ringcentral-csharp-client).
-
-- [Announcing the New RingCentral SDK for .NET](https://medium.com/ringcentral-developers/new-ringcentral-sdk-for-net-a43417b2538c)
-- [RingCentral SDK for .NET Upgrade Guide](https://medium.com/ringcentral-developers/ringcentral-sdk-for-net-upgrade-guide-8ead6bcdaf99)
-
 
 ## Installation
 
-Package is available on NuGet: https://www.nuget.org/packages/RingCentral.Net
+Packages are [available on NuGet](https://www.nuget.org/packages?q=ringcentral.net).
+You can install them just like you install any other NuGet packages.
 
-You can install it just like you install any other NuGet packages.
 
-If you need PubNub feature, you also need to install one of the following packages:
+## Extensions
 
-- If you want to target traditional .NET Framework: https://www.nuget.org/packages/RingCentral.Net.Pubnub
-- If you want to target .NET Core, Mono, Xamarin...etc: https://www.nuget.org/packages/RingCentral.Net.PubnubPCL
+Since version 5.0.0, this project has been changed to an extension based architecture. 
 
-### Compatibility issue
+- [RingCentral.Net](./RingCentral.Net) provides core features. 
 
-- RingCentral.Net 4.x is compatible with RingCentral.Net.Pubnub/RingCentral.Net.PubnubPCL 1.4 or later versions.
-- RingCentral.Net 3.x is compatible with RingCentral.Net.Pubnub/RingCentral.Net.PubnubPCL 1.3.1 or earlier versions.
+You need to install extensions if you need extra features:
 
-If wrong combination is installed, there will be [System.MissingMethodException](https://github.com/ringcentral/RingCentral.Net/issues/22).
+- [RingCentral.Net.AuthorizeUri](./RingCentral.Net.AuthorizeUri) provides utility methods to build URI for OAuth authorization purpose. 
+- [RingCentral.Net.Debug](./RingCentral.Net.Debug) prints all HTTP traffic to console.
+- [RingCentral.Net.Events](./RingCentral.Net.Events) provides your with events about HTTP requests.
+- [RingCentral.Net.Pubnub](./RingCentral.Net.Pubnub) if you need PubNub support and your app targets traditional .NET Framework.
+- [RingCentral.Net.PubnubPCL](./RingCentral.Net.PubnubPCL) if you need PubNub support and your app targets .NET Core, Mono, Xamarin...etc.
+- [RingCentral.Net.RateLimit](./RingCentral.Net.RateLimit) automatically handles rate limit for you.
+- [RingCentral.Net.Retry](./RingCentral.Net.Retry) allows you to retry a REST request if there is `RestException`.
 
 
 ## Code samples
@@ -36,7 +35,7 @@ There is also lots of useful code for your reference in our [test cases](./RingC
 
 ## PubNub notification delay issue
 
-If you create multiple subscriptions in a single app and run the app in .NET Framework environment, you may experience notifications delay. Delay time is around 4 montes and 30 seconds.
+If you create multiple subscriptions in a single app and run the app in .NET Framework environment, you may experience notifications delay. Delay time is around 4 minutes and 30 seconds.
 
 A solution/workaround is to add the following to your `app.config` file:
 
@@ -118,19 +117,16 @@ var extInfo = JsonConvert.DeserializeObject<GetExtensionInfoResponse>(responseBo
 
 ### Release
 
-Update version number in `RingCentral.Net/RingCentral.Net.csproj` & `RingCentral.Net/RestClient.cs`
+Update version number in `RingCentral.Net/RestClient.cs`.
+
+Update version number in `<ProjectName>/<ProjectName>.csproj`
 
 ```
-cd RingCentral.Net
+cd <ProjectName>
 dotnet pack
 ```
 
-Update version number in `RingCentral.Net.PubnubPCL/RingCentral.Net.PubnubPCL.csproj`
-
-```
-cd RingCentral.Net.PubnubPCL
-dotnet pack
-```
+#### RingCentral.Net.Pubnub
 
 Update version number in `RingCentral.Net.Pubnub\Properties\AssemblyInfo.cs`
 
