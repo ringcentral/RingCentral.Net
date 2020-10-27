@@ -1,7 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+      <TargetFramework>netstandard2.0</TargetFramework>
+      <PackageId>RingCentral.Net.Retry</PackageId>
+      <PackageVersion>1.0.0-beta1</PackageVersion>
+      <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
+      <Description>Retry extension for RingCentral.Net</Description>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+      <PackageTags>RingCentral;Retry</PackageTags>
+      <RootNamespace>RingCentral.Net.Retry</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

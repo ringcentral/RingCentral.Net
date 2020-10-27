@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Release a separate package of RingCentral.Net Pubnub.</releaseNotes>
-    <copyright>Copyright 2019</copyright>
+    <copyright>Copyright 2021</copyright>
     <tags>RingCentral Pubnub</tags>
   </metadata>
 </package>

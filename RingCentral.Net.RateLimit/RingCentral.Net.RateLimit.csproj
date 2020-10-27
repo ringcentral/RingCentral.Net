@@ -1,7 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+      <TargetFramework>netstandard2.0</TargetFramework>
+      <PackageId>RingCentral.Net.RateLimit</PackageId>
+      <PackageVersion>1.0.0-beta1</PackageVersion>
+      <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
+      <Description>Rate limit extension for RingCentral.Net</Description>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+      <PackageTags>RingCentral;Rate Limit</PackageTags>
+      <RootNamespace>RingCentral.Net.RateLimit</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

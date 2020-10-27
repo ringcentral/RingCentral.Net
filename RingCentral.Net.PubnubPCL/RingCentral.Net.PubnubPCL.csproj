@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>RingCentral.Net.PubnubPCL</PackageId>
-        <PackageVersion>1.4.0</PackageVersion>
+        <PackageVersion>2.0.0-beta1</PackageVersion>
         <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
         <Description>RingCentral SDK for .NET, PubnubPCL</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
