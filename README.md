@@ -122,6 +122,7 @@ dotnet pack
 #### RingCentral.Net.Pubnub
 
 Update version number in `RingCentral.Net.Pubnub\Properties\AssemblyInfo.cs`
+Update version number in `RingCentral.Net.Pubnub\RingCentral.Net.Pubnub.nuspec`
 
 Rebuild solution
 
