@@ -18,6 +18,7 @@ Since version 5.0.0, this project has been changed to an extension based archite
 You need to install extensions if you need extra features:
 
 - [RingCentral.Net.AuthorizeUri](./RingCentral.Net.AuthorizeUri) provides utility methods to build URI for OAuth authorization purpose. 
+- [RingCentral.Net.AutoRefresh](./RingCentral.Net.AutoRefresh) auto refreshes your token.
 - [RingCentral.Net.Debug](./RingCentral.Net.Debug) prints all HTTP traffic to console.
 - [RingCentral.Net.Events](./RingCentral.Net.Events) provides your with events about HTTP requests.
 - [RingCentral.Net.Pubnub](./RingCentral.Net.Pubnub) if you need PubNub support and your app targets traditional .NET Framework.
@@ -52,13 +53,6 @@ Notes:
 - If you only create one subscription in your code, you will not have this issue either.
 - This is because [by default only 2 connections to a server is allowed](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings).
 - More information FYI: https://stackoverflow.com/a/49868185/862862
-
-
-## Token auto refresh
-
-By default this SDK doesn't do token refresh. You are responsible to design and implement your own token management strategy.
-
-However, if you need a quick and dirty solution, you can try `rc.AutoRefresh(interval: 1000 * 60 * 30);`. To disable it, use `rc.StopAutoRefresh();`.
 
 
 ## Binary content downloading
