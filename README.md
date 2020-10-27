@@ -61,13 +61,6 @@ By default this SDK doesn't do token refresh. You are responsible to design and 
 However, if you need a quick and dirty solution, you can try `rc.AutoRefresh(interval: 1000 * 60 * 30);`. To disable it, use `rc.StopAutoRefresh();`.
 
 
-## API calls auto retry
-
-By default there is no API calls auto retry. If an API call fails, an exception will be thrown and you are supposed to catch and handle it.
-
-Use [Retry extension](https://github.com/ringcentral/RingCentral.Net/tree/master/RingCentral.Net.Retry) if you need a out-of-box solution.
-
-
 ## Binary content downloading
 
 Some [sample code](./samples.md) for binary content downloading may not work.
