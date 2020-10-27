@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 namespace RingCentral
 {
     public abstract class SdkExtension

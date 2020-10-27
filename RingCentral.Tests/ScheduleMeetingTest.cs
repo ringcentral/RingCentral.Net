@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using Xunit;
 
 namespace RingCentral.Tests

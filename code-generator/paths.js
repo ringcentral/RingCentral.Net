@@ -207,7 +207,6 @@ const generate = (prefix = '/') => {
         methodParams.push(`${pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
       }
       methodParams.push('RestRequestConfig restRequestConfig = null')
-      usings.add('using System.Threading;')
       code += `
 
       /// <summary>

@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using System.Threading;
 
 namespace RingCentral.Paths.Restapi.Glip.Conversations
 {
