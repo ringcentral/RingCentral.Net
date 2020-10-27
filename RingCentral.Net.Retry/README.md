@@ -17,3 +17,8 @@ await rc.Authorize(
 var retryExtension = new RetryExtension();
 rc.InstallExtension(retryExtension);
 ```
+
+
+## More documentation
+
+This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry), check its documentation for more information.

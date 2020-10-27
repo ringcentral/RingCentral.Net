@@ -11,3 +11,8 @@ var rc = new RestClient(
 var debugExtension = new DebugExtension();
 rc.InstallExtension(debugExtension);
 ```
+
+
+## More documentation
+
+This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/debug), check its documentation for more information.

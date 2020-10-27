@@ -17,3 +17,8 @@ await rc.Authorize(
 var rateLimitExtension = new RateLimitExtension();
 rc.InstallExtension(rateLimitExtension);
 ```
+
+
+## More documentation
+
+This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/rate-limit), check its documentation for more information.

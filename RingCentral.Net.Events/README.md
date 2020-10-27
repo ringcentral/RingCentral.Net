@@ -20,3 +20,8 @@ void EventHandler(object sender, HttpMessages httpMessages)
 
 eventsExtension.RequestSuccess += EventHandler;
 ```
+
+
+## More documentation
+
+This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/events), check its documentation for more information.

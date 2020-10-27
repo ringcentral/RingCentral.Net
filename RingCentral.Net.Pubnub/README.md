@@ -24,3 +24,7 @@ var subscription = await pubNubExtension.Subscribe(eventFilters, message =>
     // do something with message
 });
 ```
+
+## More documentation
+
+This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/pubnub), check its documentation for more information.
