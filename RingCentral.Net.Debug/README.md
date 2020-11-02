@@ -13,6 +13,13 @@ rc.InstallExtension(debugExtension);
 ```
 
 
+## Logging action
+
+Optionally, you can provide a `loggingAction` to constructor of `DebugExtension`.
+
+The `loggingAction` determines how the HTTP traffic message is logged. By default it is `Console.WriteLine`
+
+
 ## More documentation
 
 This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/debug), check its documentation for more information.

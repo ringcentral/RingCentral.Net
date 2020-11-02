@@ -2,10 +2,18 @@
 
 namespace RingCentral.Net.Debug
 {
-    // todo: let user specify logging method (provide default value)
-    // rename to Logging extension
     public class DebugExtension : SdkExtension
     {
+        private readonly Action<string> _loggingAction;
+        public DebugExtension(Action<string> loggingAction = null)
+        {
+            if (loggingAction == null)
+            {
+                loggingAction = Console.WriteLine;
+            }
+            this._loggingAction = loggingAction;
+        }
+
         public override void Install(RestClient rc)
         {
             var extensibleRequest = rc.extensibleRequest;
@@ -15,7 +23,7 @@ namespace RingCentral.Net.Debug
                 if (enabled)
                 {
                     var debugMessage = Utils.FormatHttpMessage(httpResponseMessage, httpRequestMessage);
-                    Console.WriteLine(debugMessage);
+                    _loggingAction(debugMessage);
                 }
 
                 return httpResponseMessage;
