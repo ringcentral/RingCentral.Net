@@ -3195,6 +3195,10 @@ paths:
           enum:
             - plain
             - S256
+        - name: discovery
+          type: boolean
+          in: formData
+          default: false
       responses:
         '302':
           description: Found
