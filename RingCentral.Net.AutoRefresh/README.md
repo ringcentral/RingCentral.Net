@@ -3,15 +3,12 @@
 This extension will auto refresh your token every 30 minutes(customizable).
 
 ```cs
-var rc = new RestClient(
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-    Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-);
-var autoRefreshExtension = new AutoRefreshExtension();
+var rc = new RestClient(...);
+var autoRefreshExtension = new AutoRefreshExtension(...);
 rc.InstallExtension(autoRefreshExtension);
 autoRefreshExtension.Start();
 ```
+
 
 ## Disclaimer
 
