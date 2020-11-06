@@ -1,6 +1,6 @@
 ﻿namespace RingCentral.Net.AutoRefresh
 {
-    public class AutoRefreshExtension  : SdkExtension
+    public class AutoRefreshExtension : SdkExtension
     {
         private RestClient _rc;
         private System.Timers.Timer _autoRefreshTimer;
@@ -10,7 +10,7 @@
         {
             _autoRefreshOptions = autoRefreshOptions ?? AutoRefreshOptions.DefaultInstance;
         }
-        
+
         public override void Install(RestClient rc)
         {
             this._rc = rc;

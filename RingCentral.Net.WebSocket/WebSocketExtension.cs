@@ -13,6 +13,7 @@ namespace RingCentral.Net.WebSocket
                 webSocketOptions = WebSocketOptions.DefaultInstance;
             }
         }
+
         public override void Install(RestClient rc)
         {
             this._rc = rc;

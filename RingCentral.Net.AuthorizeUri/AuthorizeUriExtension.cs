@@ -8,7 +8,14 @@ namespace RingCentral.Net.AuthorizeUri
     public class AuthorizeUriExtension : SdkExtension
     {
         private RestClient _rc;
-        public string codeVerifier;
+        public string CodeVerifier { get; private set; }
+
+        private readonly AuthorizeUriOptions _authorizeUriOptions;
+
+        public AuthorizeUriExtension(AuthorizeUriOptions authorizeUriOptions = null)
+        {
+            _authorizeUriOptions = authorizeUriOptions ?? AuthorizeUriOptions.DefaultInstance;
+        }
 
         public override void Install(RestClient rc)
         {
@@ -32,23 +39,36 @@ namespace RingCentral.Net.AuthorizeUri
             {
                 var randomBytes = new Byte[32];
                 new Random().NextBytes(randomBytes);
-                this.codeVerifier = Convert.ToBase64String(randomBytes)
+                this.CodeVerifier = Convert.ToBase64String(randomBytes)
                     .Replace("+", "-")
                     .Replace("/", "_")
                     .Replace("=", "");
-                var sha256Hash = new SHA256Managed().ComputeHash(Encoding.UTF8.GetBytes(this.codeVerifier));
+                var sha256Hash = new SHA256Managed().ComputeHash(Encoding.UTF8.GetBytes(this.CodeVerifier));
                 authorizeRequest.code_challenge = Convert.ToBase64String(sha256Hash)
                     .Replace("+", "-")
                     .Replace("/", "_")
                     .Replace("=", "");
             }
 
-            var uriBuilder = new UriBuilder(this._rc.server)
+            var query = string.Join("&",
+                Utils.GetPairs(authorizeRequest).Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"));
+            UriBuilder uriBuilder;
+            if (_authorizeUriOptions.baseUri == null)
             {
-                Path = "/restapi/oauth/authorize",
-                Query = string.Join("&",
-                    Utils.GetPairs(authorizeRequest).Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"))
-            };
+                uriBuilder = new UriBuilder(this._rc.server)
+                {
+                    Path = "/restapi/oauth/authorize",
+                    Query = query
+                };
+            }
+            else
+            {
+                uriBuilder = new UriBuilder(_authorizeUriOptions.baseUri)
+                {
+                    Query = query
+                };
+            }
+
             return uriBuilder.Uri.ToString();
         }
     }

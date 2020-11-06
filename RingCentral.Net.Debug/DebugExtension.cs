@@ -5,12 +5,14 @@ namespace RingCentral.Net.Debug
     public class DebugExtension : SdkExtension
     {
         private readonly Action<string> _loggingAction;
+
         public DebugExtension(Action<string> loggingAction = null)
         {
             if (loggingAction == null)
             {
                 loggingAction = Console.WriteLine;
             }
+
             this._loggingAction = loggingAction;
         }
 
