@@ -1,19 +1,12 @@
-﻿using System;
-
-namespace RingCentral.Net.Debug
+﻿namespace RingCentral.Net.Debug
 {
     public class DebugExtension : SdkExtension
     {
-        private readonly Action<string> _loggingAction;
+        private readonly DebugOptions _debugOptions;
 
-        public DebugExtension(Action<string> loggingAction = null)
+        public DebugExtension(DebugOptions debugOptions = null)
         {
-            if (loggingAction == null)
-            {
-                loggingAction = Console.WriteLine;
-            }
-
-            this._loggingAction = loggingAction;
+            _debugOptions = debugOptions ?? DebugOptions.DefaultInstance;
         }
 
         public override void Install(RestClient rc)
@@ -25,7 +18,7 @@ namespace RingCentral.Net.Debug
                 if (enabled)
                 {
                     var debugMessage = Utils.FormatHttpMessage(httpResponseMessage, httpRequestMessage);
-                    _loggingAction(debugMessage);
+                    _debugOptions.loggingAction(debugMessage);
                 }
 
                 return httpResponseMessage;

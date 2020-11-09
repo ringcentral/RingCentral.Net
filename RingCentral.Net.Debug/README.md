@@ -8,7 +8,7 @@ var rc = new RestClient(
     Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
     Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
 );
-var debugExtension = new DebugExtension();
+var debugExtension = new DebugExtension(...);
 rc.InstallExtension(debugExtension);
 ```
 
