@@ -7,21 +7,32 @@ namespace RingCentral.Net.RateLimit
 {
     public class RateLimitExtension : RetryExtension
     {
-        public RateLimitExtension(int maxRetries = 3, int rateLimitWindow = 60) : base(
-            (restException, retriesAttempted) => restException.httpResponseMessage.StatusCode == (HttpStatusCode) 429 &&
-                                                 retriesAttempted < maxRetries,
-            (restException, retriesAttempted) =>
-            {
-                var rateLimitWindowHeader = restException.httpResponseMessage.Headers.GetValues("x-rate-limit-window")
-                    .FirstOrDefault();
-                if (rateLimitWindowHeader != default)
-                {
-                    rateLimitWindow = int.Parse(rateLimitWindowHeader);
-                }
-
-                return (int) (rateLimitWindow * 1000 * Math.Pow(2, retriesAttempted)); // exponential back off
-            })
+        public RateLimitExtension(RateLimitOptions options = null) : base(DefaultOptions(options))
         {
+        }
+
+        private static RetryOptions DefaultOptions(RateLimitOptions options)
+        {
+            options = options ?? RateLimitOptions.DefaultInstance;
+            return new RetryOptions
+            {
+                shouldRetry = (restException, retriesAttempted) =>
+                    restException.httpResponseMessage.StatusCode == (HttpStatusCode) 429 &&
+                    retriesAttempted < options.maxRetries,
+                retryInterval = (restException, retriesAttempted) =>
+                {
+                    var rateLimitWindowHeader = restException.httpResponseMessage.Headers
+                        .GetValues("x-rate-limit-window")
+                        .FirstOrDefault();
+                    if (rateLimitWindowHeader != default)
+                    {
+                        options.rateLimitWindow = int.Parse(rateLimitWindowHeader);
+                    }
+
+                    return (int) (options.rateLimitWindow * 1000 *
+                                  Math.Pow(2, retriesAttempted)); // exponential back off
+                }
+            };
         }
     }
 }

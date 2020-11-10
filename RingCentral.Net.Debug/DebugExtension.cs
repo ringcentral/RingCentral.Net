@@ -2,11 +2,11 @@
 {
     public class DebugExtension : SdkExtension
     {
-        private readonly DebugOptions _debugOptions;
+        private readonly DebugOptions _options;
 
         public DebugExtension(DebugOptions debugOptions = null)
         {
-            _debugOptions = debugOptions ?? DebugOptions.DefaultInstance;
+            _options = debugOptions ?? DebugOptions.DefaultInstance;
         }
 
         public override void Install(RestClient rc)
@@ -18,7 +18,7 @@
                 if (enabled)
                 {
                     var debugMessage = Utils.FormatHttpMessage(httpResponseMessage, httpRequestMessage);
-                    _debugOptions.loggingAction(debugMessage);
+                    _options.loggingAction(debugMessage);
                 }
 
                 return httpResponseMessage;

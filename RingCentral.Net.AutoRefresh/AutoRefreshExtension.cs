@@ -4,11 +4,11 @@
     {
         private RestClient _rc;
         private System.Timers.Timer _autoRefreshTimer;
-        private readonly AutoRefreshOptions _autoRefreshOptions;
+        private readonly AutoRefreshOptions _options;
 
         public AutoRefreshExtension(AutoRefreshOptions autoRefreshOptions = null)
         {
-            _autoRefreshOptions = autoRefreshOptions ?? AutoRefreshOptions.DefaultInstance;
+            _options = autoRefreshOptions ?? AutoRefreshOptions.DefaultInstance;
         }
 
         public override void Install(RestClient rc)
@@ -21,7 +21,7 @@
             Stop(); // stop existing
             _autoRefreshTimer = new System.Timers.Timer();
             _autoRefreshTimer.Elapsed += (sender, args) => { this._rc.Refresh(); };
-            _autoRefreshTimer.Interval = _autoRefreshOptions.interval;
+            _autoRefreshTimer.Interval = _options.interval;
             _autoRefreshTimer.Start();
         }
 

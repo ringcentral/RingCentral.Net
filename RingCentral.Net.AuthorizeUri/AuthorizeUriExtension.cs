@@ -10,11 +10,11 @@ namespace RingCentral.Net.AuthorizeUri
         private RestClient _rc;
         public string CodeVerifier { get; private set; }
 
-        private readonly AuthorizeUriOptions _authorizeUriOptions;
+        private readonly AuthorizeUriOptions _options;
 
         public AuthorizeUriExtension(AuthorizeUriOptions authorizeUriOptions = null)
         {
-            _authorizeUriOptions = authorizeUriOptions ?? AuthorizeUriOptions.DefaultInstance;
+            _options = authorizeUriOptions ?? AuthorizeUriOptions.DefaultInstance;
         }
 
         public override void Install(RestClient rc)
@@ -53,7 +53,7 @@ namespace RingCentral.Net.AuthorizeUri
             var query = string.Join("&",
                 Utils.GetPairs(authorizeRequest).Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"));
             UriBuilder uriBuilder;
-            if (_authorizeUriOptions.baseUri == null)
+            if (_options.baseUri == null)
             {
                 uriBuilder = new UriBuilder(this._rc.server)
                 {
@@ -63,7 +63,7 @@ namespace RingCentral.Net.AuthorizeUri
             }
             else
             {
-                uriBuilder = new UriBuilder(_authorizeUriOptions.baseUri)
+                uriBuilder = new UriBuilder(_options.baseUri)
                 {
                     Query = query
                 };

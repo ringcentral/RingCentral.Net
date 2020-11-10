@@ -1,22 +1,14 @@
-﻿using System;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace RingCentral.Net.Retry
 {
     public class RetryExtension : SdkExtension
     {
-        private readonly Func<RestException, int, bool> _shouldRetry;
-        private readonly Func<RestException, int, int> _retryInterval;
+        private readonly RetryOptions _options;
 
-        public RetryExtension(Func<RestException, int, bool> shouldRetry = null,
-            Func<RestException, int, int> retryInterval = null)
+        public RetryExtension(RetryOptions options = null)
         {
-            this._shouldRetry = shouldRetry ?? ((restException, retriesAttempted) => retriesAttempted < 3 &&
-                Array.Exists(new[] {429, 503},
-                    element => (HttpStatusCode) element == restException.httpResponseMessage.StatusCode));
-            this._retryInterval = retryInterval ?? ((restException, retriesAttempted) =>
-                (int) (60 * 1000 * Math.Pow(2, retriesAttempted))); // exponential back off
+            this._options = options ?? RetryOptions.DefaultInstance;
         }
 
         public override void Install(RestClient rc)
@@ -30,9 +22,9 @@ namespace RingCentral.Net.Retry
                 }
                 catch (RestException re)
                 {
-                    if (this.enabled && this._shouldRetry(re, restRequestConfig.retriesAttempted))
+                    if (this.enabled && this._options.shouldRetry(re, restRequestConfig.retriesAttempted))
                     {
-                        await Task.Delay(this._retryInterval(re, restRequestConfig.retriesAttempted));
+                        await Task.Delay(this._options.retryInterval(re, restRequestConfig.retriesAttempted));
                         restRequestConfig.retriesAttempted += 1;
                         return await rc.extensibleRequest(httpRequestMessage, restRequestConfig);
                     }
