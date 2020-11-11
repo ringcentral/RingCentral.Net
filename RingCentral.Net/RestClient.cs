@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -54,6 +55,7 @@ namespace RingCentral
 
         public Func<HttpRequestMessage, RestRequestConfig, Task<HttpResponseMessage>> extensibleRequest;
 
+        private static readonly string[] BasicAuthPaths = new []{"/restapi/oauth/token", "/restapi/oauth/revoke"};
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
             RestRequestConfig restRequestConfig = null)
         {
@@ -61,7 +63,7 @@ namespace RingCentral
 
             httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/5.0.0-beta1");
             httpRequestMessage.Headers.Authorization =
-                httpRequestMessage.RequestUri.AbsolutePath.StartsWith("/restapi/oauth/")
+                BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath)
                     ? new AuthenticationHeaderValue("Basic",
                         Convert.ToBase64String(
                             Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))

@@ -9,3 +9,4 @@ packages/
 
 VoiceMailNotificationTest.cs
 CallOutTest.cs
+.env
