@@ -13,7 +13,25 @@ namespace RingCentral.Net.WebSocket
         private readonly WebSocketOptions _options;
         private Wsc _wsc;
         private ClientWebSocket _ws;
-        public event EventHandler<string> WebSocketMessage;
+        private ConnectionDetails _connectionDetails;
+        public event EventHandler<WsgMessage> WebSocketMessage;
+
+        private Task<WsgMessage> WaitForMessage(Func<WsgMeta, bool> condition)
+        {
+            var taskCompletionSource = new TaskCompletionSource<WsgMessage>();
+
+            void Handler(object sender, WsgMessage msg)
+            {
+                if (condition(msg.meta))
+                {
+                    WebSocketMessage -= Handler;
+                    taskCompletionSource.SetResult(msg);
+                }
+            }
+
+            WebSocketMessage += Handler;
+            return taskCompletionSource.Task;
+        }
 
         public WebSocketExtension(WebSocketOptions options = null)
         {
@@ -26,7 +44,7 @@ namespace RingCentral.Net.WebSocket
             await this.Connect();
         }
 
-        public async Task Connect(bool recoverSession = false)
+        private async Task Connect(bool recoverSession = false)
         {
             var wsToken = await this._rc.Post<WsToken>("/restapi/oauth/wstoken");
             var wsUri = $"{wsToken.uri}?access_token={wsToken.ws_access_token}";
@@ -34,11 +52,28 @@ namespace RingCentral.Net.WebSocket
             {
                 wsUri = $"{wsUri}&wsc={_wsc.token}";
             }
+
             _ws = new ClientWebSocket();
             await _ws.ConnectAsync(new Uri(wsUri), CancellationToken.None);
-#pragma warning disable 4014
-            Receive();
-#pragma warning restore 4014
+            
+            await Receive().ConfigureAwait(false);
+            
+            // listen for new wsc data
+            WebSocketMessage += (sender, msg) =>
+            {
+                if (msg.meta.wsc != null && (_wsc == null ||
+                                             (msg.meta.type ==
+                                              MessageType.ConnectionDetails &&
+                                              msg.body.GetType().GetProperty("recoveryState") != null) ||
+                                             _wsc?.sequence < msg.meta.wsc.sequence))
+                {
+                    _wsc = msg.meta.wsc;
+                }
+            };
+            
+            // get ConnectionDetails data
+            var cdsMsg = await WaitForMessage(meta => meta.type == MessageType.ConnectionDetails);
+            this._connectionDetails = cdsMsg.body;
         }
 
         public async Task Send(string message)
@@ -61,6 +96,7 @@ namespace RingCentral.Net.WebSocket
                     {
                         result = await _ws.ReceiveAsync(buffer, CancellationToken.None);
                         // ReSharper disable once AssignNullToNotNullAttribute
+                        
                         ms.Write(buffer.Array, buffer.Offset, result.Count);
                     } while (!result.EndOfMessage);
 
@@ -68,7 +104,7 @@ namespace RingCentral.Net.WebSocket
                     using (var reader = new StreamReader(ms, Encoding.UTF8))
                     {
                         var message = await reader.ReadToEndAsync();
-                        WebSocketMessage?.Invoke(this, message);
+                        WebSocketMessage?.Invoke(this, WsgMessage.Parse((message)));
                         Console.WriteLine("Received", message);
                     }
                 }

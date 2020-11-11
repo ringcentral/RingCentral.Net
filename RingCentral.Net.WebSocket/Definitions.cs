@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 namespace RingCentral.Net.WebSocket
 {
     public class WebSocketOptions
@@ -20,4 +25,72 @@ namespace RingCentral.Net.WebSocket
         public string token;
         public int sequence;
     }
+
+    public enum MessageType
+    {
+        ClientRequest,
+        ServerNotification,
+        Error,
+        ConnectionDetails,
+    }
+
+    public class WsgMeta
+    {
+        [JsonConverter(typeof(StringEnumConverter))]
+        public MessageType type;
+
+        public string messageId;
+        public int status;
+        public Dictionary<string, string> headers;
+        public Wsc wsc;
+    }
+
+    public class WsgMessage
+    {
+        public WsgMeta meta;
+        public dynamic body;
+
+        public static WsgMessage Parse(string message)
+        {
+            if (message.Contains(",--Boundary"))
+            {
+                var index = message.IndexOf(",--Boundary", StringComparison.Ordinal);
+                return new WsgMessage
+                {
+                    meta = JsonConvert.DeserializeObject<WsgMeta>(message.Substring(1, index)),
+                    body = message.Substring(index + 1, message.Length - 1),
+                };
+            }
+            else
+            {
+                var parsed = JsonConvert.DeserializeObject<dynamic>(message);
+                return new WsgMessage
+                {
+                    meta = parsed[0],
+                    body = parsed[1],
+                };
+            }
+        }
+    }
+
+    public enum RecoveryState
+    {
+        Successful,
+        Failed,
+    }
+
+    public class ConnectionDetails
+    {
+        public string creationTime;
+        public int maxConnectionsPerSession;
+        public int recoveryBufferSize;
+        public int recoveryTimeout;
+        public int idleTimeout;
+        public int absoluteTimeout;
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        public RecoveryState recoveryState;
+
+        public string recoveryErrorCode;
+    };
 }

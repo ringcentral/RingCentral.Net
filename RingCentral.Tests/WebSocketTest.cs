@@ -28,7 +28,6 @@ namespace RingCentral.Tests
                 );
                 var webSocketExtension = new WebSocketExtension();
                 rc.InstallExtension(webSocketExtension);
-                await webSocketExtension.Connect();
                 Console.ReadLine();
             }
         }
