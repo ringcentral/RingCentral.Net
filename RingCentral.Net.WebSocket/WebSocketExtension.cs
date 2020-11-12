@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Globalization;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Websocket.Client;
 
 namespace RingCentral.Net.WebSocket
@@ -21,8 +23,8 @@ namespace RingCentral.Net.WebSocket
 
         public override async Task Install(RestClient rc)
         {
-            this._rc = rc;
-            await this.Connect();
+            _rc = rc;
+            await Connect();
         }
 
         private async Task Connect(bool recoverSession = false)
@@ -51,6 +53,12 @@ namespace RingCentral.Net.WebSocket
                 _ws.MessageReceived.Subscribe(responseMessage =>
                 {
                     var wsgMessage = WsgMessage.Parse(responseMessage.Text);
+                    if (_options.debugMode)
+                    {
+                        Console.WriteLine($"***WebSocket incoming message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
+                                          $"\n{JsonConvert.SerializeObject(wsgMessage, Formatting.Indented)}" +
+                                          $"\n******");
+                    }
                     MessageReceived?.Invoke(this, wsgMessage);
                 });
             });
@@ -77,6 +85,12 @@ namespace RingCentral.Net.WebSocket
 
         public Task Send(string message)
         {
+            if (_options.debugMode)
+            {
+                Console.WriteLine($"***WebSocket outgoing message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
+                                  $"\n{JsonConvert.SerializeObject(JsonConvert.DeserializeObject(message), Formatting.Indented)}" +
+                                  $"\n******");
+            }
             return Task.Run(() => _ws.Send(message));
         }
 
