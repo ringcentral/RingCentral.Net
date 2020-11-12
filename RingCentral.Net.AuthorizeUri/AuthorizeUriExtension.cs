@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RingCentral.Net.AuthorizeUri
 {
@@ -17,9 +18,10 @@ namespace RingCentral.Net.AuthorizeUri
             _options = authorizeUriOptions ?? AuthorizeUriOptions.DefaultInstance;
         }
 
-        public override void Install(RestClient rc)
+        public override Task Install(RestClient rc)
         {
             this._rc = rc;
+            return Task.CompletedTask;
         }
 
         public string BuildUri(AuthorizeRequest authorizeRequest)

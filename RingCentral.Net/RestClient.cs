@@ -24,10 +24,10 @@ namespace RingCentral
 
         public List<SdkExtension> sdkExtensions = new List<SdkExtension>();
 
-        public void InstallExtension(SdkExtension sdkExtension)
+        public async Task InstallExtension(SdkExtension sdkExtension)
         {
             sdkExtensions.Add(sdkExtension);
-            sdkExtension.Install(this);
+            await sdkExtension.Install(this);
         }
 
         private RestClient(string clientId, string clientSecret, Uri server, string appName = "Unknown",

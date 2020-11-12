@@ -1,4 +1,6 @@
-﻿namespace RingCentral.Net.Debug
+﻿using System.Threading.Tasks;
+
+namespace RingCentral.Net.Debug
 {
     public class DebugExtension : SdkExtension
     {
@@ -9,7 +11,7 @@
             _options = debugOptions ?? DebugOptions.DefaultInstance;
         }
 
-        public override void Install(RestClient rc)
+        public override Task Install(RestClient rc)
         {
             var extensibleRequest = rc.extensibleRequest;
             rc.extensibleRequest = async (httpRequestMessage, restRequestConfig) =>
@@ -23,6 +25,7 @@
 
                 return httpResponseMessage;
             };
+            return Task.CompletedTask;
         }
     }
 }

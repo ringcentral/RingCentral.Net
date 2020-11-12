@@ -1,9 +1,6 @@
 ﻿using System;
-using System.IO;
-using System.Net.WebSockets;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
+using Websocket.Client;
 
 namespace RingCentral.Net.WebSocket
 {
@@ -12,33 +9,15 @@ namespace RingCentral.Net.WebSocket
         private RestClient _rc;
         private readonly WebSocketOptions _options;
         private Wsc _wsc;
-        private ClientWebSocket _ws;
+        private WebsocketClient _ws;
         private ConnectionDetails _connectionDetails;
-        public event EventHandler<WsgMessage> WebSocketMessage;
-
-        private Task<WsgMessage> WaitForMessage(Func<WsgMeta, bool> condition)
-        {
-            var taskCompletionSource = new TaskCompletionSource<WsgMessage>();
-
-            void Handler(object sender, WsgMessage msg)
-            {
-                if (condition(msg.meta))
-                {
-                    WebSocketMessage -= Handler;
-                    taskCompletionSource.SetResult(msg);
-                }
-            }
-
-            WebSocketMessage += Handler;
-            return taskCompletionSource.Task;
-        }
 
         public WebSocketExtension(WebSocketOptions options = null)
         {
             this._options = options ?? WebSocketOptions.DefaultInstance;
         }
 
-        public override async void Install(RestClient rc)
+        public override async Task Install(RestClient rc)
         {
             this._rc = rc;
             await this.Connect();
@@ -53,62 +32,38 @@ namespace RingCentral.Net.WebSocket
                 wsUri = $"{wsUri}&wsc={_wsc.token}";
             }
 
-            _ws = new ClientWebSocket();
-            await _ws.ConnectAsync(new Uri(wsUri), CancellationToken.None);
-            
-            await Receive().ConfigureAwait(false);
-            
-            // listen for new wsc data
-            WebSocketMessage += (sender, msg) =>
+            _ws = new WebsocketClient(new Uri(wsUri));
+            // listen for incoming events
+            _ws.MessageReceived.Subscribe(responseMessage =>
             {
-                if (msg.meta.wsc != null && (_wsc == null ||
-                                             (msg.meta.type ==
-                                              MessageType.ConnectionDetails &&
-                                              msg.body.GetType().GetProperty("recoveryState") != null) ||
-                                             _wsc?.sequence < msg.meta.wsc.sequence))
+                var wsgMsg = WsgMessage.Parse(responseMessage.Text);
+                if (wsgMsg.meta.wsc != null && (_wsc == null ||
+                                                (wsgMsg.meta.type ==
+                                                 MessageType.ConnectionDetails &&
+                                                 wsgMsg.body.GetType().GetProperty("recoveryState") != null) ||
+                                                _wsc?.sequence < wsgMsg.meta.wsc.sequence))
                 {
-                    _wsc = msg.meta.wsc;
+                    _wsc = wsgMsg.meta.wsc;
                 }
-            };
-            
-            // get ConnectionDetails data
-            var cdsMsg = await WaitForMessage(meta => meta.type == MessageType.ConnectionDetails);
-            this._connectionDetails = cdsMsg.body;
+
+                if (wsgMsg.meta.type == MessageType.ConnectionDetails)
+                {
+                    _connectionDetails = wsgMsg.body.ToObject<ConnectionDetails>();
+                }
+            });
+            await _ws.Start();
         }
 
-        public async Task Send(string message)
+        public Task Send(string message)
         {
-            var encoded = Encoding.UTF8.GetBytes(message);
-            var buffer = new ArraySegment<Byte>(encoded, 0, encoded.Length);
-            await _ws.SendAsync(buffer, WebSocketMessageType.Text, true, CancellationToken.None);
-            Console.WriteLine("Sent", message);
+            return Task.Run(() => _ws.Send(message));
         }
 
-        private async Task Receive()
+        public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
         {
-            while (true)
-            {
-                var buffer = new ArraySegment<byte>(new Byte[8192]);
-                using (var ms = new MemoryStream())
-                {
-                    WebSocketReceiveResult result = null;
-                    do
-                    {
-                        result = await _ws.ReceiveAsync(buffer, CancellationToken.None);
-                        // ReSharper disable once AssignNullToNotNullAttribute
-                        
-                        ms.Write(buffer.Array, buffer.Offset, result.Count);
-                    } while (!result.EndOfMessage);
-
-                    ms.Seek(0, SeekOrigin.Begin);
-                    using (var reader = new StreamReader(ms, Encoding.UTF8))
-                    {
-                        var message = await reader.ReadToEndAsync();
-                        WebSocketMessage?.Invoke(this, WsgMessage.Parse((message)));
-                        Console.WriteLine("Received", message);
-                    }
-                }
-            }
+            var subscription = new Subscription(this, eventFilters, callback);
+            await subscription.SubScribe();
+            return subscription;
         }
     }
 }

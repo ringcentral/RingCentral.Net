@@ -11,7 +11,7 @@ namespace RingCentral.Net.Retry
             this._options = options ?? RetryOptions.DefaultInstance;
         }
 
-        public override void Install(RestClient rc)
+        public override Task Install(RestClient rc)
         {
             var extensibleRequest = rc.extensibleRequest;
             rc.extensibleRequest = async (httpRequestMessage, restRequestConfig) =>
@@ -32,6 +32,7 @@ namespace RingCentral.Net.Retry
                     throw;
                 }
             };
+            return Task.CompletedTask;
         }
     }
 }

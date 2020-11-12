@@ -1,4 +1,6 @@
-﻿namespace RingCentral.Net.AutoRefresh
+﻿using System.Threading.Tasks;
+
+namespace RingCentral.Net.AutoRefresh
 {
     public class AutoRefreshExtension : SdkExtension
     {
@@ -11,9 +13,10 @@
             _options = autoRefreshOptions ?? AutoRefreshOptions.DefaultInstance;
         }
 
-        public override void Install(RestClient rc)
+        public override Task Install(RestClient rc)
         {
             this._rc = rc;
+            return Task.CompletedTask;
         }
 
         public void Start()

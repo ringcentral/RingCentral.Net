@@ -29,9 +29,10 @@ Please install package RingCentral.Net.PubnubPCL instead.");
             }
         }
 
-        public override void Install(RestClient restClient)
+        public override Task Install(RestClient restClient)
         {
             this.rc = restClient;
+            return Task.CompletedTask;
         }
 
         public async void Revoke()

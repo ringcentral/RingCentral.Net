@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace RingCentral.Net.Events
 {
@@ -20,7 +21,7 @@ namespace RingCentral.Net.Events
         public event EventHandler<HttpMessages> RequestSuccess;
         public event EventHandler<RestException> RequestError;
 
-        public override void Install(RestClient rc)
+        public override Task Install(RestClient rc)
         {
             var extensibleRequest = rc.extensibleRequest;
             rc.extensibleRequest = async (httpRequestMessage, restRequestConfig) =>
@@ -47,6 +48,7 @@ namespace RingCentral.Net.Events
                     throw;
                 }
             };
+            return Task.CompletedTask;
         }
     }
 }

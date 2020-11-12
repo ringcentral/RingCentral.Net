@@ -8,4 +8,8 @@
       <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Websocket.Client" Version="4.3.21" />
+    </ItemGroup>
+
 </Project>
