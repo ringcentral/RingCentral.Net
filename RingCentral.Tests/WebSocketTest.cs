@@ -1,13 +1,22 @@
 using System;
+using System.Globalization;
 using System.Threading.Tasks;
 using RingCentral.Net.WebSocket;
 using Xunit;
 using dotenv.net;
+using Xunit.Abstractions;
 
 namespace RingCentral.Tests
 {
     public class WebSocketTest
     {
+        private readonly ITestOutputHelper _testOutputHelper;
+
+        public WebSocketTest(ITestOutputHelper testOutputHelper)
+        {
+            _testOutputHelper = testOutputHelper;
+        }
+
         [Fact]
         public async void SendAndReceive()
         {
@@ -34,7 +43,27 @@ namespace RingCentral.Tests
                 {
                     Assert.NotNull(message);
                 });
-                await Task.Delay(999999999);
+                webSocketExtension.ws.MessageReceived.Subscribe(responseMessage =>
+                {
+                    _testOutputHelper.WriteLine(DateTime.Now.ToString(CultureInfo.CurrentCulture) + ": " + responseMessage.Text);
+                });
+                webSocketExtension.AutoRecoverSuccess += (sender, ws) =>
+                {
+                    ws.MessageReceived.Subscribe(responseMessage =>
+                    {
+                        _testOutputHelper.WriteLine(DateTime.Now.ToString(CultureInfo.CurrentCulture) + ": " + responseMessage.Text);
+                    });
+                };
+                while (true)
+                {
+                    await rc.Restapi().Account().Extension().CompanyPager().Post(new CreateInternalTextMessageRequest
+                    {
+                        from = new PagerCallerInfoRequest {extensionNumber = "101"},
+                        to = new[] {new PagerCallerInfoRequest {extensionNumber = "101"}},
+                        text = "Hello world",
+                    });
+                    await Task.Delay(120000);
+                }
             }
         }
     }

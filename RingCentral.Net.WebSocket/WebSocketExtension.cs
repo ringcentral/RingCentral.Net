@@ -9,8 +9,10 @@ namespace RingCentral.Net.WebSocket
         private RestClient _rc;
         private readonly WebSocketOptions _options;
         private Wsc _wsc;
-        private WebsocketClient _ws;
+        public WebsocketClient ws;
         private ConnectionDetails _connectionDetails;
+        
+        public event EventHandler<WebsocketClient> AutoRecoverSuccess;
 
         public WebSocketExtension(WebSocketOptions options = null)
         {
@@ -32,9 +34,10 @@ namespace RingCentral.Net.WebSocket
                 wsUri = $"{wsUri}&wsc={_wsc.token}";
             }
 
-            _ws = new WebsocketClient(new Uri(wsUri));
+            ws = new WebsocketClient(new Uri(wsUri));
+            ws.ReconnectTimeout = TimeSpan.FromMinutes(3);
             // listen for incoming events
-            _ws.MessageReceived.Subscribe(responseMessage =>
+            ws.MessageReceived.Subscribe(responseMessage =>
             {
                 var wsgMsg = WsgMessage.Parse(responseMessage.Text);
                 if (wsgMsg.meta.wsc != null && (_wsc == null ||
@@ -51,12 +54,21 @@ namespace RingCentral.Net.WebSocket
                     _connectionDetails = wsgMsg.body.ToObject<ConnectionDetails>();
                 }
             });
-            await _ws.Start();
+            await ws.Start();
+            ws.ReconnectionHappened.Subscribe(async info =>
+            {
+                ws.Dispose();
+                await Connect(true);
+                if (this._connectionDetails.recoveryState == RecoveryState.Successful)
+                {
+                    AutoRecoverSuccess?.Invoke(this, ws);
+                }
+            });
         }
 
         public Task Send(string message)
         {
-            return Task.Run(() => _ws.Send(message));
+            return Task.Run(() => ws.Send(message));
         }
 
         public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
