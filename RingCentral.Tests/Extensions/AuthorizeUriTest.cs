@@ -17,7 +17,7 @@ namespace RingCentral.Tests.Extensions
             );
 
             var authorizeUriExtension = new AuthorizeUriExtension();
-            rc.InstallExtension(authorizeUriExtension);
+            await rc.InstallExtension(authorizeUriExtension);
 
             var redirectUri = "http://localhost:3000/callback";
 

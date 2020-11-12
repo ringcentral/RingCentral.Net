@@ -21,7 +21,7 @@ namespace RingCentral.Tests.Extensions
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var rateLimitExtension = new RateLimitExtension();
-                rc.InstallExtension(rateLimitExtension);
+                await rc.InstallExtension(rateLimitExtension);
                 rateLimitExtension.enabled = false; // remove this line to enable rate limit
                 var extInfo = await rc.Restapi().Account().Extension().Get();
                 Assert.NotNull(extInfo);

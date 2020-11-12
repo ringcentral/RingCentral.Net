@@ -22,7 +22,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var pubNubExtension = new PubNubExtension();
-                rc.InstallExtension(pubNubExtension);
+                await rc.InstallExtension(pubNubExtension);
                 var eventFilters = new[]
                 {
                     "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true",

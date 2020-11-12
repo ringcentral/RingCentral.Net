@@ -46,7 +46,7 @@ namespace RingCentral.Tests
                 );
 
                 var pubNubExtension = new PubNubExtension();
-                rc.InstallExtension(pubNubExtension);
+                await rc.InstallExtension(pubNubExtension);
 
                 var eventFilters = new[]
                 {

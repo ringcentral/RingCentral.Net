@@ -21,7 +21,7 @@ namespace RingCentral.Tests.Extensions
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var debugExtension = new DebugExtension();
-                rc.InstallExtension(debugExtension);
+                await rc.InstallExtension(debugExtension);
                 debugExtension.enabled = false; // remove this line to enable debug mode
                 var extInfo = await rc.Restapi().Account().Extension().Get();
                 Assert.NotNull(extInfo);

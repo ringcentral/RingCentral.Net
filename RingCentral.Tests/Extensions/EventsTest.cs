@@ -23,7 +23,7 @@ namespace RingCentral.Tests.Extensions
                 );
 
                 var eventsExtension = new EventsExtension();
-                rc.InstallExtension(eventsExtension);
+                await rc.InstallExtension(eventsExtension);
 
                 var count = 0;
 

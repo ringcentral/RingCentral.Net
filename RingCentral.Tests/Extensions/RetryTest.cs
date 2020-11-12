@@ -21,7 +21,7 @@ namespace RingCentral.Tests.Extensions
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var retryExtension = new RetryExtension();
-                rc.InstallExtension(retryExtension);
+                await rc.InstallExtension(retryExtension);
                 retryExtension.enabled = false; // remove this line to enable auto retry
                 var extInfo = await rc.Restapi().Account().Extension().Get();
                 Assert.NotNull(extInfo);

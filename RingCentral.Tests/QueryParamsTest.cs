@@ -22,7 +22,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var eventsExtension = new EventsExtension();
-                rc.InstallExtension(eventsExtension);
+                await rc.InstallExtension(eventsExtension);
 
                 var count = 0;
                 const string phoneNumber = "+15889546648";
