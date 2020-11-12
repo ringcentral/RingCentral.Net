@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using RingCentral.Net.WebSocket;
 using Xunit;
 using dotenv.net;
+using Newtonsoft.Json;
 using Xunit.Abstractions;
 
 namespace RingCentral.Tests
@@ -25,6 +26,7 @@ namespace RingCentral.Tests
             {
                 return;
             }
+
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
@@ -39,20 +41,11 @@ namespace RingCentral.Tests
                 var webSocketExtension = new WebSocketExtension();
                 await rc.InstallExtension(webSocketExtension);
                 var eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"};
-                await webSocketExtension.Subscribe(eventFilters, message =>
+                await webSocketExtension.Subscribe(eventFilters, message => { Assert.NotNull(message); });
+                webSocketExtension.MessageReceived += (sender, wsgMessage) =>
                 {
-                    Assert.NotNull(message);
-                });
-                webSocketExtension.ws.MessageReceived.Subscribe(responseMessage =>
-                {
-                    _testOutputHelper.WriteLine(DateTime.Now.ToString(CultureInfo.CurrentCulture) + ": " + responseMessage.Text);
-                });
-                webSocketExtension.AutoRecoverSuccess += (sender, ws) =>
-                {
-                    ws.MessageReceived.Subscribe(responseMessage =>
-                    {
-                        _testOutputHelper.WriteLine(DateTime.Now.ToString(CultureInfo.CurrentCulture) + ": " + responseMessage.Text);
-                    });
+                    _testOutputHelper.WriteLine(DateTime.Now.ToString(CultureInfo.CurrentCulture) + ": " +
+                                                JsonConvert.SerializeObject(wsgMessage, Formatting.Indented));
                 };
                 while (true)
                 {

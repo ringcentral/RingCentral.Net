@@ -9,14 +9,14 @@ namespace RingCentral.Net.WebSocket
         private RestClient _rc;
         private readonly WebSocketOptions _options;
         private Wsc _wsc;
-        public WebsocketClient ws;
+        private WebsocketClient _ws;
         private ConnectionDetails _connectionDetails;
         
-        public event EventHandler<WebsocketClient> AutoRecoverSuccess;
-
+        public event EventHandler<WsgMessage> MessageReceived;
+        
         public WebSocketExtension(WebSocketOptions options = null)
         {
-            this._options = options ?? WebSocketOptions.DefaultInstance;
+            _options = options ?? WebSocketOptions.DefaultInstance;
         }
 
         public override async Task Install(RestClient rc)
@@ -33,42 +33,51 @@ namespace RingCentral.Net.WebSocket
             {
                 wsUri = $"{wsUri}&wsc={_wsc.token}";
             }
-
-            ws = new WebsocketClient(new Uri(wsUri));
-            ws.ReconnectTimeout = TimeSpan.FromMinutes(3);
-            // listen for incoming events
-            ws.MessageReceived.Subscribe(responseMessage =>
+            _ws = new WebsocketClient(new Uri(wsUri));
+            _ws.ReconnectTimeout = TimeSpan.FromMinutes(2);
+            
+            _ws.ReconnectionHappened.Subscribe(async info =>
             {
-                var wsgMsg = WsgMessage.Parse(responseMessage.Text);
-                if (wsgMsg.meta.wsc != null && (_wsc == null ||
-                                                (wsgMsg.meta.type ==
-                                                 MessageType.ConnectionDetails &&
-                                                 wsgMsg.body.GetType().GetProperty("recoveryState") != null) ||
-                                                _wsc?.sequence < wsgMsg.meta.wsc.sequence))
+                if (info.Type != ReconnectionType.Initial)
                 {
-                    _wsc = wsgMsg.meta.wsc;
+                    _ws.Dispose();
+                    await Connect(true);
+                    if (this._connectionDetails.recoveryState == RecoveryState.Successful)
+                    {
+                        // todo: manually recover subscriptions
+                    }
                 }
 
-                if (wsgMsg.meta.type == MessageType.ConnectionDetails)
+                _ws.MessageReceived.Subscribe(responseMessage =>
                 {
-                    _connectionDetails = wsgMsg.body.ToObject<ConnectionDetails>();
-                }
+                    var wsgMessage = WsgMessage.Parse(responseMessage.Text);
+                    MessageReceived?.Invoke(this, wsgMessage);
+                });
             });
-            await ws.Start();
-            ws.ReconnectionHappened.Subscribe(async info =>
+            
+            MessageReceived += (sender, wsgMessage) =>
             {
-                ws.Dispose();
-                await Connect(true);
-                if (this._connectionDetails.recoveryState == RecoveryState.Successful)
+                if (wsgMessage.meta.wsc != null && (_wsc == null ||
+                                                    (wsgMessage.meta.type ==
+                                                     MessageType.ConnectionDetails &&
+                                                     wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
+                                                    _wsc?.sequence < wsgMessage.meta.wsc.sequence))
                 {
-                    AutoRecoverSuccess?.Invoke(this, ws);
+                    _wsc = wsgMessage.meta.wsc;
                 }
-            });
+
+                if (wsgMessage.meta.type == MessageType.ConnectionDetails)
+                {
+                    _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
+                }
+            };
+            
+            await _ws.Start();
         }
 
         public Task Send(string message)
         {
-            return Task.Run(() => ws.Send(message));
+            return Task.Run(() => _ws.Send(message));
         }
 
         public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
