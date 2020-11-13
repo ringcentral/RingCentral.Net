@@ -5,7 +5,7 @@ This extension will auto refresh your token every 30 minutes(customizable).
 ```cs
 var rc = new RestClient(...);
 var autoRefreshExtension = new AutoRefreshExtension(...);
-rc.InstallExtension(autoRefreshExtension);
+await rc.InstallExtension(autoRefreshExtension);
 autoRefreshExtension.Start();
 ```
 

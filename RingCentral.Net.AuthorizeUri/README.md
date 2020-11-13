@@ -6,7 +6,7 @@ This extension provides utility methods to build URI for OAuth authorization pur
 var rc = new RestClient(...);
 
 var authorizeUriExtension = new AuthorizeUriExtension(...);
-rc.InstallExtension(authorizeUriExtension);
+await rc.InstallExtension(authorizeUriExtension);
 var uri = authorizeUriExtension.BuildUri(new AuthorizeRequest
 {
     redirect_uri = "http://localhost:3000/callback",

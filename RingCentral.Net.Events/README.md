@@ -9,7 +9,7 @@ var rc = new RestClient(
     Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
 )
 var eventsExtension = new EventsExtension();
-rc.InstallExtension(eventsExtension);
+await rc.InstallExtension(eventsExtension);
 
 var count = 0;
 

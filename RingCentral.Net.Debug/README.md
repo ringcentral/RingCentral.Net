@@ -9,7 +9,7 @@ var rc = new RestClient(
     Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
 );
 var debugExtension = new DebugExtension(...);
-rc.InstallExtension(debugExtension);
+await rc.InstallExtension(debugExtension);
 ```
 
 

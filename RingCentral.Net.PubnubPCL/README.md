@@ -12,7 +12,7 @@ var rc = new RestClient(
     Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
 );
 var pubNubExtension = new PubNubExtension();
-rc.InstallExtension(pubNubExtension);
+await rc.InstallExtension(pubNubExtension);
 
 var eventFilters = new[]
 {

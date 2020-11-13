@@ -15,7 +15,7 @@ await rc.Authorize(
     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
 );
 var rateLimitExtension = new RateLimitExtension();
-rc.InstallExtension(rateLimitExtension);
+await rc.InstallExtension(rateLimitExtension);
 ```
 
 
