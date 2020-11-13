@@ -26,5 +26,5 @@ This extension is inspired by [its TypeScript counterpart](https://github.com/ri
 
 ## Todo
 
-- timer to refresh subscriptions
-- subscription callback
+- Rest over WebSocket
+- Auto recover

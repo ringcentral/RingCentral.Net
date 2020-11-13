@@ -37,7 +37,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                var webSocketExtension = new WebSocketExtension(new WebSocketOptions{debugMode = false});
+                var webSocketExtension = new WebSocketExtension(new WebSocketOptions{debugMode = true});
                 Console.SetOut(new MyTextWriter(_testOutputHelper));
                 await rc.InstallExtension(webSocketExtension);
                 var autoRefreshExtension = new AutoRefreshExtension();
