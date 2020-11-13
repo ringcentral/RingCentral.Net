@@ -135,5 +135,15 @@ namespace RingCentral.Net.WebSocket
             _subscriptions.Add(subscription);
             return subscription;
         }
+
+        public async Task Revoke()
+        {
+            foreach (var subscription in _subscriptions)
+            {
+                await subscription.Revoke();
+            }
+            _subscriptions.Clear();
+            _ws.Dispose();
+        }
     }
 }
