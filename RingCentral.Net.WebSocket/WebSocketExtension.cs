@@ -83,7 +83,7 @@ namespace RingCentral.Net.WebSocket
             await _ws.Start();
         }
 
-        public Task Send(string message)
+        private Task Send(string message)
         {
             if (_options.debugMode)
             {
@@ -92,6 +92,32 @@ namespace RingCentral.Net.WebSocket
                                   $"\n******");
             }
             return Task.Run(() => _ws.Send(message));
+        }
+
+        public async Task<T> Request<T>(string method, string endpoint, object content = null)
+        {
+            TaskCompletionSource<T> tcs = new TaskCompletionSource<T>();
+            var uuid = Guid.NewGuid().ToString();
+            dynamic[] requestBody = {null, null};
+            requestBody[0] = new RestRequestHeaders
+            {
+                type = "ClientRequest",
+                messageId = uuid,
+                method = method,
+                path =  endpoint,
+            };
+            requestBody[1] = content;
+            void Handler(object sender, WsgMessage wsgMessage)
+            {
+                if (wsgMessage.meta.messageId == uuid)
+                {
+                    MessageReceived -= Handler;
+                    tcs.TrySetResult(JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(wsgMessage.body)));
+                }
+            };
+            MessageReceived += Handler;
+            await Send(JsonConvert.SerializeObject(requestBody));
+            return await tcs.Task;
         }
 
         public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
