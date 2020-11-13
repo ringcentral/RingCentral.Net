@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using RingCentral.Net.WebSocket;
 using Xunit;
 using dotenv.net;
-using Newtonsoft.Json;
+using RingCentral.Net.AutoRefresh;
 using Xunit.Abstractions;
 
 namespace RingCentral.Tests
@@ -40,12 +40,13 @@ namespace RingCentral.Tests
                 var webSocketExtension = new WebSocketExtension(new WebSocketOptions{debugMode = false});
                 Console.SetOut(new MyTextWriter(_testOutputHelper));
                 await rc.InstallExtension(webSocketExtension);
+                var autoRefreshExtension = new AutoRefreshExtension();
+                await rc.InstallExtension(autoRefreshExtension);
                 var eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"};
-                var subscription = await webSocketExtension.Subscribe(eventFilters, message =>
+                await webSocketExtension.Subscribe(eventFilters, message =>
                 {
-                    Assert.NotNull(message);
+                    _testOutputHelper.WriteLine(message);
                 });
-                _testOutputHelper.WriteLine(JsonConvert.SerializeObject(subscription.subscriptionInfo, Formatting.Indented));
                 while (true)
                 {
                     await rc.Restapi().Account().Extension().CompanyPager().Post(new CreateInternalTextMessageRequest

@@ -24,6 +24,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\RingCentral.Net.AuthorizeUri\RingCentral.Net.AuthorizeUri.csproj" />
+        <ProjectReference Include="..\RingCentral.Net.AutoRefresh\RingCentral.Net.AutoRefresh.csproj" />
         <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj" />
         <ProjectReference Include="..\RingCentral.Net.Events\RingCentral.Net.Events.csproj" />
         <ProjectReference Include="..\RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj" />
