@@ -15,7 +15,7 @@ await rc.Authorize(
     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
 );
 var retryExtension = new RetryExtension();
-rc.InstallExtension(retryExtension);
+await rc.InstallExtension(retryExtension);
 ```
 
 
