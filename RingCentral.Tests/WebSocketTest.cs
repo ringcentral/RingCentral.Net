@@ -41,6 +41,7 @@ namespace RingCentral.Tests
                 Console.SetOut(new MyTextWriter(_testOutputHelper));
                 await rc.InstallExtension(webSocketExtension);
                 var autoRefreshExtension = new AutoRefreshExtension();
+                autoRefreshExtension.Start();
                 await rc.InstallExtension(autoRefreshExtension);
                 var eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"};
                 await webSocketExtension.Subscribe(eventFilters, message =>
@@ -55,7 +56,7 @@ namespace RingCentral.Tests
                         to = new[] {new PagerCallerInfoRequest {extensionNumber = "101"}},
                         text = "Hello world",
                     });
-                    await Task.Delay(60000);
+                    await Task.Delay(120000);
                 }
             }
         }

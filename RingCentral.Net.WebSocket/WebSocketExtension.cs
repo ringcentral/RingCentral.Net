@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -13,6 +14,7 @@ namespace RingCentral.Net.WebSocket
         private Wsc _wsc;
         private WebsocketClient _ws;
         private ConnectionDetails _connectionDetails;
+        private List<Subscription> _subscriptions = new List<Subscription>();
         
         public event EventHandler<WsgMessage> MessageReceived;
         
@@ -44,9 +46,15 @@ namespace RingCentral.Net.WebSocket
                 {
                     _ws.Dispose();
                     await Connect(true);
-                    if (this._connectionDetails.recoveryState == RecoveryState.Successful)
+                    if (!recoverSession || _connectionDetails.recoveryState == RecoveryState.Failed)
                     {
-                        // todo: manually recover subscriptions
+                       foreach(var subscription in _subscriptions)
+                       {
+                           if (subscription.SubscriptionInfo != null)
+                           { // otherwise it has been revoked explicitly
+                               await subscription.SubScribe();
+                           }
+                       }
                     }
                 }
 
@@ -114,7 +122,7 @@ namespace RingCentral.Net.WebSocket
                     MessageReceived -= Handler;
                     tcs.TrySetResult(JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(wsgMessage.body)));
                 }
-            };
+            }
             MessageReceived += Handler;
             await Send(JsonConvert.SerializeObject(requestBody));
             return await tcs.Task;
@@ -124,6 +132,7 @@ namespace RingCentral.Net.WebSocket
         {
             var subscription = new Subscription(this, eventFilters, callback);
             await subscription.SubScribe();
+            _subscriptions.Add(subscription);
             return subscription;
         }
     }

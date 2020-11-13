@@ -22,6 +22,7 @@ namespace RingCentral.Net.WebSocket
                     callback(JsonConvert.SerializeObject(wsgMessage.body));
                 }
             };
+            _wse.MessageReceived += _eventListener;
         }
 
         private bool _renewScheduled;
@@ -50,7 +51,6 @@ namespace RingCentral.Net.WebSocket
             SubscriptionInfo = await _wse.Request<SubscriptionInfo>("POST",
                 "/restapi/v1.0/subscription",
                 RequestBody());
-            _wse.MessageReceived += _eventListener;
         }
 
         public async Task Refresh()
@@ -63,6 +63,18 @@ namespace RingCentral.Net.WebSocket
             await _wse.Request<SubscriptionInfo>("PUT",
                 $"/restapi/v1.0/subscription/{SubscriptionInfo.id}",
                 RequestBody());
+        }
+
+        public async Task Revoke()
+        {
+            if (SubscriptionInfo == null)
+            {
+                return;
+            }
+            await _wse.Request<SubscriptionInfo>("DELETE",
+                $"/restapi/v1.0/subscription/{SubscriptionInfo.id}");
+            SubscriptionInfo = null;
+            _wse.MessageReceived -= _eventListener;
         }
 
         private SubscriptionRequestBody RequestBody()
