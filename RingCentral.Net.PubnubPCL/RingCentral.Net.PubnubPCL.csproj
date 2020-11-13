@@ -5,7 +5,7 @@
         <PackageId>RingCentral.Net.PubnubPCL</PackageId>
         <PackageVersion>2.0.0-beta1</PackageVersion>
         <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
-        <Description>RingCentral SDK for .NET, PubnubPCL</Description>
+        <Description>PubNub extension for RingCentral.NET</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageTags>RingCentral,Pubnub,PubnubPCL</PackageTags>
