@@ -6,8 +6,8 @@ import { pascalCase } from 'change-case'
 const outputDir = '../RingCentral.Net/Definitions'
 
 const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
-const definitions = doc.definitions
-const models = Object.keys(definitions).map(k => ({ name: k, ...definitions[k] }))
+const schemas = doc.components.schemas
+const models = Object.keys(schemas).map(k => ({ name: k, ...schemas[k] }))
   .filter(m => m.type !== 'array')
 
 const keys = []
@@ -36,6 +36,8 @@ const normalizeType = f => {
 }
 
 const normalizeField = f => {
+  f = Object.assign(f, f.schema)
+  delete f.schema
   f.type = normalizeType(f)
   if (['event', 'delegate', 'ref', 'default', 'operator', 'public', 'params'].includes(f.name)) {
     f.name = `@${f.name}`
