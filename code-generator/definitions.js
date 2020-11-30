@@ -108,19 +108,38 @@ models.forEach(m => {
 Object.keys(doc.paths).forEach(p => {
   Object.keys(doc.paths[p]).forEach(method => {
     const operation = doc.paths[p][method]
-    if ((operation.parameters || []).some(p => p.in === 'formData')) {
+    if(operation.requestBody && operation.requestBody.content
+      && (operation.requestBody.content['application/x-www-form-urlencoded']
+        || operation.requestBody.content['multipart/form-data'])) {
       const operationId = operation.operationId
       const className = pascalCase(operationId) + 'Request'
-      const fields = operation.parameters.filter(p => p.in === 'formData')
-        .map(p => {
+      const properties = (operation.requestBody.content['application/x-www-form-urlencoded']
+        || operation.requestBody.content['multipart/form-data']).schema.properties
+      if(properties) { // could be a $ref without properties
+        const fields = Object.keys(properties).map(k => ({...properties[k], name: k})).map(p => {
+          console.log(JSON.stringify(p, null, 2))
           p = normalizeField(p)
           if (p.$ref) {
             p.type = p.$ref.split('/').slice(-1)[0]
           }
           return generateField({}, p)
         })
-      fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
+        fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
+      }
     }
+    // if ((operation.parameters || []).some(p => p.in === 'formData')) {
+    //   const operationId = operation.operationId
+    //   const className = pascalCase(operationId) + 'Request'
+    //   const fields = operation.parameters.filter(p => p.in === 'formData')
+    //     .map(p => {
+    //       p = normalizeField(p)
+    //       if (p.$ref) {
+    //         p.type = p.$ref.split('/').slice(-1)[0]
+    //       }
+    //       return generateField({}, p)
+    //     })
+    //   fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
+    // }
   })
 })
 
