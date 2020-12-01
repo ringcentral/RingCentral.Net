@@ -29,6 +29,9 @@ const normalizeType = f => {
   } else if (f.type === 'file') {
     return 'Attachment'
   } else if (f.type === 'string') {
+    if(f.format === 'binary') {
+      return 'Attachment'
+    }
     return 'string'
   } else {
     throw new Error(`Unknown type ${f.type}`)

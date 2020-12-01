@@ -15,9 +15,10 @@ export const deNormalizePath = path => {
 }
 
 export const getResponseType = responses => {
-  const responseSchema = (responses[200] || responses[201] || responses[202] || responses[204] || responses[205] || responses[302] || responses.default).schema
+  const responseContent = (responses[200] || responses[201] || responses[202] || responses[204] || responses[205] || responses[302] || responses.default).content
   let responseType
-  if (responseSchema) {
+  if (responseContent && !R.isEmpty(responseContent)) {
+    const responseSchema = responseContent[Object.keys(responseContent)[0]].schema
     if (responseSchema.type === 'string' && responseSchema.format === 'binary') {
       responseType = 'byte[]'
     } else if (responseSchema.$ref) {
