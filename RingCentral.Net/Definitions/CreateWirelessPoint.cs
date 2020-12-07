@@ -15,12 +15,10 @@ namespace RingCentral
         public string name;
 
         /// <summary>
-        /// Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
         /// </summary>
         public AutomaticLocationUpdatesSiteInfo site;
 
         /// <summary>
-        /// Emergency address information. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
         /// Required
         /// </summary>
         public LocationUpdatesEmergencyAddressInfoRequest emergencyAddress;
@@ -31,7 +29,6 @@ namespace RingCentral
         public string emergencyLocationId;
 
         /// <summary>
-        /// Emergency response location information
         /// </summary>
         public ERLLocationInfo emergencyLocation;
     }

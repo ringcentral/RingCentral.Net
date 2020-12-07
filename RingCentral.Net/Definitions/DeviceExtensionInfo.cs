@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Internal identifier of an extension the device should be assigned to
     public class DeviceExtensionInfo
     {
         /// <summary>

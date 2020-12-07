@@ -3,7 +3,6 @@ namespace RingCentral
     public class CallQueueUpdateDetails
     {
         /// <summary>
-        /// Call queue service level settings
         /// </summary>
         public CallQueueServiceLevelSettings serviceLevelSettings;
 

@@ -8,7 +8,6 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// Schedule when an answering rule is applied
         /// </summary>
         public UserBusinessHoursScheduleInfo schedule;
     }

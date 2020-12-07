@@ -25,7 +25,6 @@ namespace RingCentral
         public string intro;
 
         /// <summary>
-        /// Information about the author
         /// </summary>
         public GlipMessageAttachmentAuthorInfo author;
 
@@ -55,7 +54,6 @@ namespace RingCentral
         public GlipMessageAttachmentFieldsInfo[] fields;
 
         /// <summary>
-        /// Message Footer
         /// </summary>
         public GlipMessageAttachmentFootnoteInfo footnote;
 

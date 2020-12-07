@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Extension to which the call is forwarded in 'Bypass' mode
     public class CompanyAnsweringRuleExtensionInfoRequest
     {
         /// <summary>

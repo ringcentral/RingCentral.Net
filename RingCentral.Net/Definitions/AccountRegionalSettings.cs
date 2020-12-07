@@ -1,29 +1,25 @@
 namespace RingCentral
 {
+    // Account level region data (web service Auto-Receptionist settings)
     public class AccountRegionalSettings
     {
         /// <summary>
-        /// Extension country information
         /// </summary>
         public CountryInfo homeCountry;
 
         /// <summary>
-        /// Extension timezone information
         /// </summary>
         public TimezoneInfo timezone;
 
         /// <summary>
-        /// User interface language data
         /// </summary>
         public LanguageInfo language;
 
         /// <summary>
-        /// Information on language used for telephony greetings
         /// </summary>
         public GreetingLanguageInfo greetingLanguage;
 
         /// <summary>
-        /// Formatting language preferences for numbers, dates and currencies
         /// </summary>
         public FormattingLocaleInfo formattingLocale;
 
@@ -34,7 +30,6 @@ namespace RingCentral
         public string timeFormat;
 
         /// <summary>
-        /// Currency information
         /// </summary>
         public CurrencyInfo currency;
     }

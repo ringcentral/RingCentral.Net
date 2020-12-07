@@ -55,7 +55,6 @@ namespace RingCentral
         public string password;
 
         /// <summary>
-        /// For Department extension type only. Call queue settings
         /// </summary>
         public CallQueueInfoRequest callQueueInfo;
 
@@ -73,7 +72,6 @@ namespace RingCentral
         public bool? hidden;
 
         /// <summary>
-        /// Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
         /// </summary>
         public AutomaticLocationUpdatesSiteInfo site;
 

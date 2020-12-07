@@ -19,6 +19,19 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         }
 
         /// <summary>
+        /// Operation: Get Group Events
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/events
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
+        /// </summary>
+        public async Task<RingCentral.GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Create Event by Group ID
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/events
@@ -30,19 +43,6 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate, null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Get Group Events
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/events
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
-        /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

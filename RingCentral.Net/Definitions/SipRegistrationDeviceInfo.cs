@@ -44,27 +44,22 @@ namespace RingCentral
         public string computerName;
 
         /// <summary>
-        /// HardPhone model information
         /// </summary>
         public DeviceModelInfo model;
 
         /// <summary>
-        /// Internal identifier of an extension the device should be assigned to
         /// </summary>
         public DeviceExtensionInfo extension;
 
         /// <summary>
-        /// Address for emergency cases. The same emergency address is assigned to all the numbers of one device
         /// </summary>
         public DeviceEmergencyServiceAddressResource emergencyServiceAddress;
 
         /// <summary>
-        /// Emergency response location settings of a device
         /// </summary>
         public SipRegistrationDeviceEmergencyInfo emergency;
 
         /// <summary>
-        /// Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer
         /// </summary>
         public Shipping shipping;
 
@@ -95,7 +90,6 @@ namespace RingCentral
         public bool? inCompanyNet;
 
         /// <summary>
-        /// Site data
         /// </summary>
         public DeviceSiteInfo site;
 

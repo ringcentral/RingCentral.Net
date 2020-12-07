@@ -14,13 +14,11 @@ namespace RingCentral
         public UserPhoneNumberInfo[] records;
 
         /// <summary>
-        /// Information on navigation
         /// Required
         /// </summary>
         public ProvisioningNavigationInfo navigation;
 
         /// <summary>
-        /// Information on paging
         /// Required
         /// </summary>
         public ProvisioningPagingInfo paging;

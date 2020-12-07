@@ -1,9 +1,9 @@
 namespace RingCentral
 {
+    // Apple notification data
     public class GlipAPNSInfo
     {
         /// <summary>
-        /// Apple Push Notification Service Info
         /// </summary>
         public APSInfo aps;
 
@@ -28,7 +28,6 @@ namespace RingCentral
         public string subscriptionId;
 
         /// <summary>
-        /// Unread messages data
         /// </summary>
         public GlipUnreadMessageCountInfo body;
     }

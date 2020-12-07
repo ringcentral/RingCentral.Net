@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // For 'Audio' mode only. Prompt media reference
     public class AudioPromptInfo
     {
         /// <summary>

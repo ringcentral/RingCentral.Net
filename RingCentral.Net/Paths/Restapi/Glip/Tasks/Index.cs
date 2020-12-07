@@ -44,6 +44,24 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         }
 
         /// <summary>
+        /// Operation: Delete Task
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
+        /// Rate Limit Group: Medium
+        /// App Permission: undefined
+        /// User Permission: undefined
+        /// </summary>
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (this.taskId == null)
+            {
+                throw new System.ArgumentNullException("taskId");
+            }
+
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Patch Task
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
@@ -60,24 +78,6 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
             }
 
             return await rc.Patch<RingCentral.GlipTaskList>(this.Path(), glipUpdateTask, null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Delete Task
-        /// HTTP Method: DELETE
-        /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
-        /// Rate Limit Group: Medium
-        /// App Permission: undefined
-        /// User Permission: undefined
-        /// </summary>
-        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-        {
-            if (this.taskId == null)
-            {
-                throw new System.ArgumentNullException("taskId");
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

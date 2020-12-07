@@ -3,7 +3,6 @@ namespace RingCentral
     public class CreateMMSMessage
     {
         /// <summary>
-        /// Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send media messages
         /// Required
         /// </summary>
         public MessageStoreCallerInfoRequest from;

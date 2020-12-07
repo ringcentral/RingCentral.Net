@@ -3,7 +3,6 @@ namespace RingCentral
     public class CallQueueMemberPresence
     {
         /// <summary>
-        /// Call queue member information
         /// </summary>
         public CallQueueMember member;
 

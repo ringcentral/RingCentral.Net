@@ -1,9 +1,9 @@
 namespace RingCentral
 {
+    // APNS service info
     public class APNSInfo
     {
         /// <summary>
-        /// Notification priority data
         /// </summary>
         public APSInfo aps;
     }

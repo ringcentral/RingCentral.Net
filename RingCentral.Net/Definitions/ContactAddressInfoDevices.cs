@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Business address of extension user company
     public class ContactAddressInfoDevices
     {
         /// <summary>

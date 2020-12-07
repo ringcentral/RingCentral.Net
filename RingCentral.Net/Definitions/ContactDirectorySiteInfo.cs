@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Site Data || Site data
     public class ContactDirectorySiteInfo
     {
         /// <summary>

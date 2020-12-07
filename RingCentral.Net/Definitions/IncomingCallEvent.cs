@@ -3,7 +3,6 @@ namespace RingCentral
     public class IncomingCallEvent
     {
         /// <summary>
-        /// Apple Push Notification Service Info
         /// </summary>
         public APSInfo aps;
 
@@ -29,7 +28,6 @@ namespace RingCentral
 
         /// <summary>
         /// Internal identifier of an extension
-        /// Default: ~
         /// </summary>
         public string extensionId;
 

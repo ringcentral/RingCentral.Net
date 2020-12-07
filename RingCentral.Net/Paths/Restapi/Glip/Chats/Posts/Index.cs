@@ -72,6 +72,24 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
+        /// Operation: Delete Post
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
+        /// </summary>
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (this.postId == null)
+            {
+                throw new System.ArgumentNullException("postId");
+            }
+
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Update Post
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
@@ -88,24 +106,6 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
             }
 
             return await rc.Patch<RingCentral.GlipPostInfo>(this.Path(), glipPatchPostBody, null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Delete Post
-        /// HTTP Method: DELETE
-        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
-        /// </summary>
-        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-        {
-            if (this.postId == null)
-            {
-                throw new System.ArgumentNullException("postId");
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

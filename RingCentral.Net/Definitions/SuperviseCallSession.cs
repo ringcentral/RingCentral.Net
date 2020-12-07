@@ -3,12 +3,10 @@ namespace RingCentral
     public class SuperviseCallSession
     {
         /// <summary>
-        /// Information about a call party that monitors a call
         /// </summary>
         public PartyInfo from;
 
         /// <summary>
-        /// Information about a call party that is monitored
         /// </summary>
         public PartyInfo to;
 
@@ -39,7 +37,6 @@ namespace RingCentral
         public bool? muted;
 
         /// <summary>
-        /// Data on a call owner
         /// </summary>
         public OwnerInfo owner;
 

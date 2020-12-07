@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information on an extension to which the phone number is assigned
     public class PhoneNumberExtensionInfo
     {
         /// <summary>

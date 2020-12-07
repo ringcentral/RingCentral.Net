@@ -3,11 +3,6 @@ namespace RingCentral
     public class CreateFaxMessageRequest
     {
         /// <summary>
-        /// File to upload
-        /// </summary>
-        public Attachment[] attachments;
-
-        /// <summary>
         /// Resolution of Fax
         /// Enum: High, Low
         /// </summary>
@@ -37,5 +32,10 @@ namespace RingCentral
         /// Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
         /// </summary>
         public string coverPageText;
+
+        /// <summary>
+        /// File to upload
+        /// </summary>
+        public Attachment[] attachments;
     }
 }

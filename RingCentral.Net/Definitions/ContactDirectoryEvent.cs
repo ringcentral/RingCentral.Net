@@ -49,22 +49,18 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
-        /// Account data of an extension
         /// </summary>
         public CompanyDirectoryAccountInfo account;
 
         /// <summary>
-        /// Extension phone number information
         /// </summary>
         public CompanyDirectoryPhoneNumberInfo phoneNumbers;
 
         /// <summary>
-        /// Site Data
         /// </summary>
         public ContactDirectorySiteInfo site;
 
         /// <summary>
-        /// Extension profile image information. Not returned if profile images are absent for an extension
         /// </summary>
         public CompanyDirectoryProfileImageInfo profileImage;
 

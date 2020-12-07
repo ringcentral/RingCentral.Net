@@ -29,7 +29,6 @@ namespace RingCentral
         public long? conversationId;
 
         /// <summary>
-        /// SMS and Pager only. Identifier of a conversation the message belongs to
         /// </summary>
         public ConversationInfo conversation;
 
@@ -61,7 +60,6 @@ namespace RingCentral
         public string faxResolution;
 
         /// <summary>
-        /// Sender information
         /// </summary>
         public MessageStoreCallerInfoResponseFrom from;
 

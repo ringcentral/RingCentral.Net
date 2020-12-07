@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Call session information
     public class CallSessionObject
     {
         /// <summary>
@@ -8,7 +9,6 @@ namespace RingCentral
         public string id;
 
         /// <summary>
-        /// Initial data of a call session
         /// </summary>
         public OriginInfo origin;
 

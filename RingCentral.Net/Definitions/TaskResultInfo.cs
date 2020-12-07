@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Task detailed result. Returned for failed and completed tasks
     public class TaskResultInfo
     {
         /// <summary>

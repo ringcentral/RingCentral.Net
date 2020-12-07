@@ -13,17 +13,14 @@ namespace RingCentral
         public string servicePlanName;
 
         /// <summary>
-        /// Information on account brand
         /// </summary>
         public BrandInfo brand;
 
         /// <summary>
-        /// Information on the contracted country of account
         /// </summary>
         public ContractedCountryInfo contractedCountry;
 
         /// <summary>
-        /// Information on account service plan
         /// </summary>
         public ServicePlanInfo servicePlan;
 
@@ -32,7 +29,6 @@ namespace RingCentral
         public TargetServicePlanInfo targetServicePlan;
 
         /// <summary>
-        /// Information on account billing plan
         /// </summary>
         public BillingPlanInfo billingPlan;
 
@@ -42,7 +38,6 @@ namespace RingCentral
         public ServiceFeatureInfo[] serviceFeatures;
 
         /// <summary>
-        /// Limits which are effective for the account
         /// </summary>
         public AccountLimits limits;
 

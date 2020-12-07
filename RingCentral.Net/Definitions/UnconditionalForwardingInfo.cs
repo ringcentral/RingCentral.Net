@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
     public class UnconditionalForwardingInfo
     {
         /// <summary>

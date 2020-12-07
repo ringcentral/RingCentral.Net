@@ -248,23 +248,6 @@ const generate = (prefix = '/') => {
           return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'null'}, restRequestConfig);
       }`
       }
-
-      // // batch get
-      // if (method === 'Get' && (
-      //   (operation.detail.description && operation.detail.description.replace(/\s+/g, ' ').toLowerCase().includes('batch request is supported')) ||
-      //   (operation.detail.parameters && operation.detail.parameters.some(p => p.in === 'path' && p.collectionFormat === 'csv'))
-      // )) {
-      //   code += `
-      // public async Task<BatchResponse<${responseType}>[]> BatchGet(${methodParams.join(', ')})
-      // {
-      //     if (!this.Path(${(!withParam && paramName) ? 'false' : ''}).Contains(","))
-      //     {
-      //         throw new System.ArgumentException(
-      //             "In order to make a BatchGet, please specify multiple IDs delimited by ','");
-      //     }
-      //     return await rc.BatchGet<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), ${queryParams.length > 0 ? 'queryParams' : 'null'}, restRequestConfig);
-      // }`
-      // }
     })
     code += `
     }

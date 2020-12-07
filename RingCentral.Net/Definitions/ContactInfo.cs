@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Contact detailed information
     public class ContactInfo
     {
         /// <summary>
@@ -37,13 +38,11 @@ namespace RingCentral
         public string mobilePhone;
 
         /// <summary>
-        /// Business address of extension user company
         /// </summary>
         public ContactBusinessAddressInfo businessAddress;
 
         /// <summary>
         /// If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
-        /// Default: False
         /// </summary>
         public bool? emailAsLoginName;
 

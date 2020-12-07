@@ -18,7 +18,6 @@ namespace RingCentral
         public DevicePhoneLinesEmergencyAddressInfo emergencyAddress;
 
         /// <summary>
-        /// Phone number information
         /// </summary>
         public DevicePhoneNumberInfo phoneInfo;
     }

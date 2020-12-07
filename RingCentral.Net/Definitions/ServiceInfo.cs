@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Account service information, including brand, service plan and billing plan
     public class ServiceInfo
     {
         /// <summary>
@@ -8,27 +9,22 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// Information on account billing plan
         /// </summary>
         public BillingPlanInfo billingPlan;
 
         /// <summary>
-        /// Information on account brand
         /// </summary>
         public BrandInfo brand;
 
         /// <summary>
-        /// Information on account service plan
         /// </summary>
         public ServicePlanInfo servicePlan;
 
         /// <summary>
-        /// Information on account target service plan
         /// </summary>
         public TargetServicePlanInfo targetServicePlan;
 
         /// <summary>
-        /// Information on the contracted country of account
         /// </summary>
         public ContractedCountryInfo contractedCountry;
     }

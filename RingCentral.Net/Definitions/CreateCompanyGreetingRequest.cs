@@ -9,6 +9,11 @@ namespace RingCentral
         public string type;
 
         /// <summary>
+        /// Internal identifier of an answering rule
+        /// </summary>
+        public string answeringRuleId;
+
+        /// <summary>
         /// Internal identifier of a language. See Get Language List
         /// </summary>
         public string languageId;
@@ -17,9 +22,5 @@ namespace RingCentral
         /// Meida file to upload
         /// </summary>
         public Attachment binary;
-
-        /// <summary>
-        /// </summary>
-        public CustomCompanyGreetingAnsweringRuleInfo answeringRule;
     }
 }

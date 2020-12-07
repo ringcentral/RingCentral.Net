@@ -26,6 +26,20 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         }
 
         /// <summary>
+        /// Operation: Get Data Export Task List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/glip/data-export
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: undefined
+        /// </summary>
+        public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.DataExportTaskList>(this.Path(false), queryParams, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Create Data Export Task
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/data-export
@@ -39,20 +53,6 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         {
             return await rc.Post<RingCentral.DataExportTask>(this.Path(false), createDataExportTaskRequest, null,
                 restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Get Data Export Task List
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/glip/data-export
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: undefined
-        /// </summary>
-        public async Task<RingCentral.DataExportTaskList> List(ListDataExportTasksParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.DataExportTaskList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>

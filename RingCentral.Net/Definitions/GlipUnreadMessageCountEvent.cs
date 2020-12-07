@@ -8,12 +8,10 @@ namespace RingCentral
         public string uuid;
 
         /// <summary>
-        /// Apple notification data
         /// </summary>
         public GlipAPNSInfo pn_apns;
 
         /// <summary>
-        /// GCM data
         /// </summary>
         public GCMInfo pn_gcm;
 

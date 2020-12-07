@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
     public class QueueInfo
     {
         /// <summary>

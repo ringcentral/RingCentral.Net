@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // SMS and Pager only. Identifier of a conversation the message belongs to || Information about a conversation the message belongs to
     public class ConversationInfo
     {
         /// <summary>

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Site Fax/SMS recipient (operator) reference. Multi-level IVR should be enabled
     public class OperatorInfo
     {
         /// <summary>

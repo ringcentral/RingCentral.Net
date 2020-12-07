@@ -28,7 +28,6 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Site data
         /// </summary>
         public AutomaticLocationUpdatesSiteInfo site;
 

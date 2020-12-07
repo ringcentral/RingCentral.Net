@@ -41,7 +41,6 @@ namespace RingCentral
         public CompanyAnsweringRuleCalledNumberInfoRequest[] calledNumbers;
 
         /// <summary>
-        /// Schedule when an answering rule should be applied
         /// </summary>
         public CompanyAnsweringRuleScheduleInfo schedule;
 
@@ -52,7 +51,6 @@ namespace RingCentral
         public string callHandlingAction;
 
         /// <summary>
-        /// Extension to which the call is forwarded in 'Bypass' mode
         /// </summary>
         public CompanyAnsweringRuleExtensionInfoRequest extension;
 

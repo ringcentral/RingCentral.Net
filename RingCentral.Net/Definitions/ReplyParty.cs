@@ -8,7 +8,6 @@ namespace RingCentral
         public string id;
 
         /// <summary>
-        /// Status data of a call session
         /// </summary>
         public CallStatusInfo status;
 
@@ -23,22 +22,18 @@ namespace RingCentral
         public bool? standAlone;
 
         /// <summary>
-        /// Call park information
         /// </summary>
         public ParkInfo park;
 
         /// <summary>
-        /// Data on a calling party
         /// </summary>
         public PartyInfo from;
 
         /// <summary>
-        /// Data on a called party
         /// </summary>
         public PartyInfo to;
 
         /// <summary>
-        /// Data on a call owner
         /// </summary>
         public OwnerInfo owner;
 

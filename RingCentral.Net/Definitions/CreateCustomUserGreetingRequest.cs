@@ -9,12 +9,13 @@ namespace RingCentral
         public string type;
 
         /// <summary>
+        /// Internal identifier of an answering rule
+        /// </summary>
+        public string answeringRuleId;
+
+        /// <summary>
         /// Meida file to upload
         /// </summary>
         public Attachment binary;
-
-        /// <summary>
-        /// </summary>
-        public CustomGreetingAnsweringRuleInfoRequest answeringRule;
     }
 }

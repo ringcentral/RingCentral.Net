@@ -14,12 +14,10 @@ namespace RingCentral
         public string name;
 
         /// <summary>
-        /// Site data
         /// </summary>
         public SwitchSiteInfo site;
 
         /// <summary>
-        /// Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
         /// </summary>
         public LocationUpdatesEmergencyAddressInfoRequest emergencyAddress;
 
@@ -29,7 +27,6 @@ namespace RingCentral
         public string emergencyLocationId;
 
         /// <summary>
-        /// Emergency response location information
         /// </summary>
         public ERLLocationInfo emergencyLocation;
     }

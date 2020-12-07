@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Phone number information
     public class PhoneNumberInfoIntId
     {
         /// <summary>
@@ -8,12 +9,10 @@ namespace RingCentral
         public long? id;
 
         /// <summary>
-        /// Brief information on a phone number country
         /// </summary>
         public PhoneNumberCountryInfo country;
 
         /// <summary>
-        /// Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
         /// </summary>
         public DeviceProvisioningExtensionInfo extension;
 

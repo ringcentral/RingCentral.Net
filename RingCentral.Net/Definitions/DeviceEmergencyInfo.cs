@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Device emergency settings
     public class DeviceEmergencyInfo
     {
         /// <summary>
@@ -7,7 +8,6 @@ namespace RingCentral
         public DeviceEmergencyAddress address;
 
         /// <summary>
-        /// Company emergency response location details
         /// </summary>
         public DeviceEmergencyLocationInfo location;
 

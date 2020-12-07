@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Account data of an extension
     public class CompanyDirectoryAccountInfo
     {
         /// <summary>

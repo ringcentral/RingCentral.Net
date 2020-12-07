@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // This attribute can be omitted for unassigned devices
     public class ExtensionInfoIntId
     {
         /// <summary>

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information on extension
     public class ExtensionInfoCallLog
     {
         /// <summary>

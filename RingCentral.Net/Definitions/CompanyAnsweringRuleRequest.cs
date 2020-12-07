@@ -30,7 +30,6 @@ namespace RingCentral
         public CompanyAnsweringRuleCalledNumberInfo[] calledNumbers;
 
         /// <summary>
-        /// Schedule when an answering rule should be applied
         /// </summary>
         public CompanyAnsweringRuleScheduleInfoRequest schedule;
 

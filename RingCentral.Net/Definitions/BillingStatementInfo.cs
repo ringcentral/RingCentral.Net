@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'
     public class BillingStatementInfo
     {
         /// <summary>

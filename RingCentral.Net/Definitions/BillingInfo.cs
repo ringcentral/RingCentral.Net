@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Billing information related to the call || Billing information related to the call. Returned for 'Detailed' view only
     public class BillingInfo
     {
         /// <summary>

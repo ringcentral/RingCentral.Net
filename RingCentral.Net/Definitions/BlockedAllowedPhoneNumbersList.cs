@@ -13,12 +13,10 @@ namespace RingCentral
         public BlockedAllowedPhoneNumberInfo[] records;
 
         /// <summary>
-        /// Information on navigation
         /// </summary>
         public CallHandlingNavigationInfo navigation;
 
         /// <summary>
-        /// Information on paging
         /// </summary>
         public CallHandlingPagingInfo paging;
     }

@@ -26,6 +26,19 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         }
 
         /// <summary>
+        /// Operation: Get Custom Field List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadUserInfo
+        /// </summary>
+        public async Task<RingCentral.CustomFieldsResource> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CustomFieldsResource>(this.Path(false), null, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Create Custom Field
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
@@ -38,19 +51,6 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         {
             return await rc.Post<RingCentral.CustomFieldResource>(this.Path(false), customFieldCreateRequest, null,
                 restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Get Custom Field List
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadUserInfo
-        /// </summary>
-        public async Task<RingCentral.CustomFieldsResource> Get(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.CustomFieldsResource>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>

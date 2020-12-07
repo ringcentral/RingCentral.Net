@@ -13,7 +13,6 @@ namespace RingCentral
         public CompanyCallLogRecord[] records;
 
         /// <summary>
-        /// Sync information (type, token and time)
         /// </summary>
         public CompanyCallLogSyncInfo syncInfo;
     }

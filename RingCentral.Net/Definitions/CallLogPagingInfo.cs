@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information on paging
     public class CallLogPagingInfo
     {
         /// <summary>
@@ -9,7 +10,6 @@ namespace RingCentral
 
         /// <summary>
         /// Current page size, describes how many items are in each page. Maximum value is 1000. If perPage value in the request is greater than 1000, the maximum value (1000) is applied
-        /// Default: 100
         /// </summary>
         public long? perPage;
 

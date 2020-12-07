@@ -14,7 +14,6 @@ namespace RingCentral
         public GetMessageInfoResponse[] records;
 
         /// <summary>
-        /// Sync type, token and time
         /// Required
         /// </summary>
         public SyncInfoMessages syncInfo;

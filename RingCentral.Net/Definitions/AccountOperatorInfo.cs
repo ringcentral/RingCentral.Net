@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Operator extension information
+    // Operator extension information || Operator's extension information. This extension will receive all calls and messages intended for the operator
     public class AccountOperatorInfo
     {
         /// <summary>

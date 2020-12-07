@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // SIP flags data
     public class SIPFlagsResponse
     {
         /// <summary>

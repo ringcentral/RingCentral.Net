@@ -11,12 +11,10 @@ namespace RingCentral
         public FaxCoverPageInfo[] records;
 
         /// <summary>
-        /// Information on navigation
         /// </summary>
         public MessagingNavigationInfo navigation;
 
         /// <summary>
-        /// Information on paging
         /// </summary>
         public MessagingPagingInfo paging;
     }

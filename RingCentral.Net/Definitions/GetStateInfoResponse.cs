@@ -13,7 +13,6 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// Information on a country the state belongs to
         /// </summary>
         public GetCountryInfoState country;
 

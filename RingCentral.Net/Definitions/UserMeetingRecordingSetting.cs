@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Meeting recording settings locked on account level
     public class UserMeetingRecordingSetting
     {
         /// <summary>
@@ -46,6 +47,7 @@ namespace RingCentral
 
         /// <summary>
         /// Automatical deletion of cloud recordings
+        /// Default: false
         /// </summary>
         public string autoDeleteCmr;
 

@@ -13,12 +13,10 @@ namespace RingCentral
         public GetPresenceInfo[] records;
 
         /// <summary>
-        /// Information on navigation
         /// </summary>
         public PresenceNavigationInfo navigation;
 
         /// <summary>
-        /// Information on paging
         /// </summary>
         public PresencePagingInfo paging;
     }

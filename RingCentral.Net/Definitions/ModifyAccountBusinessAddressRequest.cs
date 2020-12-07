@@ -13,7 +13,6 @@ namespace RingCentral
         public string email;
 
         /// <summary>
-        /// Company business address
         /// </summary>
         public BusinessAddressInfo businessAddress;
 

@@ -26,6 +26,20 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         }
 
         /// <summary>
+        /// Operation: Get Company Call Handling Rule List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/answering-rule
+        /// Rate Limit Group: Medium
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyAnsweringRules
+        /// </summary>
+        public async Task<RingCentral.CompanyAnsweringRuleList> List(
+            ListCompanyAnsweringRulesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false), queryParams, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Create Company Call Handling Rule
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/answering-rule
@@ -39,20 +53,6 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         {
             return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest,
                 null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Get Company Call Handling Rule List
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/answering-rule
-        /// Rate Limit Group: Medium
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadCompanyAnsweringRules
-        /// </summary>
-        public async Task<RingCentral.CompanyAnsweringRuleList> List(
-            ListCompanyAnsweringRulesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>

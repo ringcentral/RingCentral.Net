@@ -8,12 +8,10 @@ namespace RingCentral
         public string id;
 
         /// <summary>
-        /// Brief information on a phone number country
         /// </summary>
         public CountryResource country;
 
         /// <summary>
-        /// Information on an extension to which the phone number is assigned
         /// </summary>
         public PhoneNumberExtensionInfo extension;
 

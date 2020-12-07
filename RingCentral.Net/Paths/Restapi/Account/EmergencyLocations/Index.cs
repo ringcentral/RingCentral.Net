@@ -26,20 +26,6 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        /// Operation: Add Emergency Location
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
-        /// Rate Limit Group: Medium
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
-        /// </summary>
-        public async Task<string> Post(RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<string>(this.Path(false), emergencyLocationInfoRequest, null, restRequestConfig);
-        }
-
-        /// <summary>
         /// Operation: Get Emergency Location List
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
@@ -51,6 +37,20 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.EmergencyLocationList>(this.Path(false), queryParams, restRequestConfig);
+        }
+
+        /// <summary>
+        /// Operation: Add Emergency Location
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
+        /// Rate Limit Group: Medium
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
+        /// </summary>
+        public async Task<string> Post(RingCentral.EmergencyLocationInfoRequest emergencyLocationInfoRequest,
+            RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(false), emergencyLocationInfoRequest, null, restRequestConfig);
         }
 
         /// <summary>

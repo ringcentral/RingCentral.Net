@@ -3,7 +3,6 @@ namespace RingCentral
     public class ExtensionCallQueueUpdatePresence
     {
         /// <summary>
-        /// Call queue information
         /// </summary>
         public CallQueueId callQueue;
 

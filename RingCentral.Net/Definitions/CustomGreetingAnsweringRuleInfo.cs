@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information on an answering rule that the greeting is applied to
     public class CustomGreetingAnsweringRuleInfo
     {
         /// <summary>

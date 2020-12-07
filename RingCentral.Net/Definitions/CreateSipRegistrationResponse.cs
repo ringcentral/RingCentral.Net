@@ -18,7 +18,6 @@ namespace RingCentral
         public SIPInfoResponse[] sipInfoPstn;
 
         /// <summary>
-        /// SIP flags data
         /// Required
         /// </summary>
         public SIPFlagsResponse sipFlags;

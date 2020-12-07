@@ -19,20 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         }
 
         /// <summary>
-        /// Operation: Create Note
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/notes
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
-        /// </summary>
-        public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, restRequestConfig);
-        }
-
-        /// <summary>
         /// Operation: Get Chat Notes
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/notes
@@ -44,6 +30,20 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams, restRequestConfig);
+        }
+
+        /// <summary>
+        /// Operation: Create Note
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/notes
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
+        /// </summary>
+        public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate,
+            RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, restRequestConfig);
         }
     }
 }

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Phone number information
     public class DevicePhoneNumberInfo
     {
         /// <summary>
@@ -8,7 +9,6 @@ namespace RingCentral
         public long? id;
 
         /// <summary>
-        /// Brief information on a phone number country
         /// </summary>
         public DevicePhoneNumberCountryInfo country;
 

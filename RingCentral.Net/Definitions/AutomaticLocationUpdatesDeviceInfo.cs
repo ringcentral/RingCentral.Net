@@ -30,12 +30,10 @@ namespace RingCentral
         public string name;
 
         /// <summary>
-        /// HardPhone model information
         /// </summary>
         public AutomaticLocationUpdatesModelInfo model;
 
         /// <summary>
-        /// Site data
         /// </summary>
         public AutomaticLocationUpdatesSiteInfo site;
 

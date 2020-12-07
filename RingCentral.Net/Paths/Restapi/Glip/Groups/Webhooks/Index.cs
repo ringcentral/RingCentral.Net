@@ -19,19 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
         }
 
         /// <summary>
-        /// Operation: Create Webhook in Group
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/webhooks
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
-        /// </summary>
-        public async Task<RingCentral.GlipWebhookInfo> Post(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<RingCentral.GlipWebhookInfo>(this.Path(), null, restRequestConfig);
-        }
-
-        /// <summary>
         /// Operation: Get Webhooks in Group
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/webhooks
@@ -42,6 +29,19 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
         public async Task<RingCentral.GlipWebhookList> Get(RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
+        /// Operation: Create Webhook in Group
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/webhooks
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
+        /// </summary>
+        public async Task<RingCentral.GlipWebhookInfo> Post(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.GlipWebhookInfo>(this.Path(), null, restRequestConfig);
         }
     }
 }

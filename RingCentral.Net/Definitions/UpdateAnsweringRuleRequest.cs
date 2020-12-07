@@ -8,7 +8,6 @@ namespace RingCentral
         public string id;
 
         /// <summary>
-        /// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
         /// </summary>
         public ForwardingInfoCreateRuleRequest forwarding;
 
@@ -33,7 +32,6 @@ namespace RingCentral
         public CalledNumberInfo[] calledNumbers;
 
         /// <summary>
-        /// Schedule when an answering rule should be applied
         /// </summary>
         public ScheduleInfo schedule;
 
@@ -50,17 +48,14 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
         /// </summary>
         public UnconditionalForwardingInfo unconditionalForwarding;
 
         /// <summary>
-        /// Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
         /// </summary>
         public QueueInfo queue;
 
         /// <summary>
-        /// Specifies whether to take a voicemail and who should do it
         /// </summary>
         public VoicemailInfo voicemail;
 
@@ -81,7 +76,6 @@ namespace RingCentral
         public bool? showInactiveNumbers;
 
         /// <summary>
-        /// Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
         /// </summary>
         public TransferredExtensionInfo transfer;
     }

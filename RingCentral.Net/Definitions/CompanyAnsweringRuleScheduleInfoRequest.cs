@@ -1,9 +1,9 @@
 namespace RingCentral
 {
+    // Schedule when an answering rule should be applied
     public class CompanyAnsweringRuleScheduleInfoRequest
     {
         /// <summary>
-        /// Weekly schedule. If specified, ranges cannot be specified
         /// </summary>
         public CompanyAnsweringRuleWeeklyScheduleInfoRequest weeklyRanges;
 

@@ -3,7 +3,6 @@ namespace RingCentral
     public class PhoneNumberInfoConferencing
     {
         /// <summary>
-        /// Information on a home country of a conference phone number
         /// </summary>
         public GetCountryInfoConferencing country;
 

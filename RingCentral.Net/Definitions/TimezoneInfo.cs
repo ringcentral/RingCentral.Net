@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Extension timezone information
     public class TimezoneInfo
     {
         /// <summary>

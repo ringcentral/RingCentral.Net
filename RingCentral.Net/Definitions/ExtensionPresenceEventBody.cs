@@ -1,10 +1,10 @@
 namespace RingCentral
 {
+    // Notification payload body
     public class ExtensionPresenceEventBody
     {
         /// <summary>
         /// Internal identifier of an extension. Optional parameter
-        /// Default: ~
         /// </summary>
         public string extensionId;
 

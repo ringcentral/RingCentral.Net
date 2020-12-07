@@ -8,7 +8,6 @@ namespace RingCentral
         public string searchString;
 
         /// <summary>
-        /// Default: firstName,lastName,extensionNumber,phoneNumber,email
         /// Enum: firstName, lastName, extensionNumber, phoneNumber, email, jobTitle, department
         /// </summary>
         public string[] searchFields;

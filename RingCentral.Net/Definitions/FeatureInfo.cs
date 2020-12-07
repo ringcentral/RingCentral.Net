@@ -17,7 +17,6 @@ namespace RingCentral
         public ParamsInfo[] @params;
 
         /// <summary>
-        /// Reason of the feature unavailability. Returned only if `available` is set to 'false'
         /// </summary>
         public ReasonInfo reason;
     }

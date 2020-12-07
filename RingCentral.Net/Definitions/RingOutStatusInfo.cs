@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // RingOut status information
     public class RingOutStatusInfo
     {
         /// <summary>

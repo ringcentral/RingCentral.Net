@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Emergency response location information
     public class ERLLocationInfo
     {
         /// <summary>

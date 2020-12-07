@@ -74,36 +74,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
-        public async Task<BatchResponse<RingCentral.BlockedAllowedPhoneNumberInfo>[]> BatchGet(
-            RestRequestConfig restRequestConfig = null)
-        {
-            if (!this.Path().Contains(","))
-            {
-                throw new System.ArgumentException(
-                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
-            }
-
-            return await rc.BatchGet<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Delete Blocked/Allowed Number
-        /// HTTP Method: DELETE
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
-        /// Rate Limit Group: Medium
-        /// App Permission: EditExtensions
-        /// User Permission: EditBlockedNumbers
-        /// </summary>
-        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-        {
-            if (this.blockedNumberId == null)
-            {
-                throw new System.ArgumentNullException("blockedNumberId");
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
-        }
-
         /// <summary>
         /// Operation: Update Blocked/Allowed Number
         /// HTTP Method: PUT
@@ -123,6 +93,24 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
 
             return await rc.Put<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), addBlockedAllowedPhoneNumber,
                 null, restRequestConfig);
+        }
+
+        /// <summary>
+        /// Operation: Delete Blocked/Allowed Number
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+        /// Rate Limit Group: Medium
+        /// App Permission: EditExtensions
+        /// User Permission: EditBlockedNumbers
+        /// </summary>
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (this.blockedNumberId == null)
+            {
+                throw new System.ArgumentNullException("blockedNumberId");
+            }
+
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

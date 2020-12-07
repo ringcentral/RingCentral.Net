@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Prompt metadata
     public class IVRMenuPromptInfo
     {
         /// <summary>
@@ -9,7 +10,6 @@ namespace RingCentral
         public string mode;
 
         /// <summary>
-        /// For 'Audio' mode only. Prompt media reference
         /// </summary>
         public AudioPromptInfo audio;
 
@@ -19,7 +19,6 @@ namespace RingCentral
         public string text;
 
         /// <summary>
-        /// For 'TextToSpeech' mode only. Prompt language metadata
         /// </summary>
         public PromptLanguageInfo language;
     }

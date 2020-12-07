@@ -12,7 +12,6 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// RingOut status information
         /// </summary>
         public RingOutStatusInfo status;
     }

@@ -20,23 +20,24 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 var groupId = (await rc.Restapi().Glip().Chats().List()).records[0].id;
-                var postInfo = await rc.Restapi().Glip().Groups(groupId).Posts().Post(new GlipCreatePost
-                {
-                    attachments = new[]
-                    {
-                        new GlipMessageAttachmentInfoRequest
-                        {
-                            type = "Card",
-                            fallback = "fallback",
-                            color = "#000000",
-                            intro = "intro",
-                            text = "text",
-                            title = "title",
-                            imageUri = "https://www.baidu.com/img/bd_logo1.png"
-                        }
-                    }
-                });
-                Assert.Equal("https://www.baidu.com/img/bd_logo1.png", postInfo.attachments[0].imageUri);
+                // https://jira.ringcentral.com/browse/PLD-803
+                // var postInfo = await rc.Restapi().Glip().Groups(groupId).Posts().Post(new GlipCreatePost
+                // {
+                //     attachments = new[]
+                //     {
+                //         new GlipMessageAttachmentInfoRequest
+                //         {
+                //             type = "Card",
+                //             fallback = "fallback",
+                //             color = "#000000",
+                //             intro = "intro",
+                //             text = "text",
+                //             title = "title",
+                //             imageUri = "https://www.baidu.com/img/bd_logo1.png"
+                //         }
+                //     }
+                // });
+                // Assert.Equal("https://www.baidu.com/img/bd_logo1.png", postInfo.attachments[0].imageUri);
             }
         }
     }

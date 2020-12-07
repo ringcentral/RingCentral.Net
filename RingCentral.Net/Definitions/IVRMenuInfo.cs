@@ -23,12 +23,10 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
-        /// Site data
         /// </summary>
         public IVRMenuSiteInfo site;
 
         /// <summary>
-        /// Prompt metadata
         /// </summary>
         public IVRMenuPromptInfo prompt;
 

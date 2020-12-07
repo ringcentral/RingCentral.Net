@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Call queue member information
     public class CallQueueMember
     {
         /// <summary>
@@ -18,7 +19,6 @@ namespace RingCentral
         public string extensionNumber;
 
         /// <summary>
-        /// Extension site
         /// </summary>
         public SiteResource site;
     }

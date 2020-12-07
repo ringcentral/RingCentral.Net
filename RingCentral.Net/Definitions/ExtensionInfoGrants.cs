@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Extension information
     public class ExtensionInfoGrants
     {
         /// <summary>

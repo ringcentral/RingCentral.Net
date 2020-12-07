@@ -29,7 +29,6 @@ namespace RingCentral
         public bool? enabled;
 
         /// <summary>
-        /// SharedLines call handling action settings
         /// </summary>
         public SharedLinesInfo sharedLines;
     }

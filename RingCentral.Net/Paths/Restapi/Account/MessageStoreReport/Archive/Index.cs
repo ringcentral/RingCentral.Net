@@ -46,14 +46,14 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         /// App Permission: ReadMessages
         /// User Permission: Users
         /// </summary>
-        public async Task<string> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
             if (this.archiveId == null)
             {
                 throw new System.ArgumentNullException("archiveId");
             }
 
-            return await rc.Get<string>(this.Path(), null, restRequestConfig);
+            return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }
 }

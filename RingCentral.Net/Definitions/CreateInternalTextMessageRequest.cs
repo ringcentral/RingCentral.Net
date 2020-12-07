@@ -3,7 +3,6 @@ namespace RingCentral
     public class CreateInternalTextMessageRequest
     {
         /// <summary>
-        /// Sender of a pager message.
         /// </summary>
         public PagerCallerInfoRequest from;
 

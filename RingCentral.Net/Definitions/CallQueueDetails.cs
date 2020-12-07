@@ -24,7 +24,6 @@ namespace RingCentral
         public string status;
 
         /// <summary>
-        /// Call queue service level settings
         /// </summary>
         public CallQueueServiceLevelSettings serviceLevelSettings;
 

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Sync information (type, token and time)
     public class SyncInfoCallLog
     {
         /// <summary>

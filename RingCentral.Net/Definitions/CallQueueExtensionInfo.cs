@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // For Department extension type only. Call queue settings
     public class CallQueueExtensionInfo
     {
         /// <summary>

@@ -70,12 +70,10 @@ namespace RingCentral
         public string terminationType;
 
         /// <summary>
-        /// Primary call session information. Supported for Call Queues only
         /// </summary>
         public PrimaryCQInfo primary;
 
         /// <summary>
-        /// Additional call session information. Supported for Call Queues only
         /// </summary>
         public AdditionalCQInfo additional;
     }

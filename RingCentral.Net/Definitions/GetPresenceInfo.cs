@@ -19,7 +19,6 @@ namespace RingCentral
         public string dndStatus;
 
         /// <summary>
-        /// Information on extension, for which this presence data is returned
         /// </summary>
         public GetPresenceExtensionInfo extension;
 

@@ -42,17 +42,14 @@ namespace RingCentral
         public string status;
 
         /// <summary>
-        /// Meeting links
         /// </summary>
         public MeetingLinks links;
 
         /// <summary>
-        /// Meeting schedule information
         /// </summary>
         public MeetingScheduleResource schedule;
 
         /// <summary>
-        /// Meeting host information
         /// </summary>
         public HostInfoRequest host;
 
@@ -77,7 +74,6 @@ namespace RingCentral
         public string[] audioOptions;
 
         /// <summary>
-        /// Meeting recurrence information
         /// </summary>
         public RecurrenceInfo reccurence;
 

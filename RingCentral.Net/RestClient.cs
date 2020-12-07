@@ -55,7 +55,8 @@ namespace RingCentral
 
         public Func<HttpRequestMessage, RestRequestConfig, Task<HttpResponseMessage>> extensibleRequest;
 
-        private static readonly string[] BasicAuthPaths = new []{"/restapi/oauth/token", "/restapi/oauth/revoke"};
+        private static readonly string[] BasicAuthPaths = new[] {"/restapi/oauth/token", "/restapi/oauth/revoke"};
+
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
             RestRequestConfig restRequestConfig = null)
         {

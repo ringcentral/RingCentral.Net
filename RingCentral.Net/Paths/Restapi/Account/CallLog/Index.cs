@@ -57,18 +57,6 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
 
             return await rc.Get<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams, restRequestConfig);
         }
-
-        public async Task<BatchResponse<RingCentral.CompanyCallLogRecord>[]> BatchGet(
-            ReadCompanyCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            if (!this.Path().Contains(","))
-            {
-                throw new System.ArgumentException(
-                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
-            }
-
-            return await rc.BatchGet<RingCentral.CompanyCallLogRecord>(this.Path(), queryParams, restRequestConfig);
-        }
     }
 }
 

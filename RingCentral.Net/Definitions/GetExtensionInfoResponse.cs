@@ -13,12 +13,10 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// Account information
         /// </summary>
         public GetExtensionAccountInfo account;
 
         /// <summary>
-        /// Contact detailed information
         /// </summary>
         public ContactInfo contact;
 
@@ -55,7 +53,6 @@ namespace RingCentral
         public ExtensionPermissions permissions;
 
         /// <summary>
-        /// Information on profile image
         /// </summary>
         public ProfileImageInfo profileImage;
 
@@ -69,7 +66,6 @@ namespace RingCentral
         public Roles[] roles;
 
         /// <summary>
-        /// Extension region data (timezone, home country, language)
         /// </summary>
         public RegionalSettings regionalSettings;
 
@@ -92,7 +88,6 @@ namespace RingCentral
         public string status;
 
         /// <summary>
-        /// Status information (reason, comment). Returned for 'Disabled' status only
         /// </summary>
         public ExtensionStatusInfo statusInfo;
 
@@ -103,7 +98,6 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// For Department extension type only. Call queue settings
         /// </summary>
         public CallQueueExtensionInfo callQueueInfo;
 
@@ -113,7 +107,6 @@ namespace RingCentral
         public bool? hidden;
 
         /// <summary>
-        /// Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
         /// </summary>
         public AutomaticLocationUpdatesSiteInfo site;
     }

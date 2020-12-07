@@ -8,7 +8,6 @@ namespace RingCentral
         public string uuid;
 
         /// <summary>
-        /// APNS service info
         /// </summary>
         public APNSInfo pn_apns;
 
@@ -29,7 +28,6 @@ namespace RingCentral
 
         /// <summary>
         /// Internal identifier of an extension
-        /// Default: ~
         /// </summary>
         public string extensionId;
 

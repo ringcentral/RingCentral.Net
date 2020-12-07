@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Temporary phone number, if any. Returned for phone numbers in `Pending` porting status only
     public class TemporaryNumberInfo
     {
         /// <summary>

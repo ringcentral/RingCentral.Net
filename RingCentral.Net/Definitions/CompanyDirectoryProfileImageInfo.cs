@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Extension profile image information. Not returned if profile images are absent for an extension
     public class CompanyDirectoryProfileImageInfo
     {
         /// <summary>

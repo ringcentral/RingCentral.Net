@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Site data
     public class DeviceSiteInfo
     {
         /// <summary>

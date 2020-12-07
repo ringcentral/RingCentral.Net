@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // For NotActivated extensions only. Welcome email settings
     public class UserTransitionInfo
     {
         /// <summary>

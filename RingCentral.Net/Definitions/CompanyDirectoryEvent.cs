@@ -28,7 +28,6 @@ namespace RingCentral
         public string ownerId;
 
         /// <summary>
-        /// Notification payload body
         /// </summary>
         public CompanyDirectoryEventBody body;
     }

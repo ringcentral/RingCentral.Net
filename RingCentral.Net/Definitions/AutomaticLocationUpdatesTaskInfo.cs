@@ -30,7 +30,6 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Task detailed result. Returned for failed and completed tasks
         /// </summary>
         public TaskResultInfo result;
     }

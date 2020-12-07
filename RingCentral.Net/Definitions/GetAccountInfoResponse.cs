@@ -23,7 +23,6 @@ namespace RingCentral
         public string mainNumber;
 
         /// <summary>
-        /// Operator's extension information. This extension will receive all calls and messages intended for the operator
         /// </summary>
         public AccountOperatorInfo @operator;
 
@@ -33,7 +32,6 @@ namespace RingCentral
         public string partnerId;
 
         /// <summary>
-        /// Account service information, including brand, service plan and billing plan
         /// </summary>
         public ServiceInfo serviceInfo;
 
@@ -45,7 +43,6 @@ namespace RingCentral
         public string setupWizardState;
 
         /// <summary>
-        /// Account sign up data
         /// </summary>
         public SignupInfoResource signupInfo;
 
@@ -56,12 +53,10 @@ namespace RingCentral
         public string status;
 
         /// <summary>
-        /// Status information (reason, comment, lifetime). Returned for 'Disabled' status only
         /// </summary>
         public AccountStatusInfo statusInfo;
 
         /// <summary>
-        /// Account level region data (web service Auto-Receptionist settings)
         /// </summary>
         public AccountRegionalSettings regionalSettings;
 
@@ -81,7 +76,6 @@ namespace RingCentral
         public string cfid;
 
         /// <summary>
-        /// Limits which are effective for the account
         /// </summary>
         public AccountLimits limits;
     }

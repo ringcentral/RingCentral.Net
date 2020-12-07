@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Official name of a formatting language
+    // Official name of a formatting language || Formatting language preferences for numbers, dates and currencies
     public class FormattingLocaleInfo
     {
         /// <summary>

@@ -8,7 +8,6 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// Extension information
         /// </summary>
         public ExtensionInfoGrants extension;
 

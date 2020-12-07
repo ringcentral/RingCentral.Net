@@ -14,13 +14,11 @@ namespace RingCentral
         public GetMessageInfoResponse[] records;
 
         /// <summary>
-        /// Information on navigation
         /// Required
         /// </summary>
         public MessagingNavigationInfo navigation;
 
         /// <summary>
-        /// Information on paging
         /// Required
         /// </summary>
         public MessagingPagingInfo paging;

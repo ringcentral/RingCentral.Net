@@ -13,12 +13,10 @@ namespace RingCentral
         public CompanyCallLogRecord[] records;
 
         /// <summary>
-        /// Information on navigation
         /// </summary>
         public CallLogNavigationInfo navigation;
 
         /// <summary>
-        /// Information on paging
         /// </summary>
         public CallLogPagingInfo paging;
     }

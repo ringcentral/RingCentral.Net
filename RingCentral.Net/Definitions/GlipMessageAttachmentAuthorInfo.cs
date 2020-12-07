@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information about the author
     public class GlipMessageAttachmentAuthorInfo
     {
         /// <summary>

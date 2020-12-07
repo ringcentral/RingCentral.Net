@@ -3,7 +3,6 @@ namespace RingCentral
     public class ExtensionCreationRequest
     {
         /// <summary>
-        /// Contact Information
         /// </summary>
         public ContactInfoCreationRequest contact;
 
@@ -27,7 +26,6 @@ namespace RingCentral
         public ReferenceInfo[] references;
 
         /// <summary>
-        /// Extension region data (timezone, home country, language)
         /// </summary>
         public RegionalSettings regionalSettings;
 
@@ -59,7 +57,6 @@ namespace RingCentral
         public string status;
 
         /// <summary>
-        /// Status information (reason, comment). For 'Disabled' status only
         /// </summary>
         public ExtensionStatusInfo statusInfo;
 

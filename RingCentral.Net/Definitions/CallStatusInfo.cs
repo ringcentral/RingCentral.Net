@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Status data of a call session
     public class CallStatusInfo
     {
         /// <summary>
@@ -9,7 +10,6 @@ namespace RingCentral
         public string code;
 
         /// <summary>
-        /// Peer session / party data.'Gone'state only
         /// </summary>
         public PeerInfo peerId;
 

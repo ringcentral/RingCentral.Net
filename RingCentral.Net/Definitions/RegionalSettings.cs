@@ -1,29 +1,25 @@
 namespace RingCentral
 {
+    // Extension region data (timezone, home country, language) || Account level region data (web service Auto-Receptionist settings) || Information about regional settings. The default is Company settings
     public class RegionalSettings
     {
         /// <summary>
-        /// Extension country information
         /// </summary>
         public CountryInfo homeCountry;
 
         /// <summary>
-        /// Extension timezone information
         /// </summary>
         public TimezoneInfo timezone;
 
         /// <summary>
-        /// User interface language data
         /// </summary>
         public LanguageInfo language;
 
         /// <summary>
-        /// Information on language used for telephony greetings
         /// </summary>
         public GreetingLanguageInfo greetingLanguage;
 
         /// <summary>
-        /// Formatting language preferences for numbers, dates and currencies
         /// </summary>
         public FormattingLocaleInfo formattingLocale;
 

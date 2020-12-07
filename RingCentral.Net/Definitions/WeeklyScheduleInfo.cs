@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Weekly schedule
     public class WeeklyScheduleInfo
     {
         /// <summary>

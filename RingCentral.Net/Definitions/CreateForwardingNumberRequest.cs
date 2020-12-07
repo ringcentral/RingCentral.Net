@@ -24,7 +24,6 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Reference to the other extension device. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter.
         /// </summary>
         public CreateForwardingNumberDeviceInfo device;
     }

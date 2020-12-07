@@ -1,9 +1,9 @@
 namespace RingCentral
 {
+    // Schedule when an answering rule is applied
     public class ScheduleInfoUserBusinessHours
     {
         /// <summary>
-        /// Weekly schedule
         /// </summary>
         public WeeklyScheduleInfo weeklyRanges;
     }

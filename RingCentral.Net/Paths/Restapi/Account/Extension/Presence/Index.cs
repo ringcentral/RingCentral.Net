@@ -32,18 +32,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
             return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams, restRequestConfig);
         }
 
-        public async Task<BatchResponse<RingCentral.GetPresenceInfo>[]> BatchGet(
-            ReadUserPresenceStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            if (!this.Path().Contains(","))
-            {
-                throw new System.ArgumentException(
-                    "In order to make a BatchGet, please specify multiple IDs delimited by ','");
-            }
-
-            return await rc.BatchGet<RingCentral.GetPresenceInfo>(this.Path(), queryParams, restRequestConfig);
-        }
-
         /// <summary>
         /// Operation: Update User Presence Status
         /// HTTP Method: PUT

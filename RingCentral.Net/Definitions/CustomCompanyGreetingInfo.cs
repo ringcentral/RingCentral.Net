@@ -30,12 +30,10 @@ namespace RingCentral
         public string contentUri;
 
         /// <summary>
-        /// Information on an answering rule that the greeting is applied to
         /// </summary>
         public CustomGreetingAnsweringRuleInfo answeringRule;
 
         /// <summary>
-        /// Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
         /// </summary>
         public CustomCompanyGreetingLanguageInfo language;
     }

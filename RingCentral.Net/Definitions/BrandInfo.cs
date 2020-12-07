@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information on account brand
     public class BrandInfo
     {
         /// <summary>
@@ -13,7 +14,6 @@ namespace RingCentral
         public string name;
 
         /// <summary>
-        /// Home country information
         /// </summary>
         public CountryInfo homeCountry;
     }

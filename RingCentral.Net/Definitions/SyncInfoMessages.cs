@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Sync type, token and time
     public class SyncInfoMessages
     {
         /// <summary>

@@ -46,22 +46,18 @@ namespace RingCentral
         public string computerName;
 
         /// <summary>
-        /// HardPhone model information
         /// </summary>
         public ModelInfo model;
 
         /// <summary>
-        /// This attribute can be omitted for unassigned devices
         /// </summary>
         public ExtensionInfoIntId extension;
 
         /// <summary>
-        /// Device emergency settings
         /// </summary>
         public DeviceEmergencyInfo emergency;
 
         /// <summary>
-        /// Address for emergency cases. The same emergency address is assigned to all the numbers of one device
         /// </summary>
         public EmergencyServiceAddressResource emergencyServiceAddress;
 
@@ -71,7 +67,6 @@ namespace RingCentral
         public PhoneLinesInfo[] phoneLines;
 
         /// <summary>
-        /// Shipping information, according to which devices (in case of  HardPhone ) or e911 stickers (in case of  SoftPhone  and  OtherPhone ) will be delivered to the customer
         /// </summary>
         public ShippingInfo shipping;
 
@@ -91,7 +86,6 @@ namespace RingCentral
         public bool? inCompanyNet;
 
         /// <summary>
-        /// Site data
         /// </summary>
         public DeviceSiteInfo site;
 
@@ -107,7 +101,6 @@ namespace RingCentral
         public string linePooling;
 
         /// <summary>
-        /// Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'
         /// </summary>
         public BillingStatementInfo billingStatement;
     }

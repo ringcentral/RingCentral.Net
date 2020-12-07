@@ -44,6 +44,24 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         /// <summary>
+        /// Operation: Delete Note
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
+        /// </summary>
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (this.noteId == null)
+            {
+                throw new System.ArgumentNullException("noteId");
+            }
+
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Update Note
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
@@ -60,24 +78,6 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
             }
 
             return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Delete Note
-        /// HTTP Method: DELETE
-        /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
-        /// </summary>
-        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-        {
-            if (this.noteId == null)
-            {
-                throw new System.ArgumentNullException("noteId");
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }

@@ -3,7 +3,6 @@ namespace RingCentral
     public class InboundMessageEvent
     {
         /// <summary>
-        /// Information on a notification
         /// </summary>
         public NotificationInfo aps;
 

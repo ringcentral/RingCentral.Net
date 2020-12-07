@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Message footer information || Message Footer
     public class GlipMessageAttachmentFootnoteInfo
     {
         /// <summary>

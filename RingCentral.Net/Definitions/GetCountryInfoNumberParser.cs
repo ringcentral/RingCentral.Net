@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information on a user home country || Information on a country the phone number belongs to
     public class GetCountryInfoNumberParser
     {
         /// <summary>

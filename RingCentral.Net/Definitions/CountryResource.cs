@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Home country information || Brief information on a phone number country || Home country setting. For extension bulk assignment is configured automatically based on contact info setting
     public class CountryResource
     {
         /// <summary>

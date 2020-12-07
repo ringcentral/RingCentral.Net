@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Limits which are effective for the account || Limits which are effective for an account
     public class AccountLimits
     {
         /// <summary>
@@ -24,7 +25,6 @@ namespace RingCentral
 
         /// <summary>
         /// Max length of extension numbers of an account; the supported value is up to 8 symbols, depends on account type
-        /// Default: 5
         /// </summary>
         public long? maxExtensionNumberLength;
 

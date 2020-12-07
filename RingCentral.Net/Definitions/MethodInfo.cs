@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Shipping method information
     public class MethodInfo
     {
         /// <summary>

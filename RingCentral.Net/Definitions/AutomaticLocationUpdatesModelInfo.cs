@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // HardPhone model information
     public class AutomaticLocationUpdatesModelInfo
     {
         /// <summary>

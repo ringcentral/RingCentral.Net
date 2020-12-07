@@ -18,7 +18,6 @@ namespace RingCentral
         public string type;
 
         /// <summary>
-        /// Sender information
         /// </summary>
         public CallerInfoFrom from;
 

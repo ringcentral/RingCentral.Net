@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Sender information
     public class CallerInfoFrom
     {
         /// <summary>

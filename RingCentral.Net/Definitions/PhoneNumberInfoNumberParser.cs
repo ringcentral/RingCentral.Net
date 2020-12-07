@@ -8,7 +8,6 @@ namespace RingCentral
         public string areaCode;
 
         /// <summary>
-        /// Information on a country the phone number belongs to
         /// </summary>
         public GetCountryInfoNumberParser country;
 

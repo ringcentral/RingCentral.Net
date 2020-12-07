@@ -30,7 +30,6 @@ namespace RingCentral
         public string contentUri;
 
         /// <summary>
-        /// Information on an answering rule that the greeting is applied to
         /// </summary>
         public CustomGreetingAnsweringRuleInfo answeringRule;
     }

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Device information
     public class DeviceInfoRequest
     {
         /// <summary>

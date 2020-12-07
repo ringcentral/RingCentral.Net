@@ -23,7 +23,6 @@ namespace RingCentral
         public string subscriptionId;
 
         /// <summary>
-        /// Notification payload body
         /// </summary>
         public ExtensionGrantListEventBody body;
     }

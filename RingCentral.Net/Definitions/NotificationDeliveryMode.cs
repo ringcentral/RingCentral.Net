@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Delivery mode data
     public class NotificationDeliveryMode
     {
         /// <summary>

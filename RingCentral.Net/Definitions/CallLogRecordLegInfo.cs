@@ -15,12 +15,10 @@ namespace RingCentral
         public string direction;
 
         /// <summary>
-        /// Billing information related to the call
         /// </summary>
         public BillingInfo billing;
 
         /// <summary>
-        /// Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
         /// </summary>
         public DelegateInfo @delegate;
 
@@ -35,7 +33,6 @@ namespace RingCentral
         public long? duration;
 
         /// <summary>
-        /// Information on extension
         /// </summary>
         public ExtensionInfoCallLog extension;
 
@@ -106,12 +103,10 @@ namespace RingCentral
         public string reasonDescription;
 
         /// <summary>
-        /// Caller information
         /// </summary>
         public CallLogCallerInfo from;
 
         /// <summary>
-        /// Callee information
         /// </summary>
         public CallLogCallerInfo to;
 
@@ -122,7 +117,6 @@ namespace RingCentral
         public string transport;
 
         /// <summary>
-        /// Call recording data. Returned if the call is recorded
         /// </summary>
         public CallLogRecordingInfo recording;
 

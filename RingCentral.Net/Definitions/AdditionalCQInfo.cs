@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Additional call session information. Supported for Call Queues only
     public class AdditionalCQInfo
     {
         /// <summary>

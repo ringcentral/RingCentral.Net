@@ -39,21 +39,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         }
 
         /// <summary>
-        /// Operation: Upload User Profile Image
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditExtensions
-        /// User Permission: EditUserInfo
-        /// </summary>
-        public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest,
-            RestRequestConfig restRequestConfig = null)
-        {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createUserProfileImageRequest);
-            return await rc.Post<string>(this.Path(false), multipartFormDataContent, null, restRequestConfig);
-        }
-
-        /// <summary>
         /// Operation: Update User Profile Image
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
@@ -66,6 +51,21 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateUserProfileImageRequest);
             return await rc.Put<string>(this.Path(false), multipartFormDataContent, null, restRequestConfig);
+        }
+
+        /// <summary>
+        /// Operation: Upload User Profile Image
+        /// HTTP Method: POST
+        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditExtensions
+        /// User Permission: EditUserInfo
+        /// </summary>
+        public async Task<string> Post(CreateUserProfileImageRequest createUserProfileImageRequest,
+            RestRequestConfig restRequestConfig = null)
+        {
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createUserProfileImageRequest);
+            return await rc.Post<string>(this.Path(false), multipartFormDataContent, null, restRequestConfig);
         }
 
         /// <summary>

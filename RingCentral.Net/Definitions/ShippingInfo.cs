@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Shipping information, according to which devices (in case of  HardPhone ) or e911 stickers (in case of  SoftPhone  and  OtherPhone ) will be delivered to the customer
     public class ShippingInfo
     {
         /// <summary>
@@ -19,12 +20,10 @@ namespace RingCentral
         public string trackingNumber;
 
         /// <summary>
-        /// Shipping method information
         /// </summary>
         public MethodInfo method;
 
         /// <summary>
-        /// Shipping address for the order. If it coincides with the Emergency Service Address, then can be omitted. By default the same value as the emergencyServiceAddress. Multiple addresses can be specified; in case an order contains several devices, they can be delivered to different addresses
         /// </summary>
         public ShippingAddressInfo address;
     }

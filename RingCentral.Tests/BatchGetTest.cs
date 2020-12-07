@@ -25,8 +25,10 @@ namespace RingCentral.Tests
                 var validId1 = messages.records[0].id;
                 var validId2 = messages.records[1].id;
                 var invalidId = "7897036116";
-                var batchResponses = await rc.Restapi().Account().Extension()
-                    .MessageStore($"{validId1},{invalidId},{validId2}").BatchGet();
+                // var batchResponses = await rc.Restapi().Account().Extension()
+                //     .MessageStore($"{validId1},{invalidId},{validId2}").BatchGet();
+                var batchResponses = await rc.BatchGet<GetMessageInfoResponse>(rc.Restapi().Account().Extension()
+                    .MessageStore($"{validId1},{invalidId},{validId2}").Path());
                 Assert.Equal(3, batchResponses.Length);
 
                 var firstResponse = batchResponses[0];
@@ -69,7 +71,9 @@ namespace RingCentral.Tests
                         {perPage = 3, dateFrom = DateTime.UtcNow.AddYears(-1).ToString("O")});
                 var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
 
-                var batchResponses = await rc.Restapi().Account().Extension().CallLog(callLogIds).BatchGet();
+                // var batchResponses = await rc.Restapi().Account().Extension().CallLog(callLogIds).BatchGet();
+                var batchResponses =
+                    await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
 
                 Assert.Equal(3, batchResponses.Length);
                 var callLog = batchResponses[0].content;

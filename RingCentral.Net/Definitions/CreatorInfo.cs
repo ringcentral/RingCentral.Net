@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Note creator information
     public class CreatorInfo
     {
         /// <summary>

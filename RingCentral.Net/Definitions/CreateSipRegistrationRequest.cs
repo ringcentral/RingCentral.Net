@@ -3,7 +3,6 @@ namespace RingCentral
     public class CreateSipRegistrationRequest
     {
         /// <summary>
-        /// Device information
         /// </summary>
         public DeviceInfoRequest device;
 

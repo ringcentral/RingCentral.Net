@@ -3,7 +3,6 @@ namespace RingCentral
     public class GlipPreferencesChats
     {
         /// <summary>
-        /// Default: 10
         /// </summary>
         public long? maxCount;
 

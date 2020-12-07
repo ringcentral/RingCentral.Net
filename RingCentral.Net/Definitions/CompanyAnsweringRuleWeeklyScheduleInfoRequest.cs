@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Weekly schedule. If specified, ranges cannot be specified
     public class CompanyAnsweringRuleWeeklyScheduleInfoRequest
     {
         /// <summary>

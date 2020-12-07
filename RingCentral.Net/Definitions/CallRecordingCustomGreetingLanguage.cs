@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Custom greeting language
     public class CallRecordingCustomGreetingLanguage
     {
         /// <summary>

@@ -7,6 +7,7 @@ namespace RingCentral.Tests
     public class MyTextWriter : TextWriter
     {
         private readonly ITestOutputHelper _testOutputHelper;
+
         public MyTextWriter(ITestOutputHelper testOutputHelper)
         {
             _testOutputHelper = testOutputHelper;

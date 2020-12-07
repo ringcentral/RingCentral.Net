@@ -84,5 +84,9 @@ namespace RingCentral
         /// Enum: plain, S256
         /// </summary>
         public string code_challenge_method;
+
+        /// <summary>
+        /// </summary>
+        public bool? discovery;
     }
 }

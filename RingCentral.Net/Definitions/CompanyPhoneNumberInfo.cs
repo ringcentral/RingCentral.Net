@@ -13,12 +13,10 @@ namespace RingCentral
         public long? id;
 
         /// <summary>
-        /// Brief information on a phone number country
         /// </summary>
         public CountryInfo country;
 
         /// <summary>
-        /// Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
         /// </summary>
         public ExtensionInfo extension;
 
@@ -61,12 +59,10 @@ namespace RingCentral
         public string usageType;
 
         /// <summary>
-        /// Temporary phone number, if any. Returned for phone numbers in `Pending` porting status only
         /// </summary>
         public TemporaryNumberInfo temporaryNumber;
 
         /// <summary>
-        /// CCRN (Contact Center Routing Number) provider. If not specified then the default value 'InContact/North America' is used, its ID is '1'
         /// </summary>
         public ContactCenterProvider contactCenterProvider;
 

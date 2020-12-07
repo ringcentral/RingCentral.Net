@@ -3,7 +3,6 @@ namespace RingCentral
     public class CreateSMSMessage
     {
         /// <summary>
-        /// Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send text messages
         /// Required
         /// </summary>
         public MessageStoreCallerInfoRequest from;

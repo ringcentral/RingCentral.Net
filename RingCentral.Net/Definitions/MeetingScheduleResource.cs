@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Meeting schedule information || Timing of a meeting
     public class MeetingScheduleResource
     {
         /// <summary>

@@ -4,12 +4,10 @@ namespace RingCentral
     public class ExtensionPermissions
     {
         /// <summary>
-        /// Admin permission
         /// </summary>
         public PermissionInfo admin;
 
         /// <summary>
-        /// International Calling permission
         /// </summary>
         public PermissionInfo internationalCalling;
     }

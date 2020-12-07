@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Notification payload body
     public class VoicemailMessageEventBody
     {
         /// <summary>
@@ -13,7 +14,6 @@ namespace RingCentral
         public NotificationRecipientInfo[] to;
 
         /// <summary>
-        /// Message sender information
         /// </summary>
         public SenderInfo from;
 

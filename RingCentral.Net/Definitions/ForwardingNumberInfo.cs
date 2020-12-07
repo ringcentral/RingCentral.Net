@@ -35,7 +35,6 @@ namespace RingCentral
         public string flipNumber;
 
         /// <summary>
-        /// Forwarding device information
         /// </summary>
         public CreateForwardingNumberDeviceInfo device;
 

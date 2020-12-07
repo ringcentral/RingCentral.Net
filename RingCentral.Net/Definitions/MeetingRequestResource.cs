@@ -13,7 +13,6 @@ namespace RingCentral
         public string meetingType;
 
         /// <summary>
-        /// Timing of a meeting
         /// </summary>
         public MeetingScheduleResource schedule;
 
@@ -23,7 +22,6 @@ namespace RingCentral
         public string password;
 
         /// <summary>
-        /// Meeting host information
         /// </summary>
         public HostInfoRequest host;
 
@@ -51,7 +49,6 @@ namespace RingCentral
         public string[] audioOptions;
 
         /// <summary>
-        /// Recurrence settings
         /// </summary>
         public RecurrenceInfo recurrence;
 

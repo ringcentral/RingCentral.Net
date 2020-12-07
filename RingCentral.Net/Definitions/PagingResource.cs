@@ -10,7 +10,6 @@ namespace RingCentral
 
         /// <summary>
         /// Number of records per page
-        /// Default: 1000
         /// </summary>
         public long? perPage;
 

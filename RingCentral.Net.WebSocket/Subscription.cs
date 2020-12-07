@@ -71,6 +71,7 @@ namespace RingCentral.Net.WebSocket
             {
                 return;
             }
+
             await _wse.Request<SubscriptionInfo>("DELETE",
                 $"/restapi/v1.0/subscription/{SubscriptionInfo.id}");
             SubscriptionInfo = null;

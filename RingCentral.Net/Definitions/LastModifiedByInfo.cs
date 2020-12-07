@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Note last modification information
     public class LastModifiedByInfo
     {
         /// <summary>

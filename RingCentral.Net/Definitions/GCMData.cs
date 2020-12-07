@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // GCM data
     public class GCMData
     {
         /// <summary>
@@ -19,7 +20,6 @@ namespace RingCentral
 
         /// <summary>
         /// Internal identifier of an extension
-        /// Default: ~
         /// </summary>
         public string extensionId;
 

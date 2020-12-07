@@ -23,17 +23,14 @@ namespace RingCentral
         public string preview;
 
         /// <summary>
-        /// Note creator information
         /// </summary>
         public CreatorInfo creator;
 
         /// <summary>
-        /// Note last modification information
         /// </summary>
         public LastModifiedByInfo lastModifiedBy;
 
         /// <summary>
-        /// Returned for the note being edited (locked) at the current moment. Information on the user editing the note
         /// </summary>
         public LockedByInfo lockedBy;
 

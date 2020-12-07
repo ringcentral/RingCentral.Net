@@ -29,7 +29,6 @@ namespace RingCentral
         public bool? enabled;
 
         /// <summary>
-        /// Schedule when an answering rule should be applied
         /// </summary>
         public ScheduleInfo schedule;
 
@@ -50,27 +49,22 @@ namespace RingCentral
         public string callHandlingAction;
 
         /// <summary>
-        /// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
         /// </summary>
         public ForwardingInfo forwarding;
 
         /// <summary>
-        /// Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
         /// </summary>
         public UnconditionalForwardingInfo unconditionalForwarding;
 
         /// <summary>
-        /// Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
         /// </summary>
         public QueueInfo queue;
 
         /// <summary>
-        /// Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
         /// </summary>
         public TransferredExtensionInfo transfer;
 
         /// <summary>
-        /// Specifies whether to take a voicemail and who should do it
         /// </summary>
         public VoicemailInfo voicemail;
 
@@ -86,7 +80,6 @@ namespace RingCentral
         public string screening;
 
         /// <summary>
-        /// SharedLines call handling action settings
         /// </summary>
         public SharedLinesInfo sharedLines;
     }

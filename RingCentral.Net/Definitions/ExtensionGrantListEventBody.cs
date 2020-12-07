@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Notification payload body
     public class ExtensionGrantListEventBody
     {
         /// <summary>

@@ -29,12 +29,10 @@ namespace RingCentral
         public string status;
 
         /// <summary>
-        /// Task creator information
         /// </summary>
         public CreatorInfo creator;
 
         /// <summary>
-        /// Information specififed in request
         /// </summary>
         public SpecificInfo specific;
 

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Notification payload body
     public class InstantMessageEventBody
     {
         /// <summary>
@@ -13,7 +14,6 @@ namespace RingCentral
         public NotificationRecipientInfo[] to;
 
         /// <summary>
-        /// Extension Type. For GCM transport type '_from' property should be used
         /// </summary>
         public SenderInfo from;
 
@@ -77,7 +77,6 @@ namespace RingCentral
         public string conversationId;
 
         /// <summary>
-        /// Information about a conversation the message belongs to
         /// </summary>
         public ConversationInfo conversation;
 

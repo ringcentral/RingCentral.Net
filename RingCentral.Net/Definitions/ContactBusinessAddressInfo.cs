@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Business address of extension user company || Extension user business address. The default is Company settings
     public class ContactBusinessAddressInfo
     {
         /// <summary>

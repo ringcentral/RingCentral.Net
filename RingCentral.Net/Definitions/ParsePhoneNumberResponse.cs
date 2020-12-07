@@ -8,7 +8,6 @@ namespace RingCentral
         public string uri;
 
         /// <summary>
-        /// Information on a user home country
         /// Required
         /// </summary>
         public GetCountryInfoNumberParser homeCountry;

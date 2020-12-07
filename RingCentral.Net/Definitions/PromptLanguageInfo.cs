@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // For 'TextToSpeech' mode only. Prompt language metadata
     public class PromptLanguageInfo
     {
         /// <summary>

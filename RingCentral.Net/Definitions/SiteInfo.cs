@@ -33,17 +33,14 @@ namespace RingCentral
         public string email;
 
         /// <summary>
-        /// Extension user business address. The default is Company settings
         /// </summary>
         public ContactBusinessAddressInfo businessAddress;
 
         /// <summary>
-        /// Information about regional settings. The default is Company settings
         /// </summary>
         public RegionalSettings regionalSettings;
 
         /// <summary>
-        /// Site Fax/SMS recipient (operator) reference. Multi-level IVR should be enabled
         /// </summary>
         public OperatorInfo @operator;
 

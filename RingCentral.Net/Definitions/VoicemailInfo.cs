@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Specifies whether to take a voicemail and who should do it
     public class VoicemailInfo
     {
         /// <summary>
@@ -8,7 +9,6 @@ namespace RingCentral
         public bool? enabled;
 
         /// <summary>
-        /// Recipient data
         /// </summary>
         public RecipientInfo recipient;
     }

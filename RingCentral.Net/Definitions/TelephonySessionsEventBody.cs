@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Notification payload body
     public class TelephonySessionsEventBody
     {
         /// <summary>
@@ -28,7 +29,6 @@ namespace RingCentral
         public string eventTime;
 
         /// <summary>
-        /// Session origin details
         /// </summary>
         public OriginInfo origin;
 

@@ -13,17 +13,14 @@ namespace RingCentral
         public PersonalContactResource[] records;
 
         /// <summary>
-        /// Information on navigation
         /// </summary>
         public UserContactsNavigationInfo navigation;
 
         /// <summary>
-        /// Information on paging
         /// </summary>
         public UserContactsPagingInfo paging;
 
         /// <summary>
-        /// Information on address book groups
         /// </summary>
         public UserContactsGroupsInfo groups;
     }

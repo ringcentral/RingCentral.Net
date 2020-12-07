@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Meeting host information
     public class HostInfoRequest
     {
         /// <summary>

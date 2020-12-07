@@ -28,7 +28,6 @@ namespace RingCentral
         public string businessPhone;
 
         /// <summary>
-        /// Business address of extension user company
         /// </summary>
         public ContactAddressInfoDevices businessAddress;
     }

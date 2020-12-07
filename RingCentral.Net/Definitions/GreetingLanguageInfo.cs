@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Information on language used for telephony greetings
     public class GreetingLanguageInfo
     {
         /// <summary>

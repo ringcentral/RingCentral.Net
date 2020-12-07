@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Notification payload body
     public class CompanyDirectoryEventBody
     {
         /// <summary>
@@ -60,12 +61,10 @@ namespace RingCentral
         public CompanyDirectoryPhoneNumberInfo[] phoneNumbers;
 
         /// <summary>
-        /// Site data
         /// </summary>
         public ContactDirectorySiteInfo site;
 
         /// <summary>
-        /// Extension profile image information. Not returned if profile images are absent for an extension
         /// </summary>
         public CompanyDirectoryProfileImageInfo profileImage;
     }

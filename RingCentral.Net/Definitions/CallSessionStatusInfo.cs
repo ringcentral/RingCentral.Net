@@ -15,7 +15,6 @@ namespace RingCentral
         public string parkData;
 
         /// <summary>
-        /// Contains details of the 'linked' Session. Appears in 'Gone' State Code
         /// </summary>
         public PeerInfo peerId;
 

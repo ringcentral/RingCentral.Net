@@ -29,7 +29,6 @@ namespace RingCentral
 
         /// <summary>
         /// Subscription lifetime in seconds
-        /// Default: 900
         /// </summary>
         public long? expiresIn;
 
@@ -45,7 +44,6 @@ namespace RingCentral
         public string creationTime;
 
         /// <summary>
-        /// Delivery mode data
         /// Required
         /// </summary>
         public NotificationDeliveryMode deliveryMode;

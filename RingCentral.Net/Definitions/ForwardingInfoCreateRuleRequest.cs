@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
     public class ForwardingInfoCreateRuleRequest
     {
         /// <summary>
@@ -14,7 +15,6 @@ namespace RingCentral
 
         /// <summary>
         /// Specifies delay between ring on apps and starting of a call forwarding
-        /// Default: 1
         /// </summary>
         public long? softPhonesRingCount;
 

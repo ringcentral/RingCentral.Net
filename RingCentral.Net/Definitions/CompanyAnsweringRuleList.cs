@@ -13,12 +13,10 @@ namespace RingCentral
         public ListCompanyAnsweringRuleInfo[] records;
 
         /// <summary>
-        /// Information on paging
         /// </summary>
         public CallHandlingPagingInfo paging;
 
         /// <summary>
-        /// Information on navigation
         /// </summary>
         public CallHandlingNavigationInfo navigation;
     }

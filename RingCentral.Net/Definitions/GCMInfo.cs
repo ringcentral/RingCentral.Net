@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // GCM data
     public class GCMInfo
     {
         /// <summary>
@@ -14,7 +15,6 @@ namespace RingCentral
         public long? time_to_live;
 
         /// <summary>
-        /// GCM data
         /// </summary>
         public GCMData data;
     }

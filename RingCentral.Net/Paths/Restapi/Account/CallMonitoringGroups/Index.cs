@@ -26,6 +26,20 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         /// <summary>
+        /// Operation: Get Call Monitoring Groups List
+        /// HTTP Method: GET
+        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
+        /// Rate Limit Group: Medium
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
+        /// </summary>
+        public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams, restRequestConfig);
+        }
+
+        /// <summary>
         /// Operation: Create Call Monitoring Group
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
@@ -39,20 +53,6 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         {
             return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest,
                 null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Operation: Get Call Monitoring Groups List
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
-        /// Rate Limit Group: Medium
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadExtensions
-        /// </summary>
-        public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
