@@ -20,6 +20,7 @@ namespace RingCentral
 
         /// <summary>
         /// Internal identifier of an extension
+        /// Default: ~
         /// </summary>
         public string extensionId;
 

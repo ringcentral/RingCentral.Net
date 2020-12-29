@@ -91,6 +91,25 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
             return await rc.Put<RingCentral.EmergencyLocationInfo>(this.Path(), emergencyLocationInfoRequest, null,
                 restRequestConfig);
         }
+
+        /// <summary>
+        /// Operation: Delete Emergency Location
+        /// HTTP Method: DELETE
+        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
+        /// </summary>
+        public async Task<string> Delete(DeleteEmergencyLocationParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
+        {
+            if (this.locationId == null)
+            {
+                throw new System.ArgumentNullException("locationId");
+            }
+
+            return await rc.Delete<string>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

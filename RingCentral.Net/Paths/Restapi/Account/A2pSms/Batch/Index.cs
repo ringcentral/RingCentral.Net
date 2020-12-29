@@ -30,13 +30,14 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/batch
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.MessageBatchResponse> Post(
-            RingCentral.MessageBatchCreateRequest messageBatchCreateRequest, RestRequestConfig restRequestConfig = null)
+            RingCentral.CreateSMSMessageBatchRequest createSMSMessageBatchRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.MessageBatchResponse>(this.Path(false), messageBatchCreateRequest, null,
+            return await rc.Post<RingCentral.MessageBatchResponse>(this.Path(false), createSMSMessageBatchRequest, null,
                 restRequestConfig);
         }
 
@@ -45,7 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.MessageBatchResponse> Get(RestRequestConfig restRequestConfig = null)

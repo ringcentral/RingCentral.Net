@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public PartyInfo from;
+        public SupervisePartyFrom from;
 
         /// <summary>
         /// </summary>
-        public PartyInfo to;
+        public SupervisePartyTo to;
 
         /// <summary>
         /// Direction of a call

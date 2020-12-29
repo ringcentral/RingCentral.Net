@@ -14,7 +14,7 @@ namespace RingCentral
         public PeerInfo peerId;
 
         /// <summary>
-        /// Reason of call termination. For 'Disconnected' code only
+        /// Reason for call termination. For 'Disconnected' code only
         /// Enum: Pickup, Supervising, TakeOver, Timeout, BlindTransfer, RccTransfer, AttendedTransfer, CallerInputRedirect, CallFlip, ParkLocation, DtmfTransfer, AgentAnswered, AgentDropped, Rejected, Cancelled, InternalError, NoAnswer, TargetBusy, InvalidNumber, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser, CallPark, CallRedirected, CallReplied, CallSwitch, CallFinished, CallDropped
         /// </summary>
         public string reason;

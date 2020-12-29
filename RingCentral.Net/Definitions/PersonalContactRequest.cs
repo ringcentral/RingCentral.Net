@@ -133,5 +133,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ContactAddressInfo otherAddress;
+
+        /// <summary>
+        /// Contact ringtone. Max number of symbols is 64
+        /// </summary>
+        public string ringtoneIndex;
     }
 }

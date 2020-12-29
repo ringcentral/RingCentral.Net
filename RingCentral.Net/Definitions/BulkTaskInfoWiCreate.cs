@@ -1,7 +1,7 @@
 namespace RingCentral
 {
-    // Information on the task for multiple switches update || Information on the task for multiple wireless points creation || Information on the task for multiple wireless points update
-    public class BulkTaskInfo
+    // Information on the task for multiple wireless points creation
+    public class BulkTaskInfoWiCreate
     {
         /// <summary>
         /// Internal identifier of a task for multiple switches creation

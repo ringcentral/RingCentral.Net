@@ -16,5 +16,10 @@ namespace RingCentral
         /// Number of department extension
         /// </summary>
         public string extensionNumber;
+
+        /// <summary>
+        /// Name of agent extension
+        /// </summary>
+        public string name;
     }
 }

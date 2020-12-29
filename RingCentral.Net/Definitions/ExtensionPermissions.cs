@@ -5,10 +5,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public PermissionInfo admin;
+        public PermissionInfoAdmin admin;
 
         /// <summary>
         /// </summary>
-        public PermissionInfo internationalCalling;
+        public PermissionInfoInt internationalCalling;
     }
 }

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Caller information || Callee information
+    // Information on caller ('from') or callee ('to')
     public class CallLogCallerInfo
     {
         /// <summary>

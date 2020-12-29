@@ -10,7 +10,7 @@ namespace RingCentral
         public string[] to;
 
         /// <summary>
-        /// Text to send
+        /// Text to send, maximum number of characters is 1000
         /// </summary>
         public string text;
     }

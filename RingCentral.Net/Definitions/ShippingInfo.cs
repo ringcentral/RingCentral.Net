@@ -4,7 +4,7 @@ namespace RingCentral
     public class ShippingInfo
     {
         /// <summary>
-        /// Shipping status of the order item. It is set to 'Initial' when the order is submitted. Then it is changed to 'Accepted' when a distributor starts processing the order. Finally it is changed to Shipped which means that distributor has shipped the device.
+        /// Shipping status of the order item. It is set to 'Initial' when the order is submitted. Then it is changed to 'Accepted' when a distributor starts processing the order. Finally the status is changed to 'Shipped' which means that distributor shipped the device.
         /// Enum: Initial, Accepted, Shipped, Won't ship
         /// </summary>
         public string status;

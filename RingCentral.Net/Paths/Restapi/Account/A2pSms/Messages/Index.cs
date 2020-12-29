@@ -30,7 +30,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/messages
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.MessageListResponse> List(ListA2PsmsParameters queryParams = null,
@@ -44,7 +44,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.MessageDetailsResponse> Get(RestRequestConfig restRequestConfig = null)

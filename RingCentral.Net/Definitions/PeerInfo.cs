@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Peer session / party data. Valid in Gone state only || Peer session / party data.'Gone'state only || Contains details of the 'linked' Session. Appears in 'Gone' State Code
+    // Peer session/party details. Valid in 'Gone' state of a call
     public class PeerInfo
     {
         /// <summary>

@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.OptOuts
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/opt-outs
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.OptOutListResponse> Get(ReadA2PsmsOptOutsParameters queryParams = null,

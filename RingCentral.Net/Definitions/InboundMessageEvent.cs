@@ -12,7 +12,7 @@ namespace RingCentral
         public string messageId;
 
         /// <summary>
-        /// Internal identifier of an conversation
+        /// Internal identifier of a conversation
         /// </summary>
         public string conversationId;
 

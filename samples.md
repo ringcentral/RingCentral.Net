@@ -131,18 +131,18 @@ Name|Value
 HTTP Method|`POST`
 Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/batch`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch().Post(messageBatchCreateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch().Post(createSmsMessageBatchRequest, restRequestConfig);
 }
 ```
 
-- Parameter `messageBatchCreateRequest` is of type [MessageBatchCreateRequest](./RingCentral.Net/Definitions/MessageBatchCreateRequest.cs)
+- Parameter `createSmsMessageBatchRequest` is of type [CreateSMSMessageBatchRequest](./RingCentral.Net/Definitions/CreateSMSMessageBatchRequest.cs)
 - `result` is of type [MessageBatchResponse](./RingCentral.Net/Definitions/MessageBatchResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -157,7 +157,7 @@ Name|Value
 HTTP Method|`GET`
 Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
@@ -183,7 +183,7 @@ Name|Value
 HTTP Method|`GET`
 Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/messages`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
@@ -209,7 +209,7 @@ Name|Value
 HTTP Method|`GET`
 Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
@@ -235,7 +235,7 @@ Name|Value
 HTTP Method|`GET`
 Endpoint|`/restapi/v1.0/account/{accountId}/a2p-sms/opt-outs`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
@@ -278,6 +278,58 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCompanyActiveCalls) in API Explorer.
+
+
+## Update Multiple Contacts
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/v1.0/account/{accountId}/address-book-bulk-upload`
+Rate Limit Group|`Heavy`
+App Permission|`Contacts`
+User Permission|`EditPersonalContacts`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Post(addressBookBulkUploadRequest, restRequestConfig);
+}
+```
+
+- Parameter `addressBookBulkUploadRequest` is of type [AddressBookBulkUploadRequest](./RingCentral.Net/Definitions/AddressBookBulkUploadRequest.cs)
+- `result` is of type [AddressBookBulkUploadResponse](./RingCentral.Net/Definitions/AddressBookBulkUploadResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-addressBookBulkUpload) in API Explorer.
+
+
+## Get Contacts Update Task
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/v1.0/account/{accountId}/address-book-bulk-upload/tasks/{taskId}`
+Rate Limit Group|`Light`
+App Permission|`Contacts`
+User Permission|`EditPersonalContacts`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Tasks(taskId).Get(restRequestConfig);
+}
+```
+
+
+- `result` is of type [AddressBookBulkUploadResponse](./RingCentral.Net/Definitions/AddressBookBulkUploadResponse.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-getAddressBookBulkUploadTask) in API Explorer.
 
 
 ## Get Company Call Handling Rule List
@@ -2127,6 +2179,32 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateEmergencyLocation) in API Explorer.
 
 
+## Delete Emergency Location
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`
+Rate Limit Group|`Heavy`
+App Permission|`EditAccounts`
+User Permission|`ConfigureEmergencyMaps`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Delete(deleteEmergencyLocationParameters, restRequestConfig);
+}
+```
+
+- Parameter `deleteEmergencyLocationParameters` is of type [DeleteEmergencyLocationParameters](./RingCentral.Net/Definitions/DeleteEmergencyLocationParameters.cs)
+- `result` is an empty string
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteEmergencyLocation) in API Explorer.
+
+
 ## Get Extension List
 
 Name|Value
@@ -2177,6 +2255,58 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `accountId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-createExtension) in API Explorer.
+
+
+## Update Multiple Extensions
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/v1.0/account/{accountId}/extension-bulk-update`
+Rate Limit Group|`Heavy`
+App Permission|`EditExtensions`
+User Permission|`EditExtensionInfo`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Post(extensionBulkUpdateRequest, restRequestConfig);
+}
+```
+
+- Parameter `extensionBulkUpdateRequest` is of type [ExtensionBulkUpdateRequest](./RingCentral.Net/Definitions/ExtensionBulkUpdateRequest.cs)
+- `result` is of type [ExtensionBulkUpdateTaskResource](./RingCentral.Net/Definitions/ExtensionBulkUpdateTaskResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-extensionBulkUpdate) in API Explorer.
+
+
+## Get Update Task Status
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/v1.0/account/{accountId}/extension-bulk-update/tasks/{taskId}`
+Rate Limit Group|`Light`
+App Permission|`EditExtensions`
+User Permission|`EditExtensionInfo`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Tasks(taskId).Get(restRequestConfig);
+}
+```
+
+
+- `result` is of type [ExtensionBulkUpdateTaskResource](./RingCentral.Net/Definitions/ExtensionBulkUpdateTaskResource.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-getExtensionBulkUpdateTask) in API Explorer.
 
 
 ## Get Extension
@@ -3232,6 +3362,33 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 - Parameter `extensionId` is optional with default value `~`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-listExtensionDevices) in API Explorer.
+
+
+## Get User Emergency Location List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/v1.0/account/{accountId}/extension/{extensionId}/emergency-locations`
+Rate Limit Group|`Light`
+App Permission|`ReadAccounts`
+User Permission|`N/A`
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations().Get(restRequestConfig);
+}
+```
+
+
+- `result` is of type [UserEmergencyLocationList](./RingCentral.Net/Definitions/UserEmergencyLocationList.cs)
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocations) in API Explorer.
 
 
 ## Get Favorite Contact List

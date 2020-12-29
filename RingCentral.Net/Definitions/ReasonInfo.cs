@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Reason of the feature unavailability. Returned only if `available` is set to 'false'
+    // Reason for the feature unavailability. Returned only if `available` is set to 'false'
     public class ReasonInfo
     {
         /// <summary>

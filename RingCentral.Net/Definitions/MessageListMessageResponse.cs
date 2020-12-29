@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Infommation on a message returned within the specified batch
+    // Infomation on a message returned within the specified batch
     public class MessageListMessageResponse
     {
         /// <summary>
@@ -24,17 +24,18 @@ namespace RingCentral
         public string[] to;
 
         /// <summary>
-        /// Time of message creation
+        /// The time at which the message was created
         /// </summary>
-        public string createdAt;
+        public string creationTime;
 
         /// <summary>
-        /// Time of the message(s) last update
+        /// The time at which the messages was last updated
         /// </summary>
-        public string lastUpdatedAt;
+        public string lastModifiedTime;
 
         /// <summary>
         /// Current status of a message
+        /// Enum: Queued, Delivered, Sent, SendingFailed, DeliveryFailed
         /// </summary>
         public string messageStatus;
 
@@ -44,8 +45,24 @@ namespace RingCentral
         public long? segmentCount;
 
         /// <summary>
+        /// Text of a message. Returned if the `view` parameter is set to 'Detailed'
+        /// </summary>
+        public string text;
+
+        /// <summary>
         /// Cost of a message
         /// </summary>
         public decimal? cost;
+
+        /// <summary>
+        /// Indicates whether the message was outbound or inbound
+        /// Enum: Inbound, Outbound
+        /// </summary>
+        public string direction;
+
+        /// <summary>
+        /// The RC error code of the message sending failure reason
+        /// </summary>
+        public string errorCode;
     }
 }

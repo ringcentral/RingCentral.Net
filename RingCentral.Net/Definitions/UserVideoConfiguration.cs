@@ -7,5 +7,11 @@ namespace RingCentral
         /// Enum: RCMeetings, RCVideo, None
         /// </summary>
         public string provider;
+
+        /// <summary>
+        /// Specifies if the user is 'paid' (has meeting license) or 'free' (w/o meeting license)
+        /// Enum: Paid, Free
+        /// </summary>
+        public string userLicenseType;
     }
 }

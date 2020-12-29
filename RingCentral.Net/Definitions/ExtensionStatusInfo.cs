@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Status information (reason, comment). Returned for 'Disabled' status only || Status information (reason, comment). For 'Disabled' status only
+    // Status information (reason, comment). Returned for 'Disabled' status only
     public class ExtensionStatusInfo
     {
         /// <summary>

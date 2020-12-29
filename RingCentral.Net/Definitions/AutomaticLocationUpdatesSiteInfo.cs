@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site` || Site data (internal identifier and custom name of a site) || Site data
+    // Site data. If multi-site feature is turned on for the account, then ID of a site must be specified. In order to assign a wireless point to the main site (company) site ID should be set to `main-site`
     public class AutomaticLocationUpdatesSiteInfo
     {
         /// <summary>

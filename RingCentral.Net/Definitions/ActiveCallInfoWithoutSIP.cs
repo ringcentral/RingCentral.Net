@@ -14,6 +14,11 @@ namespace RingCentral
         public string direction;
 
         /// <summary>
+        /// Identifies if a call belongs to the call queue
+        /// </summary>
+        public bool? queueCall;
+
+        /// <summary>
         /// Phone number or extension number of a caller. For GCM transport type '_from' property should be used
         /// </summary>
         public string from;

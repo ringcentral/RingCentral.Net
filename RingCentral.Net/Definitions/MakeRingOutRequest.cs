@@ -14,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public MakeRingOutCallerInfoRequestTo callerId;
+        public MakeRingOutCallerIdInfo callerId;
 
         /// <summary>
         /// The audio prompt that the calling party hears when the call is connected

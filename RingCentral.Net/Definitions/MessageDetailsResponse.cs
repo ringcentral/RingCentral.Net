@@ -19,19 +19,19 @@ namespace RingCentral
         public string[] to;
 
         /// <summary>
-        /// Text of a message
+        /// Text of a message, maximum number of characters is 1000
         /// </summary>
         public string text;
 
         /// <summary>
-        /// Time of message creation
+        /// The time when this is message was created.
         /// </summary>
-        public string createdAt;
+        public string creationTime;
 
         /// <summary>
-        /// Time а a message last update
+        /// The time when this message was last updated.
         /// </summary>
-        public string lastUpdatedAt;
+        public string lastModifiedTime;
 
         /// <summary>
         /// Current status of a message
@@ -48,5 +48,21 @@ namespace RingCentral
         /// Cost of a message
         /// </summary>
         public decimal? cost;
+
+        /// <summary>
+        /// The batchId in which the message was submitted
+        /// </summary>
+        public string batchId;
+
+        /// <summary>
+        /// Indicates whether the message was outbound or inbound
+        /// Enum: Inbound, Outbound
+        /// </summary>
+        public string direction;
+
+        /// <summary>
+        /// The RC error code of the message sending failure reason
+        /// </summary>
+        public string errorCode;
     }
 }

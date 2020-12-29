@@ -24,7 +24,7 @@ namespace RingCentral
         public string availability;
 
         /// <summary>
-        /// SMS and Pager only. Identifier of a conversation the message belongs to
+        /// SMS and Pager only. Identifier of a conversation that the message belongs to
         /// </summary>
         public long? conversationId;
 

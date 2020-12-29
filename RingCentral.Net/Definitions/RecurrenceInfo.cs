@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Meeting recurrence information || Recurrence settings
+    // Meeting recurrence information
     public class RecurrenceInfo
     {
         /// <summary>

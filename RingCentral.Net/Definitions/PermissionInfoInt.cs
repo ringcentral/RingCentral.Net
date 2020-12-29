@@ -1,7 +1,7 @@
 namespace RingCentral
 {
-    // Admin permission || International Calling permission
-    public class PermissionInfo
+    // International Calling permission
+    public class PermissionInfoInt
     {
         /// <summary>
         /// Specifies if a permission is enabled or not

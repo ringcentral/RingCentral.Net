@@ -13,7 +13,7 @@ namespace RingCentral
         public DevicePhoneNumberCountryInfo country;
 
         /// <summary>
-        /// Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local'],
+        /// Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local']
         /// Enum: External, TollFree, Local
         /// </summary>
         public string paymentType;

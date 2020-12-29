@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. This number can be one of user's configured forwarding numbers or arbitrary number || Phone number of the caller
+    // Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. This number can be one of the user's configured forwarding numbers or an arbitrary number
     public class MakeRingOutCallerInfoRequestFrom
     {
         /// <summary>
