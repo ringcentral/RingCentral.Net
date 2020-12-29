@@ -29,7 +29,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -39,7 +39,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: detailedTelephonyState
           in: query
           description: Whether to return detailed telephony state
@@ -90,7 +90,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: accountId
           in: path
           description: >-
@@ -99,7 +99,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -119,6 +119,7 @@ paths:
       x-metering-group: System
       x-app-permission: EditPresence
       x-docs-level: Public
+      x-feature: EditPresenceStatus
       x-notifications:
         - $ref: '#/components/schemas/IncomingCallEvent'
         - $ref: '#/components/schemas/MissedCallEvent'
@@ -145,7 +146,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: detailedTelephonyState
           in: query
           description: Whether to return detailed telephony state
@@ -181,8 +182,8 @@ paths:
       x-metering-group: System
       x-app-permission: ReadPresence
       x-user-permission: ReadPresenceStatus
-      x-feature: ReadPresenceStatus
       x-docs-level: Public
+      x-feature: ReadPresenceStatus
       x-notifications:
         - $ref: '#/components/schemas/AccountPresenceEvent'
   '/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence':
@@ -201,7 +202,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: groupId
           in: path
           description: Internal identifier of an call queue extension
@@ -221,6 +222,7 @@ paths:
       x-metering-group: System
       x-app-permission: ReadPresence
       x-docs-level: Public
+      x-feature: ReadPresenceStatus
     put:
       tags:
         - Presence
@@ -238,7 +240,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: groupId
           in: path
           description: Internal identifier of a call queue extension
@@ -267,6 +269,7 @@ paths:
       x-notifications:
         - $ref: '#/components/schemas/CallQueuePresenceEvent'
       x-codegen-request-body-name: body
+      x-feature: EditPresenceStatus
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence':
     get:
       tags:
@@ -285,14 +288,14 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: Internal identifier of an extension
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: editableMemberStatus
           in: query
           description: >-
@@ -314,6 +317,7 @@ paths:
       x-metering-group: System
       x-app-permission: ReadPresence
       x-docs-level: Public
+      x-feature: ReadPresenceStatus
     put:
       tags:
         - Presence
@@ -329,14 +333,14 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: Internal identifier of an extension
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -356,6 +360,7 @@ paths:
       x-metering-group: System
       x-app-permission: EditPresence
       x-docs-level: Public
+      x-feature: EditPresenceStatus
       x-notifications:
         - $ref: '#/components/schemas/CallQueuePresenceEvent'
       x-codegen-request-body-name: body
@@ -3527,7 +3532,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -3537,7 +3542,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: startsWith
           in: query
           description: >-
@@ -3611,7 +3616,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: dialingPlan
           in: query
           description: >-
@@ -3629,7 +3634,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -3671,7 +3676,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -3681,7 +3686,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: contactId
           in: path
           description: Internal identifier of a contact record in the RingCentral database
@@ -3721,7 +3726,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -3731,7 +3736,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: contactId
           in: path
           description: Internal identifier of a contact record in the RingCentral database
@@ -3783,7 +3788,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -3793,7 +3798,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: contactId
           in: path
           description: Internal identifier of a contact record in the RingCentral database
@@ -3828,7 +3833,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -3838,7 +3843,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: syncType
           in: query
           description: Type of synchronization
@@ -3905,7 +3910,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -3915,7 +3920,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         '200':
           description: Favorite Contact List
@@ -3953,7 +3958,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -3963,7 +3968,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -4315,7 +4320,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -4325,7 +4330,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         '200':
           description: OK
@@ -4357,7 +4362,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -4367,7 +4372,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -4411,7 +4416,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         '200':
           description: OK
@@ -4443,7 +4448,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -4755,7 +4760,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -4765,7 +4770,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: page
           in: query
           description: >-
@@ -4810,7 +4815,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -4820,7 +4825,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -4897,7 +4902,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -4907,7 +4912,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: forwardingNumberId
           in: path
           description: >-
@@ -4954,7 +4959,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -4964,7 +4969,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: forwardingNumberId
           in: path
           description: Internal identifier of a forwarding number
@@ -4999,7 +5004,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -5009,7 +5014,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: view
           in: query
           schema:
@@ -5065,7 +5070,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -5075,7 +5080,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -5115,7 +5120,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -5125,7 +5130,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ruleId
           in: path
           description: >-
@@ -5172,7 +5177,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -5182,7 +5187,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ruleId
           in: path
           description: Internal identifier of an answering rule
@@ -5227,7 +5232,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -5237,7 +5242,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ruleId
           in: path
           description: Internal identifier of an answering rule
@@ -5272,7 +5277,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: page
           in: query
           description: >-
@@ -5318,7 +5323,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -5358,7 +5363,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ruleId
           in: path
           description: >-
@@ -5399,7 +5404,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ruleId
           in: path
           description: >-
@@ -5447,7 +5452,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ruleId
           in: path
           description: Internal identifier of an answering rule
@@ -5576,7 +5581,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: answeringRule
           in: formData
           $ref: '#/components/schemas/CustomCompanyGreetingAnsweringRuleInfo'
@@ -5666,7 +5671,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -5676,7 +5681,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: apply
           in: query
           description: >-
@@ -5775,7 +5780,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -5785,7 +5790,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: greetingId
           in: path
           description: Internal identifier of a greeting
@@ -6395,21 +6400,13 @@ paths:
         can be used as a sender.
       operationId: createA2PSMS
       parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          schema:
-            type: string
+        - $ref: '#/components/parameters/AccountId'
       requestBody:
         description: SMS batch payload
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/MessageBatchCreateRequest'
-        required: true
+              $ref: '#/components/schemas/CreateSMSMessageBatchRequest'
       responses:
         '201':
           description: Message batch created
@@ -6435,9 +6432,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-      x-docs-level: Public
       x-codegen-request-body-name: body
+      x-docs-level: Public
+      x-auth-required: true
+      x-service-version: v1
+      x-service-interface: rest
+      x-api-group: asg/a2p-sms/batch
+      x-service-name: asg
+      x-internal-api: false
+      x-metered-api: false
       x-throttling-group: Light
+      x-availability: High
+      x-team: PLA RnD
+      x-app-permission: A2PSMS
+      x-feature: SMSSending
   '/restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}':
     get:
       tags:
@@ -6446,14 +6454,7 @@ paths:
       description: Returns the details of an A2P SMS message by ID.
       operationId: readA2PSMS
       parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          schema:
-            type: string
+        - $ref: '#/components/parameters/AccountId'
         - name: messageId
           in: path
           description: Internal identifier of a message to be retrieved
@@ -6493,7 +6494,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       x-docs-level: Public
+      x-auth-required: true
+      x-service-version: v1
+      x-service-interface: rest
+      x-api-group: asg/a2p-sms/messages
+      x-service-name: asg
+      x-internal-api: false
+      x-metered-api: false
       x-throttling-group: Light
+      x-availability: High
+      x-team: PLA RnD
+      x-app-permission: A2PSMS
+      x-feature: SMSSending
   '/restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}':
     get:
       tags:
@@ -6502,20 +6514,8 @@ paths:
       description: Returns information on a message batch.
       operationId: readA2PBatch
       parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          schema:
-            type: string
-        - name: batchId
-          in: path
-          description: Internal identifier of a message batch to be retrieved
-          required: true
-          schema:
-            type: string
+        - $ref: '#/components/parameters/AccountId'
+        - $ref: '#/components/parameters/BatchId'
       responses:
         '200':
           description: Message batch information
@@ -6548,7 +6548,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       x-docs-level: Public
+      x-auth-required: true
+      x-service-version: v1
+      x-service-interface: rest
+      x-api-group: asg/a2p-sms/batch
+      x-service-name: asg
+      x-internal-api: false
+      x-metered-api: false
       x-throttling-group: Light
+      x-availability: High
+      x-team: PLA RnD
+      x-app-permission: A2PSMS
+      x-feature: SMSSending
   '/restapi/v1.0/account/{accountId}/a2p-sms/messages':
     get:
       tags:
@@ -6560,24 +6571,82 @@ paths:
         batch ID and/or phone number.
       operationId: listA2PSMS
       parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          schema:
-            type: string
+        - $ref: '#/components/parameters/AccountId'
         - name: batchId
+          required: false
           in: query
           description: Internal identifier of a message batch used for filtering records
           schema:
             type: string
+          example: '1234'
+        - name: direction
+          in: query
+          required: false
+          description: >-
+            Direction of a message to filter the message list result. By default
+            there is no filter applied - both Inbound and Outbound messages are
+            returned
+          schema:
+            type: string
+            enum:
+              - Inbound
+              - Outbound
+          example: Outbound
+        - name: view
+          in: query
+          required: false
+          description: >-
+            Indicates if the response has to be detailed, includes text in the
+            response if detailed
+          schema:
+            type: string
+            default: Simple
+            enum:
+              - Simple
+              - Detailed
+        - name: dateFrom
+          in: query
+          required: false
+          description: >-
+            Date to filter message list result. Messages with `creationTime`
+            later than or equal to `dateFrom` value are returned. The default
+            value is 1 day before the current datetime
+          schema:
+            type: string
+            format: date-time
+          example: '2020-11-09T16:07:52.597Z'
+        - name: dateTo
+          in: query
+          required: false
+          description: >-
+            Date to filter message list result. Messages with `creationTime`
+            earlier than `dateTo` value are returned. The default is the current
+            datetime
+          schema:
+            type: string
+            format: date-time
+          example: '2020-11-25T16:07:52.597Z'
+        - name: phoneNumber
+          in: query
+          required: false
+          style: form
+          explode: true
+          description: >-
+            List of phone numbers (specified in 'to' or 'from' fields of a
+            message) to filter the results. Maximum number of phone numbers
+            allowed to be specified as filters is 15
+          schema:
+            type: array
+            items:
+              type: string
+          example: phoneNumber=15551234455&phoneNumber=15551235577...
         - name: pageToken
           in: query
+          required: false
           description: Token of a page to be retrieved
           schema:
             type: string
+          example: pgt1
         - name: perPage
           in: query
           description: Number of messages to be returned per request
@@ -6585,6 +6654,7 @@ paths:
             type: integer
             format: int64
             default: 1000
+          example: 1
       responses:
         '200':
           description: A2P SMS Message List
@@ -6617,7 +6687,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       x-docs-level: Public
+      x-auth-required: true
+      x-service-version: v1
+      x-service-interface: rest
+      x-api-group: asg/a2p-sms/messages
+      x-service-name: asg
+      x-internal-api: false
+      x-metered-api: false
       x-throttling-group: Light
+      x-availability: High
+      x-team: PLA RnD
+      x-app-permission: A2PSMS
+      x-feature: SMSSending
   '/restapi/v1.0/account/{accountId}/a2p-sms/opt-outs':
     get:
       tags:
@@ -6629,28 +6710,25 @@ paths:
         `text/csv` in the Accept header downloads the data in CSV format.
       operationId: readA2PSMSOptOuts
       parameters:
-        - name: accountId
-          in: path
-          description: >-
-            Internal identifier of a RingCentral account or tilde (~) to
-            indicate the account logged-in within the current session
-          required: true
-          schema:
-            type: string
+        - $ref: '#/components/parameters/AccountId'
         - name: from
           in: query
+          required: false
           description: >-
             The sender's phone number (`from` field) in
             [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for
             filtering messages
           schema:
             type: string
+          example: '15551234455'
         - name: to
           in: query
+          required: false
           description: >-
             The reciever's phone number (`to` field) in
             [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for
             filtering messages
+          example: '15551237755'
           schema:
             type: string
         - name: pageToken
@@ -6665,6 +6743,7 @@ paths:
             type: integer
             format: int64
             default: 1000
+          example: 5
       responses:
         '200':
           description: >-
@@ -6672,6 +6751,9 @@ paths:
             criteria provided as query param
           content:
             application/json:
+              schema:
+                $ref: '#/components/schemas/OptOutListResponse'
+            text/csv:
               schema:
                 $ref: '#/components/schemas/OptOutListResponse'
         '400':
@@ -6699,7 +6781,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       x-docs-level: Public
+      x-auth-required: true
+      x-service-version: v1
+      x-service-interface: rest
+      x-api-group: asg/a2p-sms/opt-outs
+      x-service-name: asg
+      x-internal-api: false
+      x-metered-api: false
       x-throttling-group: Light
+      x-availability: High
+      x-team: PLA RnD
+      x-app-permission: A2PSMS
+      x-feature: SMSSending
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log':
     get:
       tags:
@@ -6716,7 +6809,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -6726,7 +6819,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionNumber
           in: query
           description: >-
@@ -6898,7 +6991,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -6908,7 +7001,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: dateTo
           in: query
           description: >-
@@ -6983,7 +7076,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -6993,7 +7086,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: syncType
           in: query
           description: Type of synchronization
@@ -7152,7 +7245,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -7162,7 +7255,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: direction
           in: query
           description: >-
@@ -7248,7 +7341,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionNumber
           in: query
           description: >-
@@ -7393,7 +7486,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: syncType
           in: query
           description: Type of synchronization.
@@ -7491,7 +7584,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: callRecordId
           in: path
           description: Internal identifier of a call log record
@@ -7543,7 +7636,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: direction
           in: query
           description: >-
@@ -7644,7 +7737,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: recordingId
           in: path
           description: Internal identifier of a recording (returned in Call Log)
@@ -7682,7 +7775,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: recordingId
           in: path
           description: Internal identifier of a recording (returned in Call Log)
@@ -7755,7 +7848,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         '200':
           description: Custom Field List
@@ -7784,7 +7877,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -7821,7 +7914,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: fieldId
           in: path
           description: Custom field identifier
@@ -7863,7 +7956,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: fieldId
           in: path
           description: Custom field identifier
@@ -7896,7 +7989,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: deviceId
           in: path
           description: Internal identifier of a device
@@ -7986,7 +8079,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -7996,7 +8089,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: linePooling
           in: query
           description: Pooling type of a device
@@ -8752,7 +8845,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -8762,7 +8855,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -8812,7 +8905,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -8822,7 +8915,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: MMS envelope and content
         content:
@@ -8869,7 +8962,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -8879,7 +8972,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -9052,7 +9145,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -9062,7 +9155,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: availability
           in: query
           description: >-
@@ -9278,7 +9371,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -9288,7 +9381,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: messageId
           in: path
           description: Internal identifier of a message
@@ -9340,7 +9433,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -9350,7 +9443,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: messageId
           in: path
           description: Internal identifier of a message
@@ -9421,7 +9514,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -9431,7 +9524,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: messageId
           in: path
           description: Internal identifier of a message
@@ -9479,7 +9572,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -9489,7 +9582,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: attachmentId
           in: path
           description: Internal identifier of a message attachment
@@ -9552,7 +9645,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -9562,7 +9655,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: conversationId
           in: query
           description: >-
@@ -9940,7 +10033,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: status
           in: query
           description: Status of a phone number. Multiple values are supported
@@ -9960,7 +10053,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: usageType
           in: query
           description: Usage type of a phone number
@@ -10026,7 +10119,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -10036,7 +10129,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         default:
           description: Extension information
@@ -10071,7 +10164,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -10081,7 +10174,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -10177,7 +10270,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -10187,7 +10280,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         default:
           description: Success
@@ -10219,7 +10312,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -10229,7 +10322,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -10272,7 +10365,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -10282,7 +10375,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionType
           in: query
           description: Type of extension to be returned. Multiple values are supported
@@ -10350,7 +10443,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: type
           in: query
           description: Extension type. Multiple values are supported
@@ -10447,7 +10540,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -10485,7 +10578,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: siteId
           in: query
           description: >-
@@ -10555,7 +10648,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -10577,6 +10670,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-codegen-request-body-name: body
+      x-team: PLA Inno
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}':
     get:
       tags:
@@ -10592,7 +10686,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: pointId
           in: path
           required: true
@@ -10625,7 +10719,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: pointId
           in: path
           required: true
@@ -10664,7 +10758,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: pointId
           in: path
           required: true
@@ -10685,6 +10779,7 @@ paths:
       x-throttling-group: Heavy
       x-docs-level: Public
       x-beta-api: true
+      x-team: PLA Inno
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks':
     get:
       tags:
@@ -10703,7 +10798,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         default:
           description: Networks List
@@ -10736,7 +10831,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -10758,6 +10853,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-codegen-request-body-name: body
+      x-team: PLA Inno
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}':
     get:
       tags:
@@ -10773,7 +10869,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: networkId
           in: path
           required: true
@@ -10808,7 +10904,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: networkId
           in: path
           required: true
@@ -10846,7 +10942,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: networkId
           in: path
           required: true
@@ -10867,6 +10963,7 @@ paths:
       x-throttling-group: Heavy
       x-docs-level: Public
       x-beta-api: true
+      x-team: PLA Inno
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices':
     get:
       tags:
@@ -10885,7 +10982,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: siteId
           in: query
           description: >-
@@ -10978,7 +11075,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11017,7 +11114,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: siteId
           in: query
           description: >-
@@ -11090,7 +11187,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11126,7 +11223,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: switchId
           in: path
           required: true
@@ -11163,7 +11260,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: switchId
           in: path
           required: true
@@ -11205,7 +11302,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: switchId
           in: path
           required: true
@@ -11242,7 +11339,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11265,6 +11362,7 @@ paths:
       x-beta-api: true
       x-team: PLA Inno
       x-codegen-request-body-name: body
+      x-request-max-body-size: 100m
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update':
     post:
       tags:
@@ -11280,7 +11378,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11303,6 +11401,7 @@ paths:
       x-beta-api: true
       x-team: PLA Inno
       x-codegen-request-body-name: body
+      x-request-max-body-size: 100m
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create':
     post:
       tags:
@@ -11318,7 +11417,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11341,6 +11440,7 @@ paths:
       x-beta-api: true
       x-team: PLA Inno
       x-codegen-request-body-name: body
+      x-request-max-body-size: 100m
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update':
     post:
       tags:
@@ -11356,7 +11456,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11379,6 +11479,7 @@ paths:
       x-beta-api: true
       x-team: PLA Inno
       x-codegen-request-body-name: body
+      x-request-max-body-size: 100m
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate':
     post:
       tags:
@@ -11394,7 +11495,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11418,6 +11519,7 @@ paths:
       x-availability: High
       x-team: PLA Inno
       x-codegen-request-body-name: body
+      x-request-max-body-size: 100m
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate':
     post:
       tags:
@@ -11433,7 +11535,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -11457,6 +11559,7 @@ paths:
       x-availability: High
       x-team: PLA Inno
       x-codegen-request-body-name: body
+      x-request-max-body-size: 100m
   '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}':
     get:
       tags:
@@ -11477,7 +11580,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: taskId
           in: path
           required: true
@@ -11515,7 +11618,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: searchString
           in: query
           description: >-
@@ -11637,7 +11740,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: locationId
           in: path
           description: Internal identifier of the emergency location
@@ -11675,7 +11778,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: locationId
           in: path
           description: Internal identifier of the emergency location
@@ -11706,6 +11809,99 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-codegen-request-body-name: body
+    delete:
+      tags:
+        - Automatic Location Updates
+      operationId: deleteEmergencyLocation
+      summary: Delete Emergency Location
+      description: Deletes the specified emergency response location.
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: locationId
+          in: path
+          description: Internal identifier of emergency location
+          required: true
+          schema:
+            type: string
+        - name: newLocationId
+          in: query
+          description: >-
+            Internal identifier of a location that should be used instead of a
+            deleted one
+          schema:
+            type: string
+        - name: validateOnly
+          in: query
+          description: >-
+            Flag indicating that validation of emergency location(s) is required
+            before deletion
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Successful validation
+          content: {}
+        '204':
+          description: No Content
+          content: {}
+        '207':
+          description: Multi-Status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLocationDeletionMultiResponse'
+      x-api-group: account/emergency-locations
+      x-app-permission: EditAccounts
+      x-user-permission: ConfigureEmergencyMaps
+      x-throttling-group: Heavy
+      x-feature: EditEmergencyLocations
+      x-docs-level: Public
+  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/emergency-locations':
+    get:
+      tags:
+        - Automatic Location Updates
+      summary: Get User Emergency Location List
+      description: >-
+        Returns a list of emergency response locations available for the current
+        user extension.
+      operationId: getExtensionEmergencyLocations
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          schema:
+            type: string
+            default: '~'
+        - name: extensionId
+          in: path
+          description: >-
+            Internal identifier of an extension or tilde (~) to indicate the
+            extension assigned to the account logged-in within the current
+            session
+          required: true
+          schema:
+            type: string
+            default: '~'
+      responses:
+        '200':
+          description: User Emergency Location List
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserEmergencyLocationList'
+      x-api-group: extension/emergency-locations
+      x-app-permission: ReadAccounts
+      x-throttling-group: Light
+      x-availability: High
+      x-team: PLA Inno
+      x-docs-level: Public
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings':
     get:
       tags:
@@ -11724,7 +11920,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -11770,7 +11966,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -11948,7 +12144,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -11958,7 +12154,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: scaleSize
           in: path
           description: >-
@@ -11986,6 +12182,7 @@ paths:
       x-availability: High
       x-service-level: 3000
       x-team: PLA RnD
+      x-request-max-body-size: 10m
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing':
     get:
       tags:
@@ -12004,7 +12201,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -12014,7 +12211,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: countryId
           in: query
           description: >-
@@ -12057,7 +12254,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -12067,7 +12264,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -12109,7 +12306,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         default:
           description: Success
@@ -12142,7 +12339,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         default:
           description: Success
@@ -12176,7 +12373,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -12218,7 +12415,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         default:
           description: Success
@@ -12605,7 +12802,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: page
           in: query
           description: >-
@@ -12684,7 +12881,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: phoneNumberId
           in: path
           description: Internal identifier of a phone number
@@ -12725,7 +12922,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionNumber
           in: query
           description: Number of extension to be retrieved
@@ -12797,6 +12994,7 @@ paths:
                 - Limited
                 - Bot
                 - ProxyAdmin
+                - DelegatedLinesGroup
       responses:
         default:
           description: Success
@@ -12831,7 +13029,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -12950,7 +13148,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -12959,7 +13157,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         '200':
           description: User Video Configuration
@@ -12990,7 +13188,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -12999,7 +13197,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -13248,7 +13446,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -13258,7 +13456,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         content:
           application/json:
@@ -13778,6 +13976,176 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-codegen-request-body-name: body
+  '/restapi/v1.0/account/{accountId}/extension-bulk-update':
+    post:
+      tags:
+        - Extensions
+      summary: Update Multiple Extensions
+      description: >-
+        Updates multiple extensions at once. Maximum 500 extensions can be
+        updated per request.
+      operationId: extensionBulkUpdate
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          schema:
+            type: string
+            default: '~'
+      requestBody:
+        description: JSON body
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExtensionBulkUpdateRequest'
+        required: true
+      responses:
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExtensionBulkUpdateTaskResource'
+      x-api-group: account/extension-bulk-update
+      x-app-permission: EditExtensions
+      x-user-permission: EditExtensionInfo
+      x-feature: EditExtensionInfo
+      x-throttling-group: Heavy
+      x-metered-api: true
+      x-metering-group: System
+      x-docs-level: Public
+      x-team: PLA IPA
+      x-beta-api: true
+      x-codegen-request-body-name: body
+  '/restapi/v1.0/account/{accountId}/extension-bulk-update/tasks/{taskId}':
+    get:
+      tags:
+        - Extensions
+      summary: Get Update Task Status
+      description: Returns the status of multiple extension update task
+      operationId: getExtensionBulkUpdateTask
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          schema:
+            type: string
+            default: '~'
+        - name: taskId
+          in: path
+          description: Internal identifier of a task
+          required: true
+          schema:
+            type: string
+      responses:
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExtensionBulkUpdateTaskResource'
+      x-api-group: account/extension-bulk-update
+      x-app-permission: EditExtensions
+      x-user-permission: EditExtensionInfo
+      x-feature: EditExtensionInfo
+      x-throttling-group: Light
+      x-metered-api: true
+      x-metering-group: System
+      x-docs-level: Public
+      x-beta-api: true
+      x-team: PLA IPA
+  '/restapi/v1.0/account/{accountId}/address-book-bulk-upload':
+    post:
+      tags:
+        - External Contacts
+      summary: Update Multiple Contacts
+      description: >-
+        Uploads multiple contacts for multiple extensions at once. Maximum 500
+        extension, each up to 10000 contacts, can be updated per request.
+      operationId: addressBookBulkUpload
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          schema:
+            type: string
+            default: '~'
+      requestBody:
+        description: JSON body
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddressBookBulkUploadRequest'
+        required: true
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddressBookBulkUploadResponse'
+      x-api-group: account/address-book-bulk-upload
+      x-app-permission: Contacts
+      x-user-permission: EditPersonalContacts
+      x-feature: EditPersonalContacts
+      x-throttling-group: Heavy
+      x-metered-api: true
+      x-metering-group: System
+      x-docs-level: Public
+      x-beta-api: true
+      x-team: PLA IPA
+      x-codegen-request-body-name: body
+  '/restapi/v1.0/account/{accountId}/address-book-bulk-upload/tasks/{taskId}':
+    get:
+      tags:
+        - External Contacts
+      summary: Get Contacts Update Task
+      description: >-
+        Returns the status of a task on adding multiple contacts to multiple
+        extensions.
+      operationId: getAddressBookBulkUploadTask
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          schema:
+            type: string
+            default: '~'
+        - name: taskId
+          in: path
+          description: Internal identifier of a task
+          required: true
+          schema:
+            type: string
+      responses:
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddressBookBulkUploadResponse'
+      x-api-group: account/address-book-bulk-upload
+      x-app-permission: Contacts
+      x-user-permission: EditPersonalContacts
+      x-feature: EditPersonalContacts
+      x-throttling-group: Light
+      x-metered-api: true
+      x-metering-group: System
+      x-docs-level: Public
+      x-beta-api: true
+      x-team: PLA IPA
   '/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile':
     get:
       tags:
@@ -13868,7 +14236,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -13878,7 +14246,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -13916,7 +14284,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -13926,7 +14294,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ringoutId
           in: path
           description: Internal identifier of a RingOut call
@@ -13961,7 +14329,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: extensionId
           in: path
           description: >-
@@ -13971,7 +14339,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: ringoutId
           in: path
           description: Internal identifier of a RingOut call
@@ -14644,7 +15012,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       requestBody:
         description: JSON body
         content:
@@ -14692,7 +15060,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
       responses:
         '201':
           description: Created
@@ -14740,7 +15108,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -14797,7 +15165,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -14849,7 +15217,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -14916,7 +15284,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -14974,7 +15342,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15036,7 +15404,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15100,7 +15468,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15158,7 +15526,14 @@ paths:
       tags:
         - Call Control
       summary: Bridge Call Party
-      description: Connects two parties from different call sessions.
+      description: >-
+        Allows the user to connect multiple call session participants over a
+        conference call bridge. The current active call session ID and party ID
+        of the user associated with that session should be specified in path;
+        the bridged call session ID and party ID of the user associated with
+        that session should be specified in request body. Thus the user connects
+        participants of two sessions into one conference call using his/her own
+        party IDs from both sessions.
       operationId: bridgeCallParty
       parameters:
         - name: accountId
@@ -15169,7 +15544,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15242,7 +15617,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15314,7 +15689,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15389,7 +15764,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15460,7 +15835,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15536,7 +15911,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15612,7 +15987,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15682,7 +16057,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15750,7 +16125,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15807,7 +16182,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15863,7 +16238,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15936,7 +16311,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -15999,7 +16374,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: accountId
           in: path
           description: >-
@@ -16008,7 +16383,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -16092,7 +16467,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -16161,7 +16536,7 @@ paths:
           required: true
           schema:
             type: string
-            default: null
+            default: '~'
         - name: telephonySessionId
           in: path
           description: Internal identifier of a call session
@@ -16240,6 +16615,9 @@ components:
           enum:
             - Inbound
             - Outbound
+        queueCall:
+          type: boolean
+          description: Identifies if a call belongs to the call queue
         from:
           type: string
           description: >-
@@ -16448,10 +16826,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     PresencePagingInfo:
       type: object
       properties:
@@ -16609,7 +16984,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension. Optional parameter
-          default: null
+          default: '~'
         telephonyStatus:
           type: string
           description: Telephony presence status. Returned if telephony status is changed.
@@ -16689,7 +17064,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension. Optional parameter
-          default: null
+          default: '~'
         telephonyStatus:
           type: string
           description: Telephony presence status. Returned if telephony status is changed.
@@ -16769,7 +17144,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension
-          default: null
+          default: '~'
         telephonyStatus:
           type: string
           description: Telephony presence status. Returned if telephony status is changed.
@@ -16863,7 +17238,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension
-          default: null
+          default: '~'
         telephonyStatus:
           type: string
           description: Telephony presence status. Returned if telephony status is changed.
@@ -16943,6 +17318,9 @@ components:
           enum:
             - Inbound
             - Outbound
+        queueCall:
+          type: boolean
+          description: Identifies if a call belongs to the call queue
         from:
           type: string
           description: >-
@@ -17012,7 +17390,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension
-          default: null
+          default: '~'
         action:
           type: string
           description: 'Calling action, for example ''StartRing'''
@@ -17083,7 +17461,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension
-          default: null
+          default: '~'
         action:
           type: string
           description: 'Calling action, for example ''StartRing'''
@@ -17144,7 +17522,7 @@ components:
       properties:
         aps:
           $ref: '#/components/schemas/APSInfo'
-      description: APNS service info
+      description: APNS (Apple Push Notification Service) information
     CallQueuePresence:
       type: object
       properties:
@@ -17567,10 +17945,7 @@ components:
         List of users whose data is collected. The following data will be
         exported: posts, tasks, events, etc. posted by the user(s); posts
         addressing the user(s) via direct and @Mentions; tasks assigned to the
-        listed user(s). The list of 10 users per request is supported. || List
-        of users whose data is collected. The following data is exported: posts,
-        tasks, events, etc. posted by the user(s); posts addressing the user(s)
-        via direct and @Mentions; tasks assigned to the listed user(s)
+        listed user(s). The list of 10 users per request is supported.
     DataExportTaskList:
       type: object
       properties:
@@ -17706,10 +18081,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     GlipNotesInfo:
       type: object
       properties:
@@ -18190,7 +18562,7 @@ components:
             Message creation datetime in ISO 8601 format including timezone, for
             example *2016-03-10T18:07:52.534Z*
           format: date-time
-      description: Message footer information || Message Footer
+      description: Message footer information
     GlipMessageAttachmentFieldsInfo:
       type: object
       properties:
@@ -18565,7 +18937,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension
-          default: null
+          default: '~'
         action:
           type: string
           description: 'Calling action, for example ''StartRing'''
@@ -19497,6 +19869,9 @@ components:
           $ref: '#/components/schemas/ContactAddressInfo'
         otherAddress:
           $ref: '#/components/schemas/ContactAddressInfo'
+        ringtoneIndex:
+          type: string
+          description: Contact ringtone. Max number of symbols is 64
     PersonalContactResource:
       type: object
       properties:
@@ -19621,6 +19996,9 @@ components:
           $ref: '#/components/schemas/ContactAddressInfo'
         otherAddress:
           $ref: '#/components/schemas/ContactAddressInfo'
+        ringtoneIndex:
+          type: string
+          description: Contact ringtone. Max number of symbols is 64
     AddressBookSync:
       type: object
       properties:
@@ -19708,10 +20086,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     ContactAddressInfo:
       type: object
       properties:
@@ -20081,7 +20456,7 @@ components:
         name:
           type: string
           description: Custom name of a site
-      description: Site Data || Site data
+      description: Site Data
     SearchDirectoryEntriesRequest:
       type: object
       properties:
@@ -20127,6 +20502,7 @@ components:
             - Site
             - Bot
             - ProxyAdmin
+            - DelegatedLinesGroup
         orderBy:
           type: array
           description: Sorting settings
@@ -20724,7 +21100,7 @@ components:
             'Operator' 'Operator' - play company greeting and forward to
             operator extension 'Disconnect' - play company greeting and
             disconnect 'Bypass' - bypass greeting to go to selected extension =
-            ['Operator', 'Disconnect', 'Bypass']
+            ['Operator', 'Disconnect','Bypass']
           enum:
             - Operator
             - Disconnect
@@ -20910,9 +21286,8 @@ components:
           type: string
           description: Internal identifier of the other extension device
       description: >-
-        Reference to the other extension device. Applicable for 'PhoneLine' type
-        only. Cannot be specified together with 'phoneNumber' parameter. ||
-        Forwarding device information
+        Forwarding device information. Applicable for 'PhoneLine' type only.
+        Cannot be specified together with 'phoneNumber' parameter
     CustomCompanyGreetingInfo:
       type: object
       properties:
@@ -21089,6 +21464,9 @@ components:
         extensionNumber:
           type: string
           description: Number of department extension
+        name:
+          type: string
+          description: Name of agent extension
     ForwardingInfo:
       type: object
       properties:
@@ -21337,19 +21715,6 @@ components:
             - StartRecording
             - StopRecording
             - AutomaticRecording
-        usageType:
-          type: string
-          description: >-
-            Usage type of a greeting, specifying if the greeting is applied to
-            user extension or department extension.
-          enum:
-            - UserExtensionAnsweringRule
-            - ExtensionAnsweringRule
-            - DepartmentExtensionAnsweringRule
-            - CompanyAnsweringRule
-            - CompanyAfterHoursAnsweringRule
-            - VoicemailExtensionAnsweringRule
-            - AnnouncementExtensionAnsweringRule
         preset:
           $ref: '#/components/schemas/PresetInfo'
         custom:
@@ -21514,10 +21879,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     CallHandlingPagingInfo:
       type: object
       properties:
@@ -22541,7 +22903,7 @@ components:
           versionString: 1.0.34
           releaseDate: 2018-02-09T00:00:00.000Z
           uriString: v1.0
-    MessageBatchCreateRequest:
+    CreateSMSMessageBatchRequest:
       required:
         - from
         - messages
@@ -22573,6 +22935,7 @@ components:
     MessageBatchResponse:
       required:
         - from
+        - messages
       type: object
       properties:
         id:
@@ -22595,9 +22958,10 @@ components:
           type: integer
           description: Total number of messages currently processed in the batch
           example: 1
-        lastUpdatedAt:
+        lastModifiedTime:
           type: string
-          description: Time of message batch last processing
+          description: |
+            The last time the batch was processed.
           format: date-time
         status:
           type: string
@@ -22606,17 +22970,17 @@ components:
           enum:
             - Processing
             - Completed
-        createdAt:
+        creationTime:
           type: string
-          description: Time of message batch creation
+          description: |
+            The time at which the batch was created
           format: date-time
       description: >-
         Batch of A2P SMS messages. This object provides a specification to send
-        message(s) to many recipients. It contains top-level attributes, such as
-        `text`, `expiresIn`, `scheduledAt` which apply to all `messages`. In
-        addition to that, it is possible to override this attribute for each
-        message. This way a single API call may be used to send individual
-        messages to many recipients
+        message(s) to many recipients. It contains top-level attributes which
+        apply to all messages. In addition to that, it is possible to override
+        this attribute for each message. This way a single API call may be used
+        to send individual messages to many recipients
     MessageCreateRequest:
       required:
         - to
@@ -22633,7 +22997,7 @@ components:
             type: string
         text:
           type: string
-          description: Text to send
+          description: 'Text to send, maximum number of characters is 1000'
           example: 'Hello, World!'
       description: Single individual SMS resource
     MessageDetailsResponse:
@@ -22661,16 +23025,16 @@ components:
             type: string
         text:
           type: string
-          description: Text of a message
+          description: 'Text of a message, maximum number of characters is 1000'
           example: 'Hello, World!'
-        createdAt:
+        creationTime:
           type: string
-          description: Time of message creation
           format: date-time
-        lastUpdatedAt:
+          description: The time when this is message was created.
+        lastModifiedTime:
           type: string
-          description: Time а a message last update
           format: date-time
+          description: The time when this message was last updated.
         messageStatus:
           type: string
           description: Current status of a message
@@ -22691,6 +23055,21 @@ components:
           description: Cost of a message
           format: double
           example: 0.007
+        batchId:
+          type: string
+          description: The batchId in which the message was submitted
+          example: batch12345
+        direction:
+          type: string
+          enum:
+            - Inbound
+            - Outbound
+          description: Indicates whether the message was outbound or inbound
+          example: out
+        errorCode:
+          type: string
+          description: The RC error code of the message sending failure reason
+          example: SMS-RC-503
       description: Detailed information on a message
     MessageListResponse:
       type: object
@@ -22733,29 +23112,51 @@ components:
           example: 15551234567
           items:
             type: string
-        createdAt:
+        creationTime:
           type: string
-          description: Time of message creation
           format: date-time
-        lastUpdatedAt:
+          description: The time at which the message was created
+        lastModifiedTime:
           type: string
-          description: Time of the message(s) last update
           format: date-time
+          description: The time at which the messages was last updated
         messageStatus:
           type: string
           description: Current status of a message
           example: Queued
+          enum:
+            - Queued
+            - Delivered
+            - Sent
+            - SendingFailed
+            - DeliveryFailed
         segmentCount:
           type: integer
           description: Number of segments of a message
           format: int64
           example: 1
+        text:
+          type: string
+          description: >-
+            Text of a message. Returned if the `view` parameter is set to
+            'Detailed'
         cost:
           type: number
           description: Cost of a message
           format: double
           example: 0.007
-      description: Infommation on a message returned within the specified batch
+        direction:
+          type: string
+          enum:
+            - Inbound
+            - Outbound
+          description: Indicates whether the message was outbound or inbound
+          example: out
+        errorCode:
+          type: string
+          description: The RC error code of the message sending failure reason
+          example: SMS-RC-503
+      description: Infomation on a message returned within the specified batch
     OptOutListResponse:
       type: object
       properties:
@@ -23119,8 +23520,8 @@ components:
           type: number
           description: 'Cost per minute, paid and not included in your RingCentral Plan'
       description: >-
-        Billing information related to the call || Billing information related
-        to the call. Returned for 'Detailed' view only
+        Billing information related to the call. Returned for 'Detailed' view
+        only
     AccountCallLogResponse:
       type: object
       properties:
@@ -23236,7 +23637,7 @@ components:
             not determined then
         device:
           $ref: '#/components/schemas/CallLogRecordDeviceInfo'
-      description: Caller information || Callee information
+      description: Information on caller ('from') or callee ('to')
     CallLogRecordingInfo:
       type: object
       properties:
@@ -23256,10 +23657,8 @@ components:
           type: string
           description: Link to the call recording binary content
       description: >-
-        Call recording data. Returned if a call is recorded || Call recording
-        data. Returned if the call is recorded || Call recording data. Returned
-        if the call is recorded - `withRecording` parameter is set to 'True' in
-        this case
+        Call recording data. Returned if the call is recorded - `withRecording`
+        parameter is set to 'True' in this case
     CallLogRecordDeviceInfo:
       type: object
       properties:
@@ -23322,10 +23721,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     CallLogRecordLegInfo:
       type: object
       properties:
@@ -24257,7 +24653,7 @@ components:
           description: >-
             Payment type. 'External' is returned for forwarded numbers which are
             not terminated in the RingCentral phone system = ['External',
-            'TollFree', 'Local'],
+            'TollFree', 'Local']
           enum:
             - External
             - TollFree
@@ -24631,8 +25027,9 @@ components:
           description: >-
             Shipping status of the order item. It is set to 'Initial' when the
             order is submitted. Then it is changed to 'Accepted' when a
-            distributor starts processing the order. Finally it is changed to
-            Shipped which means that distributor has shipped the device.
+            distributor starts processing the order. Finally the status is
+            changed to 'Shipped' which means that distributor shipped the
+            device.
           enum:
             - Initial
             - Accepted
@@ -24733,8 +25130,8 @@ components:
       description: >-
         Shipping address for the order. If it coincides with the Emergency
         Service Address, then can be omitted. By default the same value as the
-        emergencyServiceAddress. Multiple addresses can be specified; in case an
-        order contains several devices, they can be delivered to different
+        emergencyServiceAddress. Multiple addresses can be specified; in case
+        the order contains several devices, they can be delivered to different
         addresses
     MethodInfo:
       type: object
@@ -24926,10 +25323,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     PhoneNumberInfoIntId:
       type: object
       properties:
@@ -25078,10 +25472,8 @@ components:
           description: Internal identifier of a country
       description: >-
         Address for emergency cases. The same emergency address is assigned to
-        all numbers of a single device || Address for emergency cases. The same
-        emergency address is assigned to all numbers of a single device. If the
-        emergency address is also specified in `emergency` resource, then this
-        value is ignored
+        all numbers of a single device. If the emergency address is also
+        specified in `emergency` resource, then this value is ignored
     EmergencyServiceAddressResource:
       type: object
       properties:
@@ -25164,10 +25556,7 @@ components:
           description: Internal identifier of a tax
       description: >-
         Address for emergency cases. The same emergency address is assigned to
-        all the numbers of one device || Address for emergency cases. The same
-        emergency address is assigned to all numbers of a single device || 
-        Address for emergency cases. The same emergency address is assigned to
-        all numbers of a single device
+        all the numbers of one device
     PhoneNumberExtensionInfo:
       type: object
       properties:
@@ -25370,10 +25759,7 @@ components:
         loginAllowed:
           type: boolean
           default: false
-      description: >-
-        Home country information || Brief information on a phone number country
-        || Home country setting. For extension bulk assignment is configured
-        automatically based on contact info setting
+      description: Brief information on a phone number country
     TimezoneResource:
       type: object
       properties:
@@ -25597,10 +25983,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     MeetingRecordingsPagingInfo:
       type: object
       properties:
@@ -25761,7 +26144,7 @@ components:
           format: int32
         timeZone:
           $ref: '#/components/schemas/TimezoneResource'
-      description: Meeting schedule information || Timing of a meeting
+      description: Timing of a meeting
     MeetingsNavigationInfo:
       type: object
       properties:
@@ -25920,7 +26303,7 @@ components:
         until:
           type: string
           description: Meeting expiration datetime
-      description: Meeting recurrence information || Recurrence settings
+      description: Meeting recurrence information
     HostInfoRequest:
       type: object
       properties:
@@ -26358,8 +26741,8 @@ components:
         conversationId:
           type: integer
           description: >-
-            SMS and Pager only. Identifier of a conversation the message belongs
-            to
+            SMS and Pager only. Identifier of a conversation that the message
+            belongs to
         conversation:
           $ref: '#/components/schemas/ConversationInfo'
         creationTime:
@@ -26465,8 +26848,8 @@ components:
         conversationId:
           type: integer
           description: >-
-            SMS and Pager only. Identifier of a conversation the message belongs
-            to
+            SMS and Pager only. Identifier of a conversation that the message
+            belongs to
         conversation:
           $ref: '#/components/schemas/ConversationInfo'
         creationTime:
@@ -26978,9 +27361,7 @@ components:
           description: Phone number in E.164 format
       description: >-
         Message sender information. The `phoneNumber` value should be one the
-        account phone numbers allowed to send media messages || Message sender
-        information. The `phoneNumber` value should be one the account phone
-        numbers allowed to send text messages
+        account phone numbers allowed to send the current type of messages
     UpdateMessageRequest:
       type: object
       properties:
@@ -27261,10 +27642,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     CreateMMSMessage:
       required:
         - attachments
@@ -27327,7 +27705,7 @@ components:
           description: Internal identifier of a message
         conversationId:
           type: string
-          description: Internal identifier of an conversation
+          description: Internal identifier of a conversation
         from:
           type: string
           description: >-
@@ -27574,8 +27952,8 @@ components:
           type: string
           description: Deprecated. Link to a conversation resource
       description: >-
-        SMS and Pager only. Identifier of a conversation the message belongs to
-        || Information about a conversation the message belongs to
+        SMS and Pager only. Information about a conversation the message belongs
+        to
     MessageStoreConfiguration:
       type: object
       properties:
@@ -28167,12 +28545,7 @@ components:
       description: >-
         Emergency address assigned to the switch. Only one of a pair
         `emergencyAddress` or `emergencyLocationId` should be specified,
-        otherwise the error is returned || Emergency address information. Only
-        one of a pair `emergencyAddress` or `emergencyLocationId` should be
-        specified, otherwise the error is returned || Emergency address assigned
-        to the wireless point. Only one of a pair `emergencyAddress` or
-        `emergencyLocationId` should be specified, otherwise the error is
-        returned
+        otherwise the error is returned
     LocationUpdatesEmergencyAddressInfo:
       type: object
       properties:
@@ -28216,12 +28589,8 @@ components:
           type: string
           description: Postal (Zip) code
       description: >-
-        Emergency address assigned to the switch. Only one of a pair
-        `emergencyAddress` or `emergencyLocationId` should be specified,
-        otherwise the error is returned || Emergency address assigned to the
-        wireless point. Only one of a pair `emergencyAddress` or
-        `emergencyLocationId` should be specified, otherwise the error is
-        returned || Emergency address information. Only one of a pair
+        Emergency address information (or information assigned to the switch or
+        wireless point - in case of using them). Only one of a pair
         `emergencyAddress` or `emergencyLocationId` should be specified,
         otherwise the error is returned
     SwitchSiteInfo:
@@ -28450,9 +28819,7 @@ components:
         callingCode:
           type: string
           description: Calling code of a country
-      description: >-
-        Brief information on a phone number country || Extension country
-        information || Home country information
+      description: Country information
     UserPhoneNumberExtensionInfo:
       type: object
       properties:
@@ -28620,10 +28987,7 @@ components:
       properties:
         uri:
           type: string
-      description: >-
-        Canonical URI for the first page of the list || Canonical URI for the
-        next page of the list || Canonical URI for the previous page of the list
-        || Canonical URI for the last page of the list
+      description: Canonical URI for the corresponding page of the list
     ProvisioningPagingInfo:
       type: object
       properties:
@@ -28793,6 +29157,7 @@ components:
             - Limited
             - Site
             - ProxyAdmin
+            - DelegatedLinesGroup
         callQueueInfo:
           $ref: '#/components/schemas/CallQueueExtensionInfo'
         hidden:
@@ -28876,8 +29241,8 @@ components:
           type: string
           description: Zip code of an extension user company
       description: >-
-        Business address of extension user company || Extension user business
-        address. The default is Company settings
+        Extension user business address. The default is Company
+        (Auto-Receptionist) settings
     DepartmentInfo:
       type: object
       properties:
@@ -28894,19 +29259,26 @@ components:
       type: object
       properties:
         admin:
-          $ref: '#/components/schemas/PermissionInfo'
+          $ref: '#/components/schemas/PermissionInfoAdmin'
         internationalCalling:
-          $ref: '#/components/schemas/PermissionInfo'
+          $ref: '#/components/schemas/PermissionInfoInt'
       description: >-
         Extension permissions, corresponding to the Service Web permissions
         'Admin' and 'InternationalCalling'
-    PermissionInfo:
+    PermissionInfoAdmin:
       type: object
       properties:
         enabled:
           type: boolean
           description: Specifies if a permission is enabled or not
-      description: Admin permission || International Calling permission
+      description: Admin permission
+    PermissionInfoInt:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+          description: Specifies if a permission is enabled or not
+      description: International Calling permission
     ProfileImageInfo:
       required:
         - uri
@@ -28972,9 +29344,8 @@ components:
             - 12h
             - 24h
       description: >-
-        Extension region data (timezone, home country, language) || Account
-        level region data (web service Auto-Receptionist settings) ||
-        Information about regional settings. The default is Company settings
+        Regional data (timezone, home country, language) of an
+        extension/account. The default is Company (Auto-Receptionist) settings
     AccountRegionalSettings:
       type: object
       properties:
@@ -29069,9 +29440,8 @@ components:
           description: Localization code of a formatting language
         name:
           type: string
-      description: >-
-        Official name of a formatting language || Formatting language
-        preferences for numbers, dates and currencies
+          description: Official name of a formatting language
+      description: 'Formatting language preferences for numbers, dates and currencies'
     ExtensionServiceFeatureInfo:
       type: object
       properties:
@@ -29166,7 +29536,7 @@ components:
             - SuspendedVoluntarily2
       description: >-
         Status information (reason, comment). Returned for 'Disabled' status
-        only || Status information (reason, comment). For 'Disabled' status only
+        only
     CallQueueExtensionInfo:
       type: object
       properties:
@@ -29415,6 +29785,7 @@ components:
             - IvrMenu
             - ApplicationExtension
             - ParkLocation
+            - DelegatedLinesGroup
         references:
           type: array
           description: List of non-RC internal identifiers assigned to an extension
@@ -29426,13 +29797,14 @@ components:
         sendWelcomeEmailsToUsers:
           type: boolean
           description: >-
-            Specifies if an activation email is automatically sent to new users
-            (Not Activated extensions) or not
+            Specifies if a welcome/activation email is sent to the existing
+            users during account confirmation
         sendWelcomeEmail:
           type: boolean
           description: >-
-            Supported for account confirmation. Specifies whether welcome email
-            is sent
+            Specifies if a welcome/activation email is sent to the new users
+            (within extension status changing from 'Unsassigned' to
+            'NotActivated/Disabled')
       description: For NotActivated extensions only. Welcome email settings
     CustomFieldInfo:
       type: object
@@ -30386,9 +30758,7 @@ components:
         shortExtensionNumberLength:
           type: integer
           description: Length of a short extension number
-      description: >-
-        Limits which are effective for the account || Limits which are effective
-        for an account
+      description: Limits which are effective for the account
     ServiceFeatureInfo:
       type: object
       properties:
@@ -30791,8 +31161,8 @@ components:
           type: string
           description: Number of an operator extension
       description: >-
-        Operator extension information || Operator's extension information. This
-        extension will receive all calls and messages intended for the operator
+        Operator's extension information. This extension will receive all calls
+        and messages intended for the operator
     AccountPhoneNumbers:
       type: object
       properties:
@@ -30900,6 +31270,15 @@ components:
             specified
           items:
             type: string
+    ErrorEntity:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
     EmergencyLocationList:
       type: object
       properties:
@@ -31715,9 +32094,9 @@ components:
       type: object
       properties:
         task:
-          $ref: '#/components/schemas/BulkTaskInfo'
+          $ref: '#/components/schemas/BulkTaskInfoSwUpdate'
       description: Information on the task for multiple switches creation
-    BulkTaskInfo:
+    BulkTaskInfoSwUpdate:
       type: object
       properties:
         id:
@@ -31735,10 +32114,45 @@ components:
         lastModifiedTime:
           type: string
           description: Time of the task latest modification
-      description: >-
-        Information on the task for multiple switches update || Information on
-        the task for multiple wireless points creation || Information on the
-        task for multiple wireless points update
+      description: Information on the task for multiple switches update
+    BulkTaskInfoWiUpdate:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Internal identifier of a task for multiple switches creation
+        status:
+          type: string
+          description: Status of a task
+          enum:
+            - Accepted
+            - Failed
+        creationTime:
+          type: string
+          description: Task creation time
+        lastModifiedTime:
+          type: string
+          description: Time of the task latest modification
+      description: Information on the task for multiple wireless points update
+    BulkTaskInfoWiCreate:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Internal identifier of a task for multiple switches creation
+        status:
+          type: string
+          description: Status of a task
+          enum:
+            - Accepted
+            - Failed
+        creationTime:
+          type: string
+          description: Task creation time
+        lastModifiedTime:
+          type: string
+          description: Time of the task latest modification
+      description: Information on the task for multiple wireless points creation
     UpdateMultipleSwitchesRequest:
       type: object
       properties:
@@ -31750,7 +32164,7 @@ components:
       type: object
       properties:
         task:
-          $ref: '#/components/schemas/BulkTaskInfo'
+          $ref: '#/components/schemas/BulkTaskInfoSwUpdate'
     CreateMultipleWirelessPointsRequest:
       type: object
       properties:
@@ -31762,7 +32176,7 @@ components:
       type: object
       properties:
         task:
-          $ref: '#/components/schemas/BulkTaskInfo'
+          $ref: '#/components/schemas/BulkTaskInfoWiCreate'
     UpdateMultipleWirelessPointsRequest:
       type: object
       properties:
@@ -31774,7 +32188,7 @@ components:
       type: object
       properties:
         task:
-          $ref: '#/components/schemas/BulkTaskInfo'
+          $ref: '#/components/schemas/BulkTaskInfoWiUpdate'
     ValidateMultipleWirelessPointsRequest:
       type: object
       properties:
@@ -31869,6 +32283,14 @@ components:
             - RCMeetings
             - RCVideo
             - None
+        userLicenseType:
+          type: string
+          description: >-
+            Specifies if the user is 'paid' (has meeting license) or 'free' (w/o
+            meeting license)
+          enum:
+            - Paid
+            - Free
     ListDevicesAutomaticLocationUpdates:
       type: object
       properties:
@@ -31979,10 +32401,9 @@ components:
           type: string
           description: Site code value. Returned only if specified
       description: >-
-        Site data. If multi-site feature is turned on for the account, then
-        internal identifier of a site must be specified. To assign the wireless
-        point to the main site (company) set site ID to `main-site` || Site data
-        (internal identifier and custom name of a site) || Site data
+        Site data. If multi-site feature is turned on for the account, then ID
+        of a site must be specified. In order to assign a wireless point to the
+        main site (company) site ID should be set to `main-site`
     AssignMultipleDevicesAutomaticLocationUpdates:
       type: object
       properties:
@@ -32203,7 +32624,7 @@ components:
         permission:
           type: string
       description: >-
-        Reason of the feature unavailability. Returned only if `available` is
+        Reason for the feature unavailability. Returned only if `available` is
         set to 'false'
     CallQueueDetails:
       type: object
@@ -32273,6 +32694,420 @@ components:
         extensionNumber:
           type: string
           description: Number of an extension
+    GetLocationDeletionMultiResponse:
+      type: object
+      properties:
+        deletion:
+          type: string
+          enum:
+            - Forbidden
+            - Restricted
+            - Allowed
+        reassignment:
+          type: string
+          enum:
+            - Forbidden
+            - Allowed
+        emergencyLocations:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocationDeletionInfo'
+    LocationDeletionInfo:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        deletion:
+          type: string
+          description: Identifies the possibility and status of emergency location deletion
+          enum:
+            - Failed
+            - Completed
+            - Forbidden
+            - Restricted
+            - Allowed
+        errors:
+          $ref: '#/components/schemas/LocationDeletionErrorInfo'
+    LocationDeletionErrorInfo:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+        additionalInfo:
+          type: string
+          description: 'Additional attribute for this error, for example `parameterName`'
+    UserEmergencyLocationList:
+      type: object
+      properties:
+        id:
+          type: string
+    ExtensionBulkUpdateRequest:
+      required:
+        - records
+      description: List of extensions to be updated
+      type: object
+      properties:
+        records:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExtensionBulkUpdateInfo'
+    ExtensionBulkUpdateInfo:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Internal identifier of an extension
+        status:
+          type: string
+          enum:
+            - Disabled
+            - Enabled
+            - NotActivated
+            - Frozen
+        statusInfo:
+          $ref: '#/components/schemas/ExtensionStatusInfo'
+        reason:
+          type: string
+          description: Type of suspension
+        comment:
+          type: string
+          description: Free form user comment
+        extensionNumber:
+          type: string
+          description: Extension number available
+        contact:
+          $ref: '#/components/schemas/ContactInfoUpdateRequest'
+        regionalSettings:
+          $ref: '#/components/schemas/ExtensionRegionalSettingRequest'
+        setupWizardState:
+          type: string
+          enum:
+            - NotStarted
+            - Incomplete
+            - Completed
+        partnerId:
+          type: string
+          description: >-
+            Additional extension identifier created by partner application and
+            applied on client side
+        ivrPin:
+          type: string
+          description: IVR PIN
+        password:
+          type: string
+          description: Password for extension
+        callQueueInfo:
+          $ref: '#/components/schemas/CallQueueInfoRequest'
+        transition:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserTransitionInfo'
+        customFields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldInfo'
+        hidden:
+          type: boolean
+          description: >-
+            Hides extension from showing in company directory. Supported for
+            extensions of User type only
+        site:
+          $ref: '#/components/schemas/AutomaticLocationUpdatesSiteInfo'
+        type:
+          type: string
+          description: Extension type
+          enum:
+            - User
+            - Fax User
+            - VirtualUser
+            - DigitalUser
+            - Department
+            - Announcement
+            - Voicemail
+            - SharedLinesGroup
+            - PagingOnly
+            - IvrMenu
+            - ApplicationExtension
+            - ParkLocation
+            - DelegatedLinesGroup
+        references:
+          type: array
+          description: List of non-RC internal identifiers assigned to an extension
+          items:
+            $ref: '#/components/schemas/ReferenceInfo'
+    ExtensionBulkUpdateTaskResource:
+      required:
+        - creationTime
+        - id
+        - lastModifiedTime
+        - status
+        - uri
+      type: object
+      description: Information on a task for updating multiple extensions
+      properties:
+        uri:
+          type: string
+          description: Link to a task resource
+        id:
+          type: string
+          description: Internal identifier of a task
+        status:
+          type: string
+          description: Task status
+          enum:
+            - Accepted
+            - InProgress
+            - Completed
+            - Failed
+        creationTime:
+          type: string
+          description: Task creation datetime
+        lastModifiedTime:
+          type: string
+          description: Task latest update datetime
+        result:
+          $ref: '#/components/schemas/ExtensionBulkUpdateTaskResult'
+    ExtensionBulkUpdateTaskResult:
+      type: object
+      description: Result record on multiple extension update task
+      properties:
+        affectedItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExtensionUpdateShortResult'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorEntity'
+    ExtensionUpdateShortResult:
+      type: object
+      properties:
+        extensionId:
+          type: string
+          description: Internal identifier of an extension
+        status:
+          type: string
+          description: Extension update status
+          enum:
+            - Fail
+            - Success
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorEntity'
+    AddressBookBulkUploadRequest:
+      required:
+        - records
+      type: object
+      properties:
+        records:
+          type: array
+          description: List of extensions which contacts have to be updated
+          items:
+            $ref: '#/components/schemas/AddressBookBulkUploadResource'
+    AddressBookBulkUploadResource:
+      required:
+        - extensionId
+        - contacts
+      type: object
+      properties:
+        extensionId:
+          type: string
+          description: Internal identifier of an extension
+        contacts:
+          type: array
+          description: List of contacts to be added to extension address book
+          items:
+            $ref: '#/components/schemas/AddressBookBulkContactResource'
+    AddressBookBulkContactResource:
+      type: object
+      description: Contact resource
+      properties:
+        email:
+          type: string
+          description: Email of a contact
+          example: charlie.williams@example.com
+        notes:
+          type: string
+          description: Notes for a contact
+          example: '#1 Customer'
+        company:
+          type: string
+          description: Company name of a contact
+          example: 'Example, Inc.'
+        firstName:
+          type: string
+          description: First name of a contact
+          example: Charlie
+        lastName:
+          type: string
+          description: Last name of a contact
+          example: Williams
+        jobTitle:
+          type: string
+          description: Job title of a contact
+          example: CEO
+        birthday:
+          type: string
+          description: Date of birth of a contact
+          format: date-time
+        webPage:
+          type: string
+          description: Link to a contact home page
+          example: 'http://www.example.com'
+        middleName:
+          type: string
+          description: Middle name of a contact
+          example: J
+        nickName:
+          type: string
+          description: Nick name of a contact
+          example: The Boss
+        email2:
+          type: string
+          description: Second email of a contact
+          example: charlie-example@gmail.com
+        email3:
+          type: string
+          description: Third email of a contact
+          example: theboss-example@hotmail.com
+        homePhone:
+          type: string
+          description: Home phone number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        homePhone2:
+          type: string
+          description: 2nd home phone number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        businessPhone:
+          type: string
+          description: Business phone of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        businessPhone2:
+          type: string
+          description: 2nd business phone of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        mobilePhone:
+          type: string
+          description: Mobile phone of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        businessFax:
+          type: string
+          description: Business fax number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        companyPhone:
+          type: string
+          description: Company number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        assistantPhone:
+          type: string
+          description: Phone number of a contact assistant in e.164 (with "+") format
+          example: '+15551234567'
+        carPhone:
+          type: string
+          description: Car phone number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        otherPhone:
+          type: string
+          description: Other phone number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        otherFax:
+          type: string
+          description: Other fax number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        callbackPhone:
+          type: string
+          description: Callback phone number of a contact in e.164 (with "+") format
+          example: '+15551234567'
+        businessAddress:
+          $ref: '#/components/schemas/AddressBookBulkContactAddressInfo'
+        homeAddress:
+          $ref: '#/components/schemas/AddressBookBulkContactAddressInfo'
+        otherAddress:
+          $ref: '#/components/schemas/AddressBookBulkContactAddressInfo'
+    AddressBookBulkContactAddressInfo:
+      type: object
+      description: Contact address information
+      properties:
+        country:
+          type: string
+          description: >-
+            Country name of extension user company. Not returned for Address
+            Book
+        state:
+          type: string
+          description: State/province name of extension user company
+        city:
+          type: string
+          description: City name of extension user company
+        street:
+          type: string
+          description: Street address of extension user company
+        zip:
+          type: string
+          description: Zip code of extension user company
+    AddressBookBulkUploadResponse:
+      description: >-
+        Information on a task for adding multiple contacts to multiple
+        extensions
+      required:
+        - id
+        - uri
+        - creationTime
+        - lastModifiedTime
+        - status
+      type: object
+      properties:
+        id:
+          type: string
+          description: Internal identifier of a task
+        uri:
+          type: string
+          description: Link for the task status retrieval
+        status:
+          type: string
+          description: Task status
+          enum:
+            - Accepted
+            - InProgress
+            - Completed
+            - Failed
+        creationTime:
+          type: string
+          description: Datetime of a task creation
+        lastModifiedTime:
+          type: string
+          description: Datetime of a task latest update
+        results:
+          $ref: '#/components/schemas/AddressBookBulkUploadTaskResult'
+    AddressBookBulkUploadTaskResult:
+      type: object
+      description: >-
+        Result record on adding multiple contacts to an extension. Returned for
+        completed tasks
+      properties:
+        extensionId:
+          type: string
+          description: Internal identifier of an extension
+        contact:
+          type: object
+          $ref: '#/components/schemas/AddressBookBulkContactResource'
+        status:
+          type: string
+          description: Adding contact status
+          enum:
+            - Success
+            - Fail
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorEntity'
     AuthProfileResource:
       type: object
       properties:
@@ -32369,8 +33204,8 @@ components:
             attribute
       description: >-
         Phone number of the caller. This number corresponds to the 1st leg of
-        the RingOut call. This number can be one of user's configured forwarding
-        numbers or arbitrary number || Phone number of the caller
+        the RingOut call. This number can be one of the user's configured
+        forwarding numbers or an arbitrary number
     MakeRingOutCallerInfoRequestTo:
       type: object
       properties:
@@ -32379,8 +33214,14 @@ components:
           description: Phone number in E.164 format
       description: >-
         Phone number of the called party. This number corresponds to the 2nd leg
-        of a RingOut call || The number which will be displayed to the called
-        party || Phone number of the called party
+        of the RingOut call
+    MakeRingOutCallerIdInfo:
+      type: object
+      properties:
+        phoneNumber:
+          type: string
+          description: Phone number in E.164 format
+      description: The number which will be displayed to the called party
     MakeRingOutCoutryInfo:
       type: object
       properties:
@@ -32401,7 +33242,7 @@ components:
         to:
           $ref: '#/components/schemas/MakeRingOutCallerInfoRequestTo'
         callerId:
-          $ref: '#/components/schemas/MakeRingOutCallerInfoRequestTo'
+          $ref: '#/components/schemas/MakeRingOutCallerIdInfo'
         playPrompt:
           type: boolean
           description: >-
@@ -32969,7 +33810,7 @@ components:
             - VerificationCall
             - Zoom
             - CallOut
-      description: Initial data of a call session || Session origin details
+      description: Session origin details
     CallParty:
       type: object
       properties:
@@ -33073,7 +33914,7 @@ components:
           $ref: '#/components/schemas/PeerInfo'
         reason:
           type: string
-          description: Reason of call termination. For 'Disconnected' code only
+          description: Reason for call termination. For 'Disconnected' code only
           enum:
             - Pickup
             - Supervising
@@ -33117,10 +33958,7 @@ components:
           type: string
         partyId:
           type: string
-      description: >-
-        Peer session / party data. Valid in Gone state only || Peer session /
-        party data.'Gone'state only || Contains details of the 'linked' Session.
-        Appears in 'Gone' State Code
+      description: Peer session/party details. Valid in 'Gone' state of a call
     PartyInfo:
       type: object
       properties:
@@ -33136,10 +33974,39 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension
-      description: >-
-        Information about a call party that monitors a call || Information about
-        a call party that is monitored || Data on a calling party || Data on a
-        called party
+      description: Information on a calling/called party
+    SupervisePartyTo:
+      type: object
+      properties:
+        phoneNumber:
+          type: string
+          description: Phone number of a party
+        name:
+          type: string
+          description: Displayed name of a party
+        deviceId:
+          type: string
+          description: Internal identifier of a device
+        extensionId:
+          type: string
+          description: Internal identifier of an extension
+      description: Information about a call party that is monitored
+    SupervisePartyFrom:
+      type: object
+      properties:
+        phoneNumber:
+          type: string
+          description: Phone number of a party
+        name:
+          type: string
+          description: Displayed name of a party
+        deviceId:
+          type: string
+          description: Internal identifier of a device
+        extensionId:
+          type: string
+          description: Internal identifier of an extension
+      description: Information about a call party that monitors a call
     OwnerInfo:
       type: object
       properties:
@@ -33149,9 +34016,7 @@ components:
         extensionId:
           type: string
           description: Internal identifier of an extension that monitors a call
-      description: >-
-        Deprecated. Information on call owner ||  || Deprecated. Infromation a
-        call owner || Data on a call owner
+      description: Deprecated. Information on call owner
     PartyUpdateRequest:
       type: object
       properties:
@@ -33349,9 +34214,9 @@ components:
       type: object
       properties:
         from:
-          $ref: '#/components/schemas/PartyInfo'
+          $ref: '#/components/schemas/SupervisePartyFrom'
         to:
-          $ref: '#/components/schemas/PartyInfo'
+          $ref: '#/components/schemas/SupervisePartyTo'
         direction:
           type: string
           description: Direction of a call
