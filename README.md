@@ -1,7 +1,6 @@
 # RingCentral.Net
 
 [![Build Status](https://travis-ci.org/ringcentral/RingCentral.Net.svg?branch=master)](https://travis-ci.org/ringcentral/RingCentral.Net)
-[![Community](https://img.shields.io/badge/community-dev_forums-blue)](https://community.ringcentral.com/spaces/144/index.html)
 
 ## Installation
 
