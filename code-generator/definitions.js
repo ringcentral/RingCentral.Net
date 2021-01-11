@@ -5,7 +5,7 @@ import { pascalCase } from 'change-case'
 
 const outputDir = '../RingCentral.Net/Definitions'
 
-const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
+const doc = yaml.load(fs.readFileSync('rc-platform.yml', 'utf8'))
 const schemas = doc.components.schemas
 const models = Object.keys(schemas).map(k => ({ name: k, ...schemas[k] }))
   .filter(m => m.type !== 'array')

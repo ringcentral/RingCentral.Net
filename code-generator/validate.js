@@ -1,7 +1,7 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
 
-const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
+const doc = yaml.load(fs.readFileSync('rc-platform.yml', 'utf8'))
 
 const paths = Object.keys(doc.paths)
 

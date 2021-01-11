@@ -9,7 +9,7 @@ import { normalizePath, deNormalizePath, getResponseType } from './utils'
 
 const outputDir = '../RingCentral.Net/Paths'
 
-const doc = yaml.safeLoad(fs.readFileSync('rc-platform.yml', 'utf8'))
+const doc = yaml.load(fs.readFileSync('rc-platform.yml', 'utf8'))
 
 // Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
 delete doc.paths['/restapi/oauth/authorize']

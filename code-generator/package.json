@@ -10,16 +10,16 @@
     "validate": "node -r @babel/register validate.js"
   },
   "dependencies": {
-    "change-case": "^4.1.1",
-    "js-yaml": "^3.14.0",
-    "lower-case-first": "^2.0.1",
+    "change-case": "^4.1.2",
+    "js-yaml": "^4.0.0",
+    "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/register": "^7.11.5",
-    "standard": "^14.3.4",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "standard": "^16.0.3",
     "yarn-upgrade-all": "^0.5.4"
   }
 }
