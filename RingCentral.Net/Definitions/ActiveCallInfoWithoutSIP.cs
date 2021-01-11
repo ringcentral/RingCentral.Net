@@ -69,5 +69,9 @@ namespace RingCentral
         /// Enum: final, intermediate
         /// </summary>
         public string terminationType;
+
+        /// <summary>
+        /// </summary>
+        public CallInfoCQ callInfo;
     }
 }

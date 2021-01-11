@@ -76,10 +76,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PrimaryCQInfo primary;
-
-        /// <summary>
-        /// </summary>
-        public AdditionalCQInfo additional;
+        public CallInfoCQ callInfo;
     }
 }
