@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/ringcentral/RingCentral.Net.svg?branch=master)](https://travis-ci.org/ringcentral/RingCentral.Net)
 
-
 ## Installation
 
 Packages are [available on NuGet](https://www.nuget.org/packages?q=ringcentral.net).
