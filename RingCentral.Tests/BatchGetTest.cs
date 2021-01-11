@@ -21,7 +21,10 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var messages = await rc.Restapi().Account().Extension().MessageStore().List();
+                var messages = await rc.Restapi().Account().Extension().MessageStore().List(new ListMessagesParameters
+                {
+                    dateFrom = DateTime.UtcNow.AddDays(-365).ToString("O")
+                });
                 var validId1 = messages.records[0].id;
                 var validId2 = messages.records[1].id;
                 var invalidId = "7897036116";
