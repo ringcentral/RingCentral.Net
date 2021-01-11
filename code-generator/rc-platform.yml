@@ -1,5 +1,5 @@
 paths:
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence:
     get:
       tags:
         - Presence
@@ -124,7 +124,7 @@ paths:
         - $ref: '#/components/schemas/IncomingCallEvent'
         - $ref: '#/components/schemas/MissedCallEvent'
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/presence':
+  /restapi/v1.0/account/{accountId}/presence:
     get:
       tags:
         - Presence
@@ -186,7 +186,7 @@ paths:
       x-feature: ReadPresenceStatus
       x-notifications:
         - $ref: '#/components/schemas/AccountPresenceEvent'
-  '/restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence':
+  /restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence:
     get:
       tags:
         - Presence
@@ -270,7 +270,7 @@ paths:
         - $ref: '#/components/schemas/CallQueuePresenceEvent'
       x-codegen-request-body-name: body
       x-feature: EditPresenceStatus
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence:
     get:
       tags:
         - Presence
@@ -412,7 +412,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/subscription/{subscriptionId}':
+  /restapi/v1.0/subscription/{subscriptionId}:
     get:
       tags:
         - Subscriptions
@@ -506,7 +506,7 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-docs-level: Public
-  '/restapi/v1.0/subscription/{subscriptionId}/renew':
+  /restapi/v1.0/subscription/{subscriptionId}/renew:
     post:
       tags:
         - Subscriptions
@@ -611,7 +611,7 @@ paths:
       x-app-permission: Glip
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/glip/data-export/{taskId}':
+  /restapi/v1.0/glip/data-export/{taskId}:
     get:
       tags:
         - Glip Compliance Exports
@@ -644,7 +644,7 @@ paths:
       x-docs-level: Public
       x-app-permission: Glip
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}':
+  /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}:
     get:
       tags:
         - Glip Compliance Exports
@@ -741,7 +741,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/chats
       x-rewrite-uri-to: /glip/v1/chats
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/chats/{chatId}':
+  /restapi/v1.0/glip/chats/{chatId}:
     get:
       tags:
         - Chats
@@ -863,7 +863,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/conversations
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/conversations/{chatId}':
+  /restapi/v1.0/glip/conversations/{chatId}:
     get:
       tags:
         - Conversations
@@ -949,7 +949,7 @@ paths:
       tags:
         - Teams
       summary: Create Team
-      description: 'Creates a team, and adds a list of people to the team.'
+      description: Creates a team, and adds a list of people to the team.
       operationId: createGlipTeam
       requestBody:
         description: JSON body
@@ -979,7 +979,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/teams
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/teams/{chatId}':
+  /restapi/v1.0/glip/teams/{chatId}:
     get:
       tags:
         - Teams
@@ -1093,7 +1093,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/teams/$1
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/teams/{chatId}/join':
+  /restapi/v1.0/glip/teams/{chatId}/join:
     post:
       tags:
         - Teams
@@ -1130,7 +1130,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/teams/(.*)/join
       x-rewrite-uri-to: /glip/v1/teams/$1/join
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/teams/{chatId}/leave':
+  /restapi/v1.0/glip/teams/{chatId}/leave:
     post:
       tags:
         - Teams
@@ -1167,7 +1167,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/teams/(.*)/leave
       x-rewrite-uri-to: /glip/v1/teams/$1/leave
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/teams/{chatId}/add':
+  /restapi/v1.0/glip/teams/{chatId}/add:
     post:
       tags:
         - Teams
@@ -1212,7 +1212,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/teams/$1/add
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/teams/{chatId}/remove':
+  /restapi/v1.0/glip/teams/{chatId}/remove:
     post:
       tags:
         - Teams
@@ -1257,7 +1257,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/teams/$1/remove
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/teams/{chatId}/archive':
+  /restapi/v1.0/glip/teams/{chatId}/archive:
     post:
       tags:
         - Teams
@@ -1294,7 +1294,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/teams/(.*)/archive
       x-rewrite-uri-to: /glip/v1/teams/$1/archive
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/teams/{chatId}/unarchive':
+  /restapi/v1.0/glip/teams/{chatId}/unarchive:
     post:
       tags:
         - Teams
@@ -1484,7 +1484,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/favorites
       x-rewrite-uri-to: /glip/v1/favorites
       x-docs-level: Public
-  '/restapi/v1.0/glip/chats/{chatId}/favorite':
+  /restapi/v1.0/glip/chats/{chatId}/favorite:
     post:
       tags:
         - Chats
@@ -1521,7 +1521,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/chats/(.*)/favorite
       x-rewrite-uri-to: /glip/v1/chats/$1/favorite
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/chats/{chatId}/unfavorite':
+  /restapi/v1.0/glip/chats/{chatId}/unfavorite:
     post:
       tags:
         - Chats
@@ -1552,7 +1552,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/chats/(.*)/unfavorite
       x-rewrite-uri-to: /glip/v1/chats/$1/unfavorite
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/chats/{chatId}/read':
+  /restapi/v1.0/glip/chats/{chatId}/read:
     post:
       tags:
         - Chats
@@ -1583,11 +1583,11 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-app-permission: GlipInternal
-      x-rewrite-uri-from: '/restapi/v1.0/glip/chats/([0-9]+)/read'
+      x-rewrite-uri-from: /restapi/v1.0/glip/chats/([0-9]+)/read
       x-rewrite-uri-to: /glip/v1/chats/$1/read
       x-docs-level: Public
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/chats/{chatId}/unread':
+  /restapi/v1.0/glip/chats/{chatId}/unread:
     post:
       tags:
         - Chats
@@ -1618,11 +1618,11 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-app-permission: GlipInternal
-      x-rewrite-uri-from: '/restapi/v1.0/glip/chats/([0-9]+)/unread'
+      x-rewrite-uri-from: /restapi/v1.0/glip/chats/([0-9]+)/unread
       x-rewrite-uri-to: /glip/v1/chats/$1/unread
       x-docs-level: Public
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/chats/{chatId}/posts/{postId}':
+  /restapi/v1.0/glip/chats/{chatId}/posts/{postId}:
     get:
       tags:
         - Posts
@@ -1754,7 +1754,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/chats/$1/posts/$2
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/chats/{chatId}/posts':
+  /restapi/v1.0/glip/chats/{chatId}/posts:
     get:
       tags:
         - Posts
@@ -1831,7 +1831,7 @@ paths:
           description: One of body parameters has invalid value.
           content: {}
         '404':
-          description: 'Resource for parameter [chatId] is not found.'
+          description: Resource for parameter [chatId] is not found.
           content: {}
       x-api-group: glip/chats/posts
       x-metered-api: true
@@ -1919,7 +1919,7 @@ paths:
       x-docs-level: Public
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/events/{eventId}':
+  /restapi/v1.0/glip/events/{eventId}:
     get:
       tags:
         - Calendar Events
@@ -2039,7 +2039,7 @@ paths:
       x-feature: Glip
       x-docs-level: Public
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/groups/{groupId}/events':
+  /restapi/v1.0/glip/groups/{groupId}/events:
     get:
       tags:
         - Calendar Events
@@ -2069,7 +2069,7 @@ paths:
       x-api-group: glip/events
       x-metered-api: true
       x-metering-group: System
-      x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/events'
+      x-rewrite-uri-from: /restapi/v1.0/glip/groups/([0-9]+)/events
       x-rewrite-uri-to: /glip/v1/groups/$1/events
       x-app-permission: Glip
       x-user-permission: Glip
@@ -2108,7 +2108,7 @@ paths:
       x-api-group: glip/groups/events
       x-metered-api: true
       x-metering-group: System
-      x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/events'
+      x-rewrite-uri-from: /restapi/v1.0/glip/groups/([0-9]+)/events
       x-rewrite-uri-to: /glip/v1/groups/$1/events
       x-app-permission: Glip
       x-user-permission: Glip
@@ -2116,7 +2116,7 @@ paths:
       x-docs-level: Public
       x-codegen-request-body-name: body
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/chats/{chatId}/notes':
+  /restapi/v1.0/glip/chats/{chatId}/notes:
     get:
       tags:
         - Notes
@@ -2197,7 +2197,7 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-throttling-group: Heavy
-      x-rewrite-uri-from: '/restapi/v1.0/glip/chats/([0-9]+)/notes'
+      x-rewrite-uri-from: /restapi/v1.0/glip/chats/([0-9]+)/notes
       x-rewrite-uri-to: /glip/v1/chats/$1/notes
       x-app-permission: Glip
       x-user-permission: Glip
@@ -2242,14 +2242,14 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-throttling-group: Medium
-      x-rewrite-uri-from: '/restapi/v1.0/glip/chats/([0-9]+)/notes'
+      x-rewrite-uri-from: /restapi/v1.0/glip/chats/([0-9]+)/notes
       x-rewrite-uri-to: /glip/v1/chats/$1/notes
       x-app-permission: Glip
       x-user-permission: Glip
       x-feature: Glip
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/glip/notes/{noteId}':
+  /restapi/v1.0/glip/notes/{noteId}:
     get:
       tags:
         - Notes
@@ -2362,14 +2362,14 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-throttling-group: Medium
-      x-rewrite-uri-from: '/restapi/v1.0/glip/notes/([0-9]+)'
+      x-rewrite-uri-from: /restapi/v1.0/glip/notes/([0-9]+)
       x-rewrite-uri-to: /glip/v1/notes/$1
       x-app-permission: Glip
       x-user-permission: Glip
       x-feature: Glip
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/glip/notes/{noteId}/lock':
+  /restapi/v1.0/glip/notes/{noteId}/lock:
     post:
       tags:
         - Notes
@@ -2402,13 +2402,13 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-throttling-group: Light
-      x-rewrite-uri-from: '/restapi/v1.0/glip/notes/([0-9]+)/lock'
+      x-rewrite-uri-from: /restapi/v1.0/glip/notes/([0-9]+)/lock
       x-rewrite-uri-to: /glip/v1/notes/$1/lock
       x-app-permission: Glip
       x-user-permission: Glip
       x-feature: Glip
       x-docs-level: Public
-  '/restapi/v1.0/glip/notes/{noteId}/unlock':
+  /restapi/v1.0/glip/notes/{noteId}/unlock:
     post:
       tags:
         - Notes
@@ -2442,13 +2442,13 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-throttling-group: Light
-      x-rewrite-uri-from: '/restapi/v1.0/glip/notes/([0-9]+)/unlock'
+      x-rewrite-uri-from: /restapi/v1.0/glip/notes/([0-9]+)/unlock
       x-rewrite-uri-to: /glip/v1/notes/$1/unlock
       x-app-permission: Glip
       x-user-permission: Glip
       x-feature: Glip
       x-docs-level: Public
-  '/restapi/v1.0/glip/notes/{noteId}/publish':
+  /restapi/v1.0/glip/notes/{noteId}/publish:
     post:
       tags:
         - Notes
@@ -2476,13 +2476,13 @@ paths:
       x-metered-api: true
       x-metering-group: System
       x-throttling-group: Medium
-      x-rewrite-uri-from: '/restapi/v1.0/glip/notes/([0-9]+)/publish'
+      x-rewrite-uri-from: /restapi/v1.0/glip/notes/([0-9]+)/publish
       x-rewrite-uri-to: /glip/v1/notes/$1/publish
       x-app-permission: Glip
       x-user-permission: Glip
       x-feature: Glip
       x-docs-level: Public
-  '/restapi/v1.0/glip/chats/{chatId}/tasks':
+  /restapi/v1.0/glip/chats/{chatId}/tasks:
     get:
       tags:
         - Tasks
@@ -2641,7 +2641,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/chats/$1/tasks
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/glip/tasks/{taskId}':
+  /restapi/v1.0/glip/tasks/{taskId}:
     get:
       tags:
         - Tasks
@@ -2651,7 +2651,7 @@ paths:
       parameters:
         - name: taskId
           in: path
-          description: 'Internal identifier of a task, or comma separated list of task IDs'
+          description: Internal identifier of a task, or comma separated list of task IDs
           required: true
           schema:
             type: string
@@ -2752,7 +2752,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/tasks/$1
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/glip/tasks/{taskId}/complete':
+  /restapi/v1.0/glip/tasks/{taskId}/complete:
     post:
       tags:
         - Tasks
@@ -2794,7 +2794,7 @@ paths:
       x-rewrite-uri-to: /glip/v1/tasks/$1/complete
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/glip/persons/{personId}':
+  /restapi/v1.0/glip/persons/{personId}:
     get:
       tags:
         - Glip Profile
@@ -2838,7 +2838,7 @@ paths:
       x-user-permission: Glip
       x-feature: Glip
       x-docs-level: Public
-  '/restapi/v1.0/glip/companies/{companyId}':
+  /restapi/v1.0/glip/companies/{companyId}:
     get:
       tags:
         - Glip Profile
@@ -2883,7 +2883,7 @@ paths:
       x-user-permission: Glip
       x-feature: Glip
       x-docs-level: Public
-  '/restapi/v1.0/glip/groups/{groupId}/webhooks':
+  /restapi/v1.0/glip/groups/{groupId}/webhooks:
     get:
       tags:
         - Glip Webhooks
@@ -2910,7 +2910,7 @@ paths:
       x-api-group: glip/webhooks
       x-metered-api: true
       x-metering-group: System
-      x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/webhooks'
+      x-rewrite-uri-from: /restapi/v1.0/glip/groups/([0-9]+)/webhooks
       x-rewrite-uri-to: /glip/v1/groups/$1/webhooks
       x-docs-level: Public
       x-app-permission: Glip
@@ -2943,7 +2943,7 @@ paths:
       x-api-group: glip/webhooks
       x-metered-api: true
       x-metering-group: System
-      x-rewrite-uri-from: '/restapi/v1.0/glip/groups/([0-9]+)/webhooks'
+      x-rewrite-uri-from: /restapi/v1.0/glip/groups/([0-9]+)/webhooks
       x-rewrite-uri-to: /glip/v1/groups/$1/webhooks
       x-docs-level: Public
       x-app-permission: Glip
@@ -2977,7 +2977,7 @@ paths:
       x-user-permission: Glip
       x-feature: Glip
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/webhooks/{webhookId}':
+  /restapi/v1.0/glip/webhooks/{webhookId}:
     get:
       tags:
         - Glip Webhooks
@@ -3056,7 +3056,7 @@ paths:
       x-user-permission: Glip
       x-feature: Glip
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/webhooks/{webhookId}/activate':
+  /restapi/v1.0/glip/webhooks/{webhookId}/activate:
     post:
       tags:
         - Glip Webhooks
@@ -3090,7 +3090,7 @@ paths:
       x-user-permission: Glip
       x-feature: Glip
       x-throttling-group: Medium
-  '/restapi/v1.0/glip/webhooks/{webhookId}/suspend':
+  /restapi/v1.0/glip/webhooks/{webhookId}/suspend:
     post:
       tags:
         - Glip Webhooks
@@ -3148,7 +3148,7 @@ paths:
       x-user-permission: Glip
       x-feature: Glip
       x-throttling-group: Medium
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence:
     get:
       tags:
         - Presence
@@ -3516,7 +3516,7 @@ paths:
       x-metering-group: System
       x-throttling-group: Auth
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact:
     get:
       tags:
         - External Contacts
@@ -3660,7 +3660,7 @@ paths:
       x-feature: EditPersonalContacts
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}:
     get:
       tags:
         - External Contacts
@@ -3817,7 +3817,7 @@ paths:
       x-user-permission: EditPersonalContacts
       x-feature: EditPersonalContacts
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync:
     get:
       tags:
         - External Contacts
@@ -3891,7 +3891,7 @@ paths:
       x-feature: ReadPersonalContacts
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite:
     get:
       tags:
         - External Contacts
@@ -3991,7 +3991,7 @@ paths:
       x-feature: EditPersonalContacts
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/directory/entries/search':
+  /restapi/v1.0/account/{accountId}/directory/entries/search:
     post:
       tags:
         - Internal Contacts
@@ -4059,7 +4059,7 @@ paths:
       x-throttling-group: Heavy
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/directory/entries/{entryId}':
+  /restapi/v1.0/account/{accountId}/directory/entries/{entryId}:
     get:
       tags:
         - Internal Contacts
@@ -4123,7 +4123,7 @@ paths:
       x-service-version: v1
       x-throttling-group: Medium
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/directory/entries':
+  /restapi/v1.0/account/{accountId}/directory/entries:
     get:
       tags:
         - Internal Contacts
@@ -4235,7 +4235,7 @@ paths:
       x-service-version: v1
       x-throttling-group: Medium
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/directory/federation':
+  /restapi/v1.0/account/{accountId}/directory/federation:
     get:
       tags:
         - Internal Contacts
@@ -4298,7 +4298,7 @@ paths:
       x-user-permission: ReadCompanyInfo
       x-feature: ReadCompanyInfo
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours:
     get:
       tags:
         - Business Hours
@@ -4396,7 +4396,7 @@ paths:
       x-feature: EditExtensionAnsweringRules
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/business-hours':
+  /restapi/v1.0/account/{accountId}/business-hours:
     get:
       tags:
         - Business Hours
@@ -4472,7 +4472,7 @@ paths:
       x-feature: EditExtensionAnsweringRules
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking:
     get:
       tags:
         - Call Blocking
@@ -4540,7 +4540,7 @@ paths:
       x-user-permission: EditBlockedNumbers
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers:
     get:
       tags:
         - Call Blocking
@@ -4626,7 +4626,7 @@ paths:
       x-user-permission: EditBlockedNumbers
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}:
     get:
       tags:
         - Call Blocking
@@ -4741,7 +4741,7 @@ paths:
       x-app-permission: EditExtensions
       x-user-permission: EditBlockedNumbers
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number:
     get:
       tags:
         - Call Forwarding
@@ -4849,7 +4849,7 @@ paths:
       x-feature: EditExtensionAnsweringRules
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}:
     get:
       tags:
         - Call Forwarding
@@ -4988,7 +4988,7 @@ paths:
       x-user-permission: EditUserForwardingFlipNumbers
       x-feature: EditExtensionAnsweringRules
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule:
     get:
       tags:
         - Call Handling Rules
@@ -5025,7 +5025,7 @@ paths:
               - Simple
         - name: enabledOnly
           in: query
-          description: 'If true, then only active call handling rules are returned'
+          description: If true, then only active call handling rules are returned
           schema:
             type: boolean
             default: false
@@ -5104,7 +5104,7 @@ paths:
       x-feature: EditExtensionAnsweringRules
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}:
     get:
       tags:
         - Call Handling Rules
@@ -5261,7 +5261,7 @@ paths:
       x-user-permission: EditUserAnsweringRules
       x-feature: EditExtensionAnsweringRules
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/answering-rule':
+  /restapi/v1.0/account/{accountId}/answering-rule:
     get:
       tags:
         - Call Handling Rules
@@ -5347,7 +5347,7 @@ paths:
       x-feature: EditAccountAnsweringRules
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}':
+  /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}:
     get:
       tags:
         - Call Handling Rules
@@ -5498,7 +5498,7 @@ paths:
             default: 100
         - name: type
           in: query
-          description: 'Type of a greeting, specifying the case when the greeting is played'
+          description: Type of a greeting, specifying the case when the greeting is played
           schema:
             type: string
             enum:
@@ -5539,7 +5539,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/dictionary/greeting/{greetingId}':
+  /restapi/v1.0/dictionary/greeting/{greetingId}:
     get:
       tags:
         - Greetings
@@ -5565,7 +5565,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/greeting':
+  /restapi/v1.0/account/{accountId}/greeting:
     post:
       tags:
         - Greetings
@@ -5655,7 +5655,7 @@ paths:
       x-user-permission: ReadUserInfo
       x-feature: ReadExtensionInfo
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting:
     post:
       tags:
         - Greetings
@@ -5764,7 +5764,7 @@ paths:
       x-user-permission: EditUserAnsweringRules
       x-feature: EditExtensionAnsweringRules
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}:
     get:
       tags:
         - Greetings
@@ -5813,7 +5813,7 @@ paths:
       x-feature: ReadExtensionInfo
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/ivr-prompts':
+  /restapi/v1.0/account/{accountId}/ivr-prompts:
     get:
       tags:
         - IVR
@@ -5886,7 +5886,7 @@ paths:
       x-user-permission: EditCompanyGreetings
       x-feature: EditAccountGreetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}':
+  /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}:
     get:
       tags:
         - IVR
@@ -5989,7 +5989,7 @@ paths:
       x-user-permission: EditCompanyGreetings
       x-feature: EditAccountGreetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content':
+  /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content:
     get:
       tags:
         - IVR
@@ -6024,7 +6024,7 @@ paths:
       x-feature: ReadAccountGreetings
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/ivr-menus':
+  /restapi/v1.0/account/{accountId}/ivr-menus:
     post:
       tags:
         - IVR
@@ -6060,7 +6060,7 @@ paths:
       x-feature: EditAutoReceptionist
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}':
+  /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}:
     get:
       tags:
         - IVR
@@ -6134,7 +6134,7 @@ paths:
       x-feature: EditAutoReceptionist
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/call-recording':
+  /restapi/v1.0/account/{accountId}/call-recording:
     get:
       tags:
         - Call Recording Settings
@@ -6193,7 +6193,7 @@ paths:
       x-feature: EditCompanyInfo
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/call-recording/extensions':
+  /restapi/v1.0/account/{accountId}/call-recording/extensions:
     get:
       tags:
         - Call Recording Settings
@@ -6220,7 +6220,7 @@ paths:
       x-feature: ReadCompanyInfo
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/call-recording/bulk-assign':
+  /restapi/v1.0/account/{accountId}/call-recording/bulk-assign:
     post:
       tags:
         - Call Recording Settings
@@ -6250,7 +6250,7 @@ paths:
       x-feature: ReadCompanyInfo
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/call-recording/custom-greetings':
+  /restapi/v1.0/account/{accountId}/call-recording/custom-greetings:
     get:
       tags:
         - Call Recording Settings
@@ -6312,7 +6312,7 @@ paths:
       x-metered-api: true
       x-docs-level: Public
       x-metering-group: System
-  '/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}':
+  /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}:
     delete:
       tags:
         - Call Recording Settings
@@ -6362,7 +6362,7 @@ paths:
       x-metered-api: true
       x-metering-group: Free
       x-docs-level: Public
-  '/restapi/{apiVersion}':
+  /restapi/{apiVersion}:
     get:
       tags:
         - API Info
@@ -6372,7 +6372,7 @@ paths:
       parameters:
         - name: apiVersion
           in: path
-          description: 'API version to be requested, for example ''v1.0'''
+          description: API version to be requested, for example 'v1.0'
           required: true
           schema:
             type: string
@@ -6389,7 +6389,7 @@ paths:
       x-metered-api: true
       x-metering-group: Free
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/a2p-sms/batch':
+  /restapi/v1.0/account/{accountId}/a2p-sms/batch:
     post:
       tags:
         - High Volume SMS
@@ -6415,7 +6415,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/MessageBatchResponse'
         '400':
-          description: 'Validation Failed, Invalid Request'
+          description: Validation Failed, Invalid Request
           content:
             application/json:
               schema:
@@ -6446,7 +6446,7 @@ paths:
       x-team: PLA RnD
       x-app-permission: A2PSMS
       x-feature: SMSSending
-  '/restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}':
+  /restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}:
     get:
       tags:
         - High Volume SMS
@@ -6506,7 +6506,7 @@ paths:
       x-team: PLA RnD
       x-app-permission: A2PSMS
       x-feature: SMSSending
-  '/restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}':
+  /restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}:
     get:
       tags:
         - High Volume SMS
@@ -6560,7 +6560,7 @@ paths:
       x-team: PLA RnD
       x-app-permission: A2PSMS
       x-feature: SMSSending
-  '/restapi/v1.0/account/{accountId}/a2p-sms/messages':
+  /restapi/v1.0/account/{accountId}/a2p-sms/messages:
     get:
       tags:
         - High Volume SMS
@@ -6699,7 +6699,7 @@ paths:
       x-team: PLA RnD
       x-app-permission: A2PSMS
       x-feature: SMSSending
-  '/restapi/v1.0/account/{accountId}/a2p-sms/opt-outs':
+  /restapi/v1.0/account/{accountId}/a2p-sms/opt-outs:
     get:
       tags:
         - High Volume SMS
@@ -6793,7 +6793,7 @@ paths:
       x-team: PLA RnD
       x-app-permission: A2PSMS
       x-feature: SMSSending
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log:
     get:
       tags:
         - Call Log
@@ -7060,7 +7060,7 @@ paths:
       x-feature: EditExtensionCallLog
       x-docs-level: Public
       x-availability: Limited
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync:
     get:
       tags:
         - Call Log
@@ -7166,7 +7166,7 @@ paths:
       x-user-permission: ReadCallLog
       x-feature: ReadExtensionCallLog
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}:
     get:
       tags:
         - Call Log
@@ -7227,7 +7227,7 @@ paths:
       x-user-permission: ReadCallLog
       x-feature: ReadExtensionCallLog
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls:
     get:
       tags:
         - Call Log
@@ -7325,7 +7325,7 @@ paths:
       x-feature: ReadExtensionCallLog
       x-docs-level: Public
       x-availability: Limited
-  '/restapi/v1.0/account/{accountId}/call-log':
+  /restapi/v1.0/account/{accountId}/call-log:
     get:
       tags:
         - Call Log
@@ -7470,7 +7470,7 @@ paths:
       x-user-permission: FullCompanyCallLog
       x-feature: ReadAccountCallLog
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/call-log-sync':
+  /restapi/v1.0/account/{accountId}/call-log-sync:
     get:
       tags:
         - Call Log
@@ -7566,7 +7566,7 @@ paths:
       x-user-permission: ReadCallLog
       x-feature: ReadAccountCallLog
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/call-log/{callRecordId}':
+  /restapi/v1.0/account/{accountId}/call-log/{callRecordId}:
     get:
       tags:
         - Call Log
@@ -7618,7 +7618,7 @@ paths:
       x-user-permission: FullCompanyCallLog
       x-feature: ReadAccountCallLog
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/active-calls':
+  /restapi/v1.0/account/{accountId}/active-calls:
     get:
       tags:
         - Call Log
@@ -7721,7 +7721,7 @@ paths:
       x-feature: EditAccountCallLog
       x-docs-level: Public
       x-availability: Limited
-  '/restapi/v1.0/account/{accountId}/recording/{recordingId}':
+  /restapi/v1.0/account/{accountId}/recording/{recordingId}:
     get:
       tags:
         - Call Recordings
@@ -7759,7 +7759,7 @@ paths:
       x-user-permission: ReadCallRecording
       x-feature: ReadAccountCallRecordings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/recording/{recordingId}/content':
+  /restapi/v1.0/account/{accountId}/recording/{recordingId}/content:
     get:
       tags:
         - Call Recordings
@@ -7832,7 +7832,7 @@ paths:
       x-app-permission: VoipCalling
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/custom-fields':
+  /restapi/v1.0/account/{accountId}/custom-fields:
     get:
       tags:
         - Custom Fields
@@ -7898,7 +7898,7 @@ paths:
       x-throttling-group: Light
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}':
+  /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}:
     put:
       tags:
         - Custom Fields
@@ -7973,7 +7973,7 @@ paths:
       x-feature: EditUsers
       x-throttling-group: Light
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/device/{deviceId}':
+  /restapi/v1.0/account/{accountId}/device/{deviceId}:
     get:
       tags:
         - Devices
@@ -8061,7 +8061,7 @@ paths:
       x-feature: EditAccountDevices
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/device':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/device:
     get:
       tags:
         - Devices
@@ -8125,7 +8125,7 @@ paths:
       x-feature: ReadExtensionDevices
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/meeting-recordings':
+  /restapi/v1.0/account/{accountId}/meeting-recordings:
     get:
       tags:
         - Meeting Recordings
@@ -8193,7 +8193,7 @@ paths:
       x-user-permission: MeetingsRecordings
       x-feature: MeetingsCompanyRecordings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings:
     get:
       tags:
         - Meeting Recordings
@@ -8270,7 +8270,7 @@ paths:
       x-user-permission: MeetingsRecordings
       x-feature: MeetingsPersonalRecordings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting:
     get:
       tags:
         - Meeting Management
@@ -8358,7 +8358,7 @@ paths:
       x-feature: EditMeetings
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/user-settings':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/user-settings:
     get:
       tags:
         - Meeting Configuration
@@ -8398,7 +8398,7 @@ paths:
       x-user-permission: Meetings
       x-feature: Meetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/meeting/locked-settings':
+  /restapi/v1.0/account/{accountId}/meeting/locked-settings:
     get:
       tags:
         - Meeting Configuration
@@ -8430,7 +8430,7 @@ paths:
       x-app-permission: Meetings
       x-user-permission: Meetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}:
     get:
       tags:
         - Meeting Management
@@ -8569,7 +8569,7 @@ paths:
       x-user-permission: Meetings
       x-feature: EditMeetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end:
     post:
       tags:
         - Meeting Management
@@ -8609,7 +8609,7 @@ paths:
       x-user-permission: Meetings
       x-feature: EditMeetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info:
     get:
       tags:
         - Meeting Configuration
@@ -8698,7 +8698,7 @@ paths:
       x-docs-level: Public
       x-feature: EditMeetings
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants:
     get:
       tags:
         - Meeting Configuration
@@ -8738,7 +8738,7 @@ paths:
       x-user-permission: Meetings
       x-feature: Meetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted:
     get:
       tags:
         - Meeting Configuration
@@ -8778,7 +8778,7 @@ paths:
       x-user-permission: Meetings
       x-feature: Meetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/invitation':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/invitation:
     get:
       tags:
         - Meeting Management
@@ -8823,7 +8823,7 @@ paths:
       x-app-permission: Meetings
       x-user-permission: Meetings
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms:
     post:
       tags:
         - SMS
@@ -8886,7 +8886,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms:
     post:
       tags:
         - SMS
@@ -8946,7 +8946,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager:
     post:
       tags:
         - Pager Messages
@@ -8997,7 +8997,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax:
     post:
       tags:
         - Fax
@@ -9129,7 +9129,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-team: PLA Inno
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store:
     get:
       tags:
         - Message Store
@@ -9353,7 +9353,7 @@ paths:
       x-user-permission: EditMessages
       x-feature: EditMessages
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}:
     get:
       tags:
         - Message Store
@@ -9556,7 +9556,7 @@ paths:
       x-user-permission: EditMessages
       x-feature: EditMessages
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}:
     get:
       tags:
         - Message Store
@@ -9629,7 +9629,7 @@ paths:
       x-feature: ReadMessages
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync:
     get:
       tags:
         - Message Store
@@ -9755,7 +9755,7 @@ paths:
       x-feature: ReadMessages
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/message-store-configuration':
+  /restapi/v1.0/account/{accountId}/message-store-configuration:
     get:
       tags:
         - Message Store
@@ -9870,7 +9870,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/message-store-report':
+  /restapi/v1.0/account/{accountId}/message-store-report:
     post:
       tags:
         - Message Exports
@@ -9911,7 +9911,7 @@ paths:
       x-docs-level: Public
       x-codegen-request-body-name: body
       x-throttling-group: Heavy
-  '/restapi/v1.0/account/{accountId}/message-store-report/{taskId}':
+  /restapi/v1.0/account/{accountId}/message-store-report/{taskId}:
     get:
       tags:
         - Message Exports
@@ -9942,7 +9942,7 @@ paths:
       x-feature: EditUsers
       x-docs-level: Public
       x-throttling-group: Heavy
-  '/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive':
+  /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive:
     get:
       tags:
         - Message Exports
@@ -9973,7 +9973,7 @@ paths:
       x-feature: EditUsers
       x-docs-level: Public
       x-throttling-group: Heavy
-  '/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}':
+  /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}:
     get:
       tags:
         - Message Exports
@@ -10012,7 +10012,7 @@ paths:
       x-feature: EditUsers
       x-docs-level: Public
       x-throttling-group: Heavy
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number:
     get:
       tags:
         - Phone Numbers
@@ -10103,7 +10103,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-service-level: 1000
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}:
     get:
       tags:
         - User Settings
@@ -10254,7 +10254,7 @@ paths:
       x-user-permission: AddRemoveUsers
       x-feature: EditUsers
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id:
     get:
       tags:
         - User Settings
@@ -10345,7 +10345,7 @@ paths:
       x-user-permission: EditCallerIDSettings
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant:
     get:
       tags:
         - User Settings
@@ -10425,7 +10425,7 @@ paths:
       x-notifications:
         - $ref: '#/components/schemas/ExtensionGrantListEvent'
       x-service-level: 1000
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users:
     get:
       tags:
         - Automatic Location Updates
@@ -10525,7 +10525,7 @@ paths:
       x-availability: High
       x-docs-level: Public
       x-beta-api: true
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign:
     post:
       tags:
         - Automatic Location Updates
@@ -10560,7 +10560,7 @@ paths:
       x-beta-api: true
       x-team: PLA Inno
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points:
     get:
       tags:
         - Automatic Location Updates
@@ -10671,7 +10671,7 @@ paths:
       x-beta-api: true
       x-codegen-request-body-name: body
       x-team: PLA Inno
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}:
     get:
       tags:
         - Automatic Location Updates
@@ -10780,7 +10780,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-team: PLA Inno
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks:
     get:
       tags:
         - Automatic Location Updates
@@ -10854,7 +10854,7 @@ paths:
       x-beta-api: true
       x-codegen-request-body-name: body
       x-team: PLA Inno
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}:
     get:
       tags:
         - Automatic Location Updates
@@ -10964,7 +10964,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-team: PLA Inno
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices:
     get:
       tags:
         - Automatic Location Updates
@@ -11060,7 +11060,7 @@ paths:
       x-availability: High
       x-docs-level: Public
       x-beta-api: true
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign:
     post:
       tags:
         - Automatic Location Updates
@@ -11096,7 +11096,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches:
     get:
       tags:
         - Automatic Location Updates
@@ -11210,7 +11210,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}:
     get:
       tags:
         - Automatic Location Updates
@@ -11324,7 +11324,7 @@ paths:
       x-team: PLA Inno
       x-docs-level: Public
       x-beta-api: true
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create:
     post:
       tags:
         - Automatic Location Updates
@@ -11363,7 +11363,7 @@ paths:
       x-team: PLA Inno
       x-codegen-request-body-name: body
       x-request-max-body-size: 100m
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update:
     post:
       tags:
         - Automatic Location Updates
@@ -11402,7 +11402,7 @@ paths:
       x-team: PLA Inno
       x-codegen-request-body-name: body
       x-request-max-body-size: 100m
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create:
     post:
       tags:
         - Automatic Location Updates
@@ -11441,7 +11441,7 @@ paths:
       x-team: PLA Inno
       x-codegen-request-body-name: body
       x-request-max-body-size: 100m
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update:
     post:
       tags:
         - Automatic Location Updates
@@ -11480,7 +11480,7 @@ paths:
       x-team: PLA Inno
       x-codegen-request-body-name: body
       x-request-max-body-size: 100m
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate:
     post:
       tags:
         - Automatic Location Updates
@@ -11520,7 +11520,7 @@ paths:
       x-team: PLA Inno
       x-codegen-request-body-name: body
       x-request-max-body-size: 100m
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate:
     post:
       tags:
         - Automatic Location Updates
@@ -11560,7 +11560,7 @@ paths:
       x-team: PLA Inno
       x-codegen-request-body-name: body
       x-request-max-body-size: 100m
-  '/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}':
+  /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}:
     get:
       tags:
         - Automatic Location Updates
@@ -11602,7 +11602,7 @@ paths:
       x-availability: High
       x-team: PLA Inno
       x-beta-api: true
-  '/restapi/v1.0/account/{accountId}/emergency-locations':
+  /restapi/v1.0/account/{accountId}/emergency-locations:
     get:
       tags:
         - Automatic Location Updates
@@ -11724,7 +11724,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}':
+  /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}:
     get:
       tags:
         - Automatic Location Updates
@@ -11860,7 +11860,7 @@ paths:
       x-throttling-group: Heavy
       x-feature: EditEmergencyLocations
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/emergency-locations':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/emergency-locations:
     get:
       tags:
         - Automatic Location Updates
@@ -11902,7 +11902,7 @@ paths:
       x-availability: High
       x-team: PLA Inno
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings:
     get:
       tags:
         - User Settings
@@ -11997,7 +11997,7 @@ paths:
       x-user-permission: EditMessagesNotificationsSettings
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image:
     get:
       tags:
         - User Settings
@@ -12128,7 +12128,7 @@ paths:
       x-availability: High
       x-service-level: 3000
       x-team: PLA RnD
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}:
     get:
       tags:
         - User Settings
@@ -12183,7 +12183,7 @@ paths:
       x-service-level: 3000
       x-team: PLA RnD
       x-request-max-body-size: 10m
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing:
     get:
       tags:
         - User Settings
@@ -12288,7 +12288,7 @@ paths:
       x-app-permission: EditExtensions
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}':
+  /restapi/v1.0/account/{accountId}:
     get:
       tags:
         - Company
@@ -12323,7 +12323,7 @@ paths:
       x-feature: ReadCompanyInfo
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/business-address':
+  /restapi/v1.0/account/{accountId}/business-address:
     get:
       tags:
         - Company
@@ -12397,7 +12397,7 @@ paths:
       x-feature: EditCompanyInfo
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/service-info':
+  /restapi/v1.0/account/{accountId}/service-info:
     get:
       tags:
         - Company
@@ -12454,7 +12454,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-service-level: 1000
-  '/restapi/v1.0/dictionary/language/{languageId}':
+  /restapi/v1.0/dictionary/language/{languageId}:
     get:
       tags:
         - Regional Settings
@@ -12543,7 +12543,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/dictionary/country/{countryId}':
+  /restapi/v1.0/dictionary/country/{countryId}:
     get:
       tags:
         - Regional Settings
@@ -12681,7 +12681,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/dictionary/state/{stateId}':
+  /restapi/v1.0/dictionary/state/{stateId}:
     get:
       tags:
         - Regional Settings
@@ -12743,7 +12743,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/dictionary/timezone/{timezoneId}':
+  /restapi/v1.0/dictionary/timezone/{timezoneId}:
     get:
       tags:
         - Regional Settings
@@ -12784,7 +12784,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/phone-number':
+  /restapi/v1.0/account/{accountId}/phone-number:
     get:
       tags:
         - Phone Numbers
@@ -12863,7 +12863,7 @@ paths:
       x-user-permission: ReadCompanyPhoneNumbers
       x-feature: ReadAccountPhoneNumbers
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}':
+  /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}:
     get:
       tags:
         - Phone Numbers
@@ -12904,7 +12904,7 @@ paths:
       x-feature: ReadAccountPhoneNumbers
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/extension':
+  /restapi/v1.0/account/{accountId}/extension:
     get:
       tags:
         - Extensions
@@ -13053,7 +13053,7 @@ paths:
       x-feature: EditUsers
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/templates':
+  /restapi/v1.0/account/{accountId}/templates:
     get:
       tags:
         - Extensions
@@ -13098,7 +13098,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-service-level: 1000
-  '/restapi/v1.0/account/{accountId}/templates/{templateId}':
+  /restapi/v1.0/account/{accountId}/templates/{templateId}:
     get:
       tags:
         - Extensions
@@ -13132,7 +13132,7 @@ paths:
       x-feature: ReadCompanyInfo
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration:
     get:
       tags:
         - Video Configuration
@@ -13177,7 +13177,7 @@ paths:
       tags:
         - Video Configuration
       summary: Update User Video Configuration
-      description: 'Allows to update user video settings, for example video provider.'
+      description: Allows to update user video settings, for example video provider.
       operationId: updateUserVideoConfiguration
       parameters:
         - name: accountId
@@ -13213,14 +13213,14 @@ paths:
                 $ref: '#/components/schemas/UserVideoConfiguration'
       x-api-group: account/extension/video-configuration
       x-app-permission: Meetings
-      x-feature: 'Meetings, EditMeetingsProvider'
+      x-feature: Meetings, EditMeetingsProvider
       x-throttling-group: Light
       x-docs-level: Public
       x-metered-api: true
       x-metering-group: System
       x-availability: High
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/call-queues':
+  /restapi/v1.0/account/{accountId}/call-queues:
     get:
       tags:
         - Call Queues
@@ -13269,7 +13269,7 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/call-queues/{groupId}':
+  /restapi/v1.0/account/{accountId}/call-queues/{groupId}:
     get:
       tags:
         - Call Queues
@@ -13337,7 +13337,7 @@ paths:
       x-docs-level: Public
       x-feature: EditExtensionInfo
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members':
+  /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members:
     get:
       tags:
         - Call Queues
@@ -13384,7 +13384,7 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign':
+  /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign:
     post:
       tags:
         - Call Queues
@@ -13426,7 +13426,7 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues:
     put:
       tags:
         - Call Queues
@@ -13484,7 +13484,7 @@ paths:
       x-docs-level: Public
       x-internal-api: false
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users':
+  /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users:
     get:
       tags:
         - Paging Only Groups
@@ -13537,7 +13537,7 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices':
+  /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices:
     get:
       tags:
         - Paging Only Groups
@@ -13590,7 +13590,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-service-level: 1000
-  '/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign':
+  /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign:
     post:
       tags:
         - Paging Only Groups
@@ -13632,7 +13632,7 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/call-monitoring-groups':
+  /restapi/v1.0/account/{accountId}/call-monitoring-groups:
     get:
       tags:
         - Call Monitoring Groups
@@ -13715,7 +13715,7 @@ paths:
       x-availability: High
       x-service-level: 1000
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}':
+  /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}:
     put:
       tags:
         - Call Monitoring Groups
@@ -13798,7 +13798,7 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-access-level: Advanced
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/features':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/features:
     get:
       tags:
         - Features
@@ -13887,7 +13887,7 @@ paths:
       x-api-group: features
       x-availability: High
       x-docs-level: Public
-  '/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members':
+  /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members:
     get:
       tags:
         - Call Monitoring Groups
@@ -13934,7 +13934,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-service-level: 1000
-  '/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign':
+  /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign:
     post:
       tags:
         - Call Monitoring Groups
@@ -13976,7 +13976,7 @@ paths:
       x-docs-level: Public
       x-service-level: 1000
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension-bulk-update':
+  /restapi/v1.0/account/{accountId}/extension-bulk-update:
     post:
       tags:
         - Extensions
@@ -14020,7 +14020,7 @@ paths:
       x-team: PLA IPA
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension-bulk-update/tasks/{taskId}':
+  /restapi/v1.0/account/{accountId}/extension-bulk-update/tasks/{taskId}:
     get:
       tags:
         - Extensions
@@ -14060,7 +14060,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-team: PLA IPA
-  '/restapi/v1.0/account/{accountId}/address-book-bulk-upload':
+  /restapi/v1.0/account/{accountId}/address-book-bulk-upload:
     post:
       tags:
         - External Contacts
@@ -14104,7 +14104,7 @@ paths:
       x-beta-api: true
       x-team: PLA IPA
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/address-book-bulk-upload/tasks/{taskId}':
+  /restapi/v1.0/account/{accountId}/address-book-bulk-upload/tasks/{taskId}:
     get:
       tags:
         - External Contacts
@@ -14146,7 +14146,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-team: PLA IPA
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile:
     get:
       tags:
         - User Permissions
@@ -14179,7 +14179,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check:
     get:
       tags:
         - User Permissions
@@ -14220,7 +14220,7 @@ paths:
       x-metering-group: System
       x-docs-level: Public
       x-availability: High
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out:
     post:
       tags:
         - RingOut
@@ -14268,7 +14268,7 @@ paths:
       x-app-permission: RingOut
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}':
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}:
     get:
       tags:
         - RingOut
@@ -14649,7 +14649,7 @@ paths:
       x-docs-level: Public
       x-availability: High
       x-codegen-request-body-name: body
-  '/scim/v2/Users/{id}':
+  /scim/v2/Users/{id}:
     get:
       tags:
         - SCIM
@@ -14989,7 +14989,7 @@ paths:
       x-request-max-body-size: 10m
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/call-out':
+  /restapi/v1.0/account/{accountId}/telephony/call-out:
     post:
       tags:
         - Call Control
@@ -15040,7 +15040,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/call-out
       x-rewrite-uri-to: /telephony/v1/account/$1/call-out
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/conference':
+  /restapi/v1.0/account/{accountId}/telephony/conference:
     post:
       tags:
         - Call Control
@@ -15092,7 +15092,7 @@ paths:
       x-rewrite-uri-to: /telephony/v1/account/$1/conference
       x-docs-level: Public
       x-beta-api: true
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}:
     get:
       tags:
         - Call Control
@@ -15195,7 +15195,7 @@ paths:
       x-docs-level: Public
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold:
     post:
       tags:
         - Call Control
@@ -15259,7 +15259,7 @@ paths:
       x-docs-level: Public
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/hold
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/hold
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold:
     post:
       tags:
         - Call Control
@@ -15326,7 +15326,7 @@ paths:
       x-docs-level: Public
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/unhold
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/unhold
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject:
     post:
       tags:
         - Call Control
@@ -15384,7 +15384,7 @@ paths:
       x-docs-level: Public
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/reject
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/reject
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore:
     post:
       tags:
         - Call Control
@@ -15452,7 +15452,7 @@ paths:
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/ignore
       x-docs-level: Public
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer:
     post:
       tags:
         - Call Control
@@ -15521,7 +15521,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/transfer
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/transfer
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/bridge':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/bridge:
     post:
       tags:
         - Call Control
@@ -15598,7 +15598,7 @@ paths:
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/bridge
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer:
     post:
       tags:
         - Call Control
@@ -15673,7 +15673,7 @@ paths:
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/answer
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup:
     post:
       tags:
         - Call Control
@@ -15742,7 +15742,7 @@ paths:
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/pickup
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward:
     post:
       tags:
         - Call Control
@@ -15819,7 +15819,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/forward
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/forward
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply:
     post:
       tags:
         - Call Control
@@ -15889,7 +15889,7 @@ paths:
       x-docs-level: Public
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip:
     post:
       tags:
         - Call Control
@@ -15961,7 +15961,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/flip
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/flip
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park:
     post:
       tags:
         - Call Control
@@ -16033,7 +16033,7 @@ paths:
       x-app-permission: CallControl
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/park
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/park
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in:
     post:
       tags:
         - Call Control
@@ -16105,7 +16105,7 @@ paths:
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/bring-in
       x-beta-api: true
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}:
     get:
       tags:
         - Call Control
@@ -16291,7 +16291,7 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings:
     post:
       tags:
         - Call Control
@@ -16354,7 +16354,7 @@ paths:
       x-rewrite-uri-from: >-
         /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/recordings
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/recordings
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}:
     patch:
       tags:
         - Call Control
@@ -16443,7 +16443,7 @@ paths:
         /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/(.*)/recordings/(.*)
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/$3/recordings/$4
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise:
     post:
       tags:
         - Call Control
@@ -16509,7 +16509,7 @@ paths:
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/supervise
       x-beta-api: false
       x-codegen-request-body-name: body
-  '/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise':
+  /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise:
     post:
       tags:
         - Call Control
@@ -16659,6 +16659,12 @@ components:
           description: Internal identifier of a call party
         terminationType:
           type: string
+        callInfo:
+          $ref: '#/components/schemas/CallInfoCQ'
+    CallInfoCQ:
+      type: object
+      description: Primary/additional CQ information
+      properties:
         primary:
           $ref: '#/components/schemas/PrimaryCQInfo'
         additional:
@@ -16730,7 +16736,7 @@ components:
         extensionNumber:
           type: string
           description: Extension number (usually 3 or 4 digits)
-      description: 'Information on extension, for which this presence data is returned'
+      description: Information on extension, for which this presence data is returned
     GetPresenceInfo:
       type: object
       properties:
@@ -16772,7 +16778,7 @@ components:
             hold
         presenceStatus:
           type: string
-          description: 'Aggregated presence status, calculated from a number of sources'
+          description: Aggregated presence status, calculated from a number of sources
           enum:
             - Offline
             - Busy
@@ -16953,7 +16959,7 @@ components:
             - ParkedCall
         presenceStatus:
           type: string
-          description: 'Aggregated presence status, calculated from a number of sources'
+          description: Aggregated presence status, calculated from a number of sources
           enum:
             - Offline
             - Busy
@@ -16999,7 +17005,7 @@ components:
           description: Order number of a notification to state the chronology
         presenceStatus:
           type: string
-          description: 'Aggregated presence status, calculated from a number of sources'
+          description: Aggregated presence status, calculated from a number of sources
           enum:
             - Offline
             - Busy
@@ -17079,7 +17085,7 @@ components:
           description: Order number of a notification to state the chronology
         presenceStatus:
           type: string
-          description: 'Aggregated presence status, calculated from a number of sources'
+          description: Aggregated presence status, calculated from a number of sources
           enum:
             - Offline
             - Busy
@@ -17164,7 +17170,7 @@ components:
           description: Order number of a notification to state the chronology
         presenceStatus:
           type: string
-          description: 'Aggregated presence status, calculated from a number of sources'
+          description: Aggregated presence status, calculated from a number of sources
           enum:
             - Offline
             - Busy
@@ -17258,7 +17264,7 @@ components:
           description: Order number of a notification to state the chronology
         presenceStatus:
           type: string
-          description: 'Aggregated presence status, calculated from a number of sources'
+          description: Aggregated presence status, calculated from a number of sources
           enum:
             - Offline
             - Busy
@@ -17366,6 +17372,8 @@ components:
           enum:
             - final
             - intermediate
+        callInfo:
+          $ref: '#/components/schemas/CallInfoCQ'
     IncomingCallEvent:
       type: object
       properties:
@@ -17393,7 +17401,7 @@ components:
           default: '~'
         action:
           type: string
-          description: 'Calling action, for example ''StartRing'''
+          description: Calling action, for example 'StartRing'
         sessionId:
           type: string
           description: Identifier of a call session
@@ -17464,7 +17472,7 @@ components:
           default: '~'
         action:
           type: string
-          description: 'Calling action, for example ''StartRing'''
+          description: Calling action, for example 'StartRing'
         sessionId:
           type: string
           description: Identifier of a call session
@@ -18940,7 +18948,7 @@ components:
           default: '~'
         action:
           type: string
-          description: 'Calling action, for example ''StartRing'''
+          description: Calling action, for example 'StartRing'
         sessionId:
           type: string
           description: Identifier of a call session
@@ -19038,10 +19046,10 @@ components:
           description: For 'Team' chat type only. Team access level.
         name:
           type: string
-          description: 'For ''Team'',''Everyone'' chats types only. Chat name.'
+          description: For 'Team','Everyone' chats types only. Chat name.
         description:
           type: string
-          description: 'For ''Team'',''Everyone'' chats types only. Chat description.'
+          description: For 'Team','Everyone' chats types only. Chat description.
         status:
           type: string
           description: For 'Team' chat type only. Team status.
@@ -19707,15 +19715,15 @@ components:
           example: U1BCMDFUMDRKV1MwMXxzLFSvXdw5PHMsVLEn_MrtcyxUsw
         expires_in:
           type: integer
-          description: 'Issued access token TTL (time to live), in seconds'
+          description: Issued access token TTL (time to live), in seconds
           example: 7199
         refresh_token:
           type: string
-          description: 'Refresh token to get a new access token, when the issued one expires'
+          description: Refresh token to get a new access token, when the issued one expires
           example: U1BCMDFUMDRKV1MwMXxzLFL4ec6A0XMsUv9wLriecyxS_w
         refresh_token_expires_in:
           type: integer
-          description: 'Issued refresh token TTL (time to live), in seconds'
+          description: Issued refresh token TTL (time to live), in seconds
           example: 604799
         scope:
           type: string
@@ -19786,7 +19794,7 @@ components:
         company:
           type: string
           description: Company name of the contact
-          example: 'Example, Inc.'
+          example: Example, Inc.
         jobTitle:
           type: string
           description: Job title of the contact
@@ -19810,7 +19818,7 @@ components:
         webPage:
           type: string
           description: The contact home page URL
-          example: 'http://www.example.com'
+          example: http://www.example.com
         notes:
           type: string
           description: Notes for the contact
@@ -19905,7 +19913,7 @@ components:
         company:
           type: string
           description: Company name of the contact
-          example: 'Example, Inc.'
+          example: Example, Inc.
         firstName:
           type: string
           description: First name of the contact
@@ -19925,7 +19933,7 @@ components:
         webPage:
           type: string
           description: The contact home page URL
-          example: 'http://www.example.com'
+          example: http://www.example.com
         middleName:
           type: string
           description: Middle name of the contact
@@ -20199,13 +20207,13 @@ components:
           type: string
         firstName:
           type: string
-          description: 'First name of a contact, for user extensions only'
+          description: First name of a contact, for user extensions only
         lastName:
           type: string
-          description: 'Last name of a contact, for user extensions only'
+          description: Last name of a contact, for user extensions only
         name:
           type: string
-          description: 'Name of a contact, for non-user extensions'
+          description: Name of a contact, for non-user extensions
         id:
           type: string
         jobTitle:
@@ -20307,10 +20315,10 @@ components:
           $ref: '#/components/schemas/PhoneNumberExtensionInfo'
         label:
           type: string
-          description: 'Custom user name of a phone number, if any'
+          description: Custom user name of a phone number, if any
         location:
           type: string
-          description: 'Location (City, State). Filled for local US numbers'
+          description: Location (City, State). Filled for local US numbers
         paymentType:
           type: string
           description: >-
@@ -20587,7 +20595,7 @@ components:
           description: Last name of a user extension
         name:
           type: string
-          description: 'Name of a contact, for non-user extensions'
+          description: Name of a contact, for non-user extensions
         department:
           type: string
           description: Department name
@@ -20987,7 +20995,7 @@ components:
           $ref: '#/components/schemas/CompanyAnsweringRuleWeeklyScheduleInfoRequest'
         ranges:
           type: array
-          description: 'Specific data ranges. If specified, weeklyRanges cannot be specified'
+          description: Specific data ranges. If specified, weeklyRanges cannot be specified
           items:
             $ref: '#/components/schemas/RangesInfo'
         ref:
@@ -21006,7 +21014,7 @@ components:
           $ref: '#/components/schemas/CompanyAnsweringRuleWeeklyScheduleInfoRequest'
         ranges:
           type: array
-          description: 'Specific data ranges. If specified, weeklyRanges cannot be specified'
+          description: Specific data ranges. If specified, weeklyRanges cannot be specified
           items:
             $ref: '#/components/schemas/RangesInfo'
         ref:
@@ -21021,10 +21029,10 @@ components:
       properties:
         from:
           type: string
-          description: 'Time in format hh:mm'
+          description: Time in format hh:mm
         to:
           type: string
-          description: 'Time in format hh:mm'
+          description: Time in format hh:mm
     CompanyAnsweringRuleWeeklyScheduleInfoRequest:
       type: object
       properties:
@@ -21063,7 +21071,7 @@ components:
           description: Time interval for a particular day
           items:
             $ref: '#/components/schemas/CompanyAnsweringRuleTimeIntervalRequest'
-      description: 'Weekly schedule. If specified, ranges cannot be specified'
+      description: Weekly schedule. If specified, ranges cannot be specified
     CompanyAnsweringRuleUpdate:
       type: object
       properties:
@@ -21140,19 +21148,19 @@ components:
           weeklyRanges:
             wednesday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             friday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             tuesday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             monday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             thursday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
     CompanyBusinessHoursScheduleInfo:
       type: object
       properties:
@@ -21169,19 +21177,19 @@ components:
           weeklyRanges:
             tuesday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             friday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             thursday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             wednesday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             monday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
     CreateAnsweringRuleRequest:
       type: object
       properties:
@@ -21359,13 +21367,13 @@ components:
             - SharedLinesGroupAnsweringRule
         text:
           type: string
-          description: 'Text of a greeting, if any'
+          description: Text of a greeting, if any
         contentUri:
           type: string
-          description: 'Link to a greeting content (audio file), if any'
+          description: Link to a greeting content (audio file), if any
         type:
           type: string
-          description: 'Type of a greeting, specifying the case when the greeting is played.'
+          description: Type of a greeting, specifying the case when the greeting is played.
           enum:
             - Introductory
             - Announcement
@@ -21678,25 +21686,25 @@ components:
           weeklyRanges:
             wednesday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             friday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             tuesday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             monday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
             thursday:
               - from: '09:00'
-                to: 1080
+                to: '18:00'
     GreetingInfo:
       type: object
       properties:
         type:
           type: string
-          description: 'Type of a greeting, specifying the case when the greeting is played.'
+          description: Type of a greeting, specifying the case when the greeting is played.
           enum:
             - Introductory
             - Announcement
@@ -22174,10 +22182,10 @@ components:
       properties:
         from:
           type: string
-          description: 'Time in format hh:mm'
+          description: Time in format hh:mm
         to:
           type: string
-          description: 'Time in format hh:mm'
+          description: Time in format hh:mm
     TransferredExtensionInfo:
       type: object
       properties:
@@ -22859,9 +22867,9 @@ components:
           description: Server revision
       example:
         application/json:
-          uri: 'https://platform.ringcentral.com/restapi'
+          uri: https://platform.ringcentral.com/restapi
           apiVersions:
-            - uri: 'https://platform.ringcentral.com/restapi/v1.0'
+            - uri: https://platform.ringcentral.com/restapi/v1.0
               versionString: 1.0.34
               releaseDate: 2018-02-09T00:00:00.000Z
               uriString: v1.0
@@ -22899,7 +22907,7 @@ components:
           description: URI part determining the current version
       example:
         application/json:
-          uri: 'https://platform.ringcentral.com/restapi/v1.0'
+          uri: https://platform.ringcentral.com/restapi/v1.0
           versionString: 1.0.34
           releaseDate: 2018-02-09T00:00:00.000Z
           uriString: v1.0
@@ -22920,7 +22928,7 @@ components:
           description: >-
             Text to send to `messages.to` phone numbers. Can be overridden on a
             per-message basis
-          example: 'Hello, World!'
+          example: Hello, World!
         messages:
           type: array
           description: Individual messages
@@ -22997,8 +23005,8 @@ components:
             type: string
         text:
           type: string
-          description: 'Text to send, maximum number of characters is 1000'
-          example: 'Hello, World!'
+          description: Text to send, maximum number of characters is 1000
+          example: Hello, World!
       description: Single individual SMS resource
     MessageDetailsResponse:
       type: object
@@ -23025,8 +23033,8 @@ components:
             type: string
         text:
           type: string
-          description: 'Text of a message, maximum number of characters is 1000'
-          example: 'Hello, World!'
+          description: Text of a message, maximum number of characters is 1000
+          example: Hello, World!
         creationTime:
           type: string
           format: date-time
@@ -23518,7 +23526,7 @@ components:
             For example International Calls
         costPurchased:
           type: number
-          description: 'Cost per minute, paid and not included in your RingCentral Plan'
+          description: Cost per minute, paid and not included in your RingCentral Plan
       description: >-
         Billing information related to the call. Returned for 'Detailed' view
         only
@@ -23599,7 +23607,7 @@ components:
             8601)[https://en.wikipedia.org/wiki/ISO_8601] format including
             timezone, for example 2016-03-10T18:07:52.534Z
           format: date-time
-      description: 'Sync information (type, token and time)'
+      description: Sync information (type, token and time)
     CallLogCallerInfo:
       type: object
       properties:
@@ -24202,7 +24210,7 @@ components:
             Time of last synchronization in (ISO
             8601)[https://en.wikipedia.org/wiki/ISO_8601] format including
             timezone, for example *2016-03-10T18:07:52.534Z*
-      description: 'Sync information (type, token and time)'
+      description: Sync information (type, token and time)
     CreateSipRegistrationResponse:
       required:
         - sipFlags
@@ -24583,7 +24591,7 @@ components:
       properties:
         id:
           type: string
-          description: 'Device unique identifier, retrieved at previous session (if any)'
+          description: Device unique identifier, retrieved at previous session (if any)
         appExternalId:
           type: string
           description: >-
@@ -24965,7 +24973,7 @@ components:
           description: Name of a customer
         street:
           type: string
-          description: 'Street address, line 1 - street address, P.O. box, company name, c/o'
+          description: Street address, line 1 - street address, P.O. box, company name, c/o
         street2:
           type: string
           description: >-
@@ -25086,7 +25094,7 @@ components:
             for countries except the US, Canada, the UK & Australia.
         street:
           type: string
-          description: 'Street address, line 1 - street address, P.O. box, company name, c/o'
+          description: Street address, line 1 - street address, P.O. box, company name, c/o
         street2:
           type: string
           description: >-
@@ -25145,7 +25153,7 @@ components:
             - '3'
         name:
           type: string
-          description: 'Method name, corresponding to the identifier'
+          description: Method name, corresponding to the identifier
           enum:
             - Ground
             - 2 Day
@@ -25337,10 +25345,10 @@ components:
           $ref: '#/components/schemas/DeviceProvisioningExtensionInfo'
         label:
           type: string
-          description: 'Custom user name of a phone number, if any'
+          description: Custom user name of a phone number, if any
         location:
           type: string
-          description: 'Location (City, State). Filled for local US numbers'
+          description: Location (City, State). Filled for local US numbers
         paymentType:
           type: string
           description: >-
@@ -25568,7 +25576,7 @@ components:
         partnerId:
           maxLength: 128
           minLength: 0
-          pattern: '^[\p{Alnum}\.\-_]*$'
+          pattern: ^[\p{Alnum}\.\-_]*$
           type: string
         extensionNumber:
           type: string
@@ -26085,7 +26093,7 @@ components:
           $ref: '#/components/schemas/HostInfoRequest'
         allowJoinBeforeHost:
           type: boolean
-          description: 'If true, then participants can join the meeting before host arrives'
+          description: If true, then participants can join the meeting before host arrives
           default: false
         startHostVideo:
           type: boolean
@@ -26114,16 +26122,16 @@ components:
             - none
         enforceLogin:
           type: boolean
-          description: 'If true, then only signed-in users can join this meeting'
+          description: If true, then only signed-in users can join this meeting
         muteParticipantsOnEntry:
           type: boolean
-          description: 'If true, then participants are muted on entry'
+          description: If true, then participants are muted on entry
         enableWaitingRoom:
           type: boolean
-          description: 'If true, then the waiting room for participants is enabled'
+          description: If true, then the waiting room for participants is enabled
         globalDialInCountries:
           type: array
-          description: 'List of global dial-in countries (eg. US, UK, AU, etc.)'
+          description: List of global dial-in countries (eg. US, UK, AU, etc.)
           items:
             type: string
     MeetingLinks:
@@ -26216,16 +26224,16 @@ components:
             - none
         enforceLogin:
           type: boolean
-          description: 'If true, then only signed-in users can join this meeting'
+          description: If true, then only signed-in users can join this meeting
         muteParticipantsOnEntry:
           type: boolean
-          description: 'If true, then participants are muted on entry'
+          description: If true, then participants are muted on entry
         enableWaitingRoom:
           type: boolean
-          description: 'If true, then the waiting room for participants is enabled'
+          description: If true, then the waiting room for participants is enabled
         globalDialInCountries:
           type: array
-          description: 'List of global dial-in countries (eg. US, UK, AU, etc.)'
+          description: List of global dial-in countries (eg. US, UK, AU, etc.)
           items:
             type: string
     RecurrenceInfo:
@@ -26357,7 +26365,7 @@ components:
           description: >-
             Link to the user's personal meeting room, used as an alias for
             personal meeting URL (with personal meeting ID)
-          example: 'https://meetings.ringcentral.com/my/jsmith'
+          example: https://meetings.ringcentral.com/my/jsmith
         usePmiForInstantMeetings:
           type: boolean
           description: Enables using personal meeting ID for instant meetings
@@ -27268,7 +27276,7 @@ components:
             - MmsAttachment
         contentType:
           type: string
-          description: 'MIME type for a given attachment, for instance ''audio/wav'''
+          description: MIME type for a given attachment, for instance 'audio/wav'
         vmDuration:
           type: integer
           description: Supported for `Voicemail` only. Duration of a voicemail in seconds
@@ -27306,7 +27314,7 @@ components:
             - MmsAttachment
         contentType:
           type: string
-          description: 'MIME type for a given attachment, for instance ''audio/wav'''
+          description: MIME type for a given attachment, for instance 'audio/wav'
         vmDuration:
           type: integer
           description: Voicemail only Duration of the voicemail in seconds
@@ -27508,7 +27516,7 @@ components:
         olderRecordsExist:
           type: boolean
           default: false
-      description: 'Sync type, token and time'
+      description: Sync type, token and time
     CallerInfoFrom:
       type: object
       properties:
@@ -28199,7 +28207,7 @@ components:
             - MmsAttachment
         contentType:
           type: string
-          description: 'MIME type for a given attachment, for instance ''audio/wav'''
+          description: MIME type for a given attachment, for instance 'audio/wav'
         filename:
           type: string
           description: Name of a file attached
@@ -28272,7 +28280,7 @@ components:
             indicator
         isoCode:
           type: string
-          description: 'Country code according to the ISO standard, see ISO 3166'
+          description: Country code according to the ISO standard, see ISO 3166
         name:
           type: string
           description: Official name of a country
@@ -28312,7 +28320,7 @@ components:
           description: Domestic format of a phone number
         originalString:
           type: string
-          description: 'One of the numbers to be parsed, passed as a string in response'
+          description: One of the numbers to be parsed, passed as a string in response
         special:
           type: boolean
           description: '''True'' if the number is in a special format (for example N11 code)'
@@ -28520,7 +28528,7 @@ components:
           description: Customer name
         state:
           type: string
-          description: 'State/Province name. Mandatory for the USA, the UK and Canada'
+          description: State/Province name. Mandatory for the USA, the UK and Canada
         stateId:
           type: string
           description: Internal identifier of a state
@@ -28538,7 +28546,7 @@ components:
           description: First line address
         street2:
           type: string
-          description: 'Second line address (apartment, suite, unit, building, floor, etc.)'
+          description: Second line address (apartment, suite, unit, building, floor, etc.)
         zip:
           type: string
           description: Postal (Zip) code
@@ -28566,7 +28574,7 @@ components:
           description: Customer name
         state:
           type: string
-          description: 'State/Province name. Mandatory for the USA, the UK and Canada'
+          description: State/Province name. Mandatory for the USA, the UK and Canada
         stateId:
           type: string
           description: Internal identifier of a state
@@ -28584,7 +28592,7 @@ components:
           description: First line address
         street2:
           type: string
-          description: 'Second line address (apartment, suite, unit, building, floor, etc.)'
+          description: Second line address (apartment, suite, unit, building, floor, etc.)
         zip:
           type: string
           description: Postal (Zip) code
@@ -28641,10 +28649,10 @@ components:
           $ref: '#/components/schemas/UserPhoneNumberExtensionInfo'
         label:
           type: string
-          description: 'Custom user name of a phone number, if any'
+          description: Custom user name of a phone number, if any
         location:
           type: string
-          description: 'Location (City, State). Filled for local US numbers'
+          description: Location (City, State). Filled for local US numbers
         paymentType:
           type: string
           description: >-
@@ -28715,10 +28723,10 @@ components:
           $ref: '#/components/schemas/ExtensionInfo'
         label:
           type: string
-          description: 'Custom user name of a phone number, if any'
+          description: Custom user name of a phone number, if any
         location:
           type: string
-          description: 'Location (City, State). Filled for local US numbers'
+          description: Location (City, State). Filled for local US numbers
         paymentType:
           type: string
           description: >-
@@ -29218,7 +29226,7 @@ components:
           $ref: '#/components/schemas/PronouncedNameInfo'
         department:
           type: string
-          description: 'Extension user department, if any'
+          description: Extension user department, if any
       description: Contact detailed information
     ContactBusinessAddressInfo:
       type: object
@@ -29339,7 +29347,7 @@ components:
           $ref: '#/components/schemas/FormattingLocaleInfo'
         timeFormat:
           type: string
-          description: 'Time format setting. The default value is ''12h'' = [''12h'', ''24h'']'
+          description: Time format setting. The default value is '12h' = ['12h', '24h']
           enum:
             - 12h
             - 24h
@@ -29361,7 +29369,7 @@ components:
           $ref: '#/components/schemas/FormattingLocaleInfo'
         timeFormat:
           type: string
-          description: 'Time format setting. The default value is ''12h'' = [''12h'', ''24h'']'
+          description: Time format setting. The default value is '12h' = ['12h', '24h']
           enum:
             - 12h
             - 24h
@@ -29441,7 +29449,7 @@ components:
         name:
           type: string
           description: Official name of a formatting language
-      description: 'Formatting language preferences for numbers, dates and currencies'
+      description: Formatting language preferences for numbers, dates and currencies
     ExtensionServiceFeatureInfo:
       type: object
       properties:
@@ -29525,7 +29533,7 @@ components:
       properties:
         comment:
           type: string
-          description: 'A free-form user comment, describing the status change reason'
+          description: A free-form user comment, describing the status change reason
         reason:
           type: string
           description: Type of suspension
@@ -29674,7 +29682,7 @@ components:
           $ref: '#/components/schemas/PronouncedNameInfo'
         department:
           type: string
-          description: 'Extension user department, if any'
+          description: Extension user department, if any
       description: Contact Information
     PronouncedNameInfo:
       type: object
@@ -29854,7 +29862,7 @@ components:
           $ref: '#/components/schemas/PronouncedNameInfo'
         department:
           type: string
-          description: 'Extension user department, if any'
+          description: Extension user department, if any
     CallQueueInfoRequest:
       type: object
       properties:
@@ -30083,7 +30091,7 @@ components:
           description: '''True'' if the greeting message is played on this number'
         location:
           type: string
-          description: 'Location (city, region, state) of a conference phone number'
+          description: Location (city, region, state) of a conference phone number
         phoneNumber:
           type: string
           description: Dial-in phone number to connect to a conference
@@ -30675,7 +30683,7 @@ components:
       properties:
         comment:
           type: string
-          description: 'A free-form user comment, describing the status change reason'
+          description: A free-form user comment, describing the status change reason
         reason:
           type: string
           description: Type of suspension
@@ -30712,7 +30720,7 @@ components:
           $ref: '#/components/schemas/BillingPlanInfo'
         serviceFeatures:
           type: array
-          description: 'Service features information, see Service Feature List'
+          description: Service features information, see Service Feature List
           items:
             $ref: '#/components/schemas/ServiceFeatureInfo'
         limits:
@@ -30828,7 +30836,7 @@ components:
             - WebPhone
         enabled:
           type: boolean
-          description: 'Feature status, shows feature availability for the extension'
+          description: Feature status, shows feature availability for the extension
     AccountBusinessAddressResource:
       type: object
       properties:
@@ -31023,7 +31031,7 @@ components:
           description: Area code of the location
         city:
           type: string
-          description: 'Official name of the city, belonging to the certain state'
+          description: Official name of the city, belonging to the certain state
         npa:
           type: string
           description: >-
@@ -31406,7 +31414,7 @@ components:
           description: Full name of a country
         state:
           type: string
-          description: 'State/Province name. Mandatory for the USA, the UK and Canada'
+          description: State/Province name. Mandatory for the USA, the UK and Canada
         stateId:
           type: string
           description: Internal identifier of a state
@@ -31424,7 +31432,7 @@ components:
           description: First line address
         street2:
           type: string
-          description: 'Second line address (apartment, suite, unit, building, floor, etc.)'
+          description: Second line address (apartment, suite, unit, building, floor, etc.)
         zip:
           type: string
           description: Postal (Zip) code
@@ -32741,7 +32749,7 @@ components:
           description: Error message
         additionalInfo:
           type: string
-          description: 'Additional attribute for this error, for example `parameterName`'
+          description: Additional attribute for this error, for example `parameterName`
     UserEmergencyLocationList:
       type: object
       properties:
@@ -32940,7 +32948,7 @@ components:
         company:
           type: string
           description: Company name of a contact
-          example: 'Example, Inc.'
+          example: Example, Inc.
         firstName:
           type: string
           description: First name of a contact
@@ -32960,7 +32968,7 @@ components:
         webPage:
           type: string
           description: Link to a contact home page
-          example: 'http://www.example.com'
+          example: http://www.example.com
         middleName:
           type: string
           description: Middle name of a contact
@@ -33374,7 +33382,7 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:api:messages:2.0:Error'
+              - urn:ietf:params:scim:api:messages:2.0:Error
         scimType:
           type: string
           description: bad request type when status code is 400
@@ -33391,7 +33399,7 @@ components:
             - noTarget
         status:
           type: string
-          description: 'same as HTTP status code, e.g. 400, 401, etc.'
+          description: same as HTTP status code, e.g. 400, 401, etc.
     FilterSupported:
       type: object
       properties:
@@ -33486,7 +33494,7 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:api:messages:2.0:SearchRequest'
+              - urn:ietf:params:scim:api:messages:2.0:SearchRequest
         startIndex:
           type: integer
           description: start index (1-based)
@@ -33513,7 +33521,7 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig'
+              - urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig
         sort:
           $ref: '#/components/schemas/Supported'
         xmlDataFormat:
@@ -33562,8 +33570,8 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:schemas:core:2.0:User'
-        'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User':
+              - urn:ietf:params:scim:schemas:core:2.0:User
+        urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:
           $ref: '#/components/schemas/EnterpriseUser'
         userName:
           type: string
@@ -33609,8 +33617,8 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:schemas:core:2.0:User'
-        'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User':
+              - urn:ietf:params:scim:schemas:core:2.0:User
+        urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:
           $ref: '#/components/schemas/EnterpriseUser'
         userName:
           type: string
@@ -33631,7 +33639,7 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:api:messages:2.0:PatchOp'
+              - urn:ietf:params:scim:api:messages:2.0:PatchOp
     UserResponse:
       required:
         - emails
@@ -33673,8 +33681,8 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:schemas:core:2.0:User'
-        'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User':
+              - urn:ietf:params:scim:schemas:core:2.0:User
+        urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:
           $ref: '#/components/schemas/EnterpriseUser'
         userName:
           type: string
@@ -33697,7 +33705,7 @@ components:
           items:
             type: string
             enum:
-              - 'urn:ietf:params:scim:api:messages:2.0:ListResponse'
+              - urn:ietf:params:scim:api:messages:2.0:ListResponse
         startIndex:
           type: integer
           format: int64
@@ -34352,7 +34360,7 @@ components:
           description: Legacy identifier of a call session
         telephonySessionId:
           type: string
-          description: 'Call session identifier, required for Telephony API'
+          description: Call session identifier, required for Telephony API
         serverId:
           type: string
           description: Identifier of a server
