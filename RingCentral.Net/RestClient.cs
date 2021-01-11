@@ -62,7 +62,7 @@ namespace RingCentral
         {
             restRequestConfig = restRequestConfig ?? RestRequestConfig.DefaultInstance;
 
-            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/5.0.0-beta1");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/5.0.0-beta3");
             httpRequestMessage.Headers.Authorization =
                 BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath)
                     ? new AuthenticationHeaderValue("Basic",
