@@ -5,16 +5,16 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension the call is transferred to
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Extension name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Extension number
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
     }
 }

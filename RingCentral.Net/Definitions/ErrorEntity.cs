@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Error code
         /// </summary>
-        public string errorCode;
+        public string errorCode { get; set; }
 
         /// <summary>
         /// Error message
         /// </summary>
-        public string message;
+        public string message { get; set; }
     }
 }

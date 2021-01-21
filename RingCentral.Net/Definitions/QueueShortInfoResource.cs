@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Call queue extension identifier
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Call queue name (read-only)
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

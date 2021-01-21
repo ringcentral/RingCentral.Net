@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Link to a prompt audio file
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a prompt
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

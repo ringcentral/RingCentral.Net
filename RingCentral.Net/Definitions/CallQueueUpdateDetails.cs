@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallQueueServiceLevelSettings serviceLevelSettings;
+        public CallQueueServiceLevelSettings serviceLevelSettings { get; set; }
 
         /// <summary>
         /// Allows members to change their queue status
         /// </summary>
-        public bool? editableMemberStatus;
+        public bool? editableMemberStatus { get; set; }
     }
 }

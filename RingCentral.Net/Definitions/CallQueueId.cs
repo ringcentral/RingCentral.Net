@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a call queue
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

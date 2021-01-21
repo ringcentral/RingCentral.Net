@@ -5,18 +5,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public DeviceProvisioningNavigationInfoUri firstPage;
+        public DeviceProvisioningNavigationInfoUri firstPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public DeviceProvisioningNavigationInfoUri nextPage;
+        public DeviceProvisioningNavigationInfoUri nextPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public DeviceProvisioningNavigationInfoUri previousPage;
+        public DeviceProvisioningNavigationInfoUri previousPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public DeviceProvisioningNavigationInfoUri lastPage;
+        public DeviceProvisioningNavigationInfoUri lastPage { get; set; }
     }
 }

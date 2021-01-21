@@ -5,85 +5,85 @@ namespace RingCentral
         /// <summary>
         /// Enum: Disabled, Enabled, NotActivated, Frozen
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionStatusInfo statusInfo;
+        public ExtensionStatusInfo statusInfo { get; set; }
 
         /// <summary>
         /// Type of suspension
         /// </summary>
-        public string reason;
+        public string reason { get; set; }
 
         /// <summary>
         /// Free Form user comment
         /// </summary>
-        public string comment;
+        public string comment { get; set; }
 
         /// <summary>
         /// Extension number available
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public ContactInfoUpdateRequest contact;
+        public ContactInfoUpdateRequest contact { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionRegionalSettingRequest regionalSettings;
+        public ExtensionRegionalSettingRequest regionalSettings { get; set; }
 
         /// <summary>
         /// Enum: NotStarted, Incomplete, Completed
         /// </summary>
-        public string setupWizardState;
+        public string setupWizardState { get; set; }
 
         /// <summary>
         /// Additional extension identifier, created by partner application and applied on client side
         /// </summary>
-        public string partnerId;
+        public string partnerId { get; set; }
 
         /// <summary>
         /// IVR PIN
         /// </summary>
-        public string ivrPin;
+        public string ivrPin { get; set; }
 
         /// <summary>
         /// Password for extension
         /// </summary>
-        public string password;
+        public string password { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallQueueInfoRequest callQueueInfo;
+        public CallQueueInfoRequest callQueueInfo { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserTransitionInfo[] transition;
+        public UserTransitionInfo[] transition { get; set; }
 
         /// <summary>
         /// </summary>
-        public CustomFieldInfo[] customFields;
+        public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>
         /// Hides extension from showing in company directory. Supported for extensions of User type only
         /// </summary>
-        public bool? hidden;
+        public bool? hidden { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site;
+        public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
         /// Extension type
         /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// List of non-RC internal identifiers assigned to an extension
         /// </summary>
-        public ReferenceInfo[] references;
+        public ReferenceInfo[] references { get; set; }
     }
 }

@@ -5,15 +5,15 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of the resource
         /// </summary>
-        public string resourceId;
+        public string resourceId { get; set; }
 
         /// <summary>
         /// Status code of resource retrieval
         /// </summary>
-        public long? status;
+        public long? status { get; set; }
 
         /// <summary>
         /// </summary>
-        public UnifiedPresence body;
+        public UnifiedPresence body { get; set; }
     }
 }

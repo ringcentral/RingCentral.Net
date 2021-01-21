@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public PartyUpdateInfo party;
+        public PartyUpdateInfo party { get; set; }
     }
 }

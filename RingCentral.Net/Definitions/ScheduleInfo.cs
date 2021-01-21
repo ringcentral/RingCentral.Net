@@ -5,17 +5,17 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public WeeklyScheduleInfo weeklyRanges;
+        public WeeklyScheduleInfo weeklyRanges { get; set; }
 
         /// <summary>
         /// Specific data ranges
         /// </summary>
-        public RangesInfo[] ranges;
+        public RangesInfo[] ranges { get; set; }
 
         /// <summary>
         /// The user's schedule specified for business hours or after hours; it can also be set/retrieved calling the corresponding method
         /// Enum: BusinessHours, AfterHours
         /// </summary>
-        public string @ref;
+        public string @ref { get; set; }
     }
 }

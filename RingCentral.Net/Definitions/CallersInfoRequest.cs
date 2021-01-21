@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Phone number of a caller
         /// </summary>
-        public string callerId;
+        public string callerId { get; set; }
 
         /// <summary>
         /// Contact name of a caller
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

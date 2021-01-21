@@ -5,16 +5,16 @@ namespace RingCentral
         /// <summary>
         /// Link to a greeting resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a greeting
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Name of a greeting
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

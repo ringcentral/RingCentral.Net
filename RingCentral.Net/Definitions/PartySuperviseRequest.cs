@@ -7,18 +7,18 @@ namespace RingCentral
         /// Required
         /// Enum: Listen
         /// </summary>
-        public string mode;
+        public string mode { get; set; }
 
         /// <summary>
         /// Internal identifier of a supervisor's device
         /// Required
         /// </summary>
-        public string supervisorDeviceId;
+        public string supervisorDeviceId { get; set; }
 
         /// <summary>
         /// Mailbox ID of a user that will be monitored
         /// Required
         /// </summary>
-        public string agentExtensionId;
+        public string agentExtensionId { get; set; }
     }
 }

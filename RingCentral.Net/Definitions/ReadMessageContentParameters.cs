@@ -7,6 +7,6 @@ namespace RingCentral
         /// Default: Inline
         /// Enum: Inline, Attachment
         /// </summary>
-        public string contentDisposition;
+        public string contentDisposition { get; set; }
     }
 }

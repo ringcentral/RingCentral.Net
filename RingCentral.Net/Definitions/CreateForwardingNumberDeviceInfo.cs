@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of the other extension device
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

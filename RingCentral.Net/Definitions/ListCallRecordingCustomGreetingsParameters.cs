@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Enum: StartRecording, StopRecording, AutomaticRecording
         /// </summary>
-        public string type;
+        public string type { get; set; }
     }
 }

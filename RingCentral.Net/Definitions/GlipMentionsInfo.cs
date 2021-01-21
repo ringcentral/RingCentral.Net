@@ -5,17 +5,17 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a user
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Type of mentions
         /// Enum: Person, Team, File, Link, Event, Task, Note, Card
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Name of a user
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

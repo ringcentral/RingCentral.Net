@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Archive size in bytes
         /// </summary>
-        public long? size;
+        public long? size { get; set; }
 
         /// <summary>
         /// Link for archive download
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
     }
 }

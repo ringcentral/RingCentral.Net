@@ -7,17 +7,17 @@ namespace RingCentral
         /// Sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format.
         /// Required
         /// </summary>
-        public string from;
+        public string from { get; set; }
 
         /// <summary>
         /// Text to send to `messages.to` phone numbers. Can be overridden on a per-message basis
         /// </summary>
-        public string text;
+        public string text { get; set; }
 
         /// <summary>
         /// Individual messages
         /// Required
         /// </summary>
-        public MessageCreateRequest[] messages;
+        public MessageCreateRequest[] messages { get; set; }
     }
 }

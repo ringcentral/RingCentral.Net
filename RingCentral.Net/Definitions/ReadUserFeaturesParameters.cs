@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public bool? availableOnly;
+        public bool? availableOnly { get; set; }
 
         /// <summary>
         /// </summary>
-        public string[] featureId;
+        public string[] featureId { get; set; }
     }
 }

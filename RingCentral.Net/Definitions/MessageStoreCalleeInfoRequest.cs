@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Phone number in E.164 format
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
 
         /// <summary>
         /// Name of the callee
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

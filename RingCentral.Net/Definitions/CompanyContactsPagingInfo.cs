@@ -4,26 +4,26 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public long? page;
+        public long? page { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? totalPages;
+        public long? totalPages { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? perPage;
+        public long? perPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? totalElements;
+        public long? totalElements { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? pageStart;
+        public long? pageStart { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? pageEnd;
+        public long? pageEnd { get; set; }
     }
 }

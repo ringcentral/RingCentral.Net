@@ -5,10 +5,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallerIdDeviceInfo device;
+        public CallerIdDeviceInfo device { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallerIdByDeviceInfo callerId;
+        public CallerIdByDeviceInfo callerId { get; set; }
     }
 }

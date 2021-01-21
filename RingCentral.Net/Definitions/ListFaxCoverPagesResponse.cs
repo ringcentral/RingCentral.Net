@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public FaxCoverPageInfo[] records;
+        public FaxCoverPageInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public MessagingNavigationInfo navigation;
+        public MessagingNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public MessagingPagingInfo paging;
+        public MessagingPagingInfo paging { get; set; }
     }
 }

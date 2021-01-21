@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public GlipTaskInfo[] records;
+        public GlipTaskInfo[] records { get; set; }
     }
 }

@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallQueueInfo callQueue;
+        public CallQueueInfo callQueue { get; set; }
 
         /// <summary>
         /// Call queue agent availability for calls of this queue
         /// </summary>
-        public bool? acceptCalls;
+        public bool? acceptCalls { get; set; }
     }
 }

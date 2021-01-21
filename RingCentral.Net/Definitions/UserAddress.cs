@@ -4,28 +4,28 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string country;
+        public string country { get; set; }
 
         /// <summary>
         /// </summary>
-        public string locality;
+        public string locality { get; set; }
 
         /// <summary>
         /// </summary>
-        public string postalCode;
+        public string postalCode { get; set; }
 
         /// <summary>
         /// </summary>
-        public string region;
+        public string region { get; set; }
 
         /// <summary>
         /// </summary>
-        public string streetAddress;
+        public string streetAddress { get; set; }
 
         /// <summary>
         /// Required
         /// Enum: work
         /// </summary>
-        public string type;
+        public string type { get; set; }
     }
 }

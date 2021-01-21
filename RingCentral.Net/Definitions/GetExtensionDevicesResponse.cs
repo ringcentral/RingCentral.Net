@@ -5,22 +5,22 @@ namespace RingCentral
         /// <summary>
         /// Link to the list of extension devices
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of extension devices
         /// Required
         /// </summary>
-        public ExtensionDeviceResponse[] records;
+        public ExtensionDeviceResponse[] records { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public DeviceProvisioningNavigationInfo navigation;
+        public DeviceProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public DeviceProvisioningPagingInfo paging;
+        public DeviceProvisioningPagingInfo paging { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace RingCentral
         /// Internal device identifier
         /// Required
         /// </summary>
-        public string deviceId;
+        public string deviceId { get; set; }
     }
 }

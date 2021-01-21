@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Device identifier that is used to answer the incoming call.
         /// </summary>
-        public string deviceId;
+        public string deviceId { get; set; }
     }
 }

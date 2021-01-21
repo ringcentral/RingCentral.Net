@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public FavoriteContactResource[] records;
+        public FavoriteContactResource[] records { get; set; }
     }
 }

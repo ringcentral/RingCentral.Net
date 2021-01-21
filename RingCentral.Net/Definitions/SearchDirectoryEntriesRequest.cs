@@ -5,36 +5,36 @@ namespace RingCentral
         /// <summary>
         /// String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`, `jobTitle`, `department`
         /// </summary>
-        public string searchString;
+        public string searchString { get; set; }
 
         /// <summary>
         /// Enum: firstName, lastName, extensionNumber, phoneNumber, email, jobTitle, department
         /// </summary>
-        public string[] searchFields;
+        public string[] searchFields { get; set; }
 
         /// <summary>
         /// If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
         /// Default: true
         /// </summary>
-        public bool? showFederated;
+        public bool? showFederated { get; set; }
 
         /// <summary>
         /// Type of extension to filter the contacts
         /// Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, ProxyAdmin, DelegatedLinesGroup
         /// </summary>
-        public string extensionType;
+        public string extensionType { get; set; }
 
         /// <summary>
         /// Sorting settings
         /// </summary>
-        public OrderBy[] orderBy;
+        public OrderBy[] orderBy { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? page;
+        public long? page { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? perPage;
+        public long? perPage { get; set; }
     }
 }

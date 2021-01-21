@@ -7,19 +7,19 @@ namespace RingCentral
         /// Prompt mode: custom media or text
         /// Enum: Audio, TextToSpeech
         /// </summary>
-        public string mode;
+        public string mode { get; set; }
 
         /// <summary>
         /// </summary>
-        public AudioPromptInfo audio;
+        public AudioPromptInfo audio { get; set; }
 
         /// <summary>
         /// For 'TextToSpeech' mode only. Prompt text
         /// </summary>
-        public string text;
+        public string text { get; set; }
 
         /// <summary>
         /// </summary>
-        public PromptLanguageInfo language;
+        public PromptLanguageInfo language { get; set; }
     }
 }

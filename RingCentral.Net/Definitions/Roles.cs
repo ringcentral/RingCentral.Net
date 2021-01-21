@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a role
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

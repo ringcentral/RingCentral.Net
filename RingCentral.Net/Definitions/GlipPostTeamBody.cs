@@ -5,22 +5,22 @@ namespace RingCentral
         /// <summary>
         /// Team access level.
         /// </summary>
-        public bool? @public;
+        public bool? @public { get; set; }
 
         /// <summary>
         /// Team name.
         /// Required
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Team description.
         /// </summary>
-        public string description;
+        public string description { get; set; }
 
         /// <summary>
         /// List of glip members
         /// </summary>
-        public CreateGlipMember[] members;
+        public CreateGlipMember[] members { get; set; }
     }
 }

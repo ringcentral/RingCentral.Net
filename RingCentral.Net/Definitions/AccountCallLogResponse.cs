@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Link to the list of company call log records
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of call log records
         /// </summary>
-        public CompanyCallLogRecord[] records;
+        public CompanyCallLogRecord[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallLogNavigationInfo navigation;
+        public CallLogNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallLogPagingInfo paging;
+        public CallLogPagingInfo paging { get; set; }
     }
 }

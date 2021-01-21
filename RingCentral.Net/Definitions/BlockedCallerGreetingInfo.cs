@@ -5,10 +5,10 @@ namespace RingCentral
         /// <summary>
         /// Type of a greeting
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// </summary>
-        public PresetInfo preset;
+        public PresetInfo preset { get; set; }
     }
 }

@@ -5,21 +5,21 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a paging group user extension
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a paging group user extension
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Extension number of a paging group user
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// Name of a paging group user
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

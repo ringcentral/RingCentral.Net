@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Title of a message
         /// </summary>
-        public string title;
+        public string title { get; set; }
 
         /// <summary>
         /// Message Description
         /// </summary>
-        public string body;
+        public string body { get; set; }
     }
 }

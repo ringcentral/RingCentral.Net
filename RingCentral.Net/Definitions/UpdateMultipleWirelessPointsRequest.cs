@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public UpdateWirelessPoint[] records;
+        public UpdateWirelessPoint[] records { get; set; }
     }
 }

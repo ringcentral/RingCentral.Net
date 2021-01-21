@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Canonical URI of the language list resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Language data
         /// </summary>
-        public LanguageInfo[] records;
+        public LanguageInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningNavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningPagingInfo paging;
+        public ProvisioningPagingInfo paging { get; set; }
     }
 }

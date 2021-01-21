@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Post text.
         /// </summary>
-        public string text;
+        public string text { get; set; }
     }
 }

@@ -6,10 +6,10 @@ namespace RingCentral
         /// <summary>
         /// List of individual opt-out number records
         /// </summary>
-        public OptOutResponse[] records;
+        public OptOutResponse[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public PagingResource paging;
+        public PagingResource paging { get; set; }
     }
 }

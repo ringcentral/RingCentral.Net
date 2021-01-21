@@ -5,23 +5,23 @@ namespace RingCentral
         /// <summary>
         /// link to the list of user personal contacts
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of personal contacts from the extension address book
         /// </summary>
-        public PersonalContactResource[] records;
+        public PersonalContactResource[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserContactsNavigationInfo navigation;
+        public UserContactsNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserContactsPagingInfo paging;
+        public UserContactsPagingInfo paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserContactsGroupsInfo groups;
+        public UserContactsGroupsInfo groups { get; set; }
     }
 }

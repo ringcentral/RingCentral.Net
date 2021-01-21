@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Link to the switches list resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Switches map
         /// </summary>
-        public SwitchInfo[] records;
+        public SwitchInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningNavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningPagingInfo paging;
+        public ProvisioningPagingInfo paging { get; set; }
     }
 }

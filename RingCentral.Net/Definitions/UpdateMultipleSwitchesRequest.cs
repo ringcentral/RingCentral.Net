@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public UpdateSwitchInfo[] records;
+        public UpdateSwitchInfo[] records { get; set; }
     }
 }

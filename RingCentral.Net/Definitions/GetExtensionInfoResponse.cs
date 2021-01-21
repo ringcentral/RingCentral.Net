@@ -5,109 +5,109 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public long? id;
+        public long? id { get; set; }
 
         /// <summary>
         /// Canonical URI of an extension
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public GetExtensionAccountInfo account;
+        public GetExtensionAccountInfo account { get; set; }
 
         /// <summary>
         /// </summary>
-        public ContactInfo contact;
+        public ContactInfo contact { get; set; }
 
         /// <summary>
         /// </summary>
-        public CustomFieldInfo[] customFields;
+        public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>
         /// Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
         /// </summary>
-        public DepartmentInfo[] departments;
+        public DepartmentInfo[] departments { get; set; }
 
         /// <summary>
         /// Number of department extension
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public string[] extensionNumbers;
+        public string[] extensionNumbers { get; set; }
 
         /// <summary>
         /// Extension name. For user extension types the value is a combination of the specified first name and last name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// For Partner Applications Internal identifier of an extension created by partner. The RingCentral supports the mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular RingCentral native IDs as path parameters using pid = XXX clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partnerId attributes of account and extension
         /// </summary>
-        public string partnerId;
+        public string partnerId { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionPermissions permissions;
+        public ExtensionPermissions permissions { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProfileImageInfo profileImage;
+        public ProfileImageInfo profileImage { get; set; }
 
         /// <summary>
         /// List of non-RC internal identifiers assigned to an extension
         /// </summary>
-        public ReferenceInfo[] references;
+        public ReferenceInfo[] references { get; set; }
 
         /// <summary>
         /// </summary>
-        public Roles[] roles;
+        public Roles[] roles { get; set; }
 
         /// <summary>
         /// </summary>
-        public RegionalSettings regionalSettings;
+        public RegionalSettings regionalSettings { get; set; }
 
         /// <summary>
         /// Extension service features returned in response only when the logged-in user requests his/her own extension info, see also Extension Service Features
         /// </summary>
-        public ExtensionServiceFeatureInfo[] serviceFeatures;
+        public ExtensionServiceFeatureInfo[] serviceFeatures { get; set; }
 
         /// <summary>
         /// Specifies extension configuration wizard state (web service setup).
         /// Default: NotStarted
         /// Enum: NotStarted, Incomplete, Completed
         /// </summary>
-        public string setupWizardState;
+        public string setupWizardState { get; set; }
 
         /// <summary>
         /// Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
         /// Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionStatusInfo statusInfo;
+        public ExtensionStatusInfo statusInfo { get; set; }
 
         /// <summary>
         /// Extension type
         /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallQueueExtensionInfo callQueueInfo;
+        public CallQueueExtensionInfo callQueueInfo { get; set; }
 
         /// <summary>
         /// Hides extension from showing in company directory. Supported for extensions of User type only
         /// </summary>
-        public bool? hidden;
+        public bool? hidden { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site;
+        public AutomaticLocationUpdatesSiteInfo site { get; set; }
     }
 }

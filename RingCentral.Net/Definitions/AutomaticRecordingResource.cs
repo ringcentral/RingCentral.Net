@@ -5,26 +5,26 @@ namespace RingCentral
         /// <summary>
         /// Flag for controling Automatic Call Recording settings
         /// </summary>
-        public bool? enabled;
+        public bool? enabled { get; set; }
 
         /// <summary>
         /// Flag for controlling 'Play Call Recording Announcement for Outbound Calls' settings
         /// </summary>
-        public bool? outboundCallTones;
+        public bool? outboundCallTones { get; set; }
 
         /// <summary>
         /// Flag for controlling 'Play periodic tones for outbound calls' settings
         /// </summary>
-        public bool? outboundCallAnnouncement;
+        public bool? outboundCallAnnouncement { get; set; }
 
         /// <summary>
         /// Flag for controlling 'Allow mute in auto call recording' settings
         /// </summary>
-        public bool? allowMute;
+        public bool? allowMute { get; set; }
 
         /// <summary>
         /// Total amount of extension that are used in call recordings
         /// </summary>
-        public long? extensionCount;
+        public long? extensionCount { get; set; }
     }
 }

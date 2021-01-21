@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// If 'True' then aggregated presence status is returned in a notification payload
         /// </summary>
-        public bool? aggregated;
+        public bool? aggregated { get; set; }
     }
 }

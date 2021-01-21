@@ -5,10 +5,10 @@ namespace RingCentral
         /// <summary>
         /// Text to reply
         /// </summary>
-        public string replyWithText;
+        public string replyWithText { get; set; }
 
         /// <summary>
         /// </summary>
-        public ReplyWithPattern replyWithPattern;
+        public ReplyWithPattern replyWithPattern { get; set; }
     }
 }

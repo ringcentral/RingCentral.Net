@@ -6,33 +6,33 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a billing plan
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Billing plan name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Duration period
         /// Enum: Month, Day
         /// </summary>
-        public string durationUnit;
+        public string durationUnit { get; set; }
 
         /// <summary>
         /// Number of duration units
         /// </summary>
-        public long? duration;
+        public long? duration { get; set; }
 
         /// <summary>
         /// Billing plan type
         /// Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Included digital lines count
         /// </summary>
-        public long? includedPhoneLines;
+        public long? includedPhoneLines { get; set; }
     }
 }

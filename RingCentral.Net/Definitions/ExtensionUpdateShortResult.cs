@@ -5,16 +5,16 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public string extensionId;
+        public string extensionId { get; set; }
 
         /// <summary>
         /// Extension update status
         /// Enum: Fail, Success
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public ErrorEntity[] errors;
+        public ErrorEntity[] errors { get; set; }
     }
 }

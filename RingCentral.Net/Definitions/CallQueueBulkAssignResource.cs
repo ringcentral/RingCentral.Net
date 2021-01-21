@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string[] addedExtensionIds;
+        public string[] addedExtensionIds { get; set; }
 
         /// <summary>
         /// </summary>
-        public string[] removedExtensionIds;
+        public string[] removedExtensionIds { get; set; }
     }
 }

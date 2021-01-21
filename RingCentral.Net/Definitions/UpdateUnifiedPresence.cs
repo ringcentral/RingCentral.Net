@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public UpdateUnifiedPresenceGlip glip;
+        public UpdateUnifiedPresenceGlip glip { get; set; }
 
         /// <summary>
         /// </summary>
-        public UpdateUnifiedPresenceTelephony telephony;
+        public UpdateUnifiedPresenceTelephony telephony { get; set; }
     }
 }

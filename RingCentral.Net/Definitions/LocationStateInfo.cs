@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a state
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a state resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
     }
 }

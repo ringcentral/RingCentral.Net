@@ -4,23 +4,23 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public EmergencyServiceAddressResourceRequest emergencyServiceAddress;
+        public EmergencyServiceAddressResourceRequest emergencyServiceAddress { get; set; }
 
         /// <summary>
         /// </summary>
-        public DeviceEmergencyInfo emergency;
+        public DeviceEmergencyInfo emergency { get; set; }
 
         /// <summary>
         /// </summary>
-        public DeviceUpdateExtensionInfo extension;
+        public DeviceUpdateExtensionInfo extension { get; set; }
 
         /// <summary>
         /// </summary>
-        public DeviceUpdatePhoneLinesInfo phoneLines;
+        public DeviceUpdatePhoneLinesInfo phoneLines { get; set; }
 
         /// <summary>
         /// Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
         /// </summary>
-        public bool? useAsCommonPhone;
+        public bool? useAsCommonPhone { get; set; }
     }
 }

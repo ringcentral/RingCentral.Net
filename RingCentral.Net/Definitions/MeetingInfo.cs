@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string topic;
+        public string topic { get; set; }
 
         /// <summary>
         /// </summary>
-        public string startTime;
+        public string startTime { get; set; }
     }
 }

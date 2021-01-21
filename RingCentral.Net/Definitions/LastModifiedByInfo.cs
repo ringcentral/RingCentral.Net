@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of the user who last updated the note
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

@@ -7,11 +7,11 @@ namespace RingCentral
         /// Maximum: 250
         /// Default: 30
         /// </summary>
-        public long? recordCount;
+        public long? recordCount { get; set; }
 
         /// <summary>
         /// Pagination token.
         /// </summary>
-        public string pageToken;
+        public string pageToken { get; set; }
     }
 }

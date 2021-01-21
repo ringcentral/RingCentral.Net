@@ -4,16 +4,16 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallQueueMember member;
+        public CallQueueMember member { get; set; }
 
         /// <summary>
         /// Private member telephony availability status applied to calls of all queues
         /// </summary>
-        public bool? acceptQueueCalls;
+        public bool? acceptQueueCalls { get; set; }
 
         /// <summary>
         /// Call queue member availability in this particular queue
         /// </summary>
-        public bool? acceptCurrentQueueCalls;
+        public bool? acceptCurrentQueueCalls { get; set; }
     }
 }

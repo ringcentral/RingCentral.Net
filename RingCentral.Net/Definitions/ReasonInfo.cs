@@ -7,15 +7,15 @@ namespace RingCentral
         /// Reason code
         /// Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation, InsufficientPermissions, ConfigurationLimitation
         /// </summary>
-        public string code;
+        public string code { get; set; }
 
         /// <summary>
         /// Reason description
         /// </summary>
-        public string message;
+        public string message { get; set; }
 
         /// <summary>
         /// </summary>
-        public string permission;
+        public string permission { get; set; }
     }
 }

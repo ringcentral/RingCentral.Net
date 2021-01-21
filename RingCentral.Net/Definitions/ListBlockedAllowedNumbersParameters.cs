@@ -4,15 +4,15 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public long? page;
+        public long? page { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? perPage;
+        public long? perPage { get; set; }
 
         /// <summary>
         /// Enum: Blocked, Allowed
         /// </summary>
-        public string status;
+        public string status { get; set; }
     }
 }

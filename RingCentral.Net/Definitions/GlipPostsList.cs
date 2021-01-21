@@ -6,10 +6,10 @@ namespace RingCentral
         /// List of posts
         /// Required
         /// </summary>
-        public GlipPostInfo[] records;
+        public GlipPostInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipNavigationInfo navigation;
+        public GlipNavigationInfo navigation { get; set; }
     }
 }

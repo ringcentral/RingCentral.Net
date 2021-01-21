@@ -7,6 +7,6 @@ namespace RingCentral
         /// Session origin type
         /// Enum: Call, RingOut, RingMe, Conference, GreetingsRecording, VerificationCall, Zoom, CallOut
         /// </summary>
-        public string type;
+        public string type { get; set; }
     }
 }

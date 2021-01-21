@@ -5,16 +5,16 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a phone number
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a phone number resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
     }
 }

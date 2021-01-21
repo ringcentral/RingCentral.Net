@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallSessionObject session;
+        public CallSessionObject session { get; set; }
     }
 }

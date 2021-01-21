@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public bool? prestatement;
+        public bool? prestatement { get; set; }
     }
 }

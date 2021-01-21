@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public DeviceInfoRequest device;
+        public DeviceInfoRequest device { get; set; }
 
         /// <summary>
         /// SIP settings for device
         /// </summary>
-        public SIPInfoRequest[] sipInfo;
+        public SIPInfoRequest[] sipInfo { get; set; }
     }
 }

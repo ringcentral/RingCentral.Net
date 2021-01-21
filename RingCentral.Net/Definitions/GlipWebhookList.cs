@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public GlipWebhookInfo[] records;
+        public GlipWebhookInfo[] records { get; set; }
     }
 }

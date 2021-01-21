@@ -6,21 +6,21 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an operator
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to an operator resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Extension number (pin)
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// Operator extension user full name
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

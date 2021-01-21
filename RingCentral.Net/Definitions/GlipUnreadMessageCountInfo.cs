@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Count of glip unread messages
         /// </summary>
-        public long? unread;
+        public long? unread { get; set; }
     }
 }

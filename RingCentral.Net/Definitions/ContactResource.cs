@@ -4,61 +4,61 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public AccountResource account;
+        public AccountResource account { get; set; }
 
         /// <summary>
         /// </summary>
-        public string department;
+        public string department { get; set; }
 
         /// <summary>
         /// </summary>
-        public string email;
+        public string email { get; set; }
 
         /// <summary>
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// First name of a contact, for user extensions only
         /// </summary>
-        public string firstName;
+        public string firstName { get; set; }
 
         /// <summary>
         /// Last name of a contact, for user extensions only
         /// </summary>
-        public string lastName;
+        public string lastName { get; set; }
 
         /// <summary>
         /// Name of a contact, for non-user extensions
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string jobTitle;
+        public string jobTitle { get; set; }
 
         /// <summary>
         /// </summary>
-        public PhoneNumberResource[] phoneNumbers;
+        public PhoneNumberResource[] phoneNumbers { get; set; }
 
         /// <summary>
         /// </summary>
-        public AccountDirectoryProfileImageResource profileImage;
+        public AccountDirectoryProfileImageResource profileImage { get; set; }
 
         /// <summary>
         /// </summary>
-        public BusinessSiteResource site;
+        public BusinessSiteResource site { get; set; }
 
         /// <summary>
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public string type;
+        public string type { get; set; }
     }
 }

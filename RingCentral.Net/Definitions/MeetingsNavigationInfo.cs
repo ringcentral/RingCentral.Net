@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public MeetingsNavigationInfoUri nextPage;
+        public MeetingsNavigationInfoUri nextPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingsNavigationInfoUri previousPage;
+        public MeetingsNavigationInfoUri previousPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingsNavigationInfoUri firstPage;
+        public MeetingsNavigationInfoUri firstPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingsNavigationInfoUri lastPage;
+        public MeetingsNavigationInfoUri lastPage { get; set; }
     }
 }

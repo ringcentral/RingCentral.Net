@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public ArchiveInfo[] records;
+        public ArchiveInfo[] records { get; set; }
     }
 }

@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a call recording
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Call recording status
         /// </summary>
-        public bool? active;
+        public bool? active { get; set; }
     }
 }

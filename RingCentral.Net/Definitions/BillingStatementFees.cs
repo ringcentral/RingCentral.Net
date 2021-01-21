@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string description;
+        public string description { get; set; }
 
         /// <summary>
         /// </summary>
-        public decimal? amount;
+        public decimal? amount { get; set; }
 
         /// <summary>
         /// </summary>
-        public decimal? freeServiceCredit;
+        public decimal? freeServiceCredit { get; set; }
     }
 }

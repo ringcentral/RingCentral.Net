@@ -5,21 +5,21 @@ namespace RingCentral
         /// <summary>
         /// Forwarding number (or group) ordinal. Not returned for inactive numbers
         /// </summary>
-        public long? index;
+        public long? index { get; set; }
 
         /// <summary>
         /// Number of rings for a forwarding number (or group). For inactive numbers the default value ('4') is returned
         /// </summary>
-        public long? ringCount;
+        public long? ringCount { get; set; }
 
         /// <summary>
         /// Phone number status
         /// </summary>
-        public bool? enabled;
+        public bool? enabled { get; set; }
 
         /// <summary>
         /// Forwarding number (or group) data
         /// </summary>
-        public ForwardingNumberInfoRulesCreateRuleRequest[] forwardingNumbers;
+        public ForwardingNumberInfoRulesCreateRuleRequest[] forwardingNumbers { get; set; }
     }
 }

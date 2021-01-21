@@ -5,10 +5,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string startUri;
+        public string startUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string joinUri;
+        public string joinUri { get; set; }
     }
 }

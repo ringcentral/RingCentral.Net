@@ -6,6 +6,6 @@ namespace RingCentral
         /// List of extensions which contacts have to be updated
         /// Required
         /// </summary>
-        public AddressBookBulkUploadResource[] records;
+        public AddressBookBulkUploadResource[] records { get; set; }
     }
 }

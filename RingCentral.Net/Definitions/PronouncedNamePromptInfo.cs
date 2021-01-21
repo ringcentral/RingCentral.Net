@@ -4,17 +4,17 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a prompt resource
         /// </summary>
-        public string contentUri;
+        public string contentUri { get; set; }
 
         /// <summary>
         /// Content media type
         /// Enum: audio/mpeg, audio/wav
         /// </summary>
-        public string contentType;
+        public string contentType { get; set; }
     }
 }

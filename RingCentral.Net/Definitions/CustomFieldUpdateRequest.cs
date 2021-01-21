@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Custom field display name
         /// </summary>
-        public string displayName;
+        public string displayName { get; set; }
     }
 }

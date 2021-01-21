@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of the emergency response location
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Location name
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

@@ -4,29 +4,29 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public ExtensionCountryInfoRequest homeCountry;
+        public ExtensionCountryInfoRequest homeCountry { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionTimezoneInfoRequest timezone;
+        public ExtensionTimezoneInfoRequest timezone { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionLanguageInfoRequest language;
+        public ExtensionLanguageInfoRequest language { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionGreetingLanguageInfoRequest greetingLanguage;
+        public ExtensionGreetingLanguageInfoRequest greetingLanguage { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionFormattingLocaleInfoRequest formattingLocale;
+        public ExtensionFormattingLocaleInfoRequest formattingLocale { get; set; }
 
         /// <summary>
         /// Time format setting
         /// Default: 12h
         /// Enum: 12h, 24h
         /// </summary>
-        public string timeFormat;
+        public string timeFormat { get; set; }
     }
 }

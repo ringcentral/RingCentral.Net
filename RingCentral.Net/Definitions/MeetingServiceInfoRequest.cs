@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public MeetingExternalUserInfoResource externalUserInfo;
+        public MeetingExternalUserInfoResource externalUserInfo { get; set; }
     }
 }

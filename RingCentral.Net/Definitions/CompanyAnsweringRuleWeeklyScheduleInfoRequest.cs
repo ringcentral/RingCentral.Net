@@ -6,36 +6,36 @@ namespace RingCentral
         /// <summary>
         /// Time interval for a particular day
         /// </summary>
-        public CompanyAnsweringRuleTimeIntervalRequest[] monday;
+        public CompanyAnsweringRuleTimeIntervalRequest[] monday { get; set; }
 
         /// <summary>
         /// Time interval for a particular day
         /// </summary>
-        public CompanyAnsweringRuleTimeIntervalRequest[] tuesday;
+        public CompanyAnsweringRuleTimeIntervalRequest[] tuesday { get; set; }
 
         /// <summary>
         /// Time interval for a particular day
         /// </summary>
-        public CompanyAnsweringRuleTimeIntervalRequest[] wednesday;
+        public CompanyAnsweringRuleTimeIntervalRequest[] wednesday { get; set; }
 
         /// <summary>
         /// Time interval for a particular day
         /// </summary>
-        public CompanyAnsweringRuleTimeIntervalRequest[] thursday;
+        public CompanyAnsweringRuleTimeIntervalRequest[] thursday { get; set; }
 
         /// <summary>
         /// Time interval for a particular day
         /// </summary>
-        public CompanyAnsweringRuleTimeIntervalRequest[] friday;
+        public CompanyAnsweringRuleTimeIntervalRequest[] friday { get; set; }
 
         /// <summary>
         /// Time interval for a particular day
         /// </summary>
-        public CompanyAnsweringRuleTimeIntervalRequest[] saturday;
+        public CompanyAnsweringRuleTimeIntervalRequest[] saturday { get; set; }
 
         /// <summary>
         /// Time interval for a particular day
         /// </summary>
-        public CompanyAnsweringRuleTimeIntervalRequest[] sunday;
+        public CompanyAnsweringRuleTimeIntervalRequest[] sunday { get; set; }
     }
 }

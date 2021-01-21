@@ -6,18 +6,18 @@ namespace RingCentral
         /// Aggregated presence status of the user
         /// Enum: Available, Offline, DND, Busy
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public UnifiedPresenceGlip glip;
+        public UnifiedPresenceGlip glip { get; set; }
 
         /// <summary>
         /// </summary>
-        public UnifiedPresenceTelephony telephony;
+        public UnifiedPresenceTelephony telephony { get; set; }
 
         /// <summary>
         /// </summary>
-        public UnifiedPresenceMeeting meeting;
+        public UnifiedPresenceMeeting meeting { get; set; }
     }
 }

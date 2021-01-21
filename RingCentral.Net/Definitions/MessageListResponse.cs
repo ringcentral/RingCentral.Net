@@ -6,10 +6,10 @@ namespace RingCentral
         /// <summary>
         /// An array containing individual messages
         /// </summary>
-        public MessageListMessageResponse[] records;
+        public MessageListMessageResponse[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public PagingResource paging;
+        public PagingResource paging { get; set; }
     }
 }

@@ -5,18 +5,18 @@ namespace RingCentral
         /// <summary>
         /// Enum: FSync, ISync
         /// </summary>
-        public string syncType;
+        public string syncType { get; set; }
 
         /// <summary>
         /// </summary>
-        public string syncToken;
+        public string syncToken { get; set; }
 
         /// <summary>
         /// </summary>
-        public string syncTime;
+        public string syncTime { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? olderRecordsExist;
+        public bool? olderRecordsExist { get; set; }
     }
 }

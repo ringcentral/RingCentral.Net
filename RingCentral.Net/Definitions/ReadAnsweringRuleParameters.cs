@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Indicates whether inactive numbers should be returned or not
         /// </summary>
-        public bool? showInactiveNumbers;
+        public bool? showInactiveNumbers { get; set; }
     }
 }

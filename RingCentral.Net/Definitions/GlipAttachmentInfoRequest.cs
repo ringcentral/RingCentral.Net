@@ -5,12 +5,12 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an attachment
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Type of an attachment
         /// Enum: Event, File, Note, Task
         /// </summary>
-        public string type;
+        public string type { get; set; }
     }
 }

@@ -6,34 +6,34 @@ namespace RingCentral
         /// <summary>
         /// Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) standard
         /// </summary>
-        public string currency;
+        public string currency { get; set; }
 
         /// <summary>
         /// </summary>
-        public BillingStatementCharges[] charges;
+        public BillingStatementCharges[] charges { get; set; }
 
         /// <summary>
         /// </summary>
-        public BillingStatementFees[] fees;
+        public BillingStatementFees[] fees { get; set; }
 
         /// <summary>
         /// </summary>
-        public decimal? totalCharged;
+        public decimal? totalCharged { get; set; }
 
         /// <summary>
         /// </summary>
-        public decimal? totalCharges;
+        public decimal? totalCharges { get; set; }
 
         /// <summary>
         /// </summary>
-        public decimal? totalFees;
+        public decimal? totalFees { get; set; }
 
         /// <summary>
         /// </summary>
-        public decimal? subtotal;
+        public decimal? subtotal { get; set; }
 
         /// <summary>
         /// </summary>
-        public decimal? totalFreeServiceCredit;
+        public decimal? totalFreeServiceCredit { get; set; }
     }
 }

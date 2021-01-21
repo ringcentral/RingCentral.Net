@@ -7,45 +7,45 @@ namespace RingCentral
         /// <summary>
         /// user status
         /// </summary>
-        public bool? active;
+        public bool? active { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserAddress[] addresses;
+        public UserAddress[] addresses { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public Email[] emails;
+        public Email[] emails { get; set; }
 
         /// <summary>
         /// external unique resource id defined by provisioning client
         /// </summary>
-        public string externalId;
+        public string externalId { get; set; }
 
         /// <summary>
         /// unique resource id defined by RingCentral
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public Name name;
+        public Name name { get; set; }
 
         /// <summary>
         /// </summary>
-        public PhoneNumber[] phoneNumbers;
+        public PhoneNumber[] phoneNumbers { get; set; }
 
         /// <summary>
         /// </summary>
-        public Photo[] photos;
+        public Photo[] photos { get; set; }
 
         /// <summary>
         /// Required
         /// Enum: urn:ietf:params:scim:schemas:core:2.0:User
         /// </summary>
-        public string[] schemas;
+        public string[] schemas { get; set; }
 
         /// <summary>
         /// </summary>
@@ -56,10 +56,10 @@ namespace RingCentral
         /// MUST be same as work type email address
         /// Required
         /// </summary>
-        public string userName;
+        public string userName { get; set; }
 
         /// <summary>
         /// </summary>
-        public Meta meta;
+        public Meta meta { get; set; }
     }
 }

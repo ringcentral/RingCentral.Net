@@ -5,43 +5,43 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a team
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Type of a chat
         /// Enum: Team
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Team access level
         /// </summary>
-        public bool? @public;
+        public bool? @public { get; set; }
 
         /// <summary>
         /// Team name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Team description
         /// </summary>
-        public string description;
+        public string description { get; set; }
 
         /// <summary>
         /// Team status
         /// Enum: Active, Archived
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// Team creation datetime in ISO 8601 format
         /// </summary>
-        public string creationTime;
+        public string creationTime { get; set; }
 
         /// <summary>
         /// Team last change datetime in ISO 8601 format
         /// </summary>
-        public string lastModifiedTime;
+        public string lastModifiedTime { get; set; }
     }
 }

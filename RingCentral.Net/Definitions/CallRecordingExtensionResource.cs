@@ -5,24 +5,24 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Direction of call
         /// Enum: Outbound, Inbound, All
         /// </summary>
-        public string callDirection;
+        public string callDirection { get; set; }
     }
 }

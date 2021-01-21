@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public GlipPreferencesChats chats;
+        public GlipPreferencesChats chats { get; set; }
     }
 }

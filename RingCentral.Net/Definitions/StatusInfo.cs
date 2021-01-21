@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string reason;
+        public string reason { get; set; }
 
         /// <summary>
         /// </summary>
-        public string till;
+        public string till { get; set; }
 
         /// <summary>
         /// </summary>
-        public string comment;
+        public string comment { get; set; }
     }
 }

@@ -7,6 +7,6 @@ namespace RingCentral
         /// Maximum: 250
         /// Default: 30
         /// </summary>
-        public long? recordCount;
+        public long? recordCount { get; set; }
     }
 }

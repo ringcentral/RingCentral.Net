@@ -5,24 +5,24 @@ namespace RingCentral
         /// <summary>
         /// Error code
         /// </summary>
-        public string errorCode;
+        public string errorCode { get; set; }
 
         /// <summary>
         /// Error message
         /// </summary>
-        public string message;
+        public string message { get; set; }
 
         /// <summary>
         /// Name of invalid parameter
         /// </summary>
-        public string parameterName;
+        public string parameterName { get; set; }
 
         /// <summary>
         /// </summary>
-        public string featureName;
+        public string featureName { get; set; }
 
         /// <summary>
         /// </summary>
-        public string parameterValue;
+        public string parameterValue { get; set; }
     }
 }

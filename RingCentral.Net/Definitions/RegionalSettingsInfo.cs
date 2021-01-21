@@ -4,22 +4,22 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public TimezoneResource timezone;
+        public TimezoneResource timezone { get; set; }
 
         /// <summary>
         /// </summary>
-        public CountryResource homeCountry;
+        public CountryResource homeCountry { get; set; }
 
         /// <summary>
         /// </summary>
-        public LanguageResource language;
+        public LanguageResource language { get; set; }
 
         /// <summary>
         /// </summary>
-        public LanguageResource greetingLanguage;
+        public LanguageResource greetingLanguage { get; set; }
 
         /// <summary>
         /// </summary>
-        public LanguageResource formattingLocale;
+        public LanguageResource formattingLocale { get; set; }
     }
 }

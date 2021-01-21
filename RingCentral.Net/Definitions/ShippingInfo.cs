@@ -7,24 +7,24 @@ namespace RingCentral
         /// Shipping status of the order item. It is set to 'Initial' when the order is submitted. Then it is changed to 'Accepted' when a distributor starts processing the order. Finally the status is changed to 'Shipped' which means that distributor shipped the device.
         /// Enum: Initial, Accepted, Shipped, Won't ship
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// Shipping carrier name. Appears only if the device status is 'Shipped'
         /// </summary>
-        public string carrier;
+        public string carrier { get; set; }
 
         /// <summary>
         /// Carrier-specific tracking number. Appears only if the device status is 'Shipped'
         /// </summary>
-        public string trackingNumber;
+        public string trackingNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public MethodInfo method;
+        public MethodInfo method { get; set; }
 
         /// <summary>
         /// </summary>
-        public ShippingAddressInfo address;
+        public ShippingAddressInfo address { get; set; }
     }
 }

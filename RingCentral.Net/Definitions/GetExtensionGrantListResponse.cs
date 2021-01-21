@@ -5,22 +5,22 @@ namespace RingCentral
         /// <summary>
         /// Link to the list of extension grants
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of extension grants with details
         /// Required
         /// </summary>
-        public GrantInfo[] records;
+        public GrantInfo[] records { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public ProvisioningNavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public ProvisioningPagingInfo paging;
+        public ProvisioningPagingInfo paging { get; set; }
     }
 }

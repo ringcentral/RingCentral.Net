@@ -5,31 +5,31 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a network
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a network resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site;
+        public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
         /// </summary>
-        public PublicIpRangeInfo[] publicIpRanges;
+        public PublicIpRangeInfo[] publicIpRanges { get; set; }
 
         /// <summary>
         /// </summary>
-        public PrivateIpRangeInfo[] privateIpRanges;
+        public PrivateIpRangeInfo[] privateIpRanges { get; set; }
 
         /// <summary>
         /// </summary>
-        public ERLLocationInfo emergencyLocation;
+        public ERLLocationInfo emergencyLocation { get; set; }
     }
 }

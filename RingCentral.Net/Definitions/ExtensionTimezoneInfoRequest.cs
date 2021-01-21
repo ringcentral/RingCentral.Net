@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// internal Identifier of a timezone
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

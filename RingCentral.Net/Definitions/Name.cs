@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Required
         /// </summary>
-        public string familyName;
+        public string familyName { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public string givenName;
+        public string givenName { get; set; }
     }
 }

@@ -6,10 +6,10 @@ namespace RingCentral
         /// List of conversations
         /// Required
         /// </summary>
-        public GlipConversationInfo[] records;
+        public GlipConversationInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipNavigationInfo navigation;
+        public GlipNavigationInfo navigation { get; set; }
     }
 }

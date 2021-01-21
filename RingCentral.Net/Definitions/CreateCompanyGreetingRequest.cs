@@ -6,21 +6,21 @@ namespace RingCentral
         /// Type of a greeting, specifying the case when the greeting is played.
         /// Enum: Company, StartRecording, StopRecording, AutomaticRecording
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Internal identifier of an answering rule
         /// </summary>
-        public string answeringRuleId;
+        public string answeringRuleId { get; set; }
 
         /// <summary>
         /// Internal identifier of a language. See Get Language List
         /// </summary>
-        public string languageId;
+        public string languageId { get; set; }
 
         /// <summary>
         /// Meida file to upload
         /// </summary>
-        public Attachment binary;
+        public Attachment binary { get; set; }
     }
 }

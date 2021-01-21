@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a location that should be used instead of a deleted one
         /// </summary>
-        public string newLocationId;
+        public string newLocationId { get; set; }
 
         /// <summary>
         /// Flag indicating that validation of emergency location(s) is required before deletion
         /// </summary>
-        public bool? validateOnly;
+        public bool? validateOnly { get; set; }
     }
 }

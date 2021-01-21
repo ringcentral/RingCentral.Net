@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public Attachment image;
+        public Attachment image { get; set; }
     }
 }

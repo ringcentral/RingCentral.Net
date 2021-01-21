@@ -5,20 +5,20 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string created;
+        public string created { get; set; }
 
         /// <summary>
         /// </summary>
-        public string lastModified;
+        public string lastModified { get; set; }
 
         /// <summary>
         /// resource location URI
         /// </summary>
-        public string location;
+        public string location { get; set; }
 
         /// <summary>
         /// Enum: User, Group
         /// </summary>
-        public string resourceType;
+        public string resourceType { get; set; }
     }
 }

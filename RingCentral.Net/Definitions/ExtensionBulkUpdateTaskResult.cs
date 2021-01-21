@@ -5,10 +5,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public ExtensionUpdateShortResult[] affectedItems;
+        public ExtensionUpdateShortResult[] affectedItems { get; set; }
 
         /// <summary>
         /// </summary>
-        public ErrorEntity[] errors;
+        public ErrorEntity[] errors { get; set; }
     }
 }

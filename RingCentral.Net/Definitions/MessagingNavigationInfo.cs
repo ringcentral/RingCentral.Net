@@ -5,18 +5,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public MessagingNavigationInfoURI firstPage;
+        public MessagingNavigationInfoURI firstPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public MessagingNavigationInfoURI nextPage;
+        public MessagingNavigationInfoURI nextPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public MessagingNavigationInfoURI previousPage;
+        public MessagingNavigationInfoURI previousPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public MessagingNavigationInfoURI lastPage;
+        public MessagingNavigationInfoURI lastPage { get; set; }
     }
 }

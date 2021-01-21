@@ -5,42 +5,42 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string street;
+        public string street { get; set; }
 
         /// <summary>
         /// </summary>
-        public string street2;
+        public string street2 { get; set; }
 
         /// <summary>
         /// </summary>
-        public string city;
+        public string city { get; set; }
 
         /// <summary>
         /// </summary>
-        public string zip;
+        public string zip { get; set; }
 
         /// <summary>
         /// </summary>
-        public string customerName;
+        public string customerName { get; set; }
 
         /// <summary>
         /// State/province name
         /// </summary>
-        public string state;
+        public string state { get; set; }
 
         /// <summary>
         /// Internal identifier of a state
         /// </summary>
-        public string stateId;
+        public string stateId { get; set; }
 
         /// <summary>
         /// Country name
         /// </summary>
-        public string country;
+        public string country { get; set; }
 
         /// <summary>
         /// Internal identifier of a country
         /// </summary>
-        public string countryId;
+        public string countryId { get; set; }
     }
 }

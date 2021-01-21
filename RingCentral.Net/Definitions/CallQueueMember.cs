@@ -6,20 +6,20 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Extension full name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Extension number
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public SiteResource site;
+        public SiteResource site { get; set; }
     }
 }

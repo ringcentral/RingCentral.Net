@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public bool? savePhoneLines;
+        public bool? savePhoneLines { get; set; }
 
         /// <summary>
         /// Default: true
         /// </summary>
-        public bool? savePhoneNumbers;
+        public bool? savePhoneNumbers { get; set; }
     }
 }

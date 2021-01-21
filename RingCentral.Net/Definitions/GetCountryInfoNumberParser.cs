@@ -6,31 +6,31 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a country
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Canonical URI of a country
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Country calling code defined by ITU-T recommendations E.123 and E.164, see Calling Codes
         /// </summary>
-        public string callingCode;
+        public string callingCode { get; set; }
 
         /// <summary>
         /// Emergency calling feature availability/emergency address requirement indicator
         /// </summary>
-        public bool? emergencyCalling;
+        public bool? emergencyCalling { get; set; }
 
         /// <summary>
         /// Country code according to the ISO standard, see ISO 3166
         /// </summary>
-        public string isoCode;
+        public string isoCode { get; set; }
 
         /// <summary>
         /// Official name of a country
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

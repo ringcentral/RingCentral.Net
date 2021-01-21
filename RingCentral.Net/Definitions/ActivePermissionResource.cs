@@ -4,15 +4,15 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public PermissionIdResource permission;
+        public PermissionIdResource permission { get; set; }
 
         /// <summary>
         /// </summary>
-        public RoleIdResource effectiveRole;
+        public RoleIdResource effectiveRole { get; set; }
 
         /// <summary>
         /// Enum: Account, AllExtensions, Federation, NonUserExtensions, RoleBased, Self, UserExtensions
         /// </summary>
-        public string[] scopes;
+        public string[] scopes { get; set; }
     }
 }

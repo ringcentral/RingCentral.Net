@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public FixedOrderAgentsExtensionInfo extension;
+        public FixedOrderAgentsExtensionInfo extension { get; set; }
 
         /// <summary>
         /// Ordinal of an agent (call queue member)
         /// </summary>
-        public long? index;
+        public long? index { get; set; }
     }
 }

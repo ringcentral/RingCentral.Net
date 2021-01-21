@@ -6,14 +6,14 @@ namespace RingCentral
         /// Type of a greeting, specifying the case when the greeting is played.
         /// Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, InterruptPrompt, HoldMusic, Custom, Company, BlockedCallersSpecific, BlockedCallersAll, BlockedNoCallerId, BlockedPayPhones, StartRecording, StopRecording, AutomaticRecording
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// </summary>
-        public PresetInfo preset;
+        public PresetInfo preset { get; set; }
 
         /// <summary>
         /// </summary>
-        public CustomGreetingInfoRequest custom;
+        public CustomGreetingInfoRequest custom { get; set; }
     }
 }

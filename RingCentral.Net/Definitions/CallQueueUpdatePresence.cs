@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallQueueUpdateMemberPresence[] records;
+        public CallQueueUpdateMemberPresence[] records { get; set; }
     }
 }

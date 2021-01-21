@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Link to the list of address book groups
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
     }
 }

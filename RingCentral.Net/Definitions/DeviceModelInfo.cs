@@ -6,23 +6,23 @@ namespace RingCentral
         /// <summary>
         /// Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Device name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Addons description
         /// Required
         /// </summary>
-        public DeviceAddonInfo[] addons;
+        public DeviceAddonInfo[] addons { get; set; }
 
         /// <summary>
         /// Device feature or multiple features supported
         /// Enum: BLA, Intercom, Paging, HELD
         /// </summary>
-        public string[] features;
+        public string[] features { get; set; }
     }
 }

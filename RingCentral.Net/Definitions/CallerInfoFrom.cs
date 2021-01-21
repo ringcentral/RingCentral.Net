@@ -5,14 +5,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public string location;
+        public string location { get; set; }
     }
 }

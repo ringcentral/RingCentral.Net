@@ -6,6 +6,6 @@ namespace RingCentral
         /// Device identifier that is used to pick up the parked call.
         /// Required
         /// </summary>
-        public string deviceId;
+        public string deviceId { get; set; }
     }
 }

@@ -6,20 +6,20 @@ namespace RingCentral
         /// <summary>
         /// Starting time for data collection
         /// </summary>
-        public string timeFrom;
+        public string timeFrom { get; set; }
 
         /// <summary>
         /// Ending time for data collection
         /// </summary>
-        public string timeTo;
+        public string timeTo { get; set; }
 
         /// <summary>
         /// </summary>
-        public DataExportTaskContactInfo[] contacts;
+        public DataExportTaskContactInfo[] contacts { get; set; }
 
         /// <summary>
         /// List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected
         /// </summary>
-        public string[] chatIds;
+        public string[] chatIds { get; set; }
     }
 }

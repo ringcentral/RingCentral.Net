@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public long? id;
+        public long? id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string extensionId;
+        public string extensionId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string accountId;
+        public string accountId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string contactId;
+        public string contactId { get; set; }
     }
 }

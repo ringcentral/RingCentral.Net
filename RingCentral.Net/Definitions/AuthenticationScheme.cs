@@ -4,22 +4,22 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string description;
+        public string description { get; set; }
 
         /// <summary>
         /// </summary>
-        public string documentationUri;
+        public string documentationUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public string specUri;
+        public string specUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? primary;
+        public bool? primary { get; set; }
     }
 }

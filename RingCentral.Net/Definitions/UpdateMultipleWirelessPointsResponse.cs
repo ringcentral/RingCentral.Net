@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public BulkTaskInfoWiUpdate task;
+        public BulkTaskInfoWiUpdate task { get; set; }
     }
 }

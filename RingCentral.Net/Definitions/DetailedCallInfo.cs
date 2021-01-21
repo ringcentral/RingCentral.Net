@@ -4,26 +4,26 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string callId;
+        public string callId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string toTag;
+        public string toTag { get; set; }
 
         /// <summary>
         /// </summary>
-        public string fromTag;
+        public string fromTag { get; set; }
 
         /// <summary>
         /// </summary>
-        public string remoteUri;
+        public string remoteUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string localUri;
+        public string localUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string rcSessionId;
+        public string rcSessionId { get; set; }
     }
 }

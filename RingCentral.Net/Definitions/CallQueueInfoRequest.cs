@@ -6,18 +6,18 @@ namespace RingCentral
         /// <summary>
         /// Target percentage of calls that must be answered by agents within the service level time threshold
         /// </summary>
-        public long? slaGoal;
+        public long? slaGoal { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? slaThresholdSeconds;
+        public long? slaThresholdSeconds { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? includeAbandonedCalls;
+        public bool? includeAbandonedCalls { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? abandonedThresholdSeconds;
+        public long? abandonedThresholdSeconds { get; set; }
     }
 }

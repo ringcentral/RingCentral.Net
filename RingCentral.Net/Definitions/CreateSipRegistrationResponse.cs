@@ -4,26 +4,26 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public SipRegistrationDeviceInfo device;
+        public SipRegistrationDeviceInfo device { get; set; }
 
         /// <summary>
         /// SIP settings for device
         /// Required
         /// </summary>
-        public SIPInfoResponse[] sipInfo;
+        public SIPInfoResponse[] sipInfo { get; set; }
 
         /// <summary>
         /// SIP PSTN settings for device
         /// </summary>
-        public SIPInfoResponse[] sipInfoPstn;
+        public SIPInfoResponse[] sipInfoPstn { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public SIPFlagsResponse sipFlags;
+        public SIPFlagsResponse sipFlags { get; set; }
 
         /// <summary>
         /// </summary>
-        public string[] sipErrorCodes;
+        public string[] sipErrorCodes { get; set; }
     }
 }

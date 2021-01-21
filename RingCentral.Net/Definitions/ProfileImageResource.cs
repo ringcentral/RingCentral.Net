@@ -4,22 +4,22 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string etag;
+        public string etag { get; set; }
 
         /// <summary>
         /// </summary>
-        public string contentType;
+        public string contentType { get; set; }
 
         /// <summary>
         /// </summary>
-        public string lastModified;
+        public string lastModified { get; set; }
 
         /// <summary>
         /// </summary>
-        public ScaledProfileImageResource[] scales;
+        public ScaledProfileImageResource[] scales { get; set; }
     }
 }

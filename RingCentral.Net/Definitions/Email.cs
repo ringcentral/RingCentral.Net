@@ -6,11 +6,11 @@ namespace RingCentral
         /// Required
         /// Enum: work
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public string value;
+        public string value { get; set; }
     }
 }

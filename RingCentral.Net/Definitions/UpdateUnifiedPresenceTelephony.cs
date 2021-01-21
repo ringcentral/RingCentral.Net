@@ -6,6 +6,6 @@ namespace RingCentral
         /// Telephony DND status
         /// Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptQueueCalls
         /// </summary>
-        public string availability;
+        public string availability { get; set; }
     }
 }

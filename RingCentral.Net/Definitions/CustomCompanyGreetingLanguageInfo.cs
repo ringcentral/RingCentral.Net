@@ -6,21 +6,21 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a greeting language
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a greeting language
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Name of a greeting language
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Locale code of a greeting language
         /// </summary>
-        public string localeCode;
+        public string localeCode { get; set; }
     }
 }

@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a custom user greeting
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

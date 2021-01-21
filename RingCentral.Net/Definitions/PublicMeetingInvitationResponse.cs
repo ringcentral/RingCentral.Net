@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Meeting invitation
         /// </summary>
-        public string invitation;
+        public string invitation { get; set; }
     }
 }

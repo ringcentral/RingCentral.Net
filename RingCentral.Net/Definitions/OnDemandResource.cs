@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Flag for controlling OnDemand Call Recording settings
         /// </summary>
-        public bool? enabled;
+        public bool? enabled { get; set; }
     }
 }

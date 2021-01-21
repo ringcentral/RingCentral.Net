@@ -6,10 +6,10 @@ namespace RingCentral
         /// List of chats
         /// Required
         /// </summary>
-        public GlipChatInfo[] records;
+        public GlipChatInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipNavigationInfo navigation;
+        public GlipNavigationInfo navigation { get; set; }
     }
 }

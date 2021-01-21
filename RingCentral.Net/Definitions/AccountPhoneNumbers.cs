@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Link to the list of account phone numbers
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of account phone numbers
         /// </summary>
-        public CompanyPhoneNumberInfo[] records;
+        public CompanyPhoneNumberInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningNavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningPagingInfo paging;
+        public ProvisioningPagingInfo paging { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an account
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

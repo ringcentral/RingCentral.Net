@@ -6,15 +6,15 @@ namespace RingCentral
         /// Required
         /// Enum: add, replace, remove
         /// </summary>
-        public string op;
+        public string op { get; set; }
 
         /// <summary>
         /// </summary>
-        public string path;
+        public string path { get; set; }
 
         /// <summary>
         /// corresponding 'value' of that field specified by 'path'
         /// </summary>
-        public string value;
+        public string value { get; set; }
     }
 }

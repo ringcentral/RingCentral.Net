@@ -5,6 +5,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallRecordingCustomGreeting[] records;
+        public CallRecordingCustomGreeting[] records { get; set; }
     }
 }

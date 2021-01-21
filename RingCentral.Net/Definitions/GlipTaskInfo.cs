@@ -5,92 +5,92 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a task
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Datetime of the task creation in UTC time zone.
         /// </summary>
-        public string creationTime;
+        public string creationTime { get; set; }
 
         /// <summary>
         /// Datetime of the last modification of the task in UTC time zone.
         /// </summary>
-        public string lastModifiedTime;
+        public string lastModifiedTime { get; set; }
 
         /// <summary>
         /// Type of a task
         /// Enum: Task
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// </summary>
-        public CreatorInfo creator;
+        public CreatorInfo creator { get; set; }
 
         /// <summary>
         /// Chat IDs where the task is posted or shared.
         /// </summary>
-        public string[] chatIds;
+        public string[] chatIds { get; set; }
 
         /// <summary>
         /// Status of task execution
         /// Enum: Pending, InProgress, Completed
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// Name/subject of a task
         /// </summary>
-        public string subject;
+        public string subject { get; set; }
 
         /// <summary>
         /// </summary>
-        public TaskAssigneeInfo[] assignees;
+        public TaskAssigneeInfo[] assignees { get; set; }
 
         /// <summary>
         /// Specifies how to determine task completeness
         /// Enum: Simple, AllAssignees, Percentage
         /// </summary>
-        public string completenessCondition;
+        public string completenessCondition { get; set; }
 
         /// <summary>
         /// Current completeness percentage of the task with the specified percentage completeness condition
         /// Maximum: 100
         /// </summary>
-        public long? completenessPercentage;
+        public long? completenessPercentage { get; set; }
 
         /// <summary>
         /// Task start date
         /// </summary>
-        public string startDate;
+        public string startDate { get; set; }
 
         /// <summary>
         /// Task due date/time
         /// </summary>
-        public string dueDate;
+        public string dueDate { get; set; }
 
         /// <summary>
         /// Font color of a post with the current task
         /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         /// </summary>
-        public string color;
+        public string color { get; set; }
 
         /// <summary>
         /// Task section to group/search by
         /// </summary>
-        public string section;
+        public string section { get; set; }
 
         /// <summary>
         /// Task details
         /// </summary>
-        public string description;
+        public string description { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipTaskRecurrenceInfo recurrence;
+        public GlipTaskRecurrenceInfo recurrence { get; set; }
 
         /// <summary>
         /// </summary>
-        public TaskAttachment[] attachments;
+        public TaskAttachment[] attachments { get; set; }
     }
 }

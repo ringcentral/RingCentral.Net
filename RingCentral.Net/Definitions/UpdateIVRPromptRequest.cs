@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Name of a file to be uploaded as a prompt
         /// </summary>
-        public string filename;
+        public string filename { get; set; }
     }
 }

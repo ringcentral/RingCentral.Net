@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Whether to return detailed telephony state
         /// </summary>
-        public bool? detailedTelephonyState;
+        public bool? detailedTelephonyState { get; set; }
 
         /// <summary>
         /// Whether to return SIP data
         /// </summary>
-        public bool? sipData;
+        public bool? sipData { get; set; }
     }
 }

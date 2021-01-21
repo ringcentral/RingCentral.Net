@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string permissionId;
+        public string permissionId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string targetExtensionId;
+        public string targetExtensionId { get; set; }
     }
 }

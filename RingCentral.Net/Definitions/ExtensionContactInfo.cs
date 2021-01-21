@@ -5,30 +5,30 @@ namespace RingCentral
         /// <summary>
         /// For User extension type only. Extension user first name
         /// </summary>
-        public string firstName;
+        public string firstName { get; set; }
 
         /// <summary>
         /// For User extension type only. Extension user last name
         /// </summary>
-        public string lastName;
+        public string lastName { get; set; }
 
         /// <summary>
         /// Extension user company name
         /// </summary>
-        public string company;
+        public string company { get; set; }
 
         /// <summary>
         /// Email of extension user
         /// </summary>
-        public string email;
+        public string email { get; set; }
 
         /// <summary>
         /// Extension user contact phone number
         /// </summary>
-        public string businessPhone;
+        public string businessPhone { get; set; }
 
         /// <summary>
         /// </summary>
-        public ContactAddressInfoDevices businessAddress;
+        public ContactAddressInfoDevices businessAddress { get; set; }
     }
 }

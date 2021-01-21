@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Link to the forwarding number list resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of forwarding phone numbers
         /// </summary>
-        public ForwardingNumberInfo[] records;
+        public ForwardingNumberInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingNavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingPagingInfo paging;
+        public CallHandlingPagingInfo paging { get; set; }
     }
 }

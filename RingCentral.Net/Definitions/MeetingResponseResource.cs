@@ -5,103 +5,103 @@ namespace RingCentral
         /// <summary>
         /// Link to a meeting resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Universally unique identifier of a meeting"
         /// </summary>
-        public string uuid;
+        public string uuid { get; set; }
 
         /// <summary>
         /// Internal identifier of a meeting
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Custom topic of a meeting
         /// </summary>
-        public string topic;
+        public string topic { get; set; }
 
         /// <summary>
         /// Enum: Instant, Scheduled, ScheduledRecurring, Recurring
         /// </summary>
-        public string meetingType;
+        public string meetingType { get; set; }
 
         /// <summary>
         /// Meeting password
         /// </summary>
-        public string password;
+        public string password { get; set; }
 
         /// <summary>
         /// </summary>
-        public string h323Password;
+        public string h323Password { get; set; }
 
         /// <summary>
         /// Status of a meeting
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingLinks links;
+        public MeetingLinks links { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingScheduleResource schedule;
+        public MeetingScheduleResource schedule { get; set; }
 
         /// <summary>
         /// </summary>
-        public HostInfoRequest host;
+        public HostInfoRequest host { get; set; }
 
         /// <summary>
         /// If true, then participants can join the meeting before host arrives
         /// </summary>
-        public bool? allowJoinBeforeHost;
+        public bool? allowJoinBeforeHost { get; set; }
 
         /// <summary>
         /// Starting meetings with host video on/off (true/false)
         /// </summary>
-        public bool? startHostVideo;
+        public bool? startHostVideo { get; set; }
 
         /// <summary>
         /// Starting meetings with participant video on/off (true/false)
         /// </summary>
-        public bool? startParticipantsVideo;
+        public bool? startParticipantsVideo { get; set; }
 
         /// <summary>
         /// Enum: Phone, ComputerAudio
         /// </summary>
-        public string[] audioOptions;
+        public string[] audioOptions { get; set; }
 
         /// <summary>
         /// </summary>
-        public RecurrenceInfo reccurence;
+        public RecurrenceInfo reccurence { get; set; }
 
         /// <summary>
         /// Automatic record type
         /// Default: none
         /// Enum: local, cloud, none
         /// </summary>
-        public string autoRecordType;
+        public string autoRecordType { get; set; }
 
         /// <summary>
         /// If true, then only signed-in users can join this meeting
         /// </summary>
-        public bool? enforceLogin;
+        public bool? enforceLogin { get; set; }
 
         /// <summary>
         /// If true, then participants are muted on entry
         /// </summary>
-        public bool? muteParticipantsOnEntry;
+        public bool? muteParticipantsOnEntry { get; set; }
 
         /// <summary>
         /// If true, then the waiting room for participants is enabled
         /// </summary>
-        public bool? enableWaitingRoom;
+        public bool? enableWaitingRoom { get; set; }
 
         /// <summary>
         /// List of global dial-in countries (eg. US, UK, AU, etc.)
         /// </summary>
-        public string[] globalDialInCountries;
+        public string[] globalDialInCountries { get; set; }
     }
 }

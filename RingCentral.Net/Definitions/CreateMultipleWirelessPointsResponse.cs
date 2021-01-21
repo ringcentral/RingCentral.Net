@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public BulkTaskInfoWiCreate task;
+        public BulkTaskInfoWiCreate task { get; set; }
     }
 }

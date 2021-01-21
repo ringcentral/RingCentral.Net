@@ -6,16 +6,16 @@ namespace RingCentral
         /// <summary>
         /// Agent extension ID
         /// </summary>
-        public string extensionId;
+        public string extensionId { get; set; }
 
         /// <summary>
         /// Call queue extension ID
         /// </summary>
-        public string callQueueId;
+        public string callQueueId { get; set; }
 
         /// <summary>
         /// Call queue agent availability for calls of this queue
         /// </summary>
-        public bool? acceptCalls;
+        public bool? acceptCalls { get; set; }
     }
 }

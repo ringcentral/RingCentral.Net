@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string startIp;
+        public string startIp { get; set; }
 
         /// <summary>
         /// </summary>
-        public string endIp;
+        public string endIp { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? matched;
+        public bool? matched { get; set; }
     }
 }

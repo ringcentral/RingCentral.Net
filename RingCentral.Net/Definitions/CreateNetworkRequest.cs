@@ -4,22 +4,22 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site;
+        public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
         /// </summary>
-        public PublicIpRangeInfo[] publicIpRanges;
+        public PublicIpRangeInfo[] publicIpRanges { get; set; }
 
         /// <summary>
         /// </summary>
-        public PrivateIpRangeInfoRequest[] privateIpRanges;
+        public PrivateIpRangeInfoRequest[] privateIpRanges { get; set; }
 
         /// <summary>
         /// </summary>
-        public ERLLocationInfo emergencyLocation;
+        public ERLLocationInfo emergencyLocation { get; set; }
     }
 }

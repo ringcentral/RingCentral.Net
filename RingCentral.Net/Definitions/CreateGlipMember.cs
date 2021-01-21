@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a user
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Email of a user
         /// </summary>
-        public string email;
+        public string email { get; set; }
     }
 }

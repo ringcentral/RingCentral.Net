@@ -6,32 +6,32 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a phone number
         /// </summary>
-        public long? id;
+        public long? id { get; set; }
 
         /// <summary>
         /// </summary>
-        public DevicePhoneNumberCountryInfo country;
+        public DevicePhoneNumberCountryInfo country { get; set; }
 
         /// <summary>
         /// Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local']
         /// Enum: External, TollFree, Local
         /// </summary>
-        public string paymentType;
+        public string paymentType { get; set; }
 
         /// <summary>
         /// Phone number
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
 
         /// <summary>
         /// Enum: CompanyNumber, MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
         /// </summary>
-        public string usageType;
+        public string usageType { get; set; }
 
         /// <summary>
         /// Type of a phone number
         /// Enum: VoiceFax, FaxOnly, VoiceOnly
         /// </summary>
-        public string type;
+        public string type { get; set; }
     }
 }

@@ -5,41 +5,41 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a device
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Device type
         /// Default: HardPhone
         /// Enum: HardPhone, SoftPhone, OtherPhone
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Serial number for HardPhone (is returned only when the phone is shipped and provisioned)
         /// </summary>
-        public string serial;
+        public string serial { get; set; }
 
         /// <summary>
         /// Specifies if Automatic Location Updates feature is enabled
         /// </summary>
-        public bool? featureEnabled;
+        public bool? featureEnabled { get; set; }
 
         /// <summary>
         /// Device name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesModelInfo model;
+        public AutomaticLocationUpdatesModelInfo model { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site;
+        public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
         /// Phone lines information
         /// </summary>
-        public AutomaticLocationUpdatesPhoneLine[] phoneLines;
+        public AutomaticLocationUpdatesPhoneLine[] phoneLines { get; set; }
     }
 }

@@ -5,68 +5,68 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Type of change
         /// </summary>
-        public string eventType;
+        public string eventType { get; set; }
 
         /// <summary>
         /// Extension Type
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Status of an extension
         /// Enum: Disabled, Enabled, NotActivated
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// First name of an extension user
         /// </summary>
-        public string firstName;
+        public string firstName { get; set; }
 
         /// <summary>
         /// Last name of an extension user
         /// </summary>
-        public string lastName;
+        public string lastName { get; set; }
 
         /// <summary>
         /// Department Name
         /// </summary>
-        public string department;
+        public string department { get; set; }
 
         /// <summary>
         /// Email of an extension user
         /// </summary>
-        public string email;
+        public string email { get; set; }
 
         /// <summary>
         /// Extension number
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public CompanyDirectoryAccountInfo account;
+        public CompanyDirectoryAccountInfo account { get; set; }
 
         /// <summary>
         /// </summary>
-        public CompanyDirectoryPhoneNumberInfo phoneNumbers;
+        public CompanyDirectoryPhoneNumberInfo phoneNumbers { get; set; }
 
         /// <summary>
         /// </summary>
-        public ContactDirectorySiteInfo site;
+        public ContactDirectorySiteInfo site { get; set; }
 
         /// <summary>
         /// </summary>
-        public CompanyDirectoryProfileImageInfo profileImage;
+        public CompanyDirectoryProfileImageInfo profileImage { get; set; }
 
         /// <summary>
         /// Internal identifier of a subscription owner extension
         /// </summary>
-        public string ownerId;
+        public string ownerId { get; set; }
     }
 }

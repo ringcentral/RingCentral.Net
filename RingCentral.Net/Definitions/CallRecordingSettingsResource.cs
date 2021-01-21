@@ -4,15 +4,15 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public OnDemandResource onDemand;
+        public OnDemandResource onDemand { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticRecordingResource automatic;
+        public AutomaticRecordingResource automatic { get; set; }
 
         /// <summary>
         /// Collection of Greeting Info
         /// </summary>
-        public GreetingResource[] greetings;
+        public GreetingResource[] greetings { get; set; }
     }
 }

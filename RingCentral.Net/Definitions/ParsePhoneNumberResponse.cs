@@ -5,17 +5,17 @@ namespace RingCentral
         /// <summary>
         /// Canonical URI of a resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public GetCountryInfoNumberParser homeCountry;
+        public GetCountryInfoNumberParser homeCountry { get; set; }
 
         /// <summary>
         /// Parsed phone numbers data
         /// Required
         /// </summary>
-        public PhoneNumberInfoNumberParser[] phoneNumbers;
+        public PhoneNumberInfoNumberParser[] phoneNumbers { get; set; }
     }
 }

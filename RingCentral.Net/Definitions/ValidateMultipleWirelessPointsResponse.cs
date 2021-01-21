@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public WirelessPointValidated[] records;
+        public WirelessPointValidated[] records { get; set; }
     }
 }

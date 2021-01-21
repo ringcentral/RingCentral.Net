@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public long? maxOperations;
+        public long? maxOperations { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? maxPayloadSize;
+        public long? maxPayloadSize { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? supported;
+        public bool? supported { get; set; }
     }
 }

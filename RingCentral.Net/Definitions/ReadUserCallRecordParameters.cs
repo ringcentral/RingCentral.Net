@@ -7,6 +7,6 @@ namespace RingCentral
         /// Default: Simple
         /// Enum: Simple, Detailed
         /// </summary>
-        public string view;
+        public string view { get; set; }
     }
 }

@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Link to the list of users allowed to page the Paging Only group
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of users allowed to page the Paging Only group
         /// </summary>
-        public PagingGroupExtensionInfo[] records;
+        public PagingGroupExtensionInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningNavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningPagingInfo paging;
+        public ProvisioningPagingInfo paging { get; set; }
     }
 }

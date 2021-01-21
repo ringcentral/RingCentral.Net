@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of the provider
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Provider's name
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

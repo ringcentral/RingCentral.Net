@@ -5,28 +5,28 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CountryInfo homeCountry;
+        public CountryInfo homeCountry { get; set; }
 
         /// <summary>
         /// </summary>
-        public TimezoneInfo timezone;
+        public TimezoneInfo timezone { get; set; }
 
         /// <summary>
         /// </summary>
-        public LanguageInfo language;
+        public LanguageInfo language { get; set; }
 
         /// <summary>
         /// </summary>
-        public GreetingLanguageInfo greetingLanguage;
+        public GreetingLanguageInfo greetingLanguage { get; set; }
 
         /// <summary>
         /// </summary>
-        public FormattingLocaleInfo formattingLocale;
+        public FormattingLocaleInfo formattingLocale { get; set; }
 
         /// <summary>
         /// Time format setting. The default value is '12h' = ['12h', '24h']
         /// Enum: 12h, 24h
         /// </summary>
-        public string timeFormat;
+        public string timeFormat { get; set; }
     }
 }

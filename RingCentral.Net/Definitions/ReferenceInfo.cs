@@ -5,12 +5,12 @@ namespace RingCentral
         /// <summary>
         /// Non-RC identifier of an extension
         /// </summary>
-        public string @ref;
+        public string @ref { get; set; }
 
         /// <summary>
         /// Type of external identifier
         /// Enum: PartnerId, CustomerDirectoryId
         /// </summary>
-        public string type;
+        public string type { get; set; }
     }
 }

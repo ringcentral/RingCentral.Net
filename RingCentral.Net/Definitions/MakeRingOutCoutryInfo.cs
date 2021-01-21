@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Dialing plan country identifier
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

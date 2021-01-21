@@ -5,20 +5,20 @@ namespace RingCentral
         /// <summary>
         /// Link to the extension list resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of extensions with extension information
         /// Required
         /// </summary>
-        public GetExtensionInfoResponse[] records;
+        public GetExtensionInfoResponse[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningNavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningPagingInfo paging;
+        public ProvisioningPagingInfo paging { get; set; }
     }
 }

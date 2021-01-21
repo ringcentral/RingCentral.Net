@@ -5,36 +5,36 @@ namespace RingCentral
         /// <summary>
         /// Link to an extension custom greeting
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of an answering rule
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Type of a company greeting
         /// Enum: Company, StartRecording, StopRecording, AutomaticRecording
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Content media type
         /// Enum: audio/mpeg, audio/wav
         /// </summary>
-        public string contentType;
+        public string contentType { get; set; }
 
         /// <summary>
         /// Link to a greeting content (audio file)
         /// </summary>
-        public string contentUri;
+        public string contentUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public CustomGreetingAnsweringRuleInfo answeringRule;
+        public CustomGreetingAnsweringRuleInfo answeringRule { get; set; }
 
         /// <summary>
         /// </summary>
-        public CustomCompanyGreetingLanguageInfo language;
+        public CustomCompanyGreetingLanguageInfo language { get; set; }
     }
 }

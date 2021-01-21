@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public SwitchValidated[] records;
+        public SwitchValidated[] records { get; set; }
     }
 }

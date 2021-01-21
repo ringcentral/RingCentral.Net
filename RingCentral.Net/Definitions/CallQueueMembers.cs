@@ -6,22 +6,22 @@ namespace RingCentral
         /// Link to a call queue members resource
         /// Required
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of call queue members
         /// Required
         /// </summary>
-        public CallQueueMemberInfo[] records;
+        public CallQueueMemberInfo[] records { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public ProvisioningNavigationInfo navigation;
+        public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public ProvisioningPagingInfo paging;
+        public ProvisioningPagingInfo paging { get; set; }
     }
 }

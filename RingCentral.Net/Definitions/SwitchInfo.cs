@@ -5,38 +5,38 @@ namespace RingCentral
         /// <summary>
         /// Link to the network switch resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a network switch
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Unique identifier of a network switch
         /// </summary>
-        public string chassisId;
+        public string chassisId { get; set; }
 
         /// <summary>
         /// Name of a network switch
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public SwitchSiteInfo site;
+        public SwitchSiteInfo site { get; set; }
 
         /// <summary>
         /// </summary>
-        public LocationUpdatesEmergencyAddressInfo emergencyAddress;
+        public LocationUpdatesEmergencyAddressInfo emergencyAddress { get; set; }
 
         /// <summary>
         /// Deprecated. Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
         /// </summary>
-        public string emergencyLocationId;
+        public string emergencyLocationId { get; set; }
 
         /// <summary>
         /// </summary>
-        public ERLLocationInfo emergencyLocation;
+        public ERLLocationInfo emergencyLocation { get; set; }
     }
 }

@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Link to a recipient extension resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a recipient extension
         /// </summary>
-        public long? id;
+        public long? id { get; set; }
     }
 }

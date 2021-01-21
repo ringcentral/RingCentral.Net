@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a device
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// string to a device
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
     }
 }

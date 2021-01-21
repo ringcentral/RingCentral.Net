@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string errorCode;
+        public string errorCode { get; set; }
 
         /// <summary>
         /// </summary>
-        public string message;
+        public string message { get; set; }
 
         /// <summary>
         /// </summary>
-        public string parameterName;
+        public string parameterName { get; set; }
 
         /// <summary>
         /// </summary>
-        public string description;
+        public string description { get; set; }
     }
 }

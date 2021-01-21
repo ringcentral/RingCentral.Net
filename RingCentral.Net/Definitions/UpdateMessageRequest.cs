@@ -6,6 +6,6 @@ namespace RingCentral
         /// Read status of a message to be changed. Multiple values are accepted
         /// Enum: Read, Unread
         /// </summary>
-        public string readStatus;
+        public string readStatus { get; set; }
     }
 }

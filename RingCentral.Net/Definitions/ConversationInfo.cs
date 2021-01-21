@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a conversation
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Deprecated. Link to a conversation resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
     }
 }

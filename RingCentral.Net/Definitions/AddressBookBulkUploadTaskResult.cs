@@ -6,20 +6,20 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public string extensionId;
+        public string extensionId { get; set; }
 
         /// <summary>
         /// </summary>
-        public AddressBookBulkContactResource contact;
+        public AddressBookBulkContactResource contact { get; set; }
 
         /// <summary>
         /// Adding contact status
         /// Enum: Success, Fail
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public ErrorEntity[] errors;
+        public ErrorEntity[] errors { get; set; }
     }
 }

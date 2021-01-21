@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public GlipNoteInfo[] records;
+        public GlipNoteInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipNavigationInfo navigation;
+        public GlipNavigationInfo navigation { get; set; }
     }
 }

@@ -5,6 +5,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public WeeklyScheduleInfo weeklyRanges;
+        public WeeklyScheduleInfo weeklyRanges { get; set; }
     }
 }

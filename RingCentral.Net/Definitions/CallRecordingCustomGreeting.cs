@@ -5,14 +5,14 @@ namespace RingCentral
         /// <summary>
         /// Enum: StartRecording, StopRecording, AutomaticRecording
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallRecordingCustomGreetingData custom;
+        public CallRecordingCustomGreetingData custom { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallRecordingCustomGreetingLanguage language;
+        public CallRecordingCustomGreetingLanguage language { get; set; }
     }
 }

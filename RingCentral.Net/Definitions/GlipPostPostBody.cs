@@ -6,11 +6,11 @@ namespace RingCentral
         /// Post text.
         /// Required
         /// </summary>
-        public string text;
+        public string text { get; set; }
 
         /// <summary>
         /// Identifier(s) of attachments.
         /// </summary>
-        public GlipAttachmentInfoRequest[] attachments;
+        public GlipAttachmentInfoRequest[] attachments { get; set; }
     }
 }

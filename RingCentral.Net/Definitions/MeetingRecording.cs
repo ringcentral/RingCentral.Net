@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public MeetingInfo meeting;
+        public MeetingInfo meeting { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingRecordingInfo[] recording;
+        public MeetingRecordingInfo[] recording { get; set; }
     }
 }

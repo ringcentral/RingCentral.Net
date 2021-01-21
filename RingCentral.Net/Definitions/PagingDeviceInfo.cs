@@ -5,16 +5,16 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a paging device
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a paging device resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Name of a paging device
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

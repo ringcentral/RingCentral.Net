@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public Permission admin;
+        public Permission admin { get; set; }
 
         /// <summary>
         /// </summary>
-        public Permission internationalCalling;
+        public Permission internationalCalling { get; set; }
 
         /// <summary>
         /// </summary>
-        public Permission freeSoftPhoneDigitalLine;
+        public Permission freeSoftPhoneDigitalLine { get; set; }
     }
 }

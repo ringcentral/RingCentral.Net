@@ -5,10 +5,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public PrimaryCQInfo primary;
+        public PrimaryCQInfo primary { get; set; }
 
         /// <summary>
         /// </summary>
-        public AdditionalCQInfo additional;
+        public AdditionalCQInfo additional { get; set; }
     }
 }

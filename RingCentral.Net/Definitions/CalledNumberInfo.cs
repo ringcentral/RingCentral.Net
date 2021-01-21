@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Called phone number
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
     }
 }

@@ -5,14 +5,14 @@ namespace RingCentral
         /// <summary>
         /// Enum: UserSettings, CallHandling
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// </summary>
-        public string page;
+        public string page { get; set; }
 
         /// <summary>
         /// </summary>
-        public string perPage;
+        public string perPage { get; set; }
     }
 }

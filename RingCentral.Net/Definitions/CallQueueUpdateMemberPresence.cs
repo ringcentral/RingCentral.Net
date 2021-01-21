@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallQueueMemberId member;
+        public CallQueueMemberId member { get; set; }
 
         /// <summary>
         /// Call queue member availability for calls of this queue
         /// </summary>
-        public bool? acceptCurrentQueueCalls;
+        public bool? acceptCurrentQueueCalls { get; set; }
     }
 }

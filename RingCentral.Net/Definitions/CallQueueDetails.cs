@@ -5,31 +5,31 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a call queue
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Call queue name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Call queue extension number
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// Call queue status
         /// Enum: Enabled, Disabled, NotActivated
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallQueueServiceLevelSettings serviceLevelSettings;
+        public CallQueueServiceLevelSettings serviceLevelSettings { get; set; }
 
         /// <summary>
         /// Allows members to change their queue status
         /// </summary>
-        public bool? editableMemberStatus;
+        public bool? editableMemberStatus { get; set; }
     }
 }

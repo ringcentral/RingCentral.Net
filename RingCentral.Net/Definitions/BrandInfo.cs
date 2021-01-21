@@ -6,15 +6,15 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a brand
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Brand name, for example  RingCentral UK ,  ClearFax
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public CountryInfo homeCountry;
+        public CountryInfo homeCountry { get; set; }
     }
 }

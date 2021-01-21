@@ -4,39 +4,39 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public AuthenticationScheme[] authenticationSchemes;
+        public AuthenticationScheme[] authenticationSchemes { get; set; }
 
         /// <summary>
         /// </summary>
-        public BulkSupported bulk;
+        public BulkSupported bulk { get; set; }
 
         /// <summary>
         /// </summary>
-        public Supported changePassword;
+        public Supported changePassword { get; set; }
 
         /// <summary>
         /// </summary>
-        public Supported etag;
+        public Supported etag { get; set; }
 
         /// <summary>
         /// </summary>
-        public FilterSupported filter;
+        public FilterSupported filter { get; set; }
 
         /// <summary>
         /// </summary>
-        public Supported patch;
+        public Supported patch { get; set; }
 
         /// <summary>
         /// Enum: urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig
         /// </summary>
-        public string[] schemas;
+        public string[] schemas { get; set; }
 
         /// <summary>
         /// </summary>
-        public Supported sort;
+        public Supported sort { get; set; }
 
         /// <summary>
         /// </summary>
-        public Supported xmlDataFormat;
+        public Supported xmlDataFormat { get; set; }
     }
 }

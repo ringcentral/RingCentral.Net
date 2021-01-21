@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CompanyBusinessHoursScheduleInfo schedule;
+        public CompanyBusinessHoursScheduleInfo schedule { get; set; }
     }
 }

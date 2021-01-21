@@ -5,18 +5,18 @@ namespace RingCentral
         /// <summary>
         /// Link to call recording extension list resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallRecordingExtensionInfo[] records;
+        public CallRecordingExtensionInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingNavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingPagingInfo paging;
+        public CallHandlingPagingInfo paging { get; set; }
     }
 }

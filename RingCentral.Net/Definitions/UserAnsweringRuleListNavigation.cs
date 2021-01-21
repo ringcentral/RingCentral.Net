@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListNavigationPage firstPage;
+        public UserAnsweringRuleListNavigationPage firstPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListNavigationPage nextPage;
+        public UserAnsweringRuleListNavigationPage nextPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListNavigationPage previousPage;
+        public UserAnsweringRuleListNavigationPage previousPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListNavigationPage lastPage;
+        public UserAnsweringRuleListNavigationPage lastPage { get; set; }
     }
 }

@@ -5,10 +5,10 @@ namespace RingCentral
         /// <summary>
         /// Enum: PartnerId, CustomerDirectoryId
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// </summary>
-        public string @ref;
+        public string @ref { get; set; }
     }
 }

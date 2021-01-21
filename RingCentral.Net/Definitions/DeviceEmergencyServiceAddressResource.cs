@@ -5,67 +5,67 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string street;
+        public string street { get; set; }
 
         /// <summary>
         /// </summary>
-        public string street2;
+        public string street2 { get; set; }
 
         /// <summary>
         /// </summary>
-        public string city;
+        public string city { get; set; }
 
         /// <summary>
         /// </summary>
-        public string zip;
+        public string zip { get; set; }
 
         /// <summary>
         /// </summary>
-        public string customerName;
+        public string customerName { get; set; }
 
         /// <summary>
         /// State/province name
         /// </summary>
-        public string state;
+        public string state { get; set; }
 
         /// <summary>
         /// Internal identifier of a state
         /// </summary>
-        public string stateId;
+        public string stateId { get; set; }
 
         /// <summary>
         /// ISO code of a state
         /// </summary>
-        public string stateIsoCode;
+        public string stateIsoCode { get; set; }
 
         /// <summary>
         /// Full name of a state
         /// </summary>
-        public string stateName;
+        public string stateName { get; set; }
 
         /// <summary>
         /// Internal identifier of a country
         /// </summary>
-        public string countryId;
+        public string countryId { get; set; }
 
         /// <summary>
         /// ISO code of a country
         /// </summary>
-        public string countryIsoCode;
+        public string countryIsoCode { get; set; }
 
         /// <summary>
         /// Country name
         /// </summary>
-        public string country;
+        public string country { get; set; }
 
         /// <summary>
         /// Full name of a country
         /// </summary>
-        public string countryName;
+        public string countryName { get; set; }
 
         /// <summary>
         /// Specifies if emergency address is out of country
         /// </summary>
-        public bool? outOfCountry;
+        public bool? outOfCountry { get; set; }
     }
 }

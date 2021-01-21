@@ -6,26 +6,26 @@ namespace RingCentral
         /// <summary>
         /// Name of a country
         /// </summary>
-        public string country;
+        public string country { get; set; }
 
         /// <summary>
         /// Name of a state/province
         /// </summary>
-        public string state;
+        public string state { get; set; }
 
         /// <summary>
         /// Name of a city
         /// </summary>
-        public string city;
+        public string city { get; set; }
 
         /// <summary>
         /// Street address
         /// </summary>
-        public string street;
+        public string street { get; set; }
 
         /// <summary>
         /// Zip code
         /// </summary>
-        public string zip;
+        public string zip { get; set; }
     }
 }

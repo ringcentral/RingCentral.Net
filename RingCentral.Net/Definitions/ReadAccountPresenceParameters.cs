@@ -5,21 +5,21 @@ namespace RingCentral
         /// <summary>
         /// Whether to return detailed telephony state
         /// </summary>
-        public bool? detailedTelephonyState;
+        public bool? detailedTelephonyState { get; set; }
 
         /// <summary>
         /// Whether to return SIP data
         /// </summary>
-        public bool? sipData;
+        public bool? sipData { get; set; }
 
         /// <summary>
         /// Page number for account presence information
         /// </summary>
-        public long? page;
+        public long? page { get; set; }
 
         /// <summary>
         /// Number for account presence information items per page
         /// </summary>
-        public long? perPage;
+        public long? perPage { get; set; }
     }
 }

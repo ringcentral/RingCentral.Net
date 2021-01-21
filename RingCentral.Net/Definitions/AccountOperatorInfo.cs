@@ -6,16 +6,16 @@ namespace RingCentral
         /// <summary>
         /// Link to an operator extension resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of an operator extension
         /// </summary>
-        public long? id;
+        public long? id { get; set; }
 
         /// <summary>
         /// Number of an operator extension
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
     }
 }

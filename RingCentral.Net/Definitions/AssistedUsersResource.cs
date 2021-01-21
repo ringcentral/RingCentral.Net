@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public AssistedUserResource[] records;
+        public AssistedUserResource[] records { get; set; }
     }
 }

@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Specifies if emergency address should be synchronized or not
         /// </summary>
-        public bool? syncEmergencyAddress;
+        public bool? syncEmergencyAddress { get; set; }
     }
 }

@@ -5,20 +5,20 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a phone line
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Type of phone line
         /// Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
         /// </summary>
-        public string lineType;
+        public string lineType { get; set; }
 
         /// <summary>
         /// </summary>
-        public DevicePhoneLinesEmergencyAddressInfo emergencyAddress;
+        public DevicePhoneLinesEmergencyAddressInfo emergencyAddress { get; set; }
 
         /// <summary>
         /// </summary>
-        public DevicePhoneNumberInfo phoneInfo;
+        public DevicePhoneNumberInfo phoneInfo { get; set; }
     }
 }

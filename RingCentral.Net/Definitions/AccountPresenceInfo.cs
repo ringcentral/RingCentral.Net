@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Canonical URI of account presence resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of Prompts
         /// </summary>
-        public GetPresenceInfo[] records;
+        public GetPresenceInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public PresenceNavigationInfo navigation;
+        public PresenceNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public PresencePagingInfo paging;
+        public PresencePagingInfo paging { get; set; }
     }
 }

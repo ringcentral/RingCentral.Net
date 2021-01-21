@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Recording status
         /// </summary>
-        public bool? active;
+        public bool? active { get; set; }
     }
 }

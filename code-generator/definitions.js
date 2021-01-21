@@ -57,7 +57,7 @@ const generateField = (m, f) => {
     p += `[JsonProperty("${f.name}")]`
     p += `\n        public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
   } else {
-    p = `public ${f.type} ${f.name};`
+    p = `public ${f.type} ${f.name} { get; set; }`
   }
 
   p = `/// </summary>\n        ${p}`

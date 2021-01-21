@@ -6,17 +6,17 @@ namespace RingCentral
         /// Indicates the page number to retrieve. Only positive number values are allowed
         /// Default: 1
         /// </summary>
-        public long? page;
+        public long? page { get; set; }
 
         /// <summary>
         /// Indicates the page size (number of items)
         /// Default: 100
         /// </summary>
-        public long? perPage;
+        public long? perPage { get; set; }
 
         /// <summary>
         /// Internal identifier of an extension that is a member of every group within the result
         /// </summary>
-        public string memberExtensionId;
+        public string memberExtensionId { get; set; }
     }
 }

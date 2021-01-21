@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Call park identifier
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

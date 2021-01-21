@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a contact
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Email address of a contact
         /// </summary>
-        public string email;
+        public string email { get; set; }
     }
 }

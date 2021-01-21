@@ -6,6 +6,6 @@ namespace RingCentral
         /// Name of a group
         /// Required
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

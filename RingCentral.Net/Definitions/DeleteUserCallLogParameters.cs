@@ -5,28 +5,28 @@ namespace RingCentral
         /// <summary>
         /// The end datetime for records deletion in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
         /// </summary>
-        public string dateTo;
+        public string dateTo { get; set; }
 
         /// <summary>
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// Enum: Voice, Fax
         /// </summary>
-        public string[] type;
+        public string[] type { get; set; }
 
         /// <summary>
         /// Enum: Inbound, Outbound
         /// </summary>
-        public string[] direction;
+        public string[] direction { get; set; }
 
         /// <summary>
         /// </summary>
-        public string dateFrom;
+        public string dateFrom { get; set; }
     }
 }

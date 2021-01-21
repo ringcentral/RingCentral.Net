@@ -6,96 +6,96 @@ namespace RingCentral
         /// <summary>
         /// Name of a primary contact person (receiver)
         /// </summary>
-        public string customerName;
+        public string customerName { get; set; }
 
         /// <summary>
         /// Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
         /// </summary>
-        public string additionalCustomerName;
+        public string additionalCustomerName { get; set; }
 
         /// <summary>
         /// Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia.
         /// </summary>
-        public string customerEmail;
+        public string customerEmail { get; set; }
 
         /// <summary>
         /// Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
         /// </summary>
-        public string additionalCustomerEmail;
+        public string additionalCustomerEmail { get; set; }
 
         /// <summary>
         /// Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia
         /// </summary>
-        public string customerPhone;
+        public string customerPhone { get; set; }
 
         /// <summary>
         /// Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK & Australia.
         /// </summary>
-        public string additionalCustomerPhone;
+        public string additionalCustomerPhone { get; set; }
 
         /// <summary>
         /// Street address, line 1 - street address, P.O. box, company name, c/o
         /// </summary>
-        public string street;
+        public string street { get; set; }
 
         /// <summary>
         /// Street address, line 2 - apartment, suite, unit, building, floor, etc.
         /// </summary>
-        public string street2;
+        public string street2 { get; set; }
 
         /// <summary>
         /// City name
         /// </summary>
-        public string city;
+        public string city { get; set; }
 
         /// <summary>
         /// State/province name
         /// </summary>
-        public string state;
+        public string state { get; set; }
 
         /// <summary>
         /// Internal identifier of a state
         /// </summary>
-        public string stateId;
+        public string stateId { get; set; }
 
         /// <summary>
         /// ISO code of a state
         /// </summary>
-        public string stateIsoCode;
+        public string stateIsoCode { get; set; }
 
         /// <summary>
         /// Full name of a state
         /// </summary>
-        public string stateName;
+        public string stateName { get; set; }
 
         /// <summary>
         /// Internal identifier of a country
         /// </summary>
-        public string countryId;
+        public string countryId { get; set; }
 
         /// <summary>
         /// ISO code of a country
         /// </summary>
-        public string countryIsoCode;
+        public string countryIsoCode { get; set; }
 
         /// <summary>
         /// Country name
         /// </summary>
-        public string country;
+        public string country { get; set; }
 
         /// <summary>
         /// Full name of a country
         /// </summary>
-        public string countryName;
+        public string countryName { get; set; }
 
         /// <summary>
         /// Zip code
         /// </summary>
-        public string zip;
+        public string zip { get; set; }
 
         /// <summary>
         /// National taxpayer identification number. Should be specified for Brazil (CNPJ/CPF number) and Argentina (CUIT number).
         /// </summary>
-        public string taxId;
+        public string taxId { get; set; }
     }
 }

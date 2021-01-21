@@ -5,17 +5,17 @@ namespace RingCentral
         /// <summary>
         /// Link to the message sync resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of message records with synchronization information
         /// Required
         /// </summary>
-        public GetMessageInfoResponse[] records;
+        public GetMessageInfoResponse[] records { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public SyncInfoMessages syncInfo;
+        public SyncInfoMessages syncInfo { get; set; }
     }
 }

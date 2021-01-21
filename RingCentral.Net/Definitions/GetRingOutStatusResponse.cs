@@ -5,14 +5,14 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a RingOut call
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public RingOutStatusInfo status;
+        public RingOutStatusInfo status { get; set; }
     }
 }

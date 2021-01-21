@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Universally unique identifier of a notification
         /// </summary>
-        public string uuid;
+        public string uuid { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipAPNSInfo pn_apns;
+        public GlipAPNSInfo pn_apns { get; set; }
 
         /// <summary>
         /// </summary>
-        public GCMInfo pn_gcm;
+        public GCMInfo pn_gcm { get; set; }
 
         /// <summary>
         /// Internal identifier of a subscription owner extension
         /// </summary>
-        public string ownerId;
+        public string ownerId { get; set; }
     }
 }

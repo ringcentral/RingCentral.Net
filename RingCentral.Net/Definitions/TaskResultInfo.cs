@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Detailed task results by elements from initial request
         /// </summary>
-        public TaskResultRecord[] records;
+        public TaskResultRecord[] records { get; set; }
     }
 }

@@ -5,21 +5,21 @@ namespace RingCentral
         /// <summary>
         /// Link to a call monitoring group member
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a call monitoring group member
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Extension number of a call monitoring group member
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// Enum: Monitoring, Monitored
         /// </summary>
-        public string[] permissions;
+        public string[] permissions { get; set; }
     }
 }

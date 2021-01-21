@@ -5,31 +5,31 @@ namespace RingCentral
         /// <summary>
         /// Link to a template
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a template
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Enum: UserSettings, CallHandling
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Name of a template
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Time of a template creation
         /// </summary>
-        public string creationTime;
+        public string creationTime { get; set; }
 
         /// <summary>
         /// Time of the last template modification
         /// </summary>
-        public string lastModifiedTime;
+        public string lastModifiedTime { get; set; }
     }
 }

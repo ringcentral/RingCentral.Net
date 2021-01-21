@@ -4,31 +4,31 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string accountId;
+        public string accountId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string extensionId;
+        public string extensionId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Enum: Inbound, Outbound
         /// </summary>
-        public string direction;
+        public string direction { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallPartyInfo to;
+        public CallPartyInfo to { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallPartyInfo from;
+        public CallPartyInfo from { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallSessionStatusInfo status;
+        public CallSessionStatusInfo status { get; set; }
     }
 }

@@ -4,49 +4,49 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public PartyInfo from;
+        public PartyInfo from { get; set; }
 
         /// <summary>
         /// </summary>
-        public PartyInfo to;
+        public PartyInfo to { get; set; }
 
         /// <summary>
         /// Direction of a call
         /// Enum: Outbound, Inbound
         /// </summary>
-        public string direction;
+        public string direction { get; set; }
 
         /// <summary>
         /// Internal identifier of a party that monitors a call
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Internal identifier of an account that monitors a call
         /// </summary>
-        public string accountId;
+        public string accountId { get; set; }
 
         /// <summary>
         /// Internal identifier of an extension that monitors a call
         /// </summary>
-        public string extensionId;
+        public string extensionId { get; set; }
 
         /// <summary>
         /// Specifies if a call party is muted
         /// </summary>
-        public bool? muted;
+        public bool? muted { get; set; }
 
         /// <summary>
         /// </summary>
-        public OwnerInfo owner;
+        public OwnerInfo owner { get; set; }
 
         /// <summary>
         /// Specifies if a device is stand-alone
         /// </summary>
-        public bool? standAlone;
+        public bool? standAlone { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallStatusInfo status;
+        public CallStatusInfo status { get; set; }
     }
 }

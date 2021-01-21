@@ -5,71 +5,71 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a post
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Internal identifier of a group a post belongs to
         /// </summary>
-        public string groupId;
+        public string groupId { get; set; }
 
         /// <summary>
         /// Type of a post
         /// Enum: TextMessage, PersonJoined, PersonsAdded
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// For 'TextMessage' post type only. Text of a message
         /// </summary>
-        public string text;
+        public string text { get; set; }
 
         /// <summary>
         /// Internal identifier of a user - author of a post
         /// </summary>
-        public string creatorId;
+        public string creatorId { get; set; }
 
         /// <summary>
         /// For 'PersonsAdded' post type only. Identifiers of persons added to a group
         /// </summary>
-        public string[] addedPersonIds;
+        public string[] addedPersonIds { get; set; }
 
         /// <summary>
         /// Post creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
         /// </summary>
-        public string creationTime;
+        public string creationTime { get; set; }
 
         /// <summary>
         /// Post last modification datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
         /// </summary>
-        public string lastModifiedTime;
+        public string lastModifiedTime { get; set; }
 
         /// <summary>
         /// List of posted attachments
         /// </summary>
-        public GlipMessageAttachmentInfo[] attachments;
+        public GlipMessageAttachmentInfo[] attachments { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipMentionsInfo[] mentions;
+        public GlipMentionsInfo[] mentions { get; set; }
 
         /// <summary>
         /// Label of activity type
         /// </summary>
-        public string activity;
+        public string activity { get; set; }
 
         /// <summary>
         /// Title of a message. (Can be set for bot's messages only)
         /// </summary>
-        public string title;
+        public string title { get; set; }
 
         /// <summary>
         /// Link to an image used as an icon for this message
         /// </summary>
-        public string iconUri;
+        public string iconUri { get; set; }
 
         /// <summary>
         /// Emoji used as an icon for this message
         /// </summary>
-        public string iconEmoji;
+        public string iconEmoji { get; set; }
     }
 }

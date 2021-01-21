@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public FeatureInfo[] records;
+        public FeatureInfo[] records { get; set; }
     }
 }

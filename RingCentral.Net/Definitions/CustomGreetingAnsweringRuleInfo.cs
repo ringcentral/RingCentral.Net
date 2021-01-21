@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Canonical URI of an answering rule
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of an answering rule
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

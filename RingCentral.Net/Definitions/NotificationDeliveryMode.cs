@@ -6,47 +6,47 @@ namespace RingCentral
         /// <summary>
         /// Optional parameter. Specifies if the message will be encrypted or not
         /// </summary>
-        public bool? encryption;
+        public bool? encryption { get; set; }
 
         /// <summary>
         /// PubNub channel name
         /// </summary>
-        public string address;
+        public string address { get; set; }
 
         /// <summary>
         /// PubNub subscriber credentials required to subscribe to the channel
         /// </summary>
-        public string subscriberKey;
+        public string subscriberKey { get; set; }
 
         /// <summary>
         /// PubNub subscriber credentials required to subscribe to the channel. Optional (for PubNub transport type only)
         /// </summary>
-        public string secretKey;
+        public string secretKey { get; set; }
 
         /// <summary>
         /// Encryption algorithm 'AES' (for PubNub transport type only)
         /// </summary>
-        public string encryptionAlgorithm;
+        public string encryptionAlgorithm { get; set; }
 
         /// <summary>
         /// Key for notification message decryption (for PubNub transport type only)
         /// </summary>
-        public string encryptionKey;
+        public string encryptionKey { get; set; }
 
         /// <summary>
         /// Notifications transportation provider name
         /// Enum: PubNub, WebHook, RC/APNS, RC/GCM
         /// </summary>
-        public string transportType;
+        public string transportType { get; set; }
 
         /// <summary>
         /// Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
         /// </summary>
-        public string certificateName;
+        public string certificateName { get; set; }
 
         /// <summary>
         /// Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
         /// </summary>
-        public string registrationId;
+        public string registrationId { get; set; }
     }
 }

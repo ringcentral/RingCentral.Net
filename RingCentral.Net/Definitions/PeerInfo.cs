@@ -5,14 +5,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string sessionId;
+        public string sessionId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string telephonySessionId;
+        public string telephonySessionId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string partyId;
+        public string partyId { get; set; }
     }
 }

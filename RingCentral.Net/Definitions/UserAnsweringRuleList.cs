@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Canonical URI of an answering rule list resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of answering rules
         /// </summary>
-        public UserAnsweringRuleListRecord[] records;
+        public UserAnsweringRuleListRecord[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListPaging paging;
+        public UserAnsweringRuleListPaging paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListNavigation navigation;
+        public UserAnsweringRuleListNavigation navigation { get; set; }
     }
 }

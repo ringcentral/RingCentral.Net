@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public ActivePermissionResource[] permissions;
+        public ActivePermissionResource[] permissions { get; set; }
     }
 }

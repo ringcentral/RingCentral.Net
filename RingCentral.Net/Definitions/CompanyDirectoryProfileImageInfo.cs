@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Link to a profile image resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of an image
         /// </summary>
-        public string etag;
+        public string etag { get; set; }
     }
 }

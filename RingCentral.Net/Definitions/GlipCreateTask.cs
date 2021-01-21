@@ -6,51 +6,51 @@ namespace RingCentral
         /// Task name/subject. Max allowed length is 250 characters.
         /// Required
         /// </summary>
-        public string subject;
+        public string subject { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public AssigneeInfo[] assignees;
+        public AssigneeInfo[] assignees { get; set; }
 
         /// <summary>
         /// Default: Simple
         /// Enum: Simple, AllAssignees, Percentage
         /// </summary>
-        public string completenessCondition;
+        public string completenessCondition { get; set; }
 
         /// <summary>
         /// Task start date in UTC time zone.
         /// </summary>
-        public string startDate;
+        public string startDate { get; set; }
 
         /// <summary>
         /// Task due date/time in UTC time zone.
         /// </summary>
-        public string dueDate;
+        public string dueDate { get; set; }
 
         /// <summary>
         /// Default: Black
         /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         /// </summary>
-        public string color;
+        public string color { get; set; }
 
         /// <summary>
         /// Task section to group / search by. Max allowed legth is 100 characters.
         /// </summary>
-        public string section;
+        public string section { get; set; }
 
         /// <summary>
         /// Task details. Max allowed legth is 102400 characters (100kB).
         /// </summary>
-        public string description;
+        public string description { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipTaskRecurrenceInfo recurrence;
+        public GlipTaskRecurrenceInfo recurrence { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipAttachmentInfoRequest[] attachments;
+        public GlipAttachmentInfoRequest[] attachments { get; set; }
     }
 }

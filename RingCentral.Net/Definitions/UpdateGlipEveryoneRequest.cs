@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Everyone chat name. Maximum number of characters supported is 250
         /// </summary>
-        public long? name;
+        public long? name { get; set; }
 
         /// <summary>
         /// Everyone chat description. Maximum number of characters supported is 1000
         /// </summary>
-        public string description;
+        public string description { get; set; }
     }
 }

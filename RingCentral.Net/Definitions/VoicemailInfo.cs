@@ -6,10 +6,10 @@ namespace RingCentral
         /// <summary>
         /// If 'True' then voicemails are allowed to be received
         /// </summary>
-        public bool? enabled;
+        public bool? enabled { get; set; }
 
         /// <summary>
         /// </summary>
-        public RecipientInfo recipient;
+        public RecipientInfo recipient { get; set; }
     }
 }

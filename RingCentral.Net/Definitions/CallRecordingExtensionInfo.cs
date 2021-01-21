@@ -5,21 +5,21 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an extension
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to an extension resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Number of an extension
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// Name of an extension
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

@@ -5,21 +5,21 @@ namespace RingCentral
         /// <summary>
         /// Link to a call queue
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Internal identifier of a call queue
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Extension number of a call queue
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// Name of a call queue
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

@@ -5,31 +5,31 @@ namespace RingCentral
         /// <summary>
         /// Enum: Offline, Busy, Available
         /// </summary>
-        public string userStatus;
+        public string userStatus { get; set; }
 
         /// <summary>
         /// Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         /// </summary>
-        public string dndStatus;
+        public string dndStatus { get; set; }
 
         /// <summary>
         /// </summary>
-        public string message;
+        public string message { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? allowSeeMyPresence;
+        public bool? allowSeeMyPresence { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? ringOnMonitoredCall;
+        public bool? ringOnMonitoredCall { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? pickUpCallsOnHold;
+        public bool? pickUpCallsOnHold { get; set; }
 
         /// <summary>
         /// </summary>
-        public ActiveCallInfo[] activeCalls;
+        public ActiveCallInfo[] activeCalls { get; set; }
     }
 }

@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CustomFieldResource[] records;
+        public CustomFieldResource[] records { get; set; }
     }
 }

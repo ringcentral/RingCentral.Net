@@ -6,12 +6,12 @@ namespace RingCentral
         /// Internal identifier of an extension
         /// Required
         /// </summary>
-        public string extensionId;
+        public string extensionId { get; set; }
 
         /// <summary>
         /// List of contacts to be added to extension address book
         /// Required
         /// </summary>
-        public AddressBookBulkContactResource[] contacts;
+        public AddressBookBulkContactResource[] contacts { get; set; }
     }
 }

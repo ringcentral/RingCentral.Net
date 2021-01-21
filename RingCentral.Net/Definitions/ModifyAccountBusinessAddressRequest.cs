@@ -5,20 +5,20 @@ namespace RingCentral
         /// <summary>
         /// Company business name
         /// </summary>
-        public string company;
+        public string company { get; set; }
 
         /// <summary>
         /// Company business email address
         /// </summary>
-        public string email;
+        public string email { get; set; }
 
         /// <summary>
         /// </summary>
-        public BusinessAddressInfo businessAddress;
+        public BusinessAddressInfo businessAddress { get; set; }
 
         /// <summary>
         /// Custom site name
         /// </summary>
-        public string mainSiteName;
+        public string mainSiteName { get; set; }
     }
 }

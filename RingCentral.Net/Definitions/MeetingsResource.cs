@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingResponseResource[] records;
+        public MeetingResponseResource[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingsPagingInfo paging;
+        public MeetingsPagingInfo paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingsNavigationInfo navigation;
+        public MeetingsNavigationInfo navigation { get; set; }
     }
 }

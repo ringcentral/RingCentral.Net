@@ -5,6 +5,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public APSInfo aps;
+        public APSInfo aps { get; set; }
     }
 }

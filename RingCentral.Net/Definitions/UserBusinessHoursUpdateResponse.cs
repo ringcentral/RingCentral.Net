@@ -5,10 +5,10 @@ namespace RingCentral
         /// <summary>
         /// Canonical URI of a business-hours resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserBusinessHoursScheduleInfo schedule;
+        public UserBusinessHoursScheduleInfo schedule { get; set; }
     }
 }

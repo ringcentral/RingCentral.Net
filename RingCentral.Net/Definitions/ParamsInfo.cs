@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Parameter name
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Parameter value
         /// </summary>
-        public string value;
+        public string value { get; set; }
     }
 }

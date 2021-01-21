@@ -7,6 +7,6 @@ namespace RingCentral
         /// Maximum: 90
         /// Minimum: 7
         /// </summary>
-        public long? retentionPeriod;
+        public long? retentionPeriod { get; set; }
     }
 }

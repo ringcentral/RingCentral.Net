@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public GlipDataExportNavigationInfoUri firstPage;
+        public GlipDataExportNavigationInfoUri firstPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipDataExportNavigationInfoUri nextPage;
+        public GlipDataExportNavigationInfoUri nextPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipDataExportNavigationInfoUri previousPage;
+        public GlipDataExportNavigationInfoUri previousPage { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipDataExportNavigationInfoUri lastPage;
+        public GlipDataExportNavigationInfoUri lastPage { get; set; }
     }
 }

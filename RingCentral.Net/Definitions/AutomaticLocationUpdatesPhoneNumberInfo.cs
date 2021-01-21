@@ -5,11 +5,11 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a phone number
         /// </summary>
-        public long? id;
+        public long? id { get; set; }
 
         /// <summary>
         /// Phone number
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
     }
 }

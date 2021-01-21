@@ -7,11 +7,11 @@ namespace RingCentral
         /// Call information to be displayed as 'Line 2' for a call queue call session
         /// Enum: PhoneNumberLabel, PhoneNumber, QueueExtension, QueueName, CallerIdName, CallerIdNumber, None
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Call information value
         /// </summary>
-        public string value;
+        public string value { get; set; }
     }
 }

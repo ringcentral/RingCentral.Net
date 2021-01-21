@@ -5,81 +5,81 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string partnerId;
+        public string partnerId { get; set; }
 
         /// <summary>
         /// </summary>
-        public string extensionNumber;
+        public string extensionNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public string loginName;
+        public string loginName { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionContactInfo contact;
+        public ExtensionContactInfo contact { get; set; }
 
         /// <summary>
         /// </summary>
-        public Reference[] references;
+        public Reference[] references { get; set; }
 
         /// <summary>
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public StatusInfo statusInfo;
+        public StatusInfo statusInfo { get; set; }
 
         /// <summary>
         /// </summary>
-        public DepartmentResource[] departments;
+        public DepartmentResource[] departments { get; set; }
 
         /// <summary>
         /// </summary>
-        public ServiceFeatureValue[] serviceFeatures;
+        public ServiceFeatureValue[] serviceFeatures { get; set; }
 
         /// <summary>
         /// </summary>
-        public RegionalSettingsInfo regionalSettings;
+        public RegionalSettingsInfo regionalSettings { get; set; }
 
         /// <summary>
         /// Enum: NotStarted, Incomplete, Completed, Unknown
         /// </summary>
-        public string setupWizardState;
+        public string setupWizardState { get; set; }
 
         /// <summary>
         /// </summary>
-        public ExtensionPermissionsResource permissions;
+        public ExtensionPermissionsResource permissions { get; set; }
 
         /// <summary>
         /// </summary>
-        public string password;
+        public string password { get; set; }
 
         /// <summary>
         /// </summary>
-        public string ivrPin;
+        public string ivrPin { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProfileImageResource profileImage;
+        public ProfileImageResource profileImage { get; set; }
     }
 }

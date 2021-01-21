@@ -6,18 +6,18 @@ namespace RingCentral
         /// <summary>
         /// Link to a list of blocked/allowed phone numbers resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public BlockedAllowedPhoneNumberInfo[] records;
+        public BlockedAllowedPhoneNumberInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingNavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingPagingInfo paging;
+        public CallHandlingPagingInfo paging { get; set; }
     }
 }

@@ -5,34 +5,34 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public string isoCode;
+        public string isoCode { get; set; }
 
         /// <summary>
         /// </summary>
-        public string callingCode;
+        public string callingCode { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? emergencyCalling;
+        public bool? emergencyCalling { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? numberSelling;
+        public bool? numberSelling { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? loginAllowed;
+        public bool? loginAllowed { get; set; }
     }
 }

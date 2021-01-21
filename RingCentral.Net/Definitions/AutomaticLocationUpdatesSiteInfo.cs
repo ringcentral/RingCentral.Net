@@ -6,21 +6,21 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a site
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link to a site resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Name of a site
         /// </summary>
-        public string name;
+        public string name { get; set; }
 
         /// <summary>
         /// Site code value. Returned only if specified
         /// </summary>
-        public string code;
+        public string code { get; set; }
     }
 }

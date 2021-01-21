@@ -6,24 +6,24 @@ namespace RingCentral
         /// Indicates the page number to retrieve. Only positive number values are accepted.
         /// Default: 1
         /// </summary>
-        public long? page;
+        public long? page { get; set; }
 
         /// <summary>
         /// Indicates the page size (number of items).
         /// Default: 100
         /// </summary>
-        public long? perPage;
+        public long? perPage { get; set; }
 
         /// <summary>
         /// Type of a greeting, specifying the case when the greeting is played
         /// Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic, Company
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Usage type of a greeting, specifying if the greeting is applied for user extension or department extension
         /// Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule, SharedLinesGroupAnsweringRule
         /// </summary>
-        public string usageType;
+        public string usageType { get; set; }
     }
 }

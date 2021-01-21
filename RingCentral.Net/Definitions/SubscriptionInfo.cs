@@ -5,67 +5,67 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a subscription
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Canonical URI of a subscription
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is subscribed to
         /// </summary>
-        public string[] eventFilters;
+        public string[] eventFilters { get; set; }
 
         /// <summary>
         /// Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is not subscribed to due to certain limitations
         /// </summary>
-        public DisabledFilterInfo[] disabledFilters;
+        public DisabledFilterInfo[] disabledFilters { get; set; }
 
         /// <summary>
         /// Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
         /// </summary>
-        public string expirationTime;
+        public string expirationTime { get; set; }
 
         /// <summary>
         /// Subscription lifetime in seconds
         /// </summary>
-        public long? expiresIn;
+        public long? expiresIn { get; set; }
 
         /// <summary>
         /// Subscription status
         /// Enum: Active, Suspended, Blacklisted
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
         /// </summary>
-        public string creationTime;
+        public string creationTime { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public NotificationDeliveryMode deliveryMode;
+        public NotificationDeliveryMode deliveryMode { get; set; }
 
         /// <summary>
         /// </summary>
-        public NotificationBlacklistedData blacklistedData;
+        public NotificationBlacklistedData blacklistedData { get; set; }
 
         /// <summary>
         /// Notifications transportation provider name
         /// Enum: PubNub, WebHook, RC/APNS, RC/GCM
         /// </summary>
-        public string transportType;
+        public string transportType { get; set; }
 
         /// <summary>
         /// Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
         /// </summary>
-        public string certificateName;
+        public string certificateName { get; set; }
 
         /// <summary>
         /// Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
         /// </summary>
-        public string registrationId;
+        public string registrationId { get; set; }
     }
 }

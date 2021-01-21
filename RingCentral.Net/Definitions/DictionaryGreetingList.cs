@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Canonical URI of greetings list resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of greetings
         /// </summary>
-        public DictionaryGreetingInfo[] records;
+        public DictionaryGreetingInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingNavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingPagingInfo paging;
+        public CallHandlingPagingInfo paging { get; set; }
     }
 }

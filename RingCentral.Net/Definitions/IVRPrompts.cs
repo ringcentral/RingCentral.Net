@@ -5,19 +5,19 @@ namespace RingCentral
         /// <summary>
         /// Link to prompts library resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of Prompts
         /// </summary>
-        public PromptInfo[] records;
+        public PromptInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingNavigationInfo navigation;
+        public CallHandlingNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingPagingInfo paging;
+        public CallHandlingPagingInfo paging { get; set; }
     }
 }

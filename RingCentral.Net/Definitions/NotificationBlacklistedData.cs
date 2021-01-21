@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Time of adding subscrition to a black list in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*
         /// </summary>
-        public string blacklistedAt;
+        public string blacklistedAt { get; set; }
 
         /// <summary>
         /// Reason for adding subscrition to a black list
         /// </summary>
-        public string reason;
+        public string reason { get; set; }
     }
 }

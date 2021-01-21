@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Specifies if a permission is enabled or not
         /// </summary>
-        public bool? enabled;
+        public bool? enabled { get; set; }
     }
 }

@@ -5,14 +5,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string startTime;
+        public string startTime { get; set; }
 
         /// <summary>
         /// </summary>
-        public long? durationInMinutes;
+        public long? durationInMinutes { get; set; }
 
         /// <summary>
         /// </summary>
-        public TimezoneResource timeZone;
+        public TimezoneResource timeZone { get; set; }
     }
 }

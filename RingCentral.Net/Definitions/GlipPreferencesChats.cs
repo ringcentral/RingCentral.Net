@@ -4,12 +4,12 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public long? maxCount;
+        public long? maxCount { get; set; }
 
         /// <summary>
         /// Default: CombineAllChatTypes
         /// Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
         /// </summary>
-        public string leftRailMode;
+        public string leftRailMode { get; set; }
     }
 }

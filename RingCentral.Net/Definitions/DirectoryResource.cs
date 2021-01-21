@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CompanyContactsPagingInfo paging;
+        public CompanyContactsPagingInfo paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public ContactResource[] records;
+        public ContactResource[] records { get; set; }
     }
 }

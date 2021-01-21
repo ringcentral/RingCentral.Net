@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string[] enabledUserIds;
+        public string[] enabledUserIds { get; set; }
 
         /// <summary>
         /// </summary>
-        public string[] disabledUserIds;
+        public string[] disabledUserIds { get; set; }
     }
 }

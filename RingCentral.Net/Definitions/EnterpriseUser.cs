@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string department;
+        public string department { get; set; }
     }
 }

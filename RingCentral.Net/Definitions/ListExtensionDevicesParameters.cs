@@ -6,12 +6,12 @@ namespace RingCentral
         /// Pooling type of a device
         /// Enum: Host, Guest, None
         /// </summary>
-        public string linePooling;
+        public string linePooling { get; set; }
 
         /// <summary>
         /// Device feature or multiple features supported
         /// Enum: Intercom, Paging, BLA, HELD
         /// </summary>
-        public string feature;
+        public string feature { get; set; }
     }
 }

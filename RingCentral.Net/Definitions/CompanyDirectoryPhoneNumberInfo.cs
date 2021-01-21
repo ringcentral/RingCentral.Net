@@ -6,23 +6,23 @@ namespace RingCentral
         /// <summary>
         /// Extension phone number in E.164 format
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
 
         /// <summary>
         /// Type of a phone number
         /// Enum: VoiceFax, FaxOnly, VoiceOnly
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Specifies if a phone number should be hidden or not. Returned only if the value is 'True'
         /// </summary>
-        public bool? hidden;
+        public bool? hidden { get; set; }
 
         /// <summary>
         /// Usage type of a phone number
         /// Enum: MobileNumber, ContactNumber, DirectNumber, ForwardedNumber
         /// </summary>
-        public string usageType;
+        public string usageType { get; set; }
     }
 }

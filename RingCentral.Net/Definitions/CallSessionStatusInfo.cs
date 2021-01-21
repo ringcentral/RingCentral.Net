@@ -4,22 +4,22 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string code;
+        public string code { get; set; }
 
         /// <summary>
         /// </summary>
-        public string reason;
+        public string reason { get; set; }
 
         /// <summary>
         /// </summary>
-        public string parkData;
+        public string parkData { get; set; }
 
         /// <summary>
         /// </summary>
-        public PeerInfo peerId;
+        public PeerInfo peerId { get; set; }
 
         /// <summary>
         /// </summary>
-        public MobilePickupData mobilePickupData;
+        public MobilePickupData mobilePickupData { get; set; }
     }
 }

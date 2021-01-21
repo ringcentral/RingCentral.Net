@@ -7,17 +7,17 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public AlertInfo alert;
+        public AlertInfo alert { get; set; }
 
         /// <summary>
         /// Number of incoming messages
         /// </summary>
-        public string badge;
+        public string badge { get; set; }
 
         /// <summary>
         /// Message sound
         /// </summary>
-        public string sound;
+        public string sound { get; set; }
 
         /// <summary>
         /// Content availability
@@ -27,6 +27,6 @@ namespace RingCentral
         /// <summary>
         /// Category of a message
         /// </summary>
-        public string category;
+        public string category { get; set; }
     }
 }

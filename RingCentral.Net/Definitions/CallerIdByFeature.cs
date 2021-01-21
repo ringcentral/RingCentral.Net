@@ -6,10 +6,10 @@ namespace RingCentral
         /// <summary>
         /// Enum: RingOut, RingMe, CallFlip, FaxNumber, AdditionalSoftphone, Alternate, CommonPhone, MobileApp, Delegated
         /// </summary>
-        public string feature;
+        public string feature { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallerIdByFeatureInfo callerId;
+        public CallerIdByFeatureInfo callerId { get; set; }
     }
 }

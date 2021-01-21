@@ -5,22 +5,22 @@ namespace RingCentral
         /// <summary>
         /// Link to the list of user messages
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// List of records with message information
         /// Required
         /// </summary>
-        public GetMessageInfoResponse[] records;
+        public GetMessageInfoResponse[] records { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public MessagingNavigationInfo navigation;
+        public MessagingNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// Required
         /// </summary>
-        public MessagingPagingInfo paging;
+        public MessagingPagingInfo paging { get; set; }
     }
 }

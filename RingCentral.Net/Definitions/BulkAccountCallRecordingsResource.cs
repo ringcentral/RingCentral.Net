@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallRecordingExtensionResource[] addedExtensions;
+        public CallRecordingExtensionResource[] addedExtensions { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallRecordingExtensionResource[] updatedExtensions;
+        public CallRecordingExtensionResource[] updatedExtensions { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallRecordingExtensionResource[] removedExtensions;
+        public CallRecordingExtensionResource[] removedExtensions { get; set; }
     }
 }

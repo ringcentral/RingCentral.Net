@@ -6,16 +6,16 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a message
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Type of a message
         /// </summary>
-        public string type;
+        public string type { get; set; }
 
         /// <summary>
         /// Link to a message resource
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
     }
 }

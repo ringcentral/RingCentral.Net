@@ -6,6 +6,6 @@ namespace RingCentral
         /// <summary>
         /// Required
         /// </summary>
-        public ExtensionBulkUpdateInfo[] records;
+        public ExtensionBulkUpdateInfo[] records { get; set; }
     }
 }

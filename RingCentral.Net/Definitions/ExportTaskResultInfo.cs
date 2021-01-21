@@ -5,16 +5,16 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of a dataset
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Link for downloading a dataset
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// Size of ta dataset in bytes
         /// </summary>
-        public long? size;
+        public long? size { get; set; }
     }
 }

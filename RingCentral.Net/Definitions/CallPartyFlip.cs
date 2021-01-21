@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Call flip id
         /// </summary>
-        public string callFlipId;
+        public string callFlipId { get; set; }
     }
 }

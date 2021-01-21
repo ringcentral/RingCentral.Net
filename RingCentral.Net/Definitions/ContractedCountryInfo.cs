@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Identifier of a contracted country
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Canonical URI of a contracted country
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
     }
 }

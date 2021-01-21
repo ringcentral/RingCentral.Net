@@ -4,22 +4,22 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string supportUri;
+        public string supportUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public string intlDialInNumbersUri;
+        public string intlDialInNumbersUri { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingExternalUserInfoResource externalUserInfo;
+        public MeetingExternalUserInfoResource externalUserInfo { get; set; }
 
         /// <summary>
         /// </summary>
-        public DialInNumberResource[] dialInNumbers;
+        public DialInNumberResource[] dialInNumbers { get; set; }
     }
 }

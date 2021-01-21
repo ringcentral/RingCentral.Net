@@ -6,6 +6,6 @@ namespace RingCentral
         /// Identifies a brand of a logged in user or a brand of a sign-up session
         /// Default: ~
         /// </summary>
-        public string brandId;
+        public string brandId { get; set; }
     }
 }

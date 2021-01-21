@@ -4,18 +4,18 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string phoneNumber;
+        public string phoneNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public string formattedNumber;
+        public string formattedNumber { get; set; }
 
         /// <summary>
         /// </summary>
-        public string location;
+        public string location { get; set; }
 
         /// <summary>
         /// </summary>
-        public CountryResource country;
+        public CountryResource country { get; set; }
     }
 }

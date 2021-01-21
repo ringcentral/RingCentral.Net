@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Internal Identifier of a formatting language
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

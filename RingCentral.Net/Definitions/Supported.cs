@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public bool? supported;
+        public bool? supported { get; set; }
     }
 }

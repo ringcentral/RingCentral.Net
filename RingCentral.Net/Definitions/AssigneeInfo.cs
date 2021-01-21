@@ -5,6 +5,6 @@ namespace RingCentral
         /// <summary>
         /// Internal identifier of an assignee
         /// </summary>
-        public string id;
+        public string id { get; set; }
     }
 }

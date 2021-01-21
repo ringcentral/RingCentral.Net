@@ -4,6 +4,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public AssistantResource[] records;
+        public AssistantResource[] records { get; set; }
     }
 }

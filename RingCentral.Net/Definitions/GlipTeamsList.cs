@@ -6,10 +6,10 @@ namespace RingCentral
         /// List of teams
         /// Required
         /// </summary>
-        public GlipTeamInfo[] records;
+        public GlipTeamInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipNavigationInfo navigation;
+        public GlipNavigationInfo navigation { get; set; }
     }
 }

@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public MeetingRecording[] records;
+        public MeetingRecording[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingRecordingsPagingInfo paging;
+        public MeetingRecordingsPagingInfo paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingRecordingsNavigationInfo navigation;
+        public MeetingRecordingsNavigationInfo navigation { get; set; }
     }
 }

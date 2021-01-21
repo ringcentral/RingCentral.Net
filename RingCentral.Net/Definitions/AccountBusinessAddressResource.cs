@@ -4,23 +4,23 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public string uri;
+        public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public ContactBusinessAddressInfo businessAddress;
+        public ContactBusinessAddressInfo businessAddress { get; set; }
 
         /// <summary>
         /// </summary>
-        public string company;
+        public string company { get; set; }
 
         /// <summary>
         /// </summary>
-        public string email;
+        public string email { get; set; }
 
         /// <summary>
         /// Custom site name
         /// </summary>
-        public string mainSiteName;
+        public string mainSiteName { get; set; }
     }
 }

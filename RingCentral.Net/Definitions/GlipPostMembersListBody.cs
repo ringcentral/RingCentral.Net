@@ -6,6 +6,6 @@ namespace RingCentral
         /// List of glip members
         /// Required
         /// </summary>
-        public CreateGlipMember[] members;
+        public CreateGlipMember[] members { get; set; }
     }
 }

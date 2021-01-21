@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public long? maxResults;
+        public long? maxResults { get; set; }
 
         /// <summary>
         /// </summary>
-        public bool? supported;
+        public bool? supported { get; set; }
     }
 }

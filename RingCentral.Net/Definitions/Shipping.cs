@@ -5,22 +5,22 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public DeviceEmergencyServiceAddressResource address;
+        public DeviceEmergencyServiceAddressResource address { get; set; }
 
         /// <summary>
         /// </summary>
-        public MethodResource method;
+        public MethodResource method { get; set; }
 
         /// <summary>
         /// </summary>
-        public string status;
+        public string status { get; set; }
 
         /// <summary>
         /// </summary>
-        public string carrier;
+        public string carrier { get; set; }
 
         /// <summary>
         /// </summary>
-        public string trackingNumber;
+        public string trackingNumber { get; set; }
     }
 }

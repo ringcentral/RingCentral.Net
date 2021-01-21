@@ -6,11 +6,11 @@ namespace RingCentral
         /// <summary>
         /// Site extension identifier
         /// </summary>
-        public string id;
+        public string id { get; set; }
 
         /// <summary>
         /// Site extension name
         /// </summary>
-        public string name;
+        public string name { get; set; }
     }
 }

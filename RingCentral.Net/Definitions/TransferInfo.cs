@@ -4,12 +4,12 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public TransferExtensionInfo extension;
+        public TransferExtensionInfo extension { get; set; }
 
         /// <summary>
         /// Event that initiates transferring to the specified extension
         /// Enum: HoldTimeExpiration, MaxCallers, NoAnswer
         /// </summary>
-        public string action;
+        public string action { get; set; }
     }
 }

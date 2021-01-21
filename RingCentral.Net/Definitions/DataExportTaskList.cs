@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public DataExportTask[] tasks;
+        public DataExportTask[] tasks { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipDataExportNavigationInfo navigation;
+        public GlipDataExportNavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public GlipDataExportPagingInfo paging;
+        public GlipDataExportPagingInfo paging { get; set; }
     }
 }
