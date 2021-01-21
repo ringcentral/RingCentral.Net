@@ -132,7 +132,7 @@ Please install package RingCentral.Net.Pubnub instead.");
         {
             try
             {
-                var r = await pne.rc.Delete($"/restapi/v1.0/subscription/{_subscriptionInfo.id}");
+                var r = await pne.rc.Delete($"/restapi/v1.0/subscription/{SubscriptionInfo.id}");
                 return r;
             }
             catch (RestException re)
@@ -146,7 +146,7 @@ Please install package RingCentral.Net.Pubnub instead.");
             }
             finally
             {
-                _pubnub.Destroy();
+                _pubnub?.Destroy();
                 _pubnub = null;
                 SubscriptionInfo = null;
             }
