@@ -130,19 +130,6 @@ Object.keys(doc.paths).forEach(p => {
         fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
       }
     }
-    // if ((operation.parameters || []).some(p => p.in === 'formData')) {
-    //   const operationId = operation.operationId
-    //   const className = pascalCase(operationId) + 'Request'
-    //   const fields = operation.parameters.filter(p => p.in === 'formData')
-    //     .map(p => {
-    //       p = normalizeField(p)
-    //       if (p.$ref) {
-    //         p.type = p.$ref.split('/').slice(-1)[0]
-    //       }
-    //       return generateField({}, p)
-    //     })
-    //   fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
-    // }
   })
 })
 

@@ -174,7 +174,6 @@ const generate = (prefix = '/') => {
       } else if (operation.detail.consumes && !operation.detail.consumes.some(c => c === 'application/json') && !operation.detail.consumes.some(c => c.startsWith('text/'))) {
         throw new Error(`Unsupported consume content type: ${operation.detail.consumes.join(', ')}`)
       } else {
-        // body = (operation.detail.parameters || []).filter(p => p.in === 'body')[0]
         const requestBody = operation.detail.requestBody
         if(requestBody) {
           const content = requestBody.content
@@ -192,7 +191,6 @@ const generate = (prefix = '/') => {
       if (formUrlEncoded || multipart) {
         bodyClass = `${pascalCase(operation.detail.operationId)}Request`
         bodyParam = `${operation.detail.operationId}Request`
-        // body = (operation.detail.parameters || []).filter(p => p.in === 'body' && p.schema && p.schema.$ref)[0]
         const content = operation.detail.requestBody.content
         body = content[Object.keys(content)[0]]
         if (body && body.schema && body.schema.$ref) {
