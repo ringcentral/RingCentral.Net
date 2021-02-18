@@ -22,13 +22,13 @@ const normalizeType = f => {
   if (f.$ref) {
     return f.$ref.split('/').slice(-1)[0]
   } else if (f.type === 'number') {
-    return 'decimal?'
+    return 'float64'
   } else if (f.type === 'integer') {
-    return 'long?'
+    return 'int'
   } else if (f.type === 'array') {
-    return `${normalizeType(f.items)}[]`
+    return `[]${normalizeType(f.items)}`
   } else if (f.type === 'boolean') {
-    return 'bool?'
+    return 'bool'
   } else if (f.type === 'file') {
     return 'Attachment'
   } else if (f.type === 'string') {
@@ -53,15 +53,16 @@ const normalizeField = f => {
 
 const generateField = (m, f) => {
   let p = ''
-  if (f.name.includes('-')) {
-    p += `[JsonProperty("${f.name}")]`
-    p += `\n    public ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())};`
-  } else if (f.name.includes(':') || f.name.includes('.')) {
-    p += `[JsonProperty("${f.name}")]`
-    p += `\n    public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
-  } else {
-    p = `public ${f.type} ${f.name} { get; set; }`
-  }
+  // if (f.name.includes('-')) {
+  //   p += `[JsonProperty("${f.name}")]`
+  //   p += `\n    public ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())};`
+  // } else if (f.name.includes(':') || f.name.includes('.')) {
+  //   p += `[JsonProperty("${f.name}")]`
+  //   p += `\n    public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
+  // } else {
+  //   p = `public ${f.type} ${f.name} { get; set; }`
+  // }
+  p += `${pascalCase(f.name)} ${f.type} \`json:"${f.name}"\``
 
   // p = `/// </summary>\n    ${p}`
   // if (f.enum || (f.items || {}).enum) {
@@ -152,5 +153,14 @@ Object.keys(doc.paths).forEach(p => {
     }
   })
 })
+
+finalCode += `
+
+// Attachment attachment
+type Attachment struct {
+    Filename string
+    Bytes []byte
+    ContentType string
+}`
 
 fs.writeFileSync(path.join(outputDir, `definitions.go`), finalCode)
