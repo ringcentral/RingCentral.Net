@@ -2,6 +2,7 @@
   "license": "MIT",
   "scripts": {
     "definitions": "rm -rf ../RingCentral.Net/Definitions/* && node -r @babel/register definitions.js",
+    "definitions-golang": "node -r @babel/register definitions-golang.js",
     "paths": "rm -rf ../RingCentral.Net/Paths/* && node -r @babel/register paths.js",
     "samples": "node -r @babel/register samples.js",
     "samples-java": "node -r @babel/register samples-java.js",
