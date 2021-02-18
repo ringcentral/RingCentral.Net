@@ -166,7 +166,7 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.cs'), `namespace RingCentral
         public byte[] bytes;
 
         /// <summary>
-        /// Content tyle of the file, such as "image/png"
+        /// Content type of the file, such as "image/png"
         /// </summary>
         public string contentType;
     }
