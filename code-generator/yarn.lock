@@ -2642,6 +2642,11 @@ to-fast-properties@^2.0.0:
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
 
+to-start-case@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/to-start-case/-/to-start-case-1.1.0.tgz#f402b7d4225af2d628acddcf4697f80fad8cfe97"
+  integrity sha1-9AK31CJa8tYorN3PRpf4D62M/pc=
+
 tsconfig-paths@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.9.0.tgz#098547a6c4448807e8fcb8eae081064ee9a3c90b"

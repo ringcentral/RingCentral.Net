@@ -2,6 +2,7 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
 import { pascalCase } from 'change-case'
+import toStartCase from 'to-start-case'
 
 const outputDir = '../../../golang/ringcentral'
 
@@ -54,44 +55,41 @@ const generateField = (m, f) => {
   let p = ''
   if (f.name.includes('-')) {
     p += `[JsonProperty("${f.name}")]`
-    p += `\n        public ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())};`
+    p += `\n    public ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())};`
   } else if (f.name.includes(':') || f.name.includes('.')) {
     p += `[JsonProperty("${f.name}")]`
-    p += `\n        public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
+    p += `\n    public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
   } else {
     p = `public ${f.type} ${f.name} { get; set; }`
   }
 
-  p = `/// </summary>\n        ${p}`
-  if (f.enum || (f.items || {}).enum) {
-    p = `/// Enum: ${(f.enum || (f.items || {}).enum).join(', ')}\n        ${p}`
-  }
-  if (f.default) {
-    p = `/// Default: ${f.default}\n        ${p}`
-  }
-  if (f.minimum) {
-    p = `/// Minimum: ${f.minimum}\n        ${p}`
-  }
-  if (f.maximum) {
-    p = `/// Maximum: ${f.maximum}\n        ${p}`
-  }
-  if (m.required && m.required.includes(f.name)) {
-    p = `/// Required\n        ${p}`
-  }
-  if (f.description) {
-    p = `${f.description.trim().split('\n').map(l => `/// ${l}`).join('\n')}\n        ${p}`
-  }
-  p = `/// <summary>\n        ${p}`
+  // p = `/// </summary>\n    ${p}`
+  // if (f.enum || (f.items || {}).enum) {
+  //   p = `/// Enum: ${(f.enum || (f.items || {}).enum).join(', ')}\n    ${p}`
+  // }
+  // if (f.default) {
+  //   p = `/// Default: ${f.default}\n    ${p}`
+  // }
+  // if (f.minimum) {
+  //   p = `/// Minimum: ${f.minimum}\n    ${p}`
+  // }
+  // if (f.maximum) {
+  //   p = `/// Maximum: ${f.maximum}\n    ${p}`
+  // }
+  // if (m.required && m.required.includes(f.name)) {
+  //   p = `/// Required\n    ${p}`
+  // }
+  // if (f.description) {
+  //   p = `${f.description.trim().split('\n').map(l => `/// ${l}`).join('\n')}\n    ${p}`
+  // }
+  // p = `/// <summary>\n    ${p}`
   return p
 }
 
 const generateCode = (m, fields) => {
-  let code = `namespace RingCentral
-{${m.description ? '\n    // ' + m.description : ''}
-    public class ${m.name}
-    {
-        ${fields.join('\n\n        ')}
-    }
+  let code = `// ${m.name} ${toStartCase(m.name)}
+type ${m.name} struct {
+    ${fields.join('\n    ')}
 }`
   if (code.includes('[JsonProperty(')) {
     code = 'using Newtonsoft.Json;\n\n' + code
