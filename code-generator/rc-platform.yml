@@ -104,7 +104,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PresenceInfoResource'
+              $ref: '#/components/schemas/PresenceInfoRequest'
         required: false
       responses:
         '200':
@@ -446,9 +446,12 @@ paths:
         Updates the existent subscription. The client application can
         extend/narrow the events for which it receives notifications within the
         frame of one subscription. If event filters are specified, calling this
-        method modifies them for the existing subscription. If the request body
-        is empty then the specified subscription will be just renewed without
-        any event filter change.
+        method modifies them for the existing subscription. The method also
+        allows to set the subscription expiration time. If other than `events`
+        and `expiresIn` parameters are passed in request they will be ignored.
+        If the request body is empty then the specified subscription will be
+        just renewed without any event filter change and with expiration time
+        default.
       operationId: updateSubscription
       parameters:
         - name: subscriptionId
@@ -457,13 +460,6 @@ paths:
           required: true
           schema:
             type: string
-        - name: aggregated
-          in: query
-          description: >-
-            If 'True' then aggregated presence status is returned in a
-            notification payload
-          schema:
-            type: boolean
       requestBody:
         description: JSON body
         content:
@@ -1802,9 +1798,13 @@ paths:
         - Posts
       summary: Create Post
       description: >-
-        Creates a post within the specified chat. Attachments are supported only
-        for Card type. All other atatchment types (File, Task, Event and Note)
-        should be first created via the corresponding method.
+        Creates a post in the chat specified in path. Any mention can be added
+        within the `text` attribute of the request body in .md format -
+        [![:Type](id)], where `type` is one of (Person, Team, File, Note, Task,
+        Event, Link, Card) and `id` is a unique identifier of the mentioned
+        object of the specified type. Attachments of the following types (File,
+        Card, Event, Note) can also be added to a post by passing type and ID of
+        attachment(s) in request body.
       operationId: createGlipPost
       parameters:
         - name: chatId
@@ -1836,6 +1836,7 @@ paths:
       x-api-group: glip/chats/posts
       x-metered-api: true
       x-metering-group: System
+      x-throttling-group: Medium
       x-app-permission: Glip
       x-user-permission: Glip
       x-feature: Glip
@@ -1843,7 +1844,6 @@ paths:
       x-rewrite-uri-from: /restapi/v1.0/glip/chats/(.*)/posts/?
       x-rewrite-uri-to: /glip/v1/chats/$1/posts
       x-codegen-request-body-name: body
-      x-throttling-group: Medium
   /restapi/v1.0/glip/events:
     get:
       tags:
@@ -3251,7 +3251,7 @@ paths:
       x-beta-api: true
       x-codegen-request-body-name: body
   /restapi/oauth/authorize:
-    get:
+    post:
       tags:
         - OAuth 2.0
       summary: Authorize
@@ -4155,7 +4155,10 @@ paths:
             default: true
         - name: type
           in: query
-          description: Type of an extension
+          description: >-
+            Type of an extension. Please note that legacy 'Department' extension
+            type corresponds to 'Call Queue' extensions in modern RingCentral
+            product terminology
           schema:
             type: string
             enum:
@@ -5015,6 +5018,13 @@ paths:
           schema:
             type: string
             default: '~'
+        - name: type
+          in: query
+          description: Filters custom call handling rules of the extension
+          schema:
+            type: string
+            enum:
+              - Custom
         - name: view
           in: query
           schema:
@@ -5514,7 +5524,7 @@ paths:
           in: query
           description: >-
             Usage type of a greeting, specifying if the greeting is applied for
-            user extension or department extension
+            user extension or department (call queue) extension
           schema:
             type: string
             enum:
@@ -6613,7 +6623,6 @@ paths:
             value is 1 day before the current datetime
           schema:
             type: string
-            format: date-time
           example: '2020-11-09T16:07:52.597Z'
         - name: dateTo
           in: query
@@ -6624,7 +6633,6 @@ paths:
             datetime
           schema:
             type: string
-            format: date-time
           example: '2020-11-25T16:07:52.597Z'
         - name: phoneNumber
           in: query
@@ -6639,7 +6647,7 @@ paths:
             type: array
             items:
               type: string
-          example: phoneNumber=15551234455&phoneNumber=15551235577...
+          example: phoneNumber=15551234455&phoneNumber=15551235577
         - name: pageToken
           in: query
           required: false
@@ -8109,6 +8117,18 @@ paths:
               - Paging
               - BLA
               - HELD
+        - name: page
+          in: query
+          description: Number of a page to be returned
+          schema:
+            type: string
+            default: '1'
+        - name: perPage
+          in: query
+          description: Number of records per page to be returned
+          schema:
+            type: string
+            default: '100'
       responses:
         default:
           description: Success
@@ -8429,6 +8449,55 @@ paths:
       x-metering-group: System
       x-app-permission: Meetings
       x-user-permission: Meetings
+      x-docs-level: Public
+  /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image:
+    post:
+      tags:
+        - Meeting Configuration
+      summary: Upload User Meeting Profile Image
+      description: Uploads profile picture for user meetings.
+      operationId: createUserMeetingProfileImage
+      parameters:
+        - name: accountId
+          in: path
+          description: >-
+            Internal identifier of a RingCentral account or tilde (~) to
+            indicate the account logged-in within the current session
+          required: true
+          schema:
+            type: string
+            default: '~'
+        - name: extensionId
+          in: path
+          description: >-
+            Internal identifier of an extension or tilde (~) to indicate the
+            extension assigned to the account logged-in within the current
+            session
+          required: true
+          schema:
+            type: string
+            default: '~'
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - profilePic
+              properties:
+                profilePic:
+                  type: string
+                  description: >-
+                    Profile image file size cannot exceed 2Mb. Supported formats
+                    are: JPG/JPEG, GIF and PNG
+                  format: file
+      responses:
+        '204':
+          description: No Content
+      x-api-group: extension/user
+      x-throttling-group: Light
+      x-metered-api: true
+      x-metering-group: System
+      x-request-max-body-size: 2m
       x-docs-level: Public
   /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}:
     get:
@@ -9422,7 +9491,7 @@ paths:
         query/path parameters is 50. Alternative syntax is supported - user
         messages can be updated by passing multiple IDs in request body as an
         array of string, max number of IDs passed in request body is 1000. In
-        this case asterisk is used in the path instead of IDs
+        this case asterisk is used in the path instead of IDs.
       operationId: updateMessage
       parameters:
         - name: accountId
@@ -9449,7 +9518,9 @@ paths:
           description: Internal identifier of a message
           required: true
           schema:
-            type: integer
+            type: array
+            items:
+              type: integer
         - name: dateFrom
           in: query
           schema:
@@ -9468,6 +9539,9 @@ paths:
       requestBody:
         description: JSON body
         content:
+          multipart/mixed:
+            schema:
+              $ref: '#/components/schemas/UpdateMessageRequest'
           application/json:
             schema:
               $ref: '#/components/schemas/UpdateMessageRequest'
@@ -9530,7 +9604,9 @@ paths:
           description: Internal identifier of a message
           required: true
           schema:
-            type: integer
+            type: array
+            items:
+              type: integer
         - name: purge
           in: query
           description: >-
@@ -10072,6 +10148,7 @@ paths:
                 - ForwardedNumber
                 - ForwardedCompanyNumber
                 - BusinessMobileNumber
+                - ExternalMobileNumber
         - name: page
           in: query
           description: >-
@@ -10378,7 +10455,10 @@ paths:
             default: '~'
         - name: extensionType
           in: query
-          description: Type of extension to be returned. Multiple values are supported
+          description: >-
+            Type of extension to be returned. Multiple values are supported.
+            Please note that legacy 'Department' extension type corresponds to
+            'Call Queue' extensions in modern RingCentral product terminology
           schema:
             type: string
             enum:
@@ -12838,6 +12918,7 @@ paths:
                 - ConferencingNumber
                 - MeetingsNumber
                 - BusinessMobileNumber
+                - ExternalMobileNumber
         - name: status
           in: query
           description: Status of a phone number. Multiple values are supported
@@ -12970,7 +13051,10 @@ paths:
                 - Unassigned
         - name: type
           in: query
-          description: Extension type. Multiple values are supported
+          description: >-
+            Extension type. Multiple values are supported. Please note that
+            legacy 'Department' extension type corresponds to 'Call Queue'
+            extensions in modern RingCentral product terminology
           allowEmptyValue: true
           style: form
           explode: true
@@ -15457,7 +15541,9 @@ paths:
       tags:
         - Call Control
       summary: Transfer Call Party
-      description: Transfers a party by placing a new call to the specified target
+      description: >-
+        Transfers an answered call to the specified call party. Applicable for a
+        call session in "Answered" or "Hold" state.
       operationId: transferCallParty
       parameters:
         - name: accountId
@@ -15482,7 +15568,9 @@ paths:
           schema:
             type: string
       requestBody:
-        description: Defines a target for a party transfer. Only a single target is allowed
+        description: >-
+          Specifies a call party to which the call will be transfered. Only a
+          single call party is allowed.
         content:
           application/json:
             schema:
@@ -15529,11 +15617,11 @@ paths:
       description: >-
         Allows the user to connect multiple call session participants over a
         conference call bridge. The current active call session ID and party ID
-        of the user associated with that session should be specified in path;
-        the bridged call session ID and party ID of the user associated with
-        that session should be specified in request body. Thus the user connects
-        participants of two sessions into one conference call using his/her own
-        party IDs from both sessions.
+        of the user within this session should be specified in path; the bridged
+        call session ID and party ID of the user within that session should be
+        specified in request body. Thus the user connects participants of two
+        sessions into one conference call using his/her own party IDs from both
+        sessions.
       operationId: bridgeCallParty
       parameters:
         - name: accountId
@@ -15748,8 +15836,8 @@ paths:
         - Call Control
       summary: Forward Call Party
       description: >-
-        Distributes a non-answered call to the defined target. Applicable for
-        "Setup" or "Proceeding" states
+        Forwards a non-answered incoming call to the specified call party.
+        Applicable for a call session in "Setup" or "Proceeding" state.
       externalDocs:
         description: Find more info about body and response format
         url: >-
@@ -15779,8 +15867,8 @@ paths:
             type: string
       requestBody:
         description: >-
-          Distributes a non-answered call to the defined target. Only a single
-          target is allowed
+          Specifies a call party to which the call will be forwarded. Only a
+          single call party is allowed.
         content:
           application/json:
             schema:
@@ -16869,7 +16957,7 @@ components:
             The total number of elements in a dataset. May be omitted for some
             resource due to performance reasons
       description: Information on paging
-    PresenceInfoResource:
+    PresenceInfoRequest:
       type: object
       properties:
         userStatus:
@@ -16899,10 +16987,6 @@ components:
         pickUpCallsOnHold:
           type: boolean
           default: false
-        activeCalls:
-          type: array
-          items:
-            $ref: '#/components/schemas/ActiveCallInfo'
     PresenceInfoResponse:
       type: object
       properties:
@@ -17906,8 +17990,6 @@ components:
           description: Collection of URIs to API resources
           items:
             type: string
-        deliveryMode:
-          $ref: '#/components/schemas/NotificationDeliveryModeRequest'
         expiresIn:
           type: integer
           description: >-
@@ -18597,10 +18679,10 @@ components:
           type: string
           description: Type of an attachment
           enum:
-            - Event
             - File
             - Note
-            - Task
+            - Event
+            - Card
     GlipPostInfo:
       type: object
       properties:
@@ -18686,7 +18768,7 @@ components:
           description: Internal identifier of a user
         type:
           type: string
-          description: Type of mentions
+          description: Type of mention
           enum:
             - Person
             - Team
@@ -19239,16 +19321,19 @@ components:
           type: string
           description: Post text.
     GlipPostPostBody:
-      required:
-        - text
       type: object
+      description: >-
+        Post data. At least one attribute should be provided (text or
+        attachments)
       properties:
         text:
           type: string
-          description: Post text.
+          description: >-
+            Text of a post. Maximum length is 10000 symbols. Mentions can be
+            added in .md format [![:Type](id)]
         attachments:
           type: array
-          description: Identifier(s) of attachments.
+          description: Identifier(s) of attachments. Maximum number of attachments is 25
           items:
             $ref: '#/components/schemas/GlipAttachmentInfoRequest'
     GlipPostsList:
@@ -19826,51 +19911,51 @@ components:
         homePhone:
           type: string
           description: Home phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         homePhone2:
           type: string
           description: 2nd home phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         businessPhone:
           type: string
           description: Business phone of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         businessPhone2:
           type: string
           description: 2nd business phone of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         mobilePhone:
           type: string
           description: Mobile phone of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         businessFax:
           type: string
           description: Business fax number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         companyPhone:
           type: string
           description: Company number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         assistantPhone:
           type: string
           description: Phone number of the contact assistant in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         carPhone:
           type: string
           description: Car phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         otherPhone:
           type: string
           description: Other phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         otherFax:
           type: string
           description: Other fax number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         callbackPhone:
           type: string
           description: Callback phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         homeAddress:
           $ref: '#/components/schemas/ContactAddressInfo'
         businessAddress:
@@ -19953,51 +20038,51 @@ components:
         homePhone:
           type: string
           description: Home phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         homePhone2:
           type: string
           description: 2nd home phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         businessPhone:
           type: string
           description: Business phone of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         businessPhone2:
           type: string
           description: 2nd business phone of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         mobilePhone:
           type: string
           description: Mobile phone of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         businessFax:
           type: string
           description: Business fax number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         companyPhone:
           type: string
           description: Company number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         assistantPhone:
           type: string
           description: Phone number of the contact assistant in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         carPhone:
           type: string
           description: Car phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         otherPhone:
           type: string
           description: Other phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         otherFax:
           type: string
           description: Other fax number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         callbackPhone:
           type: string
           description: Callback phone number of the contact in e.164 (with "+") format
-          example: 15551234567
+          example: '+15551234567'
         businessAddress:
           $ref: '#/components/schemas/ContactAddressInfo'
         homeAddress:
@@ -20495,7 +20580,10 @@ components:
           default: true
         extensionType:
           type: string
-          description: Type of extension to filter the contacts
+          description: >-
+            Type of extension to filter the contacts. Please note that legacy
+            'Department' extension type corresponds to 'Call Queue' extensions
+            in modern RingCentral product terminology
           enum:
             - User
             - Department
@@ -20511,6 +20599,7 @@ components:
             - Bot
             - ProxyAdmin
             - DelegatedLinesGroup
+            - GroupCallPickup
         orderBy:
           type: array
           description: Sorting settings
@@ -21352,7 +21441,7 @@ components:
           type: string
           description: >-
             Usage type of a greeting, specifying if the greeting is applied for
-            user extension or department extension.
+            user extension or department (call queue) extension.
           enum:
             - UserExtensionAnsweringRule
             - ExtensionAnsweringRule
@@ -21436,7 +21525,7 @@ components:
           description: Extension name
         extensionNumber:
           type: string
-          description: Number of department extension
+          description: Number of extension
         partnerId:
           type: string
           description: >-
@@ -21471,7 +21560,7 @@ components:
           description: Canonical URI of an extension
         extensionNumber:
           type: string
-          description: Number of department extension
+          description: Number of extension
         name:
           type: string
           description: Name of agent extension
@@ -21570,8 +21659,6 @@ components:
         label:
           type: string
           description: Forwarding/Call flip number title
-          enum:
-            - Business Mobile Phone
         features:
           type: array
           description: >-
@@ -21600,6 +21687,7 @@ components:
             - Outage
             - Other
             - BusinessMobilePhone
+            - ExternalCarrier
     CreateAnsweringRuleForwardingNumberInfo:
       type: object
       properties:
@@ -21615,8 +21703,6 @@ components:
         label:
           type: string
           description: Forwarding/Call flip number title
-          enum:
-            - Business Mobile Phone
         type:
           type: string
           description: Type of a forwarding number
@@ -21628,6 +21714,7 @@ components:
             - Outage
             - Other
             - BusinessMobilePhone
+            - ExternalCarrier
     ForwardingNumberInfoRulesCreateRuleRequest:
       type: object
       properties:
@@ -21645,6 +21732,7 @@ components:
             - Outage
             - Other
             - BusinessMobilePhone
+            - ExternalCarrier
         uri:
           type: string
           description: Canonical URI of a forwarding/call flip phone number
@@ -21654,8 +21742,6 @@ components:
         label:
           type: string
           description: Forwarding/Call flip number title
-          enum:
-            - Business Mobile Phone
     GetExtensionForwardingNumberListResponse:
       type: object
       properties:
@@ -22303,8 +22389,6 @@ components:
         label:
           type: string
           description: Forwarding/Call flip number title
-          enum:
-            - Business Mobile Phone
         flipNumber:
           type: string
           description: >-
@@ -22321,6 +22405,7 @@ components:
             - Outage
             - Other
             - BusinessMobilePhone
+            - ExternalCarrier
     UserBusinessHoursScheduleInfo:
       type: object
       properties:
@@ -22474,12 +22559,23 @@ components:
         extensionCount:
           type: integer
           description: Total amount of extension that are used in call recordings
+        retentionPeriod:
+          type: integer
+          description: Retention period of a call recording, the default value is 90 days
+        maxNumberLimit:
+          type: integer
+          description: >-
+            Max number of automatic call recordings per account, the default
+            value is 100 000
     OnDemandResource:
       type: object
       properties:
         enabled:
           type: boolean
           description: Flag for controlling OnDemand Call Recording settings
+        retentionPeriod:
+          type: integer
+          description: Retention period of a call recording, the default value is 90 days
     CustomUserGreetingInfo:
       type: object
       properties:
@@ -22977,6 +23073,7 @@ components:
           example: Processing
           enum:
             - Processing
+            - Sent
             - Completed
         creationTime:
           type: string
@@ -23065,18 +23162,18 @@ components:
           example: 0.007
         batchId:
           type: string
-          description: The batchId in which the message was submitted
+          description: The batch in which the message was submitted
           example: batch12345
         direction:
           type: string
           enum:
             - Inbound
             - Outbound
-          description: Indicates whether the message was outbound or inbound
+          description: Indicates whether the message is outbound or inbound
           example: out
         errorCode:
           type: string
-          description: The RC error code of the message sending failure reason
+          description: RC error code of the message sending failure reason
           example: SMS-RC-503
       description: Detailed information on a message
     MessageListResponse:
@@ -25398,7 +25495,7 @@ components:
           description: Canonical URI of an extension
         extensionNumber:
           type: string
-          description: Number of department extension
+          description: Number of extension
         partnerId:
           type: string
           description: >-
@@ -25426,7 +25523,7 @@ components:
           description: Canonical URI of an extension
         extensionNumber:
           type: string
-          description: Number of department extension
+          description: Number of extension
         partnerId:
           type: string
           description: >-
@@ -25592,6 +25689,10 @@ components:
           type: string
         type:
           type: string
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - Unknown
             - User
@@ -25780,6 +25881,8 @@ components:
           type: string
         description:
           type: string
+        bias:
+          type: string
       description: >-
         Timezone setting. For extension bulk assignment is configured
         automatically based on contact info setting
@@ -25954,7 +26057,9 @@ components:
           type: string
         contentDownloadUri:
           type: string
-          description: Link for recording file download
+          description: >-
+            Link for downloading the recorded file (mp4, mp3 audio and
+            text/plain chat file)
         contentType:
           type: string
           enum:
@@ -26034,6 +26139,8 @@ components:
           $ref: '#/components/schemas/ScheduleUserMeetingInfo'
         recording:
           $ref: '#/components/schemas/UserMeetingRecordingSetting'
+        telephony:
+          $ref: '#/components/schemas/TelephonyLockedSettings'
     PublicMeetingInvitationResponse:
       type: object
       properties:
@@ -26442,9 +26549,14 @@ components:
           $ref: '#/components/schemas/UserMeetingRecordingSetting'
         scheduleMeeting:
           $ref: '#/components/schemas/ScheduleUserMeetingInfo'
+        telephony:
+          $ref: '#/components/schemas/TelephonyUserMeetingSettings'
     ScheduleUserMeetingInfo:
       type: object
       properties:
+        enforceLogin:
+          type: boolean
+          description: If true, then only signed-in users can join this meeting
         startHostVideo:
           type: boolean
           description: Starting meetings with host video on/off (true/false)
@@ -26459,6 +26571,7 @@ components:
             enum:
               - Phone
               - ComputerAudio
+              - ThirdParty
         allowJoinBeforeHost:
           type: boolean
           description: Allows participants to join the meeting before the host arrives
@@ -26514,7 +26627,7 @@ components:
             participants joining by phone
       description: >-
         Scheduling meeting settings locked on account level || Settings defining
-        how to schedule user meetings
+        how to schedule user meetingsxs
     UserMeetingRecordingSetting:
       type: object
       properties:
@@ -26562,6 +26675,23 @@ components:
             A specified number of days for automatical deletion of cloud
             recordings, the value range is 1-60
       description: Meeting recording settings locked on account level
+    TelephonyUserMeetingSettings:
+      type: object
+      properties:
+        thirdPartyAudio:
+          type: boolean
+          description: ThirdParty audio option
+        audioConferenceInfo:
+          type: boolean
+          description: >-
+            Users can join the meeting using the existing 3rd party audio
+            configuration
+    TelephonyLockedSettings:
+      type: object
+      properties:
+        thirdPartyAudio:
+          type: boolean
+          description: ThirdParty audio option
     GetMessageInfoResponse:
       type: object
       properties:
@@ -26571,6 +26701,9 @@ components:
         uri:
           type: string
           description: Canonical URI of a message
+        extensionId:
+          type: string
+          description: Internal identifier of an extension
         attachments:
           type: array
           description: The list of message attachments
@@ -28663,6 +28796,7 @@ components:
             - TollFree
             - Local
             - BusinessMobileNumberProvider
+            - ExternalNumberProvider
         phoneNumber:
           type: string
           description: Phone number
@@ -28696,6 +28830,7 @@ components:
             - ConferencingNumber
             - NumberPool
             - BusinessMobileNumber
+            - ExternalMobileNumber
         features:
           type: array
           description: List of features of a phone number
@@ -28737,6 +28872,7 @@ components:
             - TollFree
             - Local
             - BusinessMobileNumberProvider
+            - ExternalNumberProvider
         phoneNumber:
           type: string
           description: Phone number
@@ -28772,6 +28908,7 @@ components:
             - MeetingsNumber
             - NumberPool
             - BusinessMobileNumber
+            - ExternalMobileNumber
         temporaryNumber:
           $ref: '#/components/schemas/TemporaryNumberInfo'
         contactCenterProvider:
@@ -28839,7 +28976,7 @@ components:
           description: Canonical URI of an extension
         extensionNumber:
           type: string
-          description: Number of department extension
+          description: Number of extension
         partnerId:
           type: string
           description: >-
@@ -28854,7 +28991,10 @@ components:
             extension
         type:
           type: string
-          description: Extension type
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - User
             - FaxUser
@@ -28897,7 +29037,7 @@ components:
             $ref: '#/components/schemas/CustomFieldInfo'
         extensionNumber:
           type: string
-          description: Number of department extension
+          description: Number of extension
         name:
           type: string
           description: >-
@@ -28961,7 +29101,10 @@ components:
           $ref: '#/components/schemas/ExtensionStatusInfo'
         type:
           type: string
-          description: Extension type
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - User
             - VirtualUser
@@ -29044,7 +29187,7 @@ components:
           type: array
           description: List of extensions with extension information
           items:
-            $ref: '#/components/schemas/GetExtensionInfoResponse'
+            $ref: '#/components/schemas/GetExtensionListInfoResponse'
         navigation:
           $ref: '#/components/schemas/ProvisioningNavigationInfo'
         paging:
@@ -29072,12 +29215,14 @@ components:
           description: >-
             Information on department extension(s), to which the requested
             extension belongs. Returned only for user extensions, members of
-            department, requested by single extensionId
+            department, requested by single extensionId. Please note that legacy
+            'Department' extension type corresponds to 'Call Queue' extensions
+            in modern RingCentral product terminology
           items:
             $ref: '#/components/schemas/DepartmentInfo'
         extensionNumber:
           type: string
-          description: Number of department extension
+          description: Number of extension
         extensionNumbers:
           type: array
           items:
@@ -29146,7 +29291,10 @@ components:
           $ref: '#/components/schemas/ExtensionStatusInfo'
         type:
           type: string
-          description: Extension type
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - User
             - FaxUser
@@ -29166,6 +29314,78 @@ components:
             - Site
             - ProxyAdmin
             - DelegatedLinesGroup
+            - GroupCallPickup
+        callQueueInfo:
+          $ref: '#/components/schemas/CallQueueExtensionInfo'
+        hidden:
+          type: boolean
+          description: >-
+            Hides extension from showing in company directory. Supported for
+            extensions of User type only
+        site:
+          $ref: '#/components/schemas/AutomaticLocationUpdatesSiteInfo'
+    GetExtensionListInfoResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Internal identifier of an extension
+          format: int64
+        uri:
+          type: string
+          description: Canonical URI of an extension
+        contact:
+          $ref: '#/components/schemas/ContactInfo'
+        extensionNumber:
+          type: string
+          description: Number of an extension
+        name:
+          type: string
+          description: >-
+            Extension name. For user extension types the value is a combination
+            of the specified first name and last name
+        permissions:
+          $ref: '#/components/schemas/ExtensionPermissions'
+        profileImage:
+          $ref: '#/components/schemas/ProfileImageInfo'
+        status:
+          type: string
+          description: >-
+            Extension current state. If 'Unassigned' is specified, then
+            extensions without ‘extensionNumber’ are returned. If not specified,
+            then all extensions are returned
+          enum:
+            - Enabled
+            - Disabled
+            - Frozen
+            - NotActivated
+            - Unassigned
+        type:
+          type: string
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
+          enum:
+            - User
+            - FaxUser
+            - VirtualUser
+            - DigitalUser
+            - Department
+            - Announcement
+            - Voicemail
+            - SharedLinesGroup
+            - PagingOnly
+            - IvrMenu
+            - ApplicationExtension
+            - ParkLocation
+            - Bot
+            - Room
+            - Limited
+            - Site
+            - ProxyAdmin
+            - DelegatedLinesGroup
+            - GroupCallPickup
         callQueueInfo:
           $ref: '#/components/schemas/CallQueueExtensionInfo'
         hidden:
@@ -29253,6 +29473,9 @@ components:
         (Auto-Receptionist) settings
     DepartmentInfo:
       type: object
+      description: >-
+        Please note that legacy 'Department' extension type corresponds to 'Call
+        Queue' extensions in modern RingCentral product terminology
       properties:
         id:
           type: string
@@ -29570,7 +29793,10 @@ components:
             calls that are shorter will not be included into the calculation of
             service level.; zero value means that abandoned calls of any
             duration will be included into calculation
-      description: For Department extension type only. Call queue settings
+      description: >-
+        For Call Queue extension type only. Please note that legacy 'Department'
+        extension type corresponds to 'Call Queue' extensions in modern
+        RingCentral product terminology
     ExtensionCreationRequest:
       type: object
       properties:
@@ -29626,7 +29852,10 @@ components:
           $ref: '#/components/schemas/ExtensionStatusInfo'
         type:
           type: string
-          description: Extension type
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - User
             - VirtualUser
@@ -29763,7 +29992,7 @@ components:
         callQueueInfo:
           $ref: '#/components/schemas/CallQueueInfoRequest'
         transition:
-          type: array
+          type: object
           items:
             $ref: '#/components/schemas/UserTransitionInfo'
         customFields:
@@ -29779,7 +30008,10 @@ components:
           $ref: '#/components/schemas/AutomaticLocationUpdatesSiteInfo'
         type:
           type: string
-          description: Extension type
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - User
             - Fax User
@@ -29794,6 +30026,7 @@ components:
             - ApplicationExtension
             - ParkLocation
             - DelegatedLinesGroup
+            - GroupCallPickup
         references:
           type: array
           description: List of non-RC internal identifiers assigned to an extension
@@ -29877,7 +30110,10 @@ components:
           type: boolean
         abandonedThresholdSeconds:
           type: integer
-      description: For Department extension type only. Call queue settings
+      description: >-
+        For Call Queue extension type only. Please note that legacy 'Department'
+        extension type corresponds to 'Call Queue' extensions in modern
+        RingCentral product terminology
     ExtensionRegionalSettingRequest:
       type: object
       properties:
@@ -30211,7 +30447,10 @@ components:
           description: Name of extension
         type:
           type: string
-          description: Extension type
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - User
             - Fax User
@@ -30611,8 +30850,9 @@ components:
           type: string
           description: Duration period
           enum:
-            - Month
             - Day
+            - Month
+            - Year
         duration:
           type: integer
           description: Number of duration units
@@ -31170,7 +31410,7 @@ components:
           description: Number of an operator extension
       description: >-
         Operator's extension information. This extension will receive all calls
-        and messages intended for the operator
+        and messages intended for the operator.
     AccountPhoneNumbers:
       type: object
       properties:
@@ -31191,9 +31431,20 @@ components:
       properties:
         uri:
           type: string
+          format: uri
+          description: Link to a role
         id:
           type: string
           description: Internal identifier of a role
+        autoAssigned:
+          type: boolean
+          default: false
+        displayName:
+          type: string
+        siteCompatible:
+          type: boolean
+        siteRestricted:
+          type: boolean
     PagingOnlyGroupUsers:
       type: object
       properties:
@@ -31287,6 +31538,12 @@ components:
         message:
           type: string
           description: Error message
+        parameterName:
+          type: string
+          description: Name of invalid parameter
+        parameterValue:
+          type: string
+          description: Value of invalid parameter
     EmergencyLocationList:
       type: object
       properties:
@@ -32813,7 +33070,7 @@ components:
         callQueueInfo:
           $ref: '#/components/schemas/CallQueueInfoRequest'
         transition:
-          type: array
+          type: object
           items:
             $ref: '#/components/schemas/UserTransitionInfo'
         customFields:
@@ -32829,7 +33086,10 @@ components:
           $ref: '#/components/schemas/AutomaticLocationUpdatesSiteInfo'
         type:
           type: string
-          description: Extension type
+          description: >-
+            Extension type. Please note that legacy 'Department' extension type
+            corresponds to 'Call Queue' extensions in modern RingCentral product
+            terminology
           enum:
             - User
             - Fax User
@@ -34080,6 +34340,10 @@ components:
           example: '400018633008'
     ForwardTarget:
       type: object
+      description: >-
+        Identifier of a call party the call will be forwarded to. Only **one
+        of** these parameters: `phoneNumber`, `voicemail` or `extensionNumber`
+        must be specified, otherwise an error is returned.
       properties:
         phoneNumber:
           type: string
@@ -34087,8 +34351,15 @@ components:
         voicemail:
           type: string
           description: Voicemail owner extension identifier
+        extensionNumber:
+          type: string
+          description: Number of an extension
     TransferTarget:
       type: object
+      description: >-
+        Identifier of a call party the call will be transfered to. Only **one
+        of** these parameters: `phoneNumber`, `voicemail`, `extensionNumber` or
+        `parkOrbit` must be specified, otherwise an error is returned.
       properties:
         phoneNumber:
           type: string
@@ -34099,6 +34370,9 @@ components:
         parkOrbit:
           type: string
           description: Park orbit identifier
+        extensionNumber:
+          type: string
+          description: Number of extension
     CallPartyReply:
       type: object
       properties:
@@ -34432,7 +34706,7 @@ components:
         ccMailboxes:
           type: array
           description: >-
-            The list of extension IDs, configured to pick a call from
+            List of extension IDs, configured to pick up a call from
             Desktop/Mobile applications
           items:
             type: string
