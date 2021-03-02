@@ -29993,8 +29993,7 @@ components:
           $ref: '#/components/schemas/CallQueueInfoRequest'
         transition:
           type: object
-          items:
-            $ref: '#/components/schemas/UserTransitionInfo'
+          $ref: '#/components/schemas/UserTransitionInfo'
         customFields:
           type: array
           items:
@@ -33071,8 +33070,7 @@ components:
           $ref: '#/components/schemas/CallQueueInfoRequest'
         transition:
           type: object
-          items:
-            $ref: '#/components/schemas/UserTransitionInfo'
+          $ref: '#/components/schemas/UserTransitionInfo'
         customFields:
           type: array
           items:
