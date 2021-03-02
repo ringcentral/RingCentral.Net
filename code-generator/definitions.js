@@ -34,6 +34,7 @@ const normalizeType = f => {
     }
     return 'string'
   } else {
+    console.log(f)
     throw new Error(`Unknown type ${f.type}`)
   }
 }
