@@ -49,7 +49,7 @@ Name|Value\n-|-\n${comments.map(c => `${c[0].substring(4)}|\`${c[1] === 'undefin
     const match = summary.match(/\/\/\/ <\/summary>[\s\S]+?(\S+?)\(([\s\S]+?)\)/)
     const method = match[1]
     const parameters = match[2].trim().split(/,\s+/).map(p => p.split(' ')[0].trim())
-      .filter(p => p !== 'CancellationToken?').map(p => p.startsWith('RingCentral.') ? p.substring(12) : p)
+      .filter(p => p !== 'CancellationToken?' && p !== 'RestRequestConfig').map(p => p.startsWith('RingCentral.') ? p.substring(12) : p)
     code += `
 \`\`\`cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
@@ -59,7 +59,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 }
 \`\`\`
 
-${parameters.filter(p => p !== 'RestRequestConfig').map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
+${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./RingCentral.Net/Definitions/${p}.cs)`).join('\n')}`
     const httpMethod = comments.shift()[1]
     const endpoint = comments.shift()[1]
     // because `.../message-store` and `.../message-store/{messageId}` are in the same file

@@ -15,7 +15,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().List(restRequestConfig);
+    var result = await rc.Restapi().List();
 }
 ```
 
@@ -39,7 +39,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest, restRequestConfig);
+    var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest);
 }
 ```
 
@@ -63,7 +63,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest, restRequestConfig);
+    var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest);
 }
 ```
 
@@ -87,7 +87,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Get();
 }
 ```
 
@@ -112,7 +112,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Get();
 }
 ```
 
@@ -138,7 +138,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch().Post(createSmsMessageBatchRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch().Post(createSmsMessageBatchRequest);
 }
 ```
 
@@ -164,7 +164,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch(batchId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batch(batchId).Get();
 }
 ```
 
@@ -190,7 +190,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PsmsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PsmsParameters);
 }
 ```
 
@@ -216,7 +216,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get();
 }
 ```
 
@@ -242,7 +242,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().OptOuts().Get(readA2PsmsOptOutsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().OptOuts().Get(readA2PsmsOptOutsParameters);
 }
 ```
 
@@ -268,7 +268,7 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters);
 }
 ```
 
@@ -294,7 +294,7 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Post(addressBookBulkUploadRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Post(addressBookBulkUploadRequest);
 }
 ```
 
@@ -320,7 +320,7 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Tasks(taskId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Tasks(taskId).Get();
 }
 ```
 
@@ -346,7 +346,7 @@ User Permission|`ReadCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
 }
 ```
 
@@ -372,7 +372,7 @@ User Permission|`EditCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
 }
 ```
 
@@ -398,7 +398,7 @@ User Permission|`ReadCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
 }
 ```
 
@@ -424,7 +424,7 @@ User Permission|`EditCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
 }
 ```
 
@@ -450,7 +450,7 @@ User Permission|`EditCompanyAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
 }
 ```
 
@@ -476,7 +476,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
 }
 ```
 
@@ -502,7 +502,7 @@ User Permission|`EditCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
 }
 ```
 
@@ -528,7 +528,7 @@ User Permission|`ReadUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
 }
 ```
 
@@ -554,7 +554,7 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
 }
 ```
 
@@ -580,7 +580,7 @@ User Permission|`FullCompanyCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters);
 }
 ```
 
@@ -606,7 +606,7 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
 }
 ```
 
@@ -632,7 +632,7 @@ User Permission|`FullCompanyCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters);
 }
 ```
 
@@ -658,7 +658,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters);
 }
 ```
 
@@ -684,7 +684,7 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
 }
 ```
 
@@ -710,7 +710,7 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest);
 }
 ```
 
@@ -736,7 +736,7 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete();
 }
 ```
 
@@ -762,7 +762,7 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign);
 }
 ```
 
@@ -788,7 +788,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
 }
 ```
 
@@ -814,7 +814,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
 }
 ```
 
@@ -840,7 +840,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
 }
 ```
 
@@ -866,7 +866,7 @@ User Permission|`EditUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails);
 }
 ```
 
@@ -892,7 +892,7 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource);
 }
 ```
 
@@ -918,7 +918,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
 }
 ```
 
@@ -944,7 +944,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
 }
 ```
 
@@ -970,7 +970,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
 }
 ```
 
@@ -996,7 +996,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
 }
 ```
 
@@ -1022,7 +1022,7 @@ User Permission|`EditCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
 }
 ```
 
@@ -1048,7 +1048,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource);
 }
 ```
 
@@ -1074,7 +1074,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters);
 }
 ```
 
@@ -1100,7 +1100,7 @@ User Permission|`EditCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
 }
 ```
 
@@ -1126,7 +1126,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();
 }
 ```
 
@@ -1152,7 +1152,7 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
 }
 ```
 
@@ -1178,7 +1178,7 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
 }
 ```
 
@@ -1204,7 +1204,7 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
 }
 ```
 
@@ -1230,7 +1230,7 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
 }
 ```
 
@@ -1256,7 +1256,7 @@ User Permission|`ReadCompanyDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters);
 }
 ```
 
@@ -1282,7 +1282,7 @@ User Permission|`EditCompanyDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters);
 }
 ```
 
@@ -1309,7 +1309,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
 }
 ```
 
@@ -1335,7 +1335,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest);
 }
 ```
 
@@ -1361,7 +1361,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get();
 }
 ```
 
@@ -1387,7 +1387,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get();
 }
 ```
 
@@ -1413,7 +1413,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters);
 }
 ```
 
@@ -1439,7 +1439,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates);
 }
 ```
 
@@ -1465,7 +1465,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List();
 }
 ```
 
@@ -1491,7 +1491,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest);
 }
 ```
 
@@ -1517,7 +1517,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get();
 }
 ```
 
@@ -1543,7 +1543,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest);
 }
 ```
 
@@ -1569,7 +1569,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete();
 }
 ```
 
@@ -1595,7 +1595,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters);
 }
 ```
 
@@ -1621,7 +1621,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo);
 }
 ```
 
@@ -1647,7 +1647,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest);
 }
 ```
 
@@ -1673,7 +1673,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest);
 }
 ```
 
@@ -1699,7 +1699,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest);
 }
 ```
 
@@ -1725,7 +1725,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get();
 }
 ```
 
@@ -1751,7 +1751,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo);
 }
 ```
 
@@ -1777,7 +1777,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete();
 }
 ```
 
@@ -1803,7 +1803,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get();
 }
 ```
 
@@ -1829,7 +1829,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters);
 }
 ```
 
@@ -1855,7 +1855,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticLocationUpdatesUsers, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticLocationUpdatesUsers);
 }
 ```
 
@@ -1881,7 +1881,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters);
 }
 ```
 
@@ -1907,7 +1907,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint);
 }
 ```
 
@@ -1933,7 +1933,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest);
 }
 ```
 
@@ -1959,7 +1959,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest);
 }
 ```
 
@@ -1985,7 +1985,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest);
 }
 ```
 
@@ -2011,7 +2011,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get();
 }
 ```
 
@@ -2037,7 +2037,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint);
 }
 ```
 
@@ -2063,7 +2063,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete();
 }
 ```
 
@@ -2089,7 +2089,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters);
 }
 ```
 
@@ -2115,7 +2115,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest);
 }
 ```
 
@@ -2141,7 +2141,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get();
 }
 ```
 
@@ -2167,7 +2167,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);
 }
 ```
 
@@ -2193,7 +2193,7 @@ User Permission|`ConfigureEmergencyMaps`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Delete(deleteEmergencyLocationParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Delete(deleteEmergencyLocationParameters);
 }
 ```
 
@@ -2219,7 +2219,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters);
 }
 ```
 
@@ -2245,7 +2245,7 @@ User Permission|`AddRemoveUsers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest);
 }
 ```
 
@@ -2271,7 +2271,7 @@ User Permission|`EditExtensionInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Post(extensionBulkUpdateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Post(extensionBulkUpdateRequest);
 }
 ```
 
@@ -2297,7 +2297,7 @@ User Permission|`EditExtensionInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Tasks(taskId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Tasks(taskId).Get();
 }
 ```
 
@@ -2323,7 +2323,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get();
 }
 ```
 
@@ -2350,7 +2350,7 @@ User Permission|`EditUserInfo OR EditUserCredentials`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest);
 }
 ```
 
@@ -2377,7 +2377,7 @@ User Permission|`AddRemoveUsers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete(deleteExtensionParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete(deleteExtensionParameters);
 }
 ```
 
@@ -2404,7 +2404,7 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
 }
 ```
 
@@ -2431,7 +2431,7 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters);
 }
 ```
 
@@ -2458,7 +2458,7 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
 }
 ```
 
@@ -2485,7 +2485,7 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters);
 }
 ```
 
@@ -2513,7 +2513,7 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
 }
 ```
 
@@ -2540,7 +2540,7 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters);
 }
 ```
 
@@ -2568,7 +2568,7 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
 }
 ```
 
@@ -2595,7 +2595,7 @@ User Permission|`ReadUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
 }
 ```
 
@@ -2622,7 +2622,7 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest);
 }
 ```
 
@@ -2649,7 +2649,7 @@ User Permission|`ReadUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
 }
 ```
 
@@ -2676,7 +2676,7 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest);
 }
 ```
 
@@ -2703,7 +2703,7 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
 }
 ```
 
@@ -2730,7 +2730,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get();
 }
 ```
 
@@ -2757,7 +2757,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters);
 }
 ```
 
@@ -2784,7 +2784,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get();
 }
 ```
 
@@ -2811,7 +2811,7 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest);
 }
 ```
 
@@ -2838,7 +2838,7 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters);
 }
 ```
 
@@ -2865,7 +2865,7 @@ User Permission|`EditCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
 }
 ```
 
@@ -2892,7 +2892,7 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters);
 }
 ```
 
@@ -2919,7 +2919,7 @@ User Permission|`ReadCallLog`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
 }
 ```
 
@@ -2946,7 +2946,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters);
 }
 ```
 
@@ -2973,7 +2973,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList);
 }
 ```
 
@@ -3000,7 +3000,7 @@ User Permission|`JoinLeaveCallQueue`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues);
 }
 ```
 
@@ -3027,7 +3027,7 @@ User Permission|`ReadBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();
 }
 ```
 
@@ -3054,7 +3054,7 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);
 }
 ```
 
@@ -3081,7 +3081,7 @@ User Permission|`ReadBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
 }
 ```
 
@@ -3108,7 +3108,7 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber);
 }
 ```
 
@@ -3135,7 +3135,7 @@ User Permission|`ReadBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get();
 }
 ```
 
@@ -3162,7 +3162,7 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber);
 }
 ```
 
@@ -3189,7 +3189,7 @@ User Permission|`EditBlockedNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
 }
 ```
 
@@ -3216,7 +3216,7 @@ User Permission|`ReadCallerIDSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get();
 }
 ```
 
@@ -3243,7 +3243,7 @@ User Permission|`EditCallerIDSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfo, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfo);
 }
 ```
 
@@ -3270,7 +3270,7 @@ User Permission|`InternalSMS`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest);
 }
 ```
 
@@ -3297,7 +3297,7 @@ User Permission|`OrganizeConference`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
 }
 ```
 
@@ -3324,7 +3324,7 @@ User Permission|`OrganizeConference`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest);
 }
 ```
 
@@ -3351,7 +3351,7 @@ User Permission|`ReadUserDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
 }
 ```
 
@@ -3378,7 +3378,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations().Get();
 }
 ```
 
@@ -3405,7 +3405,7 @@ User Permission|`ReadPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get();
 }
 ```
 
@@ -3432,7 +3432,7 @@ User Permission|`EditPersonalContacts`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
 }
 ```
 
@@ -3459,7 +3459,7 @@ User Permission|`OutboundFaxes`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
 }
 ```
 
@@ -3486,7 +3486,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readUserFeaturesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readUserFeaturesParameters);
 }
 ```
 
@@ -3513,7 +3513,7 @@ User Permission|`ReadUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
 }
 ```
 
@@ -3540,7 +3540,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest);
 }
 ```
 
@@ -3567,7 +3567,7 @@ User Permission|`ReadUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
 }
 ```
 
@@ -3594,7 +3594,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest);
 }
 ```
 
@@ -3621,7 +3621,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
 }
 ```
 
@@ -3648,7 +3648,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
 }
 ```
 
@@ -3675,7 +3675,7 @@ User Permission|`EditUserAnsweringRules`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest, createCustomUserGreetingParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest, createCustomUserGreetingParameters);
 }
 ```
 
@@ -3703,7 +3703,7 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get();
 }
 ```
 
@@ -3730,7 +3730,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List();
 }
 ```
 
@@ -3757,7 +3757,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource);
 }
 ```
 
@@ -3784,7 +3784,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingConfiguration().ProfileImage().Post(createUserMeetingProfileImageRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingConfiguration().ProfileImage().Post(createUserMeetingProfileImageRequest);
 }
 ```
 
@@ -3811,7 +3811,7 @@ User Permission|`MeetingsRecordings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters);
 }
 ```
 
@@ -3838,7 +3838,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get();
 }
 ```
 
@@ -3865,7 +3865,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest);
 }
 ```
 
@@ -3892,7 +3892,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().UserSettings().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().UserSettings().Get();
 }
 ```
 
@@ -3919,7 +3919,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get();
 }
 ```
 
@@ -3946,7 +3946,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource);
 }
 ```
 
@@ -3973,7 +3973,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete();
 }
 ```
 
@@ -4000,7 +4000,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post();
 }
 ```
 
@@ -4027,7 +4027,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Invitation().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Invitation().Get();
 }
 ```
 
@@ -4054,7 +4054,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get();
 }
 ```
 
@@ -4081,7 +4081,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get();
 }
 ```
 
@@ -4108,7 +4108,7 @@ User Permission|`ReadMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters);
 }
 ```
 
@@ -4135,7 +4135,7 @@ User Permission|`ReadMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
 }
 ```
 
@@ -4162,7 +4162,7 @@ User Permission|`EditMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest, updateMessageParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest, updateMessageParameters);
 }
 ```
 
@@ -4190,7 +4190,7 @@ User Permission|`EditMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters);
 }
 ```
 
@@ -4217,7 +4217,7 @@ User Permission|`ReadMessageContent`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
 }
 ```
 
@@ -4248,7 +4248,7 @@ User Permission|`ReadMessages`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters);
 }
 ```
 
@@ -4275,7 +4275,7 @@ User Permission|`OutboundSMS`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMmsMessage, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMmsMessage);
 }
 ```
 
@@ -4302,7 +4302,7 @@ User Permission|`ReadMessagesNotificationsSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get();
 }
 ```
 
@@ -4329,7 +4329,7 @@ User Permission|`EditMessagesNotificationsSettings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest);
 }
 ```
 
@@ -4356,7 +4356,7 @@ User Permission|`ReadUserPhoneNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters);
 }
 ```
 
@@ -4383,7 +4383,7 @@ User Permission|`ReadPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
 }
 ```
 
@@ -4410,7 +4410,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoRequest);
 }
 ```
 
@@ -4437,7 +4437,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List();
 }
 ```
 
@@ -4468,7 +4468,7 @@ User Permission|`EditUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest);
 }
 ```
 
@@ -4495,7 +4495,7 @@ User Permission|`EditUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest);
 }
 ```
 
@@ -4522,7 +4522,7 @@ User Permission|`ReadExtensions`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
 }
 ```
 
@@ -4553,7 +4553,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest);
 }
 ```
 
@@ -4580,7 +4580,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get();
 }
 ```
 
@@ -4607,7 +4607,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
 }
 ```
 
@@ -4634,7 +4634,7 @@ User Permission|`OutboundSMS`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSmsMessage, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSmsMessage);
 }
 ```
 
@@ -4661,7 +4661,7 @@ User Permission|`ReadPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get();
 }
 ```
 
@@ -4688,7 +4688,7 @@ User Permission|`EditPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence);
 }
 ```
 
@@ -4715,7 +4715,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get();
 }
 ```
 
@@ -4742,7 +4742,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Put(userVideoConfiguration, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Put(userVideoConfiguration);
 }
 ```
 
@@ -4769,7 +4769,7 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest);
 }
 ```
 
@@ -4795,7 +4795,7 @@ User Permission|`AutoReceptionist`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(ivrMenuInfo, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(ivrMenuInfo);
 }
 ```
 
@@ -4821,7 +4821,7 @@ User Permission|`AutoReceptionist`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get();
 }
 ```
 
@@ -4847,7 +4847,7 @@ User Permission|`AutoReceptionist`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(ivrMenuInfo, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(ivrMenuInfo);
 }
 ```
 
@@ -4873,7 +4873,7 @@ User Permission|`ReadCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
 }
 ```
 
@@ -4899,7 +4899,7 @@ User Permission|`EditCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIvrPromptRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIvrPromptRequest);
 }
 ```
 
@@ -4925,7 +4925,7 @@ User Permission|`ReadCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
 }
 ```
 
@@ -4951,7 +4951,7 @@ User Permission|`EditCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIvrPromptRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIvrPromptRequest);
 }
 ```
 
@@ -4977,7 +4977,7 @@ User Permission|`EditCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
 }
 ```
 
@@ -5003,7 +5003,7 @@ User Permission|`ReadCompanyGreetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get();
 }
 ```
 
@@ -5033,7 +5033,7 @@ User Permission|`MeetingsRecordings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters);
 }
 ```
 
@@ -5059,7 +5059,7 @@ User Permission|`Meetings`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Meeting().LockedSettings().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Meeting().LockedSettings().Get();
 }
 ```
 
@@ -5085,7 +5085,7 @@ User Permission|`AccountAdministration`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get();
 }
 ```
 
@@ -5111,7 +5111,7 @@ User Permission|`AccountAdministration`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
 }
 ```
 
@@ -5137,7 +5137,7 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest);
 }
 ```
 
@@ -5163,7 +5163,7 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get();
 }
 ```
 
@@ -5189,7 +5189,7 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List();
 }
 ```
 
@@ -5215,7 +5215,7 @@ User Permission|`Users`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
 }
 ```
 
@@ -5245,7 +5245,7 @@ User Permission|`Groups`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest);
 }
 ```
 
@@ -5271,7 +5271,7 @@ User Permission|`ReadCompanyDevices`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
 }
 ```
 
@@ -5297,7 +5297,7 @@ User Permission|`ReadUserInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters);
 }
 ```
 
@@ -5323,7 +5323,7 @@ User Permission|`ReadCompanyPhoneNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
 }
 ```
 
@@ -5349,7 +5349,7 @@ User Permission|`ReadCompanyPhoneNumbers`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
 }
 ```
 
@@ -5375,7 +5375,7 @@ User Permission|`ReadPresenceStatus`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters);
 }
 ```
 
@@ -5401,7 +5401,7 @@ User Permission|`ReadCallRecording`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get();
 }
 ```
 
@@ -5427,7 +5427,7 @@ User Permission|`ReadCallRecording`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get();
 }
 ```
 
@@ -5457,7 +5457,7 @@ User Permission|`ReadServicePlanInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
 }
 ```
 
@@ -5483,7 +5483,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest);
 }
 ```
 
@@ -5509,7 +5509,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Conference().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Conference().Post();
 }
 ```
 
@@ -5535,7 +5535,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters);
 }
 ```
 
@@ -5561,7 +5561,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete();
 }
 ```
 
@@ -5587,7 +5587,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().BringIn().Post(addPartyRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().BringIn().Post(addPartyRequest);
 }
 ```
 
@@ -5613,7 +5613,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get();
 }
 ```
 
@@ -5639,7 +5639,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete();
 }
 ```
 
@@ -5665,7 +5665,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest);
 }
 ```
 
@@ -5691,7 +5691,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget);
 }
 ```
 
@@ -5717,7 +5717,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Bridge().Post(bridgeTargetRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Bridge().Post(bridgeTargetRequest);
 }
 ```
 
@@ -5743,7 +5743,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
 }
 ```
 
@@ -5769,7 +5769,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget);
 }
 ```
 
@@ -5795,7 +5795,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post();
 }
 ```
 
@@ -5821,7 +5821,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody);
 }
 ```
 
@@ -5847,7 +5847,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();
 }
 ```
 
@@ -5873,7 +5873,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget);
 }
 ```
 
@@ -5899,7 +5899,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post();
 }
 ```
 
@@ -5925,7 +5925,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
 }
 ```
 
@@ -5952,7 +5952,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post();
 }
 ```
 
@@ -5978,7 +5978,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply);
 }
 ```
 
@@ -6004,7 +6004,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest);
 }
 ```
 
@@ -6030,7 +6030,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget);
 }
 ```
 
@@ -6056,7 +6056,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post();
 }
 ```
 
@@ -6082,7 +6082,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest);
 }
 ```
 
@@ -6108,7 +6108,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters);
 }
 ```
 
@@ -6134,7 +6134,7 @@ User Permission|`ReadCompanyInfo`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get();
 }
 ```
 
@@ -6160,7 +6160,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest);
 }
 ```
 
@@ -6185,7 +6185,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
 }
 ```
 
@@ -6210,7 +6210,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
 }
 ```
 
@@ -6235,7 +6235,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
 }
 ```
 
@@ -6260,7 +6260,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
 }
 ```
 
@@ -6285,7 +6285,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
 }
 ```
 
@@ -6310,7 +6310,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
 }
 ```
 
@@ -6335,7 +6335,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
 }
 ```
 
@@ -6360,7 +6360,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
 }
 ```
 
@@ -6385,7 +6385,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters);
 }
 ```
 
@@ -6410,7 +6410,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get();
 }
 ```
 
@@ -6435,7 +6435,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
 }
 ```
 
@@ -6460,7 +6460,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters);
 }
 ```
 
@@ -6485,7 +6485,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters);
 }
 ```
 
@@ -6510,7 +6510,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get();
 }
 ```
 
@@ -6535,7 +6535,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post();
 }
 ```
 
@@ -6560,7 +6560,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Get(listChatNotesParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Get(listChatNotesParameters);
 }
 ```
 
@@ -6585,7 +6585,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Post(glipNoteCreate, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Post(glipNoteCreate);
 }
 ```
 
@@ -6610,7 +6610,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters);
 }
 ```
 
@@ -6635,7 +6635,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(glipPostPostBody, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(glipPostPostBody);
 }
 ```
 
@@ -6660,7 +6660,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get();
 }
 ```
 
@@ -6685,7 +6685,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete();
 }
 ```
 
@@ -6710,7 +6710,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody);
 }
 ```
 
@@ -6735,7 +6735,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post();
 }
 ```
 
@@ -6760,7 +6760,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Get(listChatTasksParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Get(listChatTasksParameters);
 }
 ```
 
@@ -6785,7 +6785,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Post(glipCreateTask, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Post(glipCreateTask);
 }
 ```
 
@@ -6810,7 +6810,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post();
 }
 ```
 
@@ -6835,7 +6835,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post();
 }
 ```
 
@@ -6860,7 +6860,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get();
 }
 ```
 
@@ -6885,7 +6885,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters);
 }
 ```
 
@@ -6910,7 +6910,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest);
 }
 ```
 
@@ -6935,7 +6935,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get();
 }
 ```
 
@@ -6960,7 +6960,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().List(listDataExportTasksParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport().List(listDataExportTasksParameters);
 }
 ```
 
@@ -6985,7 +6985,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest);
 }
 ```
 
@@ -7010,7 +7010,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get();
 }
 ```
 
@@ -7035,7 +7035,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).Get();
 }
 ```
 
@@ -7064,7 +7064,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters);
 }
 ```
 
@@ -7089,7 +7089,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate);
 }
 ```
 
@@ -7114,7 +7114,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get();
 }
 ```
 
@@ -7139,7 +7139,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate);
 }
 ```
 
@@ -7164,7 +7164,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete();
 }
 ```
 
@@ -7189,7 +7189,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Everyone().Get();
 }
 ```
 
@@ -7214,7 +7214,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest);
 }
 ```
 
@@ -7239,7 +7239,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters);
 }
 ```
 
@@ -7264,7 +7264,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get();
 }
 ```
 
@@ -7289,7 +7289,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate);
 }
 ```
 
@@ -7314,7 +7314,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get();
 }
 ```
 
@@ -7339,7 +7339,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post();
 }
 ```
 
@@ -7364,7 +7364,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get();
 }
 ```
 
@@ -7389,7 +7389,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete();
 }
 ```
 
@@ -7414,7 +7414,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate);
 }
 ```
 
@@ -7439,7 +7439,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post();
 }
 ```
 
@@ -7464,7 +7464,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post();
 }
 ```
 
@@ -7489,7 +7489,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post();
 }
 ```
 
@@ -7514,7 +7514,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get();
 }
 ```
 
@@ -7539,7 +7539,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Preferences().Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Preferences().Get();
 }
 ```
 
@@ -7564,7 +7564,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters);
 }
 ```
 
@@ -7589,7 +7589,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Get();
 }
 ```
 
@@ -7614,7 +7614,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Delete();
 }
 ```
 
@@ -7639,7 +7639,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Patch(glipUpdateTask, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Patch(glipUpdateTask);
 }
 ```
 
@@ -7664,7 +7664,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().Post(glipCompleteTask, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().Post(glipCompleteTask);
 }
 ```
 
@@ -7689,7 +7689,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters);
 }
 ```
 
@@ -7714,7 +7714,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody);
 }
 ```
 
@@ -7739,7 +7739,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get();
 }
 ```
 
@@ -7764,7 +7764,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete();
 }
 ```
 
@@ -7789,7 +7789,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody);
 }
 ```
 
@@ -7814,7 +7814,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody);
 }
 ```
 
@@ -7839,7 +7839,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post();
 }
 ```
 
@@ -7864,7 +7864,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post();
 }
 ```
 
@@ -7889,7 +7889,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post();
 }
 ```
 
@@ -7914,7 +7914,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody);
 }
 ```
 
@@ -7939,7 +7939,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post();
 }
 ```
 
@@ -7964,7 +7964,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks().List();
 }
 ```
 
@@ -7989,7 +7989,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get();
 }
 ```
 
@@ -8014,7 +8014,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete();
 }
 ```
 
@@ -8039,7 +8039,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post();
 }
 ```
 
@@ -8064,7 +8064,7 @@ User Permission|`Glip`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post();
 }
 ```
 
@@ -8089,7 +8089,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
 }
 ```
 
@@ -8115,7 +8115,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().List(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Subscription().List();
 }
 ```
 
@@ -8140,7 +8140,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest);
 }
 ```
 
@@ -8165,7 +8165,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get();
 }
 ```
 
@@ -8190,7 +8190,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest, restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest);
 }
 ```
 
@@ -8215,7 +8215,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete();
 }
 ```
 
@@ -8240,7 +8240,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post(restRequestConfig);
+    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
 }
 ```
 
@@ -8265,7 +8265,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).ServiceProviderConfig().Get(restRequestConfig);
+    var result = await rc.Scim(version).ServiceProviderConfig().Get();
 }
 ```
 
@@ -8290,7 +8290,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().List(searchViaGet2Parameters, restRequestConfig);
+    var result = await rc.Scim(version).Users().List(searchViaGet2Parameters);
 }
 ```
 
@@ -8315,7 +8315,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().Post(createUser, restRequestConfig);
+    var result = await rc.Scim(version).Users().Post(createUser);
 }
 ```
 
@@ -8340,7 +8340,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest, restRequestConfig);
+    var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest);
 }
 ```
 
@@ -8365,7 +8365,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Get(restRequestConfig);
+    var result = await rc.Scim(version).Users(id).Get();
 }
 ```
 
@@ -8390,7 +8390,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Put(user, restRequestConfig);
+    var result = await rc.Scim(version).Users(id).Put(user);
 }
 ```
 
@@ -8415,7 +8415,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Delete(restRequestConfig);
+    var result = await rc.Scim(version).Users(id).Delete();
 }
 ```
 
@@ -8440,7 +8440,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Patch(userPatch, restRequestConfig);
+    var result = await rc.Scim(version).Users(id).Patch(userPatch);
 }
 ```
 
@@ -8465,7 +8465,7 @@ User Permission|`N/A`
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 {
     await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Health().Get(restRequestConfig);
+    var result = await rc.Scim(version).Health().Get();
 }
 ```
 
