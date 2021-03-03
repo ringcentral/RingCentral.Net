@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-
+    environment: sandbox
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +23,16 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      env:
+        RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
+        RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
+        RINGCENTRAL_CLIENT_SECRET: ${{ secrets.RINGCENTRAL_CLIENT_SECRET }}
+        RINGCENTRAL_USERNAME: ${{ secrets.RINGCENTRAL_USERNAME }}
+        RINGCENTRAL_EXTENSION: ${{ secrets.RINGCENTRAL_EXTENSION }}
+        RINGCENTRAL_PASSWORD: ${{ secrets.RINGCENTRAL_PASSWORD }}
+        RINGCENTRAL_RECEIVER: ${{ secrets.RINGCENTRAL_RECEIVER }}
+        RINGCENTRAL_CALLEE: ${{ secrets.RINGCENTRAL_CALLEE }}
+        # to test schedule meeting for others
+        RINGCENTRAL_USERNAME2: ${{ secrets.RINGCENTRAL_USERNAME2 }}
+        RINGCENTRAL_EXTENSION2: ${{ secrets.RINGCENTRAL_EXTENSION2 }}
+        RINGCENTRAL_PASSWORD2: ${{ secrets.RINGCENTRAL_PASSWORD2 }}
