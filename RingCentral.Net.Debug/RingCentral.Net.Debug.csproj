@@ -3,7 +3,7 @@
     <PropertyGroup>
       <TargetFramework>netstandard2.0</TargetFramework>
       <PackageId>RingCentral.Net.Debug</PackageId>
-      <PackageVersion>1.0.0-beta2</PackageVersion>
+      <PackageVersion>1.0.0</PackageVersion>
       <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
       <Description>Debug extension for RingCentral.Net</Description>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
