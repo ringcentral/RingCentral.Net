@@ -3,6 +3,12 @@ namespace RingCentral
     public class ListAnsweringRulesParameters
     {
         /// <summary>
+        /// Filters custom call handling rules of the extension
+        /// Enum: Custom
+        /// </summary>
+        public string type { get; set; }
+
+        /// <summary>
         /// Default: Simple
         /// Enum: Detailed, Simple
         /// </summary>

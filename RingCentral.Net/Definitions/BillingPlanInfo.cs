@@ -15,7 +15,7 @@ namespace RingCentral
 
         /// <summary>
         /// Duration period
-        /// Enum: Month, Day
+        /// Enum: Day, Month, Year
         /// </summary>
         public string durationUnit { get; set; }
 

@@ -7,7 +7,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        /// Link for recording file download
+        /// Link for downloading the recorded file (mp4, mp3 audio and text/plain chat file)
         /// </summary>
         public string contentDownloadUri { get; set; }
 

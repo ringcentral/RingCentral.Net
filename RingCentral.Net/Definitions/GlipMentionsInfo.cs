@@ -8,7 +8,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        /// Type of mentions
+        /// Type of mention
         /// Enum: Person, Team, File, Link, Event, Task, Note, Card
         /// </summary>
         public string type { get; set; }

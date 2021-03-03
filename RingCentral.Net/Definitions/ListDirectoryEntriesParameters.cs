@@ -9,7 +9,7 @@ namespace RingCentral
         public bool? showFederated { get; set; }
 
         /// <summary>
-        /// Type of an extension
+        /// Type of an extension. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
         /// Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ParkLocation, Limited
         /// </summary>
         public string type { get; set; }

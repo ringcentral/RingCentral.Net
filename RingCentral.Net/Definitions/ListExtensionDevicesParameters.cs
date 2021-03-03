@@ -13,5 +13,17 @@ namespace RingCentral
         /// Enum: Intercom, Paging, BLA, HELD
         /// </summary>
         public string feature { get; set; }
+
+        /// <summary>
+        /// Number of a page to be returned
+        /// Default: 1
+        /// </summary>
+        public string page { get; set; }
+
+        /// <summary>
+        /// Number of records per page to be returned
+        /// Default: 100
+        /// </summary>
+        public string perPage { get; set; }
     }
 }

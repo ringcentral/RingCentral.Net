@@ -9,7 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// Forwarding phone number type
-        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone
+        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExternalCarrier
         /// </summary>
         public string type { get; set; }
 
@@ -25,7 +25,6 @@ namespace RingCentral
 
         /// <summary>
         /// Forwarding/Call flip number title
-        /// Enum: Business Mobile Phone
         /// </summary>
         public string label { get; set; }
     }

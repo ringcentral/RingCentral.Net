@@ -13,7 +13,7 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        /// Number of department extension
+        /// Number of extension
         /// </summary>
         public string extensionNumber { get; set; }
 

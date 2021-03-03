@@ -50,18 +50,18 @@ namespace RingCentral
         public decimal? cost { get; set; }
 
         /// <summary>
-        /// The batchId in which the message was submitted
+        /// The batch in which the message was submitted
         /// </summary>
         public string batchId { get; set; }
 
         /// <summary>
-        /// Indicates whether the message was outbound or inbound
+        /// Indicates whether the message is outbound or inbound
         /// Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
 
         /// <summary>
-        /// The RC error code of the message sending failure reason
+        /// RC error code of the message sending failure reason
         /// </summary>
         public string errorCode { get; set; }
     }

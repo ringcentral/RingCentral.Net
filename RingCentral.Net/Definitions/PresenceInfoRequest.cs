@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PresenceInfoResource
+    public class PresenceInfoRequest
     {
         /// <summary>
         /// Enum: Offline, Busy, Available
@@ -27,9 +27,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? pickUpCallsOnHold { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public ActiveCallInfo[] activeCalls { get; set; }
     }
 }

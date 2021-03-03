@@ -60,7 +60,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public UserTransitionInfo[] transition { get; set; }
+        public UserTransitionInfo transition { get; set; }
 
         /// <summary>
         /// </summary>
@@ -76,8 +76,8 @@ namespace RingCentral
         public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
-        /// Extension type
-        /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup
+        /// Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        /// Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
 

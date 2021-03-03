@@ -25,12 +25,12 @@ namespace RingCentral
         public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>
-        /// Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
+        /// Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
         /// </summary>
         public DepartmentInfo[] departments { get; set; }
 
         /// <summary>
-        /// Number of department extension
+        /// Number of extension
         /// </summary>
         public string extensionNumber { get; set; }
 
@@ -92,8 +92,8 @@ namespace RingCentral
         public ExtensionStatusInfo statusInfo { get; set; }
 
         /// <summary>
-        /// Extension type
-        /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup
+        /// Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
 

@@ -9,5 +9,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ScheduleUserMeetingInfo scheduleMeeting { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public TelephonyUserMeetingSettings telephony { get; set; }
     }
 }

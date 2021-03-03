@@ -40,10 +40,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         /// App Permission: EditPresence
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoResource presenceInfoResource,
+        public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoRequest presenceInfoRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.PresenceInfoResponse>(this.Path(), presenceInfoResource, null,
+            return await rc.Put<RingCentral.PresenceInfoResponse>(this.Path(), presenceInfoRequest, null,
                 restRequestConfig);
         }
     }

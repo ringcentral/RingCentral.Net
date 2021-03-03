@@ -21,7 +21,7 @@ namespace RingCentral
         public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>
-        /// Number of department extension
+        /// Number of extension
         /// </summary>
         public string extensionNumber { get; set; }
 
@@ -78,7 +78,7 @@ namespace RingCentral
         public ExtensionStatusInfo statusInfo { get; set; }
 
         /// <summary>
-        /// Extension type
+        /// Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
         /// Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, Limited
         /// </summary>
         public string type { get; set; }

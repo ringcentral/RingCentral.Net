@@ -11,7 +11,7 @@ namespace RingCentral
         /// List of extensions with extension information
         /// Required
         /// </summary>
-        public GetExtensionInfoResponse[] records { get; set; }
+        public GetExtensionListInfoResponse[] records { get; set; }
 
         /// <summary>
         /// </summary>

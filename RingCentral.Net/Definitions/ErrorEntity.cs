@@ -11,5 +11,15 @@ namespace RingCentral
         /// Error message
         /// </summary>
         public string message { get; set; }
+
+        /// <summary>
+        /// Name of invalid parameter
+        /// </summary>
+        public string parameterName { get; set; }
+
+        /// <summary>
+        /// Value of invalid parameter
+        /// </summary>
+        public string parameterValue { get; set; }
     }
 }

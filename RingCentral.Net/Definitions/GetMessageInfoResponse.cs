@@ -13,6 +13,11 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
+        /// Internal identifier of an extension
+        /// </summary>
+        public string extensionId { get; set; }
+
+        /// <summary>
         /// The list of message attachments
         /// </summary>
         public MessageAttachmentInfo[] attachments { get; set; }

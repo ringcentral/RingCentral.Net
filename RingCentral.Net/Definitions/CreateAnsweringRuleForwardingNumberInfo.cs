@@ -19,13 +19,12 @@ namespace RingCentral
 
         /// <summary>
         /// Forwarding/Call flip number title
-        /// Enum: Business Mobile Phone
         /// </summary>
         public string label { get; set; }
 
         /// <summary>
         /// Type of a forwarding number
-        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone
+        /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExternalCarrier
         /// </summary>
         public string type { get; set; }
     }

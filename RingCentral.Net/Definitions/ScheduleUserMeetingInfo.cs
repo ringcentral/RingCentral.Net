@@ -1,8 +1,13 @@
 namespace RingCentral
 {
-    // Scheduling meeting settings locked on account level || Settings defining how to schedule user meetings
+    // Scheduling meeting settings locked on account level || Settings defining how to schedule user meetingsxs
     public class ScheduleUserMeetingInfo
     {
+        /// <summary>
+        /// If true, then only signed-in users can join this meeting
+        /// </summary>
+        public bool? enforceLogin { get; set; }
+
         /// <summary>
         /// Starting meetings with host video on/off (true/false)
         /// </summary>
@@ -15,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         /// Determines how participants can join the audio channel of a meeting
-        /// Enum: Phone, ComputerAudio
+        /// Enum: Phone, ComputerAudio, ThirdParty
         /// </summary>
         public string[] audioOptions { get; set; }
 

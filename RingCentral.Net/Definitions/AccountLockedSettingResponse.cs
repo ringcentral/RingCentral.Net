@@ -9,5 +9,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UserMeetingRecordingSetting recording { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public TelephonyLockedSettings telephony { get; set; }
     }
 }

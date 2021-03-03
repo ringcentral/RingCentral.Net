@@ -31,7 +31,7 @@ namespace RingCentral
         public string[] status { get; set; }
 
         /// <summary>
-        /// Extension type. Multiple values are supported
+        /// Extension type. Multiple values are supported. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
         /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, ProxyAdmin, DelegatedLinesGroup
         /// </summary>
         public string[] type { get; set; }

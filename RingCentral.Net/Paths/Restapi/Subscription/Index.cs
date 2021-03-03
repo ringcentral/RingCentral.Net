@@ -82,15 +82,14 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Put(
-            RingCentral.ModifySubscriptionRequest modifySubscriptionRequest,
-            UpdateSubscriptionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+            RingCentral.ModifySubscriptionRequest modifySubscriptionRequest, RestRequestConfig restRequestConfig = null)
         {
             if (this.subscriptionId == null)
             {
                 throw new System.ArgumentNullException("subscriptionId");
             }
 
-            return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, queryParams,
+            return await rc.Put<RingCentral.SubscriptionInfo>(this.Path(), modifySubscriptionRequest, null,
                 restRequestConfig);
         }
 

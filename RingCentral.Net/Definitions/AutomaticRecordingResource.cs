@@ -26,5 +26,15 @@ namespace RingCentral
         /// Total amount of extension that are used in call recordings
         /// </summary>
         public long? extensionCount { get; set; }
+
+        /// <summary>
+        /// Retention period of a call recording, the default value is 90 days
+        /// </summary>
+        public long? retentionPeriod { get; set; }
+
+        /// <summary>
+        /// Max number of automatic call recordings per account, the default value is 100 000
+        /// </summary>
+        public long? maxNumberLimit { get; set; }
     }
 }

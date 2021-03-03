@@ -3,7 +3,7 @@ namespace RingCentral
     public class MobilePickupData
     {
         /// <summary>
-        /// The list of extension IDs, configured to pick a call from Desktop/Mobile applications
+        /// List of extension IDs, configured to pick up a call from Desktop/Mobile applications
         /// </summary>
         public string[] ccMailboxes { get; set; }
 

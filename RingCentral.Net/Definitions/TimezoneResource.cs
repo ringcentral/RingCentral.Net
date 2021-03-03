@@ -18,5 +18,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string description { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public string bias { get; set; }
     }
 }

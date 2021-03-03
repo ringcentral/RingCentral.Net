@@ -19,8 +19,8 @@ namespace RingCentral
         public bool? showFederated { get; set; }
 
         /// <summary>
-        /// Type of extension to filter the contacts
-        /// Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, ProxyAdmin, DelegatedLinesGroup
+        /// Type of extension to filter the contacts. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        /// Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string extensionType { get; set; }
 
