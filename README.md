@@ -1,5 +1,7 @@
 # RingCentral.Net
 
+[![Build Status](https://github.com/ringcentral/RingCentral.Net/workflows/.NET/badge.svg?branch=master)](https://github.com/ringcentral/RingCentral.Net/actions)
+
 ## Installation
 
 Packages are [available on NuGet](https://www.nuget.org/packages?q=ringcentral.net).
