@@ -33,27 +33,6 @@ You can find [sample code for all the endpoints](./samples.md).
 There is also lots of useful code for your reference in our [test cases](./RingCentral.Tests).
 
 
-## PubNub notification delay issue
-
-If you create multiple subscriptions in a single app and run the app in .NET Framework environment, you may experience notifications delay. Delay time is around 4 minutes and 30 seconds.
-
-A solution/workaround is to add the following to your `app.config` file:
-
-```xml
-<system.net>
-<connectionManagement>
-<add address = "*" maxconnection = "999" />
-</connectionManagement>
-</system.net>
-```
-
-Notes: 
-- If you run your app in .NET Core environment, you will not have this issue. 
-- If you only create one subscription in your code, you will not have this issue either.
-- This is because [by default only 2 connections to a server is allowed](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings).
-- More information FYI: https://stackoverflow.com/a/49868185/862862
-
-
 ## Binary content downloading
 
 Some [sample code](./samples.md) for binary content downloading may not work.
