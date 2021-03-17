@@ -686,7 +686,11 @@ paths:
       description: >-
         Returns the list of chats where the user is a member and also public
         teams that can be joined. All records in response are sorted by creation
-        time of a chat in ascending order.
+        time of a chat in ascending order. **Note** 'Chat' is a general name for
+        all types of threads icluding *Personal* (user's own me-chat), *Direct*
+        (one on one chat), *Group* (chat of 3-15 participants without specific
+        name), *Team* (chat of 2 and more participants, with a specific name),
+        *Everyone* (company chat including all employees, with a specific name).
       operationId: listGlipChats
       parameters:
         - name: type
@@ -701,11 +705,11 @@ paths:
             items:
               type: string
               enum:
-                - Everyone
-                - Group
                 - Personal
                 - Direct
+                - Group
                 - Team
+                - Everyone
         - name: recordCount
           in: query
           description: >-
@@ -742,7 +746,13 @@ paths:
       tags:
         - Chats
       summary: Get Chat
-      description: Returns information about a chat by ID.
+      description: >-
+        Returns information about a chat by ID. **Note** 'Chat' is a general
+        name for all types of threads icluding *Personal* (user's own me-chat),
+        *Direct* (one on one chat), *Group* (chat of 3-15 participants without
+        specific name), *Team* (chat of 2 and more participants, with a specific
+        name), *Everyone* (company chat including all employees, with a specific
+        name)."
       operationId: readGlipChat
       parameters:
         - name: chatId
@@ -779,8 +789,8 @@ paths:
       summary: Get Conversations
       description: >-
         Returns the list of conversations where the user is a member. All
-        records in response are sorted by creation time of a chat in ascending
-        order.
+        records in response are sorted by creation time of a conversation in
+        ascending order. Conversation is a chat of the *Group* type.
       operationId: listGlipConversations
       parameters:
         - name: recordCount
@@ -822,8 +832,9 @@ paths:
         Creates a new conversation or opens the existing one. If the
         conversation already exists, then its ID will be returned in response. A
         conversation is an adhoc discussion between a particular set of users,
-        not featuring any specific name or description. If you add a person to
-        the existing conversation, it creates a whole new conversation.
+        not featuring any specific name or description; it is a chat of 'Group'
+        type. If you add a person to the existing conversation (group), it
+        creates a whole new conversation.
       operationId: createGlipConversation
       requestBody:
         description: JSON body
@@ -868,8 +879,8 @@ paths:
         Returns information about the specified conversation, including the list
         of conversation participants. A conversation is an adhoc discussion
         between a particular set of users, not featuring any specific name or
-        description. If you add a person to the existing conversation, it
-        creates a whole new conversation.
+        description; it is a chat of 'Group' type. If you add a person to the
+        existing conversation, it creates a whole new conversation.
       operationId: readGlipConversation
       parameters:
         - name: chatId
@@ -907,7 +918,8 @@ paths:
         Returns the list of teams where the user is a member (both archived and
         active) combined with a list of public teams that can be joined by the
         current user. All records in response are sorted by creation time of a
-        chat in ascending order.
+        chat in ascending order. A team is a chat between 2 and more (unlimited
+        number) participants assigned with specific name.
       operationId: listGlipTeams
       parameters:
         - name: recordCount
@@ -945,7 +957,10 @@ paths:
       tags:
         - Teams
       summary: Create Team
-      description: Creates a team, and adds a list of people to the team.
+      description: >-
+        Creates a team, and adds a list of people to the team.  A team is a chat
+        between 2 and more (unlimited number) participants assigned with
+        specific name.
       operationId: createGlipTeam
       requestBody:
         description: JSON body
@@ -980,7 +995,9 @@ paths:
       tags:
         - Teams
       summary: Get Team
-      description: Returns information about the specified team.
+      description: >-
+        Returns information about the specified team. A team is a chat between 2
+        and more participants assigned with specific name.
       operationId: readGlipTeam
       parameters:
         - name: chatId
@@ -1013,7 +1030,9 @@ paths:
       tags:
         - Teams
       summary: Delete Team
-      description: Deletes the specified team.
+      description: >-
+        Deletes the specified team. A team is a chat between 2 and more
+        (unlimited number) participants assigned with specific name.
       operationId: deleteGlipTeam
       parameters:
         - name: chatId
@@ -1046,7 +1065,10 @@ paths:
       tags:
         - Teams
       summary: Update Team
-      description: Updates the name and description of the specified team.
+      description: >-
+        Updates the name and description of the specified team. A team is a chat
+        between 2 and more (unlimited number) participants assigned with
+        specific name.
       operationId: patchGlipTeam
       parameters:
         - name: chatId
@@ -1094,7 +1116,9 @@ paths:
       tags:
         - Teams
       summary: Join Team
-      description: Adds the current user to the specified team.
+      description: >-
+        Adds the current user to the specified team. A team is a chat between 2
+        and more participants assigned with specific name.
       operationId: joinGlipTeam
       parameters:
         - name: chatId
@@ -1131,7 +1155,9 @@ paths:
       tags:
         - Teams
       summary: Leave Team
-      description: Removes the current user from the specified team.
+      description: >-
+        Removes the current user from the specified team. A team is a chat
+        between 2 and more participants assigned with specific name.
       operationId: leaveGlipTeam
       parameters:
         - name: chatId
@@ -1168,7 +1194,9 @@ paths:
       tags:
         - Teams
       summary: Add Team Members
-      description: Adds members to the specified team.
+      description: >-
+        Adds members to the specified team. A team is a chat between 2 and more
+        participants assigned with specific name.
       operationId: addGlipTeamMembers
       parameters:
         - name: chatId
@@ -1213,7 +1241,9 @@ paths:
       tags:
         - Teams
       summary: Remove Team Members
-      description: Removes members from the specified team.
+      description: >-
+        Removes members from the specified team. A team is a chat between 2 and
+        more participants assigned with specific name.
       operationId: removeGlipTeamMembers
       parameters:
         - name: chatId
@@ -1258,7 +1288,9 @@ paths:
       tags:
         - Teams
       summary: Archive Team
-      description: Changes the status of the specified team to 'Archived'.
+      description: >-
+        Changes the status of the specified team to 'Archived'. A team is a chat
+        between 2 and more participants assigned with specific name.
       operationId: archiveGlipTeam
       parameters:
         - name: chatId
@@ -1295,7 +1327,9 @@ paths:
       tags:
         - Teams
       summary: Unarchive Team
-      description: Changes the status of the specified team to 'Active'.
+      description: >-
+        Changes the status of the specified team to 'Active'. A team is a chat
+        between 2 and more participants assigned with specific name.
       operationId: unarchiveGlipTeam
       parameters:
         - name: chatId
@@ -1332,7 +1366,9 @@ paths:
       tags:
         - Teams
       summary: Get Everyone Chat
-      description: Returns information about Everyone chat.
+      description: >-
+        Returns information about Everyone chat, which is a company level chat
+        including all employees; assigned with specific name.
       operationId: readGlipEveryone
       responses:
         '200':
@@ -1358,7 +1394,9 @@ paths:
       tags:
         - Teams
       summary: Update Everyone Сhat
-      description: Updates Everyone chat information.
+      description: >-
+        Updates Everyone chat information. Everyone chat is a company level chat
+        including all employees; assigned with specific name.
       operationId: patchGlipEveryone
       requestBody:
         description: JSON body
@@ -1396,7 +1434,12 @@ paths:
       description: >-
         Returns recent chats where the user is a member. All records in response
         are sorted by the `lastModifiedTime` in descending order (the latest
-        changed chat is displayed first on page)
+        changed chat is displayed first on page). **Note** 'Chat' is a general
+        name for all types of threads icluding *Personal* (user's own me-chat),
+        *Direct* (one on one chat), *Group* (chat of 3-15 participants without
+        specific name), *Team* (chat of 2 and more participants, with a specific
+        name), *Everyone* (company chat including all employees, with a specific
+        name)."
       operationId: listRecentChats
       parameters:
         - name: type
@@ -1448,7 +1491,13 @@ paths:
       tags:
         - Chats
       summary: Get Favorite Chats
-      description: Returns a list of the current user's favorite chats.
+      description: >-
+        Returns a list of the current user's favorite chats. **Note** 'Chat' is
+        a general name for all types of threads icluding *Personal* (user's own
+        me-chat), *Direct* (one on one chat), *Group* (chat of 3-15 participants
+        without specific name), *Team* (chat of 2 and more participants, with a
+        specific name), *Everyone* (company chat including all employees, with a
+        specific name)."
       operationId: listFavoriteChats
       parameters:
         - name: recordCount
@@ -1485,7 +1534,13 @@ paths:
       tags:
         - Chats
       summary: Add Chat to Favorites
-      description: Adds the specified chat to the users's list of favorites.
+      description: >-
+        Adds the specified chat to the users's list of favorites. **Note**
+        'Chat' is a general name for all types of threads icluding *Personal*
+        (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15
+        participants without specific name), *Team* (chat of 2 and more
+        participants, with a specific name), *Everyone* (company chat including
+        all employees, with a specific name)."
       operationId: favoriteGlipChat
       parameters:
         - name: chatId
@@ -1588,7 +1643,13 @@ paths:
       tags:
         - Chats
       summary: Mark Chat as Unread
-      description: Sets the specified chat status to 'Unread' for the current user.
+      description: >-
+        Sets the specified chat status to 'Unread' for the current user.
+        **Note** 'Chat' is a general name for all types of threads icluding
+        *Personal* (user's own me-chat), *Direct* (one on one chat), *Group*
+        (chat of 3-15 participants without specific name), *Team* (chat of 2 and
+        more participants, with a specific name), *Everyone* (company chat
+        including all employees, with a specific name)."
       operationId: markChatUnread
       parameters:
         - name: chatId
@@ -1799,8 +1860,8 @@ paths:
       summary: Create Post
       description: >-
         Creates a post in the chat specified in path. Any mention can be added
-        within the `text` attribute of the request body in .md format -
-        [![:Type](id)], where `type` is one of (Person, Team, File, Note, Task,
+        within the `text` attribute of the request body in .md format - `!
+        [:Type] (id)`, where `type` is one of (Person, Team, File, Note, Task,
         Event, Link, Card) and `id` is a unique identifier of the mentioned
         object of the specified type. Attachments of the following types (File,
         Card, Event, Note) can also be added to a post by passing type and ID of
@@ -2326,7 +2387,7 @@ paths:
         - Notes
       summary: Update Note
       description: >-
-        Edits a note. Notes can be edited by any user if posted to a chat the
+        Edits a note. Notes can be edited by any user if posted to a chat. the
         user belongs to.
       operationId: patchNote
       parameters:
@@ -2921,7 +2982,7 @@ paths:
       tags:
         - Glip Webhooks
       summary: Create Webhook in Group
-      description: Creates a new webhook
+      description: Creates a new webhook.
       operationId: createGlipGroupWebhook
       parameters:
         - name: groupId
@@ -2955,7 +3016,7 @@ paths:
       tags:
         - Glip Webhooks
       summary: Get Webhooks
-      description: Returns a list of all webhooks associated with the current account.
+      description: Returns the list of all webhooks associated with the current account.
       operationId: listGlipWebhooks
       responses:
         '200':
@@ -3027,7 +3088,7 @@ paths:
       tags:
         - Glip Webhooks
       summary: Delete Webhook
-      description: Deletes the webhook by ID.
+      description: Deletes a webhook by ID.
       operationId: deleteGlipWebhook
       parameters:
         - name: webhookId
@@ -3061,7 +3122,7 @@ paths:
       tags:
         - Glip Webhooks
       summary: Activate Webhook
-      description: Activates webhook by ID.
+      description: Activates a webhook by ID.
       operationId: activateGlipWebhook
       parameters:
         - name: webhookId
@@ -3095,7 +3156,7 @@ paths:
       tags:
         - Glip Webhooks
       summary: Suspend Webhook
-      description: Suspends webhook by ID.
+      description: Suspends a webhook by ID.
       operationId: suspendGlipWebhook
       parameters:
         - name: webhookId
@@ -4032,19 +4093,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '500':
           description: Some unexpected error during current request processing.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '503':
           description: Network error during request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
       x-api-group: account/directory/entries/search
       x-app-permission: ReadAccounts
       x-user-permission: ReadExtensions
@@ -4097,13 +4158,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '500':
           description: Some unexpected error during current request processing
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '503':
           description: >-
             Network error during request. One should check connection between
@@ -4111,7 +4172,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
       x-api-group: account/directory/entries/single
       x-app-permission: ReadAccounts
       x-auth-required: true
@@ -4214,19 +4275,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '500':
           description: Some unexpected error during current request processing.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '503':
           description: Network error during request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
       x-api-group: account/directory/entries
       x-app-permission: ReadAccounts
       x-auth-required: true
@@ -4275,19 +4336,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '500':
           description: Some unexpected error during current request processing.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
         '503':
           description: Network error during request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ADGErrorResponse'
       x-api-group: account/directory/federation
       x-app-permission: ReadAccounts
       x-auth-required: true
@@ -6423,25 +6484,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MessageBatchResponse'
+                $ref: '#/components/schemas/CreateMessageBatchResponse'
         '400':
           description: Validation Failed, Invalid Request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '401':
           description: Unauthorized error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '500':
           description: Service is not available
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
       x-codegen-request-body-name: body
       x-docs-level: Public
       x-auth-required: true
@@ -6484,25 +6545,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '401':
           description: Unauthorized error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '404':
           description: The message is not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '500':
           description: Service is not available
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
       x-docs-level: Public
       x-auth-required: true
       x-service-version: v1
@@ -6538,25 +6599,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '401':
           description: Unauthorized error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '404':
           description: The batch is not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '500':
           description: Service is unavailable
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
       x-docs-level: Public
       x-auth-required: true
       x-service-version: v1
@@ -6675,25 +6736,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '401':
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '404':
           description: No resource found for the account.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '500':
           description: Service Unavailable
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
       x-docs-level: Public
       x-auth-required: true
       x-service-version: v1
@@ -6769,25 +6830,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '401':
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '404':
           description: No resource found for the account
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
         '500':
           description: Service Unavailable
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/ASGErrorResponse'
       x-docs-level: Public
       x-auth-required: true
       x-service-version: v1
@@ -8988,9 +9049,6 @@ paths:
       requestBody:
         description: MMS envelope and content
         content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CreateMMSMessage'
           multipart/mixed:
             schema:
               $ref: '#/components/schemas/CreateMMSMessage'
@@ -15170,7 +15228,7 @@ paths:
       x-api-group: telephony/conference
       x-throttling-group: Heavy
       x-internal-api: false
-      x-app-permission: TelephonySessions
+      x-app-permission: CallControl
       x-failover-strategy: Hardening
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/conference
       x-rewrite-uri-to: /telephony/v1/account/$1/conference
@@ -16188,7 +16246,7 @@ paths:
       x-throttling-group: Light
       x-internal-api: false
       x-docs-level: Public
-      x-app-permission: TelephonySessions
+      x-app-permission: CallControl
       x-rewrite-uri-from: /restapi/v1.0/account/(.*)/telephony/sessions/(.*)/parties/bring-in
       x-rewrite-uri-to: /telephony/v1/account/$1/sessions/$2/parties/bring-in
       x-beta-api: true
@@ -19330,7 +19388,7 @@ components:
           type: string
           description: >-
             Text of a post. Maximum length is 10000 symbols. Mentions can be
-            added in .md format [![:Type](id)]
+            added in .md format `! [:Type] (id)`
         attachments:
           type: array
           description: Identifier(s) of attachments. Maximum number of attachments is 25
@@ -20324,18 +20382,77 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ContactResource'
-    ErrorResponse:
+    ADGError:
       type: object
       properties:
         errorCode:
           type: string
-          description: Error code
-          example: ASG-101
-        description:
+          description: >-
+            Code that characterizes this error. Code uniqly identifies the
+            source of the error.
+          readOnly: true
+          enum:
+            - >-
+              ErrorCode{code='ADG-000', httpStatus=503, description='Service
+              temporary unavailable.'}
+            - >-
+              ErrorCode{code='ADG-010', httpStatus=503, description='Federation
+              data temporary unavailable.'}
+            - >-
+              ErrorCode{code='ADG-001', httpStatus=500, description='Service
+              internal error.'}
+            - >-
+              ErrorCode{code='ADG-100', httpStatus=403,
+              description='Insufficient permissions.'}
+            - >-
+              ErrorCode{code='ADG-101', httpStatus=403,
+              description='Unauthorized access.'}
+            - >-
+              ErrorCode{code='ADG-102', httpStatus=405, description='Method not
+              allowed.'}
+            - >-
+              ErrorCode{code='ADG-111', httpStatus=400, description='Need
+              Content-Type header.'}
+            - >-
+              ErrorCode{code='ADG-112', httpStatus=400, description='Request
+              body is invalid.'}
+            - >-
+              ErrorCode{code='ADG-121', httpStatus=400, description='Parameter
+              [${paramName}]is invalid. ${additionalInfo:-}'}
+            - >-
+              ErrorCode{code='ADG-115', httpStatus=415, description='Unsupported
+              Media Type.'}
+            - >-
+              ErrorCode{code='ADG-105', httpStatus=404, description='Current
+              account is not linked to any federation.'}
+            - >-
+              ErrorCode{code='ADG-107', httpStatus=404, description='Account not
+              found.'}
+            - >-
+              ErrorCode{code='ADG-122', httpStatus=404, description='Contact not
+              found.'}
+            - >-
+              ErrorCode{code='ADG-200', httpStatus=404, description='Invalid
+              URI'}
+        message:
           type: string
-          description: Human-readable description of an error. Not suitable for end users
-          example: AccountId 1234 is invalid
-      description: Error response
+          description: Message that describes the error. This message can be used in UI.
+          readOnly: true
+      description: >-
+        Description of an error occurred during request processing. This data
+        type can be used only in readonly mode, no writing is allowed
+    ADGErrorResponse:
+      type: object
+      properties:
+        errors:
+          type: array
+          description: Collection of all gathered errors
+          readOnly: true
+          items:
+            $ref: '#/components/schemas/ADGError'
+      description: >-
+        Format of response in case that any error occured during request
+        processing
     FederatedAccountResource:
       type: object
       properties:
@@ -21833,6 +21950,9 @@ components:
             - ReturnToRoot
             - ReturnToPrevious
             - Disconnect
+            - ReturnToTopLevelMenu
+            - DoNothing
+            - ConnectToOperator
         extension:
           $ref: '#/components/schemas/IVRMenuExtensionInfo'
         phoneNumber:
@@ -23086,6 +23206,84 @@ components:
         apply to all messages. In addition to that, it is possible to override
         this attribute for each message. This way a single API call may be used
         to send individual messages to many recipients
+    CreateMessageBatchResponse:
+      required:
+        - from
+        - messages
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the message batch
+          readOnly: true
+          example: '12345'
+        from:
+          type: string
+          description: >-
+            Phone number in
+            [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from
+            which the messages are going to be sent
+          example: 15551234567
+        batchSize:
+          type: integer
+          description: Total number of messages in the accepted batch
+          example: 5
+        processedCount:
+          type: integer
+          description: Total number of messages currently processed in the batch
+          example: 1
+        lastModifiedTime:
+          type: string
+          description: |
+            The last time the batch was processed.
+          format: date-time
+        status:
+          type: string
+          description: Current status of a message batch
+          example: Processing
+          enum:
+            - Processing
+            - Sent
+            - Completed
+        creationTime:
+          type: string
+          description: |
+            The time at which the batch was created
+          format: date-time
+        rejected:
+          type: array
+          items:
+            type: object
+            $ref: '#/components/schemas/RejectedMessageInfo'
+      description: >-
+        Batch of A2P SMS messages. This object provides a specification to send
+        message(s) to many recipients. It contains top-level attributes which
+        apply to all messages. In addition to that, it is possible to override
+        this attribute for each message. This way a single API call may be used
+        to send individual messages to many recipients
+    RejectedMessageInfo:
+      type: object
+      description: Information about the message that failed to be sent
+      properties:
+        index:
+          type: integer
+          description: Index of the rejected message in the request
+          example: 2
+        to:
+          type: array
+          items:
+            type: string
+            description: Phone number specified exactly as in the request, if available
+            example:
+              - '234456'
+        errorCode:
+          type: string
+          description: Standard error code
+          example: CMN-100
+        description:
+          type: string
+          description: Standard error description
+          example: Parameter [to] value is invalid
     MessageCreateRequest:
       required:
         - to
@@ -23315,6 +23513,17 @@ components:
           description: Next page token of the current filter criteria
           example: npgt1
       description: Pagination details
+    ASGErrorResponse:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: Error code
+        description:
+          type: string
+          description: Human-readable description of an error. Not suitable for end users
+          example: AccountId 1234 is invalid
+      description: Error response
     UserCallLogResponse:
       required:
         - navigation
@@ -23665,13 +23874,21 @@ components:
         callPickup:
           type: boolean
           description: >-
-            Specifies whether Secretary is permitted to pickup calls on behalf
-            of Boss
+            Specifies whether secretary user is permitted to pickup calls on
+            behalf of boss user role
         conferencing:
           type: boolean
           description: >-
-            Specifies whether Secretary is permitted to organize conference on
-            behalf of Boss
+            Specifies whether secretary user is permitted to organize conference
+            on behalf of boss user role
+        conferencingSettings:
+          type: object
+          $ref: '#/components/schemas/ConferencingSettingsInfo'
+        delegateIds:
+          type: array
+          description: List of the delegate users for the current boss user
+          items:
+            type: string
     CallLogRecordMessage:
       type: object
       properties:
@@ -23781,8 +23998,6 @@ components:
         nextPage:
           $ref: '#/components/schemas/CallLogNavigationInfoURI'
         previousPage:
-          $ref: '#/components/schemas/CallLogNavigationInfoURI'
-        lastPage:
           $ref: '#/components/schemas/CallLogNavigationInfoURI'
       description: Information on navigation
     CallLogPagingInfo:
@@ -26044,6 +26259,9 @@ components:
     MeetingInfo:
       type: object
       properties:
+        uuid:
+          type: string
+          description: Unique identifier of a meeting instance
         id:
           type: string
         topic:
@@ -26053,6 +26271,9 @@ components:
     MeetingRecordingInfo:
       type: object
       properties:
+        uuid:
+          type: string
+          description: Unique identifier of a meeting instance
         id:
           type: string
         contentDownloadUri:
@@ -32946,6 +33167,15 @@ components:
         editableMemberStatus:
           type: boolean
           description: Allows members to change their queue status
+    ConferencingSettingsInfo:
+      type: object
+      properties:
+        hostCode:
+          type: string
+          description: Delegated access code for a host user
+        participantCode:
+          type: string
+          description: Delegated access code for a participant user
     DelegateExtensionInfo:
       type: object
       properties:
@@ -33238,11 +33468,11 @@ components:
         email2:
           type: string
           description: Second email of a contact
-          example: charlie-example@gmail.com
+          example: charlie.williams2@example.com
         email3:
           type: string
           description: Third email of a contact
-          example: theboss-example@hotmail.com
+          example: charlie.williams3@example.com
         homePhone:
           type: string
           description: Home phone number of a contact in e.164 (with "+") format
