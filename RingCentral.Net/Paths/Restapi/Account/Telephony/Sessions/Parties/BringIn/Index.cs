@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in
         /// Rate Limit Group: Light
-        /// App Permission: TelephonySessions
+        /// App Permission: CallControl
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallParty> Post(RingCentral.AddPartyRequest addPartyRequest,

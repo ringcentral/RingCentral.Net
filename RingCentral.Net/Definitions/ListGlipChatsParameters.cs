@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Type of chats to be fetched. By default all type of chats will be fetched
-        /// Enum: Everyone, Group, Personal, Direct, Team
+        /// Enum: Personal, Direct, Group, Team, Everyone
         /// </summary>
         public string[] type { get; set; }
 

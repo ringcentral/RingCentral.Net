@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/conference
         /// Rate Limit Group: Heavy
-        /// App Permission: TelephonySessions
+        /// App Permission: CallControl
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.CallSessionObject> Post(RestRequestConfig restRequestConfig = null)

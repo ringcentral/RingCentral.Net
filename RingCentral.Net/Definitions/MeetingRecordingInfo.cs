@@ -3,6 +3,11 @@ namespace RingCentral
     public class MeetingRecordingInfo
     {
         /// <summary>
+        /// Unique identifier of a meeting instance
+        /// </summary>
+        public string uuid { get; set; }
+
+        /// <summary>
         /// </summary>
         public string id { get; set; }
 

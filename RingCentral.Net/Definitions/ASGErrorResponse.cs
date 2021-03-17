@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     // Error response
-    public class ErrorResponse
+    public class ASGErrorResponse
     {
         /// <summary>
         /// Error code

@@ -10,7 +10,7 @@ namespace RingCentral
     public class BatchResponse<T>
     {
         public BatchSummary summary;
-        public ErrorResponse error;
+        public ADGErrorResponse error;
         public T content;
     }
 
@@ -53,7 +53,7 @@ namespace RingCentral
                 var responseString = await multipart.Contents[i + 1].ReadAsStringAsync();
                 if (batchSummary.isError)
                 {
-                    batchResponse.error = JsonConvert.DeserializeObject<ErrorResponse>(responseString);
+                    batchResponse.error = JsonConvert.DeserializeObject<ADGErrorResponse>(responseString);
                 }
                 else
                 {

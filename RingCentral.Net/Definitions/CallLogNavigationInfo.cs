@@ -14,9 +14,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallLogNavigationInfoURI previousPage { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public CallLogNavigationInfoURI lastPage { get; set; }
     }
 }

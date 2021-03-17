@@ -143,7 +143,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 ```
 
 - Parameter `createSmsMessageBatchRequest` is of type [CreateSMSMessageBatchRequest](./RingCentral.Net/Definitions/CreateSMSMessageBatchRequest.cs)
-- `result` is of type [MessageBatchResponse](./RingCentral.Net/Definitions/MessageBatchResponse.cs)
+- `result` is of type [CreateMessageBatchResponse](./RingCentral.Net/Definitions/CreateMessageBatchResponse.cs)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -5502,7 +5502,7 @@ Name|Value
 HTTP Method|`POST`
 Endpoint|`/restapi/v1.0/account/{accountId}/telephony/conference`
 Rate Limit Group|`Heavy`
-App Permission|`TelephonySessions`
+App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
@@ -5580,7 +5580,7 @@ Name|Value
 HTTP Method|`POST`
 Endpoint|`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in`
 Rate Limit Group|`Light`
-App Permission|`TelephonySessions`
+App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs

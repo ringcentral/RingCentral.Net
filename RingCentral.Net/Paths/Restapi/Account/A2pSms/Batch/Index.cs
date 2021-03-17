@@ -33,12 +33,12 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.MessageBatchResponse> Post(
+        public async Task<RingCentral.CreateMessageBatchResponse> Post(
             RingCentral.CreateSMSMessageBatchRequest createSMSMessageBatchRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.MessageBatchResponse>(this.Path(false), createSMSMessageBatchRequest, null,
-                restRequestConfig);
+            return await rc.Post<RingCentral.CreateMessageBatchResponse>(this.Path(false), createSMSMessageBatchRequest,
+                null, restRequestConfig);
         }
 
         /// <summary>
