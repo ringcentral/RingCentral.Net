@@ -5,7 +5,6 @@
 
 ## HTTP POST but no request body
 
-- /restapi/v1.0/glip/chats/{chatId}/posts
 - /restapi/v1.0/account/{accountId}/telephony/conference
 
 ## HTTP PUT but no request body

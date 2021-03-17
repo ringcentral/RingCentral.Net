@@ -31,7 +31,7 @@ for (const path of cache.get) {
   }
   const responses = doc.paths[path].get.responses
   const response = responses['200'] || responses.default
-  if (!response.schema) {
+  if (!response.content) {
     markdown += `\n- ${path}`
   }
 }
@@ -71,13 +71,7 @@ for (const path of cache.post) {
   ) {
     continue
   }
-  if (!doc.paths[path].post.parameters || doc.paths[path].post.parameters.filter(
-    p => p.name === 'body' ||
-    p.name === 'attachments' ||
-    p.name === 'attachment' ||
-    p.name === 'binary' ||
-    p.type === 'file'
-  ).length === 0) {
+  if (!doc.paths[path].post.requestBody) {
     markdown += `\n- ${path}`
   }
 }
@@ -87,13 +81,7 @@ markdown += `
 ## HTTP PUT but no request body
 `
 for (const path of cache.put) {
-  if (doc.paths[path].put.parameters.filter(
-    p => p.in === 'body' ||
-    p.name === 'attachments' ||
-    p.name === 'attachment' ||
-    p.name === 'binary' ||
-    p.type === 'file'
-  ).length === 0) {
+  if (!doc.paths[path].put.requestBody) {
     markdown += `\n- ${path}`
   }
 }
@@ -103,13 +91,7 @@ markdown += `
 ## HTTP PATCH but no request body
 `
 for (const path of cache.patch) {
-  if (doc.paths[path].patch.parameters.filter(
-    p => p.in === 'body' ||
-    p.name === 'attachments' ||
-    p.name === 'attachment' ||
-    p.name === 'binary' ||
-    p.type === 'file'
-  ).length === 0) {
+  if (!doc.paths[path].patch.requestBody) {
     markdown += `\n- ${path}`
   }
 }
@@ -118,9 +100,9 @@ markdown += `
 
 ## string type as definitions
 `
-for (const definition of Object.keys(doc.definitions)) {
-  if (doc.definitions[definition].type === 'string') {
-    markdown += `\n- ${definition}`
+for (const schema of Object.keys(doc.components.schemas)) {
+  if (doc.components.schemas[schema].type === 'string') {
+    markdown += `\n- ${schema}`
   }
 }
 
@@ -128,9 +110,9 @@ markdown += `
 
 ## array type as definitions
 `
-for (const definition of Object.keys(doc.definitions)) {
-  if (doc.definitions[definition].type === 'array') {
-    markdown += `\n- ${definition}`
+for (const schema of Object.keys(doc.components.schemas)) {
+  if (doc.components.schemas[schema].type === 'array') {
+    markdown += `\n- ${schema}`
   }
 }
 
@@ -138,8 +120,8 @@ markdown += `
 
 ## Anonymouse types
 `
-for (const dKey of Object.keys(doc.definitions)) {
-  const properties = doc.definitions[dKey].properties
+for (const dKey of Object.keys(doc.components.schemas)) {
+  const properties = doc.components.schemas[dKey].properties
   if (!properties) {
     continue
   }
