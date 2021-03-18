@@ -54,7 +54,7 @@ Name|Value\n-|-\n${comments.map(c => `${c[0].substring(4)}|\`${c[1] === 'undefin
 \`\`\`java
 RestClient rc = new RestClient(clientID, clientSecret, serverURL);
 rc.authorize(username, extension, password);
-var result = ${pathToCode(path).replace(/\.[A-Z]/g, (m) => m.toLowerCase())}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')});
+var result = ${pathToCode(path).replace(/\.[A-Za-z0-9]+/g, (m) => m.toLowerCase())}.${method.toLowerCase()}(${parameters.map(p => camelCase(p)).join(', ')});
 rc.revoke();
 \`\`\`
 ${parameters.map(p => `- Parameter \`${camelCase(p)}\` is of type [${p}](./src/main/java/com/ringcentral/definitions/${p}.java)`).join('\n')}`
