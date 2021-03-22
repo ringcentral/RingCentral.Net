@@ -19,7 +19,6 @@ namespace RingCentral
         public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
-        /// Required
         /// </summary>
         public LocationUpdatesEmergencyAddressInfoRequest emergencyAddress { get; set; }
 

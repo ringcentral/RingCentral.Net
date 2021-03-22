@@ -1860,8 +1860,8 @@ paths:
       summary: Create Post
       description: >-
         Creates a post in the chat specified in path. Any mention can be added
-        within the `text` attribute of the request body in .md format - `!
-        [:Type] (id)`, where `type` is one of (Person, Team, File, Note, Task,
+        within the `text` attribute of the request body in .md format -
+        `![:Type](id)`, where `type` is one of (Person, Team, File, Note, Task,
         Event, Link, Card) and `id` is a unique identifier of the mentioned
         object of the specified type. Attachments of the following types (File,
         Card, Event, Note) can also be added to a post by passing type and ID of
@@ -19388,7 +19388,7 @@ components:
           type: string
           description: >-
             Text of a post. Maximum length is 10000 symbols. Mentions can be
-            added in .md format `! [:Type] (id)`
+            added in .md format `![:Type](id)`
         attachments:
           type: array
           description: Identifier(s) of attachments. Maximum number of attachments is 25
@@ -31941,7 +31941,6 @@ components:
     CreateWirelessPoint:
       required:
         - bssid
-        - emergencyAddress
         - name
       type: object
       properties:
@@ -32723,8 +32722,10 @@ components:
           description: Name of invalid parameter
         featureName:
           type: string
+          example: Sites
         parameterValue:
           type: string
+          example: SoftPhoneAutoLocationUpdate
     ValidateMultipleSwitchesRequest:
       type: object
       properties:

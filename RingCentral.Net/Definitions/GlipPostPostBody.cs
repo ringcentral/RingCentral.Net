@@ -4,7 +4,7 @@ namespace RingCentral
     public class GlipPostPostBody
     {
         /// <summary>
-        /// Text of a post. Maximum length is 10000 symbols. Mentions can be added in .md format `! [:Type] (id)`
+        /// Text of a post. Maximum length is 10000 symbols. Mentions can be added in .md format `![:Type](id)`
         /// </summary>
         public string text { get; set; }
 
