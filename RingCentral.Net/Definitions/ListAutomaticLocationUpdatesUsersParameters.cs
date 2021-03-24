@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listAutomaticLocationUpdatesUsers
     public class ListAutomaticLocationUpdatesUsersParameters
     {
         /// <summary>

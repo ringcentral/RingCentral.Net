@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listCallRecordingCustomGreetings
     public class ListCallRecordingCustomGreetingsParameters
     {
         /// <summary>

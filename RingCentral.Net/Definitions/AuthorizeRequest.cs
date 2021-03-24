@@ -1,20 +1,24 @@
 namespace RingCentral
 {
+    // Request body for operation authorize
     public class AuthorizeRequest
     {
         /// <summary>
         /// Determines authorization flow: **code** - Authorization Code, **token** - Implicit Grant
+        /// Required
         /// Enum: code, token
         /// </summary>
         public string response_type { get; set; }
 
         /// <summary>
         /// This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration
+        /// Required
         /// </summary>
         public string redirect_uri { get; set; }
 
         /// <summary>
         /// Identifier (key) of a client application
+        /// Required
         /// </summary>
         public string client_id { get; set; }
 

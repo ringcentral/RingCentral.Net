@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Request body for operation createFaxMessage
     public class CreateFaxMessageRequest
     {
         /// <summary>
@@ -10,6 +11,7 @@ namespace RingCentral
 
         /// <summary>
         /// To Phone Number
+        /// Required
         /// </summary>
         public MessageStoreCalleeInfoRequest[] to { get; set; }
 
@@ -35,6 +37,7 @@ namespace RingCentral
 
         /// <summary>
         /// File to upload
+        /// Required
         /// </summary>
         public Attachment[] attachments { get; set; }
     }

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation readUserPresenceStatus
     public class ReadUserPresenceStatusParameters
     {
         /// <summary>

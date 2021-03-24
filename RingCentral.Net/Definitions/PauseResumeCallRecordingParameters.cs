@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation pauseResumeCallRecording
     public class PauseResumeCallRecordingParameters
     {
         /// <summary>

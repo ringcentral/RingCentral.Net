@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation readAnsweringRule
     public class ReadAnsweringRuleParameters
     {
         /// <summary>

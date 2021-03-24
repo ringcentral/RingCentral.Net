@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listMessages
     public class ListMessagesParameters
     {
         /// <summary>

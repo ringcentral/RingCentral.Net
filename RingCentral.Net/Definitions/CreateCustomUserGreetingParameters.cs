@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation createCustomUserGreeting
     public class CreateCustomUserGreetingParameters
     {
         /// <summary>

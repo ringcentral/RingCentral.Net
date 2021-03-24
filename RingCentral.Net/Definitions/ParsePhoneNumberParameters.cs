@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation parsePhoneNumber
     public class ParsePhoneNumberParameters
     {
         /// <summary>

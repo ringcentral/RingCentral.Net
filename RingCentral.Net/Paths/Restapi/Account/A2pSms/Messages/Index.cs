@@ -33,7 +33,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.MessageListResponse> List(ListA2PsmsParameters queryParams = null,
+        public async Task<RingCentral.MessageListResponse> List(ListA2PSMSParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.MessageListResponse>(this.Path(false), queryParams, restRequestConfig);

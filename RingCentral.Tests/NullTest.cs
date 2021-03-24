@@ -13,7 +13,7 @@ namespace RingCentral.Tests
         {
             object attachment = new Attachment
             {
-                fileName = "test.png"
+                filename = "test.png"
             };
             var attachments = attachment;
             attachments = new[] {attachments};

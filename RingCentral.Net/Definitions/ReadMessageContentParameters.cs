@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation readMessageContent
     public class ReadMessageContentParameters
     {
         /// <summary>

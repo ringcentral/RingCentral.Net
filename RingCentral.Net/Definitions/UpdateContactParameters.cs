@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation updateContact
     public class UpdateContactParameters
     {
         /// <summary>

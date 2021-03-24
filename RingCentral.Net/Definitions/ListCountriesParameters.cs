@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listCountries
     public class ListCountriesParameters
     {
         /// <summary>

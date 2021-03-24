@@ -25,9 +25,9 @@ namespace RingCentral.Tests
                 {
                     new Attachment
                     {
-                        fileName = "rc.png",
+                        filename = "rc.png",
                         contentType = "image/png",
-                        bytes = File.ReadAllBytes("rc.png")
+                        content = File.ReadAllBytes("rc.png")
                     }
                 };
 

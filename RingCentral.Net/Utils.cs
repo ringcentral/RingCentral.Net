@@ -38,14 +38,14 @@ namespace RingCentral
 
                 ((object[]) attachments).Select(a => a as Attachment).ToList().ForEach(attachment =>
                 {
-                    var content = new ByteArrayContent(attachment.bytes);
+                    var content = new ByteArrayContent(attachment.content);
                     if (attachment.contentType != null)
                     {
                         content.Headers.ContentType =
                             new System.Net.Http.Headers.MediaTypeHeaderValue(attachment.contentType);
                     }
 
-                    multipartFormDataContent.Add(content, p.name, attachment.fileName);
+                    multipartFormDataContent.Add(content, p.name, attachment.filename);
                 });
             });
             return multipartFormDataContent;

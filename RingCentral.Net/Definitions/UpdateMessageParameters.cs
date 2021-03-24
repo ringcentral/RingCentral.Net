@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation updateMessage
     public class UpdateMessageParameters
     {
         /// <summary>

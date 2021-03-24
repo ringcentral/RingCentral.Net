@@ -46,7 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyGreetings
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Post(CreateIvrPromptRequest createIVRPromptRequest,
+        public async Task<RingCentral.PromptInfo> Post(CreateIVRPromptRequest createIVRPromptRequest,
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listAccountSwitches
     public class ListAccountSwitchesParameters
     {
         /// <summary>

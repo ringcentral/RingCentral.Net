@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listBlockedAllowedNumbers
     public class ListBlockedAllowedNumbersParameters
     {
         /// <summary>

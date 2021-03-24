@@ -1,6 +1,7 @@
 namespace RingCentral
 {
-    public class ListA2PsmsParameters
+    // Query parameters for operation listA2PSMS
+    public class ListA2PSMSParameters
     {
         /// <summary>
         /// Internal identifier of a message batch used for filtering records

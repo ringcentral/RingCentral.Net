@@ -1,6 +1,7 @@
 namespace RingCentral
 {
-    public class ReadA2PsmsOptOutsParameters
+    // Query parameters for operation readA2PSMSOptOuts
+    public class ReadA2PSMSOptOutsParameters
     {
         /// <summary>
         /// The sender's phone number (`from` field) in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for filtering messages

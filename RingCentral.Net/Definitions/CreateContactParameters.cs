@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation createContact
     public class CreateContactParameters
     {
         /// <summary>

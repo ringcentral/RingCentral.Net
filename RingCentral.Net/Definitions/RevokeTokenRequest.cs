@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Request body for operation revokeToken
     public class RevokeTokenRequest
     {
         /// <summary>
@@ -12,6 +13,7 @@ namespace RingCentral
 
         /// <summary>
         /// Active access or refresh token to be revoked
+        /// Required
         /// </summary>
         public string token { get; set; }
     }

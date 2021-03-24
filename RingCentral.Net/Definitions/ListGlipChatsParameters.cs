@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listGlipChats
     public class ListGlipChatsParameters
     {
         /// <summary>

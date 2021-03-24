@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listForwardingNumbers
     public class ListForwardingNumbersParameters
     {
         /// <summary>

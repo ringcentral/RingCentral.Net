@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Request body for operation getToken
     public class GetTokenRequest
     {
         /// <summary>

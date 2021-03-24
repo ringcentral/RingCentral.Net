@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listCallQueueMembers
     public class ListCallQueueMembersParameters
     {
         /// <summary>

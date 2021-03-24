@@ -38,18 +38,18 @@ namespace RingCentral.Tests
                     {
                         new Attachment
                         {
-                            fileName = "rc.png",
-                            bytes = await File.ReadAllBytesAsync("./rc.png")
+                            filename = "rc.png",
+                            content = await File.ReadAllBytesAsync("./rc.png")
                         },
                         new Attachment
                         {
-                            fileName = "glip.png",
-                            bytes = await File.ReadAllBytesAsync("./glip.png")
+                            filename = "glip.png",
+                            content = await File.ReadAllBytesAsync("./glip.png")
                         },
                         new Attachment
                         {
-                            fileName = "hello.txt",
-                            bytes = Encoding.UTF8.GetBytes("Hello 888")
+                            filename = "hello.txt",
+                            content = Encoding.UTF8.GetBytes("Hello 888")
                         }
                     }
                 };

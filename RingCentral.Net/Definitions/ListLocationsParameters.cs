@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listLocations
     public class ListLocationsParameters
     {
         /// <summary>

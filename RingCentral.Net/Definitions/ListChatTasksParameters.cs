@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listChatTasks
     public class ListChatTasksParameters
     {
         /// <summary>

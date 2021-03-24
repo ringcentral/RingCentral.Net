@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation readAccountPresence
     public class ReadAccountPresenceParameters
     {
         /// <summary>

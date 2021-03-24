@@ -1,9 +1,11 @@
 namespace RingCentral
 {
-    public class CreateIvrPromptRequest
+    // Request body for operation createIVRPrompt
+    public class CreateIVRPromptRequest
     {
         /// <summary>
         /// Audio file that will be used as a prompt. Attachment cannot be empty, only audio files are supported
+        /// Required
         /// </summary>
         public Attachment attachment { get; set; }
 

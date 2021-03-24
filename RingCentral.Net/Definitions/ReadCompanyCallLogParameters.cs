@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation readCompanyCallLog
     public class ReadCompanyCallLogParameters
     {
         /// <summary>

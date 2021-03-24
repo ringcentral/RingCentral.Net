@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.OptOuts
         /// App Permission: A2PSMS
         /// User Permission: undefined
         /// </summary>
-        public async Task<RingCentral.OptOutListResponse> Get(ReadA2PsmsOptOutsParameters queryParams = null,
+        public async Task<RingCentral.OptOutListResponse> Get(ReadA2PSMSOptOutsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.OptOutListResponse>(this.Path(), queryParams, restRequestConfig);

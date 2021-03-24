@@ -1,9 +1,11 @@
 namespace RingCentral
 {
+    // Request body for operation createCustomUserGreeting
     public class CreateCustomUserGreetingRequest
     {
         /// <summary>
         /// Type of a greeting, specifying the case when the greeting is played.
+        /// Required
         /// Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
         /// </summary>
         public string type { get; set; }
@@ -15,6 +17,7 @@ namespace RingCentral
 
         /// <summary>
         /// Meida file to upload
+        /// Required
         /// </summary>
         public Attachment binary { get; set; }
     }

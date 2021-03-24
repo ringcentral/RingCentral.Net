@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation readGlipEvents
     public class ReadGlipEventsParameters
     {
         /// <summary>

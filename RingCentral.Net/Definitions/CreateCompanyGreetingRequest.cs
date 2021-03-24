@@ -1,9 +1,11 @@
 namespace RingCentral
 {
+    // Request body for operation createCompanyGreeting
     public class CreateCompanyGreetingRequest
     {
         /// <summary>
         /// Type of a greeting, specifying the case when the greeting is played.
+        /// Required
         /// Enum: Company, StartRecording, StopRecording, AutomaticRecording
         /// </summary>
         public string type { get; set; }
@@ -20,6 +22,7 @@ namespace RingCentral
 
         /// <summary>
         /// Meida file to upload
+        /// Required
         /// </summary>
         public Attachment binary { get; set; }
     }

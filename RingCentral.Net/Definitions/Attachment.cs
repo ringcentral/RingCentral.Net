@@ -1,20 +1,22 @@
 namespace RingCentral
 {
+    // Attachment is a file to be uploaded
     public class Attachment
     {
         /// <summary>
-        /// File name with extension, such as "example.png"
+        /// Filename with extension
         /// </summary>
-        public string fileName;
+        public string filename { get; set; }
 
         /// <summary>
         /// Binary content of the file
+        /// Required
         /// </summary>
-        public byte[] bytes;
+        public byte[] content { get; set; }
 
         /// <summary>
         /// Content type of the file, such as "image/png"
         /// </summary>
-        public string contentType;
+        public string contentType { get; set; }
     }
 }

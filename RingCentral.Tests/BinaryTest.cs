@@ -27,8 +27,8 @@ namespace RingCentral.Tests
                 {
                     image = new Attachment
                     {
-                        bytes = bytes,
-                        fileName = "rc.png",
+                        content = bytes,
+                        filename = "rc.png",
                         contentType = "image/png"
                     }
                 });
@@ -39,8 +39,8 @@ namespace RingCentral.Tests
                 {
                     image = new Attachment
                     {
-                        bytes = bytes,
-                        fileName = "rc.png",
+                        content = bytes,
+                        filename = "rc.png",
                         contentType = "image/png"
                     }
                 });

@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation readTimezone
     public class ReadTimezoneParameters
     {
         /// <summary>

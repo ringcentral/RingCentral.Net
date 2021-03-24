@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation listUserTemplates
     public class ListUserTemplatesParameters
     {
         /// <summary>

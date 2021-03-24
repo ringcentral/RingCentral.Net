@@ -41,18 +41,18 @@ namespace RingCentral.Tests
                     {
                         new Attachment
                         {
-                            fileName = "rc.png",
-                            bytes = File.ReadAllBytes("./rc.png")
+                            filename = "rc.png",
+                            content = File.ReadAllBytes("./rc.png")
                         },
                         new Attachment
                         {
-                            fileName = "glip.png",
-                            bytes = File.ReadAllBytes("./glip.png")
+                            filename = "glip.png",
+                            content = File.ReadAllBytes("./glip.png")
                         },
                         new Attachment
                         {
-                            fileName = "hello.txt",
-                            bytes = Encoding.UTF8.GetBytes("Hello 888")
+                            filename = "hello.txt",
+                            content = Encoding.UTF8.GetBytes("Hello 888")
                         }
                     }
                 };
@@ -90,18 +90,18 @@ namespace RingCentral.Tests
                     {
                         new Attachment
                         {
-                            fileName = "rc.png",
-                            bytes = File.ReadAllBytes("./rc.png")
+                            filename = "rc.png",
+                            content = File.ReadAllBytes("./rc.png")
                         },
                         new Attachment
                         {
-                            fileName = "glip.png",
-                            bytes = File.ReadAllBytes("./glip.png")
+                            filename = "glip.png",
+                            content = File.ReadAllBytes("./glip.png")
                         },
                         new Attachment
                         {
-                            fileName = "hello.txt",
-                            bytes = Encoding.UTF8.GetBytes("Hello 888")
+                            filename = "hello.txt",
+                            content = Encoding.UTF8.GetBytes("Hello 888")
                         }
                     }
                 };
@@ -122,8 +122,8 @@ namespace RingCentral.Tests
 
                     (attachments as IEnumerable<Attachment>).ToList().ForEach(attachment =>
                     {
-                        var content = new ByteArrayContent(attachment.bytes);
-                        multipartFormDataContent.Add(content, attachment.fileName, attachment.fileName);
+                        var content = new ByteArrayContent(attachment.content);
+                        multipartFormDataContent.Add(content, attachment.filename, attachment.filename);
                     });
                 });
 

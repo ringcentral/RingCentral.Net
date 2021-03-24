@@ -1,5 +1,6 @@
 namespace RingCentral
 {
+    // Query parameters for operation searchViaGet2
     public class SearchViaGet2Parameters
     {
         /// <summary>
