@@ -21,11 +21,13 @@ namespace RingCentral
 
         /// <summary>
         /// Task start date in UTC time zone.
+        /// Format: date-time
         /// </summary>
         public string startDate { get; set; }
 
         /// <summary>
         /// Task due date/time in UTC time zone.
+        /// Format: date-time
         /// </summary>
         public string dueDate { get; set; }
 

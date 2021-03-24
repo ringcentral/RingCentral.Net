@@ -3,6 +3,7 @@ namespace RingCentral
     public class FilterSupported
     {
         /// <summary>
+        /// Format: int32
         /// </summary>
         public long? maxResults { get; set; }
 

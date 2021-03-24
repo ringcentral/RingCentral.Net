@@ -8,6 +8,7 @@ namespace RingCentral
         public UserResponse[] Resources { get; set; }
 
         /// <summary>
+        /// Format: int64
         /// </summary>
         public long? itemsPerPage { get; set; }
 
@@ -17,10 +18,12 @@ namespace RingCentral
         public string[] schemas { get; set; }
 
         /// <summary>
+        /// Format: int64
         /// </summary>
         public long? startIndex { get; set; }
 
         /// <summary>
+        /// Format: int64
         /// </summary>
         public long? totalResults { get; set; }
     }

@@ -57,6 +57,12 @@ const generateField = (f: Field) => {
   if (f.default) {
     p = `/// Default: ${f.default}\n        ${p}`;
   }
+  if (f.example) {
+    p = `/// Example: ${f.example}\n        ${p}`;
+  }
+  if (f.format) {
+    p = `/// Format: ${f.format}\n        ${p}`;
+  }
   if (f.minimum) {
     p = `/// Minimum: ${f.minimum}\n        ${p}`;
   }

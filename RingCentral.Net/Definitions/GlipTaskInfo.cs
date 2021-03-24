@@ -9,11 +9,13 @@ namespace RingCentral
 
         /// <summary>
         /// Datetime of the task creation in UTC time zone.
+        /// Format: datetime
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         /// Datetime of the last modification of the task in UTC time zone.
+        /// Format: datetime
         /// </summary>
         public string lastModifiedTime { get; set; }
 
@@ -61,11 +63,13 @@ namespace RingCentral
 
         /// <summary>
         /// Task start date
+        /// Format: date-time
         /// </summary>
         public string startDate { get; set; }
 
         /// <summary>
         /// Task due date/time
+        /// Format: date-time
         /// </summary>
         public string dueDate { get; set; }
 

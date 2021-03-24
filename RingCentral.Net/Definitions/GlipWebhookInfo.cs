@@ -19,11 +19,13 @@ namespace RingCentral
 
         /// <summary>
         /// Webhook creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         /// Webhook last update time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 

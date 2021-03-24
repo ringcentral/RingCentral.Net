@@ -15,11 +15,13 @@ namespace RingCentral
 
         /// <summary>
         /// Conversation creation datetime in ISO 8601 format
+        /// Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         /// Conversation last change datetime in ISO 8601 format
+        /// Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 

@@ -4,10 +4,12 @@ namespace RingCentral
     public class Meta
     {
         /// <summary>
+        /// Format: date-time
         /// </summary>
         public string created { get; set; }
 
         /// <summary>
+        /// Format: date-time
         /// </summary>
         public string lastModified { get; set; }
 

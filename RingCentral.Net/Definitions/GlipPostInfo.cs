@@ -35,11 +35,13 @@ namespace RingCentral
 
         /// <summary>
         /// Post creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         /// Post last modification datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        /// Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 

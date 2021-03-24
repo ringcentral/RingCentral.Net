@@ -5,11 +5,13 @@ namespace RingCentral
     {
         /// <summary>
         /// Phone number in E.164 format
+        /// Example: 16502223366
         /// </summary>
         public string phoneNumber { get; set; }
 
         /// <summary>
         /// Extension number
+        /// Example: 103
         /// </summary>
         public string extensionNumber { get; set; }
     }

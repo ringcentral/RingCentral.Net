@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// page size
+        /// Format: int32
         /// </summary>
         public long? count { get; set; }
 
@@ -19,6 +20,7 @@ namespace RingCentral
 
         /// <summary>
         /// start index (1-based)
+        /// Format: int32
         /// </summary>
         public long? startIndex { get; set; }
     }

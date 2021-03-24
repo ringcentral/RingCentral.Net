@@ -5,6 +5,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Internal identifier of a device
+        /// Example: 59474004
         /// </summary>
         public string deviceId { get; set; }
     }

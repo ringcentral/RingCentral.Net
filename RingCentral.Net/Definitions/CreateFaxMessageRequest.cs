@@ -17,6 +17,7 @@ namespace RingCentral
 
         /// <summary>
         /// Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately
+        /// Format: date-time
         /// </summary>
         public string sendTime { get; set; }
 
@@ -27,6 +28,7 @@ namespace RingCentral
 
         /// <summary>
         /// Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages. If not specified, the default cover page which is configured in 'Outbound Fax Settings' is attached
+        /// Format: int32
         /// </summary>
         public long? coverIndex { get; set; }
 
@@ -38,6 +40,7 @@ namespace RingCentral
         /// <summary>
         /// File to upload
         /// Required
+        /// Format: binary
         /// </summary>
         public Attachment[] attachments { get; set; }
     }

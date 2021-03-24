@@ -10,12 +10,14 @@ namespace RingCentral
 
         /// <summary>
         /// start index (1-based)
+        /// Format: int32
         /// Default: 1
         /// </summary>
         public long? startIndex { get; set; }
 
         /// <summary>
         /// page size
+        /// Format: int32
         /// Default: 100
         /// </summary>
         public long? count { get; set; }

@@ -18,10 +18,12 @@ namespace RingCentral
         public string parameterName { get; set; }
 
         /// <summary>
+        /// Example: Sites
         /// </summary>
         public string featureName { get; set; }
 
         /// <summary>
+        /// Example: SoftPhoneAutoLocationUpdate
         /// </summary>
         public string parameterValue { get; set; }
     }

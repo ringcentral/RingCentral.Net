@@ -3,6 +3,7 @@ namespace RingCentral
     public class RoleIdResource
     {
         /// <summary>
+        /// Format: uri
         /// </summary>
         public string uri { get; set; }
 

@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         /// User's password
+        /// Format: password
         /// </summary>
         public string password { get; set; }
 
@@ -39,6 +40,7 @@ namespace RingCentral
         /// Access token lifetime in seconds
         /// Maximum: 3600
         /// Minimum: 600
+        /// Format: int64
         /// Default: 3600
         /// </summary>
         public long? access_token_ttl { get; set; }
@@ -46,6 +48,7 @@ namespace RingCentral
         /// <summary>
         /// Refresh token lifetime in seconds
         /// Maximum: 604800
+        /// Format: int64
         /// Default: 604800
         /// </summary>
         public long? refresh_token_ttl { get; set; }

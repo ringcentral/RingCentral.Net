@@ -25,11 +25,13 @@ namespace RingCentral
 
         /// <summary>
         /// Chat creation datetime in ISO 8601 format
+        /// Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         /// Chat last change datetime in ISO 8601 format
+        /// Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
     }

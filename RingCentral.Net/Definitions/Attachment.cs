@@ -5,6 +5,7 @@ namespace RingCentral
     {
         /// <summary>
         /// Filename with extension
+        /// Example: example.png
         /// </summary>
         public string filename { get; set; }
 

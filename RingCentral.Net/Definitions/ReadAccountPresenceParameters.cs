@@ -15,11 +15,13 @@ namespace RingCentral
 
         /// <summary>
         /// Page number for account presence information
+        /// Format: int32
         /// </summary>
         public long? page { get; set; }
 
         /// <summary>
         /// Number for account presence information items per page
+        /// Format: int32
         /// </summary>
         public long? perPage { get; set; }
     }

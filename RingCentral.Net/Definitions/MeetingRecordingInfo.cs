@@ -22,6 +22,7 @@ namespace RingCentral
         public string contentType { get; set; }
 
         /// <summary>
+        /// Format: int32
         /// </summary>
         public long? size { get; set; }
 

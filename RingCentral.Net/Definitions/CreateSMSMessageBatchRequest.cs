@@ -6,11 +6,13 @@ namespace RingCentral
         /// <summary>
         /// Sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format.
         /// Required
+        /// Example: 15551234567
         /// </summary>
         public string from { get; set; }
 
         /// <summary>
         /// Text to send to `messages.to` phone numbers. Can be overridden on a per-message basis
+        /// Example: Hello, World!
         /// </summary>
         public string text { get; set; }
 

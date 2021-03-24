@@ -23,6 +23,7 @@ namespace RingCentral
 
         /// <summary>
         /// End date of periodic task
+        /// Format: date-time
         /// </summary>
         public string endingOn { get; set; }
     }

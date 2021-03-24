@@ -3,6 +3,7 @@ namespace RingCentral
     public class ProfileImageResource
     {
         /// <summary>
+        /// Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -15,6 +16,7 @@ namespace RingCentral
         public string contentType { get; set; }
 
         /// <summary>
+        /// Format: date-time
         /// </summary>
         public string lastModified { get; set; }
 

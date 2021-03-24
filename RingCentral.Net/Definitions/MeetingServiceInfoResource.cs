@@ -3,6 +3,7 @@ namespace RingCentral
     public class MeetingServiceInfoResource
     {
         /// <summary>
+        /// Format: uri
         /// </summary>
         public string uri { get; set; }
 

@@ -12,6 +12,7 @@ namespace RingCentral
         public string syncToken { get; set; }
 
         /// <summary>
+        /// Format: date-time
         /// </summary>
         public string syncTime { get; set; }
 
