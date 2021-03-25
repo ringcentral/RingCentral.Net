@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
         }
 
         /// <summary>
-        /// Operation: Complete Task
+        /// Completes a task in the specified chat.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}/complete
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(RingCentral.GlipCompleteTask glipCompleteTask,

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Unarchive
         }
 
         /// <summary>
-        /// Operation: Unarchive Team
+        /// Changes the status of the specified team to 'Active'. A team is a chat between 2 and more participants assigned with specific name.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/unarchive
         /// Rate Limit Group: Medium

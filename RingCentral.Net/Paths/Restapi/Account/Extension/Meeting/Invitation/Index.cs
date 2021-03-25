@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.Invitation
         }
 
         /// <summary>
-        /// Operation: Get Meeting Invitation
+        /// Returns a meeting invitation by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/invitation
         /// Rate Limit Group: Light

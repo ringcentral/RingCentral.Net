@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         /// <summary>
-        /// Operation: Get User Events List
+        /// Returns all calendar events created by the current user.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/events
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         /// <summary>
-        /// Operation: Create Event
+        /// Creates a new calendar event.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/events
         /// Rate Limit Group: Medium
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         /// <summary>
-        /// Operation: Get Event
+        /// Returns the specified calendar event(s) by ID(s).
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/events/{eventId}
         /// Rate Limit Group: Medium
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         /// <summary>
-        /// Operation: Update Event
+        /// Updates the specified calendar event.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/glip/events/{eventId}
         /// Rate Limit Group: Medium
@@ -91,7 +91,7 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         }
 
         /// <summary>
-        /// Operation: Delete Event
+        /// Deletes the specified calendar event.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/events/{eventId}
         /// Rate Limit Group: Medium

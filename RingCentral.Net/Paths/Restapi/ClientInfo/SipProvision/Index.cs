@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         }
 
         /// <summary>
-        /// Operation: Register Device
+        /// Creates SIP registration of a device/application (WebPhone, Mobile, softphone).
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/client-info/sip-provision
         /// Rate Limit Group: Heavy

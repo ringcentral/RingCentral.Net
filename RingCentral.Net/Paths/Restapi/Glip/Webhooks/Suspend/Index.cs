@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks.Suspend
         }
 
         /// <summary>
-        /// Operation: Suspend Webhook
+        /// Suspends a webhook by ID.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/webhooks/{webhookId}/suspend
         /// Rate Limit Group: Medium

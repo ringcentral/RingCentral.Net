@@ -21,11 +21,11 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         }
 
         /// <summary>
-        /// Operation: Get Token
+        /// Returns access tokens for making API requests
         /// HTTP Method: POST
         /// Endpoint: /restapi/oauth/token
         /// Rate Limit Group: Auth
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest,

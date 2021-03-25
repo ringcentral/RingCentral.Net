@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Lock
         }
 
         /// <summary>
-        /// Operation: Lock Note
+        /// Locks a note providing the user with the unique write access for 5 hours.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/notes/{noteId}/lock
         /// Rate Limit Group: Light

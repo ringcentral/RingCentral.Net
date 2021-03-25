@@ -26,11 +26,11 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         }
 
         /// <summary>
-        /// Operation: Get Task
+        /// Returns information about the specified task(s) by ID(s).
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskInfo> Get(RestRequestConfig restRequestConfig = null)
@@ -44,11 +44,11 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         }
 
         /// <summary>
-        /// Operation: Delete Task
+        /// Deletes the specified task.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
@@ -62,11 +62,11 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         }
 
         /// <summary>
-        /// Operation: Patch Task
+        /// Updates the specified task by ID.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/tasks/{taskId}
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask,

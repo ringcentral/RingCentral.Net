@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         }
 
         /// <summary>
-        /// Operation: Get Caller Blocking Settings
+        /// Returns the current caller blocking settings of a user.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         }
 
         /// <summary>
-        /// Operation: Update Caller Blocking Settings
+        /// Updates the current caller blocking settings of a user.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
         /// Rate Limit Group: Light

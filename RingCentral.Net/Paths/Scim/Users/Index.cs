@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         /// <summary>
-        /// Operation: Search/List Users
+        /// Search/List Users
         /// HTTP Method: GET
         /// Endpoint: /scim/v2/Users
         /// Rate Limit Group: Light
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         /// <summary>
-        /// Operation: Create User
+        /// Create User
         /// HTTP Method: POST
         /// Endpoint: /scim/v2/Users
         /// Rate Limit Group: Heavy
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         /// <summary>
-        /// Operation: Get User
+        /// Get User
         /// HTTP Method: GET
         /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Light
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         /// <summary>
-        /// Operation: Update/Replace User
+        /// Update/Replace User
         /// HTTP Method: PUT
         /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Heavy
@@ -91,7 +91,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         /// <summary>
-        /// Operation: Delete User
+        /// Delete User
         /// HTTP Method: DELETE
         /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Heavy
@@ -109,7 +109,7 @@ namespace RingCentral.Paths.Scim.Users
         }
 
         /// <summary>
-        /// Operation: Update/Patch User
+        /// Update/Patch User
         /// HTTP Method: PATCH
         /// Endpoint: /scim/v2/Users/{id}
         /// Rate Limit Group: Heavy

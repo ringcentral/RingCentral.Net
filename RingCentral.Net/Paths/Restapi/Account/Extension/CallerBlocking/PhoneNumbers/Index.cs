@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        /// Operation: Get Blocked/Allowed Phone Numbers
+        /// Returns the lists of blocked and allowed phone numbers.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// Rate Limit Group: Light
@@ -41,7 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        /// Operation: Add Blocked/Allowed Number
+        /// Updates either blocked or allowed phone number list with a new phone number.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
         /// Rate Limit Group: Medium
@@ -57,7 +57,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        /// Operation: Get Blocked/Allowed Number
+        /// Returns blocked or allowed phone number(s) by their ID(s). Batch request is supported.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// Rate Limit Group: Light
@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        /// Operation: Update Blocked/Allowed Number
+        /// Updates blocked or allowed phone number(s) by their ID(s). Batch request is supported.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// Rate Limit Group: Medium
@@ -96,7 +96,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        /// Operation: Delete Blocked/Allowed Number
+        /// Deletes blocked or allowed phone number(s) by their ID(s). Batch request is supported.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
         /// Rate Limit Group: Medium

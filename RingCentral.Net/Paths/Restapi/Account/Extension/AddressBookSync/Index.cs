@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
         }
 
         /// <summary>
-        /// Operation: Address Book Synchronization
+        /// Synchronizes user contacts.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
         /// Rate Limit Group: Heavy

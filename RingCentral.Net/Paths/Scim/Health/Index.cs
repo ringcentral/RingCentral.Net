@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Scim.Health
         }
 
         /// <summary>
-        /// Operation: Check Health
+        /// Check Health
         /// HTTP Method: GET
         /// Endpoint: /scim/v2/health
         /// Rate Limit Group: NoThrottling
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Get(RestRequestConfig restRequestConfig = null)

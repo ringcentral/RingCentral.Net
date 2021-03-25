@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Users
         }
 
         /// <summary>
-        /// Operation: Get Paging Group Users
+        /// Returns the list of users allowed to page this group.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
         /// Rate Limit Group: Light

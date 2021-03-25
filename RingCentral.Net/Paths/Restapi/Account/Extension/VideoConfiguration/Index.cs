@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         }
 
         /// <summary>
-        /// Operation: Get User Video Configuration
+        /// Returns information about video configuration of the current user.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         }
 
         /// <summary>
-        /// Operation: Update User Video Configuration
+        /// Allows to update user video settings, for example video provider.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
         /// Rate Limit Group: Light

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         }
 
         /// <summary>
-        /// Operation: Get Meeting Service Info
+        /// Returns information on dial-in numbers for meetings, support and international dial-in numbers URIs and meeting account information.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         }
 
         /// <summary>
-        /// Operation: Update Meeting Service Info
+        /// Updates personal meeting identifier.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
         /// Rate Limit Group: Medium

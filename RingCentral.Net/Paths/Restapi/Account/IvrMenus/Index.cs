@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         /// <summary>
-        /// Operation: Create IVR Menu
+        /// Creates a company IVR menu.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-menus
         /// Rate Limit Group: Heavy
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         /// <summary>
-        /// Operation: Get IVR Menu
+        /// Returns a company IVR menu by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// Rate Limit Group: Medium
@@ -58,7 +58,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         /// <summary>
-        /// Operation: Update IVR Menu
+        /// Updates a company IVR menu by ID.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
         /// Rate Limit Group: Medium

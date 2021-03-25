@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         }
 
         /// <summary>
-        /// Operation: Get Company Directory Entries
+        /// Returns contact information on corporate users of federated accounts. Please note: 1. `User`, `DigitalUser`, `VirtualUser` and `FaxUser` types are returned as `User` type. 2. `ApplicationExtension` type is not returned. 3. Only extensions in `Enabled`, `Disabled` and `NotActivated` state are returned.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/entries
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         }
 
         /// <summary>
-        /// Operation: Get Corporate Directory Entry
+        /// Returns contact information on a particular corporate user of a federated account.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
         /// Rate Limit Group: Medium

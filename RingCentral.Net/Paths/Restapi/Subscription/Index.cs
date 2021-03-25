@@ -26,11 +26,11 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         /// <summary>
-        /// Operation: Get Subscription List
+        /// Returns the list of subscriptions created by the logged-in user for the currently authorized client application.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/subscription
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.RecordsCollectionResourceSubscriptionResponse> List(
@@ -41,11 +41,11 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         /// <summary>
-        /// Operation: Create Subscription
+        /// Creates a new subscription.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/subscription
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(
@@ -56,11 +56,11 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         /// <summary>
-        /// Operation: Get Subscription
+        /// Returns the requested subscription by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Get(RestRequestConfig restRequestConfig = null)
@@ -74,11 +74,11 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         /// <summary>
-        /// Operation: Update Subscription
+        /// Updates the existent subscription. The client application can extend/narrow the events for which it receives notifications within the frame of one subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows to set the subscription expiration time. If other than `events` and `expiresIn` parameters are passed in request they will be ignored. If the request body is empty then the specified subscription will be just renewed without any event filter change and with expiration time default.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Put(
@@ -94,11 +94,11 @@ namespace RingCentral.Paths.Restapi.Subscription
         }
 
         /// <summary>
-        /// Operation: Cancel Subscription
+        /// Cancels the existent subscription.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)

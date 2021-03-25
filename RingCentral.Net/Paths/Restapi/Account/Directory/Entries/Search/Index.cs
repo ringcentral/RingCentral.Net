@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
         }
 
         /// <summary>
-        /// Operation: Search Company Directory Entries
+        /// Returns contact information on corporate users of federated accounts according to the specified filtering and ordering.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/entries/search
         /// Rate Limit Group: Heavy

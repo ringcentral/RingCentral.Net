@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
         }
 
         /// <summary>
-        /// Operation: Parse Phone Number
+        /// Returns one or more parsed and/or formatted phone numbers that are passed as a string.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/number-parser/parse
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.ParsePhoneNumberResponse> Post(

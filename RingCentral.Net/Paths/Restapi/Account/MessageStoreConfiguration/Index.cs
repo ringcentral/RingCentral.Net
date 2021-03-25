@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         }
 
         /// <summary>
-        /// Operation: Get Message Store Configuration
+        /// Returns message store settings.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-configuration
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         }
 
         /// <summary>
-        /// Operation: Update Message Store Configuration
+        /// Updates message store settings.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-configuration
         /// Rate Limit Group: Light

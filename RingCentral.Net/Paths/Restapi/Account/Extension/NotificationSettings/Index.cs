@@ -19,7 +19,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         }
 
         /// <summary>
-        /// Operation: Get Notification Settings
+        /// Returns notification settings for the current extension.
+        ///  <p>Knowledge Article: <a href="https://success.ringcentral.com/articles/RC_Knowledge_Article/9740">User Settings - Set up Message Notifications</a></p>
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// Rate Limit Group: Light
@@ -32,7 +33,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.NotificationSettings
         }
 
         /// <summary>
-        /// Operation: Update Notification Settings
+        /// Updates notification settings for the current extension.
+        /// <p>Knowledge Article: <a href="https://success.ringcentral.com/articles/RC_Knowledge_Article/9740">User Settings - Set up Message Notifications</a></p>
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
         /// Rate Limit Group: Medium

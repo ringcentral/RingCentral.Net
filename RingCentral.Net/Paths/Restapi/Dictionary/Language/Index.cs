@@ -26,11 +26,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         }
 
         /// <summary>
-        /// Operation: Get Language List
+        /// Returns the information about supported languages.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/language
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.LanguageList> List(RestRequestConfig restRequestConfig = null)
@@ -39,11 +39,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         }
 
         /// <summary>
-        /// Operation: Get Language
+        /// Returns language by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/language/{languageId}
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.LanguageInfo> Get(RestRequestConfig restRequestConfig = null)

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Pickup
         }
 
         /// <summary>
-        /// Operation: Pickup Call
+        /// Picks up a call parked to the specified park location.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
         /// Rate Limit Group: Light

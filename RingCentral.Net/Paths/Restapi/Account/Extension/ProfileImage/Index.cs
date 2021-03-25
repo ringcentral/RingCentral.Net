@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         }
 
         /// <summary>
-        /// Operation: Get User Profile Image
+        /// Returns a profile image of an extension.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Medium
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         }
 
         /// <summary>
-        /// Operation: Update User Profile Image
+        /// Updates the extension profile image
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Heavy
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         }
 
         /// <summary>
-        /// Operation: Upload User Profile Image
+        /// Uploads the extension profile image.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
         /// Rate Limit Group: Heavy
@@ -69,7 +69,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         }
 
         /// <summary>
-        /// Operation: Get Scaled User Profile Image
+        /// Returns scaled profile image of an extension.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
         /// Rate Limit Group: Light

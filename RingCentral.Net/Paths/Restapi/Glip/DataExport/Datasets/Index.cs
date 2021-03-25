@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         }
 
         /// <summary>
-        /// Operation: Get Data Export Task Dataset
+        /// Returns the specified dataset by ID. Each dataset is a ZIP archive the size of which is limited to 1 Gb.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
         /// Rate Limit Group: Heavy

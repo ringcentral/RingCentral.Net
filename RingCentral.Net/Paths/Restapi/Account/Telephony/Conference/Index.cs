@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
         }
 
         /// <summary>
-        /// Operation: Start Conference Call Session
+        /// Initiates a conference call session.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/conference
         /// Rate Limit Group: Heavy

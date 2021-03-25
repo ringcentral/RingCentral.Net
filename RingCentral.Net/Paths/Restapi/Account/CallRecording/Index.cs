@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         }
 
         /// <summary>
-        /// Operation: Get Call Recording Settings
+        /// Returns call recording settings.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         }
 
         /// <summary>
-        /// Operation: Update Call Recording Settings
+        /// Updates current call recording settings.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording
         /// Rate Limit Group: Medium

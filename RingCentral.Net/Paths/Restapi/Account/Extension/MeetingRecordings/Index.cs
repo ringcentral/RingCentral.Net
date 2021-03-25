@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingRecordings
         }
 
         /// <summary>
-        /// Operation: Get User Meeting Recordings List
+        /// Returns the list of meetings recordings for the current user.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings
         /// Rate Limit Group: Medium

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         }
 
         /// <summary>
-        /// Operation: Search/List Users
+        /// Search/List Users
         /// HTTP Method: POST
         /// Endpoint: /scim/v2/Users/.search
         /// Rate Limit Group: Light

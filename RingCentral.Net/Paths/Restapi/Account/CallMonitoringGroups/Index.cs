@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         /// <summary>
-        /// Operation: Get Call Monitoring Groups List
+        /// Returns call monitoring groups that can be filtered by some extension.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         /// <summary>
-        /// Operation: Create Call Monitoring Group
+        /// Creates a new call monitoring group.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
         /// Rate Limit Group: Medium
@@ -56,7 +56,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         /// <summary>
-        /// Operation: Updates Call Monitoring Group
+        /// Updates call monitoring group name by ID.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// Rate Limit Group: Medium
@@ -77,7 +77,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         }
 
         /// <summary>
-        /// Operation: Delete Call Monitoring Group
+        /// Remove infromation about the given call monitoring group.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
         /// Rate Limit Group: Medium

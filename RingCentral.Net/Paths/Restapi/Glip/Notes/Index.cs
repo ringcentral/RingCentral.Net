@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         /// <summary>
-        /// Operation: Get Note
+        /// Returns the specified note(s). It is possible to fetch up to 50 notes per request.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
         /// Rate Limit Group: Medium
@@ -44,7 +44,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         /// <summary>
-        /// Operation: Delete Note
+        /// Deletes the specified note.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
         /// Rate Limit Group: Medium
@@ -62,7 +62,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         }
 
         /// <summary>
-        /// Operation: Update Note
+        /// Edits a note. Notes can be edited by any user if posted to a chat. the user belongs to.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/notes/{noteId}
         /// Rate Limit Group: Medium

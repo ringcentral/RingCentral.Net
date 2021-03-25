@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Tasks
         }
 
         /// <summary>
-        /// Operation: Get Contacts Update Task
+        /// Returns the status of a task on adding multiple contacts to multiple extensions.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/address-book-bulk-upload/tasks/{taskId}
         /// Rate Limit Group: Light

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Remove
         }
 
         /// <summary>
-        /// Operation: Remove Team Members
+        /// Removes members from the specified team. A team is a chat between 2 and more participants assigned with specific name.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/remove
         /// Rate Limit Group: Medium

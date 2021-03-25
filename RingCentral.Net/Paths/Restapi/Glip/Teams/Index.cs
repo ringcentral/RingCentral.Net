@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         /// <summary>
-        /// Operation: Get Teams
+        /// Returns the list of teams where the user is a member (both archived and active) combined with a list of public teams that can be joined by the current user. All records in response are sorted by creation time of a chat in ascending order. A team is a chat between 2 and more (unlimited number) participants assigned with specific name.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/teams
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         /// <summary>
-        /// Operation: Create Team
+        /// Creates a team, and adds a list of people to the team.  A team is a chat between 2 and more (unlimited number) participants assigned with specific name.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/teams
         /// Rate Limit Group: Medium
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         /// <summary>
-        /// Operation: Get Team
+        /// Returns information about the specified team. A team is a chat between 2 and more participants assigned with specific name.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}
         /// Rate Limit Group: Light
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         /// <summary>
-        /// Operation: Delete Team
+        /// Deletes the specified team. A team is a chat between 2 and more (unlimited number) participants assigned with specific name.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}
         /// Rate Limit Group: Medium
@@ -90,7 +90,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         }
 
         /// <summary>
-        /// Operation: Update Team
+        /// Updates the name and description of the specified team. A team is a chat between 2 and more (unlimited number) participants assigned with specific name.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}
         /// Rate Limit Group: Medium

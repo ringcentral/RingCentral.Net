@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         }
 
         /// <summary>
-        /// Operation: Get Group Events
+        /// Returns a list of calendar events available for the current user within the specified group. Users can only see their personal tasks and public tasks.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/events
         /// Rate Limit Group: Medium
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         }
 
         /// <summary>
-        /// Operation: Create Event by Group ID
+        /// Creates a new calendar event within the specified group.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/events
         /// Rate Limit Group: Medium

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         }
 
         /// <summary>
-        /// Operation: Create Custom User Greeting
+        /// Creates custom greeting for an extension user.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
         /// Rate Limit Group: Heavy
@@ -43,7 +43,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         }
 
         /// <summary>
-        /// Operation: Get Custom Greeting
+        /// Returns a custom user greeting by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
         /// Rate Limit Group: Medium

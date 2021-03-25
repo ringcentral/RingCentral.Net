@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         }
 
         /// <summary>
-        /// Operation: Get Call Party Status
+        /// Returns a call party status by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// Rate Limit Group: Light
@@ -44,7 +44,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         }
 
         /// <summary>
-        /// Operation: Delete Call Party
+        /// Removes a party from a call session by ID. A party can be deleted only if supervised or parked. It is possible to delete only one conference participant per request.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// Rate Limit Group: Light
@@ -62,7 +62,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         }
 
         /// <summary>
-        /// Operation: Update Call Party
+        /// Modifies a call party by ID. There is a known limitation for Mute scenario - mute via REST API doesn't work with mute placed via RingCentral apps or HardPhone. It means that if you muted participant via Call Control API and Ringcentral Desktop app you need to unmute both endpoints to bring the media back.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
         /// Rate Limit Group: Light

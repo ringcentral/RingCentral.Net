@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
         }
 
         /// <summary>
-        /// Operation: Reject Call Party
+        /// Rejects an inbound call in a "Setup" or "Proceeding" state
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
         /// Rate Limit Group: Light

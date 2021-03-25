@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
         }
 
         /// <summary>
-        /// Operation: Get Device
+        /// Returns account device(s) by their ID(s).
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// Rate Limit Group: Light
@@ -45,7 +45,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
         }
 
         /// <summary>
-        /// Operation: Update Device
+        /// Updates account device(s) by their ID(s).
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/device/{deviceId}
         /// Rate Limit Group: Medium

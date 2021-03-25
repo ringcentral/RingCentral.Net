@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        /// Operation: Get Emergency Location List
+        /// Returns emergency response locations of the current account.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
         /// Rate Limit Group: Light
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        /// Operation: Add Emergency Location
+        /// Add Emergency Location
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations
         /// Rate Limit Group: Medium
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        /// Operation: Get Emergency Location
+        /// Returns emergency response location by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// Rate Limit Group: Light
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        /// Operation: Update Emergency Location
+        /// Updates the specified emergency response location.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// Rate Limit Group: Heavy
@@ -93,7 +93,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        /// Operation: Delete Emergency Location
+        /// Deletes the specified emergency response location.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
         /// Rate Limit Group: Heavy

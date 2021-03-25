@@ -26,11 +26,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         }
 
         /// <summary>
-        /// Operation: Get States List
+        /// Returns all the states of a certain country
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/state
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetStateListResponse> List(ListStatesParameters queryParams = null,
@@ -40,11 +40,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         }
 
         /// <summary>
-        /// Operation: Get State
+        /// Returns the information on a specific state.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/state/{stateId}
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetStateInfoResponse> Get(RestRequestConfig restRequestConfig = null)

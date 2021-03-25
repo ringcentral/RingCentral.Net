@@ -26,11 +26,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         }
 
         /// <summary>
-        /// Operation: Get Standard Greeting List
+        /// Returns the list of predefined standard greetings. Custom greetings recorded by user are not returned in response to this request. See Get Extension Custom Greetings.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/greeting
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null,
@@ -40,11 +40,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         }
 
         /// <summary>
-        /// Operation: Get Standard Greeting
+        /// Returns a standard greeting by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/greeting/{greetingId}
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingInfo> Get(RestRequestConfig restRequestConfig = null)

@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
         }
 
         /// <summary>
-        /// Operation: Get Authorization Profile
+        /// Returns a list of user permissions granted at authorization procedure. Please note: Some permissions may be restricted by extension type.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.AuthProfileResource> Get(RestRequestConfig restRequestConfig = null)

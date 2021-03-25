@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
         }
 
         /// <summary>
-        /// Operation: Get Location List
+        /// Returns all available locations for a certain state.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/location
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetLocationListResponse> Get(ListLocationsParameters queryParams = null,

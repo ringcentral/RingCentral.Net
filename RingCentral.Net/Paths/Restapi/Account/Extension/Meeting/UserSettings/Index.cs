@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.UserSettings
         }
 
         /// <summary>
-        /// Operation: Get Meeting User Settings
+        /// Returns user settings for meetings.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/user-settings
         /// Rate Limit Group: Light

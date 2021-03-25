@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         }
 
         /// <summary>
-        /// Operation: Get IVR Prompt List
+        /// Returns the list of IVR prompts.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts
         /// Rate Limit Group: Medium
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         }
 
         /// <summary>
-        /// Operation: Create IVR Prompts
+        /// Creates an IVR prompt.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts
         /// Rate Limit Group: Heavy
@@ -55,7 +55,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         }
 
         /// <summary>
-        /// Operation: Get IVR Prompt
+        /// Returns an IVR prompt by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// Rate Limit Group: Medium
@@ -73,7 +73,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         }
 
         /// <summary>
-        /// Operation: Update IVR Prompt
+        /// Updates an IVR prompt by ID
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// Rate Limit Group: Medium
@@ -92,7 +92,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         }
 
         /// <summary>
-        /// Operation: Delete IVR Prompt
+        /// Deletes an IVR prompt by ID.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
         /// Rate Limit Group: Heavy

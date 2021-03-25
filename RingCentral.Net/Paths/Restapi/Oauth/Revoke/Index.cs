@@ -21,11 +21,11 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
         }
 
         /// <summary>
-        /// Operation: Revoke Token
+        /// Revokes access/refresh token. Requests to this endpoint must be authenticated with HTTP Basic scheme using the application key and application secret as login and password, correspondingly.
         /// HTTP Method: POST
         /// Endpoint: /restapi/oauth/revoke
         /// Rate Limit Group: Auth
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(RevokeTokenRequest revokeTokenRequest,

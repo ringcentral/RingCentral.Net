@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        /// Operation: Validate Multiple Wireless Points
+        /// Validates wireless points before creation or update. The maximum number of wireless points per request is 10 000.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
         /// Rate Limit Group: Heavy

@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         }
 
         /// <summary>
-        /// Operation: Get Chat Tasks
+        /// Returns the list of tasks of the specified chat.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/tasks
         /// Rate Limit Group: Heavy
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskList> Get(ListChatTasksParameters queryParams = null,
@@ -33,11 +33,11 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         }
 
         /// <summary>
-        /// Operation: Create Task
+        /// Creates a task in the specified chat.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/tasks
         /// Rate Limit Group: Medium
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GlipTaskInfo> Post(RingCentral.GlipCreateTask glipCreateTask,

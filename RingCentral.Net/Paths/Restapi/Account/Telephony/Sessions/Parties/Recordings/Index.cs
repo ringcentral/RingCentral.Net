@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         }
 
         /// <summary>
-        /// Operation: Create Recording
+        /// Starts a new call recording for the party
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
         /// Rate Limit Group: Light
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         }
 
         /// <summary>
-        /// Operation: Pause/Resume Recording
+        /// Pause/resume recording
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
         /// Rate Limit Group: Light

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Get Contact List
+        /// Returns user personal contacts.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// Rate Limit Group: Heavy
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Create Contact
+        /// Creates personal user contact.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
         /// Rate Limit Group: Heavy
@@ -56,7 +56,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Get Contact
+        /// Returns contact(s) by ID(s). Batch request is supported.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// Rate Limit Group: Heavy
@@ -74,7 +74,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Update Contact
+        /// Updates personal contact information by contact ID(s). Batch request is supported
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// Rate Limit Group: Heavy
@@ -95,7 +95,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        /// Operation: Delete Contact
+        /// Deletes contact(s) by ID(s). Batch request is supported.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         /// Rate Limit Group: Heavy

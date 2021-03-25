@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
         }
 
         /// <summary>
-        /// Operation: Ignore Call in Queue
+        /// Ignores a call to a call queue agent in `Setup` or `Proceeding` state.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
         /// Rate Limit Group: Light

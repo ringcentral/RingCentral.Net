@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         }
 
         /// <summary>
-        /// Operation: Get Account Meeting Recordings List
+        /// Returns the list of meeting recordings for the current account.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/meeting-recordings
         /// Rate Limit Group: Medium

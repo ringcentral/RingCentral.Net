@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Join
         }
 
         /// <summary>
-        /// Operation: Join Team
+        /// Adds the current user to the specified team. A team is a chat between 2 and more participants assigned with specific name.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/join
         /// Rate Limit Group: Medium

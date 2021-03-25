@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         }
 
         /// <summary>
-        /// Operation: Send A2P SMS
+        /// Allows to send high volume of A2P (Application-to-Person) SMS messages (in message batches). Only phone number with the `A2PSmsSender` feature can be used as a sender.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/batch
         /// Rate Limit Group: Light
@@ -42,7 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         }
 
         /// <summary>
-        /// Operation: Get A2P SMS Batch
+        /// Returns information on a message batch.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}
         /// Rate Limit Group: Light

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         /// <summary>
-        /// Operation: Get Forwarding Number List
+        /// Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all the extension phone numbers used for call forwarding and call flip.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// Rate Limit Group: Light
@@ -41,7 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         /// <summary>
-        /// Operation: Create Forwarding Number
+        /// Adds a new forwarding number to the forwarding number list.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
         /// Rate Limit Group: Medium
@@ -57,7 +57,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         /// <summary>
-        /// Operation: Get Forwarding Number
+        /// Returns a specific forwarding number.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// Rate Limit Group: Light
@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         /// <summary>
-        /// Operation: Update Forwarding Number
+        /// Updates the existing forwarding number from the forwarding number list.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// Rate Limit Group: Medium
@@ -96,7 +96,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         /// <summary>
-        /// Operation: Delete Forwarding Number
+        /// Deletes a forwarding number from the forwarding number list by its ID.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
         /// Rate Limit Group: Medium

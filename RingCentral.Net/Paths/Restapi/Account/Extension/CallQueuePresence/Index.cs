@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueuePresence
         }
 
         /// <summary>
-        /// Operation: Get Agent’s Call Queue Presence
+        /// Returns a list of agent's call queues with the agent presence status (per queue)
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence
         /// Rate Limit Group: Light
@@ -34,7 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueuePresence
         }
 
         /// <summary>
-        /// Operation: Update Call Queue Presence
+        /// Updates availability of the agent for the call queues.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence
         /// Rate Limit Group: Medium

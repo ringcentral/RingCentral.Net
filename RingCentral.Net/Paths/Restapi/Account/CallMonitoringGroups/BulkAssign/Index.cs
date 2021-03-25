@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
         }
 
         /// <summary>
-        /// Operation: Update Call Monitoring Group List
+        /// Updates call monitoring groups.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
         /// Rate Limit Group: Heavy

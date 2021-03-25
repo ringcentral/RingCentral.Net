@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        /// Operation: Get Network Map
+        /// Returns corporate networks map with emergency addresses assigned to the current account.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// Rate Limit Group: Heavy
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        /// Operation: Create Network
+        /// Creates a new network in corporate ethernet map for assignment of emergency addresses to network access points.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
         /// Rate Limit Group: Heavy
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        /// Operation: Get Network
+        /// Returns the specified network with emergency addresses assigned to the current account.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// Rate Limit Group: Medium
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        /// Operation: Update Network
+        /// Updates network in corporate ethernet map for assignment of emergency addresses to network access points.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// Rate Limit Group: Heavy
@@ -91,7 +91,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        /// Operation: Delete Network
+        /// Deletes network(s) in corporate ethernet map for Automatic Location Updates feature.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         /// Rate Limit Group: Heavy

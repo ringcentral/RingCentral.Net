@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
         }
 
         /// <summary>
-        /// Operation: Get Device List
+        /// Returns the list of common devices with their status of Automatic Location Updates feature.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
         /// Rate Limit Group: Medium

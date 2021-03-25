@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         }
 
         /// <summary>
-        /// Operation: Get Everyone Chat
+        /// Returns information about Everyone chat, which is a company level chat including all employees; assigned with specific name.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/everyone
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         }
 
         /// <summary>
-        /// Operation: Update Everyone Сhat
+        /// Updates Everyone chat information. Everyone chat is a company level chat including all employees; assigned with specific name.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/everyone
         /// Rate Limit Group: Medium

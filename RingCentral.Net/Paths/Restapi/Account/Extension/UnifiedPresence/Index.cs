@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         }
 
         /// <summary>
-        /// Operation: Get Unified Presence
+        /// Returns the unified presence status of the requested user(s). The set of parameters returned by this method differs whether you return the requester's presence or any other user presence.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// Rate Limit Group: Medium
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         }
 
         /// <summary>
-        /// Operation: Update Unified Presence
+        /// Updates the unified presence for the current user specified in path.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
         /// Rate Limit Group: Medium

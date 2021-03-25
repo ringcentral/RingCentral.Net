@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         }
 
         /// <summary>
-        /// Operation: Get Message Content
+        /// Returns a specific message attachment data as media stream.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
         /// Rate Limit Group: Medium

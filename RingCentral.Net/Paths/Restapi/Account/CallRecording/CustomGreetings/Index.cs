@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         }
 
         /// <summary>
-        /// Operation: Get Call Recording Custom Greeting List
+        /// Returns call recording custom greetings.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
         /// Rate Limit Group: Medium
@@ -41,7 +41,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         }
 
         /// <summary>
-        /// Operation: Delete Call Recording Custom Greeting
+        /// Deletes call recording custom greeting(s).
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
         /// Rate Limit Group: Medium

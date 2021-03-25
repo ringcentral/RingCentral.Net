@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
         }
 
         /// <summary>
-        /// Operation: Make CallOut
+        /// Creates a new outbound call out session. Currently this method is supported for Softphone/Hardphone only, since device IDs for WebRTC/Mobile apps cannot be obtained.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/call-out
         /// Rate Limit Group: Heavy

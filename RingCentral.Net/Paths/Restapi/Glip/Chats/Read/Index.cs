@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Read
         }
 
         /// <summary>
-        /// Operation: Mark Chat as Read
+        /// Sets the specified chat status to 'Read' for the current user.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/read
         /// Rate Limit Group: Medium

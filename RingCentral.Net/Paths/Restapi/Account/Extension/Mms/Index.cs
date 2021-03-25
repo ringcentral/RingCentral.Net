@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         }
 
         /// <summary>
-        /// Operation: Send MMS
+        /// Creates and sends media messages. Sending MMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
         /// Rate Limit Group: Medium

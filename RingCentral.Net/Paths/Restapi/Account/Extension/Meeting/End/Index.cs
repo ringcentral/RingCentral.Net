@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
         }
 
         /// <summary>
-        /// Operation: End Meeting
+        /// Ends a meetings which is in progress.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
         /// Rate Limit Group: Medium

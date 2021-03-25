@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Recording.Content
         }
 
         /// <summary>
-        /// Operation: Get Call Recordings Data
+        /// Returns media content of a call recording.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
         /// Rate Limit Group: Heavy

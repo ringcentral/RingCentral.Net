@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Publish
         }
 
         /// <summary>
-        /// Operation: Publish Note
+        /// Publishes a note making it visible to other users.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/notes/{noteId}/publish
         /// Rate Limit Group: Medium

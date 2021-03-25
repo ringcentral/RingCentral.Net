@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLogSync
         }
 
         /// <summary>
-        /// Operation: Sync User Call Log
+        /// Synchronizes call log records.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync
         /// Rate Limit Group: Heavy

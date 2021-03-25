@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         }
 
         /// <summary>
-        /// Operation: Get Data Export Task List
+        /// Returns the list of Glip data export tasks.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/data-export
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         }
 
         /// <summary>
-        /// Operation: Create Data Export Task
+        /// Creates a task for Glip data export and returns a link at which the exported data will be available in future once the task is implemented. The exported data can be downloaded by calling Get Data Export Task method with the specified task ID. Simultaneously no more than 2 tasks per company can be created.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/data-export
         /// Rate Limit Group: Heavy
@@ -56,7 +56,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         }
 
         /// <summary>
-        /// Operation: Get Data Export Task
+        /// Returns the links for downloading Glip data exported within the specified task. If the export task is still in progress, then only the task status will be returned. If the data is ready for downloading, then the list of URLs will be returned.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/data-export/{taskId}
         /// Rate Limit Group: Medium

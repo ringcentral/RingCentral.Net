@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Unlock
         }
 
         /// <summary>
-        /// Operation: Unlock Note
+        /// Unlocks a note letting other users edit this note. Once the note is locked (by another user) it cannot be unlocked during 5 hours since the lock datetime.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/notes/{noteId}/unlock
         /// Rate Limit Group: Light

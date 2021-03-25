@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Sms
         }
 
         /// <summary>
-        /// Operation: Send SMS
+        /// Creates and sends a new text message. You can send SMS messages simultaneously to different recipients up to 40 requests per minute; this limitation is relevant for all client applications. Sending and receiving SMS is available for Toll-Free Numbers within the USA. You can send up to 10 attachments in one MMS message; the size of all attachments linked is limited to 1500000 bytes.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
         /// Rate Limit Group: Medium

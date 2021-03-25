@@ -27,3 +27,7 @@ export const getResponseType = responses => {
   }
   return responseType
 }
+
+export const capitalizeFirstLetter = s => {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+};

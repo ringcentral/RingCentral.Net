@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         }
 
         /// <summary>
-        /// Operation: Get Webhooks
+        /// Returns the list of all webhooks associated with the current account.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/webhooks
         /// Rate Limit Group: Medium
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         }
 
         /// <summary>
-        /// Operation: Get Webhook
+        /// Returns webhooks(s) with the specified id(s).
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/webhooks/{webhookId}
         /// Rate Limit Group: Medium
@@ -57,7 +57,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         }
 
         /// <summary>
-        /// Operation: Delete Webhook
+        /// Deletes a webhook by ID.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/webhooks/{webhookId}
         /// Rate Limit Group: Medium

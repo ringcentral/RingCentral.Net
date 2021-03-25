@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload
         }
 
         /// <summary>
-        /// Operation: Update Multiple Contacts
+        /// Uploads multiple contacts for multiple extensions at once. Maximum 500 extension, each up to 10000 contacts, can be updated per request.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/address-book-bulk-upload
         /// Rate Limit Group: Heavy

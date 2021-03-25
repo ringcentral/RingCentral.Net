@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
         }
 
         /// <summary>
-        /// Operation: Validate Multiple Switches
+        /// Validates switches before creation or update. The maximum number of switches per request is 10 000.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
         /// Rate Limit Group: Heavy

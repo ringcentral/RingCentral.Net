@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users
         }
 
         /// <summary>
-        /// Operation: Get User List
+        /// Returns the list of users with their status of Automatic Location Updates feature.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
         /// Rate Limit Group: Medium

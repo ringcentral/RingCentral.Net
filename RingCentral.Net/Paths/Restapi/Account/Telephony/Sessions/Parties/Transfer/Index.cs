@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
         }
 
         /// <summary>
-        /// Operation: Transfer Call Party
+        /// Transfers an answered call to the specified call party. Applicable for a call session in "Answered" or "Hold" state.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
         /// Rate Limit Group: Light

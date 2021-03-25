@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         }
 
         /// <summary>
-        /// Operation: Get Extension Caller ID
+        /// Returns information on an outbound caller ID of an extension.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         }
 
         /// <summary>
-        /// Operation: Update Extension Caller ID
+        /// Updates outbound caller ID information of an extension.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
         /// Rate Limit Group: Medium

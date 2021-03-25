@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Flip
         }
 
         /// <summary>
-        /// Operation: Call Flip on Party
+        /// Performs call flip procedure by holding opposite party and calling to the specified target
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
         /// Rate Limit Group: Light

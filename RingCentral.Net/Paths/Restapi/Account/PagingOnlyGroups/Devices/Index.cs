@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
         }
 
         /// <summary>
-        /// Operation: Get Paging Group Devices
+        /// Returns the list of paging devices assigned to this group.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
         /// Rate Limit Group: Light

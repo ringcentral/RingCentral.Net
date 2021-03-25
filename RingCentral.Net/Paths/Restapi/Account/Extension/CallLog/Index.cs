@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         }
 
         /// <summary>
-        /// Operation: Get User Call Log Records
+        /// Returns call log records filtered by parameters specified.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// Rate Limit Group: Heavy
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         }
 
         /// <summary>
-        /// Operation: Delete User Call Log
+        /// Deletes filtered call log records.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
         /// Rate Limit Group: Heavy
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         }
 
         /// <summary>
-        /// Operation: Get User Call Record
+        /// Returns call log records by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
         /// Rate Limit Group: Heavy

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueues
         }
 
         /// <summary>
-        /// Operation: Update User Call Queues
+        /// Updates the list of call queues where the user is an agent. This is a full update request, which means that if any queue where the user is an agent is not mentioned in request, then the user is automatically removed from this queue.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
         /// Rate Limit Group: Medium

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         }
 
         /// <summary>
-        /// Operation: Get Custom Field List
+        /// Returns the list of created custom fields.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
         /// Rate Limit Group: Light
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         }
 
         /// <summary>
-        /// Operation: Create Custom Field
+        /// Creates custom field attached to the object.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields
         /// Rate Limit Group: Light
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         }
 
         /// <summary>
-        /// Operation: Update Сustom Field
+        /// Updates custom field by ID specified in path.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// Rate Limit Group: Light
@@ -74,7 +74,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         }
 
         /// <summary>
-        /// Operation: Delete Custom Field
+        /// Deletes custom field(s) by ID(s) with the corresponding values.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
         /// Rate Limit Group: Light

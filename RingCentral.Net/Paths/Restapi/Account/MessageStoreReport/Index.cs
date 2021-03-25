@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         }
 
         /// <summary>
-        /// Operation: Create Message Store Report
+        /// Creates a task to collect all account messages within the specified time interval. Maximum number of simaltaneous tasks per account is 2.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report
         /// Rate Limit Group: Heavy
@@ -42,7 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         }
 
         /// <summary>
-        /// Operation: Get Message Store Report Task
+        /// Returns the current status of a task on report creation.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
         /// Rate Limit Group: Heavy

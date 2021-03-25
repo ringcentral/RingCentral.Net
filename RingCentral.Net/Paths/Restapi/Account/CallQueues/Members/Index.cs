@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
         }
 
         /// <summary>
-        /// Operation: Get Call Queue Members
+        /// Returns call queue group members.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
         /// Rate Limit Group: Light

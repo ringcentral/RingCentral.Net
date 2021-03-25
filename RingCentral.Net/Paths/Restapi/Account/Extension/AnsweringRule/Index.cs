@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Get Call Handling Rules
+        /// Returns call handling rules of an extension.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Create Call Handling Rule
+        /// Creates a custom call handling rule for a particular caller ID.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
         /// Rate Limit Group: Medium
@@ -56,7 +56,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Get Call Handling Rule
+        /// Returns an call handling rule by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// Rate Limit Group: Light
@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Update Call Handling Rule
+        /// Updates a custom call handling rule for a particular caller ID.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// Rate Limit Group: Medium
@@ -96,7 +96,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         }
 
         /// <summary>
-        /// Operation: Delete Call Handling Rule
+        /// Deletes a custom call handling rule by a particular ID.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
         /// Rate Limit Group: Medium

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         }
 
         /// <summary>
-        /// Operation: Get User Emergency Location List
+        /// Returns a list of emergency response locations available for the current user extension.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/emergency-locations
         /// Rate Limit Group: Light

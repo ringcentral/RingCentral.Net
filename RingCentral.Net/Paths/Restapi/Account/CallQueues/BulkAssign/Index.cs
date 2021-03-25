@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
         }
 
         /// <summary>
-        /// Operation: Assign Multiple Call Queue Members
+        /// Updates a call queue group.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
         /// Rate Limit Group: Heavy

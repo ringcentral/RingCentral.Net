@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
         }
 
         /// <summary>
-        /// Operation: Create Company Greeting
+        /// Creates a custom company greeting.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/greeting
         /// Rate Limit Group: Medium

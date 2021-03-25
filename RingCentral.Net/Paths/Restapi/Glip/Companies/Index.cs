@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         }
 
         /// <summary>
-        /// Operation: Get Company Info
+        /// Returns information about one or more companies by their IDs.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/companies/{companyId}
         /// Rate Limit Group: Light

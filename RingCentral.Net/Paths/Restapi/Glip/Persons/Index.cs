@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
         }
 
         /// <summary>
-        /// Operation: Get Person
+        /// Returns a user or multiple users by their ID(s). Batch request is supported.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/persons/{personId}
         /// Rate Limit Group: Light

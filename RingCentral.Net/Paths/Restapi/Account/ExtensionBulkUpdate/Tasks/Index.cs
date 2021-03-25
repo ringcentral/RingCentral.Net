@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate.Tasks
         }
 
         /// <summary>
-        /// Operation: Get Update Task Status
+        /// Returns the status of multiple extension update task
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension-bulk-update/tasks/{taskId}
         /// Rate Limit Group: Light

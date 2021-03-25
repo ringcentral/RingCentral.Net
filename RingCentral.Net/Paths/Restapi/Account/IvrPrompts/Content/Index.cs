@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts.Content
         }
 
         /// <summary>
-        /// Operation: Get IVR Prompt Content
+        /// Returns media content of an IVR prompt by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
         /// Rate Limit Group: Medium

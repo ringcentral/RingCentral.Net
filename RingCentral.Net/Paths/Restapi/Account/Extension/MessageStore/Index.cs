@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        /// Operation: Get Message List
+        /// Returns the list of messages from an extension mailbox.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
         /// Rate Limit Group: Light
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        /// Operation: Get Message
+        /// Returns individual message record(s) by the given message ID(s). The length of inbound messages is unlimited. Batch request is supported.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// Rate Limit Group: Light
@@ -58,7 +58,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        /// Operation: Update Message List
+        /// Updates message(s) by ID(s). Currently only message read status can be updated. Batch request is supported, max number of IDs passed as query/path parameters is 50. Alternative syntax is supported - user messages can be updated by passing multiple IDs in request body as an array of string, max number of IDs passed in request body is 1000. In this case asterisk is used in the path instead of IDs.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// Rate Limit Group: Medium
@@ -78,7 +78,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        /// Operation: Delete Message
+        /// Deletes message(s) by the given message ID(s). The first call of this method transfers the message to the 'Delete' status. The second call transfers the deleted message to the 'Purged' status. If it is required to make the message 'Purged' immediately (from the first call), then set the query parameter purge to 'True'.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         /// Rate Limit Group: Medium

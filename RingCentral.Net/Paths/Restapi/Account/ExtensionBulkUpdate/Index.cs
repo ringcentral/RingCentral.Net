@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate
         }
 
         /// <summary>
-        /// Operation: Update Multiple Extensions
+        /// Updates multiple extensions at once. Maximum 500 extensions can be updated per request.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension-bulk-update
         /// Rate Limit Group: Heavy

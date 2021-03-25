@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        /// Operation: Get Wireless Point List
+        /// Returns account wireless points configured and used for Automatic Location Updates feature.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        /// Operation: Create Wireless Point
+        /// Creates a new wireless point in network configuration with the emergency address assigned.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
         /// Rate Limit Group: Heavy
@@ -55,7 +55,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        /// Operation: Get Wireless Point
+        /// Returns the specified wireless access point of a corporate map with the emergency address assigned.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// Rate Limit Group: Medium
@@ -73,7 +73,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        /// Operation: Update Wireless Point
+        /// Updates the specified wireless access point of a corporate map by ID.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// Rate Limit Group: Heavy
@@ -93,7 +93,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        /// Operation: Delete Wireless Point
+        /// Deletes wireless point(s) of a corporate map by ID(s).
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
         /// Rate Limit Group: Heavy

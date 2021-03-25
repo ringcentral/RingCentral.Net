@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
         }
 
         /// <summary>
-        /// Operation: Create Multiple Switches
+        /// Creates multiple switches in corporate map. The maximum number of switches per request is 10 000; limitation for account is 10 000.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create
         /// Rate Limit Group: Heavy

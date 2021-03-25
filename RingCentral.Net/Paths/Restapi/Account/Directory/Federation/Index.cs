@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
         }
 
         /// <summary>
-        /// Operation: Get Account Federation
+        /// Returns information on a federation and associated accounts.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/directory/federation
         /// Rate Limit Group: Medium

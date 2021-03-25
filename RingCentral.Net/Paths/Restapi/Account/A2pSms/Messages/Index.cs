@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         }
 
         /// <summary>
-        /// Operation: Get A2P SMS List
+        /// Returns the list of outbound/inbound A2P messages sent from/to A2P phone numbers of the current account. The list can be filtered by message batch ID and/or phone number.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/messages
         /// Rate Limit Group: Light
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         }
 
         /// <summary>
-        /// Operation: Get A2P SMS
+        /// Returns the details of an A2P SMS message by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/a2p-sms/messages/{messageId}
         /// Rate Limit Group: Light

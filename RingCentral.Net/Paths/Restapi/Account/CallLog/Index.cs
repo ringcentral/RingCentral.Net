@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         }
 
         /// <summary>
-        /// Operation: Get Company Call Log Records
+        /// Returns call log records filtered by parameters specified.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-log
         /// Rate Limit Group: Heavy
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         }
 
         /// <summary>
-        /// Operation: Get Company Call Log Record(s)
+        /// Returns individual call log record(s) by ID(s). Batch request is supported.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
         /// Rate Limit Group: Heavy

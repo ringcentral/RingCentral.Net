@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        /// Operation: Get Scheduled Meetings
+        /// Returns a list of user meetings scheduled for the future (meetings of 'Instant' type are not included).
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// Rate Limit Group: Light
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        /// Operation: Create Meeting
+        /// Creates a new meeting.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
         /// Rate Limit Group: Medium
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        /// Operation: Get Meeting Info
+        /// Returns a particular meetings details by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// Rate Limit Group: Light
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        /// Operation: Update Meeting
+        /// Modifies a particular meeting.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// Rate Limit Group: Medium
@@ -92,7 +92,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        /// Operation: Delete Meeting
+        /// Deletes a scheduled meeting.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         /// Rate Limit Group: Medium

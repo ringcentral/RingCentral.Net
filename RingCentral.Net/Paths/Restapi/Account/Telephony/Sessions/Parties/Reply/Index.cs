@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reply
         }
 
         /// <summary>
-        /// Operation: Reply with Text
+        /// Replies with text/pattern without picking up a call.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply
         /// Rate Limit Group: Light

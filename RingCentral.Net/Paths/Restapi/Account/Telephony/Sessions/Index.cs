@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         }
 
         /// <summary>
-        /// Operation: Get Call Session Status
+        /// Returns the status of a call session by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
         /// Rate Limit Group: Light
@@ -45,7 +45,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         }
 
         /// <summary>
-        /// Operation: Drop Call Session
+        /// Drops a call session.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
         /// Rate Limit Group: Light

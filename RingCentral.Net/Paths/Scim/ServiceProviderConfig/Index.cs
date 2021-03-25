@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
         }
 
         /// <summary>
-        /// Operation: Get Service Provider Config
+        /// Get Service Provider Config
         /// HTTP Method: GET
         /// Endpoint: /scim/v2/ServiceProviderConfig
         /// Rate Limit Group: NoThrottling
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.ServiceProviderConfig> Get(RestRequestConfig restRequestConfig = null)

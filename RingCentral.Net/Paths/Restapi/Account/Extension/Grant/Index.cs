@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         }
 
         /// <summary>
-        /// Operation: Get Extension Grant List
+        /// Returns the list of extensions with the information on grants given to the current extension regarding them. Currently the list of grants include: picking up a call, monitoring, calling or receiving a call on behalf of somebody, call delegation and calling paging groups.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
         /// Rate Limit Group: Light

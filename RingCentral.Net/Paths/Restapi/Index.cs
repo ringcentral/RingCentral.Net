@@ -24,11 +24,11 @@ namespace RingCentral.Paths.Restapi
         }
 
         /// <summary>
-        /// Operation: Get API Versions
+        /// Returns current API version(s) and server info.
         /// HTTP Method: GET
         /// Endpoint: /restapi
         /// Rate Limit Group: NoThrottling
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetVersionsResponse> List(RestRequestConfig restRequestConfig = null)
@@ -37,11 +37,11 @@ namespace RingCentral.Paths.Restapi
         }
 
         /// <summary>
-        /// Operation: Get Version Info
+        /// Returns current API version info by apiVersion.
         /// HTTP Method: GET
         /// Endpoint: /restapi/{apiVersion}
         /// Rate Limit Group: NoThrottling
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetVersionResponse> Get(RestRequestConfig restRequestConfig = null)

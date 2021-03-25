@@ -21,11 +21,11 @@ namespace RingCentral.Paths.Restapi.Oauth.Authorize
         }
 
         /// <summary>
-        /// Operation: Returns a link to a login page location.
+        /// Returns a link to a login page location.
         /// HTTP Method: POST
         /// Endpoint: /restapi/oauth/authorize
         /// Rate Limit Group: undefined
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(AuthorizeRequest authorizeRequest, RestRequestConfig restRequestConfig = null)

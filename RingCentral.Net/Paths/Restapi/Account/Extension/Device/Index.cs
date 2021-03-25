@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         }
 
         /// <summary>
-        /// Operation: Get Extension Device List
+        /// Returns devices of the extension(s) by their ID(s). Batch request is supported
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
         /// Rate Limit Group: Light

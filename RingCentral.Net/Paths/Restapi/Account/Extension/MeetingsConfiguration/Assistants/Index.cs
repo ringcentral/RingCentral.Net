@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assi
         }
 
         /// <summary>
-        /// Operation: Get Assistants
+        /// Returns assistants information.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
         /// Rate Limit Group: Light

@@ -26,11 +26,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         }
 
         /// <summary>
-        /// Operation: Get Country List
+        /// Returns all the countries available for calling.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/country
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetCountryListResponse> List(ListCountriesParameters queryParams = null,
@@ -40,11 +40,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         }
 
         /// <summary>
-        /// Operation: Get Country
+        /// Returns the information on a specific country.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/dictionary/country/{countryId}
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get(RestRequestConfig restRequestConfig = null)

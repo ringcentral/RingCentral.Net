@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
         }
 
         /// <summary>
-        /// Operation: Get Call Recording Extension List
+        /// Returns the list of extensions to be recorded.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/extensions
         /// Rate Limit Group: Medium

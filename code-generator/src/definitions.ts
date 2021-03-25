@@ -76,7 +76,7 @@ const generateField = (f: Field) => {
     p = `${f.description
       .trim()
       .split('\n')
-      .map(l => `/// ${l}`)
+      .map(l => `/// ${l}`) // todo: refactor
       .join('\n        ')}\n        ${p}`;
   }
   p = `/// <summary>\n        ${p}`;

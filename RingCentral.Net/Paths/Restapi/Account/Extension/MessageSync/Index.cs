@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
         }
 
         /// <summary>
-        /// Operation: Sync Messages
+        /// Synchronizes messages.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
         /// Rate Limit Group: Light

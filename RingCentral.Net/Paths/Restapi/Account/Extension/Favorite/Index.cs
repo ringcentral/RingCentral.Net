@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         }
 
         /// <summary>
-        /// Operation: Get Favorite Contact List
+        /// Returns the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         }
 
         /// <summary>
-        /// Operation: Update Favorite Contact List
+        /// Updates the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).**Please note**: currently personal address book size is limited to 10 000 contacts.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
         /// Rate Limit Group: Medium

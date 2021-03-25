@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
         }
 
         /// <summary>
-        /// Operation: Renew Subscription
+        /// Renews an existent subscription by posting request with an empty body.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/subscription/{subscriptionId}/renew
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<RingCentral.SubscriptionInfo> Post(RestRequestConfig restRequestConfig = null)

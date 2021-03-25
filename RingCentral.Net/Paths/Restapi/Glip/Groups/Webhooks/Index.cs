@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
         }
 
         /// <summary>
-        /// Operation: Get Webhooks in Group
+        /// Returns webhooks which are available for the current user by group ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/webhooks
         /// Rate Limit Group: Medium
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Webhooks
         }
 
         /// <summary>
-        /// Operation: Create Webhook in Group
+        /// Creates a new webhook.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/webhooks
         /// Rate Limit Group: Medium

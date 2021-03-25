@@ -5,14 +5,14 @@ import { pascalCase, capitalCase } from 'change-case'
 import { lowerCaseFirst } from 'lower-case-first'
 import path from 'path'
 
-import { normalizePath, deNormalizePath, getResponseType } from './utils'
+import { normalizePath, deNormalizePath, getResponseType, capitalizeFirstLetter } from './utils'
 
 const outputDir = '../RingCentral.Net/Paths'
 
-const doc = yaml.load(fs.readFileSync('rc-platform.yml', 'utf8'))
+const doc = yaml.load(fs.readFileSync('/Users/tyler.liu/src/ts/consolidate-api-specs/rc-platform.yml', 'utf8'))
 
 // Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
-delete doc.paths['/restapi/oauth/authorize']
+// delete doc.paths['/restapi/oauth/authorize']
 
 const paths = Object.keys(doc.paths)
 const normalizedPaths = paths.map(p => normalizePath(p))
@@ -189,7 +189,7 @@ const generate = (prefix = '/') => {
         }
       }
       if (formUrlEncoded || multipart) {
-        bodyClass = `${pascalCase(operation.detail.operationId)}Request`
+        bodyClass = `${capitalizeFirstLetter(operation.detail.operationId)}Request`
         bodyParam = `${operation.detail.operationId}Request`
         const content = operation.detail.requestBody.content
         body = content[Object.keys(content)[0]]
@@ -207,18 +207,18 @@ const generate = (prefix = '/') => {
         methodParams.push(`${bodyClass} ${bodyParam}`)
       }
       if (queryParams.length > 0) {
-        methodParams.push(`${pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
+        methodParams.push(`${capitalizeFirstLetter(operation.detail.operationId)}Parameters queryParams = null`)
       }
       methodParams.push('RestRequestConfig restRequestConfig = null')
       code += `
 
       /// <summary>
-      /// Operation: ${operation.detail.summary || capitalCase(operation.detail.operationId)}
+      ${(operation.detail.description || operation.detail.summary || capitalCase(operation.detail.operationId)).split('\n').map(l => `/// ${l}`).join('\n')}
       /// HTTP Method: ${method.toUpperCase()}
       /// Endpoint: ${operation.endpoint}
       /// Rate Limit Group: ${operation.detail['x-throttling-group']}
-      /// App Permission: ${operation.detail['x-app-permission']}
-      /// User Permission: ${operation.detail['x-user-permission']}
+      /// App Permission: ${operation.detail['x-app-permission'] ?? ''}
+      /// User Permission: ${operation.detail['x-user-permission' ?? '']}
       /// </summary>
       public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
       {${withParam ? `

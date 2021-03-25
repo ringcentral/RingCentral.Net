@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
         }
 
         /// <summary>
-        /// Operation: Get Preferences
+        /// Returns information about user preferences.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/preferences
         /// Rate Limit Group: Medium

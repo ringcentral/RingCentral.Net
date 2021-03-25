@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks.Activate
         }
 
         /// <summary>
-        /// Operation: Activate Webhook
+        /// Activates a webhook by ID.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/webhooks/{webhookId}/activate
         /// Rate Limit Group: Medium

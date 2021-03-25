@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         }
 
         /// <summary>
-        /// Operation: Get User Template List
+        /// Returns the list of user templates for the current account.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/templates
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         }
 
         /// <summary>
-        /// Operation: Get User Template
+        /// Returns the user template by ID.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/templates/{templateId}
         /// Rate Limit Group: Light

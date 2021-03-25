@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         }
 
         /// <summary>
-        /// Operation: Get Chat Notes
+        /// Returns the list of notes created in the specified chat.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/notes
         /// Rate Limit Group: Heavy
@@ -33,7 +33,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         }
 
         /// <summary>
-        /// Operation: Create Note
+        /// Creates a new note in the specified chat.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/notes
         /// Rate Limit Group: Medium

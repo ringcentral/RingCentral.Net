@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Archive
         }
 
         /// <summary>
-        /// Operation: Archive Team
+        /// Changes the status of the specified team to 'Archived'. A team is a chat between 2 and more participants assigned with specific name.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/archive
         /// Rate Limit Group: Medium

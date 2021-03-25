@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         }
 
         /// <summary>
-        /// Operation: Get Call Queue List
+        /// Returns call queue group list.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         }
 
         /// <summary>
-        /// Operation: Get Call Queue
+        /// Returns basic information on a call queue group extension.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues/{groupId}
         /// Rate Limit Group: Light
@@ -58,7 +58,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         }
 
         /// <summary>
-        /// Operation: Update Call Queue
+        /// Updates information on a call queue group extension.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-queues/{groupId}
         /// Rate Limit Group: Light

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         }
 
         /// <summary>
-        /// Operation: Create Internal Text Message
+        /// Creates and sends an internal text message.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
         /// Rate Limit Group: Medium

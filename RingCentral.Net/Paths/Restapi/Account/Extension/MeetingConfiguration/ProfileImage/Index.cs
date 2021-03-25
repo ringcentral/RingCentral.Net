@@ -19,11 +19,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingConfiguration.Profi
         }
 
         /// <summary>
-        /// Operation: Upload User Meeting Profile Image
+        /// Uploads profile picture for user meetings.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image
         /// Rate Limit Group: Light
-        /// App Permission: undefined
+        /// App Permission: 
         /// User Permission: undefined
         /// </summary>
         public async Task<string> Post(CreateUserMeetingProfileImageRequest createUserMeetingProfileImageRequest,

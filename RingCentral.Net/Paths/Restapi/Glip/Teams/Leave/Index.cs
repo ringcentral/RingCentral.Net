@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Leave
         }
 
         /// <summary>
-        /// Operation: Leave Team
+        /// Removes the current user from the specified team. A team is a chat between 2 and more participants assigned with specific name.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/teams/{chatId}/leave
         /// Rate Limit Group: Medium

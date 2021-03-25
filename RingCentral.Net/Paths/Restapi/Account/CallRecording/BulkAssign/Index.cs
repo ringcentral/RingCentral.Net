@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
         }
 
         /// <summary>
-        /// Operation: Update Call Recording Extension List
+        /// Creates or updates the list of extensions to be recorded.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
         /// Rate Limit Group: Medium

@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Get Posts
+        /// Returns a list of posts from the specified chat.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts
         /// Rate Limit Group: Medium
@@ -40,7 +40,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Create Post
+        /// Creates a post in the chat specified in path. Any mention can be added within the `text` attribute of the request body in .md format - `![:Type](id)`, where `type` is one of (Person, Team, File, Note, Task, Event, Link, Card) and `id` is a unique identifier of the mentioned object of the specified type. Attachments of the following types (File, Card, Event, Note) can also be added to a post by passing type and ID of attachment(s) in request body.
         /// HTTP Method: POST
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts
         /// Rate Limit Group: Medium
@@ -54,7 +54,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Get Post
+        /// Returns information about the specified post.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// Rate Limit Group: Light
@@ -72,7 +72,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Delete Post
+        /// Deletes the specified post from the chat.
         /// HTTP Method: DELETE
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// Rate Limit Group: Medium
@@ -90,7 +90,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         }
 
         /// <summary>
-        /// Operation: Update Post
+        /// Updates a specific post within a chat.
         /// HTTP Method: PATCH
         /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
         /// Rate Limit Group: Medium

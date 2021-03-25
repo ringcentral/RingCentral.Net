@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.ActiveCalls
         }
 
         /// <summary>
-        /// Operation: Get Company Active Calls
+        /// Returns records of all calls that are in progress, ordered by start time in descending order.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/active-calls
         /// Rate Limit Group: Heavy

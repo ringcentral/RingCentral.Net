@@ -26,7 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         }
 
         /// <summary>
-        /// Operation: Get Message Store Report Archive
+        /// Returns the created report with message data not including attachments.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
         /// Rate Limit Group: Heavy
@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         }
 
         /// <summary>
-        /// Operation: Get Message Store Report Archive Content
+        /// Returns one of the report archives with message contents in application/zip format.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
         /// Rate Limit Group: Heavy

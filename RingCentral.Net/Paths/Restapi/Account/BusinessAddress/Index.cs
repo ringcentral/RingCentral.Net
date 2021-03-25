@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         }
 
         /// <summary>
-        /// Operation: Get Account Business Address
+        /// Returns business address of a company.
         /// HTTP Method: GET
         /// Endpoint: /restapi/v1.0/account/{accountId}/business-address
         /// Rate Limit Group: Light
@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         }
 
         /// <summary>
-        /// Operation: Update Company Business Address
+        /// Updates the business address of a company that account is linked to. Batch request is supported.
         /// HTTP Method: PUT
         /// Endpoint: /restapi/v1.0/account/{accountId}/business-address
         /// Rate Limit Group: Medium
