@@ -33,6 +33,24 @@ namespace RingCentral.Paths.${itemPaths.join('.')}
                 : ''
             }
         }
+
+        ${
+          item.parameter
+            ? `public string Path(bool withParameter = true)
+        {
+            if (withParameter && ${item.parameter} != null)
+            {
+                return $"{parent.Path()}/${R.last(item.paths)}/{${
+                item.parameter
+              }}";
+            }
+            return $"{parent.Path()}/${R.last(item.paths)}";
+        }`
+            : `public string Path()
+        {
+            return $"{parent.Path()}/${R.last(item.paths)}";
+        }`
+        }
     }
 }
 
