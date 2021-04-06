@@ -9,14 +9,15 @@
     "samples-typescript": "node -r @babel/register samples-typescript.js",
     "generate": "yarn definitions && yarn paths && yarn samples && yarn samples-java && yarn samples-typescript",
     "validate": "node -r @babel/register validate.js",
-    "new": "rm -rf ../RingCentral.Net/Definitions/* && ts-node src/definitions.ts"
+    "new-defi": "rm -rf ../RingCentral.Net/Definitions/* && ts-node src/definitions.ts",
+    "new-path": "ts-node src/paths.ts"
   },
   "dependencies": {
     "change-case": "^4.1.2",
     "js-yaml": "^4.0.0",
     "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1",
-    "ringcentral-open-api-parser": "^0.2.4",
+    "ringcentral-open-api-parser": "^0.2.5",
     "to-start-case": "^1.1.0"
   },
   "devDependencies": {
