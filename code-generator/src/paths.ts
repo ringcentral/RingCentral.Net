@@ -6,10 +6,68 @@ import R from 'ramda';
 
 const outputDir = '../RingCentral.Net/Paths';
 
+const generatePathMethod = (
+  parameter: string | undefined,
+  token: string
+): string => {
+  if (parameter) {
+    return `public string Path(bool withParameter = true)
+        {
+            if (withParameter && ${parameter} != null)
+            {
+                return $"{parent.Path()}/${token}/{${parameter}}";
+            }
+            return $"{parent.Path()}/${token}";
+        }`;
+  } else {
+    return `public string Path()
+        {
+            return $"{parent.Path()}/${token}";
+        }`;
+  }
+};
+
+const generateBridgeMethod = (
+  parameter: string | undefined,
+  itemPaths: string[]
+): string => {
+  return `namespace RingCentral.Paths.${R.init(itemPaths).join('.')}
+{
+    public partial class Index
+    {
+        public ${itemPaths.join('.')}.Index ${R.last(itemPaths)}(${
+    parameter ? `string ${parameter} = null` : ''
+  })
+        {
+            return new ${itemPaths.join('.')}.Index(this${
+    parameter ? `, ${parameter}` : ''
+  });
+        }
+    }
+}`;
+};
+
+const generateConstructor = (
+  parameter: string | undefined,
+  parentPaths: string[]
+): string => {
+  return `public RestClient rc;
+        public ${parentPaths.join('.')}.Index parent;
+        ${parameter ? `public string ${parameter};` : ''}
+
+        public Index(${parentPaths.join('.')}.Index parent${
+    parameter ? `, string ${parameter} = null` : ''
+  })
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            ${parameter ? `this.${parameter} = ${parameter};` : ''}
+        }`;
+};
+
 for (const item of parsed.paths) {
   console.log(item);
   const itemPaths = item.paths.map(p => pascalCase(p));
-  const parentPaths = R.init(itemPaths);
   const code = `
 using System.Threading.Tasks;
 
@@ -17,59 +75,14 @@ namespace RingCentral.Paths.${itemPaths.join('.')}
 {
     public partial class Index
     {
-        public RestClient rc;
-        public ${parentPaths.join('.')}.Index parent;
-        ${item.parameter ? `public string ${item.parameter};` : ''}
-
-        public Index(${parentPaths.join('.')}.Index parent${
-    item.parameter ? `, string ${item.parameter} = null` : ''
-  })
-        {
-            this.parent = parent;
-            this.rc = parent.rc;
-            ${
-              item.parameter
-                ? `this.${item.parameter} = ${item.parameter};`
-                : ''
-            }
-        }
-
-        ${
-          item.parameter
-            ? `public string Path(bool withParameter = true)
-        {
-            if (withParameter && ${item.parameter} != null)
-            {
-                return $"{parent.Path()}/${R.last(item.paths)}/{${
-                item.parameter
-              }}";
-            }
-            return $"{parent.Path()}/${R.last(item.paths)}";
-        }`
-            : `public string Path()
-        {
-            return $"{parent.Path()}/${R.last(item.paths)}";
-        }`
-        }
+        ${generateConstructor(item.parameter, R.init(itemPaths))}
+        ${generatePathMethod(item.parameter, R.last(item.paths)!)}
     }
 }
 
-namespace RingCentral.Paths.${parentPaths.join('.')}
-{
-    public partial class Index
-    {
-        public ${itemPaths.join('.')}.Index ${R.last(itemPaths)}(${
-    item.parameter ? `string ${item.parameter} = null` : ''
-  })
-        {
-            return new ${itemPaths.join('.')}.Index(this${
-    item.parameter ? `, ${item.parameter}` : ''
-  });
-        }
-    }
-}
-`.trim();
+${generateBridgeMethod(item.parameter, itemPaths)}
+`;
   const folder = path.join(outputDir, ...itemPaths);
   fs.mkdirSync(folder, {recursive: true});
-  fs.writeFileSync(path.join(folder, 'Index.cs'), code);
+  fs.writeFileSync(path.join(folder, 'Index.cs'), code.trim());
 }
