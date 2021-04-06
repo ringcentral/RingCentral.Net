@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import {pascalCase} from 'change-case';
 import R from 'ramda';
+import {Operation} from 'ringcentral-open-api-parser/lib/types';
 
 const outputDir = '../RingCentral.Net/Paths';
 
@@ -65,8 +66,11 @@ const generateConstructor = (
         }`;
 };
 
+const generateOperationMethod = (operation: Operation): string => {
+  return 'Hello';
+};
+
 for (const item of parsed.paths) {
-  console.log(item);
   const itemPaths = item.paths.map(p => pascalCase(p));
   const code = `
 using System.Threading.Tasks;
@@ -77,6 +81,9 @@ namespace RingCentral.Paths.${itemPaths.join('.')}
     {
         ${generateConstructor(item.parameter, R.init(itemPaths))}
         ${generatePathMethod(item.parameter, R.last(item.paths)!)}
+        ${item.operations
+          .map(operation => generateOperationMethod(operation))
+          .join('\n\n')}
     }
 }
 
