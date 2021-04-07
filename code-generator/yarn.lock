@@ -3550,10 +3550,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-ringcentral-open-api-parser@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.2.7.tgz#eb9f8eb3e6be0fcf002f2c7596fe4115149071ce"
-  integrity sha512-WhnIeu1/ZI5ycko8vnHGsIpPcHW1tMCPVvelvZKDakkriIS1lztU+hcuBVr2OifDCFNNFgXv0T6eNikjuFifUA==
+ringcentral-open-api-parser@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.2.8.tgz#bc962f844dfcb153c3f537b1b4e81af3b02b28bc"
+  integrity sha512-TaZsgf5cgJwwx8+Ka8QKXZ9yBWIaa1TcQa4bU1IA8VhK5QUSGUbil2Yt8ZmBh0Acre+1teVbCJRQQOf1XLnr1A==
   dependencies:
     openapi-types "^7.2.3"
     ramda "^0.27.1"

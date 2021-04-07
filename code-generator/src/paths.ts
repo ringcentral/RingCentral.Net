@@ -1,7 +1,7 @@
 import {parsed} from 'ringcentral-open-api-parser';
 import fs from 'fs';
 import path from 'path';
-import {pascalCase} from 'change-case';
+import {pascalCase, capitalCase} from 'change-case';
 import R from 'ramda';
 import {Operation} from 'ringcentral-open-api-parser/lib/types';
 
@@ -67,7 +67,30 @@ const generateConstructor = (
 };
 
 const generateOperationMethod = (operation: Operation): string => {
-  return 'Hello';
+  const result = ['/// <summary>'];
+  result.push(
+    `${(
+      operation.description ||
+      operation.summary ||
+      capitalCase(operation.operationId)
+    )
+      .split('\n')
+      .map(l => `/// ${l}`)
+      .join('\n')}`
+  );
+  result.push(`/// HTTP Method: ${operation.method}`);
+  result.push(`/// Endpoint: ${operation.endpoint}`);
+  if (operation.rateLimitGroup) {
+    result.push(`/// Rate Limit Group: ${operation.rateLimitGroup}`);
+  }
+  if (operation.appPermission) {
+    result.push(`/// App Permission: ${operation.appPermission}`);
+  }
+  if (operation.userPermission) {
+    result.push(`/// User Permission: ${operation.userPermission}`);
+  }
+  result.push('/// </summary>');
+  return result.map(l => `        ${l}`).join('\n');
 };
 
 for (const item of parsed.paths) {
@@ -81,9 +104,9 @@ namespace RingCentral.Paths.${itemPaths.join('.')}
     {
         ${generateConstructor(item.parameter, R.init(itemPaths))}
         ${generatePathMethod(item.parameter, R.last(item.paths)!)}
-        ${item.operations
-          .map(operation => generateOperationMethod(operation))
-          .join('\n\n')}
+${item.operations
+  .map(operation => generateOperationMethod(operation))
+  .join('\n\n')}
     }
 }
 
