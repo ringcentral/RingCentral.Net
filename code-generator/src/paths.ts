@@ -105,7 +105,7 @@ const generateOperationMethod = (operation: Operation): string => {
     }
   }
   result += `
-  public async Task<${responseType}> ${pascalCase(operation.method)}()
+  public async Task<${responseType}> ${pascalCase(operation.method2)}()
   {
 
   }`;
