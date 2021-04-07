@@ -67,8 +67,8 @@ const generateConstructor = (
 };
 
 const generateOperationMethod = (operation: Operation): string => {
-  const result = ['/// <summary>'];
-  result.push(
+  const comments = ['/// <summary>'];
+  comments.push(
     `${(
       operation.description ||
       operation.summary ||
@@ -78,19 +78,38 @@ const generateOperationMethod = (operation: Operation): string => {
       .map(l => `/// ${l}`)
       .join('\n')}`
   );
-  result.push(`/// HTTP Method: ${operation.method}`);
-  result.push(`/// Endpoint: ${operation.endpoint}`);
+  comments.push(`/// HTTP Method: ${operation.method}`);
+  comments.push(`/// Endpoint: ${operation.endpoint}`);
   if (operation.rateLimitGroup) {
-    result.push(`/// Rate Limit Group: ${operation.rateLimitGroup}`);
+    comments.push(`/// Rate Limit Group: ${operation.rateLimitGroup}`);
   }
   if (operation.appPermission) {
-    result.push(`/// App Permission: ${operation.appPermission}`);
+    comments.push(`/// App Permission: ${operation.appPermission}`);
   }
   if (operation.userPermission) {
-    result.push(`/// User Permission: ${operation.userPermission}`);
+    comments.push(`/// User Permission: ${operation.userPermission}`);
   }
-  result.push('/// </summary>');
-  return result.map(l => `        ${l}`).join('\n');
+  comments.push('/// </summary>');
+  let result = comments.map(l => `        ${l}`).join('\n');
+  let responseType = 'string';
+  if (operation.responseSchema) {
+    if (
+      operation.responseSchema.type === 'string' &&
+      operation.responseSchema.format === 'binary'
+    ) {
+      responseType = 'byte[]';
+    } else if (operation.responseSchema.$ref) {
+      responseType = `RingCentral.${R.last(
+        operation.responseSchema.$ref.split('/')
+      )}`;
+    }
+  }
+  result += `
+  public async Task<${responseType}> ${pascalCase(operation.method)}()
+  {
+
+  }`;
+  return result;
 };
 
 for (const item of parsed.paths) {
