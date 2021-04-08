@@ -52,20 +52,7 @@ const generateBridgeMethod = (
     }
 }`;
   }
-  return `namespace RingCentral
-{
-    public partial class RestClient
-    {
-        public Paths.${itemPaths.join('.')}.Index Scim(${
-    parameter ? `string ${parameter} = null` : ''
-  })
-        {
-            return new Paths.${itemPaths.join('.')}.Index(this${
-    parameter ? `, ${parameter}` : ''
-  });
-        }
-    }
-}`;
+  return '';
 };
 
 const generateConstructor = (

@@ -149,5 +149,15 @@ namespace RingCentral
         {
             await Revoke();
         }
+
+        // bridge methods to start the call chain, like rc.Restapi().Account()
+        public Paths.Restapi.Index Restapi(string apiVersion = "v1.0")
+        {
+            return new Paths.Restapi.Index(this, apiVersion);
+        }
+        public Paths.Scim.Index Scim(string version = "v2")
+        {
+            return new Paths.Scim.Index(this, version);
+        }
     }
 }
