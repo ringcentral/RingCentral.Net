@@ -67,7 +67,11 @@ const generateConstructor = (
         }`;
 };
 
-const generateOperationMethod = (operation: Operation): string => {
+const generateOperationMethod = (
+  operation: Operation,
+  parameter: string | undefined
+): string => {
+  // comments
   const comments = ['/// <summary>'];
   comments.push(
     `${(
@@ -92,6 +96,8 @@ const generateOperationMethod = (operation: Operation): string => {
   }
   comments.push('/// </summary>');
   let result = comments.map(l => `        ${l}`).join('\n');
+
+  // responseType
   let responseType = 'string';
   if (operation.responseSchema) {
     if (
@@ -105,6 +111,8 @@ const generateOperationMethod = (operation: Operation): string => {
       )}`;
     }
   }
+
+  // methodParams
   const methodParams: string[] = [];
   if (operation.bodyParameters) {
     methodParams.push(
@@ -121,12 +129,27 @@ const generateOperationMethod = (operation: Operation): string => {
     );
   }
   methodParams.push('RestRequestConfig restRequestConfig = null');
+
+  // requestParams
+  const requestParams: string[] = [];
+  requestParams.push(
+    `this.Path(${!operation.withParameter && parameter ? 'false' : ''})`
+  );
+  if (operation.bodyParameters) {
+    requestParams.push(operation.bodyParameters);
+  }
+  requestParams.push(operation.queryParameters ? 'queryParams' : 'null');
+  requestParams.push('restRequestConfig');
+
+  // result
   result += `
   public async Task<${responseType}> ${pascalCase(
     operation.method2
   )}(${methodParams.join(', ')})
   {
-
+    return await rc.${capitalizeFirstLetter(
+      operation.method
+    )}<${responseType}>(${requestParams.join(', ')});
   }`;
   return result;
 };
@@ -143,7 +166,7 @@ namespace RingCentral.Paths.${itemPaths.join('.')}
         ${generateConstructor(item.parameter, R.init(itemPaths))}
         ${generatePathMethod(item.parameter, R.last(item.paths)!)}
 ${item.operations
-  .map(operation => generateOperationMethod(operation))
+  .map(operation => generateOperationMethod(operation, item.parameter))
   .join('\n\n')}
     }
 }
