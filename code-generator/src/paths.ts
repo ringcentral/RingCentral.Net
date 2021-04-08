@@ -27,7 +27,10 @@ const generatePathMethod = (
   } else {
     return `public string Path()
         {
-            return $"${hasParent ? '{parent.Path()}' : ''}/${token}";
+            return $"${hasParent ? '{parent.Path()}' : ''}/${token.replace(
+      'dotSearch',
+      '.search'
+    )}";
         }`;
   }
 };
