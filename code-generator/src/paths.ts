@@ -36,15 +36,31 @@ const generateBridgeMethod = (
   parameter: string | undefined,
   itemPaths: string[]
 ): string => {
-  return `namespace RingCentral.Paths.${R.init(itemPaths).join('.')}
+  if (itemPaths.length > 1) {
+    return `namespace RingCentral.Paths.${R.init(itemPaths).join('.')}
 {
     public partial class Index
     {
         public ${itemPaths.join('.')}.Index ${R.last(itemPaths)}(${
+      parameter ? `string ${parameter} = null` : ''
+    })
+        {
+            return new ${itemPaths.join('.')}.Index(this${
+      parameter ? `, ${parameter}` : ''
+    });
+        }
+    }
+}`;
+  }
+  return `namespace RingCentral
+{
+    public partial class RestClient
+    {
+        public Paths.${itemPaths.join('.')}.Index Scim(${
     parameter ? `string ${parameter} = null` : ''
   })
         {
-            return new ${itemPaths.join('.')}.Index(this${
+            return new Paths.${itemPaths.join('.')}.Index(this${
     parameter ? `, ${parameter}` : ''
   });
         }
