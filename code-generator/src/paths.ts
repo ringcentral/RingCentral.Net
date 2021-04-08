@@ -34,6 +34,7 @@ const generatePathMethod = (
 
 const generateBridgeMethod = (
   parameter: string | undefined,
+  defaultValue: string | undefined,
   itemPaths: string[]
 ): string => {
   if (itemPaths.length > 1) {
@@ -42,7 +43,9 @@ const generateBridgeMethod = (
     public partial class Index
     {
         public ${itemPaths.join('.')}.Index ${R.last(itemPaths)}(${
-      parameter ? `string ${parameter} = null` : ''
+      parameter
+        ? `string ${parameter} = ${defaultValue ? `"${defaultValue}"` : null}`
+        : ''
     })
         {
             return new ${itemPaths.join('.')}.Index(this${
@@ -57,6 +60,7 @@ const generateBridgeMethod = (
 
 const generateConstructor = (
   parameter: string | undefined,
+  defaultValue: string | undefined,
   parentPaths: string[]
 ): string => {
   const result = ['public RestClient rc;'];
@@ -69,7 +73,11 @@ const generateConstructor = (
   if (parentPaths.length > 0) {
     result.push(
       `public Index(${parentPaths.join('.')}.Index parent${
-        parameter ? `, string ${parameter} = null` : ''
+        parameter
+          ? `, string ${parameter} = ${
+              defaultValue ? `"${defaultValue}"` : null
+            }`
+          : ''
       })
       {`
     );
@@ -78,7 +86,11 @@ const generateConstructor = (
   } else {
     result.push(
       `public Index(RestClient rc${
-        parameter ? `, string ${parameter} = null` : ''
+        parameter
+          ? `, string ${parameter} = ${
+              defaultValue ? `"${defaultValue}"` : null
+            }`
+          : ''
       })
       {`
     );
@@ -200,7 +212,11 @@ namespace RingCentral.Paths.${itemPaths.join('.')}
 {
     public partial class Index
     {
-        ${generateConstructor(item.parameter, R.init(itemPaths))}
+        ${generateConstructor(
+          item.parameter,
+          item.defaultParameter,
+          R.init(itemPaths)
+        )}
         ${generatePathMethod(
           item.parameter,
           R.last(item.paths)!,
@@ -212,7 +228,7 @@ ${item.operations
     }
 }
 
-${generateBridgeMethod(item.parameter, itemPaths)}
+${generateBridgeMethod(item.parameter, item.defaultParameter, itemPaths)}
 `;
   const folder = path.join(outputDir, ...itemPaths);
   fs.mkdirSync(folder, {recursive: true});
