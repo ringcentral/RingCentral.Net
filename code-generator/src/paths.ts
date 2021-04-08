@@ -160,7 +160,11 @@ const generateOperationMethod = (
   requestParams.push(
     `this.Path(${!operation.withParameter && parameter ? 'false' : ''})`
   );
-  if (operation.bodyParameters) {
+  if (operation.formUrlEncoded) {
+    requestParams.push('new FormUrlEncodedContent(dict)');
+  } else if (operation.multipart) {
+    requestParams.push('multipartFormDataContent');
+  } else if (operation.bodyParameters) {
     requestParams.push(operation.bodyParameters);
   }
   requestParams.push(operation.queryParameters ? 'queryParams' : 'null');
@@ -171,10 +175,16 @@ const generateOperationMethod = (
   public async Task<${responseType}> ${pascalCase(
     operation.method2
   )}(${methodParams.join(', ')})
-  {
-    return await rc.${capitalizeFirstLetter(
-      operation.method
-    )}<${responseType}>(${requestParams.join(', ')});
+  {\n`;
+  if (operation.formUrlEncoded) {
+    result += `var dict = new System.Collections.Generic.Dictionary<string, string>();
+    Utils.GetPairs(${operation.bodyParameters}).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));\n`;
+  } else if (operation.multipart) {
+    result += `var multipartFormDataContent = Utils.GetMultipartFormDataContent(${operation.bodyParameters});\n`;
+  }
+  result += `return await rc.${capitalizeFirstLetter(
+    operation.method
+  )}<${responseType}>(${requestParams.join(', ')});
   }`;
   return result;
 };
@@ -183,6 +193,8 @@ for (const item of parsed.paths) {
   const itemPaths = item.paths.map(p => pascalCase(p));
   const code = `
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.${itemPaths.join('.')}
 {

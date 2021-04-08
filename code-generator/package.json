@@ -17,7 +17,7 @@
     "js-yaml": "^4.0.0",
     "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1",
-    "ringcentral-open-api-parser": "^0.3.6",
+    "ringcentral-open-api-parser": "^0.3.8",
     "to-start-case": "^1.1.0"
   },
   "devDependencies": {
