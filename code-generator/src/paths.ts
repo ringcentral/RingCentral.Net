@@ -4,6 +4,7 @@ import path from 'path';
 import {pascalCase, capitalCase} from 'change-case';
 import R from 'ramda';
 import {Operation} from 'ringcentral-open-api-parser/lib/types';
+import {capitalizeFirstLetter} from './utils';
 
 const outputDir = '../RingCentral.Net/Paths';
 
@@ -104,8 +105,26 @@ const generateOperationMethod = (operation: Operation): string => {
       )}`;
     }
   }
+  const methodParams: string[] = [];
+  if (operation.bodyParameters) {
+    methodParams.push(
+      `RingCentral.${capitalizeFirstLetter(operation.bodyParameters)} ${
+        operation.bodyParameters
+      }`
+    );
+  }
+  if (operation.queryParameters) {
+    methodParams.push(
+      `RingCentral.${capitalizeFirstLetter(
+        operation.queryParameters
+      )} queryParams = null`
+    );
+  }
+  methodParams.push('RestRequestConfig restRequestConfig = null');
   result += `
-  public async Task<${responseType}> ${pascalCase(operation.method2)}()
+  public async Task<${responseType}> ${pascalCase(
+    operation.method2
+  )}(${methodParams.join(', ')})
   {
 
   }`;
