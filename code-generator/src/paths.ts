@@ -10,21 +10,24 @@ const outputDir = '../RingCentral.Net/Paths';
 
 const generatePathMethod = (
   parameter: string | undefined,
-  token: string
+  token: string,
+  hasParent: boolean
 ): string => {
   if (parameter) {
     return `public string Path(bool withParameter = true)
         {
             if (withParameter && ${parameter} != null)
             {
-                return $"{parent.Path()}/${token}/{${parameter}}";
+                return $"${
+                  hasParent ? '{parent.Path()}' : ''
+                }/${token}/{${parameter}}";
             }
-            return $"{parent.Path()}/${token}";
+            return $"${hasParent ? '{parent.Path()}' : ''}/${token}";
         }`;
   } else {
     return `public string Path()
         {
-            return $"{parent.Path()}/${token}";
+            return $"${hasParent ? '{parent.Path()}' : ''}/${token}";
         }`;
   }
 };
@@ -53,18 +56,37 @@ const generateConstructor = (
   parameter: string | undefined,
   parentPaths: string[]
 ): string => {
-  return `public RestClient rc;
-        public ${parentPaths.join('.')}.Index parent;
-        ${parameter ? `public string ${parameter};` : ''}
+  const result = ['public RestClient rc;'];
+  if (parentPaths.length > 0) {
+    result.push(`public ${parentPaths.join('.')}.Index parent;`);
+  }
+  if (parameter) {
+    result.push(`public string ${parameter};`);
+  }
+  if (parentPaths.length > 0) {
+    result.push(
+      `public Index(${parentPaths.join('.')}.Index parent${
+        parameter ? `, string ${parameter} = null` : ''
+      })
+      {`
+    );
+    result.push('this.parent = parent;');
+    result.push('this.rc = parent.rc;');
+  } else {
+    result.push(
+      `public Index(RestClient rc${
+        parameter ? `, string ${parameter} = null` : ''
+      })
+      {`
+    );
+    result.push('this.rc = rc;');
+  }
+  if (parameter) {
+    result.push(`this.${parameter} = ${parameter};`);
+  }
+  result.push('}');
 
-        public Index(${parentPaths.join('.')}.Index parent${
-    parameter ? `, string ${parameter} = null` : ''
-  })
-        {
-            this.parent = parent;
-            this.rc = parent.rc;
-            ${parameter ? `this.${parameter} = ${parameter};` : ''}
-        }`;
+  return result.join('\n');
 };
 
 const generateOperationMethod = (
@@ -164,7 +186,11 @@ namespace RingCentral.Paths.${itemPaths.join('.')}
     public partial class Index
     {
         ${generateConstructor(item.parameter, R.init(itemPaths))}
-        ${generatePathMethod(item.parameter, R.last(item.paths)!)}
+        ${generatePathMethod(
+          item.parameter,
+          R.last(item.paths)!,
+          itemPaths.length > 1
+        )}
 ${item.operations
   .map(operation => generateOperationMethod(operation, item.parameter))
   .join('\n\n')}
