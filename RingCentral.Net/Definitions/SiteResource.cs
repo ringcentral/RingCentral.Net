@@ -4,12 +4,12 @@ namespace RingCentral
     public class SiteResource
     {
         /// <summary>
-        /// Site extension identifier
+        ///     Site extension identifier
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Site extension name
+        ///     Site extension name
         /// </summary>
         public string name { get; set; }
     }

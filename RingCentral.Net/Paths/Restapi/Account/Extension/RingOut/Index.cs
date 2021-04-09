@@ -2,78 +2,62 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
         public string ringoutId;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent, string ringoutId = null)
+        public Index(Extension.Index parent, string ringoutId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.ringoutId = ringoutId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && ringoutId != null)
-            {
-                return $"{parent.Path()}/ring-out/{ringoutId}";
-            }
+            if (withParameter && ringoutId != null) return $"{parent.Path()}/ring-out/{ringoutId}";
 
             return $"{parent.Path()}/ring-out";
         }
 
         /// <summary>
-        /// Makes a 2-leg RingOut call.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
-        /// Rate Limit Group: Heavy
-        /// App Permission: RingOut
-        /// User Permission: undefined
+        ///     Makes a 2-leg RingOut call.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: RingOut
         /// </summary>
-        public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest,
+        public async Task<GetRingOutStatusResponse> Post(MakeRingOutRequest makeRingOutRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest, null,
+            return await rc.Post<GetRingOutStatusResponse>(Path(false), makeRingOutRequest, null,
                 restRequestConfig);
         }
 
         /// <summary>
-        /// Returns the status of a 2-leg RingOut call.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
-        /// Rate Limit Group: Light
-        /// App Permission: RingOut
-        /// User Permission: undefined
+        ///     Returns the status of a 2-leg RingOut call.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+        ///     Rate Limit Group: Light
+        ///     App Permission: RingOut
         /// </summary>
-        public async Task<RingCentral.GetRingOutStatusResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<GetRingOutStatusResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (this.ringoutId == null)
-            {
-                throw new System.ArgumentNullException("ringoutId");
-            }
-
-            return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path(), null, restRequestConfig);
+            return await rc.Get<GetRingOutStatusResponse>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Cancels a 2-leg RingOut call.
-        /// HTTP Method: DELETE
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
-        /// Rate Limit Group: Heavy
-        /// App Permission: RingOut
-        /// User Permission: undefined
+        ///     Cancels a 2-leg RingOut call.
+        ///     HTTP Method: delete
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: RingOut
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            if (this.ringoutId == null)
-            {
-                throw new System.ArgumentNullException("ringoutId");
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -82,9 +66,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.RingOut.Index RingOut(string ringoutId = null)
+        public RingOut.Index RingOut(string ringoutId = null)
         {
-            return new Restapi.Account.Extension.RingOut.Index(this, ringoutId);
+            return new RingOut.Index(this, ringoutId);
         }
     }
 }

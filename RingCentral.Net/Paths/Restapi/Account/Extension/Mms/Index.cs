@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Mms
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,18 +19,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         }
 
         /// <summary>
-        /// Creates and sends media messages. Sending MMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
-        /// Rate Limit Group: Medium
-        /// App Permission: SMS
-        /// User Permission: OutboundSMS
+        ///     Creates and sends media messages. Sending MMS messages simultaneously to different recipients is limited up to 50
+        ///     requests per minute; relevant for all client applications.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms
+        ///     Rate Limit Group: Medium
+        ///     App Permission: SMS
+        ///     User Permission: OutboundSMS
         /// </summary>
-        public async Task<RingCentral.GetSMSMessageInfoResponse> Post(RingCentral.CreateMMSMessage createMMSMessage,
+        public async Task<GetSMSMessageInfoResponse> Post(CreateMMSMessage CreateMMSMessage,
             RestRequestConfig restRequestConfig = null)
         {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createMMSMessage);
-            return await rc.Post<RingCentral.GetSMSMessageInfoResponse>(this.Path(), multipartFormDataContent, null,
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(CreateMMSMessage);
+            return await rc.Post<GetSMSMessageInfoResponse>(Path(), multipartFormDataContent, null,
                 restRequestConfig);
         }
     }
@@ -40,9 +41,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.Mms.Index Mms()
+        public Mms.Index Mms()
         {
-            return new Restapi.Account.Extension.Mms.Index(this);
+            return new Mms.Index(this);
         }
     }
 }

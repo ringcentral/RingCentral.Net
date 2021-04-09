@@ -2,13 +2,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingConfiguration
 {
     public partial class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.MeetingConfiguration.Index MeetingConfiguration()
+        public MeetingConfiguration.Index MeetingConfiguration()
         {
-            return new Restapi.Account.Extension.MeetingConfiguration.Index(this);
+            return new MeetingConfiguration.Index(this);
         }
     }
 }

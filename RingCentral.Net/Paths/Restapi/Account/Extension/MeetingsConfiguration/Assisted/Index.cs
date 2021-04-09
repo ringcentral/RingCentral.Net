@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assisted
 {
-    public partial class Index
+    public class Index
     {
+        public MeetingsConfiguration.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.MeetingsConfiguration.Index parent;
 
-        public Index(Restapi.Account.Extension.MeetingsConfiguration.Index parent)
+        public Index(MeetingsConfiguration.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assi
         }
 
         /// <summary>
-        /// Returns assisted users information.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
-        /// Rate Limit Group: Light
-        /// App Permission: Meetings
-        /// User Permission: Meetings
+        ///     Returns assisted users information.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
+        ///     Rate Limit Group: Light
+        ///     App Permission: Meetings
+        ///     User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.AssistedUsersResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<AssistedUsersResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AssistedUsersResource>(this.Path(), null, restRequestConfig);
+            return await rc.Get<AssistedUsersResource>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.MeetingsConfiguration.Assisted.Index Assisted()
+        public Assisted.Index Assisted()
         {
-            return new Restapi.Account.Extension.MeetingsConfiguration.Assisted.Index(this);
+            return new Assisted.Index(this);
         }
     }
 }

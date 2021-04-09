@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Glip.Notes.Publish
 {
-    public partial class Index
+    public class Index
     {
+        public Notes.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Notes.Index parent;
 
-        public Index(Restapi.Glip.Notes.Index parent)
+        public Index(Notes.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Publish
         }
 
         /// <summary>
-        /// Publishes a note making it visible to other users.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/glip/notes/{noteId}/publish
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        ///     Publishes a note making it visible to other users.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}/publish
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Glip
+        ///     User Permission: Glip
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), null, restRequestConfig);
+            return await rc.Post<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
 {
     public partial class Index
     {
-        public Restapi.Glip.Notes.Publish.Index Publish()
+        public Publish.Index Publish()
         {
-            return new Restapi.Glip.Notes.Publish.Index(this);
+            return new Publish.Index(this);
         }
     }
 }

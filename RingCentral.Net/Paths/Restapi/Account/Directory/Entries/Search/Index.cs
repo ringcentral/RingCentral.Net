@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
 {
-    public partial class Index
+    public class Index
     {
+        public Entries.Index parent;
         public RestClient rc;
-        public Restapi.Account.Directory.Entries.Index parent;
 
-        public Index(Restapi.Account.Directory.Entries.Index parent)
+        public Index(Entries.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,18 +19,19 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
         }
 
         /// <summary>
-        /// Returns contact information on corporate users of federated accounts according to the specified filtering and ordering.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/directory/entries/search
-        /// Rate Limit Group: Heavy
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadExtensions
+        ///     Returns contact information on corporate users of federated accounts according to the specified filtering and
+        ///     ordering.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/directory/entries/search
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.DirectoryResource> Post(
-            RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest,
+        public async Task<DirectoryResource> Post(
+            SearchDirectoryEntriesRequest searchDirectoryEntriesRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest, null,
+            return await rc.Post<DirectoryResource>(Path(), searchDirectoryEntriesRequest, null,
                 restRequestConfig);
         }
     }
@@ -40,9 +41,9 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
 {
     public partial class Index
     {
-        public Restapi.Account.Directory.Entries.Search.Index Search()
+        public Search.Index Search()
         {
-            return new Restapi.Account.Directory.Entries.Search.Index(this);
+            return new Search.Index(this);
         }
     }
 }

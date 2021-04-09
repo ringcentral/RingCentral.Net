@@ -3,7 +3,7 @@ namespace RingCentral
     public class SyncInfo
     {
         /// <summary>
-        /// Enum: FSync, ISync
+        ///     Enum: FSync, ISync
         /// </summary>
         public string syncType { get; set; }
 
@@ -12,7 +12,7 @@ namespace RingCentral
         public string syncToken { get; set; }
 
         /// <summary>
-        /// Format: date-time
+        ///     Format: date-time
         /// </summary>
         public string syncTime { get; set; }
 

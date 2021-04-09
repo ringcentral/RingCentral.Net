@@ -4,94 +4,82 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 {
     public partial class Index
     {
-        public RestClient rc;
         public string groupId;
-        public Restapi.Account.Index parent;
+        public Account.Index parent;
+        public RestClient rc;
 
-        public Index(Restapi.Account.Index parent, string groupId = null)
+        public Index(Account.Index parent, string groupId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.groupId = groupId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && groupId != null)
-            {
-                return $"{parent.Path()}/call-monitoring-groups/{groupId}";
-            }
+            if (withParameter && groupId != null) return $"{parent.Path()}/call-monitoring-groups/{groupId}";
 
             return $"{parent.Path()}/call-monitoring-groups";
         }
 
         /// <summary>
-        /// Returns call monitoring groups that can be filtered by some extension.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
-        /// Rate Limit Group: Medium
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadExtensions
+        ///     Returns call monitoring groups that can be filtered by some extension.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups
+        ///     Rate Limit Group: Medium
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
+        public async Task<RingCentral.CallMonitoringGroups> Get(
+            ListCallMonitoringGroupsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallMonitoringGroups>(this.Path(false), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.CallMonitoringGroups>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Creates a new call monitoring group.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups
-        /// Rate Limit Group: Medium
-        /// App Permission: EditExtensions
-        /// User Permission: Groups
+        ///     Creates a new call monitoring group.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditExtensions
+        ///     User Permission: Groups
         /// </summary>
-        public async Task<RingCentral.CallMonitoringGroup> Post(
-            RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
+        public async Task<CallMonitoringGroup> Post(
+            CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CallMonitoringGroup>(this.Path(false), createCallMonitoringGroupRequest,
+            return await rc.Post<CallMonitoringGroup>(Path(false), createCallMonitoringGroupRequest,
                 null, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates call monitoring group name by ID.
-        /// HTTP Method: PUT
-        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
-        /// Rate Limit Group: Medium
-        /// App Permission: EditExtensions
-        /// User Permission: Groups
+        ///     Updates call monitoring group name by ID.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditExtensions
+        ///     User Permission: Groups
         /// </summary>
-        public async Task<RingCentral.CallMonitoringGroup> Put(
-            RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
+        public async Task<CallMonitoringGroup> Put(
+            CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            if (this.groupId == null)
-            {
-                throw new System.ArgumentNullException("groupId");
-            }
-
-            return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest, null,
+            return await rc.Put<CallMonitoringGroup>(Path(), createCallMonitoringGroupRequest, null,
                 restRequestConfig);
         }
 
         /// <summary>
-        /// Remove infromation about the given call monitoring group.
-        /// HTTP Method: DELETE
-        /// Endpoint: /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
-        /// Rate Limit Group: Medium
-        /// App Permission: EditExtensions
-        /// User Permission: Groups
+        ///     Remove infromation about the given call monitoring group.
+        ///     HTTP Method: delete
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditExtensions
+        ///     User Permission: Groups
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            if (this.groupId == null)
-            {
-                throw new System.ArgumentNullException("groupId");
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -100,9 +88,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.CallMonitoringGroups.Index CallMonitoringGroups(string groupId = null)
+        public CallMonitoringGroups.Index CallMonitoringGroups(string groupId = null)
         {
-            return new Restapi.Account.CallMonitoringGroups.Index(this, groupId);
+            return new CallMonitoringGroups.Index(this, groupId);
         }
     }
 }

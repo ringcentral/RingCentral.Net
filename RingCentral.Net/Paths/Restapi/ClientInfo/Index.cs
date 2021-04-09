@@ -2,13 +2,13 @@ namespace RingCentral.Paths.Restapi.ClientInfo
 {
     public partial class Index
     {
-        public RestClient rc;
         public Restapi.Index parent;
+        public RestClient rc;
 
         public Index(Restapi.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi
 {
     public partial class Index
     {
-        public Restapi.ClientInfo.Index ClientInfo()
+        public ClientInfo.Index ClientInfo()
         {
-            return new Restapi.ClientInfo.Index(this);
+            return new ClientInfo.Index(this);
         }
     }
 }

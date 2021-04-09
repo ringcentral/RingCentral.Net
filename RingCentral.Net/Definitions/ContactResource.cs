@@ -19,17 +19,17 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        /// First name of a contact, for user extensions only
+        ///     First name of a contact, for user extensions only
         /// </summary>
         public string firstName { get; set; }
 
         /// <summary>
-        /// Last name of a contact, for user extensions only
+        ///     Last name of a contact, for user extensions only
         /// </summary>
         public string lastName { get; set; }
 
         /// <summary>
-        /// Name of a contact, for non-user extensions
+        ///     Name of a contact, for non-user extensions
         /// </summary>
         public string name { get; set; }
 

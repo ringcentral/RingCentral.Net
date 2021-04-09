@@ -3,8 +3,8 @@ namespace RingCentral
     public class PatchOperation
     {
         /// <summary>
-        /// Required
-        /// Enum: add, replace, remove
+        ///     Required
+        ///     Enum: add, replace, remove
         /// </summary>
         public string op { get; set; }
 
@@ -13,7 +13,7 @@ namespace RingCentral
         public string path { get; set; }
 
         /// <summary>
-        /// corresponding 'value' of that field specified by 'path'
+        ///     corresponding 'value' of that field specified by 'path'
         /// </summary>
         public string value { get; set; }
     }

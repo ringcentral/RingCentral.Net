@@ -4,7 +4,7 @@ namespace RingCentral
     public class ServiceInfo
     {
         /// <summary>
-        /// Canonical URI of a service info resource
+        ///     Canonical URI of a service info resource
         /// </summary>
         public string uri { get; set; }
 

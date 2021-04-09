@@ -4,7 +4,7 @@ namespace RingCentral
     public class CallQueueId
     {
         /// <summary>
-        /// Internal identifier of a call queue
+        ///     Internal identifier of a call queue
         /// </summary>
         public string id { get; set; }
     }

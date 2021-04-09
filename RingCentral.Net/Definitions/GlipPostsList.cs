@@ -3,8 +3,8 @@ namespace RingCentral
     public class GlipPostsList
     {
         /// <summary>
-        /// List of posts
-        /// Required
+        ///     List of posts
+        ///     Required
         /// </summary>
         public GlipPostInfo[] records { get; set; }
 

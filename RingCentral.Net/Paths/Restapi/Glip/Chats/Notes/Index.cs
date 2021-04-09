@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
 {
-    public partial class Index
+    public class Index
     {
+        public Chats.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Chats.Index parent;
 
-        public Index(Restapi.Glip.Chats.Index parent)
+        public Index(Chats.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,31 +19,31 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         }
 
         /// <summary>
-        /// Returns the list of notes created in the specified chat.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/notes
-        /// Rate Limit Group: Heavy
-        /// App Permission: Glip
-        /// User Permission: Glip
+        ///     Returns the list of notes created in the specified chat.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/notes
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: Glip
+        ///     User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipNotesInfo> Get(ListChatNotesParameters queryParams = null,
+        public async Task<GlipNotesInfo> Get(ListChatNotesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipNotesInfo>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<GlipNotesInfo>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Creates a new note in the specified chat.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/notes
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        ///     Creates a new note in the specified chat.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/notes
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Glip
+        ///     User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate,
+        public async Task<GlipNoteInfo> Post(GlipNoteCreate glipNoteCreate,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, restRequestConfig);
+            return await rc.Post<GlipNoteInfo>(Path(), glipNoteCreate, null, restRequestConfig);
         }
     }
 }
@@ -52,9 +52,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
 {
     public partial class Index
     {
-        public Restapi.Glip.Chats.Notes.Index Notes()
+        public Notes.Index Notes()
         {
-            return new Restapi.Glip.Chats.Notes.Index(this);
+            return new Notes.Index(this);
         }
     }
 }

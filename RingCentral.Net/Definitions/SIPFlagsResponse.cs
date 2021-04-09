@@ -4,20 +4,20 @@ namespace RingCentral
     public class SIPFlagsResponse
     {
         /// <summary>
-        /// If 'True' VoIP calling feature is enabled
-        /// Enum: True, False
+        ///     If 'True' VoIP calling feature is enabled
+        ///     Enum: True, False
         /// </summary>
         public string voipFeatureEnabled { get; set; }
 
         /// <summary>
-        /// If 'True' the request is sent from IP address of a country blocked for VoIP calling
-        /// Enum: True, False
+        ///     If 'True' the request is sent from IP address of a country blocked for VoIP calling
+        ///     Enum: True, False
         /// </summary>
         public string voipCountryBlocked { get; set; }
 
         /// <summary>
-        /// If 'True' outbound calls are enabled
-        /// Enum: True, False
+        ///     If 'True' outbound calls are enabled
+        ///     Enum: True, False
         /// </summary>
         public string outboundCallsEnabled { get; set; }
 

@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Grant
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +19,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         }
 
         /// <summary>
-        /// Returns the list of extensions with the information on grants given to the current extension regarding them. Currently the list of grants include: picking up a call, monitoring, calling or receiving a call on behalf of somebody, call delegation and calling paging groups.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadExtensions
+        ///     Returns the list of extensions with the information on grants given to the current extension regarding them.
+        ///     Currently the list of grants include: picking up a call, monitoring, calling or receiving a call on behalf of
+        ///     somebody, call delegation and calling paging groups.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/grant
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.GetExtensionGrantListResponse> Get(
+        public async Task<GetExtensionGrantListResponse> Get(
             ListExtensionGrantsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetExtensionGrantListResponse>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<GetExtensionGrantListResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +40,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.Grant.Index Grant()
+        public Grant.Index Grant()
         {
-            return new Restapi.Account.Extension.Grant.Index(this);
+            return new Grant.Index(this);
         }
     }
 }

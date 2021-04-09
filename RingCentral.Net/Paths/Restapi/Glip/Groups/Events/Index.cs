@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Glip.Groups.Events
 {
-    public partial class Index
+    public class Index
     {
+        public Groups.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Groups.Index parent;
 
-        public Index(Restapi.Glip.Groups.Index parent)
+        public Index(Groups.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,30 +19,31 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         }
 
         /// <summary>
-        /// Returns a list of calendar events available for the current user within the specified group. Users can only see their personal tasks and public tasks.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/events
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        ///     Returns a list of calendar events available for the current user within the specified group. Users can only see
+        ///     their personal tasks and public tasks.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/events
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Glip
+        ///     User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, restRequestConfig);
+            return await rc.Get<GlipEventInfo>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Creates a new calendar event within the specified group.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/glip/groups/{groupId}/events
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        ///     Creates a new calendar event within the specified group.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/events
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Glip
+        ///     User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
+        public async Task<GlipEventInfo> Post(GlipEventCreate glipEventCreate,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate, null, restRequestConfig);
+            return await rc.Post<GlipEventInfo>(Path(), glipEventCreate, null, restRequestConfig);
         }
     }
 }
@@ -51,9 +52,9 @@ namespace RingCentral.Paths.Restapi.Glip.Groups
 {
     public partial class Index
     {
-        public Restapi.Glip.Groups.Events.Index Events()
+        public Events.Index Events()
         {
-            return new Restapi.Glip.Groups.Events.Index(this);
+            return new Events.Index(this);
         }
     }
 }

@@ -3,7 +3,7 @@ namespace RingCentral
     public class NetworksList
     {
         /// <summary>
-        /// Link to a networks resource
+        ///     Link to a networks resource
         /// </summary>
         public string uri { get; set; }
 

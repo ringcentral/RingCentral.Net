@@ -3,47 +3,47 @@ namespace RingCentral
     public class GlipCreateTask
     {
         /// <summary>
-        /// Task name/subject. Max allowed length is 250 characters.
-        /// Required
+        ///     Task name/subject. Max allowed length is 250 characters.
+        ///     Required
         /// </summary>
         public string subject { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public AssigneeInfo[] assignees { get; set; }
 
         /// <summary>
-        /// Default: Simple
-        /// Enum: Simple, AllAssignees, Percentage
+        ///     Default: Simple
+        ///     Enum: Simple, AllAssignees, Percentage
         /// </summary>
         public string completenessCondition { get; set; }
 
         /// <summary>
-        /// Task start date in UTC time zone.
-        /// Format: date-time
+        ///     Task start date in UTC time zone.
+        ///     Format: date-time
         /// </summary>
         public string startDate { get; set; }
 
         /// <summary>
-        /// Task due date/time in UTC time zone.
-        /// Format: date-time
+        ///     Task due date/time in UTC time zone.
+        ///     Format: date-time
         /// </summary>
         public string dueDate { get; set; }
 
         /// <summary>
-        /// Default: Black
-        /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+        ///     Default: Black
+        ///     Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         /// </summary>
         public string color { get; set; }
 
         /// <summary>
-        /// Task section to group / search by. Max allowed legth is 100 characters.
+        ///     Task section to group / search by. Max allowed legth is 100 characters.
         /// </summary>
         public string section { get; set; }
 
         /// <summary>
-        /// Task details. Max allowed legth is 102400 characters (100kB).
+        ///     Task details. Max allowed legth is 102400 characters (100kB).
         /// </summary>
         public string description { get; set; }
 

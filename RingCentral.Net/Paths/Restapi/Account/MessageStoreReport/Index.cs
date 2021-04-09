@@ -4,59 +4,52 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
 {
     public partial class Index
     {
+        public Account.Index parent;
         public RestClient rc;
         public string taskId;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent, string taskId = null)
+        public Index(Account.Index parent, string taskId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.taskId = taskId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && taskId != null)
-            {
-                return $"{parent.Path()}/message-store-report/{taskId}";
-            }
+            if (withParameter && taskId != null) return $"{parent.Path()}/message-store-report/{taskId}";
 
             return $"{parent.Path()}/message-store-report";
         }
 
         /// <summary>
-        /// Creates a task to collect all account messages within the specified time interval. Maximum number of simaltaneous tasks per account is 2.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report
-        /// Rate Limit Group: Heavy
-        /// App Permission: ReadMessages
-        /// User Permission: Users
+        ///     Creates a task to collect all account messages within the specified time interval. Maximum number of simaltaneous
+        ///     tasks per account is 2.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: ReadMessages
+        ///     User Permission: Users
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Post(
-            RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest,
+            CreateMessageStoreReportRequest createMessageStoreReportRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest,
+            return await rc.Post<RingCentral.MessageStoreReport>(Path(false), createMessageStoreReportRequest,
                 null, restRequestConfig);
         }
 
         /// <summary>
-        /// Returns the current status of a task on report creation.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
-        /// Rate Limit Group: Heavy
-        /// App Permission: ReadMessages
-        /// User Permission: Users
+        ///     Returns the current status of a task on report creation.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: ReadMessages
+        ///     User Permission: Users
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (this.taskId == null)
-            {
-                throw new System.ArgumentNullException("taskId");
-            }
-
-            return await rc.Get<RingCentral.MessageStoreReport>(this.Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.MessageStoreReport>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -65,9 +58,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.MessageStoreReport.Index MessageStoreReport(string taskId = null)
+        public MessageStoreReport.Index MessageStoreReport(string taskId = null)
         {
-            return new Restapi.Account.MessageStoreReport.Index(this, taskId);
+            return new MessageStoreReport.Index(this, taskId);
         }
     }
 }

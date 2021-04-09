@@ -3,12 +3,12 @@ namespace RingCentral
     public class ParamsInfo
     {
         /// <summary>
-        /// Parameter name
+        ///     Parameter name
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        /// Parameter value
+        ///     Parameter value
         /// </summary>
         public string value { get; set; }
     }

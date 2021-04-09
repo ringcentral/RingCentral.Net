@@ -4,12 +4,12 @@ namespace RingCentral
     public class BrandInfo
     {
         /// <summary>
-        /// Internal identifier of a brand
+        ///     Internal identifier of a brand
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Brand name, for example  RingCentral UK ,  ClearFax
+        ///     Brand name, for example  RingCentral UK ,  ClearFax
         /// </summary>
         public string name { get; set; }
 

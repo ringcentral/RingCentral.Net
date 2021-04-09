@@ -4,12 +4,12 @@ namespace RingCentral
     public class AudioPromptInfo
     {
         /// <summary>
-        /// Link to a prompt audio file
+        ///     Link to a prompt audio file
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Internal identifier of a prompt
+        ///     Internal identifier of a prompt
         /// </summary>
         public string id { get; set; }
     }

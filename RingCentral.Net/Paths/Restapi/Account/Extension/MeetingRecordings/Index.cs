@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MeetingRecordings
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +19,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingRecordings
         }
 
         /// <summary>
-        /// Returns the list of meetings recordings for the current user.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings
-        /// Rate Limit Group: Medium
-        /// App Permission: Meetings
-        /// User Permission: MeetingsRecordings
+        ///     Returns the list of meetings recordings for the current user.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting-recordings
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Meetings
+        ///     User Permission: MeetingsRecordings
         /// </summary>
-        public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
-            ListUserMeetingRecordingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<ListMeetingRecordingsResponse> Get(
+            ListUserMeetingRecordingsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<ListMeetingRecordingsResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.MeetingRecordings.Index MeetingRecordings()
+        public MeetingRecordings.Index MeetingRecordings()
         {
-            return new Restapi.Account.Extension.MeetingRecordings.Index(this);
+            return new MeetingRecordings.Index(this);
         }
     }
 }

@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Linq;
+using System.Text;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -9,7 +11,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ProfileImage()
         {
-            var bytes = System.IO.File.ReadAllBytes("rc.png");
+            var bytes = File.ReadAllBytes("rc.png");
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
@@ -75,8 +77,8 @@ namespace RingCentral.Tests
                 var response = await extension.MessageStore()
                     .List(new ListMessagesParameters
                     {
-                        dateFrom = DateTime.UtcNow.AddDays(-30).ToString("o"),
-                        perPage = 500
+                        dateFrom = DateTime.UtcNow.AddDays(-120).ToString("o"),
+                        perPage = 300
                     });
                 var messages = response.records;
 
@@ -85,24 +87,22 @@ namespace RingCentral.Tests
                     .First(m => m.type == "SMS" && m.attachments != null && m.attachments.Length > 0);
                 var content = await extension.MessageStore(message.id.ToString())
                     .Content(message.attachments[0].id.ToString()).Get();
-                var str = System.Text.Encoding.UTF8.GetString(content);
+                var str = Encoding.UTF8.GetString(content);
                 Assert.NotNull(str);
                 Assert.True(str.Length > 0);
 
                 // fax
-                message = messages.LastOrDefault(m => m.type == "Fax" && m.messageStatus != "SendingFailed" &&
-                                                      m.attachments != null &&
-                                                      m.attachments.Length > 0);
-                if (message == null)
-                {
-                    return;
-                }
+                message = messages.LastOrDefault(m =>
+                    m.type == "Fax" && m.messageStatus == "Delivered" &&
+                    m.attachments != null &&
+                    m.attachments.Length > 0);
+                if (message == null) return;
 
-//                content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
+                //                content = await extension.MessageStore(message.id).Content(message.attachments[0].id).Get();
                 content = await rc.Get<byte[]>(message.attachments[0].uri);
                 Assert.NotNull(content);
                 Assert.True(content.Length > 0);
-                System.IO.File.WriteAllBytes("test.pdf", content);
+                File.WriteAllBytes("test.pdf", content);
             }
         }
 
@@ -130,7 +130,7 @@ namespace RingCentral.Tests
                     view = "Detailed",
                     dateFrom = DateTime.UtcNow.AddDays(-365).ToString("o"),
                     withRecording = true,
-                    perPage = 10,
+                    perPage = 10
                 };
                 var callLogs = await account.CallLog().List(queryParams);
                 if (callLogs.records.Length > 0)
@@ -142,7 +142,7 @@ namespace RingCentral.Tests
                         var content = await account.Recording(callLog.recording.id).Content().Get();
                         Assert.NotNull(content);
                         Assert.True(content.Length > 0);
-                        System.IO.File.WriteAllBytes("test.wav", content);
+                        File.WriteAllBytes("test.wav", content);
                     }
                 }
             }

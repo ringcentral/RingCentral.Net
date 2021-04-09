@@ -4,22 +4,22 @@ namespace RingCentral
     public class TransferTarget
     {
         /// <summary>
-        /// Phone number
+        ///     Phone number
         /// </summary>
         public string phoneNumber { get; set; }
 
         /// <summary>
-        /// Voicemail owner extension identifier
+        ///     Voicemail owner extension identifier
         /// </summary>
         public string voicemail { get; set; }
 
         /// <summary>
-        /// Park orbit identifier
+        ///     Park orbit identifier
         /// </summary>
         public string parkOrbit { get; set; }
 
         /// <summary>
-        /// Number of extension
+        ///     Number of extension
         /// </summary>
         public string extensionNumber { get; set; }
     }

@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
 {
-    public partial class Index
+    public class Index
     {
+        public Chats.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Chats.Index parent;
 
-        public Index(Restapi.Glip.Chats.Index parent)
+        public Index(Chats.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,31 +19,27 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         }
 
         /// <summary>
-        /// Returns the list of tasks of the specified chat.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/tasks
-        /// Rate Limit Group: Heavy
-        /// App Permission: 
-        /// User Permission: undefined
+        ///     Returns the list of tasks of the specified chat.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
+        ///     Rate Limit Group: Heavy
         /// </summary>
-        public async Task<RingCentral.GlipTaskList> Get(ListChatTasksParameters queryParams = null,
+        public async Task<GlipTaskList> Get(ListChatTasksParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipTaskList>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<GlipTaskList>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Creates a task in the specified chat.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/glip/chats/{chatId}/tasks
-        /// Rate Limit Group: Medium
-        /// App Permission: 
-        /// User Permission: undefined
+        ///     Creates a task in the specified chat.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
+        ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<RingCentral.GlipTaskInfo> Post(RingCentral.GlipCreateTask glipCreateTask,
+        public async Task<GlipTaskInfo> Post(GlipCreateTask glipCreateTask,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipTaskInfo>(this.Path(), glipCreateTask, null, restRequestConfig);
+            return await rc.Post<GlipTaskInfo>(Path(), glipCreateTask, null, restRequestConfig);
         }
     }
 }
@@ -52,9 +48,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
 {
     public partial class Index
     {
-        public Restapi.Glip.Chats.Tasks.Index Tasks()
+        public Tasks.Index Tasks()
         {
-            return new Restapi.Glip.Chats.Tasks.Index(this);
+            return new Tasks.Index(this);
         }
     }
 }

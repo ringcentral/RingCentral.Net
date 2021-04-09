@@ -11,7 +11,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        /// Format: int32
+        ///     Format: int32
         /// </summary>
         public string count { get; set; }
     }

@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
 {
-    public partial class Index
+    public class Index
     {
+        public CallRecording.Index parent;
         public RestClient rc;
-        public Restapi.Account.CallRecording.Index parent;
 
-        public Index(Restapi.Account.CallRecording.Index parent)
+        public Index(CallRecording.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.Extensions
         }
 
         /// <summary>
-        /// Returns the list of extensions to be recorded.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/call-recording/extensions
-        /// Rate Limit Group: Medium
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadCompanyInfo
+        ///     Returns the list of extensions to be recorded.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recording/extensions
+        ///     Rate Limit Group: Medium
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.CallRecordingExtensions> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<CallRecordingExtensions> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallRecordingExtensions>(this.Path(), null, restRequestConfig);
+            return await rc.Get<CallRecordingExtensions>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
 {
     public partial class Index
     {
-        public Restapi.Account.CallRecording.Extensions.Index Extensions()
+        public Extensions.Index Extensions()
         {
-            return new Restapi.Account.CallRecording.Extensions.Index(this);
+            return new Extensions.Index(this);
         }
     }
 }

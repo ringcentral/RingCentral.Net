@@ -4,12 +4,12 @@ namespace RingCentral
     public class SpecificInfo
     {
         /// <summary>
-        /// Starting time for data collection
+        ///     Starting time for data collection
         /// </summary>
         public string timeFrom { get; set; }
 
         /// <summary>
-        /// Ending time for data collection
+        ///     Ending time for data collection
         /// </summary>
         public string timeTo { get; set; }
 
@@ -18,7 +18,7 @@ namespace RingCentral
         public DataExportTaskContactInfo[] contacts { get; set; }
 
         /// <summary>
-        /// List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected
+        ///     List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected
         /// </summary>
         public string[] chatIds { get; set; }
     }

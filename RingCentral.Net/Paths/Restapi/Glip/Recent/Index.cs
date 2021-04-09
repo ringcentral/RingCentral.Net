@@ -2,13 +2,13 @@ namespace RingCentral.Paths.Restapi.Glip.Recent
 {
     public partial class Index
     {
+        public Glip.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Index parent;
 
-        public Index(Restapi.Glip.Index parent)
+        public Index(Glip.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Restapi.Glip.Recent.Index Recent()
+        public Recent.Index Recent()
         {
-            return new Restapi.Glip.Recent.Index(this);
+            return new Recent.Index(this);
         }
     }
 }

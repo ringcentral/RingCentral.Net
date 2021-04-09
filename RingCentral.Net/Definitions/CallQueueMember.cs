@@ -4,17 +4,17 @@ namespace RingCentral
     public class CallQueueMember
     {
         /// <summary>
-        /// Internal identifier of an extension
+        ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Extension full name
+        ///     Extension full name
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        /// Extension number
+        ///     Extension number
         /// </summary>
         public string extensionNumber { get; set; }
 

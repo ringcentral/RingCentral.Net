@@ -4,17 +4,17 @@ namespace RingCentral
     public class ContactInfo
     {
         /// <summary>
-        /// For User extension type only. Extension user first name
+        ///     For User extension type only. Extension user first name
         /// </summary>
         public string firstName { get; set; }
 
         /// <summary>
-        /// For User extension type only. Extension user last name
+        ///     For User extension type only. Extension user last name
         /// </summary>
         public string lastName { get; set; }
 
         /// <summary>
-        /// Extension user company name
+        ///     Extension user company name
         /// </summary>
         public string company { get; set; }
 
@@ -23,17 +23,18 @@ namespace RingCentral
         public string jobTitle { get; set; }
 
         /// <summary>
-        /// Email of extension user
+        ///     Email of extension user
         /// </summary>
         public string email { get; set; }
 
         /// <summary>
-        /// Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+        ///     Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
         /// </summary>
         public string businessPhone { get; set; }
 
         /// <summary>
-        /// Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+        ///     Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+        ///     (with '+' sign) format
         /// </summary>
         public string mobilePhone { get; set; }
 
@@ -42,7 +43,8 @@ namespace RingCentral
         public ContactBusinessAddressInfo businessAddress { get; set; }
 
         /// <summary>
-        /// If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
+        ///     If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in
+        ///     this case.
         /// </summary>
         public bool? emailAsLoginName { get; set; }
 
@@ -51,7 +53,7 @@ namespace RingCentral
         public PronouncedNameInfo pronouncedName { get; set; }
 
         /// <summary>
-        /// Extension user department, if any
+        ///     Extension user department, if any
         /// </summary>
         public string department { get; set; }
     }

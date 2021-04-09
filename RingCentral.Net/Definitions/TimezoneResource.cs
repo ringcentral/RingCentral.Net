@@ -4,7 +4,7 @@ namespace RingCentral
     public class TimezoneResource
     {
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

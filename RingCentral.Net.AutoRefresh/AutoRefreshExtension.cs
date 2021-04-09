@@ -1,11 +1,12 @@
 ﻿using System.Threading.Tasks;
+using System.Timers;
 
 namespace RingCentral.Net.AutoRefresh
 {
     public class AutoRefreshExtension : SdkExtension
     {
         private RestClient _rc;
-        private System.Timers.Timer _autoRefreshTimer;
+        private Timer _autoRefreshTimer;
         private readonly AutoRefreshOptions _options;
 
         public AutoRefreshExtension(AutoRefreshOptions autoRefreshOptions = null)
@@ -22,7 +23,7 @@ namespace RingCentral.Net.AutoRefresh
         public void Start()
         {
             Stop(); // stop existing
-            _autoRefreshTimer = new System.Timers.Timer();
+            _autoRefreshTimer = new Timer();
             _autoRefreshTimer.Elapsed += (sender, args) => { this._rc.Refresh(); };
             _autoRefreshTimer.Interval = _options.interval;
             _autoRefreshTimer.Start();

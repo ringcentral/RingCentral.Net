@@ -7,7 +7,7 @@ namespace RingCentral
         public string reason { get; set; }
 
         /// <summary>
-        /// Format: date-time
+        ///     Format: date-time
         /// </summary>
         public string till { get; set; }
 

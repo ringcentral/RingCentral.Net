@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Scim.Health
 {
-    public partial class Index
+    public class Index
     {
-        public RestClient rc;
         public Scim.Index parent;
+        public RestClient rc;
 
         public Index(Scim.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +19,14 @@ namespace RingCentral.Paths.Scim.Health
         }
 
         /// <summary>
-        /// Check Health
-        /// HTTP Method: GET
-        /// Endpoint: /scim/v2/health
-        /// Rate Limit Group: NoThrottling
-        /// App Permission: 
-        /// User Permission: undefined
+        ///     Check Health
+        ///     HTTP Method: get
+        ///     Endpoint: /scim/{version}/health
+        ///     Rate Limit Group: NoThrottling
         /// </summary>
         public async Task<string> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<string>(this.Path(), null, restRequestConfig);
+            return await rc.Get<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +35,9 @@ namespace RingCentral.Paths.Scim
 {
     public partial class Index
     {
-        public Scim.Health.Index Health()
+        public Health.Index Health()
         {
-            return new Scim.Health.Index(this);
+            return new Health.Index(this);
         }
     }
 }

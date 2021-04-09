@@ -2,24 +2,17 @@ namespace RingCentral.Paths.Restapi.Glip.Groups
 {
     public partial class Index
     {
+        public Glip.Index parent;
         public RestClient rc;
-        public string groupId;
-        public Restapi.Glip.Index parent;
 
-        public Index(Restapi.Glip.Index parent, string groupId = null)
+        public Index(Glip.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
-            this.groupId = groupId;
+            rc = parent.rc;
         }
 
-        public string Path(bool withParameter = true)
+        public string Path()
         {
-            if (withParameter && groupId != null)
-            {
-                return $"{parent.Path()}/groups/{groupId}";
-            }
-
             return $"{parent.Path()}/groups";
         }
     }
@@ -29,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Restapi.Glip.Groups.Index Groups(string groupId = null)
+        public Groups.Index Groups()
         {
-            return new Restapi.Glip.Groups.Index(this, groupId);
+            return new Groups.Index(this);
         }
     }
 }

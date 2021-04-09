@@ -2,13 +2,13 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public RestClient rc;
         public Restapi.Index parent;
+        public RestClient rc;
 
         public Index(Restapi.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi
 {
     public partial class Index
     {
-        public Restapi.Glip.Index Glip()
+        public Glip.Index Glip()
         {
-            return new Restapi.Glip.Index(this);
+            return new Glip.Index(this);
         }
     }
 }

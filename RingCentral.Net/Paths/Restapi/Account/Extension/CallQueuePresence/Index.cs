@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CallQueuePresence
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,33 +19,32 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueuePresence
         }
 
         /// <summary>
-        /// Returns a list of agent's call queues with the agent presence status (per queue)
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence
-        /// Rate Limit Group: Light
-        /// App Permission: ReadPresence
-        /// User Permission: undefined
+        ///     Returns a list of agent's call queues with the agent presence status (per queue)
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadPresence
         /// </summary>
-        public async Task<RingCentral.ExtensionCallQueuePresenceList> Get(
-            ReadExtensionCallQueuePresenceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<ExtensionCallQueuePresenceList> Get(
+            ReadExtensionCallQueuePresenceParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ExtensionCallQueuePresenceList>(this.Path(), queryParams,
+            return await rc.Get<ExtensionCallQueuePresenceList>(Path(), queryParams,
                 restRequestConfig);
         }
 
         /// <summary>
-        /// Updates availability of the agent for the call queues.
-        /// HTTP Method: PUT
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence
-        /// Rate Limit Group: Medium
-        /// App Permission: EditPresence
-        /// User Permission: undefined
+        ///     Updates availability of the agent for the call queues.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditPresence
         /// </summary>
-        public async Task<RingCentral.ExtensionCallQueuePresenceList> Put(
-            RingCentral.ExtensionCallQueueUpdatePresenceList extensionCallQueueUpdatePresenceList,
+        public async Task<ExtensionCallQueuePresenceList> Put(
+            ExtensionCallQueueUpdatePresenceList extensionCallQueueUpdatePresenceList,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.ExtensionCallQueuePresenceList>(this.Path(),
+            return await rc.Put<ExtensionCallQueuePresenceList>(Path(),
                 extensionCallQueueUpdatePresenceList, null, restRequestConfig);
         }
     }
@@ -55,9 +54,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.CallQueuePresence.Index CallQueuePresence()
+        public CallQueuePresence.Index CallQueuePresence()
         {
-            return new Restapi.Account.Extension.CallQueuePresence.Index(this);
+            return new CallQueuePresence.Index(this);
         }
     }
 }

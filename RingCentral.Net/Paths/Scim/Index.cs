@@ -13,23 +13,9 @@ namespace RingCentral.Paths.Scim
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && version != null)
-            {
-                return $"/scim/{version}";
-            }
+            if (withParameter && version != null) return $"/scim/{version}";
 
             return "/scim";
-        }
-    }
-}
-
-namespace RingCentral
-{
-    public partial class RestClient
-    {
-        public Paths.Scim.Index Scim(string version = "v2")
-        {
-            return new Paths.Scim.Index(this, version);
         }
     }
 }

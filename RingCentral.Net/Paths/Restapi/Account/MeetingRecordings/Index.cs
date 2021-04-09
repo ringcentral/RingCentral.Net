@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
 {
-    public partial class Index
+    public class Index
     {
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +19,18 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         }
 
         /// <summary>
-        /// Returns the list of meeting recordings for the current account.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/meeting-recordings
-        /// Rate Limit Group: Medium
-        /// App Permission: Meetings
-        /// User Permission: MeetingsRecordings
+        ///     Returns the list of meeting recordings for the current account.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/meeting-recordings
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Meetings
+        ///     User Permission: MeetingsRecordings
         /// </summary>
-        public async Task<RingCentral.ListMeetingRecordingsResponse> Get(
-            ListAccountMeetingRecordingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<ListMeetingRecordingsResponse> Get(
+            ListAccountMeetingRecordingsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ListMeetingRecordingsResponse>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<ListMeetingRecordingsResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.MeetingRecordings.Index MeetingRecordings()
+        public MeetingRecordings.Index MeetingRecordings()
         {
-            return new Restapi.Account.MeetingRecordings.Index(this);
+            return new MeetingRecordings.Index(this);
         }
     }
 }

@@ -3,12 +3,12 @@ namespace RingCentral
     public class NetworkInfo
     {
         /// <summary>
-        /// Internal identifier of a network
+        ///     Internal identifier of a network
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Link to a network resource
+        ///     Link to a network resource
         /// </summary>
         public string uri { get; set; }
 

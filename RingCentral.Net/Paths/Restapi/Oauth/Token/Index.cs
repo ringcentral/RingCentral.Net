@@ -1,18 +1,19 @@
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Oauth.Token
 {
-    public partial class Index
+    public class Index
     {
+        public Oauth.Index parent;
         public RestClient rc;
-        public Restapi.Oauth.Index parent;
 
-        public Index(Restapi.Oauth.Index parent)
+        public Index(Oauth.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,20 +22,17 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         }
 
         /// <summary>
-        /// Returns access tokens for making API requests
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/oauth/token
-        /// Rate Limit Group: Auth
-        /// App Permission: 
-        /// User Permission: undefined
+        ///     Returns access tokens for making API requests
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/oauth/token
+        ///     Rate Limit Group: Auth
         /// </summary>
-        public async Task<RingCentral.TokenInfo> Post(GetTokenRequest getTokenRequest,
+        public async Task<TokenInfo> Post(GetTokenRequest getTokenRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            var dict = new System.Collections.Generic.Dictionary<string, string>();
-            Utils.GetPairs(getTokenRequest)
-                .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict), null,
+            var dict = new Dictionary<string, string>();
+            Utils.GetPairs(getTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
+            return await rc.Post<TokenInfo>(Path(), new FormUrlEncodedContent(dict), null,
                 restRequestConfig);
         }
     }
@@ -44,9 +42,9 @@ namespace RingCentral.Paths.Restapi.Oauth
 {
     public partial class Index
     {
-        public Restapi.Oauth.Token.Index Token()
+        public Token.Index Token()
         {
-            return new Restapi.Oauth.Token.Index(this);
+            return new Token.Index(this);
         }
     }
 }

@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +19,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         }
 
         /// <summary>
-        /// Returns a list of emergency response locations available for the current user extension.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/emergency-locations
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: undefined
+        ///     Returns a list of emergency response locations available for the current user extension.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<RingCentral.UserEmergencyLocationList> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<UserEmergencyLocationList> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserEmergencyLocationList>(this.Path(), null, restRequestConfig);
+            return await rc.Get<UserEmergencyLocationList>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +36,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.EmergencyLocations.Index EmergencyLocations()
+        public EmergencyLocations.Index EmergencyLocations()
         {
-            return new Restapi.Account.Extension.EmergencyLocations.Index(this);
+            return new EmergencyLocations.Index(this);
         }
     }
 }

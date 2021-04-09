@@ -2,13 +2,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook
 {
     public partial class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.AddressBook.Index AddressBook()
+        public AddressBook.Index AddressBook()
         {
-            return new Restapi.Account.Extension.AddressBook.Index(this);
+            return new AddressBook.Index(this);
         }
     }
 }

@@ -3,7 +3,7 @@ namespace RingCentral
     public class AddressBookSync
     {
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -16,12 +16,12 @@ namespace RingCentral
         public SyncInfo syncInfo { get; set; }
 
         /// <summary>
-        /// Format: int64
+        ///     Format: int64
         /// </summary>
         public long? nextPageId { get; set; }
 
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string nextPageUri { get; set; }
     }

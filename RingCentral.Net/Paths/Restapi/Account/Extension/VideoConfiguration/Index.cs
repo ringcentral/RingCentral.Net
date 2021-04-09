@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,30 +19,29 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         }
 
         /// <summary>
-        /// Returns information about video configuration of the current user.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
-        /// Rate Limit Group: Light
-        /// App Permission: Meetings
-        /// User Permission: Meetings
+        ///     Returns information about video configuration of the current user.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
+        ///     Rate Limit Group: Light
+        ///     App Permission: Meetings
+        ///     User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.UserVideoConfiguration> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<UserVideoConfiguration> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserVideoConfiguration>(this.Path(), null, restRequestConfig);
+            return await rc.Get<UserVideoConfiguration>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Allows to update user video settings, for example video provider.
-        /// HTTP Method: PUT
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
-        /// Rate Limit Group: Light
-        /// App Permission: Meetings
-        /// User Permission: undefined
+        ///     Allows to update user video settings, for example video provider.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
+        ///     Rate Limit Group: Light
+        ///     App Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.UserVideoConfiguration> Put(
-            RingCentral.UserVideoConfiguration userVideoConfiguration, RestRequestConfig restRequestConfig = null)
+        public async Task<UserVideoConfiguration> Put(
+            UserVideoConfiguration userVideoConfiguration, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.UserVideoConfiguration>(this.Path(), userVideoConfiguration, null,
+            return await rc.Put<UserVideoConfiguration>(Path(), userVideoConfiguration, null,
                 restRequestConfig);
         }
     }
@@ -52,9 +51,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.VideoConfiguration.Index VideoConfiguration()
+        public VideoConfiguration.Index VideoConfiguration()
         {
-            return new Restapi.Account.Extension.VideoConfiguration.Index(this);
+            return new VideoConfiguration.Index(this);
         }
     }
 }

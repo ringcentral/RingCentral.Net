@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
 {
-    public partial class Index
+    public class Index
     {
+        public ClientInfo.Index parent;
         public RestClient rc;
-        public Restapi.ClientInfo.Index parent;
 
-        public Index(Restapi.ClientInfo.Index parent)
+        public Index(ClientInfo.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,18 +19,17 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         }
 
         /// <summary>
-        /// Creates SIP registration of a device/application (WebPhone, Mobile, softphone).
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/client-info/sip-provision
-        /// Rate Limit Group: Heavy
-        /// App Permission: VoipCalling
-        /// User Permission: undefined
+        ///     Creates SIP registration of a device/application (WebPhone, Mobile, softphone).
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/client-info/sip-provision
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: VoipCalling
         /// </summary>
-        public async Task<RingCentral.CreateSipRegistrationResponse> Post(
-            RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest,
+        public async Task<CreateSipRegistrationResponse> Post(
+            CreateSipRegistrationRequest createSipRegistrationRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CreateSipRegistrationResponse>(this.Path(), createSipRegistrationRequest,
+            return await rc.Post<CreateSipRegistrationResponse>(Path(), createSipRegistrationRequest,
                 null, restRequestConfig);
         }
     }
@@ -40,9 +39,9 @@ namespace RingCentral.Paths.Restapi.ClientInfo
 {
     public partial class Index
     {
-        public Restapi.ClientInfo.SipProvision.Index SipProvision()
+        public SipProvision.Index SipProvision()
         {
-            return new Restapi.ClientInfo.SipProvision.Index(this);
+            return new SipProvision.Index(this);
         }
     }
 }

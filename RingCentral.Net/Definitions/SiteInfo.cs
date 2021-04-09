@@ -3,32 +3,33 @@ namespace RingCentral
     public class SiteInfo
     {
         /// <summary>
-        /// Internal idetifier of a site extension
+        ///     Internal idetifier of a site extension
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Link to a site resource
+        ///     Link to a site resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Extension user first name
+        ///     Extension user first name
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        /// Extension number
+        ///     Extension number
         /// </summary>
         public string extensionNumber { get; set; }
 
         /// <summary>
-        /// Custom name of a caller. Max number of characters is 15 (only alphabetical symbols, numbers and commas are supported)
+        ///     Custom name of a caller. Max number of characters is 15 (only alphabetical symbols, numbers and commas are
+        ///     supported)
         /// </summary>
         public string callerIdName { get; set; }
 
         /// <summary>
-        /// Exetnsion user email
+        ///     Exetnsion user email
         /// </summary>
         public string email { get; set; }
 
@@ -45,7 +46,7 @@ namespace RingCentral
         public OperatorInfo @operator { get; set; }
 
         /// <summary>
-        /// Site code value. Returned only if specified
+        ///     Site code value. Returned only if specified
         /// </summary>
         public string code { get; set; }
     }

@@ -4,17 +4,17 @@ namespace RingCentral
     public class ForwardTarget
     {
         /// <summary>
-        /// Phone number
+        ///     Phone number
         /// </summary>
         public string phoneNumber { get; set; }
 
         /// <summary>
-        /// Voicemail owner extension identifier
+        ///     Voicemail owner extension identifier
         /// </summary>
         public string voicemail { get; set; }
 
         /// <summary>
-        /// Number of an extension
+        ///     Number of an extension
         /// </summary>
         public string extensionNumber { get; set; }
     }

@@ -4,13 +4,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
 {
     public partial class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,31 +19,31 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         }
 
         /// <summary>
-        /// Returns the current caller blocking settings of a user.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadBlockedNumbers
+        ///     Returns the current caller blocking settings of a user.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadBlockedNumbers
         /// </summary>
-        public async Task<RingCentral.CallerBlockingSettings> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<CallerBlockingSettings> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path(), null, restRequestConfig);
+            return await rc.Get<CallerBlockingSettings>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates the current caller blocking settings of a user.
-        /// HTTP Method: PUT
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
-        /// Rate Limit Group: Light
-        /// App Permission: EditExtensions
-        /// User Permission: EditBlockedNumbers
+        ///     Updates the current caller blocking settings of a user.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking
+        ///     Rate Limit Group: Light
+        ///     App Permission: EditExtensions
+        ///     User Permission: EditBlockedNumbers
         /// </summary>
-        public async Task<RingCentral.CallerBlockingSettings> Put(
-            RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate,
+        public async Task<CallerBlockingSettings> Put(
+            CallerBlockingSettingsUpdate callerBlockingSettingsUpdate,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate, null,
+            return await rc.Put<CallerBlockingSettings>(Path(), callerBlockingSettingsUpdate, null,
                 restRequestConfig);
         }
     }
@@ -53,9 +53,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.CallerBlocking.Index CallerBlocking()
+        public CallerBlocking.Index CallerBlocking()
         {
-            return new Restapi.Account.Extension.CallerBlocking.Index(this);
+            return new CallerBlocking.Index(this);
         }
     }
 }

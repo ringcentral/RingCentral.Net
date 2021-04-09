@@ -3,13 +3,13 @@ namespace RingCentral
     public class Photo
     {
         /// <summary>
-        /// Required
-        /// Enum: photo
+        ///     Required
+        ///     Enum: photo
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public string value { get; set; }
     }

@@ -23,8 +23,8 @@ namespace RingCentral
         public string streetAddress { get; set; }
 
         /// <summary>
-        /// Required
-        /// Enum: work
+        ///     Required
+        ///     Enum: work
         /// </summary>
         public string type { get; set; }
     }

@@ -1,9 +1,5 @@
 using System;
-using System.Threading.Tasks;
-using RingCentral.Net.WebSocket;
 using Xunit;
-using dotenv.net;
-using RingCentral.Net.AutoRefresh;
 using Xunit.Abstractions;
 
 namespace RingCentral.Tests

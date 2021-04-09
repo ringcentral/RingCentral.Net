@@ -3,7 +3,7 @@ namespace RingCentral
     public class CallPartyReply
     {
         /// <summary>
-        /// Text to reply
+        ///     Text to reply
         /// </summary>
         public string replyWithText { get; set; }
 

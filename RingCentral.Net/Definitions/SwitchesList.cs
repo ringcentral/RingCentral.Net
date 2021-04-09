@@ -3,12 +3,12 @@ namespace RingCentral
     public class SwitchesList
     {
         /// <summary>
-        /// Link to the switches list resource
+        ///     Link to the switches list resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Switches map
+        ///     Switches map
         /// </summary>
         public SwitchInfo[] records { get; set; }
 

@@ -4,7 +4,7 @@ namespace RingCentral
     public class ADGErrorResponse
     {
         /// <summary>
-        /// Collection of all gathered errors
+        ///     Collection of all gathered errors
         /// </summary>
         public ADGError[] errors { get; set; }
     }

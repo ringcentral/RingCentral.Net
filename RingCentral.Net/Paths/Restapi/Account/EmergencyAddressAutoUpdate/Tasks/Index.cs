@@ -2,45 +2,39 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
 {
-    public partial class Index
+    public class Index
     {
+        public EmergencyAddressAutoUpdate.Index parent;
         public RestClient rc;
         public string taskId;
-        public Restapi.Account.EmergencyAddressAutoUpdate.Index parent;
 
-        public Index(Restapi.Account.EmergencyAddressAutoUpdate.Index parent, string taskId = null)
+        public Index(EmergencyAddressAutoUpdate.Index parent, string taskId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.taskId = taskId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && taskId != null)
-            {
-                return $"{parent.Path()}/tasks/{taskId}";
-            }
+            if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
 
             return $"{parent.Path()}/tasks";
         }
 
         /// <summary>
-        /// Returns results of the task created within the frame of Automatic Location Updates feature. Currently four task types are supported: 'Wireless Points Bulk Create', 'Wireless Points Bulk Update', 'Switches Bulk Create', 'Switches Bulk Update'.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
-        /// Rate Limit Group: Light
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
+        ///     Returns results of the task created within the frame of Automatic Location Updates feature. Currently four task
+        ///     types are supported: 'Wireless Points Bulk Create', 'Wireless Points Bulk Update', 'Switches Bulk Create',
+        ///     'Switches Bulk Update'.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
+        ///     Rate Limit Group: Light
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<AutomaticLocationUpdatesTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (this.taskId == null)
-            {
-                throw new System.ArgumentNullException("taskId");
-            }
-
-            return await rc.Get<RingCentral.AutomaticLocationUpdatesTaskInfo>(this.Path(), null, restRequestConfig);
+            return await rc.Get<AutomaticLocationUpdatesTaskInfo>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -49,9 +43,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate
 {
     public partial class Index
     {
-        public Restapi.Account.EmergencyAddressAutoUpdate.Tasks.Index Tasks(string taskId = null)
+        public Tasks.Index Tasks(string taskId = null)
         {
-            return new Restapi.Account.EmergencyAddressAutoUpdate.Tasks.Index(this, taskId);
+            return new Tasks.Index(this, taskId);
         }
     }
 }

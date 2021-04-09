@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.UserSettings
 {
-    public partial class Index
+    public class Index
     {
+        public Meeting.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Meeting.Index parent;
 
-        public Index(Restapi.Account.Extension.Meeting.Index parent)
+        public Index(Meeting.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.UserSettings
         }
 
         /// <summary>
-        /// Returns user settings for meetings.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/user-settings
-        /// Rate Limit Group: Light
-        /// App Permission: Meetings
-        /// User Permission: Meetings
+        ///     Returns user settings for meetings.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/user-settings
+        ///     Rate Limit Group: Light
+        ///     App Permission: Meetings
+        ///     User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.MeetingUserSettingsResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<MeetingUserSettingsResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.MeetingUserSettingsResponse>(this.Path(), null, restRequestConfig);
+            return await rc.Get<MeetingUserSettingsResponse>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.Meeting.UserSettings.Index UserSettings()
+        public UserSettings.Index UserSettings()
         {
-            return new Restapi.Account.Extension.Meeting.UserSettings.Index(this);
+            return new UserSettings.Index(this);
         }
     }
 }

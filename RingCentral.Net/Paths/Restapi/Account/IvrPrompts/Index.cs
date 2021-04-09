@@ -4,109 +4,91 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
 {
     public partial class Index
     {
-        public RestClient rc;
+        public Account.Index parent;
         public string promptId;
-        public Restapi.Account.Index parent;
+        public RestClient rc;
 
-        public Index(Restapi.Account.Index parent, string promptId = null)
+        public Index(Account.Index parent, string promptId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.promptId = promptId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && promptId != null)
-            {
-                return $"{parent.Path()}/ivr-prompts/{promptId}";
-            }
+            if (withParameter && promptId != null) return $"{parent.Path()}/ivr-prompts/{promptId}";
 
             return $"{parent.Path()}/ivr-prompts";
         }
 
         /// <summary>
-        /// Returns the list of IVR prompts.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts
-        /// Rate Limit Group: Medium
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadCompanyGreetings
+        ///     Returns the list of IVR prompts.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-prompts
+        ///     Rate Limit Group: Medium
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadCompanyGreetings
         /// </summary>
-        public async Task<RingCentral.IVRPrompts> List(RestRequestConfig restRequestConfig = null)
+        public async Task<IVRPrompts> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.IVRPrompts>(this.Path(false), null, restRequestConfig);
+            return await rc.Get<IVRPrompts>(Path(false), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Creates an IVR prompt.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
-        /// User Permission: EditCompanyGreetings
+        ///     Creates an IVR prompt.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-prompts
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
+        ///     User Permission: EditCompanyGreetings
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Post(CreateIVRPromptRequest createIVRPromptRequest,
+        public async Task<PromptInfo> Post(CreateIVRPromptRequest createIVRPromptRequest,
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
-            return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent, null,
+            return await rc.Post<PromptInfo>(Path(false), multipartFormDataContent, null,
                 restRequestConfig);
         }
 
         /// <summary>
-        /// Returns an IVR prompt by ID.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
-        /// Rate Limit Group: Medium
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadCompanyGreetings
+        ///     Returns an IVR prompt by ID.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}
+        ///     Rate Limit Group: Medium
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadCompanyGreetings
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<PromptInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (this.promptId == null)
-            {
-                throw new System.ArgumentNullException("promptId");
-            }
-
-            return await rc.Get<RingCentral.PromptInfo>(this.Path(), null, restRequestConfig);
+            return await rc.Get<PromptInfo>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates an IVR prompt by ID
-        /// HTTP Method: PUT
-        /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
-        /// Rate Limit Group: Medium
-        /// App Permission: EditAccounts
-        /// User Permission: EditCompanyGreetings
+        ///     Updates an IVR prompt by ID
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditAccounts
+        ///     User Permission: EditCompanyGreetings
         /// </summary>
-        public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest,
+        public async Task<PromptInfo> Put(UpdateIVRPromptRequest updateIVRPromptRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            if (this.promptId == null)
-            {
-                throw new System.ArgumentNullException("promptId");
-            }
-
-            return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest, null, restRequestConfig);
+            return await rc.Put<PromptInfo>(Path(), updateIVRPromptRequest, null, restRequestConfig);
         }
 
         /// <summary>
-        /// Deletes an IVR prompt by ID.
-        /// HTTP Method: DELETE
-        /// Endpoint: /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
-        /// User Permission: EditCompanyGreetings
+        ///     Deletes an IVR prompt by ID.
+        ///     HTTP Method: delete
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
+        ///     User Permission: EditCompanyGreetings
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            if (this.promptId == null)
-            {
-                throw new System.ArgumentNullException("promptId");
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -115,9 +97,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.IvrPrompts.Index IvrPrompts(string promptId = null)
+        public IvrPrompts.Index IvrPrompts(string promptId = null)
         {
-            return new Restapi.Account.IvrPrompts.Index(this, promptId);
+            return new IvrPrompts.Index(this, promptId);
         }
     }
 }

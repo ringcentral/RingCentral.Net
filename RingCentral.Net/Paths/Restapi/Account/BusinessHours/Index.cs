@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.BusinessHours
 {
-    public partial class Index
+    public class Index
     {
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,31 +19,32 @@ namespace RingCentral.Paths.Restapi.Account.BusinessHours
         }
 
         /// <summary>
-        /// Returns the company business hours schedule. Business hours (and After hours - all the remaining time) schedules are commonly used for setting call handling rules - `business-hours-rule` and `after-hours-rule` correspondingly.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/business-hours
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadUserAnsweringRules
+        ///     Returns the company business hours schedule. Business hours (and After hours - all the remaining time) schedules
+        ///     are commonly used for setting call handling rules - `business-hours-rule` and `after-hours-rule` correspondingly.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/business-hours
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadUserAnsweringRules
         /// </summary>
-        public async Task<RingCentral.CompanyBusinessHours> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<CompanyBusinessHours> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CompanyBusinessHours>(this.Path(), null, restRequestConfig);
+            return await rc.Get<CompanyBusinessHours>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates the company business hours schedule.
-        /// HTTP Method: PUT
-        /// Endpoint: /restapi/v1.0/account/{accountId}/business-hours
-        /// Rate Limit Group: Medium
-        /// App Permission: EditExtensions
-        /// User Permission: EditUserAnsweringRules
+        ///     Updates the company business hours schedule.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/business-hours
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditExtensions
+        ///     User Permission: EditUserAnsweringRules
         /// </summary>
-        public async Task<RingCentral.CompanyBusinessHours> Put(
-            RingCentral.CompanyBusinessHoursUpdateRequest companyBusinessHoursUpdateRequest,
+        public async Task<CompanyBusinessHours> Put(
+            CompanyBusinessHoursUpdateRequest companyBusinessHoursUpdateRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.CompanyBusinessHours>(this.Path(), companyBusinessHoursUpdateRequest, null,
+            return await rc.Put<CompanyBusinessHours>(Path(), companyBusinessHoursUpdateRequest, null,
                 restRequestConfig);
         }
     }
@@ -53,9 +54,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.BusinessHours.Index BusinessHours()
+        public BusinessHours.Index BusinessHours()
         {
-            return new Restapi.Account.BusinessHours.Index(this);
+            return new BusinessHours.Index(this);
         }
     }
 }

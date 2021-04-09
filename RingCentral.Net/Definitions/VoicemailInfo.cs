@@ -4,7 +4,7 @@ namespace RingCentral
     public class VoicemailInfo
     {
         /// <summary>
-        /// If 'True' then voicemails are allowed to be received
+        ///     If 'True' then voicemails are allowed to be received
         /// </summary>
         public bool? enabled { get; set; }
 

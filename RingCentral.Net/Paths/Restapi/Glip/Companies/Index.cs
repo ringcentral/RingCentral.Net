@@ -2,45 +2,37 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Glip.Companies
 {
-    public partial class Index
+    public class Index
     {
-        public RestClient rc;
         public string companyId;
-        public Restapi.Glip.Index parent;
+        public Glip.Index parent;
+        public RestClient rc;
 
-        public Index(Restapi.Glip.Index parent, string companyId = null)
+        public Index(Glip.Index parent, string companyId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.companyId = companyId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && companyId != null)
-            {
-                return $"{parent.Path()}/companies/{companyId}";
-            }
+            if (withParameter && companyId != null) return $"{parent.Path()}/companies/{companyId}";
 
             return $"{parent.Path()}/companies";
         }
 
         /// <summary>
-        /// Returns information about one or more companies by their IDs.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/glip/companies/{companyId}
-        /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        ///     Returns information about one or more companies by their IDs.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/glip/companies/{companyId}
+        ///     Rate Limit Group: Light
+        ///     App Permission: Glip
+        ///     User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipCompany> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<GlipCompany> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (this.companyId == null)
-            {
-                throw new System.ArgumentNullException("companyId");
-            }
-
-            return await rc.Get<RingCentral.GlipCompany>(this.Path(), null, restRequestConfig);
+            return await rc.Get<GlipCompany>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -49,9 +41,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Restapi.Glip.Companies.Index Companies(string companyId = null)
+        public Companies.Index Companies(string companyId = null)
         {
-            return new Restapi.Glip.Companies.Index(this, companyId);
+            return new Companies.Index(this, companyId);
         }
     }
 }

@@ -4,13 +4,13 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
 {
     public partial class Index
     {
+        public EmergencyAddressAutoUpdate.Index parent;
         public RestClient rc;
-        public Restapi.Account.EmergencyAddressAutoUpdate.Index parent;
 
-        public Index(Restapi.Account.EmergencyAddressAutoUpdate.Index parent)
+        public Index(EmergencyAddressAutoUpdate.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,18 +19,18 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
         }
 
         /// <summary>
-        /// Returns the list of common devices with their status of Automatic Location Updates feature.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
-        /// Rate Limit Group: Medium
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
+        ///     Returns the list of common devices with their status of Automatic Location Updates feature.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.ListDevicesAutomaticLocationUpdates> Get(
+        public async Task<ListDevicesAutomaticLocationUpdates> Get(
             ListDevicesAutomaticLocationUpdatesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ListDevicesAutomaticLocationUpdates>(this.Path(), queryParams,
+            return await rc.Get<ListDevicesAutomaticLocationUpdates>(Path(), queryParams,
                 restRequestConfig);
         }
     }
@@ -40,9 +40,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate
 {
     public partial class Index
     {
-        public Restapi.Account.EmergencyAddressAutoUpdate.Devices.Index Devices()
+        public Devices.Index Devices()
         {
-            return new Restapi.Account.EmergencyAddressAutoUpdate.Devices.Index(this);
+            return new Devices.Index(this);
         }
     }
 }

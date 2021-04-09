@@ -3,13 +3,13 @@ namespace RingCentral
     public class Roles
     {
         /// <summary>
-        /// Link to a role
-        /// Format: uri
+        ///     Link to a role
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Internal identifier of a role
+        ///     Internal identifier of a role
         /// </summary>
         public string id { get; set; }
 

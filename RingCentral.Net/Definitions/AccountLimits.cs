@@ -4,37 +4,37 @@ namespace RingCentral
     public class AccountLimits
     {
         /// <summary>
-        /// Max number of free softphone phone lines per user extension
+        ///     Max number of free softphone phone lines per user extension
         /// </summary>
         public long? freeSoftPhoneLinesPerExtension { get; set; }
 
         /// <summary>
-        /// Max number of participants in RingCentral meeting hosted by this account's user
+        ///     Max number of participants in RingCentral meeting hosted by this account's user
         /// </summary>
         public long? meetingSize { get; set; }
 
         /// <summary>
-        /// Meetings recording cloud storage limitaion in Gb
+        ///     Meetings recording cloud storage limitaion in Gb
         /// </summary>
         public long? cloudRecordingStorage { get; set; }
 
         /// <summary>
-        /// Max number of extensions which can be included in the list of users monitored for Presence
+        ///     Max number of extensions which can be included in the list of users monitored for Presence
         /// </summary>
         public long? maxMonitoredExtensionsPerUser { get; set; }
 
         /// <summary>
-        /// Max length of extension numbers of an account; the supported value is up to 8 symbols, depends on account type
+        ///     Max length of extension numbers of an account; the supported value is up to 8 symbols, depends on account type
         /// </summary>
         public long? maxExtensionNumberLength { get; set; }
 
         /// <summary>
-        /// Length of a site code
+        ///     Length of a site code
         /// </summary>
         public long? siteCodeLength { get; set; }
 
         /// <summary>
-        /// Length of a short extension number
+        ///     Length of a short extension number
         /// </summary>
         public long? shortExtensionNumberLength { get; set; }
     }

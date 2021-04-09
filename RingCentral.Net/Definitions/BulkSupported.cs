@@ -3,12 +3,12 @@ namespace RingCentral
     public class BulkSupported
     {
         /// <summary>
-        /// Format: int32
+        ///     Format: int32
         /// </summary>
         public long? maxOperations { get; set; }
 
         /// <summary>
-        /// Format: int32
+        ///     Format: int32
         /// </summary>
         public long? maxPayloadSize { get; set; }
 

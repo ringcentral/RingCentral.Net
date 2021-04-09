@@ -2,13 +2,13 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate
 {
     public partial class Index
     {
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +22,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.EmergencyAddressAutoUpdate.Index EmergencyAddressAutoUpdate()
+        public EmergencyAddressAutoUpdate.Index EmergencyAddressAutoUpdate()
         {
-            return new Restapi.Account.EmergencyAddressAutoUpdate.Index(this);
+            return new EmergencyAddressAutoUpdate.Index(this);
         }
     }
 }

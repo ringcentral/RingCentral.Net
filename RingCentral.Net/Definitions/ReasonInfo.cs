@@ -4,13 +4,14 @@ namespace RingCentral
     public class ReasonInfo
     {
         /// <summary>
-        /// Reason code
-        /// Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation, InsufficientPermissions, ConfigurationLimitation
+        ///     Reason code
+        ///     Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation,
+        ///     InsufficientPermissions, ConfigurationLimitation
         /// </summary>
         public string code { get; set; }
 
         /// <summary>
-        /// Reason description
+        ///     Reason description
         /// </summary>
         public string message { get; set; }
 

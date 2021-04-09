@@ -7,43 +7,43 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        /// Enum: Inbound, Outbound
+        ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
 
         /// <summary>
-        /// Identifies if a call belongs to the call queue
+        ///     Identifies if a call belongs to the call queue
         /// </summary>
         public bool? queueCall { get; set; }
 
         /// <summary>
-        /// Phone number or extension number of a caller. For GCM transport type '_from' property should be used
+        ///     Phone number or extension number of a caller. For GCM transport type '_from' property should be used
         /// </summary>
         public string from { get; set; }
 
         /// <summary>
-        /// Name of a caller
+        ///     Name of a caller
         /// </summary>
         public string fromName { get; set; }
 
         /// <summary>
-        /// Phone number or extension number of a callee
+        ///     Phone number or extension number of a callee
         /// </summary>
         public string to { get; set; }
 
         /// <summary>
-        /// Name of a callee
+        ///     Name of a callee
         /// </summary>
         public string toName { get; set; }
 
         /// <summary>
-        /// Time when the call is actually started
+        ///     Time when the call is actually started
         /// </summary>
         public string startTime { get; set; }
 
         /// <summary>
-        /// Telephony presence status
-        /// Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
+        ///     Telephony presence status
+        ///     Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
         /// </summary>
         public string telephonyStatus { get; set; }
 
@@ -56,17 +56,17 @@ namespace RingCentral
         public string sessionId { get; set; }
 
         /// <summary>
-        /// Telephony identifier of a call session
+        ///     Telephony identifier of a call session
         /// </summary>
         public string telephonySessionId { get; set; }
 
         /// <summary>
-        /// Extension ID of the call owner on whose behalf a call is performed
+        ///     Extension ID of the call owner on whose behalf a call is performed
         /// </summary>
         public string onBehalfOf { get; set; }
 
         /// <summary>
-        /// Internal identifier of a call party
+        ///     Internal identifier of a call party
         /// </summary>
         public string partyId { get; set; }
 

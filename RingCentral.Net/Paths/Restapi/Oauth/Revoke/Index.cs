@@ -1,18 +1,19 @@
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Oauth.Revoke
 {
-    public partial class Index
+    public class Index
     {
+        public Oauth.Index parent;
         public RestClient rc;
-        public Restapi.Oauth.Index parent;
 
-        public Index(Restapi.Oauth.Index parent)
+        public Index(Oauth.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,20 +22,18 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
         }
 
         /// <summary>
-        /// Revokes access/refresh token. Requests to this endpoint must be authenticated with HTTP Basic scheme using the application key and application secret as login and password, correspondingly.
-        /// HTTP Method: POST
-        /// Endpoint: /restapi/oauth/revoke
-        /// Rate Limit Group: Auth
-        /// App Permission: 
-        /// User Permission: undefined
+        ///     Revokes access/refresh token. Requests to this endpoint must be authenticated with HTTP Basic scheme using the
+        ///     application key and application secret as login and password, correspondingly.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/oauth/revoke
+        ///     Rate Limit Group: Auth
         /// </summary>
         public async Task<string> Post(RevokeTokenRequest revokeTokenRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            var dict = new System.Collections.Generic.Dictionary<string, string>();
-            Utils.GetPairs(revokeTokenRequest)
-                .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<string>(this.Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
+            var dict = new Dictionary<string, string>();
+            Utils.GetPairs(revokeTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
+            return await rc.Post<string>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
         }
     }
 }
@@ -43,9 +42,9 @@ namespace RingCentral.Paths.Restapi.Oauth
 {
     public partial class Index
     {
-        public Restapi.Oauth.Revoke.Index Revoke()
+        public Revoke.Index Revoke()
         {
-            return new Restapi.Oauth.Revoke.Index(this);
+            return new Revoke.Index(this);
         }
     }
 }

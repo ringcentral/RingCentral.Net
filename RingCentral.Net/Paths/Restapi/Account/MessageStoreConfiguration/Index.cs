@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
 {
-    public partial class Index
+    public class Index
     {
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,30 +19,30 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
         }
 
         /// <summary>
-        /// Returns message store settings.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-configuration
-        /// Rate Limit Group: Light
-        /// App Permission: EditAccounts
-        /// User Permission: AccountAdministration
+        ///     Returns message store settings.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-configuration
+        ///     Rate Limit Group: Light
+        ///     App Permission: EditAccounts
+        ///     User Permission: AccountAdministration
         /// </summary>
         public async Task<RingCentral.MessageStoreConfiguration> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.MessageStoreConfiguration>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates message store settings.
-        /// HTTP Method: PUT
-        /// Endpoint: /restapi/v1.0/account/{accountId}/message-store-configuration
-        /// Rate Limit Group: Light
-        /// App Permission: EditAccounts
-        /// User Permission: AccountAdministration
+        ///     Updates message store settings.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-configuration
+        ///     Rate Limit Group: Light
+        ///     App Permission: EditAccounts
+        ///     User Permission: AccountAdministration
         /// </summary>
         public async Task<RingCentral.MessageStoreConfiguration> Put(
             RingCentral.MessageStoreConfiguration messageStoreConfiguration, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration, null,
+            return await rc.Put<RingCentral.MessageStoreConfiguration>(Path(), messageStoreConfiguration, null,
                 restRequestConfig);
         }
     }
@@ -52,9 +52,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.MessageStoreConfiguration.Index MessageStoreConfiguration()
+        public MessageStoreConfiguration.Index MessageStoreConfiguration()
         {
-            return new Restapi.Account.MessageStoreConfiguration.Index(this);
+            return new MessageStoreConfiguration.Index(this);
         }
     }
 }

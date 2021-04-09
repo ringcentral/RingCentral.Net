@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
 {
-    public partial class Index
+    public class Index
     {
+        public Meeting.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Meeting.Index parent;
 
-        public Index(Restapi.Account.Extension.Meeting.Index parent)
+        public Index(Meeting.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,30 +19,31 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         }
 
         /// <summary>
-        /// Returns information on dial-in numbers for meetings, support and international dial-in numbers URIs and meeting account information.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
-        /// Rate Limit Group: Light
-        /// App Permission: Meetings
-        /// User Permission: Meetings
+        ///     Returns information on dial-in numbers for meetings, support and international dial-in numbers URIs and meeting
+        ///     account information.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/service-info
+        ///     Rate Limit Group: Light
+        ///     App Permission: Meetings
+        ///     User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.MeetingServiceInfoResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<MeetingServiceInfoResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.MeetingServiceInfoResource>(this.Path(), null, restRequestConfig);
+            return await rc.Get<MeetingServiceInfoResource>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates personal meeting identifier.
-        /// HTTP Method: PATCH
-        /// Endpoint: /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
-        /// Rate Limit Group: Medium
-        /// App Permission: Meetings
-        /// User Permission: Meetings
+        ///     Updates personal meeting identifier.
+        ///     HTTP Method: patch
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/service-info
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Meetings
+        ///     User Permission: Meetings
         /// </summary>
-        public async Task<RingCentral.MeetingServiceInfoResource> Patch(
-            RingCentral.MeetingServiceInfoRequest meetingServiceInfoRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<MeetingServiceInfoResource> Patch(
+            MeetingServiceInfoRequest meetingServiceInfoRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<RingCentral.MeetingServiceInfoResource>(this.Path(), meetingServiceInfoRequest, null,
+            return await rc.Patch<MeetingServiceInfoResource>(Path(), meetingServiceInfoRequest, null,
                 restRequestConfig);
         }
     }
@@ -52,9 +53,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.Meeting.ServiceInfo.Index ServiceInfo()
+        public ServiceInfo.Index ServiceInfo()
         {
-            return new Restapi.Account.Extension.Meeting.ServiceInfo.Index(this);
+            return new ServiceInfo.Index(this);
         }
     }
 }

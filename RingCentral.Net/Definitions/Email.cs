@@ -3,13 +3,13 @@ namespace RingCentral
     public class Email
     {
         /// <summary>
-        /// Required
-        /// Enum: work
+        ///     Required
+        ///     Enum: work
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public string value { get; set; }
     }

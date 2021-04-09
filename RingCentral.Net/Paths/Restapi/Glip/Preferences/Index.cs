@@ -2,15 +2,15 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Glip.Preferences
 {
-    public partial class Index
+    public class Index
     {
+        public Glip.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Index parent;
 
-        public Index(Restapi.Glip.Index parent)
+        public Index(Glip.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
         }
 
         /// <summary>
-        /// Returns information about user preferences.
-        /// HTTP Method: GET
-        /// Endpoint: /restapi/v1.0/glip/preferences
-        /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        ///     Returns information about user preferences.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/glip/preferences
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Glip
+        ///     User Permission: Glip
         /// </summary>
-        public async Task<RingCentral.GlipPreferencesInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<GlipPreferencesInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GlipPreferencesInfo>(this.Path(), null, restRequestConfig);
+            return await rc.Get<GlipPreferencesInfo>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Restapi.Glip.Preferences.Index Preferences()
+        public Preferences.Index Preferences()
         {
-            return new Restapi.Glip.Preferences.Index(this);
+            return new Preferences.Index(this);
         }
     }
 }

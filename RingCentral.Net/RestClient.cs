@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using RingCentral.Paths.Restapi;
 
 namespace RingCentral
 {
@@ -119,7 +120,7 @@ namespace RingCentral
             var tokenToRefresh = refreshToken ?? token?.refresh_token;
             if (tokenToRefresh == null)
             {
-                throw new System.ArgumentNullException(nameof(tokenToRefresh));
+                throw new ArgumentNullException(nameof(tokenToRefresh));
             }
 
             var getTokenRequest = new GetTokenRequest
@@ -151,10 +152,11 @@ namespace RingCentral
         }
 
         // bridge methods to start the call chain, like rc.Restapi().Account()
-        public Paths.Restapi.Index Restapi(string apiVersion = "v1.0")
+        public Index Restapi(string apiVersion = "v1.0")
         {
-            return new Paths.Restapi.Index(this, apiVersion);
+            return new Index(this, apiVersion);
         }
+
         public Paths.Scim.Index Scim(string version = "v2")
         {
             return new Paths.Scim.Index(this, version);

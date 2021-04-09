@@ -4,22 +4,22 @@ namespace RingCentral
     public class OperatorInfo
     {
         /// <summary>
-        /// Internal identifier of an operator
+        ///     Internal identifier of an operator
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Link to an operator resource
+        ///     Link to an operator resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Extension number (pin)
+        ///     Extension number (pin)
         /// </summary>
         public string extensionNumber { get; set; }
 
         /// <summary>
-        /// Operator extension user full name
+        ///     Operator extension user full name
         /// </summary>
         public string name { get; set; }
     }

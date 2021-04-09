@@ -3,12 +3,12 @@ namespace RingCentral
     public class Name
     {
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public string familyName { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public string givenName { get; set; }
     }

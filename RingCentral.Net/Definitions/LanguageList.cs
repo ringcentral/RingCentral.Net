@@ -3,12 +3,12 @@ namespace RingCentral
     public class LanguageList
     {
         /// <summary>
-        /// Canonical URI of the language list resource
+        ///     Canonical URI of the language list resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Language data
+        ///     Language data
         /// </summary>
         public LanguageInfo[] records { get; set; }
 
