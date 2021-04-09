@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Subscription
         public string Path(bool withParameter = true)
         {
             if (withParameter && subscriptionId != null) return $"{parent.Path()}/subscription/{subscriptionId}";
-
             return $"{parent.Path()}/subscription";
         }
 
@@ -31,8 +30,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         public async Task<RecordsCollectionResourceSubscriptionResponse> List(
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RecordsCollectionResourceSubscriptionResponse>(Path(false), null,
-                restRequestConfig);
+            return await rc.Get<RecordsCollectionResourceSubscriptionResponse>(Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -41,11 +39,10 @@ namespace RingCentral.Paths.Restapi.Subscription
         ///     Endpoint: /restapi/{apiVersion}/subscription
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<SubscriptionInfo> Post(
-            CreateSubscriptionRequest createSubscriptionRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<SubscriptionInfo> Post(CreateSubscriptionRequest createSubscriptionRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<SubscriptionInfo>(Path(false), createSubscriptionRequest, null,
-                restRequestConfig);
+            return await rc.Post<SubscriptionInfo>(Path(false), createSubscriptionRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -69,11 +66,10 @@ namespace RingCentral.Paths.Restapi.Subscription
         ///     Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<SubscriptionInfo> Put(
-            ModifySubscriptionRequest modifySubscriptionRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<SubscriptionInfo> Put(ModifySubscriptionRequest modifySubscriptionRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<SubscriptionInfo>(Path(), modifySubscriptionRequest, null,
-                restRequestConfig);
+            return await rc.Put<SubscriptionInfo>(Path(), modifySubscriptionRequest, null, restRequestConfig);
         }
 
         /// <summary>

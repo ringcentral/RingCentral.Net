@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public string Path(bool withParameter = true)
         {
             if (withParameter && networkId != null) return $"{parent.Path()}/networks/{networkId}";
-
             return $"{parent.Path()}/networks";
         }
 
@@ -46,8 +45,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public async Task<NetworkInfo> Post(CreateNetworkRequest createNetworkRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<NetworkInfo>(Path(false), createNetworkRequest, null,
-                restRequestConfig);
+            return await rc.Post<NetworkInfo>(Path(false), createNetworkRequest, null, restRequestConfig);
         }
 
         /// <summary>

@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         public string Path(bool withParameter = true)
         {
             if (withParameter && groupId != null) return $"{parent.Path()}/call-queues/{groupId}";
-
             return $"{parent.Path()}/call-queues";
         }
 
@@ -60,8 +59,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         public async Task<CallQueueDetails> Put(CallQueueUpdateDetails callQueueUpdateDetails,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<CallQueueDetails>(Path(), callQueueUpdateDetails, null,
-                restRequestConfig);
+            return await rc.Put<CallQueueDetails>(Path(), callQueueUpdateDetails, null, restRequestConfig);
         }
     }
 }

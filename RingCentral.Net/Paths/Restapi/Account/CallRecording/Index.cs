@@ -40,11 +40,10 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
         ///     User Permission: EditCompanyInfo
         /// </summary>
         public async Task<CallRecordingSettingsResource> Put(
-            CallRecordingSettingsResource callRecordingSettingsResource,
-            RestRequestConfig restRequestConfig = null)
+            CallRecordingSettingsResource callRecordingSettingsResource, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<CallRecordingSettingsResource>(Path(), callRecordingSettingsResource,
-                null, restRequestConfig);
+            return await rc.Put<CallRecordingSettingsResource>(Path(), callRecordingSettingsResource, null,
+                restRequestConfig);
         }
     }
 }

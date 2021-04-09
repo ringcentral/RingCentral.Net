@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         public string Path(bool withParameter = true)
         {
             if (withParameter && contactId != null) return $"{parent.Path()}/contact/{contactId}";
-
             return $"{parent.Path()}/contact";
         }
 
@@ -44,12 +43,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         ///     App Permission: Contacts
         ///     User Permission: EditPersonalContacts
         /// </summary>
-        public async Task<PersonalContactResource> Post(
-            PersonalContactRequest personalContactRequest,
+        public async Task<PersonalContactResource> Post(PersonalContactRequest personalContactRequest,
             CreateContactParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<PersonalContactResource>(Path(false), personalContactRequest,
-                queryParams, restRequestConfig);
+            return await rc.Post<PersonalContactResource>(Path(false), personalContactRequest, queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -73,8 +71,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         ///     App Permission: Contacts
         ///     User Permission: EditPersonalContacts
         /// </summary>
-        public async Task<PersonalContactResource> Put(
-            PersonalContactRequest personalContactRequest,
+        public async Task<PersonalContactResource> Put(PersonalContactRequest personalContactRequest,
             UpdateContactParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<PersonalContactResource>(Path(), personalContactRequest, queryParams,

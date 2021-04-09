@@ -26,12 +26,11 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate
         ///     App Permission: EditExtensions
         ///     User Permission: EditExtensionInfo
         /// </summary>
-        public async Task<ExtensionBulkUpdateTaskResource> Post(
-            ExtensionBulkUpdateRequest extensionBulkUpdateRequest,
+        public async Task<ExtensionBulkUpdateTaskResource> Post(ExtensionBulkUpdateRequest extensionBulkUpdateRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<ExtensionBulkUpdateTaskResource>(Path(), extensionBulkUpdateRequest,
-                null, restRequestConfig);
+            return await rc.Post<ExtensionBulkUpdateTaskResource>(Path(), extensionBulkUpdateRequest, null,
+                restRequestConfig);
         }
     }
 }

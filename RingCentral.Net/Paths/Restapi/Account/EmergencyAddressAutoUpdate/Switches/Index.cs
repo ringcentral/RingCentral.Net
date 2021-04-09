@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         public string Path(bool withParameter = true)
         {
             if (withParameter && switchId != null) return $"{parent.Path()}/switches/{switchId}";
-
             return $"{parent.Path()}/switches";
         }
 
@@ -73,8 +72,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         ///     App Permission: EditAccounts
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<SwitchInfo> Put(UpdateSwitchInfo updateSwitchInfo,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<SwitchInfo> Put(UpdateSwitchInfo updateSwitchInfo, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<SwitchInfo>(Path(), updateSwitchInfo, null, restRequestConfig);
         }

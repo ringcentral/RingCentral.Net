@@ -26,8 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         ///     App Permission: Meetings
         ///     User Permission: MeetingsRecordings
         /// </summary>
-        public async Task<ListMeetingRecordingsResponse> Get(
-            ListAccountMeetingRecordingsParameters queryParams = null,
+        public async Task<ListMeetingRecordingsResponse> Get(ListAccountMeetingRecordingsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<ListMeetingRecordingsResponse>(Path(), queryParams, restRequestConfig);

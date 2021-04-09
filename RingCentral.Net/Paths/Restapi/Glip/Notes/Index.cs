@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         public string Path(bool withParameter = true)
         {
             if (withParameter && noteId != null) return $"{parent.Path()}/notes/{noteId}";
-
             return $"{parent.Path()}/notes";
         }
 
@@ -56,8 +55,7 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         ///     App Permission: Glip
         ///     User Permission: Glip
         /// </summary>
-        public async Task<GlipNoteInfo> Patch(GlipNoteCreate glipNoteCreate,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GlipNoteInfo> Patch(GlipNoteCreate glipNoteCreate, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Patch<GlipNoteInfo>(Path(), glipNoteCreate, null, restRequestConfig);
         }

@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Recording
         public string Path(bool withParameter = true)
         {
             if (withParameter && recordingId != null) return $"{parent.Path()}/recording/{recordingId}";
-
             return $"{parent.Path()}/recording";
         }
 

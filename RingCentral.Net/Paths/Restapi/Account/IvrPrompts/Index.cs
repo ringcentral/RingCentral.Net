@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         public string Path(bool withParameter = true)
         {
             if (withParameter && promptId != null) return $"{parent.Path()}/ivr-prompts/{promptId}";
-
             return $"{parent.Path()}/ivr-prompts";
         }
 
@@ -47,8 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
-            return await rc.Post<PromptInfo>(Path(false), multipartFormDataContent, null,
-                restRequestConfig);
+            return await rc.Post<PromptInfo>(Path(false), multipartFormDataContent, null, restRequestConfig);
         }
 
         /// <summary>

@@ -36,8 +36,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<GlipTaskInfo> Post(GlipCreateTask glipCreateTask,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GlipTaskInfo> Post(GlipCreateTask glipCreateTask, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<GlipTaskInfo>(Path(), glipCreateTask, null, restRequestConfig);
         }

@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null) return $"{parent.Path()}/teams/{chatId}";
-
             return $"{parent.Path()}/teams";
         }
 

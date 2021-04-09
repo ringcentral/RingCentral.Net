@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account
         public string Path(bool withParameter = true)
         {
             if (withParameter && accountId != null) return $"{parent.Path()}/account/{accountId}";
-
             return $"{parent.Path()}/account";
         }
 

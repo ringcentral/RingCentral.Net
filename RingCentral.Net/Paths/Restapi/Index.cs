@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Restapi
         public string Path(bool withParameter = true)
         {
             if (withParameter && apiVersion != null) return $"/restapi/{apiVersion}";
-
             return "/restapi";
         }
 

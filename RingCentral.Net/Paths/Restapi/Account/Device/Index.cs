@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Device
         public string Path(bool withParameter = true)
         {
             if (withParameter && deviceId != null) return $"{parent.Path()}/device/{deviceId}";
-
             return $"{parent.Path()}/device";
         }
 
@@ -47,8 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
         public async Task<GetDeviceInfoResponse> Put(AccountDeviceUpdate accountDeviceUpdate,
             UpdateDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<GetDeviceInfoResponse>(Path(), accountDeviceUpdate, queryParams,
-                restRequestConfig);
+            return await rc.Put<GetDeviceInfoResponse>(Path(), accountDeviceUpdate, queryParams, restRequestConfig);
         }
     }
 }

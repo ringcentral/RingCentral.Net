@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
-
             return $"{parent.Path()}/tasks";
         }
 
@@ -50,8 +49,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<GlipTaskList> Patch(GlipUpdateTask glipUpdateTask,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GlipTaskList> Patch(GlipUpdateTask glipUpdateTask, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Patch<GlipTaskList>(Path(), glipUpdateTask, null, restRequestConfig);
         }

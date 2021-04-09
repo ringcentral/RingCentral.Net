@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
         ///     Endpoint: /restapi/{apiVersion}/dictionary/location
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<GetLocationListResponse> Get(
-            ListLocationsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetLocationListResponse> Get(ListLocationsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetLocationListResponse>(Path(), queryParams, restRequestConfig);
         }

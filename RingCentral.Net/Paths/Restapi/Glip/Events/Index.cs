@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         public string Path(bool withParameter = true)
         {
             if (withParameter && eventId != null) return $"{parent.Path()}/events/{eventId}";
-
             return $"{parent.Path()}/events";
         }
 

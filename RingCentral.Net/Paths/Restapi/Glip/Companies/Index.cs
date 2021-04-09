@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         public string Path(bool withParameter = true)
         {
             if (withParameter && companyId != null) return $"{parent.Path()}/companies/{companyId}";
-
             return $"{parent.Path()}/companies";
         }
 

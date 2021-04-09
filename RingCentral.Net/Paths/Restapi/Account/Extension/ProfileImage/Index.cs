@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         public string Path(bool withParameter = true)
         {
             if (withParameter && scaleSize != null) return $"{parent.Path()}/profile-image/{scaleSize}";
-
             return $"{parent.Path()}/profile-image";
         }
 

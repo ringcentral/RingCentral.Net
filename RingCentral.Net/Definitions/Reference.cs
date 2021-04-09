@@ -3,7 +3,7 @@ namespace RingCentral
     public class Reference
     {
         /// <summary>
-        /// Enum: PartnerId, CustomerDirectoryId
+        ///     Enum: PartnerId, CustomerDirectoryId
         /// </summary>
         public string type { get; set; }
 

@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         public string Path(bool withParameter = true)
         {
             if (withParameter && ruleId != null) return $"{parent.Path()}/answering-rule/{ruleId}";
-
             return $"{parent.Path()}/answering-rule";
         }
 
@@ -30,8 +29,7 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadCompanyAnsweringRules
         /// </summary>
-        public async Task<CompanyAnsweringRuleList> List(
-            ListCompanyAnsweringRulesParameters queryParams = null,
+        public async Task<CompanyAnsweringRuleList> List(ListCompanyAnsweringRulesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<CompanyAnsweringRuleList>(Path(false), queryParams, restRequestConfig);
@@ -45,12 +43,11 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyAnsweringRules
         /// </summary>
-        public async Task<CompanyAnsweringRuleInfo> Post(
-            CompanyAnsweringRuleRequest companyAnsweringRuleRequest,
+        public async Task<CompanyAnsweringRuleInfo> Post(CompanyAnsweringRuleRequest companyAnsweringRuleRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CompanyAnsweringRuleInfo>(Path(false), companyAnsweringRuleRequest,
-                null, restRequestConfig);
+            return await rc.Post<CompanyAnsweringRuleInfo>(Path(false), companyAnsweringRuleRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -74,12 +71,10 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyAnsweringRules
         /// </summary>
-        public async Task<CompanyAnsweringRuleInfo> Put(
-            CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate,
+        public async Task<CompanyAnsweringRuleInfo> Put(CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<CompanyAnsweringRuleInfo>(Path(), companyAnsweringRuleUpdate, null,
-                restRequestConfig);
+            return await rc.Put<CompanyAnsweringRuleInfo>(Path(), companyAnsweringRuleUpdate, null, restRequestConfig);
         }
 
         /// <summary>

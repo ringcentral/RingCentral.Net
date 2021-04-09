@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         public string Path(bool withParameter = true)
         {
             if (withParameter && languageId != null) return $"{parent.Path()}/language/{languageId}";
-
             return $"{parent.Path()}/language";
         }
 

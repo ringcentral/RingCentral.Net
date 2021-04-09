@@ -39,11 +39,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerId
         ///     App Permission: EditExtensions
         ///     User Permission: EditCallerIDSettings
         /// </summary>
-        public async Task<ExtensionCallerIdInfo> Put(
-            ExtensionCallerIdInfo extensionCallerIdInfo, RestRequestConfig restRequestConfig = null)
+        public async Task<ExtensionCallerIdInfo> Put(ExtensionCallerIdInfo extensionCallerIdInfo,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<ExtensionCallerIdInfo>(Path(), extensionCallerIdInfo, null,
-                restRequestConfig);
+            return await rc.Put<ExtensionCallerIdInfo>(Path(), extensionCallerIdInfo, null, restRequestConfig);
         }
     }
 }

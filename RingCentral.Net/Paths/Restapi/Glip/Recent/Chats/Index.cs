@@ -30,11 +30,10 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
         ///     App Permission: Glip
         ///     User Permission: Glip
         /// </summary>
-        public async Task<GlipChatsListWithoutNavigation> Get(
-            ListRecentChatsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GlipChatsListWithoutNavigation> Get(ListRecentChatsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GlipChatsListWithoutNavigation>(Path(), queryParams,
-                restRequestConfig);
+            return await rc.Get<GlipChatsListWithoutNavigation>(Path(), queryParams, restRequestConfig);
         }
     }
 }

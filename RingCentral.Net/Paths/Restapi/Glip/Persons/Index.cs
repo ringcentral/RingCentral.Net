@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
         public string Path(bool withParameter = true)
         {
             if (withParameter && personId != null) return $"{parent.Path()}/persons/{personId}";
-
             return $"{parent.Path()}/persons";
         }
 

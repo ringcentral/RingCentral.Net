@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         public string Path(bool withParameter = true)
         {
             if (withParameter && datasetId != null) return $"{parent.Path()}/datasets/{datasetId}";
-
             return $"{parent.Path()}/datasets";
         }
 

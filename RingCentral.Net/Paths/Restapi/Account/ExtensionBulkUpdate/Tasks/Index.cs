@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate.Tasks
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
-
             return $"{parent.Path()}/tasks";
         }
 

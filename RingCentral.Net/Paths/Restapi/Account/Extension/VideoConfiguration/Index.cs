@@ -38,11 +38,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         ///     Rate Limit Group: Light
         ///     App Permission: Meetings
         /// </summary>
-        public async Task<UserVideoConfiguration> Put(
-            UserVideoConfiguration userVideoConfiguration, RestRequestConfig restRequestConfig = null)
+        public async Task<UserVideoConfiguration> Put(UserVideoConfiguration userVideoConfiguration,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<UserVideoConfiguration>(Path(), userVideoConfiguration, null,
-                restRequestConfig);
+            return await rc.Put<UserVideoConfiguration>(Path(), userVideoConfiguration, null, restRequestConfig);
         }
     }
 }

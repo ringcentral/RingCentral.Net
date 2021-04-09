@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         public string Path(bool withParameter = true)
         {
             if (withParameter && attachmentId != null) return $"{parent.Path()}/content/{attachmentId}";
-
             return $"{parent.Path()}/content";
         }
 

@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         public string Path(bool withParameter = true)
         {
             if (withParameter && telephonySessionId != null) return $"{parent.Path()}/sessions/{telephonySessionId}";
-
             return $"{parent.Path()}/sessions";
         }
 

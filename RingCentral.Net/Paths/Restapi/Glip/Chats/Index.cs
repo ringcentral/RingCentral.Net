@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null) return $"{parent.Path()}/chats/{chatId}";
-
             return $"{parent.Path()}/chats";
         }
 

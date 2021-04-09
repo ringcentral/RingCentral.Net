@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/data-export/{taskId}";
-
             return $"{parent.Path()}/data-export";
         }
 
@@ -29,8 +28,8 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         ///     Rate Limit Group: Medium
         ///     App Permission: Glip
         /// </summary>
-        public async Task<DataExportTaskList> List(
-            ListDataExportTasksParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<DataExportTaskList> List(ListDataExportTasksParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<DataExportTaskList>(Path(false), queryParams, restRequestConfig);
         }
@@ -44,12 +43,10 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         ///     Rate Limit Group: Heavy
         ///     App Permission: Glip
         /// </summary>
-        public async Task<DataExportTask> Post(
-            CreateDataExportTaskRequest createDataExportTaskRequest,
+        public async Task<DataExportTask> Post(CreateDataExportTaskRequest createDataExportTaskRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<DataExportTask>(Path(false), createDataExportTaskRequest, null,
-                restRequestConfig);
+            return await rc.Post<DataExportTask>(Path(false), createDataExportTaskRequest, null, restRequestConfig);
         }
 
         /// <summary>

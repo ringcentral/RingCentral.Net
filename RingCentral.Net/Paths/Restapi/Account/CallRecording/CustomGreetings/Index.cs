@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         public string Path(bool withParameter = true)
         {
             if (withParameter && greetingId != null) return $"{parent.Path()}/custom-greetings/{greetingId}";
-
             return $"{parent.Path()}/custom-greetings";
         }
 
@@ -31,11 +30,9 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         ///     User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<CallRecordingCustomGreetings> Get(
-            ListCallRecordingCustomGreetingsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+            ListCallRecordingCustomGreetingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<CallRecordingCustomGreetings>(Path(false), queryParams,
-                restRequestConfig);
+            return await rc.Get<CallRecordingCustomGreetings>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>

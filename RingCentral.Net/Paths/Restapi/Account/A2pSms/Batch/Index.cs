@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         public string Path(bool withParameter = true)
         {
             if (withParameter && batchId != null) return $"{parent.Path()}/batch/{batchId}";
-
             return $"{parent.Path()}/batch";
         }
 
@@ -30,12 +29,11 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<CreateMessageBatchResponse> Post(
-            CreateSMSMessageBatchRequest createSMSMessageBatchRequest,
+        public async Task<CreateMessageBatchResponse> Post(CreateSMSMessageBatchRequest createSMSMessageBatchRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CreateMessageBatchResponse>(Path(false), createSMSMessageBatchRequest,
-                null, restRequestConfig);
+            return await rc.Post<CreateMessageBatchResponse>(Path(false), createSMSMessageBatchRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>

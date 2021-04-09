@@ -14,7 +14,6 @@ namespace RingCentral.Paths.Scim
         public string Path(bool withParameter = true)
         {
             if (withParameter && version != null) return $"/scim/{version}";
-
             return "/scim";
         }
     }

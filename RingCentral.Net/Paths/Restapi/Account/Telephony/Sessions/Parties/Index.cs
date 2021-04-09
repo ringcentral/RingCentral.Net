@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         public string Path(bool withParameter = true)
         {
             if (withParameter && partyId != null) return $"{parent.Path()}/parties/{partyId}";
-
             return $"{parent.Path()}/parties";
         }
 

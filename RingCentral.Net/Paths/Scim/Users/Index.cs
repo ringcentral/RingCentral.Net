@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Scim.Users
         public string Path(bool withParameter = true)
         {
             if (withParameter && id != null) return $"{parent.Path()}/Users/{id}";
-
             return $"{parent.Path()}/Users";
         }
 
@@ -42,8 +41,7 @@ namespace RingCentral.Paths.Scim.Users
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<UserResponse> Post(CreateUser createUser,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<UserResponse> Post(CreateUser createUser, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<UserResponse>(Path(false), createUser, null, restRequestConfig);
         }
@@ -67,8 +65,7 @@ namespace RingCentral.Paths.Scim.Users
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<UserResponse> Put(User user,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<UserResponse> Put(User user, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<UserResponse>(Path(), user, null, restRequestConfig);
         }
@@ -92,8 +89,7 @@ namespace RingCentral.Paths.Scim.Users
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<UserResponse> Patch(UserPatch userPatch,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<UserResponse> Patch(UserPatch userPatch, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Patch<UserResponse>(Path(), userPatch, null, restRequestConfig);
         }

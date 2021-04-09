@@ -39,12 +39,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
         ///     App Permission: EditExtensions
         ///     User Permission: EditBlockedNumbers
         /// </summary>
-        public async Task<CallerBlockingSettings> Put(
-            CallerBlockingSettingsUpdate callerBlockingSettingsUpdate,
+        public async Task<CallerBlockingSettings> Put(CallerBlockingSettingsUpdate callerBlockingSettingsUpdate,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<CallerBlockingSettings>(Path(), callerBlockingSettingsUpdate, null,
-                restRequestConfig);
+            return await rc.Put<CallerBlockingSettings>(Path(), callerBlockingSettingsUpdate, null, restRequestConfig);
         }
     }
 }

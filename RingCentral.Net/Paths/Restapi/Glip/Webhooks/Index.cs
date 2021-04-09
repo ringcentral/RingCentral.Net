@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         public string Path(bool withParameter = true)
         {
             if (withParameter && webhookId != null) return $"{parent.Path()}/webhooks/{webhookId}";
-
             return $"{parent.Path()}/webhooks";
         }
 

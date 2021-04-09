@@ -1,16 +1,14 @@
 {
   "license": "MIT",
   "scripts": {
-    "definitions": "rm -rf ../RingCentral.Net/Definitions/* && node -r @babel/register definitions.js",
+    "definitions": "rm -rf ../RingCentral.Net/Definitions/* && ts-node src/definitions.ts",
     "definitions-golang": "node -r @babel/register definitions-golang.js",
-    "paths": "rm -rf ../RingCentral.Net/Paths/* && node -r @babel/register paths.js",
+    "paths": "rm -rf ../RingCentral.Net/Paths/* && ts-node src/paths.ts",
     "samples": "node -r @babel/register samples.js",
     "samples-java": "node -r @babel/register samples-java.js",
     "samples-typescript": "node -r @babel/register samples-typescript.js",
     "generate": "yarn definitions && yarn paths && yarn samples && yarn samples-java && yarn samples-typescript",
-    "validate": "node -r @babel/register validate.js",
-    "new-defi": "rm -rf ../RingCentral.Net/Definitions/* && ts-node src/definitions.ts",
-    "new-path": "rm -rf ../RingCentral.Net/Paths/* && ts-node src/paths.ts"
+    "validate": "node -r @babel/register validate.js"
   },
   "dependencies": {
     "change-case": "^4.1.2",

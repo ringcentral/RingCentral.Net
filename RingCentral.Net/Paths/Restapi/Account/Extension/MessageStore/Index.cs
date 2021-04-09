@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public string Path(bool withParameter = true)
         {
             if (withParameter && messageId != null) return $"{parent.Path()}/message-store/{messageId}";
-
             return $"{parent.Path()}/message-store";
         }
 
@@ -81,8 +80,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public async Task<GetMessageInfoResponse> Put(UpdateMessageRequest updateMessageRequest,
             UpdateMessageParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<GetMessageInfoResponse>(Path(), updateMessageRequest, queryParams,
-                restRequestConfig);
+            return await rc.Put<GetMessageInfoResponse>(Path(), updateMessageRequest, queryParams, restRequestConfig);
         }
 
         /// <summary>

@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         public string Path(bool withParameter = true)
         {
             if (withParameter && templateId != null) return $"{parent.Path()}/templates/{templateId}";
-
             return $"{parent.Path()}/templates";
         }
 

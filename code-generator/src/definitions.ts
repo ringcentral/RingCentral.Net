@@ -1,6 +1,7 @@
-import {parsed, Field} from 'ringcentral-open-api-parser';
+import {parsed} from 'ringcentral-open-api-parser';
 import fs from 'fs';
 import path from 'path';
+import {Field} from 'ringcentral-open-api-parser/lib/types';
 
 const outputDir = '../RingCentral.Net/Definitions';
 
@@ -50,34 +51,33 @@ const generateField = (f: Field) => {
 
   p = `/// </summary>\n        ${p}`;
   if (f.enum || (f.items || {}).enum) {
-    p = `/// Enum: ${(f.enum || (f.items || {}).enum)!.join(
+    p = `///     Enum: ${(f.enum || (f.items || {}).enum)!.join(
       ', '
     )}\n        ${p}`;
   }
   if (f.default) {
-    p = `/// Default: ${f.default}\n        ${p}`;
+    p = `///     Default: ${f.default}\n        ${p}`;
   }
   if (f.example) {
-    p = `/// Example: ${f.example}\n        ${p}`;
+    p = `///     Example: ${f.example}\n        ${p}`;
   }
   if (f.format) {
-    p = `/// Format: ${f.format}\n        ${p}`;
+    p = `///     Format: ${f.format}\n        ${p}`;
   }
   if (f.minimum) {
-    p = `/// Minimum: ${f.minimum}\n        ${p}`;
+    p = `///     Minimum: ${f.minimum}\n        ${p}`;
   }
   if (f.maximum) {
-    p = `/// Maximum: ${f.maximum}\n        ${p}`;
+    p = `///     Maximum: ${f.maximum}\n        ${p}`;
   }
   if (f.required) {
-    p = `/// Required\n        ${p}`;
+    p = `///     Required\n        ${p}`;
   }
   if (f.description) {
-    p = `${f.description
+    p = `///     ${f.description
       .trim()
       .split('\n')
-      .map(l => `/// ${l}`) // todo: refactor
-      .join('\n        ')}\n        ${p}`;
+      .join('\n            ///     ')}\n        ${p}`;
   }
   p = `/// <summary>\n        ${p}`;
   return p;

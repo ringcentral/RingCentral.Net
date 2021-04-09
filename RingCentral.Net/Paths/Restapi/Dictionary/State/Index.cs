@@ -18,7 +18,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         public string Path(bool withParameter = true)
         {
             if (withParameter && stateId != null) return $"{parent.Path()}/state/{stateId}";
-
             return $"{parent.Path()}/state";
         }
 
