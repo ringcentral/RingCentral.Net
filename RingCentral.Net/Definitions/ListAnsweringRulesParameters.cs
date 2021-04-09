@@ -4,29 +4,29 @@ namespace RingCentral
     public class ListAnsweringRulesParameters
     {
         /// <summary>
-        /// Filters custom call handling rules of the extension
-        /// Enum: Custom
+        ///     Filters custom call handling rules of the extension
+        ///     Enum: Custom
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        /// Default: Simple
-        /// Enum: Detailed, Simple
+        ///     Default: Simple
+        ///     Enum: Detailed, Simple
         /// </summary>
         public string view { get; set; }
 
         /// <summary>
-        /// If true, then only active call handling rules are returned
+        ///     If true, then only active call handling rules are returned
         /// </summary>
         public bool? enabledOnly { get; set; }
 
         /// <summary>
-        /// Default: 1
+        ///     Default: 1
         /// </summary>
         public string page { get; set; }
 
         /// <summary>
-        /// Default: 100
+        ///     Default: 100
         /// </summary>
         public string perPage { get; set; }
     }

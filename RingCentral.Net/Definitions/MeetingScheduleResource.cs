@@ -8,7 +8,7 @@ namespace RingCentral
         public string startTime { get; set; }
 
         /// <summary>
-        /// Format: int32
+        ///     Format: int32
         /// </summary>
         public long? durationInMinutes { get; set; }
 

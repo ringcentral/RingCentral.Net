@@ -12,8 +12,8 @@ namespace RingCentral
         public string client_assertion { get; set; }
 
         /// <summary>
-        /// Active access or refresh token to be revoked
-        /// Required
+        ///     Active access or refresh token to be revoked
+        ///     Required
         /// </summary>
         public string token { get; set; }
     }

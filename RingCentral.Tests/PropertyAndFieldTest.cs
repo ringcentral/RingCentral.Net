@@ -5,7 +5,7 @@ using Xunit;
 // Please do not reference the code here, it should not be used in production
 namespace RingCentral.Tests
 {
-    class A
+    internal class A
     {
         public string b = "bb";
         public string c { get; set; } = "cc";
@@ -38,7 +38,7 @@ namespace RingCentral.Tests
         }
 
         [Fact]
-        void GetPairs()
+        private void GetPairs()
         {
             var a = new
             {

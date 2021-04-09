@@ -4,22 +4,22 @@ namespace RingCentral
     public class CustomCompanyGreetingLanguageInfo
     {
         /// <summary>
-        /// Internal identifier of a greeting language
+        ///     Internal identifier of a greeting language
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Link to a greeting language
+        ///     Link to a greeting language
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Name of a greeting language
+        ///     Name of a greeting language
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        /// Locale code of a greeting language
+        ///     Locale code of a greeting language
         /// </summary>
         public string localeCode { get; set; }
     }

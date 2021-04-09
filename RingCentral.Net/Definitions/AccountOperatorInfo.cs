@@ -4,17 +4,17 @@ namespace RingCentral
     public class AccountOperatorInfo
     {
         /// <summary>
-        /// Link to an operator extension resource
+        ///     Link to an operator extension resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Internal identifier of an operator extension
+        ///     Internal identifier of an operator extension
         /// </summary>
         public long? id { get; set; }
 
         /// <summary>
-        /// Number of an operator extension
+        ///     Number of an operator extension
         /// </summary>
         public string extensionNumber { get; set; }
     }

@@ -8,7 +8,7 @@ namespace RingCentral.Net.Retry
 
         public RetryExtension(RetryOptions options = null)
         {
-            this._options = options ?? RetryOptions.DefaultInstance;
+            _options = options ?? RetryOptions.DefaultInstance;
         }
 
         public override Task Install(RestClient rc)
@@ -22,9 +22,9 @@ namespace RingCentral.Net.Retry
                 }
                 catch (RestException re)
                 {
-                    if (this.enabled && this._options.shouldRetry(re, restRequestConfig.retriesAttempted))
+                    if (enabled && _options.shouldRetry(re, restRequestConfig.retriesAttempted))
                     {
-                        await Task.Delay(this._options.retryInterval(re, restRequestConfig.retriesAttempted));
+                        await Task.Delay(_options.retryInterval(re, restRequestConfig.retriesAttempted));
                         restRequestConfig.retriesAttempted += 1;
                         return await rc.extensibleRequest(httpRequestMessage, restRequestConfig);
                     }

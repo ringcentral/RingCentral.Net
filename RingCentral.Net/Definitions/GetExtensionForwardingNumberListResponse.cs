@@ -3,12 +3,12 @@ namespace RingCentral
     public class GetExtensionForwardingNumberListResponse
     {
         /// <summary>
-        /// Link to the forwarding number list resource
+        ///     Link to the forwarding number list resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// List of forwarding phone numbers
+        ///     List of forwarding phone numbers
         /// </summary>
         public ForwardingNumberInfo[] records { get; set; }
 

@@ -3,12 +3,12 @@ namespace RingCentral
     public class WirelessPointsList
     {
         /// <summary>
-        /// Link to the wireless point list resource
+        ///     Link to the wireless point list resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// List of wireless points with assigned emergency addresses
+        ///     List of wireless points with assigned emergency addresses
         /// </summary>
         public WirelessPointInfo[] records { get; set; }
 

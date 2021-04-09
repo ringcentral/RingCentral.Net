@@ -9,16 +9,16 @@ namespace RingCentral
 {
     public class BatchResponse<T>
     {
-        public BatchSummary summary;
-        public ADGErrorResponse error;
         public T content;
+        public ADGErrorResponse error;
+        public BatchSummary summary;
     }
 
     public class BatchSummary
     {
         public string href;
-        public int status;
         public string responseDescription;
+        public int status;
 
         public bool isError => status < 200 || status >= 300;
     }
@@ -35,10 +35,8 @@ namespace RingCentral
         {
             // if no multiple IDs specified
             if (!endpoint.Contains(","))
-            {
                 throw new ArgumentException(
                     "In order to make a BatchGet, endpoint should contain multiple IDs delimited by ','");
-            }
 
             var httpResponseMessage = await Get<HttpResponseMessage>(endpoint, queryParams, restRequestConfig);
             var multipart = await httpResponseMessage.Content.ReadAsMultipartAsync();
@@ -52,13 +50,9 @@ namespace RingCentral
                 result.Add(batchResponse);
                 var responseString = await multipart.Contents[i + 1].ReadAsStringAsync();
                 if (batchSummary.isError)
-                {
                     batchResponse.error = JsonConvert.DeserializeObject<ADGErrorResponse>(responseString);
-                }
                 else
-                {
                     batchResponse.content = JsonConvert.DeserializeObject<T>(responseString);
-                }
             }
 
             return result.ToArray();

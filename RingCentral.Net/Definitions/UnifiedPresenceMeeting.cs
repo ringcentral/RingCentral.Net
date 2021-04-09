@@ -4,8 +4,8 @@ namespace RingCentral
     public class UnifiedPresenceMeeting
     {
         /// <summary>
-        /// Meeting status calculated from all user`s meetings
-        /// Enum: NoMeeting, InMeeting
+        ///     Meeting status calculated from all user`s meetings
+        ///     Enum: NoMeeting, InMeeting
         /// </summary>
         public string status { get; set; }
     }

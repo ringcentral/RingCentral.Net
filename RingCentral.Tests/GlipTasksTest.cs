@@ -23,7 +23,7 @@ namespace RingCentral.Tests
                 // Find the group with type "Personal" where you can talk to yourself
                 var groups = await rc.Restapi().Glip().Chats().List(new ListGlipChatsParameters
                 {
-                    type = new string[] {"Personal"}
+                    type = new[] {"Personal"}
                 });
                 var group = groups.records[0];
 

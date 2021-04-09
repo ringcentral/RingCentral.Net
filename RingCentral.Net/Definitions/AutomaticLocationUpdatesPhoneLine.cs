@@ -3,7 +3,7 @@ namespace RingCentral
     public class AutomaticLocationUpdatesPhoneLine
     {
         /// <summary>
-        /// Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
+        ///     Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
         /// </summary>
         public string lineType { get; set; }
 

@@ -7,18 +7,18 @@ namespace RingCentral
         public SipRegistrationDeviceInfo device { get; set; }
 
         /// <summary>
-        /// SIP settings for device
-        /// Required
+        ///     SIP settings for device
+        ///     Required
         /// </summary>
         public SIPInfoResponse[] sipInfo { get; set; }
 
         /// <summary>
-        /// SIP PSTN settings for device
+        ///     SIP PSTN settings for device
         /// </summary>
         public SIPInfoResponse[] sipInfoPstn { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public SIPFlagsResponse sipFlags { get; set; }
 

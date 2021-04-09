@@ -23,9 +23,9 @@ namespace RingCentral
         public ExtensionFormattingLocaleInfoRequest formattingLocale { get; set; }
 
         /// <summary>
-        /// Time format setting
-        /// Default: 12h
-        /// Enum: 12h, 24h
+        ///     Time format setting
+        ///     Default: 12h
+        ///     Enum: 12h, 24h
         /// </summary>
         public string timeFormat { get; set; }
     }

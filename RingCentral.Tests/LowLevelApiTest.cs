@@ -56,11 +56,11 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
                 // normal way to get extension info
-                var extInfo = await rc.Restapi().Account("~").Extension("~").Get();
+                var extInfo = await rc.Restapi().Account().Extension().Get();
                 Assert.NotNull(extInfo.id);
 
                 // low level way to get extension info + headers info
-                var httpResponseMessage = await rc.Get(rc.Restapi().Account("~").Extension("~").Path(true));
+                var httpResponseMessage = await rc.Get(rc.Restapi().Account().Extension().Path());
                 var headers = httpResponseMessage.Headers;
                 Assert.NotNull(headers);
                 var responseBodyStr = await httpResponseMessage.Content.ReadAsStringAsync();

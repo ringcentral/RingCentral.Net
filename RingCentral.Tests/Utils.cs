@@ -13,11 +13,11 @@ namespace RingCentral.Tests
             _testOutputHelper = testOutputHelper;
         }
 
+        public override Encoding Encoding => Encoding.UTF8;
+
         public override void WriteLine(string value)
         {
             _testOutputHelper.WriteLine(value);
         }
-
-        public override Encoding Encoding => Encoding.UTF8;
     }
 }

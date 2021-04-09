@@ -3,7 +3,7 @@ namespace RingCentral
     public class MeetingsNavigationInfoUri
     {
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
     }

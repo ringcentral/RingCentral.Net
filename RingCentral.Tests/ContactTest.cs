@@ -25,10 +25,7 @@ namespace RingCentral.Tests
 
                 var listt = await addressBook.Contact().List(new ListContactsParameters
                     {phoneNumber = new[] {phoneNumber}});
-                foreach (var item in listt.records)
-                {
-                    await addressBook.Contact(item.id.ToString()).Delete();
-                }
+                foreach (var item in listt.records) await addressBook.Contact(item.id.ToString()).Delete();
 
                 // list
                 var list = await addressBook.Contact().List();
@@ -74,7 +71,7 @@ namespace RingCentral.Tests
 
                 // search again
                 list = await addressBook.Contact()
-                    .List(new ListContactsParameters() {phoneNumber = new[] {phoneNumber}});
+                    .List(new ListContactsParameters {phoneNumber = new[] {phoneNumber}});
                 Assert.Equal(0, list.paging.totalElements);
             }
         }

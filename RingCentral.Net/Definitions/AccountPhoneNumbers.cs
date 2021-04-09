@@ -3,12 +3,12 @@ namespace RingCentral
     public class AccountPhoneNumbers
     {
         /// <summary>
-        /// Link to the list of account phone numbers
+        ///     Link to the list of account phone numbers
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// List of account phone numbers
+        ///     List of account phone numbers
         /// </summary>
         public CompanyPhoneNumberInfo[] records { get; set; }
 

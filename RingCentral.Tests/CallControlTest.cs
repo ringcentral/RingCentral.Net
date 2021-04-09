@@ -25,7 +25,7 @@ namespace RingCentral.Tests
                 await rc.InstallExtension(pubNubExtension);
                 var eventFilters = new[]
                 {
-                    "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true",
+                    "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true"
                 };
                 var subscription = await pubNubExtension.Subscribe(eventFilters, async message =>
                 {

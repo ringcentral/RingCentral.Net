@@ -115,10 +115,7 @@ namespace RingCentral.Tests
                 pairs.Where(p => p.value is Attachment || p.value is IEnumerable<Attachment>).ToList().ForEach(p =>
                 {
                     var attachments = p.value;
-                    if (!(attachments is IEnumerable<Attachment>))
-                    {
-                        attachments = new[] {attachments};
-                    }
+                    if (!(attachments is IEnumerable<Attachment>)) attachments = new[] {attachments};
 
                     (attachments as IEnumerable<Attachment>).ToList().ForEach(attachment =>
                     {

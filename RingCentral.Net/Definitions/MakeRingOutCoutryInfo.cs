@@ -4,7 +4,7 @@ namespace RingCentral
     public class MakeRingOutCoutryInfo
     {
         /// <summary>
-        /// Dialing plan country identifier
+        ///     Dialing plan country identifier
         /// </summary>
         public string id { get; set; }
     }

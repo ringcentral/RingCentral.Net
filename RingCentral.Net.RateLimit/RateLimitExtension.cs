@@ -24,10 +24,7 @@ namespace RingCentral.Net.RateLimit
                     var rateLimitWindowHeader = restException.httpResponseMessage.Headers
                         .GetValues("x-rate-limit-window")
                         .FirstOrDefault();
-                    if (rateLimitWindowHeader != default)
-                    {
-                        options.rateLimitWindow = int.Parse(rateLimitWindowHeader);
-                    }
+                    if (rateLimitWindowHeader != default) options.rateLimitWindow = int.Parse(rateLimitWindowHeader);
 
                     return (int) (options.rateLimitWindow * 1000 *
                                   Math.Pow(2, retriesAttempted)); // exponential back off

@@ -8,13 +8,13 @@ namespace RingCentral
         public CompanyAnsweringRuleWeeklyScheduleInfoRequest weeklyRanges { get; set; }
 
         /// <summary>
-        /// Specific data ranges. If specified, weeklyRanges cannot be specified
+        ///     Specific data ranges. If specified, weeklyRanges cannot be specified
         /// </summary>
         public RangesInfo[] ranges { get; set; }
 
         /// <summary>
-        /// Reference to Business Hours or After Hours schedule = ['BusinessHours', 'AfterHours']
-        /// Enum: BusinessHours, AfterHours
+        ///     Reference to Business Hours or After Hours schedule = ['BusinessHours', 'AfterHours']
+        ///     Enum: BusinessHours, AfterHours
         /// </summary>
         public string @ref { get; set; }
     }

@@ -32,7 +32,7 @@ namespace RingCentral.Tests
 
                 // create a subscription
                 var subscription = await pubNubExtension.Subscribe(
-                    new string[] {"/restapi/v1.0/account/~/extension/~/message-store"},
+                    new[] {"/restapi/v1.0/account/~/extension/~/message-store"},
                     message => { Console.WriteLine(message); });
 
                 // use the token again to make API call

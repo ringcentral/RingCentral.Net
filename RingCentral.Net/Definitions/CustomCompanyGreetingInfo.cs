@@ -3,29 +3,29 @@ namespace RingCentral
     public class CustomCompanyGreetingInfo
     {
         /// <summary>
-        /// Link to an extension custom greeting
+        ///     Link to an extension custom greeting
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Internal identifier of an answering rule
+        ///     Internal identifier of an answering rule
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Type of a company greeting
-        /// Enum: Company, StartRecording, StopRecording, AutomaticRecording
+        ///     Type of a company greeting
+        ///     Enum: Company, StartRecording, StopRecording, AutomaticRecording
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        /// Content media type
-        /// Enum: audio/mpeg, audio/wav
+        ///     Content media type
+        ///     Enum: audio/mpeg, audio/wav
         /// </summary>
         public string contentType { get; set; }
 
         /// <summary>
-        /// Link to a greeting content (audio file)
+        ///     Link to a greeting content (audio file)
         /// </summary>
         public string contentUri { get; set; }
 

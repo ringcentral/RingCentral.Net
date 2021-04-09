@@ -4,22 +4,22 @@ namespace RingCentral
     public class TargetServicePlanInfo
     {
         /// <summary>
-        /// Internal identifier of a target service plan
+        ///     Internal identifier of a target service plan
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Name of a target service plan
+        ///     Name of a target service plan
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        /// Edition of a service plan
+        ///     Edition of a service plan
         /// </summary>
         public string edition { get; set; }
 
         /// <summary>
-        /// Enum: Freyja, Phoenix
+        ///     Enum: Freyja, Phoenix
         /// </summary>
         public string freemiumProductType { get; set; }
     }

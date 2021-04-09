@@ -8,21 +8,21 @@ namespace RingCentral.Net.WebSocket
     public class WebSocketOptions
     {
         public static readonly WebSocketOptions DefaultInstance = new WebSocketOptions();
-        public bool debugMode = false;
         public bool autoRecover = true;
+        public bool debugMode = false;
     }
 
     public class WsToken
     {
+        public int expires_in;
         public string uri;
         public string ws_access_token;
-        public int expires_in;
     }
 
     public class Wsc
     {
-        public string token;
         public int sequence;
+        public string token;
     }
 
     public enum MessageType
@@ -30,24 +30,26 @@ namespace RingCentral.Net.WebSocket
         ClientRequest,
         ServerNotification,
         Error,
-        ConnectionDetails,
+        ConnectionDetails
     }
 
     public class WsgMeta
     {
-        [JsonConverter(typeof(StringEnumConverter))]
-        public MessageType type;
+        public Dictionary<string, string> headers;
 
         public string messageId;
         public int status;
-        public Dictionary<string, string> headers;
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        public MessageType type;
+
         public Wsc wsc;
     }
 
     public class WsgMessage
     {
-        public WsgMeta meta;
         public dynamic body;
+        public WsgMeta meta;
 
         public static WsgMessage Parse(string message)
         {
@@ -57,41 +59,40 @@ namespace RingCentral.Net.WebSocket
                 return new WsgMessage
                 {
                     meta = JsonConvert.DeserializeObject<WsgMeta>(message.Substring(1, index)),
-                    body = message.Substring(index + 1, message.Length - 1),
+                    body = message.Substring(index + 1, message.Length - 1)
                 };
             }
-            else
+
+            var parsed = JsonConvert.DeserializeObject<dynamic>(message);
+            return new WsgMessage
             {
-                var parsed = JsonConvert.DeserializeObject<dynamic>(message);
-                return new WsgMessage
-                {
-                    meta = parsed[0].ToObject<WsgMeta>(),
-                    body = parsed[1],
-                };
-            }
+                meta = parsed[0].ToObject<WsgMeta>(),
+                body = parsed[1]
+            };
         }
     }
 
     public enum RecoveryState
     {
         Successful,
-        Failed,
+        Failed
     }
 
     public class ConnectionDetails
     {
+        public int absoluteTimeout;
         public string creationTime;
+        public int idleTimeout;
         public int maxConnectionsPerSession;
         public int recoveryBufferSize;
-        public int recoveryTimeout;
-        public int idleTimeout;
-        public int absoluteTimeout;
+
+        public string recoveryErrorCode;
 
         [JsonConverter(typeof(StringEnumConverter))]
         public RecoveryState recoveryState;
 
-        public string recoveryErrorCode;
-    };
+        public int recoveryTimeout;
+    }
 
     public class SubscriptionRequestBody
     {
@@ -106,9 +107,9 @@ namespace RingCentral.Net.WebSocket
 
     public class RestRequestHeaders
     {
-        public string type;
         public string messageId;
         public string method;
         public string path;
+        public string type;
     }
 }

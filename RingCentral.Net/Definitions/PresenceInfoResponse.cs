@@ -3,17 +3,17 @@ namespace RingCentral
     public class PresenceInfoResponse
     {
         /// <summary>
-        /// Link to the presence resource
+        ///     Link to the presence resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Enum: Offline, Busy, Available
+        ///     Enum: Offline, Busy, Available
         /// </summary>
         public string userStatus { get; set; }
 
         /// <summary>
-        /// Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
+        ///     Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         /// </summary>
         public string dndStatus { get; set; }
 
@@ -42,20 +42,20 @@ namespace RingCentral
         public GetPresenceExtensionInfo extension { get; set; }
 
         /// <summary>
-        /// Meetings presence status
-        /// Enum: Connected, Disconnected
+        ///     Meetings presence status
+        ///     Enum: Connected, Disconnected
         /// </summary>
         public string meetingStatus { get; set; }
 
         /// <summary>
-        /// Telephony presence status. Returned if telephony status is changed
-        /// Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
+        ///     Telephony presence status. Returned if telephony status is changed
+        ///     Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
         /// </summary>
         public string telephonyStatus { get; set; }
 
         /// <summary>
-        /// Aggregated presence status, calculated from a number of sources
-        /// Enum: Offline, Busy, Available
+        ///     Aggregated presence status, calculated from a number of sources
+        ///     Enum: Offline, Busy, Available
         /// </summary>
         public string presenceStatus { get; set; }
     }

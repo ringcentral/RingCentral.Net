@@ -14,22 +14,26 @@ namespace RingCentral
         public const string SandboxServer = "https://platform.devtest.ringcentral.com";
         public const string ProductionServer = "https://platform.ringcentral.com";
 
-        public string clientId;
-        public string clientSecret;
-        public Uri server;
-        public TokenInfo token;
+        public static HttpClient httpClient = new HttpClient();
+
+        private static readonly string[] BasicAuthPaths =
+        {
+            "/restapi/oauth/token",
+            "/restapi/oauth/revoke",
+            "/restapi/oauth/authorize"
+        };
+
         public string appName = "Unknown";
         public string appVersion = "0.0.1";
 
-        public static HttpClient httpClient = new HttpClient();
+        public string clientId;
+        public string clientSecret;
+
+        public Func<HttpRequestMessage, RestRequestConfig, Task<HttpResponseMessage>> extensibleRequest;
 
         public List<SdkExtension> sdkExtensions = new List<SdkExtension>();
-
-        public async Task InstallExtension(SdkExtension sdkExtension)
-        {
-            sdkExtensions.Add(sdkExtension);
-            await sdkExtension.Install(this);
-        }
+        public Uri server;
+        public TokenInfo token;
 
         private RestClient(string clientId, string clientSecret, Uri server, string appName = "Unknown",
             string appVersion = "0.0.1")
@@ -39,7 +43,7 @@ namespace RingCentral
             this.server = server;
             this.appName = appName;
             this.appVersion = appVersion;
-            this.extensibleRequest = Request;
+            extensibleRequest = Request;
         }
 
         public RestClient(string clientId, string clientSecret, string server, string appName = "Unknown",
@@ -54,14 +58,16 @@ namespace RingCentral
         {
         }
 
-        public Func<HttpRequestMessage, RestRequestConfig, Task<HttpResponseMessage>> extensibleRequest;
-
-        private static readonly string[] BasicAuthPaths = new[]
+        public async void Dispose()
         {
-            "/restapi/oauth/token",
-            "/restapi/oauth/revoke",
-            "/restapi/oauth/authorize",
-        };
+            await Revoke();
+        }
+
+        public async Task InstallExtension(SdkExtension sdkExtension)
+        {
+            sdkExtensions.Add(sdkExtension);
+            await sdkExtension.Install(this);
+        }
 
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
             RestRequestConfig restRequestConfig = null)
@@ -79,9 +85,7 @@ namespace RingCentral
             var httpResponseMessage =
                 await httpClient.SendAsync(httpRequestMessage, restRequestConfig.cancellationToken);
             if (!httpResponseMessage.IsSuccessStatusCode)
-            {
                 throw new RestException(httpResponseMessage, httpRequestMessage);
-            }
 
             return httpResponseMessage;
         }
@@ -110,7 +114,7 @@ namespace RingCentral
             {
                 grant_type = "authorization_code",
                 code = authCode,
-                redirect_uri = redirectUri,
+                redirect_uri = redirectUri
             };
             return Authorize(getTokenRequest);
         }
@@ -118,10 +122,7 @@ namespace RingCentral
         public Task<TokenInfo> Refresh(string refreshToken = null)
         {
             var tokenToRefresh = refreshToken ?? token?.refresh_token;
-            if (tokenToRefresh == null)
-            {
-                throw new ArgumentNullException(nameof(tokenToRefresh));
-            }
+            if (tokenToRefresh == null) throw new ArgumentNullException(nameof(tokenToRefresh));
 
             var getTokenRequest = new GetTokenRequest
             {
@@ -134,9 +135,7 @@ namespace RingCentral
         public async Task Revoke(string tokenToRevoke = null)
         {
             if (tokenToRevoke == null && token == null) // nothing  to revoke
-            {
                 return;
-            }
 
             tokenToRevoke = tokenToRevoke ?? token.access_token ?? token.refresh_token;
             await Restapi(null).Oauth().Revoke().Post(new RevokeTokenRequest
@@ -144,11 +143,6 @@ namespace RingCentral
                 token = tokenToRevoke
             });
             token = null;
-        }
-
-        public async void Dispose()
-        {
-            await Revoke();
         }
 
         // bridge methods to start the call chain, like rc.Restapi().Account()

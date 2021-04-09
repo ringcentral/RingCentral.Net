@@ -108,9 +108,7 @@ namespace RingCentral.Tests
                 };
                 var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
                 if (userSearchResponse.Resources.Length == 1)
-                {
                     await rc.Scim().Users(userSearchResponse.Resources[0].id).Delete();
-                }
 
                 // create the user
                 var user = new CreateUser

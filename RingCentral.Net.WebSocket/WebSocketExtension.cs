@@ -9,19 +9,19 @@ namespace RingCentral.Net.WebSocket
 {
     public class WebSocketExtension : SdkExtension
     {
-        private RestClient _rc;
         private readonly WebSocketOptions _options;
-        private Wsc _wsc;
-        private WebsocketClient _ws;
         private ConnectionDetails _connectionDetails;
-        private List<Subscription> _subscriptions = new List<Subscription>();
-
-        public event EventHandler<WsgMessage> MessageReceived;
+        private RestClient _rc;
+        private readonly List<Subscription> _subscriptions = new List<Subscription>();
+        private WebsocketClient _ws;
+        private Wsc _wsc;
 
         public WebSocketExtension(WebSocketOptions options = null)
         {
             _options = options ?? WebSocketOptions.DefaultInstance;
         }
+
+        public event EventHandler<WsgMessage> MessageReceived;
 
         public override async Task Install(RestClient rc)
         {
@@ -31,12 +31,9 @@ namespace RingCentral.Net.WebSocket
 
         private async Task Connect(bool recoverSession = false)
         {
-            var wsToken = await this._rc.Post<WsToken>("/restapi/oauth/wstoken");
+            var wsToken = await _rc.Post<WsToken>("/restapi/oauth/wstoken");
             var wsUri = $"{wsToken.uri}?access_token={wsToken.ws_access_token}";
-            if (recoverSession)
-            {
-                wsUri = $"{wsUri}&wsc={_wsc.token}";
-            }
+            if (recoverSession) wsUri = $"{wsUri}&wsc={_wsc.token}";
 
             _ws = new WebsocketClient(new Uri(wsUri));
             _ws.ReconnectTimeout = TimeSpan.FromMinutes(2);
@@ -48,28 +45,20 @@ namespace RingCentral.Net.WebSocket
                     _ws.Dispose();
                     await Connect(true);
                     if (!recoverSession || _connectionDetails.recoveryState == RecoveryState.Failed)
-                    {
                         foreach (var subscription in _subscriptions)
-                        {
                             if (subscription.SubscriptionInfo != null)
-                            {
                                 // otherwise it has been revoked explicitly
                                 await subscription.SubScribe();
-                            }
-                        }
-                    }
                 }
 
                 _ws.MessageReceived.Subscribe(responseMessage =>
                 {
                     var wsgMessage = WsgMessage.Parse(responseMessage.Text);
                     if (_options.debugMode)
-                    {
                         Console.WriteLine(
                             $"***WebSocket incoming message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
                             $"\n{JsonConvert.SerializeObject(wsgMessage, Formatting.Indented)}" +
-                            $"\n******");
-                    }
+                            "\n******");
 
                     MessageReceived?.Invoke(this, wsgMessage);
                 });
@@ -78,18 +67,14 @@ namespace RingCentral.Net.WebSocket
             MessageReceived += (sender, wsgMessage) =>
             {
                 if (wsgMessage.meta.wsc != null && (_wsc == null ||
-                                                    (wsgMessage.meta.type ==
-                                                     MessageType.ConnectionDetails &&
-                                                     wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
+                                                    wsgMessage.meta.type ==
+                                                    MessageType.ConnectionDetails &&
+                                                    wsgMessage.body.GetType().GetProperty("recoveryState") != null ||
                                                     _wsc?.sequence < wsgMessage.meta.wsc.sequence))
-                {
                     _wsc = wsgMessage.meta.wsc;
-                }
 
                 if (wsgMessage.meta.type == MessageType.ConnectionDetails)
-                {
                     _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
-                }
             };
 
             await _ws.Start();
@@ -98,19 +83,17 @@ namespace RingCentral.Net.WebSocket
         private Task Send(string message)
         {
             if (_options.debugMode)
-            {
                 Console.WriteLine(
                     $"***WebSocket outgoing message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
                     $"\n{JsonConvert.SerializeObject(JsonConvert.DeserializeObject(message), Formatting.Indented)}" +
-                    $"\n******");
-            }
+                    "\n******");
 
             return Task.Run(() => _ws.Send(message));
         }
 
         public async Task<T> Request<T>(string method, string endpoint, object content = null)
         {
-            TaskCompletionSource<T> tcs = new TaskCompletionSource<T>();
+            var tcs = new TaskCompletionSource<T>();
             var uuid = Guid.NewGuid().ToString();
             dynamic[] requestBody = {null, null};
             requestBody[0] = new RestRequestHeaders
@@ -118,7 +101,7 @@ namespace RingCentral.Net.WebSocket
                 type = "ClientRequest",
                 messageId = uuid,
                 method = method,
-                path = endpoint,
+                path = endpoint
             };
             requestBody[1] = content;
 
@@ -146,10 +129,7 @@ namespace RingCentral.Net.WebSocket
 
         public async Task Revoke()
         {
-            foreach (var subscription in _subscriptions)
-            {
-                await subscription.Revoke();
-            }
+            foreach (var subscription in _subscriptions) await subscription.Revoke();
 
             _subscriptions.Clear();
             _ws.Dispose();

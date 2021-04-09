@@ -15,7 +15,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        /// Enum: Inbound, Outbound
+        ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
 

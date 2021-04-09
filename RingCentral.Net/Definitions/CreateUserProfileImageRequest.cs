@@ -4,7 +4,7 @@ namespace RingCentral
     public class CreateUserProfileImageRequest
     {
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public Attachment image { get; set; }
     }

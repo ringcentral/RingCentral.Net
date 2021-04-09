@@ -4,7 +4,7 @@ namespace RingCentral
     public class ExtensionBulkUpdateRequest
     {
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public ExtensionBulkUpdateInfo[] records { get; set; }
     }

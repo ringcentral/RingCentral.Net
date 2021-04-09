@@ -3,7 +3,7 @@ namespace RingCentral
     public class MeetingExternalUserInfoResource
     {
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -16,7 +16,7 @@ namespace RingCentral
         public string accountId { get; set; }
 
         /// <summary>
-        /// Format: int64
+        ///     Format: int64
         /// </summary>
         public long? userType { get; set; }
 
@@ -33,13 +33,13 @@ namespace RingCentral
         public string personalMeetingId { get; set; }
 
         /// <summary>
-        /// Link to the user's personal meeting room, used as an alias for personal meeting URL (with personal meeting ID)
-        /// Example: https://meetings.ringcentral.com/my/jsmith
+        ///     Link to the user's personal meeting room, used as an alias for personal meeting URL (with personal meeting ID)
+        ///     Example: https://meetings.ringcentral.com/my/jsmith
         /// </summary>
         public string personalLink { get; set; }
 
         /// <summary>
-        /// Enables using personal meeting ID for instant meetings
+        ///     Enables using personal meeting ID for instant meetings
         /// </summary>
         public bool? usePmiForInstantMeetings { get; set; }
     }

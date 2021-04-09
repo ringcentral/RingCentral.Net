@@ -3,7 +3,7 @@ namespace RingCentral
     public class CallRecordingExtensions
     {
         /// <summary>
-        /// Link to call recording extension list resource
+        ///     Link to call recording extension list resource
         /// </summary>
         public string uri { get; set; }
 

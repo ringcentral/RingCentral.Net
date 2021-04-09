@@ -11,7 +11,7 @@ namespace RingCentral
         public AutomaticRecordingResource automatic { get; set; }
 
         /// <summary>
-        /// Collection of Greeting Info
+        ///     Collection of Greeting Info
         /// </summary>
         public GreetingResource[] greetings { get; set; }
     }

@@ -11,28 +11,28 @@ namespace RingCentral
         public PartyInfo to { get; set; }
 
         /// <summary>
-        /// Direction of a call
-        /// Enum: Outbound, Inbound
+        ///     Direction of a call
+        ///     Enum: Outbound, Inbound
         /// </summary>
         public string direction { get; set; }
 
         /// <summary>
-        /// Internal identifier of a party that monitors a call
+        ///     Internal identifier of a party that monitors a call
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Internal identifier of an account that monitors a call
+        ///     Internal identifier of an account that monitors a call
         /// </summary>
         public string accountId { get; set; }
 
         /// <summary>
-        /// Internal identifier of an extension that monitors a call
+        ///     Internal identifier of an extension that monitors a call
         /// </summary>
         public string extensionId { get; set; }
 
         /// <summary>
-        /// Specifies if a call party is muted
+        ///     Specifies if a call party is muted
         /// </summary>
         public bool? muted { get; set; }
 
@@ -41,7 +41,7 @@ namespace RingCentral
         public OwnerInfo owner { get; set; }
 
         /// <summary>
-        /// Specifies if a device is stand-alone
+        ///     Specifies if a device is stand-alone
         /// </summary>
         public bool? standAlone { get; set; }
 

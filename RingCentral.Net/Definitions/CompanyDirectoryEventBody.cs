@@ -4,43 +4,43 @@ namespace RingCentral
     public class CompanyDirectoryEventBody
     {
         /// <summary>
-        /// Internal identifier of an extension
+        ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Type of change
+        ///     Type of change
         /// </summary>
         public string eventType { get; set; }
 
         /// <summary>
-        /// Type of extension
+        ///     Type of extension
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        /// Status of an extension
-        /// Enum: Enabled, NotActivated, Disabled
+        ///     Status of an extension
+        ///     Enum: Enabled, NotActivated, Disabled
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        /// First name of a user extension
+        ///     First name of a user extension
         /// </summary>
         public string firstName { get; set; }
 
         /// <summary>
-        /// Last name of a user extension
+        ///     Last name of a user extension
         /// </summary>
         public string lastName { get; set; }
 
         /// <summary>
-        /// Name of a contact, for non-user extensions
+        ///     Name of a contact, for non-user extensions
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        /// Department name
+        ///     Department name
         /// </summary>
         public string department { get; set; }
 

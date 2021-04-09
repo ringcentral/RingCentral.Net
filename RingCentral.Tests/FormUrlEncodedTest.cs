@@ -21,7 +21,7 @@ namespace RingCentral.Tests
                     grant_type = "password",
                     username = Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
                     extension = Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    password = Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD"),
+                    password = Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 });
                 Assert.NotNull(tokenInfo);
                 Assert.True(tokenInfo.access_token.Length > 0);

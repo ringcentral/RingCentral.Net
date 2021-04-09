@@ -4,7 +4,7 @@ namespace RingCentral
     public class BlockedAllowedPhoneNumbersList
     {
         /// <summary>
-        /// Link to a list of blocked/allowed phone numbers resource
+        ///     Link to a list of blocked/allowed phone numbers resource
         /// </summary>
         public string uri { get; set; }
 

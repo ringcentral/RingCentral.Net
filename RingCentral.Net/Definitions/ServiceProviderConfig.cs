@@ -27,7 +27,7 @@ namespace RingCentral
         public Supported patch { get; set; }
 
         /// <summary>
-        /// Enum: urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig
+        ///     Enum: urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig
         /// </summary>
         public string[] schemas { get; set; }
 

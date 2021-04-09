@@ -12,7 +12,7 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        /// Enum: Blocked, Allowed
+        ///     Enum: Blocked, Allowed
         /// </summary>
         public string status { get; set; }
     }

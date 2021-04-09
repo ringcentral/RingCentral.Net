@@ -3,31 +3,31 @@ namespace RingCentral
     public class ContactAddressInfo
     {
         /// <summary>
-        /// Street address
-        /// Example: 20 Davis Dr.
+        ///     Street address
+        ///     Example: 20 Davis Dr.
         /// </summary>
         public string street { get; set; }
 
         /// <summary>
-        /// City name
-        /// Example: Belmont
+        ///     City name
+        ///     Example: Belmont
         /// </summary>
         public string city { get; set; }
 
         /// <summary>
-        /// Country name
+        ///     Country name
         /// </summary>
         public string country { get; set; }
 
         /// <summary>
-        /// State/province name
-        /// Example: CA
+        ///     State/province name
+        ///     Example: CA
         /// </summary>
         public string state { get; set; }
 
         /// <summary>
-        /// Zip/Postal code
-        /// Example: 94002
+        ///     Zip/Postal code
+        ///     Example: 94002
         /// </summary>
         public string zip { get; set; }
     }

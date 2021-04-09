@@ -4,20 +4,20 @@ namespace RingCentral
     public class CreateCustomUserGreetingRequest
     {
         /// <summary>
-        /// Type of a greeting, specifying the case when the greeting is played.
-        /// Required
-        /// Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
+        ///     Type of a greeting, specifying the case when the greeting is played.
+        ///     Required
+        ///     Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        /// Internal identifier of an answering rule
+        ///     Internal identifier of an answering rule
         /// </summary>
         public string answeringRuleId { get; set; }
 
         /// <summary>
-        /// Meida file to upload
-        /// Required
+        ///     Meida file to upload
+        ///     Required
         /// </summary>
         public Attachment binary { get; set; }
     }

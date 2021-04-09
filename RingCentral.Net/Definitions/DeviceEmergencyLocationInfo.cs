@@ -4,12 +4,12 @@ namespace RingCentral
     public class DeviceEmergencyLocationInfo
     {
         /// <summary>
-        /// Internal identifier of the emergency response location
+        ///     Internal identifier of the emergency response location
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Location name
+        ///     Location name
         /// </summary>
         public string name { get; set; }
     }

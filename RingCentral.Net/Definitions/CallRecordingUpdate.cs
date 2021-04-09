@@ -3,7 +3,7 @@ namespace RingCentral
     public class CallRecordingUpdate
     {
         /// <summary>
-        /// Recording status
+        ///     Recording status
         /// </summary>
         public bool? active { get; set; }
     }

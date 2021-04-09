@@ -132,7 +132,7 @@ namespace RingCentral.Tests
             {
                 response_type = "code",
                 redirect_uri = "http://localhost:8080/oauth2callback",
-                client_id = Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                client_id = Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID")
             });
             Assert.True(str.Length > 0);
             Assert.StartsWith("<!DOCTYPE HTML>", str);

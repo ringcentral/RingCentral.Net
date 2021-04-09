@@ -6,9 +6,12 @@ namespace RingCentral.Net.WebSocket
 {
     public class Subscription
     {
-        private readonly WebSocketExtension _wse;
         private readonly string[] _eventFilters;
         private readonly EventHandler<WsgMessage> _eventListener;
+        private readonly WebSocketExtension _wse;
+
+        private bool _renewScheduled;
+        private SubscriptionInfo _subscriptionInfo;
 
         public Subscription(WebSocketExtension wse, string[] eventFilters, Action<string> callback)
         {
@@ -18,15 +21,10 @@ namespace RingCentral.Net.WebSocket
             {
                 if (wsgMessage.meta.type == MessageType.ServerNotification &&
                     wsgMessage.body.subscriptionId == SubscriptionInfo.id)
-                {
                     callback(JsonConvert.SerializeObject(wsgMessage.body));
-                }
             };
             _wse.MessageReceived += _eventListener;
         }
-
-        private bool _renewScheduled;
-        private SubscriptionInfo _subscriptionInfo;
 
         public SubscriptionInfo SubscriptionInfo
         {
@@ -55,10 +53,7 @@ namespace RingCentral.Net.WebSocket
 
         public async Task Refresh()
         {
-            if (SubscriptionInfo == null)
-            {
-                return;
-            }
+            if (SubscriptionInfo == null) return;
 
             await _wse.Request<SubscriptionInfo>("PUT",
                 $"/restapi/v1.0/subscription/{SubscriptionInfo.id}",
@@ -67,10 +62,7 @@ namespace RingCentral.Net.WebSocket
 
         public async Task Revoke()
         {
-            if (SubscriptionInfo == null)
-            {
-                return;
-            }
+            if (SubscriptionInfo == null) return;
 
             await _wse.Request<SubscriptionInfo>("DELETE",
                 $"/restapi/v1.0/subscription/{SubscriptionInfo.id}");
@@ -86,7 +78,7 @@ namespace RingCentral.Net.WebSocket
                 {
                     transportType = "WebSocket"
                 },
-                eventFilters = _eventFilters,
+                eventFilters = _eventFilters
             };
         }
     }

@@ -3,8 +3,8 @@ namespace RingCentral
     public class GlipConversationsList
     {
         /// <summary>
-        /// List of conversations
-        /// Required
+        ///     List of conversations
+        ///     Required
         /// </summary>
         public GlipConversationInfo[] records { get; set; }
 

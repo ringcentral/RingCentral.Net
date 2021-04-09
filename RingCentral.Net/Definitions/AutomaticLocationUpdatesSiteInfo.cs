@@ -4,22 +4,22 @@ namespace RingCentral
     public class AutomaticLocationUpdatesSiteInfo
     {
         /// <summary>
-        /// Internal identifier of a site
+        ///     Internal identifier of a site
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Link to a site resource
+        ///     Link to a site resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Name of a site
+        ///     Name of a site
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        /// Site code value. Returned only if specified
+        ///     Site code value. Returned only if specified
         /// </summary>
         public string code { get; set; }
     }

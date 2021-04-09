@@ -3,7 +3,7 @@ namespace RingCentral
     public class AuthProfileCheckResource
     {
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

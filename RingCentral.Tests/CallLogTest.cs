@@ -52,7 +52,7 @@ namespace RingCentral.Tests
                     });
                 Assert.Single(callLogResponse.records);
 
-                var fromNumber = callLogResponse.records[0].@from.phoneNumber;
+                var fromNumber = callLogResponse.records[0].from.phoneNumber;
                 callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new ReadUserCallLogParameters
                 {
                     perPage = 1,

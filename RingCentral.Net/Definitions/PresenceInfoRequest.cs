@@ -3,12 +3,12 @@ namespace RingCentral
     public class PresenceInfoRequest
     {
         /// <summary>
-        /// Enum: Offline, Busy, Available
+        ///     Enum: Offline, Busy, Available
         /// </summary>
         public string userStatus { get; set; }
 
         /// <summary>
-        /// Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
+        ///     Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         /// </summary>
         public string dndStatus { get; set; }
 

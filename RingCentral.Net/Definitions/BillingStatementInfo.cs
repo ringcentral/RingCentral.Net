@@ -4,7 +4,7 @@ namespace RingCentral
     public class BillingStatementInfo
     {
         /// <summary>
-        /// Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) standard
+        ///     Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) standard
         /// </summary>
         public string currency { get; set; }
 

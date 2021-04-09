@@ -7,8 +7,8 @@ namespace RingCentral
         public long? maxCount { get; set; }
 
         /// <summary>
-        /// Default: CombineAllChatTypes
-        /// Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
+        ///     Default: CombineAllChatTypes
+        ///     Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
         /// </summary>
         public string leftRailMode { get; set; }
     }

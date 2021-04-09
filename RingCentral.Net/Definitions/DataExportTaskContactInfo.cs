@@ -4,12 +4,12 @@ namespace RingCentral
     public class DataExportTaskContactInfo
     {
         /// <summary>
-        /// Internal identifier of a contact
+        ///     Internal identifier of a contact
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Email address of a contact
+        ///     Email address of a contact
         /// </summary>
         public string email { get; set; }
     }

@@ -3,7 +3,7 @@ namespace RingCentral
     public class AutomaticLocationUpdatesUserList
     {
         /// <summary>
-        /// Link to the users list resource
+        ///     Link to the users list resource
         /// </summary>
         public string uri { get; set; }
 

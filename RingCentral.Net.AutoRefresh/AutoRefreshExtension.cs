@@ -5,9 +5,9 @@ namespace RingCentral.Net.AutoRefresh
 {
     public class AutoRefreshExtension : SdkExtension
     {
-        private RestClient _rc;
-        private Timer _autoRefreshTimer;
         private readonly AutoRefreshOptions _options;
+        private Timer _autoRefreshTimer;
+        private RestClient _rc;
 
         public AutoRefreshExtension(AutoRefreshOptions autoRefreshOptions = null)
         {
@@ -16,7 +16,7 @@ namespace RingCentral.Net.AutoRefresh
 
         public override Task Install(RestClient rc)
         {
-            this._rc = rc;
+            _rc = rc;
             return Task.CompletedTask;
         }
 
@@ -24,7 +24,7 @@ namespace RingCentral.Net.AutoRefresh
         {
             Stop(); // stop existing
             _autoRefreshTimer = new Timer();
-            _autoRefreshTimer.Elapsed += (sender, args) => { this._rc.Refresh(); };
+            _autoRefreshTimer.Elapsed += (sender, args) => { _rc.Refresh(); };
             _autoRefreshTimer.Interval = _options.interval;
             _autoRefreshTimer.Start();
         }

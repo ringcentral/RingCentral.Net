@@ -3,7 +3,7 @@ namespace RingCentral
     public class CallRecordingCustomGreeting
     {
         /// <summary>
-        /// Enum: StartRecording, StopRecording, AutomaticRecording
+        ///     Enum: StartRecording, StopRecording, AutomaticRecording
         /// </summary>
         public string type { get; set; }
 

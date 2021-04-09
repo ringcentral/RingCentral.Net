@@ -7,13 +7,13 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        /// Link to a prompt resource
+        ///     Link to a prompt resource
         /// </summary>
         public string contentUri { get; set; }
 
         /// <summary>
-        /// Content media type
-        /// Enum: audio/mpeg, audio/wav
+        ///     Content media type
+        ///     Enum: audio/mpeg, audio/wav
         /// </summary>
         public string contentType { get; set; }
     }

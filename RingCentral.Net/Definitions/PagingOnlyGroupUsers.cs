@@ -3,12 +3,12 @@ namespace RingCentral
     public class PagingOnlyGroupUsers
     {
         /// <summary>
-        /// Link to the list of users allowed to page the Paging Only group
+        ///     Link to the list of users allowed to page the Paging Only group
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// List of users allowed to page the Paging Only group
+        ///     List of users allowed to page the Paging Only group
         /// </summary>
         public PagingGroupExtensionInfo[] records { get; set; }
 

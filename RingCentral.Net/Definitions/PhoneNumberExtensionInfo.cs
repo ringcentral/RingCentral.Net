@@ -4,7 +4,7 @@ namespace RingCentral
     public class PhoneNumberExtensionInfo
     {
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -37,13 +37,15 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        /// Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
-        /// Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
+        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
+        ///     modern RingCentral product terminology
+        ///     Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly,
+        ///     SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        /// Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
+        ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
 
@@ -64,7 +66,7 @@ namespace RingCentral
         public RegionalSettingsInfo regionalSettings { get; set; }
 
         /// <summary>
-        /// Enum: NotStarted, Incomplete, Completed, Unknown
+        ///     Enum: NotStarted, Incomplete, Completed, Unknown
         /// </summary>
         public string setupWizardState { get; set; }
 

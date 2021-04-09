@@ -3,7 +3,7 @@ namespace RingCentral
     public class AccountBusinessAddressResource
     {
         /// <summary>
-        /// Format: uri
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -20,7 +20,7 @@ namespace RingCentral
         public string email { get; set; }
 
         /// <summary>
-        /// Custom site name
+        ///     Custom site name
         /// </summary>
         public string mainSiteName { get; set; }
     }

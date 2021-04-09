@@ -4,12 +4,12 @@ namespace RingCentral
     public class ContactCenterProvider
     {
         /// <summary>
-        /// Internal identifier of the provider
+        ///     Internal identifier of the provider
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Provider's name
+        ///     Provider's name
         /// </summary>
         public string name { get; set; }
     }

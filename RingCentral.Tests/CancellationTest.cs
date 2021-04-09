@@ -53,8 +53,8 @@ namespace RingCentral.Tests
                         }
                     }
                 };
-                CancellationTokenSource source = new CancellationTokenSource();
-                CancellationToken token = source.Token;
+                var source = new CancellationTokenSource();
+                var token = source.Token;
                 source.CancelAfter(10); // impossible to send a fax within 10ms
                 var taskCanceledException = false;
                 try

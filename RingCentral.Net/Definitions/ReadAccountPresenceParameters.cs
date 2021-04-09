@@ -4,24 +4,24 @@ namespace RingCentral
     public class ReadAccountPresenceParameters
     {
         /// <summary>
-        /// Whether to return detailed telephony state
+        ///     Whether to return detailed telephony state
         /// </summary>
         public bool? detailedTelephonyState { get; set; }
 
         /// <summary>
-        /// Whether to return SIP data
+        ///     Whether to return SIP data
         /// </summary>
         public bool? sipData { get; set; }
 
         /// <summary>
-        /// Page number for account presence information
-        /// Format: int32
+        ///     Page number for account presence information
+        ///     Format: int32
         /// </summary>
         public long? page { get; set; }
 
         /// <summary>
-        /// Number for account presence information items per page
-        /// Format: int32
+        ///     Number for account presence information items per page
+        ///     Format: int32
         /// </summary>
         public long? perPage { get; set; }
     }

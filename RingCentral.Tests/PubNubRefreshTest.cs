@@ -23,7 +23,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var eventFilters = new string[] {"/restapi/v1.0/account/~/extension/~/message-store"};
+                var eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"};
                 var requestBody = new
                 {
                     eventFilters,

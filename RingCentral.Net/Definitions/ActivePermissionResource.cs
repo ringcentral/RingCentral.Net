@@ -11,7 +11,7 @@ namespace RingCentral
         public RoleIdResource effectiveRole { get; set; }
 
         /// <summary>
-        /// Enum: Account, AllExtensions, Federation, NonUserExtensions, RoleBased, Self, UserExtensions
+        ///     Enum: Account, AllExtensions, Federation, NonUserExtensions, RoleBased, Self, UserExtensions
         /// </summary>
         public string[] scopes { get; set; }
     }

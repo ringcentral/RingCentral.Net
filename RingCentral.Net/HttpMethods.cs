@@ -19,45 +19,30 @@ namespace RingCentral
         {
             HttpContent httpContent = null;
             if (content is HttpContent)
-            {
                 httpContent = (HttpContent) content;
-            }
             else if (content is string s)
-            {
                 httpContent = new StringContent(s);
-            }
             else if (content != null)
-            {
                 httpContent = new StringContent(
                     JsonConvert.SerializeObject(content, Formatting.None, jsonSerializerSettings), Encoding.UTF8,
                     "application/json"
                 );
-            }
 
             UriBuilder uriBuilder = null;
             if (endpoint.StartsWith("https://"))
-            {
                 uriBuilder = new UriBuilder(endpoint);
-            }
             else
-            {
                 uriBuilder = new UriBuilder(server) {Path = endpoint};
-            }
 
             if (queryParams != null)
             {
                 var fields = Utils.GetPairs(queryParams).Select(t =>
                 {
                     if (t.value.GetType().IsArray)
-                    {
                         return string.Join("&",
                             (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeUriString(o.ToString())}")
                             .ToArray());
-                    }
-                    else
-                    {
-                        return $"{t.name}={Uri.EscapeUriString(t.value.ToString())}";
-                    }
+                    return $"{t.name}={Uri.EscapeUriString(t.value.ToString())}";
                 });
                 uriBuilder.Query = string.Join("&", fields);
             }
@@ -75,10 +60,7 @@ namespace RingCentral
             object content = null, object queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             var httpResponseMessage = await Request(httpMethod, endpoint, content, queryParams, restRequestConfig);
-            if (typeof(T) == typeof(HttpResponseMessage))
-            {
-                return (T) (object) httpResponseMessage;
-            }
+            if (typeof(T) == typeof(HttpResponseMessage)) return (T) (object) httpResponseMessage;
 
             if (typeof(T) == typeof(byte[]))
             {
@@ -87,10 +69,7 @@ namespace RingCentral
             }
 
             var httpContent = await httpResponseMessage.Content.ReadAsStringAsync();
-            if (typeof(T) == typeof(string))
-            {
-                return (T) (object) httpContent;
-            }
+            if (typeof(T) == typeof(string)) return (T) (object) httpContent;
 
             try
             {
@@ -99,11 +78,9 @@ namespace RingCentral
             catch (Exception e)
             {
                 if (e is JsonReaderException || e is JsonSerializationException)
-                {
                     throw new JsonDeserializeException(
                         $"Unable to deserialize json string to type {typeof(T)}\n\n{e.Message}\n\nJson string: {httpContent}",
                         e);
-                }
 
                 throw;
             }

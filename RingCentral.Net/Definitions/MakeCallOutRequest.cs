@@ -3,12 +3,12 @@ namespace RingCentral
     public class MakeCallOutRequest
     {
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public MakeCallOutCallerInfoRequestFrom from { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public MakeCallOutCallerInfoRequestTo to { get; set; }
     }

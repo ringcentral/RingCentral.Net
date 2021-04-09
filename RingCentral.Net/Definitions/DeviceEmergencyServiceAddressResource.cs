@@ -24,47 +24,47 @@ namespace RingCentral
         public string customerName { get; set; }
 
         /// <summary>
-        /// State/province name
+        ///     State/province name
         /// </summary>
         public string state { get; set; }
 
         /// <summary>
-        /// Internal identifier of a state
+        ///     Internal identifier of a state
         /// </summary>
         public string stateId { get; set; }
 
         /// <summary>
-        /// ISO code of a state
+        ///     ISO code of a state
         /// </summary>
         public string stateIsoCode { get; set; }
 
         /// <summary>
-        /// Full name of a state
+        ///     Full name of a state
         /// </summary>
         public string stateName { get; set; }
 
         /// <summary>
-        /// Internal identifier of a country
+        ///     Internal identifier of a country
         /// </summary>
         public string countryId { get; set; }
 
         /// <summary>
-        /// ISO code of a country
+        ///     ISO code of a country
         /// </summary>
         public string countryIsoCode { get; set; }
 
         /// <summary>
-        /// Country name
+        ///     Country name
         /// </summary>
         public string country { get; set; }
 
         /// <summary>
-        /// Full name of a country
+        ///     Full name of a country
         /// </summary>
         public string countryName { get; set; }
 
         /// <summary>
-        /// Specifies if emergency address is out of country
+        ///     Specifies if emergency address is out of country
         /// </summary>
         public bool? outOfCountry { get; set; }
     }

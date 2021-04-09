@@ -7,7 +7,7 @@ namespace RingCentral
         public DeviceInfoRequest device { get; set; }
 
         /// <summary>
-        /// SIP settings for device
+        ///     SIP settings for device
         /// </summary>
         public SIPInfoRequest[] sipInfo { get; set; }
     }

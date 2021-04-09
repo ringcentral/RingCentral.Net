@@ -11,8 +11,8 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        /// Identifies the possibility and status of emergency location deletion
-        /// Enum: Failed, Completed, Forbidden, Restricted, Allowed
+        ///     Identifies the possibility and status of emergency location deletion
+        ///     Enum: Failed, Completed, Forbidden, Restricted, Allowed
         /// </summary>
         public string deletion { get; set; }
 

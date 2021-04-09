@@ -4,17 +4,17 @@ namespace RingCentral
     public class FormattingLocaleInfo
     {
         /// <summary>
-        /// Internal identifier of a formatting language
+        ///     Internal identifier of a formatting language
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        /// Localization code of a formatting language
+        ///     Localization code of a formatting language
         /// </summary>
         public string localeCode { get; set; }
 
         /// <summary>
-        /// Official name of a formatting language
+        ///     Official name of a formatting language
         /// </summary>
         public string name { get; set; }
     }

@@ -3,22 +3,22 @@ namespace RingCentral
     public class GetLocationListResponse
     {
         /// <summary>
-        /// Link to the location list resource
+        ///     Link to the location list resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// List of locations
+        ///     List of locations
         /// </summary>
         public LocationInfo[] records { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public ProvisioningNavigationInfo navigation { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public ProvisioningPagingInfo paging { get; set; }
     }

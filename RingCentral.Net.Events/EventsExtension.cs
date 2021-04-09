@@ -6,8 +6,8 @@ namespace RingCentral.Net.Events
 {
     public class HttpMessages
     {
-        public HttpResponseMessage httpResponseMessage;
         public HttpRequestMessage httpRequestMessage;
+        public HttpResponseMessage httpResponseMessage;
 
         public override string ToString()
         {
@@ -26,10 +26,7 @@ namespace RingCentral.Net.Events
             var extensibleRequest = rc.extensibleRequest;
             rc.extensibleRequest = async (httpRequestMessage, restRequestConfig) =>
             {
-                if (!enabled)
-                {
-                    return await extensibleRequest(httpRequestMessage, restRequestConfig);
-                }
+                if (!enabled) return await extensibleRequest(httpRequestMessage, restRequestConfig);
 
                 BeforeRequest?.Invoke(this, httpRequestMessage);
                 try

@@ -24,22 +24,22 @@ namespace RingCentral
         public string customerName { get; set; }
 
         /// <summary>
-        /// State/province name
+        ///     State/province name
         /// </summary>
         public string state { get; set; }
 
         /// <summary>
-        /// Internal identifier of a state
+        ///     Internal identifier of a state
         /// </summary>
         public string stateId { get; set; }
 
         /// <summary>
-        /// Country name
+        ///     Country name
         /// </summary>
         public string country { get; set; }
 
         /// <summary>
-        /// Internal identifier of a country
+        ///     Internal identifier of a country
         /// </summary>
         public string countryId { get; set; }
     }

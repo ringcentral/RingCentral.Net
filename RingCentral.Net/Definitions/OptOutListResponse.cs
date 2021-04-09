@@ -4,7 +4,7 @@ namespace RingCentral
     public class OptOutListResponse
     {
         /// <summary>
-        /// List of individual opt-out number records
+        ///     List of individual opt-out number records
         /// </summary>
         public OptOutResponse[] records { get; set; }
 

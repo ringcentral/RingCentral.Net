@@ -4,7 +4,7 @@ namespace RingCentral
     public class AddressBookBulkUploadTaskResult
     {
         /// <summary>
-        /// Internal identifier of an extension
+        ///     Internal identifier of an extension
         /// </summary>
         public string extensionId { get; set; }
 
@@ -13,8 +13,8 @@ namespace RingCentral
         public AddressBookBulkContactResource contact { get; set; }
 
         /// <summary>
-        /// Adding contact status
-        /// Enum: Success, Fail
+        ///     Adding contact status
+        ///     Enum: Success, Fail
         /// </summary>
         public string status { get; set; }
 

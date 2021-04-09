@@ -3,12 +3,12 @@ namespace RingCentral
     public class MakeRingOutRequest
     {
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public MakeRingOutCallerInfoRequestFrom from { get; set; }
 
         /// <summary>
-        /// Required
+        ///     Required
         /// </summary>
         public MakeRingOutCallerInfoRequestTo to { get; set; }
 
@@ -17,7 +17,7 @@ namespace RingCentral
         public MakeRingOutCallerIdInfo callerId { get; set; }
 
         /// <summary>
-        /// The audio prompt that the calling party hears when the call is connected
+        ///     The audio prompt that the calling party hears when the call is connected
         /// </summary>
         public bool? playPrompt { get; set; }
 

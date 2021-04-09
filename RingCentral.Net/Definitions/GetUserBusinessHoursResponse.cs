@@ -3,7 +3,7 @@ namespace RingCentral
     public class GetUserBusinessHoursResponse
     {
         /// <summary>
-        /// Canonical URI of a business-hours resource
+        ///     Canonical URI of a business-hours resource
         /// </summary>
         public string uri { get; set; }
 

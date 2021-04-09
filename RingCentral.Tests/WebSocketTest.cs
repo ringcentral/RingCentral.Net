@@ -17,10 +17,7 @@ namespace RingCentral.Tests
         public async void SendAndReceive()
         {
             // DotEnv.Config(false);
-            if (Environment.GetEnvironmentVariable("IS_LAB_ENV") != "true")
-            {
-                return;
-            }
+            if (Environment.GetEnvironmentVariable("IS_LAB_ENV") != "true") return;
 
             using (var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),

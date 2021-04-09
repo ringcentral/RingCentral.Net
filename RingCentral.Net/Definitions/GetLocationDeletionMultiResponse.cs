@@ -3,12 +3,12 @@ namespace RingCentral
     public class GetLocationDeletionMultiResponse
     {
         /// <summary>
-        /// Enum: Forbidden, Restricted, Allowed
+        ///     Enum: Forbidden, Restricted, Allowed
         /// </summary>
         public string deletion { get; set; }
 
         /// <summary>
-        /// Enum: Forbidden, Allowed
+        ///     Enum: Forbidden, Allowed
         /// </summary>
         public string reassignment { get; set; }
 

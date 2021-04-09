@@ -3,12 +3,12 @@ namespace RingCentral
     public class ModifyAccountBusinessAddressRequest
     {
         /// <summary>
-        /// Company business name
+        ///     Company business name
         /// </summary>
         public string company { get; set; }
 
         /// <summary>
-        /// Company business email address
+        ///     Company business email address
         /// </summary>
         public string email { get; set; }
 
@@ -17,7 +17,7 @@ namespace RingCentral
         public BusinessAddressInfo businessAddress { get; set; }
 
         /// <summary>
-        /// Custom site name
+        ///     Custom site name
         /// </summary>
         public string mainSiteName { get; set; }
     }

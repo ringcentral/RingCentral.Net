@@ -7,7 +7,7 @@ namespace RingCentral
         public string companyName { get; set; }
 
         /// <summary>
-        /// Format: int32
+        ///     Format: int32
         /// </summary>
         public long? conflictCount { get; set; }
 

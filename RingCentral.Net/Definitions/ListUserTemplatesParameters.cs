@@ -4,7 +4,7 @@ namespace RingCentral
     public class ListUserTemplatesParameters
     {
         /// <summary>
-        /// Enum: UserSettings, CallHandling
+        ///     Enum: UserSettings, CallHandling
         /// </summary>
         public string type { get; set; }
 

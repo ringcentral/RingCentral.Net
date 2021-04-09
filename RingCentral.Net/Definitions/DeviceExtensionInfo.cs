@@ -4,17 +4,17 @@ namespace RingCentral
     public class DeviceExtensionInfo
     {
         /// <summary>
-        /// Internal identifier of an extension
+        ///     Internal identifier of an extension
         /// </summary>
         public long? id { get; set; }
 
         /// <summary>
-        /// Link to an extension resource
+        ///     Link to an extension resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Number of extension
+        ///     Number of extension
         /// </summary>
         public string extensionNumber { get; set; }
     }

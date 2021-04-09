@@ -4,7 +4,7 @@ namespace RingCentral
     public class MessageListResponse
     {
         /// <summary>
-        /// An array containing individual messages
+        ///     An array containing individual messages
         /// </summary>
         public MessageListMessageResponse[] records { get; set; }
 

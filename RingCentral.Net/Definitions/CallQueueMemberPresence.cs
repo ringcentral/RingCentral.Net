@@ -7,12 +7,12 @@ namespace RingCentral
         public CallQueueMember member { get; set; }
 
         /// <summary>
-        /// Private member telephony availability status applied to calls of all queues
+        ///     Private member telephony availability status applied to calls of all queues
         /// </summary>
         public bool? acceptQueueCalls { get; set; }
 
         /// <summary>
-        /// Call queue member availability in this particular queue
+        ///     Call queue member availability in this particular queue
         /// </summary>
         public bool? acceptCurrentQueueCalls { get; set; }
     }

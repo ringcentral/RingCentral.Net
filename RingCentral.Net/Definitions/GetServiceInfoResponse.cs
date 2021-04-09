@@ -3,12 +3,12 @@ namespace RingCentral
     public class GetServiceInfoResponse
     {
         /// <summary>
-        /// Canonical URI of the account Service Info resource
+        ///     Canonical URI of the account Service Info resource
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        /// Account Service Plan name
+        ///     Account Service Plan name
         /// </summary>
         public string servicePlanName { get; set; }
 
@@ -33,7 +33,7 @@ namespace RingCentral
         public BillingPlanInfo billingPlan { get; set; }
 
         /// <summary>
-        /// Service features information, see Service Feature List
+        ///     Service features information, see Service Feature List
         /// </summary>
         public ServiceFeatureInfo[] serviceFeatures { get; set; }
 

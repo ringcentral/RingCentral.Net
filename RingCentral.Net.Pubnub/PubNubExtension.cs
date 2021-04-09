@@ -16,53 +16,55 @@ namespace RingCentral.Net.PubNub
 {
     public class PubNubExtension : SdkExtension
     {
-        public RestClient rc;
         public readonly List<Subscription> subscriptions = new List<Subscription>();
+        public RestClient rc;
 
         public PubNubExtension()
         {
             var frameworkDescription = RuntimeInformation.FrameworkDescription;
             if (!frameworkDescription.StartsWith(".NET Framework "))
-            {
                 throw new NotSupportedException(@"Package RingCentral.NET.Pubnub only supports .NET Framework. 
 Please install package RingCentral.Net.PubnubPCL instead.");
-            }
         }
 
         public override Task Install(RestClient restClient)
         {
-            this.rc = restClient;
+            rc = restClient;
             return Task.CompletedTask;
         }
 
         public async void Revoke()
         {
-            foreach (var subscription in subscriptions)
-            {
-                await subscription.Revoke();
-            }
+            foreach (var subscription in subscriptions) await subscription.Revoke();
 
-            this.subscriptions.Clear();
+            subscriptions.Clear();
         }
 
         public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
         {
             var subscription = new Subscription(this, eventFilters, callback);
             await subscription.Subscribe();
-            this.subscriptions.Add(subscription);
+            subscriptions.Add(subscription);
             return subscription;
         }
     }
 
     public class Subscription
     {
-        public readonly PubNubExtension pne;
         public readonly string[] eventFilters;
-        public Action<string> callback;
+        public readonly PubNubExtension pne;
         private Pubnub _pubnub;
 
         private bool _renewScheduled;
         private SubscriptionInfo _subscriptionInfo;
+        public Action<string> callback;
+
+        internal Subscription(PubNubExtension pne, string[] eventFilters, Action<string> callback)
+        {
+            this.pne = pne;
+            this.eventFilters = eventFilters;
+            this.callback = callback;
+        }
 
         public SubscriptionInfo SubscriptionInfo
         {
@@ -81,13 +83,6 @@ Please install package RingCentral.Net.PubnubPCL instead.");
                     });
                 _renewScheduled = true;
             }
-        }
-
-        internal Subscription(PubNubExtension pne, string[] eventFilters, Action<string> callback)
-        {
-            this.pne = pne;
-            this.eventFilters = eventFilters;
-            this.callback = callback;
         }
 
         internal async Task<SubscriptionInfo> Subscribe()
@@ -138,9 +133,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
             catch (RestException re)
             {
                 if (re.httpResponseMessage.StatusCode == HttpStatusCode.NotFound) // already deleted
-                {
                     return re.httpResponseMessage;
-                }
 
                 throw;
             }
@@ -167,10 +160,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
             var buffer = new byte[bufferSize];
             int length;
             var resultStream = new MemoryStream();
-            while ((length = cipherStream.Read(buffer, 0, bufferSize)) > 0)
-            {
-                resultStream.Write(buffer, 0, length);
-            }
+            while ((length = cipherStream.Read(buffer, 0, bufferSize)) > 0) resultStream.Write(buffer, 0, length);
 
             var resultBytes = resultStream.ToArray();
             return Encoding.UTF8.GetString(resultBytes, 0, resultBytes.Length);
