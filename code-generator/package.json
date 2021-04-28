@@ -7,8 +7,7 @@
     "samples": "node -r @babel/register samples.js",
     "samples-java": "node -r @babel/register samples-java.js",
     "samples-typescript": "node -r @babel/register samples-typescript.js",
-    "generate": "yarn definitions && yarn paths && yarn samples && yarn samples-java && yarn samples-typescript",
-    "validate": "node -r @babel/register validate.js"
+    "generate": "yarn definitions && yarn paths && yarn samples && yarn samples-java && yarn samples-typescript"
   },
   "dependencies": {
     "change-case": "^4.1.2",
