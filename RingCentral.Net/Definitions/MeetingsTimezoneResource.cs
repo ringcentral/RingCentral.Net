@@ -1,7 +1,6 @@
 namespace RingCentral
 {
-    // Timezone setting. For extension bulk assignment is configured automatically based on contact info setting
-    public class TimezoneResource
+    public class MeetingsTimezoneResource
     {
         /// <summary>
         ///     Format: uri
@@ -19,9 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string description { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public string bias { get; set; }
     }
 }

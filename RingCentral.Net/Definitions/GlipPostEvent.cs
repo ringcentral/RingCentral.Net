@@ -19,8 +19,7 @@ namespace RingCentral
         public string groupId { get; set; }
 
         /// <summary>
-        ///     Type of a post. 'TextMessage' - an incoming text message; 'PersonJoined' - a message notifying that person has
-        ///     joined a conversation; 'PersonsAdded' - a message notifying that a person(s) were added to a conversation
+        ///     Type of a post. 'TextMessage' - an incoming text message; 'PersonJoined' - a message notifying that person has joined a conversation; 'PersonsAdded' - a message notifying that a person(s) were added to a conversation
         ///     Enum: TextMessage, PersonJoined, PersonsAdded, Card
         /// </summary>
         public string type { get; set; }
@@ -46,7 +45,7 @@ namespace RingCentral
         public string[] removedPersonIds { get; set; }
 
         /// <summary>
-        ///     List of at mentions in post text with names.
+        ///     List of mentions in post text with names.
         /// </summary>
         public GlipMentionsInfo[] mentions { get; set; }
 

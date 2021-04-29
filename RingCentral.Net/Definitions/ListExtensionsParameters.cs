@@ -28,17 +28,14 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        ///     Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without
-        ///     `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
+        ///     Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
         ///     Enum: Enabled, Disabled, NotActivated, Unassigned
         /// </summary>
         public string[] status { get; set; }
 
         /// <summary>
-        ///     Extension type. Multiple values are supported. Please note that legacy 'Department' extension type corresponds to
-        ///     'Call Queue' extensions in modern RingCentral product terminology
-        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, ProxyAdmin, DelegatedLinesGroup
+        ///     Extension type. Multiple values are supported. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, ProxyAdmin, DelegatedLinesGroup
         /// </summary>
         public string[] type { get; set; }
     }

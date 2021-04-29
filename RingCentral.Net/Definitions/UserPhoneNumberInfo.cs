@@ -46,8 +46,12 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an
-        ///     external number not yet ported to RingCentral
+        ///     Specifies if the number is primary or not
+        /// </summary>
+        public bool? primary { get; set; }
+
+        /// <summary>
+        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
         /// </summary>
         public string status { get; set; }
 
@@ -58,10 +62,8 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
-        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool, BusinessMobileNumber,
-        ///     ExternalMobileNumber
+        ///     Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool, BusinessMobileNumber, ExternalMobileNumber
         /// </summary>
         public string usageType { get; set; }
 

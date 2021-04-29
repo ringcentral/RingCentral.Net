@@ -13,8 +13,7 @@ namespace RingCentral
         public AssigneeInfo[] assignees { get; set; }
 
         /// <summary>
-        ///     Current completeness percentage of a task with the 'Percentage' completeness condition. 'Mandatory' if
-        ///     `completenessCondition` is set to `Percentage`, otherwise 'Optional'
+        ///     Current completeness percentage of a task with the 'Percentage' completeness condition. 'Mandatory' if `completenessCondition` is set to `Percentage`, otherwise 'Optional'
         ///     Maximum: 100
         /// </summary>
         public long? completenessPercentage { get; set; }

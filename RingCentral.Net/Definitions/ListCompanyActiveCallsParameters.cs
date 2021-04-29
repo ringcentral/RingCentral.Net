@@ -4,15 +4,13 @@ namespace RingCentral
     public class ListCompanyActiveCallsParameters
     {
         /// <summary>
-        ///     The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple
-        ///     values are accepted
+        ///     The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] direction { get; set; }
 
         /// <summary>
-        ///     View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be
-        ///     changed for ISync
+        ///     View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
         ///     Default: Simple
         ///     Enum: Simple, Detailed
         /// </summary>
@@ -25,8 +23,7 @@ namespace RingCentral
         public string[] type { get; set; }
 
         /// <summary>
-        ///     Call transport type. 'PSTN' specifies that a call leg is initiated from the PSTN network provider; 'VoIP' - from an
-        ///     RC phone. By default this filter is disabled
+        ///     Call transport type. 'PSTN' specifies that a call leg is initiated from the PSTN network provider; 'VoIP' - from an RC phone. By default this filter is disabled
         ///     Enum: PSTN, VoIP
         /// </summary>
         public string[] transport { get; set; }

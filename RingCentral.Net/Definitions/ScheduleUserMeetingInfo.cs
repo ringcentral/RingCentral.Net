@@ -40,8 +40,7 @@ namespace RingCentral
         public bool? usePmiForInstantMeetings { get; set; }
 
         /// <summary>
-        ///     A password will be generated when scheduling a meeting and participants will require password to join a meeting.
-        ///     The Personal Meeting ID (PMI) meetings are not included
+        ///     A password will be generated when scheduling a meeting and participants will require password to join a meeting. The Personal Meeting ID (PMI) meetings are not included
         /// </summary>
         public bool? requirePasswordForSchedulingNewMeetings { get; set; }
 
@@ -56,14 +55,12 @@ namespace RingCentral
         public string defaultPasswordForScheduledMeetings { get; set; }
 
         /// <summary>
-        ///     A random password will be generated for an instant meeting, if set to 'True'. If you use PMI for your instant
-        ///     meetings, this option will be disabled
+        ///     A random password will be generated for an instant meeting, if set to 'True'. If you use PMI for your instant meetings, this option will be disabled
         /// </summary>
         public bool? requirePasswordForInstantMeetings { get; set; }
 
         /// <summary>
-        ///     Specifies whether to require a password for meetings using Personal Meeting ID (PMI). The supported values are:
-        ///     'none', 'all' and 'jbhOnly' (joined before host only)
+        ///     Specifies whether to require a password for meetings using Personal Meeting ID (PMI). The supported values are: 'none', 'all' and 'jbhOnly' (joined before host only)
         ///     Enum: all, none, jbhOnly
         /// </summary>
         public string requirePasswordForPmiMeetings { get; set; }

@@ -25,8 +25,7 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where
-        ///     'N' is the first free number
+        ///     Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
         /// </summary>
         public string name { get; set; }
 

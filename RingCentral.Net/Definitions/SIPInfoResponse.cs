@@ -54,9 +54,7 @@ namespace RingCentral
         public string certificate { get; set; }
 
         /// <summary>
-        ///     The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched
-        ///     to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy
-        ///     after the next SIP-provision call.
+        ///     The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy after the next SIP-provision call.
         /// </summary>
         public long? switchBackInterval { get; set; }
     }

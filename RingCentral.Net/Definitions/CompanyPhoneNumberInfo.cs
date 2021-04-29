@@ -42,8 +42,7 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an
-        ///     external number not yet ported to RingCentral
+        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
         /// </summary>
         public string status { get; set; }
 
@@ -54,11 +53,8 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number. Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for
-        ///     phone number list requests
-        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber,
-        ///     ExternalMobileNumber
+        ///     Usage type of a phone number. Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber, ExternalMobileNumber
         /// </summary>
         public string usageType { get; set; }
 
@@ -71,8 +67,7 @@ namespace RingCentral
         public ContactCenterProvider contactCenterProvider { get; set; }
 
         /// <summary>
-        ///     Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to
-        ///     request parameters nxx plus line or numberPattern
+        ///     Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to request parameters nxx plus line or numberPattern
         /// </summary>
         public string vanityPattern { get; set; }
     }

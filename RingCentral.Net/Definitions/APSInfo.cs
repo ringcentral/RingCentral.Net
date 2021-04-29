@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace RingCentral
 {
-    // Apple Push Notification Service Info
+    // APS (Apple Push Service) information/ priority data
     public class APSInfo
     {
         /// <summary>

@@ -1,19 +1,18 @@
 namespace RingCentral
 {
-    public class DelegateExtensionInfo
+    // Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+    public class DeviceDepartmentResource
     {
         /// <summary>
-        ///     Canonical URI of an extension
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     Extension name
         /// </summary>
-        public string name { get; set; }
+        public string id { get; set; }
 
         /// <summary>
-        ///     Number of an extension
         /// </summary>
         public string extensionNumber { get; set; }
     }

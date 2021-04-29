@@ -34,12 +34,12 @@ namespace RingCentral
         public string color { get; set; }
 
         /// <summary>
-        ///     Task section to group/search by. Max allowed legth is 100 characters
+        ///     Task section to group/search by. Max allowed length is 100 characters
         /// </summary>
         public string section { get; set; }
 
         /// <summary>
-        ///     Task details. Max allowed legth is 102400 characters (100kB)
+        ///     Task details. Max allowed length is 102400 characters (100kB)
         /// </summary>
         public string description { get; set; }
 

@@ -4,14 +4,12 @@ namespace RingCentral
     public class ListChatNotesParameters
     {
         /// <summary>
-        ///     The end datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
-        ///     timezone, e.g. 2019-03-10T18:23:45. The default value is Now.
+        ///     The end datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, e.g. 2019-03-10T18:23:45. The default value is Now.
         /// </summary>
         public string creationTimeTo { get; set; }
 
         /// <summary>
-        ///     The start datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
-        ///     timezone
+        ///     The start datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone
         /// </summary>
         public string creationTimeFrom { get; set; }
 

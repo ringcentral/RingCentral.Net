@@ -4,8 +4,7 @@ namespace RingCentral
     public class GCMInfo
     {
         /// <summary>
-        ///     Notification priority, if the value is 'high' then notification is turned on even if the application is in
-        ///     background
+        ///     Notification priority, if the value is 'high' then notification is turned on even if the application is in background
         ///     Enum: high, normal
         /// </summary>
         public string priority { get; set; }

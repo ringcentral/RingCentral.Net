@@ -4,11 +4,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public TimezoneResource timezone { get; set; }
+        public DeviceTimezoneResource timezone { get; set; }
 
         /// <summary>
         /// </summary>
-        public CountryResource homeCountry { get; set; }
+        public DeviceCountryResource homeCountry { get; set; }
 
         /// <summary>
         /// </summary>

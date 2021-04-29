@@ -14,8 +14,7 @@ namespace RingCentral
 
         /// <summary>
         ///     bad request type when status code is 400
-        ///     Enum: uniqueness, tooMany, mutability, sensitive, invalidSyntax, invalidFilter, invalidPath, invalidValue,
-        ///     invalidVers, noTarget
+        ///     Enum: uniqueness, tooMany, mutability, sensitive, invalidSyntax, invalidFilter, invalidPath, invalidValue, invalidVers, noTarget
         /// </summary>
         public string scimType { get; set; }
 

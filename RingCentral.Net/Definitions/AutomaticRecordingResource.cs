@@ -3,7 +3,7 @@ namespace RingCentral
     public class AutomaticRecordingResource
     {
         /// <summary>
-        ///     Flag for controling Automatic Call Recording settings
+        ///     Flag for controlling Automatic Call Recording settings
         /// </summary>
         public bool? enabled { get; set; }
 

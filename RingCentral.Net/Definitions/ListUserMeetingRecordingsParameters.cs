@@ -9,14 +9,12 @@ namespace RingCentral
         public string meetingId { get; set; }
 
         /// <summary>
-        ///     Recordings of meetings started after the time specified will be returned. Either `meetingId` or
-        ///     `meetingStartTime`/`meetingEndTime` can be specified
+        ///     Recordings of meetings started after the time specified will be returned. Either `meetingId` or `meetingStartTime`/`meetingEndTime` can be specified
         /// </summary>
         public string meetingStartTimeFrom { get; set; }
 
         /// <summary>
-        ///     Recordings of meetings started before the time specified will be returned. The default value is current time.
-        ///     Either `meetingId` or `meetingStartTime`/`meetingEndTime` can be specified
+        ///     Recordings of meetings started before the time specified will be returned. The default value is current time. Either `meetingId` or `meetingStartTime`/`meetingEndTime` can be specified
         /// </summary>
         public string meetingStartTimeTo { get; set; }
 

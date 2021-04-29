@@ -21,7 +21,7 @@ namespace RingCentral
         public string languageId { get; set; }
 
         /// <summary>
-        ///     Meida file to upload
+        ///     Media file to upload
         ///     Required
         /// </summary>
         public Attachment binary { get; set; }

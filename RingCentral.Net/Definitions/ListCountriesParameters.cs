@@ -9,8 +9,7 @@ namespace RingCentral
         public bool? loginAllowed { get; set; }
 
         /// <summary>
-        ///     Indicates whether signup/billing is allowed for a country. If not specified all countries are returned (according
-        ///     to other filters specified if any)
+        ///     Indicates whether signup/billing is allowed for a country. If not specified all countries are returned (according to other filters specified if any)
         /// </summary>
         public bool? signupAllowed { get; set; }
 

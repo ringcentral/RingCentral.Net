@@ -14,7 +14,7 @@ namespace RingCentral
         public long? meetingSize { get; set; }
 
         /// <summary>
-        ///     Meetings recording cloud storage limitaion in Gb
+        ///     Meetings recording cloud storage limitation in Gb
         /// </summary>
         public long? cloudRecordingStorage { get; set; }
 

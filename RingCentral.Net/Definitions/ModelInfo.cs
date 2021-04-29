@@ -19,6 +19,10 @@ namespace RingCentral
         public AddonInfo[] addons { get; set; }
 
         /// <summary>
+        /// </summary>
+        public string deviceClass { get; set; }
+
+        /// <summary>
         ///     Device feature or multiple features supported
         ///     Enum: BLA, CommonPhone, Intercom, Paging, HELD
         /// </summary>

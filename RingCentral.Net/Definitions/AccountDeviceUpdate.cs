@@ -19,8 +19,7 @@ namespace RingCentral
         public DeviceUpdatePhoneLinesInfo phoneLines { get; set; }
 
         /// <summary>
-        ///     Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a
-        ///     common phone.
+        ///     Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
         /// </summary>
         public bool? useAsCommonPhone { get; set; }
     }

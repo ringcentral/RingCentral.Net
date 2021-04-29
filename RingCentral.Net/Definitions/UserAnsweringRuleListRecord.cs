@@ -4,13 +4,12 @@ namespace RingCentral
     {
         /// <summary>
         ///     Canonical URI to an answering rule resource
-        ///     Example:
-        ///     https://platform.ringcentral.com/restapi/v1.0/account/240913004/extension/240972004/answering-rule/business-hours-rule
+        ///     Example: https://platform.ringcentral.com/restapi/v1.0/account/240913004/extension/240972004/answering-rule/business-hours-rule
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     Internal identifier of an asnwering rule
+        ///     Internal identifier of an answering rule
         ///     Example: business-hours-rule
         /// </summary>
         public string id { get; set; }

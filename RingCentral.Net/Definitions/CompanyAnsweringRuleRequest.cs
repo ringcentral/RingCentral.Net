@@ -3,8 +3,7 @@ namespace RingCentral
     public class CompanyAnsweringRuleRequest
     {
         /// <summary>
-        ///     Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where
-        ///     'N' is the first free number
+        ///     Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
         /// </summary>
         public string name { get; set; }
 
@@ -35,9 +34,7 @@ namespace RingCentral
         public CompanyAnsweringRuleScheduleInfoRequest schedule { get; set; }
 
         /// <summary>
-        ///     Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and
-        ///     forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go
-        ///     to selected extension = ['Operator', 'Disconnect', 'Bypass']
+        ///     Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect', 'Bypass']
         ///     Enum: Operator, Disconnect, Bypass
         /// </summary>
         public string callHandlingAction { get; set; }

@@ -9,7 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CountryResource country { get; set; }
+        public DeviceCountryResource country { get; set; }
 
         /// <summary>
         /// </summary>
@@ -37,14 +37,12 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an
-        ///     external number not yet ported to RingCentral
+        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     Enum: CompanyNumber, MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber
+        ///     Enum: CompanyNumber, MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
         /// </summary>
         public string usageType { get; set; }
 

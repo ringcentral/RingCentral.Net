@@ -101,8 +101,7 @@ namespace RingCentral
         public string endingOn { get; set; }
 
         /// <summary>
-        ///     Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive
-        ///     message of a Card
+        ///     Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
         ///     Default: Black
         ///     Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         /// </summary>

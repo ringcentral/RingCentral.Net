@@ -37,10 +37,8 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
-        ///     modern RingCentral product terminology
-        ///     Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly,
-        ///     SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
+        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        ///     Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
         /// </summary>
         public string type { get; set; }
 
@@ -55,7 +53,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public DepartmentResource[] departments { get; set; }
+        public DeviceDepartmentResource[] departments { get; set; }
 
         /// <summary>
         /// </summary>

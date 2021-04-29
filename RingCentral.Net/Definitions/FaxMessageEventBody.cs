@@ -23,14 +23,12 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for
-        ///     example *2016-03-10T18:07:52.534Z*
+        ///     Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
-        ///     timezone, for example *2016-03-10T18:07:52.534Z*
+        ///     Datetime when the message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*
         /// </summary>
         public string lastModifiedTime { get; set; }
 
@@ -79,8 +77,7 @@ namespace RingCentral
         public string conversationId { get; set; }
 
         /// <summary>
-        ///     Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image
-        ///     scanned at 100 dpi)
+        ///     Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi)
         /// </summary>
         public string faxResolution { get; set; }
 

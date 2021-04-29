@@ -9,7 +9,7 @@ namespace RingCentral
         public string visibility { get; set; }
 
         /// <summary>
-        ///     Availability setting specifing whether to receive Glip notifications or not
+        ///     Availability setting specifying whether to receive Glip notifications or not
         ///     Enum: Available, DND
         /// </summary>
         public string availability { get; set; }

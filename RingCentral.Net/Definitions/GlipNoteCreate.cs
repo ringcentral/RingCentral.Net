@@ -3,7 +3,7 @@ namespace RingCentral
     public class GlipNoteCreate
     {
         /// <summary>
-        ///     Title of a note. Max allowed legth is 250 characters
+        ///     Title of a note. Max allowed length is 250 characters
         ///     Required
         /// </summary>
         public string title { get; set; }

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Information specififed in request
+    // Information specified in request
     public class SpecificInfo
     {
         /// <summary>

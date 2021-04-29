@@ -5,11 +5,6 @@ namespace RingCentral
     public class CreateUser
     {
         /// <summary>
-        /// </summary>
-        [JsonProperty("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User")]
-        public EnterpriseUser urn_ietf_params_scim_schemas_extension_enterprise_2_0_User;
-
-        /// <summary>
         ///     User status
         /// </summary>
         public bool? active { get; set; }
@@ -46,6 +41,11 @@ namespace RingCentral
         ///     Enum: urn:ietf:params:scim:schemas:core:2.0:User
         /// </summary>
         public string[] schemas { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User")]
+        public EnterpriseUser urn_ietf_params_scim_schemas_extension_enterprise_2_0_User;
 
         /// <summary>
         ///     MUST be same as work type email address

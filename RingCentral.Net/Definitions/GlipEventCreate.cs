@@ -36,8 +36,7 @@ namespace RingCentral
         public bool? allDay { get; set; }
 
         /// <summary>
-        ///     Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration:
-        ///     1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
+        ///     Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
         ///     Enum: None, Day, Weekday, Week, Month, Year
         /// </summary>
         public string recurrence { get; set; }
@@ -48,8 +47,7 @@ namespace RingCentral
         public string endingCondition { get; set; }
 
         /// <summary>
-        ///     Count of iterations. For periodic events only. Value range is 1 - 10. Must be specified if 'endingCondition' is
-        ///     'Count'
+        ///     Count of iterations. For periodic events only. Value range is 1 - 10. Must be specified if 'endingCondition' is 'Count'
         /// </summary>
         public long? endingAfter { get; set; }
 

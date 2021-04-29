@@ -13,12 +13,7 @@ namespace RingCentral
         public bool? allowSeeMyPresence { get; set; }
 
         /// <summary>
-        ///     Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail (Take Messages Only)/Fax
-        ///     User/Shared Lines Group/Paging Only Group/IVR Menu/Application Extension/Park Location extensions. The
-        ///     'DoNotAcceptDepartmentCalls' and 'TakeDepartmentCallsOnly' values are applicable only for extensions - members of a
-        ///     Department; if these values are set for department outsiders, the 400 Bad Request error code is returned. The
-        ///     'TakeDepartmentCallsOnly' status can be set through the old RingCentral user interface and is available for some
-        ///     migrated accounts only.
+        ///     Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls' and 'TakeDepartmentCallsOnly' values are applicable only for extensions - members of a Department; if these values are set for department outsiders, the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly' status can be set through the old RingCentral user interface and is available for some migrated accounts only.
         ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
         /// </summary>
         public string dndStatus { get; set; }

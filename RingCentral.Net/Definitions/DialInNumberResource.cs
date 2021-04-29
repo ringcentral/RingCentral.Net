@@ -16,6 +16,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CountryResource country { get; set; }
+        public MeetingsCountryResource country { get; set; }
     }
 }

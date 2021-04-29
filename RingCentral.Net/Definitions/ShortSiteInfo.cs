@@ -3,7 +3,7 @@ namespace RingCentral
     public class ShortSiteInfo
     {
         /// <summary>
-        ///     Internal idetifier of a site extension
+        ///     Internal identifier of a site extension
         /// </summary>
         public string id { get; set; }
 

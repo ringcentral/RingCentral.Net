@@ -10,8 +10,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the messages are going to
-        ///     be sent
+        ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the messages are going to be sent
         ///     Required
         ///     Example: 15551234567
         /// </summary>

@@ -36,18 +36,14 @@ namespace RingCentral
         public ProfileImageInfo profileImage { get; set; }
 
         /// <summary>
-        ///     Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If
-        ///     not specified, then all extensions are returned
+        ///     Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
         ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
-        ///     modern RingCentral product terminology
-        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup,
-        ///     GroupCallPickup
+        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
 

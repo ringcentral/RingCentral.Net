@@ -13,20 +13,17 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is
-        ///     subscribed to
+        ///     Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is subscribed to
         /// </summary>
         public string[] eventFilters { get; set; }
 
         /// <summary>
-        ///     Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is not
-        ///     subscribed to due to certain limitations
+        ///     Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is not subscribed to due to certain limitations
         /// </summary>
         public DisabledFilterInfo[] disabledFilters { get; set; }
 
         /// <summary>
-        ///     Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone,
-        ///     for example 2016-03-10T18:07:52.534Z
+        ///     Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string expirationTime { get; set; }
@@ -43,8 +40,7 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
-        ///     Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for
-        ///     example 2016-03-10T18:07:52.534Z
+        ///     Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }

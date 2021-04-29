@@ -5,6 +5,6 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public ExtensionInfo extension { get; set; }
+        public CallHandlingExtensionInfo extension { get; set; }
     }
 }

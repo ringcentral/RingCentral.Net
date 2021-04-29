@@ -27,7 +27,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CreatorInfo creator { get; set; }
+        public GlipCreatorInfo creator { get; set; }
 
         /// <summary>
         ///     Chat IDs where the task is posted or shared.

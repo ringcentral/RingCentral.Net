@@ -4,14 +4,12 @@ namespace RingCentral
     public class ForwardingInfo
     {
         /// <summary>
-        ///     Specifies if the user's softphone(s) are notified before forwarding the incoming call to desk phones and forwarding
-        ///     numbers
+        ///     Specifies if the user's softphone(s) are notified before forwarding the incoming call to desk phones and forwarding numbers
         /// </summary>
         public bool? notifyMySoftPhones { get; set; }
 
         /// <summary>
-        ///     Specifies if the administrator's softphone is notified before forwarding the incoming call to desk phones and
-        ///     forwarding numbers. The default value is 'False'
+        ///     Specifies if the administrator's softphone is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is 'False'
         /// </summary>
         public bool? notifyAdminSoftPhones { get; set; }
 
@@ -21,8 +19,7 @@ namespace RingCentral
         public long? softPhonesRingCount { get; set; }
 
         /// <summary>
-        ///     Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one
-        ///     at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ring all at the same time
+        ///     Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ring all at the same time
         ///     Enum: Sequentially, Simultaneously
         /// </summary>
         public string ringingMode { get; set; }

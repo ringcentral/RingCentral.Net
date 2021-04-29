@@ -14,8 +14,7 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     Country calling code defined by ITU-T recommendations [E.123](https://www.itu.int/rec/T-REC-E.123-200102-I/en) and
-        ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+        ///     Country calling code defined by ITU-T recommendations [E.123](https://www.itu.int/rec/T-REC-E.123-200102-I/en) and [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
         /// </summary>
         public string callingCode { get; set; }
 

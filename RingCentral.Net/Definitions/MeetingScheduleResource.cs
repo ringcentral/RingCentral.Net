@@ -14,6 +14,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public TimezoneResource timeZone { get; set; }
+        public MeetingsTimezoneResource timeZone { get; set; }
     }
 }

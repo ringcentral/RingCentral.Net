@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class DepartmentResource
+    public class DeviceTimezoneResource
     {
         /// <summary>
         ///     Format: uri
@@ -13,6 +13,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public string extensionNumber { get; set; }
+        public string name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public string description { get; set; }
     }
 }

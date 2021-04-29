@@ -24,7 +24,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CreatorInfo creator { get; set; }
+        public GlipCreatorInfo creator { get; set; }
 
         /// <summary>
         /// </summary>

@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CallQueueInfo callQueue { get; set; }
+        public PresenceCallQueueInfo callQueue { get; set; }
 
         /// <summary>
         ///     Call queue agent availability for calls of this queue

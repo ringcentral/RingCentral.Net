@@ -4,15 +4,13 @@ namespace RingCentral
     public class ListExtensionActiveCallsParameters
     {
         /// <summary>
-        ///     The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple
-        ///     values are accepted
+        ///     The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] direction { get; set; }
 
         /// <summary>
-        ///     View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be
-        ///     changed for ISync
+        ///     View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
         ///     Default: Simple
         ///     Enum: Simple, Detailed
         /// </summary>

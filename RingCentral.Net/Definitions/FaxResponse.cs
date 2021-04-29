@@ -57,24 +57,19 @@ namespace RingCentral
         public string direction { get; set; }
 
         /// <summary>
-        ///     Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be
-        ///     restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically
-        ///     deleted shortly
+        ///     Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
         ///     Enum: Alive, Deleted, Purged
         /// </summary>
         public string availability { get; set; }
 
         /// <summary>
-        ///     Message status. 'Queued' - the message is queued for sending; 'Sent' - a message is successfully sent;
-        ///     'SendingFailed' - a message sending attempt has failed; 'Received' - a message is received (inbound messages have
-        ///     this status by default)
+        ///     Message status. 'Queued' - the message is queued for sending; 'Sent' - a message is successfully sent; 'SendingFailed' - a message sending attempt has failed; 'Received' - a message is received (inbound messages have this status by default)
         ///     Enum: Queued, Sent, SendingFailed, Received
         /// </summary>
         public string messageStatus { get; set; }
 
         /// <summary>
-        ///     Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image
-        ///     scanned at 100 dpi)
+        ///     Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi)
         ///     Enum: High, Low
         /// </summary>
         public string faxResolution { get; set; }
@@ -85,8 +80,7 @@ namespace RingCentral
         public long? faxPageCount { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified on server in ISO 8601 format including timezone, for example
-        ///     2016-03-10T18:07:52.534Z
+        ///     Datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }

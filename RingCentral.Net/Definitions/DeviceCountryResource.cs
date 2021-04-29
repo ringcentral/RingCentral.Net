@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     // Brief information on a phone number country
-    public class CountryResource
+    public class DeviceCountryResource
     {
         /// <summary>
         ///     Format: uri
