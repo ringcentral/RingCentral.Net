@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
 {
-    public class Index
+    public partial class Index
     {
-        public Chats.Index parent;
         public RestClient rc;
+        public Restapi.Glip.Chats.Index parent;
 
-        public Index(Chats.Index parent)
+        public Index(Restapi.Glip.Chats.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,26 +21,27 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         }
 
         /// <summary>
-        ///     Returns the list of tasks of the specified chat.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
-        ///     Rate Limit Group: Heavy
+        /// Returns the list of tasks of the specified chat.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
+        /// Rate Limit Group: Heavy
         /// </summary>
-        public async Task<GlipTaskList> Get(ListChatTasksParameters queryParams = null,
+        public async Task<RingCentral.GlipTaskList> Get(RingCentral.ListChatTasksParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GlipTaskList>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.GlipTaskList>(this.Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        ///     Creates a task in the specified chat.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
-        ///     Rate Limit Group: Medium
+        /// Creates a task in the specified chat.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
+        /// Rate Limit Group: Medium
         /// </summary>
-        public async Task<GlipTaskInfo> Post(GlipCreateTask glipCreateTask, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipTaskInfo> Post(RingCentral.GlipCreateTask glipCreateTask,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<GlipTaskInfo>(Path(), glipCreateTask, null, restRequestConfig);
+            return await rc.Post<RingCentral.GlipTaskInfo>(this.Path(), glipCreateTask, null, restRequestConfig);
         }
     }
 }
@@ -47,9 +50,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
 {
     public partial class Index
     {
-        public Tasks.Index Tasks()
+        public Restapi.Glip.Chats.Tasks.Index Tasks()
         {
-            return new Tasks.Index(this);
+            return new Restapi.Glip.Chats.Tasks.Index(this);
         }
     }
 }

@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
 {
-    public class Index
+    public partial class Index
     {
-        public PagingOnlyGroups.Index parent;
         public RestClient rc;
+        public Restapi.Account.PagingOnlyGroups.Index parent;
 
-        public Index(PagingOnlyGroups.Index parent)
+        public Index(Restapi.Account.PagingOnlyGroups.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,17 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.BulkAssign
         }
 
         /// <summary>
-        ///     Adds and/or removes paging group users and devices.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: EditAccounts
-        ///     User Permission: Groups
+        /// Adds and/or removes paging group users and devices.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditAccounts
+        /// User Permission: Groups
         /// </summary>
-        public async Task<string> Post(EditPagingGroupRequest editPagingGroupRequest,
+        public async Task<string> Post(RingCentral.EditPagingGroupRequest editPagingGroupRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), editPagingGroupRequest, null, restRequestConfig);
+            return await rc.Post<string>(this.Path(), editPagingGroupRequest, null, restRequestConfig);
         }
     }
 }
@@ -38,9 +40,9 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups
 {
     public partial class Index
     {
-        public BulkAssign.Index BulkAssign()
+        public Restapi.Account.PagingOnlyGroups.BulkAssign.Index BulkAssign()
         {
-            return new BulkAssign.Index(this);
+            return new Restapi.Account.PagingOnlyGroups.BulkAssign.Index(this);
         }
     }
 }

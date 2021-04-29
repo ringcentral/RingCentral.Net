@@ -1,14 +1,18 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Restapi.Glip.Recent
 {
     public partial class Index
     {
-        public Glip.Index parent;
         public RestClient rc;
+        public Restapi.Glip.Index parent;
 
-        public Index(Glip.Index parent)
+        public Index(Restapi.Glip.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +26,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Recent.Index Recent()
+        public Restapi.Glip.Recent.Index Recent()
         {
-            return new Recent.Index(this);
+            return new Restapi.Glip.Recent.Index(this);
         }
     }
 }

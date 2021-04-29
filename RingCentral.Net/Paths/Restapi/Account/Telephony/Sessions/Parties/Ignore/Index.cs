@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
 {
-    public class Index
+    public partial class Index
     {
-        public Parties.Index parent;
         public RestClient rc;
+        public Restapi.Account.Telephony.Sessions.Parties.Index parent;
 
-        public Index(Parties.Index parent)
+        public Index(Restapi.Account.Telephony.Sessions.Parties.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,16 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
         }
 
         /// <summary>
-        ///     Ignores a call to a call queue agent in `Setup` or `Proceeding` state.
-        ///     HTTP Method: post
-        ///     Endpoint:
-        ///     /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
-        ///     Rate Limit Group: Light
-        ///     App Permission: CallControl
+        /// Ignores a call to a call queue agent in `Setup` or `Proceeding` state.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
+        /// Rate Limit Group: Light
+        /// App Permission: CallControl
         /// </summary>
-        public async Task<string> Post(IgnoreRequestBody ignoreRequestBody, RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(RingCentral.IgnoreRequestBody ignoreRequestBody,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), ignoreRequestBody, null, restRequestConfig);
+            return await rc.Post<string>(this.Path(), ignoreRequestBody, null, restRequestConfig);
         }
     }
 }
@@ -37,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 {
     public partial class Index
     {
-        public Ignore.Index Ignore()
+        public Restapi.Account.Telephony.Sessions.Parties.Ignore.Index Ignore()
         {
-            return new Ignore.Index(this);
+            return new Restapi.Account.Telephony.Sessions.Parties.Ignore.Index(this);
         }
     }
 }

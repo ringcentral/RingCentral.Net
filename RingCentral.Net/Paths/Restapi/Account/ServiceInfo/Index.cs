@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.ServiceInfo
 {
-    public class Index
+    public partial class Index
     {
-        public Account.Index parent;
         public RestClient rc;
+        public Restapi.Account.Index parent;
 
-        public Index(Account.Index parent)
+        public Index(Restapi.Account.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,16 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
         }
 
         /// <summary>
-        ///     Returns the information about service plan, available features and limitations for a particular RingCentral
-        ///     customer account.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ReadServicePlanInfo
+        /// Returns the information about service plan, available features and limitations for a particular RingCentral customer account.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadServicePlanInfo
         /// </summary>
-        public async Task<GetServiceInfoResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GetServiceInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetServiceInfoResponse>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.GetServiceInfoResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -38,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public ServiceInfo.Index ServiceInfo()
+        public Restapi.Account.ServiceInfo.Index ServiceInfo()
         {
-            return new ServiceInfo.Index(this);
+            return new Restapi.Account.ServiceInfo.Index(this);
         }
     }
 }

@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
 {
-    public class Index
+    public partial class Index
     {
-        public AuthzProfile.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.AuthzProfile.Index parent;
 
-        public Index(AuthzProfile.Index parent)
+        public Index(Restapi.Account.Extension.AuthzProfile.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,15 +21,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
         }
 
         /// <summary>
-        ///     Checks if a certain user permission is activated for a particular extension.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check
-        ///     Rate Limit Group: Light
+        /// Checks if a certain user permission is activated for a particular extension.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check
+        /// Rate Limit Group: Light
         /// </summary>
-        public async Task<AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.AuthProfileCheckResource> Get(
+            RingCentral.CheckUserPermissionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<AuthProfileCheckResource>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -36,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
 {
     public partial class Index
     {
-        public Check.Index Check()
+        public Restapi.Account.Extension.AuthzProfile.Check.Index Check()
         {
-            return new Check.Index(this);
+            return new Restapi.Account.Extension.AuthzProfile.Check.Index(this);
         }
     }
 }

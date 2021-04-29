@@ -1,63 +1,70 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Notes
 {
     public partial class Index
     {
-        public string noteId;
-        public Glip.Index parent;
         public RestClient rc;
+        public Restapi.Glip.Index parent;
+        public string noteId;
 
-        public Index(Glip.Index parent, string noteId = null)
+        public Index(Restapi.Glip.Index parent, string noteId = null)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
             this.noteId = noteId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && noteId != null) return $"{parent.Path()}/notes/{noteId}";
+            if (withParameter && noteId != null)
+            {
+                return $"{parent.Path()}/notes/{noteId}";
+            }
+
             return $"{parent.Path()}/notes";
         }
 
         /// <summary>
-        ///     Returns the specified note(s). It is possible to fetch up to 50 notes per request.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Returns the specified note(s). It is possible to fetch up to 50 notes per request.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
-        public async Task<GetGlipNoteInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GetGlipNoteInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetGlipNoteInfo>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.GetGlipNoteInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Deletes the specified note.
-        ///     HTTP Method: delete
-        ///     Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Deletes the specified note.
+        /// HTTP Method: delete
+        /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Edits a note. Notes can be edited by any user if posted to a chat. the user belongs to.
-        ///     HTTP Method: patch
-        ///     Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Edits a note. Notes can be edited by any user if posted to a chat. the user belongs to.
+        /// HTTP Method: patch
+        /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
-        public async Task<GlipNoteInfo> Patch(GlipNoteCreate glipNoteCreate, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<GlipNoteInfo>(Path(), glipNoteCreate, null, restRequestConfig);
+            return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, restRequestConfig);
         }
     }
 }
@@ -66,9 +73,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Notes.Index Notes(string noteId = null)
+        public Restapi.Glip.Notes.Index Notes(string noteId = null)
         {
-            return new Notes.Index(this, noteId);
+            return new Restapi.Glip.Notes.Index(this, noteId);
         }
     }
 }

@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
 {
-    public class Index
+    public partial class Index
     {
-        public Extension.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.Index parent;
 
-        public Index(Extension.Index parent)
+        public Index(Restapi.Account.Extension.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
         }
 
         /// <summary>
-        ///     Returns records of all extension calls that are in progress, ordered by start time in descending order.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/active-calls
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: ReadCallLog
-        ///     User Permission: ReadCallLog
+        /// Returns records of all extension calls that are in progress, ordered by start time in descending order.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/active-calls
+        /// Rate Limit Group: Heavy
+        /// App Permission: ReadCallLog
+        /// User Permission: ReadCallLog
         /// </summary>
-        public async Task<UserActiveCallsResponse> Get(ListExtensionActiveCallsParameters queryParams = null,
+        public async Task<RingCentral.UserActiveCallsResponse> Get(
+            RingCentral.ListExtensionActiveCallsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<UserActiveCallsResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.UserActiveCallsResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +41,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public ActiveCalls.Index ActiveCalls()
+        public Restapi.Account.Extension.ActiveCalls.Index ActiveCalls()
         {
-            return new ActiveCalls.Index(this);
+            return new Restapi.Account.Extension.ActiveCalls.Index(this);
         }
     }
 }

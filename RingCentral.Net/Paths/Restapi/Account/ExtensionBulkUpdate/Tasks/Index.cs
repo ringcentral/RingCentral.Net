@@ -1,37 +1,43 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate.Tasks
 {
-    public class Index
+    public partial class Index
     {
-        public ExtensionBulkUpdate.Index parent;
         public RestClient rc;
+        public Restapi.Account.ExtensionBulkUpdate.Index parent;
         public string taskId;
 
-        public Index(ExtensionBulkUpdate.Index parent, string taskId = null)
+        public Index(Restapi.Account.ExtensionBulkUpdate.Index parent, string taskId = null)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
             this.taskId = taskId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+            if (withParameter && taskId != null)
+            {
+                return $"{parent.Path()}/tasks/{taskId}";
+            }
+
             return $"{parent.Path()}/tasks";
         }
 
         /// <summary>
-        ///     Returns the status of multiple extension update task
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update/tasks/{taskId}
-        ///     Rate Limit Group: Light
-        ///     App Permission: EditExtensions
-        ///     User Permission: EditExtensionInfo
+        /// Returns the status of multiple extension update task
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update/tasks/{taskId}
+        /// Rate Limit Group: Light
+        /// App Permission: EditExtensions
+        /// User Permission: EditExtensionInfo
         /// </summary>
-        public async Task<ExtensionBulkUpdateTaskResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.ExtensionBulkUpdateTaskResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<ExtensionBulkUpdateTaskResource>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.ExtensionBulkUpdateTaskResource>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -40,9 +46,9 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate
 {
     public partial class Index
     {
-        public Tasks.Index Tasks(string taskId = null)
+        public Restapi.Account.ExtensionBulkUpdate.Tasks.Index Tasks(string taskId = null)
         {
-            return new Tasks.Index(this, taskId);
+            return new Restapi.Account.ExtensionBulkUpdate.Tasks.Index(this, taskId);
         }
     }
 }

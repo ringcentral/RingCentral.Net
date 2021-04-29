@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.NumberParser.Parse
 {
-    public class Index
+    public partial class Index
     {
-        public NumberParser.Index parent;
         public RestClient rc;
+        public Restapi.NumberParser.Index parent;
 
-        public Index(NumberParser.Index parent)
+        public Index(Restapi.NumberParser.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,17 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
         }
 
         /// <summary>
-        ///     Returns one or more parsed and/or formatted phone numbers that are passed as a string.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/number-parser/parse
-        ///     Rate Limit Group: Light
+        /// Returns one or more parsed and/or formatted phone numbers that are passed as a string.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/number-parser/parse
+        /// Rate Limit Group: Light
         /// </summary>
-        public async Task<ParsePhoneNumberResponse> Post(ParsePhoneNumberRequest parsePhoneNumberRequest,
-            ParsePhoneNumberParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.ParsePhoneNumberResponse> Post(
+            RingCentral.ParsePhoneNumberRequest parsePhoneNumberRequest,
+            RingCentral.ParsePhoneNumberParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<ParsePhoneNumberResponse>(Path(), parsePhoneNumberRequest, queryParams,
-                restRequestConfig);
+            return await rc.Post<RingCentral.ParsePhoneNumberResponse>(this.Path(), parsePhoneNumberRequest,
+                queryParams, restRequestConfig);
         }
     }
 }
@@ -37,9 +40,9 @@ namespace RingCentral.Paths.Restapi.NumberParser
 {
     public partial class Index
     {
-        public Parse.Index Parse()
+        public Restapi.NumberParser.Parse.Index Parse()
         {
-            return new Parse.Index(this);
+            return new Restapi.NumberParser.Parse.Index(this);
         }
     }
 }

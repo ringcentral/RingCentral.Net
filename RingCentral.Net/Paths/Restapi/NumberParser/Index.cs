@@ -1,14 +1,18 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Restapi.NumberParser
 {
     public partial class Index
     {
-        public Restapi.Index parent;
         public RestClient rc;
+        public Restapi.Index parent;
 
         public Index(Restapi.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +26,9 @@ namespace RingCentral.Paths.Restapi
 {
     public partial class Index
     {
-        public NumberParser.Index NumberParser()
+        public Restapi.NumberParser.Index NumberParser()
         {
-            return new NumberParser.Index(this);
+            return new Restapi.NumberParser.Index(this);
         }
     }
 }

@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Scim.Users.DotSearch
 {
-    public class Index
+    public partial class Index
     {
-        public Users.Index parent;
         public RestClient rc;
+        public Scim.Users.Index parent;
 
-        public Index(Users.Index parent)
+        public Index(Scim.Users.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,16 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         }
 
         /// <summary>
-        ///     Search/List Users
-        ///     HTTP Method: post
-        ///     Endpoint: /scim/{version}/Users/dotSearch
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadAccounts
+        /// Search/List Users
+        /// HTTP Method: post
+        /// Endpoint: /scim/{version}/Users/dotSearch
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
         /// </summary>
-        public async Task<UserSearchResponse> Post(SearchRequest searchRequest,
+        public async Task<RingCentral.UserSearchResponse> Post(RingCentral.SearchRequest searchRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<UserSearchResponse>(Path(), searchRequest, null, restRequestConfig);
+            return await rc.Post<RingCentral.UserSearchResponse>(this.Path(), searchRequest, null, restRequestConfig);
         }
     }
 }
@@ -37,9 +39,9 @@ namespace RingCentral.Paths.Scim.Users
 {
     public partial class Index
     {
-        public DotSearch.Index DotSearch()
+        public Scim.Users.DotSearch.Index DotSearch()
         {
-            return new DotSearch.Index(this);
+            return new Scim.Users.DotSearch.Index(this);
         }
     }
 }

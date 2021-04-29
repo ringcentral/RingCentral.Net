@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Everyone
 {
-    public class Index
+    public partial class Index
     {
-        public Glip.Index parent;
         public RestClient rc;
+        public Restapi.Glip.Index parent;
 
-        public Index(Glip.Index parent)
+        public Index(Restapi.Glip.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,32 +21,31 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         }
 
         /// <summary>
-        ///     Returns information about Everyone chat, which is a company level chat including all employees; assigned with
-        ///     specific name.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/glip/everyone
-        ///     Rate Limit Group: Light
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Returns information about Everyone chat, which is a company level chat including all employees; assigned with specific name.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/glip/everyone
+        /// Rate Limit Group: Light
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
-        public async Task<GlipEveryoneInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipEveryoneInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GlipEveryoneInfo>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.GlipEveryoneInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Updates Everyone chat information. Everyone chat is a company level chat including all employees; assigned with
-        ///     specific name.
-        ///     HTTP Method: patch
-        ///     Endpoint: /restapi/{apiVersion}/glip/everyone
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Updates Everyone chat information. Everyone chat is a company level chat including all employees; assigned with specific name.
+        /// HTTP Method: patch
+        /// Endpoint: /restapi/{apiVersion}/glip/everyone
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
-        public async Task<GlipEveryoneInfo> Patch(UpdateGlipEveryoneRequest updateGlipEveryoneRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipEveryoneInfo> Patch(
+            RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<GlipEveryoneInfo>(Path(), updateGlipEveryoneRequest, null, restRequestConfig);
+            return await rc.Patch<RingCentral.GlipEveryoneInfo>(this.Path(), updateGlipEveryoneRequest, null,
+                restRequestConfig);
         }
     }
 }
@@ -53,9 +54,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Everyone.Index Everyone()
+        public Restapi.Glip.Everyone.Index Everyone()
         {
-            return new Everyone.Index(this);
+            return new Restapi.Glip.Everyone.Index(this);
         }
     }
 }

@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
 {
-    public class Index
+    public partial class Index
     {
-        public Extension.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.Index parent;
 
-        public Index(Extension.Index parent)
+        public Index(Restapi.Account.Extension.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,19 +21,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
         }
 
         /// <summary>
-        ///     Returns the list of phone numbers that are used by a particular extension, and can be filtered by the phone number
-        ///     type. The returned list contains all numbers which are directly mapped to a given extension plus the features and
-        ///     also company-level numbers which may be used when performing different operations on behalf of this extension.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ReadUserPhoneNumbers
+        /// Returns the list of phone numbers that are used by a particular extension, and can be filtered by the phone number type. The returned list contains all numbers which are directly mapped to a given extension plus the features and also company-level numbers which may be used when performing different operations on behalf of this extension.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadUserPhoneNumbers
         /// </summary>
-        public async Task<GetExtensionPhoneNumbersResponse> Get(ListExtensionPhoneNumbersParameters queryParams = null,
+        public async Task<RingCentral.GetExtensionPhoneNumbersResponse> Get(
+            RingCentral.ListExtensionPhoneNumbersParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetExtensionPhoneNumbersResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.GetExtensionPhoneNumbersResponse>(this.Path(), queryParams,
+                restRequestConfig);
         }
     }
 }
@@ -40,9 +42,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public PhoneNumber.Index PhoneNumber()
+        public Restapi.Account.Extension.PhoneNumber.Index PhoneNumber()
         {
-            return new PhoneNumber.Index(this);
+            return new Restapi.Account.Extension.PhoneNumber.Index(this);
         }
     }
 }

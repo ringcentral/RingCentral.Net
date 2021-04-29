@@ -4,6 +4,7 @@ import path from 'path';
 import {pascalCase, capitalCase} from 'change-case';
 import R from 'ramda';
 import {Operation} from 'ringcentral-open-api-parser/lib/types';
+
 import {capitalizeFirstLetter} from './utils';
 
 const outputDir = '../RingCentral.Net/Paths';
@@ -146,9 +147,7 @@ const generateOperationMethod = (
     ) {
       responseType = 'byte[]';
     } else if (operation.responseSchema.$ref) {
-      responseType = `RingCentral.${R.last(
-        operation.responseSchema.$ref.split('/')
-      )}`;
+      responseType = `RingCentral.${operation.responseSchema.$ref}`;
     }
   }
 

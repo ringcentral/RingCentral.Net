@@ -1,47 +1,53 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Dictionary.State
 {
-    public class Index
+    public partial class Index
     {
-        public Dictionary.Index parent;
         public RestClient rc;
+        public Restapi.Dictionary.Index parent;
         public string stateId;
 
-        public Index(Dictionary.Index parent, string stateId = null)
+        public Index(Restapi.Dictionary.Index parent, string stateId = null)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
             this.stateId = stateId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && stateId != null) return $"{parent.Path()}/state/{stateId}";
+            if (withParameter && stateId != null)
+            {
+                return $"{parent.Path()}/state/{stateId}";
+            }
+
             return $"{parent.Path()}/state";
         }
 
         /// <summary>
-        ///     Returns all the states of a certain country
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/dictionary/state
-        ///     Rate Limit Group: Light
+        /// Returns all the states of a certain country
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/dictionary/state
+        /// Rate Limit Group: Light
         /// </summary>
-        public async Task<GetStateListResponse> List(ListStatesParameters queryParams = null,
+        public async Task<RingCentral.GetStateListResponse> List(RingCentral.ListStatesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetStateListResponse>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.GetStateListResponse>(this.Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        ///     Returns the information on a specific state.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/dictionary/state/{stateId}
-        ///     Rate Limit Group: Light
+        /// Returns the information on a specific state.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/dictionary/state/{stateId}
+        /// Rate Limit Group: Light
         /// </summary>
-        public async Task<GetStateInfoResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GetStateInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetStateInfoResponse>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.GetStateInfoResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -50,9 +56,9 @@ namespace RingCentral.Paths.Restapi.Dictionary
 {
     public partial class Index
     {
-        public State.Index State(string stateId = null)
+        public Restapi.Dictionary.State.Index State(string stateId = null)
         {
-            return new State.Index(this, stateId);
+            return new Restapi.Dictionary.State.Index(this, stateId);
         }
     }
 }

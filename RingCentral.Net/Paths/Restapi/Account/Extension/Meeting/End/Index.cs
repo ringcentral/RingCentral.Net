@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
 {
-    public class Index
+    public partial class Index
     {
-        public Meeting.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.Meeting.Index parent;
 
-        public Index(Meeting.Index parent)
+        public Index(Restapi.Account.Extension.Meeting.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.End
         }
 
         /// <summary>
-        ///     Ends a meetings which is in progress.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Meetings
-        ///     User Permission: Meetings
+        /// Ends a meetings which is in progress.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
+        /// Rate Limit Group: Medium
+        /// App Permission: Meetings
+        /// User Permission: Meetings
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), null, restRequestConfig);
+            return await rc.Post<string>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
 {
     public partial class Index
     {
-        public End.Index End()
+        public Restapi.Account.Extension.Meeting.End.Index End()
         {
-            return new End.Index(this);
+            return new Restapi.Account.Extension.Meeting.End.Index(this);
         }
     }
 }

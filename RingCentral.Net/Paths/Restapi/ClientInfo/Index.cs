@@ -1,14 +1,18 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Restapi.ClientInfo
 {
     public partial class Index
     {
-        public Restapi.Index parent;
         public RestClient rc;
+        public Restapi.Index parent;
 
         public Index(Restapi.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +26,9 @@ namespace RingCentral.Paths.Restapi
 {
     public partial class Index
     {
-        public ClientInfo.Index ClientInfo()
+        public Restapi.ClientInfo.Index ClientInfo()
         {
-            return new ClientInfo.Index(this);
+            return new Restapi.ClientInfo.Index(this);
         }
     }
 }

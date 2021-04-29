@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Webhooks.Activate
 {
-    public class Index
+    public partial class Index
     {
-        public Webhooks.Index parent;
         public RestClient rc;
+        public Restapi.Glip.Webhooks.Index parent;
 
-        public Index(Webhooks.Index parent)
+        public Index(Restapi.Glip.Webhooks.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,16 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks.Activate
         }
 
         /// <summary>
-        ///     Activates a webhook by ID.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/glip/webhooks/{webhookId}/activate
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Activates a webhook by ID.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/glip/webhooks/{webhookId}/activate
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), null, restRequestConfig);
+            return await rc.Post<string>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
 {
     public partial class Index
     {
-        public Activate.Index Activate()
+        public Restapi.Glip.Webhooks.Activate.Index Activate()
         {
-            return new Activate.Index(this);
+            return new Restapi.Glip.Webhooks.Activate.Index(this);
         }
     }
 }

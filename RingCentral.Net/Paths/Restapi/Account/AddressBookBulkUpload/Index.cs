@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload
 {
     public partial class Index
     {
-        public Account.Index parent;
         public RestClient rc;
+        public Restapi.Account.Index parent;
 
-        public Index(Account.Index parent)
+        public Index(Restapi.Account.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,19 +21,19 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload
         }
 
         /// <summary>
-        ///     Uploads multiple contacts for multiple extensions at once. Maximum 500 extension, each up to 10000 contacts, can be
-        ///     updated per request.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: Contacts
-        ///     User Permission: EditPersonalContacts
+        /// Uploads multiple contacts for multiple extensions at once. Maximum 500 extension, each up to 10000 contacts, can be updated per request.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload
+        /// Rate Limit Group: Heavy
+        /// App Permission: Contacts
+        /// User Permission: EditPersonalContacts
         /// </summary>
-        public async Task<AddressBookBulkUploadResponse> Post(AddressBookBulkUploadRequest addressBookBulkUploadRequest,
+        public async Task<RingCentral.AddressBookBulkUploadResponse> Post(
+            RingCentral.AddressBookBulkUploadRequest addressBookBulkUploadRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AddressBookBulkUploadResponse>(Path(), addressBookBulkUploadRequest, null,
-                restRequestConfig);
+            return await rc.Post<RingCentral.AddressBookBulkUploadResponse>(this.Path(), addressBookBulkUploadRequest,
+                null, restRequestConfig);
         }
     }
 }
@@ -40,9 +42,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public AddressBookBulkUpload.Index AddressBookBulkUpload()
+        public Restapi.Account.AddressBookBulkUpload.Index AddressBookBulkUpload()
         {
-            return new AddressBookBulkUpload.Index(this);
+            return new Restapi.Account.AddressBookBulkUpload.Index(this);
         }
     }
 }

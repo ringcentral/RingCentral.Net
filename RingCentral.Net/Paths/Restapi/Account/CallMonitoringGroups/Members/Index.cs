@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
 {
-    public class Index
+    public partial class Index
     {
-        public CallMonitoringGroups.Index parent;
         public RestClient rc;
+        public Restapi.Account.CallMonitoringGroups.Index parent;
 
-        public Index(CallMonitoringGroups.Index parent)
+        public Index(Restapi.Account.CallMonitoringGroups.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,18 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
         }
 
         /// <summary>
-        ///     Returns call monitoring group members.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/members
-        ///     Rate Limit Group: Medium
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ReadExtensions
+        /// Returns call monitoring group members.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/members
+        /// Rate Limit Group: Medium
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<CallMonitoringGroupMemberList> Get(
-            ListCallMonitoringGroupMembersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.CallMonitoringGroupMemberList> Get(
+            RingCentral.ListCallMonitoringGroupMembersParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<CallMonitoringGroupMemberList>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +41,9 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 {
     public partial class Index
     {
-        public Members.Index Members()
+        public Restapi.Account.CallMonitoringGroups.Members.Index Members()
         {
-            return new Members.Index(this);
+            return new Restapi.Account.CallMonitoringGroups.Members.Index(this);
         }
     }
 }

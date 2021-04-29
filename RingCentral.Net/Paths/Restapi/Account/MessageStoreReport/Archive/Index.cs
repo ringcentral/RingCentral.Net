@@ -1,50 +1,56 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
 {
-    public class Index
+    public partial class Index
     {
-        public string archiveId;
-        public MessageStoreReport.Index parent;
         public RestClient rc;
+        public Restapi.Account.MessageStoreReport.Index parent;
+        public string archiveId;
 
-        public Index(MessageStoreReport.Index parent, string archiveId = null)
+        public Index(Restapi.Account.MessageStoreReport.Index parent, string archiveId = null)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
             this.archiveId = archiveId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && archiveId != null) return $"{parent.Path()}/archive/{archiveId}";
+            if (withParameter && archiveId != null)
+            {
+                return $"{parent.Path()}/archive/{archiveId}";
+            }
+
             return $"{parent.Path()}/archive";
         }
 
         /// <summary>
-        ///     Returns the created report with message data not including attachments.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: ReadMessages
-        ///     User Permission: Users
+        /// Returns the created report with message data not including attachments.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive
+        /// Rate Limit Group: Heavy
+        /// App Permission: ReadMessages
+        /// User Permission: Users
         /// </summary>
-        public async Task<MessageStoreReportArchive> List(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.MessageStoreReportArchive> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<MessageStoreReportArchive>(Path(false), null, restRequestConfig);
+            return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Returns one of the report archives with message contents in application/zip format.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: ReadMessages
-        ///     User Permission: Users
+        /// Returns one of the report archives with message contents in application/zip format.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
+        /// Rate Limit Group: Heavy
+        /// App Permission: ReadMessages
+        /// User Permission: Users
         /// </summary>
         public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<byte[]>(Path(), null, restRequestConfig);
+            return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -53,9 +59,9 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
 {
     public partial class Index
     {
-        public Archive.Index Archive(string archiveId = null)
+        public Restapi.Account.MessageStoreReport.Archive.Index Archive(string archiveId = null)
         {
-            return new Archive.Index(this, archiveId);
+            return new Restapi.Account.MessageStoreReport.Archive.Index(this, archiveId);
         }
     }
 }

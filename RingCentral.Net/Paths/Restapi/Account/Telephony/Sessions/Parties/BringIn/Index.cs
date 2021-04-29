@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn
 {
-    public class Index
+    public partial class Index
     {
-        public Parties.Index parent;
         public RestClient rc;
+        public Restapi.Account.Telephony.Sessions.Parties.Index parent;
 
-        public Index(Parties.Index parent)
+        public Index(Restapi.Account.Telephony.Sessions.Parties.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,16 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn
         }
 
         /// <summary>
-        ///     Adds a new party to the call session by bringing-in an established SIP call connection. The maximum number of
-        ///     parties to bring-in is 10; only 1 call party can be added per request. Currently the method is supported for
-        ///     sessions of 'Conference' origin only.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in
-        ///     Rate Limit Group: Light
-        ///     App Permission: CallControl
+        /// Adds a new party to the call session by bringing-in an established SIP call connection. The maximum number of parties to bring-in is 10; only 1 call party can be added per request. Currently the method is supported for sessions of 'Conference' origin only.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in
+        /// Rate Limit Group: Light
+        /// App Permission: CallControl
         /// </summary>
-        public async Task<CallParty> Post(AddPartyRequest addPartyRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.CallParty> Post(RingCentral.AddPartyRequest addPartyRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CallParty>(Path(), addPartyRequest, null, restRequestConfig);
+            return await rc.Post<RingCentral.CallParty>(this.Path(), addPartyRequest, null, restRequestConfig);
         }
     }
 }
@@ -38,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 {
     public partial class Index
     {
-        public BringIn.Index BringIn()
+        public Restapi.Account.Telephony.Sessions.Parties.BringIn.Index BringIn()
         {
-            return new BringIn.Index(this);
+            return new Restapi.Account.Telephony.Sessions.Parties.BringIn.Index(this);
         }
     }
 }

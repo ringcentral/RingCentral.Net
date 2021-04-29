@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
 {
-    public class Index
+    public partial class Index
     {
-        public Parties.Index parent;
         public RestClient rc;
+        public Restapi.Account.Telephony.Sessions.Parties.Index parent;
 
-        public Index(Parties.Index parent)
+        public Index(Restapi.Account.Telephony.Sessions.Parties.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,15 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
         }
 
         /// <summary>
-        ///     Rejects an inbound call in a "Setup" or "Proceeding" state
-        ///     HTTP Method: post
-        ///     Endpoint:
-        ///     /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
-        ///     Rate Limit Group: Light
-        ///     App Permission: CallControl
+        /// Rejects an inbound call in a "Setup" or "Proceeding" state
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
+        /// Rate Limit Group: Light
+        /// App Permission: CallControl
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), null, restRequestConfig);
+            return await rc.Post<string>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 {
     public partial class Index
     {
-        public Reject.Index Reject()
+        public Restapi.Account.Telephony.Sessions.Parties.Reject.Index Reject()
         {
-            return new Reject.Index(this);
+            return new Restapi.Account.Telephony.Sessions.Parties.Reject.Index(this);
         }
     }
 }

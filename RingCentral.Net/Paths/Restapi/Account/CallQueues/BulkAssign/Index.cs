@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
 {
-    public class Index
+    public partial class Index
     {
-        public CallQueues.Index parent;
         public RestClient rc;
+        public Restapi.Account.CallQueues.Index parent;
 
-        public Index(CallQueues.Index parent)
+        public Index(Restapi.Account.CallQueues.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,17 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.BulkAssign
         }
 
         /// <summary>
-        ///     Updates a call queue group.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/bulk-assign
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: EditExtensions
-        ///     User Permission: Groups
+        /// Updates a call queue group.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/bulk-assign
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditExtensions
+        /// User Permission: Groups
         /// </summary>
-        public async Task<string> Post(CallQueueBulkAssignResource callQueueBulkAssignResource,
+        public async Task<string> Post(RingCentral.CallQueueBulkAssignResource callQueueBulkAssignResource,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), callQueueBulkAssignResource, null, restRequestConfig);
+            return await rc.Post<string>(this.Path(), callQueueBulkAssignResource, null, restRequestConfig);
         }
     }
 }
@@ -38,9 +40,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
 {
     public partial class Index
     {
-        public BulkAssign.Index BulkAssign()
+        public Restapi.Account.CallQueues.BulkAssign.Index BulkAssign()
         {
-            return new BulkAssign.Index(this);
+            return new Restapi.Account.CallQueues.BulkAssign.Index(this);
         }
     }
 }

@@ -1,63 +1,69 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Webhooks
 {
     public partial class Index
     {
-        public Glip.Index parent;
         public RestClient rc;
+        public Restapi.Glip.Index parent;
         public string webhookId;
 
-        public Index(Glip.Index parent, string webhookId = null)
+        public Index(Restapi.Glip.Index parent, string webhookId = null)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
             this.webhookId = webhookId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && webhookId != null) return $"{parent.Path()}/webhooks/{webhookId}";
+            if (withParameter && webhookId != null)
+            {
+                return $"{parent.Path()}/webhooks/{webhookId}";
+            }
+
             return $"{parent.Path()}/webhooks";
         }
 
         /// <summary>
-        ///     Returns the list of all webhooks associated with the current account.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/glip/webhooks
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Returns the list of all webhooks associated with the current account.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/glip/webhooks
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
-        public async Task<GlipWebhookList> List(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipWebhookList> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GlipWebhookList>(Path(false), null, restRequestConfig);
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(false), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Returns webhooks(s) with the specified id(s).
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/glip/webhooks/{webhookId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Returns webhooks(s) with the specified id(s).
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/glip/webhooks/{webhookId}
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
-        public async Task<GlipWebhookList> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipWebhookList> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GlipWebhookList>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Deletes a webhook by ID.
-        ///     HTTP Method: delete
-        ///     Endpoint: /restapi/{apiVersion}/glip/webhooks/{webhookId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: Glip
-        ///     User Permission: Glip
+        /// Deletes a webhook by ID.
+        /// HTTP Method: delete
+        /// Endpoint: /restapi/{apiVersion}/glip/webhooks/{webhookId}
+        /// Rate Limit Group: Medium
+        /// App Permission: Glip
+        /// User Permission: Glip
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -66,9 +72,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Webhooks.Index Webhooks(string webhookId = null)
+        public Restapi.Glip.Webhooks.Index Webhooks(string webhookId = null)
         {
-            return new Webhooks.Index(this, webhookId);
+            return new Restapi.Glip.Webhooks.Index(this, webhookId);
         }
     }
 }

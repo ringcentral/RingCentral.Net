@@ -1,57 +1,64 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Tasks
 {
     public partial class Index
     {
-        public Glip.Index parent;
         public RestClient rc;
+        public Restapi.Glip.Index parent;
         public string taskId;
 
-        public Index(Glip.Index parent, string taskId = null)
+        public Index(Restapi.Glip.Index parent, string taskId = null)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
             this.taskId = taskId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+            if (withParameter && taskId != null)
+            {
+                return $"{parent.Path()}/tasks/{taskId}";
+            }
+
             return $"{parent.Path()}/tasks";
         }
 
         /// <summary>
-        ///     Returns information about the specified task(s) by ID(s).
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
-        ///     Rate Limit Group: Medium
+        /// Returns information about the specified task(s) by ID(s).
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
+        /// Rate Limit Group: Medium
         /// </summary>
-        public async Task<GlipTaskInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GlipTaskInfo>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.GlipTaskInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Deletes the specified task.
-        ///     HTTP Method: delete
-        ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
-        ///     Rate Limit Group: Medium
+        /// Deletes the specified task.
+        /// HTTP Method: delete
+        /// Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
+        /// Rate Limit Group: Medium
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Updates the specified task by ID.
-        ///     HTTP Method: patch
-        ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
-        ///     Rate Limit Group: Medium
+        /// Updates the specified task by ID.
+        /// HTTP Method: patch
+        /// Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
+        /// Rate Limit Group: Medium
         /// </summary>
-        public async Task<GlipTaskList> Patch(GlipUpdateTask glipUpdateTask, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.GlipTaskList> Patch(RingCentral.GlipUpdateTask glipUpdateTask,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<GlipTaskList>(Path(), glipUpdateTask, null, restRequestConfig);
+            return await rc.Patch<RingCentral.GlipTaskList>(this.Path(), glipUpdateTask, null, restRequestConfig);
         }
     }
 }
@@ -60,9 +67,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Tasks.Index Tasks(string taskId = null)
+        public Restapi.Glip.Tasks.Index Tasks(string taskId = null)
         {
-            return new Tasks.Index(this, taskId);
+            return new Restapi.Glip.Tasks.Index(this, taskId);
         }
     }
 }

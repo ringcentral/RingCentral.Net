@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
 {
-    public class Index
+    public partial class Index
     {
-        public Extension.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.Index parent;
 
-        public Index(Extension.Index parent)
+        public Index(Restapi.Account.Extension.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,19 +21,19 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
         }
 
         /// <summary>
-        ///     Creates and sends an internal text message.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/company-pager
-        ///     Rate Limit Group: Medium
-        ///     App Permission: InternalMessages
-        ///     User Permission: InternalSMS
+        /// Creates and sends an internal text message.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/company-pager
+        /// Rate Limit Group: Medium
+        /// App Permission: InternalMessages
+        /// User Permission: InternalSMS
         /// </summary>
-        public async Task<GetInternalTextMessageInfoResponse> Post(
-            CreateInternalTextMessageRequest createInternalTextMessageRequest,
+        public async Task<RingCentral.GetInternalTextMessageInfoResponse> Post(
+            RingCentral.CreateInternalTextMessageRequest createInternalTextMessageRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<GetInternalTextMessageInfoResponse>(Path(), createInternalTextMessageRequest, null,
-                restRequestConfig);
+            return await rc.Post<RingCentral.GetInternalTextMessageInfoResponse>(this.Path(),
+                createInternalTextMessageRequest, null, restRequestConfig);
         }
     }
 }
@@ -40,9 +42,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public CompanyPager.Index CompanyPager()
+        public Restapi.Account.Extension.CompanyPager.Index CompanyPager()
         {
-            return new CompanyPager.Index(this);
+            return new Restapi.Account.Extension.CompanyPager.Index(this);
         }
     }
 }

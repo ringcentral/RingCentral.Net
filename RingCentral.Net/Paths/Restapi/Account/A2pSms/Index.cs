@@ -1,14 +1,18 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Restapi.Account.A2pSms
 {
     public partial class Index
     {
-        public Account.Index parent;
         public RestClient rc;
+        public Restapi.Account.Index parent;
 
-        public Index(Account.Index parent)
+        public Index(Restapi.Account.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +26,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public A2pSms.Index A2pSms()
+        public Restapi.Account.A2pSms.Index A2pSms()
         {
-            return new A2pSms.Index(this);
+            return new Restapi.Account.A2pSms.Index(this);
         }
     }
 }

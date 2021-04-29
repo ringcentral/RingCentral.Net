@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
 {
-    public class Index
+    public partial class Index
     {
-        public Extension.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.Index parent;
 
-        public Index(Extension.Index parent)
+        public Index(Restapi.Account.Extension.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,17 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageSync
         }
 
         /// <summary>
-        ///     Synchronizes messages.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-sync
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadMessages
-        ///     User Permission: ReadMessages
+        /// Synchronizes messages.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-sync
+        /// Rate Limit Group: Light
+        /// App Permission: ReadMessages
+        /// User Permission: ReadMessages
         /// </summary>
-        public async Task<GetMessageSyncResponse> Get(SyncMessagesParameters queryParams = null,
+        public async Task<RingCentral.GetMessageSyncResponse> Get(RingCentral.SyncMessagesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetMessageSyncResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.GetMessageSyncResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +40,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public MessageSync.Index MessageSync()
+        public Restapi.Account.Extension.MessageSync.Index MessageSync()
         {
-            return new MessageSync.Index(this);
+            return new Restapi.Account.Extension.MessageSync.Index(this);
         }
     }
 }

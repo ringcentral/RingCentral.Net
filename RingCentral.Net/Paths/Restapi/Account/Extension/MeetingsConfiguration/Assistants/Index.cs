@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assistants
 {
-    public class Index
+    public partial class Index
     {
-        public MeetingsConfiguration.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.MeetingsConfiguration.Index parent;
 
-        public Index(MeetingsConfiguration.Index parent)
+        public Index(Restapi.Account.Extension.MeetingsConfiguration.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration.Assi
         }
 
         /// <summary>
-        ///     Returns assistants information.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
-        ///     Rate Limit Group: Light
-        ///     App Permission: Meetings
-        ///     User Permission: Meetings
+        /// Returns assistants information.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
+        /// Rate Limit Group: Light
+        /// App Permission: Meetings
+        /// User Permission: Meetings
         /// </summary>
-        public async Task<AssistantsResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.AssistantsResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<AssistantsResource>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.AssistantsResource>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingsConfiguration
 {
     public partial class Index
     {
-        public Assistants.Index Assistants()
+        public Restapi.Account.Extension.MeetingsConfiguration.Assistants.Index Assistants()
         {
-            return new Assistants.Index(this);
+            return new Restapi.Account.Extension.MeetingsConfiguration.Assistants.Index(this);
         }
     }
 }

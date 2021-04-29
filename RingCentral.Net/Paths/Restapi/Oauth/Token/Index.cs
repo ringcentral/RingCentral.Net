@@ -1,19 +1,18 @@
-using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Oauth.Token
 {
-    public class Index
+    public partial class Index
     {
-        public Oauth.Index parent;
         public RestClient rc;
+        public Restapi.Oauth.Index parent;
 
-        public Index(Oauth.Index parent)
+        public Index(Restapi.Oauth.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -22,16 +21,18 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         }
 
         /// <summary>
-        ///     Returns access tokens for making API requests
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/oauth/token
-        ///     Rate Limit Group: Auth
+        /// Returns access tokens for making API requests
+        /// HTTP Method: post
+        /// Endpoint: /restapi/oauth/token
+        /// Rate Limit Group: Auth
         /// </summary>
-        public async Task<TokenInfo> Post(GetTokenRequest getTokenRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.TokenInfo> Post(RingCentral.GetTokenRequest getTokenRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            var dict = new Dictionary<string, string>();
+            var dict = new System.Collections.Generic.Dictionary<string, string>();
             Utils.GetPairs(getTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<TokenInfo>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
+            return await rc.Post<RingCentral.TokenInfo>(this.Path(), new FormUrlEncodedContent(dict), null,
+                restRequestConfig);
         }
     }
 }
@@ -40,9 +41,9 @@ namespace RingCentral.Paths.Restapi.Oauth
 {
     public partial class Index
     {
-        public Token.Index Token()
+        public Restapi.Oauth.Token.Index Token()
         {
-            return new Token.Index(this);
+            return new Restapi.Oauth.Token.Index(this);
         }
     }
 }

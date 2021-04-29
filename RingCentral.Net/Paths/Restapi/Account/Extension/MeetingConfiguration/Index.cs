@@ -1,14 +1,18 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Restapi.Account.Extension.MeetingConfiguration
 {
     public partial class Index
     {
-        public Extension.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.Index parent;
 
-        public Index(Extension.Index parent)
+        public Index(Restapi.Account.Extension.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -22,9 +26,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public MeetingConfiguration.Index MeetingConfiguration()
+        public Restapi.Account.Extension.MeetingConfiguration.Index MeetingConfiguration()
         {
-            return new MeetingConfiguration.Index(this);
+            return new Restapi.Account.Extension.MeetingConfiguration.Index(this);
         }
     }
 }

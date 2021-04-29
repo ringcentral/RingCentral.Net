@@ -1,37 +1,43 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Tasks
 {
-    public class Index
+    public partial class Index
     {
-        public AddressBookBulkUpload.Index parent;
         public RestClient rc;
+        public Restapi.Account.AddressBookBulkUpload.Index parent;
         public string taskId;
 
-        public Index(AddressBookBulkUpload.Index parent, string taskId = null)
+        public Index(Restapi.Account.AddressBookBulkUpload.Index parent, string taskId = null)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
             this.taskId = taskId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+            if (withParameter && taskId != null)
+            {
+                return $"{parent.Path()}/tasks/{taskId}";
+            }
+
             return $"{parent.Path()}/tasks";
         }
 
         /// <summary>
-        ///     Returns the status of a task on adding multiple contacts to multiple extensions.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload/tasks/{taskId}
-        ///     Rate Limit Group: Light
-        ///     App Permission: Contacts
-        ///     User Permission: EditPersonalContacts
+        /// Returns the status of a task on adding multiple contacts to multiple extensions.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload/tasks/{taskId}
+        /// Rate Limit Group: Light
+        /// App Permission: Contacts
+        /// User Permission: EditPersonalContacts
         /// </summary>
-        public async Task<AddressBookBulkUploadResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.AddressBookBulkUploadResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<AddressBookBulkUploadResponse>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.AddressBookBulkUploadResponse>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -40,9 +46,9 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload
 {
     public partial class Index
     {
-        public Tasks.Index Tasks(string taskId = null)
+        public Restapi.Account.AddressBookBulkUpload.Tasks.Index Tasks(string taskId = null)
         {
-            return new Tasks.Index(this, taskId);
+            return new Restapi.Account.AddressBookBulkUpload.Tasks.Index(this, taskId);
         }
     }
 }

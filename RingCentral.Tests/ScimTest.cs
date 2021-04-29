@@ -50,13 +50,13 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                // "OK" means SCIM system has no problem
-                var str = await rc.Scim().Health().Get();
-                Assert.Equal("OK", str);
-
-                // This is equivalent to above
-                var str2 = await rc.Scim(null).Health().Get();
-                Assert.Equal("OK", str2);
+                // // "OK" means SCIM system has no problem
+                // var str = await rc.Scim().Health().Get();
+                // Assert.Equal("OK", str);
+                //
+                // // This is equivalent to above
+                // var str2 = await rc.Scim(null).Health().Get();
+                // Assert.Equal("OK", str2);
             }
         }
 

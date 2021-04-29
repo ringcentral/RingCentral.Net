@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
 {
     public partial class Index
     {
-        public Extension.Index parent;
         public RestClient rc;
+        public Restapi.Account.Extension.Index parent;
 
-        public Index(Extension.Index parent)
+        public Index(Restapi.Account.Extension.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,15 +21,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
         }
 
         /// <summary>
-        ///     Returns a list of user permissions granted at authorization procedure. Please note: Some permissions may be
-        ///     restricted by extension type.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
-        ///     Rate Limit Group: Medium
+        /// Returns a list of user permissions granted at authorization procedure. Please note: Some permissions may be restricted by extension type.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
+        /// Rate Limit Group: Medium
         /// </summary>
-        public async Task<AuthProfileResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.AuthProfileResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<AuthProfileResource>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.AuthProfileResource>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -36,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public AuthzProfile.Index AuthzProfile()
+        public Restapi.Account.Extension.AuthzProfile.Index AuthzProfile()
         {
-            return new AuthzProfile.Index(this);
+            return new Restapi.Account.Extension.AuthzProfile.Index(this);
         }
     }
 }

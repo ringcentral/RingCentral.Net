@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Directory.Federation
 {
-    public class Index
+    public partial class Index
     {
-        public Directory.Index parent;
         public RestClient rc;
+        public Restapi.Account.Directory.Index parent;
 
-        public Index(Directory.Index parent)
+        public Index(Restapi.Account.Directory.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,16 +21,16 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
         }
 
         /// <summary>
-        ///     Returns information on a federation and associated accounts.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/directory/federation
-        ///     Rate Limit Group: Medium
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ReadCompanyInfo
+        /// Returns information on a federation and associated accounts.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/directory/federation
+        /// Rate Limit Group: Medium
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<FederationResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.FederationResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<FederationResource>(Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.FederationResource>(this.Path(), null, restRequestConfig);
         }
     }
 }
@@ -37,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account.Directory
 {
     public partial class Index
     {
-        public Federation.Index Federation()
+        public Restapi.Account.Directory.Federation.Index Federation()
         {
-            return new Federation.Index(this);
+            return new Restapi.Account.Directory.Federation.Index(this);
         }
     }
 }

@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.ActiveCalls
 {
-    public class Index
+    public partial class Index
     {
-        public Account.Index parent;
         public RestClient rc;
+        public Restapi.Account.Index parent;
 
-        public Index(Account.Index parent)
+        public Index(Restapi.Account.Index parent)
         {
             this.parent = parent;
-            rc = parent.rc;
+            this.rc = parent.rc;
         }
 
         public string Path()
@@ -19,17 +21,17 @@ namespace RingCentral.Paths.Restapi.Account.ActiveCalls
         }
 
         /// <summary>
-        ///     Returns records of all calls that are in progress, ordered by start time in descending order.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/active-calls
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: ReadCallLog
-        ///     User Permission: ReadCallLog
+        /// Returns records of all calls that are in progress, ordered by start time in descending order.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/active-calls
+        /// Rate Limit Group: Heavy
+        /// App Permission: ReadCallLog
+        /// User Permission: ReadCallLog
         /// </summary>
-        public async Task<CompanyActiveCallsResponse> Get(ListCompanyActiveCallsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.CompanyActiveCallsResponse> Get(
+            RingCentral.ListCompanyActiveCallsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<CompanyActiveCallsResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.CompanyActiveCallsResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +40,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public ActiveCalls.Index ActiveCalls()
+        public Restapi.Account.ActiveCalls.Index ActiveCalls()
         {
-            return new ActiveCalls.Index(this);
+            return new Restapi.Account.ActiveCalls.Index(this);
         }
     }
 }
