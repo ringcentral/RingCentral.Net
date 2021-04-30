@@ -4,7 +4,7 @@
     "definitions": "rm -rf ../RingCentral.Net/Definitions/* && ts-node src/definitions.ts",
     "definitions-golang": "node -r @babel/register definitions-golang.js",
     "paths": "rm -rf ../RingCentral.Net/Paths/* && ts-node src/paths.ts",
-    "samples": "node -r @babel/register samples.js",
+    "samples": "ts-node src/samples.ts",
     "samples-java": "node -r @babel/register samples-java.js",
     "samples-typescript": "node -r @babel/register samples-typescript.js",
     "generate": "yarn definitions && yarn paths && yarn samples && yarn samples-java && yarn samples-typescript"
@@ -14,7 +14,7 @@
     "js-yaml": "^4.1.0",
     "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1",
-    "ringcentral-open-api-parser": "^0.4.0",
+    "ringcentral-open-api-parser": "^0.4.1",
     "to-start-case": "^1.1.0"
   },
   "devDependencies": {
