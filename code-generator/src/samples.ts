@@ -3,6 +3,7 @@ import path from 'path';
 import {parsed} from 'ringcentral-open-api-parser';
 import R from 'ramda';
 import {pascalCase} from 'change-case';
+import {capitalizeFirstLetter} from './utils';
 
 const markdown = ['# RingCentral.Net SDK Code Samples'];
 
@@ -54,12 +55,12 @@ for (const path of paths.filter(item => item.operations.length > 0)) {
     );
     markdown.push('{');
     markdown.push(
-      '    await rc.Authorize("username", "extension", "password");`);'
+      '    await rc.Authorize("username", "extension", "password");'
     );
     markdown.push(
-      `    var result = await rc${buildPath(operation.endpoint)}.${pascalCase(
-        operation.method
-      )}(${parameters.join(', ')});`
+      `    var result = await rc${buildPath(
+        operation.endpoint
+      )}.${capitalizeFirstLetter(operation.method2)}(${parameters.join(', ')});`
     );
     markdown.push('}');
     markdown.push('```\n');
@@ -87,9 +88,11 @@ for (const path of paths.filter(item => item.operations.length > 0)) {
 
     for (const parameter of parameters) {
       markdown.push(
-        `- \`${parameter}\` is of type [${pascalCase(
+        `- \`${parameter}\` is of type [${capitalizeFirstLetter(
           parameter
-        )}](./RingCentral.Net/Definitions/${pascalCase(parameter)}.cs)`
+        )}](./RingCentral.Net/Definitions/${capitalizeFirstLetter(
+          parameter
+        )}.cs)`
       );
     }
 
@@ -101,6 +104,8 @@ for (const path of paths.filter(item => item.operations.length > 0)) {
       markdown.push('- `result` is an empty string');
     } else if (operation.responseSchema.format === 'binary') {
       markdown.push('- `result` is of type `byte[]`');
+      markdown.push(`\n### ❗❗❗ Code sample above may not work
+\nPlease refer to [Binary content downloading](/README.md#Binary-content-downloading).`);
     } else {
       console.log(operation);
     }
@@ -114,4 +119,7 @@ for (const path of paths.filter(item => item.operations.length > 0)) {
   }
 }
 
-fs.writeFileSync(path.join(__dirname, '..', 'samples.md'), markdown.join('\n'));
+fs.writeFileSync(
+  path.join(__dirname, '..', '..', 'samples.md'),
+  markdown.join('\n')
+);
