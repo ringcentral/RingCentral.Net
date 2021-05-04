@@ -55,6 +55,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         /// </summary>
         public async Task<RingCentral.CustomUserGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (greetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(greetingId));
+            }
+
             return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, restRequestConfig);
         }
     }

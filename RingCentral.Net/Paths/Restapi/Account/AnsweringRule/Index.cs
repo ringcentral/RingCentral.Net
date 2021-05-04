@@ -68,6 +68,11 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         /// </summary>
         public async Task<RingCentral.CompanyAnsweringRuleInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+
             return await rc.Get<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -83,6 +88,11 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
             RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate,
             RestRequestConfig restRequestConfig = null)
         {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+
             return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate, null,
                 restRequestConfig);
         }
@@ -97,6 +107,11 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

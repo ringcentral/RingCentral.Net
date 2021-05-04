@@ -51,6 +51,11 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         /// </summary>
         public async Task<RingCentral.CallQueueDetails> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (groupId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
+            }
+
             return await rc.Get<RingCentral.CallQueueDetails>(this.Path(), null, restRequestConfig);
         }
 
@@ -65,6 +70,11 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         public async Task<RingCentral.CallQueueDetails> Put(RingCentral.CallQueueUpdateDetails callQueueUpdateDetails,
             RestRequestConfig restRequestConfig = null)
         {
+            if (groupId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
+            }
+
             return await rc.Put<RingCentral.CallQueueDetails>(this.Path(), callQueueUpdateDetails, null,
                 restRequestConfig);
         }

@@ -49,6 +49,11 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         /// </summary>
         public async Task<RingCentral.MessageDetailsResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (messageId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(messageId));
+            }
+
             return await rc.Get<RingCentral.MessageDetailsResponse>(this.Path(), null, restRequestConfig);
         }
     }

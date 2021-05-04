@@ -47,6 +47,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         /// </summary>
         public async Task<RingCentral.GetStateInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (stateId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(stateId));
+            }
+
             return await rc.Get<RingCentral.GetStateInfoResponse>(this.Path(), null, restRequestConfig);
         }
     }

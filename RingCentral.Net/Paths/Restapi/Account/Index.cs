@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Account
         /// </summary>
         public async Task<RingCentral.GetAccountInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (accountId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(accountId));
+            }
+
             return await rc.Get<RingCentral.GetAccountInfoResponse>(this.Path(), null, restRequestConfig);
         }
     }

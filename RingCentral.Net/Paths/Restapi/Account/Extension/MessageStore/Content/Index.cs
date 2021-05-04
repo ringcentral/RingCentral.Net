@@ -38,6 +38,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         public async Task<byte[]> Get(RingCentral.ReadMessageContentParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
+            if (attachmentId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(attachmentId));
+            }
+
             return await rc.Get<byte[]>(this.Path(), queryParams, restRequestConfig);
         }
     }

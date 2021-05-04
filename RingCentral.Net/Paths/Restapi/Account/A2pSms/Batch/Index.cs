@@ -51,6 +51,11 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batch
         /// </summary>
         public async Task<RingCentral.MessageBatchResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (batchId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(batchId));
+            }
+
             return await rc.Get<RingCentral.MessageBatchResponse>(this.Path(), null, restRequestConfig);
         }
     }

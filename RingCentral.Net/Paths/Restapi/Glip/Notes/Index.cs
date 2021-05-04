@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         /// </summary>
         public async Task<RingCentral.GetGlipNoteInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (noteId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(noteId));
+            }
+
             return await rc.Get<RingCentral.GetGlipNoteInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -50,6 +55,11 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (noteId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(noteId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
@@ -64,6 +74,11 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
             RestRequestConfig restRequestConfig = null)
         {
+            if (noteId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(noteId));
+            }
+
             return await rc.Patch<RingCentral.GlipNoteInfo>(this.Path(), glipNoteCreate, null, restRequestConfig);
         }
     }

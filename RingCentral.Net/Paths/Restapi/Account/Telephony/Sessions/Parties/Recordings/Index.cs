@@ -50,6 +50,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
             RingCentral.PauseResumeCallRecordingParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
+            if (recordingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(recordingId));
+            }
+
             return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams,
                 restRequestConfig);
         }

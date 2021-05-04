@@ -36,6 +36,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// </summary>
         public async Task<RingCentral.CallParty> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (partyId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(partyId));
+            }
+
             return await rc.Get<RingCentral.CallParty>(this.Path(), null, restRequestConfig);
         }
 
@@ -48,6 +53,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (partyId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(partyId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
@@ -61,6 +71,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         public async Task<RingCentral.CallParty> Patch(RingCentral.PartyUpdateRequest partyUpdateRequest,
             RestRequestConfig restRequestConfig = null)
         {
+            if (partyId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(partyId));
+            }
+
             return await rc.Patch<RingCentral.CallParty>(this.Path(), partyUpdateRequest, null, restRequestConfig);
         }
     }

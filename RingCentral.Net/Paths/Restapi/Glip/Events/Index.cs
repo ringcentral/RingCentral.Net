@@ -65,6 +65,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (eventId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
+            }
+
             return await rc.Get<RingCentral.GlipEventInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -79,6 +84,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate,
             RestRequestConfig restRequestConfig = null)
         {
+            if (eventId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
+            }
+
             return await rc.Put<RingCentral.GlipEventInfo>(this.Path(), glipEventCreate, null, restRequestConfig);
         }
 
@@ -92,6 +102,11 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (eventId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

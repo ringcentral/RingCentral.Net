@@ -65,6 +65,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         /// </summary>
         public async Task<RingCentral.GetMessageInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (messageId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(messageId));
+            }
+
             return await rc.Get<RingCentral.GetMessageInfoResponse>(this.Path(), null, restRequestConfig);
         }
 
@@ -79,6 +84,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public async Task<RingCentral.GetMessageInfoResponse> Put(RingCentral.UpdateMessageRequest updateMessageRequest,
             RingCentral.UpdateMessageParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
+            if (messageId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(messageId));
+            }
+
             return await rc.Put<RingCentral.GetMessageInfoResponse>(this.Path(), updateMessageRequest, queryParams,
                 restRequestConfig);
         }
@@ -94,6 +104,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public async Task<string> Delete(RingCentral.DeleteMessageParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
+            if (messageId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(messageId));
+            }
+
             return await rc.Delete<string>(this.Path(), queryParams, restRequestConfig);
         }
     }

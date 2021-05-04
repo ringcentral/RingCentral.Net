@@ -50,6 +50,11 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         /// </summary>
         public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (archiveId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(archiveId));
+            }
+
             return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }

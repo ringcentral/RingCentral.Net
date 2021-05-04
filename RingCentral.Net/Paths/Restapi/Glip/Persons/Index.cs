@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
         /// </summary>
         public async Task<RingCentral.GlipPersonInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (personId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(personId));
+            }
+
             return await rc.Get<RingCentral.GlipPersonInfo>(this.Path(), null, restRequestConfig);
         }
     }

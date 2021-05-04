@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
         /// </summary>
         public async Task<RingCentral.AutomaticLocationUpdatesTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (taskId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(taskId));
+            }
+
             return await rc.Get<RingCentral.AutomaticLocationUpdatesTaskInfo>(this.Path(), null, restRequestConfig);
         }
     }

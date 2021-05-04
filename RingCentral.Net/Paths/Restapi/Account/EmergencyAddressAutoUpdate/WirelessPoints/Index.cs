@@ -66,6 +66,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// </summary>
         public async Task<RingCentral.WirelessPointInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (pointId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(pointId));
+            }
+
             return await rc.Get<RingCentral.WirelessPointInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -80,6 +85,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         public async Task<RingCentral.WirelessPointInfo> Put(RingCentral.UpdateWirelessPoint updateWirelessPoint,
             RestRequestConfig restRequestConfig = null)
         {
+            if (pointId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(pointId));
+            }
+
             return await rc.Put<RingCentral.WirelessPointInfo>(this.Path(), updateWirelessPoint, null,
                 restRequestConfig);
         }
@@ -94,6 +104,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (pointId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(pointId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

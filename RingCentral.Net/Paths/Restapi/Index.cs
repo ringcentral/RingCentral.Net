@@ -44,6 +44,11 @@ namespace RingCentral.Paths.Restapi
         /// </summary>
         public async Task<RingCentral.GetVersionResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (apiVersion == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(apiVersion));
+            }
+
             return await rc.Get<RingCentral.GetVersionResponse>(this.Path(), null, restRequestConfig);
         }
     }

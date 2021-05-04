@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         public async Task<RingCentral.CallSessionObject> Get(
             RingCentral.ReadCallSessionStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
+            if (telephonySessionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
+            }
+
             return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams, restRequestConfig);
         }
 
@@ -49,6 +54,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (telephonySessionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

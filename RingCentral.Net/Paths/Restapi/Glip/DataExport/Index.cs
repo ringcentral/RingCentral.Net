@@ -64,6 +64,11 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport
         /// </summary>
         public async Task<RingCentral.DataExportTask> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (taskId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(taskId));
+            }
+
             return await rc.Get<RingCentral.DataExportTask>(this.Path(), null, restRequestConfig);
         }
     }

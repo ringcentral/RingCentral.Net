@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate.Tasks
         /// </summary>
         public async Task<RingCentral.ExtensionBulkUpdateTaskResource> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (taskId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(taskId));
+            }
+
             return await rc.Get<RingCentral.ExtensionBulkUpdateTaskResource>(this.Path(), null, restRequestConfig);
         }
     }

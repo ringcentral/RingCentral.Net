@@ -67,6 +67,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// </summary>
         public async Task<RingCentral.PersonalContactResource> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (contactId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(contactId));
+            }
+
             return await rc.Get<RingCentral.PersonalContactResource>(this.Path(), null, restRequestConfig);
         }
 
@@ -82,6 +87,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
             RingCentral.PersonalContactRequest personalContactRequest,
             RingCentral.UpdateContactParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
+            if (contactId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(contactId));
+            }
+
             return await rc.Put<RingCentral.PersonalContactResource>(this.Path(), personalContactRequest, queryParams,
                 restRequestConfig);
         }
@@ -96,6 +106,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (contactId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(contactId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

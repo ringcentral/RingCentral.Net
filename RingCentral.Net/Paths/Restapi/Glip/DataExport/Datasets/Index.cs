@@ -36,6 +36,11 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         /// </summary>
         public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (datasetId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(datasetId));
+            }
+
             return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }

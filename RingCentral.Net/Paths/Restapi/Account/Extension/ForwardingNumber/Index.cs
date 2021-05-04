@@ -68,6 +68,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// </summary>
         public async Task<RingCentral.ForwardingNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (forwardingNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+            }
+
             return await rc.Get<RingCentral.ForwardingNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -83,6 +88,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
             RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest,
             RestRequestConfig restRequestConfig = null)
         {
+            if (forwardingNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+            }
+
             return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest, null,
                 restRequestConfig);
         }
@@ -97,6 +107,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (forwardingNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

@@ -47,6 +47,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         /// </summary>
         public async Task<RingCentral.DictionaryGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (greetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(greetingId));
+            }
+
             return await rc.Get<RingCentral.DictionaryGreetingInfo>(this.Path(), null, restRequestConfig);
         }
     }

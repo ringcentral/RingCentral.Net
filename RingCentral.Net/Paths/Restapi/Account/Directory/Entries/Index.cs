@@ -49,6 +49,11 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         /// </summary>
         public async Task<RingCentral.ContactResource> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (entryId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(entryId));
+            }
+
             return await rc.Get<RingCentral.ContactResource>(this.Path(), null, restRequestConfig);
         }
     }

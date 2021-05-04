@@ -51,6 +51,11 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// </summary>
         public async Task<RingCentral.IVRMenuInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (ivrMenuId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ivrMenuId));
+            }
+
             return await rc.Get<RingCentral.IVRMenuInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -65,6 +70,11 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         public async Task<RingCentral.IVRMenuInfo> Put(RingCentral.IVRMenuInfo iVRMenuInfo,
             RestRequestConfig restRequestConfig = null)
         {
+            if (ivrMenuId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ivrMenuId));
+            }
+
             return await rc.Put<RingCentral.IVRMenuInfo>(this.Path(), iVRMenuInfo, null, restRequestConfig);
         }
     }

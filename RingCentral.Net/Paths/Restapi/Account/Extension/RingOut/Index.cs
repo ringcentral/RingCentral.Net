@@ -50,6 +50,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// </summary>
         public async Task<RingCentral.GetRingOutStatusResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (ringoutId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ringoutId));
+            }
+
             return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path(), null, restRequestConfig);
         }
 
@@ -62,6 +67,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (ringoutId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ringoutId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

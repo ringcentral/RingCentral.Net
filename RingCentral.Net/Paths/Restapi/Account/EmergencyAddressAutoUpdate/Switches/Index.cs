@@ -65,6 +65,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// </summary>
         public async Task<RingCentral.SwitchInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (switchId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(switchId));
+            }
+
             return await rc.Get<RingCentral.SwitchInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -79,6 +84,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         public async Task<RingCentral.SwitchInfo> Put(RingCentral.UpdateSwitchInfo updateSwitchInfo,
             RestRequestConfig restRequestConfig = null)
         {
+            if (switchId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(switchId));
+            }
+
             return await rc.Put<RingCentral.SwitchInfo>(this.Path(), updateSwitchInfo, null, restRequestConfig);
         }
 
@@ -92,6 +102,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (switchId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(switchId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

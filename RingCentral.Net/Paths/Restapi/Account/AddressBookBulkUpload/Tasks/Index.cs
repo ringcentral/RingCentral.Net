@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Tasks
         /// </summary>
         public async Task<RingCentral.AddressBookBulkUploadResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (taskId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(taskId));
+            }
+
             return await rc.Get<RingCentral.AddressBookBulkUploadResponse>(this.Path(), null, restRequestConfig);
         }
     }

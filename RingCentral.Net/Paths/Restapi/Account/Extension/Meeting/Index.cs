@@ -65,6 +65,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// </summary>
         public async Task<RingCentral.MeetingResponseResource> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (meetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(meetingId));
+            }
+
             return await rc.Get<RingCentral.MeetingResponseResource>(this.Path(), null, restRequestConfig);
         }
 
@@ -79,6 +84,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         public async Task<RingCentral.MeetingResponseResource> Put(
             RingCentral.MeetingRequestResource meetingRequestResource, RestRequestConfig restRequestConfig = null)
         {
+            if (meetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(meetingId));
+            }
+
             return await rc.Put<RingCentral.MeetingResponseResource>(this.Path(), meetingRequestResource, null,
                 restRequestConfig);
         }
@@ -93,6 +103,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (meetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(meetingId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

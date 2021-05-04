@@ -65,6 +65,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// </summary>
         public async Task<RingCentral.NetworkInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (networkId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(networkId));
+            }
+
             return await rc.Get<RingCentral.NetworkInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -79,6 +84,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public async Task<string> Put(RingCentral.UpdateNetworkRequest updateNetworkRequest,
             RestRequestConfig restRequestConfig = null)
         {
+            if (networkId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(networkId));
+            }
+
             return await rc.Put<string>(this.Path(), updateNetworkRequest, null, restRequestConfig);
         }
 
@@ -92,6 +102,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (networkId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(networkId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

@@ -66,6 +66,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         public async Task<RingCentral.UserCallLogRecord> Get(
             RingCentral.ReadUserCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
+            if (callRecordId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(callRecordId));
+            }
+
             return await rc.Get<RingCentral.UserCallLogRecord>(this.Path(), queryParams, restRequestConfig);
         }
     }

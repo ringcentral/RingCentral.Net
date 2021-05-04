@@ -190,6 +190,12 @@ const generateOperationMethod = (
     operation.method2
   )}(${methodParams.join(', ')})
   {\n`;
+  if (operation.withParameter) {
+    result += `if (${parameter} == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(${parameter}));
+    }`;
+  }
   if (operation.formUrlEncoded) {
     result += `var dict = new System.Collections.Generic.Dictionary<string, string>();
     Utils.GetPairs(${operation.bodyParameters}).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));\n`;

@@ -52,6 +52,11 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         /// </summary>
         public async Task<RingCentral.CompanyPhoneNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (phoneNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(phoneNumberId));
+            }
+
             return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, restRequestConfig);
         }
     }

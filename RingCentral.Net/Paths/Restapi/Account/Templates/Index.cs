@@ -51,6 +51,11 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         /// </summary>
         public async Task<RingCentral.TemplateInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (templateId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(templateId));
+            }
+
             return await rc.Get<RingCentral.TemplateInfo>(this.Path(), null, restRequestConfig);
         }
     }

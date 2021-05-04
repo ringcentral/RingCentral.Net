@@ -47,6 +47,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         /// </summary>
         public async Task<RingCentral.GetCountryInfoDictionaryResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (countryId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(countryId));
+            }
+
             return await rc.Get<RingCentral.GetCountryInfoDictionaryResponse>(this.Path(), null, restRequestConfig);
         }
     }

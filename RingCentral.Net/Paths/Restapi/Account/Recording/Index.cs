@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Account.Recording
         /// </summary>
         public async Task<RingCentral.GetCallRecordingResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (recordingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(recordingId));
+            }
+
             return await rc.Get<RingCentral.GetCallRecordingResponse>(this.Path(), null, restRequestConfig);
         }
     }

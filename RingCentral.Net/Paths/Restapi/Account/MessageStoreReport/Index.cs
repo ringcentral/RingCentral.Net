@@ -53,6 +53,11 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (taskId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(taskId));
+            }
+
             return await rc.Get<RingCentral.MessageStoreReport>(this.Path(), null, restRequestConfig);
         }
     }

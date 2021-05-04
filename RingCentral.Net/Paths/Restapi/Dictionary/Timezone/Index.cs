@@ -48,6 +48,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         public async Task<RingCentral.GetTimezoneInfoResponse> Get(
             RingCentral.ReadTimezoneParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
+            if (timezoneId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(timezoneId));
+            }
+
             return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams, restRequestConfig);
         }
     }

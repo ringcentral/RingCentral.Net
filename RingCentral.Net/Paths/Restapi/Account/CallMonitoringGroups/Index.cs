@@ -70,6 +70,11 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
             RingCentral.CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
             RestRequestConfig restRequestConfig = null)
         {
+            if (groupId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
+            }
+
             return await rc.Put<RingCentral.CallMonitoringGroup>(this.Path(), createCallMonitoringGroupRequest, null,
                 restRequestConfig);
         }
@@ -84,6 +89,11 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (groupId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

@@ -80,6 +80,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// </summary>
         public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (scaleSize == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(scaleSize));
+            }
+
             return await rc.Get<byte[]>(this.Path(), null, restRequestConfig);
         }
     }

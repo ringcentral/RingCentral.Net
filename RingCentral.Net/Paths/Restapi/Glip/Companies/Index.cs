@@ -37,6 +37,11 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         /// </summary>
         public async Task<RingCentral.GlipCompany> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (companyId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(companyId));
+            }
+
             return await rc.Get<RingCentral.GlipCompany>(this.Path(), null, restRequestConfig);
         }
     }

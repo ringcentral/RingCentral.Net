@@ -66,6 +66,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         public async Task<RingCentral.CustomFieldResource> Put(
             RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, RestRequestConfig restRequestConfig = null)
         {
+            if (fieldId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(fieldId));
+            }
+
             return await rc.Put<RingCentral.CustomFieldResource>(this.Path(), customFieldUpdateRequest, null,
                 restRequestConfig);
         }
@@ -80,6 +85,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (fieldId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(fieldId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

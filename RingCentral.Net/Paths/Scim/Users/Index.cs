@@ -62,6 +62,11 @@ namespace RingCentral.Paths.Scim.Users
         /// </summary>
         public async Task<RingCentral.UserResponse> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (id == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
+            }
+
             return await rc.Get<RingCentral.UserResponse>(this.Path(), null, restRequestConfig);
         }
 
@@ -75,6 +80,11 @@ namespace RingCentral.Paths.Scim.Users
         public async Task<RingCentral.UserResponse> Put(RingCentral.User user,
             RestRequestConfig restRequestConfig = null)
         {
+            if (id == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
+            }
+
             return await rc.Put<RingCentral.UserResponse>(this.Path(), user, null, restRequestConfig);
         }
 
@@ -87,6 +97,11 @@ namespace RingCentral.Paths.Scim.Users
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (id == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
@@ -100,6 +115,11 @@ namespace RingCentral.Paths.Scim.Users
         public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch,
             RestRequestConfig restRequestConfig = null)
         {
+            if (id == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
+            }
+
             return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch, null, restRequestConfig);
         }
     }

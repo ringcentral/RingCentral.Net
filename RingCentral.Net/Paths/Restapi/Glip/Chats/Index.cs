@@ -51,6 +51,11 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         /// </summary>
         public async Task<RingCentral.GlipChatInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (chatId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(chatId));
+            }
+
             return await rc.Get<RingCentral.GlipChatInfo>(this.Path(), null, restRequestConfig);
         }
     }

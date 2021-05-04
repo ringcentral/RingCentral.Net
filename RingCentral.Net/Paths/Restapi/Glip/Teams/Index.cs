@@ -65,6 +65,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// </summary>
         public async Task<RingCentral.GlipTeamInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (chatId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(chatId));
+            }
+
             return await rc.Get<RingCentral.GlipTeamInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -78,6 +83,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (chatId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(chatId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
 
@@ -92,6 +102,11 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         public async Task<RingCentral.GlipTeamInfo> Patch(RingCentral.GlipPatchTeamBody glipPatchTeamBody,
             RestRequestConfig restRequestConfig = null)
         {
+            if (chatId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(chatId));
+            }
+
             return await rc.Patch<RingCentral.GlipTeamInfo>(this.Path(), glipPatchTeamBody, null, restRequestConfig);
         }
     }

@@ -50,6 +50,11 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         /// </summary>
         public async Task<RingCentral.GlipWebhookList> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (webhookId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(webhookId));
+            }
+
             return await rc.Get<RingCentral.GlipWebhookList>(this.Path(), null, restRequestConfig);
         }
 
@@ -63,6 +68,11 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (webhookId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(webhookId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }

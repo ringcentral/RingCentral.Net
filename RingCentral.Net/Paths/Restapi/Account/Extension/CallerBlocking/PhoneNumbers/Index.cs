@@ -69,6 +69,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// </summary>
         public async Task<RingCentral.BlockedAllowedPhoneNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
+            if (blockedNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(blockedNumberId));
+            }
+
             return await rc.Get<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
@@ -84,6 +89,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
             RingCentral.AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
             RestRequestConfig restRequestConfig = null)
         {
+            if (blockedNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(blockedNumberId));
+            }
+
             return await rc.Put<RingCentral.BlockedAllowedPhoneNumberInfo>(this.Path(), addBlockedAllowedPhoneNumber,
                 null, restRequestConfig);
         }
@@ -98,6 +108,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
+            if (blockedNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(blockedNumberId));
+            }
+
             return await rc.Delete<string>(this.Path(), null, restRequestConfig);
         }
     }
