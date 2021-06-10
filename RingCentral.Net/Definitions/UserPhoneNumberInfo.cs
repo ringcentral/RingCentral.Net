@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a phone number
+        ///     Format: int64
         /// </summary>
         public long? id { get; set; }
 
@@ -46,7 +47,7 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Specifies if the number is primary or not
+        ///     Specifies if the number is primary, i.e. displayed as 'main number' and called by default
         /// </summary>
         public bool? primary { get; set; }
 

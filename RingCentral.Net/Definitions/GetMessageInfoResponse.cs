@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a message
+        ///     Format: int64
         /// </summary>
         public long? id { get; set; }
 
@@ -30,6 +31,7 @@ namespace RingCentral
 
         /// <summary>
         ///     SMS and Pager only. Identifier of a conversation the message belongs to
+        ///     Format: int64
         /// </summary>
         public long? conversationId { get; set; }
 

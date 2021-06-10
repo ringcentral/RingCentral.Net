@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a country
+        ///     Format: int64
         /// </summary>
         public long? countryId { get; set; }
 

@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a recipient extension
+        ///     Format: int64
         /// </summary>
         public long? id { get; set; }
     }

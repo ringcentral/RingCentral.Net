@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a call queue member
+        ///     Format: int64
         /// </summary>
         public long? id { get; set; }
 

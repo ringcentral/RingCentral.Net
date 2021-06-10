@@ -82,5 +82,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public SharedLinesInfo sharedLines { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public MissedCallInfo missedCall { get; set; }
     }
 }

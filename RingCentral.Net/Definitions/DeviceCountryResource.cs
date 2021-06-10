@@ -9,6 +9,7 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
+        ///     Format: int64
         /// </summary>
         public string id { get; set; }
 

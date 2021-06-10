@@ -5,8 +5,9 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a currency
+        ///     Format: int64
         /// </summary>
-        public string id { get; set; }
+        public long? id { get; set; }
 
         /// <summary>
         ///     Official code of a currency

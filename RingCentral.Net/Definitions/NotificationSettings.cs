@@ -18,6 +18,11 @@ namespace RingCentral
         public string[] emailAddresses { get; set; }
 
         /// <summary>
+        ///     Specifies if managers' emails are included in the list of emails to which notifications are sent
+        /// </summary>
+        public bool? includeManagers { get; set; }
+
+        /// <summary>
         ///     List of notification recipient email addresses
         /// </summary>
         public string[] smsEmailAddresses { get; set; }

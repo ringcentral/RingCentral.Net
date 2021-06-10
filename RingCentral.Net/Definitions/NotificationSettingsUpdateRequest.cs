@@ -36,5 +36,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public MissedCallsInfo missedCalls { get; set; }
+
+        /// <summary>
+        ///     Specifies if managers' emails are included in the list of emails to which notifications are sent
+        /// </summary>
+        public bool? includeManagers { get; set; }
     }
 }

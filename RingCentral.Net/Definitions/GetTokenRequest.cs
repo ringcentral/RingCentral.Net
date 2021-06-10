@@ -22,7 +22,7 @@ namespace RingCentral
         /// <summary>
         ///     Grant type
         ///     Default: password
-        ///     Enum: authorization_code, password, refresh_token, client_credentials, urn:ietf:params:oauth:grant-type:jwt-bearer
+        ///     Enum: authorization_code, password, refresh_token, client_credentials, urn:ietf:params:oauth:grant-type:jwt-bearer, partner_jwt
         /// </summary>
         public string grant_type { get; set; }
 

@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a message thread
+        ///     Format: int64
         /// </summary>
         public long? conversationId { get; set; }
     }

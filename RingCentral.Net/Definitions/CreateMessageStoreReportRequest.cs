@@ -3,13 +3,18 @@ namespace RingCentral
     public class CreateMessageStoreReportRequest
     {
         /// <summary>
-        ///     Starting time for collecting messages. The default value equals to the current time minus 24 hours
+        ///     Only messages created before the date will be collected. The default value is current time
+        /// </summary>
+        public string dateTo { get; set; }
+
+        /// <summary>
+        ///     Only messages created after (or including) the date will be collected. The default value is current time minus 24 hours
         /// </summary>
         public string dateFrom { get; set; }
 
         /// <summary>
-        ///     Ending time for collecting messages. The default value is the current time
+        ///     Enum: EMail, Fax, SMS, VoiceMail, Pager, Text
         /// </summary>
-        public string dateTo { get; set; }
+        public string[] messageTypes { get; set; }
     }
 }

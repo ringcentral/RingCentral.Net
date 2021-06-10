@@ -22,6 +22,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of the contact
+        ///     Format: int64
         ///     Example: 623045004
         /// </summary>
         public long? id { get; set; }

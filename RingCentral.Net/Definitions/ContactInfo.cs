@@ -14,6 +14,11 @@ namespace RingCentral
         public string lastName { get; set; }
 
         /// <summary>
+        ///     Extension user name (first name and last name)
+        /// </summary>
+        public string name { get; set; }
+
+        /// <summary>
         ///     Extension user company name
         /// </summary>
         public string company { get; set; }

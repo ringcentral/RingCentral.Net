@@ -71,7 +71,8 @@ namespace RingCentral
         public ShippingInfo shipping { get; set; }
 
         /// <summary>
-        ///     Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. EitherT? model  structure, or  boxBillingId  must be specified forT?HardPhone
+        ///     Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either model  structure, or  boxBillingId  must be specified for HardPhone
+        ///     Format: int64
         /// </summary>
         public long? boxBillingId { get; set; }
 

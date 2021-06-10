@@ -5,6 +5,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of an extension
+        ///     Format: int64
         /// </summary>
         public long? id { get; set; }
 

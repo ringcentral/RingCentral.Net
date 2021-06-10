@@ -73,7 +73,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site { get; set; }
+        public AutomaticLocationUpdatesSiteInfoRequest site { get; set; }
 
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology

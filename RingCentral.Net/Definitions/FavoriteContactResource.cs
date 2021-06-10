@@ -3,6 +3,7 @@ namespace RingCentral
     public class FavoriteContactResource
     {
         /// <summary>
+        ///     Format: int64
         /// </summary>
         public long? id { get; set; }
 

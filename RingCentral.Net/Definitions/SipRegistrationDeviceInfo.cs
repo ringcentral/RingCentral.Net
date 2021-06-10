@@ -70,6 +70,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. EitherT? model  structure, or  boxBillingId  must be specified forT?HardPhone
+        ///     Format: int64
         /// </summary>
         public long? boxBillingId { get; set; }
 

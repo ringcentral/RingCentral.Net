@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of an account
+        ///     Format: int64
         /// </summary>
         public long? id { get; set; }
 

@@ -5,6 +5,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only.
+        ///     Format: int64
         /// </summary>
         public long? conversationId { get; set; }
 

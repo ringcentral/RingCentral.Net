@@ -21,6 +21,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a page. It can be obtained from the 'nextPageId' parameter passed in response body
+        ///     Format: int64
         /// </summary>
         public long? pageId { get; set; }
     }
