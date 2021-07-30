@@ -1,9 +1,9 @@
 {
   "license": "MIT",
   "scripts": {
-    "definitions": "rm -rf ../RingCentral.Net/Definitions/* && ts-node src/definitions.ts",
-    "paths": "rm -rf ../RingCentral.Net/Paths/* && ts-node src/paths.ts",
-    "samples": "ts-node src/samples.ts",
+    "definitions": "rm -rf ../RingCentral.Net/Definitions/* && ts-node -r dotenv-override-true/config src/definitions.ts",
+    "paths": "rm -rf ../RingCentral.Net/Paths/* && ts-node -r dotenv-override-true/config src/paths.ts",
+    "samples": "ts-node -r dotenv-override-true/config src/samples.ts",
     "generate": "yarn definitions && yarn paths && yarn samples",
     "definitions-golang": "node -r @babel/register definitions-golang.js"
   },
@@ -11,6 +11,7 @@
     "change-case": "^4.1.2",
     "js-yaml": "^4.1.0",
     "lower-case-first": "^2.0.2",
+    "openapi-types": "^9.1.0",
     "ramda": "^0.27.1",
     "ringcentral-open-api-parser": "^0.5.1",
     "to-start-case": "^1.1.0"
@@ -19,8 +20,10 @@
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
     "@babel/register": "^7.14.5",
+    "@types/js-yaml": "^4.0.2",
     "@types/node": "^16.4.7",
     "@types/ramda": "^0.27.44",
+    "dotenv-override-true": "^6.2.2",
     "gts": "^3.1.0",
     "standard": "^16.0.3",
     "ts-node": "^10.1.0",

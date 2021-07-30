@@ -1,4 +1,4 @@
-import {parsed} from 'ringcentral-open-api-parser';
+import {parsed} from './utils';
 import fs from 'fs';
 import path from 'path';
 import {Field} from 'ringcentral-open-api-parser/lib/types';
