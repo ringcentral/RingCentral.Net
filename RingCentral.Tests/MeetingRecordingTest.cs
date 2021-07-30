@@ -20,19 +20,12 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                try
-                {
-                    var r = await rc.Restapi().Account().MeetingRecordings().Get();
-                    Assert.NotNull(r);
-
-                    var str = await rc.Get<string>(rc.Restapi().Account().MeetingRecordings().Path());
-                    Assert.NotNull(str);
-                }
-                catch (RestException re)
-                {
-                    // todo: https://jira.ringcentral.com/browse/PLA-49859
-                    Assert.Equal(HttpStatusCode.Forbidden, re.httpResponseMessage.StatusCode);
-                }
+                var r = await rc.Restapi().Account().MeetingRecordings().Get(
+                    new ListAccountMeetingRecordingsParameters
+                    {
+                        meetingStartTimeFrom = "2030-05-20T22:21:25Z"
+                    });
+                Assert.NotNull(r);
             }
         }
     }
