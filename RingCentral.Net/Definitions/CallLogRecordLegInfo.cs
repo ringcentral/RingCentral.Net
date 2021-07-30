@@ -139,5 +139,11 @@ namespace RingCentral
         ///     Telephony identifier of a call session
         /// </summary>
         public string telephonySessionId { get; set; }
+
+        /// <summary>
+        ///     Internal type of a call
+        ///     Enum: Local, LongDistance, International, Sip, RingMe, RingOut, Usual, TollFreeNumber, VerificationNumber, Vma, LocalNumber, ImsOutgoing, ImsIncoming
+        /// </summary>
+        public string internalType { get; set; }
     }
 }

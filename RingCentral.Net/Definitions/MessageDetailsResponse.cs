@@ -48,7 +48,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Number of segments of a message
-        ///     Format: int64
+        ///     Format: int32
         ///     Example: 1
         /// </summary>
         public long? segmentCount { get; set; }

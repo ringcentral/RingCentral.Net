@@ -5,6 +5,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Index of the rejected message in the request
+        ///     Format: int32
         ///     Example: 2
         /// </summary>
         public long? index { get; set; }

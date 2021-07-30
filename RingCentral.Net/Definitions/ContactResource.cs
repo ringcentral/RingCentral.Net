@@ -60,5 +60,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string type { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public UserCustomFieldResource[] customFields { get; set; }
     }
 }

@@ -9,7 +9,8 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Extension email address
+        ///     Extension email address. Multiple values are accepted
+        ///     Example: alice.smith@example.com&email=bob.johnson@example.com
         /// </summary>
         public string email { get; set; }
 

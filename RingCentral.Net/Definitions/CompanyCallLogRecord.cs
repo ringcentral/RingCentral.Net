@@ -120,5 +120,11 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
+
+        /// <summary>
+        ///     Internal type of a call
+        ///     Enum: Local, LongDistance, International, Sip, RingMe, RingOut, Usual, TollFreeNumber, VerificationNumber, Vma, LocalNumber, ImsOutgoing, ImsIncoming
+        /// </summary>
+        public string internalType { get; set; }
     }
 }

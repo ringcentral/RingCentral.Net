@@ -21,5 +21,9 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public MessageCreateRequest[] messages { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public string[] to { get; set; }
     }
 }

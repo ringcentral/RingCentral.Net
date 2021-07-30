@@ -11,6 +11,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Number of records per page
+        ///     Format: int32
         ///     Example: 3
         /// </summary>
         public long? perPage { get; set; }

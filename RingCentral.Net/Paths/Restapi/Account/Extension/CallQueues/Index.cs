@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueues
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues
         /// Rate Limit Group: Medium
-        /// App Permission: Accounts
+        /// App Permission: EditAccounts
         /// User Permission: JoinLeaveCallQueue
         /// </summary>
         public async Task<RingCentral.UserCallQueues> Put(RingCentral.UserCallQueues userCallQueues,
