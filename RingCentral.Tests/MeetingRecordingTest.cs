@@ -20,12 +20,15 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                var r = await rc.Restapi().Account().MeetingRecordings().Get(
-                    new ListAccountMeetingRecordingsParameters
-                    {
-                        meetingStartTimeFrom = "2030-05-20T22:21:25Z"
-                    });
-                Assert.NotNull(r);
+
+                // meetings API is being deprecated
+
+                // var r = await rc.Restapi().Account().MeetingRecordings().Get(
+                //     new ListAccountMeetingRecordingsParameters
+                //     {
+                //         meetingStartTimeFrom = "2030-05-20T22:21:25Z"
+                //     });
+                // Assert.NotNull(r);
             }
         }
     }

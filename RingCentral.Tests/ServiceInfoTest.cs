@@ -28,10 +28,12 @@ namespace RingCentral.Tests
                     .enabled;
                 Assert.True(faxReceiving);
 
-                // meeting service-info
-                var meetingServiceInfo = await account.Extension().Meeting().ServiceInfo().Get();
-                Assert.NotNull(meetingServiceInfo);
-                Assert.StartsWith("http", meetingServiceInfo.uri);
+                // meetings api is being deprecated
+
+                // // meeting service-info
+                // var meetingServiceInfo = await account.Extension().Meeting().ServiceInfo().Get();
+                // Assert.NotNull(meetingServiceInfo);
+                // Assert.StartsWith("http", meetingServiceInfo.uri);
             }
         }
     }
