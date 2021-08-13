@@ -5472,7 +5472,7 @@ HTTP Method|`PUT`
 Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues`
 Rate Limit Group|`Medium`
 App Permission|`EditAccounts`
-User Permission|`JoinLeaveCallQueue`
+User Permission|`EditCallQueuePresence`
 
 ```cs
 using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))

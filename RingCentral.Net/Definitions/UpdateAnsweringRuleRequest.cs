@@ -60,6 +60,10 @@ namespace RingCentral
         public VoicemailInfo voicemail { get; set; }
 
         /// <summary>
+        /// </summary>
+        public MissedCallInfo missedCall { get; set; }
+
+        /// <summary>
         ///     Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
         /// </summary>
         public GreetingInfo[] greetings { get; set; }
