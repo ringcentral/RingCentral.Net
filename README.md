@@ -53,7 +53,7 @@ using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
 
 `rc.Dispose()` will be automatically invoked after the code block above and the **token will be revoked**.
 
-If you want to retain the token, do NOT use `using`.
+If you want to retain the token, do NOT use `using` and do not `rc.Revoke()`. 
 
 
 ## Binary content downloading
