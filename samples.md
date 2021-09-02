@@ -12,11 +12,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi().List();
+await rc.Revoke();
 ```
 
 - `result` is of type [GetVersionsResponse](./RingCentral.Net/Definitions/GetVersionsResponse.cs)
@@ -35,11 +34,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -59,11 +57,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().List(searchViaGet2Parameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).Users().List(searchViaGet2Parameters);
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -84,11 +81,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().Post(createUser);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).Users().Post(createUser);
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -109,11 +105,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).Users(id).Get();
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -133,11 +128,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Put(user);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).Users(id).Put(user);
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -158,11 +152,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).Users(id).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -182,11 +175,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users(id).Patch(userPatch);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).Users(id).Patch(userPatch);
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -207,11 +199,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Authorize().Post(authorizeRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi().Oauth().Authorize().Post(authorizeRequest);
+await rc.Revoke();
 ```
 
 - `authorizeRequest` is of type [AuthorizeRequest](./RingCentral.Net/Definitions/AuthorizeRequest.cs)
@@ -231,11 +222,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest);
+await rc.Revoke();
 ```
 
 - `getTokenRequest` is of type [GetTokenRequest](./RingCentral.Net/Definitions/GetTokenRequest.cs)
@@ -255,11 +245,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -280,11 +269,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest);
+await rc.Revoke();
 ```
 
 - `revokeTokenRequest` is of type [RevokeTokenRequest](./RingCentral.Net/Definitions/RevokeTokenRequest.cs)
@@ -304,11 +292,10 @@ App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().List(listA2PBatchesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().List(listA2PBatchesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -330,11 +317,10 @@ App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().Post(createSMSMessageBatchRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().Post(createSMSMessageBatchRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -356,11 +342,10 @@ App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches(batchId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches(batchId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -381,11 +366,10 @@ App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PSMSParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PSMSParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -407,11 +391,10 @@ App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -432,11 +415,10 @@ App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().OptOuts().Get(readA2PSMSOptOutsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().OptOuts().Get(readA2PSMSOptOutsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -458,11 +440,10 @@ App Permission|`A2PSMS`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Statuses().Get(aggregateA2PSMSStatusesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Statuses().Get(aggregateA2PSMSStatusesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -484,11 +465,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -510,11 +490,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -536,11 +515,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -562,11 +540,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -587,11 +564,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -613,11 +589,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -638,11 +613,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadAssignedRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AssignedRole().Get(listAssignedRolesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AssignedRole().Get(listAssignedRolesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -664,11 +638,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -689,11 +662,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -715,11 +687,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -740,11 +711,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -766,11 +736,10 @@ App Permission|`ReadCallLog`
 User Permission|`FullCompanyCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -792,11 +761,10 @@ App Permission|`ReadCallLog`
 User Permission|`FullCompanyCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -818,11 +786,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -844,11 +811,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -870,11 +836,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -895,11 +860,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -921,11 +885,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -946,11 +909,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -972,11 +934,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -997,11 +958,10 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1023,11 +983,10 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1049,11 +1008,10 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1074,11 +1032,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyDevices`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1100,11 +1057,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyDevices`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1127,11 +1083,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyDevices`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).SipInfo().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).SipInfo().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1152,11 +1107,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1178,11 +1132,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1203,11 +1156,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1229,11 +1181,10 @@ App Permission|`EditAccounts`
 User Permission|`AddRemoveUsers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1255,11 +1206,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1281,11 +1231,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo OR EditUserCredentials`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1308,11 +1257,10 @@ App Permission|`EditAccounts`
 User Permission|`AddRemoveUsers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete(deleteExtensionParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Delete(deleteExtensionParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1335,11 +1283,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1362,11 +1309,10 @@ App Permission|`EditCallLog`
 User Permission|`EditCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1389,11 +1335,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1416,11 +1361,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserDevices`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1443,11 +1387,10 @@ App Permission|`Faxes`
 User Permission|`OutboundFaxes`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1470,11 +1413,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1497,11 +1439,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest, createCustomUserGreetingParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest, createCustomUserGreetingParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1525,11 +1466,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1551,11 +1491,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1577,11 +1516,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().Post(meetingRequestResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1604,11 +1542,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1630,11 +1567,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Put(meetingRequestResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1657,11 +1593,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1683,11 +1618,10 @@ App Permission|`SMS`
 User Permission|`OutboundSMS`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(CreateMMSMessage);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(CreateMMSMessage);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1710,11 +1644,10 @@ App Permission|`SMS`
 User Permission|`OutboundSMS`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(CreateSMSMessage);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(CreateSMSMessage);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1737,11 +1670,10 @@ App Permission|`EditAccounts`
 User Permission|`ReadUserInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1763,11 +1695,10 @@ App Permission|`EditAccounts`
 User Permission|`AutoReceptionist`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(iVRMenuInfo);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(iVRMenuInfo);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1789,11 +1720,10 @@ App Permission|`ReadAccounts`
 User Permission|`AutoReceptionist`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1814,11 +1744,10 @@ App Permission|`ReadAccounts`
 User Permission|`AutoReceptionist`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(iVRMenuInfo);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(iVRMenuInfo);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1840,11 +1769,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1865,11 +1793,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIVRPromptRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIVRPromptRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1891,11 +1818,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1916,11 +1842,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIVRPromptRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIVRPromptRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1942,11 +1867,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1967,11 +1891,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyPhoneNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -1993,11 +1916,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyPhoneNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2018,11 +1940,10 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2044,11 +1965,10 @@ App Permission|`ReadCallRecording`
 User Permission|`ReadCallRecording`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2069,11 +1989,10 @@ App Permission|`ReadCallRecording`
 User Permission|`ReadCallRecording`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2098,11 +2017,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadServicePlanInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2123,11 +2041,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2149,11 +2066,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2174,11 +2090,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().List(listUserRolesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().List(listUserRolesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2200,11 +2115,10 @@ App Permission|`RoleManagement`
 User Permission|`EditUserRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Post(roleResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Post(roleResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2226,11 +2140,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2251,11 +2164,10 @@ App Permission|`RoleManagement`
 User Permission|`EditUserRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Put(roleResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Put(roleResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2277,11 +2189,10 @@ App Permission|`RoleManagement`
 User Permission|`EditUserRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Delete(deleteCustomRoleParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Delete(deleteCustomRoleParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2303,11 +2214,10 @@ App Permission|`RoleManagement`
 User Permission|`Roles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Default().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Default().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2328,11 +2238,10 @@ App Permission|`RoleManagement`
 User Permission|`Roles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Default().Put(defaultUserRoleRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Default().Put(defaultUserRoleRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2354,11 +2263,10 @@ App Permission|`VoipCalling`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2379,11 +2287,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2404,11 +2311,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2428,11 +2334,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2453,11 +2358,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2478,11 +2382,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2502,11 +2405,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2526,11 +2428,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2550,11 +2451,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2575,11 +2475,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Permission().List(listPermissionsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Permission().List(listPermissionsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2600,11 +2499,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Permission(permissionId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Permission(permissionId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2624,11 +2522,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2649,11 +2546,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2673,11 +2569,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2698,11 +2593,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get(readTimezoneParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2723,11 +2617,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().UserRole().List(listStandardUserRoleParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().UserRole().List(listStandardUserRoleParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2748,11 +2641,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().UserRole(roleId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().UserRole(roleId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2772,11 +2664,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats().List(listGlipChatsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2797,11 +2688,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2821,11 +2711,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Favorite().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2845,11 +2734,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Get(listChatNotesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Get(listChatNotesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2870,11 +2758,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Post(glipNoteCreate);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Notes().Post(glipNoteCreate);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2895,11 +2782,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().List(readGlipPostsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2920,11 +2806,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(glipPostPostBody);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts().Post(glipPostPostBody);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2945,11 +2830,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2969,11 +2853,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -2993,11 +2876,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Posts(postId).Patch(glipPatchPostBody);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3018,11 +2900,10 @@ App Permission|`GlipInternal`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Read().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3042,11 +2923,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Get(listChatTasksParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Get(listChatTasksParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3067,11 +2947,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Post(glipCreateTask);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Tasks().Post(glipCreateTask);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3092,11 +2971,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unfavorite().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3116,11 +2994,10 @@ App Permission|`GlipInternal`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Chats(chatId).Unread().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3140,11 +3017,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Companies(companyId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3164,11 +3040,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Conversations().List(listGlipConversationsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3189,11 +3064,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Conversations().Post(createGlipConversationRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3214,11 +3088,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Conversations(chatId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3238,11 +3111,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().List(listDataExportTasksParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().DataExport().List(listDataExportTasksParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3263,11 +3135,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().DataExport().Post(createDataExportTaskRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3288,11 +3159,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3312,11 +3182,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().DataExport(taskId).Datasets(datasetId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3340,11 +3209,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Everyone().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3364,11 +3232,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Everyone().Patch(updateGlipEveryoneRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3389,11 +3256,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Favorites().Get(listFavoriteChatsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3414,11 +3280,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3438,11 +3303,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Events().Post(glipEventCreate);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3463,11 +3327,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3487,11 +3350,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Groups(groupId).Webhooks().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3511,11 +3373,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3535,11 +3396,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3559,11 +3419,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Patch(glipNoteCreate);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3584,11 +3443,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Publish().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3608,11 +3466,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Recent().Chats().Get(listRecentChatsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3633,11 +3490,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3657,11 +3513,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3681,11 +3536,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Patch(glipUpdateTask);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Patch(glipUpdateTask);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3706,11 +3560,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().Post(glipCompleteTask);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Tasks(taskId).Complete().Post(glipCompleteTask);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3731,11 +3584,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams().List(listGlipTeamsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3756,11 +3608,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams().Post(glipPostTeamBody);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3781,11 +3632,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3805,11 +3655,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3829,11 +3678,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Patch(glipPatchTeamBody);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3854,11 +3702,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Events().List(readGlipEventsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3879,11 +3726,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Events().Post(glipEventCreate);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3904,11 +3750,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3928,11 +3773,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Put(glipEventCreate);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3953,11 +3797,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Events(eventId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -3977,11 +3820,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Lock().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4001,11 +3843,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Notes(noteId).Unlock().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4025,11 +3866,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Persons(personId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4049,11 +3889,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Add().Post(glipPostMembersListBody);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4074,11 +3913,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Archive().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4098,11 +3936,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Webhooks().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4122,11 +3959,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4146,11 +3982,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4170,11 +4005,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Subscription().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4194,11 +4028,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4219,11 +4052,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4243,11 +4075,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(modifySubscriptionRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4268,11 +4099,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4292,11 +4122,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).Users().DotSearch().Post(searchRequest);
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -4317,11 +4146,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Join().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4341,11 +4169,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Preferences().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Preferences().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4365,11 +4192,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Leave().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4389,11 +4215,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Remove().Post(glipPostMembersIdsListBody);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4414,11 +4239,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Teams(chatId).Unarchive().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4438,11 +4262,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Activate().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4462,11 +4285,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Glip().Webhooks(webhookId).Suspend().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4486,11 +4308,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4512,11 +4333,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4536,11 +4356,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Scim(version).ServiceProviderConfig().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Scim(version).ServiceProviderConfig().Get();
+await rc.Revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
@@ -4560,11 +4379,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Post(addressBookBulkUploadRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Post(addressBookBulkUploadRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4586,11 +4404,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4612,11 +4429,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4638,11 +4454,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4664,11 +4479,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4689,11 +4503,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4715,11 +4528,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4741,11 +4553,10 @@ App Permission|`ReadPresence`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4766,11 +4577,10 @@ App Permission|`EditPresence`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4792,11 +4602,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4818,11 +4627,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4843,11 +4651,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4869,11 +4676,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4894,11 +4700,10 @@ App Permission|`ReadAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4920,11 +4725,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4946,11 +4750,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4971,11 +4774,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -4997,11 +4799,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Delete(deleteEmergencyLocationParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Delete(deleteEmergencyLocationParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5023,11 +4824,10 @@ App Permission|`EditExtensions`
 User Permission|`EditExtensionInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Post(extensionBulkUpdateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Post(extensionBulkUpdateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5049,11 +4849,10 @@ App Permission|`EditExtensions`
 User Permission|`EditExtensionInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Tasks(taskId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Tasks(taskId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5074,11 +4873,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5101,11 +4899,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5128,11 +4925,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AdministeredSites().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AdministeredSites().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5154,11 +4950,10 @@ App Permission|`EditAccounts`
 User Permission|`EditAssignedRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AdministeredSites().Put(businessSiteCollectionRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AdministeredSites().Put(businessSiteCollectionRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5181,11 +4976,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5208,11 +5002,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5235,11 +5028,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5262,11 +5054,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5289,11 +5080,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5315,11 +5105,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Get(listUserAssignedRolesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Get(listUserAssignedRolesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5342,11 +5131,10 @@ App Permission|`RoleManagement`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Put(assignedRolesResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Put(assignedRolesResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5369,11 +5157,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5395,11 +5182,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5421,11 +5207,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5448,11 +5233,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5475,11 +5259,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCallQueuePresence`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5502,11 +5285,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5528,11 +5310,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5555,11 +5336,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCallerIDSettings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5581,11 +5361,10 @@ App Permission|`EditExtensions`
 User Permission|`EditCallerIDSettings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfoRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfoRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5608,11 +5387,10 @@ App Permission|`InternalMessages`
 User Permission|`InternalSMS`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5635,11 +5413,10 @@ App Permission|`ReadAccounts`
 User Permission|`OrganizeConference`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5662,11 +5439,10 @@ App Permission|`EditExtensions`
 User Permission|`OrganizeConference`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5689,11 +5465,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5715,11 +5490,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5742,11 +5516,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readUserFeaturesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readUserFeaturesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5769,11 +5542,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserForwardingFlipNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5796,11 +5568,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5823,11 +5594,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserForwardingFlipNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5849,11 +5619,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5876,11 +5645,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5902,11 +5670,10 @@ App Permission|`Meetings`
 User Permission|`MeetingsRecordings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingRecordings().Get(listUserMeetingRecordingsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5929,11 +5696,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).End().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5955,11 +5721,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Invitation().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting(meetingId).Invitation().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -5981,11 +5746,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6008,11 +5772,10 @@ App Permission|`EditMessages`
 User Permission|`EditMessages`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().DeleteAll(deleteMessageByFilterParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().DeleteAll(deleteMessageByFilterParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6035,11 +5798,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6061,11 +5823,10 @@ App Permission|`EditMessages`
 User Permission|`EditMessages`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest, updateMessageParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest, updateMessageParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6089,11 +5850,10 @@ App Permission|`EditMessages`
 User Permission|`EditMessages`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6116,11 +5876,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6143,11 +5902,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserPhoneNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6170,11 +5928,10 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6197,11 +5954,10 @@ App Permission|`EditPresence`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6224,11 +5980,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6254,11 +6009,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6281,11 +6035,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6308,11 +6061,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6338,11 +6090,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6365,11 +6116,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6391,11 +6141,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6417,11 +6166,10 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6443,11 +6191,10 @@ App Permission|`EditPresence`
 User Permission|`EditPresenceStatus`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6470,11 +6217,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6499,11 +6245,10 @@ App Permission|`Meetings`
 User Permission|`MeetingsRecordings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).MeetingRecordings().Get(listAccountMeetingRecordingsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6525,11 +6270,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Meeting().LockedSettings().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Meeting().LockedSettings().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6550,11 +6294,10 @@ App Permission|`EditAccounts`
 User Permission|`AccountAdministration`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6575,11 +6318,10 @@ App Permission|`EditAccounts`
 User Permission|`AccountAdministration`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6601,11 +6343,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6627,11 +6368,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6652,11 +6392,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6677,11 +6416,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6706,11 +6444,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyDevices`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6732,11 +6469,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6758,11 +6494,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6784,11 +6519,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Conference().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Conference().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6809,11 +6543,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6835,11 +6568,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6860,11 +6592,10 @@ App Permission|`RoleManagement`
 User Permission|`EditUserRoles`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).BulkAssign().Post(bulkRoleAssignResource);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).BulkAssign().Post(bulkRoleAssignResource);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6886,11 +6617,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6911,11 +6641,10 @@ App Permission|`TelephonySessions`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6936,11 +6665,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6962,11 +6690,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -6988,11 +6715,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().Brand(brandId).ContractedCountry(contractedCountryId).Get(listDomesticCountriesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().Brand(brandId).ContractedCountry(contractedCountryId).Get(listDomesticCountriesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7013,11 +6739,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().PermissionCategory().List(listPermissionCategoriesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().PermissionCategory().List(listPermissionCategoriesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7038,11 +6763,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Dictionary().PermissionCategory(permissionCategoryId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Dictionary().PermissionCategory(permissionCategoryId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7062,11 +6786,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Tasks(taskId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Tasks(taskId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7087,11 +6810,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7113,11 +6835,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7139,11 +6860,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().DeleteAll();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().DeleteAll();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7164,11 +6884,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7189,11 +6908,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7215,11 +6933,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7241,11 +6958,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7266,11 +6982,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7292,11 +7007,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7317,11 +7031,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7343,11 +7056,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7368,11 +7080,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7394,11 +7105,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7420,11 +7130,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7445,11 +7154,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7471,11 +7179,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7496,11 +7203,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7522,11 +7228,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7547,11 +7252,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticLocationUpdatesUsers);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(bulkAssignAutomaticLocationUpdatesUsers);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7573,11 +7277,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7599,11 +7302,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7625,11 +7327,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7650,11 +7351,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7676,11 +7376,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7701,11 +7400,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7728,11 +7426,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7756,11 +7453,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7782,11 +7478,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7810,11 +7505,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7836,11 +7530,10 @@ App Permission|`RoleManagement`
 User Permission|`Users`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Default().Put();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Default().Put();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7862,11 +7555,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7889,11 +7581,10 @@ App Permission|`ReadPresence`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7916,11 +7607,10 @@ App Permission|`EditPresence`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7943,11 +7633,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7969,11 +7658,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -7995,11 +7683,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Patch(meetingServiceInfoRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8022,11 +7709,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessageContent`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8053,11 +7739,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8079,11 +7764,10 @@ App Permission|`Meetings`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Put(userVideoConfiguration);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Put(userVideoConfiguration);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8106,11 +7790,10 @@ App Permission|`EditAccounts`
 User Permission|`Groups`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8132,11 +7815,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8158,11 +7840,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8184,11 +7865,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8210,11 +7890,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8236,11 +7915,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8262,11 +7940,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8288,11 +7965,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8314,11 +7990,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8341,11 +8016,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8368,11 +8042,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8394,11 +8067,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8421,11 +8093,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8447,11 +8118,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingConfiguration().ProfileImage().Post(createUserMeetingProfileImageRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingConfiguration().ProfileImage().Post(createUserMeetingProfileImageRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8474,11 +8144,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().UserSettings().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Meeting().UserSettings().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8500,11 +8169,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assistants().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8526,11 +8194,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MeetingsConfiguration().Assisted().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8552,11 +8219,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadMessagesNotificationsSettings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8578,11 +8244,10 @@ App Permission|`EditExtensions`
 User Permission|`EditMessagesNotificationsSettings`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8605,11 +8270,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().BringIn().Post(addPartyRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().BringIn().Post(addPartyRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8631,11 +8295,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8657,11 +8320,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Bridge().Post(bridgeTargetRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Bridge().Post(bridgeTargetRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8683,11 +8345,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8709,11 +8370,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8735,11 +8395,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8760,11 +8419,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8785,11 +8443,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8811,11 +8468,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8837,11 +8493,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8862,11 +8517,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8889,11 +8543,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8914,11 +8567,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8940,11 +8592,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8966,11 +8617,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget);
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget);
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
@@ -8992,11 +8642,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```cs
-using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
-{
-    await rc.Authorize("username", "extension", "password");
-    var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post();
-}
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("username", "extension", "password");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post();
+await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`

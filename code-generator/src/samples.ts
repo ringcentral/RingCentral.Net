@@ -51,18 +51,15 @@ for (const path of paths.filter(item => item.operations.length > 0)) {
 
     markdown.push('\n```cs');
     markdown.push(
-      'using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))'
+      'var rc = new RestClient("clientID", "clientSecret", "serverURL"));'
     );
-    markdown.push('{');
+    markdown.push('await rc.Authorize("username", "extension", "password");');
     markdown.push(
-      '    await rc.Authorize("username", "extension", "password");'
-    );
-    markdown.push(
-      `    var result = await rc${buildPath(
+      `var result = await rc${buildPath(
         operation.endpoint
       )}.${capitalizeFirstLetter(operation.method2)}(${parameters.join(', ')});`
     );
-    markdown.push('}');
+    markdown.push('await rc.Revoke();');
     markdown.push('```\n');
 
     if (operation.endpoint.indexOf('{apiVersion}') !== -1) {
