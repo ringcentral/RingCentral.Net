@@ -39,6 +39,23 @@ You can find [sample code for all the endpoints](./samples.md).
 There is also lots of useful code for your reference in our [test cases](./RingCentral.Tests).
 
 
+## C# `using` statement
+
+Please note that if you use the `using` statement to initialize a `RestClient`:
+
+```cs
+using (var rc = new RestClient("clientID", "clientSecret", "serverURL"))
+{
+    await rc.Authorize("username", "extension", "password");
+    ...
+}
+````
+
+`rc.Dispose()` will be automatically invoked after the code block above and the **token will be revoked**.
+
+If you want to retain the token, do NOT use `using`.
+
+
 ## Binary content downloading
 
 Some [sample code](./samples.md) for binary content downloading may not work.
