@@ -45,5 +45,10 @@ namespace RingCentral
         ///     Specifies whether the current extension is assigned as a Members-Only manager in the call queue referenced in extension object
         /// </summary>
         public bool? callQueueMembersSetup { get; set; }
+
+        /// <summary>
+        ///     Specifies whether the current extension is assigned as a Messages Manager in the queue referenced in extension object
+        /// </summary>
+        public bool? callQueueMessages { get; set; }
     }
 }

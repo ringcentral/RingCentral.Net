@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Archive
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/teams/{chatId}/archive
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {

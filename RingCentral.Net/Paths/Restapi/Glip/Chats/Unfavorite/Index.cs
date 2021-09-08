@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unfavorite
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/unfavorite
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {

@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/favorites
         /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipChatsListWithoutNavigation> Get(
             RingCentral.ListFavoriteChatsParameters queryParams = null, RestRequestConfig restRequestConfig = null)

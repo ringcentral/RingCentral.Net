@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/everyone
         /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Get(RestRequestConfig restRequestConfig = null)
         {
@@ -38,8 +38,8 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         /// HTTP Method: patch
         /// Endpoint: /restapi/{apiVersion}/glip/everyone
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEveryoneInfo> Patch(
             RingCentral.UpdateGlipEveryoneRequest updateGlipEveryoneRequest, RestRequestConfig restRequestConfig = null)

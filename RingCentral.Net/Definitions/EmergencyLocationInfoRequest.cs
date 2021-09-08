@@ -35,13 +35,8 @@ namespace RingCentral
         /// <summary>
         ///     Visibility of an emergency response location. If `Private` is set, then location is visible only for restricted number of users, specified in `owners` array
         ///     Default: Public
-        ///     Enum: Private, Public
+        ///     Enum: Public
         /// </summary>
         public string visibility { get; set; }
-
-        /// <summary>
-        ///     List of private location owners
-        /// </summary>
-        public LocationOwnerInfo[] owners { get; set; }
     }
 }

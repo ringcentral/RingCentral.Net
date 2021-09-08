@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Read
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/read
         /// Rate Limit Group: Medium
-        /// App Permission: GlipInternal
+        /// App Permission: TeamMessagingInternal
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {

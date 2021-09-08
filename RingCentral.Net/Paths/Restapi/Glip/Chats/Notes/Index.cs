@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/notes
         /// Rate Limit Group: Heavy
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipNotesInfo> Get(RingCentral.ListChatNotesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
@@ -39,8 +39,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/notes
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipNoteInfo> Post(RingCentral.GlipNoteCreate glipNoteCreate,
             RestRequestConfig restRequestConfig = null)

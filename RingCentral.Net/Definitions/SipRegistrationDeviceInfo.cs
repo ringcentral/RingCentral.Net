@@ -14,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Device type
-        ///     Enum: HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
+        ///     Enum: HardPhone, SoftPhone, OtherPhone, Paging, WebPhone, Room
         /// </summary>
         public string type { get; set; }
 

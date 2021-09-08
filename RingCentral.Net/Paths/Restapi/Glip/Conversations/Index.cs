@@ -32,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/conversations
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipConversationsList> List(
             RingCentral.ListGlipConversationsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
@@ -46,8 +46,8 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/conversations
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Post(
             RingCentral.CreateGlipConversationRequest createGlipConversationRequest,
@@ -62,8 +62,8 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/conversations/{chatId}
         /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipConversationInfo> Get(RestRequestConfig restRequestConfig = null)
         {

@@ -20,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of extension to filter the contacts. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
-        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup
+        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup, Room
         /// </summary>
         public string extensionType { get; set; }
 

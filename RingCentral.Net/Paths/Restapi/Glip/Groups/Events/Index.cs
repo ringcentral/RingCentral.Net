@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/events
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
         {
@@ -38,8 +38,8 @@ namespace RingCentral.Paths.Restapi.Glip.Groups.Events
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/events
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
             RestRequestConfig restRequestConfig = null)

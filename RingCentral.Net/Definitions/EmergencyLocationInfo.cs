@@ -23,7 +23,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Emergency address status
-        ///     Enum: Valid, Invalid
+        ///     Enum: Valid, Invalid, Provisioning
         /// </summary>
         public string addressStatus { get; set; }
 
@@ -40,7 +40,7 @@ namespace RingCentral
         public string syncStatus { get; set; }
 
         /// <summary>
-        ///     Visibility of an emergency response location. If `Private` is set, then location is visible only for restricted number of users, specified in `owners` array
+        ///     Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted number of users, specified in `owners` array
         ///     Default: Public
         ///     Enum: Private, Public
         /// </summary>

@@ -32,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipPostsList> List(RingCentral.ReadGlipPostsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
@@ -46,8 +46,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Post(RingCentral.GlipPostPostBody glipPostPostBody,
             RestRequestConfig restRequestConfig = null)
@@ -60,8 +60,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}
         /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Get(RestRequestConfig restRequestConfig = null)
         {
@@ -78,8 +78,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// HTTP Method: delete
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
@@ -96,8 +96,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         /// HTTP Method: patch
         /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipPostInfo> Patch(RingCentral.GlipPatchPostBody glipPatchPostBody,
             RestRequestConfig restRequestConfig = null)

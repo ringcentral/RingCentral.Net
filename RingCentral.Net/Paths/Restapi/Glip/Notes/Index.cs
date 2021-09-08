@@ -32,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GetGlipNoteInfo> Get(RestRequestConfig restRequestConfig = null)
         {
@@ -50,8 +50,8 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         /// HTTP Method: delete
         /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
@@ -68,8 +68,8 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         /// HTTP Method: patch
         /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipNoteInfo> Patch(RingCentral.GlipNoteCreate glipNoteCreate,
             RestRequestConfig restRequestConfig = null)

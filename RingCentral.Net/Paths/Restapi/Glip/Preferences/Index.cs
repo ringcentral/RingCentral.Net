@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Preferences
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/preferences
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipPreferencesInfo> Get(RestRequestConfig restRequestConfig = null)
         {

@@ -3,7 +3,7 @@ namespace RingCentral
     public class NotificationSettingsUpdateRequest
     {
         /// <summary>
-        ///     List of notification recipient email addresses
+        ///     List of notification recipient email addresses. Should not be empty if 'includeManagers' parameter is set to false
         /// </summary>
         public string[] emailAddresses { get; set; }
 
@@ -38,7 +38,8 @@ namespace RingCentral
         public MissedCallsInfo missedCalls { get; set; }
 
         /// <summary>
-        ///     Specifies if managers' emails are included in the list of emails to which notifications are sent
+        ///     Specifies if managers' emails are included in the list of emails to which notifications are sent. If not specified, then the value is 'True'
+        ///     Default: true
         /// </summary>
         public bool? includeManagers { get; set; }
     }

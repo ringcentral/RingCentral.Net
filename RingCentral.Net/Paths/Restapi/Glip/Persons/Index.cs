@@ -32,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Glip.Persons
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/persons/{personId}
         /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipPersonInfo> Get(RestRequestConfig restRequestConfig = null)
         {

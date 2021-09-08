@@ -32,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/companies/{companyId}
         /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipCompany> Get(RestRequestConfig restRequestConfig = null)
         {

@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Teams.Remove
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/teams/{chatId}/remove
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Post(RingCentral.GlipPostMembersIdsListBody glipPostMembersIdsListBody,
             RestRequestConfig restRequestConfig = null)

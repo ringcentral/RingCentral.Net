@@ -42,7 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        /// Add Emergency Location
+        /// Creates a new emergency response location for the company.
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
         /// Rate Limit Group: Medium

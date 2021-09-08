@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Unlock
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}/unlock
         /// Rate Limit Group: Light
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {

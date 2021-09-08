@@ -100,6 +100,12 @@ namespace RingCentral
         public string additionalCustomerPhone { get; set; }
 
         /// <summary>
+        ///     Status of digital line provisioning
+        ///     Enum: Provisioning, Valid, Invalid
+        /// </summary>
+        public string lineProvisioningStatus { get; set; }
+
+        /// <summary>
         ///     Internal identifier of a tax
         /// </summary>
         public string taxId { get; set; }

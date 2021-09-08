@@ -32,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/events
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEventsInfo> List(RingCentral.ReadGlipEventsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
@@ -46,8 +46,8 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/glip/events
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Post(RingCentral.GlipEventCreate glipEventCreate,
             RestRequestConfig restRequestConfig = null)
@@ -60,8 +60,8 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
         {
@@ -78,8 +78,8 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<RingCentral.GlipEventInfo> Put(RingCentral.GlipEventCreate glipEventCreate,
             RestRequestConfig restRequestConfig = null)
@@ -97,8 +97,8 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         /// HTTP Method: delete
         /// Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
         /// Rate Limit Group: Medium
-        /// App Permission: Glip
-        /// User Permission: Glip
+        /// App Permission: TeamMessaging
+        /// User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
