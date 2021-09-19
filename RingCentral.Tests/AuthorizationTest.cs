@@ -120,22 +120,22 @@ namespace RingCentral.Tests
             await rc.Revoke();
         }
 
-        [Fact]
-        public async void GetLoginLinkTest()
-        {
-            var rc = new RestClient(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-            );
-            var str = await rc.Restapi(null).Oauth().Authorize().Post(new AuthorizeRequest
-            {
-                response_type = "code",
-                redirect_uri = "http://localhost:8080/oauth2callback",
-                client_id = Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID")
-            });
-            Assert.True(str.Length > 0);
-            Assert.StartsWith("<!DOCTYPE HTML>", str);
-        }
+        // [Fact]
+        // public async void GetLoginLinkTest()
+        // {
+        //     var rc = new RestClient(
+        //         Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+        //         Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+        //         Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+        //     );
+        //     var str = await rc.Restapi(null).Oauth().Authorize().Post(new AuthorizeRequest
+        //     {
+        //         response_type = "code",
+        //         redirect_uri = "http://localhost:8080/oauth2callback",
+        //         client_id = Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID")
+        //     });
+        //     Assert.True(str.Length > 0);
+        //     Assert.StartsWith("<!DOCTYPE HTML>", str);
+        // }
     }
 }

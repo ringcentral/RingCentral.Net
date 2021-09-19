@@ -39,12 +39,12 @@ namespace RingCentral.Tests
                         new Attachment
                         {
                             filename = "rc.png",
-                            content = await File.ReadAllBytesAsync("./rc.png")
+                            content = File.ReadAllBytes("./rc.png")
                         },
                         new Attachment
                         {
                             filename = "glip.png",
-                            content = await File.ReadAllBytesAsync("./glip.png")
+                            content = File.ReadAllBytes("./glip.png")
                         },
                         new Attachment
                         {

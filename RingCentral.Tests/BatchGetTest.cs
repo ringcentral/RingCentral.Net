@@ -72,7 +72,7 @@ namespace RingCentral.Tests
                 var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
                     .List(new ReadUserCallLogParameters
                         {perPage = 3, dateFrom = DateTime.UtcNow.AddYears(-1).ToString("O")});
-                var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
+                var callLogIds = string.Join(",", callLogsResponse.records.Select(r => r.id));
 
                 // var batchResponses = await rc.Restapi().Account().Extension().CallLog(callLogIds).BatchGet();
                 var batchResponses =
@@ -82,7 +82,7 @@ namespace RingCentral.Tests
                 var callLog = batchResponses[0].content;
                 Assert.NotNull(callLog);
                 Assert.NotNull(callLog.id);
-                Assert.Equal(callLogIds, string.Join(',', batchResponses.Select(br => br.content.id)));
+                Assert.Equal(callLogIds, string.Join(",", batchResponses.Select(br => br.content.id)));
             }
         }
 
@@ -104,13 +104,13 @@ namespace RingCentral.Tests
                 var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
                     .List(new ReadUserCallLogParameters
                         {perPage = 3, dateFrom = DateTime.UtcNow.AddYears(-3).ToString("O")});
-                var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
+                var callLogIds = string.Join(",", callLogsResponse.records.Select(r => r.id));
 
                 var batchResponses =
                     await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
 
                 Assert.Equal(3, batchResponses.Length);
-                Assert.Equal(callLogIds, string.Join(',', batchResponses.Select(br => br.content.id)));
+                Assert.Equal(callLogIds, string.Join(",", batchResponses.Select(br => br.content.id)));
             }
         }
 
@@ -131,7 +131,7 @@ namespace RingCentral.Tests
 
                 var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
                     .List(new ReadUserCallLogParameters {perPage = 1});
-                var callLogIds = string.Join(',', callLogsResponse.records.Select(r => r.id));
+                var callLogIds = string.Join(",", callLogsResponse.records.Select(r => r.id));
                 ArgumentException argumentException = null;
                 try
                 {
