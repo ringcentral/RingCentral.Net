@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Location
 {
-    public partial class Index
+    public class Index
     {
+        public Dictionary.Index parent;
         public RestClient rc;
-        public Restapi.Dictionary.Index parent;
 
-        public Index(Restapi.Dictionary.Index parent)
+        public Index(Dictionary.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,15 +19,15 @@ namespace RingCentral.Paths.Restapi.Dictionary.Location
         }
 
         /// <summary>
-        /// Returns all available locations for a certain state.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/dictionary/location
-        /// Rate Limit Group: Light
+        ///     Returns all available locations for a certain state.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/dictionary/location
+        ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<RingCentral.GetLocationListResponse> Get(
-            RingCentral.ListLocationsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetLocationListResponse> Get(ListLocationsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetLocationListResponse>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<GetLocationListResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -38,9 +36,9 @@ namespace RingCentral.Paths.Restapi.Dictionary
 {
     public partial class Index
     {
-        public Restapi.Dictionary.Location.Index Location()
+        public Location.Index Location()
         {
-            return new Restapi.Dictionary.Location.Index(this);
+            return new Location.Index(this);
         }
     }
 }

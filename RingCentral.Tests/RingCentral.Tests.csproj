@@ -7,10 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="dotenv.net" Version="2.1.1" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0-preview-20200921-01" />
-        <PackageReference Include="xunit" Version="2.4.1" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
+        <PackageReference Include="dotenv.net" Version="2.1.1"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0-preview-20200921-01"/>
+        <PackageReference Include="xunit" Version="2.4.1"/>
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -23,15 +23,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\RingCentral.Net.AuthorizeUri\RingCentral.Net.AuthorizeUri.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.AutoRefresh\RingCentral.Net.AutoRefresh.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.Events\RingCentral.Net.Events.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.RateLimit\RingCentral.Net.RateLimit.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.Retry\RingCentral.Net.Retry.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.WebSocket\RingCentral.Net.WebSocket.csproj" />
-        <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
+        <ProjectReference Include="..\RingCentral.Net.AuthorizeUri\RingCentral.Net.AuthorizeUri.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.AutoRefresh\RingCentral.Net.AutoRefresh.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.Events\RingCentral.Net.Events.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.RateLimit\RingCentral.Net.RateLimit.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.Retry\RingCentral.Net.Retry.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.WebSocket\RingCentral.Net.WebSocket.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -39,7 +39,7 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
         <None Update=".env">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>
 

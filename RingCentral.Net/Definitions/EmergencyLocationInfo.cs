@@ -34,13 +34,15 @@ namespace RingCentral
         public string usageStatus { get; set; }
 
         /// <summary>
-        ///     Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
+        ///     Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to
+        ///     'True'
         ///     Enum: Verified, Updated, Deleted, ActivationProcess, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
 
         /// <summary>
-        ///     Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted number of users, specified in `owners` array
+        ///     Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted
+        ///     number of users, specified in `owners` array
         ///     Default: Public
         ///     Enum: Private, Public
         /// </summary>

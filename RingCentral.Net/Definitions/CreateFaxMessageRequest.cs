@@ -27,7 +27,9 @@ namespace RingCentral
         public string isoCode { get; set; }
 
         /// <summary>
-        ///     Cover page identifier. If coverIndex is set to '0' (zero) cover page is not attached. For the list of available cover page identifiers (1-13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in 'Outbound Fax Settings')
+        ///     Cover page identifier. If coverIndex is set to '0' (zero) cover page is not attached. For the list of available
+        ///     cover page identifiers (1-13) please call the Fax Cover Pages method. If not specified, the default cover page is
+        ///     attached (which is configured in 'Outbound Fax Settings')
         ///     Format: int32
         /// </summary>
         public long? coverIndex { get; set; }

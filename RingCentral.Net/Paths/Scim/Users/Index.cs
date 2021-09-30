@@ -1,126 +1,102 @@
+using System;
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Scim.Users
 {
     public partial class Index
     {
-        public RestClient rc;
-        public Scim.Index parent;
         public string id;
+        public Scim.Index parent;
+        public RestClient rc;
 
         public Index(Scim.Index parent, string id = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.id = id;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && id != null)
-            {
-                return $"{parent.Path()}/Users/{id}";
-            }
-
+            if (withParameter && id != null) return $"{parent.Path()}/Users/{id}";
             return $"{parent.Path()}/Users";
         }
 
         /// <summary>
-        /// Search/List Users
-        /// HTTP Method: get
-        /// Endpoint: /scim/{version}/Users
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
+        ///     Search/List Users
+        ///     HTTP Method: get
+        ///     Endpoint: /scim/{version}/Users
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<RingCentral.UserSearchResponse> List(RingCentral.SearchViaGet2Parameters queryParams = null,
+        public async Task<UserSearchResponse> List(SearchViaGet2Parameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.UserSearchResponse>(this.Path(false), queryParams, restRequestConfig);
+            return await rc.Get<UserSearchResponse>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Create User
-        /// HTTP Method: post
-        /// Endpoint: /scim/{version}/Users
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
+        ///     Create User
+        ///     HTTP Method: post
+        ///     Endpoint: /scim/{version}/Users
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<RingCentral.UserResponse> Post(RingCentral.CreateUser createUser,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<UserResponse> Post(CreateUser createUser, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.UserResponse>(this.Path(false), createUser, null, restRequestConfig);
+            return await rc.Post<UserResponse>(Path(false), createUser, null, restRequestConfig);
         }
 
         /// <summary>
-        /// Get User
-        /// HTTP Method: get
-        /// Endpoint: /scim/{version}/Users/{id}
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
+        ///     Get User
+        ///     HTTP Method: get
+        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<RingCentral.UserResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<UserResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (id == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
-            }
-
-            return await rc.Get<RingCentral.UserResponse>(this.Path(), null, restRequestConfig);
+            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
+            return await rc.Get<UserResponse>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Update/Replace User
-        /// HTTP Method: put
-        /// Endpoint: /scim/{version}/Users/{id}
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
+        ///     Update/Replace User
+        ///     HTTP Method: put
+        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<RingCentral.UserResponse> Put(RingCentral.User user,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<UserResponse> Put(User user, RestRequestConfig restRequestConfig = null)
         {
-            if (id == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
-            }
-
-            return await rc.Put<RingCentral.UserResponse>(this.Path(), user, null, restRequestConfig);
+            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
+            return await rc.Put<UserResponse>(Path(), user, null, restRequestConfig);
         }
 
         /// <summary>
-        /// Delete User
-        /// HTTP Method: delete
-        /// Endpoint: /scim/{version}/Users/{id}
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
+        ///     Delete User
+        ///     HTTP Method: delete
+        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            if (id == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
+            return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Update/Patch User
-        /// HTTP Method: patch
-        /// Endpoint: /scim/{version}/Users/{id}
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
+        ///     Update/Patch User
+        ///     HTTP Method: patch
+        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<RingCentral.UserResponse> Patch(RingCentral.UserPatch userPatch,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<UserResponse> Patch(UserPatch userPatch, RestRequestConfig restRequestConfig = null)
         {
-            if (id == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(id));
-            }
-
-            return await rc.Patch<RingCentral.UserResponse>(this.Path(), userPatch, null, restRequestConfig);
+            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
+            return await rc.Patch<UserResponse>(Path(), userPatch, null, restRequestConfig);
         }
     }
 }
@@ -129,9 +105,9 @@ namespace RingCentral.Paths.Scim
 {
     public partial class Index
     {
-        public Scim.Users.Index Users(string id = null)
+        public Users.Index Users(string id = null)
         {
-            return new Scim.Users.Index(this, id);
+            return new Users.Index(this, id);
         }
     }
 }

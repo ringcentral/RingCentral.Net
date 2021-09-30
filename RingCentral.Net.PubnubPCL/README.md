@@ -4,7 +4,6 @@ Install this extension if you want to use PubNub and your app targets .NET Core,
 
 Check [RingCentral.Net.Pubnub](../RingCentral.Net.Pubnub) if your app targets traditional .NET framework.
 
-
 ```cs
 var rc = new RestClient(
     Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -27,4 +26,6 @@ var subscription = await pubNubExtension.Subscribe(eventFilters, message =>
 
 ## More documentation
 
-This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/pubnub), check its documentation for more information.
+This extension is inspired
+by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/pubnub)
+, check its documentation for more information.

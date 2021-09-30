@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate
 {
     public partial class Index
     {
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,19 +19,18 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate
         }
 
         /// <summary>
-        /// Updates multiple extensions at once. Maximum 500 extensions can be updated per request.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditExtensions
-        /// User Permission: EditExtensionInfo
+        ///     Updates multiple extensions at once. Maximum 500 extensions can be updated per request.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditExtensions
+        ///     User Permission: EditExtensionInfo
         /// </summary>
-        public async Task<RingCentral.ExtensionBulkUpdateTaskResource> Post(
-            RingCentral.ExtensionBulkUpdateRequest extensionBulkUpdateRequest,
+        public async Task<ExtensionBulkUpdateTaskResource> Post(ExtensionBulkUpdateRequest extensionBulkUpdateRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.ExtensionBulkUpdateTaskResource>(this.Path(), extensionBulkUpdateRequest,
-                null, restRequestConfig);
+            return await rc.Post<ExtensionBulkUpdateTaskResource>(Path(), extensionBulkUpdateRequest, null,
+                restRequestConfig);
         }
     }
 }
@@ -42,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.ExtensionBulkUpdate.Index ExtensionBulkUpdate()
+        public ExtensionBulkUpdate.Index ExtensionBulkUpdate()
         {
-            return new Restapi.Account.ExtensionBulkUpdate.Index(this);
+            return new ExtensionBulkUpdate.Index(this);
         }
     }
 }

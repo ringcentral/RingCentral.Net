@@ -6,6 +6,11 @@ namespace RingCentral
     public class NotificationInfo
     {
         /// <summary>
+        ///     Content availability
+        /// </summary>
+        [JsonProperty("content-available")] public string contentAvailable;
+
+        /// <summary>
         /// </summary>
         public AlertInfo alert { get; set; }
 
@@ -18,11 +23,6 @@ namespace RingCentral
         ///     Message sound
         /// </summary>
         public string sound { get; set; }
-
-        /// <summary>
-        ///     Content availability
-        /// </summary>
-        [JsonProperty("content-available")] public string contentAvailable;
 
         /// <summary>
         ///     Category of a message

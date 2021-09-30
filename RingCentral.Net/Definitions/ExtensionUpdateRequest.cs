@@ -76,8 +76,10 @@ namespace RingCentral
         public AutomaticLocationUpdatesSiteInfoRequest site { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
-        ///     Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
+        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
+        ///     modern RingCentral product terminology
+        ///     Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
+        ///     IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
 

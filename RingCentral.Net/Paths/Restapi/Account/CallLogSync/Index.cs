@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.CallLogSync
 {
-    public partial class Index
+    public class Index
     {
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,17 +19,17 @@ namespace RingCentral.Paths.Restapi.Account.CallLogSync
         }
 
         /// <summary>
-        /// Synchronizes company call log records.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log-sync
-        /// Rate Limit Group: Heavy
-        /// App Permission: ReadCallLog
-        /// User Permission: ReadCallLog
+        ///     Synchronizes company call log records.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log-sync
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: ReadCallLog
+        ///     User Permission: ReadCallLog
         /// </summary>
-        public async Task<RingCentral.AccountCallLogSyncResponse> Get(
-            RingCentral.SyncAccountCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<AccountCallLogSyncResponse> Get(SyncAccountCallLogParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountCallLogSyncResponse>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<AccountCallLogSyncResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -40,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.CallLogSync.Index CallLogSync()
+        public CallLogSync.Index CallLogSync()
         {
-            return new Restapi.Account.CallLogSync.Index(this);
+            return new CallLogSync.Index(this);
         }
     }
 }

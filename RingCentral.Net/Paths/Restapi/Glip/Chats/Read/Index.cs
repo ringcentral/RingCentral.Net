@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Chats.Read
 {
-    public partial class Index
+    public class Index
     {
+        public Chats.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Chats.Index parent;
 
-        public Index(Restapi.Glip.Chats.Index parent)
+        public Index(Chats.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,15 +19,15 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Read
         }
 
         /// <summary>
-        /// Sets the specified chat status to 'Read' for the current user.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/read
-        /// Rate Limit Group: Medium
-        /// App Permission: TeamMessagingInternal
+        ///     Sets the specified chat status to 'Read' for the current user.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/read
+        ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessagingInternal
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), null, restRequestConfig);
+            return await rc.Post<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -38,9 +36,9 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
 {
     public partial class Index
     {
-        public Restapi.Glip.Chats.Read.Index Read()
+        public Read.Index Read()
         {
-            return new Restapi.Glip.Chats.Read.Index(this);
+            return new Read.Index(this);
         }
     }
 }

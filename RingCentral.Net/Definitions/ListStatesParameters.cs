@@ -4,7 +4,8 @@ namespace RingCentral
     public class ListStatesParameters
     {
         /// <summary>
-        ///     If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the value is empty then the parameter is ignored
+        ///     If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the
+        ///     value is empty then the parameter is ignored
         /// </summary>
         public bool? allCountries { get; set; }
 

@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesBulkValidate
 {
-    public partial class Index
+    public class Index
     {
+        public EmergencyAddressAutoUpdate.Index parent;
         public RestClient rc;
-        public Restapi.Account.EmergencyAddressAutoUpdate.Index parent;
 
-        public Index(Restapi.Account.EmergencyAddressAutoUpdate.Index parent)
+        public Index(EmergencyAddressAutoUpdate.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,19 +19,18 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
         }
 
         /// <summary>
-        /// Validates switches before creation or update. The maximum number of switches per request is 10 000.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
+        ///     Validates switches before creation or update. The maximum number of switches per request is 10 000.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.ValidateMultipleSwitchesResponse> Post(
-            RingCentral.ValidateMultipleSwitchesRequest validateMultipleSwitchesRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<ValidateMultipleSwitchesResponse> Post(
+            ValidateMultipleSwitchesRequest validateMultipleSwitchesRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.ValidateMultipleSwitchesResponse>(this.Path(),
-                validateMultipleSwitchesRequest, null, restRequestConfig);
+            return await rc.Post<ValidateMultipleSwitchesResponse>(Path(), validateMultipleSwitchesRequest, null,
+                restRequestConfig);
         }
     }
 }
@@ -42,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate
 {
     public partial class Index
     {
-        public Restapi.Account.EmergencyAddressAutoUpdate.SwitchesBulkValidate.Index SwitchesBulkValidate()
+        public SwitchesBulkValidate.Index SwitchesBulkValidate()
         {
-            return new Restapi.Account.EmergencyAddressAutoUpdate.SwitchesBulkValidate.Index(this);
+            return new SwitchesBulkValidate.Index(this);
         }
     }
 }

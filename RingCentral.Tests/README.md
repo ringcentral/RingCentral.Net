@@ -2,8 +2,8 @@
 
 ## Setup
 
-If you want to run the test cases in this project (you don't need to run them unless you want to contribute to this project),
-make sure you have the following environment variables defined:
+If you want to run the test cases in this project (you don't need to run them unless you want to contribute to this
+project), make sure you have the following environment variables defined:
 
 ```
 export RINGCENTRAL_SERVER_URL=https://platform.devtest.ringcentral.com

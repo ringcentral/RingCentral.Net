@@ -10,9 +10,9 @@ namespace RingCentral.Net.WebSocket
     public class WebSocketExtension : SdkExtension
     {
         private readonly WebSocketOptions _options;
+        private readonly List<Subscription> _subscriptions = new List<Subscription>();
         private ConnectionDetails _connectionDetails;
         private RestClient _rc;
-        private readonly List<Subscription> _subscriptions = new List<Subscription>();
         private WebsocketClient _ws;
         private Wsc _wsc;
 

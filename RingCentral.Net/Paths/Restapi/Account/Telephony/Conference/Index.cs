@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
 {
-    public partial class Index
+    public class Index
     {
+        public Telephony.Index parent;
         public RestClient rc;
-        public Restapi.Account.Telephony.Index parent;
 
-        public Index(Restapi.Account.Telephony.Index parent)
+        public Index(Telephony.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,15 +19,15 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
         }
 
         /// <summary>
-        /// Initiates a conference call session.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/conference
-        /// Rate Limit Group: Heavy
-        /// App Permission: CallControl
+        ///     Initiates a conference call session.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/conference
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: CallControl
         /// </summary>
-        public async Task<RingCentral.CallSessionObject> Post(RestRequestConfig restRequestConfig = null)
+        public async Task<CallSessionObject> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.CallSessionObject>(this.Path(), null, restRequestConfig);
+            return await rc.Post<CallSessionObject>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -38,9 +36,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony
 {
     public partial class Index
     {
-        public Restapi.Account.Telephony.Conference.Index Conference()
+        public Conference.Index Conference()
         {
-            return new Restapi.Account.Telephony.Conference.Index(this);
+            return new Conference.Index(this);
         }
     }
 }

@@ -19,7 +19,8 @@ namespace RingCentral
         public bool? includeAbandonedCalls { get; set; }
 
         /// <summary>
-        ///     Abandoned calls that are shorter than the defined period of time in seconds will not be included into the calculation of Service Level
+        ///     Abandoned calls that are shorter than the defined period of time in seconds will not be included into the
+        ///     calculation of Service Level
         /// </summary>
         public long? abandonedThresholdSeconds { get; set; }
     }

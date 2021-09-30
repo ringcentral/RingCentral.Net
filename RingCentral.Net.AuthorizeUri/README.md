@@ -14,7 +14,8 @@ var uri = authorizeUriExtension.BuildUri(new AuthorizeRequest
 });
 ```
 
-
 ## More documentation
 
-This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri), check its documentation for more information.
+This extension is inspired
+by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri)
+, check its documentation for more information.

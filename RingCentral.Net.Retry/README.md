@@ -2,7 +2,6 @@
 
 This extension allows you to retry a REST request if there is `RestException`.
 
-
 ```cs
 var rc = new RestClient(
     Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
@@ -18,7 +17,8 @@ var retryExtension = new RetryExtension();
 await rc.InstallExtension(retryExtension);
 ```
 
-
 ## More documentation
 
-This extension is inspired by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry), check its documentation for more information.
+This extension is inspired
+by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry)
+, check its documentation for more information.

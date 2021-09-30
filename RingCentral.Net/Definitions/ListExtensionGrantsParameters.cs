@@ -4,8 +4,10 @@ namespace RingCentral
     public class ListExtensionGrantsParameters
     {
         /// <summary>
-        ///     Type of extension to be returned. Multiple values are supported. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
-        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Room
+        ///     Type of extension to be returned. Multiple values are supported. Please note that legacy 'Department' extension
+        ///     type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
+        ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Room
         /// </summary>
         public string extensionType { get; set; }
 

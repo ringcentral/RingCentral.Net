@@ -1,78 +1,75 @@
+using System;
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Conversations
 {
-    public partial class Index
+    public class Index
     {
-        public RestClient rc;
-        public Restapi.Glip.Index parent;
         public string chatId;
+        public Glip.Index parent;
+        public RestClient rc;
 
-        public Index(Restapi.Glip.Index parent, string chatId = null)
+        public Index(Glip.Index parent, string chatId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.chatId = chatId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && chatId != null)
-            {
-                return $"{parent.Path()}/conversations/{chatId}";
-            }
-
+            if (withParameter && chatId != null) return $"{parent.Path()}/conversations/{chatId}";
             return $"{parent.Path()}/conversations";
         }
 
         /// <summary>
-        /// Returns the list of conversations where the user is a member. All records in response are sorted by creation time of a conversation in ascending order. Conversation is a chat of the *Group* type.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/glip/conversations
-        /// Rate Limit Group: Medium
-        /// App Permission: TeamMessaging
-        /// User Permission: UnifiedAppDesktop
+        ///     Returns the list of conversations where the user is a member. All records in response are sorted by creation time
+        ///     of a conversation in ascending order. Conversation is a chat of the *Group* type.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/glip/conversations
+        ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessaging
+        ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<RingCentral.GlipConversationsList> List(
-            RingCentral.ListGlipConversationsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.GlipConversationsList>(this.Path(false), queryParams, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Creates a new conversation or opens the existing one. If the conversation already exists, then its ID will be returned in response. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of 'Group' type. If you add a person to the existing conversation (group), it creates a whole new conversation.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/glip/conversations
-        /// Rate Limit Group: Medium
-        /// App Permission: TeamMessaging
-        /// User Permission: UnifiedAppDesktop
-        /// </summary>
-        public async Task<RingCentral.GlipConversationInfo> Post(
-            RingCentral.CreateGlipConversationRequest createGlipConversationRequest,
+        public async Task<GlipConversationsList> List(ListGlipConversationsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.GlipConversationInfo>(this.Path(false), createGlipConversationRequest,
-                null, restRequestConfig);
+            return await rc.Get<GlipConversationsList>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Returns information about the specified conversation, including the list of conversation participants. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of 'Group' type. If you add a person to the existing conversation, it creates a whole new conversation.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/glip/conversations/{chatId}
-        /// Rate Limit Group: Light
-        /// App Permission: TeamMessaging
-        /// User Permission: UnifiedAppDesktop
+        ///     Creates a new conversation or opens the existing one. If the conversation already exists, then its ID will be
+        ///     returned in response. A conversation is an adhoc discussion between a particular set of users, not featuring any
+        ///     specific name or description; it is a chat of 'Group' type. If you add a person to the existing conversation
+        ///     (group), it creates a whole new conversation.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/conversations
+        ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessaging
+        ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<RingCentral.GlipConversationInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<GlipConversationInfo> Post(CreateGlipConversationRequest createGlipConversationRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            if (chatId == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(chatId));
-            }
+            return await rc.Post<GlipConversationInfo>(Path(false), createGlipConversationRequest, null,
+                restRequestConfig);
+        }
 
-            return await rc.Get<RingCentral.GlipConversationInfo>(this.Path(), null, restRequestConfig);
+        /// <summary>
+        ///     Returns information about the specified conversation, including the list of conversation participants. A
+        ///     conversation is an adhoc discussion between a particular set of users, not featuring any specific name or
+        ///     description; it is a chat of 'Group' type. If you add a person to the existing conversation, it creates a whole new
+        ///     conversation.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/glip/conversations/{chatId}
+        ///     Rate Limit Group: Light
+        ///     App Permission: TeamMessaging
+        ///     User Permission: UnifiedAppDesktop
+        /// </summary>
+        public async Task<GlipConversationInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
+            return await rc.Get<GlipConversationInfo>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -81,9 +78,9 @@ namespace RingCentral.Paths.Restapi.Glip
 {
     public partial class Index
     {
-        public Restapi.Glip.Conversations.Index Conversations(string chatId = null)
+        public Conversations.Index Conversations(string chatId = null)
         {
-            return new Restapi.Glip.Conversations.Index(this, chatId);
+            return new Conversations.Index(this, chatId);
         }
     }
 }

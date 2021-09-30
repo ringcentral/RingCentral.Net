@@ -1,18 +1,19 @@
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Oauth.Authorize
 {
-    public partial class Index
+    public class Index
     {
+        public Oauth.Index parent;
         public RestClient rc;
-        public Restapi.Oauth.Index parent;
 
-        public Index(Restapi.Oauth.Index parent)
+        public Index(Oauth.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,16 +22,15 @@ namespace RingCentral.Paths.Restapi.Oauth.Authorize
         }
 
         /// <summary>
-        /// Returns a link to a login page location.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/oauth/authorize
+        ///     Returns a link to a login page location.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/oauth/authorize
         /// </summary>
-        public async Task<string> Post(RingCentral.AuthorizeRequest authorizeRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(AuthorizeRequest authorizeRequest, RestRequestConfig restRequestConfig = null)
         {
-            var dict = new System.Collections.Generic.Dictionary<string, string>();
+            var dict = new Dictionary<string, string>();
             Utils.GetPairs(authorizeRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<string>(this.Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
+            return await rc.Post<string>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
         }
     }
 }
@@ -39,9 +39,9 @@ namespace RingCentral.Paths.Restapi.Oauth
 {
     public partial class Index
     {
-        public Restapi.Oauth.Authorize.Index Authorize()
+        public Authorize.Index Authorize()
         {
-            return new Restapi.Oauth.Authorize.Index(this);
+            return new Authorize.Index(this);
         }
     }
 }

@@ -10,19 +10,22 @@ namespace RingCentral
         public long? conversationId { get; set; }
 
         /// <summary>
-        ///     The start datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
+        ///     The start datetime for resulting messages in ISO 8601 format including timezone, for example
+        ///     2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
         ///     Format: date-time
         /// </summary>
         public string dateFrom { get; set; }
 
         /// <summary>
-        ///     The end datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
+        ///     The end datetime for resulting messages in ISO 8601 format including timezone, for example
+        ///     2016-03-10T18:07:52.534Z. The default value is current time
         ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }
 
         /// <summary>
-        ///     Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
+        ///     Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple
+        ///     values are accepted
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] direction { get; set; }

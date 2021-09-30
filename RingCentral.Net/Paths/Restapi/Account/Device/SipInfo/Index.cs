@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Device.SipInfo
 {
-    public partial class Index
+    public class Index
     {
+        public Device.Index parent;
         public RestClient rc;
-        public Restapi.Account.Device.Index parent;
 
-        public Index(Restapi.Account.Device.Index parent)
+        public Index(Device.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Account.Device.SipInfo
         }
 
         /// <summary>
-        /// Get Device SIP Info
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/device/{deviceId}/sip-info
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadCompanyDevices
+        ///     Get Device SIP Info
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/device/{deviceId}/sip-info
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadCompanyDevices
         /// </summary>
-        public async Task<RingCentral.SipInfoResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<SipInfoResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.SipInfoResource>(this.Path(), null, restRequestConfig);
+            return await rc.Get<SipInfoResource>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -39,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Account.Device
 {
     public partial class Index
     {
-        public Restapi.Account.Device.SipInfo.Index SipInfo()
+        public SipInfo.Index SipInfo()
         {
-            return new Restapi.Account.Device.SipInfo.Index(this);
+            return new SipInfo.Index(this);
         }
     }
 }

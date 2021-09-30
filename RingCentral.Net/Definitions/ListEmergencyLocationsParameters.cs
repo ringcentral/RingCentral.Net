@@ -4,7 +4,8 @@ namespace RingCentral
     public class ListEmergencyLocationsParameters
     {
         /// <summary>
-        ///     Filters entries containing the specified substring in address and name fields. The characters range is 0-64; not case-sensitive. If empty then the filter is ignored
+        ///     Filters entries containing the specified substring in address and name fields. The characters range is 0-64; not
+        ///     case-sensitive. If empty then the filter is ignored
         /// </summary>
         public string searchString { get; set; }
 
@@ -28,13 +29,15 @@ namespace RingCentral
         public string domesticCountryId { get; set; }
 
         /// <summary>
-        ///     Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-' (descending order). Supported values: 'address'
+        ///     Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-'
+        ///     (descending order). Supported values: 'address'
         ///     Default: address
         /// </summary>
         public string orderBy { get; set; }
 
         /// <summary>
-        ///     Indicates the page size (number of items). The values supported: `Max` or numeric value. If not specified, 100 records are returned per one page
+        ///     Indicates the page size (number of items). The values supported: `Max` or numeric value. If not specified, 100
+        ///     records are returned per one page
         /// </summary>
         public long? perPage { get; set; }
 

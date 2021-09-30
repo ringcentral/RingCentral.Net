@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Notes.Lock
 {
-    public partial class Index
+    public class Index
     {
+        public Notes.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Notes.Index parent;
 
-        public Index(Restapi.Glip.Notes.Index parent)
+        public Index(Notes.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Glip.Notes.Lock
         }
 
         /// <summary>
-        /// Locks a note providing the user with the unique write access for 5 hours.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}/lock
-        /// Rate Limit Group: Light
-        /// App Permission: TeamMessaging
-        /// User Permission: UnifiedAppDesktop
+        ///     Locks a note providing the user with the unique write access for 5 hours.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}/lock
+        ///     Rate Limit Group: Light
+        ///     App Permission: TeamMessaging
+        ///     User Permission: UnifiedAppDesktop
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), null, restRequestConfig);
+            return await rc.Post<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -39,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
 {
     public partial class Index
     {
-        public Restapi.Glip.Notes.Lock.Index Lock()
+        public Lock.Index Lock()
         {
-            return new Restapi.Glip.Notes.Lock.Index(this);
+            return new Lock.Index(this);
         }
     }
 }

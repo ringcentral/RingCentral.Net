@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
 {
-    public partial class Index
+    public class Index
     {
+        public PagingOnlyGroups.Index parent;
         public RestClient rc;
-        public Restapi.Account.PagingOnlyGroups.Index parent;
 
-        public Index(Restapi.Account.PagingOnlyGroups.Index parent)
+        public Index(PagingOnlyGroups.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,17 +19,17 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Devices
         }
 
         /// <summary>
-        /// Returns the list of paging devices assigned to this group.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadCompanyDevices
+        ///     Returns the list of paging devices assigned to this group.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadCompanyDevices
         /// </summary>
-        public async Task<RingCentral.PagingOnlyGroupDevices> Get(
-            RingCentral.ListPagingGroupDevicesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<PagingOnlyGroupDevices> Get(ListPagingGroupDevicesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.PagingOnlyGroupDevices>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<PagingOnlyGroupDevices>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -40,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups
 {
     public partial class Index
     {
-        public Restapi.Account.PagingOnlyGroups.Devices.Index Devices()
+        public Devices.Index Devices()
         {
-            return new Restapi.Account.PagingOnlyGroups.Devices.Index(this);
+            return new Devices.Index(this);
         }
     }
 }

@@ -9,7 +9,8 @@ namespace RingCentral
         public string extensionId { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was last modified in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        ///     Datetime when the message was last modified in ISO 8601 format including timezone, for example
+        ///     2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string lastUpdated { get; set; }

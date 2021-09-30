@@ -23,7 +23,8 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Custom name of a caller. Max number of characters is 15 (only alphabetical symbols, numbers and commas are supported)
+        ///     Custom name of a caller. Max number of characters is 15 (only alphabetical symbols, numbers and commas are
+        ///     supported)
         /// </summary>
         public string callerIdName { get; set; }
 

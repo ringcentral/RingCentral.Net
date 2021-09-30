@@ -7674,7 +7674,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createExtensionEmergencyLocation) in API Explorer.
 
 ## updateExtensionEmergencyLocation
-Updates a personal emergency response location by the current user or admin.
+Update User Emergency Location
 
 Name|Value
 -|-
@@ -7697,7 +7697,7 @@ await rc.Revoke();
 - `emergencyLocationInfo` is of type [EmergencyLocationInfo](./RingCentral.Net/Definitions/EmergencyLocationInfo.cs)
 - `result` is of type [EmergencyLocationInfo](./RingCentral.Net/Definitions/EmergencyLocationInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Update-a-personal-emergency-response-location-for-the-end-user-updateExtensionEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateExtensionEmergencyLocation) in API Explorer.
 
 ## deleteExtensionEmergencyLocation
 Delete User Emergency Location

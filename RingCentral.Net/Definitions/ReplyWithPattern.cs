@@ -5,7 +5,8 @@ namespace RingCentral
         /// <summary>
         ///     Predefined reply pattern name.
         ///     Example: OnMyWay
-        ///     Enum: WillCallYouBack, CallMeBack, OnMyWay, OnTheOtherLine, WillCallYouBackLater, CallMeBackLater, InAMeeting, OnTheOtherLineNoCall
+        ///     Enum: WillCallYouBack, CallMeBack, OnMyWay, OnTheOtherLine, WillCallYouBackLater, CallMeBackLater, InAMeeting,
+        ///     OnTheOtherLineNoCall
         /// </summary>
         public string pattern { get; set; }
 

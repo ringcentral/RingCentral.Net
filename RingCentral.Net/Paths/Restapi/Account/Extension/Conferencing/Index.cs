@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,34 +19,33 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         }
 
         /// <summary>
-        /// Returns the information on the Free Conference Calling (FCC) feature for a given extension.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: OrganizeConference
+        ///     Returns the information on the Free Conference Calling (FCC) feature for a given extension.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: OrganizeConference
         /// </summary>
-        public async Task<RingCentral.GetConferencingInfoResponse> Get(
-            RingCentral.ReadConferencingSettingsParameters queryParams = null,
+        public async Task<GetConferencingInfoResponse> Get(ReadConferencingSettingsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<GetConferencingInfoResponse>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates the default conferencing number for the current extension. The number can be selected from conferencing numbers of the current extension. Updates the setting, allowing participants join the conference before host.
-        /// HTTP Method: put
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
-        /// Rate Limit Group: Medium
-        /// App Permission: EditExtensions
-        /// User Permission: OrganizeConference
+        ///     Updates the default conferencing number for the current extension. The number can be selected from conferencing
+        ///     numbers of the current extension. Updates the setting, allowing participants join the conference before host.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditExtensions
+        ///     User Permission: OrganizeConference
         /// </summary>
-        public async Task<RingCentral.GetConferencingInfoResponse> Put(
-            RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest,
+        public async Task<GetConferencingInfoResponse> Put(UpdateConferencingInfoRequest updateConferencingInfoRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest,
-                null, restRequestConfig);
+            return await rc.Put<GetConferencingInfoResponse>(Path(), updateConferencingInfoRequest, null,
+                restRequestConfig);
         }
     }
 }
@@ -57,9 +54,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.Conferencing.Index Conferencing()
+        public Conferencing.Index Conferencing()
         {
-            return new Restapi.Account.Extension.Conferencing.Index(this);
+            return new Conferencing.Index(this);
         }
     }
 }

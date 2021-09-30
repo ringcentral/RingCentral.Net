@@ -1,22 +1,22 @@
-using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
-
 namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups
 {
     public partial class Index
     {
+        public string pagingOnlyGroupId;
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent, string pagingOnlyGroupId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
+            this.pagingOnlyGroupId = pagingOnlyGroupId;
         }
 
-        public string Path()
+        public string Path(bool withParameter = true)
         {
+            if (withParameter && pagingOnlyGroupId != null)
+                return $"{parent.Path()}/paging-only-groups/{pagingOnlyGroupId}";
             return $"{parent.Path()}/paging-only-groups";
         }
     }
@@ -26,9 +26,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.PagingOnlyGroups.Index PagingOnlyGroups()
+        public PagingOnlyGroups.Index PagingOnlyGroups(string pagingOnlyGroupId = null)
         {
-            return new Restapi.Account.PagingOnlyGroups.Index(this);
+            return new PagingOnlyGroups.Index(this, pagingOnlyGroupId);
         }
     }
 }

@@ -9,7 +9,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of an answering rule
-        ///     Enum: Connect, Voicemail, DialByName, Transfer, Repeat, ReturnToRoot, ReturnToPrevious, Disconnect, ReturnToTopLevelMenu, DoNothing, ConnectToOperator
+        ///     Enum: Connect, Voicemail, DialByName, Transfer, Repeat, ReturnToRoot, ReturnToPrevious, Disconnect,
+        ///     ReturnToTopLevelMenu, DoNothing, ConnectToOperator
         /// </summary>
         public string action { get; set; }
 

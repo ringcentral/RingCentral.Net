@@ -4,7 +4,8 @@ namespace RingCentral
     public class ListContactsParameters
     {
         /// <summary>
-        ///     If specified, only contacts whose First name or Last name start with the mentioned substring are returned. Case-insensitive
+        ///     If specified, only contacts whose First name or Last name start with the mentioned substring are returned.
+        ///     Case-insensitive
         /// </summary>
         public string startsWith { get; set; }
 

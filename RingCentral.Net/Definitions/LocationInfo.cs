@@ -18,12 +18,16 @@ namespace RingCentral
         public string city { get; set; }
 
         /// <summary>
-        ///     Area code of the location (3-digit usually), according to the NANP number format, that can be summarized as NPA-NXX-xxxx and covers Canada, the United States, parts of the Caribbean Sea, and some Atlantic and Pacific islands. See for details North American Numbering Plan
+        ///     Area code of the location (3-digit usually), according to the NANP number format, that can be summarized as
+        ///     NPA-NXX-xxxx and covers Canada, the United States, parts of the Caribbean Sea, and some Atlantic and Pacific
+        ///     islands. See for details North American Numbering Plan
         /// </summary>
         public string npa { get; set; }
 
         /// <summary>
-        ///     Central office code of the location, according to the NANP number format, that can be summarized as NPA-NXX-xxxx and covers Canada, the United States, parts of the Caribbean Sea, and some Atlantic and Pacific islands. See for details North American Numbering Plan
+        ///     Central office code of the location, according to the NANP number format, that can be summarized as NPA-NXX-xxxx
+        ///     and covers Canada, the United States, parts of the Caribbean Sea, and some Atlantic and Pacific islands. See for
+        ///     details North American Numbering Plan
         /// </summary>
         public string nxx { get; set; }
 

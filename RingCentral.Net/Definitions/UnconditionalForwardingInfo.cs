@@ -4,7 +4,9 @@ namespace RingCentral
     public class UnconditionalForwardingInfo
     {
         /// <summary>
-        ///     Phone number to which the call is forwarded. In addition to common e.164 format, the following number patterns are supported: 11xxxxxxxxxxx, 444xxxxxxxxxxx, 616xxxxxxxxxxx, 1700yyyy; where xxxxxxxxxxx is a phone number in e.164 format (without '+' sign) and yyyy is an external short extension number. Max number of digits is 15
+        ///     Phone number to which the call is forwarded. In addition to common e.164 format, the following number patterns are
+        ///     supported: 11xxxxxxxxxxx, 444xxxxxxxxxxx, 616xxxxxxxxxxx, 1700yyyy; where xxxxxxxxxxx is a phone number in e.164
+        ///     format (without '+' sign) and yyyy is an external short extension number. Max number of digits is 15
         /// </summary>
         public string phoneNumber { get; set; }
 

@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.BusinessAddress
 {
-    public partial class Index
+    public class Index
     {
+        public Account.Index parent;
         public RestClient rc;
-        public Restapi.Account.Index parent;
 
-        public Index(Restapi.Account.Index parent)
+        public Index(Account.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,32 +19,32 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         }
 
         /// <summary>
-        /// Returns business address of a company.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadCompanyInfo
+        ///     Returns business address of a company.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<RingCentral.AccountBusinessAddressResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<AccountBusinessAddressResource> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AccountBusinessAddressResource>(this.Path(), null, restRequestConfig);
+            return await rc.Get<AccountBusinessAddressResource>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates the business address of a company that account is linked to. Batch request is supported.
-        /// HTTP Method: put
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address
-        /// Rate Limit Group: Medium
-        /// App Permission: EditAccounts
-        /// User Permission: EditCompanyInfo
+        ///     Updates the business address of a company that account is linked to. Batch request is supported.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditAccounts
+        ///     User Permission: EditCompanyInfo
         /// </summary>
-        public async Task<RingCentral.AccountBusinessAddressResource> Put(
-            RingCentral.ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest,
+        public async Task<AccountBusinessAddressResource> Put(
+            ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.AccountBusinessAddressResource>(this.Path(),
-                modifyAccountBusinessAddressRequest, null, restRequestConfig);
+            return await rc.Put<AccountBusinessAddressResource>(Path(), modifyAccountBusinessAddressRequest, null,
+                restRequestConfig);
         }
     }
 }
@@ -55,9 +53,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Restapi.Account.BusinessAddress.Index BusinessAddress()
+        public BusinessAddress.Index BusinessAddress()
         {
-            return new Restapi.Account.BusinessAddress.Index(this);
+            return new BusinessAddress.Index(this);
         }
     }
 }

@@ -1,115 +1,96 @@
+using System;
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessPoints
 {
-    public partial class Index
+    public class Index
     {
-        public RestClient rc;
-        public Restapi.Account.EmergencyAddressAutoUpdate.Index parent;
+        public EmergencyAddressAutoUpdate.Index parent;
         public string pointId;
+        public RestClient rc;
 
-        public Index(Restapi.Account.EmergencyAddressAutoUpdate.Index parent, string pointId = null)
+        public Index(EmergencyAddressAutoUpdate.Index parent, string pointId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.pointId = pointId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && pointId != null)
-            {
-                return $"{parent.Path()}/wireless-points/{pointId}";
-            }
-
+            if (withParameter && pointId != null) return $"{parent.Path()}/wireless-points/{pointId}";
             return $"{parent.Path()}/wireless-points";
         }
 
         /// <summary>
-        /// Returns account wireless points configured and used for Automatic Location Updates feature.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
-        /// Rate Limit Group: Medium
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
+        ///     Returns account wireless points configured and used for Automatic Location Updates feature.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.WirelessPointsList> List(
-            RingCentral.ListWirelessPointsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.WirelessPointsList>(this.Path(false), queryParams, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Creates a new wireless point in network configuration with the emergency address assigned.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
-        /// </summary>
-        public async Task<RingCentral.WirelessPointInfo> Post(RingCentral.CreateWirelessPoint createWirelessPoint,
+        public async Task<WirelessPointsList> List(ListWirelessPointsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.WirelessPointInfo>(this.Path(false), createWirelessPoint, null,
-                restRequestConfig);
+            return await rc.Get<WirelessPointsList>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Returns the specified wireless access point of a corporate map with the emergency address assigned.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
-        /// Rate Limit Group: Medium
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
+        ///     Creates a new wireless point in network configuration with the emergency address assigned.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<RingCentral.WirelessPointInfo> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (pointId == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(pointId));
-            }
-
-            return await rc.Get<RingCentral.WirelessPointInfo>(this.Path(), null, restRequestConfig);
-        }
-
-        /// <summary>
-        /// Updates the specified wireless access point of a corporate map by ID.
-        /// HTTP Method: put
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
-        /// </summary>
-        public async Task<RingCentral.WirelessPointInfo> Put(RingCentral.UpdateWirelessPoint updateWirelessPoint,
+        public async Task<WirelessPointInfo> Post(CreateWirelessPoint createWirelessPoint,
             RestRequestConfig restRequestConfig = null)
         {
-            if (pointId == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(pointId));
-            }
-
-            return await rc.Put<RingCentral.WirelessPointInfo>(this.Path(), updateWirelessPoint, null,
-                restRequestConfig);
+            return await rc.Post<WirelessPointInfo>(Path(false), createWirelessPoint, null, restRequestConfig);
         }
 
         /// <summary>
-        /// Deletes wireless point(s) of a corporate map by ID(s).
-        /// HTTP Method: delete
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditAccounts
-        /// User Permission: ConfigureEmergencyMaps
+        ///     Returns the specified wireless access point of a corporate map with the emergency address assigned.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
+        /// </summary>
+        public async Task<WirelessPointInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (pointId == null) throw new ArgumentException("Parameter cannot be null", nameof(pointId));
+            return await rc.Get<WirelessPointInfo>(Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
+        ///     Updates the specified wireless access point of a corporate map by ID.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
+        /// </summary>
+        public async Task<WirelessPointInfo> Put(UpdateWirelessPoint updateWirelessPoint,
+            RestRequestConfig restRequestConfig = null)
+        {
+            if (pointId == null) throw new ArgumentException("Parameter cannot be null", nameof(pointId));
+            return await rc.Put<WirelessPointInfo>(Path(), updateWirelessPoint, null, restRequestConfig);
+        }
+
+        /// <summary>
+        ///     Deletes wireless point(s) of a corporate map by ID(s).
+        ///     HTTP Method: delete
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditAccounts
+        ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            if (pointId == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(pointId));
-            }
-
-            return await rc.Delete<string>(this.Path(), null, restRequestConfig);
+            if (pointId == null) throw new ArgumentException("Parameter cannot be null", nameof(pointId));
+            return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -118,9 +99,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate
 {
     public partial class Index
     {
-        public Restapi.Account.EmergencyAddressAutoUpdate.WirelessPoints.Index WirelessPoints(string pointId = null)
+        public WirelessPoints.Index WirelessPoints(string pointId = null)
         {
-            return new Restapi.Account.EmergencyAddressAutoUpdate.WirelessPoints.Index(this, pointId);
+            return new WirelessPoints.Index(this, pointId);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace RingCentral.Tests
                             foundIt = true;
 
                             var newText = Guid.NewGuid().ToString();
-                            var r = await rc.Restapi().Glip().Chats(@group.id).Posts(post.id)
+                            var r = await rc.Restapi().Glip().Chats(group.id).Posts(post.id)
                                 .Patch(new GlipPatchPostBody {text = newText});
                             Assert.Equal(r.text, newText);
 

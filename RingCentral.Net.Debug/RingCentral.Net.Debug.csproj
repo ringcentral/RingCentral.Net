@@ -1,19 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-      <TargetFramework>netstandard2.0</TargetFramework>
-      <PackageId>RingCentral.Net.Debug</PackageId>
-      <PackageVersion>1.0.0</PackageVersion>
-      <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
-      <Description>Debug extension for RingCentral.Net</Description>
-      <PackageLicenseExpression>MIT</PackageLicenseExpression>
-      <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-      <PackageTags>RingCentral;Debug</PackageTags>
-      <RootNamespace>RingCentral.Net.Debug</RootNamespace>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>RingCentral.Net.Debug</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+        <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
+        <Description>Debug extension for RingCentral.Net</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageTags>RingCentral;Debug</PackageTags>
+        <RootNamespace>RingCentral.Net.Debug</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
+        <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj"/>
     </ItemGroup>
 
 </Project>

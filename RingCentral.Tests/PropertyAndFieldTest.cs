@@ -49,7 +49,7 @@ namespace RingCentral.Tests
 
             Assert.Equal(new[]
             {
-                (name: "b", value: "b" as object),
+                (name: "b", value: "b"),
                 (name: "c", value: "c" as object)
             }, pairs.ToArray());
 
@@ -57,7 +57,7 @@ namespace RingCentral.Tests
             var pairs2 = Utils.GetPairs(a2);
             Assert.Equal(new[]
             {
-                (name: "b", value: "bb" as object),
+                (name: "b", value: "bb"),
                 (name: "c", value: "cc" as object)
             }, pairs2.ToArray());
         }

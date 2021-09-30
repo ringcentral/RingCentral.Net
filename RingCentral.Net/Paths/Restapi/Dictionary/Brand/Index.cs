@@ -1,22 +1,21 @@
-using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
-
 namespace RingCentral.Paths.Restapi.Dictionary.Brand
 {
     public partial class Index
     {
+        public string brandId;
+        public Dictionary.Index parent;
         public RestClient rc;
-        public Restapi.Dictionary.Index parent;
 
-        public Index(Restapi.Dictionary.Index parent)
+        public Index(Dictionary.Index parent, string brandId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
+            this.brandId = brandId;
         }
 
-        public string Path()
+        public string Path(bool withParameter = true)
         {
+            if (withParameter && brandId != null) return $"{parent.Path()}/brand/{brandId}";
             return $"{parent.Path()}/brand";
         }
     }
@@ -26,9 +25,9 @@ namespace RingCentral.Paths.Restapi.Dictionary
 {
     public partial class Index
     {
-        public Restapi.Dictionary.Brand.Index Brand()
+        public Brand.Index Brand(string brandId = null)
         {
-            return new Restapi.Dictionary.Brand.Index(this);
+            return new Brand.Index(this, brandId);
         }
     }
 }

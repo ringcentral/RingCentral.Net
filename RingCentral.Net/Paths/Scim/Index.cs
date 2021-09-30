@@ -1,7 +1,3 @@
-using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
-
 namespace RingCentral.Paths.Scim
 {
     public partial class Index
@@ -17,12 +13,8 @@ namespace RingCentral.Paths.Scim
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && version != null)
-            {
-                return $"/scim/{version}";
-            }
-
-            return $"/scim";
+            if (withParameter && version != null) return $"/scim/{version}";
+            return "/scim";
         }
     }
 }

@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,17 +19,17 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBookSync
         }
 
         /// <summary>
-        /// Synchronizes user contacts.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book-sync
-        /// Rate Limit Group: Heavy
-        /// App Permission: ReadContacts
-        /// User Permission: ReadPersonalContacts
+        ///     Synchronizes user contacts.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book-sync
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: ReadContacts
+        ///     User Permission: ReadPersonalContacts
         /// </summary>
-        public async Task<RingCentral.AddressBookSync> Get(RingCentral.SyncAddressBookParameters queryParams = null,
+        public async Task<RingCentral.AddressBookSync> Get(SyncAddressBookParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AddressBookSync>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.AddressBookSync>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -40,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.AddressBookSync.Index AddressBookSync()
+        public AddressBookSync.Index AddressBookSync()
         {
-            return new Restapi.Account.Extension.AddressBookSync.Index(this);
+            return new AddressBookSync.Index(this);
         }
     }
 }

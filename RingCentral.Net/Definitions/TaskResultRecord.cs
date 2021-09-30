@@ -8,7 +8,8 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Unique 48-bit identifier of the wireless access point complying with MAC address conventions. Returned only for 'Wireless Points Bulk Create' tasks
+        ///     Unique 48-bit identifier of the wireless access point complying with MAC address conventions. Returned only for
+        ///     'Wireless Points Bulk Create' tasks
         /// </summary>
         public string bssid { get; set; }
 

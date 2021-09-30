@@ -44,7 +44,8 @@ namespace RingCentral
         public string dateTo { get; set; }
 
         /// <summary>
-        ///     Only messages created after (or including) the date will be collected. The default value is current time minus 24 hours
+        ///     Only messages created after (or including) the date will be collected. The default value is current time minus 24
+        ///     hours
         /// </summary>
         public string dateFrom { get; set; }
 

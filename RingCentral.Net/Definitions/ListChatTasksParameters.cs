@@ -4,13 +4,15 @@ namespace RingCentral
     public class ListChatTasksParameters
     {
         /// <summary>
-        ///     The end datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, e.g. 2019-03-10T18:23:45Z
+        ///     The end datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+        ///     timezone, e.g. 2019-03-10T18:23:45Z
         ///     Default: now
         /// </summary>
         public string creationTimeTo { get; set; }
 
         /// <summary>
-        ///     The start datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, e.g. 2016-02-23T00:00:00
+        ///     The start datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+        ///     timezone, e.g. 2016-02-23T00:00:00
         /// </summary>
         public string creationTimeFrom { get; set; }
 

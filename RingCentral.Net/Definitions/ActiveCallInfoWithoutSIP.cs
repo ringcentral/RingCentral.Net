@@ -65,7 +65,8 @@ namespace RingCentral
         public string telephonySessionId { get; set; }
 
         /// <summary>
-        ///     Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices
+        ///     Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is
+        ///     'intermediate' it means the call is not actually ended, the connection is established on one of the devices
         ///     Enum: final, intermediate
         /// </summary>
         public string terminationType { get; set; }

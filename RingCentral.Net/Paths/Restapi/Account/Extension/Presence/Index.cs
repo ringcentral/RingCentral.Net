@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Presence
 {
-    public partial class Index
+    public class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,31 +19,41 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         }
 
         /// <summary>
-        /// Returns presence status of an extension or several extensions by their ID(s). Batch request is supported. The 'presenceStatus' is returned as Offline (the parameters 'telephonyStatus', 'message', 'userStatus' and 'dndStatus' are not returned at all) for the following extension types: Department/Announcement Only/Take Messages Only (Voicemail)/Fax User/Paging Only Group/Shared Lines Group/IVR Menu/Application Extension/Park Location.If the user requests his/her own presence status, the response contains actual presence status even if the status publication is turned off. Batch request is supported. For batch requests the number of extensions in one request is limited to 30. If more extensions are included in the request, the error code 400 Bad Request is returned with the logical error code InvalidMultipartRequest and the corresponding message 'Extension Presence Info multipart request is limited to 30 extensions'.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence
-        /// Rate Limit Group: Light
-        /// App Permission: ReadPresence
-        /// User Permission: ReadPresenceStatus
+        ///     Returns presence status of an extension or several extensions by their ID(s). Batch request is supported. The
+        ///     'presenceStatus' is returned as Offline (the parameters 'telephonyStatus', 'message', 'userStatus' and 'dndStatus'
+        ///     are not returned at all) for the following extension types: Department/Announcement Only/Take Messages Only
+        ///     (Voicemail)/Fax User/Paging Only Group/Shared Lines Group/IVR Menu/Application Extension/Park Location.If the user
+        ///     requests his/her own presence status, the response contains actual presence status even if the status publication
+        ///     is turned off. Batch request is supported. For batch requests the number of extensions in one request is limited to
+        ///     30. If more extensions are included in the request, the error code 400 Bad Request is returned with the logical
+        ///     error code InvalidMultipartRequest and the corresponding message 'Extension Presence Info multipart request is
+        ///     limited to 30 extensions'.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadPresence
+        ///     User Permission: ReadPresenceStatus
         /// </summary>
-        public async Task<RingCentral.GetPresenceInfo> Get(
-            RingCentral.ReadUserPresenceStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetPresenceInfo> Get(ReadUserPresenceStatusParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetPresenceInfo>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<GetPresenceInfo>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates user-defined extension presence status, status message and DnD status by extension ID. Supported for regular User extensions only. The extension types listed do not support presence status: Department, Announcement Only, Take Messages Only (Voicemail), Fax User, Paging Only Group, Shared Lines Group, IVR Menu, Application Extension.
-        /// HTTP Method: put
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence
-        /// Rate Limit Group: Medium
-        /// App Permission: EditPresence
+        ///     Updates user-defined extension presence status, status message and DnD status by extension ID. Supported for
+        ///     regular User extensions only. The extension types listed do not support presence status: Department, Announcement
+        ///     Only, Take Messages Only (Voicemail), Fax User, Paging Only Group, Shared Lines Group, IVR Menu, Application
+        ///     Extension.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditPresence
         /// </summary>
-        public async Task<RingCentral.PresenceInfoResponse> Put(RingCentral.PresenceInfoRequest presenceInfoRequest,
+        public async Task<PresenceInfoResponse> Put(PresenceInfoRequest presenceInfoRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.PresenceInfoResponse>(this.Path(), presenceInfoRequest, null,
-                restRequestConfig);
+            return await rc.Put<PresenceInfoResponse>(Path(), presenceInfoRequest, null, restRequestConfig);
         }
     }
 }
@@ -54,9 +62,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.Presence.Index Presence()
+        public Presence.Index Presence()
         {
-            return new Restapi.Account.Extension.Presence.Index(this);
+            return new Presence.Index(this);
         }
     }
 }

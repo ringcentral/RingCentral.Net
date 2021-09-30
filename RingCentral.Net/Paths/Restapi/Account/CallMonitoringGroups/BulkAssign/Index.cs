@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
 {
-    public partial class Index
+    public class Index
     {
+        public CallMonitoringGroups.Index parent;
         public RestClient rc;
-        public Restapi.Account.CallMonitoringGroups.Index parent;
 
-        public Index(Restapi.Account.CallMonitoringGroups.Index parent)
+        public Index(CallMonitoringGroups.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,17 +19,17 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.BulkAssign
         }
 
         /// <summary>
-        /// Updates call monitoring groups.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
-        /// Rate Limit Group: Heavy
-        /// App Permission: EditExtensions
-        /// User Permission: Groups
+        ///     Updates call monitoring groups.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: EditExtensions
+        ///     User Permission: Groups
         /// </summary>
-        public async Task<string> Post(RingCentral.CallMonitoringBulkAssign callMonitoringBulkAssign,
+        public async Task<string> Post(CallMonitoringBulkAssign callMonitoringBulkAssign,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), callMonitoringBulkAssign, null, restRequestConfig);
+            return await rc.Post<string>(Path(), callMonitoringBulkAssign, null, restRequestConfig);
         }
     }
 }
@@ -40,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
 {
     public partial class Index
     {
-        public Restapi.Account.CallMonitoringGroups.BulkAssign.Index BulkAssign()
+        public BulkAssign.Index BulkAssign()
         {
-            return new Restapi.Account.CallMonitoringGroups.BulkAssign.Index(this);
+            return new BulkAssign.Index(this);
         }
     }
 }

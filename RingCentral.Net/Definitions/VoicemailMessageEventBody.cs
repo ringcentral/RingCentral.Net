@@ -24,12 +24,14 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2019-03-10T18:07:52.534Z*
+        ///     Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for
+        ///     example *2019-03-10T18:07:52.534Z*
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2019-03-10T18:07:52.534Z*
+        ///     Datetime when the message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
+        ///     timezone, for example *2019-03-10T18:07:52.534Z*
         /// </summary>
         public string lastModifiedTime { get; set; }
 

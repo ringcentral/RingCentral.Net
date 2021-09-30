@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
 {
-    public partial class Index
+    public class Index
     {
+        public CallQueues.Index parent;
         public RestClient rc;
-        public Restapi.Account.CallQueues.Index parent;
 
-        public Index(Restapi.Account.CallQueues.Index parent)
+        public Index(CallQueues.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,17 +19,17 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
         }
 
         /// <summary>
-        /// Returns call queue group members.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadExtensions
+        ///     Returns call queue group members.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.CallQueueMembers> Get(
-            RingCentral.ListCallQueueMembersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<CallQueueMembers> Get(ListCallQueueMembersParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallQueueMembers>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<CallQueueMembers>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -40,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
 {
     public partial class Index
     {
-        public Restapi.Account.CallQueues.Members.Index Members()
+        public Members.Index Members()
         {
-            return new Restapi.Account.CallQueues.Members.Index(this);
+            return new Members.Index(this);
         }
     }
 }

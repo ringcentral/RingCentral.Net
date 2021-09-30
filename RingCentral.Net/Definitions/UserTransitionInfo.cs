@@ -9,7 +9,8 @@ namespace RingCentral
         public bool? sendWelcomeEmailsToUsers { get; set; }
 
         /// <summary>
-        ///     Specifies if a welcome/activation email is sent to the new users (within extension status changing from 'Unsassigned' to 'NotActivated/Disabled')
+        ///     Specifies if a welcome/activation email is sent to the new users (within extension status changing from
+        ///     'Unsassigned' to 'NotActivated/Disabled')
         /// </summary>
         public bool? sendWelcomeEmail { get; set; }
     }

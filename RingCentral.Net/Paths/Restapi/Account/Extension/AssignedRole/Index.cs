@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AssignedRole
 {
     public partial class Index
     {
+        public Extension.Index parent;
         public RestClient rc;
-        public Restapi.Account.Extension.Index parent;
 
-        public Index(Restapi.Account.Extension.Index parent)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,31 +19,30 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignedRole
         }
 
         /// <summary>
-        /// Returns the list of roles assigned to the current extension.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
-        /// Rate Limit Group: Light
-        /// App Permission: ReadAccounts
-        /// User Permission: ReadExtensions
+        ///     Returns the list of roles assigned to the current extension.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
+        ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.AssignedRolesResource> Get(
-            RingCentral.ListUserAssignedRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<AssignedRolesResource> Get(ListUserAssignedRolesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.AssignedRolesResource>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<AssignedRolesResource>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Updates the list of assigned roles for the current user.
-        /// HTTP Method: put
-        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
-        /// Rate Limit Group: Medium
-        /// App Permission: RoleManagement
+        ///     Updates the list of assigned roles for the current user.
+        ///     HTTP Method: put
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
+        ///     Rate Limit Group: Medium
+        ///     App Permission: RoleManagement
         /// </summary>
-        public async Task<RingCentral.AssignedRolesResource> Put(
-            RingCentral.AssignedRolesResource assignedRolesResource, RestRequestConfig restRequestConfig = null)
+        public async Task<AssignedRolesResource> Put(AssignedRolesResource assignedRolesResource,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<RingCentral.AssignedRolesResource>(this.Path(), assignedRolesResource, null,
-                restRequestConfig);
+            return await rc.Put<AssignedRolesResource>(Path(), assignedRolesResource, null, restRequestConfig);
         }
     }
 }
@@ -54,9 +51,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public Restapi.Account.Extension.AssignedRole.Index AssignedRole()
+        public AssignedRole.Index AssignedRole()
         {
-            return new Restapi.Account.Extension.AssignedRole.Index(this);
+            return new AssignedRole.Index(this);
         }
     }
 }

@@ -1,59 +1,50 @@
+using System;
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Timezone
 {
-    public partial class Index
+    public class Index
     {
+        public Dictionary.Index parent;
         public RestClient rc;
-        public Restapi.Dictionary.Index parent;
         public string timezoneId;
 
-        public Index(Restapi.Dictionary.Index parent, string timezoneId = null)
+        public Index(Dictionary.Index parent, string timezoneId = null)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
             this.timezoneId = timezoneId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && timezoneId != null)
-            {
-                return $"{parent.Path()}/timezone/{timezoneId}";
-            }
-
+            if (withParameter && timezoneId != null) return $"{parent.Path()}/timezone/{timezoneId}";
             return $"{parent.Path()}/timezone";
         }
 
         /// <summary>
-        /// Returns all available timezones.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/dictionary/timezone
-        /// Rate Limit Group: Light
+        ///     Returns all available timezones.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/dictionary/timezone
+        ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<RingCentral.GetTimezoneListResponse> List(
-            RingCentral.ListTimezonesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetTimezoneListResponse> List(ListTimezonesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams, restRequestConfig);
+            return await rc.Get<GetTimezoneListResponse>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        /// Returns the information on a certain timezone.
-        /// HTTP Method: get
-        /// Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
-        /// Rate Limit Group: Light
+        ///     Returns the information on a certain timezone.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
+        ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<RingCentral.GetTimezoneInfoResponse> Get(
-            RingCentral.ReadTimezoneParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            if (timezoneId == null)
-            {
-                throw new System.ArgumentException("Parameter cannot be null", nameof(timezoneId));
-            }
-
-            return await rc.Get<RingCentral.GetTimezoneInfoResponse>(this.Path(), queryParams, restRequestConfig);
+            if (timezoneId == null) throw new ArgumentException("Parameter cannot be null", nameof(timezoneId));
+            return await rc.Get<GetTimezoneInfoResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -62,9 +53,9 @@ namespace RingCentral.Paths.Restapi.Dictionary
 {
     public partial class Index
     {
-        public Restapi.Dictionary.Timezone.Index Timezone(string timezoneId = null)
+        public Timezone.Index Timezone(string timezoneId = null)
         {
-            return new Restapi.Dictionary.Timezone.Index(this, timezoneId);
+            return new Timezone.Index(this, timezoneId);
         }
     }
 }

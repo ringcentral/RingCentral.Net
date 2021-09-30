@@ -9,12 +9,14 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Phone number of a caller/call recipient. If specified, returns all calls (both incoming and outcoming) with the phone number specified. Cannot be specified together with the extensionNumber filter
+        ///     Phone number of a caller/call recipient. If specified, returns all calls (both incoming and outcoming) with the
+        ///     phone number specified. Cannot be specified together with the extensionNumber filter
         /// </summary>
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
+        ///     The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple
+        ///     values are accepted
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] direction { get; set; }
@@ -26,14 +28,16 @@ namespace RingCentral
         public string[] type { get; set; }
 
         /// <summary>
-        ///     View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
+        ///     View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be
+        ///     changed for ISync
         ///     Default: Simple
         ///     Enum: Simple, Detailed
         /// </summary>
         public string view { get; set; }
 
         /// <summary>
-        ///     **Deprecated**. Supported for compatibility reasons only. `true` if only recorded calls are returned. The default value is `false`. If both `withRecording` and `recordingType` are specified, `withRecording` is ignored
+        ///     **Deprecated**. Supported for compatibility reasons only. `true` if only recorded calls are returned. The default
+        ///     value is `false`. If both `withRecording` and `recordingType` are specified, `withRecording` is ignored
         /// </summary>
         public bool? withRecording { get; set; }
 
@@ -44,13 +48,15 @@ namespace RingCentral
         public string recordingType { get; set; }
 
         /// <summary>
-        ///     The start datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
+        ///     The start datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including
+        ///     timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
         ///     Format: date-time
         /// </summary>
         public string dateFrom { get; set; }
 
         /// <summary>
-        ///     The end datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
+        ///     The end datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including
+        ///     timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
         ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }

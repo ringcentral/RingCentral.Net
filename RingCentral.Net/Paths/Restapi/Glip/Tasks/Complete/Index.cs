@@ -1,18 +1,16 @@
 using System.Threading.Tasks;
-using System.Linq;
-using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
 {
-    public partial class Index
+    public class Index
     {
+        public Tasks.Index parent;
         public RestClient rc;
-        public Restapi.Glip.Tasks.Index parent;
 
-        public Index(Restapi.Glip.Tasks.Index parent)
+        public Index(Tasks.Index parent)
         {
             this.parent = parent;
-            this.rc = parent.rc;
+            rc = parent.rc;
         }
 
         public string Path()
@@ -21,15 +19,14 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
         }
 
         /// <summary>
-        /// Completes a task in the specified chat.
-        /// HTTP Method: post
-        /// Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}/complete
-        /// Rate Limit Group: Medium
+        ///     Completes a task in the specified chat.
+        ///     HTTP Method: post
+        ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}/complete
+        ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<string> Post(RingCentral.GlipCompleteTask glipCompleteTask,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(GlipCompleteTask glipCompleteTask, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(), glipCompleteTask, null, restRequestConfig);
+            return await rc.Post<string>(Path(), glipCompleteTask, null, restRequestConfig);
         }
     }
 }
@@ -38,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
 {
     public partial class Index
     {
-        public Restapi.Glip.Tasks.Complete.Index Complete()
+        public Complete.Index Complete()
         {
-            return new Restapi.Glip.Tasks.Complete.Index(this);
+            return new Complete.Index(this);
         }
     }
 }
