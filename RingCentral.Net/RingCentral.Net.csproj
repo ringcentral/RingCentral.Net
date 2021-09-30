@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>RingCentral.Net</PackageId>
-        <PackageVersion>5.6.1</PackageVersion>
+        <PackageVersion>5.7.0</PackageVersion>
         <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
         <Description>RingCentral SDK for .NET</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
