@@ -34,8 +34,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         ///     App Permission: ReadPresence
         ///     User Permission: ReadPresenceStatus
         /// </summary>
-        public async Task<GetPresenceInfo> Get(ReadUserPresenceStatusParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GetPresenceInfo> Get(
+            ReadUserPresenceStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetPresenceInfo>(Path(), queryParams, restRequestConfig);
         }
@@ -53,7 +53,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         public async Task<PresenceInfoResponse> Put(PresenceInfoRequest presenceInfoRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<PresenceInfoResponse>(Path(), presenceInfoRequest, null, restRequestConfig);
+            return await rc.Put<PresenceInfoResponse>(Path(), presenceInfoRequest, null,
+                restRequestConfig);
         }
     }
 }

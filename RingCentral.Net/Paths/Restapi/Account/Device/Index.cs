@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
         public string Path(bool withParameter = true)
         {
             if (withParameter && deviceId != null) return $"{parent.Path()}/device/{deviceId}";
+
             return $"{parent.Path()}/device";
         }
 
@@ -34,6 +35,7 @@ namespace RingCentral.Paths.Restapi.Account.Device
             RestRequestConfig restRequestConfig = null)
         {
             if (deviceId == null) throw new ArgumentException("Parameter cannot be null", nameof(deviceId));
+
             return await rc.Get<GetDeviceInfoResponse>(Path(), queryParams, restRequestConfig);
         }
 
@@ -49,7 +51,9 @@ namespace RingCentral.Paths.Restapi.Account.Device
             UpdateDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (deviceId == null) throw new ArgumentException("Parameter cannot be null", nameof(deviceId));
-            return await rc.Put<GetDeviceInfoResponse>(Path(), accountDeviceUpdate, queryParams, restRequestConfig);
+
+            return await rc.Put<GetDeviceInfoResponse>(Path(), accountDeviceUpdate, queryParams,
+                restRequestConfig);
         }
     }
 }

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         public string Path(bool withParameter = true)
         {
             if (withParameter && promptId != null) return $"{parent.Path()}/ivr-prompts/{promptId}";
+
             return $"{parent.Path()}/ivr-prompts";
         }
 
@@ -47,7 +48,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
-            return await rc.Post<PromptInfo>(Path(false), multipartFormDataContent, null, restRequestConfig);
+            return await rc.Post<PromptInfo>(Path(false), multipartFormDataContent, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         public async Task<PromptInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (promptId == null) throw new ArgumentException("Parameter cannot be null", nameof(promptId));
+
             return await rc.Get<PromptInfo>(Path(), null, restRequestConfig);
         }
 
@@ -76,6 +79,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
             RestRequestConfig restRequestConfig = null)
         {
             if (promptId == null) throw new ArgumentException("Parameter cannot be null", nameof(promptId));
+
             return await rc.Put<PromptInfo>(Path(), updateIVRPromptRequest, null, restRequestConfig);
         }
 
@@ -90,6 +94,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (promptId == null) throw new ArgumentException("Parameter cannot be null", nameof(promptId));
+
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

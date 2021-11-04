@@ -27,7 +27,8 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
         ///     User Permission: ReadExtensions
         /// </summary>
         public async Task<CallMonitoringGroupMemberList> Get(
-            ListCallMonitoringGroupMembersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+            ListCallMonitoringGroupMembersParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<CallMonitoringGroupMemberList>(Path(), queryParams, restRequestConfig);
         }

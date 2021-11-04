@@ -20,6 +20,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         {
             if (withParameter && forwardingNumberId != null)
                 return $"{parent.Path()}/forwarding-number/{forwardingNumberId}";
+
             return $"{parent.Path()}/forwarding-number";
         }
 
@@ -35,7 +36,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         public async Task<GetExtensionForwardingNumberListResponse> List(
             ListForwardingNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetExtensionForwardingNumberListResponse>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<GetExtensionForwardingNumberListResponse>(Path(false), queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -46,11 +48,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserForwardingFlipNumbers
         /// </summary>
-        public async Task<ForwardingNumberInfo> Post(CreateForwardingNumberRequest createForwardingNumberRequest,
+        public async Task<ForwardingNumberInfo> Post(
+            CreateForwardingNumberRequest createForwardingNumberRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<ForwardingNumberInfo>(Path(false), createForwardingNumberRequest, null,
-                restRequestConfig);
+            return await rc.Post<ForwardingNumberInfo>(Path(false), createForwardingNumberRequest,
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -65,6 +68,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         {
             if (forwardingNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+
             return await rc.Get<ForwardingNumberInfo>(Path(), null, restRequestConfig);
         }
 
@@ -76,12 +80,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserForwardingFlipNumbers
         /// </summary>
-        public async Task<ForwardingNumberInfo> Put(UpdateForwardingNumberRequest updateForwardingNumberRequest,
+        public async Task<ForwardingNumberInfo> Put(
+            UpdateForwardingNumberRequest updateForwardingNumberRequest,
             RestRequestConfig restRequestConfig = null)
         {
             if (forwardingNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
-            return await rc.Put<ForwardingNumberInfo>(Path(), updateForwardingNumberRequest, null, restRequestConfig);
+
+            return await rc.Put<ForwardingNumberInfo>(Path(), updateForwardingNumberRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -96,6 +103,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         {
             if (forwardingNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

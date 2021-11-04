@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         public string Path(bool withParameter = true)
         {
             if (withParameter && archiveId != null) return $"{parent.Path()}/archive/{archiveId}";
+
             return $"{parent.Path()}/archive";
         }
 
@@ -46,6 +47,7 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
             if (archiveId == null) throw new ArgumentException("Parameter cannot be null", nameof(archiveId));
+
             return await rc.Get<byte[]>(Path(), null, restRequestConfig);
         }
     }

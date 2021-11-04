@@ -24,7 +24,8 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
         ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}/complete
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<string> Post(GlipCompleteTask glipCompleteTask, RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(GlipCompleteTask glipCompleteTask,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<string>(Path(), glipCompleteTask, null, restRequestConfig);
         }

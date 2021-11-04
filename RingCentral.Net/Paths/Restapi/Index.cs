@@ -17,6 +17,7 @@ namespace RingCentral.Paths.Restapi
         public string Path(bool withParameter = true)
         {
             if (withParameter && apiVersion != null) return $"/restapi/{apiVersion}";
+
             return "/restapi";
         }
 
@@ -40,6 +41,7 @@ namespace RingCentral.Paths.Restapi
         public async Task<GetVersionResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (apiVersion == null) throw new ArgumentException("Parameter cannot be null", nameof(apiVersion));
+
             return await rc.Get<GetVersionResponse>(Path(), null, restRequestConfig);
         }
     }

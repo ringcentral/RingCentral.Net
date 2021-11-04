@@ -28,10 +28,11 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.SwitchesB
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<CreateMultipleSwitchesResponse> Post(
-            CreateMultipleSwitchesRequest createMultipleSwitchesRequest, RestRequestConfig restRequestConfig = null)
+            CreateMultipleSwitchesRequest createMultipleSwitchesRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CreateMultipleSwitchesResponse>(Path(), createMultipleSwitchesRequest, null,
-                restRequestConfig);
+            return await rc.Post<CreateMultipleSwitchesResponse>(Path(), createMultipleSwitchesRequest,
+                null, restRequestConfig);
         }
     }
 }

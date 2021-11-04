@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         public string Path(bool withParameter = true)
         {
             if (withParameter && pointId != null) return $"{parent.Path()}/wireless-points/{pointId}";
+
             return $"{parent.Path()}/wireless-points";
         }
 
@@ -30,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         ///     App Permission: EditAccounts
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<WirelessPointsList> List(ListWirelessPointsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<WirelessPointsList> List(
+            ListWirelessPointsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<WirelessPointsList>(Path(false), queryParams, restRequestConfig);
         }
@@ -47,7 +48,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         public async Task<WirelessPointInfo> Post(CreateWirelessPoint createWirelessPoint,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<WirelessPointInfo>(Path(false), createWirelessPoint, null, restRequestConfig);
+            return await rc.Post<WirelessPointInfo>(Path(false), createWirelessPoint, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         public async Task<WirelessPointInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (pointId == null) throw new ArgumentException("Parameter cannot be null", nameof(pointId));
+
             return await rc.Get<WirelessPointInfo>(Path(), null, restRequestConfig);
         }
 
@@ -76,7 +79,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
             RestRequestConfig restRequestConfig = null)
         {
             if (pointId == null) throw new ArgumentException("Parameter cannot be null", nameof(pointId));
-            return await rc.Put<WirelessPointInfo>(Path(), updateWirelessPoint, null, restRequestConfig);
+
+            return await rc.Put<WirelessPointInfo>(Path(), updateWirelessPoint, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -90,6 +95,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (pointId == null) throw new ArgumentException("Parameter cannot be null", nameof(pointId));
+
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

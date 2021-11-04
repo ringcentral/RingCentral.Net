@@ -40,7 +40,8 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Notes
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipNoteInfo> Post(GlipNoteCreate glipNoteCreate, RestRequestConfig restRequestConfig = null)
+        public async Task<GlipNoteInfo> Post(GlipNoteCreate glipNoteCreate,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<GlipNoteInfo>(Path(), glipNoteCreate, null, restRequestConfig);
         }

@@ -26,8 +26,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserDevices
         /// </summary>
-        public async Task<GetExtensionDevicesResponse> Get(ListExtensionDevicesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GetExtensionDevicesResponse> Get(
+            ListExtensionDevicesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetExtensionDevicesResponse>(Path(), queryParams, restRequestConfig);
         }

@@ -28,10 +28,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserPhoneNumbers
         /// </summary>
-        public async Task<GetExtensionPhoneNumbersResponse> Get(ListExtensionPhoneNumbersParameters queryParams = null,
+        public async Task<GetExtensionPhoneNumbersResponse> Get(
+            ListExtensionPhoneNumbersParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetExtensionPhoneNumbersResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<GetExtensionPhoneNumbersResponse>(Path(), queryParams,
+                restRequestConfig);
         }
     }
 }

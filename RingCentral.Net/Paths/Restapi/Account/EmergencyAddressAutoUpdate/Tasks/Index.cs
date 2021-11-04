@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+
             return $"{parent.Path()}/tasks";
         }
 
@@ -35,6 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
         public async Task<AutomaticLocationUpdatesTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Get<AutomaticLocationUpdatesTaskInfo>(Path(), null, restRequestConfig);
         }
     }

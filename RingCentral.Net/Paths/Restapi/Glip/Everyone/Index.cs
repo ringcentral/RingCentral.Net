@@ -41,10 +41,11 @@ namespace RingCentral.Paths.Restapi.Glip.Everyone
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipEveryoneInfo> Patch(UpdateGlipEveryoneRequest updateGlipEveryoneRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GlipEveryoneInfo> Patch(
+            UpdateGlipEveryoneRequest updateGlipEveryoneRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<GlipEveryoneInfo>(Path(), updateGlipEveryoneRequest, null, restRequestConfig);
+            return await rc.Patch<GlipEveryoneInfo>(Path(), updateGlipEveryoneRequest, null,
+                restRequestConfig);
         }
     }
 }

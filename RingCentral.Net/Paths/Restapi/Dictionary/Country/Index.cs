@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         public string Path(bool withParameter = true)
         {
             if (withParameter && countryId != null) return $"{parent.Path()}/country/{countryId}";
+
             return $"{parent.Path()}/country";
         }
 
@@ -28,8 +29,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         ///     Endpoint: /restapi/{apiVersion}/dictionary/country
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<GetCountryListResponse> List(ListCountriesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GetCountryListResponse> List(
+            ListCountriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetCountryListResponse>(Path(false), queryParams, restRequestConfig);
         }
@@ -43,6 +44,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
         public async Task<GetCountryInfoDictionaryResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (countryId == null) throw new ArgumentException("Parameter cannot be null", nameof(countryId));
+
             return await rc.Get<GetCountryInfoDictionaryResponse>(Path(), null, restRequestConfig);
         }
     }

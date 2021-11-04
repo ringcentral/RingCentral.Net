@@ -31,7 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(CreateMMSMessage);
-            return await rc.Post<GetSMSMessageInfoResponse>(Path(), multipartFormDataContent, null, restRequestConfig);
+            return await rc.Post<GetSMSMessageInfoResponse>(Path(), multipartFormDataContent, null,
+                restRequestConfig);
         }
     }
 }

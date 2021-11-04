@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         public string Path(bool withParameter = true)
         {
             if (withParameter && groupId != null) return $"{parent.Path()}/call-monitoring-groups/{groupId}";
+
             return $"{parent.Path()}/call-monitoring-groups";
         }
 
@@ -30,7 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.CallMonitoringGroups> Get(ListCallMonitoringGroupsParameters queryParams = null,
+        public async Task<RingCentral.CallMonitoringGroups> Get(
+            ListCallMonitoringGroupsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RingCentral.CallMonitoringGroups>(Path(false), queryParams, restRequestConfig);
@@ -44,11 +46,12 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         ///     App Permission: EditExtensions
         ///     User Permission: Groups
         /// </summary>
-        public async Task<CallMonitoringGroup> Post(CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
+        public async Task<CallMonitoringGroup> Post(
+            CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CallMonitoringGroup>(Path(false), createCallMonitoringGroupRequest, null,
-                restRequestConfig);
+            return await rc.Post<CallMonitoringGroup>(Path(false), createCallMonitoringGroupRequest,
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -59,11 +62,14 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         ///     App Permission: EditExtensions
         ///     User Permission: Groups
         /// </summary>
-        public async Task<CallMonitoringGroup> Put(CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
+        public async Task<CallMonitoringGroup> Put(
+            CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest,
             RestRequestConfig restRequestConfig = null)
         {
             if (groupId == null) throw new ArgumentException("Parameter cannot be null", nameof(groupId));
-            return await rc.Put<CallMonitoringGroup>(Path(), createCallMonitoringGroupRequest, null, restRequestConfig);
+
+            return await rc.Put<CallMonitoringGroup>(Path(), createCallMonitoringGroupRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -77,6 +83,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (groupId == null) throw new ArgumentException("Parameter cannot be null", nameof(groupId));
+
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

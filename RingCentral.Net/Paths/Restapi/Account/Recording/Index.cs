@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Recording
         public string Path(bool withParameter = true)
         {
             if (withParameter && recordingId != null) return $"{parent.Path()}/recording/{recordingId}";
+
             return $"{parent.Path()}/recording";
         }
 
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.Recording
         public async Task<GetCallRecordingResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (recordingId == null) throw new ArgumentException("Parameter cannot be null", nameof(recordingId));
+
             return await rc.Get<GetCallRecordingResponse>(Path(), null, restRequestConfig);
         }
     }

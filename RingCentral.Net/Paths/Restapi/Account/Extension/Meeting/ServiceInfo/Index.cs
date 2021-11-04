@@ -40,8 +40,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting.ServiceInfo
         ///     App Permission: Meetings
         ///     User Permission: Meetings
         /// </summary>
-        public async Task<MeetingServiceInfoResource> Patch(MeetingServiceInfoRequest meetingServiceInfoRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<MeetingServiceInfoResource> Patch(
+            MeetingServiceInfoRequest meetingServiceInfoRequest, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Patch<MeetingServiceInfoResource>(Path(), meetingServiceInfoRequest, null,
                 restRequestConfig);

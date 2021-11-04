@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         public string Path(bool withParameter = true)
         {
             if (withParameter && datasetId != null) return $"{parent.Path()}/datasets/{datasetId}";
+
             return $"{parent.Path()}/datasets";
         }
 
@@ -32,6 +33,7 @@ namespace RingCentral.Paths.Restapi.Glip.DataExport.Datasets
         public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
         {
             if (datasetId == null) throw new ArgumentException("Parameter cannot be null", nameof(datasetId));
+
             return await rc.Get<byte[]>(Path(), null, restRequestConfig);
         }
     }

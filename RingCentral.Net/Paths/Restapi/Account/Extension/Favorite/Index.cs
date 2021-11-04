@@ -45,7 +45,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Favorite
         public async Task<FavoriteContactList> Put(FavoriteCollection favoriteCollection,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<FavoriteContactList>(Path(), favoriteCollection, null, restRequestConfig);
+            return await rc.Put<FavoriteContactList>(Path(), favoriteCollection, null,
+                restRequestConfig);
         }
     }
 }

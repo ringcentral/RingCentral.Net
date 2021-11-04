@@ -1,0 +1,14 @@
+namespace RingCentral
+{
+    // Provides mapping of possible breakdown options for call aggregation and aggregation formula
+    public class PerformanceCallsResponseDataOptions
+    {
+        /// <summary>
+        /// </summary>
+        public PerformanceCallsCountersResponseOptions counters { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PerformanceCallsTimersResponseOptions timers { get; set; }
+    }
+}

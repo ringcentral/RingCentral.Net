@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         public string Path(bool withParameter = true)
         {
             if (withParameter && greetingId != null) return $"{parent.Path()}/greeting/{greetingId}";
+
             return $"{parent.Path()}/greeting";
         }
 
@@ -29,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         ///     Endpoint: /restapi/{apiVersion}/dictionary/greeting
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<DictionaryGreetingList> List(ListStandardGreetingsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<DictionaryGreetingList> List(
+            ListStandardGreetingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<DictionaryGreetingList>(Path(false), queryParams, restRequestConfig);
         }
@@ -44,6 +45,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Greeting
         public async Task<DictionaryGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (greetingId == null) throw new ArgumentException("Parameter cannot be null", nameof(greetingId));
+
             return await rc.Get<DictionaryGreetingInfo>(Path(), null, restRequestConfig);
         }
     }

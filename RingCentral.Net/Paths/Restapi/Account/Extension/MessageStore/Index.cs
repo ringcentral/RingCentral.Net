@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public string Path(bool withParameter = true)
         {
             if (withParameter && messageId != null) return $"{parent.Path()}/message-store/{messageId}";
+
             return $"{parent.Path()}/message-store";
         }
 
@@ -65,6 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public async Task<GetMessageInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
+
             return await rc.Get<GetMessageInfoResponse>(Path(), null, restRequestConfig);
         }
 
@@ -83,7 +85,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             UpdateMessageParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
-            return await rc.Put<GetMessageInfoResponse>(Path(), updateMessageRequest, queryParams, restRequestConfig);
+
+            return await rc.Put<GetMessageInfoResponse>(Path(), updateMessageRequest, queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -100,6 +104,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
+
             return await rc.Delete<string>(Path(), queryParams, restRequestConfig);
         }
     }

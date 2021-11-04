@@ -43,8 +43,8 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
             ModifyAccountBusinessAddressRequest modifyAccountBusinessAddressRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<AccountBusinessAddressResource>(Path(), modifyAccountBusinessAddressRequest, null,
-                restRequestConfig);
+            return await rc.Put<AccountBusinessAddressResource>(Path(),
+                modifyAccountBusinessAddressRequest, null, restRequestConfig);
         }
     }
 }

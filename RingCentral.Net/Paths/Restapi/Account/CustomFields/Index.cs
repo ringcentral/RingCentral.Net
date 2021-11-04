@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         public string Path(bool withParameter = true)
         {
             if (withParameter && fieldId != null) return $"{parent.Path()}/custom-fields/{fieldId}";
+
             return $"{parent.Path()}/custom-fields";
         }
 
@@ -43,10 +44,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         ///     App Permission: EditAccounts
         ///     User Permission: Users
         /// </summary>
-        public async Task<CustomFieldResource> Post(CustomFieldCreateRequest customFieldCreateRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CustomFieldResource> Post(
+            CustomFieldCreateRequest customFieldCreateRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CustomFieldResource>(Path(false), customFieldCreateRequest, null, restRequestConfig);
+            return await rc.Post<CustomFieldResource>(Path(false), customFieldCreateRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -57,11 +59,13 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         ///     App Permission: EditAccounts
         ///     User Permission: Users
         /// </summary>
-        public async Task<CustomFieldResource> Put(CustomFieldUpdateRequest customFieldUpdateRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CustomFieldResource> Put(
+            CustomFieldUpdateRequest customFieldUpdateRequest, RestRequestConfig restRequestConfig = null)
         {
             if (fieldId == null) throw new ArgumentException("Parameter cannot be null", nameof(fieldId));
-            return await rc.Put<CustomFieldResource>(Path(), customFieldUpdateRequest, null, restRequestConfig);
+
+            return await rc.Put<CustomFieldResource>(Path(), customFieldUpdateRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -75,6 +79,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (fieldId == null) throw new ArgumentException("Parameter cannot be null", nameof(fieldId));
+
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

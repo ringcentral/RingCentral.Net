@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+
             return $"{parent.Path()}/tasks";
         }
 
@@ -31,6 +32,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         public async Task<GlipTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Get<GlipTaskInfo>(Path(), null, restRequestConfig);
         }
 
@@ -43,6 +45,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
 
@@ -52,9 +55,11 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<GlipTaskList> Patch(GlipUpdateTask glipUpdateTask, RestRequestConfig restRequestConfig = null)
+        public async Task<GlipTaskList> Patch(GlipUpdateTask glipUpdateTask,
+            RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Patch<GlipTaskList>(Path(), glipUpdateTask, null, restRequestConfig);
         }
     }

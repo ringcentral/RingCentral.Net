@@ -29,10 +29,11 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipChatsListWithoutNavigation> Get(ListFavoriteChatsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GlipChatsListWithoutNavigation> Get(
+            ListFavoriteChatsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GlipChatsListWithoutNavigation>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<GlipChatsListWithoutNavigation>(Path(), queryParams,
+                restRequestConfig);
         }
     }
 }

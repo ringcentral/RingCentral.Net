@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         public string Path(bool withParameter = true)
         {
             if (withParameter && entryId != null) return $"{parent.Path()}/entries/{entryId}";
+
             return $"{parent.Path()}/entries";
         }
 
@@ -31,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         ///     Rate Limit Group: Medium
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<DirectoryResource> List(ListDirectoryEntriesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<DirectoryResource> List(
+            ListDirectoryEntriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<DirectoryResource>(Path(false), queryParams, restRequestConfig);
         }
@@ -47,6 +48,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         public async Task<ContactResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (entryId == null) throw new ArgumentException("Parameter cannot be null", nameof(entryId));
+
             return await rc.Get<ContactResource>(Path(), null, restRequestConfig);
         }
     }

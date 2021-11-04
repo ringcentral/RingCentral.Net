@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         public string Path(bool withParameter = true)
         {
             if (withParameter && postId != null) return $"{parent.Path()}/posts/{postId}";
+
             return $"{parent.Path()}/posts";
         }
 
@@ -64,6 +65,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         public async Task<GlipPostInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (postId == null) throw new ArgumentException("Parameter cannot be null", nameof(postId));
+
             return await rc.Get<GlipPostInfo>(Path(), null, restRequestConfig);
         }
 
@@ -78,6 +80,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (postId == null) throw new ArgumentException("Parameter cannot be null", nameof(postId));
+
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
 
@@ -93,6 +96,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Posts
             RestRequestConfig restRequestConfig = null)
         {
             if (postId == null) throw new ArgumentException("Parameter cannot be null", nameof(postId));
+
             return await rc.Patch<GlipPostInfo>(Path(), glipPatchPostBody, null, restRequestConfig);
         }
     }

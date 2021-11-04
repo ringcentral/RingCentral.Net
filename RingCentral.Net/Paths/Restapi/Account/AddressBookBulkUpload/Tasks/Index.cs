@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Tasks
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+
             return $"{parent.Path()}/tasks";
         }
 
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Tasks
         public async Task<AddressBookBulkUploadResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Get<AddressBookBulkUploadResponse>(Path(), null, restRequestConfig);
         }
     }
