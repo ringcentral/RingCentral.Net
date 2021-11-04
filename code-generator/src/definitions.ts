@@ -15,6 +15,7 @@ const normalizeField = (f: Field): Field => {
       'operator',
       'public',
       'params',
+      'internal',
     ].includes(f.name)
   ) {
     f.name = `@${f.name}`;
@@ -27,6 +28,10 @@ const normalizeField = (f: Field): Field => {
     f.type = 'long?';
   } else if (f.type === 'array') {
     f.type = `${normalizeField(f.items!).type}[]`;
+  } else if (f.type === 'dict') {
+    f.type = `System.Collections.Generic.Dictionary<string, ${
+      normalizeField(f.items!).type
+    }>`;
   } else if (f.type === 'boolean') {
     f.type = 'bool?';
   }
@@ -36,7 +41,11 @@ const normalizeField = (f: Field): Field => {
 const generateField = (f: Field) => {
   f = normalizeField(f);
   let p = '';
-  if (f.name.includes('-')) {
+  if (f.name.startsWith('$')) {
+    // $schema
+    p += `[JsonProperty("${f.name}")]`;
+    p += `\n        public ${f.type} ${f.name.substring(1)} { get; set; }`;
+  } else if (f.name.includes('-')) {
     p += `[JsonProperty("${f.name}")]`;
     p += `\n        public ${f.type} ${f.name.replace(
       /-([a-z])/g,
