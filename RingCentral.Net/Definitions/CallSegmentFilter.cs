@@ -8,5 +8,9 @@ namespace RingCentral
         ///     Enum: Ringing, LiveTalk, Hold, Park, Transfer, IvrPrompt, VoiceMailing, VmGreeting
         /// </summary>
         public string callSegment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallSegmentLength callSegmentLength { get; set; }
     }
 }

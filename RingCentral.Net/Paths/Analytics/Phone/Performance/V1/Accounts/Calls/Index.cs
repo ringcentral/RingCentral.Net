@@ -1,11 +1,11 @@
-namespace RingCentral.Paths.Restapi.Account.Analytics.Performance.Calls
+namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls
 {
     public partial class Index
     {
-        public Performance.Index parent;
+        public Accounts.Index parent;
         public RestClient rc;
 
-        public Index(Performance.Index parent)
+        public Index(Accounts.Index parent)
         {
             this.parent = parent;
             rc = parent.rc;
@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Restapi.Account.Analytics.Performance.Calls
     }
 }
 
-namespace RingCentral.Paths.Restapi.Account.Analytics.Performance
+namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts
 {
     public partial class Index
     {

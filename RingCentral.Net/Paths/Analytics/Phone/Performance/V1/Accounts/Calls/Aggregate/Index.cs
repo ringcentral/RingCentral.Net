@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace RingCentral.Paths.Restapi.Account.Analytics.Performance.Calls.Aggregate
+namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls.Aggregate
 {
     public class Index
     {
@@ -21,20 +21,21 @@ namespace RingCentral.Paths.Restapi.Account.Analytics.Performance.Calls.Aggregat
         /// <summary>
         ///     Returns a call performance report aggregated by parameters specified.
         ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/analytics/performance/calls/aggregate
+        ///     Endpoint: /analytics/phone/performance/v1/accounts/{accountId}/calls/aggregate
         ///     Rate Limit Group: Light
         /// </summary>
         public async Task<PerformanceCallsAggregatesResponse> Post(
             PerformanceCallsAggregatesRequest performanceCallsAggregatesRequest,
+            AggregatePerformanceReportCallsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<PerformanceCallsAggregatesResponse>(Path(),
-                performanceCallsAggregatesRequest, null, restRequestConfig);
+                performanceCallsAggregatesRequest, queryParams, restRequestConfig);
         }
     }
 }
 
-namespace RingCentral.Paths.Restapi.Account.Analytics.Performance.Calls
+namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls
 {
     public partial class Index
     {

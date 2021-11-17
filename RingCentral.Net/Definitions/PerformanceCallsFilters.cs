@@ -39,6 +39,11 @@ namespace RingCentral
         public CallSegmentFilter[] callSegments { get; set; }
 
         /// <summary>
+        ///     Aggregation of calls by presence of specific action (joined via OR)
+        /// </summary>
+        public CallPerformanceActionInfo[] callActions { get; set; }
+
+        /// <summary>
         ///     Aggregation of calls by company business hours or after hours.
         ///     Enum: BusinessHours, AfterHours
         /// </summary>
@@ -68,5 +73,12 @@ namespace RingCentral
         ///     Direct numbers the caller dialed. Multiple values can be joined via 'OR'
         /// </summary>
         public string[] calledNumbers { get; set; }
+
+        /// <summary>
+        ///     This filter allows to get aggregation of calls that were either within or out of queue SLA. Only applicable to
+        ///     Queues grouping
+        ///     Enum: InSla, OutSla
+        /// </summary>
+        public string callSla { get; set; }
     }
 }

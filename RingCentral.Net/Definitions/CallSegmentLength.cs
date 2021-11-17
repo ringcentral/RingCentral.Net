@@ -1,7 +1,6 @@
 namespace RingCentral
 {
-    // Conditional aggregation of calls based on the overall call length
-    public class PerformanceCallsFilterByLength
+    public class CallSegmentLength
     {
         /// <summary>
         ///     Format: int64

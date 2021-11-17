@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsBySegment { get; set; }
+        public PerformanceCallsCounter callsBySegments { get; set; }
 
         /// <summary>
         /// </summary>
@@ -38,5 +38,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PerformanceCallsCounter callsByCompanyHours { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PerformanceCallsCounter callsByQueueSla { get; set; }
     }
 }

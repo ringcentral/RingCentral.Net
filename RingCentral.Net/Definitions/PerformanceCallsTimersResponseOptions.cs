@@ -5,34 +5,38 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer totalCallLength { get; set; }
+        public PerformanceCallsTimer allCallsDuration { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer timeSpentByCallSegments { get; set; }
+        public PerformanceCallsTimer callsSegmentsDuration { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callLengthByDirection { get; set; }
+        public PerformanceCallsTimer callsDurationByDirection { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callLengthByOrigin { get; set; }
+        public PerformanceCallsTimer callsDurationByOrigin { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callLengthByResponse { get; set; }
+        public PerformanceCallsTimer callsDurationByResponse { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callLengthByResponseType { get; set; }
+        public PerformanceCallsTimer callsDurationByResponseType { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callLengthByResult { get; set; }
+        public PerformanceCallsTimer callsDurationByResult { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsLengthByCompanyHours { get; set; }
+        public PerformanceCallsTimer callsDurationByCompanyHours { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PerformanceCallsTimer callsDurationByQueueSla { get; set; }
     }
 }

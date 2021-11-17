@@ -1,4 +1,4 @@
-namespace RingCentral.Paths.Restapi.Account.Analytics.Performance
+namespace RingCentral.Paths.Analytics.Phone
 {
     public partial class Index
     {
@@ -13,18 +13,18 @@ namespace RingCentral.Paths.Restapi.Account.Analytics.Performance
 
         public string Path()
         {
-            return $"{parent.Path()}/performance";
+            return $"{parent.Path()}/phone";
         }
     }
 }
 
-namespace RingCentral.Paths.Restapi.Account.Analytics
+namespace RingCentral.Paths.Analytics
 {
     public partial class Index
     {
-        public Performance.Index Performance()
+        public Phone.Index Phone()
         {
-            return new Performance.Index(this);
+            return new Phone.Index(this);
         }
     }
 }
