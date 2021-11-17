@@ -155,5 +155,10 @@ namespace RingCentral
         {
             return new Paths.Scim.Index(this, version);
         }
+
+        public Paths.Analytics.Index Analytics()
+        {
+            return new Paths.Analytics.Index(this);
+        }
     }
 }
