@@ -43,11 +43,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
         ///     User Permission: EditUserAnsweringRules
         /// </summary>
         public async Task<UserBusinessHoursUpdateResponse> Put(
-            UserBusinessHoursUpdateRequest userBusinessHoursUpdateRequest,
-            RestRequestConfig restRequestConfig = null)
+            UserBusinessHoursUpdateRequest userBusinessHoursUpdateRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<UserBusinessHoursUpdateResponse>(Path(),
-                userBusinessHoursUpdateRequest, null, restRequestConfig);
+            return await rc.Put<UserBusinessHoursUpdateResponse>(Path(), userBusinessHoursUpdateRequest, null,
+                restRequestConfig);
         }
     }
 }

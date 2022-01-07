@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         public string Path(bool withParameter = true)
         {
             if (withParameter && companyId != null) return $"{parent.Path()}/companies/{companyId}";
-
             return $"{parent.Path()}/companies";
         }
 
@@ -34,7 +33,6 @@ namespace RingCentral.Paths.Restapi.Glip.Companies
         public async Task<GlipCompany> Get(RestRequestConfig restRequestConfig = null)
         {
             if (companyId == null) throw new ArgumentException("Parameter cannot be null", nameof(companyId));
-
             return await rc.Get<GlipCompany>(Path(), null, restRequestConfig);
         }
     }

@@ -14,8 +14,9 @@ namespace RingCentral
         public NotificationDeliveryModeRequest deliveryMode { get; set; }
 
         /// <summary>
-        ///     Subscription lifetime in seconds. Max value is 7 days (604800 sec). For *WebHook* transport type max value might be
-        ///     set up to 630720000 seconds (20 years)
+        ///     Subscription lifetime in seconds. For *WebHook* transport type max value might be set up to 630720000 seconds (20
+        ///     years). For RC/APNS and RC/GSM transport max subscription lifetime is 7776000 seconds (90 days). For PubNub
+        ///     transport the max value is 900 seconds (15 minutes)
         /// </summary>
         public long? expiresIn { get; set; }
     }

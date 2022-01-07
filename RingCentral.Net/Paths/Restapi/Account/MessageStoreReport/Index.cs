@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/message-store-report/{taskId}";
-
             return $"{parent.Path()}/message-store-report";
         }
 
@@ -33,11 +32,10 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         ///     User Permission: Users
         /// </summary>
         public async Task<RingCentral.MessageStoreReport> Post(
-            CreateMessageStoreReportRequest createMessageStoreReportRequest,
-            RestRequestConfig restRequestConfig = null)
+            CreateMessageStoreReportRequest createMessageStoreReportRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.MessageStoreReport>(Path(false), createMessageStoreReportRequest,
-                null, restRequestConfig);
+            return await rc.Post<RingCentral.MessageStoreReport>(Path(false), createMessageStoreReportRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -51,7 +49,6 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
         public async Task<RingCentral.MessageStoreReport> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
-
             return await rc.Get<RingCentral.MessageStoreReport>(Path(), null, restRequestConfig);
         }
     }

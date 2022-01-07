@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null) return $"{parent.Path()}/chats/{chatId}";
-
             return $"{parent.Path()}/chats";
         }
 
@@ -55,7 +54,6 @@ namespace RingCentral.Paths.Restapi.Glip.Chats
         public async Task<GlipChatInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
-
             return await rc.Get<GlipChatInfo>(Path(), null, restRequestConfig);
         }
     }

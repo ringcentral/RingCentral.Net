@@ -15,8 +15,9 @@ namespace RingCentral
         public bool? showBlocked { get; set; }
 
         /// <summary>
-        ///     Phone number of a caller/callee. If specified, returns all calls (both incoming and outcoming) with the phone
-        ///     number specified
+        ///     Phone number of a caller/callee in e.164 format without a plus sign '+'. If specified, all incoming and outcoming
+        ///     calls with this phone number are returned
+        ///     Example: 12053320032
         /// </summary>
         public string phoneNumber { get; set; }
 
@@ -87,7 +88,8 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     Indicates the page size (number of items)
+        ///     Indicates the page size (number of items). The default value is 100. The maximum value is 1000, for detailed call
+        ///     log - 250
         ///     Default: 100
         /// </summary>
         public long? perPage { get; set; }

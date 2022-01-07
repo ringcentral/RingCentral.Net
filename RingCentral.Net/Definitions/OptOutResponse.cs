@@ -14,5 +14,16 @@ namespace RingCentral
         ///     Example: 15551234567
         /// </summary>
         public string to { get; set; }
+
+        /// <summary>
+        ///     Status of a phone number
+        ///     Enum: OptIn, OptOut
+        /// </summary>
+        public string status { get; set; }
+
+        /// <summary>
+        ///     Enum: Recipient, Account, Upstream, Carrier
+        /// </summary>
+        public string source { get; set; }
     }
 }

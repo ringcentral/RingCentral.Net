@@ -20,8 +20,11 @@ namespace RingCentral
         public string domesticCountryId { get; set; }
 
         /// <summary>
-        ///     Comma-separated list of fields to order results prefixed by '+' sign (ascending order) or '-' sign (descending
-        ///     order). The default sorting is by `name`
+        ///     Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-'
+        ///     (descending order). The default value is `+visibility`, which means public ERLs will be returned first in the list,
+        ///     then - private ones
+        ///     Default: +visibility
+        ///     Enum: name, siteName, address, addressStatus, usageStatus, visibility
         /// </summary>
         public string orderBy { get; set; }
 

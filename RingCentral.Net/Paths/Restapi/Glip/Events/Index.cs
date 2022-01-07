@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         public string Path(bool withParameter = true)
         {
             if (withParameter && eventId != null) return $"{parent.Path()}/events/{eventId}";
-
             return $"{parent.Path()}/events";
         }
 
@@ -62,7 +61,6 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         public async Task<GlipEventInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (eventId == null) throw new ArgumentException("Parameter cannot be null", nameof(eventId));
-
             return await rc.Get<GlipEventInfo>(Path(), null, restRequestConfig);
         }
 
@@ -78,7 +76,6 @@ namespace RingCentral.Paths.Restapi.Glip.Events
             RestRequestConfig restRequestConfig = null)
         {
             if (eventId == null) throw new ArgumentException("Parameter cannot be null", nameof(eventId));
-
             return await rc.Put<GlipEventInfo>(Path(), glipEventCreate, null, restRequestConfig);
         }
 
@@ -93,7 +90,6 @@ namespace RingCentral.Paths.Restapi.Glip.Events
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (eventId == null) throw new ArgumentException("Parameter cannot be null", nameof(eventId));
-
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

@@ -5,7 +5,8 @@ namespace RingCentral
     {
         /// <summary>
         ///     Aggregation interval
+        ///     Enum: Hour, Day, Week, Month
         /// </summary>
-        public Interval interval { get; set; }
+        public string interval { get; set; }
     }
 }

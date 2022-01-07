@@ -37,11 +37,10 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Presence
         ///     Rate Limit Group: Medium
         ///     App Permission: EditPresence
         /// </summary>
-        public async Task<CallQueuePresence> Put(
-            CallQueueUpdatePresence callQueueUpdatePresence, RestRequestConfig restRequestConfig = null)
+        public async Task<CallQueuePresence> Put(CallQueueUpdatePresence callQueueUpdatePresence,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<CallQueuePresence>(Path(), callQueueUpdatePresence, null,
-                restRequestConfig);
+            return await rc.Put<CallQueuePresence>(Path(), callQueueUpdatePresence, null, restRequestConfig);
         }
     }
 }

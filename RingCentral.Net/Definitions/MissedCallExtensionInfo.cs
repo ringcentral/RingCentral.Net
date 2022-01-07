@@ -7,5 +7,9 @@ namespace RingCentral
         ///     Internal identifier of an extension which should be used for the missed call transfer
         /// </summary>
         public string id { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public MissedCallExtensionInfoExternalNumber externalNumber { get; set; }
     }
 }

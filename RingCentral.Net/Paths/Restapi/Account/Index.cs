@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account
         public string Path(bool withParameter = true)
         {
             if (withParameter && accountId != null) return $"{parent.Path()}/account/{accountId}";
-
             return $"{parent.Path()}/account";
         }
 
@@ -34,7 +33,6 @@ namespace RingCentral.Paths.Restapi.Account
         public async Task<GetAccountInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (accountId == null) throw new ArgumentException("Parameter cannot be null", nameof(accountId));
-
             return await rc.Get<GetAccountInfoResponse>(Path(), null, restRequestConfig);
         }
     }

@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.A2pSms.OptOuts
 {
-    public class Index
+    public partial class Index
     {
         public A2pSms.Index parent;
         public RestClient rc;
@@ -26,8 +26,8 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.OptOuts
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<OptOutListResponse> Get(
-            ReadA2PSMSOptOutsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<OptOutListResponse> Get(ReadA2PSMSOptOutsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<OptOutListResponse>(Path(), queryParams, restRequestConfig);
         }

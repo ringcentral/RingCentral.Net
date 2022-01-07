@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         public string Path(bool withParameter = true)
         {
             if (withParameter && webhookId != null) return $"{parent.Path()}/webhooks/{webhookId}";
-
             return $"{parent.Path()}/webhooks";
         }
 
@@ -47,7 +46,6 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         public async Task<GlipWebhookList> Get(RestRequestConfig restRequestConfig = null)
         {
             if (webhookId == null) throw new ArgumentException("Parameter cannot be null", nameof(webhookId));
-
             return await rc.Get<GlipWebhookList>(Path(), null, restRequestConfig);
         }
 
@@ -62,7 +60,6 @@ namespace RingCentral.Paths.Restapi.Glip.Webhooks
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (webhookId == null) throw new ArgumentException("Parameter cannot be null", nameof(webhookId));
-
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

@@ -26,11 +26,10 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.AdaptiveCards
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipAdaptiveCardShortInfo> Post(
-            GlipAdaptiveCardRequest glipAdaptiveCardRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<GlipAdaptiveCardShortInfo> Post(GlipAdaptiveCardRequest glipAdaptiveCardRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<GlipAdaptiveCardShortInfo>(Path(), glipAdaptiveCardRequest, null,
-                restRequestConfig);
+            return await rc.Post<GlipAdaptiveCardShortInfo>(Path(), glipAdaptiveCardRequest, null, restRequestConfig);
         }
     }
 }

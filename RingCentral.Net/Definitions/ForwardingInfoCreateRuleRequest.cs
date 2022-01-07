@@ -9,15 +9,24 @@ namespace RingCentral
         public bool? notifyMySoftPhones { get; set; }
 
         /// <summary>
-        ///     Specifies if the administrator's softphone (desktop application) is notified before forwarding the incoming call to
-        ///     desk phones and forwarding numbers. The default value is 'True'
+        ///     Deprecated parameter. Specifies if the administrator's softphone (desktop application) is notified before
+        ///     forwarding the incoming call to desk phones and forwarding numbers. The default value is 'True'.
         /// </summary>
         public bool? notifyAdminSoftPhones { get; set; }
 
         /// <summary>
-        ///     Specifies delay between ring on apps and starting of a call forwarding
+        ///     Specifies delay between ring on apps and starting of a call forwarding. To activate this parameter use the value >
+        ///     0, and turn off the `softPhonesAlwaysRing` setting. If the value is 1 or 0, the `softPhonesAlwaysRing` setting
+        ///     cannot be turned off
         /// </summary>
         public long? softPhonesRingCount { get; set; }
+
+        /// <summary>
+        ///     Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set
+        ///     to 'True' then `softPhonesRingCount` is ignored
+        ///     Default: true
+        /// </summary>
+        public bool? softPhonesAlwaysRing { get; set; }
 
         /// <summary>
         ///     Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one
@@ -33,7 +42,7 @@ namespace RingCentral
         public RuleInfoCreateRuleRequest[] rules { get; set; }
 
         /// <summary>
-        ///     Specifies if mobile timeout is activated for the rule
+        ///     Deprecated parameter. Specifies if mobile timeout is activated for the rule
         /// </summary>
         public bool? mobileTimeout { get; set; }
     }

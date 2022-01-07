@@ -66,7 +66,8 @@ namespace RingCentral
         /// <summary>
         ///     Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool, BusinessMobileNumber
+        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool, BusinessMobileNumber,
+        ///     IntegrationNumber
         /// </summary>
         public string usageType { get; set; }
 

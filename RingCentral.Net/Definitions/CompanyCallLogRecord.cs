@@ -89,7 +89,7 @@ namespace RingCentral
         ///     Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted,
         ///     Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted,
         ///     Number Not Allowed, Number Blocked, Number Disabled, Resource Error, Call Loop, Fax Not Received, Fax Partially
-        ///     Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
+        ///     Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error, DescNoE911Address
         /// </summary>
         public string reason { get; set; }
 

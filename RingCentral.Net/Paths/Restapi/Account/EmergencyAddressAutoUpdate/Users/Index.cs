@@ -27,11 +27,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<AutomaticLocationUpdatesUserList> Get(
-            ListAutomaticLocationUpdatesUsersParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+            ListAutomaticLocationUpdatesUsersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<AutomaticLocationUpdatesUserList>(Path(), queryParams,
-                restRequestConfig);
+            return await rc.Get<AutomaticLocationUpdatesUserList>(Path(), queryParams, restRequestConfig);
         }
     }
 }

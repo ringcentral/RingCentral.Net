@@ -12,7 +12,7 @@ namespace RingCentral
         /// <summary>
         ///     Usage type of a phone number
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, BusinessMobileNumber
+        ///     ForwardedCompanyNumber, BusinessMobileNumber, IntegrationNumber
         /// </summary>
         public string[] usageType { get; set; }
 

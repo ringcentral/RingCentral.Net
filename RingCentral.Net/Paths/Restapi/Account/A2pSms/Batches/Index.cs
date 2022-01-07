@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         public string Path(bool withParameter = true)
         {
             if (withParameter && batchId != null) return $"{parent.Path()}/batches/{batchId}";
-
             return $"{parent.Path()}/batches";
         }
 
@@ -31,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<MessageBatchListResponse> List(
-            ListA2PBatchesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<MessageBatchListResponse> List(ListA2PBatchesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<MessageBatchListResponse>(Path(false), queryParams, restRequestConfig);
         }
@@ -45,12 +44,10 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<MessageBatchInfo> Post(
-            CreateSMSMessageBatchRequest createSMSMessageBatchRequest,
+        public async Task<MessageBatchInfo> Post(CreateSMSMessageBatchRequest createSMSMessageBatchRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<MessageBatchInfo>(Path(false), createSMSMessageBatchRequest, null,
-                restRequestConfig);
+            return await rc.Post<MessageBatchInfo>(Path(false), createSMSMessageBatchRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -63,7 +60,6 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         public async Task<MessageBatchInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (batchId == null) throw new ArgumentException("Parameter cannot be null", nameof(batchId));
-
             return await rc.Get<MessageBatchInfo>(Path(), null, restRequestConfig);
         }
     }

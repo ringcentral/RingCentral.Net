@@ -26,8 +26,8 @@ namespace RingCentral.Paths.Restapi.Account.ActiveCalls
         ///     App Permission: ReadCallLog
         ///     User Permission: ReadCallLog
         /// </summary>
-        public async Task<CompanyActiveCallsResponse> Get(
-            ListCompanyActiveCallsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<CompanyActiveCallsResponse> Get(ListCompanyActiveCallsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<CompanyActiveCallsResponse>(Path(), queryParams, restRequestConfig);
         }

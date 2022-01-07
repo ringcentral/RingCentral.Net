@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.AdaptiveCards
         public string Path(bool withParameter = true)
         {
             if (withParameter && cardId != null) return $"{parent.Path()}/adaptive-cards/{cardId}";
-
             return $"{parent.Path()}/adaptive-cards";
         }
 
@@ -34,7 +33,6 @@ namespace RingCentral.Paths.Restapi.Glip.AdaptiveCards
         public async Task<GlipAdaptiveCardInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-
             return await rc.Get<GlipAdaptiveCardInfo>(Path(), null, restRequestConfig);
         }
 
@@ -46,13 +44,11 @@ namespace RingCentral.Paths.Restapi.Glip.AdaptiveCards
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipAdaptiveCardShortInfo> Put(
-            GlipAdaptiveCardRequest glipAdaptiveCardRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<GlipAdaptiveCardShortInfo> Put(GlipAdaptiveCardRequest glipAdaptiveCardRequest,
+            RestRequestConfig restRequestConfig = null)
         {
             if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-
-            return await rc.Put<GlipAdaptiveCardShortInfo>(Path(), glipAdaptiveCardRequest, null,
-                restRequestConfig);
+            return await rc.Put<GlipAdaptiveCardShortInfo>(Path(), glipAdaptiveCardRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -66,7 +62,6 @@ namespace RingCentral.Paths.Restapi.Glip.AdaptiveCards
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         public string Path(bool withParameter = true)
         {
             if (withParameter && callRecordId != null) return $"{parent.Path()}/call-log/{callRecordId}";
-
             return $"{parent.Path()}/call-log";
         }
 
@@ -31,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         ///     App Permission: ReadCallLog
         ///     User Permission: ReadCallLog
         /// </summary>
-        public async Task<UserCallLogResponse> List(
-            ReadUserCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<UserCallLogResponse> List(ReadUserCallLogParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<UserCallLogResponse>(Path(false), queryParams, restRequestConfig);
         }
@@ -59,11 +58,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         ///     App Permission: ReadCallLog
         ///     User Permission: ReadCallLog
         /// </summary>
-        public async Task<UserCallLogRecord> Get(
-            ReadUserCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<UserCallLogRecord> Get(ReadUserCallRecordParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (callRecordId == null) throw new ArgumentException("Parameter cannot be null", nameof(callRecordId));
-
             return await rc.Get<UserCallLogRecord>(Path(), queryParams, restRequestConfig);
         }
     }

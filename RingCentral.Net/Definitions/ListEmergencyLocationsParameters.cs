@@ -30,8 +30,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-'
-        ///     (descending order). Supported values: 'address'
-        ///     Default: address
+        ///     (descending order). The default value is `+address`
+        ///     Default: +address
+        ///     Enum: name, siteName, address, addressStatus, usageStatus
         /// </summary>
         public string orderBy { get; set; }
 

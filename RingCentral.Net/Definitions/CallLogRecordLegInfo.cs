@@ -116,11 +116,12 @@ namespace RingCentral
         ///     * `Fax Prepare Error` - An internal error occurred when preparing the fax. Please try again
         ///     * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
         ///     * `Fax Send Error` - An error occurred when sending the fax. Please try again
+        ///     * `DescNoE911Address` - The call was rejected due to no E911 address. Please define emergency address
         ///     Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit,
         ///     Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted,
         ///     Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted,
         ///     Number Not Allowed, Number Blocked, Number Disabled, Not Allowed, Resource Error, Call Loop, Fax Not Received, Fax
-        ///     Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
+        ///     Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error, DescNoE911Address
         /// </summary>
         public string reason { get; set; }
 

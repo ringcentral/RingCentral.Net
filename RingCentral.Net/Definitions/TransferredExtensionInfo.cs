@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    // Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
+    // Transfer settings applied for department (call queue) extension type, returned if CallHandlingAction is set to `TransferToExtension`
     public class TransferredExtensionInfo
     {
         /// <summary>

@@ -25,12 +25,11 @@ namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
         ///     Rate Limit Group: Heavy
         ///     App Permission: VoipCalling
         /// </summary>
-        public async Task<CreateSipRegistrationResponse> Post(
-            CreateSipRegistrationRequest createSipRegistrationRequest,
+        public async Task<CreateSipRegistrationResponse> Post(CreateSipRegistrationRequest createSipRegistrationRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CreateSipRegistrationResponse>(Path(), createSipRegistrationRequest,
-                null, restRequestConfig);
+            return await rc.Post<CreateSipRegistrationResponse>(Path(), createSipRegistrationRequest, null,
+                restRequestConfig);
         }
     }
 }

@@ -20,7 +20,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.PermissionCategory
         {
             if (withParameter && permissionCategoryId != null)
                 return $"{parent.Path()}/permission-category/{permissionCategoryId}";
-
             return $"{parent.Path()}/permission-category";
         }
 
@@ -31,11 +30,9 @@ namespace RingCentral.Paths.Restapi.Dictionary.PermissionCategory
         ///     Rate Limit Group: Light
         /// </summary>
         public async Task<PermissionCategoryCollectionResource> List(
-            ListPermissionCategoriesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+            ListPermissionCategoriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<PermissionCategoryCollectionResource>(Path(false), queryParams,
-                restRequestConfig);
+            return await rc.Get<PermissionCategoryCollectionResource>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -48,7 +45,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.PermissionCategory
         {
             if (permissionCategoryId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(permissionCategoryId));
-
             return await rc.Get<PermissionCategoryResource>(Path(), null, restRequestConfig);
         }
     }

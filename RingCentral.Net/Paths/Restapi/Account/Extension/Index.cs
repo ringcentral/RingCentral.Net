@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         public string Path(bool withParameter = true)
         {
             if (withParameter && extensionId != null) return $"{parent.Path()}/extension/{extensionId}";
-
             return $"{parent.Path()}/extension";
         }
 
@@ -31,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<GetExtensionListResponse> List(
-            ListExtensionsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetExtensionListResponse> List(ListExtensionsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetExtensionListResponse>(Path(false), queryParams, restRequestConfig);
         }
@@ -45,11 +44,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         ///     App Permission: EditAccounts
         ///     User Permission: AddRemoveUsers
         /// </summary>
-        public async Task<ExtensionCreationResponse> Post(
-            ExtensionCreationRequest extensionCreationRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<ExtensionCreationResponse> Post(ExtensionCreationRequest extensionCreationRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<ExtensionCreationResponse>(Path(false), extensionCreationRequest,
-                null, restRequestConfig);
+            return await rc.Post<ExtensionCreationResponse>(Path(false), extensionCreationRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -63,7 +62,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         public async Task<GetExtensionInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (extensionId == null) throw new ArgumentException("Parameter cannot be null", nameof(extensionId));
-
             return await rc.Get<GetExtensionInfoResponse>(Path(), null, restRequestConfig);
         }
 
@@ -75,13 +73,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserInfo OR EditUserCredentials
         /// </summary>
-        public async Task<GetExtensionInfoResponse> Put(
-            ExtensionUpdateRequest extensionUpdateRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<GetExtensionInfoResponse> Put(ExtensionUpdateRequest extensionUpdateRequest,
+            RestRequestConfig restRequestConfig = null)
         {
             if (extensionId == null) throw new ArgumentException("Parameter cannot be null", nameof(extensionId));
-
-            return await rc.Put<GetExtensionInfoResponse>(Path(), extensionUpdateRequest, null,
-                restRequestConfig);
+            return await rc.Put<GetExtensionInfoResponse>(Path(), extensionUpdateRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -101,7 +97,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             RestRequestConfig restRequestConfig = null)
         {
             if (extensionId == null) throw new ArgumentException("Parameter cannot be null", nameof(extensionId));
-
             return await rc.Delete<string>(Path(), queryParams, restRequestConfig);
         }
     }

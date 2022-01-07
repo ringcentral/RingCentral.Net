@@ -7,7 +7,7 @@ namespace RingCentral
         ///     Specifies the action that should be executed on a missed call. It can either be playing greeting message and
         ///     disconnection, or sending call to a calling group. If 'ConnectToExtension' is set, then calling group extension
         ///     should be specified
-        ///     Enum: PlayGreetingAndDisconnect, ConnectToExtension
+        ///     Enum: PlayGreetingAndDisconnect, ConnectToExtension, ConnectToExternalNumber
         /// </summary>
         public string actionType { get; set; }
 

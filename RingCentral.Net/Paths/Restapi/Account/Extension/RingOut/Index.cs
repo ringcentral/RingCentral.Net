@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         public string Path(bool withParameter = true)
         {
             if (withParameter && ringoutId != null) return $"{parent.Path()}/ring-out/{ringoutId}";
-
             return $"{parent.Path()}/ring-out";
         }
 
@@ -33,8 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         public async Task<GetRingOutStatusResponse> Post(MakeRingOutRequest makeRingOutRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<GetRingOutStatusResponse>(Path(false), makeRingOutRequest, null,
-                restRequestConfig);
+            return await rc.Post<GetRingOutStatusResponse>(Path(false), makeRingOutRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -47,7 +45,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         public async Task<GetRingOutStatusResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (ringoutId == null) throw new ArgumentException("Parameter cannot be null", nameof(ringoutId));
-
             return await rc.Get<GetRingOutStatusResponse>(Path(), null, restRequestConfig);
         }
 
@@ -61,7 +58,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (ringoutId == null) throw new ArgumentException("Parameter cannot be null", nameof(ringoutId));
-
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

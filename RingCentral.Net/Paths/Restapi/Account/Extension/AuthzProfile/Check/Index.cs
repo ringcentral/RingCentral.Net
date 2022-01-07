@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<AuthProfileCheckResource> Get(
-            CheckUserPermissionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<AuthProfileCheckResource> Get(CheckUserPermissionParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<AuthProfileCheckResource>(Path(), queryParams, restRequestConfig);
         }

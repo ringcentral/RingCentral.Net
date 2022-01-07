@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null) return $"{parent.Path()}/conversations/{chatId}";
-
             return $"{parent.Path()}/conversations";
         }
 
@@ -32,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipConversationsList> List(
-            ListGlipConversationsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GlipConversationsList> List(ListGlipConversationsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GlipConversationsList>(Path(false), queryParams, restRequestConfig);
         }
@@ -49,12 +48,11 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipConversationInfo> Post(
-            CreateGlipConversationRequest createGlipConversationRequest,
+        public async Task<GlipConversationInfo> Post(CreateGlipConversationRequest createGlipConversationRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<GlipConversationInfo>(Path(false), createGlipConversationRequest,
-                null, restRequestConfig);
+            return await rc.Post<GlipConversationInfo>(Path(false), createGlipConversationRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -71,7 +69,6 @@ namespace RingCentral.Paths.Restapi.Glip.Conversations
         public async Task<GlipConversationInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
-
             return await rc.Get<GlipConversationInfo>(Path(), null, restRequestConfig);
         }
     }

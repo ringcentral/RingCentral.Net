@@ -26,11 +26,10 @@ namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls.Timeli
         /// </summary>
         public async Task<PerformanceCallsTimelineResponse> Post(
             PerformanceCallsTimelineRequest performanceCallsTimelineRequest,
-            PerformanceReportCallsTimelineParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+            PerformanceReportCallsTimelineParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<PerformanceCallsTimelineResponse>(Path(),
-                performanceCallsTimelineRequest, queryParams, restRequestConfig);
+            return await rc.Post<PerformanceCallsTimelineResponse>(Path(), performanceCallsTimelineRequest, queryParams,
+                restRequestConfig);
         }
     }
 }

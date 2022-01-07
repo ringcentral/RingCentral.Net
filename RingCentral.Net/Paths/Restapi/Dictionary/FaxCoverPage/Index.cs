@@ -24,8 +24,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
         ///     Endpoint: /restapi/{apiVersion}/dictionary/fax-cover-page
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<ListFaxCoverPagesResponse> Get(
-            ListFaxCoverPagesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<ListFaxCoverPagesResponse> Get(ListFaxCoverPagesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<ListFaxCoverPagesResponse>(Path(), queryParams, restRequestConfig);
         }

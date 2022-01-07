@@ -26,11 +26,10 @@ namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls.Aggreg
         /// </summary>
         public async Task<PerformanceCallsAggregatesResponse> Post(
             PerformanceCallsAggregatesRequest performanceCallsAggregatesRequest,
-            AggregatePerformanceReportCallsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+            AggregatePerformanceReportCallsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<PerformanceCallsAggregatesResponse>(Path(),
-                performanceCallsAggregatesRequest, queryParams, restRequestConfig);
+            return await rc.Post<PerformanceCallsAggregatesResponse>(Path(), performanceCallsAggregatesRequest,
+                queryParams, restRequestConfig);
         }
     }
 }

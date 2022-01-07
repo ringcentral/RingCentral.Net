@@ -24,8 +24,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MeetingConfiguration.Profi
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<string> Post(
-            CreateUserMeetingProfileImageRequest createUserMeetingProfileImageRequest,
+        public async Task<string> Post(CreateUserMeetingProfileImageRequest createUserMeetingProfileImageRequest,
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createUserMeetingProfileImageRequest);

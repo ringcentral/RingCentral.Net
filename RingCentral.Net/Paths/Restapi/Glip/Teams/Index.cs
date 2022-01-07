@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null) return $"{parent.Path()}/teams/{chatId}";
-
             return $"{parent.Path()}/teams";
         }
 
@@ -66,7 +65,6 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         public async Task<GlipTeamInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
-
             return await rc.Get<GlipTeamInfo>(Path(), null, restRequestConfig);
         }
 
@@ -82,7 +80,6 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
-
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
 
@@ -99,7 +96,6 @@ namespace RingCentral.Paths.Restapi.Glip.Teams
             RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
-
             return await rc.Patch<GlipTeamInfo>(Path(), glipPatchTeamBody, null, restRequestConfig);
         }
     }

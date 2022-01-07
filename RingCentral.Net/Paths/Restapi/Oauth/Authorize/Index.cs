@@ -26,8 +26,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Authorize
         ///     HTTP Method: post
         ///     Endpoint: /restapi/oauth/authorize
         /// </summary>
-        public async Task<string> Post(AuthorizeRequest authorizeRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(AuthorizeRequest authorizeRequest, RestRequestConfig restRequestConfig = null)
         {
             var dict = new Dictionary<string, string>();
             Utils.GetPairs(authorizeRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));

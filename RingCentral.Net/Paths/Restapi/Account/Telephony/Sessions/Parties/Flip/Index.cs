@@ -25,8 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Flip
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<string> Post(CallPartyFlip callPartyFlip,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(CallPartyFlip callPartyFlip, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<string>(Path(), callPartyFlip, null, restRequestConfig);
         }

@@ -31,8 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
             CreateMultipleWirelessPointsRequest createMultipleWirelessPointsRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CreateMultipleWirelessPointsResponse>(Path(),
-                createMultipleWirelessPointsRequest, null, restRequestConfig);
+            return await rc.Post<CreateMultipleWirelessPointsResponse>(Path(), createMultipleWirelessPointsRequest,
+                null, restRequestConfig);
         }
     }
 }

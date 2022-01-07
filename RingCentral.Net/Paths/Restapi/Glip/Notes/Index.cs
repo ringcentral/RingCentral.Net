@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         public string Path(bool withParameter = true)
         {
             if (withParameter && noteId != null) return $"{parent.Path()}/notes/{noteId}";
-
             return $"{parent.Path()}/notes";
         }
 
@@ -34,7 +33,6 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         public async Task<GetGlipNoteInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (noteId == null) throw new ArgumentException("Parameter cannot be null", nameof(noteId));
-
             return await rc.Get<GetGlipNoteInfo>(Path(), null, restRequestConfig);
         }
 
@@ -49,7 +47,6 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (noteId == null) throw new ArgumentException("Parameter cannot be null", nameof(noteId));
-
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
 
@@ -61,11 +58,9 @@ namespace RingCentral.Paths.Restapi.Glip.Notes
         ///     App Permission: TeamMessaging
         ///     User Permission: UnifiedAppDesktop
         /// </summary>
-        public async Task<GlipNoteInfo> Patch(GlipNoteCreate glipNoteCreate,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GlipNoteInfo> Patch(GlipNoteCreate glipNoteCreate, RestRequestConfig restRequestConfig = null)
         {
             if (noteId == null) throw new ArgumentException("Parameter cannot be null", nameof(noteId));
-
             return await rc.Patch<GlipNoteInfo>(Path(), glipNoteCreate, null, restRequestConfig);
         }
     }

@@ -26,8 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Statuses
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<MessageStatusesResponse> Get(
-            AggregateA2PSMSStatusesParameters queryParams = null,
+        public async Task<MessageStatusesResponse> Get(AggregateA2PSMSStatusesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<MessageStatusesResponse>(Path(), queryParams, restRequestConfig);

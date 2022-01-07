@@ -13,7 +13,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public LanguageInfo language { get; set; }
+        public RegionalLanguageInfo language { get; set; }
 
         /// <summary>
         /// </summary>

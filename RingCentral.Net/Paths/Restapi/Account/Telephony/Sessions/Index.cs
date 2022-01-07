@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         public string Path(bool withParameter = true)
         {
             if (withParameter && telephonySessionId != null) return $"{parent.Path()}/sessions/{telephonySessionId}";
-
             return $"{parent.Path()}/sessions";
         }
 
@@ -30,12 +29,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<CallSessionObject> Get(
-            ReadCallSessionStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<CallSessionObject> Get(ReadCallSessionStatusParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (telephonySessionId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
-
             return await rc.Get<CallSessionObject>(Path(), queryParams, restRequestConfig);
         }
 
@@ -50,7 +48,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         {
             if (telephonySessionId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
-
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
     }

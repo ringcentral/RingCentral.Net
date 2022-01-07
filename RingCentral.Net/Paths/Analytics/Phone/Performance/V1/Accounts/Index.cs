@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts
         public string Path(bool withParameter = true)
         {
             if (withParameter && accountId != null) return $"{parent.Path()}/accounts/{accountId}";
-
             return $"{parent.Path()}/accounts";
         }
     }
