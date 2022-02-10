@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Linked message (Fax/Voicemail)
+    /// <summary>
+    ///     Linked message (Fax/Voicemail)
+    /// </summary>
     public class CallLogRecordMessage
     {
         /// <summary>

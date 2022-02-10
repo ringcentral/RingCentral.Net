@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Meeting recording settings locked on account level
+    /// <summary>
+    ///     Meeting recording settings locked on account level
+    /// </summary>
     public class UserMeetingRecordingSetting
     {
         /// <summary>

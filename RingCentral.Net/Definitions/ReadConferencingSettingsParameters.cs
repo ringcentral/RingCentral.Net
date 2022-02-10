@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation readConferencingSettings
+    /// <summary>
+    ///     Query parameters for operation readConferencingSettings
+    /// </summary>
     public class ReadConferencingSettingsParameters
     {
         /// <summary>

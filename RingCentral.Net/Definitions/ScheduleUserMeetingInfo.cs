@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Scheduling meeting settings locked on account level || Settings defining how to schedule user meetingsxs
+    /// <summary>
+    ///     Scheduling meeting settings locked on account level || Settings defining how to schedule user meetingsxs
+    /// </summary>
     public class ScheduleUserMeetingInfo
     {
         /// <summary>

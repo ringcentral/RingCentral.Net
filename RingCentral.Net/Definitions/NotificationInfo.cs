@@ -2,7 +2,9 @@ using Newtonsoft.Json;
 
 namespace RingCentral
 {
-    // Information on a notification
+    /// <summary>
+    ///     Information on a notification
+    /// </summary>
     public class NotificationInfo
     {
         /// <summary>

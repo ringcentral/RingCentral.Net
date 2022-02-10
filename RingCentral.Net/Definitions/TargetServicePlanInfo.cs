@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on account target service plan
+    /// <summary>
+    ///     Information on account target service plan
+    /// </summary>
     public class TargetServicePlanInfo
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listPagingGroupDevices
+    /// <summary>
+    ///     Query parameters for operation listPagingGroupDevices
+    /// </summary>
     public class ListPagingGroupDevicesParameters
     {
         /// <summary>

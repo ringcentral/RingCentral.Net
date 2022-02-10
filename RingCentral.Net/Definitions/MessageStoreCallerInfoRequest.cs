@@ -1,6 +1,9 @@
 namespace RingCentral
 {
-    // Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send the current type of messages
+    /// <summary>
+    ///     Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send the
+    ///     current type of messages
+    /// </summary>
     public class MessageStoreCallerInfoRequest
     {
         /// <summary>

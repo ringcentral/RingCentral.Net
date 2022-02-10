@@ -13,7 +13,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsFilters additionalFilters { get; set; }
+        public PerformanceCallsAdditionalFilters additionalFilters { get; set; }
 
         /// <summary>
         ///     Required

@@ -1,29 +1,33 @@
 namespace RingCentral
 {
-    public class CallDurationByResult
+    public class PerformanceCallsPaging
     {
         /// <summary>
+        ///     The current page number
         ///     Required
         ///     Format: int64
         /// </summary>
-        public long? completedCallsSeconds { get; set; }
+        public long? page { get; set; }
 
         /// <summary>
+        ///     The number of items displayed per page
         ///     Required
         ///     Format: int64
         /// </summary>
-        public long? abandonedCallsSeconds { get; set; }
+        public long? perPage { get; set; }
 
         /// <summary>
+        ///     The total number of pages
         ///     Required
         ///     Format: int64
         /// </summary>
-        public long? voiceMailCallsSeconds { get; set; }
+        public long? totalPages { get; set; }
 
         /// <summary>
+        ///     The total number of items in the dataset
         ///     Required
         ///     Format: int64
         /// </summary>
-        public long? connectedCallsSeconds { get; set; }
+        public long? totalElements { get; set; }
     }
 }

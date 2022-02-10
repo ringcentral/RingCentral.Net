@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Task creator information
+    /// <summary>
+    ///     Task creator information
+    /// </summary>
     public class CreatorInfo
     {
         /// <summary>

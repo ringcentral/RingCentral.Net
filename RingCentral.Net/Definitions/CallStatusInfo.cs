@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Status data of a call session
+    /// <summary>
+    ///     Status data of a call session
+    /// </summary>
     public class CallStatusInfo
     {
         /// <summary>

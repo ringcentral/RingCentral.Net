@@ -1,6 +1,9 @@
 namespace RingCentral
 {
-    // Forwarding device information. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter
+    /// <summary>
+    ///     Forwarding device information. Applicable for 'PhoneLine' type only. Cannot be specified together with
+    ///     'phoneNumber' parameter
+    /// </summary>
     public class CreateForwardingNumberDeviceInfo
     {
         /// <summary>

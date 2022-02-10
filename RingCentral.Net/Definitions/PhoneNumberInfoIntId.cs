@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Phone number information
+    /// <summary>
+    ///     Phone number information
+    /// </summary>
     public class PhoneNumberInfoIntId
     {
         /// <summary>

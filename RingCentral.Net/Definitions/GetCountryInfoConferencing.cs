@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a home country of a conference phone number
+    /// <summary>
+    ///     Information on a home country of a conference phone number
+    /// </summary>
     public class GetCountryInfoConferencing
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation aggregatePerformanceReportCalls
+    /// <summary>
+    ///     Query parameters for operation aggregatePerformanceReportCalls
+    /// </summary>
     public class AggregatePerformanceReportCallsParameters
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Represents a failure of adding opt-out / opt-in. A pair of a recipient phone number and an error message
+    /// <summary>
+    ///     Represents a failure of adding opt-out / opt-in. A pair of a recipient phone number and an error message
+    /// </summary>
     public class OptOutBulkAssignFailedEntry
     {
         /// <summary>

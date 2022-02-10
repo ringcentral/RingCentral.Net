@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Request body for operation authorize
+    /// <summary>
+    ///     Request body for operation authorize
+    /// </summary>
     public class AuthorizeRequest
     {
         /// <summary>

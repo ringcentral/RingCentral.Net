@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Returns data on call recording custom greetings.
+    /// <summary>
+    ///     Returns data on call recording custom greetings.
+    /// </summary>
     public class CallRecordingCustomGreetings
     {
         /// <summary>

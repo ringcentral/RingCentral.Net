@@ -9,11 +9,11 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public PerformanceCallsTimeRange timeRange { get; set; }
+        public PerformanceCallsTimeSettings timeSettings { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsFilters additionalFilters { get; set; }
+        public PerformanceCallsAdditionalFilters additionalFilters { get; set; }
 
         /// <summary>
         ///     Required

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // resource metadata
+    /// <summary>
+    ///     resource metadata
+    /// </summary>
     public class Meta
     {
         /// <summary>

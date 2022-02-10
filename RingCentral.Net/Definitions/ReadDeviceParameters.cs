@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation readDevice
+    /// <summary>
+    ///     Query parameters for operation readDevice
+    /// </summary>
     public class ReadDeviceParameters
     {
         /// <summary>

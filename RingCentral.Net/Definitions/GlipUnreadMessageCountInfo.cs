@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Unread messages data
+    /// <summary>
+    ///     Unread messages data
+    /// </summary>
     public class GlipUnreadMessageCountInfo
     {
         /// <summary>

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallSegmentLength
+    public class PerformanceCallsCallSegmentLengthFilter
     {
         /// <summary>
         ///     Format: int64

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listDataExportTasks
+    /// <summary>
+    ///     Query parameters for operation listDataExportTasks
+    /// </summary>
     public class ListDataExportTasksParameters
     {
         /// <summary>

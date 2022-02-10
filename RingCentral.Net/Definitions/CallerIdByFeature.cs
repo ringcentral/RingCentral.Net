@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Caller ID settings by feature
+    /// <summary>
+    ///     Caller ID settings by feature
+    /// </summary>
     public class CallerIdByFeature
     {
         /// <summary>

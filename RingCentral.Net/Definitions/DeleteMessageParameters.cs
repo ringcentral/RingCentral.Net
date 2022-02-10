@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation deleteMessage
+    /// <summary>
+    ///     Query parameters for operation deleteMessage
+    /// </summary>
     public class DeleteMessageParameters
     {
         /// <summary>

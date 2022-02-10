@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on phone lines added to a device
+    /// <summary>
+    ///     Information on phone lines added to a device
+    /// </summary>
     public class DeviceUpdatePhoneLinesInfo
     {
         /// <summary>

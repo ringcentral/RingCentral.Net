@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listAccountPhoneNumbers
+    /// <summary>
+    ///     Query parameters for operation listAccountPhoneNumbers
+    /// </summary>
     public class ListAccountPhoneNumbersParameters
     {
         /// <summary>

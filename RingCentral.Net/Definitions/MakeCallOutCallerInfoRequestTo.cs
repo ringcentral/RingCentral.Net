@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Phone number of the called party. This number corresponds to the 2nd leg of a CallOut call
+    /// <summary>
+    ///     Phone number of the called party. This number corresponds to the 2nd leg of a CallOut call
+    /// </summary>
     public class MakeCallOutCallerInfoRequestTo
     {
         /// <summary>

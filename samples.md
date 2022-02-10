@@ -6894,7 +6894,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Company-listDomesticCountries) in API Explorer.
 
 ## aggregatePerformanceReportCalls
-Create Call Performance Report
+Access Call Performance Aggregates
 
 Name|Value
 -|-
@@ -6918,7 +6918,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Performance-Reports-aggregatePerformanceReportCalls) in API Explorer.
 
 ## performanceReportCallsTimeline
-Create Timeline Call Performance Report
+Access Call Performance Timeline
 
 Name|Value
 -|-

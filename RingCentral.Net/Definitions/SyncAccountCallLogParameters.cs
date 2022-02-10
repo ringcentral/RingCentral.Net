@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation syncAccountCallLog
+    /// <summary>
+    ///     Query parameters for operation syncAccountCallLog
+    /// </summary>
     public class SyncAccountCallLogParameters
     {
         /// <summary>

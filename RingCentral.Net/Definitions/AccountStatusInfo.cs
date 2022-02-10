@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Status information (reason, comment, lifetime). Returned for 'Disabled' status only
+    /// <summary>
+    ///     Status information (reason, comment, lifetime). Returned for 'Disabled' status only
+    /// </summary>
     public class AccountStatusInfo
     {
         /// <summary>

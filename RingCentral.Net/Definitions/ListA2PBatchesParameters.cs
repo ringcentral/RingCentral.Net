@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listA2PBatches
+    /// <summary>
+    ///     Query parameters for operation listA2PBatches
+    /// </summary>
     public class ListA2PBatchesParameters
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Contact detailed information
+    /// <summary>
+    ///     Contact detailed information
+    /// </summary>
     public class ContactInfo
     {
         /// <summary>

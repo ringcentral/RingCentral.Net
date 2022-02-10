@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation deleteExtension
+    /// <summary>
+    ///     Query parameters for operation deleteExtension
+    /// </summary>
     public class DeleteExtensionParameters
     {
         /// <summary>

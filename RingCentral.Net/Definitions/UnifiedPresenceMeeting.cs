@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Returned if *Meetings* feature is switched on
+    /// <summary>
+    ///     Returned if *Meetings* feature is switched on
+    /// </summary>
     public class UnifiedPresenceMeeting
     {
         /// <summary>

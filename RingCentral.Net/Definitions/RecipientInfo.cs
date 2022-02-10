@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Recipient data
+    /// <summary>
+    ///     Recipient data
+    /// </summary>
     public class RecipientInfo
     {
         /// <summary>

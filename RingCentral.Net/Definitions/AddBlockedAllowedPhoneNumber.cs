@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Updates either blocked or allowed phone number list with a new phone number.
+    /// <summary>
+    ///     Updates either blocked or allowed phone number list with a new phone number.
+    /// </summary>
     public class AddBlockedAllowedPhoneNumber
     {
         /// <summary>

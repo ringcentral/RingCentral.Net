@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // List of extensions to be updated
+    /// <summary>
+    ///     List of extensions to be updated
+    /// </summary>
     public class ExtensionBulkUpdateRequest
     {
         /// <summary>

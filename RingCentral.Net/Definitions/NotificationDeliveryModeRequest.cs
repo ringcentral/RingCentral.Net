@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Notification delivery settings
+    /// <summary>
+    ///     Notification delivery settings
+    /// </summary>
     public class NotificationDeliveryModeRequest
     {
         /// <summary>

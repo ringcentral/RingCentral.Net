@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Brief information on a phone number country
+    /// <summary>
+    ///     Brief information on a phone number country
+    /// </summary>
     public class PhoneNumberCountryInfo
     {
         /// <summary>

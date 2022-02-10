@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Attachment is a file to be uploaded
+    /// <summary>
+    ///     Attachment is a file to be uploaded
+    /// </summary>
     public class Attachment
     {
         /// <summary>

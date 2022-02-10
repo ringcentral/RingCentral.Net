@@ -118,13 +118,13 @@ namespace RingCentral
             };
             return Authorize(getTokenRequest);
         }
-        
+
         public Task<TokenInfo> Authorize(string jwt)
         {
             var getTokenRequest = new GetTokenRequest
             {
                 grant_type = "urn:ietf:params:oauth:grant-type:jwt-bearer",
-                assertion = jwt,
+                assertion = jwt
             };
             return Authorize(getTokenRequest);
         }

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation deleteUserCallLog
+    /// <summary>
+    ///     Query parameters for operation deleteUserCallLog
+    /// </summary>
     public class DeleteUserCallLogParameters
     {
         /// <summary>

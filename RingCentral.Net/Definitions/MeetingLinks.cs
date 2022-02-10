@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Meeting links
+    /// <summary>
+    ///     Meeting links
+    /// </summary>
     public class MeetingLinks
     {
         /// <summary>

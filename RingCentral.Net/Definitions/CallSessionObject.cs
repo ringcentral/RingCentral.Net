@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Call session information
+    /// <summary>
+    ///     Call session information
+    /// </summary>
     public class CallSessionObject
     {
         /// <summary>

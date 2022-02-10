@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Canonical URI for the corresponding page of the list
+    /// <summary>
+    ///     Canonical URI for the corresponding page of the list
+    /// </summary>
     public class UserContactsNavigationInfoUri
     {
         /// <summary>

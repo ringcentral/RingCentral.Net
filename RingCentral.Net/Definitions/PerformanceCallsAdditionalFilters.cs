@@ -1,35 +1,40 @@
 namespace RingCentral
 {
-    // Optional filters that limit the scope of calls to be aggregated. Multiple values can be joined via 'AND'
-    public class PerformanceCallsFilters
+    /// <summary>
+    ///     Optional filters that limit the scope of calls to be aggregated. Multiple values can be joined via 'AND'
+    /// </summary>
+    public class PerformanceCallsAdditionalFilters
     {
         /// <summary>
-        ///     Specifies whether a call is inbound or outbound relative to the account. Not applicable to internal calls
+        ///     Specifies whether the call was inbound or outbound relative to the scope specified in grouping object. Not
+        ///     applicable to internal calls with company scope (when grouping is not specified)
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
 
         /// <summary>
-        ///     Specifies whether a call was originated within the account or outside of it
+        ///     Specifies whether an external party was present in the initial segment of the call
         ///     Enum: Internal, External
         /// </summary>
         public string origin { get; set; }
 
         /// <summary>
         ///     Aggregation of calls by the first response
-        ///     Enum: Answered, NotAnswered
+        ///     Enum: Answered, NotAnswered, Connected, NotConnected
         /// </summary>
         public string callResponse { get; set; }
 
         /// <summary>
-        ///     List of call response types. Multiple values can be joined via 'OR'
-        ///     Enum: InboundDirect, ParkRetrievals, QueueCalls, Transferred, Missed, Accepted
+        ///     List of call response types. This filter allows to get aggregation of calls based on how the call started from the
+        ///     callee perspective. Multiple values can be joined via 'OR'. If the call is outbound relative to the grouping scope,
+        ///     `callType` is Outbound
+        ///     Enum: Direct, Outbound, ParkRetrieval, FromQueue, Transferred
         /// </summary>
-        public string[] callResponseType { get; set; }
+        public string[] callType { get; set; }
 
         /// <summary>
         ///     Aggregation of calls by the nature of call result. Multiple values can be joined via 'OR'
-        ///     Enum: Completed, Abandoned, VoiceMail, Connected
+        ///     Enum: Completed, Abandoned, VoiceMail, Unknown, Missed, Accepted
         /// </summary>
         public string[] callResult { get; set; }
 
@@ -79,6 +84,6 @@ namespace RingCentral
         ///     Queues grouping
         ///     Enum: InSla, OutSla
         /// </summary>
-        public string callSla { get; set; }
+        public string queueSla { get; set; }
     }
 }

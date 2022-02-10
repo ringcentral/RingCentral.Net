@@ -1,6 +1,9 @@
 namespace RingCentral
 {
-    // Specifies an external PSTN number which should be used for the missed call transfer. Returned only if the actionType is set to `ConnectToExternalNumber`
+    /// <summary>
+    ///     Specifies an external PSTN number which should be used for the missed call transfer. Returned only if the
+    ///     actionType is set to `ConnectToExternalNumber`
+    /// </summary>
     public class MissedCallExtensionInfoExternalNumber
     {
         /// <summary>

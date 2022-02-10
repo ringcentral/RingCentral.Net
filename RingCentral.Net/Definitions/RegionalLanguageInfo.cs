@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a language set as regional
+    /// <summary>
+    ///     Information on a language set as regional
+    /// </summary>
     public class RegionalLanguageInfo
     {
         /// <summary>

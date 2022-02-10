@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Detailed information on a message
+    /// <summary>
+    ///     Detailed information on a message
+    /// </summary>
     public class MessageDetailsResponse
     {
         /// <summary>

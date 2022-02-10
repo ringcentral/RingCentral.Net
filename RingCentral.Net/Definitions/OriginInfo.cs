@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Session origin details
+    /// <summary>
+    ///     Session origin details
+    /// </summary>
     public class OriginInfo
     {
         /// <summary>

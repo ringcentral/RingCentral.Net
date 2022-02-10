@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Call park information
+    /// <summary>
+    ///     Call park information
+    /// </summary>
     public class ParkInfo
     {
         /// <summary>

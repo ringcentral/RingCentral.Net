@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Company business address
+    /// <summary>
+    ///     Company business address
+    /// </summary>
     public class BusinessAddressInfo
     {
         /// <summary>

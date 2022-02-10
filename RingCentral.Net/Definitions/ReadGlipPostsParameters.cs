@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation readGlipPosts
+    /// <summary>
+    ///     Query parameters for operation readGlipPosts
+    /// </summary>
     public class ReadGlipPostsParameters
     {
         /// <summary>

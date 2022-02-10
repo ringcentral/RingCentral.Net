@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation updateDevice
+    /// <summary>
+    ///     Query parameters for operation updateDevice
+    /// </summary>
     public class UpdateDeviceParameters
     {
         /// <summary>

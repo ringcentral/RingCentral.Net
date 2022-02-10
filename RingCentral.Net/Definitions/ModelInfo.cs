@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // HardPhone model information
+    /// <summary>
+    ///     HardPhone model information
+    /// </summary>
     public class ModelInfo
     {
         /// <summary>

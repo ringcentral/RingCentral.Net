@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listUserMeetingRecordings
+    /// <summary>
+    ///     Query parameters for operation listUserMeetingRecordings
+    /// </summary>
     public class ListUserMeetingRecordingsParameters
     {
         /// <summary>

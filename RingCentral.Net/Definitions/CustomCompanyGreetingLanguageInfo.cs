@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
+    /// <summary>
+    ///     Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
+    /// </summary>
     public class CustomCompanyGreetingLanguageInfo
     {
         /// <summary>

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls.Timeli
         }
 
         /// <summary>
-        ///     Returns a timeline call performance report aggregated by parameters specified.
+        ///     Returns call performance data aggregated for specified time intervals.
         ///     HTTP Method: post
         ///     Endpoint: /analytics/phone/performance/v1/accounts/{accountId}/calls/timeline
         ///     Rate Limit Group: Light

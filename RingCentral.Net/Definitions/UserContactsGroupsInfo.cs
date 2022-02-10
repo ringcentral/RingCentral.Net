@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on address book groups
+    /// <summary>
+    ///     Information on address book groups
+    /// </summary>
     public class UserContactsGroupsInfo
     {
         /// <summary>

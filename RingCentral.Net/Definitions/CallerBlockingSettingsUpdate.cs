@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Returns the lists of blocked and allowed phone numbers
+    /// <summary>
+    ///     Returns the lists of blocked and allowed phone numbers
+    /// </summary>
     public class CallerBlockingSettingsUpdate
     {
         /// <summary>

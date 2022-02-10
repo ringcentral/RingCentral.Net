@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on navigation
+    /// <summary>
+    ///     Information on navigation
+    /// </summary>
     public class DeviceProvisioningNavigationInfo
     {
         /// <summary>

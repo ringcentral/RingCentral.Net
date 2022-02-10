@@ -1,6 +1,9 @@
 namespace RingCentral
 {
-    // Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
+    /// <summary>
+    ///     Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine
+    ///     the forwarding numbers to which the call will be forwarded
+    /// </summary>
     public class ForwardingInfo
     {
         /// <summary>

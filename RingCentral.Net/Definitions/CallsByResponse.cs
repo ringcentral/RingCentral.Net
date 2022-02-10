@@ -4,14 +4,26 @@ namespace RingCentral
     {
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? answered { get; set; }
+        public decimal? answered { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? notAnswered { get; set; }
+        public decimal? notAnswered { get; set; }
+
+        /// <summary>
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? connected { get; set; }
+
+        /// <summary>
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? notConnected { get; set; }
     }
 }

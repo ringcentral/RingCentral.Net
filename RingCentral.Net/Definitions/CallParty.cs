@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a party of a call session
+    /// <summary>
+    ///     Information on a party of a call session
+    /// </summary>
     public class CallParty
     {
         /// <summary>

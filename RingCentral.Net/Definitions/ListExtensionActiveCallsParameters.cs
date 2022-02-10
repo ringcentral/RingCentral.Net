@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listExtensionActiveCalls
+    /// <summary>
+    ///     Query parameters for operation listExtensionActiveCalls
+    /// </summary>
     public class ListExtensionActiveCallsParameters
     {
         /// <summary>

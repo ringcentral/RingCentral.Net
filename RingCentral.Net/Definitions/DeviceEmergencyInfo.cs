@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Device emergency settings
+    /// <summary>
+    ///     Device emergency settings
+    /// </summary>
     public class DeviceEmergencyInfo
     {
         /// <summary>

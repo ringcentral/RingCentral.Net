@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listFaxCoverPages
+    /// <summary>
+    ///     Query parameters for operation listFaxCoverPages
+    /// </summary>
     public class ListFaxCoverPagesParameters
     {
         /// <summary>

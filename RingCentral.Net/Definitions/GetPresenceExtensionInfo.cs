@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on extension, for which this presence data is returned
+    /// <summary>
+    ///     Information on extension, for which this presence data is returned
+    /// </summary>
     public class GetPresenceExtensionInfo
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Alert information
+    /// <summary>
+    ///     Alert information
+    /// </summary>
     public class AlertInfo
     {
         /// <summary>

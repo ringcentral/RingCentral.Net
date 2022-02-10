@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Contact address information
+    /// <summary>
+    ///     Contact address information
+    /// </summary>
     public class AddressBookBulkContactAddressInfo
     {
         /// <summary>

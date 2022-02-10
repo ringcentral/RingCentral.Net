@@ -4,14 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? businessHours { get; set; }
+        public decimal? businessHours { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? afterHours { get; set; }
+        public decimal? afterHours { get; set; }
     }
 }

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listFavoriteChats
+    /// <summary>
+    ///     Query parameters for operation listFavoriteChats
+    /// </summary>
     public class ListFavoriteChatsParameters
     {
         /// <summary>

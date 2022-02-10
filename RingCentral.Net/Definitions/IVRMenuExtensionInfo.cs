@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // For 'Connect' or 'Voicemail' actions only. Extension reference
+    /// <summary>
+    ///     For 'Connect' or 'Voicemail' actions only. Extension reference
+    /// </summary>
     public class IVRMenuExtensionInfo
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Call recording data. Returned if the call is recorded - `withRecording` parameter is set to 'True' in this case
+    /// <summary>
+    ///     Call recording data. Returned if the call is recorded - `withRecording` parameter is set to 'True' in this case
+    /// </summary>
     public class CallLogRecordingInfo
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Infomation on a message returned within the specified batch
+    /// <summary>
+    ///     Infomation on a message returned within the specified batch
+    /// </summary>
     public class MessageListMessageResponse
     {
         /// <summary>

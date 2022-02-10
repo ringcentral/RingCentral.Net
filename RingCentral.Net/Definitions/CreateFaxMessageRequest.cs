@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Request body for operation createFaxMessage
+    /// <summary>
+    ///     Request body for operation createFaxMessage
+    /// </summary>
     public class CreateFaxMessageRequest
     {
         /// <summary>

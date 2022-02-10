@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Deprecated. Information on call owner
+    /// <summary>
+    ///     Deprecated. Information on call owner
+    /// </summary>
     public class OwnerInfo
     {
         /// <summary>

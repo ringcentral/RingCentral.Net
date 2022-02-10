@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Request body for operation createUserProfileImage
+    /// <summary>
+    ///     Request body for operation createUserProfileImage
+    /// </summary>
     public class CreateUserProfileImageRequest
     {
         /// <summary>

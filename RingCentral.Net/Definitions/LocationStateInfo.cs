@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on the state this location belongs to
+    /// <summary>
+    ///     Information on the state this location belongs to
+    /// </summary>
     public class LocationStateInfo
     {
         /// <summary>

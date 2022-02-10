@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation checkUserPermission
+    /// <summary>
+    ///     Query parameters for operation checkUserPermission
+    /// </summary>
     public class CheckUserPermissionParameters
     {
         /// <summary>

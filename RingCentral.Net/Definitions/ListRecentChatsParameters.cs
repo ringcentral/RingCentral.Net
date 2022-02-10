@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listRecentChats
+    /// <summary>
+    ///     Query parameters for operation listRecentChats
+    /// </summary>
     public class ListRecentChatsParameters
     {
         /// <summary>

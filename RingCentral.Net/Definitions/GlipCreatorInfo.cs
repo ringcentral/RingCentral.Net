@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Note creator information
+    /// <summary>
+    ///     Note creator information
+    /// </summary>
     public class GlipCreatorInfo
     {
         /// <summary>

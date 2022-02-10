@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listContacts
+    /// <summary>
+    ///     Query parameters for operation listContacts
+    /// </summary>
     public class ListContactsParameters
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Contains successfull and failed opt-ins
+    /// <summary>
+    ///     Contains successfull and failed opt-ins
+    /// </summary>
     public class BulkAssignOptIns
     {
         /// <summary>

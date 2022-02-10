@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Request body for operation updateUserProfileImage
+    /// <summary>
+    ///     Request body for operation updateUserProfileImage
+    /// </summary>
     public class UpdateUserProfileImageRequest
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // International Calling permission
+    /// <summary>
+    ///     International Calling permission
+    /// </summary>
     public class PermissionInfoInt
     {
         /// <summary>

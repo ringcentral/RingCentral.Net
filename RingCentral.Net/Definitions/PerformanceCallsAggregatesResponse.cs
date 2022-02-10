@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace RingCentral
 {
     public class PerformanceCallsAggregatesResponse
@@ -7,6 +5,10 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public Dictionary<string, PerformanceCallsData> data { get; set; }
+        public PerformanceCallsData[] data { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PerformanceCallsPaging paging { get; set; }
     }
 }

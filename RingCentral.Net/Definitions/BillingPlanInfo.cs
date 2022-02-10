@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on account billing plan
+    /// <summary>
+    ///     Information on account billing plan
+    /// </summary>
     public class BillingPlanInfo
     {
         /// <summary>

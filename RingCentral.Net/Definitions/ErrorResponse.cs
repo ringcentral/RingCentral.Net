@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Error response
+    /// <summary>
+    ///     Error response
+    /// </summary>
     public class ErrorResponse
     {
         /// <summary>

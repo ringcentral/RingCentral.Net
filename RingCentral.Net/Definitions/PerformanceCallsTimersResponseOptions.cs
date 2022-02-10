@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Performance calls timers
+    /// <summary>
+    ///     Performance calls timers. 'callsDurationByQueueSla' timer is only applicable to Queues grouping
+    /// </summary>
     public class PerformanceCallsTimersResponseOptions
     {
         /// <summary>
@@ -25,7 +27,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsDurationByResponseType { get; set; }
+        public PerformanceCallsTimer callsDurationByType { get; set; }
 
         /// <summary>
         /// </summary>

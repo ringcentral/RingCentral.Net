@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Pagination details
+    /// <summary>
+    ///     Pagination details
+    /// </summary>
     public class PagingResource
     {
         /// <summary>

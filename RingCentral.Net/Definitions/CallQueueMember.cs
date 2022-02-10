@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Call queue member information
+    /// <summary>
+    ///     Call queue member information
+    /// </summary>
     public class CallQueueMember
     {
         /// <summary>

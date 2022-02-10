@@ -1,6 +1,9 @@
 namespace RingCentral
 {
-    // Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+    /// <summary>
+    ///     Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral
+    ///     product terminology
+    /// </summary>
     public class DepartmentInfo
     {
         /// <summary>

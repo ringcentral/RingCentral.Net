@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on the task for multiple switches creation
+    /// <summary>
+    ///     Information on the task for multiple switches creation
+    /// </summary>
     public class CreateMultipleSwitchesResponse
     {
         /// <summary>

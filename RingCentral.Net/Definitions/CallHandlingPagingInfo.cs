@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on paging
+    /// <summary>
+    ///     Information on paging
+    /// </summary>
     public class CallHandlingPagingInfo
     {
         /// <summary>

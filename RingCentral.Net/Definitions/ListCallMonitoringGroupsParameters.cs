@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listCallMonitoringGroups
+    /// <summary>
+    ///     Query parameters for operation listCallMonitoringGroups
+    /// </summary>
     public class ListCallMonitoringGroupsParameters
     {
         /// <summary>

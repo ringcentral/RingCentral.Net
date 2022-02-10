@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Contains successfull and failed opt-outs
+    /// <summary>
+    ///     Contains successfull and failed opt-outs
+    /// </summary>
     public class BulkAssignOptOuts
     {
         /// <summary>

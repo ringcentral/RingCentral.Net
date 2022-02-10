@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Primary call session information. Supported for Call Queues only
+    /// <summary>
+    ///     Primary call session information. Supported for Call Queues only
+    /// </summary>
     public class PrimaryCQInfo
     {
         /// <summary>

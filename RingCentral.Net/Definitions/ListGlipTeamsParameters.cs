@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listGlipTeams
+    /// <summary>
+    ///     Query parameters for operation listGlipTeams
+    /// </summary>
     public class ListGlipTeamsParameters
     {
         /// <summary>

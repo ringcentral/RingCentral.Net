@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Currency information
+    /// <summary>
+    ///     Currency information
+    /// </summary>
     public class CurrencyInfo
     {
         /// <summary>

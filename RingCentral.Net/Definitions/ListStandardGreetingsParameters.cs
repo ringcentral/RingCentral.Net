@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listStandardGreetings
+    /// <summary>
+    ///     Query parameters for operation listStandardGreetings
+    /// </summary>
     public class ListStandardGreetingsParameters
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // GCM data
+    /// <summary>
+    ///     GCM data
+    /// </summary>
     public class GCMInfo
     {
         /// <summary>

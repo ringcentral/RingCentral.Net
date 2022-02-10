@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Single individual SMS resource
+    /// <summary>
+    ///     Single individual SMS resource
+    /// </summary>
     public class MessageCreateRequest
     {
         /// <summary>

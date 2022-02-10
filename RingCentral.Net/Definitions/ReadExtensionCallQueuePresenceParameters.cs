@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation readExtensionCallQueuePresence
+    /// <summary>
+    ///     Query parameters for operation readExtensionCallQueuePresence
+    /// </summary>
     public class ReadExtensionCallQueuePresenceParameters
     {
         /// <summary>

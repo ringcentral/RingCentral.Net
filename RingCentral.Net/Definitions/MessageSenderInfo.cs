@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Sender information
+    /// <summary>
+    ///     Sender information
+    /// </summary>
     public class MessageSenderInfo
     {
         /// <summary>

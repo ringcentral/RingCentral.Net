@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation syncAddressBook
+    /// <summary>
+    ///     Query parameters for operation syncAddressBook
+    /// </summary>
     public class SyncAddressBookParameters
     {
         /// <summary>

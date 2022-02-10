@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // The number which will be displayed to the called party
+    /// <summary>
+    ///     The number which will be displayed to the called party
+    /// </summary>
     public class MakeRingOutCallerIdInfo
     {
         /// <summary>

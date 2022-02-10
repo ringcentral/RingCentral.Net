@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation performanceReportCallsTimeline
+    /// <summary>
+    ///     Query parameters for operation performanceReportCallsTimeline
+    /// </summary>
     public class PerformanceReportCallsTimelineParameters
     {
         /// <summary>

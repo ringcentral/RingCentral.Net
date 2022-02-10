@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Primary/additional CQ information
+    /// <summary>
+    ///     Primary/additional CQ information
+    /// </summary>
     public class CallInfoCQ
     {
         /// <summary>

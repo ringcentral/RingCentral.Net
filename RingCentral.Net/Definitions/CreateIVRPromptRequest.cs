@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Request body for operation createIVRPrompt
+    /// <summary>
+    ///     Request body for operation createIVRPrompt
+    /// </summary>
     public class CreateIVRPromptRequest
     {
         /// <summary>

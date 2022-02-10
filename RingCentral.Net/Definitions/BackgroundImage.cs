@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF
+    /// <summary>
+    ///     Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF
+    /// </summary>
     public class BackgroundImage
     {
         /// <summary>

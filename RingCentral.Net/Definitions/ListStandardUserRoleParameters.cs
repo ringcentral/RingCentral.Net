@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listStandardUserRole
+    /// <summary>
+    ///     Query parameters for operation listStandardUserRole
+    /// </summary>
     public class ListStandardUserRoleParameters
     {
         /// <summary>

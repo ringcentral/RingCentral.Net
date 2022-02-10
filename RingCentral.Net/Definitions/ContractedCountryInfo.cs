@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on the contracted country of account
+    /// <summary>
+    ///     Information on the contracted country of account
+    /// </summary>
     public class ContractedCountryInfo
     {
         /// <summary>

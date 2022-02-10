@@ -30,5 +30,11 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? autoAnswer { get; set; }
+
+        /// <summary>
+        ///     Specifies session description protocol setting
+        ///     Enum: sendOnly, sendRecv
+        /// </summary>
+        public string mediaSDP { get; set; }
     }
 }

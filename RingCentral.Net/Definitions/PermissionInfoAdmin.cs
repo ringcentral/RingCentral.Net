@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Admin permission
+    /// <summary>
+    ///     Admin permission
+    /// </summary>
     public class PermissionInfoAdmin
     {
         /// <summary>

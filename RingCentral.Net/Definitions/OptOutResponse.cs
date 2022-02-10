@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Opt-out record
+    /// <summary>
+    ///     Opt-out record
+    /// </summary>
     public class OptOutResponse
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Apple notification data
+    /// <summary>
+    ///     Apple notification data
+    /// </summary>
     public class GlipAPNSInfo
     {
         /// <summary>

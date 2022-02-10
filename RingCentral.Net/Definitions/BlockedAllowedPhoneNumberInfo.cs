@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a blocked/allowed phone number
+    /// <summary>
+    ///     Information on a blocked/allowed phone number
+    /// </summary>
     public class BlockedAllowedPhoneNumberInfo
     {
         /// <summary>

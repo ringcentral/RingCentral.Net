@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Extension user business address. The default is Company (Auto-Receptionist) settings
+    /// <summary>
+    ///     Extension user business address. The default is Company (Auto-Receptionist) settings
+    /// </summary>
     public class ContactBusinessAddressInfo
     {
         /// <summary>

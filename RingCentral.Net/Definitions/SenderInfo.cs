@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Extension Type. For GCM transport type '_from' property should be used || Message sender information
+    /// <summary>
+    ///     Extension Type. For GCM transport type '_from' property should be used || Message sender information
+    /// </summary>
     public class SenderInfo
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Peer session/party details. Valid in 'Gone' state of a call
+    /// <summary>
+    ///     Peer session/party details. Valid in 'Gone' state of a call
+    /// </summary>
     public class PeerInfo
     {
         /// <summary>

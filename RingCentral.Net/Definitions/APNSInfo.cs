@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // APNS (Apple Push Notification Service) information
+    /// <summary>
+    ///     APNS (Apple Push Notification Service) information
+    /// </summary>
     public class APNSInfo
     {
         /// <summary>

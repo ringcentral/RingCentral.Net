@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listA2PSMS
+    /// <summary>
+    ///     Query parameters for operation listA2PSMS
+    /// </summary>
     public class ListA2PSMSParameters
     {
         /// <summary>

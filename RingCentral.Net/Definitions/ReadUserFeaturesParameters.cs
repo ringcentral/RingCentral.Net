@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation readUserFeatures
+    /// <summary>
+    ///     Query parameters for operation readUserFeatures
+    /// </summary>
     public class ReadUserFeaturesParameters
     {
         /// <summary>

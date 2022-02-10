@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Result record on multiple extension update task
+    /// <summary>
+    ///     Result record on multiple extension update task
+    /// </summary>
     public class ExtensionBulkUpdateTaskResult
     {
         /// <summary>

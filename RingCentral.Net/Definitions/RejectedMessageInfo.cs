@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information about the message that failed to be sent
+    /// <summary>
+    ///     Information about the message that failed to be sent
+    /// </summary>
     public class RejectedMessageInfo
     {
         /// <summary>

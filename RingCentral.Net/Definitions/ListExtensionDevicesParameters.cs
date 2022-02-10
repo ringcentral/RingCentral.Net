@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listExtensionDevices
+    /// <summary>
+    ///     Query parameters for operation listExtensionDevices
+    /// </summary>
     public class ListExtensionDevicesParameters
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a task for updating multiple extensions
+    /// <summary>
+    ///     Information on a task for updating multiple extensions
+    /// </summary>
     public class ExtensionBulkUpdateTaskResource
     {
         /// <summary>

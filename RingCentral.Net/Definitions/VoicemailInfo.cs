@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Specifies whether to take a voicemail and who should do it
+    /// <summary>
+    ///     Specifies whether to take a voicemail and who should do it
+    /// </summary>
     public class VoicemailInfo
     {
         /// <summary>

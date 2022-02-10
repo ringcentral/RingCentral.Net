@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a task for adding multiple contacts to multiple extensions
+    /// <summary>
+    ///     Information on a task for adding multiple contacts to multiple extensions
+    /// </summary>
     public class AddressBookBulkUploadResponse
     {
         /// <summary>

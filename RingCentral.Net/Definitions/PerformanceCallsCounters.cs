@@ -1,43 +1,48 @@
 namespace RingCentral
 {
-    // Call volume data for the specified grouping.
+    /// <summary>
+    ///     Call volume data for the specified grouping.
+    /// </summary>
     public class PerformanceCallsCounters
     {
         /// <summary>
-        ///     Format: int64
         /// </summary>
-        public long? totalCalls { get; set; }
+        public PerformanceCallsTotal allCalls { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsByDirection callsByDirection { get; set; }
+        public PerformanceCallsByDirection callsByDirection { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsByOrigin callsByOrigin { get; set; }
+        public PerformanceCallsByOrigin callsByOrigin { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsByResponse callsByResponse { get; set; }
+        public PerformanceCallsByResponse callsByResponse { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsByResponseType callsByResponseType { get; set; }
+        public PerformanceCallsSegments callsSegments { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsByResult callsByResult { get; set; }
+        public PerformanceCallsByResult callsByResult { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsActionsCount callsActionsCount { get; set; }
+        public PerformanceCallsActions callsActions { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsBySegments callsBySegments { get; set; }
+        public PerformanceCallsByCompanyHours callsByCompanyHours { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallsByCompanyHours callsByCompanyHours { get; set; }
+        public PerformanceCallsByQueueSla callsByQueueSla { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PerformanceCallsByType callsByType { get; set; }
     }
 }

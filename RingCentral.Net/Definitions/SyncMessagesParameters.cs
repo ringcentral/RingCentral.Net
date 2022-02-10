@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation syncMessages
+    /// <summary>
+    ///     Query parameters for operation syncMessages
+    /// </summary>
     public class SyncMessagesParameters
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Limits which are effective for the account
+    /// <summary>
+    ///     Limits which are effective for the account
+    /// </summary>
     public class AccountLimits
     {
         /// <summary>

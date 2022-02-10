@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listStates
+    /// <summary>
+    ///     Query parameters for operation listStates
+    /// </summary>
     public class ListStatesParameters
     {
         /// <summary>

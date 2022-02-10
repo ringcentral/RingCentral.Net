@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Post data. At least one attribute should be provided (text or attachments)
+    /// <summary>
+    ///     Post data. At least one attribute should be provided (text or attachments)
+    /// </summary>
     public class GlipPostPostBody
     {
         /// <summary>

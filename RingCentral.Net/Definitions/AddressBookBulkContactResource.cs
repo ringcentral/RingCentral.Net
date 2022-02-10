@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Contact resource
+    /// <summary>
+    ///     Contact resource
+    /// </summary>
     public class AddressBookBulkContactResource
     {
         /// <summary>

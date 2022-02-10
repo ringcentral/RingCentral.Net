@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // SharedLines call handling action settings
+    /// <summary>
+    ///     SharedLines call handling action settings
+    /// </summary>
     public class SharedLinesInfo
     {
         /// <summary>

@@ -2,7 +2,9 @@ using Newtonsoft.Json;
 
 namespace RingCentral
 {
-    // Apple Push Notification Service Info
+    /// <summary>
+    ///     Apple Push Notification Service Info
+    /// </summary>
     public class GlipAPSInfo
     {
         /// <summary>

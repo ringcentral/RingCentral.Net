@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation aggregateA2PSMSStatuses
+    /// <summary>
+    ///     Query parameters for operation aggregateA2PSMSStatuses
+    /// </summary>
     public class AggregateA2PSMSStatusesParameters
     {
         /// <summary>

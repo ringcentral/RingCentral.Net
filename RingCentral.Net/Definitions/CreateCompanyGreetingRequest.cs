@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Request body for operation createCompanyGreeting
+    /// <summary>
+    ///     Request body for operation createCompanyGreeting
+    /// </summary>
     public class CreateCompanyGreetingRequest
     {
         /// <summary>

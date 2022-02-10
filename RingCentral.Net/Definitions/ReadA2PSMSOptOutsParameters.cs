@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation readA2PSMSOptOuts
+    /// <summary>
+    ///     Query parameters for operation readA2PSMSOptOuts
+    /// </summary>
     public class ReadA2PSMSOptOutsParameters
     {
         /// <summary>

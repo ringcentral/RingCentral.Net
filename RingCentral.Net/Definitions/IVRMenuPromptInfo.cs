@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Prompt metadata
+    /// <summary>
+    ///     Prompt metadata
+    /// </summary>
     public class IVRMenuPromptInfo
     {
         /// <summary>

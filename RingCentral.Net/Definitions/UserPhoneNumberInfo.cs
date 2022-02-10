@@ -54,6 +54,7 @@ namespace RingCentral
         /// <summary>
         ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an
         ///     external number not yet ported to RingCentral
+        ///     Enum: Normal, Pending, PortedIn, Temporary
         /// </summary>
         public string status { get; set; }
 

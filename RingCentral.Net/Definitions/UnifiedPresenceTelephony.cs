@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Returned if *BLF* feature is switched on
+    /// <summary>
+    ///     Returned if *BLF* feature is switched on
+    /// </summary>
     public class UnifiedPresenceTelephony
     {
         /// <summary>

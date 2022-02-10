@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information about a call party that is monitored
+    /// <summary>
+    ///     Information about a call party that is monitored
+    /// </summary>
     public class SupervisePartyTo
     {
         /// <summary>

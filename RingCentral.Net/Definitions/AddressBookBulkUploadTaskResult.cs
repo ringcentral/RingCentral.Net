@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Result record on adding multiple contacts to an extension. Returned for completed tasks
+    /// <summary>
+    ///     Result record on adding multiple contacts to an extension. Returned for completed tasks
+    /// </summary>
     public class AddressBookBulkUploadTaskResult
     {
         /// <summary>

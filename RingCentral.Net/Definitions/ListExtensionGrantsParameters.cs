@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listExtensionGrants
+    /// <summary>
+    ///     Query parameters for operation listExtensionGrants
+    /// </summary>
     public class ListExtensionGrantsParameters
     {
         /// <summary>

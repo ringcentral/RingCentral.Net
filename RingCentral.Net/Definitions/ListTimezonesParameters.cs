@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listTimezones
+    /// <summary>
+    ///     Query parameters for operation listTimezones
+    /// </summary>
     public class ListTimezonesParameters
     {
         /// <summary>

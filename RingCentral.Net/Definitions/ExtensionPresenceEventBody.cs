@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Notification payload body
+    /// <summary>
+    ///     Notification payload body
+    /// </summary>
     public class ExtensionPresenceEventBody
     {
         /// <summary>

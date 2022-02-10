@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Conditional aggregation of calls based on the overall call length
+    /// <summary>
+    ///     Conditional aggregation of calls based on the overall call length
+    /// </summary>
     public class PerformanceCallsFilterByLength
     {
         /// <summary>

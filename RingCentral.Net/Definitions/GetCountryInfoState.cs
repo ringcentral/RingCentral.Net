@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on a country the state belongs to
+    /// <summary>
+    ///     Information on a country the state belongs to
+    /// </summary>
     public class GetCountryInfoState
     {
         /// <summary>

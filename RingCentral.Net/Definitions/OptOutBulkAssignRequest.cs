@@ -1,6 +1,9 @@
 namespace RingCentral
 {
-    // Consists of `from` field and `optOuts` and `optIns` lists. Both `optOuts` and `optIns` can be empty but not simultaneously - at least one of the lists must be entered."
+    /// <summary>
+    ///     Consists of `from` field and `optOuts` and `optIns` lists. Both `optOuts` and `optIns` can be empty but not
+    ///     simultaneously - at least one of the lists must be entered."
+    /// </summary>
     public class OptOutBulkAssignRequest
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Call queue information
+    /// <summary>
+    ///     Call queue information
+    /// </summary>
     public class CallQueueId
     {
         /// <summary>

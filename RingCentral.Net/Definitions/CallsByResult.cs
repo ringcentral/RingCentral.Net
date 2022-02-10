@@ -4,26 +4,38 @@ namespace RingCentral
     {
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? completed { get; set; }
+        public decimal? completed { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? abandoned { get; set; }
+        public decimal? abandoned { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? voiceMail { get; set; }
+        public decimal? voicemail { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: int64
+        ///     Format: double
         /// </summary>
-        public long? connected { get; set; }
+        public decimal? missed { get; set; }
+
+        /// <summary>
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? accepted { get; set; }
+
+        /// <summary>
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? unknown { get; set; }
     }
 }

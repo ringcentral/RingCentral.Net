@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Emergency response location settings of a device
+    /// <summary>
+    ///     Emergency response location settings of a device
+    /// </summary>
     public class SipRegistrationDeviceEmergencyInfo
     {
         /// <summary>

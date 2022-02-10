@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Party update data
+    /// <summary>
+    ///     Party update data
+    /// </summary>
     public class PartyUpdateInfo
     {
         /// <summary>

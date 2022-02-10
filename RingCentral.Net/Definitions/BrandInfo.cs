@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on account brand
+    /// <summary>
+    ///     Information on account brand
+    /// </summary>
     public class BrandInfo
     {
         /// <summary>

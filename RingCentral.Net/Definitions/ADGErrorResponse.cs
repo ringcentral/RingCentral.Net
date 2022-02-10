@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Format of response in case that any error occurred during request processing
+    /// <summary>
+    ///     Format of response in case that any error occurred during request processing
+    /// </summary>
     public class ADGErrorResponse
     {
         /// <summary>

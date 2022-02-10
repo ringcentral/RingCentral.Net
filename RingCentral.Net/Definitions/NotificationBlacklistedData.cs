@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Returned if WebHook subscription is blacklisted
+    /// <summary>
+    ///     Returned if WebHook subscription is blacklisted
+    /// </summary>
     public class NotificationBlacklistedData
     {
         /// <summary>

@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listDomesticCountries
+    /// <summary>
+    ///     Query parameters for operation listDomesticCountries
+    /// </summary>
     public class ListDomesticCountriesParameters
     {
         /// <summary>

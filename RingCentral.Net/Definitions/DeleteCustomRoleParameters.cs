@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation deleteCustomRole
+    /// <summary>
+    ///     Query parameters for operation deleteCustomRole
+    /// </summary>
     public class DeleteCustomRoleParameters
     {
         /// <summary>

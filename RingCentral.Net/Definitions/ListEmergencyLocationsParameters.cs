@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listEmergencyLocations
+    /// <summary>
+    ///     Query parameters for operation listEmergencyLocations
+    /// </summary>
     public class ListEmergencyLocationsParameters
     {
         /// <summary>

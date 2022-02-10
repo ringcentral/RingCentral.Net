@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Call queue service level settings
+    /// <summary>
+    ///     Call queue service level settings
+    /// </summary>
     public class CallQueueServiceLevelSettings
     {
         /// <summary>

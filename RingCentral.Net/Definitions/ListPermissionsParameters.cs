@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listPermissions
+    /// <summary>
+    ///     Query parameters for operation listPermissions
+    /// </summary>
     public class ListPermissionsParameters
     {
         /// <summary>

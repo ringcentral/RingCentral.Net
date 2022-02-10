@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listWirelessPoints
+    /// <summary>
+    ///     Query parameters for operation listWirelessPoints
+    /// </summary>
     public class ListWirelessPointsParameters
     {
         /// <summary>

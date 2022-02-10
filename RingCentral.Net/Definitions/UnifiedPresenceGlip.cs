@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Returned if *Glip* feature is switched on
+    /// <summary>
+    ///     Returned if *Glip* feature is switched on
+    /// </summary>
     public class UnifiedPresenceGlip
     {
         /// <summary>

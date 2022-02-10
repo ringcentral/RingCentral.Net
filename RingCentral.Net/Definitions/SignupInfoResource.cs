@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Account sign up data
+    /// <summary>
+    ///     Account sign up data
+    /// </summary>
     public class SignupInfoResource
     {
         /// <summary>

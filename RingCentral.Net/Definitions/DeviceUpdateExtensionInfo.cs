@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on extension that the device is assigned to
+    /// <summary>
+    ///     Information on extension that the device is assigned to
+    /// </summary>
     public class DeviceUpdateExtensionInfo
     {
         /// <summary>

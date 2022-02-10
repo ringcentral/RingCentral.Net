@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Query parameters for operation listDirectoryEntries
+    /// <summary>
+    ///     Query parameters for operation listDirectoryEntries
+    /// </summary>
     public class ListDirectoryEntriesParameters
     {
         /// <summary>

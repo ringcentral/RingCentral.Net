@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Extension phone number information
+    /// <summary>
+    ///     Extension phone number information
+    /// </summary>
     public class CompanyDirectoryPhoneNumberInfo
     {
         /// <summary>

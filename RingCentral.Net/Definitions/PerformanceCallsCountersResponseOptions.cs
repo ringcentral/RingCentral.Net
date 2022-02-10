@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Performance calls counters
+    /// <summary>
+    ///     Performance calls counters
+    /// </summary>
     public class PerformanceCallsCountersResponseOptions
     {
         /// <summary>
@@ -21,7 +23,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByResponseType { get; set; }
+        public PerformanceCallsCounter callsByType { get; set; }
 
         /// <summary>
         /// </summary>

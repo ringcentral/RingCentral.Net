@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Request body for operation revokeToken
+    /// <summary>
+    ///     Request body for operation revokeToken
+    /// </summary>
     public class RevokeTokenRequest
     {
         /// <summary>

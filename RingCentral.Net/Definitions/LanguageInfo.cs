@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // User interface language data
+    /// <summary>
+    ///     User interface language data
+    /// </summary>
     public class LanguageInfo
     {
         /// <summary>

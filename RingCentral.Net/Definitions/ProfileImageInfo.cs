@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Information on profile image
+    /// <summary>
+    ///     Information on profile image
+    /// </summary>
     public class ProfileImageInfo
     {
         /// <summary>

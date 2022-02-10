@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Account level region data (web service Auto-Receptionist settings)
+    /// <summary>
+    ///     Account level region data (web service Auto-Receptionist settings)
+    /// </summary>
     public class AccountRegionalSettings
     {
         /// <summary>

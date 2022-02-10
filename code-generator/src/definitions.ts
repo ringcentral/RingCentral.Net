@@ -94,7 +94,16 @@ const generateField = (f: Field) => {
 
 parsed.models.forEach(model => {
   let code = `namespace RingCentral
-{${model.description ? '\n    // ' + model.description : ''}
+{${
+    model.description
+      ? '\n    /// <summary>\n' +
+        model.description
+          .split('\n')
+          .map(line => '/// ' + line)
+          .join('\n') +
+        '\n/// </summary>'
+      : ''
+  }
     public class ${model.name}
     {
         ${model.fields.map(f => generateField(f)).join('\n\n        ')}

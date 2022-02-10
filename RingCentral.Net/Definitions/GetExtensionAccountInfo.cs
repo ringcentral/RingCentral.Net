@@ -1,6 +1,8 @@
 namespace RingCentral
 {
-    // Account information
+    /// <summary>
+    ///     Account information
+    /// </summary>
     public class GetExtensionAccountInfo
     {
         /// <summary>
