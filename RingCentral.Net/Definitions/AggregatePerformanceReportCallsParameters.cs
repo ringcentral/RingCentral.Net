@@ -6,7 +6,8 @@ namespace RingCentral
     public class AggregatePerformanceReportCallsParameters
     {
         /// <summary>
-        ///     Page number
+        ///     The current page number
+        ///     Minimum: 1
         /// </summary>
         public long? page { get; set; }
 

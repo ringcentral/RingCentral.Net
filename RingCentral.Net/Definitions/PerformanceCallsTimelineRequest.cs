@@ -3,21 +3,22 @@ namespace RingCentral
     public class PerformanceCallsTimelineRequest
     {
         /// <summary>
+        ///     Required
         /// </summary>
-        public PerformanceCallsGrouping grouping { get; set; }
+        public TimelinePerformanceCallsGrouping grouping { get; set; }
 
         /// <summary>
         ///     Required
         /// </summary>
-        public PerformanceCallsTimeRange timeRange { get; set; }
+        public PerformanceCallsTimeSettings timeSettings { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsAdditionalFilters additionalFilters { get; set; }
+        public PerformanceCallsFilters additionalFilters { get; set; }
 
         /// <summary>
         ///     Required
         /// </summary>
-        public PerformanceCallsResponseDataOptions responseOptions { get; set; }
+        public TimelineResponseDataOptions responseOptions { get; set; }
     }
 }

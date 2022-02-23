@@ -1,44 +1,52 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Performance calls timers. 'callsDurationByQueueSla' timer is only applicable to Queues grouping
+    ///     The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually. If
+    ///     `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported. If `aggregationType` is `Min`,
+    ///     `Max` or `Average`,`aggregationInterval` is supported, but not required. If left empty, aggregation will be
+    ///     performed on per-call basis
     /// </summary>
     public class PerformanceCallsTimersResponseOptions
     {
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer allCallsDuration { get; set; }
+        public PerformanceCallsTimersResponseOptionsAllCallsDuration allCallsDuration { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsSegmentsDuration { get; set; }
+        public PerformanceCallsTimersResponseOptionsCallsDurationByDirection callsDurationByDirection { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsDurationByDirection { get; set; }
+        public PerformanceCallsTimersResponseOptionsCallsDurationByOrigin callsDurationByOrigin { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsDurationByOrigin { get; set; }
+        public PerformanceCallsTimersResponseOptionsCallsDurationByResponse callsDurationByResponse { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsDurationByResponse { get; set; }
+        public PerformanceCallsTimersResponseOptionsCallsSegmentsDuration callsSegmentsDuration { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsDurationByType { get; set; }
+        public PerformanceCallsTimersResponseOptionsCallsDurationByResult callsDurationByResult { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsDurationByResult { get; set; }
+        public PerformanceCallsTimersResponseOptionsCallsDurationByCompanyHours callsDurationByCompanyHours
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     This timer is only applicable to Queues grouping
+        /// </summary>
+        public PerformanceCallsTimersResponseOptionsCallsDurationByQueueSla callsDurationByQueueSla { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsTimer callsDurationByCompanyHours { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public PerformanceCallsTimer callsDurationByQueueSla { get; set; }
+        public PerformanceCallsTimersResponseOptionsCallsDurationByType callsDurationByType { get; set; }
     }
 }

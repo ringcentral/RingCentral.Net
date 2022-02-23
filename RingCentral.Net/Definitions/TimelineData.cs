@@ -9,6 +9,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public KeyInfo keyInfo { get; set; }
+
+        /// <summary>
+        /// </summary>
         public TimelineDataPoint[] points { get; set; }
     }
 }

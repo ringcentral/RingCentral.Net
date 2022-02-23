@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Call length data for the specified grouping.
+    ///     Call length data for the specified grouping
     /// </summary>
     public class PerformanceCallsTimers
     {

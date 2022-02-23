@@ -19,10 +19,11 @@ namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls.Aggreg
         }
 
         /// <summary>
-        ///     Returns call performance data aggregated as per the specified parameters.
+        ///     Returns call performance aggregations filtered by parameters specified.
         ///     HTTP Method: post
         ///     Endpoint: /analytics/phone/performance/v1/accounts/{accountId}/calls/aggregate
         ///     Rate Limit Group: Light
+        ///     App Permission: Analytics
         /// </summary>
         public async Task<PerformanceCallsAggregatesResponse> Post(
             PerformanceCallsAggregatesRequest performanceCallsAggregatesRequest,

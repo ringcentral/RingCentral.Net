@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Conditional aggregation of calls based on the time spent on a call by the specified mailbox(es)
+    ///     Conditional aggregation of calls based on the time spent by specified mailbox(es) on call
     /// </summary>
     public class PerformanceCallsFilterTimeSpentByMailbox
     {

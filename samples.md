@@ -6894,14 +6894,14 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Company-listDomesticCountries) in API Explorer.
 
 ## aggregatePerformanceReportCalls
-Access Call Performance Aggregates
+Aggregate Call Performance Data
 
 Name|Value
 -|-
 HTTP Method|`POST`
 Endpoint|`/analytics/phone/performance/v1/accounts/{accountId}/calls/aggregate`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`Analytics`
 User Permission|`N/A`
 
 ```cs
@@ -6915,17 +6915,17 @@ await rc.Revoke();
 - `aggregatePerformanceReportCallsParameters` is of type [AggregatePerformanceReportCallsParameters](./RingCentral.Net/Definitions/AggregatePerformanceReportCallsParameters.cs)
 - `result` is of type [PerformanceCallsAggregatesResponse](./RingCentral.Net/Definitions/PerformanceCallsAggregatesResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Performance-Reports-aggregatePerformanceReportCalls) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-aggregatePerformanceReportCalls) in API Explorer.
 
 ## performanceReportCallsTimeline
-Access Call Performance Timeline
+Timeline Call Performance Data
 
 Name|Value
 -|-
 HTTP Method|`POST`
 Endpoint|`/analytics/phone/performance/v1/accounts/{accountId}/calls/timeline`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`Analytics`
 User Permission|`N/A`
 
 ```cs
@@ -6939,7 +6939,7 @@ await rc.Revoke();
 - `performanceReportCallsTimelineParameters` is of type [PerformanceReportCallsTimelineParameters](./RingCentral.Net/Definitions/PerformanceReportCallsTimelineParameters.cs)
 - `result` is of type [PerformanceCallsTimelineResponse](./RingCentral.Net/Definitions/PerformanceCallsTimelineResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Performance-Reports-performanceReportCallsTimeline) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-performanceReportCallsTimeline) in API Explorer.
 
 ## getAddressBookBulkUploadTask
 Get Contacts Update Task

@@ -3,8 +3,9 @@ namespace RingCentral
     public class PerformanceCallsAggregatesRequest
     {
         /// <summary>
+        ///     Required
         /// </summary>
-        public PerformanceCallsGrouping grouping { get; set; }
+        public AggregatePerformanceCallsGrouping grouping { get; set; }
 
         /// <summary>
         ///     Required
@@ -13,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsAdditionalFilters additionalFilters { get; set; }
+        public PerformanceCallsFilters additionalFilters { get; set; }
 
         /// <summary>
         ///     Required

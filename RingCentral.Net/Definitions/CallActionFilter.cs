@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallPerformanceActionInfo
+    public class CallActionFilter
     {
         /// <summary>
         ///     Enum: HoldOff, HoldOn, ParkOn, ParkOff, BlindTransfer, WarmTransfer, DTMFTransfer

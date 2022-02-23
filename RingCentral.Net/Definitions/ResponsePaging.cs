@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PerformanceCallsPaging
+    public class ResponsePaging
     {
         /// <summary>
         ///     The current page number
@@ -10,7 +10,7 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     The number of items displayed per page
+        ///     How many items are displayed on the page
         ///     Required
         ///     Format: int64
         /// </summary>

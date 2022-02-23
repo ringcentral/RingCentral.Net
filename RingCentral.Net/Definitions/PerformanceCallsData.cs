@@ -1,19 +1,16 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     A list of call aggregations as per the grouping and filtering options specified in the request.
-    /// </summary>
     public class PerformanceCallsData
     {
         /// <summary>
-        ///     Grouping key
+        ///     Grouping key.
         ///     Required
         /// </summary>
         public string key { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsKeyInfo keyInfo { get; set; }
+        public KeyInfo keyInfo { get; set; }
 
         /// <summary>
         /// </summary>

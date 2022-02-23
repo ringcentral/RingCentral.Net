@@ -1,48 +1,51 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Performance calls counters
+    ///     The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually. If
+    ///     `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported. If `aggregationType` is `Min`,
+    ///     `Max` or `Average`,`aggregationInterval` is required
     /// </summary>
     public class PerformanceCallsCountersResponseOptions
     {
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter allCalls { get; set; }
+        public PerformanceCallsCountersResponseOptionsAllCalls allCalls { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByDirection { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsByDirection callsByDirection { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByOrigin { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsByOrigin callsByOrigin { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByResponse { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsByResponse callsByResponse { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByType { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsSegments callsSegments { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsBySegments { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsByResult callsByResult { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByResult { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsByCompanyHours callsByCompanyHours { get; set; }
+
+        /// <summary>
+        ///     This counter is only applicable to Queues grouping
+        /// </summary>
+        public PerformanceCallsCountersResponseOptionsCallsByQueueSla callsByQueueSla { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByActions { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsByActions callsByActions { get; set; }
 
         /// <summary>
         /// </summary>
-        public PerformanceCallsCounter callsByCompanyHours { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public PerformanceCallsCounter callsByQueueSla { get; set; }
+        public PerformanceCallsCountersResponseOptionsCallsByType callsByType { get; set; }
     }
 }

@@ -3,10 +3,9 @@ namespace RingCentral
     /// <summary>
     ///     Additional info about the key
     /// </summary>
-    public class PerformanceCallsKeyInfo
+    public class KeyInfo
     {
         /// <summary>
-        ///     Number of extension
         /// </summary>
         public string extensionNumber { get; set; }
     }

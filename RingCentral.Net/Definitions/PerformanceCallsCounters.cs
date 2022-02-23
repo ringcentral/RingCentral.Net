@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Call volume data for the specified grouping.
+    ///     Call volume data for the specified grouping
     /// </summary>
     public class PerformanceCallsCounters
     {
