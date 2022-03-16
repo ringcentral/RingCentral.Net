@@ -39,6 +39,21 @@ You can find [sample code for all the endpoints](./samples.md).
 There is also lots of useful code for your reference in our [test cases](./RingCentral.Tests).
 
 
+## Logging
+
+The SDK takes advantages of [System.Diagnostics.Trace](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace?view=net-6.0) to provide logs.
+
+To enable logging, you need to either add `#define TRACE` to your source or specify the option `/d:TRACE` when compiling.
+
+To specify an output channel, you need to specify a listener: 
+
+```cs
+Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+```
+
+Code about will print logs to console. For more detail please refer to [Trace.Listeners Property](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace.listeners?view=net-6.0).
+
+
 ## C# `using` statement
 
 Please note that if you use the `using` statement to initialize a `RestClient`:

@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -53,7 +54,21 @@ namespace RingCentral
                 RequestUri = uriBuilder.Uri,
                 Content = httpContent
             };
-            return await extensibleRequest(httpRequestMessage, restRequestConfig ?? RestRequestConfig.DefaultInstance);
+            try
+            {
+                var r = await extensibleRequest(httpRequestMessage,
+                    restRequestConfig ?? RestRequestConfig.DefaultInstance);
+                Trace.WriteLine(
+                    $"[HTTP {httpMethod.Method} {r.StatusCode} {r.ReasonPhrase} {DateTime.Now.ToString("yyyyMMdd-HHmmss")}] {this.server.ToString()} {endpoint}");
+                return r;
+            }
+            catch (RestException re)
+            {
+                var r = re.httpResponseMessage;
+                Trace.WriteLine(
+                    $"[HTTP {httpMethod.Method} {r.StatusCode} {r.ReasonPhrase} {DateTime.Now.ToString("yyyyMMdd-HHmmss")}] {this.server.ToString()} {endpoint}");
+                throw;
+            }
         }
 
         public async Task<T> Request<T>(HttpMethod httpMethod, string endpoint,
