@@ -53,6 +53,8 @@ Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
 
 Code about will print logs to console. For more detail please refer to [Trace.Listeners Property](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace.listeners?view=net-6.0).
 
+[Demo project](https://github.com/tylerlong/rc-logging-demo-csharp).
+
 
 ## C# `using` statement
 
