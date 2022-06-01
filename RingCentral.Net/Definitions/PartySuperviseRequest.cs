@@ -33,7 +33,8 @@ namespace RingCentral
         public bool? autoAnswer { get; set; }
 
         /// <summary>
-        ///     Specifies session description protocol setting
+        ///     Specifies session description protocol (SDP) setting. The possible values are 'sendOnly' (only sending) meaning
+        ///     one-way audio streaming; and 'sendRecv' (sending/receiving) meaning two-way audio streaming
         ///     Enum: sendOnly, sendRecv
         /// </summary>
         public string mediaSDP { get; set; }

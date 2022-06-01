@@ -6,8 +6,8 @@ namespace RingCentral
     public class PerformanceCallsAdvancedTimeSettings
     {
         /// <summary>
-        ///     IANA-compatible time zone name, for example 'America/Los_Angeles', 'Europe/Moscow'. See also *[Time
-        ///     Zones](https://www.iana.org/time-zones)*
+        ///     Name of the timezone that will be used for `includeDays` and `includeHours` filters. For example
+        ///     'America/Los_Angeles', 'Europe/Moscow'. See also *[Time Zones](https://www.iana.org/time-zones)*
         /// </summary>
         public string timeZone { get; set; }
 

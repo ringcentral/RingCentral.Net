@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls.Aggreg
         }
 
         /// <summary>
-        ///     Returns call performance aggregations filtered by parameters specified.
+        ///     Returns call performance aggregations filtered by parameters specified
         ///     HTTP Method: post
         ///     Endpoint: /analytics/phone/performance/v1/accounts/{accountId}/calls/aggregate
         ///     Rate Limit Group: Light

@@ -59,14 +59,14 @@ namespace RingCentral
                 var r = await extensibleRequest(httpRequestMessage,
                     restRequestConfig ?? RestRequestConfig.DefaultInstance);
                 Trace.WriteLine(
-                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int)r.StatusCode} {r.ReasonPhrase}] {this.server.ToString()} {endpoint}");
+                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int) r.StatusCode} {r.ReasonPhrase}] {server} {endpoint}");
                 return r;
             }
             catch (RestException re)
             {
                 var r = re.httpResponseMessage;
                 Trace.WriteLine(
-                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int)r.StatusCode} {r.ReasonPhrase}] {this.server.ToString()} {endpoint}");
+                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int) r.StatusCode} {r.ReasonPhrase}] {server} {endpoint}");
                 throw;
             }
         }

@@ -61,7 +61,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         /// <summary>
         ///     Updates the existent subscription. The client application can extend/narrow the events for which it receives
         ///     notifications within the frame of one subscription. If event filters are specified, calling this method modifies
-        ///     them for the existing subscription. The method also allows to set the subscription expiration time. If other than
+        ///     them for the existing subscription. The method also allows to set the subscription expiration time.  If other than
         ///     `events` and `expiresIn` parameters are passed in request they will be ignored. If the request body is empty then
         ///     the specified subscription will be just renewed without any event filter change and with expiration time default.
         ///     HTTP Method: put

@@ -3,7 +3,7 @@ namespace RingCentral
     public class PerformanceCallsData
     {
         /// <summary>
-        ///     Grouping key.
+        ///     Grouping key
         ///     Required
         /// </summary>
         public string key { get; set; }

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class InvalidRequestResponse
+    public class BadRequest
     {
         /// <summary>
         /// </summary>

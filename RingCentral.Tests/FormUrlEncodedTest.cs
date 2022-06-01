@@ -11,10 +11,10 @@ namespace RingCentral.Tests
         public async void GetAndRevokeToken()
         {
             using (var rc = new RestClient(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-            ))
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+                   ))
             {
                 var tokenInfo = await rc.Restapi(null).Oauth().Token().Post(new GetTokenRequest
                 {

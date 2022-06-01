@@ -49,5 +49,11 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? vmGreetings { get; set; }
+
+        /// <summary>
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? setup { get; set; }
     }
 }

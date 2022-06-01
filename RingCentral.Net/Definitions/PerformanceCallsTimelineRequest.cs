@@ -3,9 +3,8 @@ namespace RingCentral
     public class PerformanceCallsTimelineRequest
     {
         /// <summary>
-        ///     Required
         /// </summary>
-        public TimelinePerformanceCallsGrouping grouping { get; set; }
+        public PerformanceCallsGrouping grouping { get; set; }
 
         /// <summary>
         ///     Required

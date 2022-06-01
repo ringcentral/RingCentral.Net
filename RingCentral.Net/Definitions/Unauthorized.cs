@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class LoginToExtensionRequiredErrorResponse
+    public class Unauthorized
     {
         /// <summary>
         /// </summary>

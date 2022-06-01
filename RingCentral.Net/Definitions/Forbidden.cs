@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class ForbiddenRequestErrorResponse
+    public class Forbidden
     {
         /// <summary>
         /// </summary>

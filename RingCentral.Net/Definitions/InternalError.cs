@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class InternalServerErrorResponse
+    public class InternalError
     {
         /// <summary>
         /// </summary>

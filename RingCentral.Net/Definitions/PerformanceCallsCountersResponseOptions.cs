@@ -1,9 +1,9 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually. If
-    ///     `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported. If `aggregationType` is `Min`,
-    ///     `Max` or `Average`,`aggregationInterval` is required
+    ///     The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually.
+    ///     If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
+    ///     If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is required
     /// </summary>
     public class PerformanceCallsCountersResponseOptions
     {

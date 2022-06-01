@@ -20,10 +20,10 @@ namespace RingCentral.Tests
             if (Environment.GetEnvironmentVariable("IS_LAB_ENV") != "true") return;
 
             using (var rc = new RestClient(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-            ))
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+                   ))
             {
                 await rc.Authorize(
                     Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),

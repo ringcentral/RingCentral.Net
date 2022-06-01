@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Analytics.Phone.Performance.V1.Accounts.Calls.Timeli
         }
 
         /// <summary>
-        ///     Returns time-value data aggregations filtered by parameters specified.
+        ///     Returns time-value data aggregations filtered by parameters specified
         ///     HTTP Method: post
         ///     Endpoint: /analytics/phone/performance/v1/accounts/{accountId}/calls/timeline
         ///     Rate Limit Group: Light

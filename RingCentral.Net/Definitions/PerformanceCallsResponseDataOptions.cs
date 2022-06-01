@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Provides mapping of possible breakdown options for call aggregation time intervals
+    ///     This field provides mapping of possible breakdown options for call aggregation and aggregation formula
     /// </summary>
     public class PerformanceCallsResponseDataOptions
     {

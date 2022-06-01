@@ -9,10 +9,10 @@ namespace RingCentral.Tests
         public async void Get()
         {
             using (var rc = new RestClient(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-            ))
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+                   ))
             {
                 await rc.Authorize(
                     Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
@@ -29,10 +29,10 @@ namespace RingCentral.Tests
         public async void List()
         {
             using (var rc = new RestClient(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-            ))
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+                   ))
             {
                 await rc.Authorize(
                     Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
