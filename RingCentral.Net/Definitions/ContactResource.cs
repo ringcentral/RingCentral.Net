@@ -34,6 +34,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
         public string id { get; set; }
 
@@ -63,6 +64,30 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public UserCustomFieldResource[] customFields { get; set; }
+        public bool? hidden { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public RoleResource role { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallQueueResource[] callQueues { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CustomFieldResource[] customFields { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public GroupResource[] groups { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CostCenterResource costCenter { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public ExternalIntegrationResource integration { get; set; }
     }
 }

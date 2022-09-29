@@ -24,7 +24,7 @@ namespace RingCentral.Tests
                     await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest
                     {
                         eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"},
-                        deliveryMode = new NotificationDeliveryModeRequest
+                        deliveryMode = new NotificationDeliveryMode
                         {
                             transportType = "WebHook",
                             address = "http://www.example.com/webhook"

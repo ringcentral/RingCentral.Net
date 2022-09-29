@@ -11,7 +11,7 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Phone number of a caller/callee in e.164 format without a plus sign '+'. If specified, all incoming and outcoming
+        ///     Phone number of a caller/callee in e.164 format without a plus sign '+'. If specified, all incoming and outgoing
         ///     calls with this phone number are returned. Cannot be specified together with the `extensionNumber` filter
         ///     Example: 12053320033
         /// </summary>

@@ -8,8 +8,9 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     'Default' value specifies that all greetings of that type (in all languages) are default, if at least one greeting
-        ///     (in any language) of the specified type is custom, then 'Custom' value is returned.
+        ///     Here `Default` indicates that all greetings of that type
+        ///     (in all languages) are default. If at least one greeting (in any language)
+        ///     of the specified type is custom, then `Custom` is returned.
         ///     Enum: Default, Custom
         /// </summary>
         public string mode { get; set; }

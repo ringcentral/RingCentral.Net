@@ -9,11 +9,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Link for downloading a dataset
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
         ///     Size of ta dataset in bytes
+        ///     Format: int64
         /// </summary>
         public long? size { get; set; }
     }

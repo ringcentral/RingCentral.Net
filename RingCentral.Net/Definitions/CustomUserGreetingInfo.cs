@@ -15,7 +15,7 @@ namespace RingCentral
         /// <summary>
         ///     Type of a custom user greeting
         ///     Enum: Introductory, Announcement, InterruptPrompt, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable,
-        ///     HoldMusic, PronouncedName
+        ///     HoldMusic, PronouncedName, TemplateGreeting
         /// </summary>
         public string type { get; set; }
 

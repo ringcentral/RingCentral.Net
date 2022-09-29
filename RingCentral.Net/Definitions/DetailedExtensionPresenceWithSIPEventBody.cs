@@ -24,6 +24,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Order number of a notification to state the chronology
+        ///     Format: int32
         /// </summary>
         public long? sequence { get; set; }
 
@@ -68,6 +69,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Total number of active calls on extension at the present moment
+        ///     Format: int32
         /// </summary>
         public long? totalActiveCalls { get; set; }
 

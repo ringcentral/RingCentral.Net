@@ -13,6 +13,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of an extension
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

@@ -1,41 +1,41 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     SIP flags data
+    ///     SIP flags information
     /// </summary>
-    public class SIPFlagsResponse
+    public class SipFlagsResponse
     {
         /// <summary>
-        ///     If 'True' VoIP calling feature is enabled
-        ///     Enum: True, False
+        ///     Indicates that VoIP calling feature is enabled
         /// </summary>
-        public string voipFeatureEnabled { get; set; }
+        public bool? voipFeatureEnabled { get; set; }
 
         /// <summary>
-        ///     If 'True' the request is sent from IP address of a country blocked for VoIP calling
-        ///     Enum: True, False
+        ///     Indicates that the request is sent from IP address of a country where VoIP calling is disallowed
         /// </summary>
-        public string voipCountryBlocked { get; set; }
+        public bool? voipCountryBlocked { get; set; }
 
         /// <summary>
-        ///     If 'True' outbound calls are enabled
-        ///     Enum: True, False
+        ///     Indicates that outbound calls are enabled
         /// </summary>
-        public string outboundCallsEnabled { get; set; }
+        public bool? outboundCallsEnabled { get; set; }
 
         /// <summary>
         /// </summary>
         public bool? dscpEnabled { get; set; }
 
         /// <summary>
+        ///     Format: int32
         /// </summary>
         public long? dscpSignaling { get; set; }
 
         /// <summary>
+        ///     Format: int32
         /// </summary>
         public long? dscpVoice { get; set; }
 
         /// <summary>
+        ///     Format: int32
         /// </summary>
         public long? dscpVideo { get; set; }
     }

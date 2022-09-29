@@ -12,7 +12,7 @@ namespace RingCentral
         public string mode { get; set; }
 
         /// <summary>
-        ///     Determines how to handle calls with no caller ID in 'Specific' mode
+        ///     Determines how to handle calls with no caller ID in `Specific` mode
         ///     Enum: BlockCallsAndFaxes, BlockFaxes, Allow
         /// </summary>
         public string noCallerId { get; set; }

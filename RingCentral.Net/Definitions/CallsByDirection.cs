@@ -1,17 +1,20 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Data for calls with breakdown by direction (Inbound, Outbound)
+    /// </summary>
     public class CallsByDirection
     {
         /// <summary>
+        ///     Unit of the result value
         ///     Required
-        ///     Format: double
+        ///     Enum: Percent, Seconds, Instances
         /// </summary>
-        public decimal? inbound { get; set; }
+        public string valueType { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: double
         /// </summary>
-        public decimal? outbound { get; set; }
+        public CallsByDirectionBreakdown values { get; set; }
     }
 }

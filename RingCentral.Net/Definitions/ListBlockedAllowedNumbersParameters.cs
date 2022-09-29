@@ -6,14 +6,8 @@ namespace RingCentral
     public class ListBlockedAllowedNumbersParameters
     {
         /// <summary>
-        /// </summary>
-        public long? page { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public long? perPage { get; set; }
-
-        /// <summary>
+        ///     Status of a phone number
+        ///     Default: Blocked
         ///     Enum: Blocked, Allowed
         /// </summary>
         public string status { get; set; }

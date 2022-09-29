@@ -3,10 +3,12 @@ namespace RingCentral
     public class DirectoryResource
     {
         /// <summary>
+        ///     Required
         /// </summary>
-        public CompanyContactsPagingInfo paging { get; set; }
+        public PagingInfo paging { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
         public ContactResource[] records { get; set; }
     }

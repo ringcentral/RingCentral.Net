@@ -8,7 +8,7 @@ namespace RingCentral
         public string[] addedUserIds { get; set; }
 
         /// <summary>
-        ///     List of users that will be unallowed to page a group specified
+        ///     List of users that will be disallowed to page a group specified
         /// </summary>
         public string[] removedUserIds { get; set; }
 

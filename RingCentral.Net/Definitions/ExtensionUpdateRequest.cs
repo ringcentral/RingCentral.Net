@@ -67,21 +67,22 @@ namespace RingCentral
         public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>
-        ///     Hides extension from showing in company directory. Supported for extensions of User type only
-        /// </summary>
-        public bool? hidden { get; set; }
-
-        /// <summary>
         /// </summary>
         public AutomaticLocationUpdatesSiteInfoRequest site { get; set; }
 
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
         ///     modern RingCentral product terminology
-        ///     Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
+        ///     Enum: User, Fax User, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail,
+        ///     SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
+
+        /// <summary>
+        ///     Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
+        /// </summary>
+        public string subType { get; set; }
 
         /// <summary>
         ///     List of non-RC internal identifiers assigned to an extension

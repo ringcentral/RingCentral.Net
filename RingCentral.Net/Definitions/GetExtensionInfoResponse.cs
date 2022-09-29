@@ -103,11 +103,17 @@ namespace RingCentral
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
         ///     modern RingCentral product terminology
-        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup,
+        ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
+        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup,
         ///     GroupCallPickup
         /// </summary>
         public string type { get; set; }
+
+        /// <summary>
+        ///     Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
+        /// </summary>
+        public string subType { get; set; }
 
         /// <summary>
         /// </summary>

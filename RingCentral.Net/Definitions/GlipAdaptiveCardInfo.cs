@@ -72,7 +72,7 @@ namespace RingCentral
         public BackgroundImage backgroundImage { get; set; }
 
         /// <summary>
-        ///     Specifies the minimum height of the card in pxls
+        ///     Specifies the minimum height of the card in pixels
         ///     Example: 50px
         /// </summary>
         public string minHeight { get; set; }

@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Canonical URI of a presence info resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

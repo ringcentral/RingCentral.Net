@@ -28,5 +28,18 @@ namespace RingCentral
         ///     Default: 100
         /// </summary>
         public string perPage { get; set; }
+
+        /// <summary>
+        ///     Device type
+        ///     Default: HardPhone
+        ///     Enum: Room, SoftPhone, OtherPhone, HardPhone, Paging, WebRTC
+        /// </summary>
+        public string line { get; set; }
+
+        /// <summary>
+        ///     Type of phone line
+        ///     Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
+        /// </summary>
+        public string lineType { get; set; }
     }
 }

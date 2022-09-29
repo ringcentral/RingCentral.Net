@@ -27,6 +27,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
         ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessaging
         /// </summary>
         public async Task<GlipTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
@@ -39,6 +40,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
         ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessaging
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
@@ -51,6 +53,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks
         ///     HTTP Method: patch
         ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
         ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessaging
         /// </summary>
         public async Task<GlipTaskList> Patch(GlipUpdateTask glipUpdateTask, RestRequestConfig restRequestConfig = null)
         {

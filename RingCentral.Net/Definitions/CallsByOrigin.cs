@@ -1,17 +1,20 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Data for calls with breakdown by origin (Internal, External)
+    /// </summary>
     public class CallsByOrigin
     {
         /// <summary>
+        ///     Unit of the result value
         ///     Required
-        ///     Format: double
+        ///     Enum: Percent, Seconds, Instances
         /// </summary>
-        public decimal? @internal { get; set; }
+        public string valueType { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: double
         /// </summary>
-        public decimal? external { get; set; }
+        public CallsByOriginBreakdown values { get; set; }
     }
 }

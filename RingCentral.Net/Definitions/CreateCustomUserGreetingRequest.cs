@@ -8,12 +8,14 @@ namespace RingCentral
         /// <summary>
         ///     Type of a greeting, specifying the case when the greeting is played.
         ///     Required
-        ///     Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
+        ///     Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic,
+        ///     TemplateGreeting
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
         ///     Internal identifier of an answering rule
+        ///     Required
         /// </summary>
         public string answeringRuleId { get; set; }
 

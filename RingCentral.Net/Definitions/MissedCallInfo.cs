@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Specifies behaviour for the missed call scenario. Returned only if `enabled` parameter of a voicemail is set to
+    ///     Specifies behavior for the missed call scenario. Returned only if `enabled` parameter of a voicemail is set to
     ///     'false'
     /// </summary>
     public class MissedCallInfo

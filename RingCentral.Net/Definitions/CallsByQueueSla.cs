@@ -1,17 +1,20 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Data for calls with breakdown by queue SLA (InSLA, OutSLA). This counter is only applicable to Queues grouping
+    /// </summary>
     public class CallsByQueueSla
     {
         /// <summary>
+        ///     Unit of the result value
         ///     Required
-        ///     Format: double
+        ///     Enum: Percent, Seconds, Instances
         /// </summary>
-        public decimal? inSla { get; set; }
+        public string valueType { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: double
         /// </summary>
-        public decimal? outOfSla { get; set; }
+        public CallsByQueueSlaBreakdown values { get; set; }
     }
 }

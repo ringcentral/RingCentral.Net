@@ -13,6 +13,6 @@ namespace RingCentral
         /// <summary>
         ///     Format: int32
         /// </summary>
-        public string count { get; set; }
+        public long? count { get; set; }
     }
 }

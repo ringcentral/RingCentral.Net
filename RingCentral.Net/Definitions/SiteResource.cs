@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Extension site
+    ///     Site extension information
     /// </summary>
     public class SiteResource
     {

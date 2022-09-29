@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Number assigned to the call flip phone number, corresponds to the shortcut dial number
+        ///     Format: int32
         /// </summary>
         public long? flipNumber { get; set; }
 

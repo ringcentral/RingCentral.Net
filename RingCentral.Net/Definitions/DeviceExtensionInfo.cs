@@ -1,8 +1,5 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Internal identifier of an extension the device should be assigned to
-    /// </summary>
     public class DeviceExtensionInfo
     {
         /// <summary>
@@ -12,12 +9,13 @@ namespace RingCentral
         public long? id { get; set; }
 
         /// <summary>
-        ///     Link to an extension resource
+        ///     Canonical URL of an extension resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     Number of extension
+        ///     Short extension number
         /// </summary>
         public string extensionNumber { get; set; }
     }

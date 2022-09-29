@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Unfavorite
         }
 
         /// <summary>
-        ///     Removes the specified chat from the users's list of favorites.
+        ///     Removes the specified chat from the users's list of favorite chats.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/unfavorite
         ///     Rate Limit Group: Medium

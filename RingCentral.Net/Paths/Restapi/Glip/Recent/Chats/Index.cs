@@ -21,7 +21,7 @@ namespace RingCentral.Paths.Restapi.Glip.Recent.Chats
         /// <summary>
         ///     Returns recent chats where the user is a member. All records in response are sorted by the `lastModifiedTime` in
         ///     descending order (the latest changed chat is displayed first on page). **Note** 'Chat' is a general name for all
-        ///     types of threads icluding *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15
+        ///     types of threads including *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15
         ///     participants without specific name), *Team* (chat of 2 and more participants, with a specific name), *Everyone*
         ///     (company chat including all employees, with a specific name)."
         ///     HTTP Method: get

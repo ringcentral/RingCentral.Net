@@ -1,13 +1,13 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Infomation on a message returned within the specified batch
+    ///     The short detail of the message in the get batch response
     /// </summary>
     public class MessageListMessageResponse
     {
         /// <summary>
-        ///     Internal identifier of a message
-        ///     Format: int32
+        ///     The Id of the message
+        ///     Format: int64
         ///     Example: 1234
         /// </summary>
         public long? id { get; set; }
@@ -20,13 +20,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the message is sent
-        ///     Example: 15551234567
+        ///     Example: +15551234567
         /// </summary>
         public string from { get; set; }
 
         /// <summary>
         ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format to which a message is sent
-        ///     Example: 15551234567
+        ///     Example: +15551234567
         /// </summary>
         public string[] to { get; set; }
 
@@ -69,8 +69,7 @@ namespace RingCentral
         public decimal? cost { get; set; }
 
         /// <summary>
-        ///     Indicates whether the message was outbound or inbound
-        ///     Example: out
+        ///     Direction of the SMS message
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }

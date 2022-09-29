@@ -1,35 +1,20 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Data for calls with breakdown by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
+    /// </summary>
     public class CallsByType
     {
         /// <summary>
+        ///     Unit of the result value
         ///     Required
-        ///     Format: double
+        ///     Enum: Percent, Seconds, Instances
         /// </summary>
-        public decimal? direct { get; set; }
+        public string valueType { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: double
         /// </summary>
-        public decimal? fromQueue { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? parkRetrieval { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? transferred { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? outbound { get; set; }
+        public CallsByTypeBreakdown values { get; set; }
     }
 }

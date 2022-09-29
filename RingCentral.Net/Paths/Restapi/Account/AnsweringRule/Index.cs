@@ -30,10 +30,9 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadCompanyAnsweringRules
         /// </summary>
-        public async Task<CompanyAnsweringRuleList> List(ListCompanyAnsweringRulesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CompanyAnsweringRuleList> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<CompanyAnsweringRuleList>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<CompanyAnsweringRuleList>(Path(false), null, restRequestConfig);
         }
 
         /// <summary>

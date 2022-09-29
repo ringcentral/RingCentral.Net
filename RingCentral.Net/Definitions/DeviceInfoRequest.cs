@@ -11,18 +11,18 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Supported for iOS devices only. Certificate name (used by iOS applications for APNS subscription)
+        ///     Supported for iOS devices only. Certificate name (used by iOS
+        ///     applications for APNS subscription)
         /// </summary>
         public string appExternalId { get; set; }
 
         /// <summary>
-        ///     Supported for SoftPhone only. Computer name
+        ///     Computer name (for SoftPhone only).
         /// </summary>
         public string computerName { get; set; }
 
         /// <summary>
-        ///     Serial number for HardPhone; `endpoint_id` for softphone and mobile applications. Returned only when the phone is
-        ///     shipped and provisioned
+        ///     Endpoint/device instance identifier for Softphone and mobile applications.
         /// </summary>
         public string serial { get; set; }
     }

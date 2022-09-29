@@ -20,6 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Number of rings before forwarding starts
+        ///     Format: int32
         /// </summary>
         public long? softPhonesRingCount { get; set; }
 
@@ -40,12 +41,12 @@ namespace RingCentral
         /// <summary>
         ///     Information on a call forwarding rule
         /// </summary>
-        public RuleInfo[] rules { get; set; }
+        public ForwardingRuleInfo[] rules { get; set; }
 
         /// <summary>
-        ///     Specifies if desktop and mobile applications of the user are notified  before (true) or after (false) forwarding
-        ///     the incoming call to desk phones and forwarding numbers. Applicable only if `notifyMySoftPhones` parameter is set
-        ///     to `true`
+        ///     Specifies if desktop and mobile applications of the user are notified before (true) or after (false) forwarding the
+        ///     incoming call to desk phones and forwarding numbers. Applicable only if `notifyMySoftPhones` parameter is set to
+        ///     `true`
         /// </summary>
         public bool? softPhonesPositionTop { get; set; }
 

@@ -3,17 +3,23 @@ namespace RingCentral
     public class CreateMessageStoreReportRequest
     {
         /// <summary>
-        ///     Only messages created before the date will be collected. The default value is current time
+        ///     The end of the time range to collect message records in ISO 8601 format including timezone.
+        ///     Default is the current time
+        ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }
 
         /// <summary>
-        ///     Only messages created after (or including) the date will be collected. The default value is current time minus 24
-        ///     hours
+        ///     The beginning of the time range to collect call log records in ISO 8601 format including timezone.
+        ///     Default is the current time minus 24 hours
+        ///     Format: date-time
         /// </summary>
         public string dateFrom { get; set; }
 
         /// <summary>
+        ///     Types of messages to be collected. If not specified, all messages without message type filtering will be returned.
+        ///     Multiple values are accepted
+        ///     Example: Fax,VoiceMail
         ///     Enum: EMail, Fax, SMS, VoiceMail, Pager, Text
         /// </summary>
         public string[] messageTypes { get; set; }

@@ -30,24 +30,25 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<MessageBatchListResponse> List(ListA2PBatchesParameters queryParams = null,
+        public async Task<BatchListResponse> List(ListA2PBatchesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<MessageBatchListResponse>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<BatchListResponse>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        ///     Allows to send high volume of A2P (Application-to-Person) SMS messages (in message batches). Only phone number with
-        ///     the `A2PSmsSender` feature can be used as a sender.
+        ///     Allows to send high volume of A2P (Application-to-Person) SMS messages
+        ///     (in message batches). Only phone number with the `A2PSmsSender` feature can
+        ///     be used as a sender.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<MessageBatchInfo> Post(CreateSMSMessageBatchRequest createSMSMessageBatchRequest,
+        public async Task<MessageBatchResponse> Post(MessageBatchCreateRequest messageBatchCreateRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<MessageBatchInfo>(Path(false), createSMSMessageBatchRequest, null, restRequestConfig);
+            return await rc.Post<MessageBatchResponse>(Path(false), messageBatchCreateRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -57,10 +58,10 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<MessageBatchInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<MessageBatchResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (batchId == null) throw new ArgumentException("Parameter cannot be null", nameof(batchId));
-            return await rc.Get<MessageBatchInfo>(Path(), null, restRequestConfig);
+            return await rc.Get<MessageBatchResponse>(Path(), null, restRequestConfig);
         }
     }
 }

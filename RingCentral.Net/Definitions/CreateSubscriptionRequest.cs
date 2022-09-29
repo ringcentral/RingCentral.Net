@@ -3,7 +3,7 @@ namespace RingCentral
     public class CreateSubscriptionRequest
     {
         /// <summary>
-        ///     Collection of URIs to API resources
+        ///     The list of event filter names corresponding to events the user is subscribed to
         ///     Required
         /// </summary>
         public string[] eventFilters { get; set; }
@@ -11,12 +11,14 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public NotificationDeliveryModeRequest deliveryMode { get; set; }
+        public NotificationDeliveryMode deliveryMode { get; set; }
 
         /// <summary>
-        ///     Subscription lifetime in seconds. For *WebHook* transport type max value might be set up to 315360000 seconds (10
-        ///     years). For RC/APNS and RC/GSM transport max subscription lifetime is 7776000 seconds (90 days). For PubNub
-        ///     transport the max value is 900 seconds (15 minutes)
+        ///     Subscription lifetime in seconds. For "WebHook" transport type max value might be set up to 315360000
+        ///     seconds (10 years). For "RC/APNS" and "RC/GSM" transport types max subscription lifetime is 7776000 seconds (90
+        ///     days).
+        ///     For "PubNub" transport type the max value is 900 seconds (15 minutes)
+        ///     Format: int32
         /// </summary>
         public long? expiresIn { get; set; }
     }

@@ -1,17 +1,20 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Data for calls with breakdown by company hours (BusinessHours, AfterHours)
+    /// </summary>
     public class CallsByCompanyHours
     {
         /// <summary>
+        ///     Unit of the result value
         ///     Required
-        ///     Format: double
+        ///     Enum: Percent, Seconds, Instances
         /// </summary>
-        public decimal? businessHours { get; set; }
+        public string valueType { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: double
         /// </summary>
-        public decimal? afterHours { get; set; }
+        public CallsByCompanyHoursBreakdown values { get; set; }
     }
 }

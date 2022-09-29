@@ -15,10 +15,12 @@ namespace RingCentral
         public string fromTag { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string remoteUri { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string localUri { get; set; }
 

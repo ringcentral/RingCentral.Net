@@ -21,6 +21,7 @@ namespace RingCentral
         ///     Specifies delay between ring on apps and starting of a call forwarding. To activate this parameter use the value >
         ///     0, and turn off the `softPhonesAlwaysRing` setting. If the value is 1 or 0, the `softPhonesAlwaysRing` setting
         ///     cannot be turned off
+        ///     Format: int32
         /// </summary>
         public long? softPhonesRingCount { get; set; }
 
@@ -42,7 +43,7 @@ namespace RingCentral
         /// <summary>
         ///     Information on a call forwarding rule
         /// </summary>
-        public RuleInfoCreateRuleRequest[] rules { get; set; }
+        public ForwardingRuleCreateRequest[] rules { get; set; }
 
         /// <summary>
         ///     Deprecated parameter. Specifies if mobile timeout is activated for the rule

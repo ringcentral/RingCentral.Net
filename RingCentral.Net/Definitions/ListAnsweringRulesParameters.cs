@@ -21,15 +21,5 @@ namespace RingCentral
         ///     If true, then only active call handling rules are returned
         /// </summary>
         public bool? enabledOnly { get; set; }
-
-        /// <summary>
-        ///     Default: 1
-        /// </summary>
-        public string page { get; set; }
-
-        /// <summary>
-        ///     Default: 100
-        /// </summary>
-        public string perPage { get; set; }
     }
 }

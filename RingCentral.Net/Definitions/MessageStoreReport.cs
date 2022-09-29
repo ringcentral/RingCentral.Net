@@ -4,11 +4,13 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a message store report task
+        ///     Example: 400142200026-400142200026-bd162f24028442489385eb3f44c18354
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        ///     Link to a task
+        ///     Canonical URI of a task
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -29,27 +31,32 @@ namespace RingCentral
         public string extensionId { get; set; }
 
         /// <summary>
-        ///     Task creation time
-        /// </summary>
-        public string creationTime { get; set; }
-
-        /// <summary>
-        ///     Time of the last task modification
-        /// </summary>
-        public string lastModifiedTime { get; set; }
-
-        /// <summary>
-        ///     Only messages created before the date will be collected. The default value is current time
+        ///     The end of the time range to collect message records in ISO 8601 format including timezone
+        ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }
 
         /// <summary>
-        ///     Only messages created after (or including) the date will be collected. The default value is current time minus 24
-        ///     hours
+        ///     The beginning of the time range to collect call log records in ISO 8601 format including timezone
+        ///     Format: date-time
         /// </summary>
         public string dateFrom { get; set; }
 
         /// <summary>
+        ///     The time when this task was started
+        ///     Format: date-time
+        /// </summary>
+        public string startTime { get; set; }
+
+        /// <summary>
+        ///     The time when this task was finished
+        ///     Format: date-time
+        /// </summary>
+        public string finishTime { get; set; }
+
+        /// <summary>
+        ///     Type of messages to be collected.
+        ///     Example: Fax,VoiceMail
         ///     Enum: EMail, Fax, SMS, VoiceMail, Pager, Text
         /// </summary>
         public string[] messageTypes { get; set; }

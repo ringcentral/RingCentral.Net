@@ -24,11 +24,11 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public IVRMenuSiteInfo site { get; set; }
+        public IvrMenuSiteInfo site { get; set; }
 
         /// <summary>
         /// </summary>
-        public IVRMenuPromptInfo prompt { get; set; }
+        public IvrMenuPromptInfo prompt { get; set; }
 
         /// <summary>
         ///     Keys handling settings

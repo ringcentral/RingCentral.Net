@@ -22,14 +22,26 @@ namespace RingCentral.Paths.Restapi.Oauth.Authorize
         }
 
         /// <summary>
-        ///     Returns a link to a login page location.
+        ///     Performs OAuth 2.0 authorization (GET version)
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/oauth/authorize
+        ///     Rate Limit Group: Auth
+        /// </summary>
+        public async Task<string> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<string>(Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
+        ///     Performs OAuth 2.0 authorization (POST version)
         ///     HTTP Method: post
         ///     Endpoint: /restapi/oauth/authorize
+        ///     Rate Limit Group: Auth
         /// </summary>
-        public async Task<string> Post(AuthorizeRequest authorizeRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(AuthorizeRequest authorize2Request, RestRequestConfig restRequestConfig = null)
         {
             var dict = new Dictionary<string, string>();
-            Utils.GetPairs(authorizeRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
+            Utils.GetPairs(authorize2Request).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<string>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
         }
     }

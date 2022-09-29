@@ -67,9 +67,9 @@ namespace RingCentral.Net.WebSocket
             MessageReceived += (sender, wsgMessage) =>
             {
                 if (wsgMessage.meta.wsc != null && (_wsc == null ||
-                                                    wsgMessage.meta.type ==
-                                                    MessageType.ConnectionDetails &&
-                                                    wsgMessage.body.GetType().GetProperty("recoveryState") != null ||
+                                                    (wsgMessage.meta.type ==
+                                                     MessageType.ConnectionDetails &&
+                                                     wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
                                                     _wsc?.sequence < wsgMessage.meta.wsc.sequence))
                     _wsc = wsgMessage.meta.wsc;
 

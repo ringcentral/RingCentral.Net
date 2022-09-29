@@ -1,29 +1,20 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Data for calls with breakdown by response (Answered, NotAnswered, Connected, NotConnected)
+    /// </summary>
     public class CallsByResponse
     {
         /// <summary>
+        ///     Unit of the result value
         ///     Required
-        ///     Format: double
+        ///     Enum: Percent, Seconds, Instances
         /// </summary>
-        public decimal? answered { get; set; }
+        public string valueType { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: double
         /// </summary>
-        public decimal? notAnswered { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? connected { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? notConnected { get; set; }
+        public CallsByResponseBreakdown values { get; set; }
     }
 }

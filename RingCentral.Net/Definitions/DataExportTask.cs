@@ -13,12 +13,14 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Task creation datetime
+        ///     Task creation timestamp
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Task last modification datetime
+        ///     Task last modification timestamp
+        ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 
@@ -37,7 +39,7 @@ namespace RingCentral
         public SpecificInfo specific { get; set; }
 
         /// <summary>
-        ///     Data collection sets. Returned by task ID
+        ///     Data collection archives. Returned by task ID
         /// </summary>
         public ExportTaskResultInfo[] datasets { get; set; }
     }

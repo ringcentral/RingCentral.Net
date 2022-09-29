@@ -54,15 +54,15 @@ namespace RingCentral
         public string sessionId { get; set; }
 
         /// <summary>
+        ///     Telephony identifier of a call session
+        /// </summary>
+        public string telephonySessionId { get; set; }
+
+        /// <summary>
         ///     Telephony call status
         ///     Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
         /// </summary>
         public string telephonyStatus { get; set; }
-
-        /// <summary>
-        ///     Telephony identifier of a call session
-        /// </summary>
-        public string telephonySessionId { get; set; }
 
         /// <summary>
         ///     Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is

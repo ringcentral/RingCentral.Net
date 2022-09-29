@@ -9,19 +9,19 @@ namespace RingCentral
         /// <summary>
         ///     The phone number of a sender which the recipients should be opted out from or opted in to
         ///     Required
-        ///     Example: 15551234455
+        ///     Example: +15551234455
         /// </summary>
         public string from { get; set; }
 
         /// <summary>
         ///     The list of phone numbers to be opted out
-        ///     Example: ["15551237755", "15551237756"]
+        ///     Example: +15551237755,+15551237756
         /// </summary>
         public string[] optOuts { get; set; }
 
         /// <summary>
         ///     The list of phone numbers to be opted in
-        ///     Example: ["15551237799", "15551237798"]
+        ///     Example: +15551237799,+15551237798
         /// </summary>
         public string[] optIns { get; set; }
     }
