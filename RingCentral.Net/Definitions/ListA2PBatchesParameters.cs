@@ -6,36 +6,29 @@ namespace RingCentral
     public class ListA2PBatchesParameters
     {
         /// <summary>
-        ///     The default is 24 hours before `dateTo`
-        ///     Format: date-time
-        /// </summary>
-        public string dateFrom { get; set; }
-
-        /// <summary>
-        ///     The default is current time
-        ///     Format: date-time
-        /// </summary>
-        public string dateTo { get; set; }
-
-        /// <summary>
-        ///     Current status of a message batch
-        ///     Enum: Processing, Sent, Completed
-        /// </summary>
-        public string[] status { get; set; }
-
-        /// <summary>
         ///     Phone number in E.164 format from which the messages are going to be sent
+        ///     Example: 15551234455
         /// </summary>
         public string from { get; set; }
 
         /// <summary>
-        ///     Token of the page to be retrieved
+        ///     A list of batch statuses to filter the results
+        ///     Example: Queued,Processing
+        ///     Enum: Queued, Processing, Sent, Completed
+        /// </summary>
+        public string[] status { get; set; }
+
+        /// <summary>
+        ///     The page token of the page to be retrieved
+        ///     Example: pgt1
         /// </summary>
         public string pageToken { get; set; }
 
         /// <summary>
-        ///     Number of records to be returned for the page
+        ///     The number of records to be returned per page
+        ///     Format: int64
+        ///     Example: 1
         /// </summary>
-        public string perPage { get; set; }
+        public long? perPage { get; set; }
     }
 }

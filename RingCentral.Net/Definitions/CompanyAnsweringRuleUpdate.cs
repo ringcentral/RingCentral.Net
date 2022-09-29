@@ -44,10 +44,8 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Internal identifier of the extension the call is forwarded to. Supported for 'Bypass' mode only (that should be
-        ///     specified in `callHandlingAction` field)
         /// </summary>
-        public string extension { get; set; }
+        public CompanyAnsweringRuleCallersInfoRequest extension { get; set; }
 
         /// <summary>
         ///     Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

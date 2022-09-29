@@ -22,7 +22,7 @@ namespace RingCentral
         /// <summary>
         ///     Device type
         ///     Default: HardPhone
-        ///     Enum: Room, SoftPhone, OtherPhone, HardPhone, Paging
+        ///     Enum: Room, SoftPhone, OtherPhone, HardPhone, Paging, WebRTC
         /// </summary>
         public string type { get; set; }
 

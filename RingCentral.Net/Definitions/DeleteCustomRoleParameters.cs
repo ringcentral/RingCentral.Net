@@ -6,7 +6,7 @@ namespace RingCentral
     public class DeleteCustomRoleParameters
     {
         /// <summary>
-        ///     Specifes that role should be validated prior to deletion whether it can be deleted or not
+        ///     Specifies that role should be validated prior to deletion whether it can be deleted or not
         /// </summary>
         public bool? validateOnly { get; set; }
     }

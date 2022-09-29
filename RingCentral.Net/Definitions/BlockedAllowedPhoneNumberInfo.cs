@@ -27,6 +27,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Status of a phone number
+        ///     Default: Blocked
         ///     Enum: Blocked, Allowed
         /// </summary>
         public string status { get; set; }

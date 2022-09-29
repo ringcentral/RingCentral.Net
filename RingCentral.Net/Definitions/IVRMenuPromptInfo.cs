@@ -3,7 +3,7 @@ namespace RingCentral
     /// <summary>
     ///     Prompt metadata
     /// </summary>
-    public class IVRMenuPromptInfo
+    public class IvrMenuPromptInfo
     {
         /// <summary>
         ///     Prompt mode: custom media or text

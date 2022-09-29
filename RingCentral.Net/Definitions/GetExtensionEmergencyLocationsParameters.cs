@@ -26,7 +26,8 @@ namespace RingCentral
         ///     (descending order). The default value is `+visibility`, which means public ERLs will be returned first in the list,
         ///     then - private ones
         ///     Default: +visibility
-        ///     Enum: name, siteName, address, addressStatus, usageStatus, visibility
+        ///     Enum: +name, +siteName, +address, +addressStatus, +usageStatus, +visibility, -name, -siteName, -address,
+        ///     -addressStatus, -usageStatus, -visibility
         /// </summary>
         public string orderBy { get; set; }
 

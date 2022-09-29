@@ -7,7 +7,7 @@ namespace RingCentral
     public class ADGError
     {
         /// <summary>
-        ///     Code that characterizes this error. Code uniqly identifies the source of the error.
+        ///     Code that characterizes this error. Code uniquely identifies the source of the error.
         ///     Enum: ErrorCode{code='ADG-000', httpStatus=503, description='Service temporary unavailable.'},
         ///     ErrorCode{code='ADG-010', httpStatus=503, description='Federation data temporary unavailable.'},
         ///     ErrorCode{code='ADG-001', httpStatus=500, description='Service internal error.'}, ErrorCode{code='ADG-100',
@@ -15,11 +15,11 @@ namespace RingCentral
         ///     description='Unauthorized access.'}, ErrorCode{code='ADG-102', httpStatus=405, description='Method not allowed.'},
         ///     ErrorCode{code='ADG-111', httpStatus=400, description='Need Content-Type header.'}, ErrorCode{code='ADG-112',
         ///     httpStatus=400, description='Request body is invalid.'}, ErrorCode{code='ADG-121', httpStatus=400,
-        ///     description='Parameter [${paramName}]is invalid. ${additionalInfo:-}'}, ErrorCode{code='ADG-115', httpStatus=415,
+        ///     description='Parameter [${paramName}] is invalid. ${additionalInfo:-}'}, ErrorCode{code='ADG-115', httpStatus=415,
         ///     description='Unsupported Media Type.'}, ErrorCode{code='ADG-105', httpStatus=404, description='Current account is
         ///     not linked to any federation.'}, ErrorCode{code='ADG-107', httpStatus=404, description='Account not found.'},
-        ///     ErrorCode{code='ADG-122', httpStatus=404, description='Contact not found.'}, ErrorCode{code='ADG-200',
-        ///     httpStatus=404, description='Invalid URI'}
+        ///     ErrorCode{code='ADG-122', httpStatus=404, description='Contact not found.'}, ErrorCode{code=''ADG-200'',
+        ///     httpStatus=404, description=''Invalid URI''}
         /// </summary>
         public string errorCode { get; set; }
 

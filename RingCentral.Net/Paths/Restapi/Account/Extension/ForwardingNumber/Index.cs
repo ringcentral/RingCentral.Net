@@ -24,18 +24,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         /// <summary>
-        ///     Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all
-        ///     the extension phone numbers used for call forwarding and call flip.
+        ///     Returns the list of extension phone numbers used for call forwarding
+        ///     and call flip. The returned list contains all the extension phone numbers
+        ///     used for call forwarding and call flip.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
-        public async Task<GetExtensionForwardingNumberListResponse> List(
-            ListForwardingNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetExtensionForwardingNumberListResponse> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetExtensionForwardingNumberListResponse>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<GetExtensionForwardingNumberListResponse>(Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -54,6 +54,20 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         }
 
         /// <summary>
+        ///     Deletes multiple forwarding numbers from the forwarding number list by IDs.
+        ///     HTTP Method: delete
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditExtensions
+        ///     User Permission: EditUserForwardingFlipNumbers
+        /// </summary>
+        public async Task<string> DeleteAll(DeleteForwardingNumbersRequest deleteForwardingNumbersRequest,
+            RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Delete<string>(Path(false), deleteForwardingNumbersRequest, null, restRequestConfig);
+        }
+
+        /// <summary>
         ///     Returns a specific forwarding number.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
@@ -61,11 +75,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
-        public async Task<ForwardingNumberInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<ForwardingNumberResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (forwardingNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
-            return await rc.Get<ForwardingNumberInfo>(Path(), null, restRequestConfig);
+            return await rc.Get<ForwardingNumberResource>(Path(), null, restRequestConfig);
         }
 
         /// <summary>

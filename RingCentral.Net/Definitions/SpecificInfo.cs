@@ -7,11 +7,13 @@ namespace RingCentral
     {
         /// <summary>
         ///     Starting time for data collection
+        ///     Format: date-time
         /// </summary>
         public string timeFrom { get; set; }
 
         /// <summary>
         ///     Ending time for data collection
+        ///     Format: date-time
         /// </summary>
         public string timeTo { get; set; }
 

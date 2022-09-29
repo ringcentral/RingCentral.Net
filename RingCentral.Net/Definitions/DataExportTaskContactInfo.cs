@@ -14,6 +14,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Email address of a contact
+        ///     Format: email
         /// </summary>
         public string email { get; set; }
     }

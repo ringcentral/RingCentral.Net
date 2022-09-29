@@ -1,8 +1,5 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Notification payload body
-    /// </summary>
     public class ExtensionPresenceEventBody
     {
         /// <summary>
@@ -19,6 +16,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Order number of a notification to state the chronology
+        ///     Format: int32
         /// </summary>
         public long? sequence { get; set; }
 

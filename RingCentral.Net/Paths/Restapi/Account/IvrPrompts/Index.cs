@@ -30,9 +30,9 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadCompanyGreetings
         /// </summary>
-        public async Task<IVRPrompts> List(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.IvrPrompts> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<IVRPrompts>(Path(false), null, restRequestConfig);
+            return await rc.Get<RingCentral.IvrPrompts>(Path(false), null, restRequestConfig);
         }
 
         /// <summary>

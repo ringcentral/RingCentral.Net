@@ -8,7 +8,7 @@ namespace RingCentral
         /// <summary>
         ///     Type of a greeting, specifying the case when the greeting is played.
         ///     Required
-        ///     Enum: Company, StartRecording, StopRecording, AutomaticRecording
+        ///     Enum: Company, StartRecording, StopRecording, AutomaticRecording, TemplateGreeting
         /// </summary>
         public string type { get; set; }
 

@@ -26,9 +26,9 @@ namespace RingCentral.Paths.Restapi
         ///     Endpoint: /restapi
         ///     Rate Limit Group: NoThrottling
         /// </summary>
-        public async Task<GetVersionsResponse> List(RestRequestConfig restRequestConfig = null)
+        public async Task<ApiVersionsList> List(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetVersionsResponse>(Path(false), null, restRequestConfig);
+            return await rc.Get<ApiVersionsList>(Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -37,10 +37,10 @@ namespace RingCentral.Paths.Restapi
         ///     Endpoint: /restapi/{apiVersion}
         ///     Rate Limit Group: NoThrottling
         /// </summary>
-        public async Task<GetVersionResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<ApiVersionInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (apiVersion == null) throw new ArgumentException("Parameter cannot be null", nameof(apiVersion));
-            return await rc.Get<GetVersionResponse>(Path(), null, restRequestConfig);
+            return await rc.Get<ApiVersionInfo>(Path(), null, restRequestConfig);
         }
     }
 }

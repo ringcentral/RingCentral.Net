@@ -38,7 +38,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
 
         /// <summary>
         ///     Deletes conversation(s) by conversation ID(s). Batch request is supported, max number of IDs passed as query/path
-        ///     parameters is 50. Alternative syntax is supported - user converations can be deleted by passing multiple IDs in
+        ///     parameters is 50. Alternative syntax is supported - user conversations can be deleted by passing multiple IDs in
         ///     request body as an array of string, max number of conversation IDs passed in request body is 100. In this case
         ///     asterisk is used in the path instead of IDs
         ///     HTTP Method: delete

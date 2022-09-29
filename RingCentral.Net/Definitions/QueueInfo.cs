@@ -1,8 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call
-    ///     handling action
+    ///     Queue settings applied for department (call queue) extension type,
+    ///     with the 'AgentQueue' value specified as a call handling action
     /// </summary>
     public class QueueInfo
     {
@@ -38,6 +38,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Connecting audio interruption message period in seconds
+        ///     Format: int32
         /// </summary>
         public long? holdAudioInterruptionPeriod { get; set; }
 
@@ -52,22 +53,29 @@ namespace RingCentral
 
         /// <summary>
         ///     Maximum time in seconds to wait for a call queue member before trying the next member
+        ///     Format: int32
         /// </summary>
         public long? agentTimeout { get; set; }
 
         /// <summary>
-        ///     Minimum post-call wrap up time in seconds before agent status is automatically set; the value range is from 180 to
-        ///     300
+        ///     Minimum post-call wrap up time in seconds before agent status
+        ///     is automatically set; the value range is from 180 to 300
+        ///     Maximum: 300
+        ///     Minimum: 180
+        ///     Format: int32
         /// </summary>
         public long? wrapUpTime { get; set; }
 
         /// <summary>
         ///     Maximum hold time in seconds to wait for an available call queue member
+        ///     Format: int32
         /// </summary>
         public long? holdTime { get; set; }
 
         /// <summary>
         ///     Maximum count of callers on hold; the limitation is 25 callers
+        ///     Maximum: 25
+        ///     Format: int32
         /// </summary>
         public long? maxCallers { get; set; }
 

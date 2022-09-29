@@ -1,41 +1,20 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Data for calls with breakdown by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted)
+    /// </summary>
     public class CallsByResult
     {
         /// <summary>
+        ///     Unit of the result value
         ///     Required
-        ///     Format: double
+        ///     Enum: Percent, Seconds, Instances
         /// </summary>
-        public decimal? completed { get; set; }
+        public string valueType { get; set; }
 
         /// <summary>
         ///     Required
-        ///     Format: double
         /// </summary>
-        public decimal? abandoned { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? voicemail { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? missed { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? accepted { get; set; }
-
-        /// <summary>
-        ///     Required
-        ///     Format: double
-        /// </summary>
-        public decimal? unknown { get; set; }
+        public CallsByResultBreakdown values { get; set; }
     }
 }

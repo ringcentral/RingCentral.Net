@@ -19,10 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Favorites
         }
 
         /// <summary>
-        ///     Returns a list of the current user's favorite chats. **Note** 'Chat' is a general name for all types of threads
-        ///     icluding *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15 participants without
-        ///     specific name), *Team* (chat of 2 and more participants, with a specific name), *Everyone* (company chat including
-        ///     all employees, with a specific name)."
+        ///     Returns a list of the current user's favorite chats.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/glip/favorites
         ///     Rate Limit Group: Light

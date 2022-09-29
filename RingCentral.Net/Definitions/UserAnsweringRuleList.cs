@@ -16,7 +16,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListPaging paging { get; set; }
+        public EnumeratedPaging paging { get; set; }
 
         /// <summary>
         /// </summary>

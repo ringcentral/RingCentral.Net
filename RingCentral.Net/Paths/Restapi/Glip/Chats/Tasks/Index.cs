@@ -23,6 +23,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
         ///     Rate Limit Group: Heavy
+        ///     App Permission: TeamMessaging
         /// </summary>
         public async Task<GlipTaskList> Get(ListChatTasksParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
@@ -35,6 +36,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Tasks
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
         ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessaging
         /// </summary>
         public async Task<GlipTaskInfo> Post(GlipCreateTask glipCreateTask, RestRequestConfig restRequestConfig = null)
         {

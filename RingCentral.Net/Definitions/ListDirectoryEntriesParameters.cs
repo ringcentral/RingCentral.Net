@@ -15,20 +15,23 @@ namespace RingCentral
         /// <summary>
         ///     Type of an extension. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
         ///     modern RingCentral product terminology
-        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ParkLocation, Limited
+        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ParkLocation, Limited,
+        ///     External
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
         ///     Page number
+        ///     Format: int32
         ///     Default: 1
         /// </summary>
-        public string page { get; set; }
+        public long? page { get; set; }
 
         /// <summary>
         ///     Records count to be returned per one page. The default value is 1000. Specific keyword values: `all` - all records
         ///     are returned in one page; `max` - maximum count of records that can be returned in one page
         ///     Maximum: 2000
+        ///     Format: int32
         ///     Default: 1000
         /// </summary>
         public long? perPage { get; set; }

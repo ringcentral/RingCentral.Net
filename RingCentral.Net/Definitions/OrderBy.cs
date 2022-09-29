@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Sorting priority index, starting from '1'. Optional if only one element in `orderBy` array is specified
+        ///     Format: int32
         /// </summary>
         public long? index { get; set; }
 

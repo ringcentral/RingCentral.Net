@@ -19,10 +19,7 @@ namespace RingCentral.Paths.Restapi.Glip.Chats.Favorite
         }
 
         /// <summary>
-        ///     Adds the specified chat to the users's list of favorites. **Note** 'Chat' is a general name for all types of
-        ///     threads icluding *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15 participants
-        ///     without specific name), *Team* (chat of 2 and more participants, with a specific name), *Everyone* (company chat
-        ///     including all employees, with a specific name)."
+        ///     Adds the specified chat to the users's list of favorite chats.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/favorite
         ///     Rate Limit Group: Medium

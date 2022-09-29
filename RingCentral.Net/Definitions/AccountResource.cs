@@ -11,6 +11,7 @@ namespace RingCentral
         public string federatedName { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
         public string id { get; set; }
 

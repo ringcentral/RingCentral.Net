@@ -23,6 +23,18 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         /// <summary>
+        ///     Returns a company IVR menus.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus
+        ///     Rate Limit Group: Medium
+        ///     App Permission: ReadAccounts
+        /// </summary>
+        public async Task<IVRMenuList> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<IVRMenuList>(Path(false), null, restRequestConfig);
+        }
+
+        /// <summary>
         ///     Creates a company IVR menu.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus

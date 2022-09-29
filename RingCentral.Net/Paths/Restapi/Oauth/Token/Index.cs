@@ -22,15 +22,18 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         }
 
         /// <summary>
-        ///     Returns access tokens for making API requests
+        ///     Returns access (and potentially refresh) tokens for making API requests.
+        ///     Depending on client application type
+        ///     requests to this endpoint may require authentication with HTTP Basic scheme
+        ///     using registered client ID and client secret as login and password, correspondingly.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/oauth/token
         ///     Rate Limit Group: Auth
         /// </summary>
-        public async Task<TokenInfo> Post(GetTokenRequest getTokenRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<TokenInfo> Post(GetTokenRequest GetTokenRequest, RestRequestConfig restRequestConfig = null)
         {
             var dict = new Dictionary<string, string>();
-            Utils.GetPairs(getTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
+            Utils.GetPairs(GetTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<TokenInfo>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
         }
     }

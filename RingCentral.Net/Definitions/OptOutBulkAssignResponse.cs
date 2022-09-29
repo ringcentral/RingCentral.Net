@@ -6,11 +6,13 @@ namespace RingCentral
     public class OptOutBulkAssignResponse
     {
         /// <summary>
+        ///     Contains successful and failed opt-ins
         /// </summary>
-        public BulkAssignOptOuts optOuts { get; set; }
+        public OptOutBulkAssignResponseOptIns optIns { get; set; }
 
         /// <summary>
+        ///     Contains successful and failed opt-outs
         /// </summary>
-        public BulkAssignOptIns optIns { get; set; }
+        public OptOutBulkAssignResponseOptOuts optOuts { get; set; }
     }
 }

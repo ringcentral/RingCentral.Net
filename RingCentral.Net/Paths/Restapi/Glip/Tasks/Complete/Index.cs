@@ -23,6 +23,7 @@ namespace RingCentral.Paths.Restapi.Glip.Tasks.Complete
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}/complete
         ///     Rate Limit Group: Medium
+        ///     App Permission: TeamMessaging
         /// </summary>
         public async Task<string> Post(GlipCompleteTask glipCompleteTask, RestRequestConfig restRequestConfig = null)
         {

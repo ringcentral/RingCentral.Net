@@ -24,16 +24,19 @@ namespace RingCentral
 
         /// <summary>
         ///     Total amount of extension that are used in call recordings
+        ///     Format: int32
         /// </summary>
         public long? extensionCount { get; set; }
 
         /// <summary>
         ///     Retention period of a call recording, the default value is 90 days
+        ///     Format: int32
         /// </summary>
         public long? retentionPeriod { get; set; }
 
         /// <summary>
-        ///     Max number of automatic call recordings per account, the default value is 100 000
+        ///     Maximum number of automatic call recordings per account, the default value is 100 000
+        ///     Format: int32
         /// </summary>
         public long? maxNumberLimit { get; set; }
     }

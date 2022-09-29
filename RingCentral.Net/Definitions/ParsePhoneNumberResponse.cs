@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Canonical URI of a resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -13,7 +14,7 @@ namespace RingCentral
         public GetCountryInfoNumberParser homeCountry { get; set; }
 
         /// <summary>
-        ///     Parsed phone numbers data
+        ///     Parsed phone numbers information
         ///     Required
         /// </summary>
         public PhoneNumberInfoNumberParser[] phoneNumbers { get; set; }

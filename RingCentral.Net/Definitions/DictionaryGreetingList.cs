@@ -14,10 +14,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CallHandlingNavigationInfo navigation { get; set; }
+        public NavigationInfo navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallHandlingPagingInfo paging { get; set; }
+        public EnumeratedPaging paging { get; set; }
     }
 }

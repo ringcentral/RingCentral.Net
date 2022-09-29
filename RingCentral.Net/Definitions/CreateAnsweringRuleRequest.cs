@@ -9,11 +9,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of an answering rule. The 'Custom' value should be specified
+        ///     Required
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
         ///     Name of an answering rule specified by user
+        ///     Required
         /// </summary>
         public string name { get; set; }
 

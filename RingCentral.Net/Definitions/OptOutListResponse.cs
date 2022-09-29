@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Opt-out phone numbers information
+    ///     The list of opt outs
     /// </summary>
     public class OptOutListResponse
     {

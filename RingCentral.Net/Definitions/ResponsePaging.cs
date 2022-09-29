@@ -1,5 +1,8 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Paging information
+    /// </summary>
     public class ResponsePaging
     {
         /// <summary>

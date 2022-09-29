@@ -65,6 +65,12 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
+        ///     Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
+        /// </summary>
+        public string subType { get; set; }
+
+        /// <summary>
         ///     Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
         ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool, BusinessMobileNumber,

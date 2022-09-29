@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -15,14 +14,8 @@ namespace RingCentral.Net.Retry
                 Content = await request.Content.CloneAsync().ConfigureAwait(false),
                 Version = request.Version
             };
-            foreach (KeyValuePair<string, object> prop in request.Properties)
-            {
-                clone.Properties.Add(prop);
-            }
-            foreach (KeyValuePair<string, IEnumerable<string>> header in request.Headers)
-            {
-                clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
-            }
+            foreach (var prop in request.Properties) clone.Properties.Add(prop);
+            foreach (var header in request.Headers) clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
 
             return clone;
         }
@@ -36,14 +29,11 @@ namespace RingCentral.Net.Retry
             ms.Position = 0;
 
             var clone = new StreamContent(ms);
-            foreach (KeyValuePair<string, IEnumerable<string>> header in content.Headers)
-            {
-                clone.Headers.Add(header.Key, header.Value);
-            }
+            foreach (var header in content.Headers) clone.Headers.Add(header.Key, header.Value);
             return clone;
         }
     }
-    
+
     public class RetryExtension : SdkExtension
     {
         private readonly RetryOptions _options;

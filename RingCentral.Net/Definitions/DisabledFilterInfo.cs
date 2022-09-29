@@ -4,11 +4,13 @@ namespace RingCentral
     {
         /// <summary>
         ///     Event filter that is disabled for the user
+        ///     Required
         /// </summary>
         public string filter { get; set; }
 
         /// <summary>
         ///     Reason why the filter is disabled for the user
+        ///     Required
         /// </summary>
         public string reason { get; set; }
 

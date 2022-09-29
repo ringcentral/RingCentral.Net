@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.BusinessHours
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/business-hours
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
-        ///     User Permission: ReadUserAnsweringRules
+        ///     User Permission: ReadCompanyAnsweringRules
         /// </summary>
         public async Task<CompanyBusinessHours> Get(RestRequestConfig restRequestConfig = null)
         {

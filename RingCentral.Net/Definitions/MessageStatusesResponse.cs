@@ -1,25 +1,12 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     The statuses of the messages filtered by batch/account/phone numbers.
+    /// </summary>
     public class MessageStatusesResponse
     {
         /// <summary>
         /// </summary>
-        public MessageStatusCounts queued { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public MessageStatusCounts delivered { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public MessageStatusCounts deliveryFailed { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public MessageStatusCounts sent { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public MessageStatusCounts sendingFailed { get; set; }
+        public MessageStatuses messageStatuses { get; set; }
     }
 }

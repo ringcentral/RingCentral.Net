@@ -13,12 +13,14 @@ namespace RingCentral
 
         /// <summary>
         ///     Page number to be retrieved; value range is > 0
+        ///     Format: int32
         ///     Default: 1
         /// </summary>
         public long? page { get; set; }
 
         /// <summary>
         ///     Number of records to be returned per page; value range is 1 - 250
+        ///     Format: int32
         ///     Default: 30
         /// </summary>
         public long? perPage { get; set; }

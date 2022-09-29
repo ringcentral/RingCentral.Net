@@ -7,13 +7,16 @@ namespace RingCentral
     {
         /// <summary>
         ///     Error code
+        ///     Required
+        ///     Example: CMN-101
         /// </summary>
         public string errorCode { get; set; }
 
         /// <summary>
-        ///     Human-readable description of an error. Not suitable for end users
+        ///     Human-readable description of the error. Not suitable for end users.
+        ///     Required
         ///     Example: AccountId 1234 is invalid
         /// </summary>
-        public string description { get; set; }
+        public string message { get; set; }
     }
 }
