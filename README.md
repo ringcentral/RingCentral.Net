@@ -117,6 +117,22 @@ var responseBodyStr = await httpResponseMessage.Content.ReadAsStringAsync();
 var extInfo = JsonConvert.DeserializeObject<GetExtensionInfoResponse>(responseBodyStr);
 ```
 
+## Release Notes
+
+### 6.0.0
+
+We have renamed all "glip" to "team-messaging". For example:
+
+```cs
+rc.Restapi().Glip().Chats().List();
+```
+
+Becomes:
+
+```cs
+rc.TeamMessaging().Chats().List();
+```
+
 
 ## For maintainers
 
