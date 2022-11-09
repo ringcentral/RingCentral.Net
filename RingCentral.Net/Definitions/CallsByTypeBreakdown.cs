@@ -39,5 +39,12 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? outbound { get; set; }
+
+        /// <summary>
+        ///     Value for Overflow type
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? overflow { get; set; }
     }
 }

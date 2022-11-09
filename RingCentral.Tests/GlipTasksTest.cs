@@ -21,40 +21,41 @@ namespace RingCentral.Tests
                 );
 
                 // Find the group with type "Personal" where you can talk to yourself
-                var groups = await rc.Restapi().Glip().Chats().List(new ListGlipChatsParameters
+                var groups = await rc.TeamMessaging().Chats().List(new ListGlipChatsNewParameters
                 {
                     type = new[] {"Personal"}
                 });
                 var group = groups.records[0];
 
                 // Create a task
-                var task = await rc.Restapi().Glip().Chats(group.id).Tasks().Post(new GlipCreateTask
+                var task = await rc.TeamMessaging().Chats(group.id).Tasks().Post(new TMCreateTaskRequest
                 {
                     subject = "This is a sample task"
                 });
 
                 // List all the tasks in the group
-                var tasks = await rc.Restapi().Glip().Chats(group.id).Tasks().Get();
+                var tasks = await rc.TeamMessaging().Chats(group.id).Tasks().Get();
                 Assert.True(tasks.records.Length > 0);
 
                 //  patch the task
-                await rc.Restapi().Glip().Tasks(task.id).Patch(new GlipUpdateTask
+                await rc.TeamMessaging().Tasks(task.id).Patch(new TMUpdateTaskRequest
                 {
                     subject = "This is the new task subject"
                 });
 
                 // complete the task
-                await rc.Restapi().Glip().Tasks(task.id).Complete().Post(new GlipCompleteTask {status = "Complete"});
+                await rc.TeamMessaging().Tasks(task.id).Complete()
+                    .Post(new TMCompleteTaskRequest {status = "Complete"});
 
                 // Get the task
-                task = await rc.Restapi().Glip().Tasks(task.id).Get();
+                task = await rc.TeamMessaging().Tasks(task.id).Get();
 
                 // Check data
                 Assert.Equal("This is the new task subject", task.subject);
                 Assert.Equal("Completed", task.status);
 
                 // delete the task
-                await rc.Restapi().Glip().Tasks(task.id).Delete();
+                await rc.TeamMessaging().Tasks(task.id).Delete();
             }
         }
     }

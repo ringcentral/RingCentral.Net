@@ -170,5 +170,10 @@ namespace RingCentral
         {
             return new Paths.Analytics.Index(this);
         }
+
+        public Paths.TeamMessaging.Index TeamMessaging(string version = "v1")
+        {
+            return new Paths.TeamMessaging.Index(this, version);
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                var groupId = (await rc.Restapi().Glip().Chats().List()).records[0].id;
+                var groupId = (await rc.TeamMessaging().Chats().List()).records[0].id;
                 // https://jira.ringcentral.com/browse/PLD-803
                 // var postInfo = await rc.Restapi().Glip().Groups(groupId).Posts().Post(new GlipCreatePost
                 // {

@@ -14,7 +14,7 @@ namespace RingCentral
         /// <summary>
         ///     The URL/data URL of an image to be used as a background of a card. Acceptable formats are PNG, JPEG, and GIF
         ///     Required
-        ///     Format: uri-reference
+        ///     Format: uri
         /// </summary>
         public string url { get; set; }
 

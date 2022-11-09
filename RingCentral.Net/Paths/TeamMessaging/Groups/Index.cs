@@ -1,0 +1,33 @@
+namespace RingCentral.Paths.TeamMessaging.Groups
+{
+    public partial class Index
+    {
+        public string groupId;
+        public TeamMessaging.Index parent;
+        public RestClient rc;
+
+        public Index(TeamMessaging.Index parent, string groupId = null)
+        {
+            this.parent = parent;
+            rc = parent.rc;
+            this.groupId = groupId;
+        }
+
+        public string Path(bool withParameter = true)
+        {
+            if (withParameter && groupId != null) return $"{parent.Path()}/groups/{groupId}";
+            return $"{parent.Path()}/groups";
+        }
+    }
+}
+
+namespace RingCentral.Paths.TeamMessaging
+{
+    public partial class Index
+    {
+        public Groups.Index Groups(string groupId = null)
+        {
+            return new Groups.Index(this, groupId);
+        }
+    }
+}

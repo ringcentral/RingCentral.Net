@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Status code of resource retrieval
+        ///     Format: int32
         /// </summary>
         public long? status { get; set; }
 

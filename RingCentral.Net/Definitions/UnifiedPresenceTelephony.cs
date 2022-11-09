@@ -13,7 +13,7 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
-        ///     Specifies if the user hardphone presence status is visible to other users; returned only for requester's extension
+        ///     Specifies if the user's phone presence status is visible to other users; returned only for requester's extension
         ///     Enum: Visible, Invisible
         /// </summary>
         public string visibility { get; set; }

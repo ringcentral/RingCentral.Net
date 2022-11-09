@@ -1,5 +1,8 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     An action that will be invoked when the card is tapped or selected. `Action.ShowCard` is not supported
+    /// </summary>
     public class AdaptiveCardSelectAction
     {
         /// <summary>

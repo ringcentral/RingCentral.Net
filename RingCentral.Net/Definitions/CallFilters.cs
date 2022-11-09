@@ -78,7 +78,7 @@ namespace RingCentral
         /// <summary>
         ///     Filtering of calls based on how the call started from the callee perspective (joined via OR). If the call is
         ///     outbound relative to the grouping scope, CallType is Outbound
-        ///     Enum: Direct, FromQueue, ParkRetrieval, Transferred, Outbound
+        ///     Enum: Direct, FromQueue, ParkRetrieval, Transferred, Outbound, Overflow
         /// </summary>
         public string[] callTypes { get; set; }
     }

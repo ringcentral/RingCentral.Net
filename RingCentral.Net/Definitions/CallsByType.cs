@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Data for calls with breakdown by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
+    ///     Data for calls with breakdown by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, Overflow)
     /// </summary>
     public class CallsByType
     {
