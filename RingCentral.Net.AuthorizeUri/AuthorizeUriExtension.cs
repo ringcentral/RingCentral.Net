@@ -47,7 +47,7 @@ namespace RingCentral.Net.AuthorizeUri
             }
 
             var query = string.Join("&",
-                Utils.GetPairs(authorizeRequest).Select(t => $"{t.name}={Uri.EscapeUriString(t.value.ToString())}"));
+                Utils.GetPairs(authorizeRequest).Select(t => $"{t.name}={Uri.EscapeDataString(t.value.ToString())}"));
             UriBuilder uriBuilder;
             if (_options.baseUri == null)
                 uriBuilder = new UriBuilder(_rc.server)
