@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a call queue member
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

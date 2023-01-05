@@ -23,6 +23,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Number of duration units
+        ///     Format: int32
         /// </summary>
         public long? duration { get; set; }
 
@@ -34,6 +35,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Included digital lines count
+        ///     Format: int32
         /// </summary>
         public long? includedPhoneLines { get; set; }
     }

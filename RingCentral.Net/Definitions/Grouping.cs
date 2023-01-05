@@ -1,12 +1,24 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     This field specifies the dimensions by which the response should be grouped and specific keys to narrow the
-    ///     response. See also [Call Aggregate reports](https://developers.ringcentral.com/guide/analytics/aggregate) or [Call
-    ///     Timeline reports](https://developers.ringcentral.com/guide/analytics/timeline) pages in the developer guide for
-    ///     more information
-    /// </summary>
     public class Grouping
     {
+        /// <summary>
+        ///     The selected grouping option
+        ///     Enum: Company, CompanyNumbers, Users, Queues, IVRs, SharedLines, UserGroups, Sites, Departments
+        /// </summary>
+        public string groupBy { get; set; }
+
+        /// <summary>
+        ///     This field can be used to further limit the users selection by specifying unique identifiers of corresponding
+        ///     entities. For example, providing unique queue ids along with `Queue` in `groupByMembers` field will limit the
+        ///     response to users that are queue agents in at least one of these queues
+        /// </summary>
+        public string[] keys { get; set; }
+
+        /// <summary>
+        ///     The selected data scope
+        ///     Enum: Department, UserGroup, Queue, Site
+        /// </summary>
+        public string groupByMembers { get; set; }
     }
 }

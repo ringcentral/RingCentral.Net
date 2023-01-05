@@ -19,7 +19,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         }
 
         /// <summary>
-        ///     Returns the information on the Free Conference Calling (FCC) feature for a given extension.
+        ///     Returns information on Free Conference Calling (FCC) feature
+        ///     for a given extension.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
         ///     Rate Limit Group: Light
@@ -33,8 +34,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         }
 
         /// <summary>
-        ///     Updates the default conferencing number for the current extension. The number can be selected from conferencing
-        ///     numbers of the current extension. Updates the setting, allowing participants join the conference before host.
+        ///     Updates the default conferencing number for the current extension.
+        ///     The number can be selected from conferencing numbers of the current extension.
+        ///     Updates the setting, allowing participants join the conference before host.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
         ///     Rate Limit Group: Medium

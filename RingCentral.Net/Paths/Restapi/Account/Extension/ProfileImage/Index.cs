@@ -51,7 +51,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         }
 
         /// <summary>
-        ///     Updates the extension profile image
+        ///     Updates the extension profile image.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
         ///     Rate Limit Group: Heavy
@@ -66,7 +66,20 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         }
 
         /// <summary>
-        ///     Returns scaled profile image of an extension.
+        ///     Deletes the user profile image.
+        ///     HTTP Method: delete
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
+        ///     Rate Limit Group: Medium
+        ///     App Permission: EditExtensions
+        ///     User Permission: EditUserInfo
+        /// </summary>
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Delete<string>(Path(false), null, restRequestConfig);
+        }
+
+        /// <summary>
+        ///     Returns the scaled profile image of an extension.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
         ///     Rate Limit Group: Light

@@ -1,12 +1,14 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Account service information, including brand, service plan and billing plan
+    ///     Account service information, including brand, service plan and
+    ///     billing plan
     /// </summary>
     public class ServiceInfo
     {
         /// <summary>
         ///     Canonical URI of a service info resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -28,6 +30,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public ContractedCountryInfo contractedCountry { get; set; }
+        public CountryInfoShortModel contractedCountry { get; set; }
     }
 }

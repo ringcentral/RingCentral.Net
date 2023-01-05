@@ -1,7 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Extension user business address. The default is Company (Auto-Receptionist) settings
+    ///     Extension user business address. The default is
+    ///     Company (Auto-Receptionist) settings
     /// </summary>
     public class ContactBusinessAddressInfo
     {
@@ -11,7 +12,8 @@ namespace RingCentral
         public string country { get; set; }
 
         /// <summary>
-        ///     State/province name of an extension user company. Mandatory for the USA, UK and Canada
+        ///     State/province name of an extension user company. Mandatory
+        ///     for the USA, UK and Canada
         /// </summary>
         public string state { get; set; }
 

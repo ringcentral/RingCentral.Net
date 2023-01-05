@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the location list resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

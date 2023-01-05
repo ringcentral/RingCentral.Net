@@ -101,7 +101,7 @@ namespace RingCentral.Tests
                 );
 
                 // delete existing user first, we don't want to create duplicate users
-                var searchRequest = new SearchRequest
+                var searchRequest = new ScimSearchRequest
                 {
                     count = 1,
                     filter = $"emails eq \"{EMAIL}\""
@@ -111,17 +111,17 @@ namespace RingCentral.Tests
                     await rc.Scim().Users(userSearchResponse.Resources[0].id).Delete();
 
                 // create the user
-                var user = new CreateUser
+                var user = new ScimUser
                 {
                     emails = new[]
                     {
-                        new Email
+                        new ScimEmail
                         {
                             type = "work",
                             value = EMAIL
                         }
                     },
-                    name = new Name
+                    name = new ScimName
                     {
                         familyName = "LastName",
                         givenName = "FirstName"
@@ -156,7 +156,7 @@ namespace RingCentral.Tests
                 );
 
                 // search user and return 10 results
-                var searchRequest = new SearchRequest
+                var searchRequest = new ScimSearchRequest
                 {
                     count = 10
                 };
@@ -184,7 +184,7 @@ namespace RingCentral.Tests
                 );
 
                 // list 10 users and use the first one for testing
-                var searchRequest = new SearchRequest
+                var searchRequest = new ScimSearchRequest
                 {
                     count = 10
                 };
@@ -215,7 +215,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var searchRequest = new SearchRequest
+                var searchRequest = new ScimSearchRequest
                 {
                     count = 1,
                     filter = "emails eq \"test.user@example.com\""
@@ -227,7 +227,7 @@ namespace RingCentral.Tests
                     var userResponse = userSearchResponse.Resources[0];
 
                     // create a new use object by JSON serialization and deserialization
-                    var user = JsonConvert.DeserializeObject<User>(JsonConvert.SerializeObject(userResponse));
+                    var user = JsonConvert.DeserializeObject<ScimUser>(JsonConvert.SerializeObject(userResponse));
                     var guid = Guid.NewGuid().ToString();
 
                     // update family name of the new user
@@ -257,7 +257,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
 
-                var searchRequest = new SearchRequest
+                var searchRequest = new ScimSearchRequest
                 {
                     count = 1,
                     filter = "emails eq \"test.user@example.com\""
@@ -269,7 +269,7 @@ namespace RingCentral.Tests
                     var userResponse = userSearchResponse.Resources[0];
 
                     var guid = Guid.NewGuid().ToString();
-                    var userPatch = new UserPatch
+                    var userPatch = new ScimUserPatch
                     {
                         schemas = new[]
                         {
@@ -277,7 +277,7 @@ namespace RingCentral.Tests
                         },
                         Operations = new[]
                         {
-                            new PatchOperation
+                            new ScimPatchOperation
                             {
                                 op = "replace",
                                 path = "name.familyName",

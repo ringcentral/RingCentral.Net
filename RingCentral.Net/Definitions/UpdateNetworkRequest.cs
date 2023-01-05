@@ -9,10 +9,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        /// </summary>
-        public string uri { get; set; }
-
-        /// <summary>
+        ///     Required
         /// </summary>
         public string name { get; set; }
 
@@ -21,10 +18,12 @@ namespace RingCentral
         public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
         public PublicIpRangeInfo[] publicIpRanges { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
         public PrivateIpRangeInfoRequest[] privateIpRanges { get; set; }
 

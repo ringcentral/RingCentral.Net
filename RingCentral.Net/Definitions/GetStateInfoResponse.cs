@@ -9,12 +9,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of a state
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
         /// </summary>
-        public GetCountryInfoState country { get; set; }
+        public CountryInfoMinimalModel country { get; set; }
 
         /// <summary>
         ///     Short code for a state (2-letter usually)

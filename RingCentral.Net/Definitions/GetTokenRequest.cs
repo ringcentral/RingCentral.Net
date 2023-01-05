@@ -38,6 +38,7 @@ namespace RingCentral
         ///     For `authorization_code` grant type only. This is a callback URI which determines where the response
         ///     is sent. The value of this parameter must exactly match one of
         ///     the URIs you have provided for your app upon registration
+        ///     Format: uri
         /// </summary>
         public string redirect_uri { get; set; }
 

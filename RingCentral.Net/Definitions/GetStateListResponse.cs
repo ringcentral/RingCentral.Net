@@ -3,7 +3,8 @@ namespace RingCentral
     public class GetStateListResponse
     {
         /// <summary>
-        ///     Link to the states list resource
+        ///     Link to a states list resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

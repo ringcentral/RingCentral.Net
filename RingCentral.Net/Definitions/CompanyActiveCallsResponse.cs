@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the list of company active call records
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

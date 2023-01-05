@@ -18,6 +18,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Meeting password
+        ///     Format: password
         /// </summary>
         public string password { get; set; }
 
@@ -78,5 +79,9 @@ namespace RingCentral
         ///     List of global dial-in countries (eg. US, UK, AU, etc.)
         /// </summary>
         public string[] globalDialInCountries { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public string alternativeHosts { get; set; }
     }
 }

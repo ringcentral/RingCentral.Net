@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the network switch resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -28,16 +29,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public LocationUpdatesEmergencyAddressInfo emergencyAddress { get; set; }
-
-        /// <summary>
-        ///     Deprecated. Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or
-        ///     `emergencyLocationId` should be specified, otherwise the error is returned
-        /// </summary>
-        public string emergencyLocationId { get; set; }
+        public EmergencyAddressInfo emergencyAddress { get; set; }
 
         /// <summary>
         /// </summary>
-        public ERLLocationInfo emergencyLocation { get; set; }
+        public EmergencyLocationInfo emergencyLocation { get; set; }
     }
 }

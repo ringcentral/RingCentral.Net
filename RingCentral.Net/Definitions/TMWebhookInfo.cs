@@ -31,6 +31,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Public link to send a webhook payload
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

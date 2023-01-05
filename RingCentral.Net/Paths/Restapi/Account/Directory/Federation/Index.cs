@@ -26,9 +26,10 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Federation
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadCompanyInfo
         /// </summary>
-        public async Task<FederationResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<FederationResource> Get(ReadDirectoryFederationParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<FederationResource>(Path(), null, restRequestConfig);
+            return await rc.Get<FederationResource>(Path(), queryParams, restRequestConfig);
         }
     }
 }

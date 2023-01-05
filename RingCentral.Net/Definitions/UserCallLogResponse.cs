@@ -6,7 +6,7 @@ namespace RingCentral
         ///     List of call log records
         ///     Required
         /// </summary>
-        public UserCallLogRecord[] records { get; set; }
+        public CallLogRecord[] records { get; set; }
 
         /// <summary>
         ///     Required

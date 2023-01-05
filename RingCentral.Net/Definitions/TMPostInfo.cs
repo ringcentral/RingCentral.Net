@@ -66,6 +66,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to an image used as an icon for this message
+        ///     Format: uri
         /// </summary>
         public string iconUri { get; set; }
 

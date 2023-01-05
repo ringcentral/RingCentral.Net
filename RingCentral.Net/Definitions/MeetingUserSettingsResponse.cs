@@ -13,5 +13,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TelephonyUserMeetingSettings telephony { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public UserInMeetingResponse inMeetings { get; set; }
     }
 }

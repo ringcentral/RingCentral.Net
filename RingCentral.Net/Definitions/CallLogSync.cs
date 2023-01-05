@@ -4,17 +4,20 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the list of call log records with sync information
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     List of call log records with synchronization information. For ISync the total number of returned records is
-        ///     limited to 250; this includes both new records and the old ones, specified by the recordCount parameter
+        ///     List of call log records with synchronization information.
+        ///     For `ISync`` the total number of returned records is limited to 250; this
+        ///     includes both new records and the old ones, specified by the recordCount
+        ///     parameter
         /// </summary>
-        public UserCallLogRecord[] records { get; set; }
+        public CallLogRecord[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public SyncInfoCallLog syncInfo { get; set; }
+        public CallLogSyncInfo syncInfo { get; set; }
     }
 }

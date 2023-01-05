@@ -15,11 +15,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Task creation time
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         ///     Time of the task latest modification
+        ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 

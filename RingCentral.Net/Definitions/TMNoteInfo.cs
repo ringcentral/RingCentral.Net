@@ -42,11 +42,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Creation time
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         ///     Datetime of the note last update
+        ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 

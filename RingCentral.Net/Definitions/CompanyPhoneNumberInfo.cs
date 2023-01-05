@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a company phone number resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -15,7 +16,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CountryInfo country { get; set; }
+        public CountryInfoBasicModel country { get; set; }
 
         /// <summary>
         /// </summary>
@@ -32,7 +33,8 @@ namespace RingCentral
         public string location { get; set; }
 
         /// <summary>
-        ///     Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
+        ///     Payment type. 'External' is returned for forwarded numbers
+        ///     which are not terminated in the RingCentral phone system
         ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider
         /// </summary>
         public string paymentType { get; set; }
@@ -43,8 +45,9 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. If the value is 'Pending'
-        ///     it is an external number not yet ported to RingCentral.
+        ///     Status of a phone number. If the value is 'Normal', the phone
+        ///     number is ready to be used. If the value is 'Pending' it is an
+        ///     external number not yet ported to RingCentral.
         ///     Enum: Normal, Pending, PortedIn, Temporary
         /// </summary>
         public string status { get; set; }
@@ -56,8 +59,9 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number. Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for
-        ///     phone number list requests
+        ///     Usage type of a phone number. Usage type of a phone number.
+        ///     Numbers of 'NumberPool' type wont't be returned for phone number list
+        ///     requests
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
         ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber,
         ///     IntegrationNumber

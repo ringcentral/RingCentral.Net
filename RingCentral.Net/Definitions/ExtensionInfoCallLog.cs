@@ -1,8 +1,5 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Information on extension
-    /// </summary>
     public class ExtensionInfoCallLog
     {
         /// <summary>
@@ -13,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of an extension
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
     }

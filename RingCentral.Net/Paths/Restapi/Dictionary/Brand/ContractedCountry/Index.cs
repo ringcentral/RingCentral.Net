@@ -24,17 +24,28 @@ namespace RingCentral.Paths.Restapi.Dictionary.Brand.ContractedCountry
         }
 
         /// <summary>
-        ///     Returns the list of domestic countries by contracted country and brand of the account.
+        ///     Returns the list of contracted countries for the given brand.
+        ///     HTTP Method: get
+        ///     Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country
+        ///     Rate Limit Group: Light
+        /// </summary>
+        public async Task<ContractedCountryListResponse> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<ContractedCountryListResponse>(Path(false), null, restRequestConfig);
+        }
+
+        /// <summary>
+        ///     Returns the list of domestic countries for account contracted country and brand.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country/{contractedCountryId}
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<GetCountryListResponse> Get(ListDomesticCountriesParameters queryParams = null,
+        public async Task<CountryListDictionaryModel> Get(ListDomesticCountriesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             if (contractedCountryId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(contractedCountryId));
-            return await rc.Get<GetCountryListResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<CountryListDictionaryModel>(Path(), queryParams, restRequestConfig);
         }
     }
 }

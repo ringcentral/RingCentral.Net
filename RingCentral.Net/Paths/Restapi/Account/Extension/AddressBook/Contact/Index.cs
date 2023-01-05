@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        ///     Returns user personal contacts.
+        ///     Returns the user personal contacts.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact
         ///     Rate Limit Group: Heavy
@@ -37,7 +37,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        ///     Creates personal user contact.
+        ///     Creates the user personal contact.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact
         ///     Rate Limit Group: Heavy
@@ -52,7 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        ///     Returns contact(s) by ID(s). Batch request is supported.
+        ///     Returns the user personal contact(s). Batch request syntax is supported.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         ///     Rate Limit Group: Heavy
@@ -66,7 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        ///     Updates personal contact information by contact ID(s). Batch request is supported
+        ///     Updates the user personal contact(s) (full resource update). Batch request syntax is supported
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         ///     Rate Limit Group: Heavy
@@ -82,7 +82,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         }
 
         /// <summary>
-        ///     Deletes contact(s) by ID(s). Batch request is supported.
+        ///     Deletes the user personal contact(s). Batch request syntax is supported.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
         ///     Rate Limit Group: Heavy
@@ -93,6 +93,22 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         {
             if (contactId == null) throw new ArgumentException("Parameter cannot be null", nameof(contactId));
             return await rc.Delete<string>(Path(), null, restRequestConfig);
+        }
+
+        /// <summary>
+        ///     Updates particular values of a personal contact attributes specified in request (partial resource update).
+        ///     HTTP Method: patch
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+        ///     Rate Limit Group: Heavy
+        ///     App Permission: Contacts
+        ///     User Permission: EditPersonalContacts
+        /// </summary>
+        public async Task<PersonalContactResource> Patch(PersonalContactRequest personalContactRequest,
+            PatchContactParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (contactId == null) throw new ArgumentException("Parameter cannot be null", nameof(contactId));
+            return await rc.Patch<PersonalContactResource>(Path(), personalContactRequest, queryParams,
+                restRequestConfig);
         }
     }
 }

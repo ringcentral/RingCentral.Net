@@ -19,9 +19,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.PhoneNumber
         }
 
         /// <summary>
-        ///     Returns the list of phone numbers that are used by a particular extension, and can be filtered by the phone number
-        ///     type. The returned list contains all numbers which are directly mapped to a given extension plus the features and
-        ///     also company-level numbers which may be used when performing different operations on behalf of this extension.
+        ///     Returns the list of phone numbers that are used by a particular extension,
+        ///     can be filtered by the phone number type. The returned list contains all
+        ///     numbers which are directly mapped to the given extension. Plus the features
+        ///     and company-level numbers that may be used when performing different operations
+        ///     on behalf of this extension.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number
         ///     Rate Limit Group: Light

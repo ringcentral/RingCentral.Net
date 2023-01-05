@@ -3,7 +3,8 @@ namespace RingCentral
     public class WirelessPointsList
     {
         /// <summary>
-        ///     Link to the wireless point list resource
+        ///     Link to a wireless points resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

@@ -21,6 +21,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
+        ///     Format: date-time
         /// </summary>
         public string linkCreationTime { get; set; }
 

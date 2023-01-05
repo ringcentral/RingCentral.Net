@@ -23,8 +23,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Tasks
         }
 
         /// <summary>
-        ///     Returns results of the task created within the frame of Automatic Location Updates feature. Currently four task
-        ///     types are supported: 'Wireless Points Bulk Create', 'Wireless Points Bulk Update', 'Switches Bulk Create',
+        ///     Returns results of the task created within the frame of Automatic
+        ///     Location Updates feature. Currently four task types are supported: 'Wireless
+        ///     Points Bulk Create', 'Wireless Points Bulk Update', 'Switches Bulk Create',
         ///     'Switches Bulk Update'.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/tasks/{taskId}

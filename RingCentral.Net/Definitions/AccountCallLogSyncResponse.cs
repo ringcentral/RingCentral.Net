@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to account call log sync resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -15,6 +16,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CompanyCallLogSyncInfo syncInfo { get; set; }
+        public CallLogSyncInfo syncInfo { get; set; }
     }
 }

@@ -3,7 +3,8 @@ namespace RingCentral
     public class AccountPhoneNumbers
     {
         /// <summary>
-        ///     Link to the list of account phone numbers
+        ///     Link to a list of account phone numbers
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

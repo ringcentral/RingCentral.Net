@@ -12,16 +12,19 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of a language
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     Indicates whether a language is available as greeting language
+        ///     Indicates whether a language is available as
+        ///     greeting language
         /// </summary>
         public bool? greeting { get; set; }
 
         /// <summary>
-        ///     Indicates whether a language is available as formatting locale
+        ///     Indicates whether a language is available as
+        ///     formatting locale
         /// </summary>
         public bool? formattingLocale { get; set; }
 
@@ -31,7 +34,8 @@ namespace RingCentral
         public string localeCode { get; set; }
 
         /// <summary>
-        ///     Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+        ///     Country code according to the ISO standard, see
+        ///     [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
         /// </summary>
         public string isoCode { get; set; }
 

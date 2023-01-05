@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Canonical URI of the language list resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

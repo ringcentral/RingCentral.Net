@@ -7,6 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the meeting host resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

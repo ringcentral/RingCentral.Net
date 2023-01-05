@@ -24,7 +24,7 @@ namespace RingCentral.Tests
                 );
 
                 // return a definition type
-                var country = await rc.Get<CountryInfo>("/restapi/v1.0/dictionary/country/46");
+                var country = await rc.Get<CountryInfoDictionaryModel>("/restapi/v1.0/dictionary/country/46");
                 Assert.Equal("China", country.name);
 
                 // return a string

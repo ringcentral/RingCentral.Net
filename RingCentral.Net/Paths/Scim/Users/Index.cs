@@ -5,98 +5,99 @@ namespace RingCentral.Paths.Scim.Users
 {
     public partial class Index
     {
-        public string id;
         public Scim.Index parent;
         public RestClient rc;
+        public string scimUserId;
 
-        public Index(Scim.Index parent, string id = null)
+        public Index(Scim.Index parent, string scimUserId = null)
         {
             this.parent = parent;
             rc = parent.rc;
-            this.id = id;
+            this.scimUserId = scimUserId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && id != null) return $"{parent.Path()}/Users/{id}";
+            if (withParameter && scimUserId != null) return $"{parent.Path()}/Users/{scimUserId}";
             return $"{parent.Path()}/Users";
         }
 
         /// <summary>
-        ///     Search/List Users
+        ///     Returns the list of users satisfying search criteria
         ///     HTTP Method: get
         ///     Endpoint: /scim/{version}/Users
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<UserSearchResponse> List(SearchViaGet2Parameters queryParams = null,
+        public async Task<ScimUserSearchResponse> List(ScimSearchViaGet2Parameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<UserSearchResponse>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<ScimUserSearchResponse>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        ///     Create User
+        ///     Creates a new user
         ///     HTTP Method: post
         ///     Endpoint: /scim/{version}/Users
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<UserResponse> Post(CreateUser createUser, RestRequestConfig restRequestConfig = null)
+        public async Task<ScimUserResponse> Post(ScimUser scimUser, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<UserResponse>(Path(false), createUser, null, restRequestConfig);
+            return await rc.Post<ScimUserResponse>(Path(false), scimUser, null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Get User
+        ///     Returns a user by ID
         ///     HTTP Method: get
-        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Endpoint: /scim/{version}/Users/{scimUserId}
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<UserResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<ScimUserResponse> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
-            return await rc.Get<UserResponse>(Path(), null, restRequestConfig);
+            if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
+            return await rc.Get<ScimUserResponse>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Update/Replace User
+        ///     Updates a user
         ///     HTTP Method: put
-        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Endpoint: /scim/{version}/Users/{scimUserId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<UserResponse> Put(User user, RestRequestConfig restRequestConfig = null)
+        public async Task<ScimUserResponse> Put(ScimUser scimUser, RestRequestConfig restRequestConfig = null)
         {
-            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
-            return await rc.Put<UserResponse>(Path(), user, null, restRequestConfig);
+            if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
+            return await rc.Put<ScimUserResponse>(Path(), scimUser, null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Delete User
+        ///     Deletes a user
         ///     HTTP Method: delete
-        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Endpoint: /scim/{version}/Users/{scimUserId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
+            if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Update/Patch User
+        ///     Updates a user (partial update)
         ///     HTTP Method: patch
-        ///     Endpoint: /scim/{version}/Users/{id}
+        ///     Endpoint: /scim/{version}/Users/{scimUserId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<UserResponse> Patch(UserPatch userPatch, RestRequestConfig restRequestConfig = null)
+        public async Task<ScimUserResponse> Patch(ScimUserPatch scimUserPatch,
+            RestRequestConfig restRequestConfig = null)
         {
-            if (id == null) throw new ArgumentException("Parameter cannot be null", nameof(id));
-            return await rc.Patch<UserResponse>(Path(), userPatch, null, restRequestConfig);
+            if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
+            return await rc.Patch<ScimUserResponse>(Path(), scimUserPatch, null, restRequestConfig);
         }
     }
 }
@@ -105,9 +106,9 @@ namespace RingCentral.Paths.Scim
 {
     public partial class Index
     {
-        public Users.Index Users(string id = null)
+        public Users.Index Users(string scimUserId = null)
         {
-            return new Users.Index(this, id);
+            return new Users.Index(this, scimUserId);
         }
     }
 }

@@ -45,7 +45,8 @@ namespace RingCentral
         public string setupWizardState { get; set; }
 
         /// <summary>
-        ///     Additional extension identifier created by partner application and applied on client side
+        ///     Additional extension identifier created by partner application
+        ///     and applied on client side
         /// </summary>
         public string partnerId { get; set; }
 
@@ -81,9 +82,10 @@ namespace RingCentral
         public AutomaticLocationUpdatesSiteInfo site { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
-        ///     modern RingCentral product terminology
-        ///     Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
+        ///     Extension type. Please note that legacy 'Department' extension
+        ///     type corresponds to 'Call Queue' extensions in modern RingCentral
+        ///     product terminology
+        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
         ///     IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup
         /// </summary>
         public string type { get; set; }

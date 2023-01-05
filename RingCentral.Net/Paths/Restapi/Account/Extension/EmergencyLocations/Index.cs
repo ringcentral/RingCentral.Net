@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         }
 
         /// <summary>
-        ///     Returns a list of emergency response locations available for the current user extension.
+        ///     Returns a list of emergency response locations available for the particular extension.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations
         ///     Rate Limit Group: Light
@@ -43,25 +43,25 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         ///     App Permission: EditAccounts
         ///     User Permission: EmergencyFramework
         /// </summary>
-        public async Task<EmergencyLocationInfo> Post(
+        public async Task<EmergencyLocationResource> Post(
             CreateUserEmergencyLocationRequest createUserEmergencyLocationRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<EmergencyLocationInfo>(Path(false), createUserEmergencyLocationRequest, null,
+            return await rc.Post<EmergencyLocationResource>(Path(false), createUserEmergencyLocationRequest, null,
                 restRequestConfig);
         }
 
         /// <summary>
-        ///     Returns personal emergency response location for the current user.
+        ///     Returns a personal emergency response location for the current user.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<EmergencyLocationInfo> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<EmergencyLocationResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Get<EmergencyLocationInfo>(Path(), null, restRequestConfig);
+            return await rc.Get<EmergencyLocationResource>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -72,16 +72,17 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         ///     App Permission: EditAccounts
         ///     User Permission: EmergencyFramework
         /// </summary>
-        public async Task<EmergencyLocationInfo> Put(EmergencyLocationInfo emergencyLocationInfo,
+        public async Task<EmergencyLocationResource> Put(EmergencyLocationResource emergencyLocationResource,
             RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Put<EmergencyLocationInfo>(Path(), emergencyLocationInfo, null, restRequestConfig);
+            return await rc.Put<EmergencyLocationResource>(Path(), emergencyLocationResource, null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Deletes a personal emergency response location by ID by the current user or admin. Multiple personal emergency
-        ///     response locations can be deleted by one API call
+        ///     Deletes a personal emergency response location by ID by
+        ///     the current user or admin. Multiple personal emergency response
+        ///     locations can be deleted by single API call.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
         ///     Rate Limit Group: Heavy

@@ -19,8 +19,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        ///     Creates multiple wireless points in corporate map. The maximum number of wireless points per request is 10 000;
-        ///     limitation for account is 70 000.
+        ///     Creates multiple wireless points in a corporate map. The maximum
+        ///     number of wireless points per request is 10 000; limitation for account is
+        ///     70 000.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create
         ///     Rate Limit Group: Heavy

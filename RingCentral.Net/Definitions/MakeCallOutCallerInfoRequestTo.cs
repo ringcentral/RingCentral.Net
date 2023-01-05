@@ -7,7 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Phone number in E.164 format
-        ///     Example: +16502223366
+        ///     Example: 16502223366
         /// </summary>
         public string phoneNumber { get; set; }
 

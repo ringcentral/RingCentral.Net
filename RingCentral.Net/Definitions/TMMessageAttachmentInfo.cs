@@ -40,11 +40,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to an image displayed at the bottom of a message
+        ///     Format: uri
         /// </summary>
         public string imageUri { get; set; }
 
         /// <summary>
         ///     Link to an image preview displayed to the right of a message (82x82)
+        ///     Format: uri
         /// </summary>
         public string thumbnailUri { get; set; }
 
@@ -64,11 +66,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Datetime of starting an event
+        ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
 
         /// <summary>
         ///     Datetime of ending an event
+        ///     Format: date-time
         /// </summary>
         public string endTime { get; set; }
 

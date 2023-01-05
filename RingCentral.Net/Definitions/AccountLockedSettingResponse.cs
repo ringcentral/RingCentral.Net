@@ -4,14 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public ScheduleUserMeetingInfo scheduleMeeting { get; set; }
+        public ScheduleMeetingResponse scheduleMeeting { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserMeetingRecordingSetting recording { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public TelephonyLockedSettings telephony { get; set; }
+        public AccountLockSettingRecordResponse recording { get; set; }
     }
 }

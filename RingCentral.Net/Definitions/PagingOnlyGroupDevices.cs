@@ -3,7 +3,8 @@ namespace RingCentral
     public class PagingOnlyGroupDevices
     {
         /// <summary>
-        ///     Link to the list of devices assigned to the paging only group
+        ///     Link to a list of devices assigned to the paging only group
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

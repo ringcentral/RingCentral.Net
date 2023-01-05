@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of an extension
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -23,7 +24,8 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Extension name. For user extension types the value is a combination of the specified first name and last name
+        ///     Extension name. For user extension types the value is a combination
+        ///     of the specified first name and last name
         /// </summary>
         public string name { get; set; }
 
@@ -36,15 +38,17 @@ namespace RingCentral
         public ProfileImageInfo profileImage { get; set; }
 
         /// <summary>
-        ///     Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If
-        ///     not specified, then all extensions are returned
+        ///     Extension current state. If 'Unassigned' is specified, then
+        ///     extensions without ‘extensionNumber’ are returned. If not specified,
+        ///     then all extensions are returned
         ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
-        ///     modern RingCentral product terminology
+        ///     Extension type. Please note that legacy 'Department' extension type
+        ///     corresponds to 'Call Queue' extensions in modern RingCentral product
+        ///     terminology
         ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
         ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup,
         ///     GroupCallPickup
@@ -52,7 +56,8 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+        ///     Extension sub-type, if applicable. For any unsupported sub-types the
+        ///     'Unknown' value will be returned"
         ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
         /// </summary>
         public string subType { get; set; }
@@ -62,7 +67,8 @@ namespace RingCentral
         public CallQueueExtensionInfo callQueueInfo { get; set; }
 
         /// <summary>
-        ///     Hides extension from showing in company directory. Supported for extensions of User type only
+        ///     Hides extension from showing in company directory.
+        ///     Supported for extensions of User type only
         /// </summary>
         public bool? hidden { get; set; }
 

@@ -5,6 +5,7 @@ namespace RingCentral
         /// <summary>
         ///     Canonical URI of a subscription resource
         ///     Required
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

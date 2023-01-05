@@ -12,10 +12,13 @@ namespace RingCentral
         public ContactBusinessAddressInfo businessAddress { get; set; }
 
         /// <summary>
+        ///     Company business name
         /// </summary>
         public string company { get; set; }
 
         /// <summary>
+        ///     Company business email address
+        ///     Format: email
         /// </summary>
         public string email { get; set; }
 

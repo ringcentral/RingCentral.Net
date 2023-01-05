@@ -19,17 +19,17 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
         }
 
         /// <summary>
-        ///     Returns the information about service plan, available features and limitations for a particular RingCentral
-        ///     customer account.
+        ///     Returns the information about service plan, available features
+        ///     and limitations for a particular RingCentral customer account.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadServicePlanInfo
         /// </summary>
-        public async Task<GetServiceInfoResponse> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<AccountServiceInfo> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetServiceInfoResponse>(Path(), null, restRequestConfig);
+            return await rc.Get<AccountServiceInfo>(Path(), null, restRequestConfig);
         }
     }
 }

@@ -1,7 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Site Fax/SMS recipient (operator) reference. Multi-level IVR should be enabled
+    ///     Site Fax/SMS recipient (operator) reference. Multi-level IVR should
+    ///     be enabled
     /// </summary>
     public class OperatorInfo
     {
@@ -12,6 +13,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to an operator resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

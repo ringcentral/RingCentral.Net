@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Information on the state this location belongs to
+    ///     Information on a state this location belongs to
     /// </summary>
     public class LocationStateInfo
     {
@@ -12,6 +12,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a state resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
     }

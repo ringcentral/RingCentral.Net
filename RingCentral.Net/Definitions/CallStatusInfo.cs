@@ -7,7 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Status code of a call
-        ///     Enum: Setup, Proceeding, Answered, Disconnected, Gone, Parked, Hold, VoiceMail, FaxReceive, VoiceMailScreening
+        ///     Enum: Setup, Proceeding, Answered, Disconnected, Gone, Parked, Hold, VoiceMail, FaxReceive, Tds, VoiceMailScreening
         /// </summary>
         public string code { get; set; }
 

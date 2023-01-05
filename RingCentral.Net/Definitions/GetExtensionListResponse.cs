@@ -3,7 +3,8 @@ namespace RingCentral
     public class GetExtensionListResponse
     {
         /// <summary>
-        ///     Link to the extension list resource
+        ///     Link to an extension list resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

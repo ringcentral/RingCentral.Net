@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a paging group user extension
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

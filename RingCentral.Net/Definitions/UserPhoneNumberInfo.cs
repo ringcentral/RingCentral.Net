@@ -3,7 +3,8 @@ namespace RingCentral
     public class UserPhoneNumberInfo
     {
         /// <summary>
-        ///     Link to the user's phone number resource
+        ///     Link to the user phone number resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -15,7 +16,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CountryInfo country { get; set; }
+        public CountryInfoBasicModel country { get; set; }
 
         /// <summary>
         /// </summary>

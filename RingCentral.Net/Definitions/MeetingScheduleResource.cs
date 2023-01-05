@@ -6,6 +6,7 @@ namespace RingCentral
     public class MeetingScheduleResource
     {
         /// <summary>
+        ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
 

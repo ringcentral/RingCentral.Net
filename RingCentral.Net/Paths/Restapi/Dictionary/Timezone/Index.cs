@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         }
 
         /// <summary>
-        ///     Returns the information on a certain timezone.
+        ///     Returns information on a certain timezone.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
         ///     Rate Limit Group: Light

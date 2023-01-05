@@ -16,6 +16,7 @@ namespace RingCentral
         public string topic { get; set; }
 
         /// <summary>
+        ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
     }

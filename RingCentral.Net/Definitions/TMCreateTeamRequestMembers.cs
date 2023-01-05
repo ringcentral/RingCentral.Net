@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Email of a person
+        ///     Format: email
         /// </summary>
         public string email { get; set; }
     }

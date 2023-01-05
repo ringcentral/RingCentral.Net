@@ -19,8 +19,8 @@ namespace RingCentral.Paths.Restapi.Account.Meeting.LockedSettings
         }
 
         /// <summary>
-        ///     Returns information on user meeting settings that are locked on account level and therefore cannot be changed by
-        ///     user.
+        ///     Returns the information about user meeting settings that are locked on
+        ///     account level and therefore cannot be changed by a user.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/meeting/locked-settings
         ///     Rate Limit Group: Light

@@ -19,14 +19,16 @@ namespace RingCentral
         public string domain { get; set; }
 
         /// <summary>
-        ///     Datetime of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        ///     Datetime of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
         ///     Required
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Datetime of last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+        ///     Datetime of last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
         ///     Required
+        ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
     }

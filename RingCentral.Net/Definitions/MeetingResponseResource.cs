@@ -76,7 +76,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public RecurrenceInfo reccurence { get; set; }
+        public RecurrenceInfo recurrence { get; set; }
 
         /// <summary>
         ///     Automatic record type
@@ -96,6 +96,10 @@ namespace RingCentral
         public bool? muteParticipantsOnEntry { get; set; }
 
         /// <summary>
+        /// </summary>
+        public MeetingOccurrenceInfo[] occurrences { get; set; }
+
+        /// <summary>
         ///     If true, then the waiting room for participants is enabled
         /// </summary>
         public bool? enableWaitingRoom { get; set; }
@@ -104,5 +108,9 @@ namespace RingCentral
         ///     List of global dial-in countries (eg. US, UK, AU, etc.)
         /// </summary>
         public string[] globalDialInCountries { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public string alternativeHosts { get; set; }
     }
 }

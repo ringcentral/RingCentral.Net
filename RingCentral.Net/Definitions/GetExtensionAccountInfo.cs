@@ -11,7 +11,8 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Canonical URI of an account
+        ///     Canonical URI of an account resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
     }

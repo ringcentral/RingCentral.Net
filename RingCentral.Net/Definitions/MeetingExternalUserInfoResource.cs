@@ -39,6 +39,10 @@ namespace RingCentral
         public string personalLink { get; set; }
 
         /// <summary>
+        /// </summary>
+        public string personalLinkName { get; set; }
+
+        /// <summary>
         ///     Enables using personal meeting ID for instant meetings
         /// </summary>
         public bool? usePmiForInstantMeetings { get; set; }

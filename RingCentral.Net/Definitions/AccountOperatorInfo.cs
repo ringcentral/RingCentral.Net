@@ -1,12 +1,14 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Operator's extension information. This extension will receive all calls and messages intended for the operator.
+    ///     Operator extension information. This extension will receive
+    ///     all calls and messages addressed to an operator.
     /// </summary>
     public class AccountOperatorInfo
     {
         /// <summary>
         ///     Link to an operator extension resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

@@ -20,6 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Email of a user
+        ///     Format: email
         /// </summary>
         public string email { get; set; }
 

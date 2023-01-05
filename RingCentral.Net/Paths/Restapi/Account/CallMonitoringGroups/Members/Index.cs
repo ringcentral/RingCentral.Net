@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
         }
 
         /// <summary>
-        ///     Returns call monitoring group members.
+        ///     Returns a list of members for a call monitoring group specified in path.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/members
         ///     Rate Limit Group: Medium

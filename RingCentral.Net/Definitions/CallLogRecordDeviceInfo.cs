@@ -8,7 +8,8 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     string to a device
+        ///     Canonical URI of a device resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
     }

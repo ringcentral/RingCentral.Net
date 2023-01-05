@@ -38,6 +38,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Time when the call is actually started
+        ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
 

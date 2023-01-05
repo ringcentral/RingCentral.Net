@@ -23,8 +23,8 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         }
 
         /// <summary>
-        ///     Returns the list of phone numbers assigned to RingCentral customer account. Both company-level and extension-level
-        ///     numbers are returned.
+        ///     Returns the list of phone numbers assigned to RingCentral customer
+        ///     account. Both company-level and extension-level numbers are returned.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number
         ///     Rate Limit Group: Heavy
@@ -38,8 +38,8 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         }
 
         /// <summary>
-        ///     Returns the phone number(s) belonging to a certain account or extension by phoneNumberId(s). Batch request is
-        ///     supported.
+        ///     Returns phone number(s) belonging to a certain account or extension
+        ///     by phoneNumberId(s). Batch request is supported.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}
         ///     Rate Limit Group: Light

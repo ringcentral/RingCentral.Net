@@ -40,7 +40,8 @@ namespace RingCentral
         public string setupWizardState { get; set; }
 
         /// <summary>
-        ///     Additional extension identifier, created by partner application and applied on client side
+        ///     Additional extension identifier, created by partner application
+        ///     and applied on client side
         /// </summary>
         public string partnerId { get; set; }
 
@@ -71,15 +72,17 @@ namespace RingCentral
         public AutomaticLocationUpdatesSiteInfoRequest site { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
-        ///     modern RingCentral product terminology
-        ///     Enum: User, Fax User, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail,
-        ///     SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
+        ///     Extension type. Please note that legacy 'Department' extension
+        ///     type corresponds to 'Call Queue' extensions in modern RingCentral
+        ///     product terminology
+        ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
+        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        ///     Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+        ///     Extension sub-type, if applicable. For any unsupported sub-types
+        ///     the 'Unknown' value will be returned
         ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
         /// </summary>
         public string subType { get; set; }

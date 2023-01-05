@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a template
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -24,11 +25,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Time of a template creation
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         ///     Time of the last template modification
+        ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
     }

@@ -1,18 +1,19 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral
-    ///     product terminology
+    ///     Please note that legacy 'Department' extension type corresponds to
+    ///     'Call Queue' extensions in modern RingCentral product terminology
     /// </summary>
     public class DepartmentMemberList
     {
         /// <summary>
-        ///     Link to the list of department members
+        ///     Canonical URL of the resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     List of department members extensions
+        ///     List of call queue member extensions
         /// </summary>
         public ExtensionInfo[] records { get; set; }
 

@@ -23,8 +23,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         }
 
         /// <summary>
-        ///     Returns corporate map of configured network switches with the assigned emergency addresses for the logged-in
-        ///     account.
+        ///     Returns a corporate map of configured network switches with the assigned
+        ///     emergency addresses for the logged-in account.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches
         ///     Rate Limit Group: Heavy
@@ -38,7 +38,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         }
 
         /// <summary>
-        ///     Creates a new switch in corporate map based on chassis ID and used for Automatic Locations Update feature.
+        ///     Creates a new switch in corporate map based on chassis ID and used
+        ///     for Automatic Locations Update feature.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches
         ///     Rate Limit Group: Heavy
@@ -66,8 +67,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         }
 
         /// <summary>
-        ///     Updates switch. Partial update is not supported, all switch parameters should be specified. If null value is
-        ///     received or parameter is missing, its value is removed.
+        ///     Updates switch. Partial update is not supported, all switch parameters
+        ///     should be specified. If null value is received or parameter is missing, its
+        ///     value is removed.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         ///     Rate Limit Group: Heavy
@@ -81,7 +83,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches
         }
 
         /// <summary>
-        ///     Deletes wireless switch(es) in network configuration for Automatic Location Updates feature.
+        ///     Deletes wireless switch(es) in a network configuration for Automatic
+        ///     Location Updates feature.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}
         ///     Rate Limit Group: Heavy

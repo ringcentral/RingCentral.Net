@@ -8,6 +8,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a prompt resource
+        ///     Format: uri
         /// </summary>
         public string contentUri { get; set; }
 

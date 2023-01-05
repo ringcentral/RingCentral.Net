@@ -4,16 +4,17 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public GetCountryInfoConferencing country { get; set; }
+        public CountryInfoShortModel country { get; set; }
 
         /// <summary>
-        ///     'True' if the number is default for the conference. Default conference number is a domestic number that can be set
-        ///     by user (otherwise it is set by the system). Only one default number per country is allowed
+        ///     The value should be 'True' if the number is default for the conference. Default
+        ///     conference number is a domestic number that can be set by user (otherwise
+        ///     it is set by the system). Only one default number per country is allowed
         /// </summary>
         public bool? @default { get; set; }
 
         /// <summary>
-        ///     'True' if the greeting message is played on this number
+        ///     The value should be 'True' if any greeting message is played on this number
         /// </summary>
         public bool? hasGreeting { get; set; }
 
@@ -28,7 +29,8 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Indicates if the number is 'premium' (account phone number with the `ConferencingNumber` usageType)
+        ///     Indicates if the number is 'premium' (account phone number
+        ///     with the `ConferencingNumber` usageType)
         /// </summary>
         public bool? premium { get; set; }
     }

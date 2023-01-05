@@ -19,16 +19,16 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         }
 
         /// <summary>
-        ///     Search/List Users
+        ///     Returns the list of users satisfying search criteria
         ///     HTTP Method: post
         ///     Endpoint: /scim/{version}/Users/dotSearch
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<UserSearchResponse> Post(SearchRequest searchRequest,
+        public async Task<ScimUserSearchResponse> Post(ScimSearchRequest scimSearchRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<UserSearchResponse>(Path(), searchRequest, null, restRequestConfig);
+            return await rc.Post<ScimUserSearchResponse>(Path(), scimSearchRequest, null, restRequestConfig);
         }
     }
 }

@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a call monitoring group member
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

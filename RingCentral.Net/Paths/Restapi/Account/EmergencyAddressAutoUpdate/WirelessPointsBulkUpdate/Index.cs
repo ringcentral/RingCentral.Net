@@ -19,8 +19,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.WirelessP
         }
 
         /// <summary>
-        ///     Updates wireless points in corporate map. The maximum number of wireless points per request is 10 000; limitation
-        ///     for account is 70 000.
+        ///     Updates wireless points in corporate map. The maximum number of
+        ///     wireless points per request is 10 000; limitation for account is 70 000.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update
         ///     Rate Limit Group: Heavy

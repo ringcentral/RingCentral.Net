@@ -19,11 +19,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Datetime of starting an event
+        ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
 
         /// <summary>
         ///     Datetime of ending an event
+        ///     Format: date-time
         /// </summary>
         public string endTime { get; set; }
 

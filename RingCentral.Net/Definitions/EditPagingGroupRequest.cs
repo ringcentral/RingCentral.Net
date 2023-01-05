@@ -13,12 +13,14 @@ namespace RingCentral
         public string[] removedUserIds { get; set; }
 
         /// <summary>
-        ///     List of account devices that will be assigned to a paging group specified
+        ///     List of account devices that will be assigned to a paging group
+        ///     specified
         /// </summary>
         public string[] addedDeviceIds { get; set; }
 
         /// <summary>
-        ///     List of account devices that will be unassigned from a paging group specified
+        ///     List of account devices that will be unassigned from a paging
+        ///     group specified
         /// </summary>
         public string[] removedDeviceIds { get; set; }
     }

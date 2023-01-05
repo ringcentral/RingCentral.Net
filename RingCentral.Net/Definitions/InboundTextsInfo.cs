@@ -13,14 +13,16 @@ namespace RingCentral
         public bool? notifyBySms { get; set; }
 
         /// <summary>
-        ///     List of recipient email addresses for inbound text message notifications. Returned if specified, in both modes
-        ///     (advanced/basic). Applied in advanced mode only
+        ///     List of recipient email addresses for inbound text message
+        ///     notifications. Returned if specified, in both modes (advanced/basic).
+        ///     Applied in advanced mode only
         /// </summary>
         public string[] advancedEmailAddresses { get; set; }
 
         /// <summary>
-        ///     List of recipient phone numbers for inbound text message notifications. Returned if specified, in both modes
-        ///     (advanced/basic). Applied in advanced mode only
+        ///     List of recipient phone numbers for inbound text message notifications.
+        ///     Returned if specified, in both modes (advanced/basic). Applied in advanced
+        ///     mode only
         /// </summary>
         public string[] advancedSmsEmailAddresses { get; set; }
     }

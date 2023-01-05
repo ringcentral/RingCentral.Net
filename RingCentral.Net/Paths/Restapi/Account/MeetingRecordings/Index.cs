@@ -24,7 +24,6 @@ namespace RingCentral.Paths.Restapi.Account.MeetingRecordings
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/meeting-recordings
         ///     Rate Limit Group: Medium
         ///     App Permission: Meetings
-        ///     User Permission: MeetingsRecordings
         /// </summary>
         public async Task<ListMeetingRecordingsResponse> Get(ListAccountMeetingRecordingsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)

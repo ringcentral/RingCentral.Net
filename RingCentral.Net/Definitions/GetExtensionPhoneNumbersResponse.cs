@@ -3,7 +3,8 @@ namespace RingCentral
     public class GetExtensionPhoneNumbersResponse
     {
         /// <summary>
-        ///     Link to the user's phone number list resource
+        ///     Link to the user phone number list resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

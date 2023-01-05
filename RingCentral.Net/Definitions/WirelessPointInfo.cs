@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the wireless point resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -13,22 +14,25 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Unique 48-bit identifier of the wireless access point complying with MAC address conventions
+        ///     Unique 48-bit identifier of the wireless access point that follows MAC address conventions
+        ///     Required
         /// </summary>
         public string bssid { get; set; }
 
         /// <summary>
         ///     Wireless access point name
+        ///     Required
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site { get; set; }
+        public EmergencyAddressAutoUpdateSiteInfo site { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
-        public LocationUpdatesEmergencyAddressInfo emergencyAddress { get; set; }
+        public EmergencyAddressInfo emergencyAddress { get; set; }
 
         /// <summary>
         /// </summary>

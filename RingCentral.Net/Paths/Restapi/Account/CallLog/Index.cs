@@ -37,18 +37,17 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         }
 
         /// <summary>
-        ///     Returns individual call log record(s) by ID(s). Batch request is supported.
+        ///     Returns individual call log record(s) by ID. Batch syntax is supported.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadCallLog
         ///     User Permission: FullCompanyCallLog
         /// </summary>
-        public async Task<CompanyCallLogRecord> Get(ReadCompanyCallRecordParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CompanyCallLogRecord> Get(RestRequestConfig restRequestConfig = null)
         {
             if (callRecordId == null) throw new ArgumentException("Parameter cannot be null", nameof(callRecordId));
-            return await rc.Get<CompanyCallLogRecord>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<CompanyCallLogRecord>(Path(), null, restRequestConfig);
         }
     }
 }

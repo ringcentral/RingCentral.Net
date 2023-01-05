@@ -6,6 +6,34 @@ namespace RingCentral
     public class ListA2PSMSParameters
     {
         /// <summary>
+        ///     Internal identifier of a message batch to filter the response
+        ///     Example: 55577
+        /// </summary>
+        public string batchId { get; set; }
+
+        /// <summary>
+        ///     Direction of the SMS message
+        ///     Example: Inbound
+        ///     Enum: Inbound, Outbound
+        /// </summary>
+        public string direction { get; set; }
+
+        /// <summary>
+        ///     The end of the time range to filter the results in ISO 8601 format including timezone. Default is the 'dateTo'
+        ///     minus 24 hours
+        ///     Format: date-time
+        ///     Example: Mon Nov 09 2020 08:07:52 GMT-0800 (Pacific Standard Time)
+        /// </summary>
+        public string dateFrom { get; set; }
+
+        /// <summary>
+        ///     The end of the time range to filter the results in ISO 8601 format including timezone. Default is the current time
+        ///     Format: date-time
+        ///     Example: Wed Nov 25 2020 08:07:52 GMT-0800 (Pacific Standard Time)
+        /// </summary>
+        public string dateTo { get; set; }
+
+        /// <summary>
         ///     Indicates if the response has to be detailed, includes text in the response if detailed
         ///     Default: Simple
         ///     Enum: Simple, Detailed

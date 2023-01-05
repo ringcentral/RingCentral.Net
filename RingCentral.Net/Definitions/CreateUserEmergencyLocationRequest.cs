@@ -9,6 +9,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public LocationUpdatesEmergencyAddressInfoRequest address { get; set; }
+        public EmergencyLocationAddressInfo address { get; set; }
     }
 }

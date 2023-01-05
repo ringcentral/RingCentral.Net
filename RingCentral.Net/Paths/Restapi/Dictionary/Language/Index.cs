@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         }
 
         /// <summary>
-        ///     Returns the information about supported languages.
+        ///     Returns information about the supported languages.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/dictionary/language
         ///     Rate Limit Group: Light
@@ -34,7 +34,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         }
 
         /// <summary>
-        ///     Returns language by ID.
+        ///     Returns a language by ID.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/dictionary/language/{languageId}
         ///     Rate Limit Group: Light

@@ -139,7 +139,7 @@ namespace RingCentral.Tests
                     var callLog = callLogs.records[0];
                     if (callLog.recording != null)
                     {
-                        var content = await account.Recording(callLog.recording.id).Content().Get();
+                        var content = await rc.Get<byte[]>(callLog.recording.contentUri);
                         Assert.NotNull(content);
                         Assert.True(content.Length > 0);
                         File.WriteAllBytes("test.wav", content);

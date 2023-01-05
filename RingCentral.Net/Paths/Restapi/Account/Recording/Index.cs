@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Recording
 {
-    public partial class Index
+    public class Index
     {
         public Account.Index parent;
         public RestClient rc;

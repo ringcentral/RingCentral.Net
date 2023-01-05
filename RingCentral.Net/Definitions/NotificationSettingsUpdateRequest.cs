@@ -3,7 +3,8 @@ namespace RingCentral
     public class NotificationSettingsUpdateRequest
     {
         /// <summary>
-        ///     List of notification recipient email addresses. Should not be empty if 'includeManagers' parameter is set to false
+        ///     List of notification recipient email addresses. Should not be empty
+        ///     if 'includeManagers' parameter is set to false
         /// </summary>
         public string[] emailAddresses { get; set; }
 
@@ -13,9 +14,11 @@ namespace RingCentral
         public string[] smsEmailAddresses { get; set; }
 
         /// <summary>
-        ///     Specifies notifications settings mode. If 'True' then advanced mode is on, it allows using different emails and/or
-        ///     phone numbers for each notification type. If 'False' then basic mode is on. Advanced mode settings are returned in
-        ///     both modes, if specified once, but if basic mode is switched on, they are not applied
+        ///     Specifies notifications settings mode. If 'True' then advanced
+        ///     mode is on, it allows using different emails and/or phone numbers for
+        ///     each notification type. If 'False' then basic mode is on. Advanced mode
+        ///     settings are returned in both modes, if specified once, but if basic mode
+        ///     is switched on, they are not applied
         /// </summary>
         public bool? advancedMode { get; set; }
 
@@ -40,8 +43,8 @@ namespace RingCentral
         public MissedCallsInfo missedCalls { get; set; }
 
         /// <summary>
-        ///     Specifies if managers' emails are included in the list of emails to which notifications are sent. If not specified,
-        ///     then the value is 'True'
+        ///     Specifies if managers' emails are included in the list of emails to
+        ///     which notifications are sent. If not specified, then the value is 'True'
         ///     Default: true
         /// </summary>
         public bool? includeManagers { get; set; }

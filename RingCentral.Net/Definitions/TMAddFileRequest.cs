@@ -11,6 +11,7 @@ namespace RingCentral
         /// <summary>
         ///     Link to binary content
         ///     Required
+        ///     Format: uri
         /// </summary>
         public string contentUri { get; set; }
 

@@ -1,14 +1,14 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Regional data (timezone, home country, language) of an extension/account. The default is Company
-    ///     (Auto-Receptionist) settings
+    ///     Regional data (timezone, home country, language) of an extension/account.
+    ///     The default is Company (Auto-Receptionist) settings
     /// </summary>
     public class RegionalSettings
     {
         /// <summary>
         /// </summary>
-        public CountryInfo homeCountry { get; set; }
+        public CountryInfoShortModel homeCountry { get; set; }
 
         /// <summary>
         /// </summary>

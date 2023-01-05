@@ -23,20 +23,23 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        ///     Returns corporate networks map with emergency addresses assigned to the current account.
+        ///     Returns a corporate network map with emergency addresses assigned
+        ///     to the current account.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<NetworksList> List(RestRequestConfig restRequestConfig = null)
+        public async Task<NetworksList> List(ListNetworksParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<NetworksList>(Path(false), null, restRequestConfig);
+            return await rc.Get<NetworksList>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        ///     Creates a new network in corporate ethernet map for assignment of emergency addresses to network access points.
+        ///     Creates a new network in a corporate ethernet map for assignment
+        ///     of emergency addresses to network access points.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks
         ///     Rate Limit Group: Heavy
@@ -50,7 +53,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        ///     Returns the specified network with emergency addresses assigned to the current account.
+        ///     Returns the specified network with emergency addresses assigned
+        ///     to the current account.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         ///     Rate Limit Group: Medium
@@ -64,22 +68,24 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         }
 
         /// <summary>
-        ///     Updates network in corporate ethernet map for assignment of emergency addresses to network access points.
+        ///     Updates a network in a corporate ethernet map for assignment of emergency
+        ///     addresses to network access points.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<string> Put(UpdateNetworkRequest updateNetworkRequest,
+        public async Task<NetworkInfo> Put(UpdateNetworkRequest updateNetworkRequest,
             RestRequestConfig restRequestConfig = null)
         {
             if (networkId == null) throw new ArgumentException("Parameter cannot be null", nameof(networkId));
-            return await rc.Put<string>(Path(), updateNetworkRequest, null, restRequestConfig);
+            return await rc.Put<NetworkInfo>(Path(), updateNetworkRequest, null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Deletes network(s) in corporate ethernet map for Automatic Location Updates feature.
+        ///     Deletes network(s) in a corporate ethernet map for Automatic Location
+        ///     Updates feature.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
         ///     Rate Limit Group: Heavy

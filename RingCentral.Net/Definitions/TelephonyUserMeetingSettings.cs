@@ -11,5 +11,9 @@ namespace RingCentral
         ///     Users can join the meeting using the existing 3rd party audio configuration
         /// </summary>
         public bool? audioConferenceInfo { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public GlobalDialInCountryResponse[] globalDialCountries { get; set; }
     }
 }

@@ -1,7 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling'
+    ///     Extension permissions, corresponding to the Service Web permissions
+    ///     'Admin' and 'InternationalCalling'
     /// </summary>
     public class ExtensionPermissions
     {

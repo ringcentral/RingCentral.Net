@@ -1,8 +1,5 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Information on navigation
-    /// </summary>
     public class CallLogNavigationInfo
     {
         /// <summary>

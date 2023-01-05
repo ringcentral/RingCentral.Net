@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Scheduling meeting settings locked on account level || Settings defining how to schedule user meetingsxs
+    ///     Scheduling meeting settings locked on account level || Settings defining how to schedule user meetings
     /// </summary>
     public class ScheduleUserMeetingInfo
     {
@@ -79,5 +79,9 @@ namespace RingCentral
         ///     Specifies whether to generate and require a password for participants joining by phone
         /// </summary>
         public bool? pstnPasswordProtected { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public bool? muteParticipantsOnEntry { get; set; }
     }
 }

@@ -3,7 +3,8 @@ namespace RingCentral
     public class ContactList
     {
         /// <summary>
-        ///     link to the list of user personal contacts
+        ///     Link to the list of user personal contacts
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

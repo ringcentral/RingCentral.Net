@@ -75,7 +75,7 @@ If you want to retain the token, do NOT use `using` and do not `rc.Revoke()`.
 
 ## Binary content downloading
 
-Some [sample code](./samples.md) for binary content downloading may not work.
+Some [sample code](./RingCentral.Net/samples.md) for binary content downloading may not work.
 
 Because RingCentral is gradually migrating binary content to CDN such as `media.ringcentral.com`.
 

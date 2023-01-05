@@ -25,9 +25,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
         ///     Rate Limit Group: Heavy
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<CallSessionObject> Post(RestRequestConfig restRequestConfig = null)
+        public async Task<CallSession> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CallSessionObject>(Path(), null, restRequestConfig);
+            return await rc.Post<CallSession>(Path(), null, restRequestConfig);
         }
     }
 }

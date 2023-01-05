@@ -25,6 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Date and time of the latest session update represented in Unix time format
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
     }

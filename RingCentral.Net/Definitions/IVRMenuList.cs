@@ -10,6 +10,6 @@ namespace RingCentral
         /// <summary>
         ///     List of ivr menus
         /// </summary>
-        public IVRMenuInfo[] records { get; set; }
+        public IVRMenuListInfo[] records { get; set; }
     }
 }

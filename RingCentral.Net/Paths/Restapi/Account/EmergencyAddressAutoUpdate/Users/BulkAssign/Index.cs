@@ -19,17 +19,20 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users.Bul
         }
 
         /// <summary>
-        ///     Enables or disables Automatic Location Updates feature for multiple account users.
+        ///     Enables or disables Automatic Location Updates feature for multiple
+        ///     account users.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users/bulk-assign
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<string> Post(BulkAssignAutomaticLocationUpdatesUsers bulkAssignAutomaticLocationUpdatesUsers,
+        public async Task<string> Post(
+            EmergencyAddressAutoUpdateUsersBulkAssignResource emergencyAddressAutoUpdateUsersBulkAssignResource,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), bulkAssignAutomaticLocationUpdatesUsers, null, restRequestConfig);
+            return await rc.Post<string>(Path(), emergencyAddressAutoUpdateUsersBulkAssignResource, null,
+                restRequestConfig);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of an extension
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -26,8 +27,9 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
-        ///     modern RingCentral product terminology
+        ///     Extension type. Please note that legacy 'Department'
+        ///     extension type corresponds to 'Call Queue' extensions in modern RingCentral
+        ///     product terminology
         ///     Enum: User, Fax User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
         ///     IvrMenu, ApplicationExtension, ParkLocation
         /// </summary>

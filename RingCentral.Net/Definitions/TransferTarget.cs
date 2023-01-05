@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Identifier of a call party the call will be transfered to. Only **one of** these parameters: `phoneNumber`,
+    ///     Identifier of a call party the call will be transferred to. Only **one of** these parameters: `phoneNumber`,
     ///     `voicemail`, `extensionNumber` or `parkOrbit` must be specified, otherwise an error is returned.
     /// </summary>
     public class TransferTarget
@@ -22,7 +22,7 @@ namespace RingCentral
         public string parkOrbit { get; set; }
 
         /// <summary>
-        ///     Number of extension
+        ///     Extension short number
         /// </summary>
         public string extensionNumber { get; set; }
     }

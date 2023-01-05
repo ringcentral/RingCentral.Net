@@ -41,20 +41,21 @@ namespace RingCentral
         public bool? showTimestamp { get; set; }
 
         /// <summary>
-        ///     Automatical recording (local/cloud/none) of meetings as they start
+        ///     Automatic recording (local/cloud/none) of meetings as they start
         ///     Default: local
         ///     Enum: local, cloud, none
         /// </summary>
         public string autoRecording { get; set; }
 
         /// <summary>
-        ///     Automatical deletion of cloud recordings
+        ///     Automatic deletion of cloud recordings
         ///     Default: false
         /// </summary>
         public string autoDeleteCmr { get; set; }
 
         /// <summary>
-        ///     A specified number of days for automatical deletion of cloud recordings, the value range is 1-60
+        ///     A specified number of days for automatic deletion of cloud recordings, the value range is 1-60
+        ///     Format: int32
         /// </summary>
         public long? autoDeleteCmrDays { get; set; }
     }

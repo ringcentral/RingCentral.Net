@@ -13,11 +13,12 @@ namespace RingCentral
 
         /// <summary>
         ///     Link for downloading the recorded file (mp4, mp3 audio and text/plain chat file)
+        ///     Format: uri
         /// </summary>
         public string contentDownloadUri { get; set; }
 
         /// <summary>
-        ///     Enum: video/mp4, audio/m4a, text/plain
+        ///     Enum: video/mp4, audio/m4a, text/vtt
         /// </summary>
         public string contentType { get; set; }
 
@@ -28,11 +29,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Starting time of a recording
+        ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
 
         /// <summary>
         ///     Ending time of a recording
+        ///     Format: date-time
         /// </summary>
         public string endTime { get; set; }
 

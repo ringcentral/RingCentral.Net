@@ -4,12 +4,14 @@ namespace RingCentral
     {
         /// <summary>
         ///     Canonical URI of notifications settings resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     List of extensions specified as email notification recipients. Returned only for call queues where queue managers
-        ///     are assigned as user extensions.
+        ///     List of extensions specified as email notification recipients.
+        ///     Returned only for call queues where queue managers are assigned as user
+        ///     extensions.
         /// </summary>
         public EmailRecipientInfo[] emailRecipients { get; set; }
 
@@ -19,7 +21,8 @@ namespace RingCentral
         public string[] emailAddresses { get; set; }
 
         /// <summary>
-        ///     Specifies if managers' emails are included in the list of emails to which notifications are sent
+        ///     Specifies if managers' emails are included in the list of emails to which
+        ///     notifications are sent
         /// </summary>
         public bool? includeManagers { get; set; }
 
@@ -29,9 +32,11 @@ namespace RingCentral
         public string[] smsEmailAddresses { get; set; }
 
         /// <summary>
-        ///     Specifies notifications settings mode. If 'True' then advanced mode is on, it allows using different emails and/or
-        ///     phone numbers for each notification type. If 'False' then basic mode is on. Advanced mode settings are returned in
-        ///     both modes, if specified once, but if basic mode is switched on, they are not applied
+        ///     Specifies notifications settings mode. If 'True' then advanced
+        ///     mode is on, it allows using different emails and/or phone numbers for
+        ///     each notification type. If 'False' then basic mode is on. Advanced mode
+        ///     settings are returned in both modes, if specified once, but if basic mode
+        ///     is switched on, they are not applied
         /// </summary>
         public bool? advancedMode { get; set; }
 

@@ -1,12 +1,12 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Information on the task for multiple switches creation
+    ///     Information on a task for multiple switches creation
     /// </summary>
     public class CreateMultipleSwitchesResponse
     {
         /// <summary>
         /// </summary>
-        public BulkTaskInfoSwUpdate task { get; set; }
+        public BulkTaskInfo[] task { get; set; }
     }
 }

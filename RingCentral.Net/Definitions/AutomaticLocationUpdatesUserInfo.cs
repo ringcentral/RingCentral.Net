@@ -17,7 +17,7 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Specifies if Automatic Location Updates feature is enabled
+        ///     Specifies whether Automatic Location Updates feature is enabled
         /// </summary>
         public bool? featureEnabled { get; set; }
 

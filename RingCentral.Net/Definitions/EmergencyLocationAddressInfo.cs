@@ -53,7 +53,8 @@ namespace RingCentral
         public string street { get; set; }
 
         /// <summary>
-        ///     Second line address (apartment, suite, unit, building, floor, etc.)
+        ///     Second line address (apartment, suite, unit, building, floor,
+        ///     etc.)
         /// </summary>
         public string street2 { get; set; }
 

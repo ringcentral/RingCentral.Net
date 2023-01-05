@@ -16,6 +16,7 @@ namespace RingCentral
         ///     is sent. The value of this parameter must exactly match one of
         ///     the URIs you have provided for your app upon registration
         ///     Required
+        ///     Format: uri
         /// </summary>
         public string redirect_uri { get; set; }
 
@@ -90,6 +91,7 @@ namespace RingCentral
         public string request { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string request_uri { get; set; }
 

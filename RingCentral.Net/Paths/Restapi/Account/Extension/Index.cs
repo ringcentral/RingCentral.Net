@@ -23,7 +23,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         /// <summary>
-        ///     Returns the list of extensions created for a particular account. All types of extensions are included in this list.
+        ///     Returns the list of extensions created for a particular account.
+        ///     All types of extensions are included in this list.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
         ///     Rate Limit Group: Medium
@@ -52,7 +53,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         /// <summary>
-        ///     Returns basic information about a particular extension.
+        ///     Returns basic information about a particular extension of an account.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
         ///     Rate Limit Group: Light
@@ -66,7 +67,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         /// <summary>
-        ///     Updates user settings.
+        ///     Updates the user settings.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
         ///     Rate Limit Group: Medium
@@ -81,12 +82,15 @@ namespace RingCentral.Paths.Restapi.Account.Extension
         }
 
         /// <summary>
-        ///     Deletes extension(s) by ID(s). When an extension is being deleted the default API behavior is as follows: ⋅⋅*
-        ///     user's direct numbers are preserved by becoming additional company numbers; ⋅⋅* user's digital lines (both device &
-        ///     associated phone number) are deleted. You can change this behavior using the filters: ..* create unassigned
-        ///     extensions for each digital line of the deleted extension by setting the query parameter `savePhoneLines` to `true`
-        ///     in request path; ..* remove direct numbers of the deleted extension by setting the query parameter
-        ///     `savePhoneNumbers` to `false` in request path
+        ///     Deletes extension(s) by ID(s). When an extension is being deleted
+        ///     the default API behavior is as follows:
+        ///     - user's direct numbers are preserved by becoming additional company numbers;
+        ///     - user's digital lines (both device & associated phone number) are deleted.
+        ///     You can change this behavior using the filters:
+        ///     - create unassigned extensions for each digital line of the deleted extension by
+        ///     setting the query parameter `savePhoneLines` to `true` in request path;
+        ///     - remove direct numbers of the deleted extension by setting the `savePhoneNumbers`
+        ///     query parameter to `false` in request path
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
         ///     Rate Limit Group: Medium

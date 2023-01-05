@@ -32,7 +32,8 @@ namespace RingCentral.Paths.Restapi.Account.BusinessAddress
         }
 
         /// <summary>
-        ///     Updates the business address of a company that account is linked to. Batch request is supported.
+        ///     Updates the business address of a company that account is linked
+        ///     to. Batch request is supported.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address
         ///     Rate Limit Group: Medium

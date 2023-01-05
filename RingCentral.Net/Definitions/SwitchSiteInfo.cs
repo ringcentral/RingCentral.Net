@@ -1,12 +1,10 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Site data
-    /// </summary>
     public class SwitchSiteInfo
     {
         /// <summary>
-        ///     Internal identifier of a site. The company identifier value is 'main-site'
+        ///     Internal identifier of a site. The company identifier value
+        ///     is 'main-site'
         /// </summary>
         public string id { get; set; }
 

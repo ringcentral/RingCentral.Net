@@ -14,6 +14,7 @@ namespace RingCentral
         /// <summary>
         ///     Link for the task status retrieval
         ///     Required
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -27,12 +28,14 @@ namespace RingCentral
         /// <summary>
         ///     Datetime of a task creation
         ///     Required
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
         ///     Datetime of a task latest update
         ///     Required
+        ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 

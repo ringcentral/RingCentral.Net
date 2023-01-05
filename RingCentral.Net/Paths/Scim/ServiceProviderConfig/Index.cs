@@ -19,14 +19,15 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
         }
 
         /// <summary>
-        ///     Get Service Provider Config
+        ///     Returns SCIM service provider configuration
         ///     HTTP Method: get
         ///     Endpoint: /scim/{version}/ServiceProviderConfig
-        ///     Rate Limit Group: NoThrottling
+        ///     Rate Limit Group: Light
+        ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<RingCentral.ServiceProviderConfig> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<ScimProviderConfig> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.ServiceProviderConfig>(Path(), null, restRequestConfig);
+            return await rc.Get<ScimProviderConfig>(Path(), null, restRequestConfig);
         }
     }
 }

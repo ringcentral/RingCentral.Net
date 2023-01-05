@@ -19,7 +19,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices.B
         }
 
         /// <summary>
-        ///     Enables or disables Automatic Location Updates feature for the specified common phones.
+        ///     Enables or disables Automatic Location Updates feature for the
+        ///     specified common phones.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
         ///     Rate Limit Group: Heavy

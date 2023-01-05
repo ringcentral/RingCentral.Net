@@ -16,6 +16,7 @@ namespace RingCentral
         public ActionAdaptiveCardInfo card { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string url { get; set; }
     }

@@ -5,6 +5,7 @@ namespace RingCentral
         /// <summary>
         ///     Link to a call monitoring group members resource
         ///     Required
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

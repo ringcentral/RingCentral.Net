@@ -1,7 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Status information (reason, comment, lifetime). Returned for 'Disabled' status only
+    ///     Status information (reason, comment, lifetime). Returned for 'Disabled'
+    ///     status only
     /// </summary>
     public class AccountStatusInfo
     {
@@ -17,7 +18,8 @@ namespace RingCentral
         public string reason { get; set; }
 
         /// <summary>
-        ///     Date until which the account will get deleted. The default value is 30 days since current date
+        ///     Date until which an account will get deleted. The default
+        ///     value is 30 days since the current date
         /// </summary>
         public string till { get; set; }
     }

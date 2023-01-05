@@ -4,10 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public EmergencyLocationInfo[] records { get; set; }
+        public EmergencyLocationResource[] records { get; set; }
 
         /// <summary>
         /// </summary>
-        public ProvisioningPagingInfo paging { get; set; }
+        public EmergencyLocationsPaging paging { get; set; }
     }
 }

@@ -8,10 +8,12 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string supportUri { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string intlDialInNumbersUri { get; set; }
 

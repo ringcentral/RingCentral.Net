@@ -15,14 +15,20 @@ namespace RingCentral
         public string[] searchFields { get; set; }
 
         /// <summary>
-        ///     If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current
-        ///     account are returned, and account section is eliminated in this case
-        ///     Default: true
+        ///     If 'True' then contacts of all accounts in federation are returned, if it is in federation, account section will be
+        ///     returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in
+        ///     this case
         /// </summary>
         public bool? showFederated { get; set; }
 
         /// <summary>
+        ///     Should show AdminOnly Contacts
+        /// </summary>
+        public bool? showAdminOnlyContacts { get; set; }
+
+        /// <summary>
         ///     Type of extension to filter the contacts
+        ///     Example: FaxUser
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
         ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Site, DelegatedLinesGroup, FlexibleUser
         /// </summary>
@@ -30,11 +36,19 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of the business site to which extensions belong
+        ///     Example: 872781797006
         /// </summary>
         public string siteId { get; set; }
 
         /// <summary>
+        ///     Allows to control whether External (Hybrid) contacts should be returned in the response or not
+        ///     Example: true
+        /// </summary>
+        public bool? showExternalContacts { get; set; }
+
+        /// <summary>
         ///     The list of Internal identifiers of an accounts
+        ///     Example: 854874047006,422456828004,854874151006
         /// </summary>
         public string[] accountIds { get; set; }
 

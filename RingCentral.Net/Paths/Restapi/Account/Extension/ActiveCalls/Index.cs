@@ -19,17 +19,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
         }
 
         /// <summary>
-        ///     Returns records of all extension calls that are in progress, ordered by start time in descending order.
+        ///     Returns records of all extension calls that are in progress, ordered
+        ///     by start time in descending order.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/active-calls
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadCallLog
         ///     User Permission: ReadCallLog
         /// </summary>
-        public async Task<UserActiveCallsResponse> Get(ListExtensionActiveCallsParameters queryParams = null,
+        public async Task<ActiveCallsResponse> Get(ListExtensionActiveCallsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<UserActiveCallsResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<ActiveCallsResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }

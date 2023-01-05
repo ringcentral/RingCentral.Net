@@ -23,7 +23,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        ///     Returns a list of user meetings scheduled for the future (meetings of 'Instant' type are not included).
+        ///     Returns a list of user meetings scheduled for the future (meetings
+        ///     of 'Instant' type are not included).
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting
         ///     Rate Limit Group: Light
@@ -50,7 +51,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         }
 
         /// <summary>
-        ///     Returns a particular meetings details by ID.
+        ///     Returns a particular meeting details by ID.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
         ///     Rate Limit Group: Light
@@ -86,10 +87,26 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Meeting
         ///     App Permission: Meetings
         ///     User Permission: Meetings
         /// </summary>
-        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        public async Task<string> Delete(DeleteMeetingParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (meetingId == null) throw new ArgumentException("Parameter cannot be null", nameof(meetingId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), queryParams, restRequestConfig);
+        }
+
+        /// <summary>
+        ///     Modifies a particular meeting.
+        ///     HTTP Method: patch
+        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+        ///     Rate Limit Group: Medium
+        ///     App Permission: Meetings
+        ///     User Permission: Meetings
+        /// </summary>
+        public async Task<MeetingResponseResource> Patch(MeetingRequestResource meetingRequestResource,
+            RestRequestConfig restRequestConfig = null)
+        {
+            if (meetingId == null) throw new ArgumentException("Parameter cannot be null", nameof(meetingId));
+            return await rc.Patch<MeetingResponseResource>(Path(), meetingRequestResource, null, restRequestConfig);
         }
     }
 }

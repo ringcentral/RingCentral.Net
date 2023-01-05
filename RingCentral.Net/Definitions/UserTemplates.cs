@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to user templates resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
