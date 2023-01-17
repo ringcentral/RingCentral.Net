@@ -34,7 +34,7 @@ You need to install extensions if you need extra features:
 
 ## Code samples
 
-You can find [sample code for all the endpoints](./samples.md).
+You can find [sample code for all the endpoints](./RingCentral.Net/samples.md).
 
 There is also lots of useful code for your reference in our [test cases](./RingCentral.Tests).
 
