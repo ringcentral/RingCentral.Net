@@ -21,12 +21,14 @@ namespace RingCentral.Net.RateLimit
                     retriesAttempted < options.maxRetries,
                 retryInterval = (restException, retriesAttempted) =>
                 {
-                    var rateLimitWindowHeader = restException.httpResponseMessage.Headers
-                        .GetValues("x-rate-limit-window")
-                        .FirstOrDefault();
-                    if (rateLimitWindowHeader != default) options.rateLimitWindow = int.Parse(rateLimitWindowHeader);
-
-                    return (int) (options.rateLimitWindow * 1000 *
+                    string rateLimitWindowHeader = default;
+                    if (restException.httpResponseMessage.Headers
+                        .TryGetValues("x-rate-limit-window", out var values))
+                    {
+                        rateLimitWindowHeader = values.FirstOrDefault();
+                    }
+                    int rateLimitWindow = rateLimitWindowHeader == default ? options.rateLimitWindow : int.Parse(rateLimitWindowHeader);
+                    return (int) (rateLimitWindow * 1000 *
                                   Math.Pow(2, retriesAttempted)); // exponential back off
                 }
             };
