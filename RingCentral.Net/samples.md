@@ -1,6 +1,7 @@
 # RingCentral.Net SDK Code Samples
 
 ## readAPIVersions
+
 Get API Versions
 
 Name|Value
@@ -23,6 +24,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersions) in API Explorer.
 
 ## readAPIVersion
+
 Get Version Info
 
 Name|Value
@@ -46,6 +48,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersion) in API Explorer.
 
 ## authorize
+
 OAuth 2.0 Authorization
 
 Name|Value
@@ -68,6 +71,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-authorize) in API Explorer.
 
 ## authorize2
+
 OAuth 2.0 Authorization (POST)
 
 Name|Value
@@ -91,6 +95,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-authorize2) in API Explorer.
 
 ## getToken
+
 Get OAuth Token
 
 Name|Value
@@ -114,6 +119,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-getToken) in API Explorer.
 
 ## readAccountInfo
+
 Get Account Info
 
 Name|Value
@@ -138,6 +144,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountInfo) in API Explorer.
 
 ## readCompanyCallLog
+
 List Company Call Records
 
 Name|Value
@@ -157,12 +164,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./Definitions/ReadCompanyCallLogParameters.cs)
+- `readCompanyCallLogParameters` is of
+  type [ReadCompanyCallLogParameters](./Definitions/ReadCompanyCallLogParameters.cs)
 - `result` is of type [AccountCallLogResponse](./Definitions/AccountCallLogResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallLog) in API Explorer.
 
 ## readCompanyCallRecord
+
 Get Company Call Record(s)
 
 Name|Value
@@ -187,6 +196,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallRecord) in API Explorer.
 
 ## listExtensions
+
 List Extensions
 
 Name|Value
@@ -212,6 +222,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-listExtensions) in API Explorer.
 
 ## createExtension
+
 Create Extension
 
 Name|Value
@@ -237,6 +248,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-createExtension) in API Explorer.
 
 ## readExtension
+
 Get Extension
 
 Name|Value
@@ -262,6 +274,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtension) in API Explorer.
 
 ## updateExtension
+
 Update Extension
 
 Name|Value
@@ -288,6 +301,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateExtension) in API Explorer.
 
 ## deleteExtension
+
 Delete Extension
 
 Name|Value
@@ -314,6 +328,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-deleteExtension) in API Explorer.
 
 ## createCompanyGreeting
+
 Create Company Greeting
 
 Name|Value
@@ -333,12 +348,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./Definitions/CreateCompanyGreetingRequest.cs)
+- `createCompanyGreetingRequest` is of
+  type [CreateCompanyGreetingRequest](./Definitions/CreateCompanyGreetingRequest.cs)
 - `result` is of type [CustomCompanyGreetingInfo](./Definitions/CustomCompanyGreetingInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-createCompanyGreeting) in API Explorer.
 
 ## readIVRMenuList
+
 Get IVR Menu list
 
 Name|Value
@@ -363,6 +380,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRMenuList) in API Explorer.
 
 ## createIVRMenu
+
 Create IVR Menu
 
 Name|Value
@@ -388,6 +406,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRMenu) in API Explorer.
 
 ## readIVRMenu
+
 Get IVR Menu
 
 Name|Value
@@ -412,6 +431,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRMenu) in API Explorer.
 
 ## updateIVRMenu
+
 Update IVR Menu
 
 Name|Value
@@ -437,6 +457,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRMenu) in API Explorer.
 
 ## readCallRecording
+
 Get Call Recording
 
 Name|Value
@@ -461,6 +482,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecording) in API Explorer.
 
 ## listCountries
+
 List Countries
 
 Name|Value
@@ -485,6 +507,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listCountries) in API Explorer.
 
 ## readCountry
+
 Get Country
 
 Name|Value
@@ -508,6 +531,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readCountry) in API Explorer.
 
 ## listSubscriptions
+
 Get Subscription List
 
 Name|Value
@@ -531,6 +555,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-listSubscriptions) in API Explorer.
 
 ## createSubscription
+
 Create Subscription
 
 Name|Value
@@ -555,6 +580,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-createSubscription) in API Explorer.
 
 ## readSubscription
+
 Get Subscription
 
 Name|Value
@@ -578,6 +604,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-readSubscription) in API Explorer.
 
 ## updateSubscription
+
 Update Subscription
 
 Name|Value
@@ -602,6 +629,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-updateSubscription) in API Explorer.
 
 ## deleteSubscription
+
 Cancel Subscription
 
 Name|Value
@@ -625,6 +653,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-deleteSubscription) in API Explorer.
 
 ## renewSubscription
+
 Renew Subscription
 
 Name|Value
@@ -648,6 +677,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
 
 ## scimListResourceTypes2
+
 List Resource Types
 
 Name|Value
@@ -671,6 +701,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimListResourceTypes2) in API Explorer.
 
 ## scimGetResourceType2
+
 Get Resource Type
 
 Name|Value
@@ -694,6 +725,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetResourceType2) in API Explorer.
 
 ## scimListSchemas2
+
 List Schemas
 
 Name|Value
@@ -717,6 +749,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimListSchemas2) in API Explorer.
 
 ## scimGetSchema2
+
 Get Schema
 
 Name|Value
@@ -740,6 +773,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetSchema2) in API Explorer.
 
 ## scimSearchViaGet2
+
 Search/List Users
 
 Name|Value
@@ -764,6 +798,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimSearchViaGet2) in API Explorer.
 
 ## scimCreateUser2
+
 Create User
 
 Name|Value
@@ -788,6 +823,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimCreateUser2) in API Explorer.
 
 ## scimGetUser2
+
 Get User
 
 Name|Value
@@ -811,6 +847,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetUser2) in API Explorer.
 
 ## scimUpdateUser2
+
 Update/Replace User
 
 Name|Value
@@ -835,6 +872,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimUpdateUser2) in API Explorer.
 
 ## scimDeleteUser2
+
 Delete User
 
 Name|Value
@@ -858,6 +896,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimDeleteUser2) in API Explorer.
 
 ## scimPatchUser2
+
 Update/Patch User
 
 Name|Value
@@ -882,6 +921,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimPatchUser2) in API Explorer.
 
 ## revokeToken
+
 Revoke Token
 
 Name|Value
@@ -905,6 +945,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-revokeToken) in API Explorer.
 
 ## readDevice
+
 Get Device
 
 Name|Value
@@ -930,6 +971,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-readDevice) in API Explorer.
 
 ## updateDevice
+
 Update Device
 
 Name|Value
@@ -956,6 +998,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-updateDevice) in API Explorer.
 
 ## readAccountMeeting
+
 Get Account-level Meeting Info
 
 Name|Value
@@ -980,6 +1023,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-readAccountMeeting) in API Explorer.
 
 ## readAccountPresence
+
 Get User Presence Status List
 
 Name|Value
@@ -999,12 +1043,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./Definitions/ReadAccountPresenceParameters.cs)
+- `readAccountPresenceParameters` is of
+  type [ReadAccountPresenceParameters](./Definitions/ReadAccountPresenceParameters.cs)
 - `result` is of type [AccountPresenceInfo](./Definitions/AccountPresenceInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readAccountPresence) in API Explorer.
 
 ## listStates
+
 List States
 
 Name|Value
@@ -1029,6 +1075,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listStates) in API Explorer.
 
 ## readState
+
 Get State
 
 Name|Value
@@ -1052,6 +1099,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readState) in API Explorer.
 
 ## scimGetProviderConfig2
+
 Get Provider Config
 
 Name|Value
@@ -1075,6 +1123,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetProviderConfig2) in API Explorer.
 
 ## scimSearchViaPost2
+
 Search/List Users
 
 Name|Value
@@ -1099,6 +1148,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimSearchViaPost2) in API Explorer.
 
 ## listGlipChatsNew
+
 List Chats
 
 Name|Value
@@ -1122,6 +1172,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listGlipChatsNew) in API Explorer.
 
 ## readGlipChatNew
+
 Get Chat
 
 Name|Value
@@ -1144,6 +1195,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipChatNew) in API Explorer.
 
 ## readGlipPostsNew
+
 List Posts
 
 Name|Value
@@ -1167,6 +1219,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPostsNew) in API Explorer.
 
 ## createGlipPostNew
+
 Create Post
 
 Name|Value
@@ -1190,6 +1243,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipPostNew) in API Explorer.
 
 ## readGlipPostNew
+
 Get Post
 
 Name|Value
@@ -1212,6 +1266,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPostNew) in API Explorer.
 
 ## deleteGlipPostNew
+
 Delete Post
 
 Name|Value
@@ -1234,6 +1289,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-deleteGlipPostNew) in API Explorer.
 
 ## patchGlipPostNew
+
 Update Post
 
 Name|Value
@@ -1257,6 +1313,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-patchGlipPostNew) in API Explorer.
 
 ## listChatTasksNew
+
 List Chat Tasks
 
 Name|Value
@@ -1280,6 +1337,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-listChatTasksNew) in API Explorer.
 
 ## createTaskNew
+
 Create Task
 
 Name|Value
@@ -1303,6 +1361,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-createTaskNew) in API Explorer.
 
 ## readTMCompanyInfoNew
+
 Get Company Info
 
 Name|Value
@@ -1325,6 +1384,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Profile-readTMCompanyInfoNew) in API Explorer.
 
 ## readGlipEventsNew
+
 List User Events
 
 Name|Value
@@ -1348,6 +1408,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readGlipEventsNew) in API Explorer.
 
 ## createEventNew
+
 Create Event
 
 Name|Value
@@ -1371,6 +1432,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEventNew) in API Explorer.
 
 ## readEventNew
+
 Get Event
 
 Name|Value
@@ -1393,6 +1455,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readEventNew) in API Explorer.
 
 ## updateEventNew
+
 Update Event
 
 Name|Value
@@ -1416,6 +1479,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-updateEventNew) in API Explorer.
 
 ## deleteEventNew
+
 Delete Event
 
 Name|Value
@@ -1438,6 +1502,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-deleteEventNew) in API Explorer.
 
 ## readGlipEveryoneNew
+
 Get Everyone Chat
 
 Name|Value
@@ -1460,6 +1525,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryoneNew) in API Explorer.
 
 ## patchGlipEveryoneNew
+
 Update Everyone Chat
 
 Name|Value
@@ -1483,6 +1549,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryoneNew) in API Explorer.
 
 ## listFavoriteChatsNew
+
 List Favorite Chats
 
 Name|Value
@@ -1500,12 +1567,14 @@ var result = await rc.TeamMessaging(version).Favorites().Get(listFavoriteChatsNe
 await rc.Revoke();
 ```
 
-- `listFavoriteChatsNewParameters` is of type [ListFavoriteChatsNewParameters](./Definitions/ListFavoriteChatsNewParameters.cs)
+- `listFavoriteChatsNewParameters` is of
+  type [ListFavoriteChatsNewParameters](./Definitions/ListFavoriteChatsNewParameters.cs)
 - `result` is of type [TMChatListWithoutNavigation](./Definitions/TMChatListWithoutNavigation.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChatsNew) in API Explorer.
 
 ## createGlipFileNew
+
 Upload File
 
 Name|Value
@@ -1530,6 +1599,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipFileNew) in API Explorer.
 
 ## readUserNoteNew
+
 Get Note
 
 Name|Value
@@ -1552,6 +1622,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-readUserNoteNew) in API Explorer.
 
 ## deleteNoteNew
+
 Delete Note
 
 Name|Value
@@ -1574,6 +1645,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-deleteNoteNew) in API Explorer.
 
 ## patchNoteNew
+
 Update Note
 
 Name|Value
@@ -1598,6 +1670,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-patchNoteNew) in API Explorer.
 
 ## readTaskNew
+
 Get Task
 
 Name|Value
@@ -1620,6 +1693,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-readTaskNew) in API Explorer.
 
 ## deleteTaskNew
+
 Delete Task
 
 Name|Value
@@ -1642,6 +1716,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-deleteTaskNew) in API Explorer.
 
 ## patchTaskNew
+
 Update Task
 
 Name|Value
@@ -1665,6 +1740,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-patchTaskNew) in API Explorer.
 
 ## listGlipTeamsNew
+
 List Teams
 
 Name|Value
@@ -1688,6 +1764,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-listGlipTeamsNew) in API Explorer.
 
 ## createGlipTeamNew
+
 Create Team
 
 Name|Value
@@ -1711,6 +1788,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-createGlipTeamNew) in API Explorer.
 
 ## readGlipTeamNew
+
 Get Team
 
 Name|Value
@@ -1733,6 +1811,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipTeamNew) in API Explorer.
 
 ## deleteGlipTeamNew
+
 Delete Team
 
 Name|Value
@@ -1755,6 +1834,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-deleteGlipTeamNew) in API Explorer.
 
 ## patchGlipTeamNew
+
 Update Team
 
 Name|Value
@@ -1778,6 +1858,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipTeamNew) in API Explorer.
 
 ## listChatNotesNew
+
 List Notes
 
 Name|Value
@@ -1801,6 +1882,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-listChatNotesNew) in API Explorer.
 
 ## createChatNoteNew
+
 Create Note
 
 Name|Value
@@ -1824,6 +1906,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-createChatNoteNew) in API Explorer.
 
 ## listDataExportTasksNew
+
 List Data Export Tasks
 
 Name|Value
@@ -1841,12 +1924,14 @@ var result = await rc.TeamMessaging(version).DataExport().List(listDataExportTas
 await rc.Revoke();
 ```
 
-- `listDataExportTasksNewParameters` is of type [ListDataExportTasksNewParameters](./Definitions/ListDataExportTasksNewParameters.cs)
+- `listDataExportTasksNewParameters` is of
+  type [ListDataExportTasksNewParameters](./Definitions/ListDataExportTasksNewParameters.cs)
 - `result` is of type [DataExportTaskList](./Definitions/DataExportTaskList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-listDataExportTasksNew) in API Explorer.
 
 ## createDataExportTaskNew
+
 Create Data Export Task
 
 Name|Value
@@ -1867,9 +1952,11 @@ await rc.Revoke();
 - `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./Definitions/CreateDataExportTaskRequest.cs)
 - `result` is of type [DataExportTask](./Definitions/DataExportTask.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-createDataExportTaskNew) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-createDataExportTaskNew) in API
+Explorer.
 
 ## readDataExportTaskNew
+
 Get Data Export Task
 
 Name|Value
@@ -1892,6 +1979,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-readDataExportTaskNew) in API Explorer.
 
 ## lockNoteNew
+
 Lock Note
 
 Name|Value
@@ -1914,6 +2002,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNoteNew) in API Explorer.
 
 ## readGlipPersonNew
+
 Get Person
 
 Name|Value
@@ -1936,6 +2025,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Profile-readGlipPersonNew) in API Explorer.
 
 ## listGlipWebhooksNew
+
 List Webhooks
 
 Name|Value
@@ -1958,6 +2048,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipWebhooksNew) in API Explorer.
 
 ## readGlipWebhookNew
+
 Get Webhook
 
 Name|Value
@@ -1980,6 +2071,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-readGlipWebhookNew) in API Explorer.
 
 ## deleteGlipWebhookNew
+
 Delete Webhook
 
 Name|Value
@@ -2002,6 +2094,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-deleteGlipWebhookNew) in API Explorer.
 
 ## addGlipTeamMembersNew
+
 Add Team Members
 
 Name|Value
@@ -2025,6 +2118,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembersNew) in API Explorer.
 
 ## listUserTemplates
+
 List User Templates
 
 Name|Value
@@ -2050,6 +2144,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-listUserTemplates) in API Explorer.
 
 ## readUserTemplate
+
 Get User Template
 
 Name|Value
@@ -2074,6 +2169,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-readUserTemplate) in API Explorer.
 
 ## listUserRoles
+
 Get Account User Role List
 
 Name|Value
@@ -2099,6 +2195,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listUserRoles) in API Explorer.
 
 ## createCustomRole
+
 Create Custom Role
 
 Name|Value
@@ -2124,6 +2221,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-createCustomRole) in API Explorer.
 
 ## readUserRole
+
 Get User Role
 
 Name|Value
@@ -2148,6 +2246,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readUserRole) in API Explorer.
 
 ## updateUserRole
+
 Update User Role
 
 Name|Value
@@ -2173,6 +2272,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateUserRole) in API Explorer.
 
 ## deleteCustomRole
+
 Delete Custom Role
 
 Name|Value
@@ -2198,6 +2298,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-deleteCustomRole) in API Explorer.
 
 ## markChatReadNew
+
 Mark Chat as Read
 
 Name|Value
@@ -2220,6 +2321,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-markChatReadNew) in API Explorer.
 
 ## readGlipPreferencesNew
+
 Get Preferences
 
 Name|Value
@@ -2242,6 +2344,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Profile-readGlipPreferencesNew) in API Explorer.
 
 ## joinGlipTeamNew
+
 Join Team
 
 Name|Value
@@ -2264,6 +2367,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeamNew) in API Explorer.
 
 ## listA2PBatches
+
 Get A2P SMS Batches
 
 Name|Value
@@ -2289,6 +2393,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PBatches) in API Explorer.
 
 ## createA2PSMS
+
 Send A2P SMS
 
 Name|Value
@@ -2314,6 +2419,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-createA2PSMS) in API Explorer.
 
 ## readA2PBatch
+
 Get A2P SMS Batch
 
 Name|Value
@@ -2338,6 +2444,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PBatch) in API Explorer.
 
 ## listA2PSMS
+
 Get A2P SMS List
 
 Name|Value
@@ -2363,6 +2470,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PSMS) in API Explorer.
 
 ## readA2PSMS
+
 Get A2P SMS
 
 Name|Value
@@ -2387,6 +2495,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMS) in API Explorer.
 
 ## readA2PSMSOptOuts
+
 Get Opted Out Numbers
 
 Name|Value
@@ -2412,6 +2521,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMSOptOuts) in API Explorer.
 
 ## aggregateA2PSMSStatuses
+
 List A2P SMS Statuses
 
 Name|Value
@@ -2431,12 +2541,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `aggregateA2PSMSStatusesParameters` is of type [AggregateA2PSMSStatusesParameters](./Definitions/AggregateA2PSMSStatusesParameters.cs)
+- `aggregateA2PSMSStatusesParameters` is of
+  type [AggregateA2PSMSStatusesParameters](./Definitions/AggregateA2PSMSStatusesParameters.cs)
 - `result` is of type [MessageStatusesResponse](./Definitions/MessageStatusesResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-aggregateA2PSMSStatuses) in API Explorer.
 
 ## listCompanyActiveCalls
+
 List Company Active Calls
 
 Name|Value
@@ -2456,12 +2568,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCompanyActiveCallsParameters` is of type [ListCompanyActiveCallsParameters](./Definitions/ListCompanyActiveCallsParameters.cs)
+- `listCompanyActiveCallsParameters` is of
+  type [ListCompanyActiveCallsParameters](./Definitions/ListCompanyActiveCallsParameters.cs)
 - `result` is of type [CompanyActiveCallsResponse](./Definitions/CompanyActiveCallsResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCompanyActiveCalls) in API Explorer.
 
 ## listCompanyAnsweringRules
+
 List Company Call Handling Rules
 
 Name|Value
@@ -2483,9 +2597,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [CompanyAnsweringRuleList](./Definitions/CompanyAnsweringRuleList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listCompanyAnsweringRules) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listCompanyAnsweringRules) in API
+Explorer.
 
 ## createCompanyAnsweringRule
+
 Create Company Call Handling Rule
 
 Name|Value
@@ -2508,9 +2624,11 @@ await rc.Revoke();
 - `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./Definitions/CompanyAnsweringRuleRequest.cs)
 - `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createCompanyAnsweringRule) in API
+Explorer.
 
 ## readCompanyAnsweringRule
+
 Get Company Call Handling Rule
 
 Name|Value
@@ -2532,9 +2650,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readCompanyAnsweringRule) in API
+Explorer.
 
 ## updateCompanyAnsweringRule
+
 Update Company Call Handling Rule
 
 Name|Value
@@ -2557,9 +2677,11 @@ await rc.Revoke();
 - `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./Definitions/CompanyAnsweringRuleUpdate.cs)
 - `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateCompanyAnsweringRule) in API
+Explorer.
 
 ## deleteCompanyAnsweringRule
+
 Delete Company Call Handling Rule
 
 Name|Value
@@ -2581,9 +2703,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteCompanyAnsweringRule) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteCompanyAnsweringRule) in API
+Explorer.
 
 ## listAssignedRoles
+
 Get Assigned Role List
 
 Name|Value
@@ -2609,6 +2733,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listAssignedRoles) in API Explorer.
 
 ## readAccountBusinessAddress
+
 Get Account Business Address
 
 Name|Value
@@ -2633,6 +2758,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountBusinessAddress) in API Explorer.
 
 ## updateAccountBusinessAddress
+
 Update Company Business Address
 
 Name|Value
@@ -2652,12 +2778,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `modifyAccountBusinessAddressRequest` is of type [ModifyAccountBusinessAddressRequest](./Definitions/ModifyAccountBusinessAddressRequest.cs)
+- `modifyAccountBusinessAddressRequest` is of
+  type [ModifyAccountBusinessAddressRequest](./Definitions/ModifyAccountBusinessAddressRequest.cs)
 - `result` is of type [AccountBusinessAddressResource](./Definitions/AccountBusinessAddressResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-updateAccountBusinessAddress) in API Explorer.
 
 ## readCompanyBusinessHours
+
 Get Company Business Hours
 
 Name|Value
@@ -2682,6 +2810,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readCompanyBusinessHours) in API Explorer.
 
 ## updateCompanyBusinessHours
+
 Update Company Business Hours
 
 Name|Value
@@ -2701,12 +2830,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `companyBusinessHoursUpdateRequest` is of type [CompanyBusinessHoursUpdateRequest](./Definitions/CompanyBusinessHoursUpdateRequest.cs)
+- `companyBusinessHoursUpdateRequest` is of
+  type [CompanyBusinessHoursUpdateRequest](./Definitions/CompanyBusinessHoursUpdateRequest.cs)
 - `result` is of type [CompanyBusinessHours](./Definitions/CompanyBusinessHours.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateCompanyBusinessHours) in API Explorer.
 
 ## syncAccountCallLog
+
 Sync Company Call Log
 
 Name|Value
@@ -2726,12 +2857,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `syncAccountCallLogParameters` is of type [SyncAccountCallLogParameters](./Definitions/SyncAccountCallLogParameters.cs)
+- `syncAccountCallLogParameters` is of
+  type [SyncAccountCallLogParameters](./Definitions/SyncAccountCallLogParameters.cs)
 - `result` is of type [AccountCallLogSyncResponse](./Definitions/AccountCallLogSyncResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncAccountCallLog) in API Explorer.
 
 ## listCallQueues
+
 List Call Queues
 
 Name|Value
@@ -2757,6 +2890,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueues) in API Explorer.
 
 ## readCallQueueInfo
+
 Get Call Queue
 
 Name|Value
@@ -2781,6 +2915,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-readCallQueueInfo) in API Explorer.
 
 ## updateCallQueueInfo
+
 Update Call Queue
 
 Name|Value
@@ -2806,6 +2941,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueInfo) in API Explorer.
 
 ## readCallRecordingSettings
+
 Get Call Recording Settings
 
 Name|Value
@@ -2827,9 +2963,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-readCallRecordingSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-readCallRecordingSettings) in API
+Explorer.
 
 ## updateCallRecordingSettings
+
 Update Call Recording Settings
 
 Name|Value
@@ -2849,12 +2987,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callRecordingSettingsResource` is of type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
+- `callRecordingSettingsResource` is of
+  type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
 - `result` is of type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingSettings) in API
+Explorer.
 
 ## listCustomFields
+
 Get Custom Field List
 
 Name|Value
@@ -2879,6 +3020,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-listCustomFields) in API Explorer.
 
 ## createCustomField
+
 Create Custom Field
 
 Name|Value
@@ -2904,6 +3046,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-createCustomField) in API Explorer.
 
 ## updateCustomField
+
 Update Custom Field
 
 Name|Value
@@ -2929,6 +3072,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-updateCustomField) in API Explorer.
 
 ## deleteCustomField
+
 Delete Custom Field
 
 Name|Value
@@ -2953,6 +3097,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-deleteCustomField) in API Explorer.
 
 ## readDeviceSIPInfo
+
 Get Device SIP Info
 
 Name|Value
@@ -2977,6 +3122,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-readDeviceSIPInfo) in API Explorer.
 
 ## listDirectoryEntries
+
 Get Company Directory Entries
 
 Name|Value
@@ -2996,12 +3142,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listDirectoryEntriesParameters` is of type [ListDirectoryEntriesParameters](./Definitions/ListDirectoryEntriesParameters.cs)
+- `listDirectoryEntriesParameters` is of
+  type [ListDirectoryEntriesParameters](./Definitions/ListDirectoryEntriesParameters.cs)
 - `result` is of type [DirectoryResource](./Definitions/DirectoryResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-listDirectoryEntries) in API Explorer.
 
 ## readDirectoryEntry
+
 Get Corporate Directory Entry
 
 Name|Value
@@ -3026,6 +3174,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readDirectoryEntry) in API Explorer.
 
 ## readUserCallLog
+
 List User Call Records
 
 Name|Value
@@ -3052,6 +3201,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readUserCallLog) in API Explorer.
 
 ## deleteUserCallLog
+
 Delete User Call Records
 
 Name|Value
@@ -3078,6 +3228,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-deleteUserCallLog) in API Explorer.
 
 ## readUserCallRecord
+
 Get User Call Record(s)
 
 Name|Value
@@ -3103,6 +3254,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readUserCallRecord) in API Explorer.
 
 ## listExtensionDevices
+
 Get Extension Device List
 
 Name|Value
@@ -3123,12 +3275,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionDevicesParameters` is of type [ListExtensionDevicesParameters](./Definitions/ListExtensionDevicesParameters.cs)
+- `listExtensionDevicesParameters` is of
+  type [ListExtensionDevicesParameters](./Definitions/ListExtensionDevicesParameters.cs)
 - `result` is of type [GetExtensionDevicesResponse](./Definitions/GetExtensionDevicesResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-listExtensionDevices) in API Explorer.
 
 ## createFaxMessage
+
 Create Fax Message
 
 Name|Value
@@ -3155,6 +3309,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-createFaxMessage) in API Explorer.
 
 ## listExtensionGrants
+
 List Extension Grants
 
 Name|Value
@@ -3175,12 +3330,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionGrantsParameters` is of type [ListExtensionGrantsParameters](./Definitions/ListExtensionGrantsParameters.cs)
+- `listExtensionGrantsParameters` is of
+  type [ListExtensionGrantsParameters](./Definitions/ListExtensionGrantsParameters.cs)
 - `result` is of type [GetExtensionGrantListResponse](./Definitions/GetExtensionGrantListResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-listExtensionGrants) in API Explorer.
 
 ## createCustomUserGreeting
+
 Create Custom User Greeting
 
 Name|Value
@@ -3201,13 +3358,16 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createCustomUserGreetingRequest` is of type [CreateCustomUserGreetingRequest](./Definitions/CreateCustomUserGreetingRequest.cs)
-- `createCustomUserGreetingParameters` is of type [CreateCustomUserGreetingParameters](./Definitions/CreateCustomUserGreetingParameters.cs)
+- `createCustomUserGreetingRequest` is of
+  type [CreateCustomUserGreetingRequest](./Definitions/CreateCustomUserGreetingRequest.cs)
+- `createCustomUserGreetingParameters` is of
+  type [CreateCustomUserGreetingParameters](./Definitions/CreateCustomUserGreetingParameters.cs)
 - `result` is of type [CustomUserGreetingInfo](./Definitions/CustomUserGreetingInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-createCustomUserGreeting) in API Explorer.
 
 ## readCustomGreeting
+
 Get Custom Greeting
 
 Name|Value
@@ -3233,6 +3393,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-readCustomGreeting) in API Explorer.
 
 ## listMeetings
+
 List Scheduled Meetings
 
 Name|Value
@@ -3258,6 +3419,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-listMeetings) in API Explorer.
 
 ## createMeeting
+
 Create Meeting
 
 Name|Value
@@ -3284,6 +3446,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-createMeeting) in API Explorer.
 
 ## readMeeting
+
 Get Meeting Info
 
 Name|Value
@@ -3309,6 +3472,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-readMeeting) in API Explorer.
 
 ## updateMeeting
+
 Update Meeting
 
 Name|Value
@@ -3335,6 +3499,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-updateMeeting) in API Explorer.
 
 ## deleteMeeting
+
 Delete Meeting
 
 Name|Value
@@ -3361,6 +3526,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-deleteMeeting) in API Explorer.
 
 ## patchMeeting
+
 Update Meeting
 
 Name|Value
@@ -3387,6 +3553,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-patchMeeting) in API Explorer.
 
 ## createMMS
+
 Send MMS
 
 Name|Value
@@ -3413,6 +3580,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-createMMS) in API Explorer.
 
 ## createRingOutCall
+
 Make RingOut Call
 
 Name|Value
@@ -3439,6 +3607,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-createRingOutCall) in API Explorer.
 
 ## readRingOutCallStatus
+
 Get RingOut Call Status
 
 Name|Value
@@ -3464,6 +3633,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-readRingOutCallStatus) in API Explorer.
 
 ## deleteRingOutCall
+
 Cancel RingOut Call
 
 Name|Value
@@ -3489,6 +3659,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-deleteRingOutCall) in API Explorer.
 
 ## createSMSMessage
+
 Send SMS
 
 Name|Value
@@ -3515,6 +3686,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-createSMSMessage) in API Explorer.
 
 ## getForwardAllCompanyCalls
+
 Get Forward All Company Calls
 
 Name|Value
@@ -3536,9 +3708,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [ForwardAllCompanyCallsInfo](./Definitions/ForwardAllCompanyCallsInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-getForwardAllCompanyCalls) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-getForwardAllCompanyCalls) in API
+Explorer.
 
 ## updateForwardAllCompanyCalls
+
 Update Forward All Company Calls
 
 Name|Value
@@ -3561,9 +3735,11 @@ await rc.Revoke();
 - `forwardAllCompanyCallsInfo` is of type [ForwardAllCompanyCallsInfo](./Definitions/ForwardAllCompanyCallsInfo.cs)
 - `result` is of type [ForwardAllCompanyCallsInfo](./Definitions/ForwardAllCompanyCallsInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateForwardAllCompanyCalls) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateForwardAllCompanyCalls) in API
+Explorer.
 
 ## listIvrPrompts
+
 Get IVR Prompt List
 
 Name|Value
@@ -3588,6 +3764,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-listIvrPrompts) in API Explorer.
 
 ## createIVRPrompt
+
 Create IVR Prompts
 
 Name|Value
@@ -3613,6 +3790,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRPrompt) in API Explorer.
 
 ## readIVRPrompt
+
 Get IVR Prompt
 
 Name|Value
@@ -3637,6 +3815,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRPrompt) in API Explorer.
 
 ## updateIVRPrompt
+
 Update IVR Prompt
 
 Name|Value
@@ -3662,6 +3841,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRPrompt) in API Explorer.
 
 ## deleteIVRPrompt
+
 Delete IVR Prompt
 
 Name|Value
@@ -3686,6 +3866,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-deleteIVRPrompt) in API Explorer.
 
 ## listAccountPhoneNumbers
+
 List Company Phone Numbers
 
 Name|Value
@@ -3705,12 +3886,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAccountPhoneNumbersParameters` is of type [ListAccountPhoneNumbersParameters](./Definitions/ListAccountPhoneNumbersParameters.cs)
+- `listAccountPhoneNumbersParameters` is of
+  type [ListAccountPhoneNumbersParameters](./Definitions/ListAccountPhoneNumbersParameters.cs)
 - `result` is of type [AccountPhoneNumbers](./Definitions/AccountPhoneNumbers.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listAccountPhoneNumbers) in API Explorer.
 
 ## readAccountPhoneNumber
+
 Get Phone Number
 
 Name|Value
@@ -3735,6 +3918,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-readAccountPhoneNumber) in API Explorer.
 
 ## readAccountServiceInfo
+
 Get Account Service Info
 
 Name|Value
@@ -3759,6 +3943,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountServiceInfo) in API Explorer.
 
 ## readDefaultRole
+
 Get Default User Role
 
 Name|Value
@@ -3783,6 +3968,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readDefaultRole) in API Explorer.
 
 ## updateDefaultUserRole
+
 Set Default User Role
 
 Name|Value
@@ -3808,6 +3994,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateDefaultUserRole) in API Explorer.
 
 ## createSIPRegistration
+
 Register Device
 
 Name|Value
@@ -3826,12 +4013,15 @@ await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `createSipRegistrationRequest` is of type [CreateSipRegistrationRequest](./Definitions/CreateSipRegistrationRequest.cs)
+- `createSipRegistrationRequest` is of
+  type [CreateSipRegistrationRequest](./Definitions/CreateSipRegistrationRequest.cs)
 - `result` is of type [CreateSipRegistrationResponse](./Definitions/CreateSipRegistrationResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Device-SIP-Registration-createSIPRegistration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Device-SIP-Registration-createSIPRegistration) in API
+Explorer.
 
 ## listFaxCoverPages
+
 Get Fax Cover Page List
 
 Name|Value
@@ -3856,6 +4046,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-listFaxCoverPages) in API Explorer.
 
 ## listStandardGreetings
+
 List Standard Greetings
 
 Name|Value
@@ -3874,12 +4065,14 @@ await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listStandardGreetingsParameters` is of type [ListStandardGreetingsParameters](./Definitions/ListStandardGreetingsParameters.cs)
+- `listStandardGreetingsParameters` is of
+  type [ListStandardGreetingsParameters](./Definitions/ListStandardGreetingsParameters.cs)
 - `result` is of type [DictionaryGreetingList](./Definitions/DictionaryGreetingList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-listStandardGreetings) in API Explorer.
 
 ## readStandardGreeting
+
 Get Standard Greeting
 
 Name|Value
@@ -3903,6 +4096,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-readStandardGreeting) in API Explorer.
 
 ## listLanguages
+
 List Languages
 
 Name|Value
@@ -3926,6 +4120,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLanguages) in API Explorer.
 
 ## readLanguage
+
 Get Language
 
 Name|Value
@@ -3949,6 +4144,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readLanguage) in API Explorer.
 
 ## listLocations
+
 List Locations
 
 Name|Value
@@ -3973,6 +4169,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLocations) in API Explorer.
 
 ## listPermissions
+
 Get Permission List
 
 Name|Value
@@ -3997,6 +4194,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Permissions-listPermissions) in API Explorer.
 
 ## readPermission
+
 Get Permission
 
 Name|Value
@@ -4020,6 +4218,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Permissions-readPermission) in API Explorer.
 
 ## listTimezones
+
 List Timezones
 
 Name|Value
@@ -4044,6 +4243,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listTimezones) in API Explorer.
 
 ## readTimezone
+
 Get Timezone
 
 Name|Value
@@ -4068,6 +4268,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readTimezone) in API Explorer.
 
 ## listStandardUserRole
+
 Get Standard User Role List
 
 Name|Value
@@ -4086,12 +4287,14 @@ await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listStandardUserRoleParameters` is of type [ListStandardUserRoleParameters](./Definitions/ListStandardUserRoleParameters.cs)
+- `listStandardUserRoleParameters` is of
+  type [ListStandardUserRoleParameters](./Definitions/ListStandardUserRoleParameters.cs)
 - `result` is of type [RolesCollectionResource](./Definitions/RolesCollectionResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listStandardUserRole) in API Explorer.
 
 ## readStandardUserRole
+
 Get Standard User Role
 
 Name|Value
@@ -4115,6 +4318,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readStandardUserRole) in API Explorer.
 
 ## parsePhoneNumber
+
 Parse Phone Number(s)
 
 Name|Value
@@ -4140,6 +4344,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-parsePhoneNumber) in API Explorer.
 
 ## getGlipAdaptiveCardNew
+
 Get Adaptive Card
 
 Name|Value
@@ -4162,6 +4367,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-getGlipAdaptiveCardNew) in API Explorer.
 
 ## updateGlipAdaptiveCardNew
+
 Update Adaptive Card
 
 Name|Value
@@ -4185,6 +4391,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-updateGlipAdaptiveCardNew) in API Explorer.
 
 ## deleteGlipAdaptiveCardNew
+
 Delete Adaptive Card
 
 Name|Value
@@ -4207,6 +4414,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-deleteGlipAdaptiveCardNew) in API Explorer.
 
 ## favoriteGlipChatNew
+
 Add Chat to Favorites
 
 Name|Value
@@ -4229,6 +4437,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-favoriteGlipChatNew) in API Explorer.
 
 ## unfavoriteGlipChatNew
+
 Remove Chat from Favorites
 
 Name|Value
@@ -4251,6 +4460,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-unfavoriteGlipChatNew) in API Explorer.
 
 ## markChatUnreadNew
+
 Mark Chat as Unread
 
 Name|Value
@@ -4273,6 +4483,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-markChatUnreadNew) in API Explorer.
 
 ## listGlipConversationsNew
+
 List Conversations
 
 Name|Value
@@ -4290,12 +4501,14 @@ var result = await rc.TeamMessaging(version).Conversations().List(listGlipConver
 await rc.Revoke();
 ```
 
-- `listGlipConversationsNewParameters` is of type [ListGlipConversationsNewParameters](./Definitions/ListGlipConversationsNewParameters.cs)
+- `listGlipConversationsNewParameters` is of
+  type [ListGlipConversationsNewParameters](./Definitions/ListGlipConversationsNewParameters.cs)
 - `result` is of type [TMConversationList](./Definitions/TMConversationList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Conversations-listGlipConversationsNew) in API Explorer.
 
 ## createGlipConversationNew
+
 Create/Open Conversation
 
 Name|Value
@@ -4319,6 +4532,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Conversations-createGlipConversationNew) in API Explorer.
 
 ## readGlipConversationNew
+
 Get Conversation
 
 Name|Value
@@ -4341,6 +4555,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Conversations-readGlipConversationNew) in API Explorer.
 
 ## listGroupEventsNew
+
 List Group Events
 
 Name|Value
@@ -4363,6 +4578,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-listGroupEventsNew) in API Explorer.
 
 ## createEventByGroupIdNew
+
 Create Event by Group ID
 
 Name|Value
@@ -4386,6 +4602,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEventByGroupIdNew) in API Explorer.
 
 ## listGlipGroupWebhooksNew
+
 List Webhooks in Group
 
 Name|Value
@@ -4405,9 +4622,11 @@ await rc.Revoke();
 
 - `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipGroupWebhooksNew) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipGroupWebhooksNew) in API
+Explorer.
 
 ## createGlipGroupWebhookNew
+
 Create Webhook in Group
 
 Name|Value
@@ -4427,9 +4646,11 @@ await rc.Revoke();
 
 - `result` is of type [TMWebhookInfo](./Definitions/TMWebhookInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-createGlipGroupWebhookNew) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-createGlipGroupWebhookNew) in API
+Explorer.
 
 ## publishNoteNew
+
 Publish Note
 
 Name|Value
@@ -4452,6 +4673,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-publishNoteNew) in API Explorer.
 
 ## unlockNoteNew
+
 Unlock Note
 
 Name|Value
@@ -4474,6 +4696,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-unlockNoteNew) in API Explorer.
 
 ## listRecentChatsNew
+
 List Recent Chats
 
 Name|Value
@@ -4491,12 +4714,14 @@ var result = await rc.TeamMessaging(version).Recent().Chats().Get(listRecentChat
 await rc.Revoke();
 ```
 
-- `listRecentChatsNewParameters` is of type [ListRecentChatsNewParameters](./Definitions/ListRecentChatsNewParameters.cs)
+- `listRecentChatsNewParameters` is of
+  type [ListRecentChatsNewParameters](./Definitions/ListRecentChatsNewParameters.cs)
 - `result` is of type [TMChatListWithoutNavigation](./Definitions/TMChatListWithoutNavigation.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listRecentChatsNew) in API Explorer.
 
 ## completeTaskNew
+
 Complete Task
 
 Name|Value
@@ -4520,6 +4745,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-completeTaskNew) in API Explorer.
 
 ## archiveGlipTeamNew
+
 Archive Team
 
 Name|Value
@@ -4542,6 +4768,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-archiveGlipTeamNew) in API Explorer.
 
 ## leaveGlipTeamNew
+
 Leave Team
 
 Name|Value
@@ -4564,6 +4791,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-leaveGlipTeamNew) in API Explorer.
 
 ## removeGlipTeamMembersNew
+
 Remove Team Members
 
 Name|Value
@@ -4587,6 +4815,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-removeGlipTeamMembersNew) in API Explorer.
 
 ## unarchiveGlipTeamNew
+
 Unarchive Team
 
 Name|Value
@@ -4609,6 +4838,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-unarchiveGlipTeamNew) in API Explorer.
 
 ## activateGlipWebhookNew
+
 Activate Webhook
 
 Name|Value
@@ -4631,6 +4861,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-activateGlipWebhookNew) in API Explorer.
 
 ## suspendGlipWebhookNew
+
 Suspend Webhook
 
 Name|Value
@@ -4653,6 +4884,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-suspendGlipWebhookNew) in API Explorer.
 
 ## analyticsCallsAggregationFetch
+
 Calls Aggregation Data
 
 Name|Value
@@ -4671,12 +4903,15 @@ await rc.Revoke();
 ```
 
 - `aggregationRequest` is of type [AggregationRequest](./Definitions/AggregationRequest.cs)
-- `analyticsCallsAggregationFetchParameters` is of type [AnalyticsCallsAggregationFetchParameters](./Definitions/AnalyticsCallsAggregationFetchParameters.cs)
+- `analyticsCallsAggregationFetchParameters` is of
+  type [AnalyticsCallsAggregationFetchParameters](./Definitions/AnalyticsCallsAggregationFetchParameters.cs)
 - `result` is of type [AggregationResponse](./Definitions/AggregationResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-analyticsCallsAggregationFetch) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-analyticsCallsAggregationFetch)
+in API Explorer.
 
 ## analyticsCallsTimelineFetch
+
 Calls Timeline Data
 
 Name|Value
@@ -4695,12 +4930,15 @@ await rc.Revoke();
 ```
 
 - `timelineRequest` is of type [TimelineRequest](./Definitions/TimelineRequest.cs)
-- `analyticsCallsTimelineFetchParameters` is of type [AnalyticsCallsTimelineFetchParameters](./Definitions/AnalyticsCallsTimelineFetchParameters.cs)
+- `analyticsCallsTimelineFetchParameters` is of
+  type [AnalyticsCallsTimelineFetchParameters](./Definitions/AnalyticsCallsTimelineFetchParameters.cs)
 - `result` is of type [TimelineResponse](./Definitions/TimelineResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-analyticsCallsTimelineFetch) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-analyticsCallsTimelineFetch) in
+API Explorer.
 
 ## addressBookBulkUpload
+
 Upload Multiple User Contacts
 
 Name|Value
@@ -4720,12 +4958,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `addressBookBulkUploadRequest` is of type [AddressBookBulkUploadRequest](./Definitions/AddressBookBulkUploadRequest.cs)
+- `addressBookBulkUploadRequest` is of
+  type [AddressBookBulkUploadRequest](./Definitions/AddressBookBulkUploadRequest.cs)
 - `result` is of type [AddressBookBulkUploadResponse](./Definitions/AddressBookBulkUploadResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-addressBookBulkUpload) in API Explorer.
 
 ## auditTrailSearch
+
 Search Audit Trail Data
 
 Name|Value
@@ -4745,12 +4985,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `accountHistorySearchPublicRequest` is of type [AccountHistorySearchPublicRequest](./Definitions/AccountHistorySearchPublicRequest.cs)
+- `accountHistorySearchPublicRequest` is of
+  type [AccountHistorySearchPublicRequest](./Definitions/AccountHistorySearchPublicRequest.cs)
 - `result` is of type [AccountHistorySearchPublicResponse](./Definitions/AccountHistorySearchPublicResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Audit-Trail-auditTrailSearch) in API Explorer.
 
 ## listCallMonitoringGroups
+
 List Call Monitoring Groups
 
 Name|Value
@@ -4770,12 +5012,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallMonitoringGroupsParameters` is of type [ListCallMonitoringGroupsParameters](./Definitions/ListCallMonitoringGroupsParameters.cs)
+- `listCallMonitoringGroupsParameters` is of
+  type [ListCallMonitoringGroupsParameters](./Definitions/ListCallMonitoringGroupsParameters.cs)
 - `result` is of type [CallMonitoringGroups](./Definitions/CallMonitoringGroups.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroups) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroups) in API
+Explorer.
 
 ## createCallMonitoringGroup
+
 Create Call Monitoring Group
 
 Name|Value
@@ -4795,12 +5040,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./Definitions/CreateCallMonitoringGroupRequest.cs)
+- `createCallMonitoringGroupRequest` is of
+  type [CreateCallMonitoringGroupRequest](./Definitions/CreateCallMonitoringGroupRequest.cs)
 - `result` is of type [CallMonitoringGroup](./Definitions/CallMonitoringGroup.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-createCallMonitoringGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-createCallMonitoringGroup) in API
+Explorer.
 
 ## updateCallMonitoringGroup
+
 Update Call Monitoring Group
 
 Name|Value
@@ -4820,12 +5068,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./Definitions/CreateCallMonitoringGroupRequest.cs)
+- `createCallMonitoringGroupRequest` is of
+  type [CreateCallMonitoringGroupRequest](./Definitions/CreateCallMonitoringGroupRequest.cs)
 - `result` is of type [CallMonitoringGroup](./Definitions/CallMonitoringGroup.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroup) in API
+Explorer.
 
 ## deleteCallMonitoringGroup
+
 Delete Call Monitoring Group
 
 Name|Value
@@ -4847,9 +5098,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-deleteCallMonitoringGroup) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-deleteCallMonitoringGroup) in API
+Explorer.
 
 ## assignMultipleCallQueueMembers
+
 Assign Multiple Call Queue Members
 
 Name|Value
@@ -4872,9 +5125,11 @@ await rc.Revoke();
 - `callQueueBulkAssignResource` is of type [CallQueueBulkAssignResource](./Definitions/CallQueueBulkAssignResource.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-assignMultipleCallQueueMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-assignMultipleCallQueueMembers) in API
+Explorer.
 
 ## listCallQueueMembers
+
 List Call Queue Members
 
 Name|Value
@@ -4894,12 +5149,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallQueueMembersParameters` is of type [ListCallQueueMembersParameters](./Definitions/ListCallQueueMembersParameters.cs)
+- `listCallQueueMembersParameters` is of
+  type [ListCallQueueMembersParameters](./Definitions/ListCallQueueMembersParameters.cs)
 - `result` is of type [CallQueueMembers](./Definitions/CallQueueMembers.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueueMembers) in API Explorer.
 
 ## readCallQueuePresence
+
 Get Call Queue Presence
 
 Name|Value
@@ -4924,6 +5181,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readCallQueuePresence) in API Explorer.
 
 ## updateCallQueuePresence
+
 Update Call Queue Presence
 
 Name|Value
@@ -4949,6 +5207,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateCallQueuePresence) in API Explorer.
 
 ## updateCallRecordingExtensionList
+
 Update Call Recording Extension List
 
 Name|Value
@@ -4968,12 +5227,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `bulkAccountCallRecordingsResource` is of type [BulkAccountCallRecordingsResource](./Definitions/BulkAccountCallRecordingsResource.cs)
+- `bulkAccountCallRecordingsResource` is of
+  type [BulkAccountCallRecordingsResource](./Definitions/BulkAccountCallRecordingsResource.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingExtensionList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingExtensionList)
+in API Explorer.
 
 ## listCallRecordingExtensions
+
 Get Call Recording Extension List
 
 Name|Value
@@ -4995,9 +5257,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [CallRecordingExtensions](./Definitions/CallRecordingExtensions.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingExtensions) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingExtensions) in API
+Explorer.
 
 ## directoryGetDeviceTypes
+
 Get types of devices which are present on the account
 
 Name|Value
@@ -5022,6 +5286,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-directoryGetDeviceTypes) in API Explorer.
 
 ## directorySearchDevices
+
 Search devices within Federated accounts
 
 Name|Value
@@ -5047,6 +5312,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-directorySearchDevices) in API Explorer.
 
 ## searchDirectoryEntries
+
 Search Company Directory Entries
 
 Name|Value
@@ -5066,13 +5332,16 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `searchDirectoryEntriesRequest` is of type [SearchDirectoryEntriesRequest](./Definitions/SearchDirectoryEntriesRequest.cs)
-- `searchDirectoryEntriesParameters` is of type [SearchDirectoryEntriesParameters](./Definitions/SearchDirectoryEntriesParameters.cs)
+- `searchDirectoryEntriesRequest` is of
+  type [SearchDirectoryEntriesRequest](./Definitions/SearchDirectoryEntriesRequest.cs)
+- `searchDirectoryEntriesParameters` is of
+  type [SearchDirectoryEntriesParameters](./Definitions/SearchDirectoryEntriesParameters.cs)
 - `result` is of type [DirectoryResource](./Definitions/DirectoryResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-searchDirectoryEntries) in API Explorer.
 
 ## readDirectoryFederation
+
 Get Account Federation
 
 Name|Value
@@ -5092,12 +5361,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readDirectoryFederationParameters` is of type [ReadDirectoryFederationParameters](./Definitions/ReadDirectoryFederationParameters.cs)
+- `readDirectoryFederationParameters` is of
+  type [ReadDirectoryFederationParameters](./Definitions/ReadDirectoryFederationParameters.cs)
 - `result` is of type [FederationResource](./Definitions/FederationResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readDirectoryFederation) in API Explorer.
 
 ## listEmergencyLocations
+
 List Emergency Locations
 
 Name|Value
@@ -5117,12 +5388,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listEmergencyLocationsParameters` is of type [ListEmergencyLocationsParameters](./Definitions/ListEmergencyLocationsParameters.cs)
+- `listEmergencyLocationsParameters` is of
+  type [ListEmergencyLocationsParameters](./Definitions/ListEmergencyLocationsParameters.cs)
 - `result` is of type [EmergencyLocationsResource](./Definitions/EmergencyLocationsResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listEmergencyLocations) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listEmergencyLocations) in API
+Explorer.
 
 ## createEmergencyLocation
+
 Add Emergency Location
 
 Name|Value
@@ -5142,12 +5416,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./Definitions/EmergencyLocationInfoRequest.cs)
+- `emergencyLocationInfoRequest` is of
+  type [EmergencyLocationInfoRequest](./Definitions/EmergencyLocationInfoRequest.cs)
 - `result` is of type [EmergencyLocationResource](./Definitions/EmergencyLocationResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createEmergencyLocation) in API
+Explorer.
 
 ## readEmergencyLocation
+
 Get Emergency Location
 
 Name|Value
@@ -5167,12 +5444,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readEmergencyLocationParameters` is of type [ReadEmergencyLocationParameters](./Definitions/ReadEmergencyLocationParameters.cs)
+- `readEmergencyLocationParameters` is of
+  type [ReadEmergencyLocationParameters](./Definitions/ReadEmergencyLocationParameters.cs)
 - `result` is of type [EmergencyLocationResource](./Definitions/EmergencyLocationResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readEmergencyLocation) in API
+Explorer.
 
 ## updateEmergencyLocation
+
 Update Emergency Location
 
 Name|Value
@@ -5192,12 +5472,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./Definitions/EmergencyLocationInfoRequest.cs)
+- `emergencyLocationInfoRequest` is of
+  type [EmergencyLocationInfoRequest](./Definitions/EmergencyLocationInfoRequest.cs)
 - `result` is of type [EmergencyLocationResource](./Definitions/EmergencyLocationResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateEmergencyLocation) in API
+Explorer.
 
 ## deleteEmergencyLocation
+
 Delete Emergency Location
 
 Name|Value
@@ -5217,12 +5500,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `deleteEmergencyLocationParameters` is of type [DeleteEmergencyLocationParameters](./Definitions/DeleteEmergencyLocationParameters.cs)
+- `deleteEmergencyLocationParameters` is of
+  type [DeleteEmergencyLocationParameters](./Definitions/DeleteEmergencyLocationParameters.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteEmergencyLocation) in API
+Explorer.
 
 ## extensionBulkUpdate
+
 Update Multiple Extensions
 
 Name|Value
@@ -5248,6 +5534,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-extensionBulkUpdate) in API Explorer.
 
 ## getExtensionBulkUpdateTask
+
 Get Extension Update Task Status
 
 Name|Value
@@ -5272,6 +5559,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-getExtensionBulkUpdateTask) in API Explorer.
 
 ## getCallQueueOverflowSettings
+
 Get Call Queue Overflow Settings
 
 Name|Value
@@ -5296,6 +5584,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-getCallQueueOverflowSettings) in API Explorer.
 
 ## updateCallQueueOverflowSettings
+
 Update Call Queue Overflow Settings
 
 Name|Value
@@ -5315,12 +5604,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callQueueOverflowSettingsRequestResource` is of type [CallQueueOverflowSettingsRequestResource](./Definitions/CallQueueOverflowSettingsRequestResource.cs)
+- `callQueueOverflowSettingsRequestResource` is of
+  type [CallQueueOverflowSettingsRequestResource](./Definitions/CallQueueOverflowSettingsRequestResource.cs)
 - `result` is of type [CallQueueOverflowSettings](./Definitions/CallQueueOverflowSettings.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueOverflowSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueOverflowSettings) in API
+Explorer.
 
 ## listExtensionActiveCalls
+
 List User Active Calls
 
 Name|Value
@@ -5341,12 +5633,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionActiveCallsParameters` is of type [ListExtensionActiveCallsParameters](./Definitions/ListExtensionActiveCallsParameters.cs)
+- `listExtensionActiveCallsParameters` is of
+  type [ListExtensionActiveCallsParameters](./Definitions/ListExtensionActiveCallsParameters.cs)
 - `result` is of type [ActiveCallsResponse](./Definitions/ActiveCallsResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listExtensionActiveCalls) in API Explorer.
 
 ## syncAddressBook
+
 Address Book Synchronization
 
 Name|Value
@@ -5373,6 +5667,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-syncAddressBook) in API Explorer.
 
 ## listAnsweringRules
+
 Get Call Handling Rules
 
 Name|Value
@@ -5393,12 +5688,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listAnsweringRulesParameters` is of type [ListAnsweringRulesParameters](./Definitions/ListAnsweringRulesParameters.cs)
+- `listAnsweringRulesParameters` is of
+  type [ListAnsweringRulesParameters](./Definitions/ListAnsweringRulesParameters.cs)
 - `result` is of type [UserAnsweringRuleList](./Definitions/UserAnsweringRuleList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listAnsweringRules) in API Explorer.
 
 ## createAnsweringRule
+
 Create Call Handling Rule
 
 Name|Value
@@ -5425,6 +5722,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createAnsweringRule) in API Explorer.
 
 ## readAnsweringRule
+
 Get Call Handling Rule
 
 Name|Value
@@ -5451,6 +5749,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readAnsweringRule) in API Explorer.
 
 ## updateAnsweringRule
+
 Update Call Handling Rule
 
 Name|Value
@@ -5477,6 +5776,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateAnsweringRule) in API Explorer.
 
 ## deleteAnsweringRule
+
 Delete Call Handling Rule
 
 Name|Value
@@ -5502,6 +5802,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteAnsweringRule) in API Explorer.
 
 ## listUserAssignedRoles
+
 Get User Assigned Role List
 
 Name|Value
@@ -5522,12 +5823,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listUserAssignedRolesParameters` is of type [ListUserAssignedRolesParameters](./Definitions/ListUserAssignedRolesParameters.cs)
+- `listUserAssignedRolesParameters` is of
+  type [ListUserAssignedRolesParameters](./Definitions/ListUserAssignedRolesParameters.cs)
 - `result` is of type [AssignedRolesResource](./Definitions/AssignedRolesResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listUserAssignedRoles) in API Explorer.
 
 ## updateUserAssignedRoles
+
 Update User Assigned Roles
 
 Name|Value
@@ -5554,6 +5857,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateUserAssignedRoles) in API Explorer.
 
 ## readAuthorizationProfile
+
 Get Authorization Profile
 
 Name|Value
@@ -5579,6 +5883,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-readAuthorizationProfile) in API Explorer.
 
 ## readUserBusinessHours
+
 Get User Business Hours
 
 Name|Value
@@ -5604,6 +5909,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readUserBusinessHours) in API Explorer.
 
 ## updateUserBusinessHours
+
 Update User Business Hours
 
 Name|Value
@@ -5624,12 +5930,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `userBusinessHoursUpdateRequest` is of type [UserBusinessHoursUpdateRequest](./Definitions/UserBusinessHoursUpdateRequest.cs)
+- `userBusinessHoursUpdateRequest` is of
+  type [UserBusinessHoursUpdateRequest](./Definitions/UserBusinessHoursUpdateRequest.cs)
 - `result` is of type [UserBusinessHoursUpdateResponse](./Definitions/UserBusinessHoursUpdateResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateUserBusinessHours) in API Explorer.
 
 ## syncUserCallLog
+
 Sync User Call Log
 
 Name|Value
@@ -5656,6 +5964,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncUserCallLog) in API Explorer.
 
 ## updateUserCallQueues
+
 Update User Call Queues
 
 Name|Value
@@ -5682,6 +5991,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateUserCallQueues) in API Explorer.
 
 ## readCallerBlockingSettings
+
 Get Caller Blocking Settings
 
 Name|Value
@@ -5707,6 +6017,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readCallerBlockingSettings) in API Explorer.
 
 ## updateCallerBlockingSettings
+
 Update Caller Blocking Settings
 
 Name|Value
@@ -5727,12 +6038,15 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./Definitions/CallerBlockingSettingsUpdate.cs)
+- `callerBlockingSettingsUpdate` is of
+  type [CallerBlockingSettingsUpdate](./Definitions/CallerBlockingSettingsUpdate.cs)
 - `result` is of type [CallerBlockingSettings](./Definitions/CallerBlockingSettings.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings) in API
+Explorer.
 
 ## readExtensionCallerId
+
 Get Extension Caller ID
 
 Name|Value
@@ -5758,6 +6072,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtensionCallerId) in API Explorer.
 
 ## updateExtensionCallerId
+
 Update Extension Caller ID
 
 Name|Value
@@ -5778,12 +6093,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `extensionCallerIdInfoRequest` is of type [ExtensionCallerIdInfoRequest](./Definitions/ExtensionCallerIdInfoRequest.cs)
+- `extensionCallerIdInfoRequest` is of
+  type [ExtensionCallerIdInfoRequest](./Definitions/ExtensionCallerIdInfoRequest.cs)
 - `result` is of type [ExtensionCallerIdInfo](./Definitions/ExtensionCallerIdInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateExtensionCallerId) in API Explorer.
 
 ## createInternalTextMessage
+
 Create Internal Text Message
 
 Name|Value
@@ -5804,12 +6121,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createInternalTextMessageRequest` is of type [CreateInternalTextMessageRequest](./Definitions/CreateInternalTextMessageRequest.cs)
+- `createInternalTextMessageRequest` is of
+  type [CreateInternalTextMessageRequest](./Definitions/CreateInternalTextMessageRequest.cs)
 - `result` is of type [GetInternalTextMessageInfoResponse](./Definitions/GetInternalTextMessageInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Pager-Messages-createInternalTextMessage) in API Explorer.
 
 ## readConferencingSettings
+
 Get User Conferencing Settings
 
 Name|Value
@@ -5830,12 +6149,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readConferencingSettingsParameters` is of type [ReadConferencingSettingsParameters](./Definitions/ReadConferencingSettingsParameters.cs)
+- `readConferencingSettingsParameters` is of
+  type [ReadConferencingSettingsParameters](./Definitions/ReadConferencingSettingsParameters.cs)
 - `result` is of type [GetConferencingInfoResponse](./Definitions/GetConferencingInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readConferencingSettings) in API Explorer.
 
 ## updateConferencingSettings
+
 Update User Conferencing Settings
 
 Name|Value
@@ -5856,12 +6177,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateConferencingInfoRequest` is of type [UpdateConferencingInfoRequest](./Definitions/UpdateConferencingInfoRequest.cs)
+- `updateConferencingInfoRequest` is of
+  type [UpdateConferencingInfoRequest](./Definitions/UpdateConferencingInfoRequest.cs)
 - `result` is of type [GetConferencingInfoResponse](./Definitions/GetConferencingInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateConferencingSettings) in API Explorer.
 
 ## listFavoriteContacts
+
 List Favorite Contacts
 
 Name|Value
@@ -5887,6 +6210,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-listFavoriteContacts) in API Explorer.
 
 ## updateFavoriteContactList
+
 Update Favorite Contact List
 
 Name|Value
@@ -5910,9 +6234,11 @@ await rc.Revoke();
 - `favoriteCollection` is of type [FavoriteCollection](./Definitions/FavoriteCollection.cs)
 - `result` is of type [FavoriteContactList](./Definitions/FavoriteContactList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateFavoriteContactList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateFavoriteContactList) in API
+Explorer.
 
 ## readExtensionFeatures
+
 Get User Features
 
 Name|Value
@@ -5933,12 +6259,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readExtensionFeaturesParameters` is of type [ReadExtensionFeaturesParameters](./Definitions/ReadExtensionFeaturesParameters.cs)
+- `readExtensionFeaturesParameters` is of
+  type [ReadExtensionFeaturesParameters](./Definitions/ReadExtensionFeaturesParameters.cs)
 - `result` is of type [FeatureList](./Definitions/FeatureList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Features-readExtensionFeatures) in API Explorer.
 
 ## listForwardingNumbers
+
 List Forwarding Numbers
 
 Name|Value
@@ -5959,11 +6287,13 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [GetExtensionForwardingNumberListResponse](./Definitions/GetExtensionForwardingNumberListResponse.cs)
+- `result` is of
+  type [GetExtensionForwardingNumberListResponse](./Definitions/GetExtensionForwardingNumberListResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-listForwardingNumbers) in API Explorer.
 
 ## createForwardingNumber
+
 Create Forwarding Number
 
 Name|Value
@@ -5984,12 +6314,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createForwardingNumberRequest` is of type [CreateForwardingNumberRequest](./Definitions/CreateForwardingNumberRequest.cs)
+- `createForwardingNumberRequest` is of
+  type [CreateForwardingNumberRequest](./Definitions/CreateForwardingNumberRequest.cs)
 - `result` is of type [ForwardingNumberInfo](./Definitions/ForwardingNumberInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-createForwardingNumber) in API Explorer.
 
 ## deleteForwardingNumbers
+
 Delete Forwarding Numbers
 
 Name|Value
@@ -6010,12 +6342,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `deleteForwardingNumbersRequest` is of type [DeleteForwardingNumbersRequest](./Definitions/DeleteForwardingNumbersRequest.cs)
+- `deleteForwardingNumbersRequest` is of
+  type [DeleteForwardingNumbersRequest](./Definitions/DeleteForwardingNumbersRequest.cs)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-deleteForwardingNumbers) in API Explorer.
 
 ## readForwardingNumber
+
 Get Forwarding Number
 
 Name|Value
@@ -6041,6 +6375,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-readForwardingNumber) in API Explorer.
 
 ## updateForwardingNumber
+
 Update Forwarding Number
 
 Name|Value
@@ -6061,12 +6396,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateForwardingNumberRequest` is of type [UpdateForwardingNumberRequest](./Definitions/UpdateForwardingNumberRequest.cs)
+- `updateForwardingNumberRequest` is of
+  type [UpdateForwardingNumberRequest](./Definitions/UpdateForwardingNumberRequest.cs)
 - `result` is of type [ForwardingNumberInfo](./Definitions/ForwardingNumberInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-updateForwardingNumber) in API Explorer.
 
 ## deleteForwardingNumber
+
 Delete Forwarding Number
 
 Name|Value
@@ -6092,6 +6429,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-deleteForwardingNumber) in API Explorer.
 
 ## endMeeting
+
 End Meeting
 
 Name|Value
@@ -6117,6 +6455,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-endMeeting) in API Explorer.
 
 ## readMeetingInvitation
+
 Get Meeting Invitation
 
 Name|Value
@@ -6142,6 +6481,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-readMeetingInvitation) in API Explorer.
 
 ## listMessages
+
 Get Message List
 
 Name|Value
@@ -6168,6 +6508,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-listMessages) in API Explorer.
 
 ## deleteMessageByFilter
+
 Delete Conversation
 
 Name|Value
@@ -6188,12 +6529,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `deleteMessageByFilterParameters` is of type [DeleteMessageByFilterParameters](./Definitions/DeleteMessageByFilterParameters.cs)
+- `deleteMessageByFilterParameters` is of
+  type [DeleteMessageByFilterParameters](./Definitions/DeleteMessageByFilterParameters.cs)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-deleteMessageByFilter) in API Explorer.
 
 ## readMessage
+
 Get Message
 
 Name|Value
@@ -6219,6 +6562,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessage) in API Explorer.
 
 ## updateMessage
+
 Update Message List
 
 Name|Value
@@ -6246,6 +6590,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-updateMessage) in API Explorer.
 
 ## deleteMessage
+
 Delete Message
 
 Name|Value
@@ -6272,6 +6617,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-deleteMessage) in API Explorer.
 
 ## syncMessages
+
 Sync Messages
 
 Name|Value
@@ -6298,6 +6644,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-syncMessages) in API Explorer.
 
 ## listExtensionPhoneNumbers
+
 Get Extension Phone Number List
 
 Name|Value
@@ -6318,12 +6665,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionPhoneNumbersParameters` is of type [ListExtensionPhoneNumbersParameters](./Definitions/ListExtensionPhoneNumbersParameters.cs)
+- `listExtensionPhoneNumbersParameters` is of
+  type [ListExtensionPhoneNumbersParameters](./Definitions/ListExtensionPhoneNumbersParameters.cs)
 - `result` is of type [GetExtensionPhoneNumbersResponse](./Definitions/GetExtensionPhoneNumbersResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listExtensionPhoneNumbers) in API Explorer.
 
 ## readUserPresenceStatus
+
 Get User Presence Status
 
 Name|Value
@@ -6344,12 +6693,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readUserPresenceStatusParameters` is of type [ReadUserPresenceStatusParameters](./Definitions/ReadUserPresenceStatusParameters.cs)
+- `readUserPresenceStatusParameters` is of
+  type [ReadUserPresenceStatusParameters](./Definitions/ReadUserPresenceStatusParameters.cs)
 - `result` is of type [GetPresenceInfo](./Definitions/GetPresenceInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readUserPresenceStatus) in API Explorer.
 
 ## updateUserPresenceStatus
+
 Update User Presence Status
 
 Name|Value
@@ -6376,6 +6727,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateUserPresenceStatus) in API Explorer.
 
 ## readUserProfileImage
+
 Get User Profile Image
 
 Name|Value
@@ -6405,6 +6757,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readUserProfileImage) in API Explorer.
 
 ## createUserProfileImage
+
 Upload User Profile Image
 
 Name|Value
@@ -6425,12 +6778,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createUserProfileImageRequest` is of type [CreateUserProfileImageRequest](./Definitions/CreateUserProfileImageRequest.cs)
+- `createUserProfileImageRequest` is of
+  type [CreateUserProfileImageRequest](./Definitions/CreateUserProfileImageRequest.cs)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-createUserProfileImage) in API Explorer.
 
 ## updateUserProfileImage
+
 Update User Profile Image
 
 Name|Value
@@ -6451,12 +6806,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateUserProfileImageRequest` is of type [UpdateUserProfileImageRequest](./Definitions/UpdateUserProfileImageRequest.cs)
+- `updateUserProfileImageRequest` is of
+  type [UpdateUserProfileImageRequest](./Definitions/UpdateUserProfileImageRequest.cs)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateUserProfileImage) in API Explorer.
 
 ## deleteUserProfileImage
+
 Delete User Profile Image
 
 Name|Value
@@ -6482,6 +6839,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-deleteUserProfileImage) in API Explorer.
 
 ## readScaledProfileImage
+
 Get Scaled Profile Image
 
 Name|Value
@@ -6511,6 +6869,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readScaledProfileImage) in API Explorer.
 
 ## readUnifiedPresence
+
 Get Unified Presence
 
 Name|Value
@@ -6536,6 +6895,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readUnifiedPresence) in API Explorer.
 
 ## updateUnifiedPresence
+
 Update Unified Presence
 
 Name|Value
@@ -6562,6 +6922,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateUnifiedPresence) in API Explorer.
 
 ## readIVRPromptContent
+
 Get IVR Prompt Content
 
 Name|Value
@@ -6590,6 +6951,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRPromptContent) in API Explorer.
 
 ## listAccountMeetingRecordings
+
 List Account Meeting Recordings
 
 Name|Value
@@ -6609,12 +6971,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./Definitions/ListAccountMeetingRecordingsParameters.cs)
+- `listAccountMeetingRecordingsParameters` is of
+  type [ListAccountMeetingRecordingsParameters](./Definitions/ListAccountMeetingRecordingsParameters.cs)
 - `result` is of type [ListMeetingRecordingsResponse](./Definitions/ListMeetingRecordingsResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listAccountMeetingRecordings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listAccountMeetingRecordings) in API
+Explorer.
 
 ## getAccountLockedSetting
+
 Get Locked Meeting Settings
 
 Name|Value
@@ -6636,9 +7001,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [AccountLockedSettingResponse](./Definitions/AccountLockedSettingResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-getAccountLockedSetting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-getAccountLockedSetting) in API
+Explorer.
 
 ## readMessageStoreConfiguration
+
 Get Message Store Configuration
 
 Name|Value
@@ -6660,9 +7027,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [MessageStoreConfiguration](./Definitions/MessageStoreConfiguration.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageStoreConfiguration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageStoreConfiguration) in API
+Explorer.
 
 ## updateMessageStoreConfiguration
+
 Update Message Store Configuration
 
 Name|Value
@@ -6685,9 +7054,11 @@ await rc.Revoke();
 - `messageStoreConfiguration` is of type [MessageStoreConfiguration](./Definitions/MessageStoreConfiguration.cs)
 - `result` is of type [MessageStoreConfiguration](./Definitions/MessageStoreConfiguration.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-updateMessageStoreConfiguration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-updateMessageStoreConfiguration) in API
+Explorer.
 
 ## createMessageStoreReport
+
 Create Message Store Report
 
 Name|Value
@@ -6707,12 +7078,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createMessageStoreReportRequest` is of type [CreateMessageStoreReportRequest](./Definitions/CreateMessageStoreReportRequest.cs)
+- `createMessageStoreReportRequest` is of
+  type [CreateMessageStoreReportRequest](./Definitions/CreateMessageStoreReportRequest.cs)
 - `result` is of type [MessageStoreReport](./Definitions/MessageStoreReport.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-createMessageStoreReport) in API Explorer.
 
 ## readMessageStoreReportTask
+
 Get Message Store Report Task
 
 Name|Value
@@ -6734,9 +7107,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [MessageStoreReport](./Definitions/MessageStoreReport.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportTask) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportTask) in API
+Explorer.
 
 ## listPagingGroupDevices
+
 Get Paging Group Devices
 
 Name|Value
@@ -6756,12 +7131,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listPagingGroupDevicesParameters` is of type [ListPagingGroupDevicesParameters](./Definitions/ListPagingGroupDevicesParameters.cs)
+- `listPagingGroupDevicesParameters` is of
+  type [ListPagingGroupDevicesParameters](./Definitions/ListPagingGroupDevicesParameters.cs)
 - `result` is of type [PagingOnlyGroupDevices](./Definitions/PagingOnlyGroupDevices.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-listPagingGroupDevices) in API Explorer.
 
 ## listPagingGroupUsers
+
 Get Paging Group Users
 
 Name|Value
@@ -6781,12 +7158,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listPagingGroupUsersParameters` is of type [ListPagingGroupUsersParameters](./Definitions/ListPagingGroupUsersParameters.cs)
+- `listPagingGroupUsersParameters` is of
+  type [ListPagingGroupUsersParameters](./Definitions/ListPagingGroupUsersParameters.cs)
 - `result` is of type [PagingOnlyGroupUsers](./Definitions/PagingOnlyGroupUsers.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-listPagingGroupUsers) in API Explorer.
 
 ## createCallOutCallSession
+
 Make CallOut
 
 Name|Value
@@ -6812,6 +7191,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-createCallOutCallSession) in API Explorer.
 
 ## createConferenceCallSession
+
 Start Conference Call Session
 
 Name|Value
@@ -6836,6 +7216,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-createConferenceCallSession) in API Explorer.
 
 ## readCallSessionStatus
+
 Get Call Session Status
 
 Name|Value
@@ -6855,12 +7236,14 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./Definitions/ReadCallSessionStatusParameters.cs)
+- `readCallSessionStatusParameters` is of
+  type [ReadCallSessionStatusParameters](./Definitions/ReadCallSessionStatusParameters.cs)
 - `result` is of type [CallSessionObject](./Definitions/CallSessionObject.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallSessionStatus) in API Explorer.
 
 ## deleteCallSession
+
 Drop Call Session
 
 Name|Value
@@ -6885,6 +7268,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-deleteCallSession) in API Explorer.
 
 ## readCallPartyStatus
+
 Get Call Party Status
 
 Name|Value
@@ -6909,6 +7293,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallPartyStatus) in API Explorer.
 
 ## deleteCallParty
+
 Delete Call Party
 
 Name|Value
@@ -6933,6 +7318,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-deleteCallParty) in API Explorer.
 
 ## updateCallParty
+
 Update Call Party
 
 Name|Value
@@ -6958,6 +7344,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-updateCallParty) in API Explorer.
 
 ## superviseCallSession
+
 Supervise Call Session
 
 Name|Value
@@ -6983,6 +7370,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-superviseCallSession) in API Explorer.
 
 ## assignMultipleUserRoles
+
 Assign Multiple User Roles
 
 Name|Value
@@ -7008,6 +7396,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-assignMultipleUserRoles) in API Explorer.
 
 ## listContractedCountries
+
 List Contracted Countries
 
 Name|Value
@@ -7031,6 +7420,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Company-listContractedCountries) in API Explorer.
 
 ## listDomesticCountries
+
 List Domestic Countries
 
 Name|Value
@@ -7049,12 +7439,14 @@ await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listDomesticCountriesParameters` is of type [ListDomesticCountriesParameters](./Definitions/ListDomesticCountriesParameters.cs)
+- `listDomesticCountriesParameters` is of
+  type [ListDomesticCountriesParameters](./Definitions/ListDomesticCountriesParameters.cs)
 - `result` is of type [CountryListDictionaryModel](./Definitions/CountryListDictionaryModel.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-listDomesticCountries) in API Explorer.
 
 ## listPermissionCategories
+
 Get Permission Category List
 
 Name|Value
@@ -7073,12 +7465,14 @@ await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listPermissionCategoriesParameters` is of type [ListPermissionCategoriesParameters](./Definitions/ListPermissionCategoriesParameters.cs)
+- `listPermissionCategoriesParameters` is of
+  type [ListPermissionCategoriesParameters](./Definitions/ListPermissionCategoriesParameters.cs)
 - `result` is of type [PermissionCategoryCollectionResource](./Definitions/PermissionCategoryCollectionResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Permissions-listPermissionCategories) in API Explorer.
 
 ## readPermissionCategory
+
 Get Permission Category
 
 Name|Value
@@ -7102,6 +7496,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Permissions-readPermissionCategory) in API Explorer.
 
 ## createGlipAdaptiveCardNew
+
 Create Adaptive Card
 
 Name|Value
@@ -7125,6 +7520,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-createGlipAdaptiveCardNew) in API Explorer.
 
 ## addA2PSMSOptOuts
+
 Assign Multiple Opted Out/In Numbers
 
 Name|Value
@@ -7150,6 +7546,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-addA2PSMSOptOuts) in API Explorer.
 
 ## getAddressBookBulkUploadTask
+
 Get Contacts Upload Task
 
 Name|Value
@@ -7171,9 +7568,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [AddressBookBulkUploadResponse](./Definitions/AddressBookBulkUploadResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-getAddressBookBulkUploadTask) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-getAddressBookBulkUploadTask) in API
+Explorer.
 
 ## updateCallMonitoringGroupList
+
 Update Call Monitoring Group List
 
 Name|Value
@@ -7196,9 +7595,11 @@ await rc.Revoke();
 - `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./Definitions/CallMonitoringBulkAssign.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroupList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroupList) in
+API Explorer.
 
 ## listCallMonitoringGroupMembers
+
 List Call Monitoring Group Members
 
 Name|Value
@@ -7218,12 +7619,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallMonitoringGroupMembersParameters` is of type [ListCallMonitoringGroupMembersParameters](./Definitions/ListCallMonitoringGroupMembersParameters.cs)
+- `listCallMonitoringGroupMembersParameters` is of
+  type [ListCallMonitoringGroupMembersParameters](./Definitions/ListCallMonitoringGroupMembersParameters.cs)
 - `result` is of type [CallMonitoringGroupMemberList](./Definitions/CallMonitoringGroupMemberList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroupMembers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroupMembers) in
+API Explorer.
 
 ## listCallRecordingCustomGreetings
+
 Get Call Recording Custom Greeting List
 
 Name|Value
@@ -7243,12 +7647,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallRecordingCustomGreetingsParameters` is of type [ListCallRecordingCustomGreetingsParameters](./Definitions/ListCallRecordingCustomGreetingsParameters.cs)
+- `listCallRecordingCustomGreetingsParameters` is of
+  type [ListCallRecordingCustomGreetingsParameters](./Definitions/ListCallRecordingCustomGreetingsParameters.cs)
 - `result` is of type [CallRecordingCustomGreetings](./Definitions/CallRecordingCustomGreetings.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingCustomGreetings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingCustomGreetings)
+in API Explorer.
 
 ## deleteCallRecordingCustomGreetingList
+
 Delete Call Recording Custom Greeting List
 
 Name|Value
@@ -7270,9 +7677,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-deleteCallRecordingCustomGreetingList) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-deleteCallRecordingCustomGreetingList)
+in API Explorer.
 
 ## deleteCallRecordingCustomGreeting
+
 Delete Call Recording Custom Greeting
 
 Name|Value
@@ -7294,9 +7703,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-deleteCallRecordingCustomGreeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-deleteCallRecordingCustomGreeting)
+in API Explorer.
 
 ## listDevicesAutomaticLocationUpdates
+
 List Devices
 
 Name|Value
@@ -7316,12 +7727,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listDevicesAutomaticLocationUpdatesParameters` is of type [ListDevicesAutomaticLocationUpdatesParameters](./Definitions/ListDevicesAutomaticLocationUpdatesParameters.cs)
+- `listDevicesAutomaticLocationUpdatesParameters` is of
+  type [ListDevicesAutomaticLocationUpdatesParameters](./Definitions/ListDevicesAutomaticLocationUpdatesParameters.cs)
 - `result` is of type [ListDevicesAutomaticLocationUpdates](./Definitions/ListDevicesAutomaticLocationUpdates.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listDevicesAutomaticLocationUpdates) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listDevicesAutomaticLocationUpdates)
+in API Explorer.
 
 ## assignMultipleDevicesAutomaticLocationUpdates
+
 Enable Automatic Location Updates Feature
 
 Name|Value
@@ -7341,12 +7755,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./Definitions/AssignMultipleDevicesAutomaticLocationUpdates.cs)
+- `assignMultipleDevicesAutomaticLocationUpdates` is of
+  type [AssignMultipleDevicesAutomaticLocationUpdates](./Definitions/AssignMultipleDevicesAutomaticLocationUpdates.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleDevicesAutomaticLocationUpdates) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleDevicesAutomaticLocationUpdates)
+in API Explorer.
 
 ## listNetworks
+
 Get Network Map
 
 Name|Value
@@ -7372,6 +7789,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listNetworks) in API Explorer.
 
 ## createNetwork
+
 Create Network
 
 Name|Value
@@ -7397,6 +7815,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createNetwork) in API Explorer.
 
 ## readNetwork
+
 Get Network
 
 Name|Value
@@ -7421,6 +7840,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readNetwork) in API Explorer.
 
 ## updateNetwork
+
 Update Network
 
 Name|Value
@@ -7446,6 +7866,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateNetwork) in API Explorer.
 
 ## deleteNetwork
+
 Delete Network
 
 Name|Value
@@ -7470,6 +7891,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteNetwork) in API Explorer.
 
 ## listAccountSwitches
+
 List Account Switches
 
 Name|Value
@@ -7489,12 +7911,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAccountSwitchesParameters` is of type [ListAccountSwitchesParameters](./Definitions/ListAccountSwitchesParameters.cs)
+- `listAccountSwitchesParameters` is of
+  type [ListAccountSwitchesParameters](./Definitions/ListAccountSwitchesParameters.cs)
 - `result` is of type [SwitchesList](./Definitions/SwitchesList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAccountSwitches) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAccountSwitches) in API
+Explorer.
 
 ## createSwitch
+
 Create Switch
 
 Name|Value
@@ -7520,6 +7945,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createSwitch) in API Explorer.
 
 ## readSwitch
+
 Get Switch
 
 Name|Value
@@ -7544,6 +7970,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readSwitch) in API Explorer.
 
 ## updateSwitch
+
 Update Switch
 
 Name|Value
@@ -7569,6 +7996,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateSwitch) in API Explorer.
 
 ## deleteSwitch
+
 Delete Switch
 
 Name|Value
@@ -7593,6 +8021,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteSwitch) in API Explorer.
 
 ## createMultipleSwitches
+
 Create Multiple Switches
 
 Name|Value
@@ -7612,12 +8041,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./Definitions/CreateMultipleSwitchesRequest.cs)
+- `createMultipleSwitchesRequest` is of
+  type [CreateMultipleSwitchesRequest](./Definitions/CreateMultipleSwitchesRequest.cs)
 - `result` is of type [CreateMultipleSwitchesResponse](./Definitions/CreateMultipleSwitchesResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleSwitches) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleSwitches) in API
+Explorer.
 
 ## updateMultipleSwitches
+
 Update Multiple Switches
 
 Name|Value
@@ -7637,12 +8069,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateMultipleSwitchesRequest` is of type [UpdateMultipleSwitchesRequest](./Definitions/UpdateMultipleSwitchesRequest.cs)
+- `updateMultipleSwitchesRequest` is of
+  type [UpdateMultipleSwitchesRequest](./Definitions/UpdateMultipleSwitchesRequest.cs)
 - `result` is of type [UpdateMultipleSwitchesResponse](./Definitions/UpdateMultipleSwitchesResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleSwitches) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleSwitches) in API
+Explorer.
 
 ## validateMultipleSwitches
+
 Validate Multiple Switches
 
 Name|Value
@@ -7662,12 +8097,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `validateMultipleSwitchesRequest` is of type [ValidateMultipleSwitchesRequest](./Definitions/ValidateMultipleSwitchesRequest.cs)
+- `validateMultipleSwitchesRequest` is of
+  type [ValidateMultipleSwitchesRequest](./Definitions/ValidateMultipleSwitchesRequest.cs)
 - `result` is of type [ValidateMultipleSwitchesResponse](./Definitions/ValidateMultipleSwitchesResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleSwitches) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleSwitches) in API
+Explorer.
 
 ## assignMultipleAutomaticLocationUpdatesUsers
+
 Enable Automatic Location Updates for Users
 
 Name|Value
@@ -7687,12 +8125,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `emergencyAddressAutoUpdateUsersBulkAssignResource` is of type [EmergencyAddressAutoUpdateUsersBulkAssignResource](./Definitions/EmergencyAddressAutoUpdateUsersBulkAssignResource.cs)
+- `emergencyAddressAutoUpdateUsersBulkAssignResource` is of
+  type [EmergencyAddressAutoUpdateUsersBulkAssignResource](./Definitions/EmergencyAddressAutoUpdateUsersBulkAssignResource.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleAutomaticLocationUpdatesUsers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleAutomaticLocationUpdatesUsers)
+in API Explorer.
 
 ## listContacts
+
 List Contacts
 
 Name|Value
@@ -7719,6 +8160,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-listContacts) in API Explorer.
 
 ## createContact
+
 Create User Contact
 
 Name|Value
@@ -7746,6 +8188,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-createContact) in API Explorer.
 
 ## readContact
+
 Get User Contact(s)
 
 Name|Value
@@ -7771,6 +8214,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-readContact) in API Explorer.
 
 ## updateContact
+
 Update User Contact(s)
 
 Name|Value
@@ -7798,6 +8242,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateContact) in API Explorer.
 
 ## deleteContact
+
 Delete User Contact(s)
 
 Name|Value
@@ -7823,6 +8268,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-deleteContact) in API Explorer.
 
 ## patchContact
+
 Update Contact Attributes
 
 Name|Value
@@ -7850,6 +8296,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-patchContact) in API Explorer.
 
 ## listAdministeredSites
+
 Get User Administered Site List
 
 Name|Value
@@ -7875,6 +8322,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Site-Administration-listAdministeredSites) in API Explorer.
 
 ## updateUserAdministeredSites
+
 Update User Administered Sites
 
 Name|Value
@@ -7895,12 +8343,15 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `businessSiteCollectionRequest` is of type [BusinessSiteCollectionRequest](./Definitions/BusinessSiteCollectionRequest.cs)
+- `businessSiteCollectionRequest` is of
+  type [BusinessSiteCollectionRequest](./Definitions/BusinessSiteCollectionRequest.cs)
 - `result` is of type [BusinessSiteCollectionResource](./Definitions/BusinessSiteCollectionResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Site-Administration-updateUserAdministeredSites) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Site-Administration-updateUserAdministeredSites) in API
+Explorer.
 
 ## checkUserPermission
+
 Check User Permission
 
 Name|Value
@@ -7921,12 +8372,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `checkUserPermissionParameters` is of type [CheckUserPermissionParameters](./Definitions/CheckUserPermissionParameters.cs)
+- `checkUserPermissionParameters` is of
+  type [CheckUserPermissionParameters](./Definitions/CheckUserPermissionParameters.cs)
 - `result` is of type [AuthProfileCheckResource](./Definitions/AuthProfileCheckResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-checkUserPermission) in API Explorer.
 
 ## readExtensionCallQueuePresence
+
 Get Agent’s Call Queue Presence
 
 Name|Value
@@ -7947,12 +8400,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readExtensionCallQueuePresenceParameters` is of type [ReadExtensionCallQueuePresenceParameters](./Definitions/ReadExtensionCallQueuePresenceParameters.cs)
+- `readExtensionCallQueuePresenceParameters` is of
+  type [ReadExtensionCallQueuePresenceParameters](./Definitions/ReadExtensionCallQueuePresenceParameters.cs)
 - `result` is of type [ExtensionCallQueuePresenceList](./Definitions/ExtensionCallQueuePresenceList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readExtensionCallQueuePresence) in API Explorer.
 
 ## updateExtensionCallQueuePresence
+
 Update Call Queue Presence
 
 Name|Value
@@ -7973,12 +8428,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `extensionCallQueueUpdatePresenceList` is of type [ExtensionCallQueueUpdatePresenceList](./Definitions/ExtensionCallQueueUpdatePresenceList.cs)
+- `extensionCallQueueUpdatePresenceList` is of
+  type [ExtensionCallQueueUpdatePresenceList](./Definitions/ExtensionCallQueueUpdatePresenceList.cs)
 - `result` is of type [ExtensionCallQueuePresenceList](./Definitions/ExtensionCallQueuePresenceList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateExtensionCallQueuePresence) in API Explorer.
 
 ## getExtensionEmergencyLocations
+
 List User Emergency Locations
 
 Name|Value
@@ -7999,12 +8456,15 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `getExtensionEmergencyLocationsParameters` is of type [GetExtensionEmergencyLocationsParameters](./Definitions/GetExtensionEmergencyLocationsParameters.cs)
+- `getExtensionEmergencyLocationsParameters` is of
+  type [GetExtensionEmergencyLocationsParameters](./Definitions/GetExtensionEmergencyLocationsParameters.cs)
 - `result` is of type [EmergencyLocationsResource](./Definitions/EmergencyLocationsResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocations) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocations)
+in API Explorer.
 
 ## createExtensionEmergencyLocation
+
 Create User Emergency Location
 
 Name|Value
@@ -8025,12 +8485,15 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createUserEmergencyLocationRequest` is of type [CreateUserEmergencyLocationRequest](./Definitions/CreateUserEmergencyLocationRequest.cs)
+- `createUserEmergencyLocationRequest` is of
+  type [CreateUserEmergencyLocationRequest](./Definitions/CreateUserEmergencyLocationRequest.cs)
 - `result` is of type [EmergencyLocationResource](./Definitions/EmergencyLocationResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createExtensionEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createExtensionEmergencyLocation)
+in API Explorer.
 
 ## getExtensionEmergencyLocation
+
 Get User Emergency Location
 
 Name|Value
@@ -8053,9 +8516,11 @@ await rc.Revoke();
 - Parameter `extensionId` is optional with default value `~`
 - `result` is of type [EmergencyLocationResource](./Definitions/EmergencyLocationResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocation)
+in API Explorer.
 
 ## updateExtensionEmergencyLocation
+
 Update User Emergency Location
 
 Name|Value
@@ -8079,9 +8544,11 @@ await rc.Revoke();
 - `emergencyLocationResource` is of type [EmergencyLocationResource](./Definitions/EmergencyLocationResource.cs)
 - `result` is of type [EmergencyLocationResource](./Definitions/EmergencyLocationResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateExtensionEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateExtensionEmergencyLocation)
+in API Explorer.
 
 ## deleteExtensionEmergencyLocation
+
 Delete User Emergency Location
 
 Name|Value
@@ -8102,12 +8569,15 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `deleteExtensionEmergencyLocationParameters` is of type [DeleteExtensionEmergencyLocationParameters](./Definitions/DeleteExtensionEmergencyLocationParameters.cs)
+- `deleteExtensionEmergencyLocationParameters` is of
+  type [DeleteExtensionEmergencyLocationParameters](./Definitions/DeleteExtensionEmergencyLocationParameters.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteExtensionEmergencyLocation) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteExtensionEmergencyLocation)
+in API Explorer.
 
 ## listUserMeetingRecordings
+
 List User Meeting Recordings
 
 Name|Value
@@ -8128,12 +8598,15 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./Definitions/ListUserMeetingRecordingsParameters.cs)
+- `listUserMeetingRecordingsParameters` is of
+  type [ListUserMeetingRecordingsParameters](./Definitions/ListUserMeetingRecordingsParameters.cs)
 - `result` is of type [ListMeetingRecordingsResponse](./Definitions/ListMeetingRecordingsResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listUserMeetingRecordings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listUserMeetingRecordings) in API
+Explorer.
 
 ## readMessageStoreReportArchive
+
 Get Message Store Report Archive
 
 Name|Value
@@ -8155,9 +8628,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [MessageStoreReportArchive](./Definitions/MessageStoreReportArchive.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchive) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchive) in API
+Explorer.
 
 ## readMessageStoreReportArchiveContent
+
 Get Message Store Report Archive Content
 
 Name|Value
@@ -8183,9 +8658,11 @@ await rc.Revoke();
 
 Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
 
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchiveContent) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchiveContent) in
+API Explorer.
 
 ## assignDefaultRole
+
 Assign Default Role
 
 Name|Value
@@ -8211,6 +8688,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-assignDefaultRole) in API Explorer.
 
 ## createUserMeetingProfileImage
+
 Upload User Meeting Profile Image
 
 Name|Value
@@ -8231,12 +8709,15 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createUserMeetingProfileImageRequest` is of type [CreateUserMeetingProfileImageRequest](./Definitions/CreateUserMeetingProfileImageRequest.cs)
+- `createUserMeetingProfileImageRequest` is of
+  type [CreateUserMeetingProfileImageRequest](./Definitions/CreateUserMeetingProfileImageRequest.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-createUserMeetingProfileImage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-createUserMeetingProfileImage) in API
+Explorer.
 
 ## readMeetingServiceInfo
+
 Get Meeting Service Info
 
 Name|Value
@@ -8259,9 +8740,11 @@ await rc.Revoke();
 - Parameter `extensionId` is optional with default value `~`
 - `result` is of type [MeetingServiceInfoResource](./Definitions/MeetingServiceInfoResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readMeetingServiceInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readMeetingServiceInfo) in API
+Explorer.
 
 ## updateMeetingServiceInfo
+
 Update Meeting Service Info
 
 Name|Value
@@ -8285,9 +8768,11 @@ await rc.Revoke();
 - `meetingServiceInfoRequest` is of type [MeetingServiceInfoRequest](./Definitions/MeetingServiceInfoRequest.cs)
 - `result` is of type [MeetingServiceInfoResource](./Definitions/MeetingServiceInfoResource.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-updateMeetingServiceInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-updateMeetingServiceInfo) in API
+Explorer.
 
 ## readMessageContent
+
 Get Message Content
 
 Name|Value
@@ -8308,7 +8793,8 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readMessageContentParameters` is of type [ReadMessageContentParameters](./Definitions/ReadMessageContentParameters.cs)
+- `readMessageContentParameters` is of
+  type [ReadMessageContentParameters](./Definitions/ReadMessageContentParameters.cs)
 - `result` is of type `byte[]`
 
 ### ❗❗❗ Code sample above may not work
@@ -8318,6 +8804,7 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageContent) in API Explorer.
 
 ## readUserVideoConfiguration
+
 Get User Video Configuration
 
 Name|Value
@@ -8340,9 +8827,11 @@ await rc.Revoke();
 - Parameter `extensionId` is optional with default value `~`
 - `result` is of type [UserVideoConfiguration](./Definitions/UserVideoConfiguration.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration) in API
+Explorer.
 
 ## updateUserVideoConfiguration
+
 Update User Video Configuration
 
 Name|Value
@@ -8366,9 +8855,11 @@ await rc.Revoke();
 - `userVideoConfiguration` is of type [UserVideoConfiguration](./Definitions/UserVideoConfiguration.cs)
 - `result` is of type [UserVideoConfiguration](./Definitions/UserVideoConfiguration.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-updateUserVideoConfiguration) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-updateUserVideoConfiguration) in API
+Explorer.
 
 ## assignMultiplePagingGroupUsersDevices
+
 Assign Paging Group Users and Devices
 
 Name|Value
@@ -8391,9 +8882,11 @@ await rc.Revoke();
 - `editPagingGroupRequest` is of type [EditPagingGroupRequest](./Definitions/EditPagingGroupRequest.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-assignMultiplePagingGroupUsersDevices) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-assignMultiplePagingGroupUsersDevices)
+in API Explorer.
 
 ## readAutomaticLocationUpdatesTask
+
 Get Emergency Map Configuration Task
 
 Name|Value
@@ -8415,9 +8908,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [AutomaticLocationUpdatesTaskInfo](./Definitions/AutomaticLocationUpdatesTaskInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readAutomaticLocationUpdatesTask) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readAutomaticLocationUpdatesTask)
+in API Explorer.
 
 ## listAutomaticLocationUpdatesUsers
+
 List Users
 
 Name|Value
@@ -8437,12 +8932,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./Definitions/ListAutomaticLocationUpdatesUsersParameters.cs)
+- `listAutomaticLocationUpdatesUsersParameters` is of
+  type [ListAutomaticLocationUpdatesUsersParameters](./Definitions/ListAutomaticLocationUpdatesUsersParameters.cs)
 - `result` is of type [AutomaticLocationUpdatesUserList](./Definitions/AutomaticLocationUpdatesUserList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAutomaticLocationUpdatesUsers) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAutomaticLocationUpdatesUsers)
+in API Explorer.
 
 ## listWirelessPoints
+
 List Wireless Points
 
 Name|Value
@@ -8462,12 +8960,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listWirelessPointsParameters` is of type [ListWirelessPointsParameters](./Definitions/ListWirelessPointsParameters.cs)
+- `listWirelessPointsParameters` is of
+  type [ListWirelessPointsParameters](./Definitions/ListWirelessPointsParameters.cs)
 - `result` is of type [WirelessPointsList](./Definitions/WirelessPointsList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listWirelessPoints) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listWirelessPoints) in API
+Explorer.
 
 ## createWirelessPoint
+
 Create Wireless Point
 
 Name|Value
@@ -8490,9 +8991,11 @@ await rc.Revoke();
 - `createWirelessPoint` is of type [CreateWirelessPoint](./Definitions/CreateWirelessPoint.cs)
 - `result` is of type [WirelessPointInfo](./Definitions/WirelessPointInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createWirelessPoint) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createWirelessPoint) in API
+Explorer.
 
 ## readWirelessPoint
+
 Get Wireless Point
 
 Name|Value
@@ -8514,9 +9017,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is of type [WirelessPointInfo](./Definitions/WirelessPointInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readWirelessPoint) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readWirelessPoint) in API
+Explorer.
 
 ## updateWirelessPoint
+
 Update Wireless Point
 
 Name|Value
@@ -8539,9 +9044,11 @@ await rc.Revoke();
 - `updateWirelessPoint` is of type [UpdateWirelessPoint](./Definitions/UpdateWirelessPoint.cs)
 - `result` is of type [WirelessPointInfo](./Definitions/WirelessPointInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateWirelessPoint) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateWirelessPoint) in API
+Explorer.
 
 ## deleteWirelessPoint
+
 Delete Wireless Point
 
 Name|Value
@@ -8563,9 +9070,11 @@ await rc.Revoke();
 - Parameter `accountId` is optional with default value `~`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteWirelessPoint) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteWirelessPoint) in API
+Explorer.
 
 ## getUserSetting
+
 Get Meeting User Settings
 
 Name|Value
@@ -8591,6 +9100,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-getUserSetting) in API Explorer.
 
 ## readNotificationSettings
+
 Get Notification Settings
 
 Name|Value
@@ -8616,6 +9126,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readNotificationSettings) in API Explorer.
 
 ## updateNotificationSettings
+
 Update Notification Settings
 
 Name|Value
@@ -8636,12 +9147,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `notificationSettingsUpdateRequest` is of type [NotificationSettingsUpdateRequest](./Definitions/NotificationSettingsUpdateRequest.cs)
+- `notificationSettingsUpdateRequest` is of
+  type [NotificationSettingsUpdateRequest](./Definitions/NotificationSettingsUpdateRequest.cs)
 - `result` is of type [NotificationSettings](./Definitions/NotificationSettings.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateNotificationSettings) in API Explorer.
 
 ## createCallPartyWithBringIn
+
 Bring-In Call Party
 
 Name|Value
@@ -8667,6 +9180,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-createCallPartyWithBringIn) in API Explorer.
 
 ## answerCallParty
+
 Answer Call Party
 
 Name|Value
@@ -8692,6 +9206,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-answerCallParty) in API Explorer.
 
 ## bridgeCallParty
+
 Bridge Call Party
 
 Name|Value
@@ -8717,6 +9232,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-bridgeCallParty) in API Explorer.
 
 ## callFlipParty
+
 Call Flip on Party
 
 Name|Value
@@ -8742,6 +9258,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.
 
 ## forwardCallParty
+
 Forward Call Party
 
 Name|Value
@@ -8767,6 +9284,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-forwardCallParty) in API Explorer.
 
 ## holdCallParty
+
 Hold Call Party
 
 Name|Value
@@ -8791,6 +9309,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty) in API Explorer.
 
 ## callParkParty
+
 Call Park
 
 Name|Value
@@ -8815,6 +9334,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callParkParty) in API Explorer.
 
 ## stopPlayCallParty
+
 Stop Playing Audio File
 
 Name|Value
@@ -8839,6 +9359,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-stopPlayCallParty) in API Explorer.
 
 ## createMultipleWirelessPoints
+
 Create Multiple Wireless Points
 
 Name|Value
@@ -8858,12 +9379,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createMultipleWirelessPointsRequest` is of type [CreateMultipleWirelessPointsRequest](./Definitions/CreateMultipleWirelessPointsRequest.cs)
+- `createMultipleWirelessPointsRequest` is of
+  type [CreateMultipleWirelessPointsRequest](./Definitions/CreateMultipleWirelessPointsRequest.cs)
 - `result` is of type [CreateMultipleWirelessPointsResponse](./Definitions/CreateMultipleWirelessPointsResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleWirelessPoints) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleWirelessPoints) in
+API Explorer.
 
 ## updateMultipleWirelessPoints
+
 Update Multiple Wireless Points
 
 Name|Value
@@ -8883,12 +9407,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateMultipleWirelessPointsRequest` is of type [UpdateMultipleWirelessPointsRequest](./Definitions/UpdateMultipleWirelessPointsRequest.cs)
+- `updateMultipleWirelessPointsRequest` is of
+  type [UpdateMultipleWirelessPointsRequest](./Definitions/UpdateMultipleWirelessPointsRequest.cs)
 - `result` is of type [UpdateMultipleWirelessPointsResponse](./Definitions/UpdateMultipleWirelessPointsResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleWirelessPoints) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleWirelessPoints) in
+API Explorer.
 
 ## validateMultipleWirelessPoints
+
 Validate Multiple Wireless Points
 
 Name|Value
@@ -8908,12 +9435,15 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `validateMultipleWirelessPointsRequest` is of type [ValidateMultipleWirelessPointsRequest](./Definitions/ValidateMultipleWirelessPointsRequest.cs)
+- `validateMultipleWirelessPointsRequest` is of
+  type [ValidateMultipleWirelessPointsRequest](./Definitions/ValidateMultipleWirelessPointsRequest.cs)
 - `result` is of type [ValidateMultipleWirelessPointsResponse](./Definitions/ValidateMultipleWirelessPointsResponse.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleWirelessPoints) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleWirelessPoints)
+in API Explorer.
 
 ## listBlockedAllowedNumbers
+
 List Blocked/Allowed Phone Numbers
 
 Name|Value
@@ -8934,12 +9464,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listBlockedAllowedNumbersParameters` is of type [ListBlockedAllowedNumbersParameters](./Definitions/ListBlockedAllowedNumbersParameters.cs)
+- `listBlockedAllowedNumbersParameters` is of
+  type [ListBlockedAllowedNumbersParameters](./Definitions/ListBlockedAllowedNumbersParameters.cs)
 - `result` is of type [BlockedAllowedPhoneNumbersList](./Definitions/BlockedAllowedPhoneNumbersList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-listBlockedAllowedNumbers) in API Explorer.
 
 ## createBlockedAllowedNumber
+
 Add Blocked/Allowed Number
 
 Name|Value
@@ -8960,12 +9492,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./Definitions/AddBlockedAllowedPhoneNumber.cs)
+- `addBlockedAllowedPhoneNumber` is of
+  type [AddBlockedAllowedPhoneNumber](./Definitions/AddBlockedAllowedPhoneNumber.cs)
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./Definitions/BlockedAllowedPhoneNumberInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-createBlockedAllowedNumber) in API Explorer.
 
 ## readBlockedAllowedNumber
+
 Get Blocked/Allowed Number
 
 Name|Value
@@ -8991,6 +9525,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readBlockedAllowedNumber) in API Explorer.
 
 ## updateBlockedAllowedNumber
+
 Update Blocked/Allowed Number
 
 Name|Value
@@ -9011,12 +9546,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./Definitions/AddBlockedAllowedPhoneNumber.cs)
+- `addBlockedAllowedPhoneNumber` is of
+  type [AddBlockedAllowedPhoneNumber](./Definitions/AddBlockedAllowedPhoneNumber.cs)
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./Definitions/BlockedAllowedPhoneNumberInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateBlockedAllowedNumber) in API Explorer.
 
 ## deleteBlockedAllowedNumber
+
 Delete Blocked/Allowed Number
 
 Name|Value
@@ -9042,6 +9579,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-deleteBlockedAllowedNumber) in API Explorer.
 
 ## readAssistants
+
 Get Assistants
 
 Name|Value
@@ -9067,6 +9605,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readAssistants) in API Explorer.
 
 ## readAssistedUsers
+
 Get Assisted Users
 
 Name|Value
@@ -9092,6 +9631,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readAssistedUsers) in API Explorer.
 
 ## ignoreCallInQueue
+
 Ignore Call in Queue
 
 Name|Value
@@ -9117,6 +9657,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-ignoreCallInQueue) in API Explorer.
 
 ## pickupCallParty
+
 Pickup Call
 
 Name|Value
@@ -9142,6 +9683,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pickupCallParty) in API Explorer.
 
 ## pausePlayCallParty
+
 Pause Playing Audio File
 
 Name|Value
@@ -9166,6 +9708,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pausePlayCallParty) in API Explorer.
 
 ## resumePlayCallParty
+
 Resume Playing Audio File
 
 Name|Value
@@ -9190,6 +9733,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-resumePlayCallParty) in API Explorer.
 
 ## startCallRecording
+
 Create Recording
 
 Name|Value
@@ -9214,6 +9758,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-startCallRecording) in API Explorer.
 
 ## pauseResumeCallRecording
+
 Pause/Resume Recording
 
 Name|Value
@@ -9234,12 +9779,14 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - `callRecordingUpdate` is of type [CallRecordingUpdate](./Definitions/CallRecordingUpdate.cs)
-- `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./Definitions/PauseResumeCallRecordingParameters.cs)
+- `pauseResumeCallRecordingParameters` is of
+  type [PauseResumeCallRecordingParameters](./Definitions/PauseResumeCallRecordingParameters.cs)
 - `result` is of type [CallRecording](./Definitions/CallRecording.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pauseResumeCallRecording) in API Explorer.
 
 ## rejectParty
+
 Reject Call Party
 
 Name|Value
@@ -9264,6 +9811,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-rejectParty) in API Explorer.
 
 ## replyParty
+
 Reply with Text
 
 Name|Value
@@ -9289,6 +9837,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-replyParty) in API Explorer.
 
 ## superviseCallParty
+
 Supervise Call Party
 
 Name|Value
@@ -9314,6 +9863,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-superviseCallParty) in API Explorer.
 
 ## transferCallParty
+
 Transfer Call Party
 
 Name|Value
@@ -9339,6 +9889,7 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-transferCallParty) in API Explorer.
 
 ## unholdCallParty
+
 Unhold Call Party
 
 Name|Value
