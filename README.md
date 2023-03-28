@@ -16,19 +16,19 @@ You can install them just like you install any other NuGet packages.
 
 ## Extensions
 
-Since version 5.0.0, this project has been changed to an extension based architecture. 
+Since version 5.0.0, this project has been changed to an extension-based architecture. 
 
 - [RingCentral.Net](./RingCentral.Net) provides core features. 
 
 You need to install extensions if you need extra features:
 
-- [RingCentral.Net.AuthorizeUri](./RingCentral.Net.AuthorizeUri) provides utility methods to build URI for OAuth authorization purpose. 
-- [RingCentral.Net.AutoRefresh](./RingCentral.Net.AutoRefresh) auto refreshes your token.
-- [RingCentral.Net.Debug](./RingCentral.Net.Debug) prints all HTTP traffic to console.
-- [RingCentral.Net.Events](./RingCentral.Net.Events) provides your with events about HTTP requests.
+- [RingCentral.Net.AuthorizeUri](./RingCentral.Net.AuthorizeUri) provides utility methods to build URI for OAuth authorization purposes. 
+- [RingCentral.Net.AutoRefresh](./RingCentral.Net.AutoRefresh) auto-refreshes your token.
+- [RingCentral.Net.Debug](./RingCentral.Net.Debug) prints all HTTP traffic to the console.
+- [RingCentral.Net.Events](./RingCentral.Net.Events) provides you with events about HTTP requests.
 - [RingCentral.Net.Pubnub](./RingCentral.Net.Pubnub) if you need PubNub support and your app targets traditional .NET Framework.
 - [RingCentral.Net.PubnubPCL](./RingCentral.Net.PubnubPCL) if you need PubNub support and your app targets .NET Core, Mono, Xamarin...etc.
-- [RingCentral.Net.RateLimit](./RingCentral.Net.RateLimit) automatically handles rate limit for you.
+- [RingCentral.Net.RateLimit](./RingCentral.Net.RateLimit) automatically handles the rate limit for you.
 - [RingCentral.Net.Retry](./RingCentral.Net.Retry) allows you to retry a REST request if there is `RestException`.
 
 
@@ -41,7 +41,7 @@ There is also lots of useful code for your reference in our [test cases](./RingC
 
 ## Logging
 
-The SDK takes advantages of [System.Diagnostics.Trace](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace?view=net-6.0) to provide logs.
+The SDK takes advantage of [System](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace?view=net-6.0).Diagnostics.Trace](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace?view=net-6.0) to provide logs.
 
 To enable logging, you need to either add `#define TRACE` to your source or specify the option `/d:TRACE` when compiling.
 
@@ -51,7 +51,7 @@ To specify an output channel, you need to specify a listener:
 Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
 ```
 
-Code about will print logs to console. For more detail please refer to [Trace.Listeners Property](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace.listeners?view=net-6.0).
+Code about will print logs to the console. For more detail please refer to [Trace.Listeners Property](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace.listeners?view=net-6.0).
 
 [Demo project](https://github.com/tylerlong/rc-logging-demo-csharp).
 
@@ -96,8 +96,8 @@ var content = await rc.Restapi().Account().Extension().MessageStore(message.id).
 ### Rule of thumb
 
 But not all binary content has been migrated to CDN.
-If the resource to download provides you with a CDN uri, use that CDN uri.
-If there is no CDN uri provided, construct the uri as the [sample code](./samples.md) shows.
+If the resource to download provides you with a CDN URI, use that CDN URI.
+If there is no CDN URI provided, construct the URI as the [sample code](./samples.md) shows.
 
 
 ## How to access headers
@@ -137,8 +137,7 @@ rc.TeamMessaging().Chats().List();
 ## For maintainers
 
 ### Release
-
-Update version number in `RingCentral.Net/RestClient.cs`.
+Update the version number in `RingCentral.Net/RestClient.cs`.
 
 Update version number in `<ProjectName>/<ProjectName>.csproj`
 
@@ -164,6 +163,6 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 
 ## Todo
 
-- Add batch get to auto generated sample code
+- Add batch get to auto-generated sample code
 - Exception error message for binary data? Will it print a LOT?
 - Add icons to NuGet packages
