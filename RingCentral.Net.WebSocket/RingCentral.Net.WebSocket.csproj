@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Websocket.Client" Version="4.3.21"/>
+        <PackageReference Include="Websocket.Client" Version="4.6.1"/>
     </ItemGroup>
 
 </Project>
