@@ -30,10 +30,10 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
         ///     Endpoint: /restapi/oauth/token
         ///     Rate Limit Group: Auth
         /// </summary>
-        public async Task<TokenInfo> Post(GetTokenRequest GetTokenRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<TokenInfo> Post(GetTokenRequest getTokenRequest, RestRequestConfig restRequestConfig = null)
         {
             var dict = new Dictionary<string, string>();
-            Utils.GetPairs(GetTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
+            Utils.GetPairs(getTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<TokenInfo>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
         }
     }

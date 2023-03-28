@@ -69,7 +69,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfoRequest site { get; set; }
+        public SiteReference site { get; set; }
 
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension

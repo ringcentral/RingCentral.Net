@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Canonical URI to an answering rule resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -79,6 +80,7 @@ namespace RingCentral
         ///     say their name before connecting; 'UnknownCallerId' - if caller ID is not in contact list, then callers are asked
         ///     to say their name before connecting; 'Always' - the callers are always asked to say their name before connecting.
         ///     The default value is 'Off'
+        ///     Default: Off
         ///     Enum: Off, NoCallerId, UnknownCallerId, Always
         /// </summary>
         public string screening { get; set; }

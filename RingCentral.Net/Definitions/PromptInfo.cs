@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a prompt
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -19,6 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a prompt media content
+        ///     Format: uri
         /// </summary>
         public string contentUri { get; set; }
 

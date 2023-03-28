@@ -1,9 +1,10 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Shipping address for the order. If it coincides with the Emergency Service Address, then can be omitted. By default
-    ///     the same value as the emergencyServiceAddress. Multiple addresses can be specified; in case the order contains
-    ///     several devices, they can be delivered to different addresses
+    ///     Shipping address for the order. If it coincides with the Emergency
+    ///     Service Address, then can be omitted. By default the same value as the
+    ///     emergencyServiceAddress. Multiple addresses can be specified; in case
+    ///     an order contains several devices, they can be delivered to different addresses
     /// </summary>
     public class ShippingAddressInfo
     {
@@ -13,42 +14,46 @@ namespace RingCentral
         public string customerName { get; set; }
 
         /// <summary>
-        ///     Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and
-        ///     Australia.
+        ///     Name of an additional contact person. Should be specified for
+        ///     countries except the US, Canada, the UK and Australia.
         /// </summary>
         public string additionalCustomerName { get; set; }
 
         /// <summary>
-        ///     Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and
-        ///     Australia.
+        ///     Email of a primary contact person (receiver). Should be specified
+        ///     for countries except the US, Canada, the UK and Australia.
+        ///     Format: email
         /// </summary>
         public string customerEmail { get; set; }
 
         /// <summary>
-        ///     Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and
-        ///     Australia.
+        ///     Email of an additional contact person. Should be specified
+        ///     for countries except the US, Canada, the UK and Australia.
+        ///     Format: email
         /// </summary>
         public string additionalCustomerEmail { get; set; }
 
         /// <summary>
-        ///     Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the
-        ///     UK and Australia
+        ///     Phone number of a primary contact person (receiver). Should
+        ///     be specified for countries except the US, Canada, the UK and Australia
         /// </summary>
         public string customerPhone { get; set; }
 
         /// <summary>
-        ///     Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK &
-        ///     Australia.
+        ///     Phone number of an additional contact person. Should be specified
+        ///     for countries except the US, Canada, the UK & Australia.
         /// </summary>
         public string additionalCustomerPhone { get; set; }
 
         /// <summary>
-        ///     Street address, line 1 - street address, P.O. box, company name, c/o
+        ///     Street address, line 1 - street address, P.O. box, company
+        ///     name, c/o
         /// </summary>
         public string street { get; set; }
 
         /// <summary>
-        ///     Street address, line 2 - apartment, suite, unit, building, floor, etc.
+        ///     Street address, line 2 - apartment, suite, unit, building,
+        ///     floor, etc.
         /// </summary>
         public string street2 { get; set; }
 
@@ -103,8 +108,8 @@ namespace RingCentral
         public string zip { get; set; }
 
         /// <summary>
-        ///     National taxpayer identification number. Should be specified for Brazil (CNPJ/CPF number) and Argentina (CUIT
-        ///     number).
+        ///     National taxpayer identification number. Should be specified
+        ///     for Brazil (CNPJ/CPF number) and Argentina (CUIT number).
         /// </summary>
         public string taxId { get; set; }
     }

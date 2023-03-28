@@ -23,8 +23,8 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         }
 
         /// <summary>
-        ///     Returns the list of A2P batches sent from the current account. The list can be filtered by message batch ID and/or
-        ///     from phone number.
+        ///     Returns the list of A2P batches sent from the current account.
+        ///     The list can be filtered by message batch ID and/or from phone number.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
         ///     Rate Limit Group: Light

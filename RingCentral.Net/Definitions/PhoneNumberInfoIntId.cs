@@ -30,7 +30,8 @@ namespace RingCentral
         public string location { get; set; }
 
         /// <summary>
-        ///     Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
+        ///     Payment type. 'External' is returned for forwarded numbers
+        ///     which are not terminated in the RingCentral phone system
         ///     Enum: External, TollFree, Local
         /// </summary>
         public string paymentType { get; set; }
@@ -41,8 +42,9 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an
-        ///     external number not yet ported to RingCentral
+        ///     Status of a phone number. If the value is 'Normal', the phone
+        ///     number is ready to be used. Otherwise it is an external number not yet
+        ///     ported to RingCentral
         /// </summary>
         public string status { get; set; }
 

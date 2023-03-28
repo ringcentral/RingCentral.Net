@@ -8,6 +8,8 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
+        ///     Link to a RingOut call resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

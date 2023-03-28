@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a custom user greeting
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -27,6 +28,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a greeting content (audio file)
+        ///     Format: uri
         /// </summary>
         public string contentUri { get; set; }
 

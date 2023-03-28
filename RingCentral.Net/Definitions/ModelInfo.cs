@@ -32,6 +32,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Max supported count of phone lines
+        ///     Format: int32
         /// </summary>
         public long? lineCount { get; set; }
     }

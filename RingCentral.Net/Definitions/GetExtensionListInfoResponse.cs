@@ -74,6 +74,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site { get; set; }
+        public ProvisioningSiteInfo site { get; set; }
     }
 }

@@ -24,10 +24,10 @@ namespace RingCentral.Net.RateLimit
                     string rateLimitWindowHeader = default;
                     if (restException.httpResponseMessage.Headers
                         .TryGetValues("x-rate-limit-window", out var values))
-                    {
                         rateLimitWindowHeader = values.FirstOrDefault();
-                    }
-                    int rateLimitWindow = rateLimitWindowHeader == default ? options.rateLimitWindow : int.Parse(rateLimitWindowHeader);
+                    var rateLimitWindow = rateLimitWindowHeader == default
+                        ? options.rateLimitWindow
+                        : int.Parse(rateLimitWindowHeader);
                     return (int) (rateLimitWindow * 1000 *
                                   Math.Pow(2, retriesAttempted)); // exponential back off
                 }

@@ -12,6 +12,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a greeting language
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

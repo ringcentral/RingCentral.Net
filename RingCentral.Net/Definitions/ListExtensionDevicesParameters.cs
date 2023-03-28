@@ -6,39 +6,48 @@ namespace RingCentral
     public class ListExtensionDevicesParameters
     {
         /// <summary>
+        ///     The result set page number (1-indexed) to return
+        ///     Maximum: 1000
+        ///     Minimum: 1
+        ///     Format: int32
+        ///     Example: 1
+        ///     Default: 1
+        /// </summary>
+        public long? page { get; set; }
+
+        /// <summary>
+        ///     The number of items per page. If provided value in the request
+        ///     is greater than a maximum, the maximum value is applied
+        ///     Maximum: 1000
+        ///     Minimum: 1
+        ///     Format: int32
+        ///     Example: 100
+        ///     Default: 100
+        /// </summary>
+        public long? perPage { get; set; }
+
+        /// <summary>
         ///     Pooling type of a device
         ///     Enum: Host, Guest, None
         /// </summary>
         public string linePooling { get; set; }
 
         /// <summary>
-        ///     Device feature or multiple features supported
-        ///     Enum: Intercom, Paging, BLA, HELD
+        ///     Device feature
+        ///     Enum: BLA, CommonPhone, Intercom, Paging, HELD
         /// </summary>
         public string feature { get; set; }
 
         /// <summary>
-        ///     Number of a page to be returned
-        ///     Default: 1
-        /// </summary>
-        public string page { get; set; }
-
-        /// <summary>
-        ///     Number of records per page to be returned
-        ///     Default: 100
-        /// </summary>
-        public string perPage { get; set; }
-
-        /// <summary>
         ///     Device type
         ///     Default: HardPhone
-        ///     Enum: Room, SoftPhone, OtherPhone, HardPhone, Paging, WebRTC
+        ///     Enum: HardPhone, SoftPhone, OtherPhone, MobileDevice, BLA, Paging, WebPhone, Room
         /// </summary>
-        public string line { get; set; }
+        public string type { get; set; }
 
         /// <summary>
-        ///     Type of phone line
-        ///     Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
+        ///     The type of a phone line
+        ///     Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary
         /// </summary>
         public string lineType { get; set; }
     }

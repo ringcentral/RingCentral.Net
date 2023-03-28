@@ -7,6 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a blocked/allowed phone number
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

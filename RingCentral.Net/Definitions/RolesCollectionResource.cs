@@ -13,10 +13,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public RNPPagingInfo paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public RNPNavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
     }
 }

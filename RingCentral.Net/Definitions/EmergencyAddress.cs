@@ -3,13 +3,19 @@ namespace RingCentral
     public class EmergencyAddress
     {
         /// <summary>
-        ///     'True' if specifying of emergency address is required
+        ///     If set to 'True' then specifying emergency address is required
         /// </summary>
         public bool? required { get; set; }
 
         /// <summary>
-        ///     'True' if only local emergency address can be specified
+        ///     If set to 'True' then only local emergency address can be specified
         /// </summary>
         public bool? localOnly { get; set; }
+
+        /// <summary>
+        ///     This status is associated with a phone line provision state
+        ///     Enum: Valid, Provisioning, Invalid
+        /// </summary>
+        public string lineProvisioningStatus { get; set; }
     }
 }

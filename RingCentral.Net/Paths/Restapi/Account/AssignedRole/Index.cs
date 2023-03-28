@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.AssignedRole
         }
 
         /// <summary>
-        ///     Returns the list of assigned roles for the current account.
+        ///     Returns a list of roles assigned to the current account.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/assigned-role
         ///     Rate Limit Group: Medium

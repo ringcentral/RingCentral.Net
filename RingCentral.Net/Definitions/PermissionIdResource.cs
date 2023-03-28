@@ -3,6 +3,7 @@ namespace RingCentral
     public class PermissionIdResource
     {
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the message sync resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

@@ -107,9 +107,5 @@ namespace RingCentral
         ///     Enum: plain, S256
         /// </summary>
         public string code_challenge_method { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public bool? discovery { get; set; }
     }
 }

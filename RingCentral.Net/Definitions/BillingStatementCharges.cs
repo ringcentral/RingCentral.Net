@@ -7,6 +7,7 @@ namespace RingCentral
         public string description { get; set; }
 
         /// <summary>
+        ///     Format: double
         /// </summary>
         public decimal? amount { get; set; }
 
@@ -15,6 +16,7 @@ namespace RingCentral
         public string feature { get; set; }
 
         /// <summary>
+        ///     Format: double
         /// </summary>
         public decimal? freeServiceCredit { get; set; }
     }

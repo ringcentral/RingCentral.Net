@@ -21,6 +21,12 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
+        ///     Type of extension group
+        ///     Enum: User, NonUser
+        /// </summary>
+        public string typeGroup { get; set; }
+
+        /// <summary>
         ///     Page number
         ///     Format: int32
         ///     Default: 1

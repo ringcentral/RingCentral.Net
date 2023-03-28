@@ -3,19 +3,18 @@ namespace RingCentral
     public class CustomFieldResource
     {
         /// <summary>
-        ///     Custom field identifier
+        ///     Example: 1032854
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        ///     Object category to attach custom fields
-        ///     Enum: User
+        ///     Example: Rank
         /// </summary>
-        public string category { get; set; }
+        public string name { get; set; }
 
         /// <summary>
-        ///     Custom field display name
+        ///     Example: 5
         /// </summary>
-        public string displayName { get; set; }
+        public string value { get; set; }
     }
 }

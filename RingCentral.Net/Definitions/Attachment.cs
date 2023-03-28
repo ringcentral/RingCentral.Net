@@ -6,8 +6,7 @@ namespace RingCentral
     public class Attachment
     {
         /// <summary>
-        ///     Filename with extension
-        ///     Example: example.png
+        ///     Filename with extension, such as "image.png"
         /// </summary>
         public string filename { get; set; }
 

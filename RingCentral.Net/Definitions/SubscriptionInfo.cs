@@ -12,6 +12,8 @@ namespace RingCentral
         /// <summary>
         ///     Internal identifier of a subscription
         ///     Required
+        ///     Format: uuid
+        ///     Example: 95fecfc9-9cdc-4e94-a78a-89fd65889d37
         /// </summary>
         public string id { get; set; }
 
@@ -22,13 +24,14 @@ namespace RingCentral
         public string[] eventFilters { get; set; }
 
         /// <summary>
-        ///     The list of event filter names corresponding to events the user is not subscribed to due to certain limitations
+        ///     The list of event filter names corresponding to events the user is not subscribed to due to
+        ///     certain limitations
         /// </summary>
         public DisabledFilterInfo[] disabledFilters { get; set; }
 
         /// <summary>
-        ///     Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone,
-        ///     for example *2016-03-10T18:07:52.534Z*
+        ///     Subscription expiration time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     format including timezone, for example *2016-03-10T18:07:52.534Z*
         ///     Required
         ///     Format: date-time
         /// </summary>
@@ -36,6 +39,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Subscription lifetime in seconds
+        ///     Minimum: 1
         ///     Format: int32
         /// </summary>
         public long? expiresIn { get; set; }
@@ -48,8 +52,8 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
-        ///     Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for
-        ///     example *2016-03-10T18:07:52.534*
+        ///     Subscription creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     format including timezone, for example *2016-03-10T18:07:52.534*
         ///     Required
         ///     Format: date-time
         /// </summary>

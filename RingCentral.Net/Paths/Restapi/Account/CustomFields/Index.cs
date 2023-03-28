@@ -30,9 +30,9 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserInfo
         /// </summary>
-        public async Task<CustomFieldsResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<CustomFieldList> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<CustomFieldsResource>(Path(false), null, restRequestConfig);
+            return await rc.Get<CustomFieldList>(Path(false), null, restRequestConfig);
         }
 
         /// <summary>
@@ -43,10 +43,10 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         ///     App Permission: EditAccounts
         ///     User Permission: Users
         /// </summary>
-        public async Task<CustomFieldResource> Post(CustomFieldCreateRequest customFieldCreateRequest,
+        public async Task<CustomFieldModel> Post(CustomFieldCreateRequest customFieldCreateRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CustomFieldResource>(Path(false), customFieldCreateRequest, null, restRequestConfig);
+            return await rc.Post<CustomFieldModel>(Path(false), customFieldCreateRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -57,11 +57,11 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         ///     App Permission: EditAccounts
         ///     User Permission: Users
         /// </summary>
-        public async Task<CustomFieldResource> Put(CustomFieldUpdateRequest customFieldUpdateRequest,
+        public async Task<CustomFieldModel> Put(CustomFieldUpdateRequest customFieldUpdateRequest,
             RestRequestConfig restRequestConfig = null)
         {
             if (fieldId == null) throw new ArgumentException("Parameter cannot be null", nameof(fieldId));
-            return await rc.Put<CustomFieldResource>(Path(), customFieldUpdateRequest, null, restRequestConfig);
+            return await rc.Put<CustomFieldModel>(Path(), customFieldUpdateRequest, null, restRequestConfig);
         }
 
         /// <summary>

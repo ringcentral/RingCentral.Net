@@ -86,6 +86,11 @@ namespace RingCentral
         public string dateFrom { get; set; }
 
         /// <summary>
+        ///     Internal identifier of a telephony session
+        /// </summary>
+        public string telephonySessionId { get; set; }
+
+        /// <summary>
         ///     Indicates the page number to retrieve. Only positive number values are allowed
         ///     Minimum: 1
         ///     Format: int32

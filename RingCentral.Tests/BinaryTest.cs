@@ -147,7 +147,7 @@ namespace RingCentral.Tests
                 }
             }
         }
-        
+
         [Fact]
         public async void UploadIvrAudio()
         {
@@ -169,7 +169,7 @@ namespace RingCentral.Tests
                     {
                         filename = "test.mp3",
                         contentType = "audio/mpeg",
-                        content = File.ReadAllBytes("test.mp3"),
+                        content = File.ReadAllBytes("test.mp3")
                     }
                 });
             }

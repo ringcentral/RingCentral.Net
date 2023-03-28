@@ -28,6 +28,24 @@ namespace RingCentral
         public string telephonySessionId { get; set; }
 
         /// <summary>
+        ///     Call session identifier, required for Telephony REST API
+        /// </summary>
+        public string sipUuidInfo { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CompanyCallLogRecordTransferTarget transferTarget { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CompanyCallLogRecordTransferee transferee { get; set; }
+
+        /// <summary>
+        ///     Internal Identifier of Participant
+        /// </summary>
+        public string partyId { get; set; }
+
+        /// <summary>
         ///     The type of a call transport. 'PSTN' indicates that a call leg was initiated
         ///     from the PSTN network provider; 'VoIP' - from an RC phone.
         ///     Enum: PSTN, VoIP

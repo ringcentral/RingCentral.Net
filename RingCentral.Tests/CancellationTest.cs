@@ -28,7 +28,7 @@ namespace RingCentral.Tests
                 {
                     to = new[]
                     {
-                        new MessageStoreCalleeInfoRequest
+                        new FaxReceiver
                         {
                             phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER"),
                             name = "The Receiver"

@@ -35,7 +35,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Permission
         }
 
         /// <summary>
-        ///     Returns user permission by ID.
+        ///     Returns a user permission by ID.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/dictionary/permission/{permissionId}
         ///     Rate Limit Group: Light

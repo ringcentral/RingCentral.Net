@@ -23,6 +23,11 @@ namespace RingCentral
         public string displayName { get; set; }
 
         /// <summary>
+        ///     Example: Account
+        /// </summary>
+        public string routingType { get; set; }
+
+        /// <summary>
         ///     Example: 1726
         /// </summary>
         public string outboundEdgeId { get; set; }

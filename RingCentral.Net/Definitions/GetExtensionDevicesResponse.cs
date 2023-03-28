@@ -3,7 +3,8 @@ namespace RingCentral
     public class GetExtensionDevicesResponse
     {
         /// <summary>
-        ///     Link to the list of extension devices
+        ///     Link to a list of extension devices
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -11,16 +12,16 @@ namespace RingCentral
         ///     List of extension devices
         ///     Required
         /// </summary>
-        public ExtensionDeviceResponse[] records { get; set; }
+        public DeviceResource[] records { get; set; }
 
         /// <summary>
         ///     Required
         /// </summary>
-        public DeviceProvisioningNavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
 
         /// <summary>
         ///     Required
         /// </summary>
-        public DeviceProvisioningPagingInfo paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
     }
 }

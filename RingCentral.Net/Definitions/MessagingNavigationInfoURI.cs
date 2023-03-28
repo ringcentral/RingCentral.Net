@@ -6,6 +6,7 @@ namespace RingCentral
     public class MessagingNavigationInfoURI
     {
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
     }

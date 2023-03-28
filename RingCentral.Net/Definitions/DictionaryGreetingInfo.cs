@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a greeting
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -33,6 +34,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a greeting content (audio file), if any
+        ///     Format: uri
         /// </summary>
         public string contentUri { get; set; }
 
@@ -54,10 +56,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public NavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public EnumeratedPaging paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
     }
 }

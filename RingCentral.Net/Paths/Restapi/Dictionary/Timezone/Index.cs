@@ -40,11 +40,10 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
         ///     Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<GetTimezoneInfoResponse> Get(ReadTimezoneParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GetTimezoneInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (timezoneId == null) throw new ArgumentException("Parameter cannot be null", nameof(timezoneId));
-            return await rc.Get<GetTimezoneInfoResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<GetTimezoneInfoResponse>(Path(), null, restRequestConfig);
         }
     }
 }

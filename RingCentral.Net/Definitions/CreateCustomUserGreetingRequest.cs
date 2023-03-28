@@ -14,15 +14,13 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Internal identifier of an answering rule
-        ///     Required
-        /// </summary>
-        public string answeringRuleId { get; set; }
-
-        /// <summary>
         ///     Media file to upload
         ///     Required
         /// </summary>
         public Attachment binary { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public GreetingAnsweringRuleId answeringRule { get; set; }
     }
 }

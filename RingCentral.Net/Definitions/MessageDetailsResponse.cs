@@ -13,13 +13,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the message was sent
-        ///     Example: 15551234567
+        ///     Example: +15551234567
         /// </summary>
         public string from { get; set; }
 
         /// <summary>
         ///     List of phone numbers in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format to which the message was sent
-        ///     Example: 15551234567
+        ///     Example: +15551234567
         /// </summary>
         public string[] to { get; set; }
 

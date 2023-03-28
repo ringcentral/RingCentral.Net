@@ -24,6 +24,24 @@ namespace RingCentral
         public string telephonySessionId { get; set; }
 
         /// <summary>
+        ///     Call session identifier, required for Telephony REST API
+        /// </summary>
+        public string sipUuidInfo { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallLogRecordTransferTarget transferTarget { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallLogRecordTransferee transferee { get; set; }
+
+        /// <summary>
+        ///     Internal Identifier of Participant
+        /// </summary>
+        public string partyId { get; set; }
+
+        /// <summary>
         /// </summary>
         public CallLogCallerInfo from { get; set; }
 

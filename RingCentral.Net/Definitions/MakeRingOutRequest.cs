@@ -17,12 +17,13 @@ namespace RingCentral
         public MakeRingOutCallerIdInfo callerId { get; set; }
 
         /// <summary>
-        ///     The audio prompt that the calling party hears when the call is connected
+        ///     Audio prompt that a calling party hears when a call
+        ///     is connected
         /// </summary>
         public bool? playPrompt { get; set; }
 
         /// <summary>
         /// </summary>
-        public MakeRingOutCoutryInfo country { get; set; }
+        public MakeRingOutCountryInfo country { get; set; }
     }
 }

@@ -30,11 +30,11 @@ namespace RingCentral.Paths.Restapi.Account.Device
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadCompanyDevices
         /// </summary>
-        public async Task<GetDeviceInfoResponse> Get(ReadDeviceParameters queryParams = null,
+        public async Task<DeviceResource> Get(ReadDeviceParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             if (deviceId == null) throw new ArgumentException("Parameter cannot be null", nameof(deviceId));
-            return await rc.Get<GetDeviceInfoResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<DeviceResource>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -45,11 +45,11 @@ namespace RingCentral.Paths.Restapi.Account.Device
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyDevices
         /// </summary>
-        public async Task<GetDeviceInfoResponse> Put(AccountDeviceUpdate accountDeviceUpdate,
+        public async Task<DeviceResource> Put(AccountDeviceUpdate accountDeviceUpdate,
             UpdateDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (deviceId == null) throw new ArgumentException("Parameter cannot be null", nameof(deviceId));
-            return await rc.Put<GetDeviceInfoResponse>(Path(), accountDeviceUpdate, queryParams, restRequestConfig);
+            return await rc.Put<DeviceResource>(Path(), accountDeviceUpdate, queryParams, restRequestConfig);
         }
     }
 }

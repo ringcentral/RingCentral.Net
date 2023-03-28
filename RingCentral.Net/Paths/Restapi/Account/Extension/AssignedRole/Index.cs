@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignedRole
         }
 
         /// <summary>
-        ///     Returns the list of roles assigned to the current extension.
+        ///     Returns a list of roles assigned to the current extension.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
         ///     Rate Limit Group: Light
@@ -33,11 +33,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignedRole
         }
 
         /// <summary>
-        ///     Updates the list of assigned roles for the current user.
+        ///     Updates a list of roles assigned to the current user.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
         ///     Rate Limit Group: Medium
         ///     App Permission: RoleManagement
+        ///     User Permission: EditAssignedRoles
         /// </summary>
         public async Task<AssignedRolesResource> Put(AssignedRolesResource assignedRolesResource,
             RestRequestConfig restRequestConfig = null)

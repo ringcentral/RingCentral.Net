@@ -8,6 +8,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
+        ///     Format: email
         /// </summary>
         public string email { get; set; }
 

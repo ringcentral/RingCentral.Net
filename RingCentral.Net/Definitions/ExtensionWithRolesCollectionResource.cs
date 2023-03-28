@@ -10,5 +10,13 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ExtensionWithRolesResource[] records { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public EnumeratedPagingModel paging { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PageNavigationModel navigation { get; set; }
     }
 }

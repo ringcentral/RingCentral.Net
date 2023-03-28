@@ -38,10 +38,10 @@ namespace RingCentral.Paths.Restapi.Oauth.Authorize
         ///     Endpoint: /restapi/oauth/authorize
         ///     Rate Limit Group: Auth
         /// </summary>
-        public async Task<string> Post(AuthorizeRequest AuthorizeRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(AuthorizeRequest authorizeRequest, RestRequestConfig restRequestConfig = null)
         {
             var dict = new Dictionary<string, string>();
-            Utils.GetPairs(AuthorizeRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
+            Utils.GetPairs(authorizeRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
             return await rc.Post<string>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
         }
     }

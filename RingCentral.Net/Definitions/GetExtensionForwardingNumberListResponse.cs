@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to the forwarding number list resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -14,10 +15,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public NavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public EnumeratedPaging paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
     }
 }

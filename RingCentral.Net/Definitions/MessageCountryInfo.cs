@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of a country
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

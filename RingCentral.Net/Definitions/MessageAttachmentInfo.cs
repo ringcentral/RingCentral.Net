@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of a message attachment
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -25,7 +26,9 @@ namespace RingCentral
         public string contentType { get; set; }
 
         /// <summary>
-        ///     Supported for `Voicemail` only. Duration of a voicemail in seconds
+        ///     Supported for `Voicemail` only. Duration of a voicemail in
+        ///     seconds
+        ///     Format: int32
         /// </summary>
         public long? vmDuration { get; set; }
 
@@ -36,16 +39,19 @@ namespace RingCentral
 
         /// <summary>
         ///     Size of attachment in bytes
+        ///     Format: int32
         /// </summary>
         public long? size { get; set; }
 
         /// <summary>
         ///     Attachment height in pixels if available
+        ///     Format: int32
         /// </summary>
         public long? height { get; set; }
 
         /// <summary>
         ///     Attachment width in pixels if available
+        ///     Format: int32
         /// </summary>
         public long? width { get; set; }
     }

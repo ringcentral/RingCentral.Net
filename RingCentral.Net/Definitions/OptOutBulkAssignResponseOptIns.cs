@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Recipients' phone numbers which opt-ins were successfully added for.
-        ///     Example: 15551237799
+        ///     Example: +15551237799
         /// </summary>
         public string[] successful { get; set; }
 

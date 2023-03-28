@@ -13,8 +13,7 @@ namespace RingCentral
         public long? count { get; set; }
 
         /// <summary>
-        ///     Format: int64
         /// </summary>
-        public long? errorCodeCounts { get; set; }
+        public object errorCodeCounts { get; set; }
     }
 }

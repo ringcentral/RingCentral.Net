@@ -117,6 +117,24 @@ namespace RingCentral
         public string telephonySessionId { get; set; }
 
         /// <summary>
+        ///     Call session identifier, required for Telephony REST API
+        /// </summary>
+        public string sipUuidInfo { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallLogRecordLegInfoTransferTarget transferTarget { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallLogRecordLegInfoTransferee transferee { get; set; }
+
+        /// <summary>
+        ///     Internal Identifier of Participant
+        /// </summary>
+        public string partyId { get; set; }
+
+        /// <summary>
         ///     The internal type of the call
         ///     Enum: Local, LongDistance, International, Sip, RingMe, RingOut, Usual, TollFreeNumber, VerificationNumber, Vma,
         ///     LocalNumber, ImsOutgoing, ImsIncoming

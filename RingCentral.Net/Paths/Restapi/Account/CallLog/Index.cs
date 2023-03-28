@@ -44,10 +44,11 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         ///     App Permission: ReadCallLog
         ///     User Permission: FullCompanyCallLog
         /// </summary>
-        public async Task<CompanyCallLogRecord> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<CompanyCallLogRecord> Get(ReadCompanyCallRecordParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (callRecordId == null) throw new ArgumentException("Parameter cannot be null", nameof(callRecordId));
-            return await rc.Get<CompanyCallLogRecord>(Path(), null, restRequestConfig);
+            return await rc.Get<CompanyCallLogRecord>(Path(), queryParams, restRequestConfig);
         }
     }
 }

@@ -20,7 +20,6 @@ namespace RingCentral
         public long? slaThresholdSeconds { get; set; }
 
         /// <summary>
-        ///     Format: int32
         /// </summary>
         public bool? includeAbandonedCalls { get; set; }
 

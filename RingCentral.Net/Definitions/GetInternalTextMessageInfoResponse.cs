@@ -10,6 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of a message
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -19,15 +20,17 @@ namespace RingCentral
         public MessageAttachmentInfo[] attachments { get; set; }
 
         /// <summary>
-        ///     Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be
-        ///     restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically
-        ///     deleted shortly
+        ///     Message availability status. Message in 'Deleted' state is still
+        ///     preserved with all its attachments and can be restored. 'Purged' means
+        ///     that all attachments are already deleted and the message itself is about
+        ///     to be physically deleted shortly
         ///     Enum: Alive, Deleted, Purged
         /// </summary>
         public string availability { get; set; }
 
         /// <summary>
-        ///     SMS and Pager only. Identifier of a conversation that the message belongs to
+        ///     SMS and Pager only. Identifier of a conversation that the message
+        ///     belongs to
         ///     Format: int64
         /// </summary>
         public long? conversationId { get; set; }
@@ -37,14 +40,16 @@ namespace RingCentral
         public ConversationInfo conversation { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        ///     Message creation datetime in ISO 8601 format including timezone,
+        ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Message direction. Note that for some message types not all directions are allowed. For example voicemail messages
-        ///     can be only inbound
+        ///     Text message direction. Note that for some message types not all
+        ///     directions are allowed. For example voicemail messages can
+        ///     be only inbound
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
@@ -54,23 +59,26 @@ namespace RingCentral
         public MessageStoreCallerInfoResponseFrom from { get; set; }
 
         /// <summary>
-        ///     The datetime when the message was modified on server in ISO 8601 format including timezone, for example
-        ///     2016-03-10T18:07:52.534Z
+        ///     Datetime when the message was modified on server in ISO
+        ///     8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 
         /// <summary>
-        ///     Message status. Different message types may have different allowed status values. For outbound faxes the aggregated
-        ///     message status is returned: If status for at least one recipient is 'Queued', then 'Queued' value is returned If
-        ///     status for at least one recipient is 'SendingFailed', then 'SendingFailed' value is returned In other cases Sent
-        ///     status is returned
+        ///     Message status. Different message types may have different
+        ///     allowed status values. For outbound faxes the aggregated message status
+        ///     is returned. If, for outbound message, a status for at least one recipient is 'Queued', then
+        ///     the 'Queued' value is returned. If a status for at least one recipient is
+        ///     'SendingFailed', then the 'SendingFailed' value is returned. In other cases
+        ///     the 'Sent' status is returned
         ///     Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
         /// </summary>
         public string messageStatus { get; set; }
 
         /// <summary>
-        ///     'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
+        ///     Pager only. 'True' if at least one of a message recipients
+        ///     is 'Department' extension
         /// </summary>
         public bool? pgToDepartment { get; set; }
 
@@ -87,7 +95,8 @@ namespace RingCentral
         public string readStatus { get; set; }
 
         /// <summary>
-        ///     Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment
+        ///     Message subject. For SMS and Pager messages it replicates message
+        ///     text which is also returned as an attachment
         /// </summary>
         public string subject { get; set; }
 

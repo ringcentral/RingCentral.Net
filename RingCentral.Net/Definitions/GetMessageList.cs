@@ -3,7 +3,8 @@ namespace RingCentral
     public class GetMessageList
     {
         /// <summary>
-        ///     Link to the list of user messages
+        ///     Link to a list of user messages
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

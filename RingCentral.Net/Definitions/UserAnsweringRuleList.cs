@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Canonical URI of an answering rule list resource
+        ///     Format: uri
         ///     Example: https://platform.ringcentral.com/restapi/v1.0/account/240913004/extension/240972004/answering-rule?page=1
         ///     &perPage=100
         /// </summary>
@@ -16,10 +17,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public EnumeratedPaging paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public UserAnsweringRuleListNavigation navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
     }
 }

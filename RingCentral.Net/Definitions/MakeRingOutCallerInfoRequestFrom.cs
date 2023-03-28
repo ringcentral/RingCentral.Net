@@ -1,8 +1,9 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. This number can be one of
-    ///     the user's configured forwarding numbers or an arbitrary number
+    ///     Phone number of a caller. This number corresponds to the 1st
+    ///     leg of a RingOut call. This number can be one of the user's configured forwarding
+    ///     numbers or an arbitrary number
     /// </summary>
     public class MakeRingOutCallerInfoRequestFrom
     {
@@ -12,8 +13,8 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Internal identifier of a forwarding number; returned in response as an 'id' field value. Can be specified instead
-        ///     of the phoneNumber attribute
+        ///     Internal identifier of a forwarding number; returned in response
+        ///     as an 'id' field value. Can be specified instead of a `phoneNumber` attribute
         /// </summary>
         public string forwardingNumberId { get; set; }
     }

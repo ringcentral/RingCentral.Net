@@ -7,6 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of an extension. Optional parameter
+        ///     Default: ~
         /// </summary>
         public string extensionId { get; set; }
 

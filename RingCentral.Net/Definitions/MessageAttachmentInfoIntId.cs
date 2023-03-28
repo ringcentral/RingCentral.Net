@@ -10,11 +10,12 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of a message attachment
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     Type of message attachment
+        ///     Type of a message attachment
         ///     Enum: AudioRecording, AudioTranscription, Text, SourceDocument, RenderedDocument, MmsAttachment
         /// </summary>
         public string type { get; set; }
@@ -25,17 +26,13 @@ namespace RingCentral
         public string contentType { get; set; }
 
         /// <summary>
-        ///     Voicemail only Duration of the voicemail in seconds
-        /// </summary>
-        public long? vmDuration { get; set; }
-
-        /// <summary>
         ///     Name of a file attached
         /// </summary>
         public string filename { get; set; }
 
         /// <summary>
-        ///     Size of attachment in bytes
+        ///     Size of an attachment in bytes
+        ///     Format: int32
         /// </summary>
         public long? size { get; set; }
     }

@@ -80,29 +80,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension
             if (extensionId == null) throw new ArgumentException("Parameter cannot be null", nameof(extensionId));
             return await rc.Put<GetExtensionInfoResponse>(Path(), extensionUpdateRequest, null, restRequestConfig);
         }
-
-        /// <summary>
-        ///     Deletes extension(s) by ID(s). When an extension is being deleted
-        ///     the default API behavior is as follows:
-        ///     - user's direct numbers are preserved by becoming additional company numbers;
-        ///     - user's digital lines (both device & associated phone number) are deleted.
-        ///     You can change this behavior using the filters:
-        ///     - create unassigned extensions for each digital line of the deleted extension by
-        ///     setting the query parameter `savePhoneLines` to `true` in request path;
-        ///     - remove direct numbers of the deleted extension by setting the `savePhoneNumbers`
-        ///     query parameter to `false` in request path
-        ///     HTTP Method: delete
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: EditAccounts
-        ///     User Permission: AddRemoveUsers
-        /// </summary>
-        public async Task<string> Delete(DeleteExtensionParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            if (extensionId == null) throw new ArgumentException("Parameter cannot be null", nameof(extensionId));
-            return await rc.Delete<string>(Path(), queryParams, restRequestConfig);
-        }
     }
 }
 

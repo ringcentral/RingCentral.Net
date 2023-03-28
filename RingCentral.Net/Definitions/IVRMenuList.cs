@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to an IVR Menu list
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

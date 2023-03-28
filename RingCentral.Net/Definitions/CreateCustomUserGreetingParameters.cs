@@ -12,9 +12,5 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? apply { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public CustomGreetingAnsweringRuleInfoRequest answeringRule { get; set; }
     }
 }

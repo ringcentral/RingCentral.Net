@@ -9,6 +9,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of an answering rule
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

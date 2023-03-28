@@ -1,7 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Address for emergency cases. The same emergency address is assigned to all the numbers of one device
+    ///     Address for emergency cases. The same emergency address is assigned
+    ///     to all the numbers of one device
     /// </summary>
     public class EmergencyServiceAddressResource
     {
@@ -71,39 +72,41 @@ namespace RingCentral
         public bool? outOfCountry { get; set; }
 
         /// <summary>
-        ///     Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to
-        ///     'True'
+        ///     Resulting status of emergency address synchronization. Returned
+        ///     if `syncEmergencyAddress` parameter is set to 'True'
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
 
         /// <summary>
-        ///     Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and
-        ///     Australia.
+        ///     Name of an additional contact person. Should be specified for
+        ///     countries except the US, Canada, the UK and Australia.
         /// </summary>
         public string additionalCustomerName { get; set; }
 
         /// <summary>
-        ///     Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and
-        ///     Australia.
+        ///     Email of a primary contact person (receiver). Should be specified
+        ///     for countries except the US, Canada, the UK and Australia.
+        ///     Format: email
         /// </summary>
         public string customerEmail { get; set; }
 
         /// <summary>
-        ///     Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and
-        ///     Australia.
+        ///     Email of an additional contact person. Should be specified
+        ///     for countries except the US, Canada, the UK and Australia.
+        ///     Format: email
         /// </summary>
         public string additionalCustomerEmail { get; set; }
 
         /// <summary>
-        ///     Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the
-        ///     UK and Australia
+        ///     Phone number of a primary contact person (receiver). Should
+        ///     be specified for countries except the US, Canada, the UK and Australia
         /// </summary>
         public string customerPhone { get; set; }
 
         /// <summary>
-        ///     Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK &
-        ///     Australia.
+        ///     Phone number of an additional contact person. Should be specified
+        ///     for countries except the US, Canada, the UK & Australia.
         /// </summary>
         public string additionalCustomerPhone { get; set; }
 

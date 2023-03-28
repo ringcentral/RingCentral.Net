@@ -19,7 +19,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         }
 
         /// <summary>
-        ///     Creates and sends media messages. Sending MMS messages simultaneously to different recipients is limited up to 50
+        ///     Creates and sends a new media message or multiple messages. Sending MMS
+        ///     messages simultaneously to different recipients is limited up to 50
         ///     requests per minute; relevant for all client applications.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms
@@ -27,10 +28,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Mms
         ///     App Permission: SMS
         ///     User Permission: OutboundSMS
         /// </summary>
-        public async Task<GetSMSMessageInfoResponse> Post(CreateMMSMessage CreateMMSMessage,
+        public async Task<GetSMSMessageInfoResponse> Post(CreateMMSMessage createMMSMessage,
             RestRequestConfig restRequestConfig = null)
         {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(CreateMMSMessage);
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createMMSMessage);
             return await rc.Post<GetSMSMessageInfoResponse>(Path(), multipartFormDataContent, null, restRequestConfig);
         }
     }

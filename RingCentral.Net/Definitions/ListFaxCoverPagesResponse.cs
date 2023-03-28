@@ -3,6 +3,7 @@ namespace RingCentral
     public class ListFaxCoverPagesResponse
     {
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
@@ -12,10 +13,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public MessagingNavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
 
         /// <summary>
         /// </summary>
-        public MessagingPagingInfo paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
     }
 }

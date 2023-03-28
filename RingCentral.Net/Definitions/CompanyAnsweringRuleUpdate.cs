@@ -3,19 +3,21 @@ namespace RingCentral
     public class CompanyAnsweringRuleUpdate
     {
         /// <summary>
-        ///     Specifies if the rule is active or inactive. The default value is 'True'
+        ///     Specifies if a rule is active or inactive. The default value is 'True'
         ///     Default: true
         /// </summary>
         public bool? enabled { get; set; }
 
         /// <summary>
-        ///     Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where
-        ///     'N' is the first free number
+        ///     Name of an answering rule specified by user. Max number of
+        ///     symbols is 30. The default value is 'My Rule N' where 'N' is the first
+        ///     free number
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        ///     Answering rule will be applied when calls are received from the specified caller(s)
+        ///     Answering rule will be applied when calls are received from
+        ///     the specified caller(s)
         /// </summary>
         public CompanyAnsweringRuleCallersInfoRequest[] callers { get; set; }
 
@@ -48,7 +50,8 @@ namespace RingCentral
         public CompanyAnsweringRuleCallersInfoRequest extension { get; set; }
 
         /// <summary>
-        ///     Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
+        ///     Greetings applied for an answering rule; only predefined greetings
+        ///     can be applied, see Dictionary Greeting List
         /// </summary>
         public GreetingInfo[] greetings { get; set; }
     }

@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         }
 
         /// <summary>
-        ///     Makes a 2-leg RingOut call.
+        ///     Makes a 2-legged RingOut call.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out
         ///     Rate Limit Group: Heavy
@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         }
 
         /// <summary>
-        ///     Returns the status of a 2-leg RingOut call.
+        ///     Returns a status of a 2-legged RingOut call.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         ///     Rate Limit Group: Light
@@ -49,7 +49,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         }
 
         /// <summary>
-        ///     Cancels a 2-leg RingOut call.
+        ///     Cancels a 2-legged RingOut call.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
         ///     Rate Limit Group: Heavy

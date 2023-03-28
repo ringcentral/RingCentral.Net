@@ -26,26 +26,28 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for
-        ///     example *2019-03-10T18:07:52.534Z*
+        ///     Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     format including timezone, for example *2019-03-10T18:07:52.534Z*
+        ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
-        ///     timezone, for example *2019-03-10T18:07:52.534Z*
+        ///     Datetime when a message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     format including timezone, for example *2019-03-10T18:07:52.534Z*
+        ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 
         /// <summary>
-        ///     Status of a message
-        ///     Default: Unread
+        ///     Message read status
+        ///     Enum: Read, Unread
         /// </summary>
         public string readStatus { get; set; }
 
         /// <summary>
         ///     Message priority
-        ///     Default: Normal
+        ///     Enum: Normal, High
         /// </summary>
         public string priority { get; set; }
 
@@ -55,15 +57,19 @@ namespace RingCentral
         public MessageAttachmentInfo[] attachments { get; set; }
 
         /// <summary>
-        ///     Message direction
-        ///     Default: Inbound
+        ///     Text message direction. Note that for some message types not all
+        ///     directions are allowed. For example voicemail messages can
+        ///     be only inbound
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
 
         /// <summary>
-        ///     Message availability status
-        ///     Default: Alive
+        ///     Message availability status. Message in 'Deleted' state is still
+        ///     preserved with all its attachments and can be restored. 'Purged' means
+        ///     that all attachments are already deleted and the message itself is about
+        ///     to be physically deleted shortly
+        ///     Enum: Alive, Deleted, Purged
         /// </summary>
         public string availability { get; set; }
 
@@ -73,8 +79,13 @@ namespace RingCentral
         public string subject { get; set; }
 
         /// <summary>
-        ///     Status of a message
-        ///     Default: Received
+        ///     Message status. Different message types may have different
+        ///     allowed status values. For outbound faxes the aggregated message status
+        ///     is returned. If, for outbound message, a status for at least one recipient is 'Queued', then
+        ///     the 'Queued' value is returned. If a status for at least one recipient is
+        ///     'SendingFailed', then the 'SendingFailed' value is returned. In other cases
+        ///     the 'Sent' status is returned
+        ///     Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
         /// </summary>
         public string messageStatus { get; set; }
 

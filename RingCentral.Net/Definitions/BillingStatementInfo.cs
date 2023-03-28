@@ -1,12 +1,14 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'
+    ///     Billing information. Returned for device update request if `prestatement`
+    ///     query parameter is set to 'true'
     /// </summary>
     public class BillingStatementInfo
     {
         /// <summary>
-        ///     Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) standard
+        ///     Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217)
+        ///     standard
         /// </summary>
         public string currency { get; set; }
 
@@ -19,22 +21,27 @@ namespace RingCentral
         public BillingStatementFees[] fees { get; set; }
 
         /// <summary>
+        ///     Format: double
         /// </summary>
         public decimal? totalCharged { get; set; }
 
         /// <summary>
+        ///     Format: double
         /// </summary>
         public decimal? totalCharges { get; set; }
 
         /// <summary>
+        ///     Format: double
         /// </summary>
         public decimal? totalFees { get; set; }
 
         /// <summary>
+        ///     Format: double
         /// </summary>
         public decimal? subtotal { get; set; }
 
         /// <summary>
+        ///     Format: double
         /// </summary>
         public decimal? totalFreeServiceCredit { get; set; }
     }

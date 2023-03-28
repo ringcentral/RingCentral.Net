@@ -77,7 +77,8 @@ namespace RingCentral
         ///     callers are asked to say their name before connecting; 'Always' - the
         ///     callers are always asked to say their name before connecting. The default
         ///     value is 'Off'
-        ///     Enum: false, NoCallerId, UnknownCallerId, Always
+        ///     Default: Off
+        ///     Enum: Off, NoCallerId, UnknownCallerId, Always
         /// </summary>
         public string screening { get; set; }
 

@@ -24,7 +24,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.PermissionCategory
         }
 
         /// <summary>
-        ///     Returns the list of permission categories.
+        ///     Returns a list of permission categories.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/dictionary/permission-category
         ///     Rate Limit Group: Light
@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.PermissionCategory
         }
 
         /// <summary>
-        ///     Returns permission category by ID.
+        ///     Returns a permission category by ID.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/dictionary/permission-category/{permissionCategoryId}
         ///     Rate Limit Group: Light

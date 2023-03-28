@@ -7,6 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a recipient extension resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 

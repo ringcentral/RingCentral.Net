@@ -78,7 +78,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public AutomaticLocationUpdatesSiteInfo site { get; set; }
+        public ProvisioningSiteInfo site { get; set; }
 
         /// <summary>
         ///     Extension current state. If 'Unassigned' is specified, then

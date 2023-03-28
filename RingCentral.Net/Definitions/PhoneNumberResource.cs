@@ -8,7 +8,7 @@ namespace RingCentral
         public string formattedPhoneNumber { get; set; }
 
         /// <summary>
-        ///     Example: 12056812029
+        ///     Example: +12056812029
         /// </summary>
         public string phoneNumber { get; set; }
 

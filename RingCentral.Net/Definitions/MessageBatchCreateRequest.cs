@@ -12,7 +12,7 @@ namespace RingCentral
         /// <summary>
         ///     Sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format.
         ///     Required
-        ///     Example: 15551234567
+        ///     Example: +15551234567
         /// </summary>
         public string from { get; set; }
 

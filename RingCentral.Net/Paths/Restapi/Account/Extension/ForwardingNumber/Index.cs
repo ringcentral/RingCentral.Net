@@ -33,9 +33,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
-        public async Task<GetExtensionForwardingNumberListResponse> List(RestRequestConfig restRequestConfig = null)
+        public async Task<GetExtensionForwardingNumberListResponse> List(
+            ListForwardingNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetExtensionForwardingNumberListResponse>(Path(false), null, restRequestConfig);
+            return await rc.Get<GetExtensionForwardingNumberListResponse>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>

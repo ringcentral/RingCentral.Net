@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
         ///     Rate Limit Group: Light
-        ///     App Permission: Meetings
+        ///     App Permission: VideoInternal
         ///     User Permission: Meetings
         /// </summary>
         public async Task<UserVideoConfiguration> Get(RestRequestConfig restRequestConfig = null)
@@ -36,7 +36,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
         ///     Rate Limit Group: Light
-        ///     App Permission: Meetings
+        ///     App Permission: VideoInternal
         /// </summary>
         public async Task<UserVideoConfiguration> Put(UserVideoConfiguration userVideoConfiguration,
             RestRequestConfig restRequestConfig = null)

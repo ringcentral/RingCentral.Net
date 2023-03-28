@@ -10,7 +10,8 @@ namespace RingCentral
         public string[] conversationId { get; set; }
 
         /// <summary>
-        ///     Messages received earlier then the date specified will be deleted. The default value is current datetime
+        ///     Messages received earlier then the date specified will be deleted.
+        ///     The default value is current datetime
         ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }

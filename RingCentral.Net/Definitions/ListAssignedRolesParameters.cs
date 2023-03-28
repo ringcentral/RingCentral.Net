@@ -6,6 +6,7 @@ namespace RingCentral
     public class ListAssignedRolesParameters
     {
         /// <summary>
+        ///     Specifies if hidden roles are shown or not
         /// </summary>
         public bool? showHidden { get; set; }
     }

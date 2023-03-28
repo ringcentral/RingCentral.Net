@@ -106,5 +106,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ExternalIntegrationResource integration { get; set; }
+
+        /// <summary>
+        ///     Example: 3
+        /// </summary>
+        public string subType { get; set; }
     }
 }
