@@ -9,6 +9,9 @@ namespace RingCentral.Net.WebSocket
     {
         public static readonly WebSocketOptions DefaultInstance = new WebSocketOptions();
         public bool autoRecover = true;
+        /// <summary>
+        ///  Will print logs for debugging purpose
+        /// </summary>
         public bool debugMode = false;
     }
 

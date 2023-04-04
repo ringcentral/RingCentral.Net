@@ -10,7 +10,7 @@ namespace RingCentral.Net.WebSocket
     public class WebSocketExtension : SdkExtension
     {
         private readonly WebSocketOptions _options;
-        private readonly List<Subscription> _subscriptions = new List<Subscription>();
+        private Subscription _subscription = default(Subscription);
         private ConnectionDetails _connectionDetails;
         private RestClient _rc;
         private WebsocketClient _ws;
@@ -45,10 +45,9 @@ namespace RingCentral.Net.WebSocket
                     _ws.Dispose();
                     await Connect(true);
                     if (!recoverSession || _connectionDetails.recoveryState == RecoveryState.Failed)
-                        foreach (var subscription in _subscriptions)
-                            if (subscription.SubscriptionInfo != null)
-                                // otherwise it has been revoked explicitly
-                                await subscription.SubScribe();
+                        if (_subscription.SubscriptionInfo != null)
+                            // otherwise it has been revoked explicitly
+                            await _subscription.SubScribe();
                 }
 
                 _ws.MessageReceived.Subscribe(responseMessage =>
@@ -121,17 +120,15 @@ namespace RingCentral.Net.WebSocket
 
         public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
         {
-            var subscription = new Subscription(this, eventFilters, callback);
-            await subscription.SubScribe();
-            _subscriptions.Add(subscription);
-            return subscription;
+            _subscription = new Subscription(this, eventFilters, callback);
+            await _subscription.SubScribe();
+            return this._subscription;
         }
 
         public async Task Revoke()
         {
-            foreach (var subscription in _subscriptions) await subscription.Revoke();
-
-            _subscriptions.Clear();
+            await _subscription.Revoke();
+            _subscription = default(Subscription);
             _ws.Dispose();
         }
     }
