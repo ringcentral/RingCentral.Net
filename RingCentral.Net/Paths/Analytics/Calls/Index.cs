@@ -4,18 +4,15 @@ namespace RingCentral.Paths.Analytics.Calls
     {
         public Analytics.Index parent;
         public RestClient rc;
-        public string version;
 
-        public Index(Analytics.Index parent, string version = "v1")
+        public Index(Analytics.Index parent)
         {
             this.parent = parent;
             rc = parent.rc;
-            this.version = version;
         }
 
-        public string Path(bool withParameter = true)
+        public string Path()
         {
-            if (withParameter && version != null) return $"{parent.Path()}/calls/{version}";
             return $"{parent.Path()}/calls";
         }
     }
@@ -25,9 +22,9 @@ namespace RingCentral.Paths.Analytics
 {
     public partial class Index
     {
-        public Calls.Index Calls(string version = "v1")
+        public Calls.Index Calls()
         {
-            return new Calls.Index(this, version);
+            return new Calls.Index(this);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace RingCentral.Net.WebSocket
         private readonly WebSocketOptions _options;
         private ConnectionDetails _connectionDetails;
         private RestClient _rc;
-        private Subscription _subscription = default;
+        private Subscription _subscription;
         private WebsocketClient _ws;
         private Wsc _wsc;
 

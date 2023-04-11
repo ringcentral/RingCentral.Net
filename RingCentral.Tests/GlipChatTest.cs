@@ -19,7 +19,7 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                     Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
                 );
-                var result = await rc.TeamMessaging().Chats()
+                var result = await rc.TeamMessaging().V1().Chats()
                     .List(new ListGlipChatsNewParameters {type = new[] {"Everyone"}});
                 Assert.Single(result.records);
             }
