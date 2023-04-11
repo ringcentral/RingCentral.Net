@@ -43,7 +43,7 @@ namespace RingCentral
         /// <summary>
         ///     Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
         ///     Indicates if only recorded calls should be returned.
-        ///     If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored'
+        ///     If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
         /// </summary>
         public bool? withRecording { get; set; }
 

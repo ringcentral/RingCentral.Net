@@ -76,7 +76,7 @@ namespace RingCentral.Tests
 
                 // var batchResponses = await rc.Restapi().Account().Extension().CallLog(callLogIds).BatchGet();
                 var batchResponses =
-                    await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
+                    await rc.BatchGet<CallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
 
                 Assert.Equal(3, batchResponses.Length);
                 var callLog = batchResponses[0].content;
@@ -107,7 +107,7 @@ namespace RingCentral.Tests
                 var callLogIds = string.Join(",", callLogsResponse.records.Select(r => r.id));
 
                 var batchResponses =
-                    await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
+                    await rc.BatchGet<CallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds).Path());
 
                 Assert.Equal(3, batchResponses.Length);
                 Assert.Equal(callLogIds, string.Join(",", batchResponses.Select(br => br.content.id)));
@@ -135,7 +135,7 @@ namespace RingCentral.Tests
                 ArgumentException argumentException = null;
                 try
                 {
-                    await rc.BatchGet<UserCallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds)
+                    await rc.BatchGet<CallLogRecord>(rc.Restapi().Account().Extension().CallLog(callLogIds)
                         .Path());
                 }
                 catch (ArgumentException ae)

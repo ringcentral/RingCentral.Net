@@ -69,7 +69,7 @@ namespace RingCentral
         public string[] extensionStatuses { get; set; }
 
         /// <summary>
-        ///     Types of extension to filter the contacts.
+        ///     Types of extension to filter the contacts
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
         ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Site, DelegatedLinesGroup, FlexibleUser
         /// </summary>

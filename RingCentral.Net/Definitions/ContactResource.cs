@@ -85,7 +85,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public RoleResource role { get; set; }
+        public DirectoryRoleResource role { get; set; }
 
         /// <summary>
         /// </summary>

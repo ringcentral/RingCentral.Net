@@ -1,22 +1,50 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Base schema for CallLogRecord and CallLogRecordLegInfo
+    /// </summary>
     public class CallLogRecord
     {
         /// <summary>
-        ///     Internal identifier of a cal log record
+        ///     Internal identifier of a call log record
+        ///     Required
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
         ///     Canonical URI of a call log record
+        ///     Required
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
         ///     Internal identifier of a call session
+        ///     Required
         /// </summary>
         public string sessionId { get; set; }
+
+        /// <summary>
+        ///     Indicates whether the record is deleted. Returned for deleted records, for ISync requests
+        /// </summary>
+        public bool? deleted { get; set; }
+
+        /// <summary>
+        ///     For 'Detailed' view only. Leg description
+        /// </summary>
+        public CallLogRecordLegInfo[] legs { get; set; }
+
+        /// <summary>
+        ///     For 'Detailed' view only. The datetime when the call log record
+        ///     was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format
+        ///     including timezone, for example *2016-03-10T18:07:52.534Z*
+        ///     Format: date-time
+        /// </summary>
+        public string lastModifiedTime { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public ExtensionInfoCallLog extension { get; set; }
 
         /// <summary>
         ///     Telephony identifier of a call session
@@ -42,41 +70,61 @@ namespace RingCentral
         public string partyId { get; set; }
 
         /// <summary>
+        ///     The type of a call transport. 'PSTN' indicates that a call leg was initiated
+        ///     from the PSTN network provider; 'VoIP' - from an RC phone.
+        ///     Required
+        ///     Enum: PSTN, VoIP
         /// </summary>
-        public CallLogCallerInfo from { get; set; }
+        public string transport { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallLogCallerInfo to { get; set; }
+        public CallLogFromParty from { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallLogToParty to { get; set; }
 
         /// <summary>
         ///     The type of a call
+        ///     Required
         ///     Enum: Voice, Fax
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
         ///     The direction of a call
+        ///     Required
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
 
         /// <summary>
+        /// </summary>
+        public CallLogRecordMessage message { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallLogDelegateInfo @delegate { get; set; }
+
+        /// <summary>
         ///     The internal action corresponding to the call operation
-        ///     Enum: Unknown, Phone Call, Phone Login, Calling Card, VoIP Call, Paging, Hunting, Call Park, Monitoring, Text
-        ///     Relay, External Application, Park Location, CallOut-CallMe, Conference Call, Move, RC Meetings, Accept Call,
-        ///     FindMe, FollowMe, RingMe, Transfer, Call Return, Ring Directly, RingOut Web, RingOut PC, RingOut Mobile, 411 Info,
-        ///     Emergency, E911 Update, Support, Incoming Fax, Outgoing Fax
+        ///     Required
+        ///     Enum: Accept Call, Barge In Call, Call Park, Call Return, CallOut-CallMe, Calling Card, Conference Call, E911
+        ///     Update, Emergency, External Application, FindMe, FollowMe, FreeSPDL, Hunting, Incoming Fax, Monitoring, Move,
+        ///     Outgoing Fax, Paging, Park Location, Phone Call, Phone Login, Pickup, RC Meetings, Ring Directly, RingMe, RingOut
+        ///     Mobile, RingOut PC, RingOut Web, Sip Forwarding, Support, Text Relay, Transfer, Unknown, VoIP Call
         /// </summary>
         public string action { get; set; }
 
         /// <summary>
         ///     The result of the call operation
-        ///     Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up,
-        ///     Blocked, ResultEmpty, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling
-        ///     Credit, Not Allowed, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, Poor Line Quality,
-        ///     International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive,
-        ///     Receive Error, Fax Receipt Error, Fax Partially Sent, No fax machine, Send Error, Sent, Fax Not Sent, Fax Poor Line
+        ///     Enum: 911, 933, Abandoned, Accepted, Answered Not Accepted, Blocked, Busy, Call Failed, Call Failure, Call
+        ///     connected, Carrier is not active, Declined, EDGE trunk misconfigured, Fax Not Sent, Fax Partially Sent, Fax Poor
+        ///     Line, Fax Receipt Error, Fax on Demand, Hang Up, IP Phone Offline, In Progress, Internal Error, International
+        ///     Disabled, International Restricted, Missed, No Answer, No Calling Credit, Not Allowed, Partial Receive, Phone
+        ///     Login, Receive Error, Received, Rejected, Reply, Restricted Number, Send Error, Sent, Sent to Voicemail, Stopped,
+        ///     Suspended account, Unknown, Voicemail, Wrong Number
         /// </summary>
         public string result { get; set; }
 
@@ -123,67 +171,59 @@ namespace RingCentral
         ///     * `Fax Prepare Error` - An internal error occurred when preparing the fax. Please try again
         ///     * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
         ///     * `Fax Send Error` - An error occurred when sending the fax. Please try again
-        ///     * `DescNoE911Address` - The call was rejected due to no E911 address
-        ///     Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit,
-        ///     Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted,
-        ///     Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted,
-        ///     Number Not Allowed, Number Blocked, Number Disabled, Resource Error, Call Loop, Fax Not Received, Fax Partially
-        ///     Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error, DescNoE911Address
+        ///     * `Emergency Address not defined` - The call was rejected due to no E911 address
+        ///     * `Carrier is not active` - The call was rejected due to carrier inactivity
+        ///     * `EDGE trunk misconfigured` - The call was rejected due to error in EDGE trunk configuration
+        ///     * `Internal Call Error` - An internal error occurred when making the call. Please try again
+        ///     * `Receive Error` - Fax receive error
+        ///     Enum: Accepted, Bad Number, Call Loop, Calls Not Accepted, Carrier is not active, Connected, Customer 611
+        ///     Restricted, EDGE trunk misconfigured, Emergency Address not defined, Failed Try Again, Fax Not Received, Fax Not
+        ///     Sent, Fax Partially Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error, Hang Up, Info 411
+        ///     Restricted, Internal Call Error, Internal Error, International Disabled, International Restricted, Line Busy, Max
+        ///     Call Limit, No Answer, No Credit, No Digital Line, Not Answered, Number Blocked, Number Disabled, Number Not
+        ///     Allowed, Receive Error, Resource Error, Restricted Number, Stopped, Too Many Calls, Unknown, Wrong Number
         /// </summary>
         public string reason { get; set; }
 
         /// <summary>
+        ///     The detailed reason description of the call result
+        /// </summary>
+        public string reasonDescription { get; set; }
+
+        /// <summary>
         ///     The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        ///     Required
         ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
 
         /// <summary>
         ///     Call duration in seconds
+        ///     Required
         ///     Format: int32
         /// </summary>
         public long? duration { get; set; }
+
+        /// <summary>
+        ///     Call duration in milliseconds
+        ///     Required
+        ///     Format: int32
+        /// </summary>
+        public long? durationMs { get; set; }
 
         /// <summary>
         /// </summary>
         public CallLogRecordingInfo recording { get; set; }
 
         /// <summary>
-        ///     For 'Detailed' view only. The datetime when the call log record was modified in ISO 8601 format including timezone,
-        ///     for example 2016-03-10T18:07:52.534Z
-        ///     Format: date-time
+        ///     Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value
+        ///     is false
         /// </summary>
-        public string lastModifiedTime { get; set; }
-
-        /// <summary>
-        ///     The type of a call transport. 'PSTN' indicates that a call leg was initiated
-        ///     from the PSTN network provider; 'VoIP' - from an RC phone.
-        ///     Enum: PSTN, VoIP
-        /// </summary>
-        public string transport { get; set; }
+        public bool? shortRecording { get; set; }
 
         /// <summary>
         /// </summary>
-        public ActiveCallsRecordExtensionInfo extension { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public CallLogDelegateInfo @delegate { get; set; }
-
-        /// <summary>
-        ///     For 'Detailed' view only. Leg description
-        ///     Required
-        /// </summary>
-        public CallLogRecordLegInfo[] legs { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public CallLogRecordMessage message { get; set; }
-
-        /// <summary>
-        ///     Returned only if this call was deleted. Value is set to 'True' in this case
-        /// </summary>
-        public bool? deleted { get; set; }
+        public BillingInfo billing { get; set; }
 
         /// <summary>
         ///     The internal type of the call

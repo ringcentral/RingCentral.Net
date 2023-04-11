@@ -6,12 +6,12 @@ namespace RingCentral
     public class Paging
     {
         /// <summary>
-        ///     current offset token
+        ///     Current page offset token
         /// </summary>
         public string currentPageToken { get; set; }
 
         /// <summary>
-        ///     next page offset token
+        ///     Next page offset token
         /// </summary>
         public string nextPageToken { get; set; }
     }

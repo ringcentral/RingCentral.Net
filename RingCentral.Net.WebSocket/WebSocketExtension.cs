@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -10,9 +9,9 @@ namespace RingCentral.Net.WebSocket
     public class WebSocketExtension : SdkExtension
     {
         private readonly WebSocketOptions _options;
-        private Subscription _subscription = default(Subscription);
         private ConnectionDetails _connectionDetails;
         private RestClient _rc;
+        private Subscription _subscription = default;
         private WebsocketClient _ws;
         private Wsc _wsc;
 
@@ -128,7 +127,7 @@ namespace RingCentral.Net.WebSocket
         public async Task Revoke()
         {
             await _subscription.Revoke();
-            _subscription = default(Subscription);
+            _subscription = default;
             _ws.Dispose();
         }
     }

@@ -27,6 +27,18 @@ namespace RingCentral
         public string[] type { get; set; }
 
         /// <summary>
+        ///     The type of call transport. Multiple values are supported. By default this filter is disabled
+        ///     Enum: PSTN, VoIP
+        /// </summary>
+        public string[] transport { get; set; }
+
+        /// <summary>
+        ///     Conference call type: RCC or RC Meetings. If not specified, no conference call filter applied
+        ///     Enum: AudioConferencing, Meetings
+        /// </summary>
+        public string[] conferenceType { get; set; }
+
+        /// <summary>
         ///     Indicates the page number to retrieve. Only positive number values are allowed
         ///     Format: int32
         ///     Default: 1

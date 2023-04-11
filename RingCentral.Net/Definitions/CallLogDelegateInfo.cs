@@ -9,6 +9,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a Secretary extension
+        ///     Required
         /// </summary>
         public string id { get; set; }
 

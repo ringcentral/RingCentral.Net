@@ -1,5 +1,8 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Notification delivery transport information
+    /// </summary>
     public class NotificationDeliveryMode
     {
         /// <summary>

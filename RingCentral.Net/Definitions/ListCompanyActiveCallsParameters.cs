@@ -33,6 +33,12 @@ namespace RingCentral
         public string[] transport { get; set; }
 
         /// <summary>
+        ///     Conference call type: RCC or RC Meetings. If not specified, no conference call filter applied
+        ///     Enum: AudioConferencing, Meetings
+        /// </summary>
+        public string[] conferenceType { get; set; }
+
+        /// <summary>
         ///     Indicates the page number to retrieve. Only positive number values are accepted
         ///     Minimum: 1
         ///     Format: int32

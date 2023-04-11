@@ -66,7 +66,7 @@ namespace RingCentral
         public string fallbackText { get; set; }
 
         /// <summary>
-        ///     Specifies the background image of a card
+        ///     Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF
         /// </summary>
         public BackgroundImage backgroundImage { get; set; }
 

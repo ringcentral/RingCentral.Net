@@ -14,9 +14,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies a conversation identifier for the resulting messages
-        ///     Format: int64
         /// </summary>
-        public long? conversationId { get; set; }
+        public string conversationId { get; set; }
 
         /// <summary>
         ///     Start datetime for resulting messages in ISO 8601 format

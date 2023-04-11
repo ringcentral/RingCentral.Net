@@ -7,12 +7,13 @@ namespace RingCentral
     {
         /// <summary>
         ///     Type of call log synchronization request: full or incremental sync
+        ///     Default: FSync
         ///     Enum: FSync, ISync
         /// </summary>
         public string syncType { get; set; }
 
         /// <summary>
-        ///     Value of syncToken property of last sync request response
+        ///     Value of syncToken property of last sync request response. Mandatory parameter for 'ISync' sync type
         /// </summary>
         public string syncToken { get; set; }
 
@@ -32,7 +33,7 @@ namespace RingCentral
         public long? recordCount { get; set; }
 
         /// <summary>
-        ///     Type of calls to be returned.
+        ///     Type of calls to be returned
         ///     Enum: Missed, All
         /// </summary>
         public string[] statusGroup { get; set; }
@@ -48,5 +49,19 @@ namespace RingCentral
         ///     Supported for `ISync` mode. Indicates that deleted call records should be returned
         /// </summary>
         public bool? showDeleted { get; set; }
+
+        /// <summary>
+        ///     Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
+        ///     Indicates if only recorded calls should be returned.
+        ///     If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
+        /// </summary>
+        public bool? withRecording { get; set; }
+
+        /// <summary>
+        ///     Indicates that call records with recordings of particular type should be returned.
+        ///     If omitted, then calls with and without recordings are returned
+        ///     Enum: Automatic, OnDemand, All
+        /// </summary>
+        public string recordingType { get; set; }
     }
 }

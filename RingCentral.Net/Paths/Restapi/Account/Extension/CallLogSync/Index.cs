@@ -26,10 +26,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLogSync
         ///     App Permission: ReadCallLog
         ///     User Permission: ReadCallLog
         /// </summary>
-        public async Task<RingCentral.CallLogSync> Get(SyncUserCallLogParameters queryParams = null,
+        public async Task<CallLogSyncResponse> Get(SyncUserCallLogParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallLogSync>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<CallLogSyncResponse>(Path(), queryParams, restRequestConfig);
         }
     }
 }

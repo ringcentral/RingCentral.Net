@@ -25,27 +25,31 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     The zero-based number of the first element on the current page. Omitted if the page is omitted or result is empty
+        ///     The zero-based number of the first element on the current page.
+        ///     Omitted if the page is omitted or result is empty
         ///     Format: int32
         /// </summary>
         public long? pageStart { get; set; }
 
         /// <summary>
-        ///     The zero-based index of the last element on the current page. Omitted if the page is omitted or result is empty
+        ///     The zero-based index of the last element on the current page.
+        ///     Omitted if the page is omitted or result is empty
         ///     Format: int32
         ///     Example: 5
         /// </summary>
         public long? pageEnd { get; set; }
 
         /// <summary>
-        ///     The total number of pages in a dataset. May be omitted for some resources due to performance reasons
+        ///     The total number of pages in a dataset. May be omitted for
+        ///     some resources due to performance reasons
         ///     Format: int32
         ///     Example: 25
         /// </summary>
         public long? totalPages { get; set; }
 
         /// <summary>
-        ///     The total number of elements in a dataset. May be omitted for some resource due to performance reasons
+        ///     The total number of elements in a dataset. May be omitted for
+        ///     some resource due to performance reasons
         ///     Format: int32
         ///     Example: 25
         /// </summary>

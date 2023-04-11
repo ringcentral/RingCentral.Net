@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public PagingInfo paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
 
         /// <summary>
         ///     Required

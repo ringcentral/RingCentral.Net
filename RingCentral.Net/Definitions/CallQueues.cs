@@ -18,11 +18,11 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public ProvisioningNavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
 
         /// <summary>
         ///     Required
         /// </summary>
-        public ProvisioningPagingInfo paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
     }
 }

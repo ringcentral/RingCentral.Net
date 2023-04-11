@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using RingCentral.Net.AutoRefresh;
 using RingCentral.Net.WebSocket;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace RingCentral.Tests
 {
@@ -34,7 +33,7 @@ namespace RingCentral.Tests
             {
                 from = new PagerCallerInfoRequest {extensionNumber = "101"},
                 to = new[] {new PagerCallerInfoRequest {extensionNumber = "101"}},
-                text = "Hello world",
+                text = "Hello world"
             });
             await Task.Delay(20000);
             Assert.True(count > 0);

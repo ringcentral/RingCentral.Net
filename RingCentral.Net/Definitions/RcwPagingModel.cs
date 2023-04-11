@@ -1,0 +1,31 @@
+namespace RingCentral
+{
+    public class RcwPagingModel
+    {
+        /// <summary>
+        ///     Number of items per page
+        ///     Required
+        ///     Maximum: 1000
+        ///     Minimum: 1
+        ///     Format: int32
+        ///     Example: 100
+        /// </summary>
+        public long? perPage { get; set; }
+
+        /// <summary>
+        ///     Current page token
+        ///     Required
+        /// </summary>
+        public string pageToken { get; set; }
+
+        /// <summary>
+        ///     Next page token (absent for the last page of the result set)
+        /// </summary>
+        public string nextPageToken { get; set; }
+
+        /// <summary>
+        ///     Previous page token (absent for the first page of the result set)
+        /// </summary>
+        public string previousPageToken { get; set; }
+    }
+}
