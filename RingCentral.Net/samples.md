@@ -14,7 +14,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi().List();
 await rc.Revoke();
 ```
@@ -37,7 +37,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Get();
 await rc.Revoke();
 ```
@@ -61,7 +61,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Users().List(scimSearchViaGet2Parameters);
 await rc.Revoke();
 ```
@@ -86,7 +86,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Users().Post(scimUser);
 await rc.Revoke();
 ```
@@ -111,7 +111,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Users(scimUserId).Get();
 await rc.Revoke();
 ```
@@ -135,7 +135,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Users(scimUserId).Put(scimUser);
 await rc.Revoke();
 ```
@@ -160,7 +160,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Users(scimUserId).Delete();
 await rc.Revoke();
 ```
@@ -184,7 +184,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Users(scimUserId).Patch(scimUserPatch);
 await rc.Revoke();
 ```
@@ -209,7 +209,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Schemas().List();
 await rc.Revoke();
 ```
@@ -233,7 +233,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Schemas(uri).Get();
 await rc.Revoke();
 ```
@@ -257,7 +257,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Get();
 await rc.Revoke();
 ```
@@ -282,7 +282,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Status().V1().Jobs(jobId).Get();
 await rc.Revoke();
 ```
@@ -305,7 +305,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V2().Bridges(bridgeId).Get(getBridgeParameters);
 await rc.Revoke();
 ```
@@ -329,7 +329,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V2().Bridges(bridgeId).Delete();
 await rc.Revoke();
 ```
@@ -352,7 +352,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V2().Bridges(bridgeId).Patch(updateBridgeRequest);
 await rc.Revoke();
 ```
@@ -376,7 +376,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi().Oauth().Revoke().Post(revokeTokenRequest);
 await rc.Revoke();
 ```
@@ -400,7 +400,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).ResourceTypes().List();
 await rc.Revoke();
 ```
@@ -424,7 +424,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).ResourceTypes(type).Get();
 await rc.Revoke();
 ```
@@ -448,7 +448,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi().Oauth().Token().Post(getTokenRequest);
 await rc.Revoke();
 ```
@@ -472,7 +472,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Subscription().List();
 await rc.Revoke();
 ```
@@ -496,7 +496,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Subscription().Post(createSubscriptionRequest);
 await rc.Revoke();
 ```
@@ -521,7 +521,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Get();
 await rc.Revoke();
 ```
@@ -545,7 +545,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Put(updateSubscriptionRequest);
 await rc.Revoke();
 ```
@@ -570,7 +570,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Delete();
 await rc.Revoke();
 ```
@@ -594,7 +594,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites().List();
 await rc.Revoke();
 ```
@@ -619,7 +619,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites().Post(createSiteRequest);
 await rc.Revoke();
 ```
@@ -645,7 +645,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Get();
 await rc.Revoke();
 ```
@@ -670,7 +670,7 @@ User Permission|`Sites`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Put(siteUpdateRequest);
 await rc.Revoke();
 ```
@@ -696,7 +696,7 @@ User Permission|`Sites`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Delete();
 await rc.Revoke();
 ```
@@ -721,7 +721,7 @@ User Permission|`ReadCompanyDevices`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Get(readDeviceParameters);
 await rc.Revoke();
 ```
@@ -747,7 +747,7 @@ User Permission|`EditCompanyDevices`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Put(accountDeviceUpdate, updateDeviceParameters);
 await rc.Revoke();
 ```
@@ -774,7 +774,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Enrollments().List(caiEnrollmentsListParameters);
 await rc.Revoke();
 ```
@@ -799,7 +799,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Enrollments().Post(enrollmentInput);
 await rc.Revoke();
 ```
@@ -823,7 +823,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Enrollments(enrollmentId).Get();
 await rc.Revoke();
 ```
@@ -846,7 +846,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Enrollments(enrollmentId).Delete();
 await rc.Revoke();
 ```
@@ -869,7 +869,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Enrollments(enrollmentId).Patch(enrollmentPatchInput);
 await rc.Revoke();
 ```
@@ -893,7 +893,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi().Oauth().Authorize().Get();
 await rc.Revoke();
 ```
@@ -916,7 +916,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi().Oauth().Authorize().Post(authorizeRequest);
 await rc.Revoke();
 ```
@@ -940,7 +940,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension().List(listExtensionsParameters);
 await rc.Revoke();
 ```
@@ -966,7 +966,7 @@ User Permission|`AddRemoveUsers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension().Post(extensionCreationRequest);
 await rc.Revoke();
 ```
@@ -992,7 +992,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Get();
 await rc.Revoke();
 ```
@@ -1018,7 +1018,7 @@ User Permission|`EditUserInfo OR EditUserCredentials`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Put(extensionUpdateRequest);
 await rc.Revoke();
 ```
@@ -1045,7 +1045,7 @@ User Permission|`ReadUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Greeting().Post(createCompanyGreetingRequest);
 await rc.Revoke();
 ```
@@ -1072,7 +1072,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().List();
 await rc.Revoke();
 ```
@@ -1097,7 +1097,7 @@ User Permission|`AutoReceptionist`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus().Post(iVRMenuInfo);
 await rc.Revoke();
 ```
@@ -1123,7 +1123,7 @@ User Permission|`AutoReceptionist`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Get();
 await rc.Revoke();
 ```
@@ -1148,7 +1148,7 @@ User Permission|`AutoReceptionist`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrMenus(ivrMenuId).Put(iVRMenuInfo);
 await rc.Revoke();
 ```
@@ -1174,7 +1174,7 @@ User Permission|`ReadPresenceStatus`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Presence().Get(readAccountPresenceParameters);
 await rc.Revoke();
 ```
@@ -1201,7 +1201,7 @@ User Permission|`ReadCallRecording`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Get();
 await rc.Revoke();
 ```
@@ -1226,7 +1226,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Ivr().Get();
 await rc.Revoke();
 ```
@@ -1251,7 +1251,7 @@ User Permission|`Sites`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Ivr().Put(siteIVRSettingsUpdate);
 await rc.Revoke();
 ```
@@ -1277,7 +1277,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Templates().List(listUserTemplatesParameters);
 await rc.Revoke();
 ```
@@ -1303,7 +1303,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Templates(templateId).Get();
 await rc.Revoke();
 ```
@@ -1328,7 +1328,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
 await rc.Revoke();
 ```
@@ -1352,7 +1352,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats().List(listGlipChatsNewParameters);
 await rc.Revoke();
 ```
@@ -1376,7 +1376,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Get();
 await rc.Revoke();
 ```
@@ -1399,7 +1399,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Files().Post(createGlipFileNewRequest, createGlipFileNewParameters);
 await rc.Revoke();
 ```
@@ -1424,7 +1424,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Notes(noteId).Get();
 await rc.Revoke();
 ```
@@ -1447,7 +1447,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Notes(noteId).Delete();
 await rc.Revoke();
 ```
@@ -1470,7 +1470,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Notes(noteId).Patch(tMCreateNoteRequest, patchNoteNewParameters);
 await rc.Revoke();
 ```
@@ -1495,7 +1495,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Tasks(taskId).Get();
 await rc.Revoke();
 ```
@@ -1518,7 +1518,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Tasks(taskId).Delete();
 await rc.Revoke();
 ```
@@ -1541,7 +1541,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Tasks(taskId).Patch(tMUpdateTaskRequest);
 await rc.Revoke();
 ```
@@ -1565,7 +1565,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams().List(listGlipTeamsNewParameters);
 await rc.Revoke();
 ```
@@ -1589,7 +1589,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams().Post(tMCreateTeamRequest);
 await rc.Revoke();
 ```
@@ -1613,7 +1613,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Get();
 await rc.Revoke();
 ```
@@ -1636,7 +1636,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Delete();
 await rc.Revoke();
 ```
@@ -1659,7 +1659,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Patch(tMUpdateTeamRequest);
 await rc.Revoke();
 ```
@@ -1683,7 +1683,7 @@ User Permission|`FullCompanyCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallLog().List(readCompanyCallLogParameters);
 await rc.Revoke();
 ```
@@ -1710,7 +1710,7 @@ User Permission|`FullCompanyCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallLog(callRecordId).Get(readCompanyCallRecordParameters);
 await rc.Revoke();
 ```
@@ -1737,7 +1737,7 @@ User Permission|`ReadUserRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().List(listUserRolesParameters);
 await rc.Revoke();
 ```
@@ -1763,7 +1763,7 @@ User Permission|`EditUserRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Post(roleResource);
 await rc.Revoke();
 ```
@@ -1789,7 +1789,7 @@ User Permission|`ReadUserRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Get();
 await rc.Revoke();
 ```
@@ -1814,7 +1814,7 @@ User Permission|`EditUserRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Put(roleResource);
 await rc.Revoke();
 ```
@@ -1840,7 +1840,7 @@ User Permission|`EditUserRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Delete(deleteCustomRoleParameters);
 await rc.Revoke();
 ```
@@ -1866,7 +1866,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().State().List(listStatesParameters);
 await rc.Revoke();
 ```
@@ -1891,7 +1891,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().State(stateId).Get();
 await rc.Revoke();
 ```
@@ -1915,7 +1915,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Events().List(readGlipEventsNewParameters);
 await rc.Revoke();
 ```
@@ -1939,7 +1939,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Events().Post(tMCreateEventRequest);
 await rc.Revoke();
 ```
@@ -1963,7 +1963,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Events(eventId).Get();
 await rc.Revoke();
 ```
@@ -1986,7 +1986,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Events(eventId).Put(tMCreateEventRequest);
 await rc.Revoke();
 ```
@@ -2010,7 +2010,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Events(eventId).Delete();
 await rc.Revoke();
 ```
@@ -2033,7 +2033,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Persons(personId).Get();
 await rc.Revoke();
 ```
@@ -2056,7 +2056,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Text().V1().Async().Punctuate().Post(punctuateInput, caiPunctuateParameters);
 await rc.Revoke();
 ```
@@ -2081,7 +2081,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Text().V1().Async().Summarize().Post(summaryInput, caiSummarizeParameters);
 await rc.Revoke();
 ```
@@ -2106,7 +2106,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V1().Account(accountId).Recordings().List(getAccountRecordingsParameters);
 await rc.Revoke();
 ```
@@ -2132,7 +2132,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V1().Account(accountId).Recordings(recordingId).Get();
 await rc.Revoke();
 ```
@@ -2156,7 +2156,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V1().History().Meetings().List(listVideoMeetingsParameters);
 await rc.Revoke();
 ```
@@ -2180,7 +2180,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V1().History().Meetings(meetingId).Get();
 await rc.Revoke();
 ```
@@ -2203,7 +2203,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V2().Bridges().Pin().Pstn(pin).Get(getBridgeByPstnPinParameters);
 await rc.Revoke();
 ```
@@ -2228,7 +2228,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V2().Bridges().Pin().Web(pin).Get(getBridgeByWebPinParameters);
 await rc.Revoke();
 ```
@@ -2252,7 +2252,7 @@ User Permission|`ReadCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).ActiveCalls().Get(listCompanyActiveCallsParameters);
 await rc.Revoke();
 ```
@@ -2279,7 +2279,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
 await rc.Revoke();
 ```
@@ -2305,7 +2305,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
 await rc.Revoke();
 ```
@@ -2330,7 +2330,7 @@ User Permission|`EditUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueUpdateDetails);
 await rc.Revoke();
 ```
@@ -2356,7 +2356,7 @@ User Permission|`ReadUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
 await rc.Revoke();
 ```
@@ -2381,7 +2381,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
 await rc.Revoke();
 ```
@@ -2407,7 +2407,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
 await rc.Revoke();
 ```
@@ -2433,7 +2433,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
 await rc.Revoke();
 ```
@@ -2458,7 +2458,7 @@ User Permission|`OutboundFaxes`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
 await rc.Revoke();
 ```
@@ -2485,7 +2485,7 @@ User Permission|`OutboundSMS`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMMSMessage);
 await rc.Revoke();
 ```
@@ -2512,7 +2512,7 @@ User Permission|`OutboundSMS`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSMSMessage);
 await rc.Revoke();
 ```
@@ -2539,7 +2539,7 @@ User Permission|`ReadCompanyGreetings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
 await rc.Revoke();
 ```
@@ -2564,7 +2564,7 @@ User Permission|`EditCompanyGreetings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIVRPromptRequest);
 await rc.Revoke();
 ```
@@ -2590,7 +2590,7 @@ User Permission|`ReadCompanyGreetings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
 await rc.Revoke();
 ```
@@ -2615,7 +2615,7 @@ User Permission|`EditCompanyGreetings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIVRPromptRequest);
 await rc.Revoke();
 ```
@@ -2641,7 +2641,7 @@ User Permission|`EditCompanyGreetings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
 await rc.Revoke();
 ```
@@ -2666,7 +2666,7 @@ User Permission|`ReadCompanyPhoneNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
 await rc.Revoke();
 ```
@@ -2693,7 +2693,7 @@ User Permission|`ReadCompanyPhoneNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
 await rc.Revoke();
 ```
@@ -2718,7 +2718,7 @@ User Permission|`ReadServicePlanInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
 await rc.Revoke();
 ```
@@ -2743,7 +2743,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Members().Get();
 await rc.Revoke();
 ```
@@ -2768,7 +2768,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
 await rc.Revoke();
 ```
@@ -2793,7 +2793,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
 await rc.Revoke();
 ```
@@ -2817,7 +2817,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
 await rc.Revoke();
 ```
@@ -2843,7 +2843,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
 await rc.Revoke();
 ```
@@ -2867,7 +2867,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
 await rc.Revoke();
 ```
@@ -2891,7 +2891,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
 await rc.Revoke();
 ```
@@ -2915,7 +2915,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
 await rc.Revoke();
 ```
@@ -2940,7 +2940,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
 await rc.Revoke();
 ```
@@ -2965,7 +2965,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get();
 await rc.Revoke();
 ```
@@ -2989,7 +2989,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().UserRole().List(listStandardUserRoleParameters);
 await rc.Revoke();
 ```
@@ -3015,7 +3015,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().UserRole(roleId).Get();
 await rc.Revoke();
 ```
@@ -3039,7 +3039,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
 await rc.Revoke();
 ```
@@ -3065,7 +3065,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).ServiceProviderConfig().Get();
 await rc.Revoke();
 ```
@@ -3089,7 +3089,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Scim(version).Users().DotSearch().Post(scimSearchRequest);
 await rc.Revoke();
 ```
@@ -3114,7 +3114,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Companies(companyId).Get();
 await rc.Revoke();
 ```
@@ -3137,7 +3137,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Everyone().Get();
 await rc.Revoke();
 ```
@@ -3160,7 +3160,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Everyone().Patch(updateEveryoneTeamRequest);
 await rc.Revoke();
 ```
@@ -3184,7 +3184,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Favorites().Get(listFavoriteChatsNewParameters);
 await rc.Revoke();
 ```
@@ -3209,7 +3209,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Notes(noteId).Lock().Post();
 await rc.Revoke();
 ```
@@ -3232,7 +3232,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Add().Post(tMAddTeamMembersRequest);
 await rc.Revoke();
 ```
@@ -3256,7 +3256,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Join().Post();
 await rc.Revoke();
 ```
@@ -3279,7 +3279,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Webhooks().List();
 await rc.Revoke();
 ```
@@ -3302,7 +3302,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Get();
 await rc.Revoke();
 ```
@@ -3325,7 +3325,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Delete();
 await rc.Revoke();
 ```
@@ -3348,7 +3348,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Sessions().Get(rcwHistoryListAllSessionsParameters);
 await rc.Revoke();
 ```
@@ -3374,7 +3374,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Webinars(webinarId).Get();
 await rc.Revoke();
 ```
@@ -3397,7 +3397,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Async().SpeakerDiarize().Post(diarizeInput, caiSpeakerDiarizeParameters);
 await rc.Revoke();
 ```
@@ -3422,7 +3422,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Async().SpeakerIdentify().Post(identifyInput, caiSpeakerIdentifyParameters);
 await rc.Revoke();
 ```
@@ -3448,7 +3448,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Audio().V1().Async().SpeechToText().Post(asrInput, caiSpeechToTextParameters);
 await rc.Revoke();
 ```
@@ -3473,7 +3473,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V2().Account(accountId).Extension(extensionId).Bridges().Post(createBridgeRequest);
 await rc.Revoke();
 ```
@@ -3499,7 +3499,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().List(listA2PBatchesParameters);
 await rc.Revoke();
 ```
@@ -3525,7 +3525,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().Post(messageBatchCreateRequest);
 await rc.Revoke();
 ```
@@ -3551,7 +3551,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches(batchId).Get();
 await rc.Revoke();
 ```
@@ -3576,7 +3576,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PSMSParameters);
 await rc.Revoke();
 ```
@@ -3602,7 +3602,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get();
 await rc.Revoke();
 ```
@@ -3627,7 +3627,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().OptOuts().Get(readA2PSMSOptOutsParameters);
 await rc.Revoke();
 ```
@@ -3653,7 +3653,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Statuses().Get(aggregateA2PSMSStatusesParameters);
 await rc.Revoke();
 ```
@@ -3680,7 +3680,7 @@ User Permission|`ReadCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
 await rc.Revoke();
 ```
@@ -3708,7 +3708,7 @@ User Permission|`EditCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
 await rc.Revoke();
 ```
@@ -3735,7 +3735,7 @@ User Permission|`ReadCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
 await rc.Revoke();
 ```
@@ -3761,7 +3761,7 @@ User Permission|`EditCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
 await rc.Revoke();
 ```
@@ -3788,7 +3788,7 @@ User Permission|`EditCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
 await rc.Revoke();
 ```
@@ -3814,7 +3814,7 @@ User Permission|`ReadAssignedRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AssignedRole().Get(listAssignedRolesParameters);
 await rc.Revoke();
 ```
@@ -3840,7 +3840,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AuditTrail().Search().Post(accountHistorySearchPublicRequest);
 await rc.Revoke();
 ```
@@ -3867,7 +3867,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
 await rc.Revoke();
 ```
@@ -3892,7 +3892,7 @@ User Permission|`EditCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
 await rc.Revoke();
 ```
@@ -3919,7 +3919,7 @@ User Permission|`ReadCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
 await rc.Revoke();
 ```
@@ -3944,7 +3944,7 @@ User Permission|`EditUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
 await rc.Revoke();
 ```
@@ -3971,7 +3971,7 @@ User Permission|`ReadCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
 await rc.Revoke();
 ```
@@ -3998,7 +3998,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
 await rc.Revoke();
 ```
@@ -4025,7 +4025,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
 await rc.Revoke();
 ```
@@ -4050,7 +4050,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
 await rc.Revoke();
 ```
@@ -4076,7 +4076,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
 await rc.Revoke();
 ```
@@ -4102,7 +4102,7 @@ User Permission|`EditCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
 await rc.Revoke();
 ```
@@ -4130,7 +4130,7 @@ User Permission|`EditCompanyDevices`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Emergency().Put(accountDeviceUpdate);
 await rc.Revoke();
 ```
@@ -4156,7 +4156,7 @@ User Permission|`ReadCompanyDevices`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).SipInfo().Get();
 await rc.Revoke();
 ```
@@ -4181,7 +4181,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
 await rc.Revoke();
 ```
@@ -4208,7 +4208,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get();
 await rc.Revoke();
 ```
@@ -4233,7 +4233,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Federation().Get(readDirectoryFederationParameters);
 await rc.Revoke();
 ```
@@ -4260,7 +4260,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().List(listEmergencyLocationsParameters);
 await rc.Revoke();
 ```
@@ -4288,7 +4288,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest);
 await rc.Revoke();
 ```
@@ -4316,7 +4316,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Get(readEmergencyLocationParameters);
 await rc.Revoke();
 ```
@@ -4344,7 +4344,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);
 await rc.Revoke();
 ```
@@ -4372,7 +4372,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Delete(deleteEmergencyLocationParameters);
 await rc.Revoke();
 ```
@@ -4400,7 +4400,7 @@ User Permission|`EditExtensionInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Post(extensionBulkUpdateRequest);
 await rc.Revoke();
 ```
@@ -4426,7 +4426,7 @@ User Permission|`ReadCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().List(readUserCallLogParameters);
 await rc.Revoke();
 ```
@@ -4453,7 +4453,7 @@ User Permission|`EditCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
 await rc.Revoke();
 ```
@@ -4480,7 +4480,7 @@ User Permission|`ReadCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
 await rc.Revoke();
 ```
@@ -4508,7 +4508,7 @@ User Permission|`EditCallQueuePresence`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueues().Put(userCallQueues);
 await rc.Revoke();
 ```
@@ -4535,7 +4535,7 @@ User Permission|`ReadCallerIDSettings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Get();
 await rc.Revoke();
 ```
@@ -4561,7 +4561,7 @@ User Permission|`EditCallerIDSettings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerId().Put(extensionCallerIdInfoRequest);
 await rc.Revoke();
 ```
@@ -4589,7 +4589,7 @@ User Permission|`ReadUserDevices`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
 await rc.Revoke();
 ```
@@ -4617,7 +4617,7 @@ User Permission|`ReadPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Get();
 await rc.Revoke();
 ```
@@ -4643,7 +4643,7 @@ User Permission|`EditPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
 await rc.Revoke();
 ```
@@ -4671,7 +4671,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Features().Get(readExtensionFeaturesParameters);
 await rc.Revoke();
 ```
@@ -4699,7 +4699,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
 await rc.Revoke();
 ```
@@ -4727,7 +4727,7 @@ User Permission|`EditUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting().Post(createCustomUserGreetingRequest, createCustomUserGreetingParameters);
 await rc.Revoke();
 ```
@@ -4757,7 +4757,7 @@ User Permission|`ReadUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Greeting(greetingId).Get();
 await rc.Revoke();
 ```
@@ -4783,7 +4783,7 @@ User Permission|`ReadPresenceStatus`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
 await rc.Revoke();
 ```
@@ -4811,7 +4811,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Presence().Put(presenceInfoRequest);
 await rc.Revoke();
 ```
@@ -4838,7 +4838,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut().Post(makeRingOutRequest);
 await rc.Revoke();
 ```
@@ -4865,7 +4865,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Get();
 await rc.Revoke();
 ```
@@ -4891,7 +4891,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
 await rc.Revoke();
 ```
@@ -4917,7 +4917,7 @@ User Permission|`ReadCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).ForwardAllCalls().Get();
 await rc.Revoke();
 ```
@@ -4943,7 +4943,7 @@ User Permission|`EditCompanyAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).ForwardAllCalls().Patch(forwardAllCompanyCallsInfo);
 await rc.Revoke();
 ```
@@ -4970,7 +4970,7 @@ User Permission|`ReadCompanyGreetings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Content().Get();
 await rc.Revoke();
 ```
@@ -4999,7 +4999,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport().Post(createMessageStoreReportRequest);
 await rc.Revoke();
 ```
@@ -5026,7 +5026,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Get();
 await rc.Revoke();
 ```
@@ -5052,7 +5052,7 @@ User Permission|`Sites`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).BulkAssign().Post(siteMembersBulkUpdate);
 await rc.Revoke();
 ```
@@ -5078,7 +5078,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().CallOut().Post(makeCallOutRequest);
 await rc.Revoke();
 ```
@@ -5104,7 +5104,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Conference().Post();
 await rc.Revoke();
 ```
@@ -5129,7 +5129,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters);
 await rc.Revoke();
 ```
@@ -5156,7 +5156,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Delete();
 await rc.Revoke();
 ```
@@ -5181,7 +5181,7 @@ User Permission|`Roles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Default().Get();
 await rc.Revoke();
 ```
@@ -5206,7 +5206,7 @@ User Permission|`Roles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Default().Put(defaultUserRoleRequest);
 await rc.Revoke();
 ```
@@ -5232,7 +5232,7 @@ User Permission|`EditUserRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).BulkAssign().Post(bulkRoleAssignResource);
 await rc.Revoke();
 ```
@@ -5258,7 +5258,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).ClientInfo().SipProvision().Post(createSipRegistrationRequest);
 await rc.Revoke();
 ```
@@ -5285,7 +5285,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
 await rc.Revoke();
 ```
@@ -5310,7 +5310,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Permission().List(listPermissionsParameters);
 await rc.Revoke();
 ```
@@ -5335,7 +5335,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Permission(permissionId).Get();
 await rc.Revoke();
 ```
@@ -5359,7 +5359,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Get();
 await rc.Revoke();
 ```
@@ -5382,7 +5382,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Put(adaptiveCardRequest);
 await rc.Revoke();
 ```
@@ -5406,7 +5406,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Delete();
 await rc.Revoke();
 ```
@@ -5429,7 +5429,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Favorite().Post();
 await rc.Revoke();
 ```
@@ -5452,7 +5452,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Notes().Get(listChatNotesNewParameters);
 await rc.Revoke();
 ```
@@ -5476,7 +5476,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Notes().Post(tMCreateNoteRequest);
 await rc.Revoke();
 ```
@@ -5500,7 +5500,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Posts().List(readGlipPostsNewParameters);
 await rc.Revoke();
 ```
@@ -5524,7 +5524,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Posts().Post(tMCreatePostRequest);
 await rc.Revoke();
 ```
@@ -5548,7 +5548,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Get();
 await rc.Revoke();
 ```
@@ -5571,7 +5571,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Delete();
 await rc.Revoke();
 ```
@@ -5594,7 +5594,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Patch(tMUpdatePostRequest);
 await rc.Revoke();
 ```
@@ -5618,7 +5618,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Tasks().Get(listChatTasksNewParameters);
 await rc.Revoke();
 ```
@@ -5642,7 +5642,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Tasks().Post(tMCreateTaskRequest);
 await rc.Revoke();
 ```
@@ -5666,7 +5666,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).Unfavorite().Post();
 await rc.Revoke();
 ```
@@ -5689,7 +5689,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Conversations().List(listGlipConversationsNewParameters);
 await rc.Revoke();
 ```
@@ -5714,7 +5714,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Conversations().Post(createConversationRequest);
 await rc.Revoke();
 ```
@@ -5738,7 +5738,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Conversations(chatId).Get();
 await rc.Revoke();
 ```
@@ -5761,7 +5761,7 @@ User Permission|`Glip`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().DataExport().List(listDataExportTasksNewParameters);
 await rc.Revoke();
 ```
@@ -5786,7 +5786,7 @@ User Permission|`Glip`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().DataExport().Post(createDataExportTaskRequest);
 await rc.Revoke();
 ```
@@ -5811,7 +5811,7 @@ User Permission|`Glip`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().DataExport(taskId).Get();
 await rc.Revoke();
 ```
@@ -5834,7 +5834,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Groups(groupId).Events().Get();
 await rc.Revoke();
 ```
@@ -5857,7 +5857,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Groups(groupId).Events().Post(tMCreateEventRequest);
 await rc.Revoke();
 ```
@@ -5881,7 +5881,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Groups(groupId).Webhooks().Get();
 await rc.Revoke();
 ```
@@ -5905,7 +5905,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Groups(groupId).Webhooks().Post();
 await rc.Revoke();
 ```
@@ -5929,7 +5929,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Notes(noteId).Publish().Post();
 await rc.Revoke();
 ```
@@ -5952,7 +5952,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Notes(noteId).Unlock().Post();
 await rc.Revoke();
 ```
@@ -5975,7 +5975,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Recent().Chats().Get(listRecentChatsNewParameters);
 await rc.Revoke();
 ```
@@ -6000,7 +6000,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Tasks(taskId).Complete().Post(tMCompleteTaskRequest);
 await rc.Revoke();
 ```
@@ -6024,7 +6024,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Leave().Post();
 await rc.Revoke();
 ```
@@ -6047,7 +6047,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Unarchive().Post();
 await rc.Revoke();
 ```
@@ -6070,7 +6070,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Activate().Post();
 await rc.Revoke();
 ```
@@ -6093,7 +6093,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Suspend().Post();
 await rc.Revoke();
 ```
@@ -6116,7 +6116,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Sessions().Get(rcwConfigListAllSessionsParameters);
 await rc.Revoke();
 ```
@@ -6142,7 +6142,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars().List(rcwConfigListWebinarsParameters);
 await rc.Revoke();
 ```
@@ -6168,7 +6168,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars().Post(webinarCreationRequest);
 await rc.Revoke();
 ```
@@ -6193,7 +6193,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Get();
 await rc.Revoke();
 ```
@@ -6216,7 +6216,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Delete();
 await rc.Revoke();
 ```
@@ -6240,7 +6240,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Patch(webinarBaseModel);
 await rc.Revoke();
 ```
@@ -6265,7 +6265,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Recordings().List(rcwHistoryListRecordingsParameters);
 await rc.Revoke();
 ```
@@ -6291,7 +6291,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Recordings(recordingId).Get();
 await rc.Revoke();
 ```
@@ -6315,7 +6315,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Archive().Post();
 await rc.Revoke();
 ```
@@ -6338,7 +6338,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Teams(chatId).Remove().Post(tMRemoveTeamMembersRequest);
 await rc.Revoke();
 ```
@@ -6362,7 +6362,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Company().Sessions().Get(rcwHistoryListAllCompanySessionsParameters);
 await rc.Revoke();
 ```
@@ -6388,7 +6388,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Company().Recordings().List(rcwHistoryAdminListRecordingsParameters);
 await rc.Revoke();
 ```
@@ -6414,7 +6414,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Company().Recordings(recordingId).Get();
 await rc.Revoke();
 ```
@@ -6438,7 +6438,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Webinars(webinarId).Sessions(sessionId).Get();
 await rc.Revoke();
 ```
@@ -6461,7 +6461,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Ai().Insights().V1().Async().AnalyzeInteraction().Post(interactionInput, caiAnalyzeInteractionParameters);
 await rc.Revoke();
 ```
@@ -6487,7 +6487,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Analytics().Calls().V1().Accounts(accountId).Timeline().Fetch().Post(timelineRequest, analyticsCallsTimelineFetchParameters);
 await rc.Revoke();
 ```
@@ -6514,7 +6514,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V1().Account(accountId).Extension(extensionId).Recordings().List(getExtensionRecordingsParameters);
 await rc.Revoke();
 ```
@@ -6541,7 +6541,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V1().Account(accountId).Extension(extensionId).Recordings(recordingId).Get();
 await rc.Revoke();
 ```
@@ -6566,7 +6566,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V1().Accounts(accountId).Extensions(extensionId).Delegators().Get(rcvListDelegatorsParameters);
 await rc.Revoke();
 ```
@@ -6590,7 +6590,7 @@ User Permission|`EditPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Post(addressBookBulkUploadRequest);
 await rc.Revoke();
 ```
@@ -6617,7 +6617,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Get(listCallMonitoringGroupsParameters);
 await rc.Revoke();
 ```
@@ -6645,7 +6645,7 @@ User Permission|`Groups`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
 await rc.Revoke();
 ```
@@ -6673,7 +6673,7 @@ User Permission|`Groups`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Put(createCallMonitoringGroupRequest);
 await rc.Revoke();
 ```
@@ -6701,7 +6701,7 @@ User Permission|`Groups`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Delete();
 await rc.Revoke();
 ```
@@ -6727,7 +6727,7 @@ User Permission|`Groups`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).BulkAssign().Post(callQueueBulkAssignResource);
 await rc.Revoke();
 ```
@@ -6754,7 +6754,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().BulkAssign().Post(bulkAccountCallRecordingsResource);
 await rc.Revoke();
 ```
@@ -6782,7 +6782,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();
 await rc.Revoke();
 ```
@@ -6808,7 +6808,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().Search().Post(searchDirectoryEntriesRequest, searchDirectoryEntriesParameters);
 await rc.Revoke();
 ```
@@ -6837,7 +6837,7 @@ User Permission|`ReadCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
 await rc.Revoke();
 ```
@@ -6865,7 +6865,7 @@ User Permission|`ReadUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
 await rc.Revoke();
 ```
@@ -6893,7 +6893,7 @@ User Permission|`EditUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule().Post(createAnsweringRuleRequest);
 await rc.Revoke();
 ```
@@ -6920,7 +6920,7 @@ User Permission|`ReadUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
 await rc.Revoke();
 ```
@@ -6947,7 +6947,7 @@ User Permission|`EditUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Put(updateAnsweringRuleRequest);
 await rc.Revoke();
 ```
@@ -6974,7 +6974,7 @@ User Permission|`EditUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
 await rc.Revoke();
 ```
@@ -7000,7 +7000,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Get(listUserAssignedRolesParameters);
 await rc.Revoke();
 ```
@@ -7028,7 +7028,7 @@ User Permission|`EditAssignedRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Put(assignedRolesResource);
 await rc.Revoke();
 ```
@@ -7055,7 +7055,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Get();
 await rc.Revoke();
 ```
@@ -7081,7 +7081,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Get();
 await rc.Revoke();
 ```
@@ -7107,7 +7107,7 @@ User Permission|`EditUserAnsweringRules`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).BusinessHours().Put(userBusinessHoursUpdateRequest);
 await rc.Revoke();
 ```
@@ -7135,7 +7135,7 @@ User Permission|`ReadCallLog`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallLogSync().Get(syncUserCallLogParameters);
 await rc.Revoke();
 ```
@@ -7162,7 +7162,7 @@ User Permission|`ReadBlockedNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();
 await rc.Revoke();
 ```
@@ -7188,7 +7188,7 @@ User Permission|`EditBlockedNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);
 await rc.Revoke();
 ```
@@ -7217,7 +7217,7 @@ User Permission|`InternalSMS`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CompanyPager().Post(createInternalTextMessageRequest);
 await rc.Revoke();
 ```
@@ -7245,7 +7245,7 @@ User Permission|`OrganizeConference`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
 await rc.Revoke();
 ```
@@ -7273,7 +7273,7 @@ User Permission|`OrganizeConference`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Conferencing().Put(updateConferencingInfoRequest);
 await rc.Revoke();
 ```
@@ -7301,7 +7301,7 @@ User Permission|`ReadUserForwardingFlipNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
 await rc.Revoke();
 ```
@@ -7330,7 +7330,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().Post(createForwardingNumberRequest);
 await rc.Revoke();
 ```
@@ -7358,7 +7358,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber().DeleteAll(deleteForwardingNumbersRequest);
 await rc.Revoke();
 ```
@@ -7386,7 +7386,7 @@ User Permission|`ReadUserForwardingFlipNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
 await rc.Revoke();
 ```
@@ -7412,7 +7412,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Put(updateForwardingNumberRequest);
 await rc.Revoke();
 ```
@@ -7440,7 +7440,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
 await rc.Revoke();
 ```
@@ -7466,7 +7466,7 @@ User Permission|`ReadMessages`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().List(listMessagesParameters);
 await rc.Revoke();
 ```
@@ -7493,7 +7493,7 @@ User Permission|`EditMessages`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore().DeleteAll(deleteMessageByFilterParameters);
 await rc.Revoke();
 ```
@@ -7521,7 +7521,7 @@ User Permission|`ReadMessages`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
 await rc.Revoke();
 ```
@@ -7547,7 +7547,7 @@ User Permission|`EditMessages`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest);
 await rc.Revoke();
 ```
@@ -7574,7 +7574,7 @@ User Permission|`EditMessages`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Delete(deleteMessageBulkRequest, deleteMessageParameters);
 await rc.Revoke();
 ```
@@ -7602,7 +7602,7 @@ User Permission|`EditMessages`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Patch(patchMessageRequest);
 await rc.Revoke();
 ```
@@ -7629,7 +7629,7 @@ User Permission|`ReadMessages`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageSync().Get(syncMessagesParameters);
 await rc.Revoke();
 ```
@@ -7656,7 +7656,7 @@ User Permission|`ReadUserPhoneNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).PhoneNumber().Get(listExtensionPhoneNumbersParameters);
 await rc.Revoke();
 ```
@@ -7684,7 +7684,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().List();
 await rc.Revoke();
 ```
@@ -7714,7 +7714,7 @@ User Permission|`EditUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Post(createUserProfileImageRequest);
 await rc.Revoke();
 ```
@@ -7742,7 +7742,7 @@ User Permission|`EditUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Put(updateUserProfileImageRequest);
 await rc.Revoke();
 ```
@@ -7770,7 +7770,7 @@ User Permission|`EditUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage().Delete();
 await rc.Revoke();
 ```
@@ -7796,7 +7796,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
 await rc.Revoke();
 ```
@@ -7826,7 +7826,7 @@ User Permission|`ReadPresenceStatus`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Get();
 await rc.Revoke();
 ```
@@ -7852,7 +7852,7 @@ User Permission|`EditPresenceStatus`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).UnifiedPresence().Patch(updateUnifiedPresence);
 await rc.Revoke();
 ```
@@ -7879,7 +7879,7 @@ User Permission|`ReadCompanyDevices`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
 await rc.Revoke();
 ```
@@ -7906,7 +7906,7 @@ User Permission|`ReadUserInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Users().Get(listPagingGroupUsersParameters);
 await rc.Revoke();
 ```
@@ -7933,7 +7933,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get();
 await rc.Revoke();
 ```
@@ -7958,7 +7958,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete();
 await rc.Revoke();
 ```
@@ -7983,7 +7983,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Patch(partyUpdateRequest);
 await rc.Revoke();
 ```
@@ -8009,7 +8009,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Brand(brandId).ContractedCountry().List();
 await rc.Revoke();
 ```
@@ -8033,7 +8033,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().Brand(brandId).ContractedCountry(contractedCountryId).Get(listDomesticCountriesParameters);
 await rc.Revoke();
 ```
@@ -8059,7 +8059,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().PermissionCategory().List(listPermissionCategoriesParameters);
 await rc.Revoke();
 ```
@@ -8085,7 +8085,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Dictionary().PermissionCategory(permissionCategoryId).Get();
 await rc.Revoke();
 ```
@@ -8109,7 +8109,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.TeamMessaging().V1().Chats(chatId).AdaptiveCards().Post(adaptiveCardRequest);
 await rc.Revoke();
 ```
@@ -8133,7 +8133,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions().Post(wcsSessionBaseModel);
 await rc.Revoke();
 ```
@@ -8158,7 +8158,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Get();
 await rc.Revoke();
 ```
@@ -8181,7 +8181,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Delete();
 await rc.Revoke();
 ```
@@ -8205,7 +8205,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Patch(wcsSessionBaseModel);
 await rc.Revoke();
 ```
@@ -8230,7 +8230,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Recordings(recordingId).Download().Get(rcwHistoryGetRecordingDownloadParameters);
 await rc.Revoke();
 ```
@@ -8256,7 +8256,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Notifications().V1().Subscriptions().List();
 await rc.Revoke();
 ```
@@ -8280,7 +8280,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Notifications().V1().Subscriptions().Post(createWebhookSubscriptionRequest);
 await rc.Revoke();
 ```
@@ -8306,7 +8306,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Notifications().V1().Subscriptions(subscriptionId).Get();
 await rc.Revoke();
 ```
@@ -8330,7 +8330,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Notifications().V1().Subscriptions(subscriptionId).Put(updateSubscriptionRequest);
 await rc.Revoke();
 ```
@@ -8355,7 +8355,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Notifications().V1().Subscriptions(subscriptionId).Delete();
 await rc.Revoke();
 ```
@@ -8379,7 +8379,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Analytics().Calls().V1().Accounts(accountId).Aggregation().Fetch().Post(aggregationRequest, analyticsCallsAggregationFetchParameters);
 await rc.Revoke();
 ```
@@ -8406,7 +8406,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Rcvideo().V2().Account(accountId).Extension(extensionId).Bridges().Default().Get();
 await rc.Revoke();
 ```
@@ -8431,7 +8431,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().OptOuts().BulkAssign().Post(optOutBulkAssignRequest);
 await rc.Revoke();
 ```
@@ -8457,7 +8457,7 @@ User Permission|`EditPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).AddressBookBulkUpload().Tasks(taskId).Get();
 await rc.Revoke();
 ```
@@ -8483,7 +8483,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
 await rc.Revoke();
 ```
@@ -8511,7 +8511,7 @@ User Permission|`ReadCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().Get(listCallRecordingCustomGreetingsParameters);
 await rc.Revoke();
 ```
@@ -8539,7 +8539,7 @@ User Permission|`EditCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings().DeleteAll();
 await rc.Revoke();
 ```
@@ -8565,7 +8565,7 @@ User Permission|`EditCompanyInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
 await rc.Revoke();
 ```
@@ -8591,7 +8591,7 @@ User Permission|`EditExtensionInfo`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).ExtensionBulkUpdate().Tasks(taskId).Get();
 await rc.Revoke();
 ```
@@ -8616,7 +8616,7 @@ User Permission|`CallQueueToCallQueue`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(callQueueId).OverflowSettings().Get();
 await rc.Revoke();
 ```
@@ -8641,7 +8641,7 @@ User Permission|`CallQueueToCallQueue`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(callQueueId).OverflowSettings().Put(callQueueOverflowSettingsRequestResource);
 await rc.Revoke();
 ```
@@ -8669,7 +8669,7 @@ User Permission|`ReadPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBookSync().Get(syncAddressBookParameters);
 await rc.Revoke();
 ```
@@ -8696,7 +8696,7 @@ User Permission|`ReadPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
 await rc.Revoke();
 ```
@@ -8723,7 +8723,7 @@ User Permission|`EditPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact().Post(personalContactRequest, createContactParameters);
 await rc.Revoke();
 ```
@@ -8751,7 +8751,7 @@ User Permission|`ReadPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
 await rc.Revoke();
 ```
@@ -8777,7 +8777,7 @@ User Permission|`EditPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Put(personalContactRequest, updateContactParameters);
 await rc.Revoke();
 ```
@@ -8805,7 +8805,7 @@ User Permission|`EditPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
 await rc.Revoke();
 ```
@@ -8831,7 +8831,7 @@ User Permission|`EditPersonalContacts`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Patch(personalContactRequest, patchContactParameters);
 await rc.Revoke();
 ```
@@ -8859,7 +8859,7 @@ User Permission|`ReadExtensions`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AdministeredSites().Get();
 await rc.Revoke();
 ```
@@ -8885,7 +8885,7 @@ User Permission|`EditAssignedRoles`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AdministeredSites().Put(businessSiteCollectionRequest);
 await rc.Revoke();
 ```
@@ -8914,7 +8914,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AssignedRole().Default().Put();
 await rc.Revoke();
 ```
@@ -8940,7 +8940,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).AuthzProfile().Check().Get(checkUserPermissionParameters);
 await rc.Revoke();
 ```
@@ -8968,7 +8968,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Get(readExtensionCallQueuePresenceParameters);
 await rc.Revoke();
 ```
@@ -8996,7 +8996,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallQueuePresence().Put(extensionCallQueueUpdatePresenceList);
 await rc.Revoke();
 ```
@@ -9024,7 +9024,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations().List(getExtensionEmergencyLocationsParameters);
 await rc.Revoke();
 ```
@@ -9053,7 +9053,7 @@ User Permission|`EmergencyFramework`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations().Post(createUserEmergencyLocationRequest);
 await rc.Revoke();
 ```
@@ -9082,7 +9082,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations(locationId).Get();
 await rc.Revoke();
 ```
@@ -9109,7 +9109,7 @@ User Permission|`EmergencyFramework`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations(locationId).Put(emergencyLocationResource);
 await rc.Revoke();
 ```
@@ -9137,7 +9137,7 @@ User Permission|`EmergencyFramework`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations(locationId).Delete(deleteExtensionEmergencyLocationParameters);
 await rc.Revoke();
 ```
@@ -9166,7 +9166,7 @@ User Permission|`ReadMessageContent`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
 await rc.Revoke();
 ```
@@ -9198,7 +9198,7 @@ User Permission|`ReadMessagesNotificationsSettings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Get();
 await rc.Revoke();
 ```
@@ -9224,7 +9224,7 @@ User Permission|`EditMessagesNotificationsSettings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).NotificationSettings().Put(notificationSettingsUpdateRequest);
 await rc.Revoke();
 ```
@@ -9252,7 +9252,7 @@ User Permission|`Meetings`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get();
 await rc.Revoke();
 ```
@@ -9279,7 +9279,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Put(userVideoConfiguration);
 await rc.Revoke();
 ```
@@ -9307,7 +9307,7 @@ User Permission|`AccountAdministration`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Get();
 await rc.Revoke();
 ```
@@ -9333,7 +9333,7 @@ User Permission|`AccountAdministration`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
 await rc.Revoke();
 ```
@@ -9360,7 +9360,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive().List();
 await rc.Revoke();
 ```
@@ -9386,7 +9386,7 @@ User Permission|`Users`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
 await rc.Revoke();
 ```
@@ -9416,7 +9416,7 @@ User Permission|`Groups`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).BulkAssign().Post(editPagingGroupRequest);
 await rc.Revoke();
 ```
@@ -9443,7 +9443,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().Move().Post(movePartiesRequest);
 await rc.Revoke();
 ```
@@ -9469,7 +9469,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Answer().Post(answerTarget);
 await rc.Revoke();
 ```
@@ -9495,7 +9495,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Bridge().Post(bridgeTargetRequest);
 await rc.Revoke();
 ```
@@ -9521,7 +9521,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);
 await rc.Revoke();
 ```
@@ -9547,7 +9547,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post();
 await rc.Revoke();
 ```
@@ -9572,7 +9572,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Ignore().Post(ignoreRequestBody);
 await rc.Revoke();
 ```
@@ -9598,7 +9598,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();
 await rc.Revoke();
 ```
@@ -9623,7 +9623,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Play(playId).Delete();
 await rc.Revoke();
 ```
@@ -9648,7 +9648,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post();
 await rc.Revoke();
 ```
@@ -9673,7 +9673,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reply().Post(callPartyReply);
 await rc.Revoke();
 ```
@@ -9699,7 +9699,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Unhold().Post();
 await rc.Revoke();
 ```
@@ -9724,7 +9724,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Supervise().Post(superviseCallSessionRequest);
 await rc.Revoke();
 ```
@@ -9750,7 +9750,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Webinars(webinarId).Sessions(sessionId).Invitees().List(rcwHistoryListInviteesParameters);
 await rc.Revoke();
 ```
@@ -9776,7 +9776,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Webinars(webinarId).Sessions(sessionId).Invitees(inviteeId).Get();
 await rc.Revoke();
 ```
@@ -9799,7 +9799,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Notifications().V1().Subscriptions(subscriptionId).Renew().Post();
 await rc.Revoke();
 ```
@@ -9823,7 +9823,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Get();
 await rc.Revoke();
 ```
@@ -9846,7 +9846,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Patch(regSessionModel);
 await rc.Revoke();
 ```
@@ -9871,7 +9871,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Registrants().List(rcwRegListRegistrantsParameters);
 await rc.Revoke();
 ```
@@ -9896,7 +9896,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Registrants().Post(registrantBaseModel);
 await rc.Revoke();
 ```
@@ -9920,7 +9920,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Registrants(registrantId).Get(rcwRegGetRegistrantParameters);
 await rc.Revoke();
 ```
@@ -9945,7 +9945,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Registrants(registrantId).Delete();
 await rc.Revoke();
 ```
@@ -9968,7 +9968,7 @@ User Permission|`Groups`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).CallMonitoringGroups(groupId).BulkAssign().Post(callMonitoringBulkAssign);
 await rc.Revoke();
 ```
@@ -9995,7 +9995,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().Get(listDevicesAutomaticLocationUpdatesParameters);
 await rc.Revoke();
 ```
@@ -10023,7 +10023,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Devices().BulkAssign().Post(assignMultipleDevicesAutomaticLocationUpdates);
 await rc.Revoke();
 ```
@@ -10051,7 +10051,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().List(listNetworksParameters);
 await rc.Revoke();
 ```
@@ -10077,7 +10077,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks().Post(createNetworkRequest);
 await rc.Revoke();
 ```
@@ -10103,7 +10103,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get();
 await rc.Revoke();
 ```
@@ -10128,7 +10128,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Put(updateNetworkRequest);
 await rc.Revoke();
 ```
@@ -10154,7 +10154,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete();
 await rc.Revoke();
 ```
@@ -10179,7 +10179,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters);
 await rc.Revoke();
 ```
@@ -10207,7 +10207,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches().Post(createSwitchInfo);
 await rc.Revoke();
 ```
@@ -10233,7 +10233,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get();
 await rc.Revoke();
 ```
@@ -10258,7 +10258,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Put(updateSwitchInfo);
 await rc.Revoke();
 ```
@@ -10284,7 +10284,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete();
 await rc.Revoke();
 ```
@@ -10309,7 +10309,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest);
 await rc.Revoke();
 ```
@@ -10337,7 +10337,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkUpdate().Post(updateMultipleSwitchesRequest);
 await rc.Revoke();
 ```
@@ -10365,7 +10365,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkValidate().Post(validateMultipleSwitchesRequest);
 await rc.Revoke();
 ```
@@ -10393,7 +10393,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Tasks(taskId).Get();
 await rc.Revoke();
 ```
@@ -10419,7 +10419,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().Get(listAutomaticLocationUpdatesUsersParameters);
 await rc.Revoke();
 ```
@@ -10447,7 +10447,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().Users().BulkAssign().Post(emergencyAddressAutoUpdateUsersBulkAssignResource);
 await rc.Revoke();
 ```
@@ -10475,7 +10475,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters);
 await rc.Revoke();
 ```
@@ -10503,7 +10503,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().Post(createWirelessPoint);
 await rc.Revoke();
 ```
@@ -10530,7 +10530,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get();
 await rc.Revoke();
 ```
@@ -10556,7 +10556,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Put(updateWirelessPoint);
 await rc.Revoke();
 ```
@@ -10583,7 +10583,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Delete();
 await rc.Revoke();
 ```
@@ -10609,7 +10609,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest);
 await rc.Revoke();
 ```
@@ -10637,7 +10637,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkUpdate().Post(updateMultipleWirelessPointsRequest);
 await rc.Revoke();
 ```
@@ -10665,7 +10665,7 @@ User Permission|`ConfigureEmergencyMaps`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest);
 await rc.Revoke();
 ```
@@ -10693,7 +10693,7 @@ User Permission|`ReadBlockedNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
 await rc.Revoke();
 ```
@@ -10721,7 +10721,7 @@ User Permission|`EditBlockedNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().Post(addBlockedAllowedPhoneNumber);
 await rc.Revoke();
 ```
@@ -10749,7 +10749,7 @@ User Permission|`ReadBlockedNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Get();
 await rc.Revoke();
 ```
@@ -10775,7 +10775,7 @@ User Permission|`EditBlockedNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Put(addBlockedAllowedPhoneNumber);
 await rc.Revoke();
 ```
@@ -10803,7 +10803,7 @@ User Permission|`EditBlockedNumbers`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
 await rc.Revoke();
 ```
@@ -10829,7 +10829,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().BringIn().Post(addPartyRequest);
 await rc.Revoke();
 ```
@@ -10855,7 +10855,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties().PromoteToRcv().Post();
 await rc.Revoke();
 ```
@@ -10880,7 +10880,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Forward().Post(forwardTarget);
 await rc.Revoke();
 ```
@@ -10906,7 +10906,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Pickup().Post(pickupTarget);
 await rc.Revoke();
 ```
@@ -10932,7 +10932,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Play(playId).Pause().Post();
 await rc.Revoke();
 ```
@@ -10957,7 +10957,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Play(playId).Resume().Post();
 await rc.Revoke();
 ```
@@ -10982,7 +10982,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post();
 await rc.Revoke();
 ```
@@ -11007,7 +11007,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
 await rc.Revoke();
 ```
@@ -11035,7 +11035,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Supervise().Post(partySuperviseRequest);
 await rc.Revoke();
 ```
@@ -11061,7 +11061,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Transfer().Post(transferTarget);
 await rc.Revoke();
 ```
@@ -11087,7 +11087,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Invitees().List(rcwConfigListInviteesParameters);
 await rc.Revoke();
 ```
@@ -11112,7 +11112,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Invitees().Patch(bulkUpdateInviteesRequest);
 await rc.Revoke();
 ```
@@ -11136,7 +11136,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Invitees(inviteeId).Get();
 await rc.Revoke();
 ```
@@ -11159,7 +11159,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Invitees(inviteeId).Put(updateInviteeRequest);
 await rc.Revoke();
 ```
@@ -11183,7 +11183,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().Configuration().V1().Webinars(webinarId).Sessions(sessionId).Invitees(inviteeId).Delete();
 await rc.Revoke();
 ```
@@ -11206,7 +11206,7 @@ User Permission|`N/A`
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("username", "extension", "password");
+await rc.Authorize("jwtToken");
 var result = await rc.Webinar().History().V1().Webinars(webinarId).Sessions(sessionId).Participants().Get(rcwHistoryListParticipantsParameters);
 await rc.Revoke();
 ```
