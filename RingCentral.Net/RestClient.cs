@@ -171,9 +171,24 @@ namespace RingCentral
             return new Paths.Analytics.Index(this);
         }
 
-        public Paths.TeamMessaging.Index TeamMessaging(string version = "v1")
+        public Paths.TeamMessaging.Index TeamMessaging()
         {
-            return new Paths.TeamMessaging.Index(this, version);
+            return new Paths.TeamMessaging.Index(this);
+        }
+
+        public Paths.Ai.Index Ai()
+        {
+            return new Paths.Ai.Index(this);
+        }
+
+        public Paths.Rcvideo.Index Rcvideo()
+        {
+            return new Paths.Rcvideo.Index(this);
+        }
+
+        public Paths.Webinar.Index Webinar()
+        {
+            return new Paths.Webinar.Index(this);
         }
     }
 }
