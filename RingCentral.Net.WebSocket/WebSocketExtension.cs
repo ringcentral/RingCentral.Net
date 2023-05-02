@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Net.WebSockets;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Websocket.Client;
@@ -32,36 +33,29 @@ namespace RingCentral.Net.WebSocket
         {
             var wsToken = await _rc.Post<WsToken>("/restapi/oauth/wstoken");
             var wsUri = $"{wsToken.uri}?access_token={wsToken.ws_access_token}";
-            if (recoverSession) wsUri = $"{wsUri}&wsc={_wsc.token}";
-
-            _ws = new WebsocketClient(new Uri(wsUri));
-            _ws.ReconnectTimeout = TimeSpan.FromMinutes(2);
-
-            _ws.ReconnectionHappened.Subscribe(async info =>
+            if (recoverSession)
             {
-                if (info.Type != ReconnectionType.Initial)
+                wsUri = $"{wsUri}&wsc={_wsc.token}";
+            }
+            var factory = new Func<ClientWebSocket>(() =>new ClientWebSocket
+            {
+                Options = {KeepAliveInterval = TimeSpan.FromSeconds(30)}
+            });
+            _ws = new WebsocketClient(new Uri(wsUri), factory);
+            _ws.ReconnectTimeout = null;
+            _ws.MessageReceived.Subscribe(responseMessage =>
+            {
+                var wsgMessage = WsgMessage.Parse(responseMessage.Text);
+                if (_options.debugMode)
                 {
-                    _ws.Dispose();
-                    await Connect(true);
-                    if (!recoverSession || _connectionDetails.recoveryState == RecoveryState.Failed)
-                        if (_subscription != default(Subscription) && _subscription.subscriptionInfo != null)
-                            // otherwise it has been revoked explicitly
-                            await _subscription.SubScribe();
+                    Console.WriteLine(
+                        $"***WebSocket incoming message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
+                        $"\n{JsonConvert.SerializeObject(wsgMessage, Formatting.Indented)}" +
+                        "\n******");
                 }
 
-                _ws.MessageReceived.Subscribe(responseMessage =>
-                {
-                    var wsgMessage = WsgMessage.Parse(responseMessage.Text);
-                    if (_options.debugMode)
-                        Console.WriteLine(
-                            $"***WebSocket incoming message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
-                            $"\n{JsonConvert.SerializeObject(wsgMessage, Formatting.Indented)}" +
-                            "\n******");
-
-                    MessageReceived?.Invoke(this, wsgMessage);
-                });
+                MessageReceived?.Invoke(this, wsgMessage);
             });
-
             MessageReceived += (sender, wsgMessage) =>
             {
                 if (wsgMessage.meta.wsc != null && (_wsc == null ||
@@ -69,22 +63,27 @@ namespace RingCentral.Net.WebSocket
                                                      MessageType.ConnectionDetails &&
                                                      wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
                                                     _wsc?.sequence < wsgMessage.meta.wsc.sequence))
+                {
                     _wsc = wsgMessage.meta.wsc;
+                }
 
                 if (wsgMessage.meta.type == MessageType.ConnectionDetails)
+                {
                     _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
+                }
             };
-
             await _ws.Start();
         }
 
         private Task Send(string message)
         {
             if (_options.debugMode)
+            {
                 Console.WriteLine(
                     $"***WebSocket outgoing message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
                     $"\n{JsonConvert.SerializeObject(JsonConvert.DeserializeObject(message), Formatting.Indented)}" +
                     "\n******");
+            }
 
             return Task.Run(() => _ws.Send(message));
         }
