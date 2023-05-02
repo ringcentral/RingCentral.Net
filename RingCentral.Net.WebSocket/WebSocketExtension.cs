@@ -44,7 +44,7 @@ namespace RingCentral.Net.WebSocket
                     _ws.Dispose();
                     await Connect(true);
                     if (!recoverSession || _connectionDetails.recoveryState == RecoveryState.Failed)
-                        if (_subscription != default(Subscription) && _subscription.SubscriptionInfo != null)
+                        if (_subscription != default(Subscription) && _subscription.subscriptionInfo != null)
                             // otherwise it has been revoked explicitly
                             await _subscription.SubScribe();
                 }
