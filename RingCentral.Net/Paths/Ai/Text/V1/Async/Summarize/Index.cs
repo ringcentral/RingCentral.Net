@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Ai.Text.V1.Async.Summarize
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/summarize";
         }

@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         ///     The number of speakers detected. Field is set only when enableSpeakerDiarization is true.
         ///     Format: int32
-        ///     Example: 3
+        ///     Example: 2
         /// </summary>
         public long? speakerCount { get; set; }
 

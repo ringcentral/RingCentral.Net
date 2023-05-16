@@ -27,7 +27,7 @@ namespace RingCentral
         /// <summary>
         ///     Recipient information
         /// </summary>
-        public MessageStoreCallerInfoResponseTo[] to { get; set; }
+        public FaxResponseTo[] to { get; set; }
 
         /// <summary>
         ///     Message creation datetime in ISO 8601 format including timezone,

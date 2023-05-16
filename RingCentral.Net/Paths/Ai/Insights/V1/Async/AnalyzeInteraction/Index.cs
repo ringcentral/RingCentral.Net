@@ -13,13 +13,14 @@ namespace RingCentral.Paths.Ai.Insights.V1.Async.AnalyzeInteraction
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/analyze-interaction";
         }
 
         /// <summary>
-        ///     Returns Interaction Analytics to the provided webhook uri.
+        ///     Returns multiple insights including summaries, emotion, key phrases, questions asked, and more in a single API
+        ///     call.
         ///     HTTP Method: post
         ///     Endpoint: /ai/insights/v1/async/analyze-interaction
         ///     Rate Limit Group: Heavy

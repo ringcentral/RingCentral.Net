@@ -33,11 +33,8 @@ namespace RingCentral.Net.WebSocket
         {
             var wsToken = await _rc.Post<WsToken>("/restapi/oauth/wstoken");
             var wsUri = $"{wsToken.uri}?access_token={wsToken.ws_access_token}";
-            if (recoverSession)
-            {
-                wsUri = $"{wsUri}&wsc={_wsc.token}";
-            }
-            var factory = new Func<ClientWebSocket>(() =>new ClientWebSocket
+            if (recoverSession) wsUri = $"{wsUri}&wsc={_wsc.token}";
+            var factory = new Func<ClientWebSocket>(() => new ClientWebSocket
             {
                 Options = {KeepAliveInterval = TimeSpan.FromSeconds(30)}
             });
@@ -47,12 +44,10 @@ namespace RingCentral.Net.WebSocket
             {
                 var wsgMessage = WsgMessage.Parse(responseMessage.Text);
                 if (_options.debugMode)
-                {
                     Console.WriteLine(
                         $"***WebSocket incoming message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
                         $"\n{JsonConvert.SerializeObject(wsgMessage, Formatting.Indented)}" +
                         "\n******");
-                }
 
                 MessageReceived?.Invoke(this, wsgMessage);
             });
@@ -63,14 +58,10 @@ namespace RingCentral.Net.WebSocket
                                                      MessageType.ConnectionDetails &&
                                                      wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
                                                     _wsc?.sequence < wsgMessage.meta.wsc.sequence))
-                {
                     _wsc = wsgMessage.meta.wsc;
-                }
 
                 if (wsgMessage.meta.type == MessageType.ConnectionDetails)
-                {
                     _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
-                }
             };
             await _ws.Start();
         }
@@ -78,12 +69,10 @@ namespace RingCentral.Net.WebSocket
         private Task Send(string message)
         {
             if (_options.debugMode)
-            {
                 Console.WriteLine(
                     $"***WebSocket outgoing message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
                     $"\n{JsonConvert.SerializeObject(JsonConvert.DeserializeObject(message), Formatting.Indented)}" +
                     "\n******");
-            }
 
             return Task.Run(() => _ws.Send(message));
         }

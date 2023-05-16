@@ -9,7 +9,7 @@ namespace RingCentral.Paths.Webinar
             this.rc = rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return "/webinar";
         }

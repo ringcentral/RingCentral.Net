@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Analytics.Calls.V1.Accounts.Timeline.Fetch
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/fetch";
         }

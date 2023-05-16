@@ -78,8 +78,8 @@ namespace RingCentral
         public string description { get; set; }
 
         /// <summary>
-        ///     Session status from Configuration service
-        ///     Example: Finished
+        ///     Session status (for the purposes of Configuration service)
+        ///     Example: Scheduled
         ///     Enum: Scheduled, Active, Finished
         /// </summary>
         public string status { get; set; }

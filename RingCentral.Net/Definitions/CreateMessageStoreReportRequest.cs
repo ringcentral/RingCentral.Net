@@ -20,7 +20,7 @@ namespace RingCentral
         ///     Types of messages to be collected. If not specified, all messages without message type filtering will be returned.
         ///     Multiple values are accepted
         ///     Example: Fax,VoiceMail
-        ///     Enum: EMail, Fax, SMS, VoiceMail, Pager, Text
+        ///     Enum: Fax, SMS, VoiceMail, Pager
         /// </summary>
         public string[] messageTypes { get; set; }
     }

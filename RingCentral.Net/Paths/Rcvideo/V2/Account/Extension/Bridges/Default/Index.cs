@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Rcvideo.V2.Account.Extension.Bridges.Default
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/default";
         }

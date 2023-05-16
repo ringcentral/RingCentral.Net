@@ -13,7 +13,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Teams.Add
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/add";
         }

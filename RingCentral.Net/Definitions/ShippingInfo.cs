@@ -28,7 +28,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public MethodInfo method { get; set; }
+        public ShippingMethodInfo method { get; set; }
 
         /// <summary>
         /// </summary>

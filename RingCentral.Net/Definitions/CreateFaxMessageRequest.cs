@@ -14,7 +14,7 @@ namespace RingCentral
         public string faxResolution { get; set; }
 
         /// <summary>
-        ///     Recipient's phone number
+        ///     Recipient's phone number(s)
         ///     Required
         /// </summary>
         public FaxReceiver[] to { get; set; }

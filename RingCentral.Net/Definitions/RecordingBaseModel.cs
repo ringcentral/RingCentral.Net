@@ -23,8 +23,11 @@ namespace RingCentral
         public long? duration { get; set; }
 
         /// <summary>
+        ///     Indicates if Host or Admin has shared a recording.
+        ///     Can be set to true only then recording status is 'Available'.
+        ///     Example: true
         /// </summary>
-        public RecordingSharedStatusModel shared { get; set; }
+        public bool? shared { get; set; }
 
         /// <summary>
         ///     Time after which recording shared link cannot be accessed by recipients.

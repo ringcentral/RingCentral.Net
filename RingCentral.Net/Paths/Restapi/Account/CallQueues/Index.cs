@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         }
 
         /// <summary>
-        ///     Returns call queues list.
+        ///     Returns a call queue list.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues
         ///     Rate Limit Group: Medium

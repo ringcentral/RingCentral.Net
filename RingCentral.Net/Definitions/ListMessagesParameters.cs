@@ -49,7 +49,7 @@ namespace RingCentral
         /// <summary>
         ///     Type of resulting messages. If not specified, all messages
         ///     without message type filtering are returned. Multiple values are accepted
-        ///     Enum: EMail, Fax, SMS, VoiceMail, Pager, Text
+        ///     Enum: Fax, SMS, VoiceMail, Pager
         /// </summary>
         public string[] messageType { get; set; }
 

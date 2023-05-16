@@ -17,9 +17,7 @@ namespace RingCentral.Net.WebSocket
             _eventListener = (sender, wsgMessage) =>
             {
                 if (wsgMessage.meta.type == MessageType.ServerNotification)
-                {
                     callback(JsonConvert.SerializeObject(wsgMessage.body));
-                }
             };
             _wse.MessageReceived += _eventListener;
         }

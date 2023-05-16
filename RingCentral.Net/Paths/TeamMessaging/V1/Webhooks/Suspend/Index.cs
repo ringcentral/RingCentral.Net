@@ -13,7 +13,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Webhooks.Suspend
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/suspend";
         }

@@ -12,6 +12,11 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
+        ///     Cost center information
+        /// </summary>
+        public ExtensionCreationRequestCostCenter costCenter { get; set; }
+
+        /// <summary>
         /// </summary>
         public CustomFieldInfo[] customFields { get; set; }
 

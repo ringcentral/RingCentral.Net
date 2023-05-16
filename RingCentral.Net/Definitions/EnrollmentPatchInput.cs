@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         ///     The encoding of the original audio
         ///     Required
-        ///     Example: Mpeg
+        ///     Example: Wav
         ///     Enum: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg
         /// </summary>
         public string encoding { get; set; }

@@ -65,14 +65,14 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates if Panelists have to be authenticated users
-        ///     Default: AuthenticatedCoworker
+        ///     Default: Guest
         ///     Enum: Guest, AuthenticatedUser, AuthenticatedCoworker
         /// </summary>
         public string panelistAuthentication { get; set; }
 
         /// <summary>
         ///     Indicates if attendees have to be authenticated users
-        ///     Default: AuthenticatedCoworker
+        ///     Default: Guest
         ///     Enum: Guest, AuthenticatedUser, AuthenticatedCoworker
         /// </summary>
         public string attendeeAuthentication { get; set; }
@@ -137,5 +137,11 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? externalLivestreamEnabled { get; set; }
+
+        /// <summary>
+        ///     Indicate if the moderated Q&A enabled for webinar
+        ///     Default: true
+        /// </summary>
+        public bool? moderatedQnAEnabled { get; set; }
     }
 }

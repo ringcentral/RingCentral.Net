@@ -45,7 +45,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Preferred transport. SIP info will be returned for this transport if supported
-        ///     Enum: UDP, TCP, TLS, WS, WSS
+        ///     Enum: UDP, TCP, TLS, WSS
         /// </summary>
         public string transport { get; set; }
 

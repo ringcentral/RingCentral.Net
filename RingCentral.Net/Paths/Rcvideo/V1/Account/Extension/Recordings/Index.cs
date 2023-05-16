@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Rcvideo.V1.Account.Extension.Recordings
@@ -7,18 +6,15 @@ namespace RingCentral.Paths.Rcvideo.V1.Account.Extension.Recordings
     {
         public Extension.Index parent;
         public RestClient rc;
-        public string recordingId;
 
-        public Index(Extension.Index parent, string recordingId = null)
+        public Index(Extension.Index parent)
         {
             this.parent = parent;
             rc = parent.rc;
-            this.recordingId = recordingId;
         }
 
-        public string Path(bool withParameter = true)
+        public string Path(bool withParameter = false)
         {
-            if (withParameter && recordingId != null) return $"{parent.Path()}/recordings/{recordingId}";
             return $"{parent.Path()}/recordings";
         }
 
@@ -29,23 +25,10 @@ namespace RingCentral.Paths.Rcvideo.V1.Account.Extension.Recordings
         ///     Rate Limit Group: Light
         ///     App Permission: Video
         /// </summary>
-        public async Task<CloudRecordings> List(GetExtensionRecordingsParameters queryParams = null,
+        public async Task<CloudRecordings> Get(GetExtensionRecordingsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<CloudRecordings>(Path(false), queryParams, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Returns the information about particular user's recording.
-        ///     HTTP Method: get
-        ///     Endpoint: /rcvideo/v1/account/{accountId}/extension/{extensionId}/recordings/{recordingId}
-        ///     Rate Limit Group: Light
-        ///     App Permission: Video
-        /// </summary>
-        public async Task<CloudRecording> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (recordingId == null) throw new ArgumentException("Parameter cannot be null", nameof(recordingId));
-            return await rc.Get<CloudRecording>(Path(), null, restRequestConfig);
+            return await rc.Get<CloudRecordings>(Path(), queryParams, restRequestConfig);
         }
     }
 }
@@ -54,9 +37,9 @@ namespace RingCentral.Paths.Rcvideo.V1.Account.Extension
 {
     public partial class Index
     {
-        public Recordings.Index Recordings(string recordingId = null)
+        public Recordings.Index Recordings()
         {
-            return new Recordings.Index(this, recordingId);
+            return new Recordings.Index(this);
         }
     }
 }

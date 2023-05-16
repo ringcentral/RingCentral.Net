@@ -71,7 +71,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars
         }
 
         /// <summary>
-        ///     Deletes a Webinar by ID. All child objects (Sessions, Participants) will be also deleted.
+        ///     Deletes a Webinar by ID. All child objects (Sessions, Invitees) will be also deleted.
         ///     It is disallowed to delete a Webinar which has at least one Session in 'Active' or 'Finished' state.
         ///     HTTP Method: delete
         ///     Endpoint: /webinar/configuration/v1/webinars/{webinarId}

@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/video-configuration";
         }
@@ -23,25 +23,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.VideoConfiguration
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
         ///     Rate Limit Group: Light
-        ///     App Permission: VideoInternal
+        ///     App Permission: ReadAccounts
         ///     User Permission: Meetings
         /// </summary>
         public async Task<UserVideoConfiguration> Get(RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<UserVideoConfiguration>(Path(), null, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Allows to update user video configuration settings, for example video provider.
-        ///     HTTP Method: put
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
-        ///     Rate Limit Group: Light
-        ///     App Permission: VideoInternal
-        /// </summary>
-        public async Task<UserVideoConfiguration> Put(UserVideoConfiguration userVideoConfiguration,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Put<UserVideoConfiguration>(Path(), userVideoConfiguration, null, restRequestConfig);
         }
     }
 }

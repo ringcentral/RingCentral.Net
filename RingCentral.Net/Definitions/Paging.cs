@@ -1,12 +1,12 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Paging
+    ///     Paging information
     /// </summary>
     public class Paging
     {
         /// <summary>
-        ///     Current page offset token
+        ///     Current offset token
         /// </summary>
         public string currentPageToken { get; set; }
 

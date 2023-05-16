@@ -11,7 +11,7 @@ namespace RingCentral
         /// <summary>
         ///     The encoding of the original audio
         ///     Required
-        ///     Example: Mpeg
+        ///     Example: Wav
         ///     Enum: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg
         /// </summary>
         public string encoding { get; set; }
@@ -31,7 +31,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of the audio
-        ///     Example: Meeting
+        ///     Example: CallCenter
         ///     Enum: CallCenter, Meeting, EarningsCalls, Interview, PressConference, Voicemail
         /// </summary>
         public string audioType { get; set; }

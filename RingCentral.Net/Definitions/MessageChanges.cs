@@ -3,9 +3,8 @@ namespace RingCentral
     public class MessageChanges
     {
         /// <summary>
-        ///     Type of messages to be collected
-        ///     Example: Fax
-        ///     Enum: EMail, Fax, SMS, VoiceMail, Pager, Text
+        ///     Type of the message
+        ///     Enum: Fax, SMS, VoiceMail, Pager
         /// </summary>
         public string type { get; set; }
 

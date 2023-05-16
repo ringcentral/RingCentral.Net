@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/renew";
         }

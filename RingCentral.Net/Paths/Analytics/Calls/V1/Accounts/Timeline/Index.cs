@@ -11,7 +11,7 @@ namespace RingCentral.Paths.Analytics.Calls.V1.Accounts.Timeline
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/timeline";
         }

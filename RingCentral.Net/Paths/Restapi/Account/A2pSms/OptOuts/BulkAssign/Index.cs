@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.OptOuts.BulkAssign
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-assign";
         }

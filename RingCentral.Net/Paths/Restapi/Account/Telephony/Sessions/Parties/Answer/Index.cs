@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Answer
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/answer";
         }

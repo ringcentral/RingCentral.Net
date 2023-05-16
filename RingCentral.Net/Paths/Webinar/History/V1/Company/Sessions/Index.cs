@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Webinar.History.V1.Company.Sessions
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/sessions";
         }

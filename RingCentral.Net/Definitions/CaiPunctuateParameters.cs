@@ -6,7 +6,7 @@ namespace RingCentral
     public class CaiPunctuateParameters
     {
         /// <summary>
-        ///     The webhook uri to which responses will be posted
+        ///     The webhook URI to which the job response will be returned
         ///     Format: uri
         /// </summary>
         public string webhook { get; set; }

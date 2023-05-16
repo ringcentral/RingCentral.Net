@@ -57,7 +57,7 @@ namespace RingCentral
         /// <summary>
         ///     Type of messages to be collected.
         ///     Example: Fax,VoiceMail
-        ///     Enum: EMail, Fax, SMS, VoiceMail, Pager, Text
+        ///     Enum: Fax, SMS, VoiceMail, Pager
         /// </summary>
         public string[] messageTypes { get; set; }
     }

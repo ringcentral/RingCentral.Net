@@ -9,7 +9,7 @@ namespace RingCentral.Paths.Analytics
             this.rc = rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return "/analytics";
         }

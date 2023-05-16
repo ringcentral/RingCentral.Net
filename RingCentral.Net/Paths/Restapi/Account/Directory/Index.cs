@@ -11,7 +11,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/directory";
         }

@@ -11,9 +11,9 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges.Pin
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/pin";
+            return $"{parent.Path(false)}/pin";
         }
     }
 }

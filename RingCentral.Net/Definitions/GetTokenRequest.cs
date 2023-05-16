@@ -25,7 +25,7 @@ namespace RingCentral
         ///     Grant type
         ///     Required
         ///     Enum: authorization_code, password, refresh_token, client_credentials, urn:ietf:params:oauth:grant-type:jwt-bearer,
-        ///     urn:ietf:params:oauth:grant-type:device_code
+        ///     urn:ietf:params:oauth:grant-type:device_code, device_certificate, partner_jwt, guest, personal_jwt, otp
         /// </summary>
         public string grant_type { get; set; }
 

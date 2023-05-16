@@ -16,7 +16,7 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/revoke";
         }

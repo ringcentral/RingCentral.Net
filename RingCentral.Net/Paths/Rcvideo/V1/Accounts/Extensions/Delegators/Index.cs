@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Rcvideo.V1.Accounts.Extensions.Delegators
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/delegators";
         }

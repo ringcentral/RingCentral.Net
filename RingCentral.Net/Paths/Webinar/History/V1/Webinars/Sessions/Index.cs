@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions
         }
 
         /// <summary>
-        ///     Returns a historical webinar Session by ID.
+        ///     Returns a historical webinar Session by ID. Access allowed to participants with original role as CoHost.
         ///     HTTP Method: get
         ///     Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}
         ///     Rate Limit Group: Heavy

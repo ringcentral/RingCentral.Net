@@ -19,6 +19,11 @@ namespace RingCentral
         public ContactInfo contact { get; set; }
 
         /// <summary>
+        ///     Cost center information
+        /// </summary>
+        public ExtensionCreationResponseCostCenter costCenter { get; set; }
+
+        /// <summary>
         /// </summary>
         public CustomFieldInfo[] customFields { get; set; }
 

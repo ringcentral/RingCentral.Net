@@ -13,7 +13,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Webhooks.Activate
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/activate";
         }

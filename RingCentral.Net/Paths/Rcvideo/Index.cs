@@ -9,7 +9,7 @@ namespace RingCentral.Paths.Rcvideo
             this.rc = rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return "/rcvideo";
         }

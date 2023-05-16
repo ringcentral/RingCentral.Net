@@ -13,7 +13,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
             rc = parent.rc;
         }
 
-        public string Path()
+        public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/fax-cover-page";
         }
