@@ -96,7 +96,7 @@ Please install package RingCentral.Net.PubnubPCL instead.");
                 "application/json");
             SubscriptionInfo = await pne.rc.Post<SubscriptionInfo>("/restapi/v1.0/subscription", httpContent);
 
-            var pnConfiguration = new PNConfiguration
+            var pnConfiguration = new PNConfiguration(new UserId(pne.rc.token.owner_id))
             {
                 SubscribeKey = SubscriptionInfo.deliveryMode.subscriberKey,
                 ReconnectionPolicy = PNReconnectionPolicy.LINEAR,
