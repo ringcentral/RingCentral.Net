@@ -14,6 +14,7 @@ using PubnubApi;
 
 namespace RingCentral.Net.PubNub
 {
+    [Obsolete("This extension is deprecated. Use RingCentral.Net.WebSocket instead.")]
     public class PubNubExtension : SdkExtension
     {
         public readonly List<Subscription> subscriptions = new List<Subscription>();
