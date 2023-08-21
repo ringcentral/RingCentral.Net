@@ -96,7 +96,8 @@ namespace RingCentral
             return token;
         }
 
-        public Task<TokenInfo> Authorize(string username, string extension, string password)
+	[Obsolete("Password auth is deprecated. Use JWT auth or OAuth instead.")]
+	public Task<TokenInfo> Authorize(string username, string extension, string password)
         {
             var getTokenRequest = new GetTokenRequest
             {
