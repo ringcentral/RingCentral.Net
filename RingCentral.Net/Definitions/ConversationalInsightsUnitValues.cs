@@ -27,5 +27,40 @@ namespace RingCentral
         ///     Example: 5.1
         /// </summary>
         public decimal? end { get; set; }
+
+        /// <summary>
+        ///     Example: 0
+        /// </summary>
+        public string groupId { get; set; }
+
+        /// <summary>
+        ///     Example: JohnDoe
+        /// </summary>
+        public string speakerId { get; set; }
+
+        /// <summary>
+        ///     Example: Speaker
+        /// </summary>
+        public string assignee { get; set; }
+
+        /// <summary>
+        ///     Example: NextStep
+        /// </summary>
+        public string category { get; set; }
+
+        /// <summary>
+        ///     Example: All right, now let us go down to a CD settings.
+        /// </summary>
+        public string text { get; set; }
+
+        /// <summary>
+        ///     Example: So so you want me to add it to the B D as well?
+        /// </summary>
+        public string question { get; set; }
+
+        /// <summary>
+        ///     Example: Or or you can add another tab and have it resigned.
+        /// </summary>
+        public string answer { get; set; }
     }
 }

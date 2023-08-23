@@ -26,5 +26,12 @@ namespace RingCentral
         ///     Updates 'Send Marketing Information' flag on web interface
         /// </summary>
         public bool? marketingAccepted { get; set; }
+
+        /// <summary>
+        ///     The timestamp of account creation
+        ///     Format: date-time
+        ///     Example: 2023-03-10T18:07:52.534Z
+        /// </summary>
+        public string creationTime { get; set; }
     }
 }

@@ -1,47 +1,10 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Base schema for CallLogRecord and CallLogRecordLegInfo
+    ///     Call log record
     /// </summary>
     public class CallLogRecord
     {
-        /// <summary>
-        ///     Internal identifier of a call log record
-        ///     Required
-        /// </summary>
-        public string id { get; set; }
-
-        /// <summary>
-        ///     Canonical URI of a call log record
-        ///     Required
-        ///     Format: uri
-        /// </summary>
-        public string uri { get; set; }
-
-        /// <summary>
-        ///     Internal identifier of a call session
-        ///     Required
-        /// </summary>
-        public string sessionId { get; set; }
-
-        /// <summary>
-        ///     Indicates whether the record is deleted. Returned for deleted records, for ISync requests
-        /// </summary>
-        public bool? deleted { get; set; }
-
-        /// <summary>
-        ///     For 'Detailed' view only. Leg description
-        /// </summary>
-        public CallLogRecordLegInfo[] legs { get; set; }
-
-        /// <summary>
-        ///     For 'Detailed' view only. The datetime when the call log record
-        ///     was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format
-        ///     including timezone, for example *2016-03-10T18:07:52.534Z*
-        ///     Format: date-time
-        /// </summary>
-        public string lastModifiedTime { get; set; }
-
         /// <summary>
         /// </summary>
         public ExtensionInfoCallLog extension { get; set; }
@@ -231,5 +194,42 @@ namespace RingCentral
         ///     LocalNumber, ImsOutgoing, ImsIncoming
         /// </summary>
         public string internalType { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of a call log record
+        ///     Required
+        /// </summary>
+        public string id { get; set; }
+
+        /// <summary>
+        ///     Canonical URI of a call log record
+        ///     Required
+        ///     Format: uri
+        /// </summary>
+        public string uri { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of a call session
+        ///     Required
+        /// </summary>
+        public string sessionId { get; set; }
+
+        /// <summary>
+        ///     Indicates whether the record is deleted. Returned for deleted records, for ISync requests
+        /// </summary>
+        public bool? deleted { get; set; }
+
+        /// <summary>
+        ///     For 'Detailed' view only. Leg description
+        /// </summary>
+        public CallLogRecordLegInfo[] legs { get; set; }
+
+        /// <summary>
+        ///     For 'Detailed' view only. The datetime when the call log record
+        ///     was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format
+        ///     including timezone, for example *2016-03-10T18:07:52.534Z*
+        ///     Format: date-time
+        /// </summary>
+        public string lastModifiedTime { get; set; }
     }
 }

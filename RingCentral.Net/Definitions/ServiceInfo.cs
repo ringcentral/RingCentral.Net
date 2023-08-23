@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Account service information, including brand, service plan and
+    ///     Account service information, including brand, sub-brand, service plan and
     ///     billing plan
     /// </summary>
     public class ServiceInfo
@@ -31,5 +31,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CountryInfoShortModel contractedCountry { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public UBrandInfo uBrand { get; set; }
     }
 }

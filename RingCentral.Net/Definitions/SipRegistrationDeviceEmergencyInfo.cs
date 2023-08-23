@@ -6,8 +6,9 @@ namespace RingCentral
     public class SipRegistrationDeviceEmergencyInfo
     {
         /// <summary>
+        ///     Address for emergency cases. The same emergency address is assigned to all the numbers of one device
         /// </summary>
-        public DeviceEmergencyServiceAddressResource address { get; set; }
+        public SipRegistrationDeviceEmergencyInfoAddress address { get; set; }
 
         /// <summary>
         /// </summary>

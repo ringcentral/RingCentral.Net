@@ -34,13 +34,15 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     Records count to be returned per one page. The default value is 1000. Specific keyword values: `all` - all records
-        ///     are returned in one page; `max` - maximum count of records that can be returned in one page
+        ///     Records count to be returned per one page. It can be either integer or string with the specific keyword values:
+        ///     - `all` - all records are returned in one page
+        ///     - `max` - maximum count of records that can be returned in one page
         ///     Maximum: 2000
         ///     Format: int32
         ///     Default: 1000
+        ///     Enum: max, all
         /// </summary>
-        public long? perPage { get; set; }
+        public string perPage { get; set; }
 
         /// <summary>
         ///     Internal identifier of the business site to which extensions belong

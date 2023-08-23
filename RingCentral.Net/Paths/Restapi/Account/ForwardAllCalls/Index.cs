@@ -39,10 +39,10 @@ namespace RingCentral.Paths.Restapi.Account.ForwardAllCalls
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyAnsweringRules
         /// </summary>
-        public async Task<ForwardAllCompanyCallsInfo> Patch(ForwardAllCompanyCallsInfo forwardAllCompanyCallsInfo,
+        public async Task<ForwardAllCompanyCallsInfo> Patch(ForwardAllCompanyCallsRequest forwardAllCompanyCallsRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<ForwardAllCompanyCallsInfo>(Path(), forwardAllCompanyCallsInfo, null,
+            return await rc.Patch<ForwardAllCompanyCallsInfo>(Path(), forwardAllCompanyCallsRequest, null,
                 restRequestConfig);
         }
     }

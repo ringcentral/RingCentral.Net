@@ -1,21 +1,10 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Target caller info
+    ///     Target caller information
     /// </summary>
     public class CallLogToParty
     {
-        /// <summary>
-        ///     Contains party location (city, state) if one can be determined from phoneNumber. This property is filled only when
-        ///     phoneNumber is not empty and server can calculate location information from it (for example, this information is
-        ///     unavailable for US toll-free numbers)
-        /// </summary>
-        public string location { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public CallLogRecordDeviceInfo device { get; set; }
-
         /// <summary>
         ///     Phone number of a party. Usually it is a plain number including country and area code like 18661234567. But
         ///     sometimes it could be returned from database with some formatting applied, for example (866)123-4567. This property
@@ -42,7 +31,18 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     The dialed phone number without modifications. Returned for outbound calls and Overlay accounts
+        ///     Contains party location (city, state) if one can be determined from phoneNumber. This property is filled only when
+        ///     phoneNumber is not empty and server can calculate location information from it (for example, this information is
+        ///     unavailable for US toll-free numbers)
+        /// </summary>
+        public string location { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallLogRecordDeviceInfo device { get; set; }
+
+        /// <summary>
+        ///     Dialed phone number without any format modifications. Returned for outbound calls
         /// </summary>
         public string dialedPhoneNumber { get; set; }
     }

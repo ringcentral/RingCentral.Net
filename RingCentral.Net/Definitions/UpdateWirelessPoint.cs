@@ -25,6 +25,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public EmergencyAddressInfo emergencyAddress { get; set; }
+        public EmergencyAddressInfoDefault emergencyAddress { get; set; }
     }
 }

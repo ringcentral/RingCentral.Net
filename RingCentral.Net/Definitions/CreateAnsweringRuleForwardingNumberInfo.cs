@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of a forwarding number
-        ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExternalCarrier
+        ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExternalCarrier, ExtensionApps
         /// </summary>
         public string type { get; set; }
     }

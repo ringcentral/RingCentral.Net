@@ -64,7 +64,7 @@ namespace RingCentral
         ///     requests
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
         ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber,
-        ///     IntegrationNumber
+        ///     PartnerBusinessMobileNumber, IntegrationNumber
         /// </summary>
         public string usageType { get; set; }
 
@@ -81,5 +81,10 @@ namespace RingCentral
         ///     request parameters nxx plus line or numberPattern
         /// </summary>
         public string vanityPattern { get; set; }
+
+        /// <summary>
+        ///     Specifies if a phone number is primary, i.e. displayed as 'main number' and called by default
+        /// </summary>
+        public bool? primary { get; set; }
     }
 }

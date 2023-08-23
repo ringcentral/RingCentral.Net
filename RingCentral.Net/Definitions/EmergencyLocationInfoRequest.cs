@@ -9,7 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public EmergencyLocationAddressInfo address { get; set; }
+        public EmergencyLocationInfoRequestAddress address { get; set; }
 
         /// <summary>
         ///     Emergency response location name
@@ -31,6 +31,11 @@ namespace RingCentral
         ///     Enum: Active, Inactive
         /// </summary>
         public string usageStatus { get; set; }
+
+        /// <summary>
+        ///     Address format id
+        /// </summary>
+        public string addressFormatId { get; set; }
 
         /// <summary>
         ///     Visibility of an emergency response location. If `Private`

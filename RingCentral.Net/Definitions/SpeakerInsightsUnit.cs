@@ -5,7 +5,8 @@ namespace RingCentral
         /// <summary>
         ///     Required
         ///     Example: TalkToListenRatio
-        ///     Enum: Energy, Pace, TalkToListenRatio
+        ///     Enum: Energy, Pace, TalkToListenRatio, Patience, LongestMonologue, FillerWordRate, TalkingSpeed, TalkTime,
+        ///     QuestionsAsked, Tone, Interruptions
         /// </summary>
         public string name { get; set; }
 

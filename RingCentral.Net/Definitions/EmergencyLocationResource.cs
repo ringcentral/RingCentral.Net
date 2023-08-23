@@ -12,7 +12,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public EmergencyLocationAddressInfo address { get; set; }
+        public EmergencyLocationResourceAddress address { get; set; }
 
         /// <summary>
         ///     Emergency response location name
@@ -60,5 +60,10 @@ namespace RingCentral
         ///     List of private location owners
         /// </summary>
         public LocationOwnerInfo[] owners { get; set; }
+
+        /// <summary>
+        ///     Address format id
+        /// </summary>
+        public string addressFormatId { get; set; }
     }
 }

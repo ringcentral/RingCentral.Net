@@ -39,7 +39,10 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers
         }
 
         /// <summary>
-        ///     Method can only delete numbers that have `"usageType": "Inventory"`.
+        ///     This method can only delete numbers that meet one of the following requirements:
+        ///     - numbers that have `"usageType": "Inventory"`
+        ///     - `"Forwarded"` numbers
+        ///     - `"Forwarded Company"` numbers
         ///     In other words, this method will not delete numbers which are in use on the account - extension direct numbers,
         ///     main number, etc. It is possible to indicate phone numbers to be deleted using their IDs or exact string values
         ///     in e.164 format. However the same lookup method (by ID or by value) must be used for all numbers within the same
@@ -60,12 +63,12 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers
         /// <summary>
         ///     Assigns or reassigns a phone number as a company or extension number.
         ///     Assign scenarios supported:
-        ///     - from Inventory to company number
-        ///     - from Inventory to extension number.
+        ///     - from Inventory to a company number;
+        ///     - from Inventory to an extension number.
         ///     Reassign scenarios supported:
-        ///     - from extension to another extension
-        ///     - from extension to company number
-        ///     - from company number to extension.
+        ///     - from an extension to another extension;
+        ///     - from an extension to a company number;
+        ///     - from a company number to an extension.
         ///     HTTP Method: patch
         ///     Endpoint: /restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}
         ///     Rate Limit Group: Medium

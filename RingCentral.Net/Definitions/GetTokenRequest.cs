@@ -25,7 +25,7 @@ namespace RingCentral
         ///     Grant type
         ///     Required
         ///     Enum: authorization_code, password, refresh_token, client_credentials, urn:ietf:params:oauth:grant-type:jwt-bearer,
-        ///     urn:ietf:params:oauth:grant-type:device_code, device_certificate, partner_jwt, guest, personal_jwt, otp
+        ///     urn:ietf:params:oauth:grant-type:device_code, device_certificate, partner_jwt, guest, personal_jwt, otp, ivr_pin
         /// </summary>
         public string grant_type { get; set; }
 
@@ -121,5 +121,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string device_code { get; set; }
+
+        /// <summary>
+        ///     For `ivr_pin` grant type only. IVR pin.
+        /// </summary>
+        public string ivr_pin { get; set; }
     }
 }

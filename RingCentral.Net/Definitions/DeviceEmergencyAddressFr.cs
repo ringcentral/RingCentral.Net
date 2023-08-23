@@ -1,29 +1,38 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Address for emergency cases. The same emergency address is assigned to all the numbers of one device
+    ///     Automatically determined emergency address. If `emergencyAddressState`
+    ///     value is 'Assigned', then this address is assigned to the current device.
+    ///     If `emergencyAddressState` value is 'Unconfirmed', then the specified address
+    ///     must be confirmed by the user before being registered as emergency address
+    ///     for the current device. In all other cases the value is null
     /// </summary>
-    public class DeviceEmergencyServiceAddressResource
+    public class DeviceEmergencyAddressFr
     {
         /// <summary>
+        ///     Name of a customer
+        /// </summary>
+        public string customerName { get; set; }
+
+        /// <summary>
+        ///     Street address, line 1 - street address, P.O. box, company name, c/o
         /// </summary>
         public string street { get; set; }
 
         /// <summary>
+        ///     Street address, line 2 - apartment, suite, unit, building, floor, etc.
         /// </summary>
         public string street2 { get; set; }
 
         /// <summary>
+        ///     City name
         /// </summary>
         public string city { get; set; }
 
         /// <summary>
+        ///     Zip code
         /// </summary>
         public string zip { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public string customerName { get; set; }
 
         /// <summary>
         ///     State/province name
@@ -66,8 +75,21 @@ namespace RingCentral
         public string countryName { get; set; }
 
         /// <summary>
-        ///     Specifies if emergency address is out of country
+        ///     (Optional) Building name
         /// </summary>
-        public bool? outOfCountry { get; set; }
+        public string buildingName { get; set; }
+
+        /// <summary>
+        ///     Building/street number
+        /// </summary>
+        public string buildingNumber { get; set; }
+
+        /// <summary>
+        ///     Resulting status of emergency address synchronization. Returned
+        ///     for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+        ///     to 'True'
+        ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
+        /// </summary>
+        public string syncStatus { get; set; }
     }
 }

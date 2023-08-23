@@ -85,8 +85,7 @@ namespace RingCentral.Tests
                 // sms
                 var message = messages
                     .First(m => m.type == "SMS" && m.attachments != null && m.attachments.Length > 0);
-                var content = await extension.MessageStore(message.id.ToString())
-                    .Content(message.attachments[0].id.ToString()).Get();
+                var content = await rc.Get<byte[]>(message.attachments[0].uri);
                 var str = Encoding.UTF8.GetString(content);
                 Assert.NotNull(str);
                 Assert.True(str.Length > 0);

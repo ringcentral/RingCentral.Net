@@ -91,8 +91,7 @@ namespace RingCentral
         public ExtensionServiceFeatureInfo[] serviceFeatures { get; set; }
 
         /// <summary>
-        ///     Specifies extension configuration wizard state (web service
-        ///     setup).
+        ///     Specifies extension configuration wizard state (web service setup)
         ///     Default: NotStarted
         ///     Enum: NotStarted, Incomplete, Completed
         /// </summary>
@@ -140,5 +139,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ProvisioningSiteInfo site { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public AssignedCountryInfo assignedCountry { get; set; }
     }
 }

@@ -3,7 +3,7 @@ namespace RingCentral
     public class ForwardAllCompanyCallsInfo
     {
         /// <summary>
-        ///     Indicates whether the Forward All Company Calls feature is enabled or disabled for account
+        ///     Indicates whether the *Forward All Company Calls* feature is enabled or disabled for an account
         /// </summary>
         public bool? enabled { get; set; }
 

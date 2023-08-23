@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
 {
-    public partial class Index
+    public class Index
     {
         public string messageId;
         public Extension.Index parent;

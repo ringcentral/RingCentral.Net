@@ -1,27 +1,10 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Base schema for CallLogRecord and CallLogRecordLegInfo
+    ///     Call leg record
     /// </summary>
     public class CallLogRecordLegInfo
     {
-        /// <summary>
-        ///     Leg type
-        ///     Required
-        ///     Enum: SipForwarding, ServiceMinus2, ServiceMinus3, PstnToSip, Accept, FindMe, FollowMe, TestCall, FaxSent,
-        ///     CallBack, CallingCard, RingDirectly, RingOutWebToSubscriber, RingOutWebToCaller, SipToPstnMetered,
-        ///     RingOutClientToSubscriber, RingOutClientToCaller, RingMe, TransferCall, SipToPstnUnmetered,
-        ///     RingOutDeviceToSubscriber, RingOutDeviceToCaller, RingOutOneLegToCaller, ExtensionToExtension, CallPark,
-        ///     PagingServer, Hunting, OutgoingFreeSpDl, ParkLocation, ConferenceCall, MobileApp, MoveToConference, Unknown,
-        ///     MeetingsCall, SilentMonitoring, Monitoring, Pickup, ImsCall, JoinCall, TextRelay
-        /// </summary>
-        public string legType { get; set; }
-
-        /// <summary>
-        ///     Returned for 'Detailed' call log. Specifies if the leg is master-leg
-        /// </summary>
-        public bool? master { get; set; }
-
         /// <summary>
         /// </summary>
         public ExtensionInfoCallLog extension { get; set; }
@@ -211,5 +194,22 @@ namespace RingCentral
         ///     LocalNumber, ImsOutgoing, ImsIncoming
         /// </summary>
         public string internalType { get; set; }
+
+        /// <summary>
+        ///     Leg type
+        ///     Required
+        ///     Enum: SipForwarding, ServiceMinus2, ServiceMinus3, PstnToSip, Accept, FindMe, FollowMe, TestCall, FaxSent,
+        ///     CallBack, CallingCard, RingDirectly, RingOutWebToSubscriber, RingOutWebToCaller, SipToPstnMetered,
+        ///     RingOutClientToSubscriber, RingOutClientToCaller, RingMe, TransferCall, SipToPstnUnmetered,
+        ///     RingOutDeviceToSubscriber, RingOutDeviceToCaller, RingOutOneLegToCaller, ExtensionToExtension, CallPark,
+        ///     PagingServer, Hunting, OutgoingFreeSpDl, ParkLocation, ConferenceCall, MobileApp, MoveToConference, Unknown,
+        ///     MeetingsCall, SilentMonitoring, Monitoring, Pickup, ImsCall, JoinCall, TextRelay
+        /// </summary>
+        public string legType { get; set; }
+
+        /// <summary>
+        ///     Returned for 'Detailed' call log. Specifies if the leg is master-leg
+        /// </summary>
+        public bool? master { get; set; }
     }
 }

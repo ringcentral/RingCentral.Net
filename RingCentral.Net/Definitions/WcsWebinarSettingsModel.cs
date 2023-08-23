@@ -140,8 +140,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicate if the moderated Q&A enabled for webinar
-        ///     Default: true
         /// </summary>
-        public bool? moderatedQnAEnabled { get; set; }
+        public bool? moderatedQnaEnabled { get; set; }
     }
 }

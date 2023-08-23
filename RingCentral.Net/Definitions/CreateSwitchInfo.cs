@@ -10,6 +10,11 @@ namespace RingCentral
         public string chassisId { get; set; }
 
         /// <summary>
+        ///     Switch entity extension for better diversity. Should be used together with chassisId.
+        /// </summary>
+        public string port { get; set; }
+
+        /// <summary>
         ///     Name of a network switch
         /// </summary>
         public string name { get; set; }
@@ -20,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public EmergencyAddressInfo emergencyAddress { get; set; }
+        public EmergencyAddressInfoDefault emergencyAddress { get; set; }
 
         /// <summary>
         /// </summary>

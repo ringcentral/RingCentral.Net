@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions.Participants
 {
-    public class Index
+    public partial class Index
     {
         public Sessions.Index parent;
         public RestClient rc;
@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions.Participants
         }
 
         /// <summary>
-        ///     Returns the list of participants of a given Webinar Session.
+        ///     Returns the list of participants of a given Webinar Session (host interface).
         ///     HTTP Method: get
         ///     Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants
         ///     Rate Limit Group: Heavy

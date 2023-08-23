@@ -35,6 +35,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public WordTimingsUnit[] wordTimings { get; set; }
+
+        /// <summary>
+        /// </summary>
         public UtteranceInsightsUnit[] insights { get; set; }
     }
 }

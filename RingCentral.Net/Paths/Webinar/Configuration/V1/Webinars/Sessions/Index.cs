@@ -29,10 +29,11 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditWebinars
         /// </summary>
-        public async Task<WcsSessionResource> Post(WcsSessionBaseModel wcsSessionBaseModel,
+        public async Task<WcsSessionResource> Post(WcsSessionWithLocaleCodeModel wcsSessionWithLocaleCodeModel,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<WcsSessionResource>(Path(false), wcsSessionBaseModel, null, restRequestConfig);
+            return await rc.Post<WcsSessionResource>(Path(false), wcsSessionWithLocaleCodeModel, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -72,11 +73,11 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditWebinars
         /// </summary>
-        public async Task<WcsSessionResource> Patch(WcsSessionBaseModel wcsSessionBaseModel,
+        public async Task<WcsSessionResource> Patch(WcsSessionWithLocaleCodeModel wcsSessionWithLocaleCodeModel,
             RestRequestConfig restRequestConfig = null)
         {
             if (sessionId == null) throw new ArgumentException("Parameter cannot be null", nameof(sessionId));
-            return await rc.Patch<WcsSessionResource>(Path(), wcsSessionBaseModel, null, restRequestConfig);
+            return await rc.Patch<WcsSessionResource>(Path(), wcsSessionWithLocaleCodeModel, null, restRequestConfig);
         }
     }
 }

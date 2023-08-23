@@ -6,12 +6,12 @@ namespace RingCentral
     public class ReadUserPresenceStatusParameters
     {
         /// <summary>
-        ///     Whether to return detailed telephony state
+        ///     Specifies whether to return a detailed telephony state or not
         /// </summary>
         public bool? detailedTelephonyState { get; set; }
 
         /// <summary>
-        ///     Whether to return SIP data
+        ///     Specifies whether to return SIP data or not
         /// </summary>
         public bool? sipData { get; set; }
     }

@@ -41,9 +41,9 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Invitees
         ///     Adds, updates and deletes Webinar Session invitees in bulk (co-hosts and panelists in phase 1
         ///     and also invited attendees in subsequent phases).
         ///     The payload may contain multiple added, updated or deleted invitees.
-        ///     For each added record either 'firstName'/'lastName'/'email' (for non-authenticated users)
+        ///     For each added record 'role' and either 'firstName'/'lastName'/'email' (for non-authenticated users)
         ///     or 'linkedUser.*' (for authenticated users) must be specified, but not both.
-        ///     For updated invitees 'id' must be specified, 'linkedUser' change is not supported.
+        ///     For updated invitees 'id'  and 'role' must be specified, 'linkedUser' change is not supported.
         ///     For deleted invitees only there ids should be specified.
         ///     The response contains added/updated records (full) and deleted records (ids only).
         ///     Deleting an invitee for a Session in 'Active' or 'Finished' status is prohibited.

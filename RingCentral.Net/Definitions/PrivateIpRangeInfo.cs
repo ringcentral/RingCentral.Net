@@ -20,8 +20,11 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
+        ///     Emergency address information (or information assigned to the switch or
+        ///     wireless point - in case of using them). Only one of a pair `emergencyAddress`
+        ///     or `emergencyLocationId` should be specified, otherwise an error is returned
         /// </summary>
-        public LocationUpdatesEmergencyAddressInfo emergencyAddress { get; set; }
+        public PrivateIpRangeInfoEmergencyAddress emergencyAddress { get; set; }
 
         /// <summary>
         ///     Emergency response location (address) internal identifier.

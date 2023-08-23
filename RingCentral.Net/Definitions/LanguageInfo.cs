@@ -34,8 +34,7 @@ namespace RingCentral
         public string localeCode { get; set; }
 
         /// <summary>
-        ///     Country code according to the ISO standard, see
-        ///     [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+        ///     Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
         /// </summary>
         public string isoCode { get; set; }
 
@@ -48,5 +47,15 @@ namespace RingCentral
         ///     Indicates whether a language is available as UI language
         /// </summary>
         public bool? ui { get; set; }
+
+        /// <summary>
+        ///     Time format
+        /// </summary>
+        public string timeFormat { get; set; }
+
+        /// <summary>
+        ///     Date format
+        /// </summary>
+        public string dateFormat { get; set; }
     }
 }

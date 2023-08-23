@@ -5,7 +5,7 @@ namespace RingCentral
     ///     wireless point - in case of using them). Only one of a pair `emergencyAddress`
     ///     or `emergencyLocationId` should be specified, otherwise an error is returned
     /// </summary>
-    public class LocationUpdatesEmergencyAddressInfo
+    public class LocationUpdatesEmergencyAddressInfoFr
     {
         /// <summary>
         ///     Country name
@@ -71,5 +71,15 @@ namespace RingCentral
         ///     Postal (Zip) code
         /// </summary>
         public string zip { get; set; }
+
+        /// <summary>
+        ///     (Optional) Building name
+        /// </summary>
+        public string buildingName { get; set; }
+
+        /// <summary>
+        ///     Building/street number
+        /// </summary>
+        public string buildingNumber { get; set; }
     }
 }

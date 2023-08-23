@@ -75,5 +75,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ProvisioningSiteInfo site { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public AssignedCountryInfo assignedCountry { get; set; }
     }
 }

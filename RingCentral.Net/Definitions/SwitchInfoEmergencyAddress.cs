@@ -1,13 +1,6 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Automatically determined emergency address. If `emergencyAddressState`
-    ///     value is 'Assigned', then this address is assigned to the current device.
-    ///     If `emergencyAddressState` value is 'Unconfirmed', then the specified address
-    ///     must be confirmed by the user before being registered as emergency address
-    ///     for the current device. In all other cases the value is null
-    /// </summary>
-    public class DeviceEmergencyAddress
+    public class SwitchInfoEmergencyAddress
     {
         /// <summary>
         ///     Name of a customer
@@ -15,12 +8,14 @@ namespace RingCentral
         public string customerName { get; set; }
 
         /// <summary>
-        ///     Street address, line 1 - street address, P.O. box, company name, c/o
+        ///     Street address, line 1 - street address, P.O. box, company
+        ///     name, c/o
         /// </summary>
         public string street { get; set; }
 
         /// <summary>
-        ///     Street address, line 2 - apartment, suite, unit, building, floor, etc.
+        ///     Street address, line 2 - apartment, suite, unit, building,
+        ///     floor, etc.
         /// </summary>
         public string street2 { get; set; }
 
@@ -81,5 +76,20 @@ namespace RingCentral
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
+
+        /// <summary>
+        ///     (Optional) Building name
+        /// </summary>
+        public string buildingName { get; set; }
+
+        /// <summary>
+        ///     Street type
+        /// </summary>
+        public string streetType { get; set; }
+
+        /// <summary>
+        ///     Building/street number
+        /// </summary>
+        public string buildingNumber { get; set; }
     }
 }

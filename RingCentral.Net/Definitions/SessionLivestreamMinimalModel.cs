@@ -38,6 +38,12 @@ namespace RingCentral
         public string previousLivestreamStatus { get; set; }
 
         /// <summary>
+        ///     Time at which the session started to publish media to livestream service provider.
+        ///     Format: date-time
+        /// </summary>
+        public string livestreamStartTime { get; set; }
+
+        /// <summary>
         /// </summary>
         public ApiError error { get; set; }
     }

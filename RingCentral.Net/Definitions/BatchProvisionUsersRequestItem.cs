@@ -37,5 +37,12 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public BatchProvisionUsersRequestItemDevices[] devices { get; set; }
+
+        /// <summary>
+        ///     Specifies if a welcome/activation email is sent to the new users (within extension status changing from
+        ///     'Unassigned' to 'NotActivated/Disabled')
+        ///     Default: true
+        /// </summary>
+        public bool? sendWelcomeEmail { get; set; }
     }
 }

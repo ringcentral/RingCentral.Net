@@ -28,9 +28,10 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<CallParty> Post(RestRequestConfig restRequestConfig = null)
+        public async Task<CallParty> Post(HoldCallPartyRequest holdCallPartyRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CallParty>(Path(), null, restRequestConfig);
+            return await rc.Post<CallParty>(Path(), holdCallPartyRequest, null, restRequestConfig);
         }
     }
 }

@@ -6,9 +6,9 @@ namespace RingCentral
     public class NotificationDeliveryMode
     {
         /// <summary>
-        ///     Notifications transport type
+        ///     The transport type for this subscription, or the channel by which an app should be notified of an event
         ///     Required
-        ///     Enum: WebHook, RC/APNS, RC/GCM, PubNub
+        ///     Enum: WebHook, RC/APNS, RC/GCM, PubNub, WebSocket
         /// </summary>
         public string transportType { get; set; }
 

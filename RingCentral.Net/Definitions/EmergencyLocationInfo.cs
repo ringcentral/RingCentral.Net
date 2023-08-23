@@ -15,5 +15,10 @@ namespace RingCentral
         ///     Emergency response location name
         /// </summary>
         public string name { get; set; }
+
+        /// <summary>
+        ///     Address format id
+        /// </summary>
+        public string addressFormatId { get; set; }
     }
 }

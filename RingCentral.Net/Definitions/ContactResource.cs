@@ -13,7 +13,8 @@ namespace RingCentral
         ///     Contact type
         ///     Example: User
         ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited,
-        ///     ApplicationExtension, Site, Bot, Room, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup, External, Unknown
+        ///     ApplicationExtension, Site, Bot, Room, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup, External, RoomConnector,
+        ///     Unknown
         /// </summary>
         public string type { get; set; }
 

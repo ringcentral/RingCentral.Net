@@ -110,5 +110,9 @@ namespace RingCentral
         ///     for extensions of 'User' type only
         /// </summary>
         public bool? hidden { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public AssignedCountryInfo assignedCountry { get; set; }
     }
 }

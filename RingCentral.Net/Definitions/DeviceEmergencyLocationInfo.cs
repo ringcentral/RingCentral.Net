@@ -14,5 +14,10 @@ namespace RingCentral
         ///     Location name
         /// </summary>
         public string name { get; set; }
+
+        /// <summary>
+        ///     Address format id
+        /// </summary>
+        public string addressFormatId { get; set; }
     }
 }

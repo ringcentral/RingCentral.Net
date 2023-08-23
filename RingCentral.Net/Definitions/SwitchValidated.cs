@@ -13,6 +13,11 @@ namespace RingCentral
         public string chassisId { get; set; }
 
         /// <summary>
+        ///     Switch entity extension for better diversity. Should be used together with chassisId.
+        /// </summary>
+        public string port { get; set; }
+
+        /// <summary>
         ///     Validation result status
         ///     Enum: Valid, Invalid
         /// </summary>

@@ -1,12 +1,6 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Emergency address information (or information assigned to the
-    ///     switch or wireless point - in case of using them). Only one of a pair
-    ///     `emergencyAddress` or `emergencyLocationId` should be specified,
-    ///     otherwise an error is returned
-    /// </summary>
-    public class EmergencyAddressInfo
+    public class DeviceEmergencyInfoAddress
     {
         /// <summary>
         ///     Name of a customer
@@ -14,14 +8,12 @@ namespace RingCentral
         public string customerName { get; set; }
 
         /// <summary>
-        ///     Street address, line 1 - street address, P.O. box, company
-        ///     name, c/o
+        ///     Street address, line 1 - street address, P.O. box, company name, c/o
         /// </summary>
         public string street { get; set; }
 
         /// <summary>
-        ///     Street address, line 2 - apartment, suite, unit, building,
-        ///     floor, etc.
+        ///     Street address, line 2 - apartment, suite, unit, building, floor, etc.
         /// </summary>
         public string street2 { get; set; }
 
@@ -82,5 +74,20 @@ namespace RingCentral
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
+
+        /// <summary>
+        ///     (Optional) Building name
+        /// </summary>
+        public string buildingName { get; set; }
+
+        /// <summary>
+        ///     Building/street number
+        /// </summary>
+        public string buildingNumber { get; set; }
+
+        /// <summary>
+        ///     Street type
+        /// </summary>
+        public string streetType { get; set; }
     }
 }

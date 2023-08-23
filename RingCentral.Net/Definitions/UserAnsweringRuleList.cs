@@ -13,7 +13,7 @@ namespace RingCentral
         /// <summary>
         ///     List of answering rules
         /// </summary>
-        public UserAnsweringRuleListRecord[] records { get; set; }
+        public AnsweringRuleInfo[] records { get; set; }
 
         /// <summary>
         /// </summary>

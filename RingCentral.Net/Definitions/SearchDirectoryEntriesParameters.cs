@@ -30,8 +30,11 @@ namespace RingCentral
         public string extensionStatus { get; set; }
 
         /// <summary>
-        ///     Extension types
+        ///     Type of extension to filter the contacts
         ///     Example: User
+        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
+        ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Site, Room, ProxyAdmin, DelegatedLinesGroup,
+        ///     FlexibleUser, GroupCallPickup, RoomConnector
         /// </summary>
         public string extensionType { get; set; }
     }

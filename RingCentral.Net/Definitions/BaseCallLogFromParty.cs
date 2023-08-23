@@ -1,12 +1,12 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Sender/initiator caller info
+    ///     Sender/initiator caller information
     /// </summary>
     public class BaseCallLogFromParty
     {
         /// <summary>
-        ///     The dialer phone number without modifications. Returned for inbound calls and Overlay accounts
+        ///     Dialer phone number without any format modifications. Returned for inbound calls
         /// </summary>
         public string dialerPhoneNumber { get; set; }
     }

@@ -1,24 +1,20 @@
-using System;
 using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
 {
     public class Index
     {
-        public string archiveId;
         public MessageStoreReport.Index parent;
         public RestClient rc;
 
-        public Index(MessageStoreReport.Index parent, string archiveId = null)
+        public Index(MessageStoreReport.Index parent)
         {
             this.parent = parent;
             rc = parent.rc;
-            this.archiveId = archiveId;
         }
 
-        public string Path(bool withParameter = true)
+        public string Path(bool withParameter = false)
         {
-            if (withParameter && archiveId != null) return $"{parent.Path()}/archive/{archiveId}";
             return $"{parent.Path()}/archive";
         }
 
@@ -30,23 +26,9 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
         ///     App Permission: ReadMessages
         ///     User Permission: Users
         /// </summary>
-        public async Task<MessageStoreReportArchive> List(RestRequestConfig restRequestConfig = null)
+        public async Task<MessageStoreReportArchive> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<MessageStoreReportArchive>(Path(false), null, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Returns one of the report archives with message contents in application/zip format.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: ReadMessages
-        ///     User Permission: Users
-        /// </summary>
-        public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (archiveId == null) throw new ArgumentException("Parameter cannot be null", nameof(archiveId));
-            return await rc.Get<byte[]>(Path(), null, restRequestConfig);
+            return await rc.Get<MessageStoreReportArchive>(Path(), null, restRequestConfig);
         }
     }
 }
@@ -55,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
 {
     public partial class Index
     {
-        public Archive.Index Archive(string archiveId = null)
+        public Archive.Index Archive()
         {
-            return new Archive.Index(this, archiveId);
+            return new Archive.Index(this);
         }
     }
 }

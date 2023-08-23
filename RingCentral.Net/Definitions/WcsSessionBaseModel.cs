@@ -27,12 +27,6 @@ namespace RingCentral
         public string timeZone { get; set; }
 
         /// <summary>
-        ///     Session locale code. Can't be blank or null
-        ///     Example: en-US
-        /// </summary>
-        public string localeCode { get; set; }
-
-        /// <summary>
         ///     The time offset (positive, in seconds) indicating how much in advance
         ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
         ///     Format: int32

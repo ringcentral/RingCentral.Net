@@ -23,8 +23,10 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.BulkAdd
         }
 
         /// <summary>
-        ///     Adds phone numbers to the account inventory as unassigned.
-        ///     Only "Inventory" usageType is supported. Later we may support other values like "ForwardedNumber" etc.
+        ///     Adds phone numbers to the account Inventory as unassigned. Currently we support the following three enum values:
+        ///     'Inventory',
+        ///     'InventoryPartnerBusinessMobileNumber' and 'PartnerBusinessMobileNumber'. Later we may support some other values
+        ///     like 'ForwardedNumber', etc.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/v2/accounts/{accountId}/phone-numbers/bulk-add
         ///     Rate Limit Group: Heavy
@@ -38,7 +40,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.BulkAdd
         }
 
         /// <summary>
-        ///     Returns the result of asynchronous operation which added phone numbers to account inventory.
+        ///     Returns the result of asynchronous operation which adds phone numbers to the account Inventory.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/v2/accounts/{accountId}/phone-numbers/bulk-add/{taskId}
         ///     Rate Limit Group: Heavy

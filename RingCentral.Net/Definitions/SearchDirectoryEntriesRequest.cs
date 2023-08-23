@@ -27,10 +27,10 @@ namespace RingCentral
         public bool? showAdminOnlyContacts { get; set; }
 
         /// <summary>
-        ///     Type of extension to filter the contacts
-        ///     Example: FaxUser
-        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Site, DelegatedLinesGroup, FlexibleUser
+        ///     Type of directory contact to filter
+        ///     Example: User
+        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited,
+        ///     ApplicationExtension, Site, Bot, Room, DelegatedLinesGroup, GroupCallPickup, External
         /// </summary>
         public string extensionType { get; set; }
 
@@ -71,7 +71,8 @@ namespace RingCentral
         /// <summary>
         ///     Types of extension to filter the contacts
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Site, DelegatedLinesGroup, FlexibleUser
+        ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Site, Room, ProxyAdmin, DelegatedLinesGroup,
+        ///     FlexibleUser, GroupCallPickup, RoomConnector
         /// </summary>
         public string[] extensionTypes { get; set; }
 

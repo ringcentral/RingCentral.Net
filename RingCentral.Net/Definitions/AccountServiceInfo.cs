@@ -48,5 +48,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PackageInfo package { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public UBrandInfo uBrand { get; set; }
     }
 }

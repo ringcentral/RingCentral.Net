@@ -60,7 +60,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public DeviceEmergencyServiceAddressResource emergencyServiceAddress { get; set; }
+        public DeviceEmergencyServiceAddressResourceDefault emergencyServiceAddress { get; set; }
 
         /// <summary>
         /// </summary>

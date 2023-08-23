@@ -6,7 +6,7 @@ namespace RingCentral
     public class MakeCallOutCallerInfoRequestTo
     {
         /// <summary>
-        ///     Phone number in E.164 format
+        ///     Phone number in E.164 format, short codes (*67, *86), emergency (911, 112) or special (988) numbers
         ///     Example: +16502223366
         /// </summary>
         public string phoneNumber { get; set; }
