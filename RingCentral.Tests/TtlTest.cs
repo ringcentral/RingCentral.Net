@@ -16,10 +16,8 @@ namespace RingCentral.Tests
             {
                 var token = await rc.Authorize(new GetTokenRequest
                 {
-                    grant_type = "password",
-                    username = Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    extension = Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    password = Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD"),
+                    grant_type = "urn:ietf:params:oauth:grant-type:jwt-bearer",
+                    assertion = Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN"),
                     access_token_ttl = 1800,
                     refresh_token_ttl = 302400
                 });

@@ -18,10 +18,8 @@ namespace RingCentral.Tests
             {
                 var tokenInfo = await rc.Restapi(null).Oauth().Token().Post(new GetTokenRequest
                 {
-                    grant_type = "password",
-                    username = Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    extension = Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    password = Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    grant_type = "urn:ietf:params:oauth:grant-type:jwt-bearer",
+                    assertion = Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 });
                 Assert.NotNull(tokenInfo);
                 Assert.True(tokenInfo.access_token.Length > 0);
