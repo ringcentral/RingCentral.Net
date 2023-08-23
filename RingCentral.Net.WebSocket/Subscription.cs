@@ -22,31 +22,31 @@ namespace RingCentral.Net.WebSocket
             _wse.MessageReceived += _eventListener;
         }
 
-        public SubscriptionInfo subscriptionInfo { get; set; }
+        public SubscriptionInfo SubscriptionInfo { get; set; }
 
         public async Task SubScribe()
         {
-            subscriptionInfo = await _wse.Request<SubscriptionInfo>("POST",
+            SubscriptionInfo = await _wse.Request<SubscriptionInfo>("POST",
                 "/restapi/v1.0/subscription",
                 RequestBody());
         }
 
         public async Task Refresh()
         {
-            if (subscriptionInfo == null) return;
+            if (SubscriptionInfo == null) return;
 
             await _wse.Request<SubscriptionInfo>("PUT",
-                $"/restapi/v1.0/subscription/{subscriptionInfo.id}",
+                $"/restapi/v1.0/subscription/{SubscriptionInfo.id}",
                 RequestBody());
         }
 
         public async Task Revoke()
         {
-            if (subscriptionInfo == null) return;
+            if (SubscriptionInfo == null) return;
 
             await _wse.Request<SubscriptionInfo>("DELETE",
-                $"/restapi/v1.0/subscription/{subscriptionInfo.id}");
-            subscriptionInfo = null;
+                $"/restapi/v1.0/subscription/{SubscriptionInfo.id}");
+            SubscriptionInfo = null;
             _wse.MessageReceived -= _eventListener;
         }
 

@@ -1,5 +1,5 @@
 using System;
-using RingCentral.Net.PubNub;
+using RingCentral.Net.WebSocket;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -18,8 +18,8 @@ namespace RingCentral.Tests
                 await rc.Authorize(
                     Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
-                var pubNubExtension = new PubNubExtension();
-                await rc.InstallExtension(pubNubExtension);
+                var webSocketExtension = new WebSocketExtension();
+                await rc.InstallExtension(webSocketExtension);
 
                 var cachedToken = rc.token;
 
@@ -29,7 +29,7 @@ namespace RingCentral.Tests
                 Assert.NotNull(ext.id);
 
                 // create a subscription
-                var subscription = await pubNubExtension.Subscribe(
+                var subscription = await webSocketExtension.Subscribe(
                     new[] {"/restapi/v1.0/account/~/extension/~/message-store"},
                     message => { Console.WriteLine(message); });
 

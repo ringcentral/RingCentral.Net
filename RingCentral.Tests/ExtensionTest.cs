@@ -16,7 +16,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                  Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
                 var extension = await rc.Restapi().Account().Extension().Get();
                 Assert.NotNull(extension);

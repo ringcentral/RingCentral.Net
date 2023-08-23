@@ -1,6 +1,6 @@
 using System;
 using Newtonsoft.Json.Linq;
-using RingCentral.Net.PubNub;
+using RingCentral.Net.WebSocket;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -19,13 +19,13 @@ namespace RingCentral.Tests
                 await rc.Authorize(
                     Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
-                var pubNubExtension = new PubNubExtension();
-                await rc.InstallExtension(pubNubExtension);
+                var webSocketExtension = new WebSocketExtension();
+                await rc.InstallExtension(webSocketExtension);
                 var eventFilters = new[]
                 {
                     "/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true"
                 };
-                var subscription = await pubNubExtension.Subscribe(eventFilters, async message =>
+                var subscription = await webSocketExtension.Subscribe(eventFilters, async message =>
                 {
                     dynamic jObject = JObject.Parse(message);
                     var activeCall = jObject.body.activeCalls[0];

@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using RingCentral.Net.PubNub;
+using RingCentral.Net.WebSocket;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -43,8 +43,8 @@ namespace RingCentral.Tests
                     Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
 
-                var pubNubExtension = new PubNubExtension();
-                await rc.InstallExtension(pubNubExtension);
+                var webSocketExtension = new WebSocketExtension();
+                await rc.InstallExtension(webSocketExtension);
 
                 var eventFilters = new[]
                 {
@@ -53,7 +53,7 @@ namespace RingCentral.Tests
                 };
                 var messages = new List<string>();
                 var messageStoreMessageCount = 0;
-                var subscription = await pubNubExtension.Subscribe(eventFilters, message =>
+                var subscription = await webSocketExtension.Subscribe(eventFilters, message =>
                 {
                     messages.Add(message);
                     dynamic jObject = JObject.Parse(message);
@@ -75,10 +75,6 @@ namespace RingCentral.Tests
                 Assert.True(messages.Count >= 1);
                 Assert.True(messageStoreMessageCount >= 1);
                 Assert.Contains(messages, message => message.Contains("message-store"));
-                subscriptionInfo = await subscription.Refresh();
-                Assert.NotNull(subscriptionInfo);
-                Assert.NotNull(subscription.SubscriptionInfo);
-                Assert.Equal(eventFilters.Length, subscriptionInfo.eventFilters.Length);
                 await subscription.Revoke();
                 Assert.Null(subscription.SubscriptionInfo);
             }

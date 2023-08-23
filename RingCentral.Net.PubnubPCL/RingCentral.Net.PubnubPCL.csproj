@@ -13,12 +13,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
+        <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
-        <PackageReference Include="PubnubPCL" Version="6.17.0" />
+        <PackageReference Include="Portable.BouncyCastle" Version="1.9.0"/>
+        <PackageReference Include="PubnubPCL" Version="6.17.0"/>
     </ItemGroup>
 
 </Project>
