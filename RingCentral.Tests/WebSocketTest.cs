@@ -17,9 +17,7 @@ namespace RingCentral.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
             );
             await rc.Authorize(
-                Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
             );
             var webSocketExtension = new WebSocketExtension(new WebSocketOptions {debugMode = true});
             await rc.InstallExtension(webSocketExtension);

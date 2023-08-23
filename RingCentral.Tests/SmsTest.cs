@@ -19,9 +19,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
 
                 var messageInfo = await rc.Restapi().Account().Extension().Sms().Post(new CreateSMSMessage
@@ -55,9 +53,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
                 var httpContent = new StringContent(JsonConvert.SerializeObject(new
                 {

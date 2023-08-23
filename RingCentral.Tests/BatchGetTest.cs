@@ -16,9 +16,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
 
                 var messages = await rc.Restapi().Account().Extension().MessageStore().List(new ListMessagesParameters
@@ -64,9 +62,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
 
                 var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
@@ -96,9 +92,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
 
                 var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
@@ -124,9 +118,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
 
                 var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()

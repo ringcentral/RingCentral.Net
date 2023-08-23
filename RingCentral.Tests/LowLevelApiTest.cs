@@ -18,9 +18,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
 
                 // return a definition type
@@ -51,9 +49,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
                 // normal way to get extension info
                 var extInfo = await rc.Restapi().Account().Extension().Get();

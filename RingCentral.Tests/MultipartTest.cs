@@ -16,9 +16,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
                 var account = rc.Restapi().Account();
                 var companyAnsweringRuleList = await account.AnsweringRule().List();
@@ -64,9 +62,7 @@ namespace RingCentral.Tests
                    ))
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
                 var extension = rc.Restapi().Account().Extension();
                 var userAnsweringRuleList = await extension.AnsweringRule().List();

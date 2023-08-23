@@ -17,13 +17,11 @@ namespace RingCentral.Tests
             var re = await Assert.ThrowsAsync<RestException>(async () =>
             {
                 await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    "wrong-password"
+                    "wrong-jwt"
                 );
             });
             Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
-            Assert.Contains("invalid_grant", re.Message);
+            Assert.Contains("Unauthorized", re.Message);
         }
     }
 }

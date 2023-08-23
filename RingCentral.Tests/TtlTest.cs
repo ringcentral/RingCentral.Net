@@ -38,9 +38,7 @@ namespace RingCentral.Tests
                    ))
             {
                 var token = await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
+                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
                 );
                 Assert.True(token.expires_in > 3500 && token.expires_in < 3700);
                 Assert.True(token.refresh_token_expires_in > 604700 && token.refresh_token_expires_in < 604900);
