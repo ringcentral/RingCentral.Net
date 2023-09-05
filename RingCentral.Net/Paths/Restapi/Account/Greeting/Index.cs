@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Greeting
 {
-    public class Index
+    public partial class Index
     {
         public Account.Index parent;
         public RestClient rc;

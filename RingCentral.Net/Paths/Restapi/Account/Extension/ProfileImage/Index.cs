@@ -80,16 +80,17 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
 
         /// <summary>
         ///     Returns the scaled profile image of an extension.
+        ///     **This API must be called via media API entry point, e.g. https://media.ringcentral.com**
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
-        ///     Rate Limit Group: Light
+        ///     Rate Limit Group: Medium
         ///     App Permission: ReadAccounts
-        ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<byte[]> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<byte[]> Get(ReadScaledProfileImageParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (scaleSize == null) throw new ArgumentException("Parameter cannot be null", nameof(scaleSize));
-            return await rc.Get<byte[]>(Path(), null, restRequestConfig);
+            return await rc.Get<byte[]>(Path(), queryParams, restRequestConfig);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.IvrPrompts
 {
-    public class Index
+    public partial class Index
     {
         public Account.Index parent;
         public string promptId;

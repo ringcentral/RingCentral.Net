@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
 {
-    public class Index
+    public partial class Index
     {
         public string greetingId;
         public Extension.Index parent;
