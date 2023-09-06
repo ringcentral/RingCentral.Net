@@ -10,3 +10,5 @@ packages/
 VoiceMailNotificationTest.cs
 CallOutTest.cs
 .env
+TestResults/
+CoverageReport/

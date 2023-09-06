@@ -166,3 +166,29 @@ Reference: [Quickstart: Create and publish a package using Visual Studio (.NET F
 - Add batch get to auto-generated sample code
 - Exception error message for binary data? Will it print a LOT?
 - Add icons to NuGet packages
+
+
+## Code coverage
+
+Install the following globally if you haven't done so:
+
+```
+dotnet tool install -g dotnet-reportgenerator-globaltool
+```
+
+### Collect code coverage data
+
+```
+dotnet test -settings RingCentral.Tests/coverlet.runsettings.xml
+```
+
+The result is located in RingCentral.Tests/TestResults/
+
+
+### Generate report
+
+```
+~/.dotnet/tools/reportgenerator -reports:"RingCentral.Tests/TestResults/239bdb87–151b-42ac-acec-1f604f8c02c5/coverage.cobertura.xml" -targetdir:RingCentral.Tests/CoverageReport -reporttypes:Html
+```
+
+Open RingCentral.Tests/CoverageReport/index.html in a browser.
