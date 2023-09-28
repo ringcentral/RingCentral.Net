@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 
 namespace RingCentral.Net.WebSocket
 {
@@ -34,7 +35,8 @@ namespace RingCentral.Net.WebSocket
         ClientRequest,
         ServerNotification,
         Error,
-        ConnectionDetails
+        ConnectionDetails,
+        Heartbeat,
     }
 
     public class WsgMeta
@@ -67,11 +69,11 @@ namespace RingCentral.Net.WebSocket
                 };
             }
 
-            var parsed = JsonConvert.DeserializeObject<dynamic>(message);
+            var parsed = JsonConvert.DeserializeObject<dynamic>(message) as JArray;
             return new WsgMessage
             {
                 meta = parsed[0].ToObject<WsgMeta>(),
-                body = parsed[1]
+                body = parsed.Count> 1 ? parsed[1] : null,
             };
         }
     }

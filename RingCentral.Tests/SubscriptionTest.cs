@@ -75,7 +75,7 @@ namespace RingCentral.Tests
                 Assert.True(messages.Count >= 1);
                 Assert.True(messageStoreMessageCount >= 1);
                 Assert.Contains(messages, message => message.Contains("message-store"));
-                await subscription.Revoke();
+                await webSocketExtension.Revoke();
                 Assert.Null(subscription.SubscriptionInfo);
             }
         }

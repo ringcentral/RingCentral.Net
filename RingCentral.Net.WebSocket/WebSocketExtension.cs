@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Net.WebSockets;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Websocket.Client;
@@ -13,8 +14,10 @@ namespace RingCentral.Net.WebSocket
         private ConnectionDetails _connectionDetails;
         private RestClient _rc;
         private Subscription _subscription;
-        private WebsocketClient _ws;
         private Wsc _wsc;
+        private Timer _keepAliveTimer;
+        public WebsocketClient ws;
+
 
         public WebSocketExtension(WebSocketOptions options = null)
         {
@@ -38,9 +41,9 @@ namespace RingCentral.Net.WebSocket
             {
                 Options = {KeepAliveInterval = TimeSpan.FromSeconds(30)}
             });
-            _ws = new WebsocketClient(new Uri(wsUri), factory);
-            _ws.ReconnectTimeout = null;
-            _ws.MessageReceived.Subscribe(responseMessage =>
+            ws = new WebsocketClient(new Uri(wsUri), factory);
+            ws.ReconnectTimeout = null;
+            ws.MessageReceived.Subscribe(responseMessage =>
             {
                 var wsgMessage = WsgMessage.Parse(responseMessage.Text);
                 if (_options.debugMode)
@@ -63,7 +66,20 @@ namespace RingCentral.Net.WebSocket
                 if (wsgMessage.meta.type == MessageType.ConnectionDetails)
                     _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
             };
-            await _ws.Start();
+            await ws.Start();
+
+            _keepAliveTimer = new Timer(state =>
+            {
+                dynamic[] requestBody =
+                {
+                    new
+                    {
+                        type = "Heartbeat",
+                        messageId = Guid.NewGuid().ToString()
+                    }
+                };
+                Send(JsonConvert.SerializeObject(requestBody));
+            }, null, 600000, 600000); // every 10 minutes
         }
 
         private Task Send(string message)
@@ -74,7 +90,7 @@ namespace RingCentral.Net.WebSocket
                     $"\n{JsonConvert.SerializeObject(JsonConvert.DeserializeObject(message), Formatting.Indented)}" +
                     "\n******");
 
-            return Task.Run(() => _ws.Send(message));
+            return Task.Run(() => ws.Send(message));
         }
 
         public async Task<T> Request<T>(string method, string endpoint, object content = null)
@@ -116,7 +132,8 @@ namespace RingCentral.Net.WebSocket
         {
             await _subscription.Revoke();
             _subscription = default;
-            _ws.Dispose();
+            _keepAliveTimer.Dispose();
+            ws.Dispose();
         }
     }
 }
