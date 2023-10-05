@@ -44,6 +44,12 @@ while (await timer.WaitForNextTickAsync())
 Upon network outage or other unexpected situations, the SDK cannot reconnect automatically. 
 You need to write some code to handle such case.
 
+By the way, RingCentral.Net SDK expires too. By default it expires in 1 hour. You need to handle the expiration as well.
+
+```cs
+rc.Refresh();
+```
+
 
 ## More documentation
 
