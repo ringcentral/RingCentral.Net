@@ -29,18 +29,24 @@ namespace RingCentral.Net.WebSocket
         public override async Task Install(RestClient rc)
         {
             _rc = rc;
-            await Connect();
+            await Reconnect(false);
         }
 
-        private async Task Connect(bool recoverSession = false)
+        /// <summary>
+        ///    Reconnect to WebSocket server
+        /// </summary>
+        /// <param name="recoverSubscription">recover your existing subscription if there is one. You will have to re-subscribe your existing subscription if you don't specify `true` here.</param>
+        /// <returns></returns>
+        public async Task Reconnect(bool recoverSubscription = true)
         {
             var wsToken = await _rc.Post<WsToken>("/restapi/oauth/wstoken");
             var wsUri = $"{wsToken.uri}?access_token={wsToken.ws_access_token}";
-            if (recoverSession) wsUri = $"{wsUri}&wsc={_wsc.token}";
+            if (recoverSubscription) wsUri = $"{wsUri}&wsc={_wsc.token}";
             var factory = new Func<ClientWebSocket>(() => new ClientWebSocket
             {
                 Options = {KeepAliveInterval = TimeSpan.FromSeconds(30)}
             });
+            ws?.Dispose(); // if ws already exist, dispose it
             ws = new WebsocketClient(new Uri(wsUri), factory);
             ws.ReconnectTimeout = null;
             ws.MessageReceived.Subscribe(responseMessage =>
@@ -64,10 +70,17 @@ namespace RingCentral.Net.WebSocket
                     _wsc = wsgMessage.meta.wsc;
 
                 if (wsgMessage.meta.type == MessageType.ConnectionDetails)
+                {
                     _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
+                    if (_connectionDetails.recoveryState == RecoveryState.Failed)
+                    {
+                        _subscription?.Subscribe();
+                    }
+                }
             };
             await ws.Start();
 
+            _keepAliveTimer?.Dispose(); // if there is already a timer, dispose it
             _keepAliveTimer = new Timer(state =>
             {
                 dynamic[] requestBody =
@@ -124,7 +137,7 @@ namespace RingCentral.Net.WebSocket
         public async Task<Subscription> Subscribe(string[] eventFilters, Action<string> callback)
         {
             _subscription = new Subscription(this, eventFilters, callback);
-            await _subscription.SubScribe();
+            await _subscription.Subscribe();
             return _subscription;
         }
 

@@ -24,13 +24,16 @@ namespace RingCentral.Net.WebSocket
 
         public SubscriptionInfo SubscriptionInfo { get; set; }
 
-        public async Task SubScribe()
+        public async Task Subscribe()
         {
             SubscriptionInfo = await _wse.Request<SubscriptionInfo>("POST",
                 "/restapi/v1.0/subscription",
                 RequestBody());
         }
 
+        /// <summary>
+        /// By design, there is no need to refresh, because server side will auto refresh
+        /// </summary>
         public async Task Refresh()
         {
             if (SubscriptionInfo == null) return;
