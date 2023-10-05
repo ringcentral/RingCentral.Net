@@ -49,6 +49,10 @@ namespace RingCentral.Net.WebSocket
             ws?.Dispose(); // if ws already exist, dispose it
             ws = new WebsocketClient(new Uri(wsUri), factory);
             ws.ReconnectTimeout = null;
+            ws.DisconnectionHappened.Subscribe( info =>
+            {
+                Reconnect();
+            });
             ws.MessageReceived.Subscribe(responseMessage =>
             {
                 var wsgMessage = WsgMessage.Parse(responseMessage.Text);
