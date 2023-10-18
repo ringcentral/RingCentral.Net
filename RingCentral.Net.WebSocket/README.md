@@ -26,9 +26,11 @@ previous ones.
 
 ## 24 * 7 long running applications
 
-If you would like to keep your app 24 * 7 running. You need to handle some unexpected situations. Like network outage.
+This extension assumes that there will be no network outage. If there is a network outage, it will not try to reconnect.
 
-Below is a sample code to handle network outage.
+If you would like to keep your app 24 * 7 running. You need to handle network outage.
+
+Below is a sample code to setup a timer to handle network outage.
 
 ```cs
 var timer = new PeriodicTimer(TimeSpan.FromMinutes(10));
@@ -41,10 +43,17 @@ while (await timer.WaitForNextTickAsync())
 }
 ```
 
-Upon network outage or other unexpected situations, the SDK cannot reconnect automatically. 
-You need to write some code to handle such case.
+Or you listen to WebSocket disconnect event instead:
 
-By the way, RingCentral.Net SDK expires too. By default it expires in 1 hour. You need to handle the expiration as well.
+```cs
+wsExtension.ws.DisconnectionHappened.Subscribe(info =>
+{
+    wsExtension.Reconnect();
+});
+```
+The disadvantage of this approach is that at the time of the event, the network outage maybe still ongoing and the `Reconnect()` will not succeed. It's up to you to handle this situation.
+
+By the way, RingCentral.Net SDK expires too. By default it expires in 1 hour. You need to handle the expiration as well:
 
 ```cs
 rc.Refresh();

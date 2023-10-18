@@ -25,6 +25,7 @@ namespace RingCentral.Net.WebSocket
         }
 
         public event EventHandler<WsgMessage> MessageReceived;
+        public event EventHandler<string> RawMessageReceived;
 
         public override async Task Install(RestClient rc)
         {
@@ -49,12 +50,9 @@ namespace RingCentral.Net.WebSocket
             ws?.Dispose(); // if ws already exist, dispose it
             ws = new WebsocketClient(new Uri(wsUri), factory);
             ws.ReconnectTimeout = null;
-            ws.DisconnectionHappened.Subscribe( info =>
-            {
-                Reconnect();
-            });
             ws.MessageReceived.Subscribe(responseMessage =>
             {
+                RawMessageReceived?.Invoke(this, responseMessage.Text);
                 var wsgMessage = WsgMessage.Parse(responseMessage.Text);
                 if (_options.debugMode)
                     Console.WriteLine(
