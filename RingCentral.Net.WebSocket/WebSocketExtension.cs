@@ -18,7 +18,6 @@ namespace RingCentral.Net.WebSocket
         private Timer _keepAliveTimer;
         public WebsocketClient ws;
 
-
         public WebSocketExtension(WebSocketOptions options = null)
         {
             _options = options ?? WebSocketOptions.DefaultInstance;
@@ -30,6 +29,26 @@ namespace RingCentral.Net.WebSocket
         public override async Task Install(RestClient rc)
         {
             _rc = rc;
+            MessageReceived += (sender, wsgMessage) =>
+            {
+                if (wsgMessage.meta.wsc != null && (_wsc == null ||
+                                                    (wsgMessage.meta.type ==
+                                                     MessageType.ConnectionDetails &&
+                                                     wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
+                                                    _wsc?.sequence < wsgMessage.meta.wsc.sequence))
+                {
+                    _wsc = wsgMessage.meta.wsc;
+                }
+
+                if (wsgMessage.meta.type == MessageType.ConnectionDetails)
+                {
+                    _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
+                    if (_connectionDetails.recoveryState == RecoveryState.Failed)
+                    {
+                        _subscription?.Subscribe();
+                    }
+                }
+            };
             await Reconnect(false);
         }
 
@@ -59,29 +78,9 @@ namespace RingCentral.Net.WebSocket
                         $"***WebSocket incoming message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
                         $"\n{JsonConvert.SerializeObject(wsgMessage, Formatting.Indented)}" +
                         "\n******");
-
                 MessageReceived?.Invoke(this, wsgMessage);
             });
-            MessageReceived += (sender, wsgMessage) =>
-            {
-                if (wsgMessage.meta.wsc != null && (_wsc == null ||
-                                                    (wsgMessage.meta.type ==
-                                                     MessageType.ConnectionDetails &&
-                                                     wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
-                                                    _wsc?.sequence < wsgMessage.meta.wsc.sequence))
-                    _wsc = wsgMessage.meta.wsc;
-
-                if (wsgMessage.meta.type == MessageType.ConnectionDetails)
-                {
-                    _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
-                    if (_connectionDetails.recoveryState == RecoveryState.Failed)
-                    {
-                        _subscription?.Subscribe();
-                    }
-                }
-            };
             await ws.Start();
-
             _keepAliveTimer?.Dispose(); // if there is already a timer, dispose it
             _keepAliveTimer = new Timer(state =>
             {
