@@ -26,42 +26,13 @@ previous ones.
 
 ## 24 * 7 long running applications
 
-This extension assumes that there will be no network outage. If there is a network outage, it will not try to reconnect.
+In order to keep your WebSocket appliation 24 * 7 running, there are several things that you need to handle:
 
-If you would like to keep your app 24 * 7 running. You need to handle network outage.
+- first of all, you need to keep you token valid. You can use `rc.Refresh()` to refresh the token.
+- secondly, you need to handle network outage. If there is a network outage, you need to `wsExtension.Reconnect()` when network is back.
+- lastly, there is a rare case: There is a 5 active oauth sessions per user per app limit. If you try to create 5 + sessions, existing ones will be revoked and `rc.Refresh()` will fail and your WebSocket connection will not function either. In this case, you need to generate a new token and `wsExtension.Reconnect()`.
 
-Below is a sample code to setup a timer to handle network outage.
+Please refer to this demo code:
+https://github.com/tylerlong/RingCentral.WebSocket.Demo/blob/main/RingCentral.WebSocket.Demo/Program.cs
 
-```cs
-var timer = new PeriodicTimer(TimeSpan.FromMinutes(10));
-while (await timer.WaitForNextTickAsync())
-{
-    if (!wsExtension.ws.IsRunning)
-    {
-        wsExtension.Reconnect();
-    }
-}
-```
-
-Or you listen to WebSocket disconnect event instead:
-
-```cs
-wsExtension.ws.DisconnectionHappened.Subscribe(info =>
-{
-    wsExtension.Reconnect();
-});
-```
-The disadvantage of this approach is that at the time of the event, the network outage maybe still ongoing and the `Reconnect()` will not succeed. It's up to you to handle this situation.
-
-By the way, RingCentral.Net SDK expires too. By default it expires in 1 hour. You need to handle the expiration as well:
-
-```cs
-rc.Refresh();
-```
-
-
-## More documentation
-
-This extension is inspired
-by [its TypeScript counterpart](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/ws)
-, check its documentation for more information.
+Please read the **comments** in the code carefully.
