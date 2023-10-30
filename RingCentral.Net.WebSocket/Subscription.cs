@@ -32,7 +32,7 @@ namespace RingCentral.Net.WebSocket
         }
 
         /// <summary>
-        /// By design, there is no need to refresh, because server side will auto refresh
+        ///     By design, there is no need to refresh, because server side will auto refresh
         /// </summary>
         public async Task Refresh()
         {

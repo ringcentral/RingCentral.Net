@@ -3,18 +3,18 @@ namespace RingCentral
     public class TMTaskInfo
     {
         /// <summary>
-        ///     Task Id
+        ///     Internal identifier of a task
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        ///     Task creation date/time in UTC time zone.
+        ///     Task creation date/time in UTC time zone
         ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Task the last modified time in UTC time zone.
+        ///     Task the last modified time in UTC time zone
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
@@ -30,28 +30,28 @@ namespace RingCentral
         public TMTaskInfoCreator creator { get; set; }
 
         /// <summary>
-        ///     Chat IDs where the task is posted or shared.
+        ///     Internal identifiers of the chats where the task is posted or shared
         /// </summary>
         public string[] chatIds { get; set; }
 
         /// <summary>
-        ///     Task execution status.
+        ///     Task execution status
         ///     Enum: Pending, InProgress, Completed
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     Task name/subject.
+        ///     Task name/subject
         /// </summary>
         public string subject { get; set; }
 
         /// <summary>
-        ///     Task name/subject.
+        ///     Task name/subject
         /// </summary>
         public TMTaskInfoAssignees[] assignees { get; set; }
 
         /// <summary>
-        ///     How the task completeness should be determined.
+        ///     How the task completeness should be determined
         ///     Enum: Simple, AllAssignees, Percentage
         /// </summary>
         public string completenessCondition { get; set; }
@@ -64,30 +64,30 @@ namespace RingCentral
         public long? completenessPercentage { get; set; }
 
         /// <summary>
-        ///     Task start date.
+        ///     Task start date
         ///     Format: date-time
         /// </summary>
         public string startDate { get; set; }
 
         /// <summary>
-        ///     Task due date/time.
+        ///     Task due date/time
         ///     Format: date-time
         /// </summary>
         public string dueDate { get; set; }
 
         /// <summary>
-        ///     Font color of a post with the current task.
+        ///     Font color of a post with the current task
         ///     Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         /// </summary>
         public string color { get; set; }
 
         /// <summary>
-        ///     Task section to group / search by.
+        ///     Task section to group / search by
         /// </summary>
         public string section { get; set; }
 
         /// <summary>
-        ///     Task details.
+        ///     Task details
         /// </summary>
         public string description { get; set; }
 

@@ -8,13 +8,13 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Possible value: File. Attachment type (currently, only File is possible).
+        ///     Possible value - File. Attachment type (currently, only File is possible)
         ///     Enum: File
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        ///     Name of the attached file (incl. extension name).
+        ///     Name of the attached file (incl. extension name)
         /// </summary>
         public string name { get; set; }
 

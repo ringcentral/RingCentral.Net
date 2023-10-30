@@ -4,6 +4,10 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public TMTaskListRecords[] records { get; set; }
+        public TMTaskInfo[] records { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public TMNavigationInfo navigation { get; set; }
     }
 }

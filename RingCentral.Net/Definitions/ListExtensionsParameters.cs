@@ -6,7 +6,7 @@ namespace RingCentral
     public class ListExtensionsParameters
     {
         /// <summary>
-        ///     Number of extension to be retrieved
+        ///     Extension short number to filter records
         /// </summary>
         public string extensionNumber { get; set; }
 

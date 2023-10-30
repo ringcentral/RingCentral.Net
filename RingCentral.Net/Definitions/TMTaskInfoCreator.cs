@@ -3,7 +3,7 @@ namespace RingCentral
     public class TMTaskInfoCreator
     {
         /// <summary>
-        ///     Creator Id
+        ///     Internal identifier of a task creator
         /// </summary>
         public string id { get; set; }
     }

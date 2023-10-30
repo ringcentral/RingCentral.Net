@@ -19,7 +19,7 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     Number of extension
+        ///     Extension short number
         /// </summary>
         public string extensionNumber { get; set; }
 

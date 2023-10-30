@@ -8,8 +8,9 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of an extension
+        ///     Format: int64
         /// </summary>
-        public string id { get; set; }
+        public long? id { get; set; }
 
         /// <summary>
         ///     Canonical URI of an extension
@@ -23,7 +24,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Number of extension
+        ///     Extension short number
         /// </summary>
         public string extensionNumber { get; set; }
 

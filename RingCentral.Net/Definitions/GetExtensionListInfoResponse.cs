@@ -19,7 +19,7 @@ namespace RingCentral
         public ContactInfo contact { get; set; }
 
         /// <summary>
-        ///     Number of an extension
+        ///     Extension short number
         /// </summary>
         public string extensionNumber { get; set; }
 

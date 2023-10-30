@@ -12,10 +12,10 @@ namespace RingCentral.Net.WebSocket
     {
         private readonly WebSocketOptions _options;
         private ConnectionDetails _connectionDetails;
+        private Timer _keepAliveTimer;
         private RestClient _rc;
         private Subscription _subscription;
         private Wsc _wsc;
-        private Timer _keepAliveTimer;
         public WebsocketClient ws;
 
         public WebSocketExtension(WebSocketOptions options = null)
@@ -36,26 +36,24 @@ namespace RingCentral.Net.WebSocket
                                                      MessageType.ConnectionDetails &&
                                                      wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
                                                     _wsc?.sequence < wsgMessage.meta.wsc.sequence))
-                {
                     _wsc = wsgMessage.meta.wsc;
-                }
 
                 if (wsgMessage.meta.type == MessageType.ConnectionDetails)
                 {
                     _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
-                    if (_connectionDetails.recoveryState == RecoveryState.Failed)
-                    {
-                        _subscription?.Subscribe();
-                    }
+                    if (_connectionDetails.recoveryState == RecoveryState.Failed) _subscription?.Subscribe();
                 }
             };
             await Reconnect(false);
         }
 
         /// <summary>
-        ///    Reconnect to WebSocket server
+        ///     Reconnect to WebSocket server
         /// </summary>
-        /// <param name="recoverSubscription">recover your existing subscription if there is one. You will have to re-subscribe your existing subscription if you don't specify `true` here.</param>
+        /// <param name="recoverSubscription">
+        ///     recover your existing subscription if there is one. You will have to re-subscribe
+        ///     your existing subscription if you don't specify `true` here.
+        /// </param>
         /// <returns></returns>
         public async Task Reconnect(bool recoverSubscription = true)
         {

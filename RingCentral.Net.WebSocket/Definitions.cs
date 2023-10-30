@@ -36,7 +36,7 @@ namespace RingCentral.Net.WebSocket
         ServerNotification,
         Error,
         ConnectionDetails,
-        Heartbeat,
+        Heartbeat
     }
 
     public class WsgMeta
@@ -73,7 +73,7 @@ namespace RingCentral.Net.WebSocket
             return new WsgMessage
             {
                 meta = parsed[0].ToObject<WsgMeta>(),
-                body = parsed.Count> 1 ? parsed[1] : null,
+                body = parsed.Count > 1 ? parsed[1] : null
             };
         }
     }

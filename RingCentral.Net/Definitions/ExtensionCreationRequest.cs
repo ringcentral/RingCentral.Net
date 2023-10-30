@@ -7,12 +7,12 @@ namespace RingCentral
         public ContactInfoCreationRequest contact { get; set; }
 
         /// <summary>
-        ///     Number of extension
+        ///     Extension short number
         /// </summary>
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Cost center information
+        ///     Cost center information. Applicable if Cost Center feature is enabled. The default is root cost center value
         /// </summary>
         public ExtensionCreationRequestCostCenter costCenter { get; set; }
 

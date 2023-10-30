@@ -31,6 +31,10 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
+        /// </summary>
+        public StatusInfo statusInfo { get; set; }
+
+        /// <summary>
         ///     Company name
         ///     Example: Acme Inc.
         /// </summary>

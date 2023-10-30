@@ -36,7 +36,7 @@ namespace RingCentral
         public DepartmentInfo[] departments { get; set; }
 
         /// <summary>
-        ///     Number of extension
+        ///     Extension short number
         /// </summary>
         public string extensionNumber { get; set; }
 
