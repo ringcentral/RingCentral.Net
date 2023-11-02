@@ -29,7 +29,7 @@ namespace RingCentral.Net.WebSocket
         public override async Task Install(RestClient rc)
         {
             _rc = rc;
-            MessageReceived += (sender, wsgMessage) =>
+            MessageReceived += async (sender, wsgMessage) =>
             {
                 if (wsgMessage.meta.wsc != null && (_wsc == null ||
                                                     (wsgMessage.meta.type ==
@@ -42,6 +42,12 @@ namespace RingCentral.Net.WebSocket
                 {
                     _connectionDetails = wsgMessage.body.ToObject<ConnectionDetails>();
                     if (_connectionDetails.recoveryState == RecoveryState.Failed) _subscription?.Subscribe();
+                }
+
+                // Absolute timeout expired, by default it is every 24 hours
+                if (wsgMessage.meta.type == MessageType.Error && wsgMessage.body.errorCode == "WSG-903")
+                {
+                    await Reconnect();
                 }
             };
             await Reconnect(false);
@@ -66,6 +72,7 @@ namespace RingCentral.Net.WebSocket
             });
             ws?.Dispose(); // if ws already exist, dispose it
             ws = new WebsocketClient(new Uri(wsUri), factory);
+            ws.IsReconnectionEnabled = false; // we don't need ws lib auto reconnect because wsToken expires in 10 minutes
             ws.ReconnectTimeout = null;
             ws.MessageReceived.Subscribe(responseMessage =>
             {
