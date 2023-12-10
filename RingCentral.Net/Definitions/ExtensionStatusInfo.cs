@@ -13,8 +13,15 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of suspension
-        ///     Enum: Voluntarily, Involuntarily, SuspendedVoluntarily
+        ///     Enum: SuspendedVoluntarily, SuspendedInvoluntarily, CancelledVoluntarily, CancelledInvoluntarily
         /// </summary>
         public string reason { get; set; }
+
+        /// <summary>
+        ///     Date until which an account will get deleted. The default
+        ///     value is 30 days since the current date
+        ///     Format: date-time
+        /// </summary>
+        public string till { get; set; }
     }
 }

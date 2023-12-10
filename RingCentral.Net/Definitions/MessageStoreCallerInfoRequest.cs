@@ -8,6 +8,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Phone number in E.164 format
+        ///     Required
         /// </summary>
         public string phoneNumber { get; set; }
     }

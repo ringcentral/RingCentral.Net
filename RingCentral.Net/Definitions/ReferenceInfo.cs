@@ -12,5 +12,10 @@ namespace RingCentral
         ///     Enum: PartnerId, CustomerDirectoryId
         /// </summary>
         public string type { get; set; }
+
+        /// <summary>
+        ///     Primary federation admin account identifier
+        /// </summary>
+        public string refAccId { get; set; }
     }
 }

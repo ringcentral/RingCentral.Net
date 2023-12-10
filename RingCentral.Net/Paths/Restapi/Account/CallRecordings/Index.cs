@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecordings
         }
 
         /// <summary>
-        ///     Deletes company call recordings by ID(s).
+        ///     Deletes company call recordings by their IDs.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recordings
         ///     Rate Limit Group: Heavy

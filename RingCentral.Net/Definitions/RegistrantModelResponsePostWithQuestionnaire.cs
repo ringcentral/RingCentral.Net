@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RegistrantModel
+    public class RegistrantModelResponsePostWithQuestionnaire
     {
         /// <summary>
         ///     Internal object ID
@@ -94,5 +94,11 @@ namespace RingCentral
         ///     Answers on custom registration questions
         /// </summary>
         public RegAnswerModel[] questionnaire { get; set; }
+
+        /// <summary>
+        ///     Sequence number for iCalendar email attachments
+        ///     Format: int32
+        /// </summary>
+        public long? icalendarSequence { get; set; }
     }
 }

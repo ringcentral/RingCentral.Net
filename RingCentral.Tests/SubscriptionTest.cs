@@ -11,19 +11,19 @@ namespace RingCentral.Tests
 {
     public class SubscriptionTest
     {
-        private Task<GetSMSMessageInfoResponse> SendSms(RestClient rc)
+        private Task<GetInternalTextMessageInfoResponse> SendPager(RestClient rc)
         {
-            return rc.Restapi().Account().Extension().Sms().Post(new CreateSMSMessage
+            return rc.Restapi().Account().Extension().CompanyPager().Post(new CreateInternalTextMessageRequest
             {
-                from = new MessageStoreCallerInfoRequest
+                from = new PagerCallerInfoRequest
                 {
-                    phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME")
+                    extensionId = rc.token.owner_id
                 },
                 to = new[]
                 {
-                    new MessageStoreCallerInfoRequest
+                    new PagerCallerInfoRequest
                     {
-                        phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
+                        extensionId = rc.token.owner_id
                     }
                 },
                 text = "Hello world"
@@ -70,7 +70,7 @@ namespace RingCentral.Tests
                 Assert.NotNull(subscriptionInfo);
                 Assert.NotNull(subscription.SubscriptionInfo);
                 Assert.Equal(eventFilters.Length, subscriptionInfo.eventFilters.Length);
-                await SendSms(rc);
+                await SendPager(rc);
                 await Task.Delay(30000);
                 Assert.True(messages.Count >= 1);
                 Assert.True(messageStoreMessageCount >= 1);

@@ -22,7 +22,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public MessageCountryInfo country { get; set; }
+        public SmsRequestCountryInfo country { get; set; }
 
         /// <summary>
         ///     Media file(s) to upload

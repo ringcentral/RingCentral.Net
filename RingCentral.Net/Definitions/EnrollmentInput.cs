@@ -28,6 +28,6 @@ namespace RingCentral
         ///     Required
         ///     Example: JohnDoe
         /// </summary>
-        public string enrollmentId { get; set; }
+        public string speakerId { get; set; }
     }
 }

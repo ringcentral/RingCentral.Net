@@ -12,16 +12,6 @@ namespace RingCentral
         public ExtensionStatusInfo statusInfo { get; set; }
 
         /// <summary>
-        ///     Type of suspension
-        /// </summary>
-        public string reason { get; set; }
-
-        /// <summary>
-        ///     Free Form user comment
-        /// </summary>
-        public string comment { get; set; }
-
-        /// <summary>
         ///     Extension number available
         /// </summary>
         public string extensionNumber { get; set; }
@@ -83,7 +73,7 @@ namespace RingCentral
         /// <summary>
         ///     Extension sub-type, if applicable. For any unsupported sub-types
         ///     the 'Unknown' value will be returned
-        ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignageOnlyRooms, Unknown
         /// </summary>
         public string subType { get; set; }
 

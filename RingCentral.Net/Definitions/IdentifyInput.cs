@@ -39,9 +39,9 @@ namespace RingCentral
         /// <summary>
         ///     Set of enrolled speakers to be identified from the media.
         ///     Required
-        ///     Example: enrollmentId1,enrollmentId2
+        ///     Example: speakerId1,speakerId2
         /// </summary>
-        public string[] enrollmentIds { get; set; }
+        public string[] speakerIds { get; set; }
 
         /// <summary>
         ///     Apply voice activity detection.

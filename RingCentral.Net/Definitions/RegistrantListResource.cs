@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public RegistrantModel[] records { get; set; }
+        public RegistrantModelWithQuestionnaire[] records { get; set; }
 
         /// <summary>
         ///     Required

@@ -47,11 +47,12 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditWebinars
         /// </summary>
-        public async Task<RegistrantModelResponsePost> Post(RegistrantBaseModel registrantBaseModel,
+        public async Task<RegistrantModelResponsePostWithQuestionnaire> Post(
+            RegistrantBaseModelWithQuestionnaire registrantBaseModelWithQuestionnaire,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RegistrantModelResponsePost>(Path(false), registrantBaseModel, null,
-                restRequestConfig);
+            return await rc.Post<RegistrantModelResponsePostWithQuestionnaire>(Path(false),
+                registrantBaseModelWithQuestionnaire, null, restRequestConfig);
         }
 
         /// <summary>
@@ -63,11 +64,11 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<RegistrantModel> Get(RcwRegGetRegistrantParameters queryParams = null,
+        public async Task<RegistrantModelWithQuestionnaire> Get(RcwRegGetRegistrantParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             if (registrantId == null) throw new ArgumentException("Parameter cannot be null", nameof(registrantId));
-            return await rc.Get<RegistrantModel>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<RegistrantModelWithQuestionnaire>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>

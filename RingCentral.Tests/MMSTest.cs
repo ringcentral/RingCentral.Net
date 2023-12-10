@@ -29,25 +29,26 @@ namespace RingCentral.Tests
                     }
                 };
 
-                var messageInfo = await extension.Mms().Post(new CreateMMSMessage
-                {
-                    from = new MessageStoreCallerInfoRequest
-                    {
-                        phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME")
-                    },
-                    to = new[]
-                    {
-                        new MessageStoreCallerInfoRequest
-                        {
-                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
-                        }
-                    },
-                    text = "Hello world again",
-                    attachments = attachments
-                });
-
-                Assert.NotNull(messageInfo);
-                Assert.Equal("SMS", messageInfo.type);
+                // comment out, because sandbox doesn't support sms/mms any more
+                // var messageInfo = await extension.Mms().Post(new CreateMMSMessage
+                // {
+                //     from = new MessageStoreCallerInfoRequest
+                //     {
+                //         phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_USERNAME")
+                //     },
+                //     to = new[]
+                //     {
+                //         new MessageStoreCallerInfoRequest
+                //         {
+                //             phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
+                //         }
+                //     },
+                //     text = "Hello world again",
+                //     attachments = attachments
+                // });
+                //
+                // Assert.NotNull(messageInfo);
+                // Assert.Equal("SMS", messageInfo.type);
             }
         }
     }

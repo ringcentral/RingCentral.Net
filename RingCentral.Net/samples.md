@@ -566,7 +566,7 @@ Get Speaker Enrollment Status
 Name|Value
 -|-
 HTTP Method|`GET`
-Endpoint|`/ai/audio/v1/enrollments/{enrollmentId}`
+Endpoint|`/ai/audio/v1/enrollments/{speakerId}`
 Rate Limit Group|`Heavy`
 App Permission|`AI`
 User Permission|`N/A`
@@ -574,7 +574,7 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
 await rc.Authorize("jwtToken");
-var result = await rc.Ai().Audio().V1().Enrollments(enrollmentId).Get();
+var result = await rc.Ai().Audio().V1().Enrollments(speakerId).Get();
 await rc.Revoke();
 ```
 
@@ -589,7 +589,7 @@ Delete Speaker Enrollment
 Name|Value
 -|-
 HTTP Method|`DELETE`
-Endpoint|`/ai/audio/v1/enrollments/{enrollmentId}`
+Endpoint|`/ai/audio/v1/enrollments/{speakerId}`
 Rate Limit Group|`Heavy`
 App Permission|`AI`
 User Permission|`N/A`
@@ -597,7 +597,7 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
 await rc.Authorize("jwtToken");
-var result = await rc.Ai().Audio().V1().Enrollments(enrollmentId).Delete();
+var result = await rc.Ai().Audio().V1().Enrollments(speakerId).Delete();
 await rc.Revoke();
 ```
 
@@ -612,7 +612,7 @@ Update Speaker Enrollment
 Name|Value
 -|-
 HTTP Method|`PATCH`
-Endpoint|`/ai/audio/v1/enrollments/{enrollmentId}`
+Endpoint|`/ai/audio/v1/enrollments/{speakerId}`
 Rate Limit Group|`Heavy`
 App Permission|`AI`
 User Permission|`N/A`
@@ -620,7 +620,7 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
 await rc.Authorize("jwtToken");
-var result = await rc.Ai().Audio().V1().Enrollments(enrollmentId).Patch(enrollmentPatchInput);
+var result = await rc.Ai().Audio().V1().Enrollments(speakerId).Patch(enrollmentPatchInput);
 await rc.Revoke();
 ```
 
@@ -6690,7 +6690,7 @@ Explorer.
 
 ## deleteCompanyCallRecordings
 
-Delete Company Call Recording(s)
+Delete Company Call Recordings
 
 Name|Value
 -|-
@@ -9889,12 +9889,14 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL"));
 await rc.Authorize("jwtToken");
-var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Registrants().Post(registrantBaseModel);
+var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Registrants().Post(registrantBaseModelWithQuestionnaire);
 await rc.Revoke();
 ```
 
-- `registrantBaseModel` is of type [RegistrantBaseModel](./Definitions/RegistrantBaseModel.cs)
-- `result` is of type [RegistrantModelResponsePost](./Definitions/RegistrantModelResponsePost.cs)
+- `registrantBaseModelWithQuestionnaire` is of
+  type [RegistrantBaseModelWithQuestionnaire](./Definitions/RegistrantBaseModelWithQuestionnaire.cs)
+- `result` is of
+  type [RegistrantModelResponsePostWithQuestionnaire](./Definitions/RegistrantModelResponsePostWithQuestionnaire.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Registrants-rcwRegCreateRegistrant) in API Explorer.
 
@@ -9919,7 +9921,7 @@ await rc.Revoke();
 
 - `rcwRegGetRegistrantParameters` is of
   type [RcwRegGetRegistrantParameters](./Definitions/RcwRegGetRegistrantParameters.cs)
-- `result` is of type [RegistrantModel](./Definitions/RegistrantModel.cs)
+- `result` is of type [RegistrantModelWithQuestionnaire](./Definitions/RegistrantModelWithQuestionnaire.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Registrants-rcwRegGetRegistrant) in API Explorer.
 

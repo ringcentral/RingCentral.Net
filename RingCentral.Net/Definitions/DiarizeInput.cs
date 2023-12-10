@@ -50,9 +50,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Optional set of speakers to be identified from the call.
-        ///     Example: enrollmentId1,enrollmentId2
+        ///     Example: speakerId1,speakerId2
         /// </summary>
-        public string[] enrollmentIds { get; set; }
+        public string[] speakerIds { get; set; }
 
         /// <summary>
         ///     Apply voice activity detection.

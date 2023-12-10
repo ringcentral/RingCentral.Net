@@ -5,20 +5,20 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
 {
     public class Index
     {
-        public string enrollmentId;
         public V1.Index parent;
         public RestClient rc;
+        public string speakerId;
 
-        public Index(V1.Index parent, string enrollmentId = null)
+        public Index(V1.Index parent, string speakerId = null)
         {
             this.parent = parent;
             rc = parent.rc;
-            this.enrollmentId = enrollmentId;
+            this.speakerId = speakerId;
         }
 
         public string Path(bool withParameter = true)
         {
-            if (withParameter && enrollmentId != null) return $"{parent.Path()}/enrollments/{enrollmentId}";
+            if (withParameter && speakerId != null) return $"{parent.Path()}/enrollments/{speakerId}";
             return $"{parent.Path()}/enrollments";
         }
 
@@ -51,40 +51,40 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
         /// <summary>
         ///     Get The Status of Enrollment for the provided Speaker.
         ///     HTTP Method: get
-        ///     Endpoint: /ai/audio/v1/enrollments/{enrollmentId}
+        ///     Endpoint: /ai/audio/v1/enrollments/{speakerId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: AI
         /// </summary>
         public async Task<EnrollmentStatus> Get(RestRequestConfig restRequestConfig = null)
         {
-            if (enrollmentId == null) throw new ArgumentException("Parameter cannot be null", nameof(enrollmentId));
+            if (speakerId == null) throw new ArgumentException("Parameter cannot be null", nameof(speakerId));
             return await rc.Get<EnrollmentStatus>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
         ///     Delete The Enrollment for the provided Speaker.
         ///     HTTP Method: delete
-        ///     Endpoint: /ai/audio/v1/enrollments/{enrollmentId}
+        ///     Endpoint: /ai/audio/v1/enrollments/{speakerId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: AI
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            if (enrollmentId == null) throw new ArgumentException("Parameter cannot be null", nameof(enrollmentId));
+            if (speakerId == null) throw new ArgumentException("Parameter cannot be null", nameof(speakerId));
             return await rc.Delete<string>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
         ///     Add newer audio data to improve an existing speaker enrollment
         ///     HTTP Method: patch
-        ///     Endpoint: /ai/audio/v1/enrollments/{enrollmentId}
+        ///     Endpoint: /ai/audio/v1/enrollments/{speakerId}
         ///     Rate Limit Group: Heavy
         ///     App Permission: AI
         /// </summary>
         public async Task<EnrollmentStatus> Patch(EnrollmentPatchInput enrollmentPatchInput,
             RestRequestConfig restRequestConfig = null)
         {
-            if (enrollmentId == null) throw new ArgumentException("Parameter cannot be null", nameof(enrollmentId));
+            if (speakerId == null) throw new ArgumentException("Parameter cannot be null", nameof(speakerId));
             return await rc.Patch<EnrollmentStatus>(Path(), enrollmentPatchInput, null, restRequestConfig);
         }
     }
@@ -94,9 +94,9 @@ namespace RingCentral.Paths.Ai.Audio.V1
 {
     public partial class Index
     {
-        public Enrollments.Index Enrollments(string enrollmentId = null)
+        public Enrollments.Index Enrollments(string speakerId = null)
         {
-            return new Enrollments.Index(this, enrollmentId);
+            return new Enrollments.Index(this, speakerId);
         }
     }
 }

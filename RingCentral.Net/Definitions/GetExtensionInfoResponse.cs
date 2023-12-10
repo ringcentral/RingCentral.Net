@@ -114,8 +114,8 @@ namespace RingCentral
         ///     corresponds to 'Call Queue' extensions in modern RingCentral product
         ///     terminology
         ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
-        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site, ProxyAdmin, DelegatedLinesGroup,
-        ///     GroupCallPickup
+        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, RoomConnector, Limited, Site, ProxyAdmin,
+        ///     DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
 

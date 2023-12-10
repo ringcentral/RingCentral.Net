@@ -61,5 +61,11 @@ namespace RingCentral
         ///     in the queue referenced in extension object
         /// </summary>
         public bool? callQueueMessages { get; set; }
+
+        /// <summary>
+        ///     Specifies whether the user referenced in extension object is sharing voicemails
+        ///     with the current extension
+        /// </summary>
+        public bool? sharedVoicemails { get; set; }
     }
 }

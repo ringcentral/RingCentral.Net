@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class RegistrantBaseModel
+    public class RegistrantBaseModelWithQuestionnaire
     {
         /// <summary>
         ///     First (given) name
@@ -69,5 +69,10 @@ namespace RingCentral
         ///     ID of session participant (from Runtime Service - if this registrant attended the webinar)
         /// </summary>
         public string participantId { get; set; }
+
+        /// <summary>
+        ///     Answers on custom registration questions
+        /// </summary>
+        public RegAnswerModel[] questionnaire { get; set; }
     }
 }
