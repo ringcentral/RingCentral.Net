@@ -29,5 +29,10 @@ namespace RingCentral
         ///     caller id
         /// </summary>
         public string callerId { get; set; }
+
+        /// <summary>
+        ///     pass-thru parameter in join url
+        /// </summary>
+        public string correlationId { get; set; }
     }
 }

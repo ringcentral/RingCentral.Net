@@ -23,8 +23,7 @@ namespace RingCentral.Paths.Restapi.Account
         }
 
         /// <summary>
-        ///     Returns basic information about a particular RingCentral
-        ///     customer account.
+        ///     Returns basic information about a particular RingCentral customer account.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}
         ///     Rate Limit Group: Light

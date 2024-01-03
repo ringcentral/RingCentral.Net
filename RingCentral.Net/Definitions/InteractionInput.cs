@@ -60,7 +60,7 @@ namespace RingCentral
         public bool? enableVoiceActivityDetection { get; set; }
 
         /// <summary>
-        ///     Enum: All, KeyPhrases, Emotion, AbstractiveSummaryLong, AbstractiveSummaryShort, ExtractiveSummary,
+        ///     Enum: All, KeyPhrases, Emotion, AbstractiveSummaryLong, AbstractiveSummaryShort, ExtractiveSummary, Topics,
         ///     TalkToListenRatio, Energy, Pace, QuestionsAsked
         /// </summary>
         public string[] insights { get; set; }

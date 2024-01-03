@@ -3301,7 +3301,7 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is an empty string
+- `result` is of type [DefaultUserRole](./Definitions/DefaultUserRole.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readDefaultRole) in API Explorer.
 
@@ -3327,7 +3327,7 @@ await rc.Revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - `defaultUserRoleRequest` is of type [DefaultUserRoleRequest](./Definitions/DefaultUserRoleRequest.cs)
-- `result` is an empty string
+- `result` is of type [DefaultUserRole](./Definitions/DefaultUserRole.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateDefaultUserRole) in API Explorer.
 
@@ -4736,6 +4736,30 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Bridge-Management-getBridgeByWebPin) in API Explorer.
 
+## removeLineJWSPublic
+
+Remove phone line
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/v2/accounts/{accountId}/devices/{deviceId}`
+Rate Limit Group|`Medium`
+App Permission|`EditAccounts`
+User Permission|`EditAccountDevices`
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).Devices(deviceId).Delete(removeLineRequest);
+await rc.Revoke();
+```
+
+- `removeLineRequest` is of type [RemoveLineRequest](./Definitions/RemoveLineRequest.cs)
+- `result` is of type [RemoveLineResponse](./Definitions/RemoveLineResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-removeLineJWSPublic) in API Explorer.
+
 ## listCompanyActiveCalls
 
 List Company Active Calls
@@ -5608,101 +5632,6 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChatsNew) in API Explorer.
 
-## listGlipGroupWebhooksNew
-
-List Webhooks in Group
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/groups/{groupId}/webhooks`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Groups(groupId).Webhooks().Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipGroupWebhooksNew) in API
-Explorer.
-
-## createGlipGroupWebhookNew
-
-Create Webhook in Group
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/groups/{groupId}/webhooks`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Groups(groupId).Webhooks().Post();
-await rc.Revoke();
-```
-
-- `result` is of type [TMWebhookInfo](./Definitions/TMWebhookInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-createGlipGroupWebhookNew) in API
-Explorer.
-
-## addGlipTeamMembersNew
-
-Add Team Members
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/add`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Teams(chatId).Add().Post(tMAddTeamMembersRequest);
-await rc.Revoke();
-```
-
-- `tMAddTeamMembersRequest` is of type [TMAddTeamMembersRequest](./Definitions/TMAddTeamMembersRequest.cs)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembersNew) in API Explorer.
-
-## unarchiveGlipTeamNew
-
-Unarchive Team
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/unarchive`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL"));
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Teams(chatId).Unarchive().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-unarchiveGlipTeamNew) in API Explorer.
-
 ## listGlipWebhooksNew
 
 List Webhooks
@@ -5822,6 +5751,54 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readStandardUserRole) in API Explorer.
 
+## listGlipGroupWebhooksNew
+
+List Webhooks in Group
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/team-messaging/v1/groups/{groupId}/webhooks`
+Rate Limit Group|`Medium`
+App Permission|`TeamMessaging`
+User Permission|`N/A`
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Groups(groupId).Webhooks().Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipGroupWebhooksNew) in API
+Explorer.
+
+## createGlipGroupWebhookNew
+
+Create Webhook in Group
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/team-messaging/v1/groups/{groupId}/webhooks`
+Rate Limit Group|`Medium`
+App Permission|`TeamMessaging`
+User Permission|`N/A`
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Groups(groupId).Webhooks().Post();
+await rc.Revoke();
+```
+
+- `result` is of type [TMWebhookInfo](./Definitions/TMWebhookInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-createGlipGroupWebhookNew) in API
+Explorer.
+
 ## lockNoteNew
 
 Lock Note
@@ -5845,6 +5822,30 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNoteNew) in API Explorer.
 
+## addGlipTeamMembersNew
+
+Add Team Members
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/team-messaging/v1/teams/{chatId}/add`
+Rate Limit Group|`Medium`
+App Permission|`TeamMessaging`
+User Permission|`N/A`
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Teams(chatId).Add().Post(tMAddTeamMembersRequest);
+await rc.Revoke();
+```
+
+- `tMAddTeamMembersRequest` is of type [TMAddTeamMembersRequest](./Definitions/TMAddTeamMembersRequest.cs)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembersNew) in API Explorer.
+
 ## joinGlipTeamNew
 
 Join Team
@@ -5867,6 +5868,29 @@ await rc.Revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeamNew) in API Explorer.
+
+## unarchiveGlipTeamNew
+
+Unarchive Team
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/team-messaging/v1/teams/{chatId}/unarchive`
+Rate Limit Group|`Medium`
+App Permission|`TeamMessaging`
+User Permission|`N/A`
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL"));
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Teams(chatId).Unarchive().Post();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-unarchiveGlipTeamNew) in API Explorer.
 
 ## activateGlipWebhookNew
 

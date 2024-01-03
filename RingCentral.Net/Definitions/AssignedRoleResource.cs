@@ -3,6 +3,12 @@ namespace RingCentral
     public class AssignedRoleResource
     {
         /// <summary>
+        ///     Link to an assigned role resource
+        ///     Format: uri
+        /// </summary>
+        public string uri { get; set; }
+
+        /// <summary>
         ///     Internal identifier of a role
         /// </summary>
         public string id { get; set; }

@@ -6,7 +6,7 @@ namespace RingCentral
     public class ListExtensionPhoneNumbersParameters
     {
         /// <summary>
-        ///     Status of a phone number. Multiple values are supported
+        ///     Status of a phone number
         ///     Enum: Normal, Pending, PortedIn, Temporary
         /// </summary>
         public string status { get; set; }

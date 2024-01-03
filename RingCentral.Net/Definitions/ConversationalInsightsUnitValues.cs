@@ -29,6 +29,7 @@ namespace RingCentral
         public decimal? end { get; set; }
 
         /// <summary>
+        ///     Paragraph index of the long summary.
         ///     Example: 0
         /// </summary>
         public string groupId { get; set; }

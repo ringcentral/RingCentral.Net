@@ -6,15 +6,14 @@ namespace RingCentral
     public class RecipientInfo
     {
         /// <summary>
-        ///     Link to a recipient extension resource
+        ///     Link to a voicemail recipient extension resource
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     Internal identifier of a recipient extension
-        ///     Format: int64
+        ///     Internal identifier of a voicemail recipient
         /// </summary>
-        public long? id { get; set; }
+        public string id { get; set; }
     }
 }

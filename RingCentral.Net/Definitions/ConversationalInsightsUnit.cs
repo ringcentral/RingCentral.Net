@@ -5,8 +5,8 @@ namespace RingCentral
         /// <summary>
         ///     Required
         ///     Example: KeyPhrases
-        ///     Enum: ExtractiveSummary, AbstractiveSummaryLong, AbstractiveSummaryShort, KeyPhrases, Tasks, Titles,
-        ///     QuestionsAsked, OverallSentiment, Topics
+        ///     Enum: ExtractiveSummary, AbstractiveSummaryLong, AbstractiveSummaryShort, KeyPhrases, QuestionsAsked,
+        ///     OverallSentiment, Topics
         /// </summary>
         public string name { get; set; }
 

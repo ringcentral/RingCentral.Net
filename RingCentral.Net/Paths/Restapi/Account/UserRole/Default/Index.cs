@@ -26,9 +26,9 @@ namespace RingCentral.Paths.Restapi.Account.UserRole.Default
         ///     App Permission: RoleManagement
         ///     User Permission: Roles
         /// </summary>
-        public async Task<string> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<DefaultUserRole> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<string>(Path(), null, restRequestConfig);
+            return await rc.Get<DefaultUserRole>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -39,10 +39,10 @@ namespace RingCentral.Paths.Restapi.Account.UserRole.Default
         ///     App Permission: RoleManagement
         ///     User Permission: Roles
         /// </summary>
-        public async Task<string> Put(DefaultUserRoleRequest defaultUserRoleRequest,
+        public async Task<DefaultUserRole> Put(DefaultUserRoleRequest defaultUserRoleRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<string>(Path(), defaultUserRoleRequest, null, restRequestConfig);
+            return await rc.Put<DefaultUserRole>(Path(), defaultUserRoleRequest, null, restRequestConfig);
         }
     }
 }

@@ -34,6 +34,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public UBrandInfo uBrand { get; set; }
+        public UBrandInfo ubrand { get; set; }
     }
 }
