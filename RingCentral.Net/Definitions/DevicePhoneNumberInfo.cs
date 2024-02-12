@@ -34,7 +34,7 @@ namespace RingCentral
         public string usageType { get; set; }
 
         /// <summary>
-        ///     Type of a phone number
+        ///     Type of phone number
         ///     Enum: VoiceFax, FaxOnly, VoiceOnly
         /// </summary>
         public string type { get; set; }

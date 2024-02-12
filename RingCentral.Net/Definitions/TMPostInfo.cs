@@ -13,7 +13,7 @@ namespace RingCentral
         public string groupId { get; set; }
 
         /// <summary>
-        ///     Type of a post
+        ///     Type of post
         ///     Enum: TextMessage, PersonJoined, PersonsAdded
         /// </summary>
         public string type { get; set; }

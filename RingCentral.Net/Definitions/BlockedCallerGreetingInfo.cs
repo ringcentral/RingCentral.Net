@@ -3,7 +3,7 @@ namespace RingCentral
     public class BlockedCallerGreetingInfo
     {
         /// <summary>
-        ///     Type of a greeting
+        ///     Type of greeting
         /// </summary>
         public string type { get; set; }
 

@@ -26,14 +26,14 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
-        ///     Task creation datetime
+        ///     Task creation date/time
         ///     Required
         ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Task latest update datetime
+        ///     Task latest update date/time
         ///     Required
         ///     Format: date-time
         /// </summary>

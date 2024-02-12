@@ -33,7 +33,7 @@ namespace RingCentral
         public string partyId { get; set; }
 
         /// <summary>
-        ///     The type of a call transport. 'PSTN' indicates that a call leg was initiated
+        ///     The type of call transport. 'PSTN' indicates that a call leg was initiated
         ///     from the PSTN network provider; 'VoIP' - from an RC phone.
         ///     Required
         ///     Enum: PSTN, VoIP
@@ -49,7 +49,7 @@ namespace RingCentral
         public CallLogToParty to { get; set; }
 
         /// <summary>
-        ///     The type of a call
+        ///     The type of call
         ///     Required
         ///     Enum: Voice, Fax
         /// </summary>
@@ -69,6 +69,12 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallLogDelegateInfo @delegate { get; set; }
+
+        /// <summary>
+        ///     Call delegation type
+        ///     Enum: Coworker, Unknown
+        /// </summary>
+        public string delegationType { get; set; }
 
         /// <summary>
         ///     The internal action corresponding to the call operation

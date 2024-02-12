@@ -22,7 +22,7 @@ namespace RingCentral
         public long? slaThresholdSeconds { get; set; }
 
         /// <summary>
-        ///     If 'True' abandoned calls (hanged up prior to being served)
+        ///     If `true` abandoned calls (hanged up prior to being served)
         ///     are included into service level calculation
         /// </summary>
         public bool? includeAbandonedCalls { get; set; }

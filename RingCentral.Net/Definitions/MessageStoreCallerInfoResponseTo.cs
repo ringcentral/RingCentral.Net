@@ -23,7 +23,7 @@ namespace RingCentral
         public string location { get; set; }
 
         /// <summary>
-        ///     The 'True' value specifies that message is sent exactly to this recipient.
+        ///     The `true` value specifies that message is sent exactly to this recipient.
         ///     Returned in the `to` field for group MMS. Useful if one extension has several
         ///     phone numbers'
         /// </summary>

@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CreateUserEmergencyLocationRequestAddress
+    public class CommonEmergencyLocationAddressInfo
     {
         /// <summary>
         ///     Country name
@@ -48,7 +48,7 @@ namespace RingCentral
         public string city { get; set; }
 
         /// <summary>
-        ///     The name of the street (The field is utilised as 'streetName' field for FR addresses)
+        ///     The name of the street (The field is utilized as 'streetName' field for FR addresses)
         /// </summary>
         public string street { get; set; }
 

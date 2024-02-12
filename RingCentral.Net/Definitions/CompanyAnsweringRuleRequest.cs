@@ -9,7 +9,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Specifies if the rule is active or inactive. The default value is 'True'
+        ///     Specifies if the rule is active or inactive. The default value is `true`
         ///     Default: true
         /// </summary>
         public bool? enabled { get; set; }

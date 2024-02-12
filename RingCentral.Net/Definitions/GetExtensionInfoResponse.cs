@@ -24,6 +24,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public CostCenterInfo costCenter { get; set; }
+
+        /// <summary>
+        /// </summary>
         public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>
@@ -55,7 +59,7 @@ namespace RingCentral
         ///     created by partner. The RingCentral supports mapping of accounts and
         ///     stores the corresponding account ID/extension ID for each partner ID of
         ///     a client application. In request URIs partner IDs are accepted instead
-        ///     of regular RingCentral native IDs as path parameters using pid = XXX clause.
+        ///     of regular RingCentral native IDs as path parameters using `pid=XXX` clause.
         ///     Though in response URIs contain the corresponding account IDs and extension
         ///     IDs. In all request and response bodies these values are reflected via
         ///     partnerId attributes of account and extension
@@ -99,7 +103,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension current state. If 'Unassigned' is specified, then
-        ///     extensions without ‘extensionNumber’ are returned. If not specified,
+        ///     extensions without `extensionNumber` are returned. If not specified,
         ///     then all extensions are returned
         ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
@@ -120,8 +124,8 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Extension sub-type, if applicable. For any unsupported sub-types the
-        ///     'Unknown' value will be returned"
+        ///     Extension subtype, if applicable. For any unsupported subtypes the
+        ///     `Unknown` value will be returned
         ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
         /// </summary>
         public string subType { get; set; }

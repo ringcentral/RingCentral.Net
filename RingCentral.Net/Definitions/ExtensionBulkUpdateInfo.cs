@@ -70,6 +70,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public CostCenterInfo costCenter { get; set; }
+
+        /// <summary>
+        /// </summary>
         public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>

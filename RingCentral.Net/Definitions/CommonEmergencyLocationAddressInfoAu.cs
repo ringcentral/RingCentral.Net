@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EmergencyLocationAddressInfoAu
+    public class CommonEmergencyLocationAddressInfoAu
     {
         /// <summary>
         ///     Country name
@@ -48,7 +48,7 @@ namespace RingCentral
         public string city { get; set; }
 
         /// <summary>
-        ///     The name of the street (The field is utilised as 'streetName' field for Au addresses)
+        ///     The name of the street (the field is utilized as 'streetName' field for AU addresses)
         /// </summary>
         public string street { get; set; }
 
@@ -73,8 +73,7 @@ namespace RingCentral
         public string buildingNumber { get; set; }
 
         /// <summary>
-        ///     Second line address (apartment, suite, unit, building, floor,
-        ///     etc.)
+        ///     Second line address (apartment, suite, unit, building, floor, etc.)
         /// </summary>
         public string street2 { get; set; }
 

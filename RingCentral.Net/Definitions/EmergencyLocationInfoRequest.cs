@@ -9,7 +9,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public EmergencyLocationInfoRequestAddress address { get; set; }
+        public CommonEmergencyLocationAddressInfo address { get; set; }
 
         /// <summary>
         ///     Emergency response location name
@@ -33,7 +33,7 @@ namespace RingCentral
         public string usageStatus { get; set; }
 
         /// <summary>
-        ///     Address format id
+        ///     Address format ID
         /// </summary>
         public string addressFormatId { get; set; }
 

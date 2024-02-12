@@ -43,11 +43,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         ///     App Permission: EditAccounts
         ///     User Permission: EmergencyFramework
         /// </summary>
-        public async Task<EmergencyLocationResource> Post(
+        public async Task<CommonEmergencyLocationResource> Post(
             CreateUserEmergencyLocationRequest createUserEmergencyLocationRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<EmergencyLocationResource>(Path(false), createUserEmergencyLocationRequest, null,
+            return await rc.Post<CommonEmergencyLocationResource>(Path(false), createUserEmergencyLocationRequest, null,
                 restRequestConfig);
         }
 
@@ -58,10 +58,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<EmergencyLocationResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<CommonEmergencyLocationResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Get<EmergencyLocationResource>(Path(), null, restRequestConfig);
+            return await rc.Get<CommonEmergencyLocationResource>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
@@ -72,11 +72,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         ///     App Permission: EditAccounts
         ///     User Permission: EmergencyFramework
         /// </summary>
-        public async Task<EmergencyLocationResource> Put(EmergencyLocationResource emergencyLocationResource,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CommonEmergencyLocationResource> Put(
+            EmergencyLocationInfoRequest emergencyLocationInfoRequest, RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Put<EmergencyLocationResource>(Path(), emergencyLocationResource, null, restRequestConfig);
+            return await rc.Put<CommonEmergencyLocationResource>(Path(), emergencyLocationInfoRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>

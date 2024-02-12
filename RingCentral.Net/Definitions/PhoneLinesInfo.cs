@@ -8,7 +8,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     The type of a phone line
+        ///     The type of phone line
         ///     Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary
         /// </summary>
         public string lineType { get; set; }

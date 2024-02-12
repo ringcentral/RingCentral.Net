@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class EmergencyLocationAddressInfoDefault
+    public class CommonEmergencyLocationAddressInfoDefault
     {
         /// <summary>
         ///     Country name

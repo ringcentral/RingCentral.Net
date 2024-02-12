@@ -54,7 +54,7 @@ namespace RingCentral
         public ContactBusinessAddressInfo businessAddress { get; set; }
 
         /// <summary>
-        ///     If 'True' then contact email is enabled as login name for this
+        ///     If `true` then contact email is enabled as login name for this
         ///     user. Please note that email should be unique in this case.
         /// </summary>
         public bool? emailAsLoginName { get; set; }

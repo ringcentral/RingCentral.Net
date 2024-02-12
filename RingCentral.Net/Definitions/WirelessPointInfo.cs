@@ -30,13 +30,9 @@ namespace RingCentral
         public EmergencyAddressAutoUpdateSiteInfo site { get; set; }
 
         /// <summary>
-        ///     Emergency address information (or information assigned to the
-        ///     switch or wireless point - in case of using them). Only one of a pair
-        ///     `emergencyAddress` or `emergencyLocationId` should be specified,
-        ///     otherwise an error is returned
         ///     Required
         /// </summary>
-        public WirelessPointInfoEmergencyAddress emergencyAddress { get; set; }
+        public EmergencyAddressInfo emergencyAddress { get; set; }
 
         /// <summary>
         /// </summary>

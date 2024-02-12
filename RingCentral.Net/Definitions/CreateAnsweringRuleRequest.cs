@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Specifies if the rule is active or inactive. The default value
-        ///     is 'True'
+        ///     is `true`
         /// </summary>
         public bool? enabled { get; set; }
 

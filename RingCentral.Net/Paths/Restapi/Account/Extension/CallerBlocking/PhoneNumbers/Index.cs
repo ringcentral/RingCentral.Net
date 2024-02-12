@@ -52,7 +52,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        ///     Returns blocked or allowed phone number(s) by their ID(s). Batch request is supported.
+        ///     Returns blocked or allowed phone number(s) by their ID(s).
+        ///     [Batch request syntax](https://developers.ringcentral.com/api-reference/Batch-Requests) is supported.
         ///     HTTP Method: get
         ///     Endpoint:
         ///     /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
@@ -68,7 +69,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         }
 
         /// <summary>
-        ///     Updates blocked or allowed phone number(s) by their ID(s). Batch request is supported.
+        ///     Updates blocked or allowed phone number(s) by their ID(s).
+        ///     [Batch request syntax](https://developers.ringcentral.com/api-reference/Batch-Requests) is supported.
         ///     HTTP Method: put
         ///     Endpoint:
         ///     /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}

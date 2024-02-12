@@ -14,7 +14,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Type of a company greeting
+        ///     Type of company greeting
         ///     Enum: Company, StartRecording, StopRecording, AutomaticRecording, TemplateGreeting
         /// </summary>
         public string type { get; set; }

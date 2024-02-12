@@ -20,20 +20,20 @@ namespace RingCentral
         public SenderInfo from { get; set; }
 
         /// <summary>
-        ///     Type of a message
+        ///     Type of message
         ///     Enum: Voicemail
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     Message creation date/time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
         ///     format including timezone, for example *2019-03-10T18:07:52.534Z*
         ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Datetime when a message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     Date/time when a message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
         ///     format including timezone, for example *2019-03-10T18:07:52.534Z*
         ///     Format: date-time
         /// </summary>

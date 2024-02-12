@@ -95,6 +95,8 @@ namespace RingCentral.Paths.Restapi.Subscription
         ///     If parameters other than `events` and `expiresIn` are specified in the request they will be ignored.
         ///     If the request body is empty then the specified subscription will be renewed without any
         ///     event filter modifications and using the default expiration time.
+        ///     If the request is sent with empty body, it just renews a subscription
+        ///     (so it is an equivalent of the `POST /restapi/v1.0/subscription/{subscriptionId}/renew`).
         ///     Please note that `WebSocket` subscriptions cannot be updated via HTTP interface.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}

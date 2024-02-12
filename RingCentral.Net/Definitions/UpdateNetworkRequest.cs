@@ -26,9 +26,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public PrivateIpRangeInfoRequest[] privateIpRanges { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public ERLLocationInfo emergencyLocation { get; set; }
     }
 }

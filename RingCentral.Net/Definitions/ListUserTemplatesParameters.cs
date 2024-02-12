@@ -6,7 +6,7 @@ namespace RingCentral
     public class ListUserTemplatesParameters
     {
         /// <summary>
-        ///     Type of a template
+        ///     Type of template
         ///     Enum: UserSettings, CallHandling
         /// </summary>
         public string type { get; set; }

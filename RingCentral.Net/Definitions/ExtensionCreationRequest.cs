@@ -12,23 +12,20 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Cost center information. Applicable if Cost Center feature is enabled. The default is root cost center value
         /// </summary>
-        public ExtensionCreationRequestCostCenter costCenter { get; set; }
+        public CostCenterInfo costCenter { get; set; }
 
         /// <summary>
         /// </summary>
         public CustomFieldInfo[] customFields { get; set; }
 
         /// <summary>
-        ///     Password for extension. If not specified, the password
-        ///     is auto-generated
+        ///     Password for extension. If not specified, the password is auto-generated
         /// </summary>
         public string password { get; set; }
 
         /// <summary>
-        ///     List of non-RC internal identifiers assigned to an
-        ///     extension
+        ///     List of non-RC internal identifiers assigned to an extension
         /// </summary>
         public ReferenceInfo[] references { get; set; }
 
@@ -81,8 +78,8 @@ namespace RingCentral
         /// <summary>
         ///     Hides extension from showing in company directory. Supported
         ///     for extensions of 'User' type only. For unassigned extensions the value
-        ///     is set to 'True' by default. For assigned extensions the value is set
-        ///     to 'False' by default
+        ///     is set to `true` by default. For assigned extensions the value is set
+        ///     to `false` by default
         /// </summary>
         public bool? hidden { get; set; }
     }

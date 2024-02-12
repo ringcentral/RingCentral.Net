@@ -17,12 +17,12 @@ namespace RingCentral
         public string appExternalId { get; set; }
 
         /// <summary>
-        ///     Computer name (for SoftPhone only).
+        ///     Computer name (for devices of `SoftPhone` type only)
         /// </summary>
         public string computerName { get; set; }
 
         /// <summary>
-        ///     Endpoint/device instance identifier for Softphone and mobile applications.
+        ///     Endpoint/device instance identifier for Softphone and mobile applications
         /// </summary>
         public string serial { get; set; }
     }

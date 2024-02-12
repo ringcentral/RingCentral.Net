@@ -40,7 +40,7 @@ namespace RingCentral
         public ConversationInfo conversation { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in ISO 8601 format including timezone,
+        ///     Message creation date/time in ISO 8601 format including timezone,
         ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
@@ -59,7 +59,7 @@ namespace RingCentral
         public MessageStoreCallerInfoResponseFrom from { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified on server in ISO
+        ///     Date/time when the message was modified on server in ISO
         ///     8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
@@ -77,7 +77,7 @@ namespace RingCentral
         public string messageStatus { get; set; }
 
         /// <summary>
-        ///     Pager only. 'True' if at least one of a message recipients
+        ///     Pager only. `true` if at least one of a message recipients
         ///     is 'Department' extension
         /// </summary>
         public bool? pgToDepartment { get; set; }

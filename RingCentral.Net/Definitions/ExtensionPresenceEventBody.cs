@@ -39,17 +39,17 @@ namespace RingCentral
         public string dndStatus { get; set; }
 
         /// <summary>
-        ///     If 'True' enables other extensions to see the extension presence status
+        ///     If `true` enables other extensions to see the extension presence status
         /// </summary>
         public bool? allowSeeMyPresence { get; set; }
 
         /// <summary>
-        ///     If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
+        ///     If `true` enables to ring extension phone, if any user monitored by this extension is ringing
         /// </summary>
         public bool? ringOnMonitoredCall { get; set; }
 
         /// <summary>
-        ///     If 'True' enables the extension user to pick up a monitored line on hold
+        ///     If `true` enables the extension user to pick up a monitored line on hold
         /// </summary>
         public bool? pickUpCallsOnHold { get; set; }
 

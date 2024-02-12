@@ -29,5 +29,9 @@ namespace RingCentral
         ///     be specified, otherwise the error is returned
         /// </summary>
         public string emergencyLocationId { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public ERLLocationInfo emergencyLocation { get; set; }
     }
 }

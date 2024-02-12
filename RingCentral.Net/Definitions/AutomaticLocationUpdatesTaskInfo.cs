@@ -26,7 +26,7 @@ namespace RingCentral
         public string lastModifiedTime { get; set; }
 
         /// <summary>
-        ///     Type of a task
+        ///     Type of task
         ///     Enum: WirelessPointsBulkCreate, WirelessPointsBulkUpdate, SwitchesBulkCreate, SwitchesBulkUpdate
         /// </summary>
         public string type { get; set; }

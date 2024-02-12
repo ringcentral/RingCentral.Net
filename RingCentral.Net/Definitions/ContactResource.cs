@@ -109,7 +109,9 @@ namespace RingCentral
         public ExternalIntegrationResource integration { get; set; }
 
         /// <summary>
-        ///     Example: 3
+        ///     Extension subtype
+        ///     Example: Unknown
+        ///     Enum: Unknown, VideoPro, VideoProPlus, DigitalSignage, Emergency
         /// </summary>
         public string subType { get; set; }
     }

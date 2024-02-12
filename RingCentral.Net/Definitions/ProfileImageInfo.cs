@@ -7,7 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Link to a profile image. If an image is not uploaded for an
-        ///     extension, only uri is returned
+        ///     extension, only `uri` is returned
         ///     Required
         ///     Format: uri
         /// </summary>
@@ -19,14 +19,14 @@ namespace RingCentral
         public string etag { get; set; }
 
         /// <summary>
-        ///     Datetime when an image was last updated, ISO 8601 format,
+        ///     Date/time when an image was last updated, in ISO 8601 format,
         ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string lastModified { get; set; }
 
         /// <summary>
-        ///     The type of an image
+        ///     The type of image
         /// </summary>
         public string contentType { get; set; }
 

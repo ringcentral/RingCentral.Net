@@ -12,7 +12,7 @@ namespace RingCentral
         public ForwardingInfoCreateRuleRequest forwarding { get; set; }
 
         /// <summary>
-        ///     Specifies if the rule is active or inactive. The default value is 'True'
+        ///     Specifies if the rule is active or inactive. The default value is `true`
         /// </summary>
         public bool? enabled { get; set; }
 

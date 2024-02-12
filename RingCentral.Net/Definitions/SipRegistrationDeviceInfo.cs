@@ -20,10 +20,10 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Device identification number (stock keeping unit) in the format
-        ///     TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all
-        ///     other devices including softphone); ID - device model ID; AT -addon type
-        ///     ID; AC - addon count (if any). For example 'HP-56-2-2'
+        ///     Device identification number (SKU, Stock Keeping Unit) in the format
+        ///     TP-ID [-AT-AC], where TP is device type (HP for RC desk phones, DV for all
+        ///     other devices including soft phones); ID - device model ID; AT - add-on type
+        ///     ID; AC - add-on count (if any). For example 'HP-56-2-2'
         /// </summary>
         public string sku { get; set; }
 
@@ -34,7 +34,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Device name. Mandatory if ordering  SoftPhone or OtherPhone.
-        ///     Optional for  HardPhone. If not specified for HardPhone, then device  model  name
+        ///     Optional for HardPhone. If not specified for HardPhone, then device  model  name
         ///     is used as device  name
         /// </summary>
         public string name { get; set; }
@@ -46,7 +46,7 @@ namespace RingCentral
         public string serial { get; set; }
 
         /// <summary>
-        ///     Computer name for Softphone devices
+        ///     Computer name (for devices of `SoftPhone` type only)
         /// </summary>
         public string computerName { get; set; }
 
@@ -90,17 +90,18 @@ namespace RingCentral
         public bool? useAsCommonPhone { get; set; }
 
         /// <summary>
-        ///     Pooling type of a deviceHost - device with standalone paid
-        ///     phone line which can be linked to Glip/Softphone instanceGuest - device
-        ///     with a linked phone lineNone - device without a phone line or with specific
-        ///     line (free, BLA, etc.) = ['Host', 'Guest', 'None']
+        ///     Pooling type of device:
+        ///     - `Host` - device with standalone paid
+        ///     phone line which can be linked to soft phone client instance
+        ///     - `Guest` - device with a linked phone line
+        ///     - `None` - device without a phone line or with specific line (free, BLA, etc.)
         ///     Enum: Host, Guest, None
         /// </summary>
         public string linePooling { get; set; }
 
         /// <summary>
-        ///     Network location status. 'True' if the device is located in
-        ///     the configured corporate network (On-Net); 'False' for Off-Net location.
+        ///     Network location status. `true` if the device is located in
+        ///     the configured corporate network (On-Net); `false` for Off-Net location.
         ///     Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not
         ///     enabled for the account/user, or if device network location is not determined
         /// </summary>

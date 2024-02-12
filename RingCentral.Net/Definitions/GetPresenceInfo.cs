@@ -9,12 +9,12 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     If set to 'True' - enables other extensions to see the extension presence status
+        ///     If set to `true` - enables other extensions to see the extension presence status
         /// </summary>
         public bool? allowSeeMyPresence { get; set; }
 
         /// <summary>
-        ///     Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to 'True',
+        ///     Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to `true`,
         ///     the following visibility options are supported via this parameter - All, None, PermittedUsers
         ///     Enum: All, None, PermittedUsers
         /// </summary>
@@ -43,7 +43,7 @@ namespace RingCentral
         public string message { get; set; }
 
         /// <summary>
-        ///     If 'True' enables the extension user to pick up a monitored line on hold
+        ///     If `true` enables the extension user to pick up a monitored line on hold
         /// </summary>
         public bool? pickUpCallsOnHold { get; set; }
 
@@ -54,7 +54,7 @@ namespace RingCentral
         public string presenceStatus { get; set; }
 
         /// <summary>
-        ///     If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
+        ///     If `true` enables to ring extension phone, if any user monitored by this extension is ringing
         /// </summary>
         public bool? ringOnMonitoredCall { get; set; }
 

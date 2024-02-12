@@ -23,12 +23,11 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Devices
         }
 
         /// <summary>
-        ///     Disassociates phone line (DL & Device) from an extension.
-        ///     - if value ```keepAssetsInInventory == true```,
+        ///     Disassociates a phone line (DL & Device) from an extension:
+        ///     - if the value of `keepAssetsInInventory` is `true`,
         ///     the given device is moved to unassigned devices and the number is moved to the number inventory;
-        ///     - if value ```keepAssetsInInventory == false```, the given device and number is removed from the account;
-        ///     - if the parameter keepAssetsInInventory is not set (empty body),
-        ///     default value ```keepAssetsInInventory == true``` is used.
+        ///     - if the value of `keepAssetsInInventory` is `false`, the given device and number is removed from the account;
+        ///     - if the parameter `keepAssetsInInventory` is not set (empty body), default value `true` is set.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/v2/accounts/{accountId}/devices/{deviceId}
         ///     Rate Limit Group: Medium

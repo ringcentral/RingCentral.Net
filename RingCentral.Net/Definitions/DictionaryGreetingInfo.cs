@@ -19,7 +19,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Usage type of a greeting, specifying if the greeting is applied for user extension or department (call queue)
+        ///     Usage type of greeting, specifying if the greeting is applied for user extension or department (call queue)
         ///     extension.
         ///     Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, BlockedCalls,
         ///     CallRecording, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, LimitedExtensionAnsweringRule,
@@ -39,7 +39,7 @@ namespace RingCentral
         public string contentUri { get; set; }
 
         /// <summary>
-        ///     Type of a greeting, specifying the case when the greeting is played.
+        ///     Type of greeting, specifying the case when the greeting is played.
         ///     Enum: Introductory, Announcement, AutomaticRecording, BlockedCallersAll, BlockedCallersSpecific, BlockedNoCallerId,
         ///     BlockedPayPhones, ConnectingMessage, ConnectingAudio, StartRecording, StopRecording, Voicemail, Unavailable,
         ///     InterruptPrompt, HoldMusic, Company

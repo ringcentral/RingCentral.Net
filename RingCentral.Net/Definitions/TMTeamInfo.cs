@@ -8,7 +8,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Type of a chat
+        ///     Type of chat
         ///     Enum: Team
         /// </summary>
         public string type { get; set; }

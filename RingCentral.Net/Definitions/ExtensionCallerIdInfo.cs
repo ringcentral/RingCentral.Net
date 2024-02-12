@@ -17,13 +17,13 @@ namespace RingCentral
         public CallerIdByFeature[] byFeature { get; set; }
 
         /// <summary>
-        ///     If 'True', then user first name and last name will be used
+        ///     If `true`, then user first name and last name will be used
         ///     as caller ID when making outbound calls from extension
         /// </summary>
         public bool? extensionNameForOutboundCalls { get; set; }
 
         /// <summary>
-        ///     If 'True', then extension number will be used as caller ID
+        ///     If `true`, then extension number will be used as caller ID
         ///     when making internal calls
         /// </summary>
         public bool? extensionNumberForInternalCalls { get; set; }

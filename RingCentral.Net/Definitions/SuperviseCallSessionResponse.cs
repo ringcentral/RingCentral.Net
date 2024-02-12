@@ -43,7 +43,7 @@ namespace RingCentral
         public OwnerInfo owner { get; set; }
 
         /// <summary>
-        ///     If 'True' then the party is not connected to a session voice conference, 'False' means the party is connected to
+        ///     If `true` then the party is not connected to a session voice conference, `false` means the party is connected to
         ///     other parties in a session
         /// </summary>
         public bool? standAlone { get; set; }

@@ -18,7 +18,7 @@ namespace RingCentral
         public string siteCompatible { get; set; }
 
         /// <summary>
-        ///     Specifies if the permission is editable on UI (if set to 'True') or not (if set to 'False')
+        ///     Specifies if the permission is editable on UI (if set to `true`) or not (if set to `false`)
         /// </summary>
         public bool? readOnly { get; set; }
 

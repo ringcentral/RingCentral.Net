@@ -1,11 +1,6 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Emergency address information (or information assigned to the switch or
-    ///     wireless point - in case of using them). Only one of a pair `emergencyAddress`
-    ///     or `emergencyLocationId` should be specified, otherwise an error is returned
-    /// </summary>
-    public class LocationUpdatesEmergencyAddressInfoFr
+    public class CommonEmergencyLocationAddressInfoFr
     {
         /// <summary>
         ///     Country name
@@ -26,11 +21,6 @@ namespace RingCentral
         ///     Full name of a country
         /// </summary>
         public string countryName { get; set; }
-
-        /// <summary>
-        ///     Customer name
-        /// </summary>
-        public string customerName { get; set; }
 
         /// <summary>
         ///     State/Province name. Mandatory for the USA, the UK and Canada
@@ -58,19 +48,14 @@ namespace RingCentral
         public string city { get; set; }
 
         /// <summary>
-        ///     First line address
+        ///     The name of the street (The field is utilized as 'streetName' field for FR addresses)
         /// </summary>
         public string street { get; set; }
 
         /// <summary>
-        ///     Second line address (apartment, suite, unit, building, floor, etc.)
+        ///     Company name
         /// </summary>
-        public string street2 { get; set; }
-
-        /// <summary>
-        ///     Postal (Zip) code
-        /// </summary>
-        public string zip { get; set; }
+        public string companyName { get; set; }
 
         /// <summary>
         ///     (Optional) Building name
@@ -81,5 +66,21 @@ namespace RingCentral
         ///     Building/street number
         /// </summary>
         public string buildingNumber { get; set; }
+
+        /// <summary>
+        ///     Second line address (apartment, suite, unit, building, floor,
+        ///     etc.)
+        /// </summary>
+        public string street2 { get; set; }
+
+        /// <summary>
+        ///     Postal (Zip) code
+        /// </summary>
+        public string zip { get; set; }
+
+        /// <summary>
+        ///     Customer name
+        /// </summary>
+        public string customerName { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace RingCentral
     public class ListStatesParameters
     {
         /// <summary>
-        ///     If set to 'True' then states of all countries are returned and
+        ///     If set to `true` then states of all countries are returned and
         ///     `countryId` is ignored, even if specified. If the value is empty
         ///     then the parameter is ignored
         /// </summary>
@@ -34,7 +34,7 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        ///     If 'True' the list of states with phone numbers available for
+        ///     If `true` the list of states with phone numbers available for
         ///     buying is returned
         /// </summary>
         public bool? withPhoneNumbers { get; set; }

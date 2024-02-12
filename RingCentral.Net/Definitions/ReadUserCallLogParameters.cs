@@ -45,7 +45,7 @@ namespace RingCentral
         public string[] type { get; set; }
 
         /// <summary>
-        ///     The type of call transport. Multiple values are supported. By default this filter is disabled
+        ///     The type of call transport. Multiple values are supported. By default, this filter is disabled
         ///     Enum: PSTN, VoIP
         /// </summary>
         public string[] transport { get; set; }

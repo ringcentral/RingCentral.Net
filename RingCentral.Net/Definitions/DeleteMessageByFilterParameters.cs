@@ -11,7 +11,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Messages received earlier then the date specified will be deleted.
-        ///     The default value is current datetime
+        ///     The default value is current date/time
         ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }

@@ -3,6 +3,11 @@ namespace RingCentral
     public class RolesBusinessSiteResource
     {
         /// <summary>
+        ///     Link to a business site resource
+        /// </summary>
+        public string uri { get; set; }
+
+        /// <summary>
         ///     Required
         /// </summary>
         public string id { get; set; }

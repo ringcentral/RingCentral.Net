@@ -24,12 +24,12 @@ namespace RingCentral
         public ScimEmail[] emails { get; set; }
 
         /// <summary>
-        ///     External unique resource id defined by provisioning client
+        ///     External unique resource ID defined by provisioning client
         /// </summary>
         public string externalId { get; set; }
 
         /// <summary>
-        ///     Unique resource id defined by RingCentral
+        ///     Unique resource ID defined by RingCentral
         /// </summary>
         public string id { get; set; }
 

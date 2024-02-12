@@ -22,7 +22,8 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
         }
 
         /// <summary>
-        ///     Revokes previously issued access and refresh token.
+        ///     Revokes all active access/refresh tokens and invalidates the OAuth session basing on token provided.
+        ///     `token` parameter may be passed in query string or body and may represent access or refresh token.
         ///     Depending on client application type
         ///     requests to this endpoint may require authentication with HTTP Basic scheme
         ///     using registered client ID and client secret as login and password, correspondingly.
@@ -30,12 +31,12 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
         ///     Endpoint: /restapi/oauth/revoke
         ///     Rate Limit Group: Auth
         /// </summary>
-        public async Task<string> Post(RevokeTokenRequest revokeTokenRequest,
+        public async Task<string> Post(RevokeTokenRequest revokeTokenRequest, RevokeTokenParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             var dict = new Dictionary<string, string>();
             Utils.GetPairs(revokeTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-            return await rc.Post<string>(Path(), new FormUrlEncodedContent(dict), null, restRequestConfig);
+            return await rc.Post<string>(Path(), new FormUrlEncodedContent(dict), queryParams, restRequestConfig);
         }
     }
 }

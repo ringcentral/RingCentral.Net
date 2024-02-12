@@ -33,7 +33,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
-        ///     if `syncEmergencyAddress` parameter is set to 'True'
+        ///     if `syncEmergencyAddress` parameter is set to `true`
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }

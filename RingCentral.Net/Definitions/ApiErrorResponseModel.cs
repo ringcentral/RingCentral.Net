@@ -6,7 +6,7 @@ namespace RingCentral
     public class ApiErrorResponseModel
     {
         /// <summary>
-        ///     The array of errors (there will be just one in the most of cases)
+        ///     The array of errors (there will be just one in the most of the cases)
         ///     Required
         /// </summary>
         public ApiError[] errors { get; set; }

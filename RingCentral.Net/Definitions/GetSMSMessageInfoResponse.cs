@@ -40,7 +40,7 @@ namespace RingCentral
         public ConversationInfo conversation { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in ISO 8601 format including timezone,
+        ///     Message creation date/time in ISO 8601 format including timezone,
         ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
@@ -64,7 +64,7 @@ namespace RingCentral
         public MessageStoreCallerInfoResponseFrom from { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified on server in ISO
+        ///     Date/time when the message was modified on server in ISO
         ///     8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
@@ -94,7 +94,7 @@ namespace RingCentral
         public string readStatus { get; set; }
 
         /// <summary>
-        ///     SMS only. The datetime when outbound SMS was delivered to
+        ///     SMS only. The date/time when outbound SMS was delivered to
         ///     recipient's handset in ISO 8601 format including timezone,
         ///     for example 2016-03-10T18:07:52.534Z. It is filled only if
         ///     the carrier sends a delivery receipt to RingCentral

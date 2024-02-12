@@ -8,12 +8,12 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Address format id
+        ///     Address format ID
         /// </summary>
         public string addressFormatId { get; set; }
 
         /// <summary>
         /// </summary>
-        public CreateUserEmergencyLocationRequestAddress address { get; set; }
+        public CommonEmergencyLocationAddressInfo address { get; set; }
     }
 }

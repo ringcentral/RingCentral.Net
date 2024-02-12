@@ -11,9 +11,9 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number. Currently we support the following three enum values: 'Inventory',
-        ///     'InventoryPartnerBusinessMobileNumber' and 'PartnerBusinessMobileNumber'.
-        ///     Later we may support other values like 'ForwardedNumber' etc.
+        ///     Usage type of phone number. Currently, we support the following values: `Inventory`,
+        ///     `InventoryPartnerBusinessMobileNumber`
+        ///     and `PartnerBusinessMobileNumber`. Later we may support some other values like `ForwardedNumber`, etc.
         ///     Required
         ///     Default: Inventory
         ///     Enum: Inventory, InventoryPartnerBusinessMobileNumber, PartnerBusinessMobileNumber

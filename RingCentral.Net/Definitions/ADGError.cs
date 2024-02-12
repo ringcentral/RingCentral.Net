@@ -18,8 +18,8 @@ namespace RingCentral
         ///     description='Parameter [${paramName}] is invalid. ${additionalInfo:-}'}, ErrorCode{code='ADG-115', httpStatus=415,
         ///     description='Unsupported Media Type.'}, ErrorCode{code='ADG-105', httpStatus=404, description='Current account is
         ///     not linked to any federation.'}, ErrorCode{code='ADG-107', httpStatus=404, description='Account not found.'},
-        ///     ErrorCode{code='ADG-122', httpStatus=404, description='Contact not found.'}, ErrorCode{code=''ADG-200'',
-        ///     httpStatus=404, description=''Invalid URI''}
+        ///     ErrorCode{code='ADG-122', httpStatus=404, description='Contact not found.'}, ErrorCode{code='ADG-200',
+        ///     httpStatus=404, description='Invalid URI'}
         /// </summary>
         public string errorCode { get; set; }
 

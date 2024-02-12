@@ -4,7 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public EmergencyLocationResource[] records { get; set; }
+        public CommonEmergencyLocationResource[] records { get; set; }
 
         /// <summary>
         /// </summary>

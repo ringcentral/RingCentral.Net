@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Service Plan information (billing package, brand, etc)
+    ///     Service Plan information (billing package, brand, etc.)
     /// </summary>
     public class ServiceInfoV2
     {

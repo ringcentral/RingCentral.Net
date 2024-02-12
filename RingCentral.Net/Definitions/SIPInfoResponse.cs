@@ -14,6 +14,12 @@ namespace RingCentral
         public string password { get; set; }
 
         /// <summary>
+        ///     Supported authorization types and their priority for clients
+        ///     Enum: SipDigest, BearerToken
+        /// </summary>
+        public string[] authorizationTypes { get; set; }
+
+        /// <summary>
         ///     Identifier for SIP authorization
         /// </summary>
         public string authorizationId { get; set; }

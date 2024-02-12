@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
         }
 
         /// <summary>
-        ///     Creates and sends/resends a fax message. Resend can be implemented
+        ///     Creates and sends/re-sends a fax message. Re-send can be implemented
         ///     if sending has failed. Fax attachment size (both single and total) is
         ///     limited to 50Mb.
         ///     HTTP Method: post

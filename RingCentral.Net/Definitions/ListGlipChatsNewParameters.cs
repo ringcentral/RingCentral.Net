@@ -6,7 +6,7 @@ namespace RingCentral
     public class ListGlipChatsNewParameters
     {
         /// <summary>
-        ///     Type of chats to be fetched. By default all type of chats will be fetched
+        ///     Type of chats to be fetched. By default, all type of chats will be fetched
         ///     Enum: Personal, Direct, Group, Team, Everyone
         /// </summary>
         public string[] type { get; set; }

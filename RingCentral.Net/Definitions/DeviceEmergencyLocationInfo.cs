@@ -16,7 +16,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Address format id
+        ///     Address format ID
         /// </summary>
         public string addressFormatId { get; set; }
     }

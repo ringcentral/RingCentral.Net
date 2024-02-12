@@ -13,7 +13,7 @@ namespace RingCentral
         public long? conversationId { get; set; }
 
         /// <summary>
-        ///     The start datetime for resulting messages in ISO 8601 format
+        ///     The start date/time for resulting messages in ISO 8601 format
         ///     including timezone, for example 2016-03-10T18:07:52.534Z. The default value
         ///     is dateTo minus 24 hours
         ///     Format: date-time
@@ -21,7 +21,7 @@ namespace RingCentral
         public string dateFrom { get; set; }
 
         /// <summary>
-        ///     The end datetime for resulting messages in ISO 8601 format including
+        ///     The end date/time for resulting messages in ISO 8601 format including
         ///     timezone, for example 2016-03-10T18:07:52.534Z. The default value is current
         ///     time
         ///     Format: date-time
@@ -36,7 +36,7 @@ namespace RingCentral
         public string[] direction { get; set; }
 
         /// <summary>
-        ///     If 'True', then the latest messages per every conversation ID
+        ///     If `true`, then the latest messages per every conversation ID
         ///     are returned
         /// </summary>
         public bool? distinctConversations { get; set; }

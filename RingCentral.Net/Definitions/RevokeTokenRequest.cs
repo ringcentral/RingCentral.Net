@@ -3,7 +3,7 @@ namespace RingCentral
     public class RevokeTokenRequest
     {
         /// <summary>
-        ///     Access or refresh token to be revoked
+        ///     Access or refresh token to be revoked (along with the entire OAuth session)
         ///     Required
         /// </summary>
         public string token { get; set; }

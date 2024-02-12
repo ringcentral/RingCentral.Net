@@ -8,7 +8,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Type of a conversation
+        ///     Type of conversation
         ///     Enum: Direct, Personal, Group
         /// </summary>
         public string type { get; set; }

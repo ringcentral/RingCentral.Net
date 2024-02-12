@@ -15,7 +15,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Type of a bridge. It specifies bridge life cycle.
+        ///     Type of bridge. It specifies bridge life cycle.
         ///     1) Instant - The bridge will be used for a meeting only once immediately after creation. Then it will be deleted.
         ///     2) Scheduled - The bridge will be used for scheduled one or more meetings. If the bridge is not used for a long
         ///     time after the last meeting, then it will be deleted.

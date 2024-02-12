@@ -27,7 +27,7 @@ namespace RingCentral
         public bool? allowSeeMyPresence { get; set; }
 
         /// <summary>
-        ///     Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to 'True',
+        ///     Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to `true`,
         ///     the following visibility options are supported via this parameter - All, None, PermittedUsers
         ///     Enum: All, None, PermittedUsers
         /// </summary>

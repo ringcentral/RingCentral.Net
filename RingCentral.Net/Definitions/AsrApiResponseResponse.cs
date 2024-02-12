@@ -10,6 +10,11 @@ namespace RingCentral
         public long? speakerCount { get; set; }
 
         /// <summary>
+        ///     Speaker wise utterances. Field is set only when enableSpeakerDiarization is true.
+        /// </summary>
+        public UtteranceObject[] utterances { get; set; }
+
+        /// <summary>
         /// </summary>
         public WordSegment[] words { get; set; }
 

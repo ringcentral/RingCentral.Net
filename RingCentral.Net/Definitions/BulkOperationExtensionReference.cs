@@ -6,7 +6,7 @@ namespace RingCentral
     public class BulkOperationExtensionReference
     {
         /// <summary>
-        ///     Internal identifier of a RingCentral  extension
+        ///     Internal identifier of a RingCentral extension
         ///     Required
         ///     Example: 12345
         /// </summary>

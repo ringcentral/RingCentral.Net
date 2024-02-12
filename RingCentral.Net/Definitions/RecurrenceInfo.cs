@@ -9,7 +9,8 @@ namespace RingCentral
         public string frequency { get; set; }
 
         /// <summary>
-        ///     Recurrence interval. The supported ranges are: 1-90 for `Daily`; 1-12 for `Weekly`; 1-3 for `Monthly`
+        ///     Recurrence interval. The supported ranges are: 1-90 for `Daily`;
+        ///     1-12 for `Weekly`; 1-3 for `Monthly`
         ///     Format: int32
         /// </summary>
         public long? interval { get; set; }

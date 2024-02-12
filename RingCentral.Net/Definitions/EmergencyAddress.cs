@@ -3,12 +3,12 @@ namespace RingCentral
     public class EmergencyAddress
     {
         /// <summary>
-        ///     If set to 'True' then specifying emergency address is required
+        ///     If set to `true` then specifying emergency address is required
         /// </summary>
         public bool? required { get; set; }
 
         /// <summary>
-        ///     If set to 'True' then only local emergency address can be specified
+        ///     If set to `true` then only local emergency address can be specified
         /// </summary>
         public bool? localOnly { get; set; }
 

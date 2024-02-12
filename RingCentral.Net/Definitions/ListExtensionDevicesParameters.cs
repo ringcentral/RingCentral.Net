@@ -27,7 +27,7 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        ///     Pooling type of a device - Host - a device with standalone paid phone line which can be linked to a soft client
+        ///     Pooling type of device - Host - a device with standalone paid phone line which can be linked to a soft client
         ///     instance - Guest - a device with a linked phone line - None - a device without a phone line or with specific line
         ///     (free, BLA, etc.)
         ///     Enum: Host, Guest, None
@@ -48,7 +48,7 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     The type of a phone line
+        ///     The type of phone line
         ///     Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary
         /// </summary>
         public string lineType { get; set; }

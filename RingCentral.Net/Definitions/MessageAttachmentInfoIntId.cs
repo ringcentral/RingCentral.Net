@@ -15,7 +15,7 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     Type of a message attachment
+        ///     Type of message attachment
         ///     Enum: AudioRecording, AudioTranscription, Text, SourceDocument, RenderedDocument, MmsAttachment
         /// </summary>
         public string type { get; set; }

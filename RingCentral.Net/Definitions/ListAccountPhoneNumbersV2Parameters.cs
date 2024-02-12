@@ -41,7 +41,7 @@ namespace RingCentral
         public string[] usageType { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an
+        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise, it is an
         ///     external number not yet ported to RingCentral
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
@@ -62,9 +62,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Phone number in e.164 format to be searched for.
-        ///     Parameter value can include wildcards (e.g. ''+165012345**'')
-        ///     or be an exact number ''+16501234500'' - single number is searched in that case.
-        ///     Make sure you escape the ''+'' in the URL as ''%2B'''
+        ///     Parameter value can include wildcards (e.g. "+165012345**")
+        ///     or be an exact number "+16501234500" - single number is searched in that case.
+        ///     Make sure you escape the "+" in the URL as "%2B"
         /// </summary>
         public string phoneNumber { get; set; }
     }

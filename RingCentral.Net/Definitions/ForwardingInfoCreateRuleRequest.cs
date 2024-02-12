@@ -7,13 +7,13 @@ namespace RingCentral
     public class ForwardingInfoCreateRuleRequest
     {
         /// <summary>
-        ///     Specifies if the first ring on desktop/mobile apps is enabled. The default value is 'True'
+        ///     Specifies if the first ring on desktop/mobile apps is enabled. The default value is `true`
         /// </summary>
         public bool? notifyMySoftPhones { get; set; }
 
         /// <summary>
         ///     Deprecated parameter. Specifies if the administrator's softphone (desktop application) is notified before
-        ///     forwarding the incoming call to desk phones and forwarding numbers. The default value is 'True'.
+        ///     forwarding the incoming call to desk phones and forwarding numbers. The default value is `true`.
         /// </summary>
         public bool? notifyAdminSoftPhones { get; set; }
 
@@ -27,7 +27,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set
-        ///     to 'True' then `softPhonesRingCount` is ignored
+        ///     to `true` then `softPhonesRingCount` is ignored
         ///     Default: true
         /// </summary>
         public bool? softPhonesAlwaysRing { get; set; }

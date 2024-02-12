@@ -14,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Deprecated parameter. Specifies if the administrator's softphone is notified before forwarding the incoming call to
-        ///     desk phones and forwarding numbers. The default value is 'False'
+        ///     desk phones and forwarding numbers. The default value is `false`
         /// </summary>
         public bool? notifyAdminSoftPhones { get; set; }
 
@@ -26,7 +26,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set
-        ///     to 'True' then `softPhonesRingCount` is ignored
+        ///     to `true` then `softPhonesRingCount` is ignored
         ///     Default: true
         /// </summary>
         public bool? softPhonesAlwaysRing { get; set; }

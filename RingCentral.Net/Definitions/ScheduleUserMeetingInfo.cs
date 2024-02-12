@@ -58,7 +58,7 @@ namespace RingCentral
         public string defaultPasswordForScheduledMeetings { get; set; }
 
         /// <summary>
-        ///     A random password will be generated for an instant meeting, if set to 'True'. If you use PMI for your instant
+        ///     A random password will be generated for an instant meeting, if set to `true`. If you use PMI for your instant
         ///     meetings, this option will be disabled
         /// </summary>
         public bool? requirePasswordForInstantMeetings { get; set; }

@@ -6,7 +6,7 @@ namespace RingCentral
     public class ListRecentChatsNewParameters
     {
         /// <summary>
-        ///     Type of chats to be fetched. By default all chat types are returned
+        ///     Type of chats to be fetched. By default, all chat types are returned
         ///     Enum: Everyone, Group, Personal, Direct, Team
         /// </summary>
         public string[] type { get; set; }

@@ -21,7 +21,7 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number
+        ///     Usage type of phone number
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
         ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, BusinessMobileNumber,
         ///     PartnerBusinessMobileNumber, IntegrationNumber
@@ -29,7 +29,7 @@ namespace RingCentral
         public string[] usageType { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. Multiple values are supported
+        ///     Status of a phone number
         ///     Enum: Normal, Pending, PortedIn, Temporary
         /// </summary>
         public string status { get; set; }

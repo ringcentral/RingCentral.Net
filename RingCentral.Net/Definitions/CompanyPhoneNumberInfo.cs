@@ -23,7 +23,7 @@ namespace RingCentral
         public ExtensionInfo extension { get; set; }
 
         /// <summary>
-        ///     Custom user name of a phone number, if any
+        ///     Custom user-defined name of a phone number, if any
         /// </summary>
         public string label { get; set; }
 
@@ -59,8 +59,8 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number. Usage type of a phone number.
-        ///     Numbers of 'NumberPool' type wont't be returned for phone number list
+        ///     Usage type of phone number. Usage type of phone number.
+        ///     Numbers of 'NumberPool' type are not returned in phone number list
         ///     requests
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
         ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber,
@@ -78,7 +78,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to
-        ///     request parameters nxx plus line or numberPattern
+        ///     request parameters `nxx` plus `line` or `numberPattern`
         /// </summary>
         public string vanityPattern { get; set; }
 

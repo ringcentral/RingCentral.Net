@@ -24,7 +24,7 @@ namespace RingCentral
         public string label { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number
+        ///     Usage type of phone number
         ///     Example: DirectNumber
         ///     Enum: MobileNumber, ContactNumber, DirectNumber, ForwardedNumber
         /// </summary>

@@ -18,8 +18,9 @@ namespace RingCentral
         public TransferInfo[] transfer { get; set; }
 
         /// <summary>
-        ///     Specifies the type of action to be taken if: members are available but no one answers, or all members are
-        ///     busy/unavailable. This option is available for Business hours only. For simultaneous transfer mode only
+        ///     Specifies the type of action to be taken if: members are available
+        ///     but no one answers, or all members are busy/unavailable. This option is
+        ///     available for Business hours only. For simultaneous transfer mode only
         ///     'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
         ///     Enum: WaitPrimaryMembers, WaitPrimaryAndOverflowMembers, Voicemail, TransferToExtension, UnconditionalForwarding
         /// </summary>
@@ -43,9 +44,10 @@ namespace RingCentral
         public long? holdAudioInterruptionPeriod { get; set; }
 
         /// <summary>
-        ///     Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires.
-        ///     If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used. The default value
-        ///     is `Voicemail`
+        ///     Specifies the type of action to be taken after the hold time
+        ///     (waiting for an available call queue member) expires. If 'TransferToExtension'
+        ///     option is selected, the extension specified in `transfer` field is used.
+        ///     The default value is `Voicemail`
         ///     Default: Voicemail
         ///     Enum: TransferToExtension, UnconditionalForwarding, Voicemail
         /// </summary>
@@ -59,10 +61,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Minimum post-call wrap up time in seconds before agent status
-        ///     is automatically set; the value range is from 180 to 300
+        ///     is automatically set; the value range is from 0 to 300 sec.
         ///     Maximum: 300
-        ///     Minimum: 180
         ///     Format: int32
+        ///     Default: 15
         /// </summary>
         public long? wrapUpTime { get; set; }
 

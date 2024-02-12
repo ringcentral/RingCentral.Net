@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     List of user email addresses from extension notification settings.
-        ///     By default main email address from contact information is returned
+        ///     By default, main email address from contact information is returned
         /// </summary>
         public string[] emailAddresses { get; set; }
 

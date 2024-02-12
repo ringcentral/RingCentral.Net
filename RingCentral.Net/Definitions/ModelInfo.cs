@@ -16,7 +16,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Addons description
+        ///     Add-ons description
         /// </summary>
         public AddonInfo[] addons { get; set; }
 

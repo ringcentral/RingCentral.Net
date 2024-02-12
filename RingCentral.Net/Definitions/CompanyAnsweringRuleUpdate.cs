@@ -3,7 +3,7 @@ namespace RingCentral
     public class CompanyAnsweringRuleUpdate
     {
         /// <summary>
-        ///     Specifies if a rule is active or inactive. The default value is 'True'
+        ///     Specifies if a rule is active or inactive. The default value is `true`
         ///     Default: true
         /// </summary>
         public bool? enabled { get; set; }

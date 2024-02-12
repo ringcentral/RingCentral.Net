@@ -39,7 +39,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension current state. If 'Unassigned' is specified, then
-        ///     extensions without ‘extensionNumber’ are returned. If not specified,
+        ///     extensions without `extensionNumber` are returned. If not specified,
         ///     then all extensions are returned
         ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
@@ -56,8 +56,8 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Extension sub-type, if applicable. For any unsupported sub-types the
-        ///     'Unknown' value will be returned"
+        ///     Extension subtype, if applicable. For any unsupported subtypes the
+        ///     `Unknown` value will be returned
         ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
         /// </summary>
         public string subType { get; set; }
@@ -79,5 +79,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AssignedCountryInfo assignedCountry { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CostCenterInfo costCenter { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Type of a message
+        ///     Type of message
         ///     Required
         /// </summary>
         public string type { get; set; }

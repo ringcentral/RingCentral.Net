@@ -20,19 +20,19 @@ namespace RingCentral
         public SenderInfo from { get; set; }
 
         /// <summary>
-        ///     Type of a message. The default value is 'SMS'
+        ///     Type of message. The default value is 'SMS'
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in ISO 8601 format including timezone,
+        ///     Message creation date/time in ISO 8601 format including timezone,
         ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified in ISO 8601 format including
+        ///     Date/time when the message was modified in ISO 8601 format including
         ///     timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>

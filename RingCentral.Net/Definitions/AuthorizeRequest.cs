@@ -27,7 +27,7 @@ namespace RingCentral
         public string client_id { get; set; }
 
         /// <summary>
-        ///     Client state. Returned back to the client at the end of the flow
+        ///     Client state. Returned to the client at the end of the flow
         /// </summary>
         public string state { get; set; }
 

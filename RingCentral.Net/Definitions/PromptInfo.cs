@@ -14,7 +14,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Type of a prompt media content
+        ///     Type of prompt media content
         /// </summary>
         public string contentType { get; set; }
 

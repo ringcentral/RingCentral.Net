@@ -6,7 +6,7 @@ namespace RingCentral
     public class CreateCustomUserGreetingRequest
     {
         /// <summary>
-        ///     Type of a greeting, specifying the case when the greeting is played.
+        ///     Type of greeting, specifying the case when the greeting is played.
         ///     Required
         ///     Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic,
         ///     TemplateGreeting

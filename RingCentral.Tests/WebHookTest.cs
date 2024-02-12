@@ -31,7 +31,8 @@ namespace RingCentral.Tests
                 }
                 catch (RestException re)
                 {
-                    Assert.Contains("{\"errorCode\":\"SUB-522\"", re.Message);
+                    // "errorCode":"SUB-523","message":"HTTPS is required"
+                    Assert.Contains("{\"errorCode\":\"SUB-523\"", re.Message);
                 }
             }
         }

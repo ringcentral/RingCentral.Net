@@ -1,41 +1,29 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Automatically determined emergency address. If `emergencyAddressState`
-    ///     value is 'Assigned', then this address is assigned to the current device.
-    ///     If `emergencyAddressState` value is 'Unconfirmed', then the specified address
-    ///     must be confirmed by the user before being registered as emergency address
-    ///     for the current device. In all other cases the value is null
-    /// </summary>
-    public class DeviceEmergencyAddressFr
+    public class EmergencyAddressInfo
     {
         /// <summary>
-        ///     Name of a customer
+        ///     Country name
         /// </summary>
-        public string customerName { get; set; }
+        public string country { get; set; }
 
         /// <summary>
-        ///     Street address, line 1 - street address, P.O. box, company name, c/o
+        ///     Internal identifier of a country
         /// </summary>
-        public string street { get; set; }
+        public string countryId { get; set; }
 
         /// <summary>
-        ///     Street address, line 2 - apartment, suite, unit, building, floor, etc.
+        ///     ISO code of a country
         /// </summary>
-        public string street2 { get; set; }
+        public string countryIsoCode { get; set; }
 
         /// <summary>
-        ///     City name
+        ///     Full name of a country
         /// </summary>
-        public string city { get; set; }
+        public string countryName { get; set; }
 
         /// <summary>
-        ///     Zip code
-        /// </summary>
-        public string zip { get; set; }
-
-        /// <summary>
-        ///     State/province name
+        ///     State/Province name. Mandatory for the USA, the UK and Canada
         /// </summary>
         public string state { get; set; }
 
@@ -55,29 +43,45 @@ namespace RingCentral
         public string stateName { get; set; }
 
         /// <summary>
-        ///     Internal identifier of a country
+        ///     City name
         /// </summary>
-        public string countryId { get; set; }
+        public string city { get; set; }
 
         /// <summary>
-        ///     ISO code of a country
+        ///     The name of the street (The field is utilized as 'streetName' field for FR addresses)
         /// </summary>
-        public string countryIsoCode { get; set; }
+        public string street { get; set; }
 
         /// <summary>
-        ///     Country name
+        ///     Second line address (apartment, suite, unit, building, floor,
+        ///     etc.)
         /// </summary>
-        public string country { get; set; }
+        public string street2 { get; set; }
 
         /// <summary>
-        ///     Full name of a country
+        ///     Postal (Zip) code
         /// </summary>
-        public string countryName { get; set; }
+        public string zip { get; set; }
+
+        /// <summary>
+        ///     Customer name
+        /// </summary>
+        public string customerName { get; set; }
+
+        /// <summary>
+        ///     Company name
+        /// </summary>
+        public string companyName { get; set; }
 
         /// <summary>
         ///     (Optional) Building name
         /// </summary>
         public string buildingName { get; set; }
+
+        /// <summary>
+        ///     Street type
+        /// </summary>
+        public string streetType { get; set; }
 
         /// <summary>
         ///     Building/street number
@@ -87,7 +91,7 @@ namespace RingCentral
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
         ///     for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
-        ///     to 'True'
+        ///     to `true`
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }

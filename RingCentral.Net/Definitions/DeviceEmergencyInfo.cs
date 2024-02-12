@@ -6,13 +6,8 @@ namespace RingCentral
     public class DeviceEmergencyInfo
     {
         /// <summary>
-        ///     Automatically determined emergency address. If `emergencyAddressState`
-        ///     value is 'Assigned', then this address is assigned to the current device.
-        ///     If `emergencyAddressState` value is 'Unconfirmed', then the specified address
-        ///     must be confirmed by the user before being registered as emergency address
-        ///     for the current device. In all other cases the value is null
         /// </summary>
-        public DeviceEmergencyInfoAddress address { get; set; }
+        public EmergencyAddressInfo address { get; set; }
 
         /// <summary>
         /// </summary>
@@ -39,7 +34,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of the emergency address synchronization. Returned
-        ///     if `syncEmergencyAddress` parameter is set to 'True'
+        ///     if `syncEmergencyAddress` parameter is set to `true`
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }

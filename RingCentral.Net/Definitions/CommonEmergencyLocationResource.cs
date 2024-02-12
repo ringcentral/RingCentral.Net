@@ -3,7 +3,7 @@ namespace RingCentral
     /// <summary>
     ///     Company emergency response location details
     /// </summary>
-    public class EmergencyLocationResource
+    public class CommonEmergencyLocationResource
     {
         /// <summary>
         ///     Internal identifier of an emergency response location
@@ -12,7 +12,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public EmergencyLocationResourceAddress address { get; set; }
+        public CommonEmergencyLocationAddressInfo address { get; set; }
 
         /// <summary>
         ///     Emergency response location name
@@ -37,7 +37,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
-        ///     if `syncEmergencyAddress` parameter is set to 'True'
+        ///     if `syncEmergencyAddress` parameter is set to `true`
         ///     Enum: Verified, Updated, Deleted, ActivationProcess, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
@@ -62,7 +62,7 @@ namespace RingCentral
         public LocationOwnerInfo[] owners { get; set; }
 
         /// <summary>
-        ///     Address format id
+        ///     Address format ID
         /// </summary>
         public string addressFormatId { get; set; }
     }

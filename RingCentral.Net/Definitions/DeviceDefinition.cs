@@ -16,7 +16,7 @@ namespace RingCentral
         public DeviceDefinitionEmergency emergency { get; set; }
 
         /// <summary>
-        ///     To be used to assign a number by id
+        ///     To be used to assign a number by ID
         ///     Required
         /// </summary>
         public DeviceDefinitionPhoneInfo phoneInfo { get; set; }

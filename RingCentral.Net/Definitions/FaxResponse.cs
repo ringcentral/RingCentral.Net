@@ -30,7 +30,7 @@ namespace RingCentral
         public FaxResponseTo[] to { get; set; }
 
         /// <summary>
-        ///     Message creation datetime in ISO 8601 format including timezone,
+        ///     Message creation date/time in ISO 8601 format including timezone,
         ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
@@ -96,7 +96,7 @@ namespace RingCentral
         public long? faxPageCount { get; set; }
 
         /// <summary>
-        ///     Datetime when the message was modified on server in ISO 8601
+        ///     Date/time when the message was modified on server in ISO 8601
         ///     format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>

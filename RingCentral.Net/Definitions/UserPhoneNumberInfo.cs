@@ -27,7 +27,7 @@ namespace RingCentral
         public UserPhoneNumberExtensionInfo extension { get; set; }
 
         /// <summary>
-        ///     Custom user name of a phone number, if any
+        ///     Custom user-defined name of a phone number, if any
         /// </summary>
         public string label { get; set; }
 
@@ -37,7 +37,8 @@ namespace RingCentral
         public string location { get; set; }
 
         /// <summary>
-        ///     Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
+        ///     Payment type. 'External' is returned for forwarded numbers
+        ///     which are not terminated in the RingCentral phone system
         ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider
         /// </summary>
         public string paymentType { get; set; }
@@ -48,13 +49,14 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Specifies if a phone number is primary, i.e. displayed as 'main number' and called by default
+        ///     Indicates if a phone number is primary, i.e. displayed as 'main number' and called by default
         /// </summary>
         public bool? primary { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an
-        ///     external number not yet ported to RingCentral
+        ///     Status of a phone number. If the value is 'Normal', the phone
+        ///     number is ready to be used. Otherwise, it is an external number not yet
+        ///     ported to RingCentral
         ///     Enum: Normal, Pending, PortedIn, Temporary
         /// </summary>
         public string status { get; set; }
@@ -66,13 +68,13 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+        ///     Extension subtype, if applicable. For any unsupported subtypes the 'Unknown' value will be returned
         ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown
         /// </summary>
         public string subType { get; set; }
 
         /// <summary>
-        ///     Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
+        ///     Usage type of phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
         ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool, BusinessMobileNumber,
         ///     PartnerBusinessMobileNumber, IntegrationNumber

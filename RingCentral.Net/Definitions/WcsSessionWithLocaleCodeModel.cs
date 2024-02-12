@@ -28,7 +28,6 @@ namespace RingCentral
 
         /// <summary>
         ///     Localized time zone description.
-        ///     Required
         ///     Example: Eastern Time (America/New_York)
         /// </summary>
         public string localizedTimeZoneDescription { get; set; }
