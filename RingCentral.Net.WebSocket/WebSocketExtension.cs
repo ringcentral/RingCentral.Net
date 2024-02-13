@@ -15,7 +15,7 @@ namespace RingCentral.Net.WebSocket
         private Timer _keepAliveTimer;
         private RestClient _rc;
         private Subscription _subscription;
-        private Wsc _wsc;
+        public Wsc wsc;
         public WebsocketClient ws;
 
         public WebSocketExtension(WebSocketOptions options = null)
@@ -25,18 +25,22 @@ namespace RingCentral.Net.WebSocket
 
         public event EventHandler<WsgMessage> MessageReceived;
         public event EventHandler<string> RawMessageReceived;
+        public event EventHandler<Wsc> WscReceived;
 
         public override async Task Install(RestClient rc)
         {
             _rc = rc;
             MessageReceived += async (sender, wsgMessage) =>
             {
-                if (wsgMessage.meta.wsc != null && (_wsc == null ||
+                if (wsgMessage.meta.wsc != null && (wsc == null ||
                                                     (wsgMessage.meta.type ==
                                                      MessageType.ConnectionDetails &&
                                                      wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
-                                                    _wsc?.sequence < wsgMessage.meta.wsc.sequence))
-                    _wsc = wsgMessage.meta.wsc;
+                                                    wsc?.sequence < wsgMessage.meta.wsc.sequence))
+                {
+                    wsc = wsgMessage.meta.wsc;
+                    WscReceived?.Invoke(this, wsc);
+                }
 
                 if (wsgMessage.meta.type == MessageType.ConnectionDetails)
                 {
@@ -63,7 +67,7 @@ namespace RingCentral.Net.WebSocket
         {
             var wsToken = await _rc.Post<WsToken>("/restapi/oauth/wstoken");
             var wsUri = $"{wsToken.uri}?access_token={wsToken.ws_access_token}";
-            if (recoverSubscription) wsUri = $"{wsUri}&wsc={_wsc.token}";
+            if (recoverSubscription) wsUri = $"{wsUri}&wsc={wsc.token}";
             var factory = new Func<ClientWebSocket>(() => new ClientWebSocket
             {
                 Options = {KeepAliveInterval = TimeSpan.FromSeconds(30)}
