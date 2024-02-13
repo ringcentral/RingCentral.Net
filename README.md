@@ -26,8 +26,7 @@ You need to install extensions if you need extra features:
 - [RingCentral.Net.AutoRefresh](./RingCentral.Net.AutoRefresh) auto-refreshes your token.
 - [RingCentral.Net.Debug](./RingCentral.Net.Debug) prints all HTTP traffic to the console.
 - [RingCentral.Net.Events](./RingCentral.Net.Events) provides you with events about HTTP requests.
-- [RingCentral.Net.Pubnub](./RingCentral.Net.Pubnub) if you need PubNub support and your app targets traditional .NET Framework.
-- [RingCentral.Net.PubnubPCL](./RingCentral.Net.PubnubPCL) if you need PubNub support and your app targets .NET Core, Mono, Xamarin...etc.
+- [RingCentral.Net.WebSocket](./RingCentral.Net.WebSocket) provide your with WebSocket support. You can subscribe to events.
 - [RingCentral.Net.RateLimit](./RingCentral.Net.RateLimit) automatically handles the rate limit for you.
 - [RingCentral.Net.Retry](./RingCentral.Net.Retry) allows you to retry a REST request if there is `RestException`.
 
