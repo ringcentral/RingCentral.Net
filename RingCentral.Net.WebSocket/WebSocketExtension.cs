@@ -32,11 +32,9 @@ namespace RingCentral.Net.WebSocket
             _rc = rc;
             MessageReceived += async (sender, wsgMessage) =>
             {
-                if (wsgMessage.meta.wsc != null && (wsc == null ||
-                                                    (wsgMessage.meta.type ==
-                                                     MessageType.ConnectionDetails &&
-                                                     wsgMessage.body.GetType().GetProperty("recoveryState") != null) ||
-                                                    wsc?.sequence < wsgMessage.meta.wsc.sequence))
+                if (wsgMessage.meta.type == MessageType.ConnectionDetails && wsgMessage.meta.wsc != null &&
+                    (wsc == null || wsgMessage.body["recoveryState"] != null ||
+                     wsc?.sequence < wsgMessage.meta.wsc.sequence))
                 {
                     wsc = wsgMessage.meta.wsc;
                     WscReceived?.Invoke(this, wsc);
