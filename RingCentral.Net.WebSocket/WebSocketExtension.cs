@@ -77,14 +77,13 @@ namespace RingCentral.Net.WebSocket
             ws.ReconnectTimeout = null;
             ws.MessageReceived.Subscribe(responseMessage =>
             {
-                RawMessageReceived?.Invoke(this, responseMessage.Text);
-                var wsgMessage = WsgMessage.Parse(responseMessage.Text);
                 if (_options.debugMode)
                     Console.WriteLine(
                         $"***WebSocket incoming message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
-                        $"\n{JsonConvert.SerializeObject(wsgMessage, Formatting.Indented)}" +
+                        $"\n{JsonConvert.SerializeObject(JsonConvert.DeserializeObject(responseMessage.Text), Formatting.Indented)}" +
                         "\n******");
-                MessageReceived?.Invoke(this, wsgMessage);
+                RawMessageReceived?.Invoke(this, responseMessage.Text);
+                MessageReceived?.Invoke(this, WsgMessage.Parse(responseMessage.Text));
             });
             await ws.Start();
             _keepAliveTimer?.Dispose(); // if there is already a timer, dispose it
@@ -109,7 +108,6 @@ namespace RingCentral.Net.WebSocket
                     $"***WebSocket outgoing message ({DateTime.Now.ToString(CultureInfo.CurrentCulture)}): ***" +
                     $"\n{JsonConvert.SerializeObject(JsonConvert.DeserializeObject(message), Formatting.Indented)}" +
                     "\n******");
-
             return Task.Run(() => ws.Send(message));
         }
 
