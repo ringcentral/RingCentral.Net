@@ -6,52 +6,52 @@ namespace RingCentral
     public class Meeting
     {
         /// <summary>
-        ///     call id
+        ///     Call id
         ///     Required
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        ///     bridge id
+        ///     Bridge id
         ///     Required
         /// </summary>
         public string bridgeId { get; set; }
 
         /// <summary>
-        ///     short bridge id
+        ///     Short bridge id
         ///     Required
         /// </summary>
         public string shortId { get; set; }
 
         /// <summary>
-        ///     start time ISO 8601
+        ///     Start time ISO 8601
         ///     Required
         ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
 
         /// <summary>
-        ///     duration second
+        ///     Duration second
         ///     Format: int32
         ///     Example: 36
         /// </summary>
         public long? duration { get; set; }
 
         /// <summary>
-        ///     meetings name
+        ///     Meetings name
         ///     Required
         /// </summary>
         public string displayName { get; set; }
 
         /// <summary>
-        ///     meeting type
+        ///     Meeting type
         ///     Required
         ///     Enum: Meeting, Call
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        ///     meeting status
+        ///     Meeting status
         ///     Required
         ///     Enum: InProgress, Done
         /// </summary>
@@ -63,23 +63,41 @@ namespace RingCentral
         public Host hostInfo { get; set; }
 
         /// <summary>
-        ///     chat id
+        ///     Describe access rights which has participants to meeting
+        ///     Required
+        ///     Enum: delete, download, share
         /// </summary>
-        public string chatId { get; set; }
+        public string[] rights { get; set; }
 
         /// <summary>
-        ///     participants list
+        ///     During meeting AI team analyze code and after meeting finished generates text summary about this meeting
+        /// </summary>
+        public string longSummary { get; set; }
+
+        /// <summary>
+        ///     During meeting AI team analyze code and after meeting finished generates text summary about this meeting
+        /// </summary>
+        public string shortSummary { get; set; }
+
+        /// <summary>
+        ///     During meeting AI team analyze code and after meeting finished generates key words used in meeting
+        /// </summary>
+        public string[] keywords { get; set; }
+
+        /// <summary>
+        ///     List of the participants in the meeting
         ///     Required
         /// </summary>
         public Participant[] participants { get; set; }
 
         /// <summary>
-        ///     recording information
+        ///     Recording information
+        ///     Required
         /// </summary>
         public Recording[] recordings { get; set; }
 
         /// <summary>
-        ///     chat location
+        ///     Chat location
         /// </summary>
         public string chatUrl { get; set; }
     }

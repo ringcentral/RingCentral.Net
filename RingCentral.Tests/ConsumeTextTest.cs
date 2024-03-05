@@ -24,7 +24,8 @@ namespace RingCentral.Tests
                 foreach (var group in (await rc.TeamMessaging().V1().Chats().List()).records)
                 {
                     foreach (var post in (await rc.TeamMessaging().V1().Chats(group.id).Posts().List()).records)
-                        if (post.creatorId == currentExtension.id.ToString() && post.text != null)
+                        if (post.creatorId == currentExtension.id.ToString() && post.text != null &&
+                            post.text.Length > 0)
                         {
                             foundIt = true;
 

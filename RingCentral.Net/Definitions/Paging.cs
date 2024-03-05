@@ -7,6 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Current offset token
+        ///     Required
         /// </summary>
         public string currentPageToken { get; set; }
 

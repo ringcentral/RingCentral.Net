@@ -8,5 +8,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EveryoneCanControl everyoneCanControl { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public AutoShared autoShared { get; set; }
     }
 }

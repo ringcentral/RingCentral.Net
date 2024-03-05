@@ -61,5 +61,28 @@ namespace RingCentral
         ///     OIDC ID token (if OpenId Connect flow was activated during authorization)
         /// </summary>
         public string id_token { get; set; }
+
+        /// <summary>
+        ///     OAuth session ID
+        /// </summary>
+        public string session_id { get; set; }
+
+        /// <summary>
+        ///     Absolute value of session expiration time as ISO datetime
+        ///     Format: date-time
+        /// </summary>
+        public string session_expiration_time { get; set; }
+
+        /// <summary>
+        ///     Remaining time (in seconds) until session expiration due to absolute timeout
+        ///     Format: int32
+        /// </summary>
+        public long? session_expires_in { get; set; }
+
+        /// <summary>
+        ///     Nominal session idle timeout in seconds
+        ///     Format: int32
+        /// </summary>
+        public long? session_idle_timeout { get; set; }
     }
 }

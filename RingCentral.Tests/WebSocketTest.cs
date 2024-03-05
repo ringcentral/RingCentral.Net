@@ -27,10 +27,11 @@ namespace RingCentral.Tests
             var eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"};
             var count = 0;
             await webSocketExtension.Subscribe(eventFilters, message => { count += 1; });
+            var extInfo = await rc.Restapi().Account().Extension().Get();
             await rc.Restapi().Account().Extension().CompanyPager().Post(new CreateInternalTextMessageRequest
             {
-                from = new PagerCallerInfoRequest {extensionNumber = "101"},
-                to = new[] {new PagerCallerInfoRequest {extensionNumber = "101"}},
+                from = new PagerCallerInfoRequest {extensionNumber = extInfo.extensionNumber},
+                to = new[] {new PagerCallerInfoRequest {extensionNumber = extInfo.extensionNumber}},
                 text = "Hello world"
             });
             await Task.Delay(20000);

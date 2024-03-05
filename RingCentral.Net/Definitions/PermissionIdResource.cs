@@ -26,5 +26,9 @@ namespace RingCentral
         ///     Specifies if the permission can be assigned by the account administrator
         /// </summary>
         public bool? assignable { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PermissionsCapabilities permissionsCapabilities { get; set; }
     }
 }

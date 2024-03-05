@@ -58,11 +58,11 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserInfo
         /// </summary>
-        public async Task<CallQueueDetails> Put(CallQueueUpdateDetails callQueueUpdateDetails,
+        public async Task<CallQueueDetails> Put(CallQueueDetails callQueueDetails,
             RestRequestConfig restRequestConfig = null)
         {
             if (groupId == null) throw new ArgumentException("Parameter cannot be null", nameof(groupId));
-            return await rc.Put<CallQueueDetails>(Path(), callQueueUpdateDetails, null, restRequestConfig);
+            return await rc.Put<CallQueueDetails>(Path(), callQueueDetails, null, restRequestConfig);
         }
     }
 }

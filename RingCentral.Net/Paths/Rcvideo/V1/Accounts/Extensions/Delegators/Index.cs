@@ -25,10 +25,9 @@ namespace RingCentral.Paths.Rcvideo.V1.Accounts.Extensions.Delegators
         ///     Rate Limit Group: Medium
         ///     App Permission: Video
         /// </summary>
-        public async Task<DelegatorsListResult> Get(RcvListDelegatorsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<DelegatorsListResult> Get(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<DelegatorsListResult>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<DelegatorsListResult>(Path(), null, restRequestConfig);
         }
     }
 }

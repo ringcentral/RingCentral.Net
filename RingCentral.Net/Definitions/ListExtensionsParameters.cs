@@ -44,7 +44,7 @@ namespace RingCentral
         ///     that legacy 'Department' extension type corresponds to 'Call Queue'
         ///     extensions in modern RingCentral product terminology
         ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
-        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, ProxyAdmin, DelegatedLinesGroup
+        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, ProxyAdmin, DelegatedLinesGroup, Site
         /// </summary>
         public string[] type { get; set; }
     }

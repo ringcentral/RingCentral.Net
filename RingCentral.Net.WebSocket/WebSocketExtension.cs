@@ -15,8 +15,8 @@ namespace RingCentral.Net.WebSocket
         private Timer _keepAliveTimer;
         private RestClient _rc;
         private Subscription _subscription;
-        public Wsc wsc;
         public WebsocketClient ws;
+        public Wsc wsc;
 
         public WebSocketExtension(WebSocketOptions options = null)
         {

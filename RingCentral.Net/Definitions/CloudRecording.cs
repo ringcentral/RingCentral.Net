@@ -43,9 +43,20 @@ namespace RingCentral
         public Host hostInfo { get; set; }
 
         /// <summary>
-        ///     Link to the recording file
+        ///     Link to the recording file. Not used anymore by Web team
         ///     Required
         /// </summary>
-        public string downloadLink { get; set; }
+        public string mediaLink { get; set; }
+
+        /// <summary>
+        ///     Encrypted link to the recording file
+        ///     Required
+        /// </summary>
+        public string url { get; set; }
+
+        /// <summary>
+        ///     Date after which recording will be deleted
+        /// </summary>
+        public string expiresIn { get; set; }
     }
 }

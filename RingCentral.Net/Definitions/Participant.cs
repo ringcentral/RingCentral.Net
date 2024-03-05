@@ -6,32 +6,39 @@ namespace RingCentral
     public class Participant
     {
         /// <summary>
+        ///     Participant type
+        ///     Required
+        /// </summary>
+        public string type { get; set; }
+
+        /// <summary>
         ///     id
+        ///     Required
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        ///     account id
+        ///     Account id
         /// </summary>
         public string accountId { get; set; }
 
         /// <summary>
-        ///     extension id
+        ///     Extension id
         /// </summary>
         public string extensionId { get; set; }
 
         /// <summary>
-        ///     displayName
+        ///     Display name
         /// </summary>
         public string displayName { get; set; }
 
         /// <summary>
-        ///     caller id
+        ///     Caller id
         /// </summary>
         public string callerId { get; set; }
 
         /// <summary>
-        ///     pass-thru parameter in join url
+        ///     Pass-thru parameter in join url
         /// </summary>
         public string correlationId { get; set; }
     }

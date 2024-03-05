@@ -9,6 +9,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CallQueueOverflowAgent[] items { get; set; }
+        public CallQueueInfo[] items { get; set; }
     }
 }

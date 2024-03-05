@@ -6,17 +6,17 @@ namespace RingCentral
     public class Host
     {
         /// <summary>
-        ///     account id
+        ///     Account id
         /// </summary>
         public string accountId { get; set; }
 
         /// <summary>
-        ///     extension id
+        ///     Extension id
         /// </summary>
         public string extensionId { get; set; }
 
         /// <summary>
-        ///     displayName
+        ///     Display name
         /// </summary>
         public string displayName { get; set; }
     }

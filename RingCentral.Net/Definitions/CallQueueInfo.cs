@@ -22,5 +22,17 @@ namespace RingCentral
         ///     Name of a call queue
         /// </summary>
         public string name { get; set; }
+
+        /// <summary>
+        ///     Call queue status
+        ///     Enum: Enabled, Disabled, NotActivated
+        /// </summary>
+        public string status { get; set; }
+
+        /// <summary>
+        ///     Indicates whether it is an emergency call queue extension or not
+        ///     Enum: Emergency
+        /// </summary>
+        public string subType { get; set; }
     }
 }

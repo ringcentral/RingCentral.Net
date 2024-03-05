@@ -6,11 +6,13 @@ namespace RingCentral
     public class MeetingPage
     {
         /// <summary>
-        ///     meetings array
+        ///     Meetings array
+        ///     Required
         /// </summary>
         public Meeting[] meetings { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
         public Paging paging { get; set; }
     }

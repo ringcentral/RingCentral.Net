@@ -32,7 +32,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public StatusInfo statusInfo { get; set; }
+        public AccountStatusInfo statusInfo { get; set; }
 
         /// <summary>
         ///     Company name

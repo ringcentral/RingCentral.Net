@@ -8,7 +8,7 @@ namespace RingCentral
         public string username { get; set; }
 
         /// <summary>
-        ///     User password
+        ///     User password. Not returned if SipDigest is not enabled
         ///     Format: password
         /// </summary>
         public string password { get; set; }

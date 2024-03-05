@@ -6,36 +6,52 @@ namespace RingCentral
     public class Recording
     {
         /// <summary>
-        ///     recording id
+        ///     Recording id
+        ///     Required
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        ///     recording start time
+        ///     Recording start time
         ///     Format: int64
         /// </summary>
         public long? startTime { get; set; }
 
         /// <summary>
-        ///     recording url
+        ///     Secure Link to the recording file
         /// </summary>
-        public string contentUri { get; set; }
+        public string url { get; set; }
 
         /// <summary>
         /// </summary>
         public JsValue metadata { get; set; }
 
         /// <summary>
-        ///     recording status
-        ///     Enum: Processing, Processed, Error, Corrupted, InProgress
+        ///     Recording processing status
+        ///     Enum: Processing, Processed, Error, Corrupted, InProgress, Purged, Failed
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     availability status
+        ///     Availability status
         ///     Required
         ///     Enum: Alive, Deleted, Purged, NotAvailable
         /// </summary>
         public string availabilityStatus { get; set; }
+
+        /// <summary>
+        ///     During meeting AI team analyze code and after meeting finished generates text summary about this meeting
+        /// </summary>
+        public string longSummary { get; set; }
+
+        /// <summary>
+        ///     During meeting AI team analyze code and after meeting finished generates text summary about this meeting
+        /// </summary>
+        public string shortSummary { get; set; }
+
+        /// <summary>
+        ///     During meeting AI team analyze code and after meeting finished generates key words used in meeting
+        /// </summary>
+        public string[] keywords { get; set; }
     }
 }

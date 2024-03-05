@@ -57,10 +57,11 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserRoles
         /// </summary>
-        public async Task<RoleResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RoleResource> Get(ReadUserRoleParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (roleId == null) throw new ArgumentException("Parameter cannot be null", nameof(roleId));
-            return await rc.Get<RoleResource>(Path(), null, restRequestConfig);
+            return await rc.Get<RoleResource>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -71,10 +72,10 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
         ///     App Permission: RoleManagement
         ///     User Permission: EditUserRoles
         /// </summary>
-        public async Task<string> Put(RoleResource roleResource, RestRequestConfig restRequestConfig = null)
+        public async Task<RoleResource> Put(RoleResource roleResource, RestRequestConfig restRequestConfig = null)
         {
             if (roleId == null) throw new ArgumentException("Parameter cannot be null", nameof(roleId));
-            return await rc.Put<string>(Path(), roleResource, null, restRequestConfig);
+            return await rc.Put<RoleResource>(Path(), roleResource, null, restRequestConfig);
         }
 
         /// <summary>
