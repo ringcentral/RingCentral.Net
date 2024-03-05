@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    environment: sandbox
+    environment: prod
     runs-on: macos-latest
 
     steps:
@@ -27,7 +27,6 @@ jobs:
         RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
         RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
         RINGCENTRAL_CLIENT_SECRET: ${{ secrets.RINGCENTRAL_CLIENT_SECRET }}
-        RINGCENTRAL_RECEIVER: ${{ secrets.RINGCENTRAL_RECEIVER }}
-        RINGCENTRAL_CALLEE: ${{ secrets.RINGCENTRAL_CALLEE }}
-        RINGCENTRAL_USERNAME: ${{ secrets.RINGCENTRAL_USERNAME }}
         RINGCENTRAL_JWT_TOKEN: ${{ secrets.RINGCENTRAL_JWT_TOKEN }}
+        RINGCENTRAL_SENDER: ${{ secrets.RINGCENTRAL_SENDER }}
+        RINGCENTRAL_RECEIVER: ${{ secrets.RINGCENTRAL_RECEIVER }}
