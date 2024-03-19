@@ -52,14 +52,10 @@ namespace RingCentral
         {
         }
 
-        public RestClient(string clientId, string clientSecret, bool production = false, string appName = "Unknown",
+        public RestClient(string clientId, string clientSecret, string appName = "Unknown",
             string appVersion = "0.0.1")
-            : this(clientId, clientSecret, production ? ProductionServer : SandboxServer, appName, appVersion)
+            : this(clientId, clientSecret, ProductionServer, appName, appVersion)
         {
-            if (!production)
-            {
-                Console.WriteLine("WARNING: Sandbox support is deprecated. Please migrate your application to Production Server.");
-            }
         }
 
         public async void Dispose()
