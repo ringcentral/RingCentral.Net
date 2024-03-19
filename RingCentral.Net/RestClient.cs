@@ -52,9 +52,9 @@ namespace RingCentral
         {
         }
 
-        public RestClient(string clientId, string clientSecret, bool production = false, string appName = "Unknown",
+        public RestClient(string clientId, string clientSecret, string appName = "Unknown",
             string appVersion = "0.0.1")
-            : this(clientId, clientSecret, production ? ProductionServer : SandboxServer, appName, appVersion)
+            : this(clientId, clientSecret, ProductionServer, appName, appVersion)
         {
         }
 
