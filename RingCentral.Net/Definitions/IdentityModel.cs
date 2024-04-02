@@ -123,7 +123,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Device info of the identity.
-        ///     Applicable to Engage Messaging channels only.
+        ///     Applicable to RingCX Digital Messaging channels only.
         ///     Example: iPhone (iPhone); iOS 15.0.2
         /// </summary>
         public string mobileDeviceInfo { get; set; }

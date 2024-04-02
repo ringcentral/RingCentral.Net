@@ -11,9 +11,9 @@ namespace RingCentral
         public string sourceId { get; set; }
 
         /// <summary>
-        ///     Filter based on the specified identityGroupId.
+        ///     Filter based on the specified identityGroupIds (separated by commas).
         /// </summary>
-        public string identityGroupId { get; set; }
+        public string[] identityGroupIds { get; set; }
 
         /// <summary>
         ///     Filter based on the specified userId.

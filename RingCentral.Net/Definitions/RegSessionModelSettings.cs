@@ -28,5 +28,11 @@ namespace RingCentral
         ///     Indicates that work email address is required for registration.
         /// </summary>
         public bool? workEmailRequired { get; set; }
+
+        /// <summary>
+        ///     Indicates that recording will be shown after the webinar and in emails.
+        ///     Default: true
+        /// </summary>
+        public bool? viewRecording { get; set; }
     }
 }

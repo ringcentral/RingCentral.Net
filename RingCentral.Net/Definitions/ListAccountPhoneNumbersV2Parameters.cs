@@ -61,6 +61,11 @@ namespace RingCentral
         public string extensionStatus { get; set; }
 
         /// <summary>
+        ///     The parameter reflects whether this number is BYOC or not
+        /// </summary>
+        public bool? byocNumber { get; set; }
+
+        /// <summary>
         ///     Phone number in e.164 format to be searched for.
         ///     Parameter value can include wildcards (e.g. "+165012345**")
         ///     or be an exact number "+16501234500" - single number is searched in that case.

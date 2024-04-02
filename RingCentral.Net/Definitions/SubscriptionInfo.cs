@@ -46,7 +46,7 @@ namespace RingCentral
         /// <summary>
         ///     Subscription status
         ///     Required
-        ///     Enum: Active, Suspended, Blacklisted
+        ///     Enum: Active, Blacklisted
         /// </summary>
         public string status { get; set; }
 

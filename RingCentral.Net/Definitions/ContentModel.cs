@@ -32,7 +32,7 @@ namespace RingCentral
         ///     Channel and max length
         ///     * Apple Messages For Business (max length 10000)
         ///     * Email (max length 262144)
-        ///     * Engage Messaging (max length 1024)
+        ///     * RingCX Digital Messaging (max length 1024)
         ///     * Facebook (max length 8000)
         ///     * GoogleBusinessMessages (max length 3000)
         ///     * Google My Business (max length 4000)

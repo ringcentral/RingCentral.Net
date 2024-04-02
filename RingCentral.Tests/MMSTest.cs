@@ -45,7 +45,7 @@ namespace RingCentral.Tests
                     text = "Hello world again",
                     attachments = attachments
                 });
-                
+
                 Assert.NotNull(messageInfo);
                 Assert.Equal("SMS", messageInfo.type);
             }

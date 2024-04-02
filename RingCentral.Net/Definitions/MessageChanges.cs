@@ -19,5 +19,10 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? updatedCount { get; set; }
+
+        /// <summary>
+        ///     Identifiers of the new messages, applicable for all message types
+        /// </summary>
+        public long?[] newMessageIds { get; set; }
     }
 }

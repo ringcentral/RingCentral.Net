@@ -7,8 +7,9 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a message
+        ///     Format: int64
         /// </summary>
-        public string id { get; set; }
+        public long? id { get; set; }
 
         /// <summary>
         ///     Message receiver(s) information
@@ -90,12 +91,10 @@ namespace RingCentral
         public string messageStatus { get; set; }
 
         /// <summary>
-        ///     Internal identifier of a conversation this message belongs to
-        /// </summary>
-        public string conversationId { get; set; }
-
-        /// <summary>
-        ///     Specifies if a voicemail message transcription is already completed or not
+        ///     Status of a voicemail to text transcription. Specifies if a voicemail message transcription is already completed or
+        ///     not
+        ///     If 'VoicemailToText' feature is not activated for account, the 'NotAvailable' value is returned
+        ///     Enum: NotAvailable, InProgress, TimedOut, Completed, CompletedPartially, Failed, Unknown
         /// </summary>
         public string vmTranscriptionStatus { get; set; }
     }

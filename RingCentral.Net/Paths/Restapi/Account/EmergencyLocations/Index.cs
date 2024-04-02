@@ -52,7 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
         }
 
         /// <summary>
-        ///     Returns emergency response location by ID.
+        ///     Returns emergency response location by ID. Available for Admin users only.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
         ///     Rate Limit Group: Light

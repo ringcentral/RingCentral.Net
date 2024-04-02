@@ -92,7 +92,7 @@ namespace RingCentral
         public string description { get; set; }
 
         /// <summary>
-        ///     Task details.
+        ///     Task details
         /// </summary>
         public TMTaskInfoRecurrence recurrence { get; set; }
 

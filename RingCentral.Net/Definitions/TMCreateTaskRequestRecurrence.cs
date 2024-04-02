@@ -17,7 +17,7 @@ namespace RingCentral
         public string endingCondition { get; set; }
 
         /// <summary>
-        ///     Count of iterations of periodic tasks.
+        ///     Count of iterations of periodic tasks
         ///     Maximum: 10
         ///     Minimum: 1
         ///     Format: int32
@@ -25,7 +25,7 @@ namespace RingCentral
         public long? endingAfter { get; set; }
 
         /// <summary>
-        ///     The end date of periodic task in UTC time zone.
+        ///     End date of a periodic task in UTC time zone
         ///     Format: date-time
         /// </summary>
         public string endingOn { get; set; }

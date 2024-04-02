@@ -10,7 +10,7 @@ namespace RingCentral
         public string schedule { get; set; }
 
         /// <summary>
-        ///     Task ending condition.
+        ///     Task ending condition
         ///     Enum: None, Count, Date
         /// </summary>
         public string endingCondition { get; set; }
@@ -24,7 +24,7 @@ namespace RingCentral
         public long? endingAfter { get; set; }
 
         /// <summary>
-        ///     The end date of periodic task in UTC time zone
+        ///     End date of a periodic task in UTC time zone
         ///     Format: date-time
         /// </summary>
         public string endingOn { get; set; }

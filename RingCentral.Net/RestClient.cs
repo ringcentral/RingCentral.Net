@@ -46,7 +46,8 @@ namespace RingCentral
             extensibleRequest = Request;
         }
 
-        public RestClient(string clientId, string clientSecret, string server = ProductionServer, string appName = "Unknown",
+        public RestClient(string clientId, string clientSecret, string server = ProductionServer,
+            string appName = "Unknown",
             string appVersion = "0.0.1")
             : this(clientId, clientSecret, new Uri(server), appName, appVersion)
         {

@@ -10,7 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Required
-        ///     Example: RingCentral MVP
+        ///     Example: RingCentral
         /// </summary>
         public string value { get; set; }
 

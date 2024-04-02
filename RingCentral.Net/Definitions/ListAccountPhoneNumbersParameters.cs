@@ -29,6 +29,14 @@ namespace RingCentral
         public string[] usageType { get; set; }
 
         /// <summary>
+        ///     Payment type. 'External' is returned for forwarded numbers
+        ///     which are not terminated in the RingCentral phone system
+        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider,
+        ///     ExternalNumberProviderTollFree
+        /// </summary>
+        public string paymentType { get; set; }
+
+        /// <summary>
         ///     Status of a phone number
         ///     Enum: Normal, Pending, PortedIn, Temporary
         /// </summary>
