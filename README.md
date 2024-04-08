@@ -13,6 +13,8 @@ If you are having difficulty using this SDK, or working with the RingCentral API
 Packages are [available on NuGet](https://www.nuget.org/packages?q=ringcentral.net).
 You can install them just like you install any other NuGet packages.
 
+This package is compatible with [.NET Standard 2.0](https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0), which means, it is compatible with all modern .NET platforms including .NET Core, .NET Framework, and Mono.
+
 
 ## Extensions
 
@@ -22,11 +24,11 @@ Since version 5.0.0, this project has been changed to an extension-based archite
 
 You need to install extensions if you need extra features:
 
+- [RingCentral.Net.WebSocket](./RingCentral.Net.WebSocket) provides you with WebSocket support. You can subscribe to events.
 - [RingCentral.Net.AuthorizeUri](./RingCentral.Net.AuthorizeUri) provides utility methods to build URI for OAuth authorization purposes. 
 - [RingCentral.Net.AutoRefresh](./RingCentral.Net.AutoRefresh) auto-refreshes your token.
 - [RingCentral.Net.Debug](./RingCentral.Net.Debug) prints all HTTP traffic to the console.
 - [RingCentral.Net.Events](./RingCentral.Net.Events) provides you with events about HTTP requests.
-- [RingCentral.Net.WebSocket](./RingCentral.Net.WebSocket) provide your with WebSocket support. You can subscribe to events.
 - [RingCentral.Net.RateLimit](./RingCentral.Net.RateLimit) automatically handles the rate limit for you.
 - [RingCentral.Net.Retry](./RingCentral.Net.Retry) allows you to retry a REST request if there is `RestException`.
 
