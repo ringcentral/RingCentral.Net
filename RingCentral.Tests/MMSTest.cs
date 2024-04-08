@@ -4,51 +4,43 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class MmsTest
     {
         [Fact]
         public async void SendMms()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
+            var rc = await SharedRestClient.GetInstance();
+            var extension = rc.Restapi().Account().Extension();
+            var attachments = new[]
             {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
-                var extension = rc.Restapi().Account().Extension();
-                var attachments = new[]
+                new Attachment
                 {
-                    new Attachment
+                    filename = "rc.png",
+                    contentType = "image/png",
+                    content = File.ReadAllBytes("rc.png")
+                }
+            };
+
+            var messageInfo = await extension.Mms().Post(new CreateMMSMessage
+            {
+                from = new MessageStoreCallerInfoRequest
+                {
+                    phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_SENDER")
+                },
+                to = new[]
+                {
+                    new MessageStoreCallerInfoRequest
                     {
-                        filename = "rc.png",
-                        contentType = "image/png",
-                        content = File.ReadAllBytes("rc.png")
+                        phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
                     }
-                };
+                },
+                text = "Hello world again",
+                attachments = attachments
+            });
 
-                var messageInfo = await extension.Mms().Post(new CreateMMSMessage
-                {
-                    from = new MessageStoreCallerInfoRequest
-                    {
-                        phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_SENDER")
-                    },
-                    to = new[]
-                    {
-                        new MessageStoreCallerInfoRequest
-                        {
-                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER")
-                        }
-                    },
-                    text = "Hello world again",
-                    attachments = attachments
-                });
-
-                Assert.NotNull(messageInfo);
-                Assert.Equal("SMS", messageInfo.type);
-            }
+            Assert.NotNull(messageInfo);
+            Assert.Equal("SMS", messageInfo.type);
         }
     }
 }

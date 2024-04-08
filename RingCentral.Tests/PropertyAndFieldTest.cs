@@ -11,6 +11,7 @@ namespace RingCentral.Tests
         public string c { get; set; } = "cc";
     }
 
+    [Collection("Sequential")]
     public class PropertyAndFieldTest
     {
         [Fact]

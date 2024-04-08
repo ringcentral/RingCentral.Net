@@ -1,27 +1,18 @@
-using System;
 using Newtonsoft.Json;
 using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class ExtensionTest
     {
         [Fact]
         public async void TestGet()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
-            {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
-                var extension = await rc.Restapi().Account().Extension().Get();
-                Assert.NotNull(extension);
-                Assert.True(extension.contact.firstName.Length > 0);
-            }
+            var rc = await SharedRestClient.GetInstance();
+            var extension = await rc.Restapi().Account().Extension().Get();
+            Assert.NotNull(extension);
+            Assert.True(extension.contact.firstName.Length > 0);
         }
 
         [Fact]

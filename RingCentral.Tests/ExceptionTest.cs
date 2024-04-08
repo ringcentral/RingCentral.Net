@@ -4,6 +4,7 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class ExceptionTest
     {
         [Fact]

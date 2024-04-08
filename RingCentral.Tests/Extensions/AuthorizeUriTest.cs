@@ -5,6 +5,7 @@ using Xunit;
 
 namespace RingCentral.Tests.Extensions
 {
+    [Collection("Sequential")]
     public class AuthorizeUriTest
     {
         [Fact]
@@ -60,6 +61,8 @@ namespace RingCentral.Tests.Extensions
             Assert.NotNull(uri3);
             Assert.Contains("response_type=code", uri3);
             Assert.Contains($"client_id={rc.clientId}", uri3);
+
+            authorizeUriExtension.enabled = false;
         }
     }
 }

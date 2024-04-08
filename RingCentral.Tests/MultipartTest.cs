@@ -1,27 +1,19 @@
-using System;
 using System.Linq;
 using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class MultipartTest
     {
         [Fact]
         public async void UpdateCompanyGreeting()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
-            {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
-                var account = rc.Restapi().Account();
-                var companyAnsweringRuleList = await account.AnsweringRule().List();
-                var answeringRule = companyAnsweringRuleList.records.Last();
-                // comment out because we don't want to update company greetings
+            var rc = await SharedRestClient.GetInstance();
+            var account = rc.Restapi().Account();
+            var companyAnsweringRuleList = await account.AnsweringRule().List();
+            var answeringRule = companyAnsweringRuleList.records.Last();
+            // comment out because we don't want to update company greetings
 //                var customCompanyGreetingInfo = await account.Greeting().Post(new CreateCompanyGreetingRequest
 //                {
 //                    type = "Company",
@@ -49,25 +41,16 @@ namespace RingCentral.Tests
 //                    },
 //                });
 //                Assert.Equal("Company", customCompanyGreetingInfo.type);
-            }
         }
 
         [Fact]
         public async void UpdateUserGreeting()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
-            {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
-                var extension = rc.Restapi().Account().Extension();
-                var userAnsweringRuleList = await extension.AnsweringRule().List();
-                var answeringRule = userAnsweringRuleList.records.Last();
-                // comment out because we don't want to update user greetings
+            var rc = await SharedRestClient.GetInstance();
+            var extension = rc.Restapi().Account().Extension();
+            var userAnsweringRuleList = await extension.AnsweringRule().List();
+            var answeringRule = userAnsweringRuleList.records.Last();
+            // comment out because we don't want to update user greetings
 //                var customGreetingInfo = await extension.Greeting().Post(new CreateCustomUserGreetingRequest
 //                {
 //                    type = "Voicemail",
@@ -94,7 +77,6 @@ namespace RingCentral.Tests
 //                    },
 //                });
 //                Assert.Equal("Voicemail", customGreetingInfo.type);
-            }
         }
     }
 }

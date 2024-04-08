@@ -1,47 +1,40 @@
-using System;
 using System.Linq;
 using RingCentral.Net.Events;
 using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class UserAgentTest
     {
         [Fact]
         public async void AfterCall()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
+            var rc = await SharedRestClient.GetInstance();
+
+            var eventsExtension = new EventsExtension();
+            await rc.InstallExtension(eventsExtension);
+
+            var count = 0;
+
+            void EventHandler(object sender, HttpMessages httpMessages)
             {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
-
-                var eventsExtension = new EventsExtension();
-                await rc.InstallExtension(eventsExtension);
-
-                var count = 0;
-
-                void EventHandler(object sender, HttpMessages httpMessages)
-                {
-                    var userAgent = httpMessages.httpRequestMessage.Headers
-                        .First(i => i.Key == "X-User-Agent").Value.ToArray();
-                    Assert.Single(userAgent);
-                    Assert.StartsWith("Unknown/0.0.1 RingCentral.Net/", userAgent[0]);
-                    count += 1;
-                }
-
-                eventsExtension.RequestSuccess += EventHandler;
-
-                var china = await rc.Restapi().Dictionary().Country("46").Get();
-                Assert.Equal("China", china.name);
-                Assert.Equal(1, count);
-
-                eventsExtension.RequestSuccess -= EventHandler;
+                var userAgent = httpMessages.httpRequestMessage.Headers
+                    .First(i => i.Key == "X-User-Agent").Value.ToArray();
+                Assert.Single(userAgent);
+                Assert.StartsWith("Unknown/0.0.1 RingCentral.Net/", userAgent[0]);
+                count += 1;
             }
+
+            eventsExtension.RequestSuccess += EventHandler;
+
+            var china = await rc.Restapi().Dictionary().Country("46").Get();
+            Assert.Equal("China", china.name);
+            Assert.Equal(1, count);
+
+            eventsExtension.RequestSuccess -= EventHandler;
+
+            eventsExtension.enabled = false;
         }
     }
 }

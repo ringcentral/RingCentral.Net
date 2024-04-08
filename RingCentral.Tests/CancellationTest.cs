@@ -7,69 +7,61 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class CancellationTest
     {
         [Fact]
         public async void CancelAfter()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
-            {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
+            var rc = await SharedRestClient.GetInstance();
 
-                var sendFaxMessageRequest = new CreateFaxMessageRequest
+            var sendFaxMessageRequest = new CreateFaxMessageRequest
+            {
+                to = new[]
                 {
-                    to = new[]
+                    new FaxReceiver
                     {
-                        new FaxReceiver
-                        {
-                            phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER"),
-                            name = "The Receiver"
-                        }
-                    },
-                    attachments = new[]
-                    {
-                        new Attachment
-                        {
-                            filename = "rc.png",
-                            content = File.ReadAllBytes("./rc.png")
-                        },
-                        new Attachment
-                        {
-                            filename = "glip.png",
-                            content = File.ReadAllBytes("./glip.png")
-                        },
-                        new Attachment
-                        {
-                            filename = "hello.txt",
-                            content = Encoding.UTF8.GetBytes("Hello 888")
-                        }
+                        phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER"),
+                        name = "The Receiver"
                     }
-                };
-                var source = new CancellationTokenSource();
-                var token = source.Token;
-                source.CancelAfter(10); // impossible to send a fax within 10ms
-                var taskCanceledException = false;
-                try
+                },
+                attachments = new[]
                 {
-                    await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest, new RestRequestConfig
+                    new Attachment
                     {
-                        cancellationToken = token
-                    });
+                        filename = "rc.png",
+                        content = File.ReadAllBytes("./rc.png")
+                    },
+                    new Attachment
+                    {
+                        filename = "glip.png",
+                        content = File.ReadAllBytes("./glip.png")
+                    },
+                    new Attachment
+                    {
+                        filename = "hello.txt",
+                        content = Encoding.UTF8.GetBytes("Hello 888")
+                    }
                 }
-                catch (TaskCanceledException)
+            };
+            var source = new CancellationTokenSource();
+            var token = source.Token;
+            source.CancelAfter(10); // impossible to send a fax within 10ms
+            var taskCanceledException = false;
+            try
+            {
+                await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest, new RestRequestConfig
                 {
-                    taskCanceledException = true;
-                }
-                finally
-                {
-                    Assert.True(taskCanceledException);
-                }
+                    cancellationToken = token
+                });
+            }
+            catch (TaskCanceledException)
+            {
+                taskCanceledException = true;
+            }
+            finally
+            {
+                Assert.True(taskCanceledException);
             }
         }
     }

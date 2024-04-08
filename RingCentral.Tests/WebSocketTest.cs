@@ -6,6 +6,7 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class WebSocketTest
     {
         [Fact]
@@ -36,6 +37,8 @@ namespace RingCentral.Tests
             });
             await Task.Delay(20000);
             Assert.True(count > 0);
+            autoRefreshExtension.enabled = false;
+            webSocketExtension.enabled = false;
         }
     }
 }

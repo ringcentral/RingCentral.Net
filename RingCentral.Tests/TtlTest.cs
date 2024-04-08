@@ -3,6 +3,7 @@ using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class TtlTest
     {
         [Fact]

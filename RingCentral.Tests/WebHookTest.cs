@@ -1,39 +1,30 @@
-using System;
 using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class WebHookTest
     {
         [Fact]
         public async void SetupWebHook()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
+            var rc = await SharedRestClient.GetInstance();
+            try
             {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
-                try
+                await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest
                 {
-                    await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest
+                    eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"},
+                    deliveryMode = new NotificationDeliveryModeRequest
                     {
-                        eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"},
-                        deliveryMode = new NotificationDeliveryModeRequest
-                        {
-                            transportType = "WebHook",
-                            address = "http://www.example.com/webhook"
-                        }
-                    });
-                }
-                catch (RestException re)
-                {
-                    // "errorCode":"SUB-523","message":"HTTPS is required"
-                    Assert.Contains("{\"errorCode\":\"SUB-523\"", re.Message);
-                }
+                        transportType = "WebHook",
+                        address = "http://www.example.com/webhook"
+                    }
+                });
+            }
+            catch (RestException re)
+            {
+                // "errorCode":"SUB-523","message":"HTTPS is required"
+                Assert.Contains("{\"errorCode\":\"SUB-523\"", re.Message);
             }
         }
 

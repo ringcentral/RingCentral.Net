@@ -1,10 +1,10 @@
-using System;
 using System.Net;
 using Newtonsoft.Json;
 using Xunit;
 
 namespace RingCentral.Tests
 {
+    [Collection("Sequential")]
     public class DictionaryTest
     {
         [Fact]
@@ -22,26 +22,17 @@ namespace RingCentral.Tests
         [Fact]
         public async void TestGet()
         {
-            using (var rc = new RestClient(
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-                       Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-                   ))
-            {
-                await rc.Authorize(
-                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-                );
-                var country = rc.Restapi().Dictionary().Country("46");
-                var response = await rc.Get(country.Path());
-                Assert.NotNull(response);
-                Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-                Assert.Contains("China", await response.Content.ReadAsStringAsync());
+            var rc = await SharedRestClient.GetInstance();
+            var country = rc.Restapi().Dictionary().Country("46");
+            var response = await rc.Get(country.Path());
+            Assert.NotNull(response);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Contains("China", await response.Content.ReadAsStringAsync());
 
-                var countryResponse = await rc.Get<CountryInfoDictionaryModel>(country.Path());
-                var countryResponse2 = await rc.Restapi().Dictionary().Country("46").Get();
-                Assert.Equal(JsonConvert.SerializeObject(countryResponse2),
-                    JsonConvert.SerializeObject(countryResponse));
-            }
+            var countryResponse = await rc.Get<CountryInfoDictionaryModel>(country.Path());
+            var countryResponse2 = await rc.Restapi().Dictionary().Country("46").Get();
+            Assert.Equal(JsonConvert.SerializeObject(countryResponse2),
+                JsonConvert.SerializeObject(countryResponse));
         }
 
         [Fact]
