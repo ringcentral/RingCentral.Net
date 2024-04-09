@@ -123,7 +123,7 @@ namespace RingCentral.Net.WebSocket
                 method = method,
                 path = endpoint
             };
-            requestBody[1] = content;
+            requestBody[1] = content ?? "";
 
             void Handler(object sender, WsgMessage wsgMessage)
             {
