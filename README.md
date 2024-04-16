@@ -17,7 +17,7 @@ If you are having difficulty using this SDK, or working with the RingCentral API
 Packages are [available on NuGet](https://www.nuget.org/packages?q=ringcentral.net).
 You can install them just like you install any other NuGet packages.
 
-This packages is compatible with [.NET Standard 2.0](https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0), which means, it is compatible with all modern .NET platforms including .NET Core, .NET Framework, and Mono.
+This package is compatible with [.NET Standard 2.0](https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0), which means, it is compatible with all modern .NET platforms including .NET Core, .NET Framework, and Mono.
 
 
 ## Extensions
