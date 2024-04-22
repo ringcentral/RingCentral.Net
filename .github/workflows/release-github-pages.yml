@@ -1,18 +1,27 @@
-name: GitHub Pages release
+name: Generate and Deploy Documentation
+
 on:
   push:
     branches:
       - master
-permissions:
-  contents: write
+      - addDocs
+
 jobs:
-  deploy:
+  generate-docs:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version}}
-        uses: actions/setup-python@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen
+
+      - name: Generate Documentation
+        run: doxygen Doxyfile
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          python-version: ${{ matrix.python-version }}
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
