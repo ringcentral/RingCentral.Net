@@ -1,0 +1,8 @@
+PROJECT_NAME = "RingCentral .Net SDK"
+OUTPUT_DIRECTORY = docs
+GENERATE_HTML = YES
+
+# Source files
+
+INPUT = RingCentral.Net.WebSocket RingCentral.Net RingCentral.Net.AuthorizeUri RingCentral.Net.AutoRefresh RingCentral.Net.Events RingCentral.Net.Pubnub RingCentral.Net.PubnubPCL RingCentral.Net.RateLimit RingCentral.Net.Retry
+RECURSIVE = YES
