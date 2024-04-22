@@ -1,0 +1,103 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Subscription.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index}\index{RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Subscription.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_ad72c51a268e67f5e7a431a3fc968e349}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_ad72c51a268e67f5e7a431a3fc968e349}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Index}{Restapi.\+Index}} parent, string subscription\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a141c9dce9e751efd785fa0e635a890d0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a141c9dce9e751efd785fa0e635a890d0}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionListResource}{Subscription\+List\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aa6dfa487d457e23c488061c31b2de4e6}{List}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of subscriptions created by the user for the current authorized client application. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/subscription Rate Limit Group\+: Light \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aab67a25597da2c393fc1a0e09740a7aa}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateSubscriptionRequest}{Create\+Subscription\+Request}} create\+Subscription\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em This API allows client applications to register a new subscription so that it can be notified of events when they occur on the platform. A subscription relates to a set of events that a client application would like to be informed of and the delivery channel by which they will be notified of those events. How subscriptions are established depends upon the notification channel the client application would like to use to receive the event notification. For example, to create a webhook a developer would create a subscription via a REST API call, while specifying a list of events or \char`\"{}event     filters\char`\"{} to be notified of, a transport type of {\ttfamily Web\+Hook}, and the address or URL to which they would like the webhook delivered. However, developers wishing to subscribe to a set of events via a Web\+Socket channel, would first connect to the Web\+Socket gateway, and then issue their subscription request over the Web\+Socket itself, as opposed to making a REST API call to this endpoint. While the protocol for establishing a subscription may vary depending upon the delivery channel for that subscription, the schemas used for representing a subscription are the same across all delivery modes. Subscriptions are currently limited to 20 subscriptions per user/extension (for particular application). \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} currently supports the following delivery modes for event subscriptions\+: \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aa24f67f0cef044bee6a6cb7cb121fb71}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the existing subscription by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/subscription/\{subscription\+Id\} Rate Limit Group\+: Light \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a86148de9eab833c1c00c4253ef0ccc48}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateSubscriptionRequest}{Update\+Subscription\+Request}} update\+Subscription\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the existing subscription. The client application can extend or narrow the list of events for which it receives notifications within the current subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows one to set an expiration time for the subscription itself. If parameters other than {\ttfamily events} and {\ttfamily expires\+In} are specified in the request they will be ignored. If the request body is empty then the specified subscription will be renewed without any event filter modifications and using the default expiration time. If the request is sent with empty body, it just renews a subscription (so it is an equivalent of the {\ttfamily POST /restapi/v1.0/subscription/\{subscription\+Id\}/renew}). Please note that {\ttfamily Web\+Socket} subscriptions cannot be updated via HTTP interface. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/subscription/\{subscription\+Id\} Rate Limit Group\+: Medium \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a97cc802192fbf95bf06092224dfb84c0}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Cancels the existing subscription. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/subscription/\{subscription\+Id\} Rate Limit Group\+: Medium \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_afc1185fd1b97d577e2cf8d116aefedb7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_afc1185fd1b97d577e2cf8d116aefedb7}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Renew_1_1Index}{Renew.\+Index}} {\bfseries Renew} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_add2af84b216a0e7f769ea003d4e1dd50}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_add2af84b216a0e7f769ea003d4e1dd50}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Index}{Restapi.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_ac76f1780e0e0c39a46a84cc2107f53ea}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_ac76f1780e0e0c39a46a84cc2107f53ea}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_adb621ab8cd6b6fafd6a640f1d2033b1d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_adb621ab8cd6b6fafd6a640f1d2033b1d}} 
+string {\bfseries subscription\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a97cc802192fbf95bf06092224dfb84c0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a97cc802192fbf95bf06092224dfb84c0}} 
+\index{RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Subscription.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cancels the existing subscription. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/subscription/\{subscription\+Id\} Rate Limit Group\+: Medium 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aa24f67f0cef044bee6a6cb7cb121fb71}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aa24f67f0cef044bee6a6cb7cb121fb71}} 
+\index{RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Subscription.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the existing subscription by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/subscription/\{subscription\+Id\} Rate Limit Group\+: Light 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aa6dfa487d457e23c488061c31b2de4e6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aa6dfa487d457e23c488061c31b2de4e6}} 
+\index{RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionListResource}{Subscription\+List\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Subscription.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of subscriptions created by the user for the current authorized client application. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/subscription Rate Limit Group\+: Light 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aab67a25597da2c393fc1a0e09740a7aa}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_aab67a25597da2c393fc1a0e09740a7aa}} 
+\index{RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Subscription.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateSubscriptionRequest}{Create\+Subscription\+Request}}}]{create\+Subscription\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This API allows client applications to register a new subscription so that it can be notified of events when they occur on the platform. A subscription relates to a set of events that a client application would like to be informed of and the delivery channel by which they will be notified of those events. How subscriptions are established depends upon the notification channel the client application would like to use to receive the event notification. For example, to create a webhook a developer would create a subscription via a REST API call, while specifying a list of events or \char`\"{}event     filters\char`\"{} to be notified of, a transport type of {\ttfamily Web\+Hook}, and the address or URL to which they would like the webhook delivered. However, developers wishing to subscribe to a set of events via a Web\+Socket channel, would first connect to the Web\+Socket gateway, and then issue their subscription request over the Web\+Socket itself, as opposed to making a REST API call to this endpoint. While the protocol for establishing a subscription may vary depending upon the delivery channel for that subscription, the schemas used for representing a subscription are the same across all delivery modes. Subscriptions are currently limited to 20 subscriptions per user/extension (for particular application). \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} currently supports the following delivery modes for event subscriptions\+: 
+
+
+\begin{DoxyItemize}
+\item \href{https://developers.ringcentral.com/guide/notifications/webhooks/quick-start}{\texttt{ Web\+Hook}} -\/ to receive event notifications as an HTTP POST to a given URL
+\item \href{https://developers.ringcentral.com/guide/notifications/websockets/quick-start}{\texttt{ Web\+Socket}} -\/ to receive real-\/time events over a persistent Web\+Socket connection
+\item \href{https://developers.ringcentral.com/guide/notifications/push-notifications/quick-start}{\texttt{ Pub\+Nub}} (deprecated) -\/ to receive a push notification sent directly to a client application Developers should be aware that the Pub\+Nub delivery mode is currently deprecated and will be removed in 2024. Developers are encouraged to \href{https://developers.ringcentral.com/guide/notifications/websockets/migration/}{\texttt{ migrate their client applications to use Web\+Sockets}} instead. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/subscription Rate Limit Group\+: Medium
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a86148de9eab833c1c00c4253ef0ccc48}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Subscription_1_1Index_a86148de9eab833c1c00c4253ef0ccc48}} 
+\index{RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Subscription.Index@{RingCentral.Paths.Restapi.Subscription.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Subscription.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateSubscriptionRequest}{Update\+Subscription\+Request}}}]{update\+Subscription\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the existing subscription. The client application can extend or narrow the list of events for which it receives notifications within the current subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows one to set an expiration time for the subscription itself. If parameters other than {\ttfamily events} and {\ttfamily expires\+In} are specified in the request they will be ignored. If the request body is empty then the specified subscription will be renewed without any event filter modifications and using the default expiration time. If the request is sent with empty body, it just renews a subscription (so it is an equivalent of the {\ttfamily POST /restapi/v1.0/subscription/\{subscription\+Id\}/renew}). Please note that {\ttfamily Web\+Socket} subscriptions cannot be updated via HTTP interface. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/subscription/\{subscription\+Id\} Rate Limit Group\+: Medium 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Subscription/Index.\+cs\end{DoxyCompactItemize}

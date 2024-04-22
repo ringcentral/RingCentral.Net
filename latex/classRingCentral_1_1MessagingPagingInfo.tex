@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1MessagingPagingInfo}{}\doxysection{Ring\+Central.\+Messaging\+Paging\+Info Class Reference}
+\label{classRingCentral_1_1MessagingPagingInfo}\index{RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}}
+
+
+Information on paging  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessagingPagingInfo_a4a8a30af0d3d650f068d3c51ed77fb32}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessagingPagingInfo_a83c749f417dbec24d4c41757844cd807}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current page size, describes how many items are in each page. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessagingPagingInfo_aaa89f6d8d937f5a89517774d89aa50bc}{page\+Start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessagingPagingInfo_a5048fca31f932e89782e5efa717e900a}{page\+End}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessagingPagingInfo_a5d8587a765db93b7666f4b46f2bfa7f7}{total\+Pages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessagingPagingInfo_ab6a2c34327923757ca1970d54b0cb329}{total\+Elements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information on paging 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1MessagingPagingInfo_a4a8a30af0d3d650f068d3c51ed77fb32}\label{classRingCentral_1_1MessagingPagingInfo_a4a8a30af0d3d650f068d3c51ed77fb32}} 
+\index{RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}!page@{page}}
+\index{page@{page}!RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Messaging\+Paging\+Info.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessagingPagingInfo_a5048fca31f932e89782e5efa717e900a}\label{classRingCentral_1_1MessagingPagingInfo_a5048fca31f932e89782e5efa717e900a}} 
+\index{RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}!pageEnd@{pageEnd}}
+\index{pageEnd@{pageEnd}!RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageEnd}{pageEnd}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Messaging\+Paging\+Info.\+page\+End\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessagingPagingInfo_aaa89f6d8d937f5a89517774d89aa50bc}\label{classRingCentral_1_1MessagingPagingInfo_aaa89f6d8d937f5a89517774d89aa50bc}} 
+\index{RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}!pageStart@{pageStart}}
+\index{pageStart@{pageStart}!RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageStart}{pageStart}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Messaging\+Paging\+Info.\+page\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessagingPagingInfo_a83c749f417dbec24d4c41757844cd807}\label{classRingCentral_1_1MessagingPagingInfo_a83c749f417dbec24d4c41757844cd807}} 
+\index{RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Messaging\+Paging\+Info.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current page size, describes how many items are in each page. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessagingPagingInfo_ab6a2c34327923757ca1970d54b0cb329}\label{classRingCentral_1_1MessagingPagingInfo_ab6a2c34327923757ca1970d54b0cb329}} 
+\index{RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}!totalElements@{totalElements}}
+\index{totalElements@{totalElements}!RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalElements}{totalElements}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Messaging\+Paging\+Info.\+total\+Elements\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessagingPagingInfo_a5d8587a765db93b7666f4b46f2bfa7f7}\label{classRingCentral_1_1MessagingPagingInfo_a5d8587a765db93b7666f4b46f2bfa7f7}} 
+\index{RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}!totalPages@{totalPages}}
+\index{totalPages@{totalPages}!RingCentral.MessagingPagingInfo@{RingCentral.MessagingPagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalPages}{totalPages}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Messaging\+Paging\+Info.\+total\+Pages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Messaging\+Paging\+Info.\+cs\end{DoxyCompactItemize}

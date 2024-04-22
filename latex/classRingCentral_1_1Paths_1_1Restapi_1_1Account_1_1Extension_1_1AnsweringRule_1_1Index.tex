@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Answering\+Rule.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Answering\+Rule.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae72961defc93d11a1a4e40934c4a58f6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae72961defc93d11a1a4e40934c4a58f6}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent, string rule\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_a80c1c8afc2773a06a019ede6ab3f8d4d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_a80c1c8afc2773a06a019ede6ab3f8d4d}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1UserAnsweringRuleList}{User\+Answering\+Rule\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ada0ac2c5cce41f6b5520b14706a66836}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListAnsweringRulesParameters}{List\+Answering\+Rules\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns call handling rules of an extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Answering\+Rules \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CustomAnsweringRuleInfo}{Custom\+Answering\+Rule\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_a34987ea0dd093c897fed87e91db80956}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest}{Create\+Answering\+Rule\+Request}} create\+Answering\+Rule\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a custom call handling rule for a particular caller ID. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Answering\+Rules \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AnsweringRuleInfo}{Answering\+Rule\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae766a1ab1a2c548b6dc02f33b012964a}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ReadAnsweringRuleParameters}{Read\+Answering\+Rule\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a call handling rule by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule/\{rule\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Answering\+Rules \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AnsweringRuleInfo}{Answering\+Rule\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae898d5022469e2c599784b238f6fdc10}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateAnsweringRuleRequest}{Update\+Answering\+Rule\+Request}} update\+Answering\+Rule\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a custom call handling rule for a particular caller ID. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule/\{rule\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Answering\+Rules \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ac0e5861ee14756f3dc5b2b0f9ca90e54}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a custom call handling rule by a particular ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule/\{rule\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Answering\+Rules \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ad9b17872a38a78012b83c1d292205b86}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ad9b17872a38a78012b83c1d292205b86}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_a5396dce0612061ebf5796e752a03bd4c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_a5396dce0612061ebf5796e752a03bd4c}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ab176a70db8b02b935fcc18958403b65e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ab176a70db8b02b935fcc18958403b65e}} 
+string {\bfseries rule\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ac0e5861ee14756f3dc5b2b0f9ca90e54}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ac0e5861ee14756f3dc5b2b0f9ca90e54}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Answering\+Rule.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a custom call handling rule by a particular ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule/\{rule\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Answering\+Rules 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae766a1ab1a2c548b6dc02f33b012964a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae766a1ab1a2c548b6dc02f33b012964a}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AnsweringRuleInfo}{Answering\+Rule\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Answering\+Rule.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadAnsweringRuleParameters}{Read\+Answering\+Rule\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a call handling rule by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule/\{rule\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Answering\+Rules 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ada0ac2c5cce41f6b5520b14706a66836}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ada0ac2c5cce41f6b5520b14706a66836}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1UserAnsweringRuleList}{User\+Answering\+Rule\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Answering\+Rule.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListAnsweringRulesParameters}{List\+Answering\+Rules\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns call handling rules of an extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Answering\+Rules 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_a34987ea0dd093c897fed87e91db80956}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_a34987ea0dd093c897fed87e91db80956}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CustomAnsweringRuleInfo}{Custom\+Answering\+Rule\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Answering\+Rule.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest}{Create\+Answering\+Rule\+Request}}}]{create\+Answering\+Rule\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a custom call handling rule for a particular caller ID. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Answering\+Rules 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae898d5022469e2c599784b238f6fdc10}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AnsweringRule_1_1Index_ae898d5022469e2c599784b238f6fdc10}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index@{RingCentral.Paths.Restapi.Account.Extension.AnsweringRule.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AnsweringRuleInfo}{Answering\+Rule\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Answering\+Rule.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateAnsweringRuleRequest}{Update\+Answering\+Rule\+Request}}}]{update\+Answering\+Rule\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a custom call handling rule for a particular caller ID. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/answering-\/rule/\{rule\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Answering\+Rules 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Answering\+Rule/Index.\+cs\end{DoxyCompactItemize}

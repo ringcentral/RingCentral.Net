@@ -1,0 +1,191 @@
+\hypertarget{classRingCentral_1_1VoicemailMessageEventBody}{}\doxysection{Ring\+Central.\+Voicemail\+Message\+Event\+Body Class Reference}
+\label{classRingCentral_1_1VoicemailMessageEventBody}\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+
+
+Notification payload body  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_ae1aa2b620e74d9b92fb76323fa6e9a64}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message Format\+: int64 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo}{Notification\+Recipient\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_a5cf99aa6361c44248defdf9c1522085a}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message receiver(s) information \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SenderInfo}{Sender\+Info}} \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_abf0b8a07563cb9fc3c5984271ec94a13}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_af5d29d018726f86864d206628a838c8b}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of message Enum\+: Voicemail \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_a97213dd19c654ed1e119b020f4357693}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message creation date/time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2019-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_a563fce78d978311d205806e4a17df57d}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Date/time when a message was modified in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2019-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_ae423f70a603536eecb5e6c167366b52d}{read\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message read status Enum\+: Read, Unread \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_a2d4712d0a6700852cd2f1042c91fc790}{priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message priority Enum\+: Normal, High \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_af99ebb3917dbb3c77dc733bd176ff682}{attachments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message attachment data \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_ad9e9cfb0556e086e4dd1ab3e419a5b55}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_a8f4fe7ff53dba65b52d3443ed52127cc}{availability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_a4939a1f002791b57ca7874f0fd8b6fa9}{subject}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message subject. It replicates message text which is also returned as an attachment \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_ac3693df988b02c0c352bfbbfeeb8ca6e}{message\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1VoicemailMessageEventBody_a3df73ecf8eaa40f53a2416ae7e9100f2}{vm\+Transcription\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Status of a voicemail to text transcription. Specifies if a voicemail message transcription is already completed or not If \textquotesingle{}Voicemail\+To\+Text\textquotesingle{} feature is not activated for account, the \textquotesingle{}Not\+Available\textquotesingle{} value is returned Enum\+: Not\+Available, In\+Progress, Timed\+Out, Completed, Completed\+Partially, Failed, Unknown \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notification payload body 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_af99ebb3917dbb3c77dc733bd176ff682}\label{classRingCentral_1_1VoicemailMessageEventBody_af99ebb3917dbb3c77dc733bd176ff682}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!attachments@{attachments}}
+\index{attachments@{attachments}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{attachments}{attachments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+attachments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message attachment data 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_a8f4fe7ff53dba65b52d3443ed52127cc}\label{classRingCentral_1_1VoicemailMessageEventBody_a8f4fe7ff53dba65b52d3443ed52127cc}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!availability@{availability}}
+\index{availability@{availability}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{availability}{availability}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+availability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_a97213dd19c654ed1e119b020f4357693}\label{classRingCentral_1_1VoicemailMessageEventBody_a97213dd19c654ed1e119b020f4357693}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message creation date/time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2019-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_ad9e9cfb0556e086e4dd1ab3e419a5b55}\label{classRingCentral_1_1VoicemailMessageEventBody_ad9e9cfb0556e086e4dd1ab3e419a5b55}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!direction@{direction}}
+\index{direction@{direction}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_abf0b8a07563cb9fc3c5984271ec94a13}\label{classRingCentral_1_1VoicemailMessageEventBody_abf0b8a07563cb9fc3c5984271ec94a13}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!from@{from}}
+\index{from@{from}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SenderInfo}{Sender\+Info}} Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_ae1aa2b620e74d9b92fb76323fa6e9a64}\label{classRingCentral_1_1VoicemailMessageEventBody_ae1aa2b620e74d9b92fb76323fa6e9a64}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!id@{id}}
+\index{id@{id}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a message Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_a563fce78d978311d205806e4a17df57d}\label{classRingCentral_1_1VoicemailMessageEventBody_a563fce78d978311d205806e4a17df57d}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Date/time when a message was modified in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2019-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_ac3693df988b02c0c352bfbbfeeb8ca6e}\label{classRingCentral_1_1VoicemailMessageEventBody_ac3693df988b02c0c352bfbbfeeb8ca6e}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!messageStatus@{messageStatus}}
+\index{messageStatus@{messageStatus}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{messageStatus}{messageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+message\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_a2d4712d0a6700852cd2f1042c91fc790}\label{classRingCentral_1_1VoicemailMessageEventBody_a2d4712d0a6700852cd2f1042c91fc790}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!priority@{priority}}
+\index{priority@{priority}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+priority\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message priority Enum\+: Normal, High 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_ae423f70a603536eecb5e6c167366b52d}\label{classRingCentral_1_1VoicemailMessageEventBody_ae423f70a603536eecb5e6c167366b52d}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!readStatus@{readStatus}}
+\index{readStatus@{readStatus}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{readStatus}{readStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+read\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message read status Enum\+: Read, Unread 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_a4939a1f002791b57ca7874f0fd8b6fa9}\label{classRingCentral_1_1VoicemailMessageEventBody_a4939a1f002791b57ca7874f0fd8b6fa9}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!subject@{subject}}
+\index{subject@{subject}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{subject}{subject}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+subject\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message subject. It replicates message text which is also returned as an attachment 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_a5cf99aa6361c44248defdf9c1522085a}\label{classRingCentral_1_1VoicemailMessageEventBody_a5cf99aa6361c44248defdf9c1522085a}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!to@{to}}
+\index{to@{to}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo}{Notification\+Recipient\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message receiver(s) information 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_af5d29d018726f86864d206628a838c8b}\label{classRingCentral_1_1VoicemailMessageEventBody_af5d29d018726f86864d206628a838c8b}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!type@{type}}
+\index{type@{type}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of message Enum\+: Voicemail 
+
+\mbox{\Hypertarget{classRingCentral_1_1VoicemailMessageEventBody_a3df73ecf8eaa40f53a2416ae7e9100f2}\label{classRingCentral_1_1VoicemailMessageEventBody_a3df73ecf8eaa40f53a2416ae7e9100f2}} 
+\index{RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}!vmTranscriptionStatus@{vmTranscriptionStatus}}
+\index{vmTranscriptionStatus@{vmTranscriptionStatus}!RingCentral.VoicemailMessageEventBody@{RingCentral.VoicemailMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{vmTranscriptionStatus}{vmTranscriptionStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Voicemail\+Message\+Event\+Body.\+vm\+Transcription\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Status of a voicemail to text transcription. Specifies if a voicemail message transcription is already completed or not If \textquotesingle{}Voicemail\+To\+Text\textquotesingle{} feature is not activated for account, the \textquotesingle{}Not\+Available\textquotesingle{} value is returned Enum\+: Not\+Available, In\+Progress, Timed\+Out, Completed, Completed\+Partially, Failed, Unknown 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Voicemail\+Message\+Event\+Body.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Directory.\+Entries.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index}\index{RingCentral.Paths.Restapi.Account.Directory.Entries.Index@{RingCentral.Paths.Restapi.Account.Directory.Entries.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Directory.\+Entries.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a293d344757feef1493da3c398a007de8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a293d344757feef1493da3c398a007de8}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Index}{Directory.\+Index}} parent, string entry\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a586f16317914e7f23b13bc178d11d1cd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a586f16317914e7f23b13bc178d11d1cd}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DirectoryResource}{Directory\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a5897faab197a029b8c3894412886d05a}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListDirectoryEntriesParameters}{List\+Directory\+Entries\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns contact information on corporate users of federated accounts. Please note\+: 1. {\ttfamily \mbox{\hyperlink{classRingCentral_1_1User}{User}}}, {\ttfamily Digital\+User}, {\ttfamily Virtual\+User} and {\ttfamily Fax\+User} types are returned as {\ttfamily \mbox{\hyperlink{classRingCentral_1_1User}{User}}} type. 2. {\ttfamily Application\+Extension} type is not returned. 3. Only extensions in {\ttfamily Enabled}, {\ttfamily Disabled} and {\ttfamily Not\+Activated} state are returned. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/directory/entries Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ContactResource}{Contact\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a4b6c961b5fe09e4d3fc774bfed0d9ee7}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns contact information on a particular corporate user of a federated account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/directory/entries/\{entry\+Id\} Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_ab9dfd05530e137262fc546eca99ed11f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_ab9dfd05530e137262fc546eca99ed11f}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Search_1_1Index}{Search.\+Index}} {\bfseries Search} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_ac0ed2141a26b276f87646f5af564785c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_ac0ed2141a26b276f87646f5af564785c}} 
+string {\bfseries entry\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a45bbd01350525a25c11551e17e92d5a8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a45bbd01350525a25c11551e17e92d5a8}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Index}{Directory.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a155bbdad4c3ab2df5c4efe20df9d9fd8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a155bbdad4c3ab2df5c4efe20df9d9fd8}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a4b6c961b5fe09e4d3fc774bfed0d9ee7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a4b6c961b5fe09e4d3fc774bfed0d9ee7}} 
+\index{RingCentral.Paths.Restapi.Account.Directory.Entries.Index@{RingCentral.Paths.Restapi.Account.Directory.Entries.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Directory.Entries.Index@{RingCentral.Paths.Restapi.Account.Directory.Entries.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ContactResource}{Contact\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Directory.\+Entries.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns contact information on a particular corporate user of a federated account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/directory/entries/\{entry\+Id\} Rate Limit Group\+: Medium App Permission\+: Read\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a5897faab197a029b8c3894412886d05a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Directory_1_1Entries_1_1Index_a5897faab197a029b8c3894412886d05a}} 
+\index{RingCentral.Paths.Restapi.Account.Directory.Entries.Index@{RingCentral.Paths.Restapi.Account.Directory.Entries.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Directory.Entries.Index@{RingCentral.Paths.Restapi.Account.Directory.Entries.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DirectoryResource}{Directory\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Directory.\+Entries.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListDirectoryEntriesParameters}{List\+Directory\+Entries\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns contact information on corporate users of federated accounts. Please note\+: 1. {\ttfamily \mbox{\hyperlink{classRingCentral_1_1User}{User}}}, {\ttfamily Digital\+User}, {\ttfamily Virtual\+User} and {\ttfamily Fax\+User} types are returned as {\ttfamily \mbox{\hyperlink{classRingCentral_1_1User}{User}}} type. 2. {\ttfamily Application\+Extension} type is not returned. 3. Only extensions in {\ttfamily Enabled}, {\ttfamily Disabled} and {\ttfamily Not\+Activated} state are returned. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/directory/entries Rate Limit Group\+: Medium App Permission\+: Read\+Accounts 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Directory/\+Entries/Index.\+cs\end{DoxyCompactItemize}

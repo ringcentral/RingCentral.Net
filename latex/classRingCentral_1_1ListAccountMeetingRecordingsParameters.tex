@@ -1,0 +1,83 @@
+\hypertarget{classRingCentral_1_1ListAccountMeetingRecordingsParameters}{}\doxysection{Ring\+Central.\+List\+Account\+Meeting\+Recordings\+Parameters Class Reference}
+\label{classRingCentral_1_1ListAccountMeetingRecordingsParameters}\index{RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}}
+
+
+Query parameters for operation list\+Account\+Meeting\+Recordings  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAccountMeetingRecordingsParameters_afe176cfdd9f16784e1aacff7f0dd55f8}{meeting\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a meeting. Either {\ttfamily meeting\+Id} or {\ttfamily meeting\+Start\+Time}/{\ttfamily meeting\+End\+Time} can be specified \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAccountMeetingRecordingsParameters_a44f5818a7b839c5bf3f74838bce3b361}{meeting\+Start\+Time\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Recordings of meetings started after the time specified will be returned. Either {\ttfamily meeting\+Id} or {\ttfamily meeting\+Start\+Time}/{\ttfamily meeting\+End\+Time} can be specified Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAccountMeetingRecordingsParameters_af9441245abb79741a8e835916fc112d1}{meeting\+Start\+Time\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Recordings of meetings started before the time specified will be returned. The default value is current time. Either {\ttfamily meeting\+Id} or {\ttfamily meeting\+Start\+Time}/{\ttfamily meeting\+End\+Time} can be specified Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListAccountMeetingRecordingsParameters_a70f384a2c40a2425164544590cb69123}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Page number Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListAccountMeetingRecordingsParameters_af2e1af0138597bbe0c5c1cb7cab441b3}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of items per page. The {\ttfamily max} value is supported to indicate the maximum size -\/ 300 Maximum\+: 300 Format\+: int32 Default\+: 100 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Account\+Meeting\+Recordings 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountMeetingRecordingsParameters_afe176cfdd9f16784e1aacff7f0dd55f8}\label{classRingCentral_1_1ListAccountMeetingRecordingsParameters_afe176cfdd9f16784e1aacff7f0dd55f8}} 
+\index{RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}!meetingId@{meetingId}}
+\index{meetingId@{meetingId}!RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{meetingId}{meetingId}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Account\+Meeting\+Recordings\+Parameters.\+meeting\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a meeting. Either {\ttfamily meeting\+Id} or {\ttfamily meeting\+Start\+Time}/{\ttfamily meeting\+End\+Time} can be specified 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountMeetingRecordingsParameters_a44f5818a7b839c5bf3f74838bce3b361}\label{classRingCentral_1_1ListAccountMeetingRecordingsParameters_a44f5818a7b839c5bf3f74838bce3b361}} 
+\index{RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}!meetingStartTimeFrom@{meetingStartTimeFrom}}
+\index{meetingStartTimeFrom@{meetingStartTimeFrom}!RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{meetingStartTimeFrom}{meetingStartTimeFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Account\+Meeting\+Recordings\+Parameters.\+meeting\+Start\+Time\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Recordings of meetings started after the time specified will be returned. Either {\ttfamily meeting\+Id} or {\ttfamily meeting\+Start\+Time}/{\ttfamily meeting\+End\+Time} can be specified Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountMeetingRecordingsParameters_af9441245abb79741a8e835916fc112d1}\label{classRingCentral_1_1ListAccountMeetingRecordingsParameters_af9441245abb79741a8e835916fc112d1}} 
+\index{RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}!meetingStartTimeTo@{meetingStartTimeTo}}
+\index{meetingStartTimeTo@{meetingStartTimeTo}!RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{meetingStartTimeTo}{meetingStartTimeTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Account\+Meeting\+Recordings\+Parameters.\+meeting\+Start\+Time\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Recordings of meetings started before the time specified will be returned. The default value is current time. Either {\ttfamily meeting\+Id} or {\ttfamily meeting\+Start\+Time}/{\ttfamily meeting\+End\+Time} can be specified Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountMeetingRecordingsParameters_a70f384a2c40a2425164544590cb69123}\label{classRingCentral_1_1ListAccountMeetingRecordingsParameters_a70f384a2c40a2425164544590cb69123}} 
+\index{RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}!page@{page}}
+\index{page@{page}!RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Account\+Meeting\+Recordings\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Page number Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountMeetingRecordingsParameters_af2e1af0138597bbe0c5c1cb7cab441b3}\label{classRingCentral_1_1ListAccountMeetingRecordingsParameters_af2e1af0138597bbe0c5c1cb7cab441b3}} 
+\index{RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListAccountMeetingRecordingsParameters@{RingCentral.ListAccountMeetingRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Account\+Meeting\+Recordings\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of items per page. The {\ttfamily max} value is supported to indicate the maximum size -\/ 300 Maximum\+: 300 Format\+: int32 Default\+: 100 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Account\+Meeting\+Recordings\+Parameters.\+cs\end{DoxyCompactItemize}

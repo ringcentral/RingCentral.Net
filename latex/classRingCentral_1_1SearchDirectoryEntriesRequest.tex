@@ -1,0 +1,193 @@
+\hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest}{}\doxysection{Ring\+Central.\+Search\+Directory\+Entries\+Request Class Reference}
+\label{classRingCentral_1_1SearchDirectoryEntriesRequest}\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a5372845e0eb30d1da78d138644415ec3}{search\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em String value to filter the contacts. The value specified is searched through the following fields\+: {\ttfamily first\+Name}, {\ttfamily last\+Name}, {\ttfamily extension\+Number}, {\ttfamily phone\+Number}, {\ttfamily email}, {\ttfamily job\+Title}, {\ttfamily department}, {\ttfamily custom\+Field\+Value} \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a09ee671acf9b83674aee19093b350094}{search\+Fields}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of field to be searched for Enum\+: first\+Name, last\+Name, extension\+Number, phone\+Number, email, job\+Title, department, custom\+Field\+Value \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a0c965407d2faf3eaf4a726f26d4aac2c}{show\+Federated}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true} then contacts of all accounts in federation are returned, if it is in federation, account section will be returned. If {\ttfamily false} then only contacts of the current account are returned, and account section is eliminated in this case \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a4194ca9573cb44576839bf9488065a83}{show\+Admin\+Only\+Contacts}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Should show Admin\+Only Contacts \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a9f03baf3d82c3f9e3b00132347aff567}{extension\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of directory contact to filter Example\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}} Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Park\+Location, Ivr\+Menu, Limited, Application\+Extension, Site, Bot, Room, Delegated\+Lines\+Group, Group\+Call\+Pickup, External \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a04af339c645d7407d77840bc2fcb0ace}{site\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of the business site to which extensions belong Example\+: 872781797006 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_aa9b76a6093077096a6da114ea2780f43}{show\+External\+Contacts}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows to control whether External (Hybrid) contacts should be returned in the response or not Example\+: true \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_aaabbe9a7844cedb076aec2f6352efe94}{account\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of Internal identifiers of an accounts Example\+: 854874047006,422456828004,854874151006 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_aaf346903988f82540c5df65a5f3a00f1}{department}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Department \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a9af766c3ea3c922752ba082a3e76d882}{site\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of Internal identifiers of the business sites to which extensions belong \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a084affcf1faaa98009f74927413d556b}{extension\+Statuses}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension current state. Enum\+: Enabled, Disabled, Not\+Activated \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a856affae8ee477dd5968cd94958ac6c3}{extension\+Types}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Types of extension to filter the contacts Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Department, Announcement, Voicemail, Digital\+User, Virtual\+User, Fax\+User, Paging\+Only, Shared\+Lines\+Group, Ivr\+Menu, Application\+Extension, Park\+Location, Limited, Bot, Site, Room, Proxy\+Admin, Delegated\+Lines\+Group, Flexible\+User, Group\+Call\+Pickup, Room\+Connector \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1OrderBy}{Order\+By}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_a84ebd0d4e47603e6cd8c5646e706d7f8}{order\+By}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sorting settings \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_ac31ce9db887ebdf209e4df65ab966c26}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SearchDirectoryEntriesRequest_ad84872e091d119fcd6f48bc738a2715e}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Format\+: int32 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_aaabbe9a7844cedb076aec2f6352efe94}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_aaabbe9a7844cedb076aec2f6352efe94}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!accountIds@{accountIds}}
+\index{accountIds@{accountIds}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{accountIds}{accountIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Search\+Directory\+Entries\+Request.\+account\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of Internal identifiers of an accounts Example\+: 854874047006,422456828004,854874151006 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_aaf346903988f82540c5df65a5f3a00f1}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_aaf346903988f82540c5df65a5f3a00f1}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!department@{department}}
+\index{department@{department}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{department}{department}}
+{\footnotesize\ttfamily string Ring\+Central.\+Search\+Directory\+Entries\+Request.\+department\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Department 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a084affcf1faaa98009f74927413d556b}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a084affcf1faaa98009f74927413d556b}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!extensionStatuses@{extensionStatuses}}
+\index{extensionStatuses@{extensionStatuses}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{extensionStatuses}{extensionStatuses}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Search\+Directory\+Entries\+Request.\+extension\+Statuses\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension current state. Enum\+: Enabled, Disabled, Not\+Activated 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a9f03baf3d82c3f9e3b00132347aff567}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a9f03baf3d82c3f9e3b00132347aff567}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!extensionType@{extensionType}}
+\index{extensionType@{extensionType}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{extensionType}{extensionType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Search\+Directory\+Entries\+Request.\+extension\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of directory contact to filter Example\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}} Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Park\+Location, Ivr\+Menu, Limited, Application\+Extension, Site, Bot, Room, Delegated\+Lines\+Group, Group\+Call\+Pickup, External 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a856affae8ee477dd5968cd94958ac6c3}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a856affae8ee477dd5968cd94958ac6c3}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!extensionTypes@{extensionTypes}}
+\index{extensionTypes@{extensionTypes}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{extensionTypes}{extensionTypes}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Search\+Directory\+Entries\+Request.\+extension\+Types\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Types of extension to filter the contacts Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Department, Announcement, Voicemail, Digital\+User, Virtual\+User, Fax\+User, Paging\+Only, Shared\+Lines\+Group, Ivr\+Menu, Application\+Extension, Park\+Location, Limited, Bot, Site, Room, Proxy\+Admin, Delegated\+Lines\+Group, Flexible\+User, Group\+Call\+Pickup, Room\+Connector 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a84ebd0d4e47603e6cd8c5646e706d7f8}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a84ebd0d4e47603e6cd8c5646e706d7f8}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{orderBy}{orderBy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1OrderBy}{Order\+By}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Search\+Directory\+Entries\+Request.\+order\+By\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sorting settings 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_ac31ce9db887ebdf209e4df65ab966c26}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_ac31ce9db887ebdf209e4df65ab966c26}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!page@{page}}
+\index{page@{page}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Search\+Directory\+Entries\+Request.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_ad84872e091d119fcd6f48bc738a2715e}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_ad84872e091d119fcd6f48bc738a2715e}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Search\+Directory\+Entries\+Request.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a09ee671acf9b83674aee19093b350094}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a09ee671acf9b83674aee19093b350094}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!searchFields@{searchFields}}
+\index{searchFields@{searchFields}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{searchFields}{searchFields}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Search\+Directory\+Entries\+Request.\+search\+Fields\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of field to be searched for Enum\+: first\+Name, last\+Name, extension\+Number, phone\+Number, email, job\+Title, department, custom\+Field\+Value 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a5372845e0eb30d1da78d138644415ec3}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a5372845e0eb30d1da78d138644415ec3}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!searchString@{searchString}}
+\index{searchString@{searchString}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{searchString}{searchString}}
+{\footnotesize\ttfamily string Ring\+Central.\+Search\+Directory\+Entries\+Request.\+search\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+String value to filter the contacts. The value specified is searched through the following fields\+: {\ttfamily first\+Name}, {\ttfamily last\+Name}, {\ttfamily extension\+Number}, {\ttfamily phone\+Number}, {\ttfamily email}, {\ttfamily job\+Title}, {\ttfamily department}, {\ttfamily custom\+Field\+Value} 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a4194ca9573cb44576839bf9488065a83}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a4194ca9573cb44576839bf9488065a83}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!showAdminOnlyContacts@{showAdminOnlyContacts}}
+\index{showAdminOnlyContacts@{showAdminOnlyContacts}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{showAdminOnlyContacts}{showAdminOnlyContacts}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Search\+Directory\+Entries\+Request.\+show\+Admin\+Only\+Contacts\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Should show Admin\+Only Contacts 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_aa9b76a6093077096a6da114ea2780f43}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_aa9b76a6093077096a6da114ea2780f43}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!showExternalContacts@{showExternalContacts}}
+\index{showExternalContacts@{showExternalContacts}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{showExternalContacts}{showExternalContacts}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Search\+Directory\+Entries\+Request.\+show\+External\+Contacts\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows to control whether External (Hybrid) contacts should be returned in the response or not Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a0c965407d2faf3eaf4a726f26d4aac2c}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a0c965407d2faf3eaf4a726f26d4aac2c}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!showFederated@{showFederated}}
+\index{showFederated@{showFederated}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{showFederated}{showFederated}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Search\+Directory\+Entries\+Request.\+show\+Federated\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true} then contacts of all accounts in federation are returned, if it is in federation, account section will be returned. If {\ttfamily false} then only contacts of the current account are returned, and account section is eliminated in this case 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a04af339c645d7407d77840bc2fcb0ace}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a04af339c645d7407d77840bc2fcb0ace}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!siteId@{siteId}}
+\index{siteId@{siteId}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{siteId}{siteId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Search\+Directory\+Entries\+Request.\+site\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of the business site to which extensions belong Example\+: 872781797006 
+
+\mbox{\Hypertarget{classRingCentral_1_1SearchDirectoryEntriesRequest_a9af766c3ea3c922752ba082a3e76d882}\label{classRingCentral_1_1SearchDirectoryEntriesRequest_a9af766c3ea3c922752ba082a3e76d882}} 
+\index{RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}!siteIds@{siteIds}}
+\index{siteIds@{siteIds}!RingCentral.SearchDirectoryEntriesRequest@{RingCentral.SearchDirectoryEntriesRequest}}
+\doxysubsubsection{\texorpdfstring{siteIds}{siteIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Search\+Directory\+Entries\+Request.\+site\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of Internal identifiers of the business sites to which extensions belong 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Search\+Directory\+Entries\+Request.\+cs\end{DoxyCompactItemize}

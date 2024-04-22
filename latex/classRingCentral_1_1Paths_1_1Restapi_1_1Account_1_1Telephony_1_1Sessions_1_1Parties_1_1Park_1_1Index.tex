@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Park.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index}\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Park.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_a06039cf69fe7b9699968b1d8f00d282b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_a06039cf69fe7b9699968b1d8f00d282b}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_aeda7d9267ff6a199274e36ab8e8c918c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_aeda7d9267ff6a199274e36ab8e8c918c}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_a79c2f1d6a7b600207e136a93480ff23f}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Parks a call to a virtual location from where it can further be retrieved by any user from any phone of the system. The call session and call party identifiers should be specified in path. Currently the users can park only their own incoming calls. Up to 50 calls can be parked simultaneously. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park}{Park}} location starts with asterisk ($\ast$) and ranges 801-\/899. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/park Rate Limit Group\+: Light App Permission\+: Call\+Control \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_ac1575fe87f26a70f7289c07fe7b6e375}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_ac1575fe87f26a70f7289c07fe7b6e375}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_aade49434c779077b3d9faa12a8cf6785}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_aade49434c779077b3d9faa12a8cf6785}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_a79c2f1d6a7b600207e136a93480ff23f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park_1_1Index_a79c2f1d6a7b600207e136a93480ff23f}} 
+\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Park.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Park.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parks a call to a virtual location from where it can further be retrieved by any user from any phone of the system. The call session and call party identifiers should be specified in path. Currently the users can park only their own incoming calls. Up to 50 calls can be parked simultaneously. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Park}{Park}} location starts with asterisk ($\ast$) and ranges 801-\/899. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/park Rate Limit Group\+: Light App Permission\+: Call\+Control 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Telephony/\+Sessions/\+Parties/\+Park/Index.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,179 @@
+\hypertarget{classRingCentral_1_1InviteeResource}{}\doxysection{Ring\+Central.\+Invitee\+Resource Class Reference}
+\label{classRingCentral_1_1InviteeResource}\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+
+
+The attribute declaration to indicate webinar session participant/invitee role  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_ad7bc704f3c5f50b20258422ccc163adc}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal object ID Example\+: 78654321 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_a230b06a2f86650bbfea4cc36570d9547}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object creation time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_adfb19236404236d604a4787f2490ea6e}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object last modification time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_a5d199feca262e8aa0c3193871799ac4b}{first\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em First (given) name Example\+: John \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_af3d4d79d62eb5a84cf3db6134e3d7e0c}{last\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last (family) name Example\+: Doe \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_a939605f1532ee22f8e70e0299068221b}{email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s contact email Format\+: email Example\+: \href{mailto:john.doe@example.com}{\texttt{ john.\+doe@example.\+com}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_af428b8b23d3818d02105480c428f20b7}{job\+Title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Job title Example\+: Product Manager \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1RcwDomainUserModel}{Rcw\+Domain\+User\+Model}} \mbox{\hyperlink{classRingCentral_1_1InviteeResource_af172261889819bc8661d99d1dfe0996c}{linked\+User}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_ac91a3cf369b74a90766f0baa10d454c0}{role}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The role of the webinar session participant/invitee. See also\+: \href{https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html}{\texttt{ Understanding Webinar Roles}} Required Example\+: Panelist Enum\+: Panelist, Co\+Host, \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Attendee \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_a3b49ed5d633530ac63125e4db4e8b128}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of the webinar invitee Default\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}} Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Room \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1InviteeResource_a066ca258481539295a9ed428f00c8ea3}{send\+Invite}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if invite/cancellation emails have to be sent to this invitee. For \char`\"{}\+Host\char`\"{} it cannot be set to false. If it is true it can\textquotesingle{}t be changed back to false. Default\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_adbbf5c4232668d38a3b0c69c0134b565}{join\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Personalized join link for the Invitee Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeResource_a09b195a8f9a4cc449991af972a82f2c9}{phone\+Participant\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone (PSTN) participant code \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The attribute declaration to indicate webinar session participant/invitee role 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_a230b06a2f86650bbfea4cc36570d9547}\label{classRingCentral_1_1InviteeResource_a230b06a2f86650bbfea4cc36570d9547}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object creation time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_a939605f1532ee22f8e70e0299068221b}\label{classRingCentral_1_1InviteeResource_a939605f1532ee22f8e70e0299068221b}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!email@{email}}
+\index{email@{email}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+email\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s contact email Format\+: email Example\+: \href{mailto:john.doe@example.com}{\texttt{ john.\+doe@example.\+com}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_a5d199feca262e8aa0c3193871799ac4b}\label{classRingCentral_1_1InviteeResource_a5d199feca262e8aa0c3193871799ac4b}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!firstName@{firstName}}
+\index{firstName@{firstName}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{firstName}{firstName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+first\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+First (given) name Example\+: John 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_ad7bc704f3c5f50b20258422ccc163adc}\label{classRingCentral_1_1InviteeResource_ad7bc704f3c5f50b20258422ccc163adc}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!id@{id}}
+\index{id@{id}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal object ID Example\+: 78654321 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_af428b8b23d3818d02105480c428f20b7}\label{classRingCentral_1_1InviteeResource_af428b8b23d3818d02105480c428f20b7}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!jobTitle@{jobTitle}}
+\index{jobTitle@{jobTitle}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{jobTitle}{jobTitle}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+job\+Title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Job title Example\+: Product Manager 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_adbbf5c4232668d38a3b0c69c0134b565}\label{classRingCentral_1_1InviteeResource_adbbf5c4232668d38a3b0c69c0134b565}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!joinUri@{joinUri}}
+\index{joinUri@{joinUri}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{joinUri}{joinUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+join\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Personalized join link for the Invitee Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_adfb19236404236d604a4787f2490ea6e}\label{classRingCentral_1_1InviteeResource_adfb19236404236d604a4787f2490ea6e}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object last modification time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_af3d4d79d62eb5a84cf3db6134e3d7e0c}\label{classRingCentral_1_1InviteeResource_af3d4d79d62eb5a84cf3db6134e3d7e0c}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!lastName@{lastName}}
+\index{lastName@{lastName}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{lastName}{lastName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+last\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Last (family) name Example\+: Doe 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_af172261889819bc8661d99d1dfe0996c}\label{classRingCentral_1_1InviteeResource_af172261889819bc8661d99d1dfe0996c}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!linkedUser@{linkedUser}}
+\index{linkedUser@{linkedUser}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{linkedUser}{linkedUser}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1RcwDomainUserModel}{Rcw\+Domain\+User\+Model}} Ring\+Central.\+Invitee\+Resource.\+linked\+User\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_a09b195a8f9a4cc449991af972a82f2c9}\label{classRingCentral_1_1InviteeResource_a09b195a8f9a4cc449991af972a82f2c9}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!phoneParticipantCode@{phoneParticipantCode}}
+\index{phoneParticipantCode@{phoneParticipantCode}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{phoneParticipantCode}{phoneParticipantCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+phone\+Participant\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone (PSTN) participant code 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_ac91a3cf369b74a90766f0baa10d454c0}\label{classRingCentral_1_1InviteeResource_ac91a3cf369b74a90766f0baa10d454c0}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!role@{role}}
+\index{role@{role}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+role\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The role of the webinar session participant/invitee. See also\+: \href{https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html}{\texttt{ Understanding Webinar Roles}} Required Example\+: Panelist Enum\+: Panelist, Co\+Host, \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Attendee 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_a066ca258481539295a9ed428f00c8ea3}\label{classRingCentral_1_1InviteeResource_a066ca258481539295a9ed428f00c8ea3}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!sendInvite@{sendInvite}}
+\index{sendInvite@{sendInvite}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{sendInvite}{sendInvite}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Invitee\+Resource.\+send\+Invite\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if invite/cancellation emails have to be sent to this invitee. For \char`\"{}\+Host\char`\"{} it cannot be set to false. If it is true it can\textquotesingle{}t be changed back to false. Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeResource_a3b49ed5d633530ac63125e4db4e8b128}\label{classRingCentral_1_1InviteeResource_a3b49ed5d633530ac63125e4db4e8b128}} 
+\index{RingCentral.InviteeResource@{RingCentral.InviteeResource}!type@{type}}
+\index{type@{type}!RingCentral.InviteeResource@{RingCentral.InviteeResource}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Resource.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of the webinar invitee Default\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}} Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Room 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Invitee\+Resource.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,299 @@
+\hypertarget{classRingCentral_1_1WcsWebinarSettingsModel}{}\doxysection{Ring\+Central.\+Wcs\+Webinar\+Settings\+Model Class Reference}
+\label{classRingCentral_1_1WcsWebinarSettingsModel}\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+
+
+Various settings which define behavior of this Webinar\textquotesingle{}s Sessions  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_aa7b8d76296dc6b3afb0671f4d14c0fcf}{recording\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if recording is enabled (if false all other recording settings cannot be enabled) Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_afa309c72e0451301a1982c1092fcdb71}{auto\+Record}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if recording should start automatically when a Webinar goes live \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a1a6c13a9496d1226544e5cd49d4c87ff}{recording\+Sharing\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if recording can be shared (this setting is read-\/only at webinar level) Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a363486a4be5723708d8c40bb75e29de9}{recording\+Download\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if recording can be downloaded (this setting is read-\/only at webinar level) Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_aec066a17db7ad9ef2db4682e2bb91615}{recording\+Deletion\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em DEPRECATED AND REPLACED BY \textquotesingle{}past\+Session\+Deletion\+Enabled\textquotesingle{} setting. Indicates if recording can be deleted (this setting is read-\/only at webinar level) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_aa1052e2f8d2e31398dec13c7278bb92b}{past\+Session\+Deletion\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if deletion of past session along with its artifacts is enabled for \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}. This setting is read-\/only at webinar level \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_af9b86cdf15fc7ab18036a8a78a6524c6}{panelist\+Waiting\+Room}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if Panelists should be places to waiting room after joining \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_aba929d8d59dc7fc3331dd28e6035d897}{panelist\+Video\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if Panelists\textquotesingle{} video should be \textquotesingle{}on\textquotesingle{} by default Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_acac8cf92b03fce359d856d64d86bfdb5}{panelist\+Screen\+Sharing\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if Panelists\textquotesingle{} screen sharing should be \textquotesingle{}on\textquotesingle{} by default Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a81000df70dd2058db7c7e6622d3f9ef7}{panelist\+Mute\+Control\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if Panelists can mute/unmute themselves by default Default\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a0c04b4b3996a27d45ba563a3c1c5dbb8}{panelist\+Authentication}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if Panelists have to be authenticated users Default\+: Guest Enum\+: Guest, Authenticated\+User, Authenticated\+Coworker \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a3d694bd4133b861f6c31d322fafe18d9}{attendee\+Authentication}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if attendees have to be authenticated users Default\+: Guest Enum\+: Guest, Authenticated\+User, Authenticated\+Coworker \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_aa2572aacf9e3764db5e9c4f5ecfd0f7c}{artifacts\+Access\+Authentication}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates who can access webinar artifacts. Applies to recordings at present. Applicable to other artifacts such as Q\&A, Polls in the future. Default\+: Authenticated\+User Enum\+: Guest, Authenticated\+User, Authenticated\+Coworker \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_af1aae7436689f1855a82e5570f310a41}{pstn\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if dial-\/in PSTN audio option is enabled for Panelists \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a6bf3323e3244bea80ebc88403492b13f}{password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Webinar password. If company-\/level \char`\"{}password\+Enabled\char`\"{} is true and \char`\"{}password\char`\"{} is null / omitted, the backend generates the password \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_ac3e538c1d5f2153cffdffb0401a73ffd}{qna\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if Q\&A is enabled for the webinar (if false all other Q\&A settings cannot be enabled) Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a52fdad4a06ab1c3f277637b624d7c548}{qna\+Anonymous\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if anonymous Q\&A is enabled for the webinar Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a401b1026ce2a94be6d456dfce42bd30d}{polls\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if polls are enabled for the webinar (if false all other polls settings cannot be enabled) Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_ae39004315706620a9a6f244899b7d0fe}{polls\+Anonymous\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if anonymous poll answers are enabled for the webinar Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_acdfb6cd9428b0bac5f9374f53b89f2de}{registration\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if a registration is enabled for the webinar (if false all other registration settings are ignored) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a1c5299b27887f804d7994b23c415e792}{post\+Webinar\+Redirect\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em URI to redirect users after the webinar Format\+: uri Example\+: \href{https://www.acme.com/thankyou}{\texttt{ https\+://www.\+acme.\+com/thankyou}} \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_a9f9f6dd363707b1c65ae7ad6f8f84e76}{external\+Livestream\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if livestreaming to external streaming provider is enabled Default\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsWebinarSettingsModel_ad7bfd0e5d0a8023ccb24952a38578e87}{moderated\+Qna\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicate if the moderated Q\&A enabled for webinar \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Various settings which define behavior of this Webinar\textquotesingle{}s Sessions 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_aa2572aacf9e3764db5e9c4f5ecfd0f7c}\label{classRingCentral_1_1WcsWebinarSettingsModel_aa2572aacf9e3764db5e9c4f5ecfd0f7c}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!artifactsAccessAuthentication@{artifactsAccessAuthentication}}
+\index{artifactsAccessAuthentication@{artifactsAccessAuthentication}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{artifactsAccessAuthentication}{artifactsAccessAuthentication}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+artifacts\+Access\+Authentication\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates who can access webinar artifacts. Applies to recordings at present. Applicable to other artifacts such as Q\&A, Polls in the future. Default\+: Authenticated\+User Enum\+: Guest, Authenticated\+User, Authenticated\+Coworker 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a3d694bd4133b861f6c31d322fafe18d9}\label{classRingCentral_1_1WcsWebinarSettingsModel_a3d694bd4133b861f6c31d322fafe18d9}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!attendeeAuthentication@{attendeeAuthentication}}
+\index{attendeeAuthentication@{attendeeAuthentication}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{attendeeAuthentication}{attendeeAuthentication}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+attendee\+Authentication\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if attendees have to be authenticated users Default\+: Guest Enum\+: Guest, Authenticated\+User, Authenticated\+Coworker 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_afa309c72e0451301a1982c1092fcdb71}\label{classRingCentral_1_1WcsWebinarSettingsModel_afa309c72e0451301a1982c1092fcdb71}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!autoRecord@{autoRecord}}
+\index{autoRecord@{autoRecord}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{autoRecord}{autoRecord}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+auto\+Record\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if recording should start automatically when a Webinar goes live 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a9f9f6dd363707b1c65ae7ad6f8f84e76}\label{classRingCentral_1_1WcsWebinarSettingsModel_a9f9f6dd363707b1c65ae7ad6f8f84e76}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!externalLivestreamEnabled@{externalLivestreamEnabled}}
+\index{externalLivestreamEnabled@{externalLivestreamEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{externalLivestreamEnabled}{externalLivestreamEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+external\+Livestream\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if livestreaming to external streaming provider is enabled Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_ad7bfd0e5d0a8023ccb24952a38578e87}\label{classRingCentral_1_1WcsWebinarSettingsModel_ad7bfd0e5d0a8023ccb24952a38578e87}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!moderatedQnaEnabled@{moderatedQnaEnabled}}
+\index{moderatedQnaEnabled@{moderatedQnaEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{moderatedQnaEnabled}{moderatedQnaEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+moderated\+Qna\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicate if the moderated Q\&A enabled for webinar 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a0c04b4b3996a27d45ba563a3c1c5dbb8}\label{classRingCentral_1_1WcsWebinarSettingsModel_a0c04b4b3996a27d45ba563a3c1c5dbb8}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!panelistAuthentication@{panelistAuthentication}}
+\index{panelistAuthentication@{panelistAuthentication}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{panelistAuthentication}{panelistAuthentication}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+panelist\+Authentication\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if Panelists have to be authenticated users Default\+: Guest Enum\+: Guest, Authenticated\+User, Authenticated\+Coworker 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a81000df70dd2058db7c7e6622d3f9ef7}\label{classRingCentral_1_1WcsWebinarSettingsModel_a81000df70dd2058db7c7e6622d3f9ef7}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!panelistMuteControlEnabled@{panelistMuteControlEnabled}}
+\index{panelistMuteControlEnabled@{panelistMuteControlEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{panelistMuteControlEnabled}{panelistMuteControlEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+panelist\+Mute\+Control\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if Panelists can mute/unmute themselves by default Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_acac8cf92b03fce359d856d64d86bfdb5}\label{classRingCentral_1_1WcsWebinarSettingsModel_acac8cf92b03fce359d856d64d86bfdb5}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!panelistScreenSharingEnabled@{panelistScreenSharingEnabled}}
+\index{panelistScreenSharingEnabled@{panelistScreenSharingEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{panelistScreenSharingEnabled}{panelistScreenSharingEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+panelist\+Screen\+Sharing\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if Panelists\textquotesingle{} screen sharing should be \textquotesingle{}on\textquotesingle{} by default Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_aba929d8d59dc7fc3331dd28e6035d897}\label{classRingCentral_1_1WcsWebinarSettingsModel_aba929d8d59dc7fc3331dd28e6035d897}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!panelistVideoEnabled@{panelistVideoEnabled}}
+\index{panelistVideoEnabled@{panelistVideoEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{panelistVideoEnabled}{panelistVideoEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+panelist\+Video\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if Panelists\textquotesingle{} video should be \textquotesingle{}on\textquotesingle{} by default Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_af9b86cdf15fc7ab18036a8a78a6524c6}\label{classRingCentral_1_1WcsWebinarSettingsModel_af9b86cdf15fc7ab18036a8a78a6524c6}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!panelistWaitingRoom@{panelistWaitingRoom}}
+\index{panelistWaitingRoom@{panelistWaitingRoom}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{panelistWaitingRoom}{panelistWaitingRoom}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+panelist\+Waiting\+Room\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if Panelists should be places to waiting room after joining 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a6bf3323e3244bea80ebc88403492b13f}\label{classRingCentral_1_1WcsWebinarSettingsModel_a6bf3323e3244bea80ebc88403492b13f}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!password@{password}}
+\index{password@{password}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Webinar password. If company-\/level \char`\"{}password\+Enabled\char`\"{} is true and \char`\"{}password\char`\"{} is null / omitted, the backend generates the password 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_aa1052e2f8d2e31398dec13c7278bb92b}\label{classRingCentral_1_1WcsWebinarSettingsModel_aa1052e2f8d2e31398dec13c7278bb92b}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!pastSessionDeletionEnabled@{pastSessionDeletionEnabled}}
+\index{pastSessionDeletionEnabled@{pastSessionDeletionEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{pastSessionDeletionEnabled}{pastSessionDeletionEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+past\+Session\+Deletion\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if deletion of past session along with its artifacts is enabled for \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}. This setting is read-\/only at webinar level 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_ae39004315706620a9a6f244899b7d0fe}\label{classRingCentral_1_1WcsWebinarSettingsModel_ae39004315706620a9a6f244899b7d0fe}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!pollsAnonymousEnabled@{pollsAnonymousEnabled}}
+\index{pollsAnonymousEnabled@{pollsAnonymousEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{pollsAnonymousEnabled}{pollsAnonymousEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+polls\+Anonymous\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if anonymous poll answers are enabled for the webinar Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a401b1026ce2a94be6d456dfce42bd30d}\label{classRingCentral_1_1WcsWebinarSettingsModel_a401b1026ce2a94be6d456dfce42bd30d}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!pollsEnabled@{pollsEnabled}}
+\index{pollsEnabled@{pollsEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{pollsEnabled}{pollsEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+polls\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if polls are enabled for the webinar (if false all other polls settings cannot be enabled) Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a1c5299b27887f804d7994b23c415e792}\label{classRingCentral_1_1WcsWebinarSettingsModel_a1c5299b27887f804d7994b23c415e792}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!postWebinarRedirectUri@{postWebinarRedirectUri}}
+\index{postWebinarRedirectUri@{postWebinarRedirectUri}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{postWebinarRedirectUri}{postWebinarRedirectUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+post\+Webinar\+Redirect\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+URI to redirect users after the webinar Format\+: uri Example\+: \href{https://www.acme.com/thankyou}{\texttt{ https\+://www.\+acme.\+com/thankyou}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_af1aae7436689f1855a82e5570f310a41}\label{classRingCentral_1_1WcsWebinarSettingsModel_af1aae7436689f1855a82e5570f310a41}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!pstnEnabled@{pstnEnabled}}
+\index{pstnEnabled@{pstnEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{pstnEnabled}{pstnEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+pstn\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if dial-\/in PSTN audio option is enabled for Panelists 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a52fdad4a06ab1c3f277637b624d7c548}\label{classRingCentral_1_1WcsWebinarSettingsModel_a52fdad4a06ab1c3f277637b624d7c548}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!qnaAnonymousEnabled@{qnaAnonymousEnabled}}
+\index{qnaAnonymousEnabled@{qnaAnonymousEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{qnaAnonymousEnabled}{qnaAnonymousEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+qna\+Anonymous\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if anonymous Q\&A is enabled for the webinar Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_ac3e538c1d5f2153cffdffb0401a73ffd}\label{classRingCentral_1_1WcsWebinarSettingsModel_ac3e538c1d5f2153cffdffb0401a73ffd}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!qnaEnabled@{qnaEnabled}}
+\index{qnaEnabled@{qnaEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{qnaEnabled}{qnaEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+qna\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if Q\&A is enabled for the webinar (if false all other Q\&A settings cannot be enabled) Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_aec066a17db7ad9ef2db4682e2bb91615}\label{classRingCentral_1_1WcsWebinarSettingsModel_aec066a17db7ad9ef2db4682e2bb91615}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!recordingDeletionEnabled@{recordingDeletionEnabled}}
+\index{recordingDeletionEnabled@{recordingDeletionEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{recordingDeletionEnabled}{recordingDeletionEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+recording\+Deletion\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+DEPRECATED AND REPLACED BY \textquotesingle{}past\+Session\+Deletion\+Enabled\textquotesingle{} setting. Indicates if recording can be deleted (this setting is read-\/only at webinar level) 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a363486a4be5723708d8c40bb75e29de9}\label{classRingCentral_1_1WcsWebinarSettingsModel_a363486a4be5723708d8c40bb75e29de9}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!recordingDownloadEnabled@{recordingDownloadEnabled}}
+\index{recordingDownloadEnabled@{recordingDownloadEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{recordingDownloadEnabled}{recordingDownloadEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+recording\+Download\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if recording can be downloaded (this setting is read-\/only at webinar level) Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_aa7b8d76296dc6b3afb0671f4d14c0fcf}\label{classRingCentral_1_1WcsWebinarSettingsModel_aa7b8d76296dc6b3afb0671f4d14c0fcf}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!recordingEnabled@{recordingEnabled}}
+\index{recordingEnabled@{recordingEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{recordingEnabled}{recordingEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+recording\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if recording is enabled (if false all other recording settings cannot be enabled) Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_a1a6c13a9496d1226544e5cd49d4c87ff}\label{classRingCentral_1_1WcsWebinarSettingsModel_a1a6c13a9496d1226544e5cd49d4c87ff}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!recordingSharingEnabled@{recordingSharingEnabled}}
+\index{recordingSharingEnabled@{recordingSharingEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{recordingSharingEnabled}{recordingSharingEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+recording\+Sharing\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if recording can be shared (this setting is read-\/only at webinar level) Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsWebinarSettingsModel_acdfb6cd9428b0bac5f9374f53b89f2de}\label{classRingCentral_1_1WcsWebinarSettingsModel_acdfb6cd9428b0bac5f9374f53b89f2de}} 
+\index{RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}!registrationEnabled@{registrationEnabled}}
+\index{registrationEnabled@{registrationEnabled}!RingCentral.WcsWebinarSettingsModel@{RingCentral.WcsWebinarSettingsModel}}
+\doxysubsubsection{\texorpdfstring{registrationEnabled}{registrationEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Webinar\+Settings\+Model.\+registration\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if a registration is enabled for the webinar (if false all other registration settings are ignored) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Wcs\+Webinar\+Settings\+Model.\+cs\end{DoxyCompactItemize}

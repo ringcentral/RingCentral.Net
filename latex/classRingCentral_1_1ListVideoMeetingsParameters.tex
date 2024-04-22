@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1ListVideoMeetingsParameters}{}\doxysection{Ring\+Central.\+List\+Video\+Meetings\+Parameters Class Reference}
+\label{classRingCentral_1_1ListVideoMeetingsParameters}\index{RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}}
+
+
+Query parameters for operation list\+Video\+Meetings  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListVideoMeetingsParameters_af98bdf044e95b7fd175d8c5664f56a54}{text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Search text \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListVideoMeetingsParameters_a326cf587587b0c30aff18e6e89352a13}{page\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Token to get the next page \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListVideoMeetingsParameters_aceba80892ec50ed3bb0eedbed7e0006c}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of records returned Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListVideoMeetingsParameters_aae74a225bac23439a78c57c280392522}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specify what kind of meeting should be returned. Possible values\+: All, My, Deleted, Shared Request type meaning in meeting search\+: {\ttfamily None} (not passed) -\/ take meetings only where requested acc/ext is participant OR host OR deputy OR watcher. {\ttfamily ALL}-\/ access rights of meeting is equal to Alive AND requested acc/ext is in watchers list OR host OR deputy {\ttfamily My}-\/ access rights of meeting is equal to Alive AND requested acc/ext is host OR deputy {\ttfamily Shared} -\/ access rights of meeting is equal to Alive AND requested acc/ext is in watcher list AND not HOST {\ttfamily Deleted} -\/ access rights of meeting is equal to Delete and requested acc/ext is host OR deputy Enum\+: All, My, Deleted, Shared \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListVideoMeetingsParameters_a9a3959ac3ddbd66d0aeddafce0c29ea1}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unix timestamp in milliseconds (inclusive) indicates the start time of meetings which should be included in response Format\+: int64 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListVideoMeetingsParameters_a6cc525b14100fdd8a66389b8f6db038a}{end\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unix timestamp in milliseconds (inclusive) indicates the end time of meetings which should be included in response Format\+: int64 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Video\+Meetings 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListVideoMeetingsParameters_a6cc525b14100fdd8a66389b8f6db038a}\label{classRingCentral_1_1ListVideoMeetingsParameters_a6cc525b14100fdd8a66389b8f6db038a}} 
+\index{RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}!endTime@{endTime}}
+\index{endTime@{endTime}!RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Video\+Meetings\+Parameters.\+end\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Unix timestamp in milliseconds (inclusive) indicates the end time of meetings which should be included in response Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListVideoMeetingsParameters_a326cf587587b0c30aff18e6e89352a13}\label{classRingCentral_1_1ListVideoMeetingsParameters_a326cf587587b0c30aff18e6e89352a13}} 
+\index{RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}!pageToken@{pageToken}}
+\index{pageToken@{pageToken}!RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}}
+\doxysubsubsection{\texorpdfstring{pageToken}{pageToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Video\+Meetings\+Parameters.\+page\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Token to get the next page 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListVideoMeetingsParameters_aceba80892ec50ed3bb0eedbed7e0006c}\label{classRingCentral_1_1ListVideoMeetingsParameters_aceba80892ec50ed3bb0eedbed7e0006c}} 
+\index{RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Video\+Meetings\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of records returned Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListVideoMeetingsParameters_a9a3959ac3ddbd66d0aeddafce0c29ea1}\label{classRingCentral_1_1ListVideoMeetingsParameters_a9a3959ac3ddbd66d0aeddafce0c29ea1}} 
+\index{RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Video\+Meetings\+Parameters.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Unix timestamp in milliseconds (inclusive) indicates the start time of meetings which should be included in response Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListVideoMeetingsParameters_af98bdf044e95b7fd175d8c5664f56a54}\label{classRingCentral_1_1ListVideoMeetingsParameters_af98bdf044e95b7fd175d8c5664f56a54}} 
+\index{RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}!text@{text}}
+\index{text@{text}!RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Video\+Meetings\+Parameters.\+text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Search text 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListVideoMeetingsParameters_aae74a225bac23439a78c57c280392522}\label{classRingCentral_1_1ListVideoMeetingsParameters_aae74a225bac23439a78c57c280392522}} 
+\index{RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}!type@{type}}
+\index{type@{type}!RingCentral.ListVideoMeetingsParameters@{RingCentral.ListVideoMeetingsParameters}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Video\+Meetings\+Parameters.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specify what kind of meeting should be returned. Possible values\+: All, My, Deleted, Shared Request type meaning in meeting search\+: {\ttfamily None} (not passed) -\/ take meetings only where requested acc/ext is participant OR host OR deputy OR watcher. {\ttfamily ALL}-\/ access rights of meeting is equal to Alive AND requested acc/ext is in watchers list OR host OR deputy {\ttfamily My}-\/ access rights of meeting is equal to Alive AND requested acc/ext is host OR deputy {\ttfamily Shared} -\/ access rights of meeting is equal to Alive AND requested acc/ext is in watcher list AND not HOST {\ttfamily Deleted} -\/ access rights of meeting is equal to Delete and requested acc/ext is host OR deputy Enum\+: All, My, Deleted, Shared 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Video\+Meetings\+Parameters.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\hypertarget{classRingCentral_1_1ForwardingInfo}{}\doxysection{Ring\+Central.\+Forwarding\+Info Class Reference}
+\label{classRingCentral_1_1ForwardingInfo}\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+
+
+Forwarding parameters. Returned if \textquotesingle{}Forward\+Calls\textquotesingle{} is specified in \textquotesingle{}call\+Handling\+Action\textquotesingle{}. These settings determine the forwarding numbers to which the call will be forwarded  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_a21178bf576c13fdd779de6c32ec7225a}{notify\+My\+Soft\+Phones}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if the user\textquotesingle{}s softphone(s) are notified before forwarding the incoming call to desk phones and forwarding numbers \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_aaaa2384e40f0f7471af7dae17ceeb3aa}{notify\+Admin\+Soft\+Phones}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Deprecated parameter. Specifies if the administrator\textquotesingle{}s softphone is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is {\ttfamily false} \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_af04b7feb88057a677a6f1312ff261fb3}{soft\+Phones\+Ring\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of rings before forwarding starts Format\+: int32 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_a0a4a02a574cb26f9d17bf0fa0b7a870c}{soft\+Phones\+Always\+Ring}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set to {\ttfamily true} then {\ttfamily soft\+Phones\+Ring\+Count} is ignored Default\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_a6fa4ccb8256fb349ae4a7df428eb95cd}{ringing\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the order in which the forwarding numbers ring. \textquotesingle{}Sequentially\textquotesingle{} means that forwarding numbers are ringing one at a time, in order of priority. \textquotesingle{}Simultaneously\textquotesingle{} means that forwarding numbers are ring all at the same time Enum\+: Sequentially, Simultaneously \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ForwardingRuleInfo}{Forwarding\+Rule\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_a8c7594af05b277363fa9e668c89b5aa6}{rules}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Information on a call forwarding rule \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_a7dd77ddb245a3e0a56a8411e42bc4ad0}{soft\+Phones\+Position\+Top}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if desktop and mobile applications of the user are notified before (true) or after (false) forwarding the incoming call to desk phones and forwarding numbers. Applicable only if {\ttfamily notify\+My\+Soft\+Phones} parameter is set to {\ttfamily true} \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo_a93edbdde7de6f02d1670a35e4e1c1ad5}{mobile\+Timeout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Deprecated parameter. Specifies if mobile timeout is activated for the rule \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Forwarding parameters. Returned if \textquotesingle{}Forward\+Calls\textquotesingle{} is specified in \textquotesingle{}call\+Handling\+Action\textquotesingle{}. These settings determine the forwarding numbers to which the call will be forwarded 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_a93edbdde7de6f02d1670a35e4e1c1ad5}\label{classRingCentral_1_1ForwardingInfo_a93edbdde7de6f02d1670a35e4e1c1ad5}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!mobileTimeout@{mobileTimeout}}
+\index{mobileTimeout@{mobileTimeout}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{mobileTimeout}{mobileTimeout}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info.\+mobile\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Deprecated parameter. Specifies if mobile timeout is activated for the rule 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_aaaa2384e40f0f7471af7dae17ceeb3aa}\label{classRingCentral_1_1ForwardingInfo_aaaa2384e40f0f7471af7dae17ceeb3aa}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!notifyAdminSoftPhones@{notifyAdminSoftPhones}}
+\index{notifyAdminSoftPhones@{notifyAdminSoftPhones}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{notifyAdminSoftPhones}{notifyAdminSoftPhones}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info.\+notify\+Admin\+Soft\+Phones\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Deprecated parameter. Specifies if the administrator\textquotesingle{}s softphone is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is {\ttfamily false} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_a21178bf576c13fdd779de6c32ec7225a}\label{classRingCentral_1_1ForwardingInfo_a21178bf576c13fdd779de6c32ec7225a}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!notifyMySoftPhones@{notifyMySoftPhones}}
+\index{notifyMySoftPhones@{notifyMySoftPhones}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{notifyMySoftPhones}{notifyMySoftPhones}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info.\+notify\+My\+Soft\+Phones\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if the user\textquotesingle{}s softphone(s) are notified before forwarding the incoming call to desk phones and forwarding numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_a6fa4ccb8256fb349ae4a7df428eb95cd}\label{classRingCentral_1_1ForwardingInfo_a6fa4ccb8256fb349ae4a7df428eb95cd}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!ringingMode@{ringingMode}}
+\index{ringingMode@{ringingMode}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{ringingMode}{ringingMode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Forwarding\+Info.\+ringing\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the order in which the forwarding numbers ring. \textquotesingle{}Sequentially\textquotesingle{} means that forwarding numbers are ringing one at a time, in order of priority. \textquotesingle{}Simultaneously\textquotesingle{} means that forwarding numbers are ring all at the same time Enum\+: Sequentially, Simultaneously 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_a8c7594af05b277363fa9e668c89b5aa6}\label{classRingCentral_1_1ForwardingInfo_a8c7594af05b277363fa9e668c89b5aa6}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!rules@{rules}}
+\index{rules@{rules}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{rules}{rules}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ForwardingRuleInfo}{Forwarding\+Rule\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Forwarding\+Info.\+rules\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Information on a call forwarding rule 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_a0a4a02a574cb26f9d17bf0fa0b7a870c}\label{classRingCentral_1_1ForwardingInfo_a0a4a02a574cb26f9d17bf0fa0b7a870c}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!softPhonesAlwaysRing@{softPhonesAlwaysRing}}
+\index{softPhonesAlwaysRing@{softPhonesAlwaysRing}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{softPhonesAlwaysRing}{softPhonesAlwaysRing}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info.\+soft\+Phones\+Always\+Ring\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set to {\ttfamily true} then {\ttfamily soft\+Phones\+Ring\+Count} is ignored Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_a7dd77ddb245a3e0a56a8411e42bc4ad0}\label{classRingCentral_1_1ForwardingInfo_a7dd77ddb245a3e0a56a8411e42bc4ad0}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!softPhonesPositionTop@{softPhonesPositionTop}}
+\index{softPhonesPositionTop@{softPhonesPositionTop}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{softPhonesPositionTop}{softPhonesPositionTop}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info.\+soft\+Phones\+Position\+Top\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if desktop and mobile applications of the user are notified before (true) or after (false) forwarding the incoming call to desk phones and forwarding numbers. Applicable only if {\ttfamily notify\+My\+Soft\+Phones} parameter is set to {\ttfamily true} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfo_af04b7feb88057a677a6f1312ff261fb3}\label{classRingCentral_1_1ForwardingInfo_af04b7feb88057a677a6f1312ff261fb3}} 
+\index{RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}!softPhonesRingCount@{softPhonesRingCount}}
+\index{softPhonesRingCount@{softPhonesRingCount}!RingCentral.ForwardingInfo@{RingCentral.ForwardingInfo}}
+\doxysubsubsection{\texorpdfstring{softPhonesRingCount}{softPhonesRingCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Forwarding\+Info.\+soft\+Phones\+Ring\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of rings before forwarding starts Format\+: int32 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Forwarding\+Info.\+cs\end{DoxyCompactItemize}

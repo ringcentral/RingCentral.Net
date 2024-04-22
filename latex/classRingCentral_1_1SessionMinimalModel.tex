@@ -1,0 +1,73 @@
+\hypertarget{classRingCentral_1_1SessionMinimalModel}{}\doxysection{Ring\+Central.\+Session\+Minimal\+Model Class Reference}
+\label{classRingCentral_1_1SessionMinimalModel}\index{RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionMinimalModel_abcb55c6c9a974a57a7e85f7c483695fe}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session start time. If a session hasn\textquotesingle{}t been started this fields should be set to \char`\"{}scheduled\+Start\+Time\char`\"{} Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionMinimalModel_a52d2f21b5ca08d4dde8f727eb7ad65ee}{end\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session end time. If a session hasn\textquotesingle{}t been finished this fields should be set to (\char`\"{}start\+Time\char`\"{}+\char`\"{}scheduled\+Duration\char`\"{}) Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SessionMinimalModel_a19fcaee8a39dddffa5f330bf76398b82}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session duration in seconds rounded up (returned if \textquotesingle{}start\+Time\textquotesingle{} and \textquotesingle{}end\+Time\textquotesingle{} are not empty) Format\+: int32 Example\+: 3600 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionMinimalModel_adde38d0287a36084181f1e8d8b42dcb1}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session title. If blank -\/ derived from webinar title. Example\+: Live Broadcasting US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionMinimalModel_a2d5e9b5cf354d3ee6ce4ee734d6fab4f}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em User-\/friendly description of the Session. If blank -\/ derived from webinar title. Example\+: Live session for US-\/based participants \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SessionMinimalModel_a2d5e9b5cf354d3ee6ce4ee734d6fab4f}\label{classRingCentral_1_1SessionMinimalModel_a2d5e9b5cf354d3ee6ce4ee734d6fab4f}} 
+\index{RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}!description@{description}}
+\index{description@{description}!RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Minimal\+Model.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+User-\/friendly description of the Session. If blank -\/ derived from webinar title. Example\+: Live session for US-\/based participants 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionMinimalModel_a19fcaee8a39dddffa5f330bf76398b82}\label{classRingCentral_1_1SessionMinimalModel_a19fcaee8a39dddffa5f330bf76398b82}} 
+\index{RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}!duration@{duration}}
+\index{duration@{duration}!RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Session\+Minimal\+Model.\+duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session duration in seconds rounded up (returned if \textquotesingle{}start\+Time\textquotesingle{} and \textquotesingle{}end\+Time\textquotesingle{} are not empty) Format\+: int32 Example\+: 3600 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionMinimalModel_a52d2f21b5ca08d4dde8f727eb7ad65ee}\label{classRingCentral_1_1SessionMinimalModel_a52d2f21b5ca08d4dde8f727eb7ad65ee}} 
+\index{RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}!endTime@{endTime}}
+\index{endTime@{endTime}!RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Minimal\+Model.\+end\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session end time. If a session hasn\textquotesingle{}t been finished this fields should be set to (\char`\"{}start\+Time\char`\"{}+\char`\"{}scheduled\+Duration\char`\"{}) Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionMinimalModel_abcb55c6c9a974a57a7e85f7c483695fe}\label{classRingCentral_1_1SessionMinimalModel_abcb55c6c9a974a57a7e85f7c483695fe}} 
+\index{RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Minimal\+Model.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session start time. If a session hasn\textquotesingle{}t been started this fields should be set to \char`\"{}scheduled\+Start\+Time\char`\"{} Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionMinimalModel_adde38d0287a36084181f1e8d8b42dcb1}\label{classRingCentral_1_1SessionMinimalModel_adde38d0287a36084181f1e8d8b42dcb1}} 
+\index{RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}!title@{title}}
+\index{title@{title}!RingCentral.SessionMinimalModel@{RingCentral.SessionMinimalModel}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Minimal\+Model.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session title. If blank -\/ derived from webinar title. Example\+: Live Broadcasting US 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Session\+Minimal\+Model.\+cs\end{DoxyCompactItemize}

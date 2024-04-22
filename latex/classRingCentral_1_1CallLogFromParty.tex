@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1CallLogFromParty}{}\doxysection{Ring\+Central.\+Call\+Log\+From\+Party Class Reference}
+\label{classRingCentral_1_1CallLogFromParty}\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+
+
+Sender/initiator caller information  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty_ad415257efd219e84b5425a93f5cae5eb}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number of a party. Usually it is a plain number including country and area code like 18661234567. But sometimes it could be returned from database with some formatting applied, for example (866)123-\/4567. This property is filled in all cases where parties communicate by means of global phone numbers, for example when calling to direct numbers or sending/receiving SMS \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty_a66b0f90eb93f2b00207efaf0461091d2}{extension\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension short number (usually 3 or 4 digits). This property is filled when parties communicate by means of short internal numbers, for example when calling to other extension or sending/receiving Company Pager message \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty_a53c2bdd2940134ac2566c0e5c276b25c}{extension\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an extension \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty_a2fe90d58bed06b6596b66bbc9a9a3bf9}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Symbolic name associated with a party. If the phone does not belong to the known extension, only the location is returned, the name is not determined then \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty_a19d307a074de15245e17acc6caa3e3df}{location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Contains party location (city, state) if one can be determined from phone\+Number. This property is filled only when phone\+Number is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-\/free numbers) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogRecordDeviceInfo}{Call\+Log\+Record\+Device\+Info}} \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty_afe6e13a9a74848242aa104a7d871b62b}{device}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty_a1c5009cc05c45ad5b5df11b95bc6c7fe}{dialer\+Phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dialer phone number without any format modifications. Returned for inbound calls \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sender/initiator caller information 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CallLogFromParty_afe6e13a9a74848242aa104a7d871b62b}\label{classRingCentral_1_1CallLogFromParty_afe6e13a9a74848242aa104a7d871b62b}} 
+\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}!device@{device}}
+\index{device@{device}!RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogRecordDeviceInfo}{Call\+Log\+Record\+Device\+Info}} Ring\+Central.\+Call\+Log\+From\+Party.\+device\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogFromParty_a1c5009cc05c45ad5b5df11b95bc6c7fe}\label{classRingCentral_1_1CallLogFromParty_a1c5009cc05c45ad5b5df11b95bc6c7fe}} 
+\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}!dialerPhoneNumber@{dialerPhoneNumber}}
+\index{dialerPhoneNumber@{dialerPhoneNumber}!RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+\doxysubsubsection{\texorpdfstring{dialerPhoneNumber}{dialerPhoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+From\+Party.\+dialer\+Phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Dialer phone number without any format modifications. Returned for inbound calls 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogFromParty_a53c2bdd2940134ac2566c0e5c276b25c}\label{classRingCentral_1_1CallLogFromParty_a53c2bdd2940134ac2566c0e5c276b25c}} 
+\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}!extensionId@{extensionId}}
+\index{extensionId@{extensionId}!RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+\doxysubsubsection{\texorpdfstring{extensionId}{extensionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+From\+Party.\+extension\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an extension 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogFromParty_a66b0f90eb93f2b00207efaf0461091d2}\label{classRingCentral_1_1CallLogFromParty_a66b0f90eb93f2b00207efaf0461091d2}} 
+\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}!extensionNumber@{extensionNumber}}
+\index{extensionNumber@{extensionNumber}!RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+\doxysubsubsection{\texorpdfstring{extensionNumber}{extensionNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+From\+Party.\+extension\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension short number (usually 3 or 4 digits). This property is filled when parties communicate by means of short internal numbers, for example when calling to other extension or sending/receiving Company Pager message 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogFromParty_a19d307a074de15245e17acc6caa3e3df}\label{classRingCentral_1_1CallLogFromParty_a19d307a074de15245e17acc6caa3e3df}} 
+\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}!location@{location}}
+\index{location@{location}!RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+From\+Party.\+location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Contains party location (city, state) if one can be determined from phone\+Number. This property is filled only when phone\+Number is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-\/free numbers) 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogFromParty_a2fe90d58bed06b6596b66bbc9a9a3bf9}\label{classRingCentral_1_1CallLogFromParty_a2fe90d58bed06b6596b66bbc9a9a3bf9}} 
+\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}!name@{name}}
+\index{name@{name}!RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+From\+Party.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Symbolic name associated with a party. If the phone does not belong to the known extension, only the location is returned, the name is not determined then 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogFromParty_ad415257efd219e84b5425a93f5cae5eb}\label{classRingCentral_1_1CallLogFromParty_ad415257efd219e84b5425a93f5cae5eb}} 
+\index{RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.CallLogFromParty@{RingCentral.CallLogFromParty}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+From\+Party.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number of a party. Usually it is a plain number including country and area code like 18661234567. But sometimes it could be returned from database with some formatting applied, for example (866)123-\/4567. This property is filled in all cases where parties communicate by means of global phone numbers, for example when calling to direct numbers or sending/receiving SMS 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Call\+Log\+From\+Party.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Sms.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.Sms.Index@{RingCentral.Paths.Restapi.Account.Extension.Sms.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Sms.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_adcfc95e9e4634d15be9728349b91763b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_adcfc95e9e4634d15be9728349b91763b}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_a763cbbe62efa1fa8c6062bffaff4beb1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_a763cbbe62efa1fa8c6062bffaff4beb1}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse}{Get\+SMSMessage\+Info\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_abe00104b1a5464b778f4e290995b9b58}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateSMSMessage}{Create\+SMSMessage}} create\+SMSMessage, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates and sends a new text message or multiple messages. You can send SMS messages simultaneously to different recipients up to 40 requests per minute; this limitation is relevant for all client applications. Sending and receiving SMS is available for Toll-\/\+Free Numbers within the USA. You can send up to 10 attachments in a single MMS message; the size of all attachments linked is limited up to 1500000 bytes. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/sms Rate Limit Group\+: Medium App Permission\+: SMS \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Outbound\+SMS \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_a717973ceb5b0cf9d56466989c723a2e8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_a717973ceb5b0cf9d56466989c723a2e8}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_a4bc40e879c22dbb4d443a148efb00b85}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_a4bc40e879c22dbb4d443a148efb00b85}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_abe00104b1a5464b778f4e290995b9b58}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Sms_1_1Index_abe00104b1a5464b778f4e290995b9b58}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.Sms.Index@{RingCentral.Paths.Restapi.Account.Extension.Sms.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.Sms.Index@{RingCentral.Paths.Restapi.Account.Extension.Sms.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse}{Get\+SMSMessage\+Info\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Sms.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateSMSMessage}{Create\+SMSMessage}}}]{create\+SMSMessage,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates and sends a new text message or multiple messages. You can send SMS messages simultaneously to different recipients up to 40 requests per minute; this limitation is relevant for all client applications. Sending and receiving SMS is available for Toll-\/\+Free Numbers within the USA. You can send up to 10 attachments in a single MMS message; the size of all attachments linked is limited up to 1500000 bytes. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/sms Rate Limit Group\+: Medium App Permission\+: SMS \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Outbound\+SMS 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Sms/Index.\+cs\end{DoxyCompactItemize}

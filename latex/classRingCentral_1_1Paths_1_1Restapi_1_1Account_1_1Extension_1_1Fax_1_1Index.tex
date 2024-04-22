@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Fax.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.Fax.Index@{RingCentral.Paths.Restapi.Account.Extension.Fax.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Fax.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_a24e8779a876b6bf34ce9341781bab2ad}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_a24e8779a876b6bf34ce9341781bab2ad}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_aa8a72ffc31730e28fb31595904651201}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_aa8a72ffc31730e28fb31595904651201}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1FaxResponse}{Fax\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_afe5ab231da80627fa7b535f72f72908f}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateFaxMessageRequest}{Create\+Fax\+Message\+Request}} create\+Fax\+Message\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates and sends/re-\/sends a fax message. Re-\/send can be implemented if sending has failed. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax}{Fax}} attachment size (both single and total) is limited to 50Mb. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/fax Rate Limit Group\+: Heavy App Permission\+: Faxes \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Outbound\+Faxes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_a2876224614db27da27ce6ac9439cf325}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_a2876224614db27da27ce6ac9439cf325}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_a375dc771b4af1970b53663d003f6c92f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_a375dc771b4af1970b53663d003f6c92f}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_afe5ab231da80627fa7b535f72f72908f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax_1_1Index_afe5ab231da80627fa7b535f72f72908f}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.Fax.Index@{RingCentral.Paths.Restapi.Account.Extension.Fax.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.Fax.Index@{RingCentral.Paths.Restapi.Account.Extension.Fax.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1FaxResponse}{Fax\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Fax.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateFaxMessageRequest}{Create\+Fax\+Message\+Request}}}]{create\+Fax\+Message\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates and sends/re-\/sends a fax message. Re-\/send can be implemented if sending has failed. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Fax}{Fax}} attachment size (both single and total) is limited to 50Mb. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/fax Rate Limit Group\+: Heavy App Permission\+: Faxes \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Outbound\+Faxes 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Fax/Index.\+cs\end{DoxyCompactItemize}

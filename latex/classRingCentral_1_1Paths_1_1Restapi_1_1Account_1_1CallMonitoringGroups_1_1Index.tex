@@ -1,0 +1,89 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Monitoring\+Groups.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index}\index{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Monitoring\+Groups.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_aef52db3afbb226b35b99c93d97762dea}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_aef52db3afbb226b35b99c93d97762dea}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1BulkAssign_1_1Index}{Bulk\+Assign.\+Index}} {\bfseries Bulk\+Assign} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a59fb394278ff4af0d7ce01b24a3b8962}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a59fb394278ff4af0d7ce01b24a3b8962}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string group\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a1faf44f67d0f1fa133b6023c4a58a933}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a1faf44f67d0f1fa133b6023c4a58a933}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallMonitoringGroups}{Ring\+Central.\+Call\+Monitoring\+Groups}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a0038a753ee7a8333fa3db6dfb32a7dc3}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ListCallMonitoringGroupsParameters}{List\+Call\+Monitoring\+Groups\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of call monitoring groups filtered by an extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallMonitoringGroup}{Call\+Monitoring\+Group}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a5a903f92f08ad00604a88027fd49c706}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateCallMonitoringGroupRequest}{Create\+Call\+Monitoring\+Group\+Request}} create\+Call\+Monitoring\+Group\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new call monitoring group. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Groups \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallMonitoringGroup}{Call\+Monitoring\+Group}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a93967d9007c2baacc74d245cc7a2f4ba}{Put}} (\mbox{\hyperlink{classRingCentral_1_1CreateCallMonitoringGroupRequest}{Create\+Call\+Monitoring\+Group\+Request}} create\+Call\+Monitoring\+Group\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a call monitoring group name. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups/\{group\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Groups \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_ad758aca4980cf7f2eee66fdcbef2bf91}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Removes information about a call monitoring group specified in path. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups/\{group\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Groups \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a70828e05d02ffcb13cbd1c8b4109e065}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a70828e05d02ffcb13cbd1c8b4109e065}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Members_1_1Index}{Members.\+Index}} {\bfseries Members} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a8188ff735735e89f36fc7d4d12bbdaf3}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a8188ff735735e89f36fc7d4d12bbdaf3}} 
+string {\bfseries group\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a02003266deeab326078039a828e0e76a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a02003266deeab326078039a828e0e76a}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_ac629458c7861ce0387eeeeab2f5440cf}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_ac629458c7861ce0387eeeeab2f5440cf}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_ad758aca4980cf7f2eee66fdcbef2bf91}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_ad758aca4980cf7f2eee66fdcbef2bf91}} 
+\index{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Monitoring\+Groups.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes information about a call monitoring group specified in path. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups/\{group\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Groups 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a0038a753ee7a8333fa3db6dfb32a7dc3}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a0038a753ee7a8333fa3db6dfb32a7dc3}} 
+\index{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallMonitoringGroups}{Ring\+Central.\+Call\+Monitoring\+Groups}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Monitoring\+Groups.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListCallMonitoringGroupsParameters}{List\+Call\+Monitoring\+Groups\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of call monitoring groups filtered by an extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a5a903f92f08ad00604a88027fd49c706}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a5a903f92f08ad00604a88027fd49c706}} 
+\index{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallMonitoringGroup}{Call\+Monitoring\+Group}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Monitoring\+Groups.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateCallMonitoringGroupRequest}{Create\+Call\+Monitoring\+Group\+Request}}}]{create\+Call\+Monitoring\+Group\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new call monitoring group. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Groups 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a93967d9007c2baacc74d245cc7a2f4ba}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallMonitoringGroups_1_1Index_a93967d9007c2baacc74d245cc7a2f4ba}} 
+\index{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index@{RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallMonitoringGroup}{Call\+Monitoring\+Group}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Monitoring\+Groups.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateCallMonitoringGroupRequest}{Create\+Call\+Monitoring\+Group\+Request}}}]{create\+Call\+Monitoring\+Group\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a call monitoring group name. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/monitoring-\/groups/\{group\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Groups 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Call\+Monitoring\+Groups/\+Bulk\+Assign/Index.\+cs\end{DoxyCompactItemize}

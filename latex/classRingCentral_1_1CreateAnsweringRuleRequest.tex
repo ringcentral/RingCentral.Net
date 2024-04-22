@@ -1,0 +1,196 @@
+\hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest}{}\doxysection{Ring\+Central.\+Create\+Answering\+Rule\+Request Class Reference}
+\label{classRingCentral_1_1CreateAnsweringRuleRequest}\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a55dced7b6e8d689a3fd13ccbc8783d1a}{enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if the rule is active or inactive. The default value is {\ttfamily true} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a17c90a9c8d21acc12566b198b59e8cdc}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of an answering rule. The \textquotesingle{}Custom\textquotesingle{} value should be specified Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_adf9315fd8fdecc190cbaf2d14ce4aeaf}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of an answering rule specified by user Required \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallersInfoRequest}{Callers\+Info\+Request}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_ae78b2407be741ceeb84f3aec3176010c}{callers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Answering rule will be applied when calls are received from the specified caller(s) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CalledNumberInfo}{Called\+Number\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a83657d2c03cbd97d7c643781e8dd22cd}{called\+Numbers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Answering rules are applied when calling to selected number(s) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ScheduleInfo}{Schedule\+Info}} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a9a44b2fcf41f6b1cdc83133ebd1d1996}{schedule}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_af4b020c3946caeded01aa666a3eaf9b8}{call\+Handling\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies how incoming calls are forwarded Enum\+: Forward\+Calls, Unconditional\+Forwarding, Agent\+Queue, Transfer\+To\+Extension, Take\+Messages\+Only, Play\+Announcement\+Only, Shared\+Lines \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ForwardingInfo}{Forwarding\+Info}} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a2d6b8e93624000c56405ba945c078dd4}{forwarding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1UnconditionalForwardingInfo}{Unconditional\+Forwarding\+Info}} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_affc96d1e79d10e3ec4e91850e3dbbfcd}{unconditional\+Forwarding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1QueueInfo}{Queue\+Info}} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a3b44ef608a67dc5ef5f72cf254d1c668}{queue}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1TransferredExtensionInfo}{Transferred\+Extension\+Info}} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a9607ebcf8d33320b55e2e0eb026372d4}{transfer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1VoicemailInfo}{Voicemail\+Info}} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_afd58c2e9240ab179e19f866c99be89fd}{voicemail}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1MissedCallInfo}{Missed\+Call\+Info}} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a8621200b328f1ad3f7478ea5c4bb6f05}{missed\+Call}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1GreetingInfo}{Greeting\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_ac122e720de969e0748317232fc4e2338}{greetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateAnsweringRuleRequest_a5d0ac17b63d1719301c4209134a2c075}{screening}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call screening status. \textquotesingle{}Off\textquotesingle{} -\/ no call screening; \textquotesingle{}No\+Caller\+Id\textquotesingle{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a83657d2c03cbd97d7c643781e8dd22cd}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a83657d2c03cbd97d7c643781e8dd22cd}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!calledNumbers@{calledNumbers}}
+\index{calledNumbers@{calledNumbers}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{calledNumbers}{calledNumbers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CalledNumberInfo}{Called\+Number\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+called\+Numbers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Answering rules are applied when calling to selected number(s) 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_ae78b2407be741ceeb84f3aec3176010c}\label{classRingCentral_1_1CreateAnsweringRuleRequest_ae78b2407be741ceeb84f3aec3176010c}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!callers@{callers}}
+\index{callers@{callers}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{callers}{callers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallersInfoRequest}{Callers\+Info\+Request}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+callers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Answering rule will be applied when calls are received from the specified caller(s) 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_af4b020c3946caeded01aa666a3eaf9b8}\label{classRingCentral_1_1CreateAnsweringRuleRequest_af4b020c3946caeded01aa666a3eaf9b8}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!callHandlingAction@{callHandlingAction}}
+\index{callHandlingAction@{callHandlingAction}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{callHandlingAction}{callHandlingAction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Answering\+Rule\+Request.\+call\+Handling\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies how incoming calls are forwarded Enum\+: Forward\+Calls, Unconditional\+Forwarding, Agent\+Queue, Transfer\+To\+Extension, Take\+Messages\+Only, Play\+Announcement\+Only, Shared\+Lines 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a55dced7b6e8d689a3fd13ccbc8783d1a}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a55dced7b6e8d689a3fd13ccbc8783d1a}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!enabled@{enabled}}
+\index{enabled@{enabled}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Create\+Answering\+Rule\+Request.\+enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if the rule is active or inactive. The default value is {\ttfamily true} 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a2d6b8e93624000c56405ba945c078dd4}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a2d6b8e93624000c56405ba945c078dd4}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!forwarding@{forwarding}}
+\index{forwarding@{forwarding}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{forwarding}{forwarding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ForwardingInfo}{Forwarding\+Info}} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+forwarding\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_ac122e720de969e0748317232fc4e2338}\label{classRingCentral_1_1CreateAnsweringRuleRequest_ac122e720de969e0748317232fc4e2338}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!greetings@{greetings}}
+\index{greetings@{greetings}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{greetings}{greetings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1GreetingInfo}{Greeting\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+greetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a8621200b328f1ad3f7478ea5c4bb6f05}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a8621200b328f1ad3f7478ea5c4bb6f05}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!missedCall@{missedCall}}
+\index{missedCall@{missedCall}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{missedCall}{missedCall}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MissedCallInfo}{Missed\+Call\+Info}} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+missed\+Call\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_adf9315fd8fdecc190cbaf2d14ce4aeaf}\label{classRingCentral_1_1CreateAnsweringRuleRequest_adf9315fd8fdecc190cbaf2d14ce4aeaf}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!name@{name}}
+\index{name@{name}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Answering\+Rule\+Request.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name of an answering rule specified by user Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a3b44ef608a67dc5ef5f72cf254d1c668}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a3b44ef608a67dc5ef5f72cf254d1c668}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!queue@{queue}}
+\index{queue@{queue}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1QueueInfo}{Queue\+Info}} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+queue\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a9a44b2fcf41f6b1cdc83133ebd1d1996}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a9a44b2fcf41f6b1cdc83133ebd1d1996}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!schedule@{schedule}}
+\index{schedule@{schedule}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{schedule}{schedule}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ScheduleInfo}{Schedule\+Info}} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+schedule\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a5d0ac17b63d1719301c4209134a2c075}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a5d0ac17b63d1719301c4209134a2c075}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!screening@{screening}}
+\index{screening@{screening}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{screening}{screening}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Answering\+Rule\+Request.\+screening\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call screening status. \textquotesingle{}Off\textquotesingle{} -\/ no call screening; \textquotesingle{}No\+Caller\+Id\textquotesingle{} 
+
+
+\begin{DoxyItemize}
+\item if caller ID is missing, then callers are asked to say their name before connecting; \textquotesingle{}Unknown\+Caller\+Id\textquotesingle{} -\/ if caller ID is not in contact list, then callers are asked to say their name before connecting; \textquotesingle{}Always\textquotesingle{} -\/ the callers are always asked to say their name before connecting. The default value is \textquotesingle{}Off\textquotesingle{} Default\+: Off Enum\+: Off, No\+Caller\+Id, Unknown\+Caller\+Id, Always
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a9607ebcf8d33320b55e2e0eb026372d4}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a9607ebcf8d33320b55e2e0eb026372d4}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!transfer@{transfer}}
+\index{transfer@{transfer}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{transfer}{transfer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1TransferredExtensionInfo}{Transferred\+Extension\+Info}} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+transfer\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_a17c90a9c8d21acc12566b198b59e8cdc}\label{classRingCentral_1_1CreateAnsweringRuleRequest_a17c90a9c8d21acc12566b198b59e8cdc}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!type@{type}}
+\index{type@{type}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Answering\+Rule\+Request.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of an answering rule. The \textquotesingle{}Custom\textquotesingle{} value should be specified Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_affc96d1e79d10e3ec4e91850e3dbbfcd}\label{classRingCentral_1_1CreateAnsweringRuleRequest_affc96d1e79d10e3ec4e91850e3dbbfcd}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!unconditionalForwarding@{unconditionalForwarding}}
+\index{unconditionalForwarding@{unconditionalForwarding}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{unconditionalForwarding}{unconditionalForwarding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1UnconditionalForwardingInfo}{Unconditional\+Forwarding\+Info}} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+unconditional\+Forwarding\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateAnsweringRuleRequest_afd58c2e9240ab179e19f866c99be89fd}\label{classRingCentral_1_1CreateAnsweringRuleRequest_afd58c2e9240ab179e19f866c99be89fd}} 
+\index{RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}!voicemail@{voicemail}}
+\index{voicemail@{voicemail}!RingCentral.CreateAnsweringRuleRequest@{RingCentral.CreateAnsweringRuleRequest}}
+\doxysubsubsection{\texorpdfstring{voicemail}{voicemail}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1VoicemailInfo}{Voicemail\+Info}} Ring\+Central.\+Create\+Answering\+Rule\+Request.\+voicemail\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Create\+Answering\+Rule\+Request.\+cs\end{DoxyCompactItemize}

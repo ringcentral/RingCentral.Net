@@ -1,0 +1,97 @@
+\hypertarget{classRingCentral_1_1SessionRefAdminModel}{}\doxysection{Ring\+Central.\+Session\+Ref\+Admin\+Model Class Reference}
+\label{classRingCentral_1_1SessionRefAdminModel}\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel_a0186cbd798e4a8f101806724fa3866b3}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal object ID Example\+: 78654321 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel_ad6438bec205926a70cd417e6f2b1e57f}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session start time. If a session hasn\textquotesingle{}t been started this fields should be set to \char`\"{}scheduled\+Start\+Time\char`\"{} Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel_ae832802bcd9a1ce7ccaff0be8c1bad93}{end\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session end time. If a session hasn\textquotesingle{}t been finished this fields should be set to (\char`\"{}start\+Time\char`\"{}+\char`\"{}scheduled\+Duration\char`\"{}) Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel_a4bc4c3fefabda87dce1ae822c4823f53}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session duration in seconds rounded up (returned if \textquotesingle{}start\+Time\textquotesingle{} and \textquotesingle{}end\+Time\textquotesingle{} are not empty) Format\+: int32 Example\+: 3600 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel_a0119def33a6027b06171353e1dd365b1}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session title. If blank -\/ derived from webinar title. Example\+: Live Broadcasting US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel_a4e52d2f28b235d899005c98943a64471}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em User-\/friendly description of the Session. If blank -\/ derived from webinar title. Example\+: Live session for US-\/based participants \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1WebinarRefModel}{Webinar\+Ref\+Model}} \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel_ab0618011d0890e29557573454383219e}{webinar}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SessionRefAdminModel_a4e52d2f28b235d899005c98943a64471}\label{classRingCentral_1_1SessionRefAdminModel_a4e52d2f28b235d899005c98943a64471}} 
+\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}!description@{description}}
+\index{description@{description}!RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Ref\+Admin\+Model.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+User-\/friendly description of the Session. If blank -\/ derived from webinar title. Example\+: Live session for US-\/based participants 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionRefAdminModel_a4bc4c3fefabda87dce1ae822c4823f53}\label{classRingCentral_1_1SessionRefAdminModel_a4bc4c3fefabda87dce1ae822c4823f53}} 
+\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}!duration@{duration}}
+\index{duration@{duration}!RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Session\+Ref\+Admin\+Model.\+duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session duration in seconds rounded up (returned if \textquotesingle{}start\+Time\textquotesingle{} and \textquotesingle{}end\+Time\textquotesingle{} are not empty) Format\+: int32 Example\+: 3600 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionRefAdminModel_ae832802bcd9a1ce7ccaff0be8c1bad93}\label{classRingCentral_1_1SessionRefAdminModel_ae832802bcd9a1ce7ccaff0be8c1bad93}} 
+\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}!endTime@{endTime}}
+\index{endTime@{endTime}!RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Ref\+Admin\+Model.\+end\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session end time. If a session hasn\textquotesingle{}t been finished this fields should be set to (\char`\"{}start\+Time\char`\"{}+\char`\"{}scheduled\+Duration\char`\"{}) Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionRefAdminModel_a0186cbd798e4a8f101806724fa3866b3}\label{classRingCentral_1_1SessionRefAdminModel_a0186cbd798e4a8f101806724fa3866b3}} 
+\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}!id@{id}}
+\index{id@{id}!RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Ref\+Admin\+Model.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal object ID Example\+: 78654321 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionRefAdminModel_ad6438bec205926a70cd417e6f2b1e57f}\label{classRingCentral_1_1SessionRefAdminModel_ad6438bec205926a70cd417e6f2b1e57f}} 
+\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Ref\+Admin\+Model.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session start time. If a session hasn\textquotesingle{}t been started this fields should be set to \char`\"{}scheduled\+Start\+Time\char`\"{} Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionRefAdminModel_a0119def33a6027b06171353e1dd365b1}\label{classRingCentral_1_1SessionRefAdminModel_a0119def33a6027b06171353e1dd365b1}} 
+\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}!title@{title}}
+\index{title@{title}!RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Ref\+Admin\+Model.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session title. If blank -\/ derived from webinar title. Example\+: Live Broadcasting US 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionRefAdminModel_ab0618011d0890e29557573454383219e}\label{classRingCentral_1_1SessionRefAdminModel_ab0618011d0890e29557573454383219e}} 
+\index{RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}!webinar@{webinar}}
+\index{webinar@{webinar}!RingCentral.SessionRefAdminModel@{RingCentral.SessionRefAdminModel}}
+\doxysubsubsection{\texorpdfstring{webinar}{webinar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1WebinarRefModel}{Webinar\+Ref\+Model}} Ring\+Central.\+Session\+Ref\+Admin\+Model.\+webinar\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Session\+Ref\+Admin\+Model.\+cs\end{DoxyCompactItemize}

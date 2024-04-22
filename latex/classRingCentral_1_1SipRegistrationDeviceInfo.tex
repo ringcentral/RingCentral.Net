@@ -1,0 +1,258 @@
+\hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo}{}\doxysection{Ring\+Central.\+Sip\+Registration\+Device\+Info Class Reference}
+\label{classRingCentral_1_1SipRegistrationDeviceInfo}\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a5a50b191ae3260a8a3dff6e25a21bc6e}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of the resource Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a6ae2f4319cc4a5b490647abe1877aaf9}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a device \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a5515d38dc254cddc471426979adbca85}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Device type Enum\+: Hard\+Phone, Soft\+Phone, Other\+Phone, \mbox{\hyperlink{classRingCentral_1_1Paging}{Paging}}, Web\+Phone, Room \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a8a75f68eccdbd223a1883cf306b2aceb}{sku}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Device identification number (SKU, Stock Keeping Unit) in the format TP-\/\+ID \mbox{[}-\/AT-\/\+AC\mbox{]}, where TP is device type (HP for RC desk phones, DV for all other devices including soft phones); ID -\/ device model ID; AT -\/ add-\/on type ID; AC -\/ add-\/on count (if any). For example \textquotesingle{}HP-\/56-\/2-\/2\textquotesingle{} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a71db4f77d00ae6e9e02d961308de5a99}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Online, Offline \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a4acd64fdfa086274e641da2886a7d79b}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Device name. Mandatory if ordering Soft\+Phone or Other\+Phone. Optional for Hard\+Phone. If not specified for Hard\+Phone, then device model name is used as device name \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a3ef2268e6459e376a2f5941ed2dbb94a}{serial}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Serial number for Hard\+Phone (is returned only when the phone is shipped and provisioned); endpoint\+\_\+id for Softphone and mobile applications \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a3ac89db42e63097d51513b38ab4b6d98}{computer\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Computer name (for devices of {\ttfamily Soft\+Phone} type only) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1DeviceModelInfo}{Device\+Model\+Info}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_aa2374ca46848ae0410c4f1b36aa0e34f}{model}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1DeviceExtensionInfo}{Device\+Extension\+Info}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a7bd9db93053859e63c03a6187da931df}{extension}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1DeviceEmergencyServiceAddressResourceDefault}{Device\+Emergency\+Service\+Address\+Resource\+Default}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_ab39cb869f89092d8292245e6c1d0fbd3}{emergency\+Service\+Address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo}{Sip\+Registration\+Device\+Emergency\+Info}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a421f5847856ac4899967d5779699c8c7}{emergency}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ShippingInfo}{Shipping\+Info}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_ae0e55688658c92c3c076bf1f9531b7aa}{shipping}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1DevicePhoneLinesInfo}{Device\+Phone\+Lines\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a7ee139e11af3d53265f548860f2e113e}{phone\+Lines}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone lines information \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a62da46ea22dfaab38e12b7fc2a852e15}{box\+Billing\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Box billing identifier of a device. Applicable only for Hard\+Phones. It is an alternative way to identify the device to be ordered. Either model structure, or box\+Billing\+Id must be specified forT?Hard\+Phone Format\+: int64 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_ade06eef45591ca4f3bd34271c385c174}{use\+As\+Common\+Phone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a0d3cce75e4f219f97df55a671ff7bd14}{line\+Pooling}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pooling type of device\+: \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_add280a55cd69bb84eb103f07952e65d7}{in\+Company\+Net}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Network location status. {\ttfamily true} if the device is located in the configured corporate network (On-\/\+Net); {\ttfamily false} for Off-\/\+Net location. Parameter is not returned if {\ttfamily Emergency\+Address\+Auto\+Update} feature is not enabled for the account/user, or if device network location is not determined \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1DeviceSiteInfo}{Device\+Site\+Info}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a22526babd65f3bb237b444d508e651e9}{site}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_ae75882c6058dd7cf7bcd8463fc058bc6}{last\+Location\+Report\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Timestamp of receiving last location report in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example $\ast$2016-\/03-\/10\+T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a62da46ea22dfaab38e12b7fc2a852e15}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a62da46ea22dfaab38e12b7fc2a852e15}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!boxBillingId@{boxBillingId}}
+\index{boxBillingId@{boxBillingId}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{boxBillingId}{boxBillingId}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Sip\+Registration\+Device\+Info.\+box\+Billing\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Box billing identifier of a device. Applicable only for Hard\+Phones. It is an alternative way to identify the device to be ordered. Either model structure, or box\+Billing\+Id must be specified forT?Hard\+Phone Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a3ac89db42e63097d51513b38ab4b6d98}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a3ac89db42e63097d51513b38ab4b6d98}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!computerName@{computerName}}
+\index{computerName@{computerName}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{computerName}{computerName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+computer\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Computer name (for devices of {\ttfamily Soft\+Phone} type only) 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a421f5847856ac4899967d5779699c8c7}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a421f5847856ac4899967d5779699c8c7}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!emergency@{emergency}}
+\index{emergency@{emergency}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{emergency}{emergency}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo}{Sip\+Registration\+Device\+Emergency\+Info}} Ring\+Central.\+Sip\+Registration\+Device\+Info.\+emergency\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_ab39cb869f89092d8292245e6c1d0fbd3}\label{classRingCentral_1_1SipRegistrationDeviceInfo_ab39cb869f89092d8292245e6c1d0fbd3}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!emergencyServiceAddress@{emergencyServiceAddress}}
+\index{emergencyServiceAddress@{emergencyServiceAddress}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{emergencyServiceAddress}{emergencyServiceAddress}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DeviceEmergencyServiceAddressResourceDefault}{Device\+Emergency\+Service\+Address\+Resource\+Default}} Ring\+Central.\+Sip\+Registration\+Device\+Info.\+emergency\+Service\+Address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a7bd9db93053859e63c03a6187da931df}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a7bd9db93053859e63c03a6187da931df}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!extension@{extension}}
+\index{extension@{extension}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DeviceExtensionInfo}{Device\+Extension\+Info}} Ring\+Central.\+Sip\+Registration\+Device\+Info.\+extension\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a6ae2f4319cc4a5b490647abe1877aaf9}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a6ae2f4319cc4a5b490647abe1877aaf9}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!id@{id}}
+\index{id@{id}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a device 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_add280a55cd69bb84eb103f07952e65d7}\label{classRingCentral_1_1SipRegistrationDeviceInfo_add280a55cd69bb84eb103f07952e65d7}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!inCompanyNet@{inCompanyNet}}
+\index{inCompanyNet@{inCompanyNet}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{inCompanyNet}{inCompanyNet}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Sip\+Registration\+Device\+Info.\+in\+Company\+Net\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Network location status. {\ttfamily true} if the device is located in the configured corporate network (On-\/\+Net); {\ttfamily false} for Off-\/\+Net location. Parameter is not returned if {\ttfamily Emergency\+Address\+Auto\+Update} feature is not enabled for the account/user, or if device network location is not determined 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_ae75882c6058dd7cf7bcd8463fc058bc6}\label{classRingCentral_1_1SipRegistrationDeviceInfo_ae75882c6058dd7cf7bcd8463fc058bc6}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!lastLocationReportTime@{lastLocationReportTime}}
+\index{lastLocationReportTime@{lastLocationReportTime}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{lastLocationReportTime}{lastLocationReportTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+last\+Location\+Report\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Timestamp of receiving last location report in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example $\ast$2016-\/03-\/10\+T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a0d3cce75e4f219f97df55a671ff7bd14}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a0d3cce75e4f219f97df55a671ff7bd14}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!linePooling@{linePooling}}
+\index{linePooling@{linePooling}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{linePooling}{linePooling}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+line\+Pooling\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Pooling type of device\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}} -\/ device with standalone paid phone line which can be linked to soft phone client instance
+\item {\ttfamily Guest} -\/ device with a linked phone line
+\item {\ttfamily None} -\/ device without a phone line or with specific line (free, BLA, etc.) Enum\+: \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Guest, None
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_aa2374ca46848ae0410c4f1b36aa0e34f}\label{classRingCentral_1_1SipRegistrationDeviceInfo_aa2374ca46848ae0410c4f1b36aa0e34f}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!model@{model}}
+\index{model@{model}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DeviceModelInfo}{Device\+Model\+Info}} Ring\+Central.\+Sip\+Registration\+Device\+Info.\+model\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a4acd64fdfa086274e641da2886a7d79b}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a4acd64fdfa086274e641da2886a7d79b}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!name@{name}}
+\index{name@{name}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Device name. Mandatory if ordering Soft\+Phone or Other\+Phone. Optional for Hard\+Phone. If not specified for Hard\+Phone, then device model name is used as device name 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a7ee139e11af3d53265f548860f2e113e}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a7ee139e11af3d53265f548860f2e113e}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!phoneLines@{phoneLines}}
+\index{phoneLines@{phoneLines}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{phoneLines}{phoneLines}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DevicePhoneLinesInfo}{Device\+Phone\+Lines\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Sip\+Registration\+Device\+Info.\+phone\+Lines\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone lines information 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a3ef2268e6459e376a2f5941ed2dbb94a}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a3ef2268e6459e376a2f5941ed2dbb94a}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!serial@{serial}}
+\index{serial@{serial}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{serial}{serial}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+serial\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Serial number for Hard\+Phone (is returned only when the phone is shipped and provisioned); endpoint\+\_\+id for Softphone and mobile applications 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_ae0e55688658c92c3c076bf1f9531b7aa}\label{classRingCentral_1_1SipRegistrationDeviceInfo_ae0e55688658c92c3c076bf1f9531b7aa}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!shipping@{shipping}}
+\index{shipping@{shipping}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{shipping}{shipping}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ShippingInfo}{Shipping\+Info}} Ring\+Central.\+Sip\+Registration\+Device\+Info.\+shipping\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a22526babd65f3bb237b444d508e651e9}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a22526babd65f3bb237b444d508e651e9}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!site@{site}}
+\index{site@{site}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{site}{site}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DeviceSiteInfo}{Device\+Site\+Info}} Ring\+Central.\+Sip\+Registration\+Device\+Info.\+site\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a8a75f68eccdbd223a1883cf306b2aceb}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a8a75f68eccdbd223a1883cf306b2aceb}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!sku@{sku}}
+\index{sku@{sku}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{sku}{sku}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+sku\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Device identification number (SKU, Stock Keeping Unit) in the format TP-\/\+ID \mbox{[}-\/AT-\/\+AC\mbox{]}, where TP is device type (HP for RC desk phones, DV for all other devices including soft phones); ID -\/ device model ID; AT -\/ add-\/on type ID; AC -\/ add-\/on count (if any). For example \textquotesingle{}HP-\/56-\/2-\/2\textquotesingle{} 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a71db4f77d00ae6e9e02d961308de5a99}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a71db4f77d00ae6e9e02d961308de5a99}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!status@{status}}
+\index{status@{status}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Online, Offline 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a5515d38dc254cddc471426979adbca85}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a5515d38dc254cddc471426979adbca85}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!type@{type}}
+\index{type@{type}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Device type Enum\+: Hard\+Phone, Soft\+Phone, Other\+Phone, \mbox{\hyperlink{classRingCentral_1_1Paging}{Paging}}, Web\+Phone, Room 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a5a50b191ae3260a8a3dff6e25a21bc6e}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a5a50b191ae3260a8a3dff6e25a21bc6e}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!uri@{uri}}
+\index{uri@{uri}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Info.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of the resource Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_ade06eef45591ca4f3bd34271c385c174}\label{classRingCentral_1_1SipRegistrationDeviceInfo_ade06eef45591ca4f3bd34271c385c174}} 
+\index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!useAsCommonPhone@{useAsCommonPhone}}
+\index{useAsCommonPhone@{useAsCommonPhone}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}
+\doxysubsubsection{\texorpdfstring{useAsCommonPhone}{useAsCommonPhone}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Sip\+Registration\+Device\+Info.\+use\+As\+Common\+Phone\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Sip\+Registration\+Device\+Info.\+cs\end{DoxyCompactItemize}

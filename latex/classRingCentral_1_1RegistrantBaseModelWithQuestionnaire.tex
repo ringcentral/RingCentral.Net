@@ -1,0 +1,157 @@
+\hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire}{}\doxysection{Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire Class Reference}
+\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire}\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_ab93c90d111c17f6aae659165479486cf}{first\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em First (given) name Required Example\+: John \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a565607ef154f4dc51aecdb98b6b5c88e}{last\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last (family) name Required Example\+: Doe \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a3bcf862885d53b21a8ecc57ba6ec489b}{email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s contact email Required Format\+: email Example\+: \href{mailto:john.doe@example.com}{\texttt{ john.\+doe@example.\+com}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a96ca90c985b22c50fcd83998248cce70}{join\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The personalized URI for this registrant to join the Webinar Format\+: uri Example\+: \href{https://v.ringcentral.com/w/a/join/iuyef77fsj473wn10ashjfk34}{\texttt{ https\+://v.\+ringcentral.\+com/w/a/join/iuyef77fsj473wn10ashjfk34}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a203f751202bf905d238e7787ae263a4a}{cancellation\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The personalized URI for this registrant to cancel the registration Format\+: uri Example\+: \href{https://abcde12345.webinar.ringcentral.com/register?jlt=iuyef77fsj473wn10ashjfk34&action=cancel}{\texttt{ https\+://abcde12345.\+webinar.\+ringcentral.\+com/register?jlt=iuyef77fsj473wn10ashjfk34\&action=cancel}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_aa53eb65f8d959024b8c6a9ea6310c01b}{visitor\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Visitor ID passed from registration page \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a8d6238be56412e8c6495d2bb314efc00}{external\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em ID of a registrant passed from external system \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a159246b055b7487bb2c4009bfcb2a11e}{registration\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Registration time (can be earlier than \char`\"{}creation\+Time\char`\"{} due to indirect persistence) Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_adf13e1e32fcd43341c45f2edebac4d15}{ip\+Address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em IP address of the registrant\textquotesingle{}s user agent Format\+: ipv4 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a85a84fe958141d2b7c49c9ce063aeac0}{source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Registration channel source (coming from registration URI) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a322191fda967f928df0f3cd22b5de910}{participant\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em ID of session participant (from Runtime Service -\/ if this registrant attended the webinar) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1RegAnswerModel}{Reg\+Answer\+Model}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_aa048abb896c3019cbab9ac1b40b41883}{questionnaire}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Answers on custom registration questions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a203f751202bf905d238e7787ae263a4a}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a203f751202bf905d238e7787ae263a4a}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!cancellationUri@{cancellationUri}}
+\index{cancellationUri@{cancellationUri}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{cancellationUri}{cancellationUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+cancellation\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The personalized URI for this registrant to cancel the registration Format\+: uri Example\+: \href{https://abcde12345.webinar.ringcentral.com/register?jlt=iuyef77fsj473wn10ashjfk34&action=cancel}{\texttt{ https\+://abcde12345.\+webinar.\+ringcentral.\+com/register?jlt=iuyef77fsj473wn10ashjfk34\&action=cancel}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a3bcf862885d53b21a8ecc57ba6ec489b}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a3bcf862885d53b21a8ecc57ba6ec489b}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!email@{email}}
+\index{email@{email}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+email\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s contact email Required Format\+: email Example\+: \href{mailto:john.doe@example.com}{\texttt{ john.\+doe@example.\+com}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a8d6238be56412e8c6495d2bb314efc00}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a8d6238be56412e8c6495d2bb314efc00}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!externalId@{externalId}}
+\index{externalId@{externalId}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{externalId}{externalId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+external\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ID of a registrant passed from external system 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_ab93c90d111c17f6aae659165479486cf}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_ab93c90d111c17f6aae659165479486cf}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!firstName@{firstName}}
+\index{firstName@{firstName}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{firstName}{firstName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+first\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+First (given) name Required Example\+: John 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_adf13e1e32fcd43341c45f2edebac4d15}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_adf13e1e32fcd43341c45f2edebac4d15}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!ipAddress@{ipAddress}}
+\index{ipAddress@{ipAddress}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{ipAddress}{ipAddress}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+ip\+Address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+IP address of the registrant\textquotesingle{}s user agent Format\+: ipv4 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a96ca90c985b22c50fcd83998248cce70}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a96ca90c985b22c50fcd83998248cce70}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!joinUri@{joinUri}}
+\index{joinUri@{joinUri}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{joinUri}{joinUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+join\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The personalized URI for this registrant to join the Webinar Format\+: uri Example\+: \href{https://v.ringcentral.com/w/a/join/iuyef77fsj473wn10ashjfk34}{\texttt{ https\+://v.\+ringcentral.\+com/w/a/join/iuyef77fsj473wn10ashjfk34}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a565607ef154f4dc51aecdb98b6b5c88e}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a565607ef154f4dc51aecdb98b6b5c88e}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!lastName@{lastName}}
+\index{lastName@{lastName}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{lastName}{lastName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+last\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Last (family) name Required Example\+: Doe 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a322191fda967f928df0f3cd22b5de910}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a322191fda967f928df0f3cd22b5de910}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!participantId@{participantId}}
+\index{participantId@{participantId}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{participantId}{participantId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+participant\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ID of session participant (from Runtime Service -\/ if this registrant attended the webinar) 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_aa048abb896c3019cbab9ac1b40b41883}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_aa048abb896c3019cbab9ac1b40b41883}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!questionnaire@{questionnaire}}
+\index{questionnaire@{questionnaire}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{questionnaire}{questionnaire}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1RegAnswerModel}{Reg\+Answer\+Model}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+questionnaire\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Answers on custom registration questions 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a159246b055b7487bb2c4009bfcb2a11e}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a159246b055b7487bb2c4009bfcb2a11e}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!registrationTime@{registrationTime}}
+\index{registrationTime@{registrationTime}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{registrationTime}{registrationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+registration\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Registration time (can be earlier than \char`\"{}creation\+Time\char`\"{} due to indirect persistence) Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a85a84fe958141d2b7c49c9ce063aeac0}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_a85a84fe958141d2b7c49c9ce063aeac0}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!source@{source}}
+\index{source@{source}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Registration channel source (coming from registration URI) 
+
+\mbox{\Hypertarget{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_aa53eb65f8d959024b8c6a9ea6310c01b}\label{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire_aa53eb65f8d959024b8c6a9ea6310c01b}} 
+\index{RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}!visitorId@{visitorId}}
+\index{visitorId@{visitorId}!RingCentral.RegistrantBaseModelWithQuestionnaire@{RingCentral.RegistrantBaseModelWithQuestionnaire}}
+\doxysubsubsection{\texorpdfstring{visitorId}{visitorId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Registrant\+Base\+Model\+With\+Questionnaire.\+visitor\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Visitor ID passed from registration page 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Registrant\+Base\+Model\+With\+Questionnaire.\+cs\end{DoxyCompactItemize}

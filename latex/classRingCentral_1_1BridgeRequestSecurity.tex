@@ -1,0 +1,73 @@
+\hypertarget{classRingCentral_1_1BridgeRequestSecurity}{}\doxysection{Ring\+Central.\+Bridge\+Request\+Security Class Reference}
+\label{classRingCentral_1_1BridgeRequestSecurity}\index{RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1BridgeRequestSecurity_a0ce6923b7725ef50c023f7d1ef6ef3a4}{password\+Protected}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if a meeting is password protected. By default, Instant and Scheduled bridges are not password protected. For default (PMI) bridge, password protection will be turned on and the password will be generated if it is not specified while creation. While creation to set password protection you should set this field to true and specify a password in the {\bfseries{password}} field. If you want to change password or set password protection for an unprotected bridge, you should set this field to true and specify a password in the {\bfseries{password}} field in the update operation. To make protected bridge as unprotected you should set this field to false in the update operation. Example\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1BridgeRequestSecurity_a1d8f04490a454ba4b4191b1c54ac33b8}{password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies a password if bridge meetings should be password protected (password\+Protected field is true). Besides that, if the field is specified in the request but {\bfseries{password\+Protected}} field is missing then it means that {\bfseries{password\+Protected}} field is set to true. Example\+: Wq123ygs15 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1BridgeRequestSecurity_a77d2a12d84635f64ce98cb26d3a590b5}{no\+Guests}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, only authenticated users can join to a meeting. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1BridgeRequestSecurity_a7ff37146fd65162fb9ccffc6da9a90f0}{same\+Account}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, only users have the same account can join to a meeting. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1BridgeRequestSecurity_ad07edd838814b9bd77d29f75739e9e28}{e2ee}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, end to end encryption will be enabled for a meeting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1BridgeRequestSecurity_ad07edd838814b9bd77d29f75739e9e28}\label{classRingCentral_1_1BridgeRequestSecurity_ad07edd838814b9bd77d29f75739e9e28}} 
+\index{RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}!e2ee@{e2ee}}
+\index{e2ee@{e2ee}!RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}}
+\doxysubsubsection{\texorpdfstring{e2ee}{e2ee}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Bridge\+Request\+Security.\+e2ee\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, end to end encryption will be enabled for a meeting. 
+
+\mbox{\Hypertarget{classRingCentral_1_1BridgeRequestSecurity_a77d2a12d84635f64ce98cb26d3a590b5}\label{classRingCentral_1_1BridgeRequestSecurity_a77d2a12d84635f64ce98cb26d3a590b5}} 
+\index{RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}!noGuests@{noGuests}}
+\index{noGuests@{noGuests}!RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}}
+\doxysubsubsection{\texorpdfstring{noGuests}{noGuests}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Bridge\+Request\+Security.\+no\+Guests\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, only authenticated users can join to a meeting. 
+
+\mbox{\Hypertarget{classRingCentral_1_1BridgeRequestSecurity_a1d8f04490a454ba4b4191b1c54ac33b8}\label{classRingCentral_1_1BridgeRequestSecurity_a1d8f04490a454ba4b4191b1c54ac33b8}} 
+\index{RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}!password@{password}}
+\index{password@{password}!RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string Ring\+Central.\+Bridge\+Request\+Security.\+password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies a password if bridge meetings should be password protected (password\+Protected field is true). Besides that, if the field is specified in the request but {\bfseries{password\+Protected}} field is missing then it means that {\bfseries{password\+Protected}} field is set to true. Example\+: Wq123ygs15 
+
+\mbox{\Hypertarget{classRingCentral_1_1BridgeRequestSecurity_a0ce6923b7725ef50c023f7d1ef6ef3a4}\label{classRingCentral_1_1BridgeRequestSecurity_a0ce6923b7725ef50c023f7d1ef6ef3a4}} 
+\index{RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}!passwordProtected@{passwordProtected}}
+\index{passwordProtected@{passwordProtected}!RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}}
+\doxysubsubsection{\texorpdfstring{passwordProtected}{passwordProtected}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Bridge\+Request\+Security.\+password\+Protected\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if a meeting is password protected. By default, Instant and Scheduled bridges are not password protected. For default (PMI) bridge, password protection will be turned on and the password will be generated if it is not specified while creation. While creation to set password protection you should set this field to true and specify a password in the {\bfseries{password}} field. If you want to change password or set password protection for an unprotected bridge, you should set this field to true and specify a password in the {\bfseries{password}} field in the update operation. To make protected bridge as unprotected you should set this field to false in the update operation. Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1BridgeRequestSecurity_a7ff37146fd65162fb9ccffc6da9a90f0}\label{classRingCentral_1_1BridgeRequestSecurity_a7ff37146fd65162fb9ccffc6da9a90f0}} 
+\index{RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}!sameAccount@{sameAccount}}
+\index{sameAccount@{sameAccount}!RingCentral.BridgeRequestSecurity@{RingCentral.BridgeRequestSecurity}}
+\doxysubsubsection{\texorpdfstring{sameAccount}{sameAccount}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Bridge\+Request\+Security.\+same\+Account\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, only users have the same account can join to a meeting. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Bridge\+Request\+Security.\+cs\end{DoxyCompactItemize}

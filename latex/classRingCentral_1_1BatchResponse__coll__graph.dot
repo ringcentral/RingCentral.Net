@@ -1,0 +1,11 @@
+digraph "RingCentral.BatchResponse&lt; T &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="RingCentral.BatchResponse\< T \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" error" ];
+  Node2 [label="RingCentral.ADGErrorResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ADGErrorResponse.html",tooltip="Format of response in case that any error occurred during request processing"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" summary" ];
+  Node3 [label="RingCentral.BatchSummary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1BatchSummary.html",tooltip=" "];
+}

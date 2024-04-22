@@ -1,0 +1,65 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Device.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index}\index{RingCentral.Paths.Restapi.Account.Device.Index@{RingCentral.Paths.Restapi.Account.Device.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Device.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a759ec4bb36743bcfc0be2220639751ba}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a759ec4bb36743bcfc0be2220639751ba}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Emergency_1_1Index}{Emergency.\+Index}} {\bfseries Emergency} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_af5b085a2347e2aa909c5959af47f7943}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_af5b085a2347e2aa909c5959af47f7943}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string device\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_aab3d120a2250925deaedc85f0c80ea91}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_aab3d120a2250925deaedc85f0c80ea91}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DeviceResource}{Device\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_abc196b2c4f4fe12f38b4667bdccc9d9e}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ReadDeviceParameters}{Read\+Device\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns account device(s) by their ID(s). HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/device/\{device\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Devices \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DeviceResource}{Device\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a6cda50d50e67d1014928c00f63b4f7b5}{Put}} (\mbox{\hyperlink{classRingCentral_1_1AccountDeviceUpdate}{Account\+Device\+Update}} account\+Device\+Update, \mbox{\hyperlink{classRingCentral_1_1UpdateDeviceParameters}{Update\+Device\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates account device(s) by their ID(s). HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/device/\{device\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Devices \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_aec4ccdeead63730fb0467e55f8ca6934}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_aec4ccdeead63730fb0467e55f8ca6934}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1SipInfo_1_1Index}{Sip\+Info.\+Index}} {\bfseries Sip\+Info} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a6ec554e43d5c7e8ebd5a68b42d1498ec}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a6ec554e43d5c7e8ebd5a68b42d1498ec}} 
+string {\bfseries device\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_acdc83f8a2e88d0fab66782e0c500d7ec}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_acdc83f8a2e88d0fab66782e0c500d7ec}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a182d0812453dbba44cb42d86e145ccef}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a182d0812453dbba44cb42d86e145ccef}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_abc196b2c4f4fe12f38b4667bdccc9d9e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_abc196b2c4f4fe12f38b4667bdccc9d9e}} 
+\index{RingCentral.Paths.Restapi.Account.Device.Index@{RingCentral.Paths.Restapi.Account.Device.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Device.Index@{RingCentral.Paths.Restapi.Account.Device.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DeviceResource}{Device\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Device.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadDeviceParameters}{Read\+Device\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns account device(s) by their ID(s). HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/device/\{device\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Devices 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a6cda50d50e67d1014928c00f63b4f7b5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Device_1_1Index_a6cda50d50e67d1014928c00f63b4f7b5}} 
+\index{RingCentral.Paths.Restapi.Account.Device.Index@{RingCentral.Paths.Restapi.Account.Device.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Device.Index@{RingCentral.Paths.Restapi.Account.Device.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DeviceResource}{Device\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Device.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AccountDeviceUpdate}{Account\+Device\+Update}}}]{account\+Device\+Update,  }\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateDeviceParameters}{Update\+Device\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates account device(s) by their ID(s). HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/device/\{device\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Devices 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Device/\+Emergency/Index.\+cs\end{DoxyCompactItemize}

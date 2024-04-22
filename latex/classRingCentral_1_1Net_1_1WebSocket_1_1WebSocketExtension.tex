@@ -1,0 +1,77 @@
+\hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension}{}\doxysection{Ring\+Central.\+Net.\+Web\+Socket.\+Web\+Socket\+Extension Class Reference}
+\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension}\index{RingCentral.Net.WebSocket.WebSocketExtension@{RingCentral.Net.WebSocket.WebSocketExtension}}
+
+
+Inheritance diagram for Ring\+Central.\+Net.\+Web\+Socket.\+Web\+Socket\+Extension\+:
+% FIG 0
+
+
+Collaboration diagram for Ring\+Central.\+Net.\+Web\+Socket.\+Web\+Socket\+Extension\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_aa5ddf2089f5a4c76c2d6ac09370bc66b}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_aa5ddf2089f5a4c76c2d6ac09370bc66b}} 
+{\bfseries Web\+Socket\+Extension} (\mbox{\hyperlink{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketOptions}{Web\+Socket\+Options}} options=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a2a3ca484466419637bb991fab834096a}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a2a3ca484466419637bb991fab834096a}} 
+override async Task {\bfseries Install} (\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} rc)
+\item 
+async Task \mbox{\hyperlink{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_af9f8fabffbb8a696afc79ae147bb8189}{Reconnect}} (bool recover\+Subscription=true)
+\begin{DoxyCompactList}\small\item\em Reconnect to \mbox{\hyperlink{namespaceRingCentral_1_1Net_1_1WebSocket}{Web\+Socket}} server \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a3081b3aa2986ddbc41dae3e6d4525ada}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a3081b3aa2986ddbc41dae3e6d4525ada}} 
+async Task$<$ T $>$ {\bfseries Request$<$ T $>$} (string method, string endpoint, object content=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a5b844646a014d62cff283abd7c8d587a}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a5b844646a014d62cff283abd7c8d587a}} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1Net_1_1WebSocket_1_1Subscription}{Subscription}} $>$ {\bfseries Subscribe} (string\mbox{[}$\,$\mbox{]} event\+Filters, Action$<$ string $>$ callback)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a381b10f6d288e9e544abb2f43dc71960}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a381b10f6d288e9e544abb2f43dc71960}} 
+async Task {\bfseries Revoke} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a85157e616c19bcbf64fca3c417996576}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a85157e616c19bcbf64fca3c417996576}} 
+Websocket\+Client {\bfseries ws}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a5e398895f9fb1f80cad2eca251549cd3}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a5e398895f9fb1f80cad2eca251549cd3}} 
+\mbox{\hyperlink{classRingCentral_1_1Net_1_1WebSocket_1_1Wsc}{Wsc}} {\bfseries wsc}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_aad06629ded1897a977498f54bbbd7c5f}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_aad06629ded1897a977498f54bbbd7c5f}} 
+Event\+Handler$<$ \mbox{\hyperlink{classRingCentral_1_1Net_1_1WebSocket_1_1WsgMessage}{Wsg\+Message}} $>$ {\bfseries Message\+Received}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a51e0382ac3e7645a874103329227518f}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a51e0382ac3e7645a874103329227518f}} 
+Event\+Handler$<$ string $>$ {\bfseries Raw\+Message\+Received}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a87fea80ebc39eea2b95483c48470d402}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_a87fea80ebc39eea2b95483c48470d402}} 
+Event\+Handler$<$ \mbox{\hyperlink{classRingCentral_1_1Net_1_1WebSocket_1_1Wsc}{Wsc}} $>$ {\bfseries Wsc\+Received}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_af9f8fabffbb8a696afc79ae147bb8189}\label{classRingCentral_1_1Net_1_1WebSocket_1_1WebSocketExtension_af9f8fabffbb8a696afc79ae147bb8189}} 
+\index{RingCentral.Net.WebSocket.WebSocketExtension@{RingCentral.Net.WebSocket.WebSocketExtension}!Reconnect@{Reconnect}}
+\index{Reconnect@{Reconnect}!RingCentral.Net.WebSocket.WebSocketExtension@{RingCentral.Net.WebSocket.WebSocketExtension}}
+\doxysubsubsection{\texorpdfstring{Reconnect()}{Reconnect()}}
+{\footnotesize\ttfamily async Task Ring\+Central.\+Net.\+Web\+Socket.\+Web\+Socket\+Extension.\+Reconnect (\begin{DoxyParamCaption}\item[{bool}]{recover\+Subscription = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reconnect to \mbox{\hyperlink{namespaceRingCentral_1_1Net_1_1WebSocket}{Web\+Socket}} server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recover\+Subscription} & recover your existing subscription if there is one. You will have to re-\/subscribe your existing subscription if you don\textquotesingle{}t specify {\ttfamily true} here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net.\+Web\+Socket/Web\+Socket\+Extension.\+cs\end{DoxyCompactItemize}

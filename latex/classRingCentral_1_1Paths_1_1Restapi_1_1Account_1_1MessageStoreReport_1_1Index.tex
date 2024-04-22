@@ -1,0 +1,62 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Store\+Report.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index}\index{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index@{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Store\+Report.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a13c29c28dedc263abc1e75333f34c30b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a13c29c28dedc263abc1e75333f34c30b}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Archive_1_1Index}{Archive.\+Index}} {\bfseries Archive} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a64b8e85988833adb9f66a865b16f2147}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a64b8e85988833adb9f66a865b16f2147}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string task\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a7e3035912f5ca7d0cfd3ebd15229831f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a7e3035912f5ca7d0cfd3ebd15229831f}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageStoreReport}{Ring\+Central.\+Message\+Store\+Report}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a0274cf75415fb2fc3b7653753533ed2e}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateMessageStoreReportRequest}{Create\+Message\+Store\+Report\+Request}} create\+Message\+Store\+Report\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a task to collect all account messages within the specified time interval. Maximum number of simultaneous tasks per account is 2. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/report Rate Limit Group\+: Heavy App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Users \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageStoreReport}{Ring\+Central.\+Message\+Store\+Report}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a16c1d3ffb5279262986fee7a858fb2c9}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the current status of a task on report creation. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/report/\{task\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Users \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a6f131a24e62e9815e1ab48e0f7e46657}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a6f131a24e62e9815e1ab48e0f7e46657}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a72e2fcaa8b01d347d795714d32f404d1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a72e2fcaa8b01d347d795714d32f404d1}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_adcf25180c21b547167c5335db86c4e27}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_adcf25180c21b547167c5335db86c4e27}} 
+string {\bfseries task\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a16c1d3ffb5279262986fee7a858fb2c9}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a16c1d3ffb5279262986fee7a858fb2c9}} 
+\index{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index@{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.MessageStoreReport.Index@{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1MessageStoreReport}{Ring\+Central.\+Message\+Store\+Report}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Store\+Report.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current status of a task on report creation. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/report/\{task\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Users 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a0274cf75415fb2fc3b7653753533ed2e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreReport_1_1Index_a0274cf75415fb2fc3b7653753533ed2e}} 
+\index{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index@{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.MessageStoreReport.Index@{RingCentral.Paths.Restapi.Account.MessageStoreReport.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1MessageStoreReport}{Ring\+Central.\+Message\+Store\+Report}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Store\+Report.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateMessageStoreReportRequest}{Create\+Message\+Store\+Report\+Request}}}]{create\+Message\+Store\+Report\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a task to collect all account messages within the specified time interval. Maximum number of simultaneous tasks per account is 2. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/report Rate Limit Group\+: Heavy App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Users 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Message\+Store\+Report/\+Archive/Index.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Cx.\+Social\+Messaging.\+V1.\+Contents.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index}\index{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index@{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Cx.\+Social\+Messaging.\+V1.\+Contents.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a5fff24700ebb8a45277520b0996355de}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a5fff24700ebb8a45277520b0996355de}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Index}{V1.\+Index}} parent, string content\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a9b6e7ecffe560d1b79f98fe9356922bc}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a9b6e7ecffe560d1b79f98fe9356922bc}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a1910dcfc1ac7e5ed3c418fd7b2b77de3}{List}} (\mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters}{Soc\+Msg\+List\+Contents\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em List contents by creation date. The default creation order is descending. The account context of this request is determined by the RC Account Id associated with the access token provided in the Authorization header. The query parameters provided shall be considered an AND operation to filter the list. A query parameter not specified or a query parameter provided with no value is treated as not required for filtering the list. HTTP Method\+: get Endpoint\+: /cx/social-\/messaging/v1/contents Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging}{Social\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a0cc26e1b3df203d6b7f5466f9b7a6400}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateContentRequest}{Create\+Content\+Request}} create\+Content\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates new content for use in discussions. This request is used to reply to already-\/posted content or to initiate a discussion. If authorized, the authenticated user will be used as the content author. Content will be created and pushed asynchronously to the channel. When the content is successfully pushed to the channel, the Content.\+Exported event will be reported. The account context of this request is determined by the RC Account Id associated with the access token provided in the Authorization header. Replying to customer content is usually possible unless the channel or conversation is read only. Composing content, on the contrary, depends on the channel itself. \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a1b597c0a13f1a2a83edb6d469603bc28}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Retrieves the content from the given id. HTTP Method\+: get Endpoint\+: /cx/social-\/messaging/v1/contents/\{content\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging}{Social\+Messaging}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a38bec30f2431b1bf1bf4c1d7cd35f951}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a38bec30f2431b1bf1bf4c1d7cd35f951}} 
+string {\bfseries content\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_ab54cab44cabf9d691198f8e0ddca229a}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_ab54cab44cabf9d691198f8e0ddca229a}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a7785ca4bf48eb4391b52bf66aa8cef60}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a7785ca4bf48eb4391b52bf66aa8cef60}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a1b597c0a13f1a2a83edb6d469603bc28}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a1b597c0a13f1a2a83edb6d469603bc28}} 
+\index{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index@{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index@{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Cx.\+Social\+Messaging.\+V1.\+Contents.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the content from the given id. HTTP Method\+: get Endpoint\+: /cx/social-\/messaging/v1/contents/\{content\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging}{Social\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a1910dcfc1ac7e5ed3c418fd7b2b77de3}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a1910dcfc1ac7e5ed3c418fd7b2b77de3}} 
+\index{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index@{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index@{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Cx.\+Social\+Messaging.\+V1.\+Contents.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters}{Soc\+Msg\+List\+Contents\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+List contents by creation date. The default creation order is descending. The account context of this request is determined by the RC Account Id associated with the access token provided in the Authorization header. The query parameters provided shall be considered an AND operation to filter the list. A query parameter not specified or a query parameter provided with no value is treated as not required for filtering the list. HTTP Method\+: get Endpoint\+: /cx/social-\/messaging/v1/contents Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging}{Social\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a0cc26e1b3df203d6b7f5466f9b7a6400}\label{classRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging_1_1V1_1_1Contents_1_1Index_a0cc26e1b3df203d6b7f5466f9b7a6400}} 
+\index{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index@{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index@{RingCentral.Paths.Cx.SocialMessaging.V1.Contents.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Cx.\+Social\+Messaging.\+V1.\+Contents.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateContentRequest}{Create\+Content\+Request}}}]{create\+Content\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates new content for use in discussions. This request is used to reply to already-\/posted content or to initiate a discussion. If authorized, the authenticated user will be used as the content author. Content will be created and pushed asynchronously to the channel. When the content is successfully pushed to the channel, the Content.\+Exported event will be reported. The account context of this request is determined by the RC Account Id associated with the access token provided in the Authorization header. Replying to customer content is usually possible unless the channel or conversation is read only. Composing content, on the contrary, depends on the channel itself. 
+
+
+\begin{DoxyItemize}
+\item The channel may not support it (and be purely reactive like Instagram, Messenger, etc.).
+\item Some channels (usually public accounts like Twitter or Facebook pages) allow for the publishing of content without targeting specific individuals.
+\item Some channels (usually non-\/public media) require specific targeting (phone number for SMS, email address for email, customer\+\_\+id, etc.) to be able to create content. This is channel-\/specific and detailed under the generic parameters. HTTP Method\+: post Endpoint\+: /cx/social-\/messaging/v1/contents Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Cx_1_1SocialMessaging}{Social\+Messaging}}
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Cx/\+Social\+Messaging/\+V1/\+Contents/Index.\+cs\end{DoxyCompactItemize}

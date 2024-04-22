@@ -1,0 +1,71 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Batches.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index}\index{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Batches.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_ae8369edd1b527c27dda6bf3946b9744f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_ae8369edd1b527c27dda6bf3946b9744f}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Index}{A2p\+Sms.\+Index}} parent, string batch\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a3555bea084bff47b3d93b9fb14539e7f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a3555bea084bff47b3d93b9fb14539e7f}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BatchListResponse}{Batch\+List\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a586ad19386b2957c46e41cab93078409}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListA2PBatchesParameters}{List\+A2\+PBatches\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of A2P batches sent from the current account. The list can be filtered by message batch ID and/or from phone number. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/batches Rate Limit Group\+: Light App Permission\+: A2\+PSMS \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse}{Message\+Batch\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a22fa1ec9ed9824a982202d4259eab4e2}{Post}} (\mbox{\hyperlink{classRingCentral_1_1MessageBatchCreateRequest}{Message\+Batch\+Create\+Request}} message\+Batch\+Create\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Allows to send high volume of A2P (Application-\/to-\/\+Person) SMS messages (in message batches). Only phone number with the {\ttfamily A2\+PSms\+Sender} feature can be used as a sender. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/batches Rate Limit Group\+: Light App Permission\+: A2\+PSMS \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse}{Message\+Batch\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_adfd529004b0a3189a0b61d4fde2c601a}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns information on a message batch. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/batches/\{batch\+Id\} Rate Limit Group\+: Light App Permission\+: A2\+PSMS \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a972646bbd97643015dbc9f78869b48e1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a972646bbd97643015dbc9f78869b48e1}} 
+string {\bfseries batch\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a8cb36bbf638eba322df54101efa71097}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a8cb36bbf638eba322df54101efa71097}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Index}{A2p\+Sms.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a8c40da2ac126a2a9939fc7d3a0ddb055}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a8c40da2ac126a2a9939fc7d3a0ddb055}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_adfd529004b0a3189a0b61d4fde2c601a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_adfd529004b0a3189a0b61d4fde2c601a}} 
+\index{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse}{Message\+Batch\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Batches.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns information on a message batch. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/batches/\{batch\+Id\} Rate Limit Group\+: Light App Permission\+: A2\+PSMS 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a586ad19386b2957c46e41cab93078409}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a586ad19386b2957c46e41cab93078409}} 
+\index{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BatchListResponse}{Batch\+List\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Batches.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListA2PBatchesParameters}{List\+A2\+PBatches\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of A2P batches sent from the current account. The list can be filtered by message batch ID and/or from phone number. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/batches Rate Limit Group\+: Light App Permission\+: A2\+PSMS 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a22fa1ec9ed9824a982202d4259eab4e2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Batches_1_1Index_a22fa1ec9ed9824a982202d4259eab4e2}} 
+\index{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Batches.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse}{Message\+Batch\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Batches.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1MessageBatchCreateRequest}{Message\+Batch\+Create\+Request}}}]{message\+Batch\+Create\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows to send high volume of A2P (Application-\/to-\/\+Person) SMS messages (in message batches). Only phone number with the {\ttfamily A2\+PSms\+Sender} feature can be used as a sender. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/batches Rate Limit Group\+: Light App Permission\+: A2\+PSMS 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+A2p\+Sms/\+Batches/Index.\+cs\end{DoxyCompactItemize}

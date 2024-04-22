@@ -1,0 +1,133 @@
+\hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel}{}\doxysection{Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model Class Reference}
+\label{classRingCentral_1_1RecordingAdminExtendedItemModel}\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a735f76be8c4ac6ff3bd6e6dbac5ec2bd}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal object ID Example\+: 78654321 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a97163351731e3a35ca176ca59761392a}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object creation time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_ab8958a7e83d588931d8b3b382466cf76}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object last modification time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a469239e4a36336ffd09801466b84205e}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} status Required Example\+: Available Enum\+: Processing, Available, Failed, Purged \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ApiError}{Api\+Error}} \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_ad84a979742b4c1fe77cc1ea4a82830c1}{failure\+Reason}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a2c6bcf2773abfed3f7ea2573124fa113}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} duration in seconds Minimum\+: 1 Format\+: int32 Example\+: 3600 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a0821ddb79098d3bd9745b2d6b6219056}{shared}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if \mbox{\hyperlink{classRingCentral_1_1Host}{Host}} or Admin has shared a recording. Can be set to true only then recording status is \textquotesingle{}Available\textquotesingle{}. Example\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a4a3c97d3bae4b8cd6599704856a256b1}{shared\+Uri\+Expiration\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time after which recording shared link cannot be accessed by recipients. Format\+: date-\/time Example\+: 2023-\/10-\/01T10\+:05\+:00.\+000Z \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a07ad5752f79ae4d8c8c5488b29da181e}{recording\+Shared\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Shared URI of the recording. If a password was required to join a webinar, the URI should contain the password encoded Required Format\+: uri Example\+: \href{https://v.ringcentral.com/w/a/recording/de7yd8ew7yfsdfjh899843rgj?pw=a1b2c3d4}{\texttt{ https\+://v.\+ringcentral.\+com/w/a/recording/de7yd8ew7yfsdfjh899843rgj?pw=a1b2c3d4}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel}{Session\+Ref\+Admin\+Model}} \mbox{\hyperlink{classRingCentral_1_1RecordingAdminExtendedItemModel_a16e7712ac517208f72f9bf54623a0b8f}{session}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a97163351731e3a35ca176ca59761392a}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a97163351731e3a35ca176ca59761392a}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object creation time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a2c6bcf2773abfed3f7ea2573124fa113}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a2c6bcf2773abfed3f7ea2573124fa113}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!duration@{duration}}
+\index{duration@{duration}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} duration in seconds Minimum\+: 1 Format\+: int32 Example\+: 3600 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_ad84a979742b4c1fe77cc1ea4a82830c1}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_ad84a979742b4c1fe77cc1ea4a82830c1}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!failureReason@{failureReason}}
+\index{failureReason@{failureReason}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{failureReason}{failureReason}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ApiError}{Api\+Error}} Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+failure\+Reason\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a735f76be8c4ac6ff3bd6e6dbac5ec2bd}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a735f76be8c4ac6ff3bd6e6dbac5ec2bd}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!id@{id}}
+\index{id@{id}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal object ID Example\+: 78654321 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_ab8958a7e83d588931d8b3b382466cf76}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_ab8958a7e83d588931d8b3b382466cf76}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object last modification time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a07ad5752f79ae4d8c8c5488b29da181e}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a07ad5752f79ae4d8c8c5488b29da181e}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!recordingSharedUri@{recordingSharedUri}}
+\index{recordingSharedUri@{recordingSharedUri}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{recordingSharedUri}{recordingSharedUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+recording\+Shared\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Shared URI of the recording. If a password was required to join a webinar, the URI should contain the password encoded Required Format\+: uri Example\+: \href{https://v.ringcentral.com/w/a/recording/de7yd8ew7yfsdfjh899843rgj?pw=a1b2c3d4}{\texttt{ https\+://v.\+ringcentral.\+com/w/a/recording/de7yd8ew7yfsdfjh899843rgj?pw=a1b2c3d4}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a16e7712ac517208f72f9bf54623a0b8f}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a16e7712ac517208f72f9bf54623a0b8f}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!session@{session}}
+\index{session@{session}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{session}{session}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SessionRefAdminModel}{Session\+Ref\+Admin\+Model}} Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+session\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a0821ddb79098d3bd9745b2d6b6219056}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a0821ddb79098d3bd9745b2d6b6219056}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!shared@{shared}}
+\index{shared@{shared}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{shared}{shared}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+shared\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if \mbox{\hyperlink{classRingCentral_1_1Host}{Host}} or Admin has shared a recording. Can be set to true only then recording status is \textquotesingle{}Available\textquotesingle{}. Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a4a3c97d3bae4b8cd6599704856a256b1}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a4a3c97d3bae4b8cd6599704856a256b1}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!sharedUriExpirationTime@{sharedUriExpirationTime}}
+\index{sharedUriExpirationTime@{sharedUriExpirationTime}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{sharedUriExpirationTime}{sharedUriExpirationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+shared\+Uri\+Expiration\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Time after which recording shared link cannot be accessed by recipients. Format\+: date-\/time Example\+: 2023-\/10-\/01T10\+:05\+:00.\+000Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingAdminExtendedItemModel_a469239e4a36336ffd09801466b84205e}\label{classRingCentral_1_1RecordingAdminExtendedItemModel_a469239e4a36336ffd09801466b84205e}} 
+\index{RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}!status@{status}}
+\index{status@{status}!RingCentral.RecordingAdminExtendedItemModel@{RingCentral.RecordingAdminExtendedItemModel}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Admin\+Extended\+Item\+Model.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} status Required Example\+: Available Enum\+: Processing, Available, Failed, Purged 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Recording\+Admin\+Extended\+Item\+Model.\+cs\end{DoxyCompactItemize}

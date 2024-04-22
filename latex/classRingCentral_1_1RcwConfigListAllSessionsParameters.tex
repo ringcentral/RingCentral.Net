@@ -1,0 +1,83 @@
+\hypertarget{classRingCentral_1_1RcwConfigListAllSessionsParameters}{}\doxysection{Ring\+Central.\+Rcw\+Config\+List\+All\+Sessions\+Parameters Class Reference}
+\label{classRingCentral_1_1RcwConfigListAllSessionsParameters}\index{RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}}
+
+
+Query parameters for operation rcw\+Config\+List\+All\+Sessions  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwConfigListAllSessionsParameters_a0840f32906bd61d5e31ba30fa7bd15b5}{name\+Fragment}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter to return only webinar sessions containing particular substring within their names Example\+: All-\/hands \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwConfigListAllSessionsParameters_a2738076deecba0065dae73ba8423a4ac}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwConfigListAllSessionsParameters_ad23d764517906f9039f0f35644144deb}{end\+Time\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The beginning of the time window by \textquotesingle{}end\+Time\textquotesingle{} (it is calculated as scheduled\+Start\+Time+scheduled\+Duration) Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1RcwConfigListAllSessionsParameters_a76c607e60367c2a446b54efda366aa8d}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwConfigListAllSessionsParameters_a04b7f0a1f62b3edeac4a175d0030066f}{page\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation rcw\+Config\+List\+All\+Sessions 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1RcwConfigListAllSessionsParameters_ad23d764517906f9039f0f35644144deb}\label{classRingCentral_1_1RcwConfigListAllSessionsParameters_ad23d764517906f9039f0f35644144deb}} 
+\index{RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}!endTimeFrom@{endTimeFrom}}
+\index{endTimeFrom@{endTimeFrom}!RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}}
+\doxysubsubsection{\texorpdfstring{endTimeFrom}{endTimeFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+Config\+List\+All\+Sessions\+Parameters.\+end\+Time\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The beginning of the time window by \textquotesingle{}end\+Time\textquotesingle{} (it is calculated as scheduled\+Start\+Time+scheduled\+Duration) Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwConfigListAllSessionsParameters_a0840f32906bd61d5e31ba30fa7bd15b5}\label{classRingCentral_1_1RcwConfigListAllSessionsParameters_a0840f32906bd61d5e31ba30fa7bd15b5}} 
+\index{RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}!nameFragment@{nameFragment}}
+\index{nameFragment@{nameFragment}!RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}}
+\doxysubsubsection{\texorpdfstring{nameFragment}{nameFragment}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+Config\+List\+All\+Sessions\+Parameters.\+name\+Fragment\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter to return only webinar sessions containing particular substring within their names Example\+: All-\/hands 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwConfigListAllSessionsParameters_a04b7f0a1f62b3edeac4a175d0030066f}\label{classRingCentral_1_1RcwConfigListAllSessionsParameters_a04b7f0a1f62b3edeac4a175d0030066f}} 
+\index{RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}!pageToken@{pageToken}}
+\index{pageToken@{pageToken}!RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}}
+\doxysubsubsection{\texorpdfstring{pageToken}{pageToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+Config\+List\+All\+Sessions\+Parameters.\+page\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwConfigListAllSessionsParameters_a76c607e60367c2a446b54efda366aa8d}\label{classRingCentral_1_1RcwConfigListAllSessionsParameters_a76c607e60367c2a446b54efda366aa8d}} 
+\index{RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Rcw\+Config\+List\+All\+Sessions\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwConfigListAllSessionsParameters_a2738076deecba0065dae73ba8423a4ac}\label{classRingCentral_1_1RcwConfigListAllSessionsParameters_a2738076deecba0065dae73ba8423a4ac}} 
+\index{RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}!status@{status}}
+\index{status@{status}!RingCentral.RcwConfigListAllSessionsParameters@{RingCentral.RcwConfigListAllSessionsParameters}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+Config\+List\+All\+Sessions\+Parameters.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Rcw\+Config\+List\+All\+Sessions\+Parameters.\+cs\end{DoxyCompactItemize}

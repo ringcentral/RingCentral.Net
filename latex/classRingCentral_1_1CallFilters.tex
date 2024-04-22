@@ -1,0 +1,191 @@
+\hypertarget{classRingCentral_1_1CallFilters}{}\doxysection{Ring\+Central.\+Call\+Filters Class Reference}
+\label{classRingCentral_1_1CallFilters}\index{RingCentral.CallFilters@{RingCentral.CallFilters}}
+
+
+Optional filters that limit the scope of calls (joined via AND)  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ExtensionFilters}{Extension\+Filters}} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a4036f659311a35349777cea50b8cf87a}{extension\+Filters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_ad5cf14729b2fa4bc80e3f7cbb445113e}{queues}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of queues extension ids which allows to get data only for calls that were routed through any of these queues \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_ace7a2a25204a9f634e501b126eb7faab}{called\+Numbers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The direct company numbers the caller called (joined via OR) \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_ae274ff68dc8add84dd7b04d8c62c4379}{directions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the call directions relative to the scope specified in grouping object (joined via OR). Not applicable to internal origin calls with company scope Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a0deb26613bc0b52bdcb2d360fcb8d72c}{origins}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether an external party was present in the initial segment of the call (joined via OR) Enum\+: Internal, External \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_ab2c6916fa2bef2fc16201459e1ce7def}{call\+Responses}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filtering of calls by first response (joined via OR) Enum\+: Answered, Not\+Answered, Connected, Not\+Connected \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a091702f694fc281ae7f17b97250dd17a}{call\+Results}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filtering of calls by the nature of call result (joined via OR) Enum\+: Completed, Abandoned, Voicemail, Unknown, Missed, Accepted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallSegmentFilter}{Call\+Segment\+Filter}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a55a6bdcfa958e93862823358ba2689cc}{call\+Segments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filtering of calls by presence of specific segment (joined via OR) \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a8dfa25879e74415d4043c2a8ad19685c}{call\+Actions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filtering of calls by presence of specific action (joined via OR) Enum\+: Hold\+Off, Hold\+On, Park\+On, Park\+Off, Blind\+Transfer, Warm\+Transfer, DTMFTransfer \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a8921cb001cea725acbcadc7216487c09}{company\+Hours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filtering of calls by company\textquotesingle{}s business hours or after hours (joined via OR) Enum\+: Business\+Hours, After\+Hours \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallDurationFilter}{Call\+Duration\+Filter}} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a5d676f7eae9810de40f1df0d7a078ceb}{call\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1TimeSpentFilter}{Time\+Spent\+Filter}} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a3ed3f26d0774e329f4493441850d4db6}{time\+Spent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_af53ef1ee165784461b09253b5b0e907b}{queue\+Sla}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filtering calls that were within or out of queue SLA (joined via OR). Only applicable to Queues grouping Enum\+: In\+Sla, Out\+Sla \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallFilters_a82c6cf30d9d363ae7aac128978eb6570}{call\+Types}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filtering of calls based on how the call started from the callee perspective (joined via OR). If the call is outbound relative to the grouping scope, Call\+Type is Outbound Enum\+: Direct, From\+Queue, Park\+Retrieval, Transferred, Outbound, Overflow \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Optional filters that limit the scope of calls (joined via AND) 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a8dfa25879e74415d4043c2a8ad19685c}\label{classRingCentral_1_1CallFilters_a8dfa25879e74415d4043c2a8ad19685c}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!callActions@{callActions}}
+\index{callActions@{callActions}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{callActions}{callActions}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+call\+Actions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filtering of calls by presence of specific action (joined via OR) Enum\+: Hold\+Off, Hold\+On, Park\+On, Park\+Off, Blind\+Transfer, Warm\+Transfer, DTMFTransfer 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a5d676f7eae9810de40f1df0d7a078ceb}\label{classRingCentral_1_1CallFilters_a5d676f7eae9810de40f1df0d7a078ceb}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!callDuration@{callDuration}}
+\index{callDuration@{callDuration}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{callDuration}{callDuration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallDurationFilter}{Call\+Duration\+Filter}} Ring\+Central.\+Call\+Filters.\+call\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_ace7a2a25204a9f634e501b126eb7faab}\label{classRingCentral_1_1CallFilters_ace7a2a25204a9f634e501b126eb7faab}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!calledNumbers@{calledNumbers}}
+\index{calledNumbers@{calledNumbers}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{calledNumbers}{calledNumbers}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+called\+Numbers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The direct company numbers the caller called (joined via OR) 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_ab2c6916fa2bef2fc16201459e1ce7def}\label{classRingCentral_1_1CallFilters_ab2c6916fa2bef2fc16201459e1ce7def}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!callResponses@{callResponses}}
+\index{callResponses@{callResponses}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{callResponses}{callResponses}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+call\+Responses\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filtering of calls by first response (joined via OR) Enum\+: Answered, Not\+Answered, Connected, Not\+Connected 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a091702f694fc281ae7f17b97250dd17a}\label{classRingCentral_1_1CallFilters_a091702f694fc281ae7f17b97250dd17a}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!callResults@{callResults}}
+\index{callResults@{callResults}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{callResults}{callResults}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+call\+Results\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filtering of calls by the nature of call result (joined via OR) Enum\+: Completed, Abandoned, Voicemail, Unknown, Missed, Accepted 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a55a6bdcfa958e93862823358ba2689cc}\label{classRingCentral_1_1CallFilters_a55a6bdcfa958e93862823358ba2689cc}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!callSegments@{callSegments}}
+\index{callSegments@{callSegments}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{callSegments}{callSegments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallSegmentFilter}{Call\+Segment\+Filter}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+call\+Segments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filtering of calls by presence of specific segment (joined via OR) 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a82c6cf30d9d363ae7aac128978eb6570}\label{classRingCentral_1_1CallFilters_a82c6cf30d9d363ae7aac128978eb6570}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!callTypes@{callTypes}}
+\index{callTypes@{callTypes}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{callTypes}{callTypes}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+call\+Types\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filtering of calls based on how the call started from the callee perspective (joined via OR). If the call is outbound relative to the grouping scope, Call\+Type is Outbound Enum\+: Direct, From\+Queue, Park\+Retrieval, Transferred, Outbound, Overflow 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a8921cb001cea725acbcadc7216487c09}\label{classRingCentral_1_1CallFilters_a8921cb001cea725acbcadc7216487c09}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!companyHours@{companyHours}}
+\index{companyHours@{companyHours}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{companyHours}{companyHours}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+company\+Hours\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filtering of calls by company\textquotesingle{}s business hours or after hours (joined via OR) Enum\+: Business\+Hours, After\+Hours 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_ae274ff68dc8add84dd7b04d8c62c4379}\label{classRingCentral_1_1CallFilters_ae274ff68dc8add84dd7b04d8c62c4379}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!directions@{directions}}
+\index{directions@{directions}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{directions}{directions}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+directions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the call directions relative to the scope specified in grouping object (joined via OR). Not applicable to internal origin calls with company scope Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a4036f659311a35349777cea50b8cf87a}\label{classRingCentral_1_1CallFilters_a4036f659311a35349777cea50b8cf87a}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!extensionFilters@{extensionFilters}}
+\index{extensionFilters@{extensionFilters}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{extensionFilters}{extensionFilters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ExtensionFilters}{Extension\+Filters}} Ring\+Central.\+Call\+Filters.\+extension\+Filters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a0deb26613bc0b52bdcb2d360fcb8d72c}\label{classRingCentral_1_1CallFilters_a0deb26613bc0b52bdcb2d360fcb8d72c}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!origins@{origins}}
+\index{origins@{origins}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{origins}{origins}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+origins\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether an external party was present in the initial segment of the call (joined via OR) Enum\+: Internal, External 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_ad5cf14729b2fa4bc80e3f7cbb445113e}\label{classRingCentral_1_1CallFilters_ad5cf14729b2fa4bc80e3f7cbb445113e}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!queues@{queues}}
+\index{queues@{queues}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{queues}{queues}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+queues\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of queues extension ids which allows to get data only for calls that were routed through any of these queues 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_af53ef1ee165784461b09253b5b0e907b}\label{classRingCentral_1_1CallFilters_af53ef1ee165784461b09253b5b0e907b}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!queueSla@{queueSla}}
+\index{queueSla@{queueSla}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{queueSla}{queueSla}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Filters.\+queue\+Sla\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filtering calls that were within or out of queue SLA (joined via OR). Only applicable to Queues grouping Enum\+: In\+Sla, Out\+Sla 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallFilters_a3ed3f26d0774e329f4493441850d4db6}\label{classRingCentral_1_1CallFilters_a3ed3f26d0774e329f4493441850d4db6}} 
+\index{RingCentral.CallFilters@{RingCentral.CallFilters}!timeSpent@{timeSpent}}
+\index{timeSpent@{timeSpent}!RingCentral.CallFilters@{RingCentral.CallFilters}}
+\doxysubsubsection{\texorpdfstring{timeSpent}{timeSpent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1TimeSpentFilter}{Time\+Spent\+Filter}} Ring\+Central.\+Call\+Filters.\+time\+Spent\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Call\+Filters.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\hypertarget{classRingCentral_1_1SubscriptionInfo}{}\doxysection{Ring\+Central.\+Subscription\+Info Class Reference}
+\label{classRingCentral_1_1SubscriptionInfo}\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_a84bdaedb98fade8fe67cc83cf6aab776}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of a subscription resource Required Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_a405f0a8f738f58d2b05469444044eff7}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a subscription Required Example\+: 95fecfc9-\/9cdc-\/4e94-\/a78a-\/89fd65889d37 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_a392446fcb7f2a15ef24df5f41b6b5839}{event\+Filters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of event filter names corresponding to events the user is subscribed to Required \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1DisabledFilterInfo}{Disabled\+Filter\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_a779690c8b9a3e0c8798fe2367343521b}{disabled\+Filters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of event filter names corresponding to events the user is not subscribed to due to certain limitations \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_a6021fefecd4d72a5487e4f083f13399d}{expiration\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subscription expiration time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534Z} Required Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_aaa5c4c0cf4ec260c1fc2dc64dadbe28f}{expires\+In}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subscription lifetime in seconds Minimum\+: 1 Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_a88f025d3d33d8fc15c49a7c6a453ff07}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subscription status Required Enum\+: Active, Blacklisted \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_a5ee48fdc5ee0512fae6c48abccd7d6b1}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subscription creation time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534} Required Format\+: date-\/time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode}{Notification\+Delivery\+Mode}} \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_aa15efb72d760876ab01ed6bdaafa57f1}{delivery\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SubscriptionInfoBlacklistedData}{Subscription\+Info\+Blacklisted\+Data}} \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo_af784654a88286db98fa920b4e71f661b}{blacklisted\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returned if a Web\+Hook subscription is blacklisted \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_af784654a88286db98fa920b4e71f661b}\label{classRingCentral_1_1SubscriptionInfo_af784654a88286db98fa920b4e71f661b}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!blacklistedData@{blacklistedData}}
+\index{blacklistedData@{blacklistedData}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{blacklistedData}{blacklistedData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfoBlacklistedData}{Subscription\+Info\+Blacklisted\+Data}} Ring\+Central.\+Subscription\+Info.\+blacklisted\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returned if a Web\+Hook subscription is blacklisted 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_a5ee48fdc5ee0512fae6c48abccd7d6b1}\label{classRingCentral_1_1SubscriptionInfo_a5ee48fdc5ee0512fae6c48abccd7d6b1}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Subscription\+Info.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subscription creation time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534} Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_aa15efb72d760876ab01ed6bdaafa57f1}\label{classRingCentral_1_1SubscriptionInfo_aa15efb72d760876ab01ed6bdaafa57f1}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!deliveryMode@{deliveryMode}}
+\index{deliveryMode@{deliveryMode}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{deliveryMode}{deliveryMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode}{Notification\+Delivery\+Mode}} Ring\+Central.\+Subscription\+Info.\+delivery\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_a779690c8b9a3e0c8798fe2367343521b}\label{classRingCentral_1_1SubscriptionInfo_a779690c8b9a3e0c8798fe2367343521b}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!disabledFilters@{disabledFilters}}
+\index{disabledFilters@{disabledFilters}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{disabledFilters}{disabledFilters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DisabledFilterInfo}{Disabled\+Filter\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Subscription\+Info.\+disabled\+Filters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of event filter names corresponding to events the user is not subscribed to due to certain limitations 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_a392446fcb7f2a15ef24df5f41b6b5839}\label{classRingCentral_1_1SubscriptionInfo_a392446fcb7f2a15ef24df5f41b6b5839}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!eventFilters@{eventFilters}}
+\index{eventFilters@{eventFilters}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{eventFilters}{eventFilters}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Subscription\+Info.\+event\+Filters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of event filter names corresponding to events the user is subscribed to Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_a6021fefecd4d72a5487e4f083f13399d}\label{classRingCentral_1_1SubscriptionInfo_a6021fefecd4d72a5487e4f083f13399d}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!expirationTime@{expirationTime}}
+\index{expirationTime@{expirationTime}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{expirationTime}{expirationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Subscription\+Info.\+expiration\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subscription expiration time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534Z} Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_aaa5c4c0cf4ec260c1fc2dc64dadbe28f}\label{classRingCentral_1_1SubscriptionInfo_aaa5c4c0cf4ec260c1fc2dc64dadbe28f}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!expiresIn@{expiresIn}}
+\index{expiresIn@{expiresIn}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{expiresIn}{expiresIn}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Subscription\+Info.\+expires\+In\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subscription lifetime in seconds Minimum\+: 1 Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_a405f0a8f738f58d2b05469444044eff7}\label{classRingCentral_1_1SubscriptionInfo_a405f0a8f738f58d2b05469444044eff7}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!id@{id}}
+\index{id@{id}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Subscription\+Info.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a subscription Required Example\+: 95fecfc9-\/9cdc-\/4e94-\/a78a-\/89fd65889d37 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_a88f025d3d33d8fc15c49a7c6a453ff07}\label{classRingCentral_1_1SubscriptionInfo_a88f025d3d33d8fc15c49a7c6a453ff07}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!status@{status}}
+\index{status@{status}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Subscription\+Info.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subscription status Required Enum\+: Active, Blacklisted 
+
+\mbox{\Hypertarget{classRingCentral_1_1SubscriptionInfo_a84bdaedb98fade8fe67cc83cf6aab776}\label{classRingCentral_1_1SubscriptionInfo_a84bdaedb98fade8fe67cc83cf6aab776}} 
+\index{RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}!uri@{uri}}
+\index{uri@{uri}!RingCentral.SubscriptionInfo@{RingCentral.SubscriptionInfo}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Subscription\+Info.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of a subscription resource Required Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Subscription\+Info.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Data\+Export.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.DataExport.Index@{RingCentral.Paths.TeamMessaging.V1.DataExport.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Data\+Export.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4d2714e217f9d7f7ef73422e45e6e07b}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4d2714e217f9d7f7ef73422e45e6e07b}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} parent, string task\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a6f1947717eb9e901a1397d9ae1117a01}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a6f1947717eb9e901a1397d9ae1117a01}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DataExportTaskList}{Data\+Export\+Task\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4b4d5de45cea8ccdca762ed742e3043e}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListDataExportTasksNewParameters}{List\+Data\+Export\+Tasks\+New\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of Glip data export tasks. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/data-\/export Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Glip \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DataExportTask}{Data\+Export\+Task}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4791d9f01471ff67ea15358df1487abb}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateDataExportTaskRequest}{Create\+Data\+Export\+Task\+Request}} create\+Data\+Export\+Task\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a task for Glip data export and returns a link at which the exported data will be available in future once the task is implemented. The exported data can be downloaded by calling Get Data Export Task method with the specified task ID. Simultaneously no more than 2 tasks per company can be created. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/data-\/export Rate Limit Group\+: Heavy App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Glip \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DataExportTask}{Data\+Export\+Task}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a5b5331ddda61dd5dfc077ac16dcb372d}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the links for downloading Glip data exported within the specified task. If the export task is still in progress, then only the task status will be returned. If the data is ready for downloading, then the list of URLs will be returned. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/data-\/export/\{task\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Glip \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_ac2fd606b68ed1fb142432d15e7e72f44}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_ac2fd606b68ed1fb142432d15e7e72f44}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a551d7c7838417411603cef3b61a61cf6}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a551d7c7838417411603cef3b61a61cf6}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a9a631a3df777c598d9e58cd9a3159ebb}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a9a631a3df777c598d9e58cd9a3159ebb}} 
+string {\bfseries task\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a5b5331ddda61dd5dfc077ac16dcb372d}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a5b5331ddda61dd5dfc077ac16dcb372d}} 
+\index{RingCentral.Paths.TeamMessaging.V1.DataExport.Index@{RingCentral.Paths.TeamMessaging.V1.DataExport.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.DataExport.Index@{RingCentral.Paths.TeamMessaging.V1.DataExport.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DataExportTask}{Data\+Export\+Task}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Data\+Export.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the links for downloading Glip data exported within the specified task. If the export task is still in progress, then only the task status will be returned. If the data is ready for downloading, then the list of URLs will be returned. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/data-\/export/\{task\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Glip 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4b4d5de45cea8ccdca762ed742e3043e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4b4d5de45cea8ccdca762ed742e3043e}} 
+\index{RingCentral.Paths.TeamMessaging.V1.DataExport.Index@{RingCentral.Paths.TeamMessaging.V1.DataExport.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.TeamMessaging.V1.DataExport.Index@{RingCentral.Paths.TeamMessaging.V1.DataExport.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DataExportTaskList}{Data\+Export\+Task\+List}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Data\+Export.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListDataExportTasksNewParameters}{List\+Data\+Export\+Tasks\+New\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of Glip data export tasks. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/data-\/export Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Glip 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4791d9f01471ff67ea15358df1487abb}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1DataExport_1_1Index_a4791d9f01471ff67ea15358df1487abb}} 
+\index{RingCentral.Paths.TeamMessaging.V1.DataExport.Index@{RingCentral.Paths.TeamMessaging.V1.DataExport.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.TeamMessaging.V1.DataExport.Index@{RingCentral.Paths.TeamMessaging.V1.DataExport.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DataExportTask}{Data\+Export\+Task}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Data\+Export.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateDataExportTaskRequest}{Create\+Data\+Export\+Task\+Request}}}]{create\+Data\+Export\+Task\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a task for Glip data export and returns a link at which the exported data will be available in future once the task is implemented. The exported data can be downloaded by calling Get Data Export Task method with the specified task ID. Simultaneously no more than 2 tasks per company can be created. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/data-\/export Rate Limit Group\+: Heavy App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Glip 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Data\+Export/Index.\+cs\end{DoxyCompactItemize}

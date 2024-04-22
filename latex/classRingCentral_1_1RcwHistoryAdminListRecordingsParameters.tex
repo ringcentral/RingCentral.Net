@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters}{}\doxysection{Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters Class Reference}
+\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters}\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+
+
+Query parameters for operation rcw\+History\+Admin\+List\+Recordings  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ad2bfba58d958173a18be7d903ca7f13d}{name\+Fragment}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter to return only webinar recordings containing particular substring within their names Example\+: All-\/hands \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a075dde6195864ab8ab1a6c9f9515e51b}{creation\+Time\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The beginning of the time window by \textquotesingle{}creation\+Time\textquotesingle{} . Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ae1fdc04e06c527b6c6021a34ae43105e}{creation\+Time\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end of the time window by \textquotesingle{}creation\+Time\textquotesingle{} . Format\+: date-\/time \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a128905faebf79328ba5c7b57d2acebef}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The status of the recording. Enum\+: Processing, Available, Failed, Purged \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a144d68d14c42db6d30920fa3c2df6090}{host\+User\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of the user who hosts a webinar (if omitted, webinars hosted by all company users will be returned) Example\+: 77777777 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ad4bed48b7241095b1bad199ece17c719}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a66e60ceebf7a0ac42965cc043b0fccd8}{page\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation rcw\+History\+Admin\+List\+Recordings 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a075dde6195864ab8ab1a6c9f9515e51b}\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a075dde6195864ab8ab1a6c9f9515e51b}} 
+\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}!creationTimeFrom@{creationTimeFrom}}
+\index{creationTimeFrom@{creationTimeFrom}!RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{creationTimeFrom}{creationTimeFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+creation\+Time\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The beginning of the time window by \textquotesingle{}creation\+Time\textquotesingle{} . Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ae1fdc04e06c527b6c6021a34ae43105e}\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ae1fdc04e06c527b6c6021a34ae43105e}} 
+\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}!creationTimeTo@{creationTimeTo}}
+\index{creationTimeTo@{creationTimeTo}!RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{creationTimeTo}{creationTimeTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+creation\+Time\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end of the time window by \textquotesingle{}creation\+Time\textquotesingle{} . Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a144d68d14c42db6d30920fa3c2df6090}\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a144d68d14c42db6d30920fa3c2df6090}} 
+\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}!hostUserId@{hostUserId}}
+\index{hostUserId@{hostUserId}!RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{hostUserId}{hostUserId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+host\+User\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of the user who hosts a webinar (if omitted, webinars hosted by all company users will be returned) Example\+: 77777777 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ad2bfba58d958173a18be7d903ca7f13d}\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ad2bfba58d958173a18be7d903ca7f13d}} 
+\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}!nameFragment@{nameFragment}}
+\index{nameFragment@{nameFragment}!RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{nameFragment}{nameFragment}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+name\+Fragment\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter to return only webinar recordings containing particular substring within their names Example\+: All-\/hands 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a66e60ceebf7a0ac42965cc043b0fccd8}\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a66e60ceebf7a0ac42965cc043b0fccd8}} 
+\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}!pageToken@{pageToken}}
+\index{pageToken@{pageToken}!RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{pageToken}{pageToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+page\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ad4bed48b7241095b1bad199ece17c719}\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_ad4bed48b7241095b1bad199ece17c719}} 
+\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a128905faebf79328ba5c7b57d2acebef}\label{classRingCentral_1_1RcwHistoryAdminListRecordingsParameters_a128905faebf79328ba5c7b57d2acebef}} 
+\index{RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}!status@{status}}
+\index{status@{status}!RingCentral.RcwHistoryAdminListRecordingsParameters@{RingCentral.RcwHistoryAdminListRecordingsParameters}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The status of the recording. Enum\+: Processing, Available, Failed, Purged 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Rcw\+History\+Admin\+List\+Recordings\+Parameters.\+cs\end{DoxyCompactItemize}

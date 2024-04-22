@@ -1,0 +1,215 @@
+\hypertarget{classRingCentral_1_1ReadUserCallLogParameters}{}\doxysection{Ring\+Central.\+Read\+User\+Call\+Log\+Parameters Class Reference}
+\label{classRingCentral_1_1ReadUserCallLogParameters}\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+
+
+Query parameters for operation read\+User\+Call\+Log  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a00a862b1af0ef5d306c8a00b36ac4416}{extension\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Short extension number of a user. If specified, returns call log for this particular extension only. Cannot be combined with {\ttfamily phone\+Number} filter Example\+: 101 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a12a9d25652c5486646bd8fe18d939e31}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number of a caller/callee in e.\+164 format without a \textquotesingle{}+\textquotesingle{} sign. If specified, all incoming/outgoing calls from/to this phone number are returned. Example\+: 12053320032 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a147bec0883563080bec561ad020919a4}{show\+Blocked}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates then calls from/to blocked numbers are returned Default\+: true \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a32e80d02c27852be0de090f1a7f87dae}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The direction of call records to be included in the result. If omitted, both inbound and outbound calls are returned. Multiple values are supported Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a6cf6d06c87a5d7e6177030414eedbd58}{session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a call session \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a87fa00d8988c6dda31292950272a7bbf}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of call records to be included in the result. If omitted, all call types are returned. Multiple values are supported Enum\+: Voice, Fax \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a018473fdf670ecaf7fd6d99726194025}{transport}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of call transport. Multiple values are supported. By default, this filter is disabled Enum\+: PSTN, Vo\+IP \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a3fdec68ee990ba9a9f05b59db103badb}{view}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines the level of details for returned call records Default\+: Simple Enum\+: Simple, Detailed \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a097bdbeb393bbb630a25a752e1ea612d}{with\+Recording}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Deprecated, replaced with {\ttfamily recording\+Type} filter, still supported for compatibility reasons. Indicates if only recorded calls should be returned. If both {\ttfamily with\+Recording} and {\ttfamily recording\+Type} parameters are specified, then {\ttfamily with\+Recording} is ignored \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a86c6ab208a67475af5014dedfe5bbad8}{recording\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates that call records with recordings of particular type should be returned. If omitted, then calls with and without recordings are returned Enum\+: Automatic, On\+Demand, All \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_aa5c3cd9f2431bd35c4b0435cc2b6c82b}{date\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end of the time range to return call records in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is current time Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a0f180935824867293d40c5501b52baf4}{date\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The beginning of the time range to return call records in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is {\ttfamily date\+To} minus 24 hours Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a7530c50a89994dcb446c34ffad81efef}{telephony\+Session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a telephony session \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a3b439c3edeccfb51af38751c1f60af9d}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates the page number to retrieve. Only positive number values are allowed Minimum\+: 1 Format\+: int32 Default\+: 1 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a026a2c29c50b64917d75aa290f802b8a}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates the page size (number of items). The default value is 100. The maximum value for {\ttfamily Simple} view is 1000, for {\ttfamily Detailed} view -\/ 250 Minimum\+: 1 Format\+: int32 Default\+: 100 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters_a80a3e2ecf66960bb7508ca9dae79d870}{show\+Deleted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates that deleted calls records should be returned \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation read\+User\+Call\+Log 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a0f180935824867293d40c5501b52baf4}\label{classRingCentral_1_1ReadUserCallLogParameters_a0f180935824867293d40c5501b52baf4}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!dateFrom@{dateFrom}}
+\index{dateFrom@{dateFrom}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{dateFrom}{dateFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+date\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The beginning of the time range to return call records in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is {\ttfamily date\+To} minus 24 hours Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_aa5c3cd9f2431bd35c4b0435cc2b6c82b}\label{classRingCentral_1_1ReadUserCallLogParameters_aa5c3cd9f2431bd35c4b0435cc2b6c82b}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!dateTo@{dateTo}}
+\index{dateTo@{dateTo}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{dateTo}{dateTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+date\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end of the time range to return call records in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is current time Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a32e80d02c27852be0de090f1a7f87dae}\label{classRingCentral_1_1ReadUserCallLogParameters_a32e80d02c27852be0de090f1a7f87dae}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!direction@{direction}}
+\index{direction@{direction}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The direction of call records to be included in the result. If omitted, both inbound and outbound calls are returned. Multiple values are supported Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a00a862b1af0ef5d306c8a00b36ac4416}\label{classRingCentral_1_1ReadUserCallLogParameters_a00a862b1af0ef5d306c8a00b36ac4416}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!extensionNumber@{extensionNumber}}
+\index{extensionNumber@{extensionNumber}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{extensionNumber}{extensionNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+extension\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Short extension number of a user. If specified, returns call log for this particular extension only. Cannot be combined with {\ttfamily phone\+Number} filter Example\+: 101 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a3b439c3edeccfb51af38751c1f60af9d}\label{classRingCentral_1_1ReadUserCallLogParameters_a3b439c3edeccfb51af38751c1f60af9d}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!page@{page}}
+\index{page@{page}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates the page number to retrieve. Only positive number values are allowed Minimum\+: 1 Format\+: int32 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a026a2c29c50b64917d75aa290f802b8a}\label{classRingCentral_1_1ReadUserCallLogParameters_a026a2c29c50b64917d75aa290f802b8a}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates the page size (number of items). The default value is 100. The maximum value for {\ttfamily Simple} view is 1000, for {\ttfamily Detailed} view -\/ 250 Minimum\+: 1 Format\+: int32 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a12a9d25652c5486646bd8fe18d939e31}\label{classRingCentral_1_1ReadUserCallLogParameters_a12a9d25652c5486646bd8fe18d939e31}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number of a caller/callee in e.\+164 format without a \textquotesingle{}+\textquotesingle{} sign. If specified, all incoming/outgoing calls from/to this phone number are returned. Example\+: 12053320032 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a86c6ab208a67475af5014dedfe5bbad8}\label{classRingCentral_1_1ReadUserCallLogParameters_a86c6ab208a67475af5014dedfe5bbad8}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!recordingType@{recordingType}}
+\index{recordingType@{recordingType}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{recordingType}{recordingType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+recording\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates that call records with recordings of particular type should be returned. If omitted, then calls with and without recordings are returned Enum\+: Automatic, On\+Demand, All 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a6cf6d06c87a5d7e6177030414eedbd58}\label{classRingCentral_1_1ReadUserCallLogParameters_a6cf6d06c87a5d7e6177030414eedbd58}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!sessionId@{sessionId}}
+\index{sessionId@{sessionId}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{sessionId}{sessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a call session 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a147bec0883563080bec561ad020919a4}\label{classRingCentral_1_1ReadUserCallLogParameters_a147bec0883563080bec561ad020919a4}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!showBlocked@{showBlocked}}
+\index{showBlocked@{showBlocked}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{showBlocked}{showBlocked}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+show\+Blocked\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates then calls from/to blocked numbers are returned Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a80a3e2ecf66960bb7508ca9dae79d870}\label{classRingCentral_1_1ReadUserCallLogParameters_a80a3e2ecf66960bb7508ca9dae79d870}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!showDeleted@{showDeleted}}
+\index{showDeleted@{showDeleted}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{showDeleted}{showDeleted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+show\+Deleted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates that deleted calls records should be returned 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a7530c50a89994dcb446c34ffad81efef}\label{classRingCentral_1_1ReadUserCallLogParameters_a7530c50a89994dcb446c34ffad81efef}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!telephonySessionId@{telephonySessionId}}
+\index{telephonySessionId@{telephonySessionId}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{telephonySessionId}{telephonySessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+telephony\+Session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a telephony session 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a018473fdf670ecaf7fd6d99726194025}\label{classRingCentral_1_1ReadUserCallLogParameters_a018473fdf670ecaf7fd6d99726194025}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!transport@{transport}}
+\index{transport@{transport}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{transport}{transport}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+transport\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of call transport. Multiple values are supported. By default, this filter is disabled Enum\+: PSTN, Vo\+IP 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a87fa00d8988c6dda31292950272a7bbf}\label{classRingCentral_1_1ReadUserCallLogParameters_a87fa00d8988c6dda31292950272a7bbf}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!type@{type}}
+\index{type@{type}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of call records to be included in the result. If omitted, all call types are returned. Multiple values are supported Enum\+: Voice, Fax 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a3fdec68ee990ba9a9f05b59db103badb}\label{classRingCentral_1_1ReadUserCallLogParameters_a3fdec68ee990ba9a9f05b59db103badb}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!view@{view}}
+\index{view@{view}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily string Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+view\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Defines the level of details for returned call records Default\+: Simple Enum\+: Simple, Detailed 
+
+\mbox{\Hypertarget{classRingCentral_1_1ReadUserCallLogParameters_a097bdbeb393bbb630a25a752e1ea612d}\label{classRingCentral_1_1ReadUserCallLogParameters_a097bdbeb393bbb630a25a752e1ea612d}} 
+\index{RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}!withRecording@{withRecording}}
+\index{withRecording@{withRecording}!RingCentral.ReadUserCallLogParameters@{RingCentral.ReadUserCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{withRecording}{withRecording}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Read\+User\+Call\+Log\+Parameters.\+with\+Recording\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Deprecated, replaced with {\ttfamily recording\+Type} filter, still supported for compatibility reasons. Indicates if only recorded calls should be returned. If both {\ttfamily with\+Recording} and {\ttfamily recording\+Type} parameters are specified, then {\ttfamily with\+Recording} is ignored 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Read\+User\+Call\+Log\+Parameters.\+cs\end{DoxyCompactItemize}

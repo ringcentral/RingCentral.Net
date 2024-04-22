@@ -1,0 +1,74 @@
+\hypertarget{classRingCentral_1_1CallQueueExtensionInfo}{}\doxysection{Ring\+Central.\+Call\+Queue\+Extension\+Info Class Reference}
+\label{classRingCentral_1_1CallQueueExtensionInfo}\index{RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}}
+
+
+For Call Queue extension type only. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1CallQueueExtensionInfo_a582a111d194851cdcd5c3f959eac2082}{sla\+Goal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Target percentage of calls that must be answered by agents within the service level time threshold Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1CallQueueExtensionInfo_abeab38c02b95d3187b40c9b3fcf0bcc8}{sla\+Threshold\+Seconds}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Period of time in seconds that is considered to be an acceptable service level Format\+: int32 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1CallQueueExtensionInfo_a187148435ee076cefd428a78ea878deb}{include\+Abandoned\+Calls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true} abandoned calls (hanged up prior to being served) are included into service level calculation \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1CallQueueExtensionInfo_a2a667e80578b1020099de2f591842880}{abandoned\+Threshold\+Seconds}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Period of time in seconds specifying abandoned calls duration \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For Call Queue extension type only. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CallQueueExtensionInfo_a2a667e80578b1020099de2f591842880}\label{classRingCentral_1_1CallQueueExtensionInfo_a2a667e80578b1020099de2f591842880}} 
+\index{RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}!abandonedThresholdSeconds@{abandonedThresholdSeconds}}
+\index{abandonedThresholdSeconds@{abandonedThresholdSeconds}!RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{abandonedThresholdSeconds}{abandonedThresholdSeconds}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Call\+Queue\+Extension\+Info.\+abandoned\+Threshold\+Seconds\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Period of time in seconds specifying abandoned calls duration 
+
+
+\begin{DoxyItemize}
+\item calls that are shorter will not be included into the calculation of service level.; zero value means that abandoned calls of any duration will be included into calculation Format\+: int32
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1CallQueueExtensionInfo_a187148435ee076cefd428a78ea878deb}\label{classRingCentral_1_1CallQueueExtensionInfo_a187148435ee076cefd428a78ea878deb}} 
+\index{RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}!includeAbandonedCalls@{includeAbandonedCalls}}
+\index{includeAbandonedCalls@{includeAbandonedCalls}!RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{includeAbandonedCalls}{includeAbandonedCalls}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Call\+Queue\+Extension\+Info.\+include\+Abandoned\+Calls\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true} abandoned calls (hanged up prior to being served) are included into service level calculation 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallQueueExtensionInfo_a582a111d194851cdcd5c3f959eac2082}\label{classRingCentral_1_1CallQueueExtensionInfo_a582a111d194851cdcd5c3f959eac2082}} 
+\index{RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}!slaGoal@{slaGoal}}
+\index{slaGoal@{slaGoal}!RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{slaGoal}{slaGoal}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Call\+Queue\+Extension\+Info.\+sla\+Goal\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Target percentage of calls that must be answered by agents within the service level time threshold Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallQueueExtensionInfo_abeab38c02b95d3187b40c9b3fcf0bcc8}\label{classRingCentral_1_1CallQueueExtensionInfo_abeab38c02b95d3187b40c9b3fcf0bcc8}} 
+\index{RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}!slaThresholdSeconds@{slaThresholdSeconds}}
+\index{slaThresholdSeconds@{slaThresholdSeconds}!RingCentral.CallQueueExtensionInfo@{RingCentral.CallQueueExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{slaThresholdSeconds}{slaThresholdSeconds}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Call\+Queue\+Extension\+Info.\+sla\+Threshold\+Seconds\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Period of time in seconds that is considered to be an acceptable service level Format\+: int32 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Call\+Queue\+Extension\+Info.\+cs\end{DoxyCompactItemize}

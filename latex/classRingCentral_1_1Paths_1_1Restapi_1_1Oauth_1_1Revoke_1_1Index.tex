@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Oauth.\+Revoke.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index}\index{RingCentral.Paths.Restapi.Oauth.Revoke.Index@{RingCentral.Paths.Restapi.Oauth.Revoke.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Oauth.\+Revoke.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_ac19d00d03e94f4f81bb512e7d641a99a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_ac19d00d03e94f4f81bb512e7d641a99a}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Index}{Oauth.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a183fa3c209013dd94ed6d852bfee1ca0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a183fa3c209013dd94ed6d852bfee1ca0}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a03194e15b852afeb0ab578432b1120e6}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RevokeTokenRequest}{Revoke\+Token\+Request}} revoke\+Token\+Request, \mbox{\hyperlink{classRingCentral_1_1RevokeTokenParameters}{Revoke\+Token\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Revokes all active access/refresh tokens and invalidates the OAuth session basing on token provided. {\ttfamily token} parameter may be passed in query string or body and may represent access or refresh token. Depending on client application type requests to this endpoint may require authentication with HTTP Basic scheme using registered client ID and client secret as login and password, correspondingly. HTTP Method\+: post Endpoint\+: /restapi/oauth/revoke Rate Limit Group\+: Auth \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a40409667dae38ba51ab1195445431963}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a40409667dae38ba51ab1195445431963}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Index}{Oauth.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a04021cb2b1530720fc4eb2f8edc9b109}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a04021cb2b1530720fc4eb2f8edc9b109}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a03194e15b852afeb0ab578432b1120e6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Revoke_1_1Index_a03194e15b852afeb0ab578432b1120e6}} 
+\index{RingCentral.Paths.Restapi.Oauth.Revoke.Index@{RingCentral.Paths.Restapi.Oauth.Revoke.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Oauth.Revoke.Index@{RingCentral.Paths.Restapi.Oauth.Revoke.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Oauth.\+Revoke.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RevokeTokenRequest}{Revoke\+Token\+Request}}}]{revoke\+Token\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RevokeTokenParameters}{Revoke\+Token\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Revokes all active access/refresh tokens and invalidates the OAuth session basing on token provided. {\ttfamily token} parameter may be passed in query string or body and may represent access or refresh token. Depending on client application type requests to this endpoint may require authentication with HTTP Basic scheme using registered client ID and client secret as login and password, correspondingly. HTTP Method\+: post Endpoint\+: /restapi/oauth/revoke Rate Limit Group\+: Auth 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Oauth/\+Revoke/Index.\+cs\end{DoxyCompactItemize}

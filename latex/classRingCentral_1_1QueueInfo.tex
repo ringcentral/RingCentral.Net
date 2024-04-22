@@ -1,0 +1,179 @@
+\hypertarget{classRingCentral_1_1QueueInfo}{}\doxysection{Ring\+Central.\+Queue\+Info Class Reference}
+\label{classRingCentral_1_1QueueInfo}\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+
+
+Queue settings applied for department (call queue) extension type, with the \textquotesingle{}Agent\+Queue\textquotesingle{} value specified as a call handling action  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1QueueInfo_ab38aecd6adf7f4edcb8aa270ef3b55ad}{transfer\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies how calls are transferred to group members Enum\+: Rotating, Simultaneous, Fixed\+Order \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1TransferInfo}{Transfer\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a445e8a114b51ac6b8e1e2c544e090447}{transfer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call transfer information \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1QueueInfo_ae4a50608b2e5fa8ebabca44f7d08fa62}{no\+Answer\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the type of action to be taken if\+: members are available but no one answers, or all members are busy/unavailable. This option is available for Business hours only. For simultaneous transfer mode only \textquotesingle{}Wait\+Primary\+Members\textquotesingle{} and \textquotesingle{}Wait\+Primary\+And\+Overflow\+Members\textquotesingle{} are supported Enum\+: Wait\+Primary\+Members, Wait\+Primary\+And\+Overflow\+Members, Voicemail, Transfer\+To\+Extension, Unconditional\+Forwarding \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1FixedOrderAgents}{Fixed\+Order\+Agents}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a5933ff34a17d5092e2c1cc090a2b74ca}{fixed\+Order\+Agents}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Information on a call forwarding rule \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1QueueInfo_ab534c4e5a3b5247690fe63133acf960a}{hold\+Audio\+Interruption\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Connecting audio interruption mode Enum\+: Never, When\+Music\+Ends, Periodically \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a3bc50fe0cac7c7e9d2fad04c0fd01ecf}{hold\+Audio\+Interruption\+Period}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Connecting audio interruption message period in seconds Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a44799bdbc40e66c49cc780d20b66eba7}{hold\+Time\+Expiration\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If \textquotesingle{}Transfer\+To\+Extension\textquotesingle{} option is selected, the extension specified in {\ttfamily transfer} field is used. The default value is {\ttfamily Voicemail} Default\+: Voicemail Enum\+: Transfer\+To\+Extension, Unconditional\+Forwarding, Voicemail \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1QueueInfo_aebf193b5c1a1ba669f483809ab108359}{agent\+Timeout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum time in seconds to wait for a call queue member before trying the next member Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a00813056131d0851e39f012fff07de13}{wrap\+Up\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Minimum post-\/call wrap up time in seconds before agent status is automatically set; the value range is from 0 to 300 sec. Maximum\+: 300 Format\+: int32 Default\+: 15 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a49442c69e6c08f39f45cc688dbe992fa}{hold\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum hold time in seconds to wait for an available call queue member Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1QueueInfo_ad29ed0fd34fd4879450da1784833fd85}{max\+Callers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum count of callers on hold; the limitation is 25 callers Maximum\+: 25 Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a4f808a2d8e73f5573cfe9c167065b013}{max\+Callers\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the type of action to be taken if count of callers on hold exceeds the supported maximum Enum\+: Voicemail, Announcement, Transfer\+To\+Extension, Unconditional\+Forwarding \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1UnconditionalForwardingInfo}{Unconditional\+Forwarding\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1QueueInfo_a64534c5de7b671f1123617f71c86a7a1}{unconditional\+Forwarding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Queue settings applied for department (call queue) extension type, with the \textquotesingle{}Agent\+Queue\textquotesingle{} value specified as a call handling action 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_aebf193b5c1a1ba669f483809ab108359}\label{classRingCentral_1_1QueueInfo_aebf193b5c1a1ba669f483809ab108359}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!agentTimeout@{agentTimeout}}
+\index{agentTimeout@{agentTimeout}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{agentTimeout}{agentTimeout}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Queue\+Info.\+agent\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum time in seconds to wait for a call queue member before trying the next member Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a5933ff34a17d5092e2c1cc090a2b74ca}\label{classRingCentral_1_1QueueInfo_a5933ff34a17d5092e2c1cc090a2b74ca}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!fixedOrderAgents@{fixedOrderAgents}}
+\index{fixedOrderAgents@{fixedOrderAgents}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{fixedOrderAgents}{fixedOrderAgents}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1FixedOrderAgents}{Fixed\+Order\+Agents}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Queue\+Info.\+fixed\+Order\+Agents\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Information on a call forwarding rule 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_ab534c4e5a3b5247690fe63133acf960a}\label{classRingCentral_1_1QueueInfo_ab534c4e5a3b5247690fe63133acf960a}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!holdAudioInterruptionMode@{holdAudioInterruptionMode}}
+\index{holdAudioInterruptionMode@{holdAudioInterruptionMode}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{holdAudioInterruptionMode}{holdAudioInterruptionMode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Queue\+Info.\+hold\+Audio\+Interruption\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Connecting audio interruption mode Enum\+: Never, When\+Music\+Ends, Periodically 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a3bc50fe0cac7c7e9d2fad04c0fd01ecf}\label{classRingCentral_1_1QueueInfo_a3bc50fe0cac7c7e9d2fad04c0fd01ecf}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!holdAudioInterruptionPeriod@{holdAudioInterruptionPeriod}}
+\index{holdAudioInterruptionPeriod@{holdAudioInterruptionPeriod}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{holdAudioInterruptionPeriod}{holdAudioInterruptionPeriod}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Queue\+Info.\+hold\+Audio\+Interruption\+Period\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Connecting audio interruption message period in seconds Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a49442c69e6c08f39f45cc688dbe992fa}\label{classRingCentral_1_1QueueInfo_a49442c69e6c08f39f45cc688dbe992fa}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!holdTime@{holdTime}}
+\index{holdTime@{holdTime}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{holdTime}{holdTime}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Queue\+Info.\+hold\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum hold time in seconds to wait for an available call queue member Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a44799bdbc40e66c49cc780d20b66eba7}\label{classRingCentral_1_1QueueInfo_a44799bdbc40e66c49cc780d20b66eba7}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!holdTimeExpirationAction@{holdTimeExpirationAction}}
+\index{holdTimeExpirationAction@{holdTimeExpirationAction}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{holdTimeExpirationAction}{holdTimeExpirationAction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Queue\+Info.\+hold\+Time\+Expiration\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If \textquotesingle{}Transfer\+To\+Extension\textquotesingle{} option is selected, the extension specified in {\ttfamily transfer} field is used. The default value is {\ttfamily Voicemail} Default\+: Voicemail Enum\+: Transfer\+To\+Extension, Unconditional\+Forwarding, Voicemail 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_ad29ed0fd34fd4879450da1784833fd85}\label{classRingCentral_1_1QueueInfo_ad29ed0fd34fd4879450da1784833fd85}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!maxCallers@{maxCallers}}
+\index{maxCallers@{maxCallers}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{maxCallers}{maxCallers}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Queue\+Info.\+max\+Callers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum count of callers on hold; the limitation is 25 callers Maximum\+: 25 Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a4f808a2d8e73f5573cfe9c167065b013}\label{classRingCentral_1_1QueueInfo_a4f808a2d8e73f5573cfe9c167065b013}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!maxCallersAction@{maxCallersAction}}
+\index{maxCallersAction@{maxCallersAction}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{maxCallersAction}{maxCallersAction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Queue\+Info.\+max\+Callers\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the type of action to be taken if count of callers on hold exceeds the supported maximum Enum\+: Voicemail, Announcement, Transfer\+To\+Extension, Unconditional\+Forwarding 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_ae4a50608b2e5fa8ebabca44f7d08fa62}\label{classRingCentral_1_1QueueInfo_ae4a50608b2e5fa8ebabca44f7d08fa62}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!noAnswerAction@{noAnswerAction}}
+\index{noAnswerAction@{noAnswerAction}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{noAnswerAction}{noAnswerAction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Queue\+Info.\+no\+Answer\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the type of action to be taken if\+: members are available but no one answers, or all members are busy/unavailable. This option is available for Business hours only. For simultaneous transfer mode only \textquotesingle{}Wait\+Primary\+Members\textquotesingle{} and \textquotesingle{}Wait\+Primary\+And\+Overflow\+Members\textquotesingle{} are supported Enum\+: Wait\+Primary\+Members, Wait\+Primary\+And\+Overflow\+Members, Voicemail, Transfer\+To\+Extension, Unconditional\+Forwarding 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a445e8a114b51ac6b8e1e2c544e090447}\label{classRingCentral_1_1QueueInfo_a445e8a114b51ac6b8e1e2c544e090447}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!transfer@{transfer}}
+\index{transfer@{transfer}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{transfer}{transfer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1TransferInfo}{Transfer\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Queue\+Info.\+transfer\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call transfer information 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_ab38aecd6adf7f4edcb8aa270ef3b55ad}\label{classRingCentral_1_1QueueInfo_ab38aecd6adf7f4edcb8aa270ef3b55ad}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!transferMode@{transferMode}}
+\index{transferMode@{transferMode}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{transferMode}{transferMode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Queue\+Info.\+transfer\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies how calls are transferred to group members Enum\+: Rotating, Simultaneous, Fixed\+Order 
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a64534c5de7b671f1123617f71c86a7a1}\label{classRingCentral_1_1QueueInfo_a64534c5de7b671f1123617f71c86a7a1}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!unconditionalForwarding@{unconditionalForwarding}}
+\index{unconditionalForwarding@{unconditionalForwarding}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{unconditionalForwarding}{unconditionalForwarding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1UnconditionalForwardingInfo}{Unconditional\+Forwarding\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Queue\+Info.\+unconditional\+Forwarding\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1QueueInfo_a00813056131d0851e39f012fff07de13}\label{classRingCentral_1_1QueueInfo_a00813056131d0851e39f012fff07de13}} 
+\index{RingCentral.QueueInfo@{RingCentral.QueueInfo}!wrapUpTime@{wrapUpTime}}
+\index{wrapUpTime@{wrapUpTime}!RingCentral.QueueInfo@{RingCentral.QueueInfo}}
+\doxysubsubsection{\texorpdfstring{wrapUpTime}{wrapUpTime}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Queue\+Info.\+wrap\+Up\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Minimum post-\/call wrap up time in seconds before agent status is automatically set; the value range is from 0 to 300 sec. Maximum\+: 300 Format\+: int32 Default\+: 15 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Queue\+Info.\+cs\end{DoxyCompactItemize}

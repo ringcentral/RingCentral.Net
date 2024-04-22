@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Emergency\+Address\+Auto\+Update.\+Switches.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index}\index{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Emergency\+Address\+Auto\+Update.\+Switches.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_ae61cc2a0027a9958ebbdc27cfcdb5dbc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_ae61cc2a0027a9958ebbdc27cfcdb5dbc}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Index}{Emergency\+Address\+Auto\+Update.\+Index}} parent, string switch\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_ac87d8b1074b9b5eb45e27973ba384340}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_ac87d8b1074b9b5eb45e27973ba384340}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SwitchesList}{Switches\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a66c70cf169e1d255e1a5fa66bdfcaa54}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListAccountSwitchesParameters}{List\+Account\+Switches\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a corporate map of configured network switches with the assigned emergency addresses for the logged-\/in account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SwitchInfo}{Switch\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a4c93cb909674019779a206762a3a8725}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateSwitchInfo}{Create\+Switch\+Info}} create\+Switch\+Info, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new switch in corporate map based on chassis ID and used for Automatic Locations Update feature. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SwitchInfo}{Switch\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a9f8189b5f126ff65e6b16e101455e6ea}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the specified switch with the assigned emergency address. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches/\{switch\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SwitchInfo}{Switch\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a4b8a95e4fbd95b60a1655c1ff99e2821}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateSwitchInfo}{Update\+Switch\+Info}} update\+Switch\+Info, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates switch. Partial update is not supported, all switch parameters should be specified. If null value is received or parameter is missing, its value is removed. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches/\{switch\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a8c6b79fa4101986c3ff160430025ba65}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes wireless switch(es) in a network configuration for Automatic Location Updates feature. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches/\{switch\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_ab584769d9a865d93d479f1d9c98c11e8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_ab584769d9a865d93d479f1d9c98c11e8}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Index}{Emergency\+Address\+Auto\+Update.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_afee12fdda5ec4ef5c319521807a9e45c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_afee12fdda5ec4ef5c319521807a9e45c}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a2053ac09597091f97df9ed739f3623a4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a2053ac09597091f97df9ed739f3623a4}} 
+string {\bfseries switch\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a8c6b79fa4101986c3ff160430025ba65}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a8c6b79fa4101986c3ff160430025ba65}} 
+\index{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Emergency\+Address\+Auto\+Update.\+Switches.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes wireless switch(es) in a network configuration for Automatic Location Updates feature. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches/\{switch\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a9f8189b5f126ff65e6b16e101455e6ea}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a9f8189b5f126ff65e6b16e101455e6ea}} 
+\index{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SwitchInfo}{Switch\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Emergency\+Address\+Auto\+Update.\+Switches.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the specified switch with the assigned emergency address. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches/\{switch\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a66c70cf169e1d255e1a5fa66bdfcaa54}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a66c70cf169e1d255e1a5fa66bdfcaa54}} 
+\index{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SwitchesList}{Switches\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Emergency\+Address\+Auto\+Update.\+Switches.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListAccountSwitchesParameters}{List\+Account\+Switches\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a corporate map of configured network switches with the assigned emergency addresses for the logged-\/in account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a4c93cb909674019779a206762a3a8725}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a4c93cb909674019779a206762a3a8725}} 
+\index{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SwitchInfo}{Switch\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Emergency\+Address\+Auto\+Update.\+Switches.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateSwitchInfo}{Create\+Switch\+Info}}}]{create\+Switch\+Info,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new switch in corporate map based on chassis ID and used for Automatic Locations Update feature. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a4b8a95e4fbd95b60a1655c1ff99e2821}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1EmergencyAddressAutoUpdate_1_1Switches_1_1Index_a4b8a95e4fbd95b60a1655c1ff99e2821}} 
+\index{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index@{RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Switches.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SwitchInfo}{Switch\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Emergency\+Address\+Auto\+Update.\+Switches.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateSwitchInfo}{Update\+Switch\+Info}}}]{update\+Switch\+Info,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates switch. Partial update is not supported, all switch parameters should be specified. If null value is received or parameter is missing, its value is removed. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/emergency-\/address-\/auto-\/update/switches/\{switch\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Configure\+Emergency\+Maps 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Emergency\+Address\+Auto\+Update/\+Switches/Index.\+cs\end{DoxyCompactItemize}

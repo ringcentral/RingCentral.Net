@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Unhold.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index}\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Unhold.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_a8040afb1d593989ad70db94145c55488}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_a8040afb1d593989ad70db94145c55488}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_aefe0ee3ad168830223bdc66fde4e2be7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_aefe0ee3ad168830223bdc66fde4e2be7}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_aa9201653f7ce046329dcadc80ba940be}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Brings a party back into a call and stops to play \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music. There is a known limitation for \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} API -\/ hold via REST API doesn\textquotesingle{}t work with hold placed via \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} apps or Hard\+Phone. It means that if you muted participant via Call Control API and \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Desktop app, then you need to unhold both endpoints to remove \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music and bring media back. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/unhold Rate Limit Group\+: Light App Permission\+: Call\+Control \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_afb7795dcc6b9b1e787a375a5c640bddd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_afb7795dcc6b9b1e787a375a5c640bddd}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_a043fafb08952242caca003146277d3cd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_a043fafb08952242caca003146277d3cd}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_aa9201653f7ce046329dcadc80ba940be}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Unhold_1_1Index_aa9201653f7ce046329dcadc80ba940be}} 
+\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Unhold.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Brings a party back into a call and stops to play \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music. There is a known limitation for \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} API -\/ hold via REST API doesn\textquotesingle{}t work with hold placed via \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} apps or Hard\+Phone. It means that if you muted participant via Call Control API and \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Desktop app, then you need to unhold both endpoints to remove \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music and bring media back. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/unhold Rate Limit Group\+: Light App Permission\+: Call\+Control 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Telephony/\+Sessions/\+Parties/\+Unhold/Index.\+cs\end{DoxyCompactItemize}

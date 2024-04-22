@@ -1,0 +1,121 @@
+\hypertarget{classRingCentral_1_1TokenIntrospectionResponse}{}\doxysection{Ring\+Central.\+Token\+Introspection\+Response Class Reference}
+\label{classRingCentral_1_1TokenIntrospectionResponse}\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_a116c9134bfaadd6fc1fea32113232676}{active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is presented token valid and active Required Example\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_a3460a46b36da0531ff93e900f46ab5da}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of permissions (space separated) granted to the application with this token Example\+: \mbox{\hyperlink{classRingCentral_1_1AccountInfo}{Account\+Info}} Call\+Log \mbox{\hyperlink{classRingCentral_1_1ExtensionInfo}{Extension\+Info}} Messages SMS \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_aa4cc6d111b16997aebe13ef047dd26db}{client\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier (key) of a client application \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_a9771f9e0781885371e11de72bddef452}{token\+\_\+type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of token. The only supported value is {\ttfamily bearer} Example\+: bearer \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_a135806731b6e211dbde7ac193515a395}{exp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Timestamp indicating when this token will expire in seconds since January 1 1970 UTC Format\+: int64 Example\+: 1706715293 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_ac2528ff841e464d1bd22bea52ae9419b}{iat}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Timestamp indicating when this token was originally issued in seconds since January 1 1970 UTC Format\+: int64 Example\+: 1706711693 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_aa78389a85313fb43a486271b1c6db55d}{sub}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subject of the token (extension ID or the owner) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_a048ef6facfd0c90b3c4c6a53db9a0397}{account\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em RC account ID associated with the token \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenIntrospectionResponse_a850d6a88ff2c2037ee206bd30f4d7e1b}{session\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OAuth session ID associated with the token \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_a048ef6facfd0c90b3c4c6a53db9a0397}\label{classRingCentral_1_1TokenIntrospectionResponse_a048ef6facfd0c90b3c4c6a53db9a0397}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!account\_id@{account\_id}}
+\index{account\_id@{account\_id}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{account\_id}{account\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Introspection\+Response.\+account\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+RC account ID associated with the token 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_a116c9134bfaadd6fc1fea32113232676}\label{classRingCentral_1_1TokenIntrospectionResponse_a116c9134bfaadd6fc1fea32113232676}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!active@{active}}
+\index{active@{active}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Token\+Introspection\+Response.\+active\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Is presented token valid and active Required Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_aa4cc6d111b16997aebe13ef047dd26db}\label{classRingCentral_1_1TokenIntrospectionResponse_aa4cc6d111b16997aebe13ef047dd26db}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!client\_id@{client\_id}}
+\index{client\_id@{client\_id}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{client\_id}{client\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Introspection\+Response.\+client\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier (key) of a client application 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_a135806731b6e211dbde7ac193515a395}\label{classRingCentral_1_1TokenIntrospectionResponse_a135806731b6e211dbde7ac193515a395}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!exp@{exp}}
+\index{exp@{exp}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{exp}{exp}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Token\+Introspection\+Response.\+exp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Timestamp indicating when this token will expire in seconds since January 1 1970 UTC Format\+: int64 Example\+: 1706715293 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_ac2528ff841e464d1bd22bea52ae9419b}\label{classRingCentral_1_1TokenIntrospectionResponse_ac2528ff841e464d1bd22bea52ae9419b}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!iat@{iat}}
+\index{iat@{iat}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{iat}{iat}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Token\+Introspection\+Response.\+iat\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Timestamp indicating when this token was originally issued in seconds since January 1 1970 UTC Format\+: int64 Example\+: 1706711693 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_a3460a46b36da0531ff93e900f46ab5da}\label{classRingCentral_1_1TokenIntrospectionResponse_a3460a46b36da0531ff93e900f46ab5da}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!scope@{scope}}
+\index{scope@{scope}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Introspection\+Response.\+scope\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of permissions (space separated) granted to the application with this token Example\+: \mbox{\hyperlink{classRingCentral_1_1AccountInfo}{Account\+Info}} Call\+Log \mbox{\hyperlink{classRingCentral_1_1ExtensionInfo}{Extension\+Info}} Messages SMS 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_a850d6a88ff2c2037ee206bd30f4d7e1b}\label{classRingCentral_1_1TokenIntrospectionResponse_a850d6a88ff2c2037ee206bd30f4d7e1b}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!session\_id@{session\_id}}
+\index{session\_id@{session\_id}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{session\_id}{session\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Introspection\+Response.\+session\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OAuth session ID associated with the token 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_aa78389a85313fb43a486271b1c6db55d}\label{classRingCentral_1_1TokenIntrospectionResponse_aa78389a85313fb43a486271b1c6db55d}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!sub@{sub}}
+\index{sub@{sub}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{sub}{sub}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Introspection\+Response.\+sub\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subject of the token (extension ID or the owner) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenIntrospectionResponse_a9771f9e0781885371e11de72bddef452}\label{classRingCentral_1_1TokenIntrospectionResponse_a9771f9e0781885371e11de72bddef452}} 
+\index{RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}!token\_type@{token\_type}}
+\index{token\_type@{token\_type}!RingCentral.TokenIntrospectionResponse@{RingCentral.TokenIntrospectionResponse}}
+\doxysubsubsection{\texorpdfstring{token\_type}{token\_type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Introspection\+Response.\+token\+\_\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of token. The only supported value is {\ttfamily bearer} Example\+: bearer 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Token\+Introspection\+Response.\+cs\end{DoxyCompactItemize}

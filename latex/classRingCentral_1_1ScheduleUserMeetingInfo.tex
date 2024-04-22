@@ -1,0 +1,203 @@
+\hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo}{}\doxysection{Ring\+Central.\+Schedule\+User\+Meeting\+Info Class Reference}
+\label{classRingCentral_1_1ScheduleUserMeetingInfo}\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+
+
+Scheduling meeting settings locked on account level $\vert$$\vert$ Settings defining how to schedule user meetings  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_a17d897e08eb4723aed75954d88b08f5e}{enforce\+Login}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, then only signed-\/in users can join this meeting \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_af74950a017259eeb17adba845360b500}{start\+Host\+Video}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Starting meetings with host video on/off (true/false) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_a1525fec7b2d2db6c34507907ca43d30f}{start\+Participants\+Video}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Starting meetings with participant video on/off (true/false) \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_ac7ac99f43beb5e4af3a5289542d4b982}{audio\+Options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines how participants can join the audio channel of a meeting Enum\+: Phone, Computer\+Audio, Third\+Party \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_addab735788e4559618cd334b8e4ae2b8}{allow\+Join\+Before\+Host}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows participants to join the meeting before the host arrives \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_adcff7c5f6c7692e09fcb7688ae6d7fe7}{use\+Pmi\+For\+Scheduled\+Meetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines whether to use Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) when scheduling a meeting \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_ada3f8c3972b4c47bd02a10d7fb58e86e}{use\+Pmi\+For\+Instant\+Meetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines whether to use Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) when starting an instant meeting \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_adc2fc23518da45c12fe1e6096c7e1f33}{require\+Password\+For\+Scheduling\+New\+Meetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A password will be generated when scheduling a meeting and participants will require password to join a meeting. The Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) meetings are not included \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_ad1b5c43978778ff6e7fbc6ce20350cd7}{require\+Password\+For\+Scheduled\+Meetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether to require a password for meetings which have already been scheduled \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_a4bcb97544d8ad63edf370aafb7a10464}{default\+Password\+For\+Scheduled\+Meetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Password for already scheduled meetings. Users can set it individually \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_affcd29de833188c95f16fcb0d485b244}{require\+Password\+For\+Instant\+Meetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A random password will be generated for an instant meeting, if set to {\ttfamily true}. If you use PMI for your instant meetings, this option will be disabled \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_a27d030500ea11dd3a6cb762a8e96d35f}{require\+Password\+For\+Pmi\+Meetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether to require a password for meetings using Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI). The supported values are\+: \textquotesingle{}none\textquotesingle{}, \textquotesingle{}all\textquotesingle{} and \textquotesingle{}jbh\+Only\textquotesingle{} (joined before host only) Enum\+: all, none, jbh\+Only \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_a40ecba98128a6de59d541c8e9d378eeb}{pmi\+Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The default password for Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) meetings \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_a9edff4de55b3853060eb98a22eabd391}{pstn\+Password\+Protected}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether to generate and require a password for participants joining by phone \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScheduleUserMeetingInfo_a773d914775a02ce914cdfb5638f63072}{mute\+Participants\+On\+Entry}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scheduling meeting settings locked on account level $\vert$$\vert$ Settings defining how to schedule user meetings 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_addab735788e4559618cd334b8e4ae2b8}\label{classRingCentral_1_1ScheduleUserMeetingInfo_addab735788e4559618cd334b8e4ae2b8}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!allowJoinBeforeHost@{allowJoinBeforeHost}}
+\index{allowJoinBeforeHost@{allowJoinBeforeHost}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{allowJoinBeforeHost}{allowJoinBeforeHost}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+allow\+Join\+Before\+Host\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows participants to join the meeting before the host arrives 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_ac7ac99f43beb5e4af3a5289542d4b982}\label{classRingCentral_1_1ScheduleUserMeetingInfo_ac7ac99f43beb5e4af3a5289542d4b982}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!audioOptions@{audioOptions}}
+\index{audioOptions@{audioOptions}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{audioOptions}{audioOptions}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+audio\+Options\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Determines how participants can join the audio channel of a meeting Enum\+: Phone, Computer\+Audio, Third\+Party 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_a4bcb97544d8ad63edf370aafb7a10464}\label{classRingCentral_1_1ScheduleUserMeetingInfo_a4bcb97544d8ad63edf370aafb7a10464}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!defaultPasswordForScheduledMeetings@{defaultPasswordForScheduledMeetings}}
+\index{defaultPasswordForScheduledMeetings@{defaultPasswordForScheduledMeetings}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{defaultPasswordForScheduledMeetings}{defaultPasswordForScheduledMeetings}}
+{\footnotesize\ttfamily string Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+default\+Password\+For\+Scheduled\+Meetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Password for already scheduled meetings. Users can set it individually 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_a17d897e08eb4723aed75954d88b08f5e}\label{classRingCentral_1_1ScheduleUserMeetingInfo_a17d897e08eb4723aed75954d88b08f5e}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!enforceLogin@{enforceLogin}}
+\index{enforceLogin@{enforceLogin}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{enforceLogin}{enforceLogin}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+enforce\+Login\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, then only signed-\/in users can join this meeting 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_a773d914775a02ce914cdfb5638f63072}\label{classRingCentral_1_1ScheduleUserMeetingInfo_a773d914775a02ce914cdfb5638f63072}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!muteParticipantsOnEntry@{muteParticipantsOnEntry}}
+\index{muteParticipantsOnEntry@{muteParticipantsOnEntry}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{muteParticipantsOnEntry}{muteParticipantsOnEntry}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+mute\+Participants\+On\+Entry\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_a40ecba98128a6de59d541c8e9d378eeb}\label{classRingCentral_1_1ScheduleUserMeetingInfo_a40ecba98128a6de59d541c8e9d378eeb}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!pmiPassword@{pmiPassword}}
+\index{pmiPassword@{pmiPassword}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{pmiPassword}{pmiPassword}}
+{\footnotesize\ttfamily string Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+pmi\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The default password for Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) meetings 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_a9edff4de55b3853060eb98a22eabd391}\label{classRingCentral_1_1ScheduleUserMeetingInfo_a9edff4de55b3853060eb98a22eabd391}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!pstnPasswordProtected@{pstnPasswordProtected}}
+\index{pstnPasswordProtected@{pstnPasswordProtected}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{pstnPasswordProtected}{pstnPasswordProtected}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+pstn\+Password\+Protected\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether to generate and require a password for participants joining by phone 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_affcd29de833188c95f16fcb0d485b244}\label{classRingCentral_1_1ScheduleUserMeetingInfo_affcd29de833188c95f16fcb0d485b244}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!requirePasswordForInstantMeetings@{requirePasswordForInstantMeetings}}
+\index{requirePasswordForInstantMeetings@{requirePasswordForInstantMeetings}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{requirePasswordForInstantMeetings}{requirePasswordForInstantMeetings}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+require\+Password\+For\+Instant\+Meetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A random password will be generated for an instant meeting, if set to {\ttfamily true}. If you use PMI for your instant meetings, this option will be disabled 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_a27d030500ea11dd3a6cb762a8e96d35f}\label{classRingCentral_1_1ScheduleUserMeetingInfo_a27d030500ea11dd3a6cb762a8e96d35f}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!requirePasswordForPmiMeetings@{requirePasswordForPmiMeetings}}
+\index{requirePasswordForPmiMeetings@{requirePasswordForPmiMeetings}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{requirePasswordForPmiMeetings}{requirePasswordForPmiMeetings}}
+{\footnotesize\ttfamily string Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+require\+Password\+For\+Pmi\+Meetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether to require a password for meetings using Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI). The supported values are\+: \textquotesingle{}none\textquotesingle{}, \textquotesingle{}all\textquotesingle{} and \textquotesingle{}jbh\+Only\textquotesingle{} (joined before host only) Enum\+: all, none, jbh\+Only 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_ad1b5c43978778ff6e7fbc6ce20350cd7}\label{classRingCentral_1_1ScheduleUserMeetingInfo_ad1b5c43978778ff6e7fbc6ce20350cd7}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!requirePasswordForScheduledMeetings@{requirePasswordForScheduledMeetings}}
+\index{requirePasswordForScheduledMeetings@{requirePasswordForScheduledMeetings}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{requirePasswordForScheduledMeetings}{requirePasswordForScheduledMeetings}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+require\+Password\+For\+Scheduled\+Meetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether to require a password for meetings which have already been scheduled 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_adc2fc23518da45c12fe1e6096c7e1f33}\label{classRingCentral_1_1ScheduleUserMeetingInfo_adc2fc23518da45c12fe1e6096c7e1f33}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!requirePasswordForSchedulingNewMeetings@{requirePasswordForSchedulingNewMeetings}}
+\index{requirePasswordForSchedulingNewMeetings@{requirePasswordForSchedulingNewMeetings}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{requirePasswordForSchedulingNewMeetings}{requirePasswordForSchedulingNewMeetings}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+require\+Password\+For\+Scheduling\+New\+Meetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A password will be generated when scheduling a meeting and participants will require password to join a meeting. The Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) meetings are not included 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_af74950a017259eeb17adba845360b500}\label{classRingCentral_1_1ScheduleUserMeetingInfo_af74950a017259eeb17adba845360b500}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!startHostVideo@{startHostVideo}}
+\index{startHostVideo@{startHostVideo}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{startHostVideo}{startHostVideo}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+start\+Host\+Video\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Starting meetings with host video on/off (true/false) 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_a1525fec7b2d2db6c34507907ca43d30f}\label{classRingCentral_1_1ScheduleUserMeetingInfo_a1525fec7b2d2db6c34507907ca43d30f}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!startParticipantsVideo@{startParticipantsVideo}}
+\index{startParticipantsVideo@{startParticipantsVideo}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{startParticipantsVideo}{startParticipantsVideo}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+start\+Participants\+Video\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Starting meetings with participant video on/off (true/false) 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_ada3f8c3972b4c47bd02a10d7fb58e86e}\label{classRingCentral_1_1ScheduleUserMeetingInfo_ada3f8c3972b4c47bd02a10d7fb58e86e}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!usePmiForInstantMeetings@{usePmiForInstantMeetings}}
+\index{usePmiForInstantMeetings@{usePmiForInstantMeetings}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{usePmiForInstantMeetings}{usePmiForInstantMeetings}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+use\+Pmi\+For\+Instant\+Meetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Determines whether to use Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) when starting an instant meeting 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScheduleUserMeetingInfo_adcff7c5f6c7692e09fcb7688ae6d7fe7}\label{classRingCentral_1_1ScheduleUserMeetingInfo_adcff7c5f6c7692e09fcb7688ae6d7fe7}} 
+\index{RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}!usePmiForScheduledMeetings@{usePmiForScheduledMeetings}}
+\index{usePmiForScheduledMeetings@{usePmiForScheduledMeetings}!RingCentral.ScheduleUserMeetingInfo@{RingCentral.ScheduleUserMeetingInfo}}
+\doxysubsubsection{\texorpdfstring{usePmiForScheduledMeetings}{usePmiForScheduledMeetings}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Schedule\+User\+Meeting\+Info.\+use\+Pmi\+For\+Scheduled\+Meetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Determines whether to use Personal \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} ID (PMI) when scheduling a meeting 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Schedule\+User\+Meeting\+Info.\+cs\end{DoxyCompactItemize}

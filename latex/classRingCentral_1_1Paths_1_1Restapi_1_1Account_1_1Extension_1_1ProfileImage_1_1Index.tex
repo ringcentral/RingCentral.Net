@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Profile\+Image.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Profile\+Image.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a2b7132735b2c63537a8e6a6f658af7e6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a2b7132735b2c63537a8e6a6f658af7e6}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent, string scale\+Size=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_aa471cb8fed024843513191cf8fecdf2b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_aa471cb8fed024843513191cf8fecdf2b}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ byte\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_acb2c7451182be70e293baa5b989ffb3e}{List}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a profile image of an extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a319bf4f2aace6b834cd3ba134955f755}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateUserProfileImageRequest}{Create\+User\+Profile\+Image\+Request}} create\+User\+Profile\+Image\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Uploads the extension profile image. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Heavy App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Info \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_ad530df7d8293819ca4c04d45f3973c7a}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateUserProfileImageRequest}{Update\+User\+Profile\+Image\+Request}} update\+User\+Profile\+Image\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the extension profile image. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Heavy App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Info \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a4843aff6a9202e960ff157ff27f598ae}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes the user profile image. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Info \end{DoxyCompactList}\item 
+async Task$<$ byte\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_aaf9616609930d6c3fa864110c8fbb760}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ReadScaledProfileImageParameters}{Read\+Scaled\+Profile\+Image\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the scaled profile image of an extension. {\bfseries{This API must be called via media API entry point, e.\+g. \href{https://media.ringcentral.com}{\texttt{ https\+://media.\+ringcentral.\+com}}}} HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image/\{scale\+Size\} Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a618c5ddbeddb07f398eb795a2829a1a0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a618c5ddbeddb07f398eb795a2829a1a0}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a12f25c9ed1848d18d875c59290db263b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a12f25c9ed1848d18d875c59290db263b}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_ab67737a3ef4923f072cc0f8aa3de3b5c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_ab67737a3ef4923f072cc0f8aa3de3b5c}} 
+string {\bfseries scale\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a4843aff6a9202e960ff157ff27f598ae}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a4843aff6a9202e960ff157ff27f598ae}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Profile\+Image.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the user profile image. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Info 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_aaf9616609930d6c3fa864110c8fbb760}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_aaf9616609930d6c3fa864110c8fbb760}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$byte\mbox{[}$\,$\mbox{]}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Profile\+Image.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadScaledProfileImageParameters}{Read\+Scaled\+Profile\+Image\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the scaled profile image of an extension. {\bfseries{This API must be called via media API entry point, e.\+g. \href{https://media.ringcentral.com}{\texttt{ https\+://media.\+ringcentral.\+com}}}} HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image/\{scale\+Size\} Rate Limit Group\+: Medium App Permission\+: Read\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_acb2c7451182be70e293baa5b989ffb3e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_acb2c7451182be70e293baa5b989ffb3e}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$byte\mbox{[}$\,$\mbox{]}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Profile\+Image.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a profile image of an extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a319bf4f2aace6b834cd3ba134955f755}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_a319bf4f2aace6b834cd3ba134955f755}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Profile\+Image.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateUserProfileImageRequest}{Create\+User\+Profile\+Image\+Request}}}]{create\+User\+Profile\+Image\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uploads the extension profile image. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Heavy App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Info 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_ad530df7d8293819ca4c04d45f3973c7a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ProfileImage_1_1Index_ad530df7d8293819ca4c04d45f3973c7a}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index@{RingCentral.Paths.Restapi.Account.Extension.ProfileImage.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Profile\+Image.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateUserProfileImageRequest}{Update\+User\+Profile\+Image\+Request}}}]{update\+User\+Profile\+Image\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the extension profile image. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/profile-\/image Rate Limit Group\+: Heavy App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Info 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Profile\+Image/Index.\+cs\end{DoxyCompactItemize}

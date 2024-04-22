@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1PresencePagingInfo}{}\doxysection{Ring\+Central.\+Presence\+Paging\+Info Class Reference}
+\label{classRingCentral_1_1PresencePagingInfo}\index{RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}}
+
+
+Information on paging  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1PresencePagingInfo_a58a0b9d763b4726614c750efe9c85fbf}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1PresencePagingInfo_ae09f1031d155dcf0aae383e7f862a84d}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current page size, describes how many items are in each page. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1PresencePagingInfo_ae38672d1051bc7a88af51f8138f3c117}{page\+Start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1PresencePagingInfo_a679b3d3b721aa6144e135339e1617df8}{page\+End}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1PresencePagingInfo_addd92f7b2be5619038aa824ee4342821}{total\+Pages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1PresencePagingInfo_a019f7f4fb4f0e2a9907f7a94223bf0d7}{total\+Elements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information on paging 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1PresencePagingInfo_a58a0b9d763b4726614c750efe9c85fbf}\label{classRingCentral_1_1PresencePagingInfo_a58a0b9d763b4726614c750efe9c85fbf}} 
+\index{RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}!page@{page}}
+\index{page@{page}!RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Presence\+Paging\+Info.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresencePagingInfo_a679b3d3b721aa6144e135339e1617df8}\label{classRingCentral_1_1PresencePagingInfo_a679b3d3b721aa6144e135339e1617df8}} 
+\index{RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}!pageEnd@{pageEnd}}
+\index{pageEnd@{pageEnd}!RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageEnd}{pageEnd}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Presence\+Paging\+Info.\+page\+End\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresencePagingInfo_ae38672d1051bc7a88af51f8138f3c117}\label{classRingCentral_1_1PresencePagingInfo_ae38672d1051bc7a88af51f8138f3c117}} 
+\index{RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}!pageStart@{pageStart}}
+\index{pageStart@{pageStart}!RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageStart}{pageStart}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Presence\+Paging\+Info.\+page\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresencePagingInfo_ae09f1031d155dcf0aae383e7f862a84d}\label{classRingCentral_1_1PresencePagingInfo_ae09f1031d155dcf0aae383e7f862a84d}} 
+\index{RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Presence\+Paging\+Info.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current page size, describes how many items are in each page. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresencePagingInfo_a019f7f4fb4f0e2a9907f7a94223bf0d7}\label{classRingCentral_1_1PresencePagingInfo_a019f7f4fb4f0e2a9907f7a94223bf0d7}} 
+\index{RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}!totalElements@{totalElements}}
+\index{totalElements@{totalElements}!RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalElements}{totalElements}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Presence\+Paging\+Info.\+total\+Elements\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresencePagingInfo_addd92f7b2be5619038aa824ee4342821}\label{classRingCentral_1_1PresencePagingInfo_addd92f7b2be5619038aa824ee4342821}} 
+\index{RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}!totalPages@{totalPages}}
+\index{totalPages@{totalPages}!RingCentral.PresencePagingInfo@{RingCentral.PresencePagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalPages}{totalPages}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Presence\+Paging\+Info.\+total\+Pages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Presence\+Paging\+Info.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Webinar.\+Configuration.\+V1.\+Webinars.\+Sessions.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index}\index{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Webinar.\+Configuration.\+V1.\+Webinars.\+Sessions.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_ae79b3269582ba440ed96442e93906a6f}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_ae79b3269582ba440ed96442e93906a6f}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Index}{Webinars.\+Index}} parent, string session\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_aa22458cd103d6afb7c76600d8f0f9208}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_aa22458cd103d6afb7c76600d8f0f9208}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource}{Wcs\+Session\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_af861d49efb5a2ee4f2957f66909f2685}{Post}} (\mbox{\hyperlink{classRingCentral_1_1WcsSessionWithLocaleCodeModel}{Wcs\+Session\+With\+Locale\+Code\+Model}} wcs\+Session\+With\+Locale\+Code\+Model, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new Session for a given \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} HTTP Method\+: post Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource}{Wcs\+Session\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_aa95fa9d35622119f32ef0f2bc70a4ace}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} Session by ID. HTTP Method\+: get Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a595f2a72b2f4cd0e364316eae3cb3713}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} Session. All child objects (\mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Invitees}{Invitees}}) will be also deleted. It is disallowed to delete a Session which is in \textquotesingle{}Active\textquotesingle{} or \textquotesingle{}Finished\textquotesingle{} state HTTP Method\+: delete Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource}{Wcs\+Session\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_ab669c3ec52039a389ea531579bccc40c}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1WcsSessionWithLocaleCodeModel}{Wcs\+Session\+With\+Locale\+Code\+Model}} wcs\+Session\+With\+Locale\+Code\+Model, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} Session. The payload may contain certain attributes from the Session resource (it is a partial update). Changing the \textquotesingle{}status\textquotesingle{} field usually invokes certain workflow actions. Updating a Session in \textquotesingle{}Active\textquotesingle{} or \textquotesingle{}Finished\textquotesingle{} status is prohibited. Some status transitions (for example, to \textquotesingle{}Active"{} or \textquotesingle{}Finished\textquotesingle{}) may be prohibited. HTTP Method\+: patch Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a410188b30b40d89a805a404fd0c36d4f}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a410188b30b40d89a805a404fd0c36d4f}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Invitees_1_1Index}{Invitees.\+Index}} {\bfseries Invitees} (string invitee\+Id=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_acee903f404a3c489511ab1ec231dc58d}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_acee903f404a3c489511ab1ec231dc58d}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Index}{Webinars.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a6a65a5e5f19c872c9b79ede65859ee96}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a6a65a5e5f19c872c9b79ede65859ee96}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a43029eec7c95d777120181f198aa3f95}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a43029eec7c95d777120181f198aa3f95}} 
+string {\bfseries session\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a595f2a72b2f4cd0e364316eae3cb3713}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_a595f2a72b2f4cd0e364316eae3cb3713}} 
+\index{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Webinar.\+Configuration.\+V1.\+Webinars.\+Sessions.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} Session. All child objects (\mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Invitees}{Invitees}}) will be also deleted. It is disallowed to delete a Session which is in \textquotesingle{}Active\textquotesingle{} or \textquotesingle{}Finished\textquotesingle{} state HTTP Method\+: delete Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_aa95fa9d35622119f32ef0f2bc70a4ace}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_aa95fa9d35622119f32ef0f2bc70a4ace}} 
+\index{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1WcsSessionResource}{Wcs\+Session\+Resource}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Configuration.\+V1.\+Webinars.\+Sessions.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} Session by ID. HTTP Method\+: get Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_ab669c3ec52039a389ea531579bccc40c}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_ab669c3ec52039a389ea531579bccc40c}} 
+\index{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1WcsSessionResource}{Wcs\+Session\+Resource}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Configuration.\+V1.\+Webinars.\+Sessions.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1WcsSessionWithLocaleCodeModel}{Wcs\+Session\+With\+Locale\+Code\+Model}}}]{wcs\+Session\+With\+Locale\+Code\+Model,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} Session. The payload may contain certain attributes from the Session resource (it is a partial update). Changing the \textquotesingle{}status\textquotesingle{} field usually invokes certain workflow actions. Updating a Session in \textquotesingle{}Active\textquotesingle{} or \textquotesingle{}Finished\textquotesingle{} status is prohibited. Some status transitions (for example, to \textquotesingle{}Active"{} or \textquotesingle{}Finished\textquotesingle{}) may be prohibited. HTTP Method\+: patch Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_af861d49efb5a2ee4f2957f66909f2685}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Configuration_1_1V1_1_1Webinars_1_1Sessions_1_1Index_af861d49efb5a2ee4f2957f66909f2685}} 
+\index{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index@{RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1WcsSessionResource}{Wcs\+Session\+Resource}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Configuration.\+V1.\+Webinars.\+Sessions.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1WcsSessionWithLocaleCodeModel}{Wcs\+Session\+With\+Locale\+Code\+Model}}}]{wcs\+Session\+With\+Locale\+Code\+Model,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new Session for a given \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} HTTP Method\+: post Endpoint\+: /webinar/configuration/v1/webinars/\{webinar\+Id\}/sessions Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Webinar/\+Configuration/\+V1/\+Webinars/\+Sessions/Index.\+cs\end{DoxyCompactItemize}

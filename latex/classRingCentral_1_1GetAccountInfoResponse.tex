@@ -1,0 +1,215 @@
+\hypertarget{classRingCentral_1_1GetAccountInfoResponse}{}\doxysection{Ring\+Central.\+Get\+Account\+Info\+Response Class Reference}
+\label{classRingCentral_1_1GetAccountInfoResponse}\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+
+
+Collaboration diagram for Ring\+Central.\+Get\+Account\+Info\+Response\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1AccountOperatorInfo}{Account\+Operator\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a9285fc6cd85ec9d8149534688673fa89}{operator\{get}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_abe08d5007c0cd7d7c17fc783b5af518a}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an account Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_ad1cf89e5911ff3264e04db449cf304fd}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of an account Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a60a3badb4566ffe2c8e3daa6d5ffc1c2}{bsid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an account in the billing system \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a16485411fb1815f8f2eff55b50f23c97}{main\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Main phone number of the current account \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_aa450b1e9de55ec20a7262e4576a2ce60}{partner\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Additional account identifier, created by partner application and applied on client side \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ServiceInfo}{Service\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a365d121fa26d4ea66baa830569201490}{service\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a1ebde89f4fef12acc4dfcc4995f5e23b}{setup\+Wizard\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies account configuration wizard state (web service setup) Default\+: Not\+Started Enum\+: Not\+Started, Incomplete, Completed \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SignupInfoResource}{Signup\+Info\+Resource}} \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a5c3d1937c617138efeaa4992dcfaf04d}{signup\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a47c3d7823d61709a7fa9028762169440}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Status of the current account Enum\+: Initial, Confirmed, Unconfirmed, Disabled \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AccountStatusInfo}{Account\+Status\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a1fe0c54790e3b0dc8c5b464a7caa7159}{status\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1AccountRegionalSettings}{Account\+Regional\+Settings}} \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_ae2c9e4af6b5f46671398313188b7bf01}{regional\+Settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a95118dbcc478ad6a53b83d48102b80c7}{federated}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether an account is included into any federation of accounts or not \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_ac3c717bc0ab2a97c1d2226dbeb75c355}{outbound\+Call\+Prefix}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If outbound call prefix is not specified, or set to null (0), then the parameter is not returned; the supported value range is 2-\/9 Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_ae36df66d2ad40565be2deb218844b486}{cfid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Customer facing identifier. Returned for accounts with the turned off PBX features. Equals to main company number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} (without \char`\"{}+\char`\"{} sign)format \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AccountLimits}{Account\+Limits}} \mbox{\hyperlink{classRingCentral_1_1GetAccountInfoResponse_a074fe3328b8a5857a7e9385b4c73ef9e}{limits}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a9285fc6cd85ec9d8149534688673fa89}\label{classRingCentral_1_1GetAccountInfoResponse_a9285fc6cd85ec9d8149534688673fa89}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!operator\lcurly{}get@{operator\lcurly{}get}}
+\index{operator\lcurly{}get@{operator\lcurly{}get}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{operator\lcurly{}get}{operator\{get}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AccountOperatorInfo}{Account\+Operator\+Info}} Ring\+Central.\+Get\+Account\+Info\+Response.\+operator\{get}
+
+
+
+
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a60a3badb4566ffe2c8e3daa6d5ffc1c2}\label{classRingCentral_1_1GetAccountInfoResponse_a60a3badb4566ffe2c8e3daa6d5ffc1c2}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!bsid@{bsid}}
+\index{bsid@{bsid}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{bsid}{bsid}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Account\+Info\+Response.\+bsid\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an account in the billing system 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_ae36df66d2ad40565be2deb218844b486}\label{classRingCentral_1_1GetAccountInfoResponse_ae36df66d2ad40565be2deb218844b486}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!cfid@{cfid}}
+\index{cfid@{cfid}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{cfid}{cfid}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Account\+Info\+Response.\+cfid\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Customer facing identifier. Returned for accounts with the turned off PBX features. Equals to main company number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} (without \char`\"{}+\char`\"{} sign)format 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a95118dbcc478ad6a53b83d48102b80c7}\label{classRingCentral_1_1GetAccountInfoResponse_a95118dbcc478ad6a53b83d48102b80c7}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!federated@{federated}}
+\index{federated@{federated}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{federated}{federated}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Get\+Account\+Info\+Response.\+federated\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether an account is included into any federation of accounts or not 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_abe08d5007c0cd7d7c17fc783b5af518a}\label{classRingCentral_1_1GetAccountInfoResponse_abe08d5007c0cd7d7c17fc783b5af518a}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!id@{id}}
+\index{id@{id}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+Account\+Info\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an account Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a074fe3328b8a5857a7e9385b4c73ef9e}\label{classRingCentral_1_1GetAccountInfoResponse_a074fe3328b8a5857a7e9385b4c73ef9e}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!limits@{limits}}
+\index{limits@{limits}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{limits}{limits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AccountLimits}{Account\+Limits}} Ring\+Central.\+Get\+Account\+Info\+Response.\+limits\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a16485411fb1815f8f2eff55b50f23c97}\label{classRingCentral_1_1GetAccountInfoResponse_a16485411fb1815f8f2eff55b50f23c97}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!mainNumber@{mainNumber}}
+\index{mainNumber@{mainNumber}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{mainNumber}{mainNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Account\+Info\+Response.\+main\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Main phone number of the current account 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_ac3c717bc0ab2a97c1d2226dbeb75c355}\label{classRingCentral_1_1GetAccountInfoResponse_ac3c717bc0ab2a97c1d2226dbeb75c355}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!outboundCallPrefix@{outboundCallPrefix}}
+\index{outboundCallPrefix@{outboundCallPrefix}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{outboundCallPrefix}{outboundCallPrefix}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+Account\+Info\+Response.\+outbound\+Call\+Prefix\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If outbound call prefix is not specified, or set to null (0), then the parameter is not returned; the supported value range is 2-\/9 Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_aa450b1e9de55ec20a7262e4576a2ce60}\label{classRingCentral_1_1GetAccountInfoResponse_aa450b1e9de55ec20a7262e4576a2ce60}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!partnerId@{partnerId}}
+\index{partnerId@{partnerId}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{partnerId}{partnerId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Account\+Info\+Response.\+partner\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Additional account identifier, created by partner application and applied on client side 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_ae2c9e4af6b5f46671398313188b7bf01}\label{classRingCentral_1_1GetAccountInfoResponse_ae2c9e4af6b5f46671398313188b7bf01}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!regionalSettings@{regionalSettings}}
+\index{regionalSettings@{regionalSettings}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{regionalSettings}{regionalSettings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AccountRegionalSettings}{Account\+Regional\+Settings}} Ring\+Central.\+Get\+Account\+Info\+Response.\+regional\+Settings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a365d121fa26d4ea66baa830569201490}\label{classRingCentral_1_1GetAccountInfoResponse_a365d121fa26d4ea66baa830569201490}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!serviceInfo@{serviceInfo}}
+\index{serviceInfo@{serviceInfo}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{serviceInfo}{serviceInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ServiceInfo}{Service\+Info}} Ring\+Central.\+Get\+Account\+Info\+Response.\+service\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a1ebde89f4fef12acc4dfcc4995f5e23b}\label{classRingCentral_1_1GetAccountInfoResponse_a1ebde89f4fef12acc4dfcc4995f5e23b}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!setupWizardState@{setupWizardState}}
+\index{setupWizardState@{setupWizardState}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{setupWizardState}{setupWizardState}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Account\+Info\+Response.\+setup\+Wizard\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies account configuration wizard state (web service setup) Default\+: Not\+Started Enum\+: Not\+Started, Incomplete, Completed 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a5c3d1937c617138efeaa4992dcfaf04d}\label{classRingCentral_1_1GetAccountInfoResponse_a5c3d1937c617138efeaa4992dcfaf04d}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!signupInfo@{signupInfo}}
+\index{signupInfo@{signupInfo}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{signupInfo}{signupInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SignupInfoResource}{Signup\+Info\+Resource}} Ring\+Central.\+Get\+Account\+Info\+Response.\+signup\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a47c3d7823d61709a7fa9028762169440}\label{classRingCentral_1_1GetAccountInfoResponse_a47c3d7823d61709a7fa9028762169440}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!status@{status}}
+\index{status@{status}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Account\+Info\+Response.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Status of the current account Enum\+: Initial, Confirmed, Unconfirmed, Disabled 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_a1fe0c54790e3b0dc8c5b464a7caa7159}\label{classRingCentral_1_1GetAccountInfoResponse_a1fe0c54790e3b0dc8c5b464a7caa7159}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!statusInfo@{statusInfo}}
+\index{statusInfo@{statusInfo}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{statusInfo}{statusInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AccountStatusInfo}{Account\+Status\+Info}} Ring\+Central.\+Get\+Account\+Info\+Response.\+status\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetAccountInfoResponse_ad1cf89e5911ff3264e04db449cf304fd}\label{classRingCentral_1_1GetAccountInfoResponse_ad1cf89e5911ff3264e04db449cf304fd}} 
+\index{RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}!uri@{uri}}
+\index{uri@{uri}!RingCentral.GetAccountInfoResponse@{RingCentral.GetAccountInfoResponse}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Account\+Info\+Response.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of an account Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Get\+Account\+Info\+Response.\+cs\end{DoxyCompactItemize}

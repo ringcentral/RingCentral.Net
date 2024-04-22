@@ -1,0 +1,169 @@
+\hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser}{}\doxysection{Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser Class Reference}
+\label{classRingCentral_1_1PhoneNumberInfoNumberParser}\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_a1d2ffe4e84bb3a2e6c8163804d009fbb}{original\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Original phone number string as it was passed in the request Example\+: (650) 722-\/1621 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1GetCountryInfoNumberParser}{Get\+Country\+Info\+Number\+Parser}} \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_a8404faa1fddd198205e96ab8a55ca351}{country}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_a6dd7b33ebc67048cc8d63177d1877751}{area\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Area code of location. The portion of the \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} number that identifies a specific geographic region/numbering area of the national numbering plan (NANP); that can be summarized as {\ttfamily NPA-\/\+NXX-\/xxxx} and covers Canada, the United States, parts of the Caribbean Sea, and some Atlantic and Pacific islands. See \href{https://en.wikipedia.org/wiki/North_American_Numbering_Plan}{\texttt{ North American Numbering Plan}} for details Example\+: 650 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_a4f63aa9dce488b1dd4b47374cdfc9bc2}{dialable}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dialing format of a phone number \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_acc23fc0a4e2ed83ff1e866620a6171a2}{e164}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_a18cbbf6d4c9022ef3c2db6b96c53b4e9}{formatted\+International}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The formatted phone number string in international format \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_a29a2bb2fbf0bb5a0e9b4d9ef10164a80}{formatted\+National}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The formatted phone number string in domestic format \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_af3ed0dcbbe4de71bc4034a83e5a6ee2f}{special}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if the number is in a special format (for example N11 code)\textquotesingle{} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_ad48bf8cce959dceb53586fe01772ee89}{normalized}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format without plus sign (\textquotesingle{}+\textquotesingle{}) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_a8e8c784a8df8e61e6663d42879322ff8}{toll\+Free}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if the number is toll free \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_ad8a4646d22cab2f215f6d642ce27d169}{sub\+Address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sub-\/\+Address. The portion of the number that identifies a subscriber into the subscriber internal (non-\/public) network. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_afed56f6b85cb3930a552a8dfc72f8103}{subscriber\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subscriber number. The portion of the \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} number that identifies a subscriber in a network or numbering area. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PhoneNumberInfoNumberParser_aba7efdc2b32cb888ab6f21b19e46fd67}{dtmf\+Postfix}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em DTMF (Dual Tone Multi-\/\+Frequency) postfix \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_a6dd7b33ebc67048cc8d63177d1877751}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_a6dd7b33ebc67048cc8d63177d1877751}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!areaCode@{areaCode}}
+\index{areaCode@{areaCode}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{areaCode}{areaCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+area\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Area code of location. The portion of the \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} number that identifies a specific geographic region/numbering area of the national numbering plan (NANP); that can be summarized as {\ttfamily NPA-\/\+NXX-\/xxxx} and covers Canada, the United States, parts of the Caribbean Sea, and some Atlantic and Pacific islands. See \href{https://en.wikipedia.org/wiki/North_American_Numbering_Plan}{\texttt{ North American Numbering Plan}} for details Example\+: 650 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_a8404faa1fddd198205e96ab8a55ca351}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_a8404faa1fddd198205e96ab8a55ca351}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!country@{country}}
+\index{country@{country}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{country}{country}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1GetCountryInfoNumberParser}{Get\+Country\+Info\+Number\+Parser}} Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+country\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_a4f63aa9dce488b1dd4b47374cdfc9bc2}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_a4f63aa9dce488b1dd4b47374cdfc9bc2}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!dialable@{dialable}}
+\index{dialable@{dialable}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{dialable}{dialable}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+dialable\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Dialing format of a phone number 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_aba7efdc2b32cb888ab6f21b19e46fd67}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_aba7efdc2b32cb888ab6f21b19e46fd67}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!dtmfPostfix@{dtmfPostfix}}
+\index{dtmfPostfix@{dtmfPostfix}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{dtmfPostfix}{dtmfPostfix}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+dtmf\+Postfix\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+DTMF (Dual Tone Multi-\/\+Frequency) postfix 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_acc23fc0a4e2ed83ff1e866620a6171a2}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_acc23fc0a4e2ed83ff1e866620a6171a2}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!e164@{e164}}
+\index{e164@{e164}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{e164}{e164}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+e164\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_a18cbbf6d4c9022ef3c2db6b96c53b4e9}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_a18cbbf6d4c9022ef3c2db6b96c53b4e9}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!formattedInternational@{formattedInternational}}
+\index{formattedInternational@{formattedInternational}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{formattedInternational}{formattedInternational}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+formatted\+International\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The formatted phone number string in international format 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_a29a2bb2fbf0bb5a0e9b4d9ef10164a80}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_a29a2bb2fbf0bb5a0e9b4d9ef10164a80}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!formattedNational@{formattedNational}}
+\index{formattedNational@{formattedNational}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{formattedNational}{formattedNational}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+formatted\+National\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The formatted phone number string in domestic format 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_ad48bf8cce959dceb53586fe01772ee89}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_ad48bf8cce959dceb53586fe01772ee89}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!normalized@{normalized}}
+\index{normalized@{normalized}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{normalized}{normalized}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+normalized\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format without plus sign (\textquotesingle{}+\textquotesingle{}) 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_a1d2ffe4e84bb3a2e6c8163804d009fbb}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_a1d2ffe4e84bb3a2e6c8163804d009fbb}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!originalString@{originalString}}
+\index{originalString@{originalString}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{originalString}{originalString}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+original\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Original phone number string as it was passed in the request Example\+: (650) 722-\/1621 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_af3ed0dcbbe4de71bc4034a83e5a6ee2f}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_af3ed0dcbbe4de71bc4034a83e5a6ee2f}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!special@{special}}
+\index{special@{special}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{special}{special}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+special\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if the number is in a special format (for example N11 code)\textquotesingle{} 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_ad8a4646d22cab2f215f6d642ce27d169}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_ad8a4646d22cab2f215f6d642ce27d169}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!subAddress@{subAddress}}
+\index{subAddress@{subAddress}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{subAddress}{subAddress}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+sub\+Address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sub-\/\+Address. The portion of the number that identifies a subscriber into the subscriber internal (non-\/public) network. 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_afed56f6b85cb3930a552a8dfc72f8103}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_afed56f6b85cb3930a552a8dfc72f8103}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!subscriberNumber@{subscriberNumber}}
+\index{subscriberNumber@{subscriberNumber}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{subscriberNumber}{subscriberNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+subscriber\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subscriber number. The portion of the \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} number that identifies a subscriber in a network or numbering area. 
+
+\mbox{\Hypertarget{classRingCentral_1_1PhoneNumberInfoNumberParser_a8e8c784a8df8e61e6663d42879322ff8}\label{classRingCentral_1_1PhoneNumberInfoNumberParser_a8e8c784a8df8e61e6663d42879322ff8}} 
+\index{RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}!tollFree@{tollFree}}
+\index{tollFree@{tollFree}!RingCentral.PhoneNumberInfoNumberParser@{RingCentral.PhoneNumberInfoNumberParser}}
+\doxysubsubsection{\texorpdfstring{tollFree}{tollFree}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Phone\+Number\+Info\+Number\+Parser.\+toll\+Free\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if the number is toll free 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Phone\+Number\+Info\+Number\+Parser.\+cs\end{DoxyCompactItemize}

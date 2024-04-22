@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters}{}\doxysection{Ring\+Central.\+Rcw\+History\+List\+All\+Company\+Sessions\+Parameters Class Reference}
+\label{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters}\index{RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}}
+
+
+Query parameters for operation rcw\+History\+List\+All\+Company\+Sessions  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a947d0391774fbbab9a9e1b0d843af720}{host\+User\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of the user who hosts a webinar (if omitted, webinars hosted by all company users will be returned) Example\+: 77777777 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_abb2244601566585f20fa7c390f12af63}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter to return only webinar sessions in certain status. Multiple values are supported. Example\+: Active,Finished Enum\+: Scheduled, Active, Finished \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_addd5d80591eca4e2a110fc378b1fbf52}{end\+Time\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The beginning of the time window by \textquotesingle{}end\+Time\textquotesingle{} . Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a0378f227bb7b6250b10bfd65db0c83e6}{end\+Time\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end of the time window by \textquotesingle{}end\+Time\textquotesingle{} . Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a70f83d9cdce2158bfcd3f71a125e08bb}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_af97c8dc09f30ed05a6044b21781275e3}{page\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation rcw\+History\+List\+All\+Company\+Sessions 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_addd5d80591eca4e2a110fc378b1fbf52}\label{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_addd5d80591eca4e2a110fc378b1fbf52}} 
+\index{RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}!endTimeFrom@{endTimeFrom}}
+\index{endTimeFrom@{endTimeFrom}!RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}}
+\doxysubsubsection{\texorpdfstring{endTimeFrom}{endTimeFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+History\+List\+All\+Company\+Sessions\+Parameters.\+end\+Time\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The beginning of the time window by \textquotesingle{}end\+Time\textquotesingle{} . Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a0378f227bb7b6250b10bfd65db0c83e6}\label{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a0378f227bb7b6250b10bfd65db0c83e6}} 
+\index{RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}!endTimeTo@{endTimeTo}}
+\index{endTimeTo@{endTimeTo}!RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}}
+\doxysubsubsection{\texorpdfstring{endTimeTo}{endTimeTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+History\+List\+All\+Company\+Sessions\+Parameters.\+end\+Time\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end of the time window by \textquotesingle{}end\+Time\textquotesingle{} . Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a947d0391774fbbab9a9e1b0d843af720}\label{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a947d0391774fbbab9a9e1b0d843af720}} 
+\index{RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}!hostUserId@{hostUserId}}
+\index{hostUserId@{hostUserId}!RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}}
+\doxysubsubsection{\texorpdfstring{hostUserId}{hostUserId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Rcw\+History\+List\+All\+Company\+Sessions\+Parameters.\+host\+User\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of the user who hosts a webinar (if omitted, webinars hosted by all company users will be returned) Example\+: 77777777 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_af97c8dc09f30ed05a6044b21781275e3}\label{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_af97c8dc09f30ed05a6044b21781275e3}} 
+\index{RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}!pageToken@{pageToken}}
+\index{pageToken@{pageToken}!RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}}
+\doxysubsubsection{\texorpdfstring{pageToken}{pageToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Rcw\+History\+List\+All\+Company\+Sessions\+Parameters.\+page\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a70f83d9cdce2158bfcd3f71a125e08bb}\label{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_a70f83d9cdce2158bfcd3f71a125e08bb}} 
+\index{RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Rcw\+History\+List\+All\+Company\+Sessions\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_abb2244601566585f20fa7c390f12af63}\label{classRingCentral_1_1RcwHistoryListAllCompanySessionsParameters_abb2244601566585f20fa7c390f12af63}} 
+\index{RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}!status@{status}}
+\index{status@{status}!RingCentral.RcwHistoryListAllCompanySessionsParameters@{RingCentral.RcwHistoryListAllCompanySessionsParameters}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Rcw\+History\+List\+All\+Company\+Sessions\+Parameters.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter to return only webinar sessions in certain status. Multiple values are supported. Example\+: Active,Finished Enum\+: Scheduled, Active, Finished 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Rcw\+History\+List\+All\+Company\+Sessions\+Parameters.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Sites.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index}\index{RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Sites.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a191fd5f5026929855ddd639dd83f218b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a191fd5f5026929855ddd639dd83f218b}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1BulkAssign_1_1Index}{Bulk\+Assign.\+Index}} {\bfseries Bulk\+Assign} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a5651c38c75c2e65a70c68865cb3d4236}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a5651c38c75c2e65a70c68865cb3d4236}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string site\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a9cb70f5292f2a06ef131d161ceb0009c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a9cb70f5292f2a06ef131d161ceb0009c}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SitesList}{Sites\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_ac67bbfdb9856661b465368cf9a0b38fd}{List}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of sites for the specified account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SiteInfo}{Site\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_ab97a120b490e91e9ff06d78e9027a89e}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateSiteRequest}{Create\+Site\+Request}} create\+Site\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a site for the specified account. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SiteInfo}{Site\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a4806b4c7430add581dfca60297ea9b55}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a site by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites/\{site\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SiteInfo}{Site\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a4bdfe422bca2231da4723315424015db}{Put}} (\mbox{\hyperlink{classRingCentral_1_1SiteUpdateRequest}{Site\+Update\+Request}} site\+Update\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a site specified in path. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites/\{site\+Id\} Rate Limit Group\+: Light App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites}{Sites}} \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a0c4c5368e02e153bcaf23f533c8d479b}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a site specified in path. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites/\{site\+Id\} Rate Limit Group\+: Light App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites}{Sites}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a24f9b49f6868427def8ea2743e2ac12a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a24f9b49f6868427def8ea2743e2ac12a}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Ivr_1_1Index}{Ivr.\+Index}} {\bfseries Ivr} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a8553af78b1fbfd67086654b7c3213096}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a8553af78b1fbfd67086654b7c3213096}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Members_1_1Index}{Members.\+Index}} {\bfseries Members} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_aad99ce6f077f5afcc9c72d45d1cdce97}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_aad99ce6f077f5afcc9c72d45d1cdce97}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_abf316e02120de85a46b80927d8f0f2a2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_abf316e02120de85a46b80927d8f0f2a2}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a1f100371b55653c6b67232cd41ca60bc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a1f100371b55653c6b67232cd41ca60bc}} 
+string {\bfseries site\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a0c4c5368e02e153bcaf23f533c8d479b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a0c4c5368e02e153bcaf23f533c8d479b}} 
+\index{RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Sites.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a site specified in path. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites/\{site\+Id\} Rate Limit Group\+: Light App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites}{Sites}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a4806b4c7430add581dfca60297ea9b55}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a4806b4c7430add581dfca60297ea9b55}} 
+\index{RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SiteInfo}{Site\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Sites.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a site by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites/\{site\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_ac67bbfdb9856661b465368cf9a0b38fd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_ac67bbfdb9856661b465368cf9a0b38fd}} 
+\index{RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SitesList}{Sites\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Sites.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of sites for the specified account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_ab97a120b490e91e9ff06d78e9027a89e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_ab97a120b490e91e9ff06d78e9027a89e}} 
+\index{RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SiteInfo}{Site\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Sites.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateSiteRequest}{Create\+Site\+Request}}}]{create\+Site\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a site for the specified account. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a4bdfe422bca2231da4723315424015db}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites_1_1Index_a4bdfe422bca2231da4723315424015db}} 
+\index{RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Sites.Index@{RingCentral.Paths.Restapi.Account.Sites.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SiteInfo}{Site\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Sites.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1SiteUpdateRequest}{Site\+Update\+Request}}}]{site\+Update\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a site specified in path. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/sites/\{site\+Id\} Rate Limit Group\+: Light App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Sites}{Sites}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Sites/\+Bulk\+Assign/Index.\+cs\end{DoxyCompactItemize}

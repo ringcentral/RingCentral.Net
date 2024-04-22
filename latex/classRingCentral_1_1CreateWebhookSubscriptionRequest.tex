@@ -1,0 +1,64 @@
+\hypertarget{classRingCentral_1_1CreateWebhookSubscriptionRequest}{}\doxysection{Ring\+Central.\+Create\+Webhook\+Subscription\+Request Class Reference}
+\label{classRingCentral_1_1CreateWebhookSubscriptionRequest}\index{RingCentral.CreateWebhookSubscriptionRequest@{RingCentral.CreateWebhookSubscriptionRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateWebhookSubscriptionRequest_a1d71f1d1f2f9db9c3bceb51119bd55e7}{event\+Filters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of event filters corresponding to events the user is subscribed to Required \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1CreateWebhookSubscriptionRequest_aff2ac9af01b68f959b02d04a6e918153}{expires\+In}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subscription lifetime in seconds. The maximum subscription lifetime depends upon the specified {\ttfamily transport\+Type}\+: \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1WebhookDeliveryModeRequest}{Webhook\+Delivery\+Mode\+Request}} \mbox{\hyperlink{classRingCentral_1_1CreateWebhookSubscriptionRequest_afdf3dd22a9621112cd8c5bf1d7609bd9}{delivery\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CreateWebhookSubscriptionRequest_afdf3dd22a9621112cd8c5bf1d7609bd9}\label{classRingCentral_1_1CreateWebhookSubscriptionRequest_afdf3dd22a9621112cd8c5bf1d7609bd9}} 
+\index{RingCentral.CreateWebhookSubscriptionRequest@{RingCentral.CreateWebhookSubscriptionRequest}!deliveryMode@{deliveryMode}}
+\index{deliveryMode@{deliveryMode}!RingCentral.CreateWebhookSubscriptionRequest@{RingCentral.CreateWebhookSubscriptionRequest}}
+\doxysubsubsection{\texorpdfstring{deliveryMode}{deliveryMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1WebhookDeliveryModeRequest}{Webhook\+Delivery\+Mode\+Request}} Ring\+Central.\+Create\+Webhook\+Subscription\+Request.\+delivery\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateWebhookSubscriptionRequest_a1d71f1d1f2f9db9c3bceb51119bd55e7}\label{classRingCentral_1_1CreateWebhookSubscriptionRequest_a1d71f1d1f2f9db9c3bceb51119bd55e7}} 
+\index{RingCentral.CreateWebhookSubscriptionRequest@{RingCentral.CreateWebhookSubscriptionRequest}!eventFilters@{eventFilters}}
+\index{eventFilters@{eventFilters}!RingCentral.CreateWebhookSubscriptionRequest@{RingCentral.CreateWebhookSubscriptionRequest}}
+\doxysubsubsection{\texorpdfstring{eventFilters}{eventFilters}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Webhook\+Subscription\+Request.\+event\+Filters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of event filters corresponding to events the user is subscribed to Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateWebhookSubscriptionRequest_aff2ac9af01b68f959b02d04a6e918153}\label{classRingCentral_1_1CreateWebhookSubscriptionRequest_aff2ac9af01b68f959b02d04a6e918153}} 
+\index{RingCentral.CreateWebhookSubscriptionRequest@{RingCentral.CreateWebhookSubscriptionRequest}!expiresIn@{expiresIn}}
+\index{expiresIn@{expiresIn}!RingCentral.CreateWebhookSubscriptionRequest@{RingCentral.CreateWebhookSubscriptionRequest}}
+\doxysubsubsection{\texorpdfstring{expiresIn}{expiresIn}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Create\+Webhook\+Subscription\+Request.\+expires\+In\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subscription lifetime in seconds. The maximum subscription lifetime depends upon the specified {\ttfamily transport\+Type}\+: 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transport type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Maximum permitted lifetime    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transport type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Maximum permitted lifetime    }\\\cline{1-2}
+\endhead
+{\ttfamily Web\+Hook}   &315360000 seconds (10 years)    \\\cline{1-2}
+{\ttfamily RC/\+APNS}, {\ttfamily RC/\+GSM}   &7776000 seconds (90 days)    \\\cline{1-2}
+{\ttfamily Pub\+Nub}   &900 seconds (15 minutes)    \\\cline{1-2}
+{\ttfamily Web\+Socket}   &n/a (the parameter is ignored)   \\\cline{1-2}
+\end{longtabu}
+Minimum\+: 1 Format\+: int32 Example\+: 1200
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Create\+Webhook\+Subscription\+Request.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Webinar.\+History.\+V1.\+Recordings.\+Download.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index}\index{RingCentral.Paths.Webinar.History.V1.Recordings.Download.Index@{RingCentral.Paths.Webinar.History.V1.Recordings.Download.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Webinar.\+History.\+V1.\+Recordings.\+Download.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_a0dea1e2246a14f881cb8ba304ec7bdb6}\label{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_a0dea1e2246a14f881cb8ba304ec7bdb6}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Index}{Recordings.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_af39a606f6fed25147e7871dac332ef07}\label{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_af39a606f6fed25147e7871dac332ef07}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RecordingDownloadModel}{Recording\+Download\+Model}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_ad9c91e133886f72cce3f799e6a8e4d25}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RcwHistoryGetRecordingDownloadParameters}{Rcw\+History\+Get\+Recording\+Download\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the webinar recording download link (both \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} host\textquotesingle{}s and admin interface). If called by a webinar host, the API returns error (403) if recording downloading is prohibited by company settings. The admin user who has \char`\"{}\+Webinar\+Settings\char`\"{} permission should be able to download recording regardless of current company settings. HTTP Method\+: get Endpoint\+: /webinar/history/v1/recordings/\{recording\+Id\}/download Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_a3f2a5af752eae086351bfd3cefd2c347}\label{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_a3f2a5af752eae086351bfd3cefd2c347}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Index}{Recordings.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_aec99c3ff4404d1b60460a3fb08a8b5a7}\label{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_aec99c3ff4404d1b60460a3fb08a8b5a7}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_ad9c91e133886f72cce3f799e6a8e4d25}\label{classRingCentral_1_1Paths_1_1Webinar_1_1History_1_1V1_1_1Recordings_1_1Download_1_1Index_ad9c91e133886f72cce3f799e6a8e4d25}} 
+\index{RingCentral.Paths.Webinar.History.V1.Recordings.Download.Index@{RingCentral.Paths.Webinar.History.V1.Recordings.Download.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Webinar.History.V1.Recordings.Download.Index@{RingCentral.Paths.Webinar.History.V1.Recordings.Download.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RecordingDownloadModel}{Recording\+Download\+Model}}$>$ Ring\+Central.\+Paths.\+Webinar.\+History.\+V1.\+Recordings.\+Download.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RcwHistoryGetRecordingDownloadParameters}{Rcw\+History\+Get\+Recording\+Download\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the webinar recording download link (both \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar}{Webinar}} host\textquotesingle{}s and admin interface). If called by a webinar host, the API returns error (403) if recording downloading is prohibited by company settings. The admin user who has \char`\"{}\+Webinar\+Settings\char`\"{} permission should be able to download recording regardless of current company settings. HTTP Method\+: get Endpoint\+: /webinar/history/v1/recordings/\{recording\+Id\}/download Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Webinar/\+History/\+V1/\+Recordings/\+Download/Index.\+cs\end{DoxyCompactItemize}

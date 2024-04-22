@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+State.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index}\index{RingCentral.Paths.Restapi.Dictionary.State.Index@{RingCentral.Paths.Restapi.Dictionary.State.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+State.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a676cbdf7f1a903bde7d40bd9c4df1278}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a676cbdf7f1a903bde7d40bd9c4df1278}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Index}{Dictionary.\+Index}} parent, string state\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a9ed54a5cf08628deda2fefa4fa952f2a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a9ed54a5cf08628deda2fefa4fa952f2a}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetStateListResponse}{Get\+State\+List\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_aa2dc0e8599dd365ca8e8046ed52d8677}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListStatesParameters}{List\+States\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns all states of a certain country. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/state Rate Limit Group\+: Light \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetStateInfoResponse}{Get\+State\+Info\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a489892cfcaf1d323a021adca639cc947}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns information on a specific state by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/state/\{state\+Id\} Rate Limit Group\+: Light \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_ad8a31426cc473b25b111415d53337efc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_ad8a31426cc473b25b111415d53337efc}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Index}{Dictionary.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a28754325cc510cb9c7024fcd812d7abf}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a28754325cc510cb9c7024fcd812d7abf}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a9c834efb18413416b73c8fdc74808456}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a9c834efb18413416b73c8fdc74808456}} 
+string {\bfseries state\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a489892cfcaf1d323a021adca639cc947}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_a489892cfcaf1d323a021adca639cc947}} 
+\index{RingCentral.Paths.Restapi.Dictionary.State.Index@{RingCentral.Paths.Restapi.Dictionary.State.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Dictionary.State.Index@{RingCentral.Paths.Restapi.Dictionary.State.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetStateInfoResponse}{Get\+State\+Info\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+State.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns information on a specific state by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/state/\{state\+Id\} Rate Limit Group\+: Light 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_aa2dc0e8599dd365ca8e8046ed52d8677}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1State_1_1Index_aa2dc0e8599dd365ca8e8046ed52d8677}} 
+\index{RingCentral.Paths.Restapi.Dictionary.State.Index@{RingCentral.Paths.Restapi.Dictionary.State.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Dictionary.State.Index@{RingCentral.Paths.Restapi.Dictionary.State.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetStateListResponse}{Get\+State\+List\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+State.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListStatesParameters}{List\+States\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns all states of a certain country. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/state Rate Limit Group\+: Light 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Dictionary/\+State/Index.\+cs\end{DoxyCompactItemize}

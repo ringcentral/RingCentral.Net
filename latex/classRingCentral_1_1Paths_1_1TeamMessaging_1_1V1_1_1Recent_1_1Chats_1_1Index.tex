@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Recent.\+Chats.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.Recent.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Recent.Chats.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Recent.\+Chats.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a33d9057ff04fdca0659df6391ec4cc05}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a33d9057ff04fdca0659df6391ec4cc05}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Index}{Recent.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_adc89727d909e756a7d5b63899174894e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_adc89727d909e756a7d5b63899174894e}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMChatListWithoutNavigation}{TMChat\+List\+Without\+Navigation}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a9c9692b6a49323e85b0e029ddd869f29}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ListRecentChatsNewParameters}{List\+Recent\+Chats\+New\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns recent chats where the user is a member. All records in response are sorted by the {\ttfamily last\+Modified\+Time} in descending order (the latest changed chat is displayed first on page) HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/recent/chats Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a7ca56cafdbd5cae719cad25594a29c21}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a7ca56cafdbd5cae719cad25594a29c21}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Index}{Recent.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a59c2500ef486bdef4928269d952946a3}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a59c2500ef486bdef4928269d952946a3}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a9c9692b6a49323e85b0e029ddd869f29}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Recent_1_1Chats_1_1Index_a9c9692b6a49323e85b0e029ddd869f29}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Recent.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Recent.Chats.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.Recent.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Recent.Chats.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMChatListWithoutNavigation}{TMChat\+List\+Without\+Navigation}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Recent.\+Chats.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListRecentChatsNewParameters}{List\+Recent\+Chats\+New\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns recent chats where the user is a member. All records in response are sorted by the {\ttfamily last\+Modified\+Time} in descending order (the latest changed chat is displayed first on page) HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/recent/chats Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Recent/\+Chats/Index.\+cs\end{DoxyCompactItemize}

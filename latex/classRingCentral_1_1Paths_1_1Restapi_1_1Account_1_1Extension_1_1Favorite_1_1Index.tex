@@ -1,0 +1,56 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Favorite.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index@{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Favorite.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_a641b2668e59d29614e21da7f7c997f3b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_a641b2668e59d29614e21da7f7c997f3b}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_aab33c7c993c832d444e60e8f9b5750a4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_aab33c7c993c832d444e60e8f9b5750a4}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1FavoriteContactList}{Favorite\+Contact\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_a925cf909831a362b477af52dd984f4c6}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of favorite contacts of the current extension. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite}{Favorite}} contacts include both company contacts (extensions) and personal contacts (address book records). HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/favorite Rate Limit Group\+: Light App Permission\+: Read\+Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Personal\+Contacts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1FavoriteContactList}{Favorite\+Contact\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_ada9c87489f6296f531ee0f20360cb0e7}{Put}} (\mbox{\hyperlink{classRingCentral_1_1FavoriteCollection}{Favorite\+Collection}} favorite\+Collection, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the list of favorite contacts of the current extension. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite}{Favorite}} contacts include both company contacts (extensions) and personal contacts (address book records).$\ast$$\ast$\+Please note$\ast$$\ast$\+: Currently personal address book size is limited to 10 000 contacts. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/favorite Rate Limit Group\+: Medium App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_afc7fdd32abd86c66a5a0d55300e6acfc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_afc7fdd32abd86c66a5a0d55300e6acfc}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_aeddfa2822a48081be7a6bb70ef2d8a9b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_aeddfa2822a48081be7a6bb70ef2d8a9b}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_a925cf909831a362b477af52dd984f4c6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_a925cf909831a362b477af52dd984f4c6}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index@{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.Favorite.Index@{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1FavoriteContactList}{Favorite\+Contact\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Favorite.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of favorite contacts of the current extension. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite}{Favorite}} contacts include both company contacts (extensions) and personal contacts (address book records). HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/favorite Rate Limit Group\+: Light App Permission\+: Read\+Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Personal\+Contacts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_ada9c87489f6296f531ee0f20360cb0e7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite_1_1Index_ada9c87489f6296f531ee0f20360cb0e7}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index@{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.Favorite.Index@{RingCentral.Paths.Restapi.Account.Extension.Favorite.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1FavoriteContactList}{Favorite\+Contact\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Favorite.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1FavoriteCollection}{Favorite\+Collection}}}]{favorite\+Collection,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the list of favorite contacts of the current extension. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Favorite}{Favorite}} contacts include both company contacts (extensions) and personal contacts (address book records).$\ast$$\ast$\+Please note$\ast$$\ast$\+: Currently personal address book size is limited to 10 000 contacts. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/favorite Rate Limit Group\+: Medium App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Favorite/Index.\+cs\end{DoxyCompactItemize}

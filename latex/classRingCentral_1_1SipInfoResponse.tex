@@ -1,0 +1,169 @@
+\hypertarget{classRingCentral_1_1SipInfoResponse}{}\doxysection{Ring\+Central.\+Sip\+Info\+Response Class Reference}
+\label{classRingCentral_1_1SipInfoResponse}\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_ad3d0d8cf3732d85454c0435c7c06986b}{username}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1User}{User}} credentials \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a5a3e093339b7329ff912fb69be775ea0}{password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1User}{User}} password. Not returned if Sip\+Digest is not enabled Format\+: password \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a85459f8e2869d249a5eae4a721f54b1e}{authorization\+Types}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Supported authorization types and their priority for clients Enum\+: Sip\+Digest, Bearer\+Token \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a05783c1158f731c53397017f878949ab}{authorization\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier for SIP authorization \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a0aba5d16f9cb61d66655de4a6943dd5c}{domain}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SIP domain \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a1c221596ebbc6ec997facaccd14afa13}{outbound\+Proxy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SIP outbound proxy server address (in the format $<$host\+:port$>$) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a4f9b33a94dc7407c64b7c961234dbcf1}{outbound\+Proxy\+IPv6}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SIP outbound IPv6 proxy server address (in the format $<$host\+:port$>$) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a5871c20bdc93c67eb0942c01bd6b7886}{outbound\+Proxy\+Backup}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SIP outbound proxy server backup address (in the format $<$host\+:port$>$) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a6413a4ff37facd6583d47bc4e9534a75}{outbound\+Proxy\+IPv6\+Backup}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SIP outbound IPv6 proxy server backup address (in the format $<$host\+:port$>$) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a97bd540b11ac658ed6fdd0adcc0fdd78}{transport}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Preferred transport. SIP info will be returned for this transport if supported Enum\+: UDP, TCP, TLS, WSS \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a8425b4570f873c079d617eea68188216}{certificate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For TLS transport only, Base64 encoded certificate \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_acc461d62d8b834596eee7db50d37c8b8}{switch\+Back\+Interval}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy after the next SIP-\/provision call. Format\+: int32 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SipInfoResponse_a817d5f3caf7d37ab0a82e8fa6d526028}{stun\+Servers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of stun servers in the format $<$host\+:port$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a05783c1158f731c53397017f878949ab}\label{classRingCentral_1_1SipInfoResponse_a05783c1158f731c53397017f878949ab}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!authorizationId@{authorizationId}}
+\index{authorizationId@{authorizationId}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{authorizationId}{authorizationId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+authorization\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier for SIP authorization 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a85459f8e2869d249a5eae4a721f54b1e}\label{classRingCentral_1_1SipInfoResponse_a85459f8e2869d249a5eae4a721f54b1e}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!authorizationTypes@{authorizationTypes}}
+\index{authorizationTypes@{authorizationTypes}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{authorizationTypes}{authorizationTypes}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Sip\+Info\+Response.\+authorization\+Types\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Supported authorization types and their priority for clients Enum\+: Sip\+Digest, Bearer\+Token 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a8425b4570f873c079d617eea68188216}\label{classRingCentral_1_1SipInfoResponse_a8425b4570f873c079d617eea68188216}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!certificate@{certificate}}
+\index{certificate@{certificate}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{certificate}{certificate}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+certificate\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For TLS transport only, Base64 encoded certificate 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a0aba5d16f9cb61d66655de4a6943dd5c}\label{classRingCentral_1_1SipInfoResponse_a0aba5d16f9cb61d66655de4a6943dd5c}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!domain@{domain}}
+\index{domain@{domain}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{domain}{domain}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+domain\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SIP domain 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a1c221596ebbc6ec997facaccd14afa13}\label{classRingCentral_1_1SipInfoResponse_a1c221596ebbc6ec997facaccd14afa13}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!outboundProxy@{outboundProxy}}
+\index{outboundProxy@{outboundProxy}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{outboundProxy}{outboundProxy}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+outbound\+Proxy\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SIP outbound proxy server address (in the format $<$host\+:port$>$) 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a5871c20bdc93c67eb0942c01bd6b7886}\label{classRingCentral_1_1SipInfoResponse_a5871c20bdc93c67eb0942c01bd6b7886}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!outboundProxyBackup@{outboundProxyBackup}}
+\index{outboundProxyBackup@{outboundProxyBackup}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{outboundProxyBackup}{outboundProxyBackup}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+outbound\+Proxy\+Backup\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SIP outbound proxy server backup address (in the format $<$host\+:port$>$) 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a4f9b33a94dc7407c64b7c961234dbcf1}\label{classRingCentral_1_1SipInfoResponse_a4f9b33a94dc7407c64b7c961234dbcf1}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!outboundProxyIPv6@{outboundProxyIPv6}}
+\index{outboundProxyIPv6@{outboundProxyIPv6}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{outboundProxyIPv6}{outboundProxyIPv6}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+outbound\+Proxy\+IPv6\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SIP outbound IPv6 proxy server address (in the format $<$host\+:port$>$) 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a6413a4ff37facd6583d47bc4e9534a75}\label{classRingCentral_1_1SipInfoResponse_a6413a4ff37facd6583d47bc4e9534a75}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!outboundProxyIPv6Backup@{outboundProxyIPv6Backup}}
+\index{outboundProxyIPv6Backup@{outboundProxyIPv6Backup}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{outboundProxyIPv6Backup}{outboundProxyIPv6Backup}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+outbound\+Proxy\+IPv6\+Backup\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SIP outbound IPv6 proxy server backup address (in the format $<$host\+:port$>$) 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a5a3e093339b7329ff912fb69be775ea0}\label{classRingCentral_1_1SipInfoResponse_a5a3e093339b7329ff912fb69be775ea0}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!password@{password}}
+\index{password@{password}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1User}{User}} password. Not returned if Sip\+Digest is not enabled Format\+: password 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a817d5f3caf7d37ab0a82e8fa6d526028}\label{classRingCentral_1_1SipInfoResponse_a817d5f3caf7d37ab0a82e8fa6d526028}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!stunServers@{stunServers}}
+\index{stunServers@{stunServers}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{stunServers}{stunServers}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Sip\+Info\+Response.\+stun\+Servers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of stun servers in the format $<$host\+:port$>$ 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_acc461d62d8b834596eee7db50d37c8b8}\label{classRingCentral_1_1SipInfoResponse_acc461d62d8b834596eee7db50d37c8b8}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!switchBackInterval@{switchBackInterval}}
+\index{switchBackInterval@{switchBackInterval}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{switchBackInterval}{switchBackInterval}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Sip\+Info\+Response.\+switch\+Back\+Interval\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy after the next SIP-\/provision call. Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_a97bd540b11ac658ed6fdd0adcc0fdd78}\label{classRingCentral_1_1SipInfoResponse_a97bd540b11ac658ed6fdd0adcc0fdd78}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!transport@{transport}}
+\index{transport@{transport}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{transport}{transport}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+transport\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Preferred transport. SIP info will be returned for this transport if supported Enum\+: UDP, TCP, TLS, WSS 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipInfoResponse_ad3d0d8cf3732d85454c0435c7c06986b}\label{classRingCentral_1_1SipInfoResponse_ad3d0d8cf3732d85454c0435c7c06986b}} 
+\index{RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}!username@{username}}
+\index{username@{username}!RingCentral.SipInfoResponse@{RingCentral.SipInfoResponse}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Info\+Response.\+username\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1User}{User}} credentials 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/SIPInfo\+Response.\+cs\end{DoxyCompactItemize}

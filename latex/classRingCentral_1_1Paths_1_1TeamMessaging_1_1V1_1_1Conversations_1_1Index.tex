@@ -1,0 +1,71 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Conversations.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.Conversations.Index@{RingCentral.Paths.TeamMessaging.V1.Conversations.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Conversations.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_af15337327f94b469aa2cec8c473fb394}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_af15337327f94b469aa2cec8c473fb394}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} parent, string chat\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_ab917806b9ced3649caef9f4918623fc4}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_ab917806b9ced3649caef9f4918623fc4}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMConversationList}{TMConversation\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a6ce3084c4378f03f47526383730fdd5f}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListGlipConversationsNewParameters}{List\+Glip\+Conversations\+New\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of conversations where the user is a member. All records in response are sorted by creation time of a conversation in ascending order. Conversation is a chat of the {\itshape Group} type. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/conversations Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMConversationInfo}{TMConversation\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a42a06b3a207527d004ad135405046a5b}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateConversationRequest}{Create\+Conversation\+Request}} create\+Conversation\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new conversation or opens the existing one. If the conversation already exists, then its ID will be returned in response. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of \textquotesingle{}Group\textquotesingle{} type. If you add a person to the existing conversation (group), it creates a whole new conversation. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/conversations Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMConversationInfo}{TMConversation\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a91cd52623027ad78a2969e2404c0f004}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns information about the specified conversation, including the list of conversation participants. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of \textquotesingle{}Group\textquotesingle{} type. If you add a person to the existing conversation, it creates a whole new conversation. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/conversations/\{chat\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a7ac4200d398986dc59d4d3fb16dd262d}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a7ac4200d398986dc59d4d3fb16dd262d}} 
+string {\bfseries chat\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_ad5169b52abe34f3dab25aec24a44f900}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_ad5169b52abe34f3dab25aec24a44f900}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a48195e242fb1c87c1e7a268b908a13c4}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a48195e242fb1c87c1e7a268b908a13c4}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a91cd52623027ad78a2969e2404c0f004}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a91cd52623027ad78a2969e2404c0f004}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Conversations.Index@{RingCentral.Paths.TeamMessaging.V1.Conversations.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.Conversations.Index@{RingCentral.Paths.TeamMessaging.V1.Conversations.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMConversationInfo}{TMConversation\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Conversations.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns information about the specified conversation, including the list of conversation participants. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of \textquotesingle{}Group\textquotesingle{} type. If you add a person to the existing conversation, it creates a whole new conversation. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/conversations/\{chat\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a6ce3084c4378f03f47526383730fdd5f}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a6ce3084c4378f03f47526383730fdd5f}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Conversations.Index@{RingCentral.Paths.TeamMessaging.V1.Conversations.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.TeamMessaging.V1.Conversations.Index@{RingCentral.Paths.TeamMessaging.V1.Conversations.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMConversationList}{TMConversation\+List}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Conversations.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListGlipConversationsNewParameters}{List\+Glip\+Conversations\+New\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of conversations where the user is a member. All records in response are sorted by creation time of a conversation in ascending order. Conversation is a chat of the {\itshape Group} type. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/conversations Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a42a06b3a207527d004ad135405046a5b}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Conversations_1_1Index_a42a06b3a207527d004ad135405046a5b}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Conversations.Index@{RingCentral.Paths.TeamMessaging.V1.Conversations.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.TeamMessaging.V1.Conversations.Index@{RingCentral.Paths.TeamMessaging.V1.Conversations.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMConversationInfo}{TMConversation\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Conversations.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateConversationRequest}{Create\+Conversation\+Request}}}]{create\+Conversation\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new conversation or opens the existing one. If the conversation already exists, then its ID will be returned in response. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of \textquotesingle{}Group\textquotesingle{} type. If you add a person to the existing conversation (group), it creates a whole new conversation. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/conversations Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Conversations/Index.\+cs\end{DoxyCompactItemize}

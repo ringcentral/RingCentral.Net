@@ -1,0 +1,167 @@
+\hypertarget{classRingCentral_1_1MessageListMessageResponse}{}\doxysection{Ring\+Central.\+Message\+List\+Message\+Response Class Reference}
+\label{classRingCentral_1_1MessageListMessageResponse}\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+
+
+The short detail of the message in the get batch response  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a99a30dfa39d51d8772b17866c22631e0}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Id of the message Format\+: int64 Example\+: 1234 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_aae5261d522b8f8674f2fb9af76c6fa26}{batch\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a batch the message was submitted in Example\+: 12345 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a3108ad6d58c70bac308d4ff57aaef2d9}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format from which the message is sent Example\+: +15551234567 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a456cecf6ce48c6934d7a6910e299deea}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format to which a message is sent Example\+: +15551234567 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a723da5224ca5daf30e6a377c57760781}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time at which the message was created Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a2286ce79c097d50a790a7fc16f9ffac9}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time at which the messages was last updated Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a140dc14b3dad6f615721f582176b91fb}{message\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current status of a message Example\+: Queued Enum\+: Queued, Delivered, Sent, Sending\+Failed, Delivery\+Failed \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a9b57e932f4ee43a160cabe3a1de78de0}{segment\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of segments of a message Format\+: int32 Example\+: 1 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a9416cda4578572a7156b6aef8eb339ea}{text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text of a message. Returned if the {\ttfamily view} parameter is set to \textquotesingle{}Detailed\textquotesingle{} \end{DoxyCompactList}\item 
+decimal? \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a668938f97fc1f2ebb14d0a0ecf02908a}{cost}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cost of a message Format\+: double Example\+: 0.\+007 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_abdd20890053a08a744669c0427e3c578}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Direction of the SMS message Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageListMessageResponse_a8315843c9984f51b43529639abea5faa}{error\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The RC error code of the message sending failure reason Example\+: SMS-\/\+RC-\/503 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The short detail of the message in the get batch response 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_aae5261d522b8f8674f2fb9af76c6fa26}\label{classRingCentral_1_1MessageListMessageResponse_aae5261d522b8f8674f2fb9af76c6fa26}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!batchId@{batchId}}
+\index{batchId@{batchId}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{batchId}{batchId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+batch\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a batch the message was submitted in Example\+: 12345 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a668938f97fc1f2ebb14d0a0ecf02908a}\label{classRingCentral_1_1MessageListMessageResponse_a668938f97fc1f2ebb14d0a0ecf02908a}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!cost@{cost}}
+\index{cost@{cost}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily decimal? Ring\+Central.\+Message\+List\+Message\+Response.\+cost\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Cost of a message Format\+: double Example\+: 0.\+007 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a723da5224ca5daf30e6a377c57760781}\label{classRingCentral_1_1MessageListMessageResponse_a723da5224ca5daf30e6a377c57760781}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time at which the message was created Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_abdd20890053a08a744669c0427e3c578}\label{classRingCentral_1_1MessageListMessageResponse_abdd20890053a08a744669c0427e3c578}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!direction@{direction}}
+\index{direction@{direction}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Direction of the SMS message Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a8315843c9984f51b43529639abea5faa}\label{classRingCentral_1_1MessageListMessageResponse_a8315843c9984f51b43529639abea5faa}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!errorCode@{errorCode}}
+\index{errorCode@{errorCode}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{errorCode}{errorCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+error\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The RC error code of the message sending failure reason Example\+: SMS-\/\+RC-\/503 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a3108ad6d58c70bac308d4ff57aaef2d9}\label{classRingCentral_1_1MessageListMessageResponse_a3108ad6d58c70bac308d4ff57aaef2d9}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!from@{from}}
+\index{from@{from}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format from which the message is sent Example\+: +15551234567 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a99a30dfa39d51d8772b17866c22631e0}\label{classRingCentral_1_1MessageListMessageResponse_a99a30dfa39d51d8772b17866c22631e0}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!id@{id}}
+\index{id@{id}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Message\+List\+Message\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The Id of the message Format\+: int64 Example\+: 1234 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a2286ce79c097d50a790a7fc16f9ffac9}\label{classRingCentral_1_1MessageListMessageResponse_a2286ce79c097d50a790a7fc16f9ffac9}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time at which the messages was last updated Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a140dc14b3dad6f615721f582176b91fb}\label{classRingCentral_1_1MessageListMessageResponse_a140dc14b3dad6f615721f582176b91fb}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!messageStatus@{messageStatus}}
+\index{messageStatus@{messageStatus}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{messageStatus}{messageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+message\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current status of a message Example\+: Queued Enum\+: Queued, Delivered, Sent, Sending\+Failed, Delivery\+Failed 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a9b57e932f4ee43a160cabe3a1de78de0}\label{classRingCentral_1_1MessageListMessageResponse_a9b57e932f4ee43a160cabe3a1de78de0}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!segmentCount@{segmentCount}}
+\index{segmentCount@{segmentCount}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{segmentCount}{segmentCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Message\+List\+Message\+Response.\+segment\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of segments of a message Format\+: int32 Example\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a9416cda4578572a7156b6aef8eb339ea}\label{classRingCentral_1_1MessageListMessageResponse_a9416cda4578572a7156b6aef8eb339ea}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!text@{text}}
+\index{text@{text}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+List\+Message\+Response.\+text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text of a message. Returned if the {\ttfamily view} parameter is set to \textquotesingle{}Detailed\textquotesingle{} 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageListMessageResponse_a456cecf6ce48c6934d7a6910e299deea}\label{classRingCentral_1_1MessageListMessageResponse_a456cecf6ce48c6934d7a6910e299deea}} 
+\index{RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}!to@{to}}
+\index{to@{to}!RingCentral.MessageListMessageResponse@{RingCentral.MessageListMessageResponse}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Message\+List\+Message\+Response.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format to which a message is sent Example\+: +15551234567 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Message\+List\+Message\+Response.\+cs\end{DoxyCompactItemize}

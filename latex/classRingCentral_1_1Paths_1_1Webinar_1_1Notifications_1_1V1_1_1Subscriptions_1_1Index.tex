@@ -1,0 +1,98 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Webinar.\+Notifications.\+V1.\+Subscriptions.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index}\index{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Webinar.\+Notifications.\+V1.\+Subscriptions.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_ad5190398b7e81af402da2a56f11c794e}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_ad5190398b7e81af402da2a56f11c794e}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Index}{V1.\+Index}} parent, string subscription\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a5a3e54b17a66672594e2cd2b7f41c469}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a5a3e54b17a66672594e2cd2b7f41c469}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionListResource}{Subscription\+List\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_aa8ef055013ca98190b983ce9440cf88d}{List}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of webinar subscriptions created by the user for the current authorized client application. HTTP Method\+: get Endpoint\+: /webinar/notifications/v1/subscriptions Rate Limit Group\+: Light \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a58811e68efe45d70fe1c1304585a6df1}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateWebhookSubscriptionRequest}{Create\+Webhook\+Subscription\+Request}} create\+Webhook\+Subscription\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new webinar subscription for the current authorized user / client application. HTTP Method\+: post Endpoint\+: /webinar/notifications/v1/subscriptions Rate Limit Group\+: Medium \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a878de3a3d3f5ed80b1831f531f22f4d0}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the webinar subscription by ID HTTP Method\+: get Endpoint\+: /webinar/notifications/v1/subscriptions/\{subscription\+Id\} Rate Limit Group\+: Light \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a1d8f6a8adf66d0db9f7c0be1f1a006dd}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateSubscriptionRequest}{Update\+Subscription\+Request}} update\+Subscription\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the existing subscription. The client application can extend/narrow the list of events for which it receives notifications within this subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows to set the subscription expiration time. If other than {\ttfamily events} and {\ttfamily expires\+In} parameters are passed in the request they will be ignored. If the request body is empty then the specified subscription will be just renewed without any event filter modifications and with default expiration time. HTTP Method\+: put Endpoint\+: /webinar/notifications/v1/subscriptions/\{subscription\+Id\} Rate Limit Group\+: Medium \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a8a35bd5c8c96b5a029ade998c3d8d982}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Cancels the existing webinar subscription. HTTP Method\+: delete Endpoint\+: /webinar/notifications/v1/subscriptions/\{subscription\+Id\} Rate Limit Group\+: Medium \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a6e53979c9d83a5138de5694c044c80d5}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a6e53979c9d83a5138de5694c044c80d5}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Renew_1_1Index}{Renew.\+Index}} {\bfseries Renew} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a5b4d1c5b7fcb12daff2177e95f18de29}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a5b4d1c5b7fcb12daff2177e95f18de29}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a2f3f546723c4d8f2b5441a0275e33efb}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a2f3f546723c4d8f2b5441a0275e33efb}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_af14d17dc211b71ce49eb110cbe943898}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_af14d17dc211b71ce49eb110cbe943898}} 
+string {\bfseries subscription\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a8a35bd5c8c96b5a029ade998c3d8d982}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a8a35bd5c8c96b5a029ade998c3d8d982}} 
+\index{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Webinar.\+Notifications.\+V1.\+Subscriptions.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cancels the existing webinar subscription. HTTP Method\+: delete Endpoint\+: /webinar/notifications/v1/subscriptions/\{subscription\+Id\} Rate Limit Group\+: Medium 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a878de3a3d3f5ed80b1831f531f22f4d0}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a878de3a3d3f5ed80b1831f531f22f4d0}} 
+\index{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Notifications.\+V1.\+Subscriptions.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the webinar subscription by ID HTTP Method\+: get Endpoint\+: /webinar/notifications/v1/subscriptions/\{subscription\+Id\} Rate Limit Group\+: Light 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_aa8ef055013ca98190b983ce9440cf88d}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_aa8ef055013ca98190b983ce9440cf88d}} 
+\index{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionListResource}{Subscription\+List\+Resource}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Notifications.\+V1.\+Subscriptions.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of webinar subscriptions created by the user for the current authorized client application. HTTP Method\+: get Endpoint\+: /webinar/notifications/v1/subscriptions Rate Limit Group\+: Light 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a58811e68efe45d70fe1c1304585a6df1}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a58811e68efe45d70fe1c1304585a6df1}} 
+\index{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Notifications.\+V1.\+Subscriptions.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateWebhookSubscriptionRequest}{Create\+Webhook\+Subscription\+Request}}}]{create\+Webhook\+Subscription\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new webinar subscription for the current authorized user / client application. HTTP Method\+: post Endpoint\+: /webinar/notifications/v1/subscriptions Rate Limit Group\+: Medium 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a1d8f6a8adf66d0db9f7c0be1f1a006dd}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Notifications_1_1V1_1_1Subscriptions_1_1Index_a1d8f6a8adf66d0db9f7c0be1f1a006dd}} 
+\index{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index@{RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1SubscriptionInfo}{Subscription\+Info}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Notifications.\+V1.\+Subscriptions.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateSubscriptionRequest}{Update\+Subscription\+Request}}}]{update\+Subscription\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the existing subscription. The client application can extend/narrow the list of events for which it receives notifications within this subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows to set the subscription expiration time. If other than {\ttfamily events} and {\ttfamily expires\+In} parameters are passed in the request they will be ignored. If the request body is empty then the specified subscription will be just renewed without any event filter modifications and with default expiration time. HTTP Method\+: put Endpoint\+: /webinar/notifications/v1/subscriptions/\{subscription\+Id\} Rate Limit Group\+: Medium 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Webinar/\+Notifications/\+V1/\+Subscriptions/Index.\+cs\end{DoxyCompactItemize}

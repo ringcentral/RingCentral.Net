@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a5196d6694b684af1d495e9c0fed1298d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a5196d6694b684af1d495e9c0fed1298d}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent, string forwarding\+Number\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ac2469f5ac1689d0f6550218b7ce454d4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ac2469f5ac1689d0f6550218b7ce454d4}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetExtensionForwardingNumberListResponse}{Get\+Extension\+Forwarding\+Number\+List\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ad30b621320dd807046b82186d66a7010}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListForwardingNumbersParameters}{List\+Forwarding\+Numbers\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all the extension phone numbers used for call forwarding and call flip. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Forwarding\+Flip\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ForwardingNumberInfo}{Forwarding\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_afcf59a7255978d161e1b22ba16562f82}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateForwardingNumberRequest}{Create\+Forwarding\+Number\+Request}} create\+Forwarding\+Number\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Adds a new forwarding number to the forwarding number list. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a76422bf91498e40da94ecd904cfc19d7}{Delete\+All}} (\mbox{\hyperlink{classRingCentral_1_1DeleteForwardingNumbersRequest}{Delete\+Forwarding\+Numbers\+Request}} delete\+Forwarding\+Numbers\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes multiple forwarding numbers from the forwarding number list by IDs. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ForwardingNumberResource}{Forwarding\+Number\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a502c4907b802d02bae2ecdf869029f61}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a specific forwarding number. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number/\{forwarding\+Number\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Forwarding\+Flip\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ForwardingNumberInfo}{Forwarding\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ab289a1596409dc5f86ee23bf5e5ff2d5}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateForwardingNumberRequest}{Update\+Forwarding\+Number\+Request}} update\+Forwarding\+Number\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the existing forwarding number from the forwarding number list. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number/\{forwarding\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a15e925a7b4ff5af54016a12820d0e755}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a forwarding number from the forwarding number list by its ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number/\{forwarding\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ac15a6981f168a2a3309f28e60daa62c4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ac15a6981f168a2a3309f28e60daa62c4}} 
+string {\bfseries forwarding\+Number\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a05090576f4eaca5107509704e22a0cad}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a05090576f4eaca5107509704e22a0cad}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a10b5140a483cc4a794966c991da92082}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a10b5140a483cc4a794966c991da92082}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a15e925a7b4ff5af54016a12820d0e755}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a15e925a7b4ff5af54016a12820d0e755}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a forwarding number from the forwarding number list by its ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number/\{forwarding\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a76422bf91498e40da94ecd904cfc19d7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a76422bf91498e40da94ecd904cfc19d7}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}!DeleteAll@{DeleteAll}}
+\index{DeleteAll@{DeleteAll}!RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}}
+\doxysubsubsection{\texorpdfstring{DeleteAll()}{DeleteAll()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index.\+Delete\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1DeleteForwardingNumbersRequest}{Delete\+Forwarding\+Numbers\+Request}}}]{delete\+Forwarding\+Numbers\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes multiple forwarding numbers from the forwarding number list by IDs. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a502c4907b802d02bae2ecdf869029f61}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_a502c4907b802d02bae2ecdf869029f61}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ForwardingNumberResource}{Forwarding\+Number\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a specific forwarding number. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number/\{forwarding\+Number\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Forwarding\+Flip\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ad30b621320dd807046b82186d66a7010}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ad30b621320dd807046b82186d66a7010}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetExtensionForwardingNumberListResponse}{Get\+Extension\+Forwarding\+Number\+List\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListForwardingNumbersParameters}{List\+Forwarding\+Numbers\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all the extension phone numbers used for call forwarding and call flip. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Forwarding\+Flip\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_afcf59a7255978d161e1b22ba16562f82}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_afcf59a7255978d161e1b22ba16562f82}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ForwardingNumberInfo}{Forwarding\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateForwardingNumberRequest}{Create\+Forwarding\+Number\+Request}}}]{create\+Forwarding\+Number\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new forwarding number to the forwarding number list. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ab289a1596409dc5f86ee23bf5e5ff2d5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1ForwardingNumber_1_1Index_ab289a1596409dc5f86ee23bf5e5ff2d5}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index@{RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ForwardingNumberInfo}{Forwarding\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Forwarding\+Number.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateForwardingNumberRequest}{Update\+Forwarding\+Number\+Request}}}]{update\+Forwarding\+Number\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the existing forwarding number from the forwarding number list. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/forwarding-\/number/\{forwarding\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Forwarding\+Flip\+Numbers 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Forwarding\+Number/Index.\+cs\end{DoxyCompactItemize}

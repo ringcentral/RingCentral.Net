@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Templates.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index}\index{RingCentral.Paths.Restapi.Account.Templates.Index@{RingCentral.Paths.Restapi.Account.Templates.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Templates.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a32fae77d082e21786fe4bd7717d1ceb6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a32fae77d082e21786fe4bd7717d1ceb6}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string template\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_ac1002835710320b4f12599c217f94de0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_ac1002835710320b4f12599c217f94de0}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1UserTemplates}{User\+Templates}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a46f7e7eaf33feb9ed678aba74e57208e}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListUserTemplatesParameters}{List\+User\+Templates\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of user templates for the current account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/templates Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Info \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TemplateInfo}{Template\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a5f3bfba0fdba8cc58c96d29fdac62ccc}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the user template by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/templates/\{template\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Info \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_ab666ecd8600f99dc95414358b113e5b7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_ab666ecd8600f99dc95414358b113e5b7}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a9f0007f258c101512784536a7711aff8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a9f0007f258c101512784536a7711aff8}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a4bc91233f68065e0f113186dcbe5242f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a4bc91233f68065e0f113186dcbe5242f}} 
+string {\bfseries template\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a5f3bfba0fdba8cc58c96d29fdac62ccc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a5f3bfba0fdba8cc58c96d29fdac62ccc}} 
+\index{RingCentral.Paths.Restapi.Account.Templates.Index@{RingCentral.Paths.Restapi.Account.Templates.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Templates.Index@{RingCentral.Paths.Restapi.Account.Templates.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TemplateInfo}{Template\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Templates.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the user template by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/templates/\{template\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Info 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a46f7e7eaf33feb9ed678aba74e57208e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Templates_1_1Index_a46f7e7eaf33feb9ed678aba74e57208e}} 
+\index{RingCentral.Paths.Restapi.Account.Templates.Index@{RingCentral.Paths.Restapi.Account.Templates.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Templates.Index@{RingCentral.Paths.Restapi.Account.Templates.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1UserTemplates}{User\+Templates}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Templates.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListUserTemplatesParameters}{List\+User\+Templates\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of user templates for the current account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/templates Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Info 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Templates/Index.\+cs\end{DoxyCompactItemize}

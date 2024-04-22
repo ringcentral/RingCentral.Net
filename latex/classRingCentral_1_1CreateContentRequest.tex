@@ -1,0 +1,220 @@
+\hypertarget{classRingCentral_1_1CreateContentRequest}{}\doxysection{Ring\+Central.\+Create\+Content\+Request Class Reference}
+\label{classRingCentral_1_1CreateContentRequest}\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_aa6fc59993b9799226b0c4d4b0d8b147f}{\mbox{[}instance initializer\mbox{]}}}
+\begin{DoxyCompactList}\small\item\em True if the content is publicly visible on the remote channel (default). Private content is NOT supported on every channel. Default\+: true \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a8ad5270351375aaad2884a20ab2d7a62}{author\+Identity\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identity identifier of the author of content. Not mandatory on creation, by default it uses the token\textquotesingle{}s user first identity on channel. Example\+: 541014e17aa58d8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_ad0c15eabfe6d1fb8d4baa0c806196cc9}{body}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The content\textquotesingle{}s body. On creation this field is mandatory except for Whats\+App content using templates. The following are the max length restrictions for the different channels supported. Channel and max length \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_af01be1b67871f6761c055fdde3fae1fe}{in\+Reply\+To\+Content\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The content identifier to which this content is a reply to. On creation, if omitted, a new discussion will be created. If the channel does not support to initiate discussion this parameter is mandatory. Example\+: 123414e17asdd8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_afd102d2a1dc386d7565474deddac46e0}{source\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of the channel. On creation if {\ttfamily in\+Reply\+To\+Content\+Id} is specified, the channel will be determined from it. Otherwise, this parameter is mandatory. Example\+: fff415437asdd8ccf000023 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a87442c5c9b965105dd5d45fb2e47ff5b}{attachment\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array containing the attachment identifiers that need to be attached to the content. Example\+: 541014e17aa58d8ccf000023,541014e17aa58d8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_abadfce32e3e28b026bc9d868f3fe6548}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable to Email channels only. The subject of the email. This field is mandatory when initiating a discussion. Example\+: An email title \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_ab644454d3287674ca414c34e2ee7ce99}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable on Email channels only. An array containing the email addresses used in sections of the email. This parameter is mandatory when initiating a discussion. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a02df9c13bf9601165fff1ebecaed7078}{cc}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable on Email channels only. An array containing the email addresses used in sections of the email. This parameter is mandatory when initiating a discussion. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a7a4105bfa935b290b33e627e11f30d2b}{bcc}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable on Email channels only. An array containing the email addresses used in sections of the email. This parameter is mandatory when initiating a discussion. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_af74f0d5b7f0f36ea04e0d03156ec2518}{template\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable to Whats\+App channels only. Name of the Whatsapp template to use for the content. All available template names are visible on the Whatsapp Business Manager interface. Example\+: customer\+\_\+order\+\_\+shipment\+\_\+template \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a8373ccc7c4cebf59f82b88c7eac1b27c}{template\+Language}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable to Whats\+App channels only. Language of the Whatsapp template to use for the content. All available template languages are visible on the Whatsapp Business Manager interface. Language specified must conform to the ISO 639-\/1 alpha-\/2 codes for representing the names of languages. Example\+: fr \end{DoxyCompactList}\item 
+object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a2db422c1fcec0a90ec2fe069d24597aa}{components}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable to Whats\+App channels only. Component configuration of the Whatsapp template to use for the content. All available components are visible on the Whatsapp Business Manager interface. Example\+: \mbox{[}object Object\mbox{]},\mbox{[}object Object\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ContentContextData}{Content\+Context\+Data}} \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a53cd5b34cae9688d8804d5cf777bd77b}{context\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1CreateContentRequest_a890a547e836ac33b21ad23a7d47629a9}{auto\+Submitted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Auto submitted content\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_aa6fc59993b9799226b0c4d4b0d8b147f}\label{classRingCentral_1_1CreateContentRequest_aa6fc59993b9799226b0c4d4b0d8b147f}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!\mbox{[}instance initializer\mbox{]}@{[instance initializer]}}
+\index{\mbox{[}instance initializer\mbox{]}@{[instance initializer]}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{[instance initializer]()}{[instance initializer]()}}
+{\footnotesize\ttfamily Ring\+Central.\+Create\+Content\+Request.\mbox{[}instance initializer\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+True if the content is publicly visible on the remote channel (default). Private content is NOT supported on every channel. Default\+: true 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a87442c5c9b965105dd5d45fb2e47ff5b}\label{classRingCentral_1_1CreateContentRequest_a87442c5c9b965105dd5d45fb2e47ff5b}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!attachmentIds@{attachmentIds}}
+\index{attachmentIds@{attachmentIds}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{attachmentIds}{attachmentIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Content\+Request.\+attachment\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An array containing the attachment identifiers that need to be attached to the content. Example\+: 541014e17aa58d8ccf000023,541014e17aa58d8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a8ad5270351375aaad2884a20ab2d7a62}\label{classRingCentral_1_1CreateContentRequest_a8ad5270351375aaad2884a20ab2d7a62}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!authorIdentityId@{authorIdentityId}}
+\index{authorIdentityId@{authorIdentityId}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{authorIdentityId}{authorIdentityId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Content\+Request.\+author\+Identity\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identity identifier of the author of content. Not mandatory on creation, by default it uses the token\textquotesingle{}s user first identity on channel. Example\+: 541014e17aa58d8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a890a547e836ac33b21ad23a7d47629a9}\label{classRingCentral_1_1CreateContentRequest_a890a547e836ac33b21ad23a7d47629a9}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!autoSubmitted@{autoSubmitted}}
+\index{autoSubmitted@{autoSubmitted}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{autoSubmitted}{autoSubmitted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Create\+Content\+Request.\+auto\+Submitted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Auto submitted content\+: 
+
+
+\begin{DoxyItemize}
+\item won\textquotesingle{}t reopen tasks or interventions
+\item can be used to send automatic messages like asking an user to follow on twitter, sending a survey, etc,
+\item doesn\textquotesingle{}t get included in statistics
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a7a4105bfa935b290b33e627e11f30d2b}\label{classRingCentral_1_1CreateContentRequest_a7a4105bfa935b290b33e627e11f30d2b}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!bcc@{bcc}}
+\index{bcc@{bcc}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{bcc}{bcc}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Content\+Request.\+bcc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable on Email channels only. An array containing the email addresses used in sections of the email. This parameter is mandatory when initiating a discussion. 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_ad0c15eabfe6d1fb8d4baa0c806196cc9}\label{classRingCentral_1_1CreateContentRequest_ad0c15eabfe6d1fb8d4baa0c806196cc9}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!body@{body}}
+\index{body@{body}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Content\+Request.\+body\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The content\textquotesingle{}s body. On creation this field is mandatory except for Whats\+App content using templates. The following are the max length restrictions for the different channels supported. Channel and max length 
+
+
+\begin{DoxyItemize}
+\item Apple Messages For Business (max length 10000)
+\item Email (max length 262144)
+\item Ring\+CX Digital Messaging (max length 1024)
+\item Facebook (max length 8000)
+\item Google\+Business\+Messages (max length 3000)
+\item Google My Business (max length 4000)
+\item Instagram (max length 950)
+\item Instagram Messaging (max length 1000)
+\item Linked\+In (max length 3000)
+\item Messenger (max length 2000)
+\item Twitter (max length 280)
+\item Viber (max length 7000)
+\item Whats\+App (max length 3800)
+\item Youtube (max length 8000) Example\+: Body of the content
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a02df9c13bf9601165fff1ebecaed7078}\label{classRingCentral_1_1CreateContentRequest_a02df9c13bf9601165fff1ebecaed7078}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!cc@{cc}}
+\index{cc@{cc}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Content\+Request.\+cc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable on Email channels only. An array containing the email addresses used in sections of the email. This parameter is mandatory when initiating a discussion. 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a2db422c1fcec0a90ec2fe069d24597aa}\label{classRingCentral_1_1CreateContentRequest_a2db422c1fcec0a90ec2fe069d24597aa}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!components@{components}}
+\index{components@{components}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily object \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Content\+Request.\+components\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable to Whats\+App channels only. Component configuration of the Whatsapp template to use for the content. All available components are visible on the Whatsapp Business Manager interface. Example\+: \mbox{[}object Object\mbox{]},\mbox{[}object Object\mbox{]} 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a53cd5b34cae9688d8804d5cf777bd77b}\label{classRingCentral_1_1CreateContentRequest_a53cd5b34cae9688d8804d5cf777bd77b}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!contextData@{contextData}}
+\index{contextData@{contextData}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{contextData}{contextData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ContentContextData}{Content\+Context\+Data}} Ring\+Central.\+Create\+Content\+Request.\+context\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_af01be1b67871f6761c055fdde3fae1fe}\label{classRingCentral_1_1CreateContentRequest_af01be1b67871f6761c055fdde3fae1fe}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!inReplyToContentId@{inReplyToContentId}}
+\index{inReplyToContentId@{inReplyToContentId}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{inReplyToContentId}{inReplyToContentId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Content\+Request.\+in\+Reply\+To\+Content\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The content identifier to which this content is a reply to. On creation, if omitted, a new discussion will be created. If the channel does not support to initiate discussion this parameter is mandatory. Example\+: 123414e17asdd8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_afd102d2a1dc386d7565474deddac46e0}\label{classRingCentral_1_1CreateContentRequest_afd102d2a1dc386d7565474deddac46e0}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!sourceId@{sourceId}}
+\index{sourceId@{sourceId}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{sourceId}{sourceId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Content\+Request.\+source\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of the channel. On creation if {\ttfamily in\+Reply\+To\+Content\+Id} is specified, the channel will be determined from it. Otherwise, this parameter is mandatory. Example\+: fff415437asdd8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_a8373ccc7c4cebf59f82b88c7eac1b27c}\label{classRingCentral_1_1CreateContentRequest_a8373ccc7c4cebf59f82b88c7eac1b27c}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!templateLanguage@{templateLanguage}}
+\index{templateLanguage@{templateLanguage}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{templateLanguage}{templateLanguage}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Content\+Request.\+template\+Language\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable to Whats\+App channels only. Language of the Whatsapp template to use for the content. All available template languages are visible on the Whatsapp Business Manager interface. Language specified must conform to the ISO 639-\/1 alpha-\/2 codes for representing the names of languages. Example\+: fr 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_af74f0d5b7f0f36ea04e0d03156ec2518}\label{classRingCentral_1_1CreateContentRequest_af74f0d5b7f0f36ea04e0d03156ec2518}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!templateName@{templateName}}
+\index{templateName@{templateName}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{templateName}{templateName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Content\+Request.\+template\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable to Whats\+App channels only. Name of the Whatsapp template to use for the content. All available template names are visible on the Whatsapp Business Manager interface. Example\+: customer\+\_\+order\+\_\+shipment\+\_\+template 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_abadfce32e3e28b026bc9d868f3fe6548}\label{classRingCentral_1_1CreateContentRequest_abadfce32e3e28b026bc9d868f3fe6548}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!title@{title}}
+\index{title@{title}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Content\+Request.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable to Email channels only. The subject of the email. This field is mandatory when initiating a discussion. Example\+: An email title 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateContentRequest_ab644454d3287674ca414c34e2ee7ce99}\label{classRingCentral_1_1CreateContentRequest_ab644454d3287674ca414c34e2ee7ce99}} 
+\index{RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}!to@{to}}
+\index{to@{to}!RingCentral.CreateContentRequest@{RingCentral.CreateContentRequest}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Content\+Request.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable on Email channels only. An array containing the email addresses used in sections of the email. This parameter is mandatory when initiating a discussion. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Create\+Content\+Request.\+cs\end{DoxyCompactItemize}

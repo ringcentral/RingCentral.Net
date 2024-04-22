@@ -1,0 +1,119 @@
+\hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters}{}\doxysection{Ring\+Central.\+List\+Emergency\+Locations\+Parameters Class Reference}
+\label{classRingCentral_1_1ListEmergencyLocationsParameters}\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+
+
+Query parameters for operation list\+Emergency\+Locations  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_a20764504dbf7e7831509ecfc7f35c321}{site\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_af08626bf2529f6afe04795a8610a94f1}{search\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters entries containing the specified substring in \textquotesingle{}address\textquotesingle{} and \textquotesingle{}name\textquotesingle{} fields. The character range is 0-\/64; not case-\/sensitive. If empty then the filter is ignored \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_a2a0c893209aac9765edc5ac7bf1d302d}{address\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Valid, Invalid, Provisioning \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_a9626f0ee627cd7c84eb71aaa6c895936}{usage\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Active, Inactive \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_ae2c8da59c82cac98da8b478fc12b0463}{domestic\+Country\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_a31e0ef2d181dd74084f22ff7f8209c9b}{order\+By}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comma-\/separated list of fields to order results, prefixed by plus sign \textquotesingle{}+\textquotesingle{} (ascending order) or minus sign \textquotesingle{}-\/\textquotesingle{} (descending order) Default\+: +address Enum\+: +name, +site\+Name, +address, +address\+Status, +usage\+Status, -\/name, -\/site\+Name, -\/address, -\/address\+Status, -\/usage\+Status \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_ae4132bfcfef4b81955085238bb634a9f}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page Format\+: int32 Default\+: 100 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListEmergencyLocationsParameters_a9dfb5550c908cc838d667b434da3b9cf}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates the page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Emergency\+Locations 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_a2a0c893209aac9765edc5ac7bf1d302d}\label{classRingCentral_1_1ListEmergencyLocationsParameters_a2a0c893209aac9765edc5ac7bf1d302d}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!addressStatus@{addressStatus}}
+\index{addressStatus@{addressStatus}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{addressStatus}{addressStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+address\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Valid, Invalid, Provisioning 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_ae2c8da59c82cac98da8b478fc12b0463}\label{classRingCentral_1_1ListEmergencyLocationsParameters_ae2c8da59c82cac98da8b478fc12b0463}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!domesticCountryId@{domesticCountryId}}
+\index{domesticCountryId@{domesticCountryId}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{domesticCountryId}{domesticCountryId}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+domestic\+Country\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_a31e0ef2d181dd74084f22ff7f8209c9b}\label{classRingCentral_1_1ListEmergencyLocationsParameters_a31e0ef2d181dd74084f22ff7f8209c9b}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{orderBy}{orderBy}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+order\+By\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Comma-\/separated list of fields to order results, prefixed by plus sign \textquotesingle{}+\textquotesingle{} (ascending order) or minus sign \textquotesingle{}-\/\textquotesingle{} (descending order) Default\+: +address Enum\+: +name, +site\+Name, +address, +address\+Status, +usage\+Status, -\/name, -\/site\+Name, -\/address, -\/address\+Status, -\/usage\+Status 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_a9dfb5550c908cc838d667b434da3b9cf}\label{classRingCentral_1_1ListEmergencyLocationsParameters_a9dfb5550c908cc838d667b434da3b9cf}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!page@{page}}
+\index{page@{page}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates the page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_ae4132bfcfef4b81955085238bb634a9f}\label{classRingCentral_1_1ListEmergencyLocationsParameters_ae4132bfcfef4b81955085238bb634a9f}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page Format\+: int32 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_af08626bf2529f6afe04795a8610a94f1}\label{classRingCentral_1_1ListEmergencyLocationsParameters_af08626bf2529f6afe04795a8610a94f1}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!searchString@{searchString}}
+\index{searchString@{searchString}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{searchString}{searchString}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+search\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filters entries containing the specified substring in \textquotesingle{}address\textquotesingle{} and \textquotesingle{}name\textquotesingle{} fields. The character range is 0-\/64; not case-\/sensitive. If empty then the filter is ignored 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_a20764504dbf7e7831509ecfc7f35c321}\label{classRingCentral_1_1ListEmergencyLocationsParameters_a20764504dbf7e7831509ecfc7f35c321}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!siteId@{siteId}}
+\index{siteId@{siteId}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{siteId}{siteId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+site\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListEmergencyLocationsParameters_a9626f0ee627cd7c84eb71aaa6c895936}\label{classRingCentral_1_1ListEmergencyLocationsParameters_a9626f0ee627cd7c84eb71aaa6c895936}} 
+\index{RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}!usageStatus@{usageStatus}}
+\index{usageStatus@{usageStatus}!RingCentral.ListEmergencyLocationsParameters@{RingCentral.ListEmergencyLocationsParameters}}
+\doxysubsubsection{\texorpdfstring{usageStatus}{usageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Emergency\+Locations\+Parameters.\+usage\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Active, Inactive 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Emergency\+Locations\+Parameters.\+cs\end{DoxyCompactItemize}

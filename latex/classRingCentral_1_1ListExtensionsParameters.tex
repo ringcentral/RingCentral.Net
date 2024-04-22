@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1ListExtensionsParameters}{}\doxysection{Ring\+Central.\+List\+Extensions\+Parameters Class Reference}
+\label{classRingCentral_1_1ListExtensionsParameters}\index{RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}}
+
+
+Query parameters for operation list\+Extensions  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListExtensionsParameters_a18cd51a6a235c2f870b19797a51e82ba}{extension\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension short number to filter records \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListExtensionsParameters_a106b505a4d80d12817f9bb6610740eed}{email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension email address. Multiple values are accepted Example\+: \href{mailto:alice.smith@example.com}{\texttt{ alice.\+smith@example.\+com}}\&email=\href{mailto:bob.johnson@example.com}{\texttt{ bob.\+johnson@example.\+com}} \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListExtensionsParameters_aacde468551ea2c7665781645c3675255}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page number to retrieve. Only positive number values are allowed Format\+: int32 Default\+: 1 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListExtensionsParameters_a96f18b1597deccf4ddd51e8a9fe625a0}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page size (number of items) Format\+: int32 Default\+: 100 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListExtensionsParameters_adc3926c35e7245e23556ab2fde650f1b}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension current state. Multiple values are supported. If \textquotesingle{}Unassigned\textquotesingle{} is specified, then extensions without {\ttfamily extension\+Number} attribute are returned. If not specified, then all extensions are returned Enum\+: Enabled, Disabled, Not\+Activated, Unassigned \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListExtensionsParameters_a16dedccf24b28c75dfb47dc7400f3590}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension type. Multiple values are supported. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Fax\+User, Flexible\+User, Virtual\+User, Digital\+User, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Ivr\+Menu, Application\+Extension, Park\+Location, Limited, Bot, Proxy\+Admin, Delegated\+Lines\+Group, Site \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Extensions 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListExtensionsParameters_a106b505a4d80d12817f9bb6610740eed}\label{classRingCentral_1_1ListExtensionsParameters_a106b505a4d80d12817f9bb6610740eed}} 
+\index{RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}!email@{email}}
+\index{email@{email}!RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Extensions\+Parameters.\+email\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension email address. Multiple values are accepted Example\+: \href{mailto:alice.smith@example.com}{\texttt{ alice.\+smith@example.\+com}}\&email=\href{mailto:bob.johnson@example.com}{\texttt{ bob.\+johnson@example.\+com}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListExtensionsParameters_a18cd51a6a235c2f870b19797a51e82ba}\label{classRingCentral_1_1ListExtensionsParameters_a18cd51a6a235c2f870b19797a51e82ba}} 
+\index{RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}!extensionNumber@{extensionNumber}}
+\index{extensionNumber@{extensionNumber}!RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}}
+\doxysubsubsection{\texorpdfstring{extensionNumber}{extensionNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Extensions\+Parameters.\+extension\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension short number to filter records 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListExtensionsParameters_aacde468551ea2c7665781645c3675255}\label{classRingCentral_1_1ListExtensionsParameters_aacde468551ea2c7665781645c3675255}} 
+\index{RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}!page@{page}}
+\index{page@{page}!RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Extensions\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page number to retrieve. Only positive number values are allowed Format\+: int32 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListExtensionsParameters_a96f18b1597deccf4ddd51e8a9fe625a0}\label{classRingCentral_1_1ListExtensionsParameters_a96f18b1597deccf4ddd51e8a9fe625a0}} 
+\index{RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Extensions\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page size (number of items) Format\+: int32 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListExtensionsParameters_adc3926c35e7245e23556ab2fde650f1b}\label{classRingCentral_1_1ListExtensionsParameters_adc3926c35e7245e23556ab2fde650f1b}} 
+\index{RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}!status@{status}}
+\index{status@{status}!RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Extensions\+Parameters.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension current state. Multiple values are supported. If \textquotesingle{}Unassigned\textquotesingle{} is specified, then extensions without {\ttfamily extension\+Number} attribute are returned. If not specified, then all extensions are returned Enum\+: Enabled, Disabled, Not\+Activated, Unassigned 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListExtensionsParameters_a16dedccf24b28c75dfb47dc7400f3590}\label{classRingCentral_1_1ListExtensionsParameters_a16dedccf24b28c75dfb47dc7400f3590}} 
+\index{RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}!type@{type}}
+\index{type@{type}!RingCentral.ListExtensionsParameters@{RingCentral.ListExtensionsParameters}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Extensions\+Parameters.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension type. Multiple values are supported. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Fax\+User, Flexible\+User, Virtual\+User, Digital\+User, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Ivr\+Menu, Application\+Extension, Park\+Location, Limited, Bot, Proxy\+Admin, Delegated\+Lines\+Group, Site 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Extensions\+Parameters.\+cs\end{DoxyCompactItemize}

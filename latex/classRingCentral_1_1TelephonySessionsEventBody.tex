@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1TelephonySessionsEventBody}{}\doxysection{Ring\+Central.\+Telephony\+Sessions\+Event\+Body Class Reference}
+\label{classRingCentral_1_1TelephonySessionsEventBody}\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+
+
+Notification payload body  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventBody_a55053fc362375fd450a51692155cf2ec}{sequence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Order number of a notification to state the chronology Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventBody_ac7bc04b51f1aeb744b8655d61e99b2f2}{session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Legacy identifier of a call session \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventBody_a9facda6172a6292246bb1c943c443ee1}{telephony\+Session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call session identifier, required for Telephony API \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventBody_a7972ec36c04ea027dcfcce78b16d7ab1}{server\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of a server \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventBody_aec96202f4a06c020269dd5386aa27d98}{event\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The call start date/time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1OriginInfo}{Origin\+Info}} \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventBody_a4768be8966ee103bf07bd8e412523f35}{origin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventPartyInfo}{Telephony\+Sessions\+Event\+Party\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventBody_a4dc58d590627bf690d79d26bfc3baf04}{parties}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call participants details \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notification payload body 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1TelephonySessionsEventBody_aec96202f4a06c020269dd5386aa27d98}\label{classRingCentral_1_1TelephonySessionsEventBody_aec96202f4a06c020269dd5386aa27d98}} 
+\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}!eventTime@{eventTime}}
+\index{eventTime@{eventTime}!RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+\doxysubsubsection{\texorpdfstring{eventTime}{eventTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Telephony\+Sessions\+Event\+Body.\+event\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The call start date/time in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TelephonySessionsEventBody_a4768be8966ee103bf07bd8e412523f35}\label{classRingCentral_1_1TelephonySessionsEventBody_a4768be8966ee103bf07bd8e412523f35}} 
+\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}!origin@{origin}}
+\index{origin@{origin}!RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+\doxysubsubsection{\texorpdfstring{origin}{origin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1OriginInfo}{Origin\+Info}} Ring\+Central.\+Telephony\+Sessions\+Event\+Body.\+origin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1TelephonySessionsEventBody_a4dc58d590627bf690d79d26bfc3baf04}\label{classRingCentral_1_1TelephonySessionsEventBody_a4dc58d590627bf690d79d26bfc3baf04}} 
+\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}!parties@{parties}}
+\index{parties@{parties}!RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+\doxysubsubsection{\texorpdfstring{parties}{parties}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1TelephonySessionsEventPartyInfo}{Telephony\+Sessions\+Event\+Party\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Telephony\+Sessions\+Event\+Body.\+parties\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call participants details 
+
+\mbox{\Hypertarget{classRingCentral_1_1TelephonySessionsEventBody_a55053fc362375fd450a51692155cf2ec}\label{classRingCentral_1_1TelephonySessionsEventBody_a55053fc362375fd450a51692155cf2ec}} 
+\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}!sequence@{sequence}}
+\index{sequence@{sequence}!RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+\doxysubsubsection{\texorpdfstring{sequence}{sequence}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Telephony\+Sessions\+Event\+Body.\+sequence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Order number of a notification to state the chronology Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1TelephonySessionsEventBody_a7972ec36c04ea027dcfcce78b16d7ab1}\label{classRingCentral_1_1TelephonySessionsEventBody_a7972ec36c04ea027dcfcce78b16d7ab1}} 
+\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}!serverId@{serverId}}
+\index{serverId@{serverId}!RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+\doxysubsubsection{\texorpdfstring{serverId}{serverId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Telephony\+Sessions\+Event\+Body.\+server\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of a server 
+
+\mbox{\Hypertarget{classRingCentral_1_1TelephonySessionsEventBody_ac7bc04b51f1aeb744b8655d61e99b2f2}\label{classRingCentral_1_1TelephonySessionsEventBody_ac7bc04b51f1aeb744b8655d61e99b2f2}} 
+\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}!sessionId@{sessionId}}
+\index{sessionId@{sessionId}!RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+\doxysubsubsection{\texorpdfstring{sessionId}{sessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Telephony\+Sessions\+Event\+Body.\+session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Legacy identifier of a call session 
+
+\mbox{\Hypertarget{classRingCentral_1_1TelephonySessionsEventBody_a9facda6172a6292246bb1c943c443ee1}\label{classRingCentral_1_1TelephonySessionsEventBody_a9facda6172a6292246bb1c943c443ee1}} 
+\index{RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}!telephonySessionId@{telephonySessionId}}
+\index{telephonySessionId@{telephonySessionId}!RingCentral.TelephonySessionsEventBody@{RingCentral.TelephonySessionsEventBody}}
+\doxysubsubsection{\texorpdfstring{telephonySessionId}{telephonySessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Telephony\+Sessions\+Event\+Body.\+telephony\+Session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call session identifier, required for Telephony API 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Telephony\+Sessions\+Event\+Body.\+cs\end{DoxyCompactItemize}

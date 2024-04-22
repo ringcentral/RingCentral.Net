@@ -1,0 +1,226 @@
+\hypertarget{classRingCentral_1_1AuthorizeRequest}{}\doxysection{Ring\+Central.\+Authorize\+Request Class Reference}
+\label{classRingCentral_1_1AuthorizeRequest}\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_ac9cf83b562cf9664b2136fc49f4acdd5}{response\+\_\+type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines authorization flow\+: \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_aeed34948b18f8e3d99d07a0d7e869077}{redirect\+\_\+uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration Required Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a64a5fa26896d0c9dbc2f6ea819bf7e5d}{client\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier (key) of a client application Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_af37c3759345f3aed08056ca666645008}{state}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Client state. Returned to the client at the end of the flow \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a4e28ccef42e1a021ffa4d3a10a27d9f5}{brand\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Brand identifier. If it is not provided in request, server will try to determine brand from client app profile. The default value is {\ttfamily 1210} -\/ \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} US brand ID Default\+: 1210 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a949d49eef205c8f3a61e548a4b20a0d1}{display}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Style of login form. The default value is \textquotesingle{}page\textquotesingle{}. The \textquotesingle{}popup\textquotesingle{} and \textquotesingle{}touch\textquotesingle{} values are featured for mobile applications Default\+: page Enum\+: page, popup, touch, mobile \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_ac47b661fb51b10d446b2772d6205784c}{prompt}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies which login form will be displayed. Space-\/separated set of the following values\+: \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a2b397f2ef9003163d3dcad24d84de95e}{locale\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Locale code of a language. Overwrites \textquotesingle{}Accept-\/\+Language\textquotesingle{} header value. DEPRECATED\+: {\ttfamily ui\+\_\+locales} parameter should be used instead Example\+: en-\/\+US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a0f72d8673c0a9f65ce7bc23ec30bbbf8}{ui\+\_\+locales}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Locale code of a language. Overwrites \textquotesingle{}Accept-\/\+Language\textquotesingle{} header value and \textquotesingle{}locale\+Id\textquotesingle{} parameter value Example\+: en-\/\+US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_ad78900b883e81c463f79fd11e7e7b16d}{ui\+\_\+options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1User}{User}} interface options (space-\/separated) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_aeb7ac345688d7ffd732e56e5e4db44e0}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OAuth scope \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a04b4c5252de2b2cf01e7706de53e7ca9}{accept\+\_\+language}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a6461d135a4a562bec4c7a03faaf740b0}{request}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_ab1d19b61cf8034afab2d04c75035c421}{request\+\_\+uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a9e07910de52f8643952034088f2245ec}{nonce}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_afaa0721760027661be8b25cfb7407cf9}{code\+\_\+challenge}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeRequest_a6ec79a69cfb8739366a78dd86f99fccf}{code\+\_\+challenge\+\_\+method}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: plain, S256 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a04b4c5252de2b2cf01e7706de53e7ca9}\label{classRingCentral_1_1AuthorizeRequest_a04b4c5252de2b2cf01e7706de53e7ca9}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!accept\_language@{accept\_language}}
+\index{accept\_language@{accept\_language}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{accept\_language}{accept\_language}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+accept\+\_\+language\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a4e28ccef42e1a021ffa4d3a10a27d9f5}\label{classRingCentral_1_1AuthorizeRequest_a4e28ccef42e1a021ffa4d3a10a27d9f5}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!brand\_id@{brand\_id}}
+\index{brand\_id@{brand\_id}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{brand\_id}{brand\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+brand\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Brand identifier. If it is not provided in request, server will try to determine brand from client app profile. The default value is {\ttfamily 1210} -\/ \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} US brand ID Default\+: 1210 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a64a5fa26896d0c9dbc2f6ea819bf7e5d}\label{classRingCentral_1_1AuthorizeRequest_a64a5fa26896d0c9dbc2f6ea819bf7e5d}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!client\_id@{client\_id}}
+\index{client\_id@{client\_id}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{client\_id}{client\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+client\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier (key) of a client application Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_afaa0721760027661be8b25cfb7407cf9}\label{classRingCentral_1_1AuthorizeRequest_afaa0721760027661be8b25cfb7407cf9}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!code\_challenge@{code\_challenge}}
+\index{code\_challenge@{code\_challenge}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{code\_challenge}{code\_challenge}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+code\+\_\+challenge\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a6ec79a69cfb8739366a78dd86f99fccf}\label{classRingCentral_1_1AuthorizeRequest_a6ec79a69cfb8739366a78dd86f99fccf}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!code\_challenge\_method@{code\_challenge\_method}}
+\index{code\_challenge\_method@{code\_challenge\_method}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{code\_challenge\_method}{code\_challenge\_method}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+code\+\_\+challenge\+\_\+method\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: plain, S256 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a949d49eef205c8f3a61e548a4b20a0d1}\label{classRingCentral_1_1AuthorizeRequest_a949d49eef205c8f3a61e548a4b20a0d1}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!display@{display}}
+\index{display@{display}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+display\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Style of login form. The default value is \textquotesingle{}page\textquotesingle{}. The \textquotesingle{}popup\textquotesingle{} and \textquotesingle{}touch\textquotesingle{} values are featured for mobile applications Default\+: page Enum\+: page, popup, touch, mobile 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a2b397f2ef9003163d3dcad24d84de95e}\label{classRingCentral_1_1AuthorizeRequest_a2b397f2ef9003163d3dcad24d84de95e}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!localeId@{localeId}}
+\index{localeId@{localeId}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{localeId}{localeId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+locale\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Locale code of a language. Overwrites \textquotesingle{}Accept-\/\+Language\textquotesingle{} header value. DEPRECATED\+: {\ttfamily ui\+\_\+locales} parameter should be used instead Example\+: en-\/\+US 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a9e07910de52f8643952034088f2245ec}\label{classRingCentral_1_1AuthorizeRequest_a9e07910de52f8643952034088f2245ec}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!nonce@{nonce}}
+\index{nonce@{nonce}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{nonce}{nonce}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+nonce\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_ac47b661fb51b10d446b2772d6205784c}\label{classRingCentral_1_1AuthorizeRequest_ac47b661fb51b10d446b2772d6205784c}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!prompt@{prompt}}
+\index{prompt@{prompt}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+prompt\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies which login form will be displayed. Space-\/separated set of the following values\+: 
+
+
+\begin{DoxyItemize}
+\item {\bfseries{login}} -\/ \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} native login form,
+\item {\bfseries{sso}} -\/ Single Sign-\/\+On login form,
+\item {\bfseries{consent}} -\/ form to show the requested scope and prompt user for consent. Either {\ttfamily login} or {\ttfamily sso} (or both) must be specified. The default value is {\ttfamily login sso} Default\+: login sso
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_aeed34948b18f8e3d99d07a0d7e869077}\label{classRingCentral_1_1AuthorizeRequest_aeed34948b18f8e3d99d07a0d7e869077}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!redirect\_uri@{redirect\_uri}}
+\index{redirect\_uri@{redirect\_uri}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{redirect\_uri}{redirect\_uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+redirect\+\_\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration Required Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a6461d135a4a562bec4c7a03faaf740b0}\label{classRingCentral_1_1AuthorizeRequest_a6461d135a4a562bec4c7a03faaf740b0}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!request@{request}}
+\index{request@{request}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+request\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_ab1d19b61cf8034afab2d04c75035c421}\label{classRingCentral_1_1AuthorizeRequest_ab1d19b61cf8034afab2d04c75035c421}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!request\_uri@{request\_uri}}
+\index{request\_uri@{request\_uri}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{request\_uri}{request\_uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+request\+\_\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_ac9cf83b562cf9664b2136fc49f4acdd5}\label{classRingCentral_1_1AuthorizeRequest_ac9cf83b562cf9664b2136fc49f4acdd5}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!response\_type@{response\_type}}
+\index{response\_type@{response\_type}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{response\_type}{response\_type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+response\+\_\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Determines authorization flow\+: 
+
+
+\begin{DoxyItemize}
+\item {\bfseries{code}} -\/ Authorization Code,
+\item {\bfseries{token}} -\/ Implicit Required Enum\+: code, token
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_aeb7ac345688d7ffd732e56e5e4db44e0}\label{classRingCentral_1_1AuthorizeRequest_aeb7ac345688d7ffd732e56e5e4db44e0}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!scope@{scope}}
+\index{scope@{scope}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+scope\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OAuth scope 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_af37c3759345f3aed08056ca666645008}\label{classRingCentral_1_1AuthorizeRequest_af37c3759345f3aed08056ca666645008}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!state@{state}}
+\index{state@{state}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+state\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Client state. Returned to the client at the end of the flow 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_a0f72d8673c0a9f65ce7bc23ec30bbbf8}\label{classRingCentral_1_1AuthorizeRequest_a0f72d8673c0a9f65ce7bc23ec30bbbf8}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!ui\_locales@{ui\_locales}}
+\index{ui\_locales@{ui\_locales}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{ui\_locales}{ui\_locales}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+ui\+\_\+locales\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Locale code of a language. Overwrites \textquotesingle{}Accept-\/\+Language\textquotesingle{} header value and \textquotesingle{}locale\+Id\textquotesingle{} parameter value Example\+: en-\/\+US 
+
+\mbox{\Hypertarget{classRingCentral_1_1AuthorizeRequest_ad78900b883e81c463f79fd11e7e7b16d}\label{classRingCentral_1_1AuthorizeRequest_ad78900b883e81c463f79fd11e7e7b16d}} 
+\index{RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}!ui\_options@{ui\_options}}
+\index{ui\_options@{ui\_options}!RingCentral.AuthorizeRequest@{RingCentral.AuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{ui\_options}{ui\_options}}
+{\footnotesize\ttfamily string Ring\+Central.\+Authorize\+Request.\+ui\+\_\+options\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1User}{User}} interface options (space-\/separated) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Authorize\+Request.\+cs\end{DoxyCompactItemize}

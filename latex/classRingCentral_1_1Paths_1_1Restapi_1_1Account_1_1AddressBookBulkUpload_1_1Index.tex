@@ -1,0 +1,47 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Address\+Book\+Bulk\+Upload.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index}\index{RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Index@{RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Address\+Book\+Bulk\+Upload.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a03adfe13fb03c1793d557e995ad24ed1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a03adfe13fb03c1793d557e995ad24ed1}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a986fa956279e0678cf787b61cde0fdcc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a986fa956279e0678cf787b61cde0fdcc}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AddressBookBulkUploadResponse}{Address\+Book\+Bulk\+Upload\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a9295adebe014a8086b6db1305bc09bd7}{Post}} (\mbox{\hyperlink{classRingCentral_1_1AddressBookBulkUploadRequest}{Address\+Book\+Bulk\+Upload\+Request}} address\+Book\+Bulk\+Upload\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Uploads multiple contacts for multiple extensions at once. Maximum 500 extensions can be uploaded per request. Max amount of contacts that can be uploaded per extension is 10,000. Each contact uploaded for a certain extension is not visible to other extensions. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/address-\/book-\/bulk-\/upload Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a383c3f59134611d82feff4b01586c052}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a383c3f59134611d82feff4b01586c052}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Tasks_1_1Index}{Tasks.\+Index}} {\bfseries Tasks} (string task\+Id=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_af851b29c7dd6f3abc36a96b0664f575d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_af851b29c7dd6f3abc36a96b0664f575d}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a6482a5c662687128c8e68df3c3204ce2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a6482a5c662687128c8e68df3c3204ce2}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a9295adebe014a8086b6db1305bc09bd7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AddressBookBulkUpload_1_1Index_a9295adebe014a8086b6db1305bc09bd7}} 
+\index{RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Index@{RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Index@{RingCentral.Paths.Restapi.Account.AddressBookBulkUpload.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AddressBookBulkUploadResponse}{Address\+Book\+Bulk\+Upload\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Address\+Book\+Bulk\+Upload.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AddressBookBulkUploadRequest}{Address\+Book\+Bulk\+Upload\+Request}}}]{address\+Book\+Bulk\+Upload\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uploads multiple contacts for multiple extensions at once. Maximum 500 extensions can be uploaded per request. Max amount of contacts that can be uploaded per extension is 10,000. Each contact uploaded for a certain extension is not visible to other extensions. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/address-\/book-\/bulk-\/upload Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Address\+Book\+Bulk\+Upload/Index.\+cs\end{DoxyCompactItemize}

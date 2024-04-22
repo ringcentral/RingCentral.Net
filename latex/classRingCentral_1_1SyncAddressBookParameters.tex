@@ -1,0 +1,71 @@
+\hypertarget{classRingCentral_1_1SyncAddressBookParameters}{}\doxysection{Ring\+Central.\+Sync\+Address\+Book\+Parameters Class Reference}
+\label{classRingCentral_1_1SyncAddressBookParameters}\index{RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}}
+
+
+Query parameters for operation sync\+Address\+Book  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SyncAddressBookParameters_a65542a897410e8c936280e4143d83f08}{sync\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of synchronization Enum\+: FSync, ISync \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SyncAddressBookParameters_af1b8cc895e2379d221767647e8f05f4d}{sync\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Value of sync\+Token property of the last sync request response \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SyncAddressBookParameters_a347a570047ffa588e005f4f233136aff}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of records per page to be returned. Max number of records is 250, which is also the default. For \textquotesingle{}FSync\textquotesingle{} -\/ if the number of records exceeds the parameter value (either specified or default), all of the pages can be retrieved in several requests. For \textquotesingle{}ISync\textquotesingle{} -\/ if the number of records exceeds page size, then the number of incoming changes to this number is limited Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SyncAddressBookParameters_a61edab73914ec2a315ead1fa889117b6}{page\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a page. It can be obtained from the \textquotesingle{}next\+Page\+Id\textquotesingle{} parameter passed in response body Format\+: int64 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation sync\+Address\+Book 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SyncAddressBookParameters_a61edab73914ec2a315ead1fa889117b6}\label{classRingCentral_1_1SyncAddressBookParameters_a61edab73914ec2a315ead1fa889117b6}} 
+\index{RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}!pageId@{pageId}}
+\index{pageId@{pageId}!RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}}
+\doxysubsubsection{\texorpdfstring{pageId}{pageId}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Sync\+Address\+Book\+Parameters.\+page\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a page. It can be obtained from the \textquotesingle{}next\+Page\+Id\textquotesingle{} parameter passed in response body Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncAddressBookParameters_a347a570047ffa588e005f4f233136aff}\label{classRingCentral_1_1SyncAddressBookParameters_a347a570047ffa588e005f4f233136aff}} 
+\index{RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Sync\+Address\+Book\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of records per page to be returned. Max number of records is 250, which is also the default. For \textquotesingle{}FSync\textquotesingle{} -\/ if the number of records exceeds the parameter value (either specified or default), all of the pages can be retrieved in several requests. For \textquotesingle{}ISync\textquotesingle{} -\/ if the number of records exceeds page size, then the number of incoming changes to this number is limited Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncAddressBookParameters_af1b8cc895e2379d221767647e8f05f4d}\label{classRingCentral_1_1SyncAddressBookParameters_af1b8cc895e2379d221767647e8f05f4d}} 
+\index{RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}!syncToken@{syncToken}}
+\index{syncToken@{syncToken}!RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}}
+\doxysubsubsection{\texorpdfstring{syncToken}{syncToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sync\+Address\+Book\+Parameters.\+sync\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Value of sync\+Token property of the last sync request response 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncAddressBookParameters_a65542a897410e8c936280e4143d83f08}\label{classRingCentral_1_1SyncAddressBookParameters_a65542a897410e8c936280e4143d83f08}} 
+\index{RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}!syncType@{syncType}}
+\index{syncType@{syncType}!RingCentral.SyncAddressBookParameters@{RingCentral.SyncAddressBookParameters}}
+\doxysubsubsection{\texorpdfstring{syncType}{syncType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sync\+Address\+Book\+Parameters.\+sync\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of synchronization Enum\+: FSync, ISync 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Sync\+Address\+Book\+Parameters.\+cs\end{DoxyCompactItemize}

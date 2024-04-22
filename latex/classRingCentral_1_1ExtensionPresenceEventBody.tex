@@ -1,0 +1,133 @@
+\hypertarget{classRingCentral_1_1ExtensionPresenceEventBody}{}\doxysection{Ring\+Central.\+Extension\+Presence\+Event\+Body Class Reference}
+\label{classRingCentral_1_1ExtensionPresenceEventBody}\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_add28f43517096fba5c2b2d6ca5a6b6e1}{extension\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an extension. Optional parameter Default\+: $\sim$ \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_ac0c5009e82834ca087139f1ff5993d74}{telephony\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Telephony presence status. Returned if telephony status is changed. Enum\+: No\+Call, Call\+Connected, Ringing, On\+Hold, Parked\+Call \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_a91900a7358158619b5cf7e3c0b201d06}{sequence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Order number of a notification to state the chronology Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_acae3802e004b83e9b8c8660138f7a21e}{presence\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregated presence status, calculated from a number of sources Enum\+: Offline, Busy, Available \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_abe3eafc4e561d81e7c7e9485001f9429}{user\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em User-\/defined presence status (as previously published by the user) Enum\+: Offline, Busy, Available \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_a021ec5b0a0c0df4d10de629a8f8f1b63}{dnd\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extended DnD (Do not Disturb) status Enum\+: Take\+All\+Calls, Do\+Not\+Accept\+Any\+Calls, Do\+Not\+Accept\+Department\+Calls, Take\+Department\+Calls\+Only \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_aff6bfe220bf8052007fefb0eb4914f69}{allow\+See\+My\+Presence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true} enables other extensions to see the extension presence status \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_a24bf96f27ca7db23249ebd8d7c3a7ad9}{ring\+On\+Monitored\+Call}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true} enables to ring extension phone, if any user monitored by this extension is ringing \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_a23abaf60f8dbeeb62e4e62ef43f567c0}{pick\+Up\+Calls\+On\+Hold}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true} enables the extension user to pick up a monitored line on hold \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ExtensionPresenceEventBody_af4059da4f5c7736c7c60c18b02bf92e8}{owner\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a subscription owner extension \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_aff6bfe220bf8052007fefb0eb4914f69}\label{classRingCentral_1_1ExtensionPresenceEventBody_aff6bfe220bf8052007fefb0eb4914f69}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!allowSeeMyPresence@{allowSeeMyPresence}}
+\index{allowSeeMyPresence@{allowSeeMyPresence}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{allowSeeMyPresence}{allowSeeMyPresence}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Extension\+Presence\+Event\+Body.\+allow\+See\+My\+Presence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true} enables other extensions to see the extension presence status 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_a021ec5b0a0c0df4d10de629a8f8f1b63}\label{classRingCentral_1_1ExtensionPresenceEventBody_a021ec5b0a0c0df4d10de629a8f8f1b63}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!dndStatus@{dndStatus}}
+\index{dndStatus@{dndStatus}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{dndStatus}{dndStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Extension\+Presence\+Event\+Body.\+dnd\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extended DnD (Do not Disturb) status Enum\+: Take\+All\+Calls, Do\+Not\+Accept\+Any\+Calls, Do\+Not\+Accept\+Department\+Calls, Take\+Department\+Calls\+Only 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_add28f43517096fba5c2b2d6ca5a6b6e1}\label{classRingCentral_1_1ExtensionPresenceEventBody_add28f43517096fba5c2b2d6ca5a6b6e1}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!extensionId@{extensionId}}
+\index{extensionId@{extensionId}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{extensionId}{extensionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Extension\+Presence\+Event\+Body.\+extension\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an extension. Optional parameter Default\+: $\sim$ 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_af4059da4f5c7736c7c60c18b02bf92e8}\label{classRingCentral_1_1ExtensionPresenceEventBody_af4059da4f5c7736c7c60c18b02bf92e8}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!ownerId@{ownerId}}
+\index{ownerId@{ownerId}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{ownerId}{ownerId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Extension\+Presence\+Event\+Body.\+owner\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a subscription owner extension 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_a23abaf60f8dbeeb62e4e62ef43f567c0}\label{classRingCentral_1_1ExtensionPresenceEventBody_a23abaf60f8dbeeb62e4e62ef43f567c0}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!pickUpCallsOnHold@{pickUpCallsOnHold}}
+\index{pickUpCallsOnHold@{pickUpCallsOnHold}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{pickUpCallsOnHold}{pickUpCallsOnHold}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Extension\+Presence\+Event\+Body.\+pick\+Up\+Calls\+On\+Hold\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true} enables the extension user to pick up a monitored line on hold 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_acae3802e004b83e9b8c8660138f7a21e}\label{classRingCentral_1_1ExtensionPresenceEventBody_acae3802e004b83e9b8c8660138f7a21e}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!presenceStatus@{presenceStatus}}
+\index{presenceStatus@{presenceStatus}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{presenceStatus}{presenceStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Extension\+Presence\+Event\+Body.\+presence\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregated presence status, calculated from a number of sources Enum\+: Offline, Busy, Available 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_a24bf96f27ca7db23249ebd8d7c3a7ad9}\label{classRingCentral_1_1ExtensionPresenceEventBody_a24bf96f27ca7db23249ebd8d7c3a7ad9}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!ringOnMonitoredCall@{ringOnMonitoredCall}}
+\index{ringOnMonitoredCall@{ringOnMonitoredCall}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{ringOnMonitoredCall}{ringOnMonitoredCall}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Extension\+Presence\+Event\+Body.\+ring\+On\+Monitored\+Call\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true} enables to ring extension phone, if any user monitored by this extension is ringing 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_a91900a7358158619b5cf7e3c0b201d06}\label{classRingCentral_1_1ExtensionPresenceEventBody_a91900a7358158619b5cf7e3c0b201d06}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!sequence@{sequence}}
+\index{sequence@{sequence}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{sequence}{sequence}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Extension\+Presence\+Event\+Body.\+sequence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Order number of a notification to state the chronology Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_ac0c5009e82834ca087139f1ff5993d74}\label{classRingCentral_1_1ExtensionPresenceEventBody_ac0c5009e82834ca087139f1ff5993d74}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!telephonyStatus@{telephonyStatus}}
+\index{telephonyStatus@{telephonyStatus}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{telephonyStatus}{telephonyStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Extension\+Presence\+Event\+Body.\+telephony\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Telephony presence status. Returned if telephony status is changed. Enum\+: No\+Call, Call\+Connected, Ringing, On\+Hold, Parked\+Call 
+
+\mbox{\Hypertarget{classRingCentral_1_1ExtensionPresenceEventBody_abe3eafc4e561d81e7c7e9485001f9429}\label{classRingCentral_1_1ExtensionPresenceEventBody_abe3eafc4e561d81e7c7e9485001f9429}} 
+\index{RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}!userStatus@{userStatus}}
+\index{userStatus@{userStatus}!RingCentral.ExtensionPresenceEventBody@{RingCentral.ExtensionPresenceEventBody}}
+\doxysubsubsection{\texorpdfstring{userStatus}{userStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Extension\+Presence\+Event\+Body.\+user\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+User-\/defined presence status (as previously published by the user) Enum\+: Offline, Busy, Available 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Extension\+Presence\+Event\+Body.\+cs\end{DoxyCompactItemize}

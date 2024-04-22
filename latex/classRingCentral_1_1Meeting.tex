@@ -1,0 +1,215 @@
+\hypertarget{classRingCentral_1_1Meeting}{}\doxysection{Ring\+Central.\+Meeting Class Reference}
+\label{classRingCentral_1_1Meeting}\index{RingCentral.Meeting@{RingCentral.Meeting}}
+
+
+\mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} information  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_a46fef8b2455e73581ed60a6960531ded}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call id Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_a421bda621d1dce25a5fc73ca115ef55f}{bridge\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Bridge id Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_ab52b6db20fb1a2f1641ed04db3e07a38}{short\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Short bridge id Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_a97a4b7e84c0acae3f554bdfdffde9ab8}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Start time ISO 8601 Required Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1Meeting_a9bbcad15938664fa7233097401b4e6b5}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Duration second Format\+: int32 Example\+: 36 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_a704070f6536429adeca01a804823fc9f}{display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Meetings name Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_a03cf502939f5aa6bccf949b21500e28c}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} type Required Enum\+: \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Call \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_a21b8052e1ad294f072a074ccfee50e0b}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} status Required Enum\+: In\+Progress, Done \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1Host}{Host}} \mbox{\hyperlink{classRingCentral_1_1Meeting_a8adf57e0ca7f219e67f6158fa59e0d66}{host\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1Meeting_a3c5fb45fe347403b2f5b109b878120ed}{rights}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Describe access rights which has participants to meeting Required Enum\+: delete, download, share \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_afd01bdd77b16b42a838bb57a8a50551f}{long\+Summary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em During meeting AI team analyze code and after meeting finished generates text summary about this meeting \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_ac002226edf77242dec85c6ec8cec1174}{short\+Summary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em During meeting AI team analyze code and after meeting finished generates text summary about this meeting \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1Meeting_a51c0daff0b1dcf9751ed26f6a3696fdd}{keywords}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em During meeting AI team analyze code and after meeting finished generates key words used in meeting \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1Participant}{Participant}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1Meeting_aee280a4098fc64bb1b251e2bdb92290d}{participants}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of the participants in the meeting Required \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1Meeting_a60fad05a2146a0b96173c2d7aa5488ea}{recordings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} information Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Meeting_a42bc4be1f25bbf3f7644d2c39f2b040f}{chat\+Url}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Chat location \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} information 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a421bda621d1dce25a5fc73ca115ef55f}\label{classRingCentral_1_1Meeting_a421bda621d1dce25a5fc73ca115ef55f}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!bridgeId@{bridgeId}}
+\index{bridgeId@{bridgeId}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{bridgeId}{bridgeId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+bridge\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Bridge id Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a42bc4be1f25bbf3f7644d2c39f2b040f}\label{classRingCentral_1_1Meeting_a42bc4be1f25bbf3f7644d2c39f2b040f}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!chatUrl@{chatUrl}}
+\index{chatUrl@{chatUrl}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{chatUrl}{chatUrl}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+chat\+Url\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Chat location 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a704070f6536429adeca01a804823fc9f}\label{classRingCentral_1_1Meeting_a704070f6536429adeca01a804823fc9f}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!displayName@{displayName}}
+\index{displayName@{displayName}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{displayName}{displayName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+display\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Meetings name Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a9bbcad15938664fa7233097401b4e6b5}\label{classRingCentral_1_1Meeting_a9bbcad15938664fa7233097401b4e6b5}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!duration@{duration}}
+\index{duration@{duration}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Meeting.\+duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Duration second Format\+: int32 Example\+: 36 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a8adf57e0ca7f219e67f6158fa59e0d66}\label{classRingCentral_1_1Meeting_a8adf57e0ca7f219e67f6158fa59e0d66}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!hostInfo@{hostInfo}}
+\index{hostInfo@{hostInfo}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{hostInfo}{hostInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1Host}{Host}} Ring\+Central.\+Meeting.\+host\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a46fef8b2455e73581ed60a6960531ded}\label{classRingCentral_1_1Meeting_a46fef8b2455e73581ed60a6960531ded}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!id@{id}}
+\index{id@{id}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call id Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a51c0daff0b1dcf9751ed26f6a3696fdd}\label{classRingCentral_1_1Meeting_a51c0daff0b1dcf9751ed26f6a3696fdd}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!keywords@{keywords}}
+\index{keywords@{keywords}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{keywords}{keywords}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Meeting.\+keywords\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+During meeting AI team analyze code and after meeting finished generates key words used in meeting 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_afd01bdd77b16b42a838bb57a8a50551f}\label{classRingCentral_1_1Meeting_afd01bdd77b16b42a838bb57a8a50551f}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!longSummary@{longSummary}}
+\index{longSummary@{longSummary}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{longSummary}{longSummary}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+long\+Summary\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+During meeting AI team analyze code and after meeting finished generates text summary about this meeting 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_aee280a4098fc64bb1b251e2bdb92290d}\label{classRingCentral_1_1Meeting_aee280a4098fc64bb1b251e2bdb92290d}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!participants@{participants}}
+\index{participants@{participants}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{participants}{participants}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1Participant}{Participant}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Meeting.\+participants\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of the participants in the meeting Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a60fad05a2146a0b96173c2d7aa5488ea}\label{classRingCentral_1_1Meeting_a60fad05a2146a0b96173c2d7aa5488ea}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!recordings@{recordings}}
+\index{recordings@{recordings}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{recordings}{recordings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Meeting.\+recordings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} information Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a3c5fb45fe347403b2f5b109b878120ed}\label{classRingCentral_1_1Meeting_a3c5fb45fe347403b2f5b109b878120ed}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!rights@{rights}}
+\index{rights@{rights}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{rights}{rights}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Meeting.\+rights\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Describe access rights which has participants to meeting Required Enum\+: delete, download, share 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_ab52b6db20fb1a2f1641ed04db3e07a38}\label{classRingCentral_1_1Meeting_ab52b6db20fb1a2f1641ed04db3e07a38}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!shortId@{shortId}}
+\index{shortId@{shortId}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{shortId}{shortId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+short\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Short bridge id Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_ac002226edf77242dec85c6ec8cec1174}\label{classRingCentral_1_1Meeting_ac002226edf77242dec85c6ec8cec1174}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!shortSummary@{shortSummary}}
+\index{shortSummary@{shortSummary}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{shortSummary}{shortSummary}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+short\+Summary\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+During meeting AI team analyze code and after meeting finished generates text summary about this meeting 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a97a4b7e84c0acae3f554bdfdffde9ab8}\label{classRingCentral_1_1Meeting_a97a4b7e84c0acae3f554bdfdffde9ab8}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Start time ISO 8601 Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a21b8052e1ad294f072a074ccfee50e0b}\label{classRingCentral_1_1Meeting_a21b8052e1ad294f072a074ccfee50e0b}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!status@{status}}
+\index{status@{status}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} status Required Enum\+: In\+Progress, Done 
+
+\mbox{\Hypertarget{classRingCentral_1_1Meeting_a03cf502939f5aa6bccf949b21500e28c}\label{classRingCentral_1_1Meeting_a03cf502939f5aa6bccf949b21500e28c}} 
+\index{RingCentral.Meeting@{RingCentral.Meeting}!type@{type}}
+\index{type@{type}!RingCentral.Meeting@{RingCentral.Meeting}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} type Required Enum\+: \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Call 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Meeting.\+cs\end{DoxyCompactItemize}

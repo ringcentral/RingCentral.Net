@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Caller\+Blocking.\+Phone\+Numbers.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Caller\+Blocking.\+Phone\+Numbers.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_af44c28eb14eabd00fd82215d6e453315}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_af44c28eb14eabd00fd82215d6e453315}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1Index}{Caller\+Blocking.\+Index}} parent, string blocked\+Number\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_ac29d5c55b8f22b0a3a3c68c06609848a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_ac29d5c55b8f22b0a3a3c68c06609848a}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumbersList}{Blocked\+Allowed\+Phone\+Numbers\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3131bb480e055ada28711a6f1b96fab9}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListBlockedAllowedNumbersParameters}{List\+Blocked\+Allowed\+Numbers\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the lists of blocked and allowed phone numbers. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Blocked\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumberInfo}{Blocked\+Allowed\+Phone\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a61e1cbd0d371d58a04a36247b05e53c5}{Post}} (\mbox{\hyperlink{classRingCentral_1_1AddBlockedAllowedPhoneNumber}{Add\+Blocked\+Allowed\+Phone\+Number}} add\+Blocked\+Allowed\+Phone\+Number, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates either blocked or allowed phone number list with a new phone number. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Blocked\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumberInfo}{Blocked\+Allowed\+Phone\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_ab41e7abaf6a28e952a78a67eebed7ed5}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns blocked or allowed phone number(s) by their ID(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers/\{blocked\+Number\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Blocked\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumberInfo}{Blocked\+Allowed\+Phone\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3effcc06ce7b1573b34479dc69a2084a}{Put}} (\mbox{\hyperlink{classRingCentral_1_1AddBlockedAllowedPhoneNumber}{Add\+Blocked\+Allowed\+Phone\+Number}} add\+Blocked\+Allowed\+Phone\+Number, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates blocked or allowed phone number(s) by their ID(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers/\{blocked\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Blocked\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a64831595de45e5aa46092d30b369093d}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes blocked or allowed phone number(s) by their ID(s). Batch request is supported. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers/\{blocked\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Blocked\+Numbers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a6fe66016ffb5231512246d21ff22fc9c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a6fe66016ffb5231512246d21ff22fc9c}} 
+string {\bfseries blocked\+Number\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a8491cfc0b1932b77323d00b2bb95efdf}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a8491cfc0b1932b77323d00b2bb95efdf}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1Index}{Caller\+Blocking.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3fd85f76cd34b6f08c3abf9cd0d45dca}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3fd85f76cd34b6f08c3abf9cd0d45dca}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a64831595de45e5aa46092d30b369093d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a64831595de45e5aa46092d30b369093d}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Caller\+Blocking.\+Phone\+Numbers.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes blocked or allowed phone number(s) by their ID(s). Batch request is supported. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers/\{blocked\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Blocked\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_ab41e7abaf6a28e952a78a67eebed7ed5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_ab41e7abaf6a28e952a78a67eebed7ed5}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumberInfo}{Blocked\+Allowed\+Phone\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Caller\+Blocking.\+Phone\+Numbers.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns blocked or allowed phone number(s) by their ID(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers/\{blocked\+Number\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Blocked\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3131bb480e055ada28711a6f1b96fab9}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3131bb480e055ada28711a6f1b96fab9}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumbersList}{Blocked\+Allowed\+Phone\+Numbers\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Caller\+Blocking.\+Phone\+Numbers.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListBlockedAllowedNumbersParameters}{List\+Blocked\+Allowed\+Numbers\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the lists of blocked and allowed phone numbers. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Blocked\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a61e1cbd0d371d58a04a36247b05e53c5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a61e1cbd0d371d58a04a36247b05e53c5}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumberInfo}{Blocked\+Allowed\+Phone\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Caller\+Blocking.\+Phone\+Numbers.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AddBlockedAllowedPhoneNumber}{Add\+Blocked\+Allowed\+Phone\+Number}}}]{add\+Blocked\+Allowed\+Phone\+Number,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates either blocked or allowed phone number list with a new phone number. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Blocked\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3effcc06ce7b1573b34479dc69a2084a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallerBlocking_1_1PhoneNumbers_1_1Index_a3effcc06ce7b1573b34479dc69a2084a}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index@{RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BlockedAllowedPhoneNumberInfo}{Blocked\+Allowed\+Phone\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Caller\+Blocking.\+Phone\+Numbers.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AddBlockedAllowedPhoneNumber}{Add\+Blocked\+Allowed\+Phone\+Number}}}]{add\+Blocked\+Allowed\+Phone\+Number,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates blocked or allowed phone number(s) by their ID(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/caller-\/blocking/phone-\/numbers/\{blocked\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Blocked\+Numbers 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Caller\+Blocking/\+Phone\+Numbers/Index.\+cs\end{DoxyCompactItemize}

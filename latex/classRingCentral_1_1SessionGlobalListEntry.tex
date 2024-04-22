@@ -1,0 +1,181 @@
+\hypertarget{classRingCentral_1_1SessionGlobalListEntry}{}\doxysection{Ring\+Central.\+Session\+Global\+List\+Entry Class Reference}
+\label{classRingCentral_1_1SessionGlobalListEntry}\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_a0532114831d35e1f2b8b248c0b4ddc69}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal object ID Example\+: 78654321 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_a1546208ca39ed13deac7bc0520e02aee}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object creation time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_a5c32eeb06572320797bec32112a698d5}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object last modification time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1WcsWebinarRefModel}{Wcs\+Webinar\+Ref\+Model}} \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_af7d38f3b34543a26f3cddd2c7aabe9b3}{webinar}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_a24e5733cab4f76bbde3a011761796ce9}{scheduled\+Start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session scheduled start time. Required Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_af4dea3d4bc077e123f4e8fdf03b7ab64}{scheduled\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The duration of the Session in seconds. Required Maximum\+: 43200 Minimum\+: 30 Format\+: int32 Example\+: 1800 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_aecdedc7684f402ed7352e8d885a127a8}{time\+Zone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em IANA-\/compatible time zone name (see \href{https://www.iana.org/time-zones}{\texttt{ https\+://www.\+iana.\+org/time-\/zones}}). Required Example\+: America/\+New\+\_\+\+York \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_ab3f50ba39e8c1db1b541f8e3be1ffbbc}{localized\+Time\+Zone\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Localized time zone description. Example\+: Eastern Time (America/\+New\+\_\+\+York) \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_a44d6cd7234136679eee08e9599121574}{panel\+Join\+Time\+Offset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time offset (positive, in seconds) indicating how much in advance (comparing to \char`\"{}scheduled\+Start\+Time\char`\"{}) panel members should join for the pre-\/webinar team sync Format\+: int32 Example\+: 900 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_ab65ea62954a1afce1bf9d7531f22da4b}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session title. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live Broadcasting US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_a08c48ed63b75bef6e33c82999b47af97}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em User-\/friendly description of the Session. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live session for US-\/based participants \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_af2f1f7cd9462e78f674bfb63a0f593e8}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_aa7b2fe7f3f890f2e11f71bc26d589801}{host\+Join\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URI to join the webinar as a host Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionGlobalListEntry_ae3be2c6a29c583b45e7906c6361a059a}{locale\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session locale code. Can\textquotesingle{}t be blank or null Example\+: en-\/\+US \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_a1546208ca39ed13deac7bc0520e02aee}\label{classRingCentral_1_1SessionGlobalListEntry_a1546208ca39ed13deac7bc0520e02aee}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object creation time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_a08c48ed63b75bef6e33c82999b47af97}\label{classRingCentral_1_1SessionGlobalListEntry_a08c48ed63b75bef6e33c82999b47af97}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!description@{description}}
+\index{description@{description}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+User-\/friendly description of the Session. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live session for US-\/based participants 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_aa7b2fe7f3f890f2e11f71bc26d589801}\label{classRingCentral_1_1SessionGlobalListEntry_aa7b2fe7f3f890f2e11f71bc26d589801}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!hostJoinUri@{hostJoinUri}}
+\index{hostJoinUri@{hostJoinUri}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{hostJoinUri}{hostJoinUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+host\+Join\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The URI to join the webinar as a host Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_a0532114831d35e1f2b8b248c0b4ddc69}\label{classRingCentral_1_1SessionGlobalListEntry_a0532114831d35e1f2b8b248c0b4ddc69}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!id@{id}}
+\index{id@{id}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal object ID Example\+: 78654321 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_a5c32eeb06572320797bec32112a698d5}\label{classRingCentral_1_1SessionGlobalListEntry_a5c32eeb06572320797bec32112a698d5}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object last modification time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_ae3be2c6a29c583b45e7906c6361a059a}\label{classRingCentral_1_1SessionGlobalListEntry_ae3be2c6a29c583b45e7906c6361a059a}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!localeCode@{localeCode}}
+\index{localeCode@{localeCode}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{localeCode}{localeCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+locale\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session locale code. Can\textquotesingle{}t be blank or null Example\+: en-\/\+US 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_ab3f50ba39e8c1db1b541f8e3be1ffbbc}\label{classRingCentral_1_1SessionGlobalListEntry_ab3f50ba39e8c1db1b541f8e3be1ffbbc}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!localizedTimeZoneDescription@{localizedTimeZoneDescription}}
+\index{localizedTimeZoneDescription@{localizedTimeZoneDescription}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{localizedTimeZoneDescription}{localizedTimeZoneDescription}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+localized\+Time\+Zone\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Localized time zone description. Example\+: Eastern Time (America/\+New\+\_\+\+York) 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_a44d6cd7234136679eee08e9599121574}\label{classRingCentral_1_1SessionGlobalListEntry_a44d6cd7234136679eee08e9599121574}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!panelJoinTimeOffset@{panelJoinTimeOffset}}
+\index{panelJoinTimeOffset@{panelJoinTimeOffset}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{panelJoinTimeOffset}{panelJoinTimeOffset}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Session\+Global\+List\+Entry.\+panel\+Join\+Time\+Offset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time offset (positive, in seconds) indicating how much in advance (comparing to \char`\"{}scheduled\+Start\+Time\char`\"{}) panel members should join for the pre-\/webinar team sync Format\+: int32 Example\+: 900 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_af4dea3d4bc077e123f4e8fdf03b7ab64}\label{classRingCentral_1_1SessionGlobalListEntry_af4dea3d4bc077e123f4e8fdf03b7ab64}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!scheduledDuration@{scheduledDuration}}
+\index{scheduledDuration@{scheduledDuration}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{scheduledDuration}{scheduledDuration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Session\+Global\+List\+Entry.\+scheduled\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The duration of the Session in seconds. Required Maximum\+: 43200 Minimum\+: 30 Format\+: int32 Example\+: 1800 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_a24e5733cab4f76bbde3a011761796ce9}\label{classRingCentral_1_1SessionGlobalListEntry_a24e5733cab4f76bbde3a011761796ce9}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!scheduledStartTime@{scheduledStartTime}}
+\index{scheduledStartTime@{scheduledStartTime}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{scheduledStartTime}{scheduledStartTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+scheduled\+Start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session scheduled start time. Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_af2f1f7cd9462e78f674bfb63a0f593e8}\label{classRingCentral_1_1SessionGlobalListEntry_af2f1f7cd9462e78f674bfb63a0f593e8}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!status@{status}}
+\index{status@{status}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_aecdedc7684f402ed7352e8d885a127a8}\label{classRingCentral_1_1SessionGlobalListEntry_aecdedc7684f402ed7352e8d885a127a8}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!timeZone@{timeZone}}
+\index{timeZone@{timeZone}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{timeZone}{timeZone}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+time\+Zone\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+IANA-\/compatible time zone name (see \href{https://www.iana.org/time-zones}{\texttt{ https\+://www.\+iana.\+org/time-\/zones}}). Required Example\+: America/\+New\+\_\+\+York 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_ab65ea62954a1afce1bf9d7531f22da4b}\label{classRingCentral_1_1SessionGlobalListEntry_ab65ea62954a1afce1bf9d7531f22da4b}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!title@{title}}
+\index{title@{title}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Global\+List\+Entry.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session title. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live Broadcasting US 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionGlobalListEntry_af7d38f3b34543a26f3cddd2c7aabe9b3}\label{classRingCentral_1_1SessionGlobalListEntry_af7d38f3b34543a26f3cddd2c7aabe9b3}} 
+\index{RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}!webinar@{webinar}}
+\index{webinar@{webinar}!RingCentral.SessionGlobalListEntry@{RingCentral.SessionGlobalListEntry}}
+\doxysubsubsection{\texorpdfstring{webinar}{webinar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1WcsWebinarRefModel}{Wcs\+Webinar\+Ref\+Model}} Ring\+Central.\+Session\+Global\+List\+Entry.\+webinar\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Required 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Session\+Global\+List\+Entry.\+cs\end{DoxyCompactItemize}

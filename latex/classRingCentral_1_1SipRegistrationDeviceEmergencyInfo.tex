@@ -1,0 +1,131 @@
+\hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo}{}\doxysection{Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info Class Reference}
+\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo}\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+
+
+Emergency response location settings of a device  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfoAddress}{Sip\+Registration\+Device\+Emergency\+Info\+Address}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a90c8042eaf1096b78bcfc5370fa0ddd7}{address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Address for emergency cases. The same emergency address is assigned to all the numbers of one device \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceLocationInfo}{Sip\+Registration\+Device\+Location\+Info}} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_ae74c48f1aa87a46e55c27b8ada94d3ce}{location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aaace8d4460e1e2b214042bf55691e5bc}{out\+Of\+Country}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if emergency address is out of country \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a01002be7d6a835db244547c8a3d6fea1}{address\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Emergency address status Enum\+: Valid, Invalid, Processing \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aacd4410f89b2321026584ef5de5aead7}{visibility}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether to return only private or only public (company) ERLs (Emergency Response Locations) Enum\+: Private, Public \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a08d32997db75d0820406a2c5c0e2d8f2}{sync\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Resulting status of emergency address synchronization. Returned if {\ttfamily sync\+Emergency\+Address} parameter is set to {\ttfamily true} Enum\+: Verified, Updated, Deleted, Not\+Required, Unsupported, Failed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a73f0517e2fa581a4ca3e3183ff311e95}{address\+Editable\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ability to register new emergency address for a phone line using devices sharing this line or only main device (line owner) Enum\+: Main\+Device, Any\+Device \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aaeac85f14d6f0f39c988b320ed0384e8}{address\+Required}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if emergency address is required for the country of a phone line \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aa804a6d7f0ff6ffe00c39e3723ad0184}{address\+Location\+Only}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if out of country emergency address is not allowed for the country of a phone line \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Emergency response location settings of a device 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a90c8042eaf1096b78bcfc5370fa0ddd7}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a90c8042eaf1096b78bcfc5370fa0ddd7}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!address@{address}}
+\index{address@{address}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceEmergencyInfoAddress}{Sip\+Registration\+Device\+Emergency\+Info\+Address}} Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Address for emergency cases. The same emergency address is assigned to all the numbers of one device 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a73f0517e2fa581a4ca3e3183ff311e95}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a73f0517e2fa581a4ca3e3183ff311e95}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!addressEditableStatus@{addressEditableStatus}}
+\index{addressEditableStatus@{addressEditableStatus}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{addressEditableStatus}{addressEditableStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+address\+Editable\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ability to register new emergency address for a phone line using devices sharing this line or only main device (line owner) Enum\+: Main\+Device, Any\+Device 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aa804a6d7f0ff6ffe00c39e3723ad0184}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aa804a6d7f0ff6ffe00c39e3723ad0184}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!addressLocationOnly@{addressLocationOnly}}
+\index{addressLocationOnly@{addressLocationOnly}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{addressLocationOnly}{addressLocationOnly}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+address\+Location\+Only\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if out of country emergency address is not allowed for the country of a phone line 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aaeac85f14d6f0f39c988b320ed0384e8}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aaeac85f14d6f0f39c988b320ed0384e8}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!addressRequired@{addressRequired}}
+\index{addressRequired@{addressRequired}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{addressRequired}{addressRequired}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+address\+Required\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if emergency address is required for the country of a phone line 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a01002be7d6a835db244547c8a3d6fea1}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a01002be7d6a835db244547c8a3d6fea1}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!addressStatus@{addressStatus}}
+\index{addressStatus@{addressStatus}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{addressStatus}{addressStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+address\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Emergency address status Enum\+: Valid, Invalid, Processing 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_ae74c48f1aa87a46e55c27b8ada94d3ce}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_ae74c48f1aa87a46e55c27b8ada94d3ce}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!location@{location}}
+\index{location@{location}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceLocationInfo}{Sip\+Registration\+Device\+Location\+Info}} Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aaace8d4460e1e2b214042bf55691e5bc}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aaace8d4460e1e2b214042bf55691e5bc}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!outOfCountry@{outOfCountry}}
+\index{outOfCountry@{outOfCountry}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{outOfCountry}{outOfCountry}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+out\+Of\+Country\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if emergency address is out of country 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a08d32997db75d0820406a2c5c0e2d8f2}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_a08d32997db75d0820406a2c5c0e2d8f2}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!syncStatus@{syncStatus}}
+\index{syncStatus@{syncStatus}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{syncStatus}{syncStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+sync\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Resulting status of emergency address synchronization. Returned if {\ttfamily sync\+Emergency\+Address} parameter is set to {\ttfamily true} Enum\+: Verified, Updated, Deleted, Not\+Required, Unsupported, Failed 
+
+\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aacd4410f89b2321026584ef5de5aead7}\label{classRingCentral_1_1SipRegistrationDeviceEmergencyInfo_aacd4410f89b2321026584ef5de5aead7}} 
+\index{RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}!visibility@{visibility}}
+\index{visibility@{visibility}!RingCentral.SipRegistrationDeviceEmergencyInfo@{RingCentral.SipRegistrationDeviceEmergencyInfo}}
+\doxysubsubsection{\texorpdfstring{visibility}{visibility}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sip\+Registration\+Device\+Emergency\+Info.\+visibility\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether to return only private or only public (company) ERLs (Emergency Response Locations) Enum\+: Private, Public 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Sip\+Registration\+Device\+Emergency\+Info.\+cs\end{DoxyCompactItemize}

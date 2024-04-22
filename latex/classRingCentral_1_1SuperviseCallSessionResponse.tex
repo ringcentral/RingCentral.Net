@@ -1,0 +1,133 @@
+\hypertarget{classRingCentral_1_1SuperviseCallSessionResponse}{}\doxysection{Ring\+Central.\+Supervise\+Call\+Session\+Response Class Reference}
+\label{classRingCentral_1_1SuperviseCallSessionResponse}\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_a0fc68de14af34973850e32b5899d185a}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_ac207a2a103b2a2cc40150e0c222d14b8}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_ae961a9e96322cdeb970e68cbeb1cf52d}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Direction of a call Enum\+: Outbound, Inbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_ad4981dfef8b1759587eaa73b480d61b8}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a party that monitors a call \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_aa967511c1dee1c853a5832cdb2670f55}{account\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an account that monitors a call \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_a95ad370d6b7b17bb0cd173a6e2fd001b}{extension\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an extension that monitors a call \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_a237cf49129731bae3e6b72c6ffc21cf7}{muted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if a call participant is muted or not. {\bfseries{Note\+:}} If a call is also controlled via Hard phone or \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} App (not only through the API by calling call control methods) then it cannot be fully muted/unmuted via API only, in this case the action should be duplicated via Hard phone/\+RC App interfaces \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1OwnerInfo}{Owner\+Info}} \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_aff5d1d188917a4879f864e7931b0b5cb}{owner}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_a962428cfd77a03e3177943495ceed0a7}{stand\+Alone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true} then the party is not connected to a session voice conference, {\ttfamily false} means the party is connected to other parties in a session \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallStatusInfo}{Call\+Status\+Info}} \mbox{\hyperlink{classRingCentral_1_1SuperviseCallSessionResponse_a33717567be267e50023274e7a3645df2}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_aa967511c1dee1c853a5832cdb2670f55}\label{classRingCentral_1_1SuperviseCallSessionResponse_aa967511c1dee1c853a5832cdb2670f55}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!accountId@{accountId}}
+\index{accountId@{accountId}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{accountId}{accountId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Supervise\+Call\+Session\+Response.\+account\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an account that monitors a call 
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_ae961a9e96322cdeb970e68cbeb1cf52d}\label{classRingCentral_1_1SuperviseCallSessionResponse_ae961a9e96322cdeb970e68cbeb1cf52d}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!direction@{direction}}
+\index{direction@{direction}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Supervise\+Call\+Session\+Response.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Direction of a call Enum\+: Outbound, Inbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_a95ad370d6b7b17bb0cd173a6e2fd001b}\label{classRingCentral_1_1SuperviseCallSessionResponse_a95ad370d6b7b17bb0cd173a6e2fd001b}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!extensionId@{extensionId}}
+\index{extensionId@{extensionId}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{extensionId}{extensionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Supervise\+Call\+Session\+Response.\+extension\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an extension that monitors a call 
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_a0fc68de14af34973850e32b5899d185a}\label{classRingCentral_1_1SuperviseCallSessionResponse_a0fc68de14af34973850e32b5899d185a}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!from@{from}}
+\index{from@{from}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} Ring\+Central.\+Supervise\+Call\+Session\+Response.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_ad4981dfef8b1759587eaa73b480d61b8}\label{classRingCentral_1_1SuperviseCallSessionResponse_ad4981dfef8b1759587eaa73b480d61b8}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!id@{id}}
+\index{id@{id}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Supervise\+Call\+Session\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a party that monitors a call 
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_a237cf49129731bae3e6b72c6ffc21cf7}\label{classRingCentral_1_1SuperviseCallSessionResponse_a237cf49129731bae3e6b72c6ffc21cf7}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!muted@{muted}}
+\index{muted@{muted}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{muted}{muted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Supervise\+Call\+Session\+Response.\+muted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if a call participant is muted or not. {\bfseries{Note\+:}} If a call is also controlled via Hard phone or \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} App (not only through the API by calling call control methods) then it cannot be fully muted/unmuted via API only, in this case the action should be duplicated via Hard phone/\+RC App interfaces 
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_aff5d1d188917a4879f864e7931b0b5cb}\label{classRingCentral_1_1SuperviseCallSessionResponse_aff5d1d188917a4879f864e7931b0b5cb}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!owner@{owner}}
+\index{owner@{owner}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{owner}{owner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1OwnerInfo}{Owner\+Info}} Ring\+Central.\+Supervise\+Call\+Session\+Response.\+owner\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_a962428cfd77a03e3177943495ceed0a7}\label{classRingCentral_1_1SuperviseCallSessionResponse_a962428cfd77a03e3177943495ceed0a7}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!standAlone@{standAlone}}
+\index{standAlone@{standAlone}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{standAlone}{standAlone}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Supervise\+Call\+Session\+Response.\+stand\+Alone\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true} then the party is not connected to a session voice conference, {\ttfamily false} means the party is connected to other parties in a session 
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_a33717567be267e50023274e7a3645df2}\label{classRingCentral_1_1SuperviseCallSessionResponse_a33717567be267e50023274e7a3645df2}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!status@{status}}
+\index{status@{status}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallStatusInfo}{Call\+Status\+Info}} Ring\+Central.\+Supervise\+Call\+Session\+Response.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SuperviseCallSessionResponse_ac207a2a103b2a2cc40150e0c222d14b8}\label{classRingCentral_1_1SuperviseCallSessionResponse_ac207a2a103b2a2cc40150e0c222d14b8}} 
+\index{RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}!to@{to}}
+\index{to@{to}!RingCentral.SuperviseCallSessionResponse@{RingCentral.SuperviseCallSessionResponse}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} Ring\+Central.\+Supervise\+Call\+Session\+Response.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Supervise\+Call\+Session\+Response.\+cs\end{DoxyCompactItemize}

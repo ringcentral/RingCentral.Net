@@ -1,0 +1,169 @@
+\hypertarget{classRingCentral_1_1TMCreateEventRequest}{}\doxysection{Ring\+Central.\+TMCreate\+Event\+Request Class Reference}
+\label{classRingCentral_1_1TMCreateEventRequest}\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a2485285214882315a813ba2c0cb45879}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an event \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_acae4f2a24d026d438eea0d49532babf8}{creator\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a person created an event \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_ad24b633ccc72d4734f518d9d561c88ba}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event title Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a4b8482ee51c29d4ead8e031af46a05fb}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Datetime of starting an event Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a768affefa1684ebaedbbf42b19ddfb10}{end\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Datetime of ending an event Required Format\+: date-\/time \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a0fe234a7d8f9d890333b6e2609ff7d05}{all\+Day}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether event has some specific time slot or lasts for whole day(s) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_ab760881e5ba56c704a45545453ff33b9}{recurrence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event recurrence settings. For non-\/periodic events the value is {\ttfamily None}. Must be greater or equal to event duration\+: 1-\/ Day/\+Weekday; 7 -\/ Week; 28 -\/ Month; 365 -\/ Year Enum\+: None, Day, Weekday, Week, Month, Year \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a4296d84d5daeaf7c65a10f885d19ef0b}{ending\+Condition}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Condition of ending an event Enum\+: None, Count, Date \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_ae40c3043b5f12094b6a5f8c410b52470}{ending\+After}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of event iterations. For periodic events only. Value range is 1 -\/ 10. Must be specified if {\ttfamily ending\+Condition} is {\ttfamily Count} Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a53b128703e6b10f73bc39d33934851a3}{ending\+On}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Iterations ending datetime for periodic events in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a31c784322314481d5607d4d44651f524}{color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Color of Event title (including its presentation in Calendar) Default\+: Black Enum\+: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_a472d77cb08e73342fd32fa61b524cd62}{location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event location \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest_aab871b96546445b3cb42096e224ff058}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event details \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a0fe234a7d8f9d890333b6e2609ff7d05}\label{classRingCentral_1_1TMCreateEventRequest_a0fe234a7d8f9d890333b6e2609ff7d05}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!allDay@{allDay}}
+\index{allDay@{allDay}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{allDay}{allDay}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+TMCreate\+Event\+Request.\+all\+Day\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates whether event has some specific time slot or lasts for whole day(s) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a31c784322314481d5607d4d44651f524}\label{classRingCentral_1_1TMCreateEventRequest_a31c784322314481d5607d4d44651f524}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!color@{color}}
+\index{color@{color}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Color of Event title (including its presentation in Calendar) Default\+: Black Enum\+: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_acae4f2a24d026d438eea0d49532babf8}\label{classRingCentral_1_1TMCreateEventRequest_acae4f2a24d026d438eea0d49532babf8}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!creatorId@{creatorId}}
+\index{creatorId@{creatorId}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{creatorId}{creatorId}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+creator\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a person created an event 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_aab871b96546445b3cb42096e224ff058}\label{classRingCentral_1_1TMCreateEventRequest_aab871b96546445b3cb42096e224ff058}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!description@{description}}
+\index{description@{description}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event details 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_ae40c3043b5f12094b6a5f8c410b52470}\label{classRingCentral_1_1TMCreateEventRequest_ae40c3043b5f12094b6a5f8c410b52470}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!endingAfter@{endingAfter}}
+\index{endingAfter@{endingAfter}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{endingAfter}{endingAfter}}
+{\footnotesize\ttfamily long? Ring\+Central.\+TMCreate\+Event\+Request.\+ending\+After\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Count of event iterations. For periodic events only. Value range is 1 -\/ 10. Must be specified if {\ttfamily ending\+Condition} is {\ttfamily Count} Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a4296d84d5daeaf7c65a10f885d19ef0b}\label{classRingCentral_1_1TMCreateEventRequest_a4296d84d5daeaf7c65a10f885d19ef0b}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!endingCondition@{endingCondition}}
+\index{endingCondition@{endingCondition}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{endingCondition}{endingCondition}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+ending\+Condition\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Condition of ending an event Enum\+: None, Count, Date 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a53b128703e6b10f73bc39d33934851a3}\label{classRingCentral_1_1TMCreateEventRequest_a53b128703e6b10f73bc39d33934851a3}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!endingOn@{endingOn}}
+\index{endingOn@{endingOn}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{endingOn}{endingOn}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+ending\+On\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Iterations ending datetime for periodic events in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a768affefa1684ebaedbbf42b19ddfb10}\label{classRingCentral_1_1TMCreateEventRequest_a768affefa1684ebaedbbf42b19ddfb10}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!endTime@{endTime}}
+\index{endTime@{endTime}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+end\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Datetime of ending an event Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a2485285214882315a813ba2c0cb45879}\label{classRingCentral_1_1TMCreateEventRequest_a2485285214882315a813ba2c0cb45879}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!id@{id}}
+\index{id@{id}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an event 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a472d77cb08e73342fd32fa61b524cd62}\label{classRingCentral_1_1TMCreateEventRequest_a472d77cb08e73342fd32fa61b524cd62}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!location@{location}}
+\index{location@{location}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event location 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_ab760881e5ba56c704a45545453ff33b9}\label{classRingCentral_1_1TMCreateEventRequest_ab760881e5ba56c704a45545453ff33b9}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!recurrence@{recurrence}}
+\index{recurrence@{recurrence}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{recurrence}{recurrence}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+recurrence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event recurrence settings. For non-\/periodic events the value is {\ttfamily None}. Must be greater or equal to event duration\+: 1-\/ Day/\+Weekday; 7 -\/ Week; 28 -\/ Month; 365 -\/ Year Enum\+: None, Day, Weekday, Week, Month, Year 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_a4b8482ee51c29d4ead8e031af46a05fb}\label{classRingCentral_1_1TMCreateEventRequest_a4b8482ee51c29d4ead8e031af46a05fb}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Datetime of starting an event Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMCreateEventRequest_ad24b633ccc72d4734f518d9d561c88ba}\label{classRingCentral_1_1TMCreateEventRequest_ad24b633ccc72d4734f518d9d561c88ba}} 
+\index{RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}!title@{title}}
+\index{title@{title}!RingCentral.TMCreateEventRequest@{RingCentral.TMCreateEventRequest}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMCreate\+Event\+Request.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event title Required 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/TMCreate\+Event\+Request.\+cs\end{DoxyCompactItemize}

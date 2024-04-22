@@ -1,0 +1,147 @@
+\hypertarget{classRingCentral_1_1SyncMessagesParameters}{}\doxysection{Ring\+Central.\+Sync\+Messages\+Parameters Class Reference}
+\label{classRingCentral_1_1SyncMessagesParameters}\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+
+
+Query parameters for operation sync\+Messages  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_aec00c43c8b48704372af5de3e9c172b3}{conversation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only. Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_a8be311e0bbe0c97eadec561536e4b8c8}{date\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The start date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is date\+To minus 24 hours Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_a46683af03f9ea5c74a98472a2bd8dd90}{date\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is current time Format\+: date-\/time \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_a2a04c33308b7876f99119d1cf2f99cd5}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_aac2243bbc9b684865dd1f8aeab96204b}{distinct\+Conversations}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true}, then the latest messages per every conversation ID are returned \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_a3aa900ad020df918855867bd471f4dc4}{message\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type for the resulting messages. If not specified, all types of messages are returned. Multiple values are accepted Enum\+: Fax, SMS, Voice\+Mail, Pager \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_aa91934e873941c427afaa7a41d2635db}{record\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Limits the number of records to be returned (works in combination with date\+From and date\+To if specified) Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_ade261a13c9d678f47f23c3e03a64aa3b}{sync\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Value of sync\+Token property of last sync request response \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_a6e0faad8f3826fe26c5fd4d201692db6}{sync\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of message synchronization request\+: \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SyncMessagesParameters_ad3098ef5124743944f663b57b6ebe11b}{voicemail\+Owner}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This query parameter will filter voicemail messages based on its owner. This parameter should be controlled by the \textquotesingle{}Shared\+Voicemail\textquotesingle{} feature. If the feature is disabled this filter shouldn\textquotesingle{}t be applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation sync\+Messages 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_aec00c43c8b48704372af5de3e9c172b3}\label{classRingCentral_1_1SyncMessagesParameters_aec00c43c8b48704372af5de3e9c172b3}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!conversationId@{conversationId}}
+\index{conversationId@{conversationId}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{conversationId}{conversationId}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Sync\+Messages\+Parameters.\+conversation\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only. Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_a8be311e0bbe0c97eadec561536e4b8c8}\label{classRingCentral_1_1SyncMessagesParameters_a8be311e0bbe0c97eadec561536e4b8c8}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!dateFrom@{dateFrom}}
+\index{dateFrom@{dateFrom}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{dateFrom}{dateFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sync\+Messages\+Parameters.\+date\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The start date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is date\+To minus 24 hours Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_a46683af03f9ea5c74a98472a2bd8dd90}\label{classRingCentral_1_1SyncMessagesParameters_a46683af03f9ea5c74a98472a2bd8dd90}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!dateTo@{dateTo}}
+\index{dateTo@{dateTo}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{dateTo}{dateTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sync\+Messages\+Parameters.\+date\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is current time Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_a2a04c33308b7876f99119d1cf2f99cd5}\label{classRingCentral_1_1SyncMessagesParameters_a2a04c33308b7876f99119d1cf2f99cd5}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!direction@{direction}}
+\index{direction@{direction}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Sync\+Messages\+Parameters.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_aac2243bbc9b684865dd1f8aeab96204b}\label{classRingCentral_1_1SyncMessagesParameters_aac2243bbc9b684865dd1f8aeab96204b}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!distinctConversations@{distinctConversations}}
+\index{distinctConversations@{distinctConversations}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{distinctConversations}{distinctConversations}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Sync\+Messages\+Parameters.\+distinct\+Conversations\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true}, then the latest messages per every conversation ID are returned 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_a3aa900ad020df918855867bd471f4dc4}\label{classRingCentral_1_1SyncMessagesParameters_a3aa900ad020df918855867bd471f4dc4}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!messageType@{messageType}}
+\index{messageType@{messageType}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{messageType}{messageType}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Sync\+Messages\+Parameters.\+message\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type for the resulting messages. If not specified, all types of messages are returned. Multiple values are accepted Enum\+: Fax, SMS, Voice\+Mail, Pager 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_aa91934e873941c427afaa7a41d2635db}\label{classRingCentral_1_1SyncMessagesParameters_aa91934e873941c427afaa7a41d2635db}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!recordCount@{recordCount}}
+\index{recordCount@{recordCount}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{recordCount}{recordCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Sync\+Messages\+Parameters.\+record\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Limits the number of records to be returned (works in combination with date\+From and date\+To if specified) Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_ade261a13c9d678f47f23c3e03a64aa3b}\label{classRingCentral_1_1SyncMessagesParameters_ade261a13c9d678f47f23c3e03a64aa3b}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!syncToken@{syncToken}}
+\index{syncToken@{syncToken}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{syncToken}{syncToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sync\+Messages\+Parameters.\+sync\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Value of sync\+Token property of last sync request response 
+
+\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_a6e0faad8f3826fe26c5fd4d201692db6}\label{classRingCentral_1_1SyncMessagesParameters_a6e0faad8f3826fe26c5fd4d201692db6}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!syncType@{syncType}}
+\index{syncType@{syncType}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{syncType}{syncType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Sync\+Messages\+Parameters.\+sync\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of message synchronization request\+: 
+
+
+\begin{DoxyItemize}
+\item FSync -- full sync
+\item ISync -- incremental sync Enum\+: FSync, ISync
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1SyncMessagesParameters_ad3098ef5124743944f663b57b6ebe11b}\label{classRingCentral_1_1SyncMessagesParameters_ad3098ef5124743944f663b57b6ebe11b}} 
+\index{RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}!voicemailOwner@{voicemailOwner}}
+\index{voicemailOwner@{voicemailOwner}!RingCentral.SyncMessagesParameters@{RingCentral.SyncMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{voicemailOwner}{voicemailOwner}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Sync\+Messages\+Parameters.\+voicemail\+Owner\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+This query parameter will filter voicemail messages based on its owner. This parameter should be controlled by the \textquotesingle{}Shared\+Voicemail\textquotesingle{} feature. If the feature is disabled this filter shouldn\textquotesingle{}t be applied. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Sync\+Messages\+Parameters.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,215 @@
+\hypertarget{classRingCentral_1_1InstantMessageEventBody}{}\doxysection{Ring\+Central.\+Instant\+Message\+Event\+Body Class Reference}
+\label{classRingCentral_1_1InstantMessageEventBody}\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+
+
+Notification payload body  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_ae53c312718d42c014b13b2f36bbc5b1f}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo}{Notification\+Recipient\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a263d4501f22cead8b6275775caa50288}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message receiver(s) information \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SenderInfo}{Sender\+Info}} \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a35e9b1ddc96de6516765612a59bdf97d}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a04fbb69a62f46b12ea4c3690c6bd59b7}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of message. The default value is \textquotesingle{}SMS\textquotesingle{} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a717737c193a9b8073dea99b89a6e6d9a}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a407f148a1612d35e4251617ddf3c9eea}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Date/time when the message was modified in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_afd6834ca8217b31e0a476ac777086386}{read\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message read status Enum\+: Read, Unread \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a3d920101e897f350a2d33a32b38c9aad}{priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message priority Enum\+: Normal, High \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a420bf4e9a3f3edce7c3d8d2ee4343cba}{attachments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message attachment data \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a53850870e24204e1247d9dbfaacf0d72}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a334fde2860affff5c3d1dad86754814d}{availability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a100294cffadce23848f02c3ed00dfc95}{subject}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message subject. It replicates message text which is also returned as an attachment \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a9a7ac2365d73c95fbe2c63f3ef710e6d}{message\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_aef8970a79d7ed9f5e405390fcdfe7dec}{conversation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Deprecated. Identifier of a conversation the message belongs to \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ConversationInfo}{Conversation\+Info}} \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a9df9d51896089dd9ea564cad23e92f5e}{conversation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InstantMessageEventBody_a7b33066db3bdafb26b82b351e245ddaf}{owner\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a subscription owner extension \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notification payload body 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a420bf4e9a3f3edce7c3d8d2ee4343cba}\label{classRingCentral_1_1InstantMessageEventBody_a420bf4e9a3f3edce7c3d8d2ee4343cba}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!attachments@{attachments}}
+\index{attachments@{attachments}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{attachments}{attachments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Instant\+Message\+Event\+Body.\+attachments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message attachment data 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a334fde2860affff5c3d1dad86754814d}\label{classRingCentral_1_1InstantMessageEventBody_a334fde2860affff5c3d1dad86754814d}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!availability@{availability}}
+\index{availability@{availability}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{availability}{availability}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+availability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a9df9d51896089dd9ea564cad23e92f5e}\label{classRingCentral_1_1InstantMessageEventBody_a9df9d51896089dd9ea564cad23e92f5e}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!conversation@{conversation}}
+\index{conversation@{conversation}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{conversation}{conversation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ConversationInfo}{Conversation\+Info}} Ring\+Central.\+Instant\+Message\+Event\+Body.\+conversation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_aef8970a79d7ed9f5e405390fcdfe7dec}\label{classRingCentral_1_1InstantMessageEventBody_aef8970a79d7ed9f5e405390fcdfe7dec}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!conversationId@{conversationId}}
+\index{conversationId@{conversationId}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{conversationId}{conversationId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+conversation\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Deprecated. Identifier of a conversation the message belongs to 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a717737c193a9b8073dea99b89a6e6d9a}\label{classRingCentral_1_1InstantMessageEventBody_a717737c193a9b8073dea99b89a6e6d9a}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a53850870e24204e1247d9dbfaacf0d72}\label{classRingCentral_1_1InstantMessageEventBody_a53850870e24204e1247d9dbfaacf0d72}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!direction@{direction}}
+\index{direction@{direction}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a35e9b1ddc96de6516765612a59bdf97d}\label{classRingCentral_1_1InstantMessageEventBody_a35e9b1ddc96de6516765612a59bdf97d}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!from@{from}}
+\index{from@{from}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SenderInfo}{Sender\+Info}} Ring\+Central.\+Instant\+Message\+Event\+Body.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_ae53c312718d42c014b13b2f36bbc5b1f}\label{classRingCentral_1_1InstantMessageEventBody_ae53c312718d42c014b13b2f36bbc5b1f}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!id@{id}}
+\index{id@{id}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a message 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a407f148a1612d35e4251617ddf3c9eea}\label{classRingCentral_1_1InstantMessageEventBody_a407f148a1612d35e4251617ddf3c9eea}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Date/time when the message was modified in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a9a7ac2365d73c95fbe2c63f3ef710e6d}\label{classRingCentral_1_1InstantMessageEventBody_a9a7ac2365d73c95fbe2c63f3ef710e6d}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!messageStatus@{messageStatus}}
+\index{messageStatus@{messageStatus}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{messageStatus}{messageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+message\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a7b33066db3bdafb26b82b351e245ddaf}\label{classRingCentral_1_1InstantMessageEventBody_a7b33066db3bdafb26b82b351e245ddaf}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!ownerId@{ownerId}}
+\index{ownerId@{ownerId}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{ownerId}{ownerId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+owner\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a subscription owner extension 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a3d920101e897f350a2d33a32b38c9aad}\label{classRingCentral_1_1InstantMessageEventBody_a3d920101e897f350a2d33a32b38c9aad}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!priority@{priority}}
+\index{priority@{priority}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+priority\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message priority Enum\+: Normal, High 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_afd6834ca8217b31e0a476ac777086386}\label{classRingCentral_1_1InstantMessageEventBody_afd6834ca8217b31e0a476ac777086386}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!readStatus@{readStatus}}
+\index{readStatus@{readStatus}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{readStatus}{readStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+read\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message read status Enum\+: Read, Unread 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a100294cffadce23848f02c3ed00dfc95}\label{classRingCentral_1_1InstantMessageEventBody_a100294cffadce23848f02c3ed00dfc95}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!subject@{subject}}
+\index{subject@{subject}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{subject}{subject}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+subject\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message subject. It replicates message text which is also returned as an attachment 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a263d4501f22cead8b6275775caa50288}\label{classRingCentral_1_1InstantMessageEventBody_a263d4501f22cead8b6275775caa50288}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!to@{to}}
+\index{to@{to}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo}{Notification\+Recipient\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Instant\+Message\+Event\+Body.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message receiver(s) information 
+
+\mbox{\Hypertarget{classRingCentral_1_1InstantMessageEventBody_a04fbb69a62f46b12ea4c3690c6bd59b7}\label{classRingCentral_1_1InstantMessageEventBody_a04fbb69a62f46b12ea4c3690c6bd59b7}} 
+\index{RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}!type@{type}}
+\index{type@{type}!RingCentral.InstantMessageEventBody@{RingCentral.InstantMessageEventBody}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Instant\+Message\+Event\+Body.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of message. The default value is \textquotesingle{}SMS\textquotesingle{} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Instant\+Message\+Event\+Body.\+cs\end{DoxyCompactItemize}

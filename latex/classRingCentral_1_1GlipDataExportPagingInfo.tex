@@ -1,0 +1,85 @@
+\hypertarget{classRingCentral_1_1GlipDataExportPagingInfo}{}\doxysection{Ring\+Central.\+Glip\+Data\+Export\+Paging\+Info Class Reference}
+\label{classRingCentral_1_1GlipDataExportPagingInfo}\index{RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GlipDataExportPagingInfo_a4911b5aaae923539102bf74a07d2a834}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GlipDataExportPagingInfo_ae4fe488ca7f827194efcd5f0a9e3b1e5}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current page size, describes how many items are in each page. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GlipDataExportPagingInfo_aa54b2de5fc6f6b63f667a2b36f57c732}{page\+Start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GlipDataExportPagingInfo_a8cc1f0d73b381f987b18f534675cbab3}{page\+End}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GlipDataExportPagingInfo_aa7588cb9dc4ed1861f6a25e79c84a5c6}{total\+Pages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GlipDataExportPagingInfo_ac13b0e44b4c60f25074455dddf2fa484}{total\+Elements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1GlipDataExportPagingInfo_a4911b5aaae923539102bf74a07d2a834}\label{classRingCentral_1_1GlipDataExportPagingInfo_a4911b5aaae923539102bf74a07d2a834}} 
+\index{RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}!page@{page}}
+\index{page@{page}!RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Glip\+Data\+Export\+Paging\+Info.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1GlipDataExportPagingInfo_a8cc1f0d73b381f987b18f534675cbab3}\label{classRingCentral_1_1GlipDataExportPagingInfo_a8cc1f0d73b381f987b18f534675cbab3}} 
+\index{RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}!pageEnd@{pageEnd}}
+\index{pageEnd@{pageEnd}!RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageEnd}{pageEnd}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Glip\+Data\+Export\+Paging\+Info.\+page\+End\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1GlipDataExportPagingInfo_aa54b2de5fc6f6b63f667a2b36f57c732}\label{classRingCentral_1_1GlipDataExportPagingInfo_aa54b2de5fc6f6b63f667a2b36f57c732}} 
+\index{RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}!pageStart@{pageStart}}
+\index{pageStart@{pageStart}!RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageStart}{pageStart}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Glip\+Data\+Export\+Paging\+Info.\+page\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1GlipDataExportPagingInfo_ae4fe488ca7f827194efcd5f0a9e3b1e5}\label{classRingCentral_1_1GlipDataExportPagingInfo_ae4fe488ca7f827194efcd5f0a9e3b1e5}} 
+\index{RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Glip\+Data\+Export\+Paging\+Info.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current page size, describes how many items are in each page. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1GlipDataExportPagingInfo_ac13b0e44b4c60f25074455dddf2fa484}\label{classRingCentral_1_1GlipDataExportPagingInfo_ac13b0e44b4c60f25074455dddf2fa484}} 
+\index{RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}!totalElements@{totalElements}}
+\index{totalElements@{totalElements}!RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalElements}{totalElements}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Glip\+Data\+Export\+Paging\+Info.\+total\+Elements\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1GlipDataExportPagingInfo_aa7588cb9dc4ed1861f6a25e79c84a5c6}\label{classRingCentral_1_1GlipDataExportPagingInfo_aa7588cb9dc4ed1861f6a25e79c84a5c6}} 
+\index{RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}!totalPages@{totalPages}}
+\index{totalPages@{totalPages}!RingCentral.GlipDataExportPagingInfo@{RingCentral.GlipDataExportPagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalPages}{totalPages}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Glip\+Data\+Export\+Paging\+Info.\+total\+Pages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Glip\+Data\+Export\+Paging\+Info.\+cs\end{DoxyCompactItemize}

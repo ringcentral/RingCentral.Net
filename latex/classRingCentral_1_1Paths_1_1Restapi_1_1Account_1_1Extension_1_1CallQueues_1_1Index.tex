@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Queues.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.CallQueues.Index@{RingCentral.Paths.Restapi.Account.Extension.CallQueues.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Queues.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_adf7c2d38f0df608a93aa00f14853c119}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_adf7c2d38f0df608a93aa00f14853c119}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_abb066a7039eae1a2336da4edb5b64086}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_abb066a7039eae1a2336da4edb5b64086}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1UserCallQueues}{User\+Call\+Queues}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_a15bbcf3278380afead411e95d2a01455}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UserCallQueues}{User\+Call\+Queues}} user\+Call\+Queues, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a list of call queues where the user is an agent. This is a full update request, which means that if any call queue where the user is an agent is not mentioned in request, then the user is automatically removed from this queue. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/queues Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Call\+Queue\+Presence \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_a3d2e50dbbc6f1aff3aa61a8539f8cee5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_a3d2e50dbbc6f1aff3aa61a8539f8cee5}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_a73e92ab03b0dd844f509147ebd92904d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_a73e92ab03b0dd844f509147ebd92904d}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_a15bbcf3278380afead411e95d2a01455}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallQueues_1_1Index_a15bbcf3278380afead411e95d2a01455}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallQueues.Index@{RingCentral.Paths.Restapi.Account.Extension.CallQueues.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.CallQueues.Index@{RingCentral.Paths.Restapi.Account.Extension.CallQueues.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1UserCallQueues}{User\+Call\+Queues}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Queues.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UserCallQueues}{User\+Call\+Queues}}}]{user\+Call\+Queues,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a list of call queues where the user is an agent. This is a full update request, which means that if any call queue where the user is an agent is not mentioned in request, then the user is automatically removed from this queue. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/queues Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Call\+Queue\+Presence 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Call\+Queues/Index.\+cs\end{DoxyCompactItemize}

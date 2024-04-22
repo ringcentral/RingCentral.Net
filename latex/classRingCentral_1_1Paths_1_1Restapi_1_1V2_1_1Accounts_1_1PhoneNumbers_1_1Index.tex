@@ -1,0 +1,89 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index}\index{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a22441d5b04b143118491f03fd937c3c2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a22441d5b04b143118491f03fd937c3c2}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1BulkAdd_1_1Index}{Bulk\+Add.\+Index}} {\bfseries Bulk\+Add} (string task\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a0aa62ae28f636eae793216b122049859}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a0aa62ae28f636eae793216b122049859}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Index}{Accounts.\+Index}} parent, string phone\+Number\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a4b46120328ea831ee41c4870622df6f5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a4b46120328ea831ee41c4870622df6f5}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberList}{Account\+Phone\+Number\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_ad1ae369c1b6886d6c63e6affc4108f14}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters}{List\+Account\+Phone\+Numbers\+V2\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of phone numbers assigned to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} customer account. Both company-\/level and extension-\/level numbers are returned. Conferencing numbers, hot desk and ELIN numbers are not returned. HTTP Method\+: get Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/phone-\/numbers Rate Limit Group\+: Heavy App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Phone\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DeletePhoneNumbersResponse}{Delete\+Phone\+Numbers\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a75a9d55d03e15994698b3e65a21ec5fa}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1DeletePhoneNumbersRequest}{Delete\+Phone\+Numbers\+Request}} delete\+Phone\+Numbers\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em This method can only delete numbers that meet one of the following requirements\+: \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo}{Account\+Phone\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_aa1bc2b382295c447aec43cbeb48a6d06}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1AssignPhoneNumberRequest}{Assign\+Phone\+Number\+Request}} assign\+Phone\+Number\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Assigns or reassigns a phone number as a company or extension number. Assign scenarios supported\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_afd71b95a39205104de77f13c01d38038}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_afd71b95a39205104de77f13c01d38038}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index}{Replace.\+Index}} {\bfseries Replace} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_abe421aef9abe8a2104130c59d4b3a44f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_abe421aef9abe8a2104130c59d4b3a44f}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Index}{Accounts.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a809d9ddb2d784ddb28235e104e49b4eb}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a809d9ddb2d784ddb28235e104e49b4eb}} 
+string {\bfseries phone\+Number\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_ae2d5a3e7aa170575a3316f2f9011a7f3}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_ae2d5a3e7aa170575a3316f2f9011a7f3}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a75a9d55d03e15994698b3e65a21ec5fa}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_a75a9d55d03e15994698b3e65a21ec5fa}} 
+\index{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DeletePhoneNumbersResponse}{Delete\+Phone\+Numbers\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1DeletePhoneNumbersRequest}{Delete\+Phone\+Numbers\+Request}}}]{delete\+Phone\+Numbers\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method can only delete numbers that meet one of the following requirements\+: 
+
+
+\begin{DoxyItemize}
+\item numbers that have {\ttfamily \char`\"{}usage\+Type\char`\"{}\+: \char`\"{}\+Inventory\char`\"{}}
+\item {\ttfamily \char`\"{}\+Forwarded\char`\"{}} numbers
+\item {\ttfamily \char`\"{}\+Forwarded Company\char`\"{}} numbers In other words, this method will not delete numbers which are in use on the account -\/ extension direct numbers, main number, etc. It is possible to indicate phone numbers to be deleted using their IDs or exact string values in e.\+164 format. However, the same lookup method (by ID or by value) must be used for all numbers within the same API call. HTTP Method\+: delete Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/phone-\/numbers Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Phone\+Numbers
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_ad1ae369c1b6886d6c63e6affc4108f14}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_ad1ae369c1b6886d6c63e6affc4108f14}} 
+\index{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberList}{Account\+Phone\+Number\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters}{List\+Account\+Phone\+Numbers\+V2\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of phone numbers assigned to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} customer account. Both company-\/level and extension-\/level numbers are returned. Conferencing numbers, hot desk and ELIN numbers are not returned. HTTP Method\+: get Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/phone-\/numbers Rate Limit Group\+: Heavy App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Phone\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_aa1bc2b382295c447aec43cbeb48a6d06}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index_aa1bc2b382295c447aec43cbeb48a6d06}} 
+\index{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo}{Account\+Phone\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AssignPhoneNumberRequest}{Assign\+Phone\+Number\+Request}}}]{assign\+Phone\+Number\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns or reassigns a phone number as a company or extension number. Assign scenarios supported\+: 
+
+
+\begin{DoxyItemize}
+\item from Inventory to a company number;
+\item from Inventory to an extension number. Reassign scenarios supported\+:
+\item from an extension to another extension;
+\item from an extension to a company number;
+\item from a company number to an extension. HTTP Method\+: patch Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/phone-\/numbers/\{phone\+Number\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Phone\+Numbers
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+V2/\+Accounts/\+Phone\+Numbers/\+Bulk\+Add/Index.\+cs\end{DoxyCompactItemize}

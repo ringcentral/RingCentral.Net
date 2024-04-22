@@ -1,0 +1,155 @@
+\hypertarget{classRingCentral_1_1ListMessagesParameters}{}\doxysection{Ring\+Central.\+List\+Messages\+Parameters Class Reference}
+\label{classRingCentral_1_1ListMessagesParameters}\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+
+
+Query parameters for operation list\+Messages  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_acbb067da9134d32f74f9d5c91ee0021d}{availability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the availability status for resulting messages. Multiple values are accepted Enum\+: Alive, Deleted, Purged \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_af5d81c1dbe0544a73d1d4218d810324d}{conversation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies a conversation identifier for the resulting messages \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_add4edb1dd94311c946d07a74c205cf61}{date\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Start date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is date\+To minus 24 hours Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_a6523e81bfe2ad6d07bae8b4fc6d8881e}{date\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em End date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is current time Format\+: date-\/time \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_a6ac2b2811450ab75484f60a5eb015b67}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Direction for resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_ab505fd5dab43816e50bb698a997dbf0d}{distinct\+Conversations}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true}, then the latest messages per every conversation ID are returned \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_abd0d31ee268c191abf3ff50914d9df18}{message\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of resulting messages. If not specified, all messages without message type filtering are returned. Multiple values are accepted Enum\+: Fax, SMS, Voice\+Mail, Pager \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_a92ead1cb3edc1aee19a4b4ff3ccb54c6}{read\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Read status for resulting messages. Multiple values are accepted Enum\+: Read, Unread \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_ae2a7c149191cfa759a239e8b02156ffd}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page number to retrieve. Only positive number values are accepted Format\+: int32 Default\+: 1 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_a109a413dbf7050f5a13c737d6d8987b6}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page size (number of items) Format\+: int32 Default\+: 100 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters_a72424030a0307e925cd0554031aaa989}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number. If specified, messages are returned for this particular phone number only \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Messages 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_acbb067da9134d32f74f9d5c91ee0021d}\label{classRingCentral_1_1ListMessagesParameters_acbb067da9134d32f74f9d5c91ee0021d}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!availability@{availability}}
+\index{availability@{availability}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{availability}{availability}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Messages\+Parameters.\+availability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the availability status for resulting messages. Multiple values are accepted Enum\+: Alive, Deleted, Purged 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_af5d81c1dbe0544a73d1d4218d810324d}\label{classRingCentral_1_1ListMessagesParameters_af5d81c1dbe0544a73d1d4218d810324d}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!conversationId@{conversationId}}
+\index{conversationId@{conversationId}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{conversationId}{conversationId}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Messages\+Parameters.\+conversation\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies a conversation identifier for the resulting messages 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_add4edb1dd94311c946d07a74c205cf61}\label{classRingCentral_1_1ListMessagesParameters_add4edb1dd94311c946d07a74c205cf61}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!dateFrom@{dateFrom}}
+\index{dateFrom@{dateFrom}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{dateFrom}{dateFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Messages\+Parameters.\+date\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Start date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is date\+To minus 24 hours Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_a6523e81bfe2ad6d07bae8b4fc6d8881e}\label{classRingCentral_1_1ListMessagesParameters_a6523e81bfe2ad6d07bae8b4fc6d8881e}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!dateTo@{dateTo}}
+\index{dateTo@{dateTo}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{dateTo}{dateTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Messages\+Parameters.\+date\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+End date/time for resulting messages in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is current time Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_a6ac2b2811450ab75484f60a5eb015b67}\label{classRingCentral_1_1ListMessagesParameters_a6ac2b2811450ab75484f60a5eb015b67}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!direction@{direction}}
+\index{direction@{direction}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Messages\+Parameters.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Direction for resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_ab505fd5dab43816e50bb698a997dbf0d}\label{classRingCentral_1_1ListMessagesParameters_ab505fd5dab43816e50bb698a997dbf0d}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!distinctConversations@{distinctConversations}}
+\index{distinctConversations@{distinctConversations}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{distinctConversations}{distinctConversations}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+List\+Messages\+Parameters.\+distinct\+Conversations\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true}, then the latest messages per every conversation ID are returned 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_abd0d31ee268c191abf3ff50914d9df18}\label{classRingCentral_1_1ListMessagesParameters_abd0d31ee268c191abf3ff50914d9df18}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!messageType@{messageType}}
+\index{messageType@{messageType}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{messageType}{messageType}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Messages\+Parameters.\+message\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of resulting messages. If not specified, all messages without message type filtering are returned. Multiple values are accepted Enum\+: Fax, SMS, Voice\+Mail, Pager 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_ae2a7c149191cfa759a239e8b02156ffd}\label{classRingCentral_1_1ListMessagesParameters_ae2a7c149191cfa759a239e8b02156ffd}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!page@{page}}
+\index{page@{page}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Messages\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page number to retrieve. Only positive number values are accepted Format\+: int32 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_a109a413dbf7050f5a13c737d6d8987b6}\label{classRingCentral_1_1ListMessagesParameters_a109a413dbf7050f5a13c737d6d8987b6}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Messages\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page size (number of items) Format\+: int32 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_a72424030a0307e925cd0554031aaa989}\label{classRingCentral_1_1ListMessagesParameters_a72424030a0307e925cd0554031aaa989}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Messages\+Parameters.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number. If specified, messages are returned for this particular phone number only 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListMessagesParameters_a92ead1cb3edc1aee19a4b4ff3ccb54c6}\label{classRingCentral_1_1ListMessagesParameters_a92ead1cb3edc1aee19a4b4ff3ccb54c6}} 
+\index{RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}!readStatus@{readStatus}}
+\index{readStatus@{readStatus}!RingCentral.ListMessagesParameters@{RingCentral.ListMessagesParameters}}
+\doxysubsubsection{\texorpdfstring{readStatus}{readStatus}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Messages\+Parameters.\+read\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Read status for resulting messages. Multiple values are accepted Enum\+: Read, Unread 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Messages\+Parameters.\+cs\end{DoxyCompactItemize}

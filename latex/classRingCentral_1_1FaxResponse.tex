@@ -1,0 +1,217 @@
+\hypertarget{classRingCentral_1_1FaxResponse}{}\doxysection{Ring\+Central.\+Fax\+Response Class Reference}
+\label{classRingCentral_1_1FaxResponse}\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1FaxResponse_ad8a13e56062cede0e42c8e0511731b52}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a61c0d53ed1b00cf3e6336f7da57575d7}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of a message Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_aa02b11433251c4289c9e9cd0a9679d02}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message type -\/ \textquotesingle{}Fax\textquotesingle{} Enum\+: Fax \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseFrom}{Message\+Store\+Caller\+Info\+Response\+From}} \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a566e1396109b61c8e48141297682599f}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1FaxResponseTo}{Fax\+Response\+To}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1FaxResponse_ad1f87de1db14af461d750a42646951f8}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Recipient information \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_adfa095bc70e8a39e725d49ba8b30d868}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_ae071a35c7d7a9a4814467c9dbd4e70f8}{read\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message read status Enum\+: Read, Unread \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a92fc5ee93e0e16734e7276270cd9d49a}{priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message priority Enum\+: Normal, High \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfoIntId}{Message\+Attachment\+Info\+Int\+Id}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a0f4e25979dcaf31e19164571464615cc}{attachments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of message attachments \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_af00f4e3599c0e10397ba6cc6c83893fd}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a2654a821e9dc98efdba76e3949b6886c}{availability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_ad3592aa23a7ec60ab1b3d76288b3ac1e}{message\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_acb691f827da0b2d2b80be9e390e6c266}{fax\+Resolution}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fax only. Resolution of a fax message. \textquotesingle{}High\textquotesingle{} for black and white image scanned at 200 dpi, \textquotesingle{}Low\textquotesingle{} for black and white image scanned at 100 dpi Enum\+: High, Low \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a4e6da0c1aa8b57a1d05c97e841f7edb8}{fax\+Page\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Page count in a fax message Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a0a22b10de2ad94f68b8605a2f748f8a6}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Date/time when the message was modified on server in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a520fd0011622fef623cc8321018f568c}{cover\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cover page identifier. If {\ttfamily cover\+Index} is set to \textquotesingle{}0\textquotesingle{} (zero), a cover page is not attached. For a list of available cover page identifiers (1-\/13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in \textquotesingle{}Outbound Fax Settings\textquotesingle{}) Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1FaxResponse_a2ab865dc1d172cd47c32134aad9e04c2}{cover\+Page\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cover page text, entered by a fax sender and printed on a cover page. Maximum length is limited to 1024 symbols \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a0f4e25979dcaf31e19164571464615cc}\label{classRingCentral_1_1FaxResponse_a0f4e25979dcaf31e19164571464615cc}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!attachments@{attachments}}
+\index{attachments@{attachments}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{attachments}{attachments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfoIntId}{Message\+Attachment\+Info\+Int\+Id}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Fax\+Response.\+attachments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of message attachments 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a2654a821e9dc98efdba76e3949b6886c}\label{classRingCentral_1_1FaxResponse_a2654a821e9dc98efdba76e3949b6886c}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!availability@{availability}}
+\index{availability@{availability}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{availability}{availability}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+availability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a520fd0011622fef623cc8321018f568c}\label{classRingCentral_1_1FaxResponse_a520fd0011622fef623cc8321018f568c}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!coverIndex@{coverIndex}}
+\index{coverIndex@{coverIndex}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{coverIndex}{coverIndex}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Fax\+Response.\+cover\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Cover page identifier. If {\ttfamily cover\+Index} is set to \textquotesingle{}0\textquotesingle{} (zero), a cover page is not attached. For a list of available cover page identifiers (1-\/13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in \textquotesingle{}Outbound Fax Settings\textquotesingle{}) Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a2ab865dc1d172cd47c32134aad9e04c2}\label{classRingCentral_1_1FaxResponse_a2ab865dc1d172cd47c32134aad9e04c2}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!coverPageText@{coverPageText}}
+\index{coverPageText@{coverPageText}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{coverPageText}{coverPageText}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+cover\+Page\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Cover page text, entered by a fax sender and printed on a cover page. Maximum length is limited to 1024 symbols 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_adfa095bc70e8a39e725d49ba8b30d868}\label{classRingCentral_1_1FaxResponse_adfa095bc70e8a39e725d49ba8b30d868}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_af00f4e3599c0e10397ba6cc6c83893fd}\label{classRingCentral_1_1FaxResponse_af00f4e3599c0e10397ba6cc6c83893fd}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!direction@{direction}}
+\index{direction@{direction}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a4e6da0c1aa8b57a1d05c97e841f7edb8}\label{classRingCentral_1_1FaxResponse_a4e6da0c1aa8b57a1d05c97e841f7edb8}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!faxPageCount@{faxPageCount}}
+\index{faxPageCount@{faxPageCount}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{faxPageCount}{faxPageCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Fax\+Response.\+fax\+Page\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Page count in a fax message Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_acb691f827da0b2d2b80be9e390e6c266}\label{classRingCentral_1_1FaxResponse_acb691f827da0b2d2b80be9e390e6c266}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!faxResolution@{faxResolution}}
+\index{faxResolution@{faxResolution}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{faxResolution}{faxResolution}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+fax\+Resolution\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Fax only. Resolution of a fax message. \textquotesingle{}High\textquotesingle{} for black and white image scanned at 200 dpi, \textquotesingle{}Low\textquotesingle{} for black and white image scanned at 100 dpi Enum\+: High, Low 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a566e1396109b61c8e48141297682599f}\label{classRingCentral_1_1FaxResponse_a566e1396109b61c8e48141297682599f}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!from@{from}}
+\index{from@{from}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseFrom}{Message\+Store\+Caller\+Info\+Response\+From}} Ring\+Central.\+Fax\+Response.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_ad8a13e56062cede0e42c8e0511731b52}\label{classRingCentral_1_1FaxResponse_ad8a13e56062cede0e42c8e0511731b52}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!id@{id}}
+\index{id@{id}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Fax\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a message Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a0a22b10de2ad94f68b8605a2f748f8a6}\label{classRingCentral_1_1FaxResponse_a0a22b10de2ad94f68b8605a2f748f8a6}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Date/time when the message was modified on server in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_ad3592aa23a7ec60ab1b3d76288b3ac1e}\label{classRingCentral_1_1FaxResponse_ad3592aa23a7ec60ab1b3d76288b3ac1e}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!messageStatus@{messageStatus}}
+\index{messageStatus@{messageStatus}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{messageStatus}{messageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+message\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a92fc5ee93e0e16734e7276270cd9d49a}\label{classRingCentral_1_1FaxResponse_a92fc5ee93e0e16734e7276270cd9d49a}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!priority@{priority}}
+\index{priority@{priority}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+priority\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message priority Enum\+: Normal, High 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_ae071a35c7d7a9a4814467c9dbd4e70f8}\label{classRingCentral_1_1FaxResponse_ae071a35c7d7a9a4814467c9dbd4e70f8}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!readStatus@{readStatus}}
+\index{readStatus@{readStatus}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{readStatus}{readStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+read\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message read status Enum\+: Read, Unread 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_ad1f87de1db14af461d750a42646951f8}\label{classRingCentral_1_1FaxResponse_ad1f87de1db14af461d750a42646951f8}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!to@{to}}
+\index{to@{to}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1FaxResponseTo}{Fax\+Response\+To}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Fax\+Response.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Recipient information 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_aa02b11433251c4289c9e9cd0a9679d02}\label{classRingCentral_1_1FaxResponse_aa02b11433251c4289c9e9cd0a9679d02}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!type@{type}}
+\index{type@{type}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message type -\/ \textquotesingle{}Fax\textquotesingle{} Enum\+: Fax 
+
+\mbox{\Hypertarget{classRingCentral_1_1FaxResponse_a61c0d53ed1b00cf3e6336f7da57575d7}\label{classRingCentral_1_1FaxResponse_a61c0d53ed1b00cf3e6336f7da57575d7}} 
+\index{RingCentral.FaxResponse@{RingCentral.FaxResponse}!uri@{uri}}
+\index{uri@{uri}!RingCentral.FaxResponse@{RingCentral.FaxResponse}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Fax\+Response.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of a message Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Fax\+Response.\+cs\end{DoxyCompactItemize}

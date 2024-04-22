@@ -1,0 +1,157 @@
+\hypertarget{classRingCentral_1_1AsrInput}{}\doxysection{Ring\+Central.\+Asr\+Input Class Reference}
+\label{classRingCentral_1_1AsrInput}\index{RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AsrInput_a651f7efd8e392ec5638c10463ab881c0}{content\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Publicly facing uri Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AsrInput_acca7fa921bd03ec0f4986c1c63c81331}{encoding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The encoding of the original audio Required Example\+: Wav Enum\+: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AsrInput_a6ab89436bd73fe69124c197515236694}{language\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Language spoken in the audio file. Required Example\+: en-\/\+US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AsrInput_add7f09f060ecd9442cba8f243d9d2904}{source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Source of the audio file eg\+: Phone, \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}}, Google\+Meet, Zoom etc Example\+: \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AsrInput_a3176c37216e7d8c2d23cd8c823b8cdb9}{audio\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the audio Example\+: Call\+Center Enum\+: Call\+Center, \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Earnings\+Calls, Interview, Press\+Conference, Voicemail \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1AsrInput_a2329158ef936e9a91f1f9f81dcae3bd0}{separate\+Speaker\+Per\+Channel}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates that the input audio is multi-\/channel and each channel has a separate speaker. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1AsrInput_ae9df72dd3bdad1f5a973daa1471d1ff8}{speaker\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of speakers in the file, omit parameter if unknown Format\+: int32 Example\+: 2 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AsrInput_a4c829626de0a35be774ee68c2b964d53}{speaker\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional set of speakers to be identified from the call. Example\+: speaker\+Id1,speaker\+Id2 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1AsrInput_a6204e57c6859faf7cd3a18fac4f5844d}{enable\+Voice\+Activity\+Detection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Apply voice activity detection. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1AsrInput_a4cbc32568b5bc9efa4bb5e3a7232a9cc}{enable\+Punctuation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables Smart Punctuation API. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1AsrInput_a5c37e00cb73c6a5f6bd0e109599c7203}{enable\+Speaker\+Diarization}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tags each word corresponding to the speaker. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SpeechContextPhrasesInput}{Speech\+Context\+Phrases\+Input}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AsrInput_ad0cc1c2c6ab6689d77df3fda26f68b14}{speech\+Contexts}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a3176c37216e7d8c2d23cd8c823b8cdb9}\label{classRingCentral_1_1AsrInput_a3176c37216e7d8c2d23cd8c823b8cdb9}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!audioType@{audioType}}
+\index{audioType@{audioType}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{audioType}{audioType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Asr\+Input.\+audio\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of the audio Example\+: Call\+Center Enum\+: Call\+Center, \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Earnings\+Calls, Interview, Press\+Conference, Voicemail 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a651f7efd8e392ec5638c10463ab881c0}\label{classRingCentral_1_1AsrInput_a651f7efd8e392ec5638c10463ab881c0}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!contentUri@{contentUri}}
+\index{contentUri@{contentUri}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{contentUri}{contentUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Asr\+Input.\+content\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Publicly facing uri Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a4cbc32568b5bc9efa4bb5e3a7232a9cc}\label{classRingCentral_1_1AsrInput_a4cbc32568b5bc9efa4bb5e3a7232a9cc}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!enablePunctuation@{enablePunctuation}}
+\index{enablePunctuation@{enablePunctuation}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{enablePunctuation}{enablePunctuation}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Asr\+Input.\+enable\+Punctuation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enables Smart Punctuation API. 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a5c37e00cb73c6a5f6bd0e109599c7203}\label{classRingCentral_1_1AsrInput_a5c37e00cb73c6a5f6bd0e109599c7203}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!enableSpeakerDiarization@{enableSpeakerDiarization}}
+\index{enableSpeakerDiarization@{enableSpeakerDiarization}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{enableSpeakerDiarization}{enableSpeakerDiarization}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Asr\+Input.\+enable\+Speaker\+Diarization\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Tags each word corresponding to the speaker. 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a6204e57c6859faf7cd3a18fac4f5844d}\label{classRingCentral_1_1AsrInput_a6204e57c6859faf7cd3a18fac4f5844d}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!enableVoiceActivityDetection@{enableVoiceActivityDetection}}
+\index{enableVoiceActivityDetection@{enableVoiceActivityDetection}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{enableVoiceActivityDetection}{enableVoiceActivityDetection}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Asr\+Input.\+enable\+Voice\+Activity\+Detection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Apply voice activity detection. 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_acca7fa921bd03ec0f4986c1c63c81331}\label{classRingCentral_1_1AsrInput_acca7fa921bd03ec0f4986c1c63c81331}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!encoding@{encoding}}
+\index{encoding@{encoding}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{encoding}{encoding}}
+{\footnotesize\ttfamily string Ring\+Central.\+Asr\+Input.\+encoding\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The encoding of the original audio Required Example\+: Wav Enum\+: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a6ab89436bd73fe69124c197515236694}\label{classRingCentral_1_1AsrInput_a6ab89436bd73fe69124c197515236694}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!languageCode@{languageCode}}
+\index{languageCode@{languageCode}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{languageCode}{languageCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Asr\+Input.\+language\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Language spoken in the audio file. Required Example\+: en-\/\+US 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a2329158ef936e9a91f1f9f81dcae3bd0}\label{classRingCentral_1_1AsrInput_a2329158ef936e9a91f1f9f81dcae3bd0}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!separateSpeakerPerChannel@{separateSpeakerPerChannel}}
+\index{separateSpeakerPerChannel@{separateSpeakerPerChannel}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{separateSpeakerPerChannel}{separateSpeakerPerChannel}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Asr\+Input.\+separate\+Speaker\+Per\+Channel\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates that the input audio is multi-\/channel and each channel has a separate speaker. 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_add7f09f060ecd9442cba8f243d9d2904}\label{classRingCentral_1_1AsrInput_add7f09f060ecd9442cba8f243d9d2904}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!source@{source}}
+\index{source@{source}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily string Ring\+Central.\+Asr\+Input.\+source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Source of the audio file eg\+: Phone, \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}}, Google\+Meet, Zoom etc Example\+: \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_ae9df72dd3bdad1f5a973daa1471d1ff8}\label{classRingCentral_1_1AsrInput_ae9df72dd3bdad1f5a973daa1471d1ff8}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!speakerCount@{speakerCount}}
+\index{speakerCount@{speakerCount}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{speakerCount}{speakerCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Asr\+Input.\+speaker\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of speakers in the file, omit parameter if unknown Format\+: int32 Example\+: 2 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_a4c829626de0a35be774ee68c2b964d53}\label{classRingCentral_1_1AsrInput_a4c829626de0a35be774ee68c2b964d53}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!speakerIds@{speakerIds}}
+\index{speakerIds@{speakerIds}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{speakerIds}{speakerIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Asr\+Input.\+speaker\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional set of speakers to be identified from the call. Example\+: speaker\+Id1,speaker\+Id2 
+
+\mbox{\Hypertarget{classRingCentral_1_1AsrInput_ad0cc1c2c6ab6689d77df3fda26f68b14}\label{classRingCentral_1_1AsrInput_ad0cc1c2c6ab6689d77df3fda26f68b14}} 
+\index{RingCentral.AsrInput@{RingCentral.AsrInput}!speechContexts@{speechContexts}}
+\index{speechContexts@{speechContexts}!RingCentral.AsrInput@{RingCentral.AsrInput}}
+\doxysubsubsection{\texorpdfstring{speechContexts}{speechContexts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SpeechContextPhrasesInput}{Speech\+Context\+Phrases\+Input}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Asr\+Input.\+speech\+Contexts\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Asr\+Input.\+cs\end{DoxyCompactItemize}

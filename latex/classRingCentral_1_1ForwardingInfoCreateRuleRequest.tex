@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest}{}\doxysection{Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request Class Reference}
+\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest}\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+
+
+Forwarding parameters. Returned if \textquotesingle{}Forward\+Calls\textquotesingle{} is specified in \textquotesingle{}call\+Handling\+Action\textquotesingle{}. These settings determine the forwarding numbers to which the call will be forwarded  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a06192792b98b36529772278c104ad78c}{notify\+My\+Soft\+Phones}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if the first ring on desktop/mobile apps is enabled. The default value is {\ttfamily true} \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a414f19218d417db2f5c646ef264b6bea}{notify\+Admin\+Soft\+Phones}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Deprecated parameter. Specifies if the administrator\textquotesingle{}s softphone (desktop application) is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is {\ttfamily true}. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a32e4ed479129ee692b6f901c11c23ad2}{soft\+Phones\+Ring\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies delay between ring on apps and starting of a call forwarding. To activate this parameter use the value $>$ 0, and turn off the {\ttfamily soft\+Phones\+Always\+Ring} setting. If the value is 1 or 0, the {\ttfamily soft\+Phones\+Always\+Ring} setting cannot be turned off Format\+: int32 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfoCreateRuleRequest_ae7ba69cf7d964690e980168dba0701db}{soft\+Phones\+Always\+Ring}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set to {\ttfamily true} then {\ttfamily soft\+Phones\+Ring\+Count} is ignored Default\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ForwardingInfoCreateRuleRequest_adf4beb1fe4439bfd5e1e9fbcab933b7b}{ringing\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the order in which forwarding numbers ring. \textquotesingle{}Sequentially\textquotesingle{} means that forwarding numbers are ringing one at a time, in order of priority. \textquotesingle{}Simultaneously\textquotesingle{} means that forwarding numbers are ringing all at the same time. The default value is \textquotesingle{}Sequentially\textquotesingle{} Enum\+: Sequentially, Simultaneously \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ForwardingRuleCreateRequest}{Forwarding\+Rule\+Create\+Request}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a711d36b3bc6f50f7e5771761b28372bf}{rules}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Information on a call forwarding rule \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardingInfoCreateRuleRequest_ab5989e1bfdd695a788b31238ecfba91c}{mobile\+Timeout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Deprecated parameter. Specifies if mobile timeout is activated for the rule \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Forwarding parameters. Returned if \textquotesingle{}Forward\+Calls\textquotesingle{} is specified in \textquotesingle{}call\+Handling\+Action\textquotesingle{}. These settings determine the forwarding numbers to which the call will be forwarded 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest_ab5989e1bfdd695a788b31238ecfba91c}\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest_ab5989e1bfdd695a788b31238ecfba91c}} 
+\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}!mobileTimeout@{mobileTimeout}}
+\index{mobileTimeout@{mobileTimeout}!RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+\doxysubsubsection{\texorpdfstring{mobileTimeout}{mobileTimeout}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request.\+mobile\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Deprecated parameter. Specifies if mobile timeout is activated for the rule 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a414f19218d417db2f5c646ef264b6bea}\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a414f19218d417db2f5c646ef264b6bea}} 
+\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}!notifyAdminSoftPhones@{notifyAdminSoftPhones}}
+\index{notifyAdminSoftPhones@{notifyAdminSoftPhones}!RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+\doxysubsubsection{\texorpdfstring{notifyAdminSoftPhones}{notifyAdminSoftPhones}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request.\+notify\+Admin\+Soft\+Phones\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Deprecated parameter. Specifies if the administrator\textquotesingle{}s softphone (desktop application) is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is {\ttfamily true}. 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a06192792b98b36529772278c104ad78c}\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a06192792b98b36529772278c104ad78c}} 
+\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}!notifyMySoftPhones@{notifyMySoftPhones}}
+\index{notifyMySoftPhones@{notifyMySoftPhones}!RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+\doxysubsubsection{\texorpdfstring{notifyMySoftPhones}{notifyMySoftPhones}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request.\+notify\+My\+Soft\+Phones\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if the first ring on desktop/mobile apps is enabled. The default value is {\ttfamily true} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest_adf4beb1fe4439bfd5e1e9fbcab933b7b}\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest_adf4beb1fe4439bfd5e1e9fbcab933b7b}} 
+\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}!ringingMode@{ringingMode}}
+\index{ringingMode@{ringingMode}!RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+\doxysubsubsection{\texorpdfstring{ringingMode}{ringingMode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request.\+ringing\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the order in which forwarding numbers ring. \textquotesingle{}Sequentially\textquotesingle{} means that forwarding numbers are ringing one at a time, in order of priority. \textquotesingle{}Simultaneously\textquotesingle{} means that forwarding numbers are ringing all at the same time. The default value is \textquotesingle{}Sequentially\textquotesingle{} Enum\+: Sequentially, Simultaneously 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a711d36b3bc6f50f7e5771761b28372bf}\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a711d36b3bc6f50f7e5771761b28372bf}} 
+\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}!rules@{rules}}
+\index{rules@{rules}!RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+\doxysubsubsection{\texorpdfstring{rules}{rules}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ForwardingRuleCreateRequest}{Forwarding\+Rule\+Create\+Request}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request.\+rules\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Information on a call forwarding rule 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest_ae7ba69cf7d964690e980168dba0701db}\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest_ae7ba69cf7d964690e980168dba0701db}} 
+\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}!softPhonesAlwaysRing@{softPhonesAlwaysRing}}
+\index{softPhonesAlwaysRing@{softPhonesAlwaysRing}!RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+\doxysubsubsection{\texorpdfstring{softPhonesAlwaysRing}{softPhonesAlwaysRing}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request.\+soft\+Phones\+Always\+Ring\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set to {\ttfamily true} then {\ttfamily soft\+Phones\+Ring\+Count} is ignored Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a32e4ed479129ee692b6f901c11c23ad2}\label{classRingCentral_1_1ForwardingInfoCreateRuleRequest_a32e4ed479129ee692b6f901c11c23ad2}} 
+\index{RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}!softPhonesRingCount@{softPhonesRingCount}}
+\index{softPhonesRingCount@{softPhonesRingCount}!RingCentral.ForwardingInfoCreateRuleRequest@{RingCentral.ForwardingInfoCreateRuleRequest}}
+\doxysubsubsection{\texorpdfstring{softPhonesRingCount}{softPhonesRingCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Forwarding\+Info\+Create\+Rule\+Request.\+soft\+Phones\+Ring\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies delay between ring on apps and starting of a call forwarding. To activate this parameter use the value $>$ 0, and turn off the {\ttfamily soft\+Phones\+Always\+Ring} setting. If the value is 1 or 0, the {\ttfamily soft\+Phones\+Always\+Ring} setting cannot be turned off Format\+: int32 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Forwarding\+Info\+Create\+Rule\+Request.\+cs\end{DoxyCompactItemize}

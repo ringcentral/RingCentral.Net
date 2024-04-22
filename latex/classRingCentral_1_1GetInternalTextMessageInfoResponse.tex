@@ -1,0 +1,217 @@
+\hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse}{}\doxysection{Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response Class Reference}
+\label{classRingCentral_1_1GetInternalTextMessageInfoResponse}\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a6f263b0265d20daac955c6b406415277}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_ae7d6baabed7b7c76ed1d3f2ee55c427a}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of a message Format\+: uri \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a36a8583183698b150d888f1bfb556955}{attachments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of message attachments \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_af70cbc259361d558cf41235323f05331}{availability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a13eac497326ccfdd6058ddcc0ba99d8a}{conversation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS and Pager only. Identifier of a conversation that the message belongs to Format\+: int64 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ConversationInfo}{Conversation\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a723c64e617429366170492ff86e8b12a}{conversation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_afe1efbd0519803953268c4c54737cb35}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_ad11eb5bee6208048cf262e7b7514fe62}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseFrom}{Message\+Store\+Caller\+Info\+Response\+From}} \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_af53387ab7859d93ffc816106f281e624}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a22ac9904c5056864856f275770cc01f3}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Date/time when the message was modified on server in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a024c640b2e8c80f447fc068486887bab}{message\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_ae4ef14a17c480020221fc3d21cfdb09a}{pg\+To\+Department}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pager only. {\ttfamily true} if at least one of a message recipients is \textquotesingle{}Department\textquotesingle{} extension \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a3ef40b1cef730fc4ec2985491ad82bdf}{priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message priority Enum\+: Normal, High \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a515dde67ea18ae1cd1e443f0a026b210}{read\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message read status Enum\+: Read, Unread \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_afbbfb605b135e8bfe43861c3ae343b4a}{subject}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseTo}{Message\+Store\+Caller\+Info\+Response\+To}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a79846a4bc44b92330318f826f266bf0d}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Recipient information \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetInternalTextMessageInfoResponse_a4ea41ca109b1aec7a7c9f4808cc26c01}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message type Enum\+: Fax, SMS, Voice\+Mail, Pager, Text \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a36a8583183698b150d888f1bfb556955}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a36a8583183698b150d888f1bfb556955}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!attachments@{attachments}}
+\index{attachments@{attachments}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{attachments}{attachments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+attachments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of message attachments 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_af70cbc259361d558cf41235323f05331}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_af70cbc259361d558cf41235323f05331}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!availability@{availability}}
+\index{availability@{availability}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{availability}{availability}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+availability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a723c64e617429366170492ff86e8b12a}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a723c64e617429366170492ff86e8b12a}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!conversation@{conversation}}
+\index{conversation@{conversation}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{conversation}{conversation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ConversationInfo}{Conversation\+Info}} Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+conversation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a13eac497326ccfdd6058ddcc0ba99d8a}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a13eac497326ccfdd6058ddcc0ba99d8a}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!conversationId@{conversationId}}
+\index{conversationId@{conversationId}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{conversationId}{conversationId}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+conversation\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SMS and Pager only. Identifier of a conversation that the message belongs to Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_afe1efbd0519803953268c4c54737cb35}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_afe1efbd0519803953268c4c54737cb35}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_ad11eb5bee6208048cf262e7b7514fe62}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_ad11eb5bee6208048cf262e7b7514fe62}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!direction@{direction}}
+\index{direction@{direction}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_af53387ab7859d93ffc816106f281e624}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_af53387ab7859d93ffc816106f281e624}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!from@{from}}
+\index{from@{from}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseFrom}{Message\+Store\+Caller\+Info\+Response\+From}} Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a6f263b0265d20daac955c6b406415277}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a6f263b0265d20daac955c6b406415277}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!id@{id}}
+\index{id@{id}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a message Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a22ac9904c5056864856f275770cc01f3}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a22ac9904c5056864856f275770cc01f3}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Date/time when the message was modified on server in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a024c640b2e8c80f447fc068486887bab}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a024c640b2e8c80f447fc068486887bab}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!messageStatus@{messageStatus}}
+\index{messageStatus@{messageStatus}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{messageStatus}{messageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+message\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_ae4ef14a17c480020221fc3d21cfdb09a}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_ae4ef14a17c480020221fc3d21cfdb09a}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!pgToDepartment@{pgToDepartment}}
+\index{pgToDepartment@{pgToDepartment}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{pgToDepartment}{pgToDepartment}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+pg\+To\+Department\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Pager only. {\ttfamily true} if at least one of a message recipients is \textquotesingle{}Department\textquotesingle{} extension 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a3ef40b1cef730fc4ec2985491ad82bdf}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a3ef40b1cef730fc4ec2985491ad82bdf}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!priority@{priority}}
+\index{priority@{priority}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+priority\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message priority Enum\+: Normal, High 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a515dde67ea18ae1cd1e443f0a026b210}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a515dde67ea18ae1cd1e443f0a026b210}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!readStatus@{readStatus}}
+\index{readStatus@{readStatus}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{readStatus}{readStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+read\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message read status Enum\+: Read, Unread 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_afbbfb605b135e8bfe43861c3ae343b4a}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_afbbfb605b135e8bfe43861c3ae343b4a}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!subject@{subject}}
+\index{subject@{subject}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{subject}{subject}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+subject\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a79846a4bc44b92330318f826f266bf0d}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a79846a4bc44b92330318f826f266bf0d}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!to@{to}}
+\index{to@{to}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseTo}{Message\+Store\+Caller\+Info\+Response\+To}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Recipient information 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_a4ea41ca109b1aec7a7c9f4808cc26c01}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_a4ea41ca109b1aec7a7c9f4808cc26c01}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!type@{type}}
+\index{type@{type}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message type Enum\+: Fax, SMS, Voice\+Mail, Pager, Text 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetInternalTextMessageInfoResponse_ae7d6baabed7b7c76ed1d3f2ee55c427a}\label{classRingCentral_1_1GetInternalTextMessageInfoResponse_ae7d6baabed7b7c76ed1d3f2ee55c427a}} 
+\index{RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}!uri@{uri}}
+\index{uri@{uri}!RingCentral.GetInternalTextMessageInfoResponse@{RingCentral.GetInternalTextMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Internal\+Text\+Message\+Info\+Response.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of a message Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Get\+Internal\+Text\+Message\+Info\+Response.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Scim.\+Users.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index}\index{RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Scim.\+Users.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ac78887b520328ca9ec82e5371badb1b4}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ac78887b520328ca9ec82e5371badb1b4}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1DotSearch_1_1Index}{Dot\+Search.\+Index}} {\bfseries Dot\+Search} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a2aaafdf2a9ae01734f5e9a526cb006d1}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a2aaafdf2a9ae01734f5e9a526cb006d1}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Index}{Scim.\+Index}} parent, string scim\+User\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_adf05e753689c012d88b05d5e7a058312}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_adf05e753689c012d88b05d5e7a058312}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ScimUserSearchResponse}{Scim\+User\+Search\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_acc193ef1f5a4b003ab9aa8fa55f3d8ee}{List}} (\mbox{\hyperlink{classRingCentral_1_1ScimSearchViaGet2Parameters}{Scim\+Search\+Via\+Get2\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of users satisfying search criteria HTTP Method\+: get Endpoint\+: /scim/\{version\}/\+Users Rate Limit Group\+: Light App Permission\+: Read\+Accounts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_af197465beea422aee4d50919a8f0a97a}{Post}} (\mbox{\hyperlink{classRingCentral_1_1ScimUser}{Scim\+User}} scim\+User, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new user HTTP Method\+: post Endpoint\+: /scim/\{version\}/\+Users Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ace90d150f624e97320009cbb3aaca8f5}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a user by ID HTTP Method\+: get Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ad6926fff13eaabc37d0585750b6c5287}{Put}} (\mbox{\hyperlink{classRingCentral_1_1ScimUser}{Scim\+User}} scim\+User, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a user HTTP Method\+: put Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a8ccc9109e875ab7cd0ab511400a51d8e}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a user HTTP Method\+: delete Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a27dafebdda3ef66ae368bbfb46765165}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1ScimUserPatch}{Scim\+User\+Patch}} scim\+User\+Patch, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a user (partial update) HTTP Method\+: patch Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ad109aaa508342ce1d5bb8d49fcd6ead0}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ad109aaa508342ce1d5bb8d49fcd6ead0}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Scim_1_1Index}{Scim.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a1188577f66bbafceda4506ec3a25fe12}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a1188577f66bbafceda4506ec3a25fe12}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_afd1016672d184c8b40f51075d403773d}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_afd1016672d184c8b40f51075d403773d}} 
+string {\bfseries scim\+User\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a8ccc9109e875ab7cd0ab511400a51d8e}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a8ccc9109e875ab7cd0ab511400a51d8e}} 
+\index{RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Scim.\+Users.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a user HTTP Method\+: delete Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ace90d150f624e97320009cbb3aaca8f5}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ace90d150f624e97320009cbb3aaca8f5}} 
+\index{RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}}$>$ Ring\+Central.\+Paths.\+Scim.\+Users.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a user by ID HTTP Method\+: get Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_acc193ef1f5a4b003ab9aa8fa55f3d8ee}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_acc193ef1f5a4b003ab9aa8fa55f3d8ee}} 
+\index{RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ScimUserSearchResponse}{Scim\+User\+Search\+Response}}$>$ Ring\+Central.\+Paths.\+Scim.\+Users.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ScimSearchViaGet2Parameters}{Scim\+Search\+Via\+Get2\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of users satisfying search criteria HTTP Method\+: get Endpoint\+: /scim/\{version\}/\+Users Rate Limit Group\+: Light App Permission\+: Read\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a27dafebdda3ef66ae368bbfb46765165}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_a27dafebdda3ef66ae368bbfb46765165}} 
+\index{RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}}$>$ Ring\+Central.\+Paths.\+Scim.\+Users.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ScimUserPatch}{Scim\+User\+Patch}}}]{scim\+User\+Patch,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a user (partial update) HTTP Method\+: patch Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_af197465beea422aee4d50919a8f0a97a}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_af197465beea422aee4d50919a8f0a97a}} 
+\index{RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}}$>$ Ring\+Central.\+Paths.\+Scim.\+Users.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ScimUser}{Scim\+User}}}]{scim\+User,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new user HTTP Method\+: post Endpoint\+: /scim/\{version\}/\+Users Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ad6926fff13eaabc37d0585750b6c5287}\label{classRingCentral_1_1Paths_1_1Scim_1_1Users_1_1Index_ad6926fff13eaabc37d0585750b6c5287}} 
+\index{RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Scim.Users.Index@{RingCentral.Paths.Scim.Users.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ScimUserResponse}{Scim\+User\+Response}}$>$ Ring\+Central.\+Paths.\+Scim.\+Users.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ScimUser}{Scim\+User}}}]{scim\+User,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a user HTTP Method\+: put Endpoint\+: /scim/\{version\}/\+Users/\{scim\+User\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Scim/\+Users/\+Dot\+Search/Index.\+cs\end{DoxyCompactItemize}

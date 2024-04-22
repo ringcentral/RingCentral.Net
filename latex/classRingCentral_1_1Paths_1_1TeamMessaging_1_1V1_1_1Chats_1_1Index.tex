@@ -1,0 +1,84 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a672bbacdab873620ec65551d46346c9e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a672bbacdab873620ec65551d46346c9e}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1AdaptiveCards_1_1Index}{Adaptive\+Cards.\+Index}} {\bfseries Adaptive\+Cards} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a53899bccb0050a3314a98b4636362e1f}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a53899bccb0050a3314a98b4636362e1f}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Favorite_1_1Index}{Favorite.\+Index}} {\bfseries Favorite} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a42fe33307417effcb1614190121b9694}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a42fe33307417effcb1614190121b9694}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} parent, string chat\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a9ef24f138b1cdbca511b2f1d88799f9a}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a9ef24f138b1cdbca511b2f1d88799f9a}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMChatList}{TMChat\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a7f700b933b426bedd65839978ec72bf9}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListGlipChatsNewParameters}{List\+Glip\+Chats\+New\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of chats where the user is a member and also public teams that can be joined. All records in response are sorted by creation time of a chat in ascending order. {\bfseries{Chat types}} There are multiple types of chats, including\+: \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMChatInfo}{TMChat\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a03254ba295ec5c27c6bb759ed498f071}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns information about a chat by ID. {\bfseries{Note}} \textquotesingle{}Chat\textquotesingle{} is a general name for all types of threads including {\itshape Personal} (user\textquotesingle{}s own me-\/chat), {\itshape Direct} (one on one chat), {\itshape Group} (chat of 3-\/15 participants without specific name), {\itshape Team} (chat of 2 and more participants, with a specific name), {\itshape \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Everyone}{Everyone}}} (company chat including all employees, with a specific name)."{} HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a0caa90f4c768f75063f550a6fce69222}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a0caa90f4c768f75063f550a6fce69222}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Notes_1_1Index}{Notes.\+Index}} {\bfseries Notes} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_ad141e5635176e0257a5490423ecdc5c7}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_ad141e5635176e0257a5490423ecdc5c7}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index}{Posts.\+Index}} {\bfseries Posts} (string post\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_aa11fc8f25a7023ae102af378676a41c3}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_aa11fc8f25a7023ae102af378676a41c3}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Tasks_1_1Index}{Tasks.\+Index}} {\bfseries Tasks} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_aff3eda349b36ac56266aaa5bff04e610}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_aff3eda349b36ac56266aaa5bff04e610}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Unfavorite_1_1Index}{Unfavorite.\+Index}} {\bfseries Unfavorite} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_aed1ec999e5890198c85bdb0dcfbe8873}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_aed1ec999e5890198c85bdb0dcfbe8873}} 
+string {\bfseries chat\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a0a882b62d387e70b63747aba7c1c2696}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a0a882b62d387e70b63747aba7c1c2696}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_ad1170c511c203e16d795a1dfc2793f33}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_ad1170c511c203e16d795a1dfc2793f33}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a03254ba295ec5c27c6bb759ed498f071}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a03254ba295ec5c27c6bb759ed498f071}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMChatInfo}{TMChat\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns information about a chat by ID. {\bfseries{Note}} \textquotesingle{}Chat\textquotesingle{} is a general name for all types of threads including {\itshape Personal} (user\textquotesingle{}s own me-\/chat), {\itshape Direct} (one on one chat), {\itshape Group} (chat of 3-\/15 participants without specific name), {\itshape Team} (chat of 2 and more participants, with a specific name), {\itshape \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Everyone}{Everyone}}} (company chat including all employees, with a specific name)."{} HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a7f700b933b426bedd65839978ec72bf9}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index_a7f700b933b426bedd65839978ec72bf9}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.TeamMessaging.V1.Chats.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMChatList}{TMChat\+List}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListGlipChatsNewParameters}{List\+Glip\+Chats\+New\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of chats where the user is a member and also public teams that can be joined. All records in response are sorted by creation time of a chat in ascending order. {\bfseries{Chat types}} There are multiple types of chats, including\+: 
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Personal}} -\/ each user is given a dedicated \char`\"{}personal chat\char`\"{} in which they are the only member.
+\item {\bfseries{Direct}} -\/ a chat between two individuals.
+\item {\bfseries{Group}} -\/ a chat between three or more named individuals. A \char`\"{}group\char`\"{} chat has no name.
+\item {\bfseries{Team}} -\/ a chat related to a specific topic. Members can come and go freely from this chat type.
+\item {\bfseries{\mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Everyone}{Everyone}}}} -\/ a special chat containing every individual in a company. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/chats Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}}
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Chats/\+Adaptive\+Cards/Index.\+cs\end{DoxyCompactItemize}

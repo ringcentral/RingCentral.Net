@@ -1,0 +1,62 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index}\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a8204aba3bf4b9372821f61a21fd3e4af}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a8204aba3bf4b9372821f61a21fd3e4af}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Index}{V1.\+Index}} parent, string session\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a25f3242f8a1852ae99b93a1b6d6b7f3e}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a25f3242f8a1852ae99b93a1b6d6b7f3e}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RegSessionModel}{Reg\+Session\+Model}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a09c0095469acac8769d7547a2005ed65}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a registration Session information by ID. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: get Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RegSessionModel}{Reg\+Session\+Model}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a15ef4a89b712c00a2bf411ffed53b72d}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1RegSessionModel}{Reg\+Session\+Model}} reg\+Session\+Model, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a Session by ID. This is a PARTIAL update (PATCH), client may call it providing only attributes which are to be changed. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. If a session record with given ID doesn\textquotesingle{}t exist on \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Registration}{Registration}} Service side the API should return HTTP 404. HTTP Method\+: patch Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_adea3bf18de7933d7edd3fab8ef21e4a9}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_adea3bf18de7933d7edd3fab8ef21e4a9}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index}{Registrants.\+Index}} {\bfseries Registrants} (string registrant\+Id=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_ab71449376ad340bbaea443b000cbf003}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_ab71449376ad340bbaea443b000cbf003}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a851199590e7fd38efd2444b4f934c856}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a851199590e7fd38efd2444b4f934c856}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a3c656c3adef11988b1b9a399e77044b8}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a3c656c3adef11988b1b9a399e77044b8}} 
+string {\bfseries session\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a09c0095469acac8769d7547a2005ed65}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a09c0095469acac8769d7547a2005ed65}} 
+\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Webinar.Registration.V1.Sessions.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RegSessionModel}{Reg\+Session\+Model}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a registration Session information by ID. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: get Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a15ef4a89b712c00a2bf411ffed53b72d}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index_a15ef4a89b712c00a2bf411ffed53b72d}} 
+\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Webinar.Registration.V1.Sessions.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RegSessionModel}{Reg\+Session\+Model}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RegSessionModel}{Reg\+Session\+Model}}}]{reg\+Session\+Model,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a Session by ID. This is a PARTIAL update (PATCH), client may call it providing only attributes which are to be changed. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. If a session record with given ID doesn\textquotesingle{}t exist on \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Registration}{Registration}} Service side the API should return HTTP 404. HTTP Method\+: patch Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Webinar/\+Registration/\+V1/\+Sessions/Index.\+cs\end{DoxyCompactItemize}

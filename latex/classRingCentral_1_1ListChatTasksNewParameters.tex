@@ -1,0 +1,131 @@
+\hypertarget{classRingCentral_1_1ListChatTasksNewParameters}{}\doxysection{Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters Class Reference}
+\label{classRingCentral_1_1ListChatTasksNewParameters}\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+
+
+Query parameters for operation list\+Chat\+Tasks\+New  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_ab22763c15445d27899d1ffc98b9e7163}{creation\+Time\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end datetime for resulting records in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, e.\+g. 2019-\/03-\/10T18\+:23\+:45Z Default\+: now \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_ac17dd0fe7955d736d7ad32455ae0fb3d}{creation\+Time\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The start datetime for resulting records in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, e.\+g. 2016-\/02-\/23T00\+:00\+:00 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_a6b6d98f495a569ff77b868a9acf98152}{creator\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a task creator \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_abc5cbf36c6fd43e81da86c154d5d0b07}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Task execution status Enum\+: Pending, In\+Progress, Completed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_ae89e28941b20f00bb1c8d2ebeeb1ef3f}{assignment\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Task assignment status Enum\+: Unassigned, Assigned \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_a7925f42fbac394889307ea7b44cb97be}{assignee\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a task assignee \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_acd8b07fe0a2c4e6d844820ce69f77032}{assignee\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Task execution status by assignee(-\/s) specified in assignee\+Id Enum\+: Pending, Completed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_a643e040738cb2e9ec8643a33cf120b0a}{page\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Token of the current page. If token is omitted then the first page should be returned \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListChatTasksNewParameters_a83225bdcee0451cdffe599103f367360}{record\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of records to be returned per screen Maximum\+: 250 Minimum\+: 1 Format\+: int32 Default\+: 30 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Chat\+Tasks\+New 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_a7925f42fbac394889307ea7b44cb97be}\label{classRingCentral_1_1ListChatTasksNewParameters_a7925f42fbac394889307ea7b44cb97be}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!assigneeId@{assigneeId}}
+\index{assigneeId@{assigneeId}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{assigneeId}{assigneeId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+assignee\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a task assignee 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_acd8b07fe0a2c4e6d844820ce69f77032}\label{classRingCentral_1_1ListChatTasksNewParameters_acd8b07fe0a2c4e6d844820ce69f77032}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!assigneeStatus@{assigneeStatus}}
+\index{assigneeStatus@{assigneeStatus}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{assigneeStatus}{assigneeStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+assignee\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Task execution status by assignee(-\/s) specified in assignee\+Id Enum\+: Pending, Completed 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_ae89e28941b20f00bb1c8d2ebeeb1ef3f}\label{classRingCentral_1_1ListChatTasksNewParameters_ae89e28941b20f00bb1c8d2ebeeb1ef3f}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!assignmentStatus@{assignmentStatus}}
+\index{assignmentStatus@{assignmentStatus}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{assignmentStatus}{assignmentStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+assignment\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Task assignment status Enum\+: Unassigned, Assigned 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_ac17dd0fe7955d736d7ad32455ae0fb3d}\label{classRingCentral_1_1ListChatTasksNewParameters_ac17dd0fe7955d736d7ad32455ae0fb3d}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!creationTimeFrom@{creationTimeFrom}}
+\index{creationTimeFrom@{creationTimeFrom}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{creationTimeFrom}{creationTimeFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+creation\+Time\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The start datetime for resulting records in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, e.\+g. 2016-\/02-\/23T00\+:00\+:00 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_ab22763c15445d27899d1ffc98b9e7163}\label{classRingCentral_1_1ListChatTasksNewParameters_ab22763c15445d27899d1ffc98b9e7163}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!creationTimeTo@{creationTimeTo}}
+\index{creationTimeTo@{creationTimeTo}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{creationTimeTo}{creationTimeTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+creation\+Time\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end datetime for resulting records in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format including timezone, e.\+g. 2019-\/03-\/10T18\+:23\+:45Z Default\+: now 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_a6b6d98f495a569ff77b868a9acf98152}\label{classRingCentral_1_1ListChatTasksNewParameters_a6b6d98f495a569ff77b868a9acf98152}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!creatorId@{creatorId}}
+\index{creatorId@{creatorId}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{creatorId}{creatorId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+creator\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a task creator 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_a643e040738cb2e9ec8643a33cf120b0a}\label{classRingCentral_1_1ListChatTasksNewParameters_a643e040738cb2e9ec8643a33cf120b0a}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!pageToken@{pageToken}}
+\index{pageToken@{pageToken}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{pageToken}{pageToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+page\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Token of the current page. If token is omitted then the first page should be returned 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_a83225bdcee0451cdffe599103f367360}\label{classRingCentral_1_1ListChatTasksNewParameters_a83225bdcee0451cdffe599103f367360}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!recordCount@{recordCount}}
+\index{recordCount@{recordCount}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{recordCount}{recordCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+record\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of records to be returned per screen Maximum\+: 250 Minimum\+: 1 Format\+: int32 Default\+: 30 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListChatTasksNewParameters_abc5cbf36c6fd43e81da86c154d5d0b07}\label{classRingCentral_1_1ListChatTasksNewParameters_abc5cbf36c6fd43e81da86c154d5d0b07}} 
+\index{RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}!status@{status}}
+\index{status@{status}!RingCentral.ListChatTasksNewParameters@{RingCentral.ListChatTasksNewParameters}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Chat\+Tasks\+New\+Parameters.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Task execution status Enum\+: Pending, In\+Progress, Completed 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Chat\+Tasks\+New\+Parameters.\+cs\end{DoxyCompactItemize}

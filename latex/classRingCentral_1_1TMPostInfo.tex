@@ -1,0 +1,181 @@
+\hypertarget{classRingCentral_1_1TMPostInfo}{}\doxysection{Ring\+Central.\+TMPost\+Info Class Reference}
+\label{classRingCentral_1_1TMPostInfo}\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_a6d9802e14da28698af6ba61831531f09}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a post \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_a5f449c55b558937193fcaad02b5296dc}{group\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a group a post belongs to \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_abf3f0395299376695a8bca8151294241}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of post Enum\+: Text\+Message, Person\+Joined, Persons\+Added \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_aa6da04653f2f5bdf09e71ed86b16e903}{text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For \textquotesingle{}Text\+Message\textquotesingle{} post type only. Text of a message \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_ac967eae2a21388268e59dbfcdd0d3a62}{creator\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a user -\/ author of a post \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_ac451bcd59f8c52d66cfbb8ea27b79ff5}{added\+Person\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For \textquotesingle{}Persons\+Added\textquotesingle{} post type only. Identifiers of persons added to a group \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_ae08811cc9f03bee23df555af44890814}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Post creation datetime in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_aa9b273155c9bdac31c0093616a686fc7}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Post last modification datetime in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1TMMessageAttachmentInfo}{TMMessage\+Attachment\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_a6de477e153fd025615bbfb8c6613ff5a}{attachments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of posted attachments \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1TMMentionsInfo}{TMMentions\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_ac06e92700339be65c31d230f4cde97f1}{mentions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_ae7dca16fd95eb47d98ae32a982df69a7}{activity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Label of activity type \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_acb53292441c81e39acc74892ca103ddf}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Title of a message. (Can be set for bot\textquotesingle{}s messages only) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_a5b6292c3696c1d7ee0737bb1a2a26a1f}{icon\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Link to an image used as an icon for this message Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMPostInfo_ac9c72350ff5419e6a080bd2757f753ff}{icon\+Emoji}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Emoji used as an icon for this message \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_ae7dca16fd95eb47d98ae32a982df69a7}\label{classRingCentral_1_1TMPostInfo_ae7dca16fd95eb47d98ae32a982df69a7}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!activity@{activity}}
+\index{activity@{activity}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{activity}{activity}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+activity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Label of activity type 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_ac451bcd59f8c52d66cfbb8ea27b79ff5}\label{classRingCentral_1_1TMPostInfo_ac451bcd59f8c52d66cfbb8ea27b79ff5}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!addedPersonIds@{addedPersonIds}}
+\index{addedPersonIds@{addedPersonIds}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{addedPersonIds}{addedPersonIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+TMPost\+Info.\+added\+Person\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For \textquotesingle{}Persons\+Added\textquotesingle{} post type only. Identifiers of persons added to a group 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_a6de477e153fd025615bbfb8c6613ff5a}\label{classRingCentral_1_1TMPostInfo_a6de477e153fd025615bbfb8c6613ff5a}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!attachments@{attachments}}
+\index{attachments@{attachments}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{attachments}{attachments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1TMMessageAttachmentInfo}{TMMessage\+Attachment\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+TMPost\+Info.\+attachments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of posted attachments 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_ae08811cc9f03bee23df555af44890814}\label{classRingCentral_1_1TMPostInfo_ae08811cc9f03bee23df555af44890814}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Post creation datetime in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_ac967eae2a21388268e59dbfcdd0d3a62}\label{classRingCentral_1_1TMPostInfo_ac967eae2a21388268e59dbfcdd0d3a62}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!creatorId@{creatorId}}
+\index{creatorId@{creatorId}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{creatorId}{creatorId}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+creator\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a user -\/ author of a post 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_a5f449c55b558937193fcaad02b5296dc}\label{classRingCentral_1_1TMPostInfo_a5f449c55b558937193fcaad02b5296dc}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!groupId@{groupId}}
+\index{groupId@{groupId}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{groupId}{groupId}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+group\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a group a post belongs to 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_ac9c72350ff5419e6a080bd2757f753ff}\label{classRingCentral_1_1TMPostInfo_ac9c72350ff5419e6a080bd2757f753ff}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!iconEmoji@{iconEmoji}}
+\index{iconEmoji@{iconEmoji}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{iconEmoji}{iconEmoji}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+icon\+Emoji\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Emoji used as an icon for this message 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_a5b6292c3696c1d7ee0737bb1a2a26a1f}\label{classRingCentral_1_1TMPostInfo_a5b6292c3696c1d7ee0737bb1a2a26a1f}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!iconUri@{iconUri}}
+\index{iconUri@{iconUri}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{iconUri}{iconUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+icon\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Link to an image used as an icon for this message Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_a6d9802e14da28698af6ba61831531f09}\label{classRingCentral_1_1TMPostInfo_a6d9802e14da28698af6ba61831531f09}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!id@{id}}
+\index{id@{id}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a post 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_aa9b273155c9bdac31c0093616a686fc7}\label{classRingCentral_1_1TMPostInfo_aa9b273155c9bdac31c0093616a686fc7}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Post last modification datetime in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_ac06e92700339be65c31d230f4cde97f1}\label{classRingCentral_1_1TMPostInfo_ac06e92700339be65c31d230f4cde97f1}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!mentions@{mentions}}
+\index{mentions@{mentions}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{mentions}{mentions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1TMMentionsInfo}{TMMentions\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+TMPost\+Info.\+mentions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_aa6da04653f2f5bdf09e71ed86b16e903}\label{classRingCentral_1_1TMPostInfo_aa6da04653f2f5bdf09e71ed86b16e903}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!text@{text}}
+\index{text@{text}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For \textquotesingle{}Text\+Message\textquotesingle{} post type only. Text of a message 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_acb53292441c81e39acc74892ca103ddf}\label{classRingCentral_1_1TMPostInfo_acb53292441c81e39acc74892ca103ddf}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!title@{title}}
+\index{title@{title}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Title of a message. (Can be set for bot\textquotesingle{}s messages only) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMPostInfo_abf3f0395299376695a8bca8151294241}\label{classRingCentral_1_1TMPostInfo_abf3f0395299376695a8bca8151294241}} 
+\index{RingCentral.TMPostInfo@{RingCentral.TMPostInfo}!type@{type}}
+\index{type@{type}!RingCentral.TMPostInfo@{RingCentral.TMPostInfo}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMPost\+Info.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of post Enum\+: Text\+Message, Person\+Joined, Persons\+Added 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/TMPost\+Info.\+cs\end{DoxyCompactItemize}

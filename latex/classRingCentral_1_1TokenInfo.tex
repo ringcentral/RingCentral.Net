@@ -1,0 +1,169 @@
+\hypertarget{classRingCentral_1_1TokenInfo}{}\doxysection{Ring\+Central.\+Token\+Info Class Reference}
+\label{classRingCentral_1_1TokenInfo}\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a0b661f8f48fb1d9cf5e4210cf8663599}{access\+\_\+token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OAuth access token to pass to subsequent API requests Required Example\+: U1\+BCMDFUMDRKV1\+Mw\+MXxz\+LFSv\+Xdw5\+PHMs\+VLEn\+\_\+\+Mrtcyx\+Usw \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a5ba2db224f07b445aa4788574dd4ced4}{expires\+\_\+in}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Issued access token TTL (time-\/to-\/live) in seconds Required Format\+: int32 Example\+: 7199 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a414491eab87caa6cd207ba6747ebabc3}{refresh\+\_\+token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OAuth refresh token (in case the one was issued) Example\+: U1\+BCMDFUMDRKV1\+Mw\+MXxz\+LFL4ec6\+A0\+XMs\+Uv9w\+Lriecyx\+S\+\_\+w \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a8a119f25b35370b28ef280597367a32d}{refresh\+\_\+token\+\_\+expires\+\_\+in}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Issued refresh token TTL (time-\/to-\/live) in seconds Format\+: int32 Example\+: 604799 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_aaa339828c6ac3dca8f58b1194598c30b}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of permissions (space separated) granted to the application with this access token Required Example\+: \mbox{\hyperlink{classRingCentral_1_1AccountInfo}{Account\+Info}} Call\+Log \mbox{\hyperlink{classRingCentral_1_1ExtensionInfo}{Extension\+Info}} Messages SMS \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a743e859bbc9a7cd94c4b42ba007f89e1}{token\+\_\+type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of token. The only supported value is {\ttfamily bearer}. This value should be used when specifying access token in {\ttfamily Authorization} header of subsequent API requests Required Example\+: bearer \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a717aab96afeea9513f46f6f535c85612}{owner\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Token owner (extension/user) identifier Example\+: 256440016 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a940293016f99df300bc770583eabd7de}{endpoint\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Application instance identifier Example\+: 8z\+Xq6oa\+LT7\+Wvw\+WITl\+Gi\+A1A \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_ac6980930de62bbc35915c00cb6b9ffd4}{id\+\_\+token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OIDC ID token (if Open\+Id Connect flow was activated during authorization) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a9efc69de0bfaddb1e795f42ac8b7a85b}{session\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OAuth session ID \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a04fe1b8ce05303db9b70f71ff2c81618}{session\+\_\+expiration\+\_\+time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Absolute value of session expiration time as ISO datetime Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TokenInfo_a8cdaab09e9fdb5087143fd63ce138196}{session\+\_\+expires\+\_\+in}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Remaining time (in seconds) until session expiration due to absolute timeout Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TokenInfo_ae61794e9a16c69f7895270ae2cfc95a5}{session\+\_\+idle\+\_\+timeout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nominal session idle timeout in seconds Format\+: int32 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a0b661f8f48fb1d9cf5e4210cf8663599}\label{classRingCentral_1_1TokenInfo_a0b661f8f48fb1d9cf5e4210cf8663599}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!access\_token@{access\_token}}
+\index{access\_token@{access\_token}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{access\_token}{access\_token}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+access\+\_\+token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OAuth access token to pass to subsequent API requests Required Example\+: U1\+BCMDFUMDRKV1\+Mw\+MXxz\+LFSv\+Xdw5\+PHMs\+VLEn\+\_\+\+Mrtcyx\+Usw 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a940293016f99df300bc770583eabd7de}\label{classRingCentral_1_1TokenInfo_a940293016f99df300bc770583eabd7de}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!endpoint\_id@{endpoint\_id}}
+\index{endpoint\_id@{endpoint\_id}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{endpoint\_id}{endpoint\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+endpoint\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Application instance identifier Example\+: 8z\+Xq6oa\+LT7\+Wvw\+WITl\+Gi\+A1A 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a5ba2db224f07b445aa4788574dd4ced4}\label{classRingCentral_1_1TokenInfo_a5ba2db224f07b445aa4788574dd4ced4}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!expires\_in@{expires\_in}}
+\index{expires\_in@{expires\_in}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{expires\_in}{expires\_in}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Token\+Info.\+expires\+\_\+in\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Issued access token TTL (time-\/to-\/live) in seconds Required Format\+: int32 Example\+: 7199 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_ac6980930de62bbc35915c00cb6b9ffd4}\label{classRingCentral_1_1TokenInfo_ac6980930de62bbc35915c00cb6b9ffd4}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!id\_token@{id\_token}}
+\index{id\_token@{id\_token}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{id\_token}{id\_token}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+id\+\_\+token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OIDC ID token (if Open\+Id Connect flow was activated during authorization) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a717aab96afeea9513f46f6f535c85612}\label{classRingCentral_1_1TokenInfo_a717aab96afeea9513f46f6f535c85612}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!owner\_id@{owner\_id}}
+\index{owner\_id@{owner\_id}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{owner\_id}{owner\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+owner\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Token owner (extension/user) identifier Example\+: 256440016 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a414491eab87caa6cd207ba6747ebabc3}\label{classRingCentral_1_1TokenInfo_a414491eab87caa6cd207ba6747ebabc3}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!refresh\_token@{refresh\_token}}
+\index{refresh\_token@{refresh\_token}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{refresh\_token}{refresh\_token}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+refresh\+\_\+token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OAuth refresh token (in case the one was issued) Example\+: U1\+BCMDFUMDRKV1\+Mw\+MXxz\+LFL4ec6\+A0\+XMs\+Uv9w\+Lriecyx\+S\+\_\+w 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a8a119f25b35370b28ef280597367a32d}\label{classRingCentral_1_1TokenInfo_a8a119f25b35370b28ef280597367a32d}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!refresh\_token\_expires\_in@{refresh\_token\_expires\_in}}
+\index{refresh\_token\_expires\_in@{refresh\_token\_expires\_in}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{refresh\_token\_expires\_in}{refresh\_token\_expires\_in}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Token\+Info.\+refresh\+\_\+token\+\_\+expires\+\_\+in\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Issued refresh token TTL (time-\/to-\/live) in seconds Format\+: int32 Example\+: 604799 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_aaa339828c6ac3dca8f58b1194598c30b}\label{classRingCentral_1_1TokenInfo_aaa339828c6ac3dca8f58b1194598c30b}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!scope@{scope}}
+\index{scope@{scope}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+scope\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of permissions (space separated) granted to the application with this access token Required Example\+: \mbox{\hyperlink{classRingCentral_1_1AccountInfo}{Account\+Info}} Call\+Log \mbox{\hyperlink{classRingCentral_1_1ExtensionInfo}{Extension\+Info}} Messages SMS 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a04fe1b8ce05303db9b70f71ff2c81618}\label{classRingCentral_1_1TokenInfo_a04fe1b8ce05303db9b70f71ff2c81618}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!session\_expiration\_time@{session\_expiration\_time}}
+\index{session\_expiration\_time@{session\_expiration\_time}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{session\_expiration\_time}{session\_expiration\_time}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+session\+\_\+expiration\+\_\+time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Absolute value of session expiration time as ISO datetime Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a8cdaab09e9fdb5087143fd63ce138196}\label{classRingCentral_1_1TokenInfo_a8cdaab09e9fdb5087143fd63ce138196}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!session\_expires\_in@{session\_expires\_in}}
+\index{session\_expires\_in@{session\_expires\_in}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{session\_expires\_in}{session\_expires\_in}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Token\+Info.\+session\+\_\+expires\+\_\+in\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Remaining time (in seconds) until session expiration due to absolute timeout Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a9efc69de0bfaddb1e795f42ac8b7a85b}\label{classRingCentral_1_1TokenInfo_a9efc69de0bfaddb1e795f42ac8b7a85b}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!session\_id@{session\_id}}
+\index{session\_id@{session\_id}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{session\_id}{session\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+session\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OAuth session ID 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_ae61794e9a16c69f7895270ae2cfc95a5}\label{classRingCentral_1_1TokenInfo_ae61794e9a16c69f7895270ae2cfc95a5}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!session\_idle\_timeout@{session\_idle\_timeout}}
+\index{session\_idle\_timeout@{session\_idle\_timeout}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{session\_idle\_timeout}{session\_idle\_timeout}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Token\+Info.\+session\+\_\+idle\+\_\+timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nominal session idle timeout in seconds Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1TokenInfo_a743e859bbc9a7cd94c4b42ba007f89e1}\label{classRingCentral_1_1TokenInfo_a743e859bbc9a7cd94c4b42ba007f89e1}} 
+\index{RingCentral.TokenInfo@{RingCentral.TokenInfo}!token\_type@{token\_type}}
+\index{token\_type@{token\_type}!RingCentral.TokenInfo@{RingCentral.TokenInfo}}
+\doxysubsubsection{\texorpdfstring{token\_type}{token\_type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Token\+Info.\+token\+\_\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of token. The only supported value is {\ttfamily bearer}. This value should be used when specifying access token in {\ttfamily Authorization} header of subsequent API requests Required Example\+: bearer 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Token\+Info.\+cs\end{DoxyCompactItemize}

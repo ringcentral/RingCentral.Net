@@ -1,0 +1,61 @@
+\hypertarget{classRingCentral_1_1CreateDataExportTaskRequest}{}\doxysection{Ring\+Central.\+Create\+Data\+Export\+Task\+Request Class Reference}
+\label{classRingCentral_1_1CreateDataExportTaskRequest}\index{RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateDataExportTaskRequest_a54d8cf34bcc7ee590d73f65046dba4dd}{time\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Starting time for data collection. The default value is {\ttfamily time\+To} minus 24 hours. Max allowed time frame between {\ttfamily time\+From} and {\ttfamily time\+To} is 6 months Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CreateDataExportTaskRequest_a3f5ecc9f84c23a3e00fff51939736971}{time\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ending time for data collection. The default value is current time. Max allowed time frame between {\ttfamily time\+From} and {\ttfamily time\+To} is 6 months Format\+: date-\/time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1DataExportTaskContactInfo}{Data\+Export\+Task\+Contact\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateDataExportTaskRequest_a498bdb408868c2d39855390e4db74fdf}{contacts}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of contacts which data is collected. The following data will be exported\+: posts, tasks, events, etc. posted by the user(s); posts addressing the user(s) via direct and @\+Mentions; tasks assigned to the listed user(s). The list of 30 users per request is supported. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CreateDataExportTaskRequest_a67b60de697c607de8ae78a9fe99e24fd}{chat\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected. Maximum number of chats supported is 10 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CreateDataExportTaskRequest_a67b60de697c607de8ae78a9fe99e24fd}\label{classRingCentral_1_1CreateDataExportTaskRequest_a67b60de697c607de8ae78a9fe99e24fd}} 
+\index{RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}!chatIds@{chatIds}}
+\index{chatIds@{chatIds}!RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}}
+\doxysubsubsection{\texorpdfstring{chatIds}{chatIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Data\+Export\+Task\+Request.\+chat\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected. Maximum number of chats supported is 10 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateDataExportTaskRequest_a498bdb408868c2d39855390e4db74fdf}\label{classRingCentral_1_1CreateDataExportTaskRequest_a498bdb408868c2d39855390e4db74fdf}} 
+\index{RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}!contacts@{contacts}}
+\index{contacts@{contacts}!RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}}
+\doxysubsubsection{\texorpdfstring{contacts}{contacts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DataExportTaskContactInfo}{Data\+Export\+Task\+Contact\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Create\+Data\+Export\+Task\+Request.\+contacts\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of contacts which data is collected. The following data will be exported\+: posts, tasks, events, etc. posted by the user(s); posts addressing the user(s) via direct and @\+Mentions; tasks assigned to the listed user(s). The list of 30 users per request is supported. 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateDataExportTaskRequest_a54d8cf34bcc7ee590d73f65046dba4dd}\label{classRingCentral_1_1CreateDataExportTaskRequest_a54d8cf34bcc7ee590d73f65046dba4dd}} 
+\index{RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}!timeFrom@{timeFrom}}
+\index{timeFrom@{timeFrom}!RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}}
+\doxysubsubsection{\texorpdfstring{timeFrom}{timeFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Data\+Export\+Task\+Request.\+time\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Starting time for data collection. The default value is {\ttfamily time\+To} minus 24 hours. Max allowed time frame between {\ttfamily time\+From} and {\ttfamily time\+To} is 6 months Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1CreateDataExportTaskRequest_a3f5ecc9f84c23a3e00fff51939736971}\label{classRingCentral_1_1CreateDataExportTaskRequest_a3f5ecc9f84c23a3e00fff51939736971}} 
+\index{RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}!timeTo@{timeTo}}
+\index{timeTo@{timeTo}!RingCentral.CreateDataExportTaskRequest@{RingCentral.CreateDataExportTaskRequest}}
+\doxysubsubsection{\texorpdfstring{timeTo}{timeTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+Create\+Data\+Export\+Task\+Request.\+time\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ending time for data collection. The default value is current time. Max allowed time frame between {\ttfamily time\+From} and {\ttfamily time\+To} is 6 months Format\+: date-\/time 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Create\+Data\+Export\+Task\+Request.\+cs\end{DoxyCompactItemize}

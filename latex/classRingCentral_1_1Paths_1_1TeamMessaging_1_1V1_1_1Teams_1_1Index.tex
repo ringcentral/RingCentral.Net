@@ -1,0 +1,113 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Teams.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Teams.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a86fd97a9fd2954dc981e160c12851de8}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a86fd97a9fd2954dc981e160c12851de8}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Add_1_1Index}{Add.\+Index}} {\bfseries Add} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a05544c1756bfc1594d0b73f86a7f525b}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a05544c1756bfc1594d0b73f86a7f525b}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Archive_1_1Index}{Archive.\+Index}} {\bfseries Archive} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a900fb948d3e66b94320978e9f401a1fe}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a900fb948d3e66b94320978e9f401a1fe}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} parent, string chat\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a92d0c68f462441572723b92cd30cec4e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a92d0c68f462441572723b92cd30cec4e}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMTeamList}{TMTeam\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_afbc0b25c28893d872cfaabeaaf98329d}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListGlipTeamsNewParameters}{List\+Glip\+Teams\+New\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of teams where the user is a member (both archived and active) combined with a list of public teams that can be joined by the current user. All records in response are sorted by creation time of a chat in ascending order. A team is a chat between 2 and more (unlimited number) participants assigned with specific name. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/teams Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMTeamInfo}{TMTeam\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a44105929dfa8999ce14237cbb8da33ef}{Post}} (\mbox{\hyperlink{classRingCentral_1_1TMCreateTeamRequest}{TMCreate\+Team\+Request}} t\+MCreate\+Team\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a team, and adds a list of people to the team. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/teams Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMTeamInfo}{TMTeam\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a7ef90bbbd5377f87bcab65296d7c335c}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns information about the specified team. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/teams/\{chat\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_ade44b588b969c9994b2420010070850b}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes the specified team. HTTP Method\+: delete Endpoint\+: /team-\/messaging/v1/teams/\{chat\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMTeamInfo}{TMTeam\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_af1f3974687a756bf59bcaf8fc9fddad5}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1TMUpdateTeamRequest}{TMUpdate\+Team\+Request}} t\+MUpdate\+Team\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the name and description of the specified team. HTTP Method\+: patch Endpoint\+: /team-\/messaging/v1/teams/\{chat\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_aaa0c4a5778710fbad251987a2f13d6c2}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_aaa0c4a5778710fbad251987a2f13d6c2}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Join_1_1Index}{Join.\+Index}} {\bfseries Join} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_af1f103bd06a1aa813d37fbbd99268e0e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_af1f103bd06a1aa813d37fbbd99268e0e}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Leave_1_1Index}{Leave.\+Index}} {\bfseries Leave} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a8cbf4de01dd05b06e6743495a4064a5e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a8cbf4de01dd05b06e6743495a4064a5e}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Remove_1_1Index}{Remove.\+Index}} {\bfseries Remove} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_aad433a28ea6326a04e915721a5e80fb8}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_aad433a28ea6326a04e915721a5e80fb8}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Unarchive_1_1Index}{Unarchive.\+Index}} {\bfseries Unarchive} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a4cc6a618d4f3f42c8e25dfacb7d5d234}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a4cc6a618d4f3f42c8e25dfacb7d5d234}} 
+string {\bfseries chat\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_af35980093c05700cbc2cfb1a36c27d2d}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_af35980093c05700cbc2cfb1a36c27d2d}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_ab4109c5b627b62320a49043cd59d9269}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_ab4109c5b627b62320a49043cd59d9269}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_ade44b588b969c9994b2420010070850b}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_ade44b588b969c9994b2420010070850b}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Teams.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the specified team. HTTP Method\+: delete Endpoint\+: /team-\/messaging/v1/teams/\{chat\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a7ef90bbbd5377f87bcab65296d7c335c}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a7ef90bbbd5377f87bcab65296d7c335c}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMTeamInfo}{TMTeam\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Teams.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns information about the specified team. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/teams/\{chat\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_afbc0b25c28893d872cfaabeaaf98329d}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_afbc0b25c28893d872cfaabeaaf98329d}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMTeamList}{TMTeam\+List}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Teams.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListGlipTeamsNewParameters}{List\+Glip\+Teams\+New\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of teams where the user is a member (both archived and active) combined with a list of public teams that can be joined by the current user. All records in response are sorted by creation time of a chat in ascending order. A team is a chat between 2 and more (unlimited number) participants assigned with specific name. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/teams Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_af1f3974687a756bf59bcaf8fc9fddad5}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_af1f3974687a756bf59bcaf8fc9fddad5}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMTeamInfo}{TMTeam\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Teams.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1TMUpdateTeamRequest}{TMUpdate\+Team\+Request}}}]{t\+MUpdate\+Team\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the name and description of the specified team. HTTP Method\+: patch Endpoint\+: /team-\/messaging/v1/teams/\{chat\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a44105929dfa8999ce14237cbb8da33ef}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Index_a44105929dfa8999ce14237cbb8da33ef}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.TeamMessaging.V1.Teams.Index@{RingCentral.Paths.TeamMessaging.V1.Teams.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMTeamInfo}{TMTeam\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Teams.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1TMCreateTeamRequest}{TMCreate\+Team\+Request}}}]{t\+MCreate\+Team\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a team, and adds a list of people to the team. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/teams Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Teams/\+Add/Index.\+cs\end{DoxyCompactItemize}

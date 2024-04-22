@@ -1,0 +1,52 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Features.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.Features.Index@{RingCentral.Paths.Restapi.Account.Extension.Features.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Features.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a356f7161251d2b663165ed093f83e9b1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a356f7161251d2b663165ed093f83e9b1}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a7aebc398d6d4e4cf12e20fdd2f4f723b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a7aebc398d6d4e4cf12e20fdd2f4f723b}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1FeatureList}{Feature\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_aecb31cc42f2734c30dcd087233b70678}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ReadExtensionFeaturesParameters}{Read\+Extension\+Features\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of supported features and information on their availability for the current extension. Specific feature(s) might be checked by providing {\ttfamily feature\+Id} query parameter. Multiple values are supported in the format\+: {\ttfamily ?feature\+Id=Feature1\&feature\+Id=Feature2}. To get only available features in order to decrease response size, {\ttfamily available\+Only=true} query param might be specified. In case a feature is available for the current user, {\ttfamily \char`\"{}available\char`\"{}\+: true} is returned in response for the record with the corresponding feature ID. Otherwise, additional attribute {\ttfamily reason} is returned with the appropriate code\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a82c8cc4d820f18f4ff841d2b45612591}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a82c8cc4d820f18f4ff841d2b45612591}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a2ba0e7215902d18169fc6de64760da61}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_a2ba0e7215902d18169fc6de64760da61}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_aecb31cc42f2734c30dcd087233b70678}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Features_1_1Index_aecb31cc42f2734c30dcd087233b70678}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.Features.Index@{RingCentral.Paths.Restapi.Account.Extension.Features.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.Features.Index@{RingCentral.Paths.Restapi.Account.Extension.Features.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1FeatureList}{Feature\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Features.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadExtensionFeaturesParameters}{Read\+Extension\+Features\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of supported features and information on their availability for the current extension. Specific feature(s) might be checked by providing {\ttfamily feature\+Id} query parameter. Multiple values are supported in the format\+: {\ttfamily ?feature\+Id=Feature1\&feature\+Id=Feature2}. To get only available features in order to decrease response size, {\ttfamily available\+Only=true} query param might be specified. In case a feature is available for the current user, {\ttfamily \char`\"{}available\char`\"{}\+: true} is returned in response for the record with the corresponding feature ID. Otherwise, additional attribute {\ttfamily reason} is returned with the appropriate code\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Service\+Plan\+Limitation} -\/ a feature is not included in account service plan;
+\item {\ttfamily Account\+Limitation} -\/ a feature is turned off for account;
+\item {\ttfamily Extension\+Type\+Limitation} -\/ a feature is not applicable for extension type;
+\item {\ttfamily Extension\+Limitation} -\/ a feature is not available for extension, e.\+g., additional license required;
+\item {\ttfamily Insufficient\+Permissions} -\/ required permission not granted to the current user (not the one, who is specified in the URL, but the one who\textquotesingle{}s access token is used);
+\item {\ttfamily Configuration\+Limitation} -\/ a feature is turned off for extension, e.\+g., by account administrator. Also, some features may have additional parameters, e.\+g., limits, which are returned in {\ttfamily params} attribute as a name-\/value collection\+: \{ \char`\"{}id\char`\"{}\+: \char`\"{}\+HUD\char`\"{}, \char`\"{}available\char`\"{}\+: true, \char`\"{}params\char`\"{}\+: \mbox{[} \{ \char`\"{}name\char`\"{}\+: \char`\"{}limit\+Max\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}100\char`\"{} \} \mbox{]} \} HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/features Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Extensions
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Features/Index.\+cs\end{DoxyCompactItemize}

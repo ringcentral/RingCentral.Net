@@ -1,0 +1,217 @@
+\hypertarget{classRingCentral_1_1MeetingRequestResource}{}\doxysection{Ring\+Central.\+Meeting\+Request\+Resource Class Reference}
+\label{classRingCentral_1_1MeetingRequestResource}\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_ab57fb59cd2f7666a80dbfb52a9a0cc4f}{topic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Custom topic of a meeting \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_ad5248901f32dc6d6d12ced8629ff9079}{meeting\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Instant, Scheduled, Scheduled\+Recurring, Recurring \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MeetingScheduleResource}{Meeting\+Schedule\+Resource}} \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_aecce2b106a43c378eb97aec9f2ed05fe}{schedule}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a0dd59b0d6a894104918bfa1f540e89ef}{password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} password Format\+: password \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1HostInfoRequest}{Host\+Info\+Request}} \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a9576358c15ef94911d47a4d7620f5244}{host}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a3044b6a248bfe30d22ead149faa463b8}{allow\+Join\+Before\+Host}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a4ccd0e588645a7836081b289bf72371f}{start\+Host\+Video}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a5a4762af6cb7bbb7f3d435718868cdc7}{start\+Participants\+Video}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Starting meetings with participant video on/off (true/false) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a5e8a15addb28446069f17b35409e2eed}{use\+Personal\+Meeting\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, then personal user\textquotesingle{}s meeting ID is applied for creation of this meeting \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a23c458e19897a2c8cda4819469772b34}{audio\+Options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Phone, Computer\+Audio \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1RecurrenceInfo}{Recurrence\+Info}} \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a31de1e9a5f611f6f49b531233b402732}{recurrence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_ae3e273118dfcfde7c71580ecd1cdbd42}{auto\+Record\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Automatic record type Default\+: none Enum\+: local, cloud, none \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_ab9e37f1f5851106cce352fce76b0840f}{enforce\+Login}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, then only signed-\/in users can join this meeting \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a3a9124ed8728bdd14d73e13caefde290}{mute\+Participants\+On\+Entry}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, then participants are muted on entry \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a34b0ec6dff69d9fea75262fc768acb64}{enable\+Waiting\+Room}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, then the waiting room for participants is enabled \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_aba947764ad3c77833c80ac1d325fef4f}{global\+Dial\+In\+Countries}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of global dial-\/in countries (eg. US, UK, AU, etc.) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MeetingRequestResource_a14a0a8f67325cf31375951580403870c}{alternative\+Hosts}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a3044b6a248bfe30d22ead149faa463b8}\label{classRingCentral_1_1MeetingRequestResource_a3044b6a248bfe30d22ead149faa463b8}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!allowJoinBeforeHost@{allowJoinBeforeHost}}
+\index{allowJoinBeforeHost@{allowJoinBeforeHost}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{allowJoinBeforeHost}{allowJoinBeforeHost}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Meeting\+Request\+Resource.\+allow\+Join\+Before\+Host\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a14a0a8f67325cf31375951580403870c}\label{classRingCentral_1_1MeetingRequestResource_a14a0a8f67325cf31375951580403870c}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!alternativeHosts@{alternativeHosts}}
+\index{alternativeHosts@{alternativeHosts}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{alternativeHosts}{alternativeHosts}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting\+Request\+Resource.\+alternative\+Hosts\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a23c458e19897a2c8cda4819469772b34}\label{classRingCentral_1_1MeetingRequestResource_a23c458e19897a2c8cda4819469772b34}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!audioOptions@{audioOptions}}
+\index{audioOptions@{audioOptions}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{audioOptions}{audioOptions}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Meeting\+Request\+Resource.\+audio\+Options\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Phone, Computer\+Audio 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_ae3e273118dfcfde7c71580ecd1cdbd42}\label{classRingCentral_1_1MeetingRequestResource_ae3e273118dfcfde7c71580ecd1cdbd42}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!autoRecordType@{autoRecordType}}
+\index{autoRecordType@{autoRecordType}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{autoRecordType}{autoRecordType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting\+Request\+Resource.\+auto\+Record\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Automatic record type Default\+: none Enum\+: local, cloud, none 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a34b0ec6dff69d9fea75262fc768acb64}\label{classRingCentral_1_1MeetingRequestResource_a34b0ec6dff69d9fea75262fc768acb64}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!enableWaitingRoom@{enableWaitingRoom}}
+\index{enableWaitingRoom@{enableWaitingRoom}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{enableWaitingRoom}{enableWaitingRoom}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Meeting\+Request\+Resource.\+enable\+Waiting\+Room\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, then the waiting room for participants is enabled 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_ab9e37f1f5851106cce352fce76b0840f}\label{classRingCentral_1_1MeetingRequestResource_ab9e37f1f5851106cce352fce76b0840f}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!enforceLogin@{enforceLogin}}
+\index{enforceLogin@{enforceLogin}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{enforceLogin}{enforceLogin}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Meeting\+Request\+Resource.\+enforce\+Login\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, then only signed-\/in users can join this meeting 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_aba947764ad3c77833c80ac1d325fef4f}\label{classRingCentral_1_1MeetingRequestResource_aba947764ad3c77833c80ac1d325fef4f}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!globalDialInCountries@{globalDialInCountries}}
+\index{globalDialInCountries@{globalDialInCountries}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{globalDialInCountries}{globalDialInCountries}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Meeting\+Request\+Resource.\+global\+Dial\+In\+Countries\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of global dial-\/in countries (eg. US, UK, AU, etc.) 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a9576358c15ef94911d47a4d7620f5244}\label{classRingCentral_1_1MeetingRequestResource_a9576358c15ef94911d47a4d7620f5244}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!host@{host}}
+\index{host@{host}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1HostInfoRequest}{Host\+Info\+Request}} Ring\+Central.\+Meeting\+Request\+Resource.\+host\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_ad5248901f32dc6d6d12ced8629ff9079}\label{classRingCentral_1_1MeetingRequestResource_ad5248901f32dc6d6d12ced8629ff9079}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!meetingType@{meetingType}}
+\index{meetingType@{meetingType}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{meetingType}{meetingType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting\+Request\+Resource.\+meeting\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Instant, Scheduled, Scheduled\+Recurring, Recurring 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a3a9124ed8728bdd14d73e13caefde290}\label{classRingCentral_1_1MeetingRequestResource_a3a9124ed8728bdd14d73e13caefde290}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!muteParticipantsOnEntry@{muteParticipantsOnEntry}}
+\index{muteParticipantsOnEntry@{muteParticipantsOnEntry}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{muteParticipantsOnEntry}{muteParticipantsOnEntry}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Meeting\+Request\+Resource.\+mute\+Participants\+On\+Entry\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, then participants are muted on entry 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a0dd59b0d6a894104918bfa1f540e89ef}\label{classRingCentral_1_1MeetingRequestResource_a0dd59b0d6a894104918bfa1f540e89ef}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!password@{password}}
+\index{password@{password}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting\+Request\+Resource.\+password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}} password Format\+: password 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a31de1e9a5f611f6f49b531233b402732}\label{classRingCentral_1_1MeetingRequestResource_a31de1e9a5f611f6f49b531233b402732}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!recurrence@{recurrence}}
+\index{recurrence@{recurrence}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{recurrence}{recurrence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1RecurrenceInfo}{Recurrence\+Info}} Ring\+Central.\+Meeting\+Request\+Resource.\+recurrence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_aecce2b106a43c378eb97aec9f2ed05fe}\label{classRingCentral_1_1MeetingRequestResource_aecce2b106a43c378eb97aec9f2ed05fe}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!schedule@{schedule}}
+\index{schedule@{schedule}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{schedule}{schedule}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MeetingScheduleResource}{Meeting\+Schedule\+Resource}} Ring\+Central.\+Meeting\+Request\+Resource.\+schedule\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a4ccd0e588645a7836081b289bf72371f}\label{classRingCentral_1_1MeetingRequestResource_a4ccd0e588645a7836081b289bf72371f}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!startHostVideo@{startHostVideo}}
+\index{startHostVideo@{startHostVideo}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{startHostVideo}{startHostVideo}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Meeting\+Request\+Resource.\+start\+Host\+Video\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a5a4762af6cb7bbb7f3d435718868cdc7}\label{classRingCentral_1_1MeetingRequestResource_a5a4762af6cb7bbb7f3d435718868cdc7}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!startParticipantsVideo@{startParticipantsVideo}}
+\index{startParticipantsVideo@{startParticipantsVideo}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{startParticipantsVideo}{startParticipantsVideo}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Meeting\+Request\+Resource.\+start\+Participants\+Video\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Starting meetings with participant video on/off (true/false) 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_ab57fb59cd2f7666a80dbfb52a9a0cc4f}\label{classRingCentral_1_1MeetingRequestResource_ab57fb59cd2f7666a80dbfb52a9a0cc4f}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!topic@{topic}}
+\index{topic@{topic}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{topic}{topic}}
+{\footnotesize\ttfamily string Ring\+Central.\+Meeting\+Request\+Resource.\+topic\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Custom topic of a meeting 
+
+\mbox{\Hypertarget{classRingCentral_1_1MeetingRequestResource_a5e8a15addb28446069f17b35409e2eed}\label{classRingCentral_1_1MeetingRequestResource_a5e8a15addb28446069f17b35409e2eed}} 
+\index{RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}!usePersonalMeetingId@{usePersonalMeetingId}}
+\index{usePersonalMeetingId@{usePersonalMeetingId}!RingCentral.MeetingRequestResource@{RingCentral.MeetingRequestResource}}
+\doxysubsubsection{\texorpdfstring{usePersonalMeetingId}{usePersonalMeetingId}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Meeting\+Request\+Resource.\+use\+Personal\+Meeting\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, then personal user\textquotesingle{}s meeting ID is applied for creation of this meeting 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Meeting\+Request\+Resource.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{classRingCentral_1_1UpdateSubscriptionRequest}{}\doxysection{Ring\+Central.\+Update\+Subscription\+Request Class Reference}
+\label{classRingCentral_1_1UpdateSubscriptionRequest}\index{RingCentral.UpdateSubscriptionRequest@{RingCentral.UpdateSubscriptionRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1UpdateSubscriptionRequest_af6ac593e968fb1e5dd8bd301e23df925}{event\+Filters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of event filters corresponding to events the user is subscribed to Required \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UpdateSubscriptionRequest_ad1fdaab34ea148f852693bc857878ba0}{expires\+In}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subscription lifetime in seconds. The maximum subscription lifetime depends upon the specified {\ttfamily transport\+Type}\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1UpdateSubscriptionRequest_af6ac593e968fb1e5dd8bd301e23df925}\label{classRingCentral_1_1UpdateSubscriptionRequest_af6ac593e968fb1e5dd8bd301e23df925}} 
+\index{RingCentral.UpdateSubscriptionRequest@{RingCentral.UpdateSubscriptionRequest}!eventFilters@{eventFilters}}
+\index{eventFilters@{eventFilters}!RingCentral.UpdateSubscriptionRequest@{RingCentral.UpdateSubscriptionRequest}}
+\doxysubsubsection{\texorpdfstring{eventFilters}{eventFilters}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Update\+Subscription\+Request.\+event\+Filters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of event filters corresponding to events the user is subscribed to Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1UpdateSubscriptionRequest_ad1fdaab34ea148f852693bc857878ba0}\label{classRingCentral_1_1UpdateSubscriptionRequest_ad1fdaab34ea148f852693bc857878ba0}} 
+\index{RingCentral.UpdateSubscriptionRequest@{RingCentral.UpdateSubscriptionRequest}!expiresIn@{expiresIn}}
+\index{expiresIn@{expiresIn}!RingCentral.UpdateSubscriptionRequest@{RingCentral.UpdateSubscriptionRequest}}
+\doxysubsubsection{\texorpdfstring{expiresIn}{expiresIn}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Update\+Subscription\+Request.\+expires\+In\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subscription lifetime in seconds. The maximum subscription lifetime depends upon the specified {\ttfamily transport\+Type}\+: 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transport type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Maximum permitted lifetime    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transport type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Maximum permitted lifetime    }\\\cline{1-2}
+\endhead
+{\ttfamily Web\+Hook}   &315360000 seconds (10 years)    \\\cline{1-2}
+{\ttfamily RC/\+APNS}, {\ttfamily RC/\+GSM}   &7776000 seconds (90 days)    \\\cline{1-2}
+{\ttfamily Pub\+Nub}   &900 seconds (15 minutes)    \\\cline{1-2}
+{\ttfamily Web\+Socket}   &n/a (the parameter is ignored)   \\\cline{1-2}
+\end{longtabu}
+Minimum\+: 1 Format\+: int32 Example\+: 1200
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Update\+Subscription\+Request.\+cs\end{DoxyCompactItemize}

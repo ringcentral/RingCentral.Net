@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo}{}\doxysection{Ring\+Central.\+User\+Phone\+Number\+Extension\+Info Class Reference}
+\label{classRingCentral_1_1UserPhoneNumberExtensionInfo}\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+
+
+Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo_a1300609eb382ff40771afb9215ebec4c}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an extension Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo_a43ebfe624f65ab6942cc7b4c8ca9ba60}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of an extension Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo_a8323815f52695409e8454138961205ac}{extension\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension short number \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo_a8d727da8521db71b557b9b844a4bc77d}{partner\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For Partner Applications Internal identifier of an extension created by partner. The \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} supports the mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} native IDs as path parameters using {\ttfamily pid=XXX} clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partner\+Id attributes of account and extension \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo_a9a7689b4f82789b507bb515fe5fd6f89}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension type. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Fax\+User, Virtual\+User, Digital\+User, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Ivr\+Menu, Application\+Extension, Park\+Location, Site \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ContactCenterProvider}{Contact\+Center\+Provider}} \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo_a14f4df738ce4c0daa8789085e3d053e7}{contact\+Center\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo_a030f9f2d4537564ae40f22680006ff46}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension name. For user extension types the value is a combination of the specified first name and last name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo_a14f4df738ce4c0daa8789085e3d053e7}\label{classRingCentral_1_1UserPhoneNumberExtensionInfo_a14f4df738ce4c0daa8789085e3d053e7}} 
+\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}!contactCenterProvider@{contactCenterProvider}}
+\index{contactCenterProvider@{contactCenterProvider}!RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{contactCenterProvider}{contactCenterProvider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ContactCenterProvider}{Contact\+Center\+Provider}} Ring\+Central.\+User\+Phone\+Number\+Extension\+Info.\+contact\+Center\+Provider\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo_a8323815f52695409e8454138961205ac}\label{classRingCentral_1_1UserPhoneNumberExtensionInfo_a8323815f52695409e8454138961205ac}} 
+\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}!extensionNumber@{extensionNumber}}
+\index{extensionNumber@{extensionNumber}!RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{extensionNumber}{extensionNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Extension\+Info.\+extension\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension short number 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo_a1300609eb382ff40771afb9215ebec4c}\label{classRingCentral_1_1UserPhoneNumberExtensionInfo_a1300609eb382ff40771afb9215ebec4c}} 
+\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}!id@{id}}
+\index{id@{id}!RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Phone\+Number\+Extension\+Info.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an extension Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo_a030f9f2d4537564ae40f22680006ff46}\label{classRingCentral_1_1UserPhoneNumberExtensionInfo_a030f9f2d4537564ae40f22680006ff46}} 
+\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}!name@{name}}
+\index{name@{name}!RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Extension\+Info.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension name. For user extension types the value is a combination of the specified first name and last name 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo_a8d727da8521db71b557b9b844a4bc77d}\label{classRingCentral_1_1UserPhoneNumberExtensionInfo_a8d727da8521db71b557b9b844a4bc77d}} 
+\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}!partnerId@{partnerId}}
+\index{partnerId@{partnerId}!RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{partnerId}{partnerId}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Extension\+Info.\+partner\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For Partner Applications Internal identifier of an extension created by partner. The \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} supports the mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} native IDs as path parameters using {\ttfamily pid=XXX} clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partner\+Id attributes of account and extension 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo_a9a7689b4f82789b507bb515fe5fd6f89}\label{classRingCentral_1_1UserPhoneNumberExtensionInfo_a9a7689b4f82789b507bb515fe5fd6f89}} 
+\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}!type@{type}}
+\index{type@{type}!RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Extension\+Info.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension type. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Fax\+User, Virtual\+User, Digital\+User, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Ivr\+Menu, Application\+Extension, Park\+Location, Site 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberExtensionInfo_a43ebfe624f65ab6942cc7b4c8ca9ba60}\label{classRingCentral_1_1UserPhoneNumberExtensionInfo_a43ebfe624f65ab6942cc7b4c8ca9ba60}} 
+\index{RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}!uri@{uri}}
+\index{uri@{uri}!RingCentral.UserPhoneNumberExtensionInfo@{RingCentral.UserPhoneNumberExtensionInfo}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Extension\+Info.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of an extension Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/User\+Phone\+Number\+Extension\+Info.\+cs\end{DoxyCompactItemize}

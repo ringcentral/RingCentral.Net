@@ -1,0 +1,167 @@
+\hypertarget{classRingCentral_1_1InviteeModel}{}\doxysection{Ring\+Central.\+Invitee\+Model Class Reference}
+\label{classRingCentral_1_1InviteeModel}\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+
+
+The internal IDs of RC-\/authenticated users.  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_a796a51a22db09b11a3747e26a01de933}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal object ID Example\+: 78654321 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_a776f2926c2a530ba13110248b5588959}{first\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em First (given) name Example\+: John \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_aec9238a136dd5d2c1e3b02099700cc07}{last\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last (family) name Example\+: Doe \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_a45f6ef12809147312f7b3f837a84c771}{role}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The role of the webinar session participant/invitee. See also\+: \href{https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html}{\texttt{ Understanding Webinar Roles}} Required Example\+: Panelist Enum\+: Panelist, Co\+Host, \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Attendee \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_acaf834a0ac605ba9f0b5e84687a3cea5}{original\+Role}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The role of the webinar session participant/invitee. See also\+: \href{https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html}{\texttt{ Understanding Webinar Roles}} Required Example\+: Panelist Enum\+: Panelist, Co\+Host, \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Attendee \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1RcwDomainUserModel}{Rcw\+Domain\+User\+Model}} \mbox{\hyperlink{classRingCentral_1_1InviteeModel_a107461f24a0e557d2610f7e1d5e103ec}{linked\+User}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_abe6f889c50065ec52243634068ff7fe6}{avatar\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A token to access avatar image from CDN. Available only for authenticated panelists Example\+: wedyugwied8wud98u90i329silqdjalidj \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_a9e78555393ab0db9152b2412395386a6}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of the participant specified in invite or determined at join time Required Default\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}} Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Room \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InviteeModel_aec515b26f10dd26d8c76551437485359}{email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s contact email Format\+: email Example\+: \href{mailto:john.doe@example.com}{\texttt{ john.\+doe@example.\+com}} \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1InviteeModel_ac0935aedb1788c541310599ee8cf6933}{qna\+Blocked}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Boolean to indicate if the participant was blocked from Q\&A Example\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1InviteeModel_ab31e223a14298d5b2466f6f7c738d65e}{send\+Invite}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if invite/cancellation emails was sent to this invitee. Required Example\+: true \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1InviteeModel_a31b6030c73de4d9839c6b6b4eaddadf9}{joined}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates that this invitee joined the session Required Example\+: true \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The internal IDs of RC-\/authenticated users. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_abe6f889c50065ec52243634068ff7fe6}\label{classRingCentral_1_1InviteeModel_abe6f889c50065ec52243634068ff7fe6}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!avatarToken@{avatarToken}}
+\index{avatarToken@{avatarToken}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{avatarToken}{avatarToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+avatar\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A token to access avatar image from CDN. Available only for authenticated panelists Example\+: wedyugwied8wud98u90i329silqdjalidj 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_aec515b26f10dd26d8c76551437485359}\label{classRingCentral_1_1InviteeModel_aec515b26f10dd26d8c76551437485359}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!email@{email}}
+\index{email@{email}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+email\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s contact email Format\+: email Example\+: \href{mailto:john.doe@example.com}{\texttt{ john.\+doe@example.\+com}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_a776f2926c2a530ba13110248b5588959}\label{classRingCentral_1_1InviteeModel_a776f2926c2a530ba13110248b5588959}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!firstName@{firstName}}
+\index{firstName@{firstName}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{firstName}{firstName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+first\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+First (given) name Example\+: John 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_a796a51a22db09b11a3747e26a01de933}\label{classRingCentral_1_1InviteeModel_a796a51a22db09b11a3747e26a01de933}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!id@{id}}
+\index{id@{id}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal object ID Example\+: 78654321 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_a31b6030c73de4d9839c6b6b4eaddadf9}\label{classRingCentral_1_1InviteeModel_a31b6030c73de4d9839c6b6b4eaddadf9}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!joined@{joined}}
+\index{joined@{joined}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{joined}{joined}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Invitee\+Model.\+joined\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates that this invitee joined the session Required Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_aec9238a136dd5d2c1e3b02099700cc07}\label{classRingCentral_1_1InviteeModel_aec9238a136dd5d2c1e3b02099700cc07}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!lastName@{lastName}}
+\index{lastName@{lastName}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{lastName}{lastName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+last\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Last (family) name Example\+: Doe 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_a107461f24a0e557d2610f7e1d5e103ec}\label{classRingCentral_1_1InviteeModel_a107461f24a0e557d2610f7e1d5e103ec}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!linkedUser@{linkedUser}}
+\index{linkedUser@{linkedUser}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{linkedUser}{linkedUser}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1RcwDomainUserModel}{Rcw\+Domain\+User\+Model}} Ring\+Central.\+Invitee\+Model.\+linked\+User\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_acaf834a0ac605ba9f0b5e84687a3cea5}\label{classRingCentral_1_1InviteeModel_acaf834a0ac605ba9f0b5e84687a3cea5}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!originalRole@{originalRole}}
+\index{originalRole@{originalRole}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{originalRole}{originalRole}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+original\+Role\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The role of the webinar session participant/invitee. See also\+: \href{https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html}{\texttt{ Understanding Webinar Roles}} Required Example\+: Panelist Enum\+: Panelist, Co\+Host, \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Attendee 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_ac0935aedb1788c541310599ee8cf6933}\label{classRingCentral_1_1InviteeModel_ac0935aedb1788c541310599ee8cf6933}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!qnaBlocked@{qnaBlocked}}
+\index{qnaBlocked@{qnaBlocked}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{qnaBlocked}{qnaBlocked}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Invitee\+Model.\+qna\+Blocked\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Boolean to indicate if the participant was blocked from Q\&A Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_a45f6ef12809147312f7b3f837a84c771}\label{classRingCentral_1_1InviteeModel_a45f6ef12809147312f7b3f837a84c771}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!role@{role}}
+\index{role@{role}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+role\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The role of the webinar session participant/invitee. See also\+: \href{https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html}{\texttt{ Understanding Webinar Roles}} Required Example\+: Panelist Enum\+: Panelist, Co\+Host, \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Attendee 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_ab31e223a14298d5b2466f6f7c738d65e}\label{classRingCentral_1_1InviteeModel_ab31e223a14298d5b2466f6f7c738d65e}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!sendInvite@{sendInvite}}
+\index{sendInvite@{sendInvite}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{sendInvite}{sendInvite}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Invitee\+Model.\+send\+Invite\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if invite/cancellation emails was sent to this invitee. Required Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1InviteeModel_a9e78555393ab0db9152b2412395386a6}\label{classRingCentral_1_1InviteeModel_a9e78555393ab0db9152b2412395386a6}} 
+\index{RingCentral.InviteeModel@{RingCentral.InviteeModel}!type@{type}}
+\index{type@{type}!RingCentral.InviteeModel@{RingCentral.InviteeModel}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Invitee\+Model.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of the participant specified in invite or determined at join time Required Default\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}} Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Room 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Invitee\+Model.\+cs\end{DoxyCompactItemize}

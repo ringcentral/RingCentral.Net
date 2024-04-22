@@ -1,0 +1,83 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Registrants.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index}\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Registrants.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aad894d2577f5df3f07ba8e7d00267b0c}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aad894d2577f5df3f07ba8e7d00267b0c}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index}{Sessions.\+Index}} parent, string registrant\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_ad8a2b4bdb4f0d7070722beede4c734c0}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_ad8a2b4bdb4f0d7070722beede4c734c0}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RegistrantListResource}{Registrant\+List\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aac1eb2d204f521a51e528a27571c486b}{List}} (\mbox{\hyperlink{classRingCentral_1_1RcwRegListRegistrantsParameters}{Rcw\+Reg\+List\+Registrants\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants}{Registrants}} ordered by \char`\"{}id\char`\"{} ascending. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: get Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RegistrantModelResponsePostWithQuestionnaire}{Registrant\+Model\+Response\+Post\+With\+Questionnaire}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_ab0e7dcd10b63f2421fb48c38c70a6a77}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire}{Registrant\+Base\+Model\+With\+Questionnaire}} registrant\+Base\+Model\+With\+Questionnaire, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new Registrant for a given session. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Registration}{Registration}} MUST be open for the session for this call to succeed (otherwise it should return HTTP 403). A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: post Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RegistrantModelWithQuestionnaire}{Registrant\+Model\+With\+Questionnaire}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_acac86ed0e21512e0961546f90fc202da}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RcwRegGetRegistrantParameters}{Rcw\+Reg\+Get\+Registrant\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a Registrant by ID. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: get Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants/\{registrant\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aabf7b5bf71033a4ec7c4934c37be9751}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a Registrant by ID. Session must not be in finished state (otherwise it should return HTTP 403). A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: delete Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants/\{registrant\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_ab57166dd270ca219fc405ea5b8cb2b95}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_ab57166dd270ca219fc405ea5b8cb2b95}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Index}{Sessions.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_a8cd885b0239e2943f53895f8923ef37c}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_a8cd885b0239e2943f53895f8923ef37c}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_a8c9c33e64567ba2d3475307bd47b3dca}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_a8c9c33e64567ba2d3475307bd47b3dca}} 
+string {\bfseries registrant\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aabf7b5bf71033a4ec7c4934c37be9751}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aabf7b5bf71033a4ec7c4934c37be9751}} 
+\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Registrants.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a Registrant by ID. Session must not be in finished state (otherwise it should return HTTP 403). A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: delete Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants/\{registrant\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_acac86ed0e21512e0961546f90fc202da}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_acac86ed0e21512e0961546f90fc202da}} 
+\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RegistrantModelWithQuestionnaire}{Registrant\+Model\+With\+Questionnaire}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Registrants.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RcwRegGetRegistrantParameters}{Rcw\+Reg\+Get\+Registrant\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a Registrant by ID. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: get Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants/\{registrant\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aac1eb2d204f521a51e528a27571c486b}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_aac1eb2d204f521a51e528a27571c486b}} 
+\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RegistrantListResource}{Registrant\+List\+Resource}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Registrants.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RcwRegListRegistrantsParameters}{Rcw\+Reg\+List\+Registrants\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants}{Registrants}} ordered by \char`\"{}id\char`\"{} ascending. A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: get Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants Rate Limit Group\+: Heavy App Permission\+: Read\+Webinars 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_ab0e7dcd10b63f2421fb48c38c70a6a77}\label{classRingCentral_1_1Paths_1_1Webinar_1_1Registration_1_1V1_1_1Sessions_1_1Registrants_1_1Index_ab0e7dcd10b63f2421fb48c38c70a6a77}} 
+\index{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index@{RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RegistrantModelResponsePostWithQuestionnaire}{Registrant\+Model\+Response\+Post\+With\+Questionnaire}}$>$ Ring\+Central.\+Paths.\+Webinar.\+Registration.\+V1.\+Sessions.\+Registrants.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RegistrantBaseModelWithQuestionnaire}{Registrant\+Base\+Model\+With\+Questionnaire}}}]{registrant\+Base\+Model\+With\+Questionnaire,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new Registrant for a given session. \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Webinar_1_1Registration}{Registration}} MUST be open for the session for this call to succeed (otherwise it should return HTTP 403). A caller must be an authorized user\+: either a host of the webinar or an IT Admin\+: a user from host\textquotesingle{}s account with \char`\"{}\+Webinar\+Settings\char`\"{} permission. HTTP Method\+: post Endpoint\+: /webinar/registration/v1/sessions/\{session\+Id\}/registrants Rate Limit Group\+: Heavy App Permission\+: Edit\+Webinars 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Webinar/\+Registration/\+V1/\+Sessions/\+Registrants/Index.\+cs\end{DoxyCompactItemize}

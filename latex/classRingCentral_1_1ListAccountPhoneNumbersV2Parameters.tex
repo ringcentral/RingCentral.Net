@@ -1,0 +1,131 @@
+\hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters}{}\doxysection{Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters Class Reference}
+\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters}\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+
+
+Query parameters for operation list\+Account\+Phone\+Numbers\+V2  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_aa088209278968813c314155a7990ccc2}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The result set page number (1-\/indexed) to return Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 1 Default\+: 1 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_ae01b68ca5db53b98fe3ce231aea7830d}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a2bc707212bf27ccfc60560395f2714e4}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Types of phone numbers to be returned Enum\+: Voice\+Fax, Voice\+Only, Fax\+Only \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a44c53fd192257564129e145b0895eb3a}{usage\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Usage type(s) of phone numbers to be returned Enum\+: Main\+Company\+Number, Direct\+Number, Inventory, Inventory\+Partner\+Business\+Mobile\+Number, Partner\+Business\+Mobile\+Number, Additional\+Company\+Number, Company\+Number, Phone\+Line, Company\+Fax\+Number, Forwarded\+Number, Forwarded\+Company\+Number, Contact\+Center\+Number, Conferencing\+Number, Meetings\+Number, Business\+Mobile\+Number, ELIN \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_abdd3a9c46ed38e83a226a6da98a10b3c}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Status of a phone number. If the value is \textquotesingle{}Normal\textquotesingle{}, the phone number is ready to be used. Otherwise, it is an external number not yet ported to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Enum\+: Normal, Pending, Ported\+In, Temporary, Unknown \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_ab5d32d4214cf9bbf86728fb872e7369e}{toll\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if a number is toll or toll-\/free Example\+: Toll Enum\+: Toll, Toll\+Free \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_af69dee5c90958be9761bf70e6683b503}{extension\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension status Enum\+: Enabled, Disabled, Frozen, Not\+Activated, Unassigned \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a3efabe56663c346832e1c4be6401be6e}{byoc\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The parameter reflects whether this number is BYOC or not \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_aa0523496cf62398f382efcf4b74c2479}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in e.\+164 format to be searched for. Parameter value can include wildcards (e.\+g. \char`\"{}+165012345$\ast$$\ast$\char`\"{}) or be an exact number \char`\"{}+16501234500\char`\"{} -\/ single number is searched in that case. Make sure you escape the \char`\"{}+\char`\"{} in the URL as \char`\"{}\%2\+B\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Account\+Phone\+Numbers\+V2 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a3efabe56663c346832e1c4be6401be6e}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a3efabe56663c346832e1c4be6401be6e}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!byocNumber@{byocNumber}}
+\index{byocNumber@{byocNumber}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{byocNumber}{byocNumber}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+byoc\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The parameter reflects whether this number is BYOC or not 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_af69dee5c90958be9761bf70e6683b503}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_af69dee5c90958be9761bf70e6683b503}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!extensionStatus@{extensionStatus}}
+\index{extensionStatus@{extensionStatus}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{extensionStatus}{extensionStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+extension\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension status Enum\+: Enabled, Disabled, Frozen, Not\+Activated, Unassigned 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_aa088209278968813c314155a7990ccc2}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_aa088209278968813c314155a7990ccc2}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!page@{page}}
+\index{page@{page}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The result set page number (1-\/indexed) to return Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 1 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_ae01b68ca5db53b98fe3ce231aea7830d}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_ae01b68ca5db53b98fe3ce231aea7830d}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_aa0523496cf62398f382efcf4b74c2479}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_aa0523496cf62398f382efcf4b74c2479}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in e.\+164 format to be searched for. Parameter value can include wildcards (e.\+g. \char`\"{}+165012345$\ast$$\ast$\char`\"{}) or be an exact number \char`\"{}+16501234500\char`\"{} -\/ single number is searched in that case. Make sure you escape the \char`\"{}+\char`\"{} in the URL as \char`\"{}\%2\+B\char`\"{} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_abdd3a9c46ed38e83a226a6da98a10b3c}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_abdd3a9c46ed38e83a226a6da98a10b3c}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!status@{status}}
+\index{status@{status}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Status of a phone number. If the value is \textquotesingle{}Normal\textquotesingle{}, the phone number is ready to be used. Otherwise, it is an external number not yet ported to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Enum\+: Normal, Pending, Ported\+In, Temporary, Unknown 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_ab5d32d4214cf9bbf86728fb872e7369e}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_ab5d32d4214cf9bbf86728fb872e7369e}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!tollType@{tollType}}
+\index{tollType@{tollType}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{tollType}{tollType}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+toll\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if a number is toll or toll-\/free Example\+: Toll Enum\+: Toll, Toll\+Free 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a2bc707212bf27ccfc60560395f2714e4}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a2bc707212bf27ccfc60560395f2714e4}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!type@{type}}
+\index{type@{type}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Types of phone numbers to be returned Enum\+: Voice\+Fax, Voice\+Only, Fax\+Only 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a44c53fd192257564129e145b0895eb3a}\label{classRingCentral_1_1ListAccountPhoneNumbersV2Parameters_a44c53fd192257564129e145b0895eb3a}} 
+\index{RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}!usageType@{usageType}}
+\index{usageType@{usageType}!RingCentral.ListAccountPhoneNumbersV2Parameters@{RingCentral.ListAccountPhoneNumbersV2Parameters}}
+\doxysubsubsection{\texorpdfstring{usageType}{usageType}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Account\+Phone\+Numbers\+V2\+Parameters.\+usage\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Usage type(s) of phone numbers to be returned Enum\+: Main\+Company\+Number, Direct\+Number, Inventory, Inventory\+Partner\+Business\+Mobile\+Number, Partner\+Business\+Mobile\+Number, Additional\+Company\+Number, Company\+Number, Phone\+Line, Company\+Fax\+Number, Forwarded\+Number, Forwarded\+Company\+Number, Contact\+Center\+Number, Conferencing\+Number, Meetings\+Number, Business\+Mobile\+Number, ELIN 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Account\+Phone\+Numbers\+V2\+Parameters.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Webhooks.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Webhooks.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a4844d3629feba0483bca4295d2c24810}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a4844d3629feba0483bca4295d2c24810}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Index}{Groups.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a4cf8f0937c447683697ee63368af4a97}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a4cf8f0937c447683697ee63368af4a97}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMWebhookList}{TMWebhook\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a798566861bb24789162af38b6a2fd909}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns webhooks which are available for the current user by group ID. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/webhooks Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMWebhookInfo}{TMWebhook\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a0b01ca52718103655201a0d717c4b1ea}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new webhook. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/webhooks Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a7cd9dd529e20552be14c7a12eae3708c}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a7cd9dd529e20552be14c7a12eae3708c}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Index}{Groups.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a1df64481a4dcfc474d2da8223b28ed1a}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a1df64481a4dcfc474d2da8223b28ed1a}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a798566861bb24789162af38b6a2fd909}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a798566861bb24789162af38b6a2fd909}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMWebhookList}{TMWebhook\+List}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Webhooks.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns webhooks which are available for the current user by group ID. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/webhooks Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a0b01ca52718103655201a0d717c4b1ea}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Webhooks_1_1Index_a0b01ca52718103655201a0d717c4b1ea}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMWebhookInfo}{TMWebhook\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Webhooks.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new webhook. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/webhooks Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Groups/\+Webhooks/Index.\+cs\end{DoxyCompactItemize}

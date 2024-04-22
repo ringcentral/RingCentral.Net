@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Permission.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index}\index{RingCentral.Paths.Restapi.Dictionary.Permission.Index@{RingCentral.Paths.Restapi.Dictionary.Permission.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Permission.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_a95a596b07a75bf785dfbdfc3e8b4cc04}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_a95a596b07a75bf785dfbdfc3e8b4cc04}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Index}{Dictionary.\+Index}} parent, string permission\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_a86447e090eff225fbb6e33fd27c537de}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_a86447e090eff225fbb6e33fd27c537de}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PermissionCollectionResource}{Permission\+Collection\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aeec47c1dadaca119acb63cf8246756fa}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListPermissionsParameters}{List\+Permissions\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of extension user permissions. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/permission Rate Limit Group\+: Light \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PermissionResource}{Permission\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aca27cd4fc05a94946d0cbd3704c86202}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a user permission by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/permission/\{permission\+Id\} Rate Limit Group\+: Light \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_ab4aa6080624e1cbfe43bcdb754849194}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_ab4aa6080624e1cbfe43bcdb754849194}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Index}{Dictionary.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aaba61365908ebcbc736a071b20f2a15d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aaba61365908ebcbc736a071b20f2a15d}} 
+string {\bfseries permission\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_a8651ad1ac678f8bd39eef1e29e9cc757}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_a8651ad1ac678f8bd39eef1e29e9cc757}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aca27cd4fc05a94946d0cbd3704c86202}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aca27cd4fc05a94946d0cbd3704c86202}} 
+\index{RingCentral.Paths.Restapi.Dictionary.Permission.Index@{RingCentral.Paths.Restapi.Dictionary.Permission.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Dictionary.Permission.Index@{RingCentral.Paths.Restapi.Dictionary.Permission.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PermissionResource}{Permission\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Permission.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a user permission by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/permission/\{permission\+Id\} Rate Limit Group\+: Light 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aeec47c1dadaca119acb63cf8246756fa}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Permission_1_1Index_aeec47c1dadaca119acb63cf8246756fa}} 
+\index{RingCentral.Paths.Restapi.Dictionary.Permission.Index@{RingCentral.Paths.Restapi.Dictionary.Permission.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Dictionary.Permission.Index@{RingCentral.Paths.Restapi.Dictionary.Permission.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PermissionCollectionResource}{Permission\+Collection\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Permission.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListPermissionsParameters}{List\+Permissions\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of extension user permissions. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/permission Rate Limit Group\+: Light 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Dictionary/\+Permission/Index.\+cs\end{DoxyCompactItemize}

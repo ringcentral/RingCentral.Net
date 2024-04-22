@@ -1,0 +1,47 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index}\index{RingCentral.Paths.Restapi.V2.Accounts.Extensions.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_aeccfb7bcbbd717074896ef18515c3c30}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_aeccfb7bcbbd717074896ef18515c3c30}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Devices_1_1Index}{Devices.\+Index}} {\bfseries Devices} (string device\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_a3c4964c2f1f7545fea294936ad5da579}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_a3c4964c2f1f7545fea294936ad5da579}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Index}{Accounts.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_a74d68d013c1ffc04210261eef85a18f0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_a74d68d013c1ffc04210261eef85a18f0}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BulkDeleteUsersResponse}{Bulk\+Delete\+Users\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_ac37a2296d9b8c6fb94614a3490d374d3}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1BulkDeleteUsersRequest}{Bulk\+Delete\+Users\+Request}} bulk\+Delete\+Users\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes user extension(s) and either keeps or destroys the assets -\/ numbers and devices. Multiple extensions can be deleted with a single API call. {\bfseries{Please note\+:}} This API cannot be tested on Sandbox. HTTP Method\+: delete Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Users \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_a1fd9e1e76a8009c5cb3a686559b988ae}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_a1fd9e1e76a8009c5cb3a686559b988ae}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Index}{Accounts.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_af367813478d161f24aa20ae59f2841b1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_af367813478d161f24aa20ae59f2841b1}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_ac37a2296d9b8c6fb94614a3490d374d3}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Index_ac37a2296d9b8c6fb94614a3490d374d3}} 
+\index{RingCentral.Paths.Restapi.V2.Accounts.Extensions.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.V2.Accounts.Extensions.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BulkDeleteUsersResponse}{Bulk\+Delete\+Users\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1BulkDeleteUsersRequest}{Bulk\+Delete\+Users\+Request}}}]{bulk\+Delete\+Users\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes user extension(s) and either keeps or destroys the assets -\/ numbers and devices. Multiple extensions can be deleted with a single API call. {\bfseries{Please note\+:}} This API cannot be tested on Sandbox. HTTP Method\+: delete Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Users 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+V2/\+Accounts/\+Extensions/\+Devices/Index.\+cs\end{DoxyCompactItemize}

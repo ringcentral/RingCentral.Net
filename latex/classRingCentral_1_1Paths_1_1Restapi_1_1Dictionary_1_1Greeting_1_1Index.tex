@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Greeting.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index}\index{RingCentral.Paths.Restapi.Dictionary.Greeting.Index@{RingCentral.Paths.Restapi.Dictionary.Greeting.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Greeting.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a7c7fb4b10b435d259245a0c34cc518a6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a7c7fb4b10b435d259245a0c34cc518a6}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Index}{Dictionary.\+Index}} parent, string greeting\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a0a200e33282f96413b30ca59021ad324}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a0a200e33282f96413b30ca59021ad324}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DictionaryGreetingList}{Dictionary\+Greeting\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a68f4318bf10398830dccd0e869b42a3e}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListStandardGreetingsParameters}{List\+Standard\+Greetings\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of predefined standard greetings. Custom greetings recorded by user are not returned in response to this request. See Get Extension Custom Greetings. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/greeting Rate Limit Group\+: Medium \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1DictionaryGreetingInfo}{Dictionary\+Greeting\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a81fa31384bc7e26effdb3246f61c3d37}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a standard greeting by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/greeting/\{greeting\+Id\} Rate Limit Group\+: Medium \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a8d843bf88306d278e2db813176bc044f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a8d843bf88306d278e2db813176bc044f}} 
+string {\bfseries greeting\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a621e64bf2c8cf2a429f47b449efbb89e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a621e64bf2c8cf2a429f47b449efbb89e}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Index}{Dictionary.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a8f7d6499d0204dfc16edd62f6a443e33}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a8f7d6499d0204dfc16edd62f6a443e33}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a81fa31384bc7e26effdb3246f61c3d37}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a81fa31384bc7e26effdb3246f61c3d37}} 
+\index{RingCentral.Paths.Restapi.Dictionary.Greeting.Index@{RingCentral.Paths.Restapi.Dictionary.Greeting.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Dictionary.Greeting.Index@{RingCentral.Paths.Restapi.Dictionary.Greeting.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DictionaryGreetingInfo}{Dictionary\+Greeting\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Greeting.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a standard greeting by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/greeting/\{greeting\+Id\} Rate Limit Group\+: Medium 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a68f4318bf10398830dccd0e869b42a3e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Dictionary_1_1Greeting_1_1Index_a68f4318bf10398830dccd0e869b42a3e}} 
+\index{RingCentral.Paths.Restapi.Dictionary.Greeting.Index@{RingCentral.Paths.Restapi.Dictionary.Greeting.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Dictionary.Greeting.Index@{RingCentral.Paths.Restapi.Dictionary.Greeting.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1DictionaryGreetingList}{Dictionary\+Greeting\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Dictionary.\+Greeting.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListStandardGreetingsParameters}{List\+Standard\+Greetings\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of predefined standard greetings. Custom greetings recorded by user are not returned in response to this request. See Get Extension Custom Greetings. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/dictionary/greeting Rate Limit Group\+: Medium 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Dictionary/\+Greeting/Index.\+cs\end{DoxyCompactItemize}

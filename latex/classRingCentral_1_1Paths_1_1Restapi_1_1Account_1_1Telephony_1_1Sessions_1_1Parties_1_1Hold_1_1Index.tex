@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Hold.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index}\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Hold.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a8598f404c75d875d63f88e62cbd39f71}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a8598f404c75d875d63f88e62cbd39f71}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a017bfd8aac5585f234bb9adcc37de732}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a017bfd8aac5585f234bb9adcc37de732}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a808e5b677d2658c8facddd5f2862a19b}{Post}} (\mbox{\hyperlink{classRingCentral_1_1HoldCallPartyRequest}{Hold\+Call\+Party\+Request}} hold\+Call\+Party\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Puts the party to stand-\/alone mode and starts to play \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music according to configuration \& state to peers. There is a known limitation for \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} API -\/ hold via REST API doesn\textquotesingle{}t work with hold placed via \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} apps or Hard\+Phone. It means that if you muted participant via Call Control API and \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Desktop app, then you need to unhold both endpoints to remove \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music and bring media back. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/hold Rate Limit Group\+: Light App Permission\+: Call\+Control \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_aad924b3e988938e4901037b321e7c547}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_aad924b3e988938e4901037b321e7c547}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a999f69511b5d0449e9137da1410d107f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a999f69511b5d0449e9137da1410d107f}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a808e5b677d2658c8facddd5f2862a19b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold_1_1Index_a808e5b677d2658c8facddd5f2862a19b}} 
+\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Hold.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Hold.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1HoldCallPartyRequest}{Hold\+Call\+Party\+Request}}}]{hold\+Call\+Party\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Puts the party to stand-\/alone mode and starts to play \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music according to configuration \& state to peers. There is a known limitation for \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} API -\/ hold via REST API doesn\textquotesingle{}t work with hold placed via \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} apps or Hard\+Phone. It means that if you muted participant via Call Control API and \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Desktop app, then you need to unhold both endpoints to remove \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Hold}{Hold}} Music and bring media back. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/hold Rate Limit Group\+: Light App Permission\+: Call\+Control 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Telephony/\+Sessions/\+Parties/\+Hold/Index.\+cs\end{DoxyCompactItemize}

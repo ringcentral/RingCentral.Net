@@ -1,0 +1,193 @@
+\hypertarget{classRingCentral_1_1UserPhoneNumberInfo}{}\doxysection{Ring\+Central.\+User\+Phone\+Number\+Info Class Reference}
+\label{classRingCentral_1_1UserPhoneNumberInfo}\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_ad5dce16aa75daf391445b2d15f8bd8c2}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Link to the user phone number resource Format\+: uri \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_aa7ca0b28d56b5e1e7ba9d6ee384ec600}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a phone number Format\+: int64 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CountryInfoBasicModel}{Country\+Info\+Basic\+Model}} \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a876f9148649aba3e2a5c9a9d27c9368f}{country}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ContactCenterProvider}{Contact\+Center\+Provider}} \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a209e33f4be6f05598d50bd029104625b}{contact\+Center\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo}{User\+Phone\+Number\+Extension\+Info}} \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a45defa2a302c5110031bd441f92fd8f4}{extension}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a6ac95455bb15c300fe8c29dfca33a0c4}{label}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Custom user-\/defined name of a phone number, if any \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a6b6ef27ee4968d1921ffcbacbae3b4eb}{location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Location (City, State). Filled for local US numbers \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a90ecf886686e60871de5b7019f705d7a}{payment\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Payment type. \textquotesingle{}External\textquotesingle{} is returned for forwarded numbers which are not terminated in the \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} phone system Enum\+: External, Toll\+Free, Local, Business\+Mobile\+Number\+Provider, External\+Number\+Provider, External\+Number\+Provider\+Toll\+Free \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_ae84c4e0b44d7708c769eeac1e139bbb3}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a374f5c270915b31d51e63706759c7732}{primary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if a phone number is primary, i.\+e. displayed as \textquotesingle{}main number\textquotesingle{} and called by default \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_ae067c9e48b8eca9194d95699034c1add}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Status of a phone number. If the value is \textquotesingle{}Normal\textquotesingle{}, the phone number is ready to be used. Otherwise, it is an external number not yet ported to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Enum\+: Normal, Pending, Ported\+In, Temporary \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a498701475ecac2e2438aa6911964aa09}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number type Enum\+: Voice\+Fax, Fax\+Only, Voice\+Only \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a36ed67a60388f2ff480c42130f75c310}{sub\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension subtype, if applicable. For any unsupported subtypes the \textquotesingle{}Unknown\textquotesingle{} value will be returned Enum\+: Video\+Pro, Video\+Pro\+Plus, Digital\+Signage, Unknown, Emergency \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a948e7ce7caeb639f157a086ca335c076}{usage\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Usage type of phone number. Numbers of \textquotesingle{}Number\+Pool\textquotesingle{} type will not be returned for phone number list requests Enum\+: Main\+Company\+Number, Additional\+Company\+Number, Company\+Number, Direct\+Number, Company\+Fax\+Number, Forwarded\+Number, Forwarded\+Company\+Number, Contact\+Center\+Number, Conferencing\+Number, Number\+Pool, Business\+Mobile\+Number, Partner\+Business\+Mobile\+Number, Integration\+Number \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberInfo_a643cf080c006943c847a0e7928d16ba6}{features}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of features of a phone number Enum\+: Caller\+Id, Sms\+Sender, A2\+PSms\+Sender, Mms\+Sender, International\+Sms\+Sender, Delegated \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a209e33f4be6f05598d50bd029104625b}\label{classRingCentral_1_1UserPhoneNumberInfo_a209e33f4be6f05598d50bd029104625b}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!contactCenterProvider@{contactCenterProvider}}
+\index{contactCenterProvider@{contactCenterProvider}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{contactCenterProvider}{contactCenterProvider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ContactCenterProvider}{Contact\+Center\+Provider}} Ring\+Central.\+User\+Phone\+Number\+Info.\+contact\+Center\+Provider\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a876f9148649aba3e2a5c9a9d27c9368f}\label{classRingCentral_1_1UserPhoneNumberInfo_a876f9148649aba3e2a5c9a9d27c9368f}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!country@{country}}
+\index{country@{country}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{country}{country}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CountryInfoBasicModel}{Country\+Info\+Basic\+Model}} Ring\+Central.\+User\+Phone\+Number\+Info.\+country\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a45defa2a302c5110031bd441f92fd8f4}\label{classRingCentral_1_1UserPhoneNumberInfo_a45defa2a302c5110031bd441f92fd8f4}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!extension@{extension}}
+\index{extension@{extension}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1UserPhoneNumberExtensionInfo}{User\+Phone\+Number\+Extension\+Info}} Ring\+Central.\+User\+Phone\+Number\+Info.\+extension\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a643cf080c006943c847a0e7928d16ba6}\label{classRingCentral_1_1UserPhoneNumberInfo_a643cf080c006943c847a0e7928d16ba6}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!features@{features}}
+\index{features@{features}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{features}{features}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+User\+Phone\+Number\+Info.\+features\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of features of a phone number Enum\+: Caller\+Id, Sms\+Sender, A2\+PSms\+Sender, Mms\+Sender, International\+Sms\+Sender, Delegated 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_aa7ca0b28d56b5e1e7ba9d6ee384ec600}\label{classRingCentral_1_1UserPhoneNumberInfo_aa7ca0b28d56b5e1e7ba9d6ee384ec600}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!id@{id}}
+\index{id@{id}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Phone\+Number\+Info.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a phone number Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a6ac95455bb15c300fe8c29dfca33a0c4}\label{classRingCentral_1_1UserPhoneNumberInfo_a6ac95455bb15c300fe8c29dfca33a0c4}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!label@{label}}
+\index{label@{label}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+label\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Custom user-\/defined name of a phone number, if any 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a6b6ef27ee4968d1921ffcbacbae3b4eb}\label{classRingCentral_1_1UserPhoneNumberInfo_a6b6ef27ee4968d1921ffcbacbae3b4eb}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!location@{location}}
+\index{location@{location}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Location (City, State). Filled for local US numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a90ecf886686e60871de5b7019f705d7a}\label{classRingCentral_1_1UserPhoneNumberInfo_a90ecf886686e60871de5b7019f705d7a}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!paymentType@{paymentType}}
+\index{paymentType@{paymentType}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{paymentType}{paymentType}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+payment\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Payment type. \textquotesingle{}External\textquotesingle{} is returned for forwarded numbers which are not terminated in the \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} phone system Enum\+: External, Toll\+Free, Local, Business\+Mobile\+Number\+Provider, External\+Number\+Provider, External\+Number\+Provider\+Toll\+Free 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_ae84c4e0b44d7708c769eeac1e139bbb3}\label{classRingCentral_1_1UserPhoneNumberInfo_ae84c4e0b44d7708c769eeac1e139bbb3}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a374f5c270915b31d51e63706759c7732}\label{classRingCentral_1_1UserPhoneNumberInfo_a374f5c270915b31d51e63706759c7732}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!primary@{primary}}
+\index{primary@{primary}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{primary}{primary}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+User\+Phone\+Number\+Info.\+primary\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if a phone number is primary, i.\+e. displayed as \textquotesingle{}main number\textquotesingle{} and called by default 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_ae067c9e48b8eca9194d95699034c1add}\label{classRingCentral_1_1UserPhoneNumberInfo_ae067c9e48b8eca9194d95699034c1add}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!status@{status}}
+\index{status@{status}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Status of a phone number. If the value is \textquotesingle{}Normal\textquotesingle{}, the phone number is ready to be used. Otherwise, it is an external number not yet ported to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Enum\+: Normal, Pending, Ported\+In, Temporary 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a36ed67a60388f2ff480c42130f75c310}\label{classRingCentral_1_1UserPhoneNumberInfo_a36ed67a60388f2ff480c42130f75c310}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!subType@{subType}}
+\index{subType@{subType}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{subType}{subType}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+sub\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension subtype, if applicable. For any unsupported subtypes the \textquotesingle{}Unknown\textquotesingle{} value will be returned Enum\+: Video\+Pro, Video\+Pro\+Plus, Digital\+Signage, Unknown, Emergency 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a498701475ecac2e2438aa6911964aa09}\label{classRingCentral_1_1UserPhoneNumberInfo_a498701475ecac2e2438aa6911964aa09}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!type@{type}}
+\index{type@{type}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number type Enum\+: Voice\+Fax, Fax\+Only, Voice\+Only 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_ad5dce16aa75daf391445b2d15f8bd8c2}\label{classRingCentral_1_1UserPhoneNumberInfo_ad5dce16aa75daf391445b2d15f8bd8c2}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!uri@{uri}}
+\index{uri@{uri}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Link to the user phone number resource Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserPhoneNumberInfo_a948e7ce7caeb639f157a086ca335c076}\label{classRingCentral_1_1UserPhoneNumberInfo_a948e7ce7caeb639f157a086ca335c076}} 
+\index{RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}!usageType@{usageType}}
+\index{usageType@{usageType}!RingCentral.UserPhoneNumberInfo@{RingCentral.UserPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{usageType}{usageType}}
+{\footnotesize\ttfamily string Ring\+Central.\+User\+Phone\+Number\+Info.\+usage\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Usage type of phone number. Numbers of \textquotesingle{}Number\+Pool\textquotesingle{} type will not be returned for phone number list requests Enum\+: Main\+Company\+Number, Additional\+Company\+Number, Company\+Number, Direct\+Number, Company\+Fax\+Number, Forwarded\+Number, Forwarded\+Company\+Number, Contact\+Center\+Number, Conferencing\+Number, Number\+Pool, Business\+Mobile\+Number, Partner\+Business\+Mobile\+Number, Integration\+Number 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/User\+Phone\+Number\+Info.\+cs\end{DoxyCompactItemize}

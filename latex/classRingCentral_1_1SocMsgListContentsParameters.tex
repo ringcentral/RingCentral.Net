@@ -1,0 +1,143 @@
+\hypertarget{classRingCentral_1_1SocMsgListContentsParameters}{}\doxysection{Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters Class Reference}
+\label{classRingCentral_1_1SocMsgListContentsParameters}\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+
+
+Query parameters for operation soc\+Msg\+List\+Contents  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_af91e1f4971756e444430b79de826307d}{intervention}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter based on the specified intervention identifiers. Example\+: 7f946431b6eebffafae642cc,re946431b6eebffafae642cc \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_af1cf776c7e72225f2d82eb7c242ef5e1}{identity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter based on the specified identity identifiers. Example\+: 7f946431b6eebffafae642cc,re946431b6eebffafae642cc \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_a159e6dde963ef7b012190276607dd009}{identity\+Group}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter based on the specified identity group identifiers. Example\+: 7f946431b6eebffafae642cc,re946431b6eebffafae642cc \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_aee3e8b28b9df2e14b7a1e6b972268619}{source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter based on the specified channel identifiers. Example\+: 7f946431b6eebffafae642cc \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_a9dce6ff2400d84e129f7c21b4448a158}{thread}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter based on the specified thread identifiers. Example\+: 7f946431b6eebffafae642cc \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_a7459950e116e65749a9c14d6fea00885}{text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter based on the specified text(s). Provided multiple times, the values are ANDed. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_aff67d74a6247f2cfaa69d19d9ab04807}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter for specified status. Enum\+: New, Assigned, Replied, User\+Reply, User\+Initiated, Ignored \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_a60d488fadf510b5e0133f2629d20abda}{order\+By}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ordering by creation\+Time is descending by default. Example\+: +creation\+Time Default\+: -\/creation\+Time Enum\+: -\/creation\+Time, +creation\+Time, creation\+Time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_ad1f0f78135acab5aec2e3aadc715bccd}{page\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SocMsgListContentsParameters_a88ebf1ebf5f80b2f7616f0f3a69c8f2b}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation soc\+Msg\+List\+Contents 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_af1cf776c7e72225f2d82eb7c242ef5e1}\label{classRingCentral_1_1SocMsgListContentsParameters_af1cf776c7e72225f2d82eb7c242ef5e1}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!identity@{identity}}
+\index{identity@{identity}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{identity}{identity}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+identity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter based on the specified identity identifiers. Example\+: 7f946431b6eebffafae642cc,re946431b6eebffafae642cc 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_a159e6dde963ef7b012190276607dd009}\label{classRingCentral_1_1SocMsgListContentsParameters_a159e6dde963ef7b012190276607dd009}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!identityGroup@{identityGroup}}
+\index{identityGroup@{identityGroup}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{identityGroup}{identityGroup}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+identity\+Group\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter based on the specified identity group identifiers. Example\+: 7f946431b6eebffafae642cc,re946431b6eebffafae642cc 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_af91e1f4971756e444430b79de826307d}\label{classRingCentral_1_1SocMsgListContentsParameters_af91e1f4971756e444430b79de826307d}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!intervention@{intervention}}
+\index{intervention@{intervention}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{intervention}{intervention}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+intervention\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter based on the specified intervention identifiers. Example\+: 7f946431b6eebffafae642cc,re946431b6eebffafae642cc 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_a60d488fadf510b5e0133f2629d20abda}\label{classRingCentral_1_1SocMsgListContentsParameters_a60d488fadf510b5e0133f2629d20abda}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{orderBy}{orderBy}}
+{\footnotesize\ttfamily string Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+order\+By\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ordering by creation\+Time is descending by default. Example\+: +creation\+Time Default\+: -\/creation\+Time Enum\+: -\/creation\+Time, +creation\+Time, creation\+Time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_ad1f0f78135acab5aec2e3aadc715bccd}\label{classRingCentral_1_1SocMsgListContentsParameters_ad1f0f78135acab5aec2e3aadc715bccd}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!pageToken@{pageToken}}
+\index{pageToken@{pageToken}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{pageToken}{pageToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+page\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_a88ebf1ebf5f80b2f7616f0f3a69c8f2b}\label{classRingCentral_1_1SocMsgListContentsParameters_a88ebf1ebf5f80b2f7616f0f3a69c8f2b}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_aee3e8b28b9df2e14b7a1e6b972268619}\label{classRingCentral_1_1SocMsgListContentsParameters_aee3e8b28b9df2e14b7a1e6b972268619}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!source@{source}}
+\index{source@{source}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter based on the specified channel identifiers. Example\+: 7f946431b6eebffafae642cc 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_aff67d74a6247f2cfaa69d19d9ab04807}\label{classRingCentral_1_1SocMsgListContentsParameters_aff67d74a6247f2cfaa69d19d9ab04807}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!status@{status}}
+\index{status@{status}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter for specified status. Enum\+: New, Assigned, Replied, User\+Reply, User\+Initiated, Ignored 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_a7459950e116e65749a9c14d6fea00885}\label{classRingCentral_1_1SocMsgListContentsParameters_a7459950e116e65749a9c14d6fea00885}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!text@{text}}
+\index{text@{text}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter based on the specified text(s). Provided multiple times, the values are ANDed. 
+
+\mbox{\Hypertarget{classRingCentral_1_1SocMsgListContentsParameters_a9dce6ff2400d84e129f7c21b4448a158}\label{classRingCentral_1_1SocMsgListContentsParameters_a9dce6ff2400d84e129f7c21b4448a158}} 
+\index{RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}!thread@{thread}}
+\index{thread@{thread}!RingCentral.SocMsgListContentsParameters@{RingCentral.SocMsgListContentsParameters}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Soc\+Msg\+List\+Contents\+Parameters.\+thread\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filter based on the specified thread identifiers. Example\+: 7f946431b6eebffafae642cc 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Soc\+Msg\+List\+Contents\+Parameters.\+cs\end{DoxyCompactItemize}

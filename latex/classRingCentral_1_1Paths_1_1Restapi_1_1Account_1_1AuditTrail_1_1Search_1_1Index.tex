@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Audit\+Trail.\+Search.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index}\index{RingCentral.Paths.Restapi.Account.AuditTrail.Search.Index@{RingCentral.Paths.Restapi.Account.AuditTrail.Search.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Audit\+Trail.\+Search.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a33a8bebc945551efead35fa554f4e1a5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a33a8bebc945551efead35fa554f4e1a5}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Index}{Audit\+Trail.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a66db87ee351937ce76a24b06c059b495}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a66db87ee351937ce76a24b06c059b495}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicResponse}{Account\+History\+Search\+Public\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a6b53e006be6dda7061bb25a0bed2034b}{Post}} (\mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest}{Account\+History\+Search\+Public\+Request}} account\+History\+Search\+Public\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the audit trail data with specific filters applied. Audit trail searching is limited to the last 10,000 records or last 180 days, whichever comes first. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/audit-\/trail/search Rate Limit Group\+: Heavy App Permission\+: Read\+Audit\+Trail \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_affefaf4ebbb7a40494e7413d912fa034}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_affefaf4ebbb7a40494e7413d912fa034}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Index}{Audit\+Trail.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a7c372a614cf4d6707ec710a75d4c133a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a7c372a614cf4d6707ec710a75d4c133a}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a6b53e006be6dda7061bb25a0bed2034b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1AuditTrail_1_1Search_1_1Index_a6b53e006be6dda7061bb25a0bed2034b}} 
+\index{RingCentral.Paths.Restapi.Account.AuditTrail.Search.Index@{RingCentral.Paths.Restapi.Account.AuditTrail.Search.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.AuditTrail.Search.Index@{RingCentral.Paths.Restapi.Account.AuditTrail.Search.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicResponse}{Account\+History\+Search\+Public\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Audit\+Trail.\+Search.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest}{Account\+History\+Search\+Public\+Request}}}]{account\+History\+Search\+Public\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the audit trail data with specific filters applied. Audit trail searching is limited to the last 10,000 records or last 180 days, whichever comes first. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/audit-\/trail/search Rate Limit Group\+: Heavy App Permission\+: Read\+Audit\+Trail 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Audit\+Trail/\+Search/Index.\+cs\end{DoxyCompactItemize}

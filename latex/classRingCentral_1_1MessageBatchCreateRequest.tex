@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1MessageBatchCreateRequest}{}\doxysection{Ring\+Central.\+Message\+Batch\+Create\+Request Class Reference}
+\label{classRingCentral_1_1MessageBatchCreateRequest}\index{RingCentral.MessageBatchCreateRequest@{RingCentral.MessageBatchCreateRequest}}
+
+
+Batch of A2P SMS messages. This object provides specification to send message(s) to many recipients. It contains top-\/level attributes, such as {\ttfamily text} which apply to all {\ttfamily messages}. In addition to that, it is possible to override this attribute for each message. This way a single API call may be used to send individual messages to many recipients.  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageBatchCreateRequest_a9524a3d3c0a9014dee5ac0fab3f0aff1}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sender\textquotesingle{}s phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format. Required Example\+: +15551234567 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageBatchCreateRequest_aeb545ed4e394a6ac5f5925bc2320473d}{text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text to send to {\ttfamily messages.\+to} phone numbers. Can be overridden on a per-\/message basis Example\+: Hello, World! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageCreateRequest}{Message\+Create\+Request}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1MessageBatchCreateRequest_a758e046c417d43c378459800918c09df}{messages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Individual messages Required \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Batch of A2P SMS messages. This object provides specification to send message(s) to many recipients. It contains top-\/level attributes, such as {\ttfamily text} which apply to all {\ttfamily messages}. In addition to that, it is possible to override this attribute for each message. This way a single API call may be used to send individual messages to many recipients. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchCreateRequest_a9524a3d3c0a9014dee5ac0fab3f0aff1}\label{classRingCentral_1_1MessageBatchCreateRequest_a9524a3d3c0a9014dee5ac0fab3f0aff1}} 
+\index{RingCentral.MessageBatchCreateRequest@{RingCentral.MessageBatchCreateRequest}!from@{from}}
+\index{from@{from}!RingCentral.MessageBatchCreateRequest@{RingCentral.MessageBatchCreateRequest}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+Batch\+Create\+Request.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sender\textquotesingle{}s phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format. Required Example\+: +15551234567 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchCreateRequest_a758e046c417d43c378459800918c09df}\label{classRingCentral_1_1MessageBatchCreateRequest_a758e046c417d43c378459800918c09df}} 
+\index{RingCentral.MessageBatchCreateRequest@{RingCentral.MessageBatchCreateRequest}!messages@{messages}}
+\index{messages@{messages}!RingCentral.MessageBatchCreateRequest@{RingCentral.MessageBatchCreateRequest}}
+\doxysubsubsection{\texorpdfstring{messages}{messages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageCreateRequest}{Message\+Create\+Request}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Message\+Batch\+Create\+Request.\+messages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Individual messages Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchCreateRequest_aeb545ed4e394a6ac5f5925bc2320473d}\label{classRingCentral_1_1MessageBatchCreateRequest_aeb545ed4e394a6ac5f5925bc2320473d}} 
+\index{RingCentral.MessageBatchCreateRequest@{RingCentral.MessageBatchCreateRequest}!text@{text}}
+\index{text@{text}!RingCentral.MessageBatchCreateRequest@{RingCentral.MessageBatchCreateRequest}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+Batch\+Create\+Request.\+text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text to send to {\ttfamily messages.\+to} phone numbers. Can be overridden on a per-\/message basis Example\+: Hello, World! 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Message\+Batch\+Create\+Request.\+cs\end{DoxyCompactItemize}

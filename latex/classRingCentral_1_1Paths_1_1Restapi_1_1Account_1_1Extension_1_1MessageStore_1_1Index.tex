@@ -1,0 +1,110 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a736ae33cccfdf2b2ff8c45913dbf4ba4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a736ae33cccfdf2b2ff8c45913dbf4ba4}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Content_1_1Index}{Content.\+Index}} {\bfseries Content} (string attachment\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_aa0c276c230641d3081a402904ca54d99}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_aa0c276c230641d3081a402904ca54d99}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent, string message\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a04033039d66840fb27f7da06f91665a7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a04033039d66840fb27f7da06f91665a7}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetMessageList}{Get\+Message\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a623f68ad5ae00d6fb627a974376a554b}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters}{List\+Messages\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of messages from an extension mailbox. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store Rate Limit Group\+: Light App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Messages \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a16ac569b8df2f0b7b92329fab2a80d71}{Delete\+All}} (\mbox{\hyperlink{classRingCentral_1_1DeleteMessageByFilterParameters}{Delete\+Message\+By\+Filter\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes conversation(s) by conversation ID(s). Batch request is supported, max number of IDs passed as query/path parameters is 50. Alternative syntax is supported -\/ user conversations can be deleted by passing multiple IDs in request body as an array of string, max number of conversation IDs passed in request body is 100. In this case asterisk is used in the path instead of IDs HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetMessageInfoResponse}{Get\+Message\+Info\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_ae820d896288c24957a9d6f057383cca3}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns an individual message record or multiple records by the given message ID(s). The length of inbound messages is unlimited. Bulk syntax is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Messages \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetMessageInfoResponse}{Get\+Message\+Info\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_add298bd0f8d150eb91b0afdf5c995890}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateMessageRequest}{Update\+Message\+Request}} update\+Message\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates message(s) by their ID(s). Currently only message read status can be updated through this method. Bulk syntax is supported, max number of IDs passed as query/path parameters is 50. Alternative bulk syntax is also supported -\/ user messages can be updated by passing multiple IDs in request body as an array of string, max number of IDs passed in the body is 1000. In this case asterisk is used in the path instead of IDs. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a96bf2fd1329e64a5b693736bbcd38d9b}{Delete}} (string\mbox{[}$\,$\mbox{]} delete\+Message\+Bulk\+Request, \mbox{\hyperlink{classRingCentral_1_1DeleteMessageParameters}{Delete\+Message\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes message(s) by the given message ID(s). The first call of this method transfers the message to the \textquotesingle{}Delete\textquotesingle{} status. The second call transfers the deleted message to the \textquotesingle{}Purged\textquotesingle{} status. If it is required to make the message \textquotesingle{}Purged\textquotesingle{} immediately (from the first call), then set the query parameter purge to {\ttfamily true}. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetMessageInfoResponse}{Get\+Message\+Info\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a16f17e9ceab130ea90aea8328822786f}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1PatchMessageRequest}{Patch\+Message\+Request}} patch\+Message\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Patches message(s) by ID(s). Currently only message read status update and restoring deleted messages are supported through this method. For changing status of a message send {\ttfamily read\+Status} set to either \textquotesingle{}Read\textquotesingle{} or \textquotesingle{}Unread\textquotesingle{} in request. It is possible to restore a message and its attachments (if message status is \textquotesingle{}Deleted\textquotesingle{}) by sending {\ttfamily availability} attribute set to \textquotesingle{}Alive\textquotesingle{} in request body. If a message is already in \textquotesingle{}Purged\textquotesingle{} state then its attachments cannot be restored and the message itself is about to be physically deleted. Bulk syntax (both traditional and alternative one) is supported. HTTP Method\+: patch Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a82691c52650649c8187d1c7b8453b4e5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a82691c52650649c8187d1c7b8453b4e5}} 
+string {\bfseries message\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_aa36c6fd3ced411d1612e13c51f0f3ac8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_aa36c6fd3ced411d1612e13c51f0f3ac8}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a429ac2790f886d033696735d8a160cd8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a429ac2790f886d033696735d8a160cd8}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a96bf2fd1329e64a5b693736bbcd38d9b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a96bf2fd1329e64a5b693736bbcd38d9b}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{string\mbox{[}$\,$\mbox{]}}]{delete\+Message\+Bulk\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1DeleteMessageParameters}{Delete\+Message\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes message(s) by the given message ID(s). The first call of this method transfers the message to the \textquotesingle{}Delete\textquotesingle{} status. The second call transfers the deleted message to the \textquotesingle{}Purged\textquotesingle{} status. If it is required to make the message \textquotesingle{}Purged\textquotesingle{} immediately (from the first call), then set the query parameter purge to {\ttfamily true}. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a16ac569b8df2f0b7b92329fab2a80d71}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a16ac569b8df2f0b7b92329fab2a80d71}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}!DeleteAll@{DeleteAll}}
+\index{DeleteAll@{DeleteAll}!RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}}
+\doxysubsubsection{\texorpdfstring{DeleteAll()}{DeleteAll()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index.\+Delete\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1DeleteMessageByFilterParameters}{Delete\+Message\+By\+Filter\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes conversation(s) by conversation ID(s). Batch request is supported, max number of IDs passed as query/path parameters is 50. Alternative syntax is supported -\/ user conversations can be deleted by passing multiple IDs in request body as an array of string, max number of conversation IDs passed in request body is 100. In this case asterisk is used in the path instead of IDs HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_ae820d896288c24957a9d6f057383cca3}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_ae820d896288c24957a9d6f057383cca3}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetMessageInfoResponse}{Get\+Message\+Info\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an individual message record or multiple records by the given message ID(s). The length of inbound messages is unlimited. Bulk syntax is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Messages 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a623f68ad5ae00d6fb627a974376a554b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a623f68ad5ae00d6fb627a974376a554b}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetMessageList}{Get\+Message\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListMessagesParameters}{List\+Messages\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of messages from an extension mailbox. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store Rate Limit Group\+: Light App Permission\+: Read\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Messages 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a16f17e9ceab130ea90aea8328822786f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_a16f17e9ceab130ea90aea8328822786f}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetMessageInfoResponse}{Get\+Message\+Info\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1PatchMessageRequest}{Patch\+Message\+Request}}}]{patch\+Message\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Patches message(s) by ID(s). Currently only message read status update and restoring deleted messages are supported through this method. For changing status of a message send {\ttfamily read\+Status} set to either \textquotesingle{}Read\textquotesingle{} or \textquotesingle{}Unread\textquotesingle{} in request. It is possible to restore a message and its attachments (if message status is \textquotesingle{}Deleted\textquotesingle{}) by sending {\ttfamily availability} attribute set to \textquotesingle{}Alive\textquotesingle{} in request body. If a message is already in \textquotesingle{}Purged\textquotesingle{} state then its attachments cannot be restored and the message itself is about to be physically deleted. Bulk syntax (both traditional and alternative one) is supported. HTTP Method\+: patch Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_add298bd0f8d150eb91b0afdf5c995890}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1MessageStore_1_1Index_add298bd0f8d150eb91b0afdf5c995890}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index@{RingCentral.Paths.Restapi.Account.Extension.MessageStore.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetMessageInfoResponse}{Get\+Message\+Info\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Message\+Store.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateMessageRequest}{Update\+Message\+Request}}}]{update\+Message\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates message(s) by their ID(s). Currently only message read status can be updated through this method. Bulk syntax is supported, max number of IDs passed as query/path parameters is 50. Alternative bulk syntax is also supported -\/ user messages can be updated by passing multiple IDs in request body as an array of string, max number of IDs passed in the body is 1000. In this case asterisk is used in the path instead of IDs. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/message-\/store/\{message\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Messages \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Messages 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Message\+Store/\+Content/Index.\+cs\end{DoxyCompactItemize}

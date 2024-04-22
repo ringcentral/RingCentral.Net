@@ -1,0 +1,121 @@
+\hypertarget{classRingCentral_1_1WcsSessionBaseModel}{}\doxysection{Ring\+Central.\+Wcs\+Session\+Base\+Model Class Reference}
+\label{classRingCentral_1_1WcsSessionBaseModel}\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_a195e552bf9fef96cf47bc980c74bf7be}{scheduled\+Start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session scheduled start time. Required Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_a6692a17dd55508c63e31232ead432f99}{scheduled\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The duration of the Session in seconds. Required Maximum\+: 43200 Minimum\+: 30 Format\+: int32 Example\+: 1800 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_ab260a225ae25e4e1d86423edab4976d3}{time\+Zone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em IANA-\/compatible time zone name (see \href{https://www.iana.org/time-zones}{\texttt{ https\+://www.\+iana.\+org/time-\/zones}}). Required Example\+: America/\+New\+\_\+\+York \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_aaa77264b87e9cb8a086a1e76bd2eb97d}{localized\+Time\+Zone\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Localized time zone description. Example\+: Eastern Time (America/\+New\+\_\+\+York) \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_aa25c1680b5caf1d83dc62f92c84ee15e}{panel\+Join\+Time\+Offset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time offset (positive, in seconds) indicating how much in advance (comparing to \char`\"{}scheduled\+Start\+Time\char`\"{}) panel members should join for the pre-\/webinar team sync Format\+: int32 Example\+: 900 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_ab5db08f64dd60c7a1bb25e1acdae03a9}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session title. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live Broadcasting US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_a1c08c54fdeff7c7a1917324fd73b088e}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em User-\/friendly description of the Session. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live session for US-\/based participants \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_a92cc9e855d439fe5a627fb3acb9ac2bd}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionBaseModel_ab208999290ccd91ce6510ee9825c985e}{host\+Join\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URI to join the webinar as a host Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_a1c08c54fdeff7c7a1917324fd73b088e}\label{classRingCentral_1_1WcsSessionBaseModel_a1c08c54fdeff7c7a1917324fd73b088e}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!description@{description}}
+\index{description@{description}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Base\+Model.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+User-\/friendly description of the Session. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live session for US-\/based participants 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_ab208999290ccd91ce6510ee9825c985e}\label{classRingCentral_1_1WcsSessionBaseModel_ab208999290ccd91ce6510ee9825c985e}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!hostJoinUri@{hostJoinUri}}
+\index{hostJoinUri@{hostJoinUri}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{hostJoinUri}{hostJoinUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Base\+Model.\+host\+Join\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The URI to join the webinar as a host Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_aaa77264b87e9cb8a086a1e76bd2eb97d}\label{classRingCentral_1_1WcsSessionBaseModel_aaa77264b87e9cb8a086a1e76bd2eb97d}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!localizedTimeZoneDescription@{localizedTimeZoneDescription}}
+\index{localizedTimeZoneDescription@{localizedTimeZoneDescription}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{localizedTimeZoneDescription}{localizedTimeZoneDescription}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Base\+Model.\+localized\+Time\+Zone\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Localized time zone description. Example\+: Eastern Time (America/\+New\+\_\+\+York) 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_aa25c1680b5caf1d83dc62f92c84ee15e}\label{classRingCentral_1_1WcsSessionBaseModel_aa25c1680b5caf1d83dc62f92c84ee15e}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!panelJoinTimeOffset@{panelJoinTimeOffset}}
+\index{panelJoinTimeOffset@{panelJoinTimeOffset}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{panelJoinTimeOffset}{panelJoinTimeOffset}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Wcs\+Session\+Base\+Model.\+panel\+Join\+Time\+Offset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time offset (positive, in seconds) indicating how much in advance (comparing to \char`\"{}scheduled\+Start\+Time\char`\"{}) panel members should join for the pre-\/webinar team sync Format\+: int32 Example\+: 900 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_a6692a17dd55508c63e31232ead432f99}\label{classRingCentral_1_1WcsSessionBaseModel_a6692a17dd55508c63e31232ead432f99}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!scheduledDuration@{scheduledDuration}}
+\index{scheduledDuration@{scheduledDuration}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{scheduledDuration}{scheduledDuration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Wcs\+Session\+Base\+Model.\+scheduled\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The duration of the Session in seconds. Required Maximum\+: 43200 Minimum\+: 30 Format\+: int32 Example\+: 1800 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_a195e552bf9fef96cf47bc980c74bf7be}\label{classRingCentral_1_1WcsSessionBaseModel_a195e552bf9fef96cf47bc980c74bf7be}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!scheduledStartTime@{scheduledStartTime}}
+\index{scheduledStartTime@{scheduledStartTime}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{scheduledStartTime}{scheduledStartTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Base\+Model.\+scheduled\+Start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session scheduled start time. Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_a92cc9e855d439fe5a627fb3acb9ac2bd}\label{classRingCentral_1_1WcsSessionBaseModel_a92cc9e855d439fe5a627fb3acb9ac2bd}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!status@{status}}
+\index{status@{status}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Base\+Model.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_ab260a225ae25e4e1d86423edab4976d3}\label{classRingCentral_1_1WcsSessionBaseModel_ab260a225ae25e4e1d86423edab4976d3}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!timeZone@{timeZone}}
+\index{timeZone@{timeZone}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{timeZone}{timeZone}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Base\+Model.\+time\+Zone\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+IANA-\/compatible time zone name (see \href{https://www.iana.org/time-zones}{\texttt{ https\+://www.\+iana.\+org/time-\/zones}}). Required Example\+: America/\+New\+\_\+\+York 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionBaseModel_ab5db08f64dd60c7a1bb25e1acdae03a9}\label{classRingCentral_1_1WcsSessionBaseModel_ab5db08f64dd60c7a1bb25e1acdae03a9}} 
+\index{RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}!title@{title}}
+\index{title@{title}!RingCentral.WcsSessionBaseModel@{RingCentral.WcsSessionBaseModel}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Base\+Model.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session title. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live Broadcasting US 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Wcs\+Session\+Base\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,169 @@
+\hypertarget{classRingCentral_1_1TMEventInfo}{}\doxysection{Ring\+Central.\+TMEvent\+Info Class Reference}
+\label{classRingCentral_1_1TMEventInfo}\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a94af2a16e6fb5195a4a7780d4dd5637d}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an event \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a4a8173b4cbea43b01cb5ca96e4cca1e2}{creator\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a person created an event \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a0ae2a1799425ecd6b39b6c2f05ffe710}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event title \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a1f0fb1fac2859d43d3772d0e40eb1351}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Datetime of starting an event Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a0e80191bec6b2ff302a07ff1d4f9cbe9}{end\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Datetime of ending an event Format\+: date-\/time \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a6860e2dec23ef2b0be9e1090df5c378c}{all\+Day}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether an event has some specific time slot or lasts for the whole day(s) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a42fcdf3586a262cc2bcfaf097bfd1f5f}{recurrence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event recurrence settings Enum\+: None, Day, Weekday, Week, Month, Year \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a1e3b51c00f4072250fe8d194a03eaaad}{ending\+Condition}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Condition of ending an event Enum\+: None, Count, Date \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a9b29dc7ce838509aaa0a170f5b806b38}{ending\+After}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of event iterations. For periodic events only. Value range is 1 -\/ 10. Must be specified if {\ttfamily ending\+Condition} is {\ttfamily Count} Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a5cd559a19caf715b51ca0bd88b06f5ba}{ending\+On}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Iterations ending datetime for periodic events in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a6ad4c1dab3c1d7f6ed1de00c07f2a6df}{color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Color of Event title (including its presentation in Calendar) Default\+: Black Enum\+: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_a67a166367c3200eadb84219774be1210}{location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event location \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1TMEventInfo_ad6e2d4d81b5c41f7c8fe6ed9445a8bb7}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event details \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a6860e2dec23ef2b0be9e1090df5c378c}\label{classRingCentral_1_1TMEventInfo_a6860e2dec23ef2b0be9e1090df5c378c}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!allDay@{allDay}}
+\index{allDay@{allDay}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{allDay}{allDay}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+TMEvent\+Info.\+all\+Day\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates whether an event has some specific time slot or lasts for the whole day(s) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a6ad4c1dab3c1d7f6ed1de00c07f2a6df}\label{classRingCentral_1_1TMEventInfo_a6ad4c1dab3c1d7f6ed1de00c07f2a6df}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!color@{color}}
+\index{color@{color}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Color of Event title (including its presentation in Calendar) Default\+: Black Enum\+: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a4a8173b4cbea43b01cb5ca96e4cca1e2}\label{classRingCentral_1_1TMEventInfo_a4a8173b4cbea43b01cb5ca96e4cca1e2}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!creatorId@{creatorId}}
+\index{creatorId@{creatorId}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{creatorId}{creatorId}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+creator\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a person created an event 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_ad6e2d4d81b5c41f7c8fe6ed9445a8bb7}\label{classRingCentral_1_1TMEventInfo_ad6e2d4d81b5c41f7c8fe6ed9445a8bb7}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!description@{description}}
+\index{description@{description}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event details 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a9b29dc7ce838509aaa0a170f5b806b38}\label{classRingCentral_1_1TMEventInfo_a9b29dc7ce838509aaa0a170f5b806b38}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!endingAfter@{endingAfter}}
+\index{endingAfter@{endingAfter}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{endingAfter}{endingAfter}}
+{\footnotesize\ttfamily long? Ring\+Central.\+TMEvent\+Info.\+ending\+After\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Count of event iterations. For periodic events only. Value range is 1 -\/ 10. Must be specified if {\ttfamily ending\+Condition} is {\ttfamily Count} Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a1e3b51c00f4072250fe8d194a03eaaad}\label{classRingCentral_1_1TMEventInfo_a1e3b51c00f4072250fe8d194a03eaaad}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!endingCondition@{endingCondition}}
+\index{endingCondition@{endingCondition}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{endingCondition}{endingCondition}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+ending\+Condition\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Condition of ending an event Enum\+: None, Count, Date 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a5cd559a19caf715b51ca0bd88b06f5ba}\label{classRingCentral_1_1TMEventInfo_a5cd559a19caf715b51ca0bd88b06f5ba}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!endingOn@{endingOn}}
+\index{endingOn@{endingOn}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{endingOn}{endingOn}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+ending\+On\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Iterations ending datetime for periodic events in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ ISO 8601}} format Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a0e80191bec6b2ff302a07ff1d4f9cbe9}\label{classRingCentral_1_1TMEventInfo_a0e80191bec6b2ff302a07ff1d4f9cbe9}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!endTime@{endTime}}
+\index{endTime@{endTime}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+end\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Datetime of ending an event Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a94af2a16e6fb5195a4a7780d4dd5637d}\label{classRingCentral_1_1TMEventInfo_a94af2a16e6fb5195a4a7780d4dd5637d}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!id@{id}}
+\index{id@{id}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an event 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a67a166367c3200eadb84219774be1210}\label{classRingCentral_1_1TMEventInfo_a67a166367c3200eadb84219774be1210}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!location@{location}}
+\index{location@{location}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event location 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a42fcdf3586a262cc2bcfaf097bfd1f5f}\label{classRingCentral_1_1TMEventInfo_a42fcdf3586a262cc2bcfaf097bfd1f5f}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!recurrence@{recurrence}}
+\index{recurrence@{recurrence}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{recurrence}{recurrence}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+recurrence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event recurrence settings Enum\+: None, Day, Weekday, Week, Month, Year 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a1f0fb1fac2859d43d3772d0e40eb1351}\label{classRingCentral_1_1TMEventInfo_a1f0fb1fac2859d43d3772d0e40eb1351}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Datetime of starting an event Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1TMEventInfo_a0ae2a1799425ecd6b39b6c2f05ffe710}\label{classRingCentral_1_1TMEventInfo_a0ae2a1799425ecd6b39b6c2f05ffe710}} 
+\index{RingCentral.TMEventInfo@{RingCentral.TMEventInfo}!title@{title}}
+\index{title@{title}!RingCentral.TMEventInfo@{RingCentral.TMEventInfo}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+TMEvent\+Info.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Event title 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/TMEvent\+Info.\+cs\end{DoxyCompactItemize}

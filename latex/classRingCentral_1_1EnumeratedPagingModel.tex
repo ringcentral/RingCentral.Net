@@ -1,0 +1,85 @@
+\hypertarget{classRingCentral_1_1EnumeratedPagingModel}{}\doxysection{Ring\+Central.\+Enumerated\+Paging\+Model Class Reference}
+\label{classRingCentral_1_1EnumeratedPagingModel}\index{RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1EnumeratedPagingModel_a1bc7221288f11a6fb10404dd750e2777}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current page size, describes how many items are in each page. Matches \char`\"{}per\+Page\char`\"{} parameter from the request. Required Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 50 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1EnumeratedPagingModel_a9cf4f9bc0c09f09f65e52222a3ad64fb}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 5 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1EnumeratedPagingModel_a0de4cf77a9c134e2ee282e98bef915b7}{page\+Start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1EnumeratedPagingModel_a9c8aa4ae3b04d60bcafc526f563db8f2}{page\+End}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 Example\+: 5 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1EnumeratedPagingModel_a61164f5527deecb80ae7868332f5de8c}{total\+Pages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 Example\+: 25 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1EnumeratedPagingModel_ac700a48ca0ff0f957bcef1db15e1e008}{total\+Elements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 Example\+: 25 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1EnumeratedPagingModel_a9cf4f9bc0c09f09f65e52222a3ad64fb}\label{classRingCentral_1_1EnumeratedPagingModel_a9cf4f9bc0c09f09f65e52222a3ad64fb}} 
+\index{RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}!page@{page}}
+\index{page@{page}!RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Enumerated\+Paging\+Model.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 5 
+
+\mbox{\Hypertarget{classRingCentral_1_1EnumeratedPagingModel_a9c8aa4ae3b04d60bcafc526f563db8f2}\label{classRingCentral_1_1EnumeratedPagingModel_a9c8aa4ae3b04d60bcafc526f563db8f2}} 
+\index{RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}!pageEnd@{pageEnd}}
+\index{pageEnd@{pageEnd}!RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}}
+\doxysubsubsection{\texorpdfstring{pageEnd}{pageEnd}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Enumerated\+Paging\+Model.\+page\+End\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The zero-\/based index of the last element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 Example\+: 5 
+
+\mbox{\Hypertarget{classRingCentral_1_1EnumeratedPagingModel_a0de4cf77a9c134e2ee282e98bef915b7}\label{classRingCentral_1_1EnumeratedPagingModel_a0de4cf77a9c134e2ee282e98bef915b7}} 
+\index{RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}!pageStart@{pageStart}}
+\index{pageStart@{pageStart}!RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}}
+\doxysubsubsection{\texorpdfstring{pageStart}{pageStart}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Enumerated\+Paging\+Model.\+page\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The zero-\/based number of the first element on the current page. Omitted if the page is omitted or result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1EnumeratedPagingModel_a1bc7221288f11a6fb10404dd750e2777}\label{classRingCentral_1_1EnumeratedPagingModel_a1bc7221288f11a6fb10404dd750e2777}} 
+\index{RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Enumerated\+Paging\+Model.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current page size, describes how many items are in each page. Matches \char`\"{}per\+Page\char`\"{} parameter from the request. Required Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 50 
+
+\mbox{\Hypertarget{classRingCentral_1_1EnumeratedPagingModel_ac700a48ca0ff0f957bcef1db15e1e008}\label{classRingCentral_1_1EnumeratedPagingModel_ac700a48ca0ff0f957bcef1db15e1e008}} 
+\index{RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}!totalElements@{totalElements}}
+\index{totalElements@{totalElements}!RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}}
+\doxysubsubsection{\texorpdfstring{totalElements}{totalElements}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Enumerated\+Paging\+Model.\+total\+Elements\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 Example\+: 25 
+
+\mbox{\Hypertarget{classRingCentral_1_1EnumeratedPagingModel_a61164f5527deecb80ae7868332f5de8c}\label{classRingCentral_1_1EnumeratedPagingModel_a61164f5527deecb80ae7868332f5de8c}} 
+\index{RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}!totalPages@{totalPages}}
+\index{totalPages@{totalPages}!RingCentral.EnumeratedPagingModel@{RingCentral.EnumeratedPagingModel}}
+\doxysubsubsection{\texorpdfstring{totalPages}{totalPages}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Enumerated\+Paging\+Model.\+total\+Pages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 Example\+: 25 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Enumerated\+Paging\+Model.\+cs\end{DoxyCompactItemize}

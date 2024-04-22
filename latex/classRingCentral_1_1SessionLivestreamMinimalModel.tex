@@ -1,0 +1,85 @@
+\hypertarget{classRingCentral_1_1SessionLivestreamMinimalModel}{}\doxysection{Ring\+Central.\+Session\+Livestream\+Minimal\+Model Class Reference}
+\label{classRingCentral_1_1SessionLivestreamMinimalModel}\index{RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionLivestreamMinimalModel_a58ab781f37e8f8fe7b170ba2cdac6527}{livestream\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of the livestream Required Example\+: 40740e06-\/4eec-\/4458-\/a86e-\/8578e192274q \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionLivestreamMinimalModel_a6e34d14266b793ba5d0b7a7de61a5cbd}{service\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the livestreaming service provider Required Example\+: Yout\+Tube \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionLivestreamMinimalModel_a1680bafdf2fc321b0d7dd6884886f9d2}{livestream\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS). Value may not be consistent with latest state, especially for livestream associated with OAuth2.\+0 based service providers. Thus, state must be obtained directly from WLCS Required Example\+: Initialized Enum\+: Initialized, Authorized, Configured, Publish\+Setup, Publishing, Paused, Error, Break, Deleted, Completed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionLivestreamMinimalModel_aaddbe717dd4076ccb8c932a5fde72290}{previous\+Livestream\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS). Value may not be consistent with latest state, especially for livestream associated with OAuth2.\+0 based service providers. Thus, state must be obtained directly from WLCS Example\+: Initialized Enum\+: Initialized, Authorized, Configured, Publish\+Setup, Publishing, Paused, Error, Break, Deleted, Completed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionLivestreamMinimalModel_ae51eda9f86ec269e65598f8ab4deb464}{livestream\+Start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time at which the session started to publish media to livestream service provider. Format\+: date-\/time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ApiError}{Api\+Error}} \mbox{\hyperlink{classRingCentral_1_1SessionLivestreamMinimalModel_adb6d06ead236b870b7f413f6049efadb}{error}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SessionLivestreamMinimalModel_adb6d06ead236b870b7f413f6049efadb}\label{classRingCentral_1_1SessionLivestreamMinimalModel_adb6d06ead236b870b7f413f6049efadb}} 
+\index{RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}!error@{error}}
+\index{error@{error}!RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ApiError}{Api\+Error}} Ring\+Central.\+Session\+Livestream\+Minimal\+Model.\+error\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionLivestreamMinimalModel_a58ab781f37e8f8fe7b170ba2cdac6527}\label{classRingCentral_1_1SessionLivestreamMinimalModel_a58ab781f37e8f8fe7b170ba2cdac6527}} 
+\index{RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}!livestreamId@{livestreamId}}
+\index{livestreamId@{livestreamId}!RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}}
+\doxysubsubsection{\texorpdfstring{livestreamId}{livestreamId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Livestream\+Minimal\+Model.\+livestream\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of the livestream Required Example\+: 40740e06-\/4eec-\/4458-\/a86e-\/8578e192274q 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionLivestreamMinimalModel_ae51eda9f86ec269e65598f8ab4deb464}\label{classRingCentral_1_1SessionLivestreamMinimalModel_ae51eda9f86ec269e65598f8ab4deb464}} 
+\index{RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}!livestreamStartTime@{livestreamStartTime}}
+\index{livestreamStartTime@{livestreamStartTime}!RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}}
+\doxysubsubsection{\texorpdfstring{livestreamStartTime}{livestreamStartTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Livestream\+Minimal\+Model.\+livestream\+Start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Time at which the session started to publish media to livestream service provider. Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionLivestreamMinimalModel_a1680bafdf2fc321b0d7dd6884886f9d2}\label{classRingCentral_1_1SessionLivestreamMinimalModel_a1680bafdf2fc321b0d7dd6884886f9d2}} 
+\index{RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}!livestreamStatus@{livestreamStatus}}
+\index{livestreamStatus@{livestreamStatus}!RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}}
+\doxysubsubsection{\texorpdfstring{livestreamStatus}{livestreamStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Livestream\+Minimal\+Model.\+livestream\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS). Value may not be consistent with latest state, especially for livestream associated with OAuth2.\+0 based service providers. Thus, state must be obtained directly from WLCS Required Example\+: Initialized Enum\+: Initialized, Authorized, Configured, Publish\+Setup, Publishing, Paused, Error, Break, Deleted, Completed 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionLivestreamMinimalModel_aaddbe717dd4076ccb8c932a5fde72290}\label{classRingCentral_1_1SessionLivestreamMinimalModel_aaddbe717dd4076ccb8c932a5fde72290}} 
+\index{RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}!previousLivestreamStatus@{previousLivestreamStatus}}
+\index{previousLivestreamStatus@{previousLivestreamStatus}!RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}}
+\doxysubsubsection{\texorpdfstring{previousLivestreamStatus}{previousLivestreamStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Livestream\+Minimal\+Model.\+previous\+Livestream\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS). Value may not be consistent with latest state, especially for livestream associated with OAuth2.\+0 based service providers. Thus, state must be obtained directly from WLCS Example\+: Initialized Enum\+: Initialized, Authorized, Configured, Publish\+Setup, Publishing, Paused, Error, Break, Deleted, Completed 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionLivestreamMinimalModel_a6e34d14266b793ba5d0b7a7de61a5cbd}\label{classRingCentral_1_1SessionLivestreamMinimalModel_a6e34d14266b793ba5d0b7a7de61a5cbd}} 
+\index{RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}!serviceProvider@{serviceProvider}}
+\index{serviceProvider@{serviceProvider}!RingCentral.SessionLivestreamMinimalModel@{RingCentral.SessionLivestreamMinimalModel}}
+\doxysubsubsection{\texorpdfstring{serviceProvider}{serviceProvider}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Livestream\+Minimal\+Model.\+service\+Provider\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name of the livestreaming service provider Required Example\+: Yout\+Tube 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Session\+Livestream\+Minimal\+Model.\+cs\end{DoxyCompactItemize}

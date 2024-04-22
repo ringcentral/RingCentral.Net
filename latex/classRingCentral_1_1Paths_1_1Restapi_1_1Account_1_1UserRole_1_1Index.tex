@@ -1,0 +1,101 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+User\+Role.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index}\index{RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+User\+Role.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a59de7bfc8df8a276dcbc2962988bb279}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a59de7bfc8df8a276dcbc2962988bb279}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1BulkAssign_1_1Index}{Bulk\+Assign.\+Index}} {\bfseries Bulk\+Assign} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a79bbc4e624f7e1ff9087657d0ed99233}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a79bbc4e624f7e1ff9087657d0ed99233}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Default_1_1Index}{Default.\+Index}} {\bfseries Default} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a11f5b183660fda8e052f316a8c873d5d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a11f5b183660fda8e052f316a8c873d5d}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string role\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_aa31a9957bf4ab21c1e1f83250ad98140}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_aa31a9957bf4ab21c1e1f83250ad98140}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RolesCollectionResource}{Roles\+Collection\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a52b6470a3acc9d004edbb707828085bd}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListUserRolesParameters}{List\+User\+Roles\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of account user roles. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Roles \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a94e1b1244068e40fc8f6bdbc52599244}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}} role\+Resource, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a custom user role. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role Rate Limit Group\+: Medium App Permission\+: Role\+Management \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Roles \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a33676a2c41d4e8cc7f61d1e8e41a0d43}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ReadUserRoleParameters}{Read\+User\+Role\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a user role assigned to the current account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role/\{role\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Roles \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a90ccadcf63668c15f3ed53f8ca093d67}{Put}} (\mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}} role\+Resource, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a user role assigned to the current account by ID. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role/\{role\+Id\} Rate Limit Group\+: Medium App Permission\+: Role\+Management \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Roles \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a750ee5bff8aee7d3bb3d94993968f0b7}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1DeleteCustomRoleParameters}{Delete\+Custom\+Role\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a custom user role by ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role/\{role\+Id\} Rate Limit Group\+: Medium App Permission\+: Role\+Management \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Roles \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a0b225da6d0baf79662703f004252f95c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a0b225da6d0baf79662703f004252f95c}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a1fda1f6eca5d45f54759426ee0e56f70}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a1fda1f6eca5d45f54759426ee0e56f70}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_aae967921a61fc9b57d55d771c620ffe5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_aae967921a61fc9b57d55d771c620ffe5}} 
+string {\bfseries role\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a750ee5bff8aee7d3bb3d94993968f0b7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a750ee5bff8aee7d3bb3d94993968f0b7}} 
+\index{RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+User\+Role.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1DeleteCustomRoleParameters}{Delete\+Custom\+Role\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a custom user role by ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role/\{role\+Id\} Rate Limit Group\+: Medium App Permission\+: Role\+Management \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Roles 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a33676a2c41d4e8cc7f61d1e8e41a0d43}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a33676a2c41d4e8cc7f61d1e8e41a0d43}} 
+\index{RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+User\+Role.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadUserRoleParameters}{Read\+User\+Role\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a user role assigned to the current account. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role/\{role\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Roles 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a52b6470a3acc9d004edbb707828085bd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a52b6470a3acc9d004edbb707828085bd}} 
+\index{RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RolesCollectionResource}{Roles\+Collection\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+User\+Role.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListUserRolesParameters}{List\+User\+Roles\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of account user roles. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+User\+Roles 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a94e1b1244068e40fc8f6bdbc52599244}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a94e1b1244068e40fc8f6bdbc52599244}} 
+\index{RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+User\+Role.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}}}]{role\+Resource,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a custom user role. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role Rate Limit Group\+: Medium App Permission\+: Role\+Management \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Roles 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a90ccadcf63668c15f3ed53f8ca093d67}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1UserRole_1_1Index_a90ccadcf63668c15f3ed53f8ca093d67}} 
+\index{RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.UserRole.Index@{RingCentral.Paths.Restapi.Account.UserRole.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+User\+Role.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RoleResource}{Role\+Resource}}}]{role\+Resource,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a user role assigned to the current account by ID. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/user-\/role/\{role\+Id\} Rate Limit Group\+: Medium App Permission\+: Role\+Management \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+User\+Roles 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+User\+Role/\+Bulk\+Assign/Index.\+cs\end{DoxyCompactItemize}

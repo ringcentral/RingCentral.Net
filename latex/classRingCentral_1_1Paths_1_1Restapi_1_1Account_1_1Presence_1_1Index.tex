@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Presence.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index}\index{RingCentral.Paths.Restapi.Account.Presence.Index@{RingCentral.Paths.Restapi.Account.Presence.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Presence.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_ae3b2ae0a5bda4cec33a7c697d39c0401}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_ae3b2ae0a5bda4cec33a7c697d39c0401}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_aefa47b27657a26e7484318298674fa1d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_aefa47b27657a26e7484318298674fa1d}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AccountPresenceInfo}{Account\+Presence\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_a403a36091f99136b0e3b663812c40c19}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ReadAccountPresenceParameters}{Read\+Account\+Presence\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns presence status of all extensions of an account. Please note\+: The presence\+Status is returned as Offline (the parameters telephony\+Status, message, user\+Status and dnd\+Status are not returned at all) for the following extension types\+: Department, Announcement Only, Voicemail (Take Messages Only), Fax \mbox{\hyperlink{classRingCentral_1_1User}{User}}, \mbox{\hyperlink{classRingCentral_1_1Paging}{Paging}} Only Group, Shared Lines Group, IVR Menu, Application \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension}{Extension}}. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/presence Rate Limit Group\+: Heavy App Permission\+: Read\+Presence \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Presence\+Status \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_a3c9a908e28d85dfadb6346996b128672}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_a3c9a908e28d85dfadb6346996b128672}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_ac01e4ee2b7dcac142f954596e4736326}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_ac01e4ee2b7dcac142f954596e4736326}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_a403a36091f99136b0e3b663812c40c19}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Presence_1_1Index_a403a36091f99136b0e3b663812c40c19}} 
+\index{RingCentral.Paths.Restapi.Account.Presence.Index@{RingCentral.Paths.Restapi.Account.Presence.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Presence.Index@{RingCentral.Paths.Restapi.Account.Presence.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AccountPresenceInfo}{Account\+Presence\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Presence.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadAccountPresenceParameters}{Read\+Account\+Presence\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns presence status of all extensions of an account. Please note\+: The presence\+Status is returned as Offline (the parameters telephony\+Status, message, user\+Status and dnd\+Status are not returned at all) for the following extension types\+: Department, Announcement Only, Voicemail (Take Messages Only), Fax \mbox{\hyperlink{classRingCentral_1_1User}{User}}, \mbox{\hyperlink{classRingCentral_1_1Paging}{Paging}} Only Group, Shared Lines Group, IVR Menu, Application \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension}{Extension}}. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/presence Rate Limit Group\+: Heavy App Permission\+: Read\+Presence \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Presence\+Status 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Presence/Index.\+cs\end{DoxyCompactItemize}

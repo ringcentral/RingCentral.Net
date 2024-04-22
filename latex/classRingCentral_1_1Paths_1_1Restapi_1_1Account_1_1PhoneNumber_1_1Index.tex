@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Phone\+Number.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index}\index{RingCentral.Paths.Restapi.Account.PhoneNumber.Index@{RingCentral.Paths.Restapi.Account.PhoneNumber.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Phone\+Number.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_af578d13ed1275e1f7e1674368a00eacd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_af578d13ed1275e1f7e1674368a00eacd}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string phone\+Number\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a8c124df14d3d365b9b28204cb7081e51}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a8c124df14d3d365b9b28204cb7081e51}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumbers}{Account\+Phone\+Numbers}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_aff9317057d785194da387bd5331b90a6}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersParameters}{List\+Account\+Phone\+Numbers\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of phone numbers assigned to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} customer account. Both company-\/level and extension-\/level numbers are returned. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/phone-\/number Rate Limit Group\+: Heavy App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Phone\+Numbers \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CompanyPhoneNumberInfo}{Company\+Phone\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_ad9402791070ed4244c5d2e2294e77699}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns phone number(s) belonging to a certain account or extension by phone\+Number\+Id(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/phone-\/number/\{phone\+Number\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Phone\+Numbers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a01e32cc15ce0b26a7bdca417c471d48a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a01e32cc15ce0b26a7bdca417c471d48a}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a208f2a486446bc17e0c7910129ea8dc0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a208f2a486446bc17e0c7910129ea8dc0}} 
+string {\bfseries phone\+Number\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a651476912d810f91e65ffe9698a3679d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_a651476912d810f91e65ffe9698a3679d}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_ad9402791070ed4244c5d2e2294e77699}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_ad9402791070ed4244c5d2e2294e77699}} 
+\index{RingCentral.Paths.Restapi.Account.PhoneNumber.Index@{RingCentral.Paths.Restapi.Account.PhoneNumber.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.PhoneNumber.Index@{RingCentral.Paths.Restapi.Account.PhoneNumber.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CompanyPhoneNumberInfo}{Company\+Phone\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Phone\+Number.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns phone number(s) belonging to a certain account or extension by phone\+Number\+Id(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/phone-\/number/\{phone\+Number\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Phone\+Numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_aff9317057d785194da387bd5331b90a6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1PhoneNumber_1_1Index_aff9317057d785194da387bd5331b90a6}} 
+\index{RingCentral.Paths.Restapi.Account.PhoneNumber.Index@{RingCentral.Paths.Restapi.Account.PhoneNumber.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.PhoneNumber.Index@{RingCentral.Paths.Restapi.Account.PhoneNumber.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumbers}{Account\+Phone\+Numbers}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Phone\+Number.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListAccountPhoneNumbersParameters}{List\+Account\+Phone\+Numbers\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of phone numbers assigned to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} customer account. Both company-\/level and extension-\/level numbers are returned. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/phone-\/number Rate Limit Group\+: Heavy App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Phone\+Numbers 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Phone\+Number/Index.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{classRingCentral_1_1WebhookDeliveryModeRequest}{}\doxysection{Ring\+Central.\+Webhook\+Delivery\+Mode\+Request Class Reference}
+\label{classRingCentral_1_1WebhookDeliveryModeRequest}\index{RingCentral.WebhookDeliveryModeRequest@{RingCentral.WebhookDeliveryModeRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1WebhookDeliveryModeRequest_ae4d6b19741d35f2d040805327874dc9a}{transport\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The transport type for this subscription, or the channel by which an app should be notified of an event Required Enum\+: Web\+Hook \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WebhookDeliveryModeRequest_a09199c1297322934ee7e7b0a0386f240}{address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URL to which notifications should be delivered. This is only applicable for the {\ttfamily Web\+Hook} transport type, for which it is a required field. Required Format\+: uri Example\+: \href{https://acme.com/myservice/webhook}{\texttt{ https\+://acme.\+com/myservice/webhook}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WebhookDeliveryModeRequest_a862f86734b66099503952e09f5e5da7d}{verification\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An optional validation token used to verify the authenticity of the incoming webhook. Applicable only for the {\ttfamily Web\+Hook} transport type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1WebhookDeliveryModeRequest_a09199c1297322934ee7e7b0a0386f240}\label{classRingCentral_1_1WebhookDeliveryModeRequest_a09199c1297322934ee7e7b0a0386f240}} 
+\index{RingCentral.WebhookDeliveryModeRequest@{RingCentral.WebhookDeliveryModeRequest}!address@{address}}
+\index{address@{address}!RingCentral.WebhookDeliveryModeRequest@{RingCentral.WebhookDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily string Ring\+Central.\+Webhook\+Delivery\+Mode\+Request.\+address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The URL to which notifications should be delivered. This is only applicable for the {\ttfamily Web\+Hook} transport type, for which it is a required field. Required Format\+: uri Example\+: \href{https://acme.com/myservice/webhook}{\texttt{ https\+://acme.\+com/myservice/webhook}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1WebhookDeliveryModeRequest_ae4d6b19741d35f2d040805327874dc9a}\label{classRingCentral_1_1WebhookDeliveryModeRequest_ae4d6b19741d35f2d040805327874dc9a}} 
+\index{RingCentral.WebhookDeliveryModeRequest@{RingCentral.WebhookDeliveryModeRequest}!transportType@{transportType}}
+\index{transportType@{transportType}!RingCentral.WebhookDeliveryModeRequest@{RingCentral.WebhookDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{transportType}{transportType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Webhook\+Delivery\+Mode\+Request.\+transport\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The transport type for this subscription, or the channel by which an app should be notified of an event Required Enum\+: Web\+Hook 
+
+\mbox{\Hypertarget{classRingCentral_1_1WebhookDeliveryModeRequest_a862f86734b66099503952e09f5e5da7d}\label{classRingCentral_1_1WebhookDeliveryModeRequest_a862f86734b66099503952e09f5e5da7d}} 
+\index{RingCentral.WebhookDeliveryModeRequest@{RingCentral.WebhookDeliveryModeRequest}!verificationToken@{verificationToken}}
+\index{verificationToken@{verificationToken}!RingCentral.WebhookDeliveryModeRequest@{RingCentral.WebhookDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{verificationToken}{verificationToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Webhook\+Delivery\+Mode\+Request.\+verification\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An optional validation token used to verify the authenticity of the incoming webhook. Applicable only for the {\ttfamily Web\+Hook} transport type. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Webhook\+Delivery\+Mode\+Request.\+cs\end{DoxyCompactItemize}

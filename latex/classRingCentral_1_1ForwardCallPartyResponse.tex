@@ -1,0 +1,179 @@
+\hypertarget{classRingCentral_1_1ForwardCallPartyResponse}{}\doxysection{Ring\+Central.\+Forward\+Call\+Party\+Response Class Reference}
+\label{classRingCentral_1_1ForwardCallPartyResponse}\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+
+
+Information on a party of a call session  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_a10ce7f466936c5bd086dfad3f73bcdb7}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a party \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallStatusInfo}{Call\+Status\+Info}} \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_a72f307ecbfd896e1bbf730d4edb55a70}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_aa254610afceb6b7d7ff0924d3d812671}{muted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if a call participant is muted or not. {\bfseries{Note\+:}} If a call is also controlled via Hard phone or \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} App (not only through the API by calling call control methods) then it cannot be fully muted/unmuted via API only, in this case the action should be duplicated via Hard phone/\+RC App interfaces \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_af4bf3e3bd4b345c79b644bdde08fe117}{stand\+Alone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true} then the party is not connected to a session voice conference, {\ttfamily false} means the party is connected to other parties in a session \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ParkInfo}{Park\+Info}} \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_ab7e78b152144dac9c45f309bc27f7320}{park}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_ab9b2db44872138a07f59769a2da24a72}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_abe51bf26d12f22df133a8b4d18cd4fd2}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1OwnerInfo}{Owner\+Info}} \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_ad6ef26c63e6ca67ef4692f4828dcf910}{owner}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_ae784697e60ae94855a2a5afe643d24d8}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Direction of a call Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_aaa567f3007e0a67b124ee4968ea07cfa}{conference\+Role}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A party\textquotesingle{}s role in the conference scenarios. For calls of \textquotesingle{}Conference\textquotesingle{} type only Enum\+: \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, \mbox{\hyperlink{classRingCentral_1_1Participant}{Participant}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_a3b378f8deaf46344a70aa8318740226e}{ring\+Out\+Role}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A party\textquotesingle{}s role in \textquotesingle{}Ring Me\textquotesingle{}/\textquotesingle{}Ring\+Out\textquotesingle{} scenarios. For calls of \textquotesingle{}Ringout\textquotesingle{} type only Enum\+: Initiator, Target \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_a40a9d6481743dbb02044f69ee9dc0cf8}{ring\+Me\+Role}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A party\textquotesingle{}s role in \textquotesingle{}Ring Me\textquotesingle{}/\textquotesingle{}Ring\+Out\textquotesingle{} scenarios. For calls of \textquotesingle{}Ringme\textquotesingle{} type only Enum\+: Initiator, Target \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1RecordingInfo}{Recording\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ForwardCallPartyResponse_ae3d50f0d64bdbbd5946febd4df235a07}{recordings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Active recordings list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information on a party of a call session 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_aaa567f3007e0a67b124ee4968ea07cfa}\label{classRingCentral_1_1ForwardCallPartyResponse_aaa567f3007e0a67b124ee4968ea07cfa}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!conferenceRole@{conferenceRole}}
+\index{conferenceRole@{conferenceRole}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{conferenceRole}{conferenceRole}}
+{\footnotesize\ttfamily string Ring\+Central.\+Forward\+Call\+Party\+Response.\+conference\+Role\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A party\textquotesingle{}s role in the conference scenarios. For calls of \textquotesingle{}Conference\textquotesingle{} type only Enum\+: \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, \mbox{\hyperlink{classRingCentral_1_1Participant}{Participant}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_ae784697e60ae94855a2a5afe643d24d8}\label{classRingCentral_1_1ForwardCallPartyResponse_ae784697e60ae94855a2a5afe643d24d8}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!direction@{direction}}
+\index{direction@{direction}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Forward\+Call\+Party\+Response.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Direction of a call Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_ab9b2db44872138a07f59769a2da24a72}\label{classRingCentral_1_1ForwardCallPartyResponse_ab9b2db44872138a07f59769a2da24a72}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!from@{from}}
+\index{from@{from}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} Ring\+Central.\+Forward\+Call\+Party\+Response.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_a10ce7f466936c5bd086dfad3f73bcdb7}\label{classRingCentral_1_1ForwardCallPartyResponse_a10ce7f466936c5bd086dfad3f73bcdb7}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!id@{id}}
+\index{id@{id}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Forward\+Call\+Party\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a party 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_aa254610afceb6b7d7ff0924d3d812671}\label{classRingCentral_1_1ForwardCallPartyResponse_aa254610afceb6b7d7ff0924d3d812671}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!muted@{muted}}
+\index{muted@{muted}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{muted}{muted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forward\+Call\+Party\+Response.\+muted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if a call participant is muted or not. {\bfseries{Note\+:}} If a call is also controlled via Hard phone or \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} App (not only through the API by calling call control methods) then it cannot be fully muted/unmuted via API only, in this case the action should be duplicated via Hard phone/\+RC App interfaces 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_ad6ef26c63e6ca67ef4692f4828dcf910}\label{classRingCentral_1_1ForwardCallPartyResponse_ad6ef26c63e6ca67ef4692f4828dcf910}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!owner@{owner}}
+\index{owner@{owner}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{owner}{owner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1OwnerInfo}{Owner\+Info}} Ring\+Central.\+Forward\+Call\+Party\+Response.\+owner\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_ab7e78b152144dac9c45f309bc27f7320}\label{classRingCentral_1_1ForwardCallPartyResponse_ab7e78b152144dac9c45f309bc27f7320}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!park@{park}}
+\index{park@{park}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{park}{park}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ParkInfo}{Park\+Info}} Ring\+Central.\+Forward\+Call\+Party\+Response.\+park\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_ae3d50f0d64bdbbd5946febd4df235a07}\label{classRingCentral_1_1ForwardCallPartyResponse_ae3d50f0d64bdbbd5946febd4df235a07}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!recordings@{recordings}}
+\index{recordings@{recordings}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{recordings}{recordings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1RecordingInfo}{Recording\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Forward\+Call\+Party\+Response.\+recordings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Active recordings list 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_a40a9d6481743dbb02044f69ee9dc0cf8}\label{classRingCentral_1_1ForwardCallPartyResponse_a40a9d6481743dbb02044f69ee9dc0cf8}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!ringMeRole@{ringMeRole}}
+\index{ringMeRole@{ringMeRole}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{ringMeRole}{ringMeRole}}
+{\footnotesize\ttfamily string Ring\+Central.\+Forward\+Call\+Party\+Response.\+ring\+Me\+Role\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A party\textquotesingle{}s role in \textquotesingle{}Ring Me\textquotesingle{}/\textquotesingle{}Ring\+Out\textquotesingle{} scenarios. For calls of \textquotesingle{}Ringme\textquotesingle{} type only Enum\+: Initiator, Target 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_a3b378f8deaf46344a70aa8318740226e}\label{classRingCentral_1_1ForwardCallPartyResponse_a3b378f8deaf46344a70aa8318740226e}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!ringOutRole@{ringOutRole}}
+\index{ringOutRole@{ringOutRole}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{ringOutRole}{ringOutRole}}
+{\footnotesize\ttfamily string Ring\+Central.\+Forward\+Call\+Party\+Response.\+ring\+Out\+Role\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A party\textquotesingle{}s role in \textquotesingle{}Ring Me\textquotesingle{}/\textquotesingle{}Ring\+Out\textquotesingle{} scenarios. For calls of \textquotesingle{}Ringout\textquotesingle{} type only Enum\+: Initiator, Target 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_af4bf3e3bd4b345c79b644bdde08fe117}\label{classRingCentral_1_1ForwardCallPartyResponse_af4bf3e3bd4b345c79b644bdde08fe117}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!standAlone@{standAlone}}
+\index{standAlone@{standAlone}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{standAlone}{standAlone}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Forward\+Call\+Party\+Response.\+stand\+Alone\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If {\ttfamily true} then the party is not connected to a session voice conference, {\ttfamily false} means the party is connected to other parties in a session 
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_a72f307ecbfd896e1bbf730d4edb55a70}\label{classRingCentral_1_1ForwardCallPartyResponse_a72f307ecbfd896e1bbf730d4edb55a70}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!status@{status}}
+\index{status@{status}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallStatusInfo}{Call\+Status\+Info}} Ring\+Central.\+Forward\+Call\+Party\+Response.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ForwardCallPartyResponse_abe51bf26d12f22df133a8b4d18cd4fd2}\label{classRingCentral_1_1ForwardCallPartyResponse_abe51bf26d12f22df133a8b4d18cd4fd2}} 
+\index{RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}!to@{to}}
+\index{to@{to}!RingCentral.ForwardCallPartyResponse@{RingCentral.ForwardCallPartyResponse}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1PartyInfo}{Party\+Info}} Ring\+Central.\+Forward\+Call\+Party\+Response.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Forward\+Call\+Party\+Response.\+cs\end{DoxyCompactItemize}

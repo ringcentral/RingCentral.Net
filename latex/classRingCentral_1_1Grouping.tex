@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1Grouping}{}\doxysection{Ring\+Central.\+Grouping Class Reference}
+\label{classRingCentral_1_1Grouping}\index{RingCentral.Grouping@{RingCentral.Grouping}}
+
+
+This grouping allows to specify the {\ttfamily group\+By\+Members} option. The response data will be grouped by users and will only include users that belong to the scope selected in {\ttfamily group\+By\+Members} field  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1Grouping_af877878e9cca3457f3330bbb2eb59e31}{group\+By}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The selected grouping option Required Enum\+: Company, Company\+Numbers, Users, Queues, IVRs, Shared\+Lines, User\+Groups, Sites, Departments \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1Grouping_a7fab92a354e6c00c0262a5b9031ea40b}{keys}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This field can be used to further limit the users selection by specifying unique identifiers of corresponding entities. For example, providing unique queue ids along with {\ttfamily Queue} in {\ttfamily group\+By\+Members} field will limit the response to users that are queue agents in at least one of these queues \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1Grouping_a98066e1930424fbca1a3042f92b21d34}{group\+By\+Members}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The selected data scope Required Enum\+: Department, User\+Group, Queue, Site \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This grouping allows to specify the {\ttfamily group\+By\+Members} option. The response data will be grouped by users and will only include users that belong to the scope selected in {\ttfamily group\+By\+Members} field 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Grouping_af877878e9cca3457f3330bbb2eb59e31}\label{classRingCentral_1_1Grouping_af877878e9cca3457f3330bbb2eb59e31}} 
+\index{RingCentral.Grouping@{RingCentral.Grouping}!groupBy@{groupBy}}
+\index{groupBy@{groupBy}!RingCentral.Grouping@{RingCentral.Grouping}}
+\doxysubsubsection{\texorpdfstring{groupBy}{groupBy}}
+{\footnotesize\ttfamily string Ring\+Central.\+Grouping.\+group\+By\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The selected grouping option Required Enum\+: Company, Company\+Numbers, Users, Queues, IVRs, Shared\+Lines, User\+Groups, Sites, Departments 
+
+\mbox{\Hypertarget{classRingCentral_1_1Grouping_a98066e1930424fbca1a3042f92b21d34}\label{classRingCentral_1_1Grouping_a98066e1930424fbca1a3042f92b21d34}} 
+\index{RingCentral.Grouping@{RingCentral.Grouping}!groupByMembers@{groupByMembers}}
+\index{groupByMembers@{groupByMembers}!RingCentral.Grouping@{RingCentral.Grouping}}
+\doxysubsubsection{\texorpdfstring{groupByMembers}{groupByMembers}}
+{\footnotesize\ttfamily string Ring\+Central.\+Grouping.\+group\+By\+Members\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The selected data scope Required Enum\+: Department, User\+Group, Queue, Site 
+
+\mbox{\Hypertarget{classRingCentral_1_1Grouping_a7fab92a354e6c00c0262a5b9031ea40b}\label{classRingCentral_1_1Grouping_a7fab92a354e6c00c0262a5b9031ea40b}} 
+\index{RingCentral.Grouping@{RingCentral.Grouping}!keys@{keys}}
+\index{keys@{keys}!RingCentral.Grouping@{RingCentral.Grouping}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Grouping.\+keys\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+This field can be used to further limit the users selection by specifying unique identifiers of corresponding entities. For example, providing unique queue ids along with {\ttfamily Queue} in {\ttfamily group\+By\+Members} field will limit the response to users that are queue agents in at least one of these queues 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Grouping.\+cs\end{DoxyCompactItemize}

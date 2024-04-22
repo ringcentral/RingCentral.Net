@@ -1,0 +1,119 @@
+\hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters}{}\doxysection{Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters Class Reference}
+\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters}\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+
+
+Query parameters for operation list\+Automatic\+Location\+Updates\+Users  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_ac989b8cdfbf20090220786a5aef58dd9}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension type. Multiple values are supported Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Limited \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a6b5864c39e4e0d88c6d3484644b0ed39}{search\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters entries containing the specified substring in user name, extension or department. The characters range is 0-\/64; not case-\/sensitive. If empty then the filter is ignored \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a1d3c6925e71f6ddf2e4ee917e1e9316f}{department}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Department name to filter the users. The value range is 0-\/64; not case-\/sensitive. If not specified then the parameter is ignored. Multiple values are supported \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a24966c5a0f1d0721c4aa3134758b0ae6}{site\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a416e96bfdc3c6a68b294eb1efdbbbd65}{feature\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters entries by their status of Automatic Location Updates feature \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_aca8273e102fc9ab52cd5c9664db897af}{order\+By}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comma-\/separated list of fields to order results prefixed by plus sign \textquotesingle{}+\textquotesingle{} (ascending order) or minus sign \textquotesingle{}-\/\textquotesingle{} (descending order). Supported values\+: \textquotesingle{}name\textquotesingle{}, \textquotesingle{}model\+Name\textquotesingle{}, \textquotesingle{}site\+Name\textquotesingle{}, \textquotesingle{}feature\+Enabled\textquotesingle{}. The default sorting is by {\ttfamily name} \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a504618856862bcf1a020fdffa03031fd}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_ad217a059f96045bca5b653e61df7b08b}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Automatic\+Location\+Updates\+Users 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a1d3c6925e71f6ddf2e4ee917e1e9316f}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a1d3c6925e71f6ddf2e4ee917e1e9316f}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!department@{department}}
+\index{department@{department}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{department}{department}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+department\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Department name to filter the users. The value range is 0-\/64; not case-\/sensitive. If not specified then the parameter is ignored. Multiple values are supported 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a416e96bfdc3c6a68b294eb1efdbbbd65}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a416e96bfdc3c6a68b294eb1efdbbbd65}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!featureEnabled@{featureEnabled}}
+\index{featureEnabled@{featureEnabled}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{featureEnabled}{featureEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+feature\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filters entries by their status of Automatic Location Updates feature 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_aca8273e102fc9ab52cd5c9664db897af}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_aca8273e102fc9ab52cd5c9664db897af}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{orderBy}{orderBy}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+order\+By\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Comma-\/separated list of fields to order results prefixed by plus sign \textquotesingle{}+\textquotesingle{} (ascending order) or minus sign \textquotesingle{}-\/\textquotesingle{} (descending order). Supported values\+: \textquotesingle{}name\textquotesingle{}, \textquotesingle{}model\+Name\textquotesingle{}, \textquotesingle{}site\+Name\textquotesingle{}, \textquotesingle{}feature\+Enabled\textquotesingle{}. The default sorting is by {\ttfamily name} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_ad217a059f96045bca5b653e61df7b08b}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_ad217a059f96045bca5b653e61df7b08b}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!page@{page}}
+\index{page@{page}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a504618856862bcf1a020fdffa03031fd}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a504618856862bcf1a020fdffa03031fd}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a6b5864c39e4e0d88c6d3484644b0ed39}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a6b5864c39e4e0d88c6d3484644b0ed39}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!searchString@{searchString}}
+\index{searchString@{searchString}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{searchString}{searchString}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+search\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filters entries containing the specified substring in user name, extension or department. The characters range is 0-\/64; not case-\/sensitive. If empty then the filter is ignored 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a24966c5a0f1d0721c4aa3134758b0ae6}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_a24966c5a0f1d0721c4aa3134758b0ae6}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!siteId@{siteId}}
+\index{siteId@{siteId}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{siteId}{siteId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+site\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_ac989b8cdfbf20090220786a5aef58dd9}\label{classRingCentral_1_1ListAutomaticLocationUpdatesUsersParameters_ac989b8cdfbf20090220786a5aef58dd9}} 
+\index{RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}!type@{type}}
+\index{type@{type}!RingCentral.ListAutomaticLocationUpdatesUsersParameters@{RingCentral.ListAutomaticLocationUpdatesUsersParameters}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Automatic\+Location\+Updates\+Users\+Parameters.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension type. Multiple values are supported Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Limited 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Automatic\+Location\+Updates\+Users\+Parameters.\+cs\end{DoxyCompactItemize}

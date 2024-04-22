@@ -1,0 +1,141 @@
+\hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest}{}\doxysection{Ring\+Central.\+Account\+History\+Search\+Public\+Request Class Reference}
+\label{classRingCentral_1_1AccountHistorySearchPublicRequest}\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_aa660d2a56929a6bfe85670f6738cd0a7}{event\+Time\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The beginning of the time range to return records in ISO 8601 format in UTC timezone, default is \char`\"{}event\+Time\+From\char`\"{}-\/24 hours Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_ad5cc6e88d4b18c3ad842aa47026ebdce}{event\+Time\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end of the time range to return records in ISO 8601 format in UTC timezone, default is the current time Format\+: date-\/time \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_a16434415f8e3d3590bebe12a403cec42}{initiator\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of extension IDs of change initiators. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_a666e19618365f2d1fec61921a5cd6cbb}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Page number in the result set Format\+: int32 Example\+: 1 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_aa01a9abf03ffaafb1187bf8651b7067d}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of records to be returned per page. Format\+: int32 Example\+: 25 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_a35fc3af69fe4258e594ad1c23850f008}{target\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of extension (user) IDs affected by this action. Example\+: 404611540004 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_a134a60b35d75ae3c33e720658d059c3a}{site\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Site ID to apply as a filter Example\+: 871836004 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_ad7ed44babb05db0b956b369a75fcde6b}{action\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of action IDs (exact keys) to search for (alternatively \char`\"{}exclude\+Action\+Ids\char`\"{} option can be used). Example\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO,CHANGE\+\_\+\+USER\+\_\+\+INFO Enum\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO, CHANGE\+\_\+\+USER\+\_\+\+INFO \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_a576751b61fc81fe6682705e3257f4f7c}{search\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The (sub)string to search, applied to the following fields\+: \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AccountHistorySearchPublicRequest_a923fa865e1c34ecdd0d9b31225a2259a}{exclude\+Action\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of action IDs (exact keys) to exclude from your search (alternatively \char`\"{}action\+Ids\char`\"{} option can be used). Example\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO,CHANGE\+\_\+\+USER\+\_\+\+INFO Enum\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO, CHANGE\+\_\+\+USER\+\_\+\+INFO \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_ad7ed44babb05db0b956b369a75fcde6b}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_ad7ed44babb05db0b956b369a75fcde6b}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!actionIds@{actionIds}}
+\index{actionIds@{actionIds}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{actionIds}{actionIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+action\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of action IDs (exact keys) to search for (alternatively \char`\"{}exclude\+Action\+Ids\char`\"{} option can be used). Example\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO,CHANGE\+\_\+\+USER\+\_\+\+INFO Enum\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO, CHANGE\+\_\+\+USER\+\_\+\+INFO 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_aa660d2a56929a6bfe85670f6738cd0a7}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_aa660d2a56929a6bfe85670f6738cd0a7}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!eventTimeFrom@{eventTimeFrom}}
+\index{eventTimeFrom@{eventTimeFrom}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{eventTimeFrom}{eventTimeFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+event\+Time\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The beginning of the time range to return records in ISO 8601 format in UTC timezone, default is \char`\"{}event\+Time\+From\char`\"{}-\/24 hours Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_ad5cc6e88d4b18c3ad842aa47026ebdce}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_ad5cc6e88d4b18c3ad842aa47026ebdce}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!eventTimeTo@{eventTimeTo}}
+\index{eventTimeTo@{eventTimeTo}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{eventTimeTo}{eventTimeTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+event\+Time\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end of the time range to return records in ISO 8601 format in UTC timezone, default is the current time Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_a923fa865e1c34ecdd0d9b31225a2259a}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_a923fa865e1c34ecdd0d9b31225a2259a}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!excludeActionIds@{excludeActionIds}}
+\index{excludeActionIds@{excludeActionIds}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{excludeActionIds}{excludeActionIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+exclude\+Action\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of action IDs (exact keys) to exclude from your search (alternatively \char`\"{}action\+Ids\char`\"{} option can be used). Example\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO,CHANGE\+\_\+\+USER\+\_\+\+INFO Enum\+: CHANGE\+\_\+\+SECRET\+\_\+\+INFO, CHANGE\+\_\+\+USER\+\_\+\+INFO 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_a16434415f8e3d3590bebe12a403cec42}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_a16434415f8e3d3590bebe12a403cec42}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!initiatorIds@{initiatorIds}}
+\index{initiatorIds@{initiatorIds}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{initiatorIds}{initiatorIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+initiator\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of extension IDs of change initiators. 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_a666e19618365f2d1fec61921a5cd6cbb}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_a666e19618365f2d1fec61921a5cd6cbb}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!page@{page}}
+\index{page@{page}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Page number in the result set Format\+: int32 Example\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_aa01a9abf03ffaafb1187bf8651b7067d}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_aa01a9abf03ffaafb1187bf8651b7067d}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of records to be returned per page. Format\+: int32 Example\+: 25 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_a576751b61fc81fe6682705e3257f4f7c}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_a576751b61fc81fe6682705e3257f4f7c}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!searchString@{searchString}}
+\index{searchString@{searchString}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{searchString}{searchString}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+search\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The (sub)string to search, applied to the following fields\+: 
+
+
+\begin{DoxyItemize}
+\item initiator.\+name
+\item initiator.\+role
+\item initiator.\+extension\+Number
+\item target.\+name
+\item target.\+extension\+Number
+\item details.\+parameters.\+value Example\+: 542617
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_a134a60b35d75ae3c33e720658d059c3a}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_a134a60b35d75ae3c33e720658d059c3a}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!siteId@{siteId}}
+\index{siteId@{siteId}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{siteId}{siteId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+site\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Site ID to apply as a filter Example\+: 871836004 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountHistorySearchPublicRequest_a35fc3af69fe4258e594ad1c23850f008}\label{classRingCentral_1_1AccountHistorySearchPublicRequest_a35fc3af69fe4258e594ad1c23850f008}} 
+\index{RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}!targetIds@{targetIds}}
+\index{targetIds@{targetIds}!RingCentral.AccountHistorySearchPublicRequest@{RingCentral.AccountHistorySearchPublicRequest}}
+\doxysubsubsection{\texorpdfstring{targetIds}{targetIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Account\+History\+Search\+Public\+Request.\+target\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of extension (user) IDs affected by this action. Example\+: 404611540004 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Account\+History\+Search\+Public\+Request.\+cs\end{DoxyCompactItemize}

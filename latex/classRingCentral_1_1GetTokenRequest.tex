@@ -1,0 +1,277 @@
+\hypertarget{classRingCentral_1_1GetTokenRequest}{}\doxysection{Ring\+Central.\+Get\+Token\+Request Class Reference}
+\label{classRingCentral_1_1GetTokenRequest}\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a6170d432c13bb32730c6ea5cb9c6ac44}{username}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily password} grant type only. \mbox{\hyperlink{classRingCentral_1_1User}{User}} login name\+: email or phone number in E.\+164 format \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a28bdfced9e1bb6a42e2926892ce46889}{password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily password} grant type only. \mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s password Format\+: password \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_afb287439548f5908d6ccd0e54e1e1c33}{extension}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily password} grant type only. Optional. Extension short number. If company number is specified as a username, and extension is not specified, the server will attempt to authenticate client as main company administrator DEPRECATED\+: use extension number embedded into username string like {\ttfamily +16501234567$\ast$101} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a3c64dc78870ef3250e0aca9469c36575}{grant\+\_\+type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Grant type Required Enum\+: authorization\+\_\+code, password, refresh\+\_\+token, client\+\_\+credentials, urn\+:ietf\+:params\+:oauth\+:grant-\/type\+:jwt-\/bearer, urn\+:ietf\+:params\+:oauth\+:grant-\/type\+:device\+\_\+code, device\+\_\+certificate, partner\+\_\+jwt, guest, personal\+\_\+jwt, otp, ivr\+\_\+pin \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a8a3c1a9bbdeb8e75d5911571b7e098f6}{code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. \mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s authorization code \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_ab5e9b0623efb8d25569e68879774f5ec}{redirect\+\_\+uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration Format\+: uri \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_aa347e650057cc5b86d898bd9e1309f0d}{access\+\_\+token\+\_\+ttl}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Access token lifetime in seconds Maximum\+: 3600 Minimum\+: 600 Format\+: int32 Default\+: 3600 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a5c02b9bce0d911e834088ed6da28eeac}{refresh\+\_\+token\+\_\+ttl}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Refresh token lifetime in seconds Maximum\+: 604800 Format\+: int32 Default\+: 604800 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_ab479488a3696e3199dd9c6c0a1577bb4}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of application permissions to be used with access token. By default, the scope includes all permissions configured during the application registration phase \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a9482317cdd8884800e80d13de6ef95ce}{refresh\+\_\+token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily refresh\+\_\+token} grant type only. Previously issued refresh token. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_acd794fb60cc1369e6c42db490a6ccbc7}{endpoint\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The unique identifier of a client application instance. If not specified, the derived or auto generated value will be used \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a3a62cc94b00df054078520f0aa12ce2a}{pin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_adfbebf9b630e27385dbc4ba65cf0c2da}{client\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OAuth client identifier (if not specified via {\ttfamily Authorization} header) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a66e1baccfc3070c6d139e8c5babdda5e}{account\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_ab849c1e96e3f6e273fc492c55ea7c12f}{partner\+\_\+account\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a17f1bba05d65ef4f8564accdbd4ce8e8}{client\+\_\+assertion\+\_\+type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Client assertion type \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_acbb53757571aab1c33f8611e35a0b68d}{client\+\_\+assertion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Client assertion \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_aaf129976354a8abd2b0484d7e695dc22}{assertion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily jwt\+\_\+bearer} grant type only. Assertion \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a1b24d629eb737129c8f1246fcb8a384e}{brand\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a6e0296a223abdd632cbcc6d18041b3a0}{code\+\_\+verifier}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em PKCE code verifier \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_a3abc96bd79a58cd5da43c28028e2c841}{device\+\_\+code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetTokenRequest_ac35ced9a8578a4f0d9d4ffc06b2f78fe}{ivr\+\_\+pin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily ivr\+\_\+pin} grant type only. IVR pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_aa347e650057cc5b86d898bd9e1309f0d}\label{classRingCentral_1_1GetTokenRequest_aa347e650057cc5b86d898bd9e1309f0d}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!access\_token\_ttl@{access\_token\_ttl}}
+\index{access\_token\_ttl@{access\_token\_ttl}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{access\_token\_ttl}{access\_token\_ttl}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+Token\+Request.\+access\+\_\+token\+\_\+ttl\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Access token lifetime in seconds Maximum\+: 3600 Minimum\+: 600 Format\+: int32 Default\+: 3600 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a66e1baccfc3070c6d139e8c5babdda5e}\label{classRingCentral_1_1GetTokenRequest_a66e1baccfc3070c6d139e8c5babdda5e}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!account\_id@{account\_id}}
+\index{account\_id@{account\_id}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{account\_id}{account\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+account\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_aaf129976354a8abd2b0484d7e695dc22}\label{classRingCentral_1_1GetTokenRequest_aaf129976354a8abd2b0484d7e695dc22}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!assertion@{assertion}}
+\index{assertion@{assertion}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{assertion}{assertion}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+assertion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily jwt\+\_\+bearer} grant type only. Assertion 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a1b24d629eb737129c8f1246fcb8a384e}\label{classRingCentral_1_1GetTokenRequest_a1b24d629eb737129c8f1246fcb8a384e}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!brand\_id@{brand\_id}}
+\index{brand\_id@{brand\_id}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{brand\_id}{brand\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+brand\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_acbb53757571aab1c33f8611e35a0b68d}\label{classRingCentral_1_1GetTokenRequest_acbb53757571aab1c33f8611e35a0b68d}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!client\_assertion@{client\_assertion}}
+\index{client\_assertion@{client\_assertion}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{client\_assertion}{client\_assertion}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+client\+\_\+assertion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Client assertion 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a17f1bba05d65ef4f8564accdbd4ce8e8}\label{classRingCentral_1_1GetTokenRequest_a17f1bba05d65ef4f8564accdbd4ce8e8}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!client\_assertion\_type@{client\_assertion\_type}}
+\index{client\_assertion\_type@{client\_assertion\_type}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{client\_assertion\_type}{client\_assertion\_type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+client\+\_\+assertion\+\_\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Client assertion type 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_adfbebf9b630e27385dbc4ba65cf0c2da}\label{classRingCentral_1_1GetTokenRequest_adfbebf9b630e27385dbc4ba65cf0c2da}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!client\_id@{client\_id}}
+\index{client\_id@{client\_id}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{client\_id}{client\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+client\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OAuth client identifier (if not specified via {\ttfamily Authorization} header) 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a8a3c1a9bbdeb8e75d5911571b7e098f6}\label{classRingCentral_1_1GetTokenRequest_a8a3c1a9bbdeb8e75d5911571b7e098f6}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!code@{code}}
+\index{code@{code}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily authorization\+\_\+code} grant type only. \mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s authorization code 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a6e0296a223abdd632cbcc6d18041b3a0}\label{classRingCentral_1_1GetTokenRequest_a6e0296a223abdd632cbcc6d18041b3a0}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!code\_verifier@{code\_verifier}}
+\index{code\_verifier@{code\_verifier}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{code\_verifier}{code\_verifier}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+code\+\_\+verifier\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+PKCE code verifier 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a3abc96bd79a58cd5da43c28028e2c841}\label{classRingCentral_1_1GetTokenRequest_a3abc96bd79a58cd5da43c28028e2c841}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!device\_code@{device\_code}}
+\index{device\_code@{device\_code}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{device\_code}{device\_code}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+device\+\_\+code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_acd794fb60cc1369e6c42db490a6ccbc7}\label{classRingCentral_1_1GetTokenRequest_acd794fb60cc1369e6c42db490a6ccbc7}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!endpoint\_id@{endpoint\_id}}
+\index{endpoint\_id@{endpoint\_id}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{endpoint\_id}{endpoint\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+endpoint\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The unique identifier of a client application instance. If not specified, the derived or auto generated value will be used 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_afb287439548f5908d6ccd0e54e1e1c33}\label{classRingCentral_1_1GetTokenRequest_afb287439548f5908d6ccd0e54e1e1c33}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!extension@{extension}}
+\index{extension@{extension}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+extension\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily password} grant type only. Optional. Extension short number. If company number is specified as a username, and extension is not specified, the server will attempt to authenticate client as main company administrator DEPRECATED\+: use extension number embedded into username string like {\ttfamily +16501234567$\ast$101} 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a3c64dc78870ef3250e0aca9469c36575}\label{classRingCentral_1_1GetTokenRequest_a3c64dc78870ef3250e0aca9469c36575}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!grant\_type@{grant\_type}}
+\index{grant\_type@{grant\_type}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{grant\_type}{grant\_type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+grant\+\_\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Grant type Required Enum\+: authorization\+\_\+code, password, refresh\+\_\+token, client\+\_\+credentials, urn\+:ietf\+:params\+:oauth\+:grant-\/type\+:jwt-\/bearer, urn\+:ietf\+:params\+:oauth\+:grant-\/type\+:device\+\_\+code, device\+\_\+certificate, partner\+\_\+jwt, guest, personal\+\_\+jwt, otp, ivr\+\_\+pin 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_ac35ced9a8578a4f0d9d4ffc06b2f78fe}\label{classRingCentral_1_1GetTokenRequest_ac35ced9a8578a4f0d9d4ffc06b2f78fe}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!ivr\_pin@{ivr\_pin}}
+\index{ivr\_pin@{ivr\_pin}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{ivr\_pin}{ivr\_pin}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+ivr\+\_\+pin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily ivr\+\_\+pin} grant type only. IVR pin. 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_ab849c1e96e3f6e273fc492c55ea7c12f}\label{classRingCentral_1_1GetTokenRequest_ab849c1e96e3f6e273fc492c55ea7c12f}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!partner\_account\_id@{partner\_account\_id}}
+\index{partner\_account\_id@{partner\_account\_id}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{partner\_account\_id}{partner\_account\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+partner\+\_\+account\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a28bdfced9e1bb6a42e2926892ce46889}\label{classRingCentral_1_1GetTokenRequest_a28bdfced9e1bb6a42e2926892ce46889}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!password@{password}}
+\index{password@{password}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily password} grant type only. \mbox{\hyperlink{classRingCentral_1_1User}{User}}\textquotesingle{}s password Format\+: password 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a3a62cc94b00df054078520f0aa12ce2a}\label{classRingCentral_1_1GetTokenRequest_a3a62cc94b00df054078520f0aa12ce2a}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!pin@{pin}}
+\index{pin@{pin}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{pin}{pin}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+pin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_ab5e9b0623efb8d25569e68879774f5ec}\label{classRingCentral_1_1GetTokenRequest_ab5e9b0623efb8d25569e68879774f5ec}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!redirect\_uri@{redirect\_uri}}
+\index{redirect\_uri@{redirect\_uri}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{redirect\_uri}{redirect\_uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+redirect\+\_\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily authorization\+\_\+code} grant type only. This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a9482317cdd8884800e80d13de6ef95ce}\label{classRingCentral_1_1GetTokenRequest_a9482317cdd8884800e80d13de6ef95ce}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!refresh\_token@{refresh\_token}}
+\index{refresh\_token@{refresh\_token}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{refresh\_token}{refresh\_token}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+refresh\+\_\+token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily refresh\+\_\+token} grant type only. Previously issued refresh token. 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a5c02b9bce0d911e834088ed6da28eeac}\label{classRingCentral_1_1GetTokenRequest_a5c02b9bce0d911e834088ed6da28eeac}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!refresh\_token\_ttl@{refresh\_token\_ttl}}
+\index{refresh\_token\_ttl@{refresh\_token\_ttl}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{refresh\_token\_ttl}{refresh\_token\_ttl}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+Token\+Request.\+refresh\+\_\+token\+\_\+ttl\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Refresh token lifetime in seconds Maximum\+: 604800 Format\+: int32 Default\+: 604800 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_ab479488a3696e3199dd9c6c0a1577bb4}\label{classRingCentral_1_1GetTokenRequest_ab479488a3696e3199dd9c6c0a1577bb4}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!scope@{scope}}
+\index{scope@{scope}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+scope\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of application permissions to be used with access token. By default, the scope includes all permissions configured during the application registration phase 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetTokenRequest_a6170d432c13bb32730c6ea5cb9c6ac44}\label{classRingCentral_1_1GetTokenRequest_a6170d432c13bb32730c6ea5cb9c6ac44}} 
+\index{RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}!username@{username}}
+\index{username@{username}!RingCentral.GetTokenRequest@{RingCentral.GetTokenRequest}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Token\+Request.\+username\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For {\ttfamily password} grant type only. \mbox{\hyperlink{classRingCentral_1_1User}{User}} login name\+: email or phone number in E.\+164 format 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Get\+Token\+Request.\+cs\end{DoxyCompactItemize}

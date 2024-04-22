@@ -1,0 +1,109 @@
+\hypertarget{classRingCentral_1_1RecordingModel}{}\doxysection{Ring\+Central.\+Recording\+Model Class Reference}
+\label{classRingCentral_1_1RecordingModel}\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingModel_a037fccc360b332baf3b69e924345a5dd}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal object ID Example\+: 78654321 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingModel_add1275360df6092020664cab6370f8c7}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object creation time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingModel_a53b5ba9ad80c203906a20ea8348f92fd}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object last modification time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingModel_abb61a17b3536721fa679c01db56fe157}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} status Required Example\+: Available Enum\+: Processing, Available, Failed, Purged \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ApiError}{Api\+Error}} \mbox{\hyperlink{classRingCentral_1_1RecordingModel_a37876a0515be2b879a9411e1e85d4800}{failure\+Reason}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1RecordingModel_ab8694a3db8302cad3070bb436dd06681}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} duration in seconds Minimum\+: 1 Format\+: int32 Example\+: 3600 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1RecordingModel_af75e1387b208b785a5ad5374824a6335}{shared}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if \mbox{\hyperlink{classRingCentral_1_1Host}{Host}} or Admin has shared a recording. Can be set to true only then recording status is \textquotesingle{}Available\textquotesingle{}. Example\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1RecordingModel_af2e55eeebc0188156096edd5c471f601}{shared\+Uri\+Expiration\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time after which recording shared link cannot be accessed by recipients. Format\+: date-\/time Example\+: 2023-\/10-\/01T10\+:05\+:00.\+000Z \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_add1275360df6092020664cab6370f8c7}\label{classRingCentral_1_1RecordingModel_add1275360df6092020664cab6370f8c7}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Model.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object creation time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_ab8694a3db8302cad3070bb436dd06681}\label{classRingCentral_1_1RecordingModel_ab8694a3db8302cad3070bb436dd06681}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!duration@{duration}}
+\index{duration@{duration}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Recording\+Model.\+duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} duration in seconds Minimum\+: 1 Format\+: int32 Example\+: 3600 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_a37876a0515be2b879a9411e1e85d4800}\label{classRingCentral_1_1RecordingModel_a37876a0515be2b879a9411e1e85d4800}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!failureReason@{failureReason}}
+\index{failureReason@{failureReason}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{failureReason}{failureReason}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ApiError}{Api\+Error}} Ring\+Central.\+Recording\+Model.\+failure\+Reason\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_a037fccc360b332baf3b69e924345a5dd}\label{classRingCentral_1_1RecordingModel_a037fccc360b332baf3b69e924345a5dd}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!id@{id}}
+\index{id@{id}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Model.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal object ID Example\+: 78654321 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_a53b5ba9ad80c203906a20ea8348f92fd}\label{classRingCentral_1_1RecordingModel_a53b5ba9ad80c203906a20ea8348f92fd}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Model.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object last modification time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_af75e1387b208b785a5ad5374824a6335}\label{classRingCentral_1_1RecordingModel_af75e1387b208b785a5ad5374824a6335}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!shared@{shared}}
+\index{shared@{shared}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{shared}{shared}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Recording\+Model.\+shared\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if \mbox{\hyperlink{classRingCentral_1_1Host}{Host}} or Admin has shared a recording. Can be set to true only then recording status is \textquotesingle{}Available\textquotesingle{}. Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_af2e55eeebc0188156096edd5c471f601}\label{classRingCentral_1_1RecordingModel_af2e55eeebc0188156096edd5c471f601}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!sharedUriExpirationTime@{sharedUriExpirationTime}}
+\index{sharedUriExpirationTime@{sharedUriExpirationTime}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{sharedUriExpirationTime}{sharedUriExpirationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Model.\+shared\+Uri\+Expiration\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Time after which recording shared link cannot be accessed by recipients. Format\+: date-\/time Example\+: 2023-\/10-\/01T10\+:05\+:00.\+000Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1RecordingModel_abb61a17b3536721fa679c01db56fe157}\label{classRingCentral_1_1RecordingModel_abb61a17b3536721fa679c01db56fe157}} 
+\index{RingCentral.RecordingModel@{RingCentral.RecordingModel}!status@{status}}
+\index{status@{status}!RingCentral.RecordingModel@{RingCentral.RecordingModel}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Recording\+Model.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{classRingCentral_1_1Recording}{Recording}} status Required Example\+: Available Enum\+: Processing, Available, Failed, Purged 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Recording\+Model.\+cs\end{DoxyCompactItemize}

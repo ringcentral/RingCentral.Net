@@ -1,0 +1,241 @@
+\hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse}{}\doxysection{Ring\+Central.\+Get\+SMSMessage\+Info\+Response Class Reference}
+\label{classRingCentral_1_1GetSMSMessageInfoResponse}\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a58d230e237c2e092daf96f5c4a5ac6e6}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a8d92908de5da09725e57d78eab79a033}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of a message Format\+: uri \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_ad9b1645192f0adae95fd040b407a8abf}{attachments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of message attachments \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a0fe9baac69d931908301078126cf4b8f}{availability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a2b4dcd69d4ddcd042c103cd94a0c9aa8}{conversation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS and Pager only. Identifier of a conversation that the message belongs to Format\+: int64 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ConversationInfo}{Conversation\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_acaeef117e129908f0ebdb0e0bb2b3303}{conversation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a89040e7da04107dc8a26485d0a10b30f}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_ad5d19c1aa5ec370fcb0213292b8809a3}{delivery\+Error\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS only. Delivery error code returned by gateway \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_afecea31296c0a89a2fda473b59b42668}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseFrom}{Message\+Store\+Caller\+Info\+Response\+From}} \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a4c310323256d630399c01740eb975d84}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_ac4a60bc31c58f6630e00a6850d99f298}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Date/time when the message was modified on server in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a70ff5dfce17e08f776b6443870185482}{message\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_af24d75d2e54c7e22b4ab07f1ba606182}{priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message priority Enum\+: Normal, High \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a2af6f6c952ddadd28cd33beee37295e9}{read\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message read status Enum\+: Read, Unread \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a85854515a2fdf591acb2349f4d96fc81}{sms\+Delivery\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS only. The date/time when outbound SMS was delivered to recipient\textquotesingle{}s handset in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. It is filled only if the carrier sends a delivery receipt to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_a2b8e3bd3a81a0d5f87973833094e4204}{sms\+Sending\+Attempts\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS only. Number of attempts made to send an outbound SMS to the Gateway (if Gateway is temporary unavailable) Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_afbe72584327a89f7fc6e05267908f0ef}{subject}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseTo}{Message\+Store\+Caller\+Info\+Response\+To}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_aebe08af3d7b106403b332a74c65c1c11}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Recipient information \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse_acb88fda89480a96e1ec98304783cfa36}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message type Enum\+: Fax, SMS, Voice\+Mail, Pager, Text \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_ad9b1645192f0adae95fd040b407a8abf}\label{classRingCentral_1_1GetSMSMessageInfoResponse_ad9b1645192f0adae95fd040b407a8abf}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!attachments@{attachments}}
+\index{attachments@{attachments}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{attachments}{attachments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+attachments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of message attachments 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a0fe9baac69d931908301078126cf4b8f}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a0fe9baac69d931908301078126cf4b8f}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!availability@{availability}}
+\index{availability@{availability}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{availability}{availability}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+availability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message availability status. Message in \textquotesingle{}Deleted\textquotesingle{} state is still preserved with all its attachments and can be restored. \textquotesingle{}Purged\textquotesingle{} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_acaeef117e129908f0ebdb0e0bb2b3303}\label{classRingCentral_1_1GetSMSMessageInfoResponse_acaeef117e129908f0ebdb0e0bb2b3303}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!conversation@{conversation}}
+\index{conversation@{conversation}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{conversation}{conversation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ConversationInfo}{Conversation\+Info}} Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+conversation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a2b4dcd69d4ddcd042c103cd94a0c9aa8}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a2b4dcd69d4ddcd042c103cd94a0c9aa8}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!conversationId@{conversationId}}
+\index{conversationId@{conversationId}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{conversationId}{conversationId}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+conversation\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SMS and Pager only. Identifier of a conversation that the message belongs to Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a89040e7da04107dc8a26485d0a10b30f}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a89040e7da04107dc8a26485d0a10b30f}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_ad5d19c1aa5ec370fcb0213292b8809a3}\label{classRingCentral_1_1GetSMSMessageInfoResponse_ad5d19c1aa5ec370fcb0213292b8809a3}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!deliveryErrorCode@{deliveryErrorCode}}
+\index{deliveryErrorCode@{deliveryErrorCode}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{deliveryErrorCode}{deliveryErrorCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+delivery\+Error\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SMS only. Delivery error code returned by gateway 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_afecea31296c0a89a2fda473b59b42668}\label{classRingCentral_1_1GetSMSMessageInfoResponse_afecea31296c0a89a2fda473b59b42668}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!direction@{direction}}
+\index{direction@{direction}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a4c310323256d630399c01740eb975d84}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a4c310323256d630399c01740eb975d84}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!from@{from}}
+\index{from@{from}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseFrom}{Message\+Store\+Caller\+Info\+Response\+From}} Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a58d230e237c2e092daf96f5c4a5ac6e6}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a58d230e237c2e092daf96f5c4a5ac6e6}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!id@{id}}
+\index{id@{id}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a message Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_ac4a60bc31c58f6630e00a6850d99f298}\label{classRingCentral_1_1GetSMSMessageInfoResponse_ac4a60bc31c58f6630e00a6850d99f298}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Date/time when the message was modified on server in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a70ff5dfce17e08f776b6443870185482}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a70ff5dfce17e08f776b6443870185482}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!messageStatus@{messageStatus}}
+\index{messageStatus@{messageStatus}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{messageStatus}{messageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+message\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for outbound message, a status for at least one recipient is \textquotesingle{}Queued\textquotesingle{}, then the \textquotesingle{}Queued\textquotesingle{} value is returned. If a status for at least one recipient is \textquotesingle{}Sending\+Failed\textquotesingle{}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases the \textquotesingle{}Sent\textquotesingle{} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_af24d75d2e54c7e22b4ab07f1ba606182}\label{classRingCentral_1_1GetSMSMessageInfoResponse_af24d75d2e54c7e22b4ab07f1ba606182}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!priority@{priority}}
+\index{priority@{priority}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+priority\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message priority Enum\+: Normal, High 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a2af6f6c952ddadd28cd33beee37295e9}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a2af6f6c952ddadd28cd33beee37295e9}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!readStatus@{readStatus}}
+\index{readStatus@{readStatus}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{readStatus}{readStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+read\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message read status Enum\+: Read, Unread 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a85854515a2fdf591acb2349f4d96fc81}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a85854515a2fdf591acb2349f4d96fc81}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!smsDeliveryTime@{smsDeliveryTime}}
+\index{smsDeliveryTime@{smsDeliveryTime}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{smsDeliveryTime}{smsDeliveryTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+sms\+Delivery\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SMS only. The date/time when outbound SMS was delivered to recipient\textquotesingle{}s handset in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. It is filled only if the carrier sends a delivery receipt to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a2b8e3bd3a81a0d5f87973833094e4204}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a2b8e3bd3a81a0d5f87973833094e4204}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!smsSendingAttemptsCount@{smsSendingAttemptsCount}}
+\index{smsSendingAttemptsCount@{smsSendingAttemptsCount}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{smsSendingAttemptsCount}{smsSendingAttemptsCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+sms\+Sending\+Attempts\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+SMS only. Number of attempts made to send an outbound SMS to the Gateway (if Gateway is temporary unavailable) Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_afbe72584327a89f7fc6e05267908f0ef}\label{classRingCentral_1_1GetSMSMessageInfoResponse_afbe72584327a89f7fc6e05267908f0ef}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!subject@{subject}}
+\index{subject@{subject}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{subject}{subject}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+subject\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_aebe08af3d7b106403b332a74c65c1c11}\label{classRingCentral_1_1GetSMSMessageInfoResponse_aebe08af3d7b106403b332a74c65c1c11}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!to@{to}}
+\index{to@{to}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseTo}{Message\+Store\+Caller\+Info\+Response\+To}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Recipient information 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_acb88fda89480a96e1ec98304783cfa36}\label{classRingCentral_1_1GetSMSMessageInfoResponse_acb88fda89480a96e1ec98304783cfa36}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!type@{type}}
+\index{type@{type}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Message type Enum\+: Fax, SMS, Voice\+Mail, Pager, Text 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetSMSMessageInfoResponse_a8d92908de5da09725e57d78eab79a033}\label{classRingCentral_1_1GetSMSMessageInfoResponse_a8d92908de5da09725e57d78eab79a033}} 
+\index{RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}!uri@{uri}}
+\index{uri@{uri}!RingCentral.GetSMSMessageInfoResponse@{RingCentral.GetSMSMessageInfoResponse}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+SMSMessage\+Info\+Response.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of a message Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Get\+SMSMessage\+Info\+Response.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+\hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers}{}\doxysection{Ring\+Central.\+Aggregation\+Response\+Options\+Timers Class Reference}
+\label{classRingCentral_1_1AggregationResponseOptionsTimers}\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+
+
+The formula is defined by {\ttfamily aggregation\+Type} and {\ttfamily aggregation\+Interval} for every timer individually. If {\ttfamily aggregation\+Type} is {\ttfamily Sum} or {\ttfamily Percent}, {\ttfamily aggregation\+Interval} is not supported. If {\ttfamily aggregation\+Type} is {\ttfamily Min}, {\ttfamily Max} or {\ttfamily Average}, {\ttfamily aggregation\+Interval} is supported, but not required. If left empty, aggregation will be performed on per-\/call basis  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersAllCallsDuration}{Aggregation\+Response\+Options\+Timers\+All\+Calls\+Duration}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_ab1ca7ab13fb870a97204311db692a5e6}{all\+Calls\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of all calls duration \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByDirection}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Direction}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_afcb9455606f1585e238012f26ef198c9}{calls\+Duration\+By\+Direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by direction (Inbound, Outbound) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByOrigin}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Origin}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_a974d0207576c7d0769c56f36308941e4}{calls\+Duration\+By\+Origin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by origin (Internal, External) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByResponse}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Response}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_a5347163aa70a3f9dc65e7b99cfa7c655}{calls\+Duration\+By\+Response}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by response (Answered, Not\+Answered, Connected, Not\+Connected) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsSegmentsDuration}{Aggregation\+Response\+Options\+Timers\+Calls\+Segments\+Duration}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_a1da7a082840b0ca8e4be35e7e0cff77e}{calls\+Segments\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by segments (Ringing, Live\+Talk, Hold, Park, Transfer, Ivr\+Prompt, Voicemail, Vm\+Greeting, Setup) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByResult}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Result}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_a489779b0c4d5477192ebdc377f350a8c}{calls\+Duration\+By\+Result}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByCompanyHours}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Company\+Hours}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_ab481bb2648d073c120efab7c11f79a36}{calls\+Duration\+By\+Company\+Hours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by company hours (Business\+Hours, After\+Hours) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByQueueSla}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Queue\+Sla}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_ae4c0e03ae87cb29d3ee8c2f5969d1c78}{calls\+Duration\+By\+Queue\+Sla}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by queue SLA (In\+SLA, Out\+SLA). This timer is only applicable to Queues grouping \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByType}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Type}} \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimers_a3e511ef8a97b030e840fe25aa937d130}{calls\+Duration\+By\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregation of calls duration by type (Direct, From\+Queue, Park\+Retrieval, Transferred, Outbound) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The formula is defined by {\ttfamily aggregation\+Type} and {\ttfamily aggregation\+Interval} for every timer individually. If {\ttfamily aggregation\+Type} is {\ttfamily Sum} or {\ttfamily Percent}, {\ttfamily aggregation\+Interval} is not supported. If {\ttfamily aggregation\+Type} is {\ttfamily Min}, {\ttfamily Max} or {\ttfamily Average}, {\ttfamily aggregation\+Interval} is supported, but not required. If left empty, aggregation will be performed on per-\/call basis 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_ab1ca7ab13fb870a97204311db692a5e6}\label{classRingCentral_1_1AggregationResponseOptionsTimers_ab1ca7ab13fb870a97204311db692a5e6}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!allCallsDuration@{allCallsDuration}}
+\index{allCallsDuration@{allCallsDuration}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{allCallsDuration}{allCallsDuration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersAllCallsDuration}{Aggregation\+Response\+Options\+Timers\+All\+Calls\+Duration}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+all\+Calls\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of all calls duration 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_ab481bb2648d073c120efab7c11f79a36}\label{classRingCentral_1_1AggregationResponseOptionsTimers_ab481bb2648d073c120efab7c11f79a36}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsDurationByCompanyHours@{callsDurationByCompanyHours}}
+\index{callsDurationByCompanyHours@{callsDurationByCompanyHours}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsDurationByCompanyHours}{callsDurationByCompanyHours}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByCompanyHours}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Company\+Hours}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Duration\+By\+Company\+Hours\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by company hours (Business\+Hours, After\+Hours) 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_afcb9455606f1585e238012f26ef198c9}\label{classRingCentral_1_1AggregationResponseOptionsTimers_afcb9455606f1585e238012f26ef198c9}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsDurationByDirection@{callsDurationByDirection}}
+\index{callsDurationByDirection@{callsDurationByDirection}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsDurationByDirection}{callsDurationByDirection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByDirection}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Direction}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Duration\+By\+Direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by direction (Inbound, Outbound) 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_a974d0207576c7d0769c56f36308941e4}\label{classRingCentral_1_1AggregationResponseOptionsTimers_a974d0207576c7d0769c56f36308941e4}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsDurationByOrigin@{callsDurationByOrigin}}
+\index{callsDurationByOrigin@{callsDurationByOrigin}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsDurationByOrigin}{callsDurationByOrigin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByOrigin}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Origin}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Duration\+By\+Origin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by origin (Internal, External) 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_ae4c0e03ae87cb29d3ee8c2f5969d1c78}\label{classRingCentral_1_1AggregationResponseOptionsTimers_ae4c0e03ae87cb29d3ee8c2f5969d1c78}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsDurationByQueueSla@{callsDurationByQueueSla}}
+\index{callsDurationByQueueSla@{callsDurationByQueueSla}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsDurationByQueueSla}{callsDurationByQueueSla}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByQueueSla}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Queue\+Sla}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Duration\+By\+Queue\+Sla\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by queue SLA (In\+SLA, Out\+SLA). This timer is only applicable to Queues grouping 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_a5347163aa70a3f9dc65e7b99cfa7c655}\label{classRingCentral_1_1AggregationResponseOptionsTimers_a5347163aa70a3f9dc65e7b99cfa7c655}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsDurationByResponse@{callsDurationByResponse}}
+\index{callsDurationByResponse@{callsDurationByResponse}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsDurationByResponse}{callsDurationByResponse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByResponse}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Response}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Duration\+By\+Response\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by response (Answered, Not\+Answered, Connected, Not\+Connected) 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_a489779b0c4d5477192ebdc377f350a8c}\label{classRingCentral_1_1AggregationResponseOptionsTimers_a489779b0c4d5477192ebdc377f350a8c}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsDurationByResult@{callsDurationByResult}}
+\index{callsDurationByResult@{callsDurationByResult}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsDurationByResult}{callsDurationByResult}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByResult}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Result}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Duration\+By\+Result\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted) 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_a3e511ef8a97b030e840fe25aa937d130}\label{classRingCentral_1_1AggregationResponseOptionsTimers_a3e511ef8a97b030e840fe25aa937d130}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsDurationByType@{callsDurationByType}}
+\index{callsDurationByType@{callsDurationByType}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsDurationByType}{callsDurationByType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsDurationByType}{Aggregation\+Response\+Options\+Timers\+Calls\+Duration\+By\+Type}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Duration\+By\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by type (Direct, From\+Queue, Park\+Retrieval, Transferred, Outbound) 
+
+\mbox{\Hypertarget{classRingCentral_1_1AggregationResponseOptionsTimers_a1da7a082840b0ca8e4be35e7e0cff77e}\label{classRingCentral_1_1AggregationResponseOptionsTimers_a1da7a082840b0ca8e4be35e7e0cff77e}} 
+\index{RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}!callsSegmentsDuration@{callsSegmentsDuration}}
+\index{callsSegmentsDuration@{callsSegmentsDuration}!RingCentral.AggregationResponseOptionsTimers@{RingCentral.AggregationResponseOptionsTimers}}
+\doxysubsubsection{\texorpdfstring{callsSegmentsDuration}{callsSegmentsDuration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AggregationResponseOptionsTimersCallsSegmentsDuration}{Aggregation\+Response\+Options\+Timers\+Calls\+Segments\+Duration}} Ring\+Central.\+Aggregation\+Response\+Options\+Timers.\+calls\+Segments\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregation of calls duration by segments (Ringing, Live\+Talk, Hold, Park, Transfer, Ivr\+Prompt, Voicemail, Vm\+Greeting, Setup) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Aggregation\+Response\+Options\+Timers.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters}{}\doxysection{Ring\+Central.\+Timeline\+Response\+Options\+Counters Class Reference}
+\label{classRingCentral_1_1TimelineResponseOptionsCounters}\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+
+
+Options for selecting breakdown for calls count  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_a52b1a2feae40798b274739ae925648d1}{all\+Calls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include data for total calls count \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_a908103ad7663652edb576b926183207c}{calls\+By\+Direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by direction (Inbound, Outbound) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_ad865d3075fa52ce52b8c9841998341a2}{calls\+By\+Origin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by origin (Internal, External) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_a460c15e84dabc578ad8580fee9cc7627}{calls\+By\+Response}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by response (Answered, Not\+Answered, Connected, Not\+Connected) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_acc2deaec0bf9d03617ace3d1ae3bc121}{calls\+Segments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by segments (Ringing, Live\+Talk, Hold, Park, Transfer, Ivr\+Prompt, Voicemail, Vm\+Greeting, Setup) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_abf2963371b1604f2ddc1e811cdb3755b}{calls\+By\+Result}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_a3252032289a0b052ce7c6efcf5d6ed53}{calls\+By\+Company\+Hours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by company hours (Business\+Hours, After\+Hours) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_a9c7d1bc36d9463a2bfeef7227fc76067}{calls\+By\+Queue\+Sla}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by queue SLA (In\+SLA, Out\+SLA). This counter is only applicable to Queues grouping \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_a23d2cb05ea6ee72a34b5f627abbfd461}{calls\+By\+Actions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by action (Hold\+Off, Hold\+On, Park\+On, Park\+Off, Blind\+Transfer, Warm\+Transfer, DTMFTransfer) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_a81a94b809e8e06a8574f96d883edaa2a}{calls\+By\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by type (Direct, From\+Queue, Park\+Retrieval, Transferred, Outbound) \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1TimelineResponseOptionsCounters_af454079a72750d870efede4a99a70185}{queue\+Opportunities}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include breakdown of calls count by the total number of times a Queue call was presented to the user. It is limited to {\ttfamily group\+By} Users and {\ttfamily group\+By\+Members} (Department, Queue, Site, User\+Group) grouping. Only the listed below options for call filters are applicable to {\ttfamily queue\+Opportunities} and provide meaningful results\+: {\ttfamily queues} (selected queue extension ids), {\ttfamily call\+Results} (Missed, Abandoned), {\ttfamily call\+Responses} (Answered, Not\+Answered), {\ttfamily origins} (Internal, External) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Options for selecting breakdown for calls count 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_a52b1a2feae40798b274739ae925648d1}\label{classRingCentral_1_1TimelineResponseOptionsCounters_a52b1a2feae40798b274739ae925648d1}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!allCalls@{allCalls}}
+\index{allCalls@{allCalls}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{allCalls}{allCalls}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+all\+Calls\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include data for total calls count 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_a23d2cb05ea6ee72a34b5f627abbfd461}\label{classRingCentral_1_1TimelineResponseOptionsCounters_a23d2cb05ea6ee72a34b5f627abbfd461}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByActions@{callsByActions}}
+\index{callsByActions@{callsByActions}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByActions}{callsByActions}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Actions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by action (Hold\+Off, Hold\+On, Park\+On, Park\+Off, Blind\+Transfer, Warm\+Transfer, DTMFTransfer) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_a3252032289a0b052ce7c6efcf5d6ed53}\label{classRingCentral_1_1TimelineResponseOptionsCounters_a3252032289a0b052ce7c6efcf5d6ed53}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByCompanyHours@{callsByCompanyHours}}
+\index{callsByCompanyHours@{callsByCompanyHours}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByCompanyHours}{callsByCompanyHours}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Company\+Hours\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by company hours (Business\+Hours, After\+Hours) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_a908103ad7663652edb576b926183207c}\label{classRingCentral_1_1TimelineResponseOptionsCounters_a908103ad7663652edb576b926183207c}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByDirection@{callsByDirection}}
+\index{callsByDirection@{callsByDirection}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByDirection}{callsByDirection}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by direction (Inbound, Outbound) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_ad865d3075fa52ce52b8c9841998341a2}\label{classRingCentral_1_1TimelineResponseOptionsCounters_ad865d3075fa52ce52b8c9841998341a2}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByOrigin@{callsByOrigin}}
+\index{callsByOrigin@{callsByOrigin}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByOrigin}{callsByOrigin}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Origin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by origin (Internal, External) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_a9c7d1bc36d9463a2bfeef7227fc76067}\label{classRingCentral_1_1TimelineResponseOptionsCounters_a9c7d1bc36d9463a2bfeef7227fc76067}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByQueueSla@{callsByQueueSla}}
+\index{callsByQueueSla@{callsByQueueSla}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByQueueSla}{callsByQueueSla}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Queue\+Sla\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by queue SLA (In\+SLA, Out\+SLA). This counter is only applicable to Queues grouping 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_a460c15e84dabc578ad8580fee9cc7627}\label{classRingCentral_1_1TimelineResponseOptionsCounters_a460c15e84dabc578ad8580fee9cc7627}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByResponse@{callsByResponse}}
+\index{callsByResponse@{callsByResponse}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByResponse}{callsByResponse}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Response\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by response (Answered, Not\+Answered, Connected, Not\+Connected) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_abf2963371b1604f2ddc1e811cdb3755b}\label{classRingCentral_1_1TimelineResponseOptionsCounters_abf2963371b1604f2ddc1e811cdb3755b}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByResult@{callsByResult}}
+\index{callsByResult@{callsByResult}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByResult}{callsByResult}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Result\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_a81a94b809e8e06a8574f96d883edaa2a}\label{classRingCentral_1_1TimelineResponseOptionsCounters_a81a94b809e8e06a8574f96d883edaa2a}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsByType@{callsByType}}
+\index{callsByType@{callsByType}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsByType}{callsByType}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+By\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by type (Direct, From\+Queue, Park\+Retrieval, Transferred, Outbound) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_acc2deaec0bf9d03617ace3d1ae3bc121}\label{classRingCentral_1_1TimelineResponseOptionsCounters_acc2deaec0bf9d03617ace3d1ae3bc121}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!callsSegments@{callsSegments}}
+\index{callsSegments@{callsSegments}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{callsSegments}{callsSegments}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+calls\+Segments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by segments (Ringing, Live\+Talk, Hold, Park, Transfer, Ivr\+Prompt, Voicemail, Vm\+Greeting, Setup) 
+
+\mbox{\Hypertarget{classRingCentral_1_1TimelineResponseOptionsCounters_af454079a72750d870efede4a99a70185}\label{classRingCentral_1_1TimelineResponseOptionsCounters_af454079a72750d870efede4a99a70185}} 
+\index{RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}!queueOpportunities@{queueOpportunities}}
+\index{queueOpportunities@{queueOpportunities}!RingCentral.TimelineResponseOptionsCounters@{RingCentral.TimelineResponseOptionsCounters}}
+\doxysubsubsection{\texorpdfstring{queueOpportunities}{queueOpportunities}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Timeline\+Response\+Options\+Counters.\+queue\+Opportunities\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include breakdown of calls count by the total number of times a Queue call was presented to the user. It is limited to {\ttfamily group\+By} Users and {\ttfamily group\+By\+Members} (Department, Queue, Site, User\+Group) grouping. Only the listed below options for call filters are applicable to {\ttfamily queue\+Opportunities} and provide meaningful results\+: {\ttfamily queues} (selected queue extension ids), {\ttfamily call\+Results} (Missed, Abandoned), {\ttfamily call\+Responses} (Answered, Not\+Answered), {\ttfamily origins} (Internal, External) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Timeline\+Response\+Options\+Counters.\+cs\end{DoxyCompactItemize}

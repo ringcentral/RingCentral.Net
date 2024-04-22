@@ -1,0 +1,145 @@
+\hypertarget{classRingCentral_1_1InteractionInput}{}\doxysection{Ring\+Central.\+Interaction\+Input Class Reference}
+\label{classRingCentral_1_1InteractionInput}\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1InteractionInput_a66e1e47a1fc51c84400be68dc50f207f}{content\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Publicly facing uri Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InteractionInput_a5f9555f501228beb0f6dc2c7f682b206}{encoding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The encoding of the original audio Required Example\+: Wav Enum\+: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InteractionInput_a18b2e5f3a3e1be102192e642d5f30afc}{language\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Language spoken in the audio file. Required Example\+: en-\/\+US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InteractionInput_aea9d2529e35c06ef0580d8bfa6d1ce55}{source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Source of the audio file eg\+: Phone, \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}}, Google\+Meet, Zoom etc Example\+: \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1InteractionInput_af49491801585b329f954be40e3d738ad}{audio\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the audio Example\+: Call\+Center Enum\+: Call\+Center, \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Earnings\+Calls, Interview, Press\+Conference, Voicemail \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1InteractionInput_ab38db4b0173126b6344870c87ac6f37b}{separate\+Speaker\+Per\+Channel}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to True if the input audio is multi-\/channel and each channel has a separate speaker. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1InteractionInput_abddf2557fc56a3e1444bbb0bbfd5af16}{speaker\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of speakers in the file, omit parameter if unknown Format\+: int32 Example\+: 2 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1InteractionInput_a05ae90ee61d19f4b596c641b543018f6}{speaker\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional set of speakers to be identified from the call. Example\+: speaker\+Id1,speaker\+Id2 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1InteractionInput_ab5678e8855d93dbad02c74e87326cee0}{enable\+Voice\+Activity\+Detection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Apply voice activity detection. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1InteractionInput_ad60b9b761ce7d2a8db94daaf2ba39314}{insights}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: All, Key\+Phrases, Emotion, Abstractive\+Summary\+Long, Abstractive\+Summary\+Short, Extractive\+Summary, Topics, Talk\+To\+Listen\+Ratio, Energy, Pace, Questions\+Asked \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1SpeechContextPhrasesInput}{Speech\+Context\+Phrases\+Input}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1InteractionInput_aa5a452eebc1a1f8bc6affe1b12a2dff2}{speech\+Contexts}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_af49491801585b329f954be40e3d738ad}\label{classRingCentral_1_1InteractionInput_af49491801585b329f954be40e3d738ad}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!audioType@{audioType}}
+\index{audioType@{audioType}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{audioType}{audioType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Interaction\+Input.\+audio\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of the audio Example\+: Call\+Center Enum\+: Call\+Center, \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Earnings\+Calls, Interview, Press\+Conference, Voicemail 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_a66e1e47a1fc51c84400be68dc50f207f}\label{classRingCentral_1_1InteractionInput_a66e1e47a1fc51c84400be68dc50f207f}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!contentUri@{contentUri}}
+\index{contentUri@{contentUri}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{contentUri}{contentUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Interaction\+Input.\+content\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Publicly facing uri Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_ab5678e8855d93dbad02c74e87326cee0}\label{classRingCentral_1_1InteractionInput_ab5678e8855d93dbad02c74e87326cee0}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!enableVoiceActivityDetection@{enableVoiceActivityDetection}}
+\index{enableVoiceActivityDetection@{enableVoiceActivityDetection}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{enableVoiceActivityDetection}{enableVoiceActivityDetection}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Interaction\+Input.\+enable\+Voice\+Activity\+Detection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Apply voice activity detection. 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_a5f9555f501228beb0f6dc2c7f682b206}\label{classRingCentral_1_1InteractionInput_a5f9555f501228beb0f6dc2c7f682b206}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!encoding@{encoding}}
+\index{encoding@{encoding}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{encoding}{encoding}}
+{\footnotesize\ttfamily string Ring\+Central.\+Interaction\+Input.\+encoding\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The encoding of the original audio Required Example\+: Wav Enum\+: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_ad60b9b761ce7d2a8db94daaf2ba39314}\label{classRingCentral_1_1InteractionInput_ad60b9b761ce7d2a8db94daaf2ba39314}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!insights@{insights}}
+\index{insights@{insights}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{insights}{insights}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Interaction\+Input.\+insights\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: All, Key\+Phrases, Emotion, Abstractive\+Summary\+Long, Abstractive\+Summary\+Short, Extractive\+Summary, Topics, Talk\+To\+Listen\+Ratio, Energy, Pace, Questions\+Asked 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_a18b2e5f3a3e1be102192e642d5f30afc}\label{classRingCentral_1_1InteractionInput_a18b2e5f3a3e1be102192e642d5f30afc}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!languageCode@{languageCode}}
+\index{languageCode@{languageCode}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{languageCode}{languageCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Interaction\+Input.\+language\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Language spoken in the audio file. Required Example\+: en-\/\+US 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_ab38db4b0173126b6344870c87ac6f37b}\label{classRingCentral_1_1InteractionInput_ab38db4b0173126b6344870c87ac6f37b}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!separateSpeakerPerChannel@{separateSpeakerPerChannel}}
+\index{separateSpeakerPerChannel@{separateSpeakerPerChannel}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{separateSpeakerPerChannel}{separateSpeakerPerChannel}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Interaction\+Input.\+separate\+Speaker\+Per\+Channel\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Set to True if the input audio is multi-\/channel and each channel has a separate speaker. 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_aea9d2529e35c06ef0580d8bfa6d1ce55}\label{classRingCentral_1_1InteractionInput_aea9d2529e35c06ef0580d8bfa6d1ce55}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!source@{source}}
+\index{source@{source}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily string Ring\+Central.\+Interaction\+Input.\+source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Source of the audio file eg\+: Phone, \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}}, Google\+Meet, Zoom etc Example\+: \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_abddf2557fc56a3e1444bbb0bbfd5af16}\label{classRingCentral_1_1InteractionInput_abddf2557fc56a3e1444bbb0bbfd5af16}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!speakerCount@{speakerCount}}
+\index{speakerCount@{speakerCount}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{speakerCount}{speakerCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Interaction\+Input.\+speaker\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of speakers in the file, omit parameter if unknown Format\+: int32 Example\+: 2 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_a05ae90ee61d19f4b596c641b543018f6}\label{classRingCentral_1_1InteractionInput_a05ae90ee61d19f4b596c641b543018f6}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!speakerIds@{speakerIds}}
+\index{speakerIds@{speakerIds}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{speakerIds}{speakerIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Interaction\+Input.\+speaker\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional set of speakers to be identified from the call. Example\+: speaker\+Id1,speaker\+Id2 
+
+\mbox{\Hypertarget{classRingCentral_1_1InteractionInput_aa5a452eebc1a1f8bc6affe1b12a2dff2}\label{classRingCentral_1_1InteractionInput_aa5a452eebc1a1f8bc6affe1b12a2dff2}} 
+\index{RingCentral.InteractionInput@{RingCentral.InteractionInput}!speechContexts@{speechContexts}}
+\index{speechContexts@{speechContexts}!RingCentral.InteractionInput@{RingCentral.InteractionInput}}
+\doxysubsubsection{\texorpdfstring{speechContexts}{speechContexts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1SpeechContextPhrasesInput}{Speech\+Context\+Phrases\+Input}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Interaction\+Input.\+speech\+Contexts\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Interaction\+Input.\+cs\end{DoxyCompactItemize}

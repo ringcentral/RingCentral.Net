@@ -1,0 +1,121 @@
+\hypertarget{classRingCentral_1_1DiarizeInput}{}\doxysection{Ring\+Central.\+Diarize\+Input Class Reference}
+\label{classRingCentral_1_1DiarizeInput}\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_a9c58ea5fda3de4048602977c09d00e61}{content\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Publicly facing uri Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_adc54731fd0667b62a2312a1ed9e971aa}{encoding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The encoding of the original audio Required Example\+: Wav Enum\+: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_ad5a3715ebd7ee5181a731f3db3687604}{language\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Language spoken in the audio file. Required Example\+: en-\/\+US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_a98e510856e3ddcb70023f776a5490f6e}{source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Source of the audio file eg\+: Phone, \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}}, Google\+Meet, Zoom etc Example\+: \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_a13b6de61f202c3579f747fe8cf202e50}{audio\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the audio Example\+: Call\+Center Enum\+: Call\+Center, \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Earnings\+Calls, Interview, Press\+Conference, Voicemail \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_ab05e88e111e619710eb94deddb658b3a}{separate\+Speaker\+Per\+Channel}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to True if the input audio is multi-\/channel and each channel has a separate speaker. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_a5e09e40385c79b8585f3ee7b03c22fbf}{speaker\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of speakers in the file, omit parameter if unknown Format\+: int32 Example\+: 2 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_ac2a90d970912d59fdd9b2aad16e503dc}{speaker\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional set of speakers to be identified from the call. Example\+: speaker\+Id1,speaker\+Id2 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1DiarizeInput_ae94044da78a0185791f2230e31a3718c}{enable\+Voice\+Activity\+Detection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Apply voice activity detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_a13b6de61f202c3579f747fe8cf202e50}\label{classRingCentral_1_1DiarizeInput_a13b6de61f202c3579f747fe8cf202e50}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!audioType@{audioType}}
+\index{audioType@{audioType}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{audioType}{audioType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Diarize\+Input.\+audio\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of the audio Example\+: Call\+Center Enum\+: Call\+Center, \mbox{\hyperlink{classRingCentral_1_1Meeting}{Meeting}}, Earnings\+Calls, Interview, Press\+Conference, Voicemail 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_a9c58ea5fda3de4048602977c09d00e61}\label{classRingCentral_1_1DiarizeInput_a9c58ea5fda3de4048602977c09d00e61}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!contentUri@{contentUri}}
+\index{contentUri@{contentUri}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{contentUri}{contentUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Diarize\+Input.\+content\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Publicly facing uri Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_ae94044da78a0185791f2230e31a3718c}\label{classRingCentral_1_1DiarizeInput_ae94044da78a0185791f2230e31a3718c}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!enableVoiceActivityDetection@{enableVoiceActivityDetection}}
+\index{enableVoiceActivityDetection@{enableVoiceActivityDetection}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{enableVoiceActivityDetection}{enableVoiceActivityDetection}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Diarize\+Input.\+enable\+Voice\+Activity\+Detection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Apply voice activity detection. 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_adc54731fd0667b62a2312a1ed9e971aa}\label{classRingCentral_1_1DiarizeInput_adc54731fd0667b62a2312a1ed9e971aa}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!encoding@{encoding}}
+\index{encoding@{encoding}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{encoding}{encoding}}
+{\footnotesize\ttfamily string Ring\+Central.\+Diarize\+Input.\+encoding\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The encoding of the original audio Required Example\+: Wav Enum\+: Mpeg, Mp4, Wav, Webm, Webp, Aac, Avi, Ogg 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_ad5a3715ebd7ee5181a731f3db3687604}\label{classRingCentral_1_1DiarizeInput_ad5a3715ebd7ee5181a731f3db3687604}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!languageCode@{languageCode}}
+\index{languageCode@{languageCode}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{languageCode}{languageCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Diarize\+Input.\+language\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Language spoken in the audio file. Required Example\+: en-\/\+US 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_ab05e88e111e619710eb94deddb658b3a}\label{classRingCentral_1_1DiarizeInput_ab05e88e111e619710eb94deddb658b3a}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!separateSpeakerPerChannel@{separateSpeakerPerChannel}}
+\index{separateSpeakerPerChannel@{separateSpeakerPerChannel}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{separateSpeakerPerChannel}{separateSpeakerPerChannel}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Diarize\+Input.\+separate\+Speaker\+Per\+Channel\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Set to True if the input audio is multi-\/channel and each channel has a separate speaker. 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_a98e510856e3ddcb70023f776a5490f6e}\label{classRingCentral_1_1DiarizeInput_a98e510856e3ddcb70023f776a5490f6e}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!source@{source}}
+\index{source@{source}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily string Ring\+Central.\+Diarize\+Input.\+source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Source of the audio file eg\+: Phone, \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}}, Google\+Meet, Zoom etc Example\+: \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_a5e09e40385c79b8585f3ee7b03c22fbf}\label{classRingCentral_1_1DiarizeInput_a5e09e40385c79b8585f3ee7b03c22fbf}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!speakerCount@{speakerCount}}
+\index{speakerCount@{speakerCount}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{speakerCount}{speakerCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Diarize\+Input.\+speaker\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of speakers in the file, omit parameter if unknown Format\+: int32 Example\+: 2 
+
+\mbox{\Hypertarget{classRingCentral_1_1DiarizeInput_ac2a90d970912d59fdd9b2aad16e503dc}\label{classRingCentral_1_1DiarizeInput_ac2a90d970912d59fdd9b2aad16e503dc}} 
+\index{RingCentral.DiarizeInput@{RingCentral.DiarizeInput}!speakerIds@{speakerIds}}
+\index{speakerIds@{speakerIds}!RingCentral.DiarizeInput@{RingCentral.DiarizeInput}}
+\doxysubsubsection{\texorpdfstring{speakerIds}{speakerIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Diarize\+Input.\+speaker\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional set of speakers to be identified from the call. Example\+: speaker\+Id1,speaker\+Id2 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Diarize\+Input.\+cs\end{DoxyCompactItemize}

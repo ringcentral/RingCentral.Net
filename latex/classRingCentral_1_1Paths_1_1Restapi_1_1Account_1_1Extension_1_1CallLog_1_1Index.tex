@@ -1,0 +1,71 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Log.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index@{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Log.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a68276503e4fd68ec68e393f789d4c215}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a68276503e4fd68ec68e393f789d4c215}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent, string call\+Record\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_ad70b4c2aa3a0332f04b28bfeae1c5183}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_ad70b4c2aa3a0332f04b28bfeae1c5183}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallLogResponse}{Call\+Log\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_aa3f71ae284769a8b3727a08cbd594865}{List}} (\mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters}{Read\+User\+Call\+Log\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns call log records filtered by parameters specified. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/log Rate Limit Group\+: Heavy App Permission\+: Read\+Call\+Log \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Call\+Log \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a7f4d111940435fb3eb639f30de69e442}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1DeleteUserCallLogParameters}{Delete\+User\+Call\+Log\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes filtered call log records. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/log Rate Limit Group\+: Heavy App Permission\+: Edit\+Call\+Log \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Call\+Log \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallLogRecord}{Call\+Log\+Record}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a927e89db6dbf93c8b46cf1027422022c}{Get}} (\mbox{\hyperlink{classRingCentral_1_1ReadUserCallRecordParameters}{Read\+User\+Call\+Record\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns call log records by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/log/\{call\+Record\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Call\+Log \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Call\+Log \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a4479227279d97eadf74996e831de3988}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a4479227279d97eadf74996e831de3988}} 
+string {\bfseries call\+Record\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a9c95baedb11fdea72b7b1f6927dbb082}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a9c95baedb11fdea72b7b1f6927dbb082}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a894738e82708f1667752a9f0c0e29bb2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a894738e82708f1667752a9f0c0e29bb2}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a7f4d111940435fb3eb639f30de69e442}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a7f4d111940435fb3eb639f30de69e442}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index@{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.CallLog.Index@{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Log.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1DeleteUserCallLogParameters}{Delete\+User\+Call\+Log\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes filtered call log records. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/log Rate Limit Group\+: Heavy App Permission\+: Edit\+Call\+Log \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Call\+Log 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a927e89db6dbf93c8b46cf1027422022c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_a927e89db6dbf93c8b46cf1027422022c}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index@{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.CallLog.Index@{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallLogRecord}{Call\+Log\+Record}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Log.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadUserCallRecordParameters}{Read\+User\+Call\+Record\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns call log records by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/log/\{call\+Record\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Call\+Log \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Call\+Log 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_aa3f71ae284769a8b3727a08cbd594865}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1CallLog_1_1Index_aa3f71ae284769a8b3727a08cbd594865}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index@{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.CallLog.Index@{RingCentral.Paths.Restapi.Account.Extension.CallLog.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallLogResponse}{Call\+Log\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Call\+Log.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadUserCallLogParameters}{Read\+User\+Call\+Log\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns call log records filtered by parameters specified. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/call-\/log Rate Limit Group\+: Heavy App Permission\+: Read\+Call\+Log \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Call\+Log 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Call\+Log/Index.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem}{}\doxysection{Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item Class Reference}
+\label{classRingCentral_1_1BatchProvisionUsersRequestItem}\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+
+
+Describes request for user extension provisioning  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItem_a5971ea0e06ea21de6dc74492a6450cef}{extension\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Short number of an extension. Actual max length depends on system length limit for extension. Example\+: 205 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItem_a1f3ab55713a2331a03a5b094f977995d}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension status. Only \char`\"{}\+Enabled\char`\"{} can be specified Required Default\+: Enabled Enum\+: Enabled \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemContact}{Batch\+Provision\+Users\+Request\+Item\+Contact}} \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItem_a68a92f72122c90b70341d7bf22fa84e7}{contact}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Personal contact information Required \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemCostCenter}{Batch\+Provision\+Users\+Request\+Item\+Cost\+Center}} \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItem_af0b175e8061c1621a0ad98550fb9e89f}{cost\+Center}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemRoles}{Batch\+Provision\+Users\+Request\+Item\+Roles}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItem_affdf3ff84ece163437d7cdefee5bf79f}{roles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemDevices}{Batch\+Provision\+Users\+Request\+Item\+Devices}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItem_a3e5136b4e0fe5da95b177a41edadd768}{devices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItem_a2d826b445690679969775c1e0a281bb3}{send\+Welcome\+Email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if a welcome/activation email is sent to the new users (within extension status changing from \textquotesingle{}Unassigned\textquotesingle{} to \textquotesingle{}Not\+Activated/\+Disabled\textquotesingle{}) Default\+: true \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes request for user extension provisioning 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem_a68a92f72122c90b70341d7bf22fa84e7}\label{classRingCentral_1_1BatchProvisionUsersRequestItem_a68a92f72122c90b70341d7bf22fa84e7}} 
+\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}!contact@{contact}}
+\index{contact@{contact}!RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+\doxysubsubsection{\texorpdfstring{contact}{contact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemContact}{Batch\+Provision\+Users\+Request\+Item\+Contact}} Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item.\+contact\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Personal contact information Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem_af0b175e8061c1621a0ad98550fb9e89f}\label{classRingCentral_1_1BatchProvisionUsersRequestItem_af0b175e8061c1621a0ad98550fb9e89f}} 
+\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}!costCenter@{costCenter}}
+\index{costCenter@{costCenter}!RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+\doxysubsubsection{\texorpdfstring{costCenter}{costCenter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemCostCenter}{Batch\+Provision\+Users\+Request\+Item\+Cost\+Center}} Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item.\+cost\+Center\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem_a3e5136b4e0fe5da95b177a41edadd768}\label{classRingCentral_1_1BatchProvisionUsersRequestItem_a3e5136b4e0fe5da95b177a41edadd768}} 
+\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}!devices@{devices}}
+\index{devices@{devices}!RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+\doxysubsubsection{\texorpdfstring{devices}{devices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemDevices}{Batch\+Provision\+Users\+Request\+Item\+Devices}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item.\+devices\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem_a5971ea0e06ea21de6dc74492a6450cef}\label{classRingCentral_1_1BatchProvisionUsersRequestItem_a5971ea0e06ea21de6dc74492a6450cef}} 
+\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}!extensionNumber@{extensionNumber}}
+\index{extensionNumber@{extensionNumber}!RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+\doxysubsubsection{\texorpdfstring{extensionNumber}{extensionNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item.\+extension\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Short number of an extension. Actual max length depends on system length limit for extension. Example\+: 205 
+
+\mbox{\Hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem_affdf3ff84ece163437d7cdefee5bf79f}\label{classRingCentral_1_1BatchProvisionUsersRequestItem_affdf3ff84ece163437d7cdefee5bf79f}} 
+\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}!roles@{roles}}
+\index{roles@{roles}!RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+\doxysubsubsection{\texorpdfstring{roles}{roles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1BatchProvisionUsersRequestItemRoles}{Batch\+Provision\+Users\+Request\+Item\+Roles}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item.\+roles\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem_a2d826b445690679969775c1e0a281bb3}\label{classRingCentral_1_1BatchProvisionUsersRequestItem_a2d826b445690679969775c1e0a281bb3}} 
+\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}!sendWelcomeEmail@{sendWelcomeEmail}}
+\index{sendWelcomeEmail@{sendWelcomeEmail}!RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+\doxysubsubsection{\texorpdfstring{sendWelcomeEmail}{sendWelcomeEmail}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item.\+send\+Welcome\+Email\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if a welcome/activation email is sent to the new users (within extension status changing from \textquotesingle{}Unassigned\textquotesingle{} to \textquotesingle{}Not\+Activated/\+Disabled\textquotesingle{}) Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1BatchProvisionUsersRequestItem_a1f3ab55713a2331a03a5b094f977995d}\label{classRingCentral_1_1BatchProvisionUsersRequestItem_a1f3ab55713a2331a03a5b094f977995d}} 
+\index{RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}!status@{status}}
+\index{status@{status}!RingCentral.BatchProvisionUsersRequestItem@{RingCentral.BatchProvisionUsersRequestItem}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Batch\+Provision\+Users\+Request\+Item.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension status. Only \char`\"{}\+Enabled\char`\"{} can be specified Required Default\+: Enabled Enum\+: Enabled 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Batch\+Provision\+Users\+Request\+Item.\+cs\end{DoxyCompactItemize}

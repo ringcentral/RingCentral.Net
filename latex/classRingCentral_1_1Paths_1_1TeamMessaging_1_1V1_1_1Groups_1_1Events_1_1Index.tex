@@ -1,0 +1,56 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Events.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Events.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a756f7efdbbabd626235c49c172915e6b}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a756f7efdbbabd626235c49c172915e6b}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Index}{Groups.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a9543ab80c1d78ac30ae023afb558ac9d}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a9543ab80c1d78ac30ae023afb558ac9d}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMEventInfo}{TMEvent\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_aa129279fdec82889de86ed47ff43e458}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of calendar events available for the current user within the specified group. Users can only see their personal tasks and public tasks. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/events Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMEventInfo}{TMEvent\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a8c3f865e2889dde295be6224f66076bb}{Post}} (\mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest}{TMCreate\+Event\+Request}} t\+MCreate\+Event\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new calendar event within the specified group. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/events Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a581f479e91caa91a952d13c0c9dcd696}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a581f479e91caa91a952d13c0c9dcd696}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Index}{Groups.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a1a6e2b3b995b9988346be096e4d5b8f9}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a1a6e2b3b995b9988346be096e4d5b8f9}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_aa129279fdec82889de86ed47ff43e458}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_aa129279fdec82889de86ed47ff43e458}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMEventInfo}{TMEvent\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Events.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of calendar events available for the current user within the specified group. Users can only see their personal tasks and public tasks. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/events Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a8c3f865e2889dde295be6224f66076bb}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Groups_1_1Events_1_1Index_a8c3f865e2889dde295be6224f66076bb}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index@{RingCentral.Paths.TeamMessaging.V1.Groups.Events.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMEventInfo}{TMEvent\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Groups.\+Events.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1TMCreateEventRequest}{TMCreate\+Event\+Request}}}]{t\+MCreate\+Event\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new calendar event within the specified group. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/groups/\{group\+Id\}/events Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Groups/\+Events/Index.\+cs\end{DoxyCompactItemize}

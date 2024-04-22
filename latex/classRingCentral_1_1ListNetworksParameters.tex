@@ -1,0 +1,83 @@
+\hypertarget{classRingCentral_1_1ListNetworksParameters}{}\doxysection{Ring\+Central.\+List\+Networks\+Parameters Class Reference}
+\label{classRingCentral_1_1ListNetworksParameters}\index{RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}}
+
+
+Query parameters for operation list\+Networks  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListNetworksParameters_a7fc67d307a1a9a931d068b5e17b7c61f}{site\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListNetworksParameters_a31f1aafad3892ea51c1d40a70db11bfb}{search\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters entries by the specified substring (search by chassis ID, switch name or address) The characters range is 0-\/64 (if empty the filter is ignored) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListNetworksParameters_a5bb0e8e26681aa3b2f6d5a02707d107e}{order\+By}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comma-\/separated list of fields to order results prefixed by \textquotesingle{}+\textquotesingle{} sign (ascending order) or \textquotesingle{}-\/\textquotesingle{} sign (descending order). The default sorting is by {\ttfamily name} \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListNetworksParameters_aa847eb7733bee6667b273edc3e69ccf8}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page\textquotesingle{} Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListNetworksParameters_a12c33257c5148ec98b444e8e4fd0877f}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Networks 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListNetworksParameters_a5bb0e8e26681aa3b2f6d5a02707d107e}\label{classRingCentral_1_1ListNetworksParameters_a5bb0e8e26681aa3b2f6d5a02707d107e}} 
+\index{RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}}
+\doxysubsubsection{\texorpdfstring{orderBy}{orderBy}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Networks\+Parameters.\+order\+By\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Comma-\/separated list of fields to order results prefixed by \textquotesingle{}+\textquotesingle{} sign (ascending order) or \textquotesingle{}-\/\textquotesingle{} sign (descending order). The default sorting is by {\ttfamily name} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListNetworksParameters_a12c33257c5148ec98b444e8e4fd0877f}\label{classRingCentral_1_1ListNetworksParameters_a12c33257c5148ec98b444e8e4fd0877f}} 
+\index{RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}!page@{page}}
+\index{page@{page}!RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Networks\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListNetworksParameters_aa847eb7733bee6667b273edc3e69ccf8}\label{classRingCentral_1_1ListNetworksParameters_aa847eb7733bee6667b273edc3e69ccf8}} 
+\index{RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Networks\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page\textquotesingle{} Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListNetworksParameters_a31f1aafad3892ea51c1d40a70db11bfb}\label{classRingCentral_1_1ListNetworksParameters_a31f1aafad3892ea51c1d40a70db11bfb}} 
+\index{RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}!searchString@{searchString}}
+\index{searchString@{searchString}!RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}}
+\doxysubsubsection{\texorpdfstring{searchString}{searchString}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Networks\+Parameters.\+search\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filters entries by the specified substring (search by chassis ID, switch name or address) The characters range is 0-\/64 (if empty the filter is ignored) 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListNetworksParameters_a7fc67d307a1a9a931d068b5e17b7c61f}\label{classRingCentral_1_1ListNetworksParameters_a7fc67d307a1a9a931d068b5e17b7c61f}} 
+\index{RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}!siteId@{siteId}}
+\index{siteId@{siteId}!RingCentral.ListNetworksParameters@{RingCentral.ListNetworksParameters}}
+\doxysubsubsection{\texorpdfstring{siteId}{siteId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Networks\+Parameters.\+site\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Networks\+Parameters.\+cs\end{DoxyCompactItemize}

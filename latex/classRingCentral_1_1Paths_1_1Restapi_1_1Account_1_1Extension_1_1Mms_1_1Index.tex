@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Mms.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.Mms.Index@{RingCentral.Paths.Restapi.Account.Extension.Mms.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Mms.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a10ed720831e85f3d311c5903e9d372f5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a10ed720831e85f3d311c5903e9d372f5}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a9fbb370b959036f10522a2149f98c1dd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a9fbb370b959036f10522a2149f98c1dd}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse}{Get\+SMSMessage\+Info\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a043f68829141776aec36bcf88a0239a4}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateMMSMessage}{Create\+MMSMessage}} create\+MMSMessage, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates and sends a new media message or multiple messages. Sending MMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/mms Rate Limit Group\+: Medium App Permission\+: SMS \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Outbound\+SMS \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a7a5406a228859fd60a4f48cab1668756}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a7a5406a228859fd60a4f48cab1668756}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a0044c6cfce6f5d0cc3765ecea362b3d6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a0044c6cfce6f5d0cc3765ecea362b3d6}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a043f68829141776aec36bcf88a0239a4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Mms_1_1Index_a043f68829141776aec36bcf88a0239a4}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.Mms.Index@{RingCentral.Paths.Restapi.Account.Extension.Mms.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.Mms.Index@{RingCentral.Paths.Restapi.Account.Extension.Mms.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1GetSMSMessageInfoResponse}{Get\+SMSMessage\+Info\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Mms.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateMMSMessage}{Create\+MMSMessage}}}]{create\+MMSMessage,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates and sends a new media message or multiple messages. Sending MMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/mms Rate Limit Group\+: Medium App Permission\+: SMS \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Outbound\+SMS 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Mms/Index.\+cs\end{DoxyCompactItemize}

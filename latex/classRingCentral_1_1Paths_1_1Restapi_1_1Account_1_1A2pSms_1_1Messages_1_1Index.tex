@@ -1,0 +1,59 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Messages.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index}\index{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Messages.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a9995845a60c5626544c41ff33dde5785}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a9995845a60c5626544c41ff33dde5785}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Index}{A2p\+Sms.\+Index}} parent, string message\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a678440db24abb67701da101fdf0ed111}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a678440db24abb67701da101fdf0ed111}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageListResponse}{Message\+List\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a07d2fdfbe59543c7ccc103e8fc68e70d}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters}{List\+A2\+PSMSParameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of outbound/inbound A2P messages sent from/to A2P phone numbers of the current account. The list can be filtered by message batch ID and/or phone number. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/messages Rate Limit Group\+: Light App Permission\+: A2\+PSMS \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageDetailsResponse}{Message\+Details\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a4d76e43884ccfd2fde3b3843abc13295}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the details of an A2P SMS message by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/messages/\{message\+Id\} Rate Limit Group\+: Light App Permission\+: A2\+PSMS \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_aba9ef9aa6f46c0cd4f1e6c53a96d175a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_aba9ef9aa6f46c0cd4f1e6c53a96d175a}} 
+string {\bfseries message\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a3669ed0a73810e39c454453a12238c2a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a3669ed0a73810e39c454453a12238c2a}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Index}{A2p\+Sms.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_af57845cf98cd0882b5ea9bbf4303a94f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_af57845cf98cd0882b5ea9bbf4303a94f}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a4d76e43884ccfd2fde3b3843abc13295}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a4d76e43884ccfd2fde3b3843abc13295}} 
+\index{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1MessageDetailsResponse}{Message\+Details\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Messages.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the details of an A2P SMS message by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/messages/\{message\+Id\} Rate Limit Group\+: Light App Permission\+: A2\+PSMS 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a07d2fdfbe59543c7ccc103e8fc68e70d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1A2pSms_1_1Messages_1_1Index_a07d2fdfbe59543c7ccc103e8fc68e70d}} 
+\index{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index@{RingCentral.Paths.Restapi.Account.A2pSms.Messages.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1MessageListResponse}{Message\+List\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+A2p\+Sms.\+Messages.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters}{List\+A2\+PSMSParameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of outbound/inbound A2P messages sent from/to A2P phone numbers of the current account. The list can be filtered by message batch ID and/or phone number. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/a2p-\/sms/messages Rate Limit Group\+: Light App Permission\+: A2\+PSMS 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+A2p\+Sms/\+Messages/Index.\+cs\end{DoxyCompactItemize}

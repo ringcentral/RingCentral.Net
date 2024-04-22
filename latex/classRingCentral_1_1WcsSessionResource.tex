@@ -1,0 +1,229 @@
+\hypertarget{classRingCentral_1_1WcsSessionResource}{}\doxysection{Ring\+Central.\+Wcs\+Session\+Resource Class Reference}
+\label{classRingCentral_1_1WcsSessionResource}\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a0f6f5edf29ed4650e98ee4242192da42}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal object ID Example\+: 78654321 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a3e9f25af5fcbf3203046f883b152181f}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object creation time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_acde139833d7cc097d8f31e1a42dbe919}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Object last modification time Required Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a002b189ed6d62e0b09f997552b1cb175}{scheduled\+Start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session scheduled start time. Required Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_ac6a89a978bbbe23c4e043cc883f6d119}{scheduled\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The duration of the Session in seconds. Required Maximum\+: 43200 Minimum\+: 30 Format\+: int32 Example\+: 1800 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a962787360f001f27523cd8ca0ce5610f}{time\+Zone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em IANA-\/compatible time zone name (see \href{https://www.iana.org/time-zones}{\texttt{ https\+://www.\+iana.\+org/time-\/zones}}). Required Example\+: America/\+New\+\_\+\+York \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a686bede19a1baacad25c8629333212fc}{localized\+Time\+Zone\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Localized time zone description. Example\+: Eastern Time (America/\+New\+\_\+\+York) \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a06114f9644f9e3ee1319f9ef6f27b91c}{panel\+Join\+Time\+Offset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time offset (positive, in seconds) indicating how much in advance (comparing to \char`\"{}scheduled\+Start\+Time\char`\"{}) panel members should join for the pre-\/webinar team sync Format\+: int32 Example\+: 900 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a4ac79700c6eade5071dee2a84a2c7ae6}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session title. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live Broadcasting US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_acb0edbf15a5122702249a282a5a07d5f}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em User-\/friendly description of the Session. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live session for US-\/based participants \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a749624385bfb3ff3448182a742ec1bb8}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_ae2cbbee69bc072b2af95b75f0eeef10a}{host\+Join\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URI to join the webinar as a host Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a9493c55ea9fee2006b254ddaa33edbcf}{locale\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session locale code. Can\textquotesingle{}t be blank or null Example\+: en-\/\+US \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a124b8663679d62e5997bc30e4f6912af}{video\+Bridge\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The RCV bridge id Example\+: 839874770 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a7d00113b531c82eca0f47900790a144c}{video\+Bridge\+Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The RCV bridge password. Returned only if requested by Host/\+Co-\/host/\+Panelist and a password for the bridge is set. Format\+: password Example\+: abc123 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a9ab5daf56304b2df5163dcfad8a1f232}{video\+Bridge\+Pstn\+Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The RCV bridge PSTN password. Returned only if requested by Host/\+Co-\/host/\+Panelist and a PSTN password for the bridge is set. Format\+: password Example\+: abc123 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_a6013d8a726b8f526340175f11999e542}{attendee\+Join\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URI for attendees to join the Webinar (if it is a public webinar) Format\+: uri Example\+: \href{https://v.ringcentral.com/w/a/join/iuyef77fsj473wn10ashjfk34}{\texttt{ https\+://v.\+ringcentral.\+com/w/a/join/iuyef77fsj473wn10ashjfk34}} \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1WcsSessionResource_abf046804f74bec1f076aaff9c0a990b8}{has\+Unsent\+Invites}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Calculated attribute indicating if there are any unsent/deferred invites to session participants \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a6013d8a726b8f526340175f11999e542}\label{classRingCentral_1_1WcsSessionResource_a6013d8a726b8f526340175f11999e542}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!attendeeJoinUri@{attendeeJoinUri}}
+\index{attendeeJoinUri@{attendeeJoinUri}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{attendeeJoinUri}{attendeeJoinUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+attendee\+Join\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The URI for attendees to join the Webinar (if it is a public webinar) Format\+: uri Example\+: \href{https://v.ringcentral.com/w/a/join/iuyef77fsj473wn10ashjfk34}{\texttt{ https\+://v.\+ringcentral.\+com/w/a/join/iuyef77fsj473wn10ashjfk34}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a3e9f25af5fcbf3203046f883b152181f}\label{classRingCentral_1_1WcsSessionResource_a3e9f25af5fcbf3203046f883b152181f}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object creation time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_acb0edbf15a5122702249a282a5a07d5f}\label{classRingCentral_1_1WcsSessionResource_acb0edbf15a5122702249a282a5a07d5f}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!description@{description}}
+\index{description@{description}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+User-\/friendly description of the Session. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live session for US-\/based participants 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_abf046804f74bec1f076aaff9c0a990b8}\label{classRingCentral_1_1WcsSessionResource_abf046804f74bec1f076aaff9c0a990b8}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!hasUnsentInvites@{hasUnsentInvites}}
+\index{hasUnsentInvites@{hasUnsentInvites}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{hasUnsentInvites}{hasUnsentInvites}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Wcs\+Session\+Resource.\+has\+Unsent\+Invites\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Calculated attribute indicating if there are any unsent/deferred invites to session participants 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_ae2cbbee69bc072b2af95b75f0eeef10a}\label{classRingCentral_1_1WcsSessionResource_ae2cbbee69bc072b2af95b75f0eeef10a}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!hostJoinUri@{hostJoinUri}}
+\index{hostJoinUri@{hostJoinUri}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{hostJoinUri}{hostJoinUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+host\+Join\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The URI to join the webinar as a host Format\+: uri Example\+: \href{https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj}{\texttt{ https\+://v.\+ringcentral.\+com/w/join/de7yd8ew7yfsdfjh899843rgj}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a0f6f5edf29ed4650e98ee4242192da42}\label{classRingCentral_1_1WcsSessionResource_a0f6f5edf29ed4650e98ee4242192da42}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!id@{id}}
+\index{id@{id}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal object ID Example\+: 78654321 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_acde139833d7cc097d8f31e1a42dbe919}\label{classRingCentral_1_1WcsSessionResource_acde139833d7cc097d8f31e1a42dbe919}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Object last modification time Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a9493c55ea9fee2006b254ddaa33edbcf}\label{classRingCentral_1_1WcsSessionResource_a9493c55ea9fee2006b254ddaa33edbcf}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!localeCode@{localeCode}}
+\index{localeCode@{localeCode}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{localeCode}{localeCode}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+locale\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session locale code. Can\textquotesingle{}t be blank or null Example\+: en-\/\+US 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a686bede19a1baacad25c8629333212fc}\label{classRingCentral_1_1WcsSessionResource_a686bede19a1baacad25c8629333212fc}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!localizedTimeZoneDescription@{localizedTimeZoneDescription}}
+\index{localizedTimeZoneDescription@{localizedTimeZoneDescription}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{localizedTimeZoneDescription}{localizedTimeZoneDescription}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+localized\+Time\+Zone\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Localized time zone description. Example\+: Eastern Time (America/\+New\+\_\+\+York) 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a06114f9644f9e3ee1319f9ef6f27b91c}\label{classRingCentral_1_1WcsSessionResource_a06114f9644f9e3ee1319f9ef6f27b91c}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!panelJoinTimeOffset@{panelJoinTimeOffset}}
+\index{panelJoinTimeOffset@{panelJoinTimeOffset}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{panelJoinTimeOffset}{panelJoinTimeOffset}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Wcs\+Session\+Resource.\+panel\+Join\+Time\+Offset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time offset (positive, in seconds) indicating how much in advance (comparing to \char`\"{}scheduled\+Start\+Time\char`\"{}) panel members should join for the pre-\/webinar team sync Format\+: int32 Example\+: 900 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_ac6a89a978bbbe23c4e043cc883f6d119}\label{classRingCentral_1_1WcsSessionResource_ac6a89a978bbbe23c4e043cc883f6d119}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!scheduledDuration@{scheduledDuration}}
+\index{scheduledDuration@{scheduledDuration}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{scheduledDuration}{scheduledDuration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Wcs\+Session\+Resource.\+scheduled\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The duration of the Session in seconds. Required Maximum\+: 43200 Minimum\+: 30 Format\+: int32 Example\+: 1800 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a002b189ed6d62e0b09f997552b1cb175}\label{classRingCentral_1_1WcsSessionResource_a002b189ed6d62e0b09f997552b1cb175}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!scheduledStartTime@{scheduledStartTime}}
+\index{scheduledStartTime@{scheduledStartTime}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{scheduledStartTime}{scheduledStartTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+scheduled\+Start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session scheduled start time. Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a749624385bfb3ff3448182a742ec1bb8}\label{classRingCentral_1_1WcsSessionResource_a749624385bfb3ff3448182a742ec1bb8}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!status@{status}}
+\index{status@{status}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session status (for the purposes of Configuration service) Example\+: Scheduled Enum\+: Scheduled, Active, Finished 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a962787360f001f27523cd8ca0ce5610f}\label{classRingCentral_1_1WcsSessionResource_a962787360f001f27523cd8ca0ce5610f}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!timeZone@{timeZone}}
+\index{timeZone@{timeZone}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{timeZone}{timeZone}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+time\+Zone\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+IANA-\/compatible time zone name (see \href{https://www.iana.org/time-zones}{\texttt{ https\+://www.\+iana.\+org/time-\/zones}}). Required Example\+: America/\+New\+\_\+\+York 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a4ac79700c6eade5071dee2a84a2c7ae6}\label{classRingCentral_1_1WcsSessionResource_a4ac79700c6eade5071dee2a84a2c7ae6}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!title@{title}}
+\index{title@{title}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Session title. Can be left blank -\/ then Webinar title should be used for presentation. Example\+: Live Broadcasting US 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a124b8663679d62e5997bc30e4f6912af}\label{classRingCentral_1_1WcsSessionResource_a124b8663679d62e5997bc30e4f6912af}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!videoBridgeId@{videoBridgeId}}
+\index{videoBridgeId@{videoBridgeId}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{videoBridgeId}{videoBridgeId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+video\+Bridge\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The RCV bridge id Example\+: 839874770 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a7d00113b531c82eca0f47900790a144c}\label{classRingCentral_1_1WcsSessionResource_a7d00113b531c82eca0f47900790a144c}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!videoBridgePassword@{videoBridgePassword}}
+\index{videoBridgePassword@{videoBridgePassword}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{videoBridgePassword}{videoBridgePassword}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+video\+Bridge\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The RCV bridge password. Returned only if requested by Host/\+Co-\/host/\+Panelist and a password for the bridge is set. Format\+: password Example\+: abc123 
+
+\mbox{\Hypertarget{classRingCentral_1_1WcsSessionResource_a9ab5daf56304b2df5163dcfad8a1f232}\label{classRingCentral_1_1WcsSessionResource_a9ab5daf56304b2df5163dcfad8a1f232}} 
+\index{RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}!videoBridgePstnPassword@{videoBridgePstnPassword}}
+\index{videoBridgePstnPassword@{videoBridgePstnPassword}!RingCentral.WcsSessionResource@{RingCentral.WcsSessionResource}}
+\doxysubsubsection{\texorpdfstring{videoBridgePstnPassword}{videoBridgePstnPassword}}
+{\footnotesize\ttfamily string Ring\+Central.\+Wcs\+Session\+Resource.\+video\+Bridge\+Pstn\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The RCV bridge PSTN password. Returned only if requested by Host/\+Co-\/host/\+Panelist and a PSTN password for the bridge is set. Format\+: password Example\+: abc123 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Wcs\+Session\+Resource.\+cs\end{DoxyCompactItemize}

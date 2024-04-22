@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Bring\+In.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index}\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Bring\+In.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_a2314bc0e2b13f36432ed2dadd50abd70}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_a2314bc0e2b13f36432ed2dadd50abd70}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_a0b5cefad1c4eb285aa66606027c5816c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_a0b5cefad1c4eb285aa66606027c5816c}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_a594e7bfbd3120c385c94dc047a020dc1}{Post}} (\mbox{\hyperlink{classRingCentral_1_1AddPartyRequest}{Add\+Party\+Request}} add\+Party\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Adds a new party to the call session by bringing-\/in an established SIP call connection. The maximum number of parties to bring-\/in is 10; only 1 call party can be added per request. Currently the method is supported for sessions of \textquotesingle{}\mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Conference}{Conference}}\textquotesingle{} origin only. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/bring-\/in Rate Limit Group\+: Light App Permission\+: Call\+Control \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_acb8ce263d6c54011fa955c5a6e74f1f9}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_acb8ce263d6c54011fa955c5a6e74f1f9}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_aaf46ac6dcd374915364659abfa3c7fac}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_aaf46ac6dcd374915364659abfa3c7fac}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_a594e7bfbd3120c385c94dc047a020dc1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1BringIn_1_1Index_a594e7bfbd3120c385c94dc047a020dc1}} 
+\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallParty}{Call\+Party}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Bring\+In.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AddPartyRequest}{Add\+Party\+Request}}}]{add\+Party\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new party to the call session by bringing-\/in an established SIP call connection. The maximum number of parties to bring-\/in is 10; only 1 call party can be added per request. Currently the method is supported for sessions of \textquotesingle{}\mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Conference}{Conference}}\textquotesingle{} origin only. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/bring-\/in Rate Limit Group\+: Light App Permission\+: Call\+Control 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Telephony/\+Sessions/\+Parties/\+Bring\+In/Index.\+cs\end{DoxyCompactItemize}

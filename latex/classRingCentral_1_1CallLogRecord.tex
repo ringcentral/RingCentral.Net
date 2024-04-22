@@ -1,0 +1,435 @@
+\hypertarget{classRingCentral_1_1CallLogRecord}{}\doxysection{Ring\+Central.\+Call\+Log\+Record Class Reference}
+\label{classRingCentral_1_1CallLogRecord}\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+
+
+Call log record  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ExtensionInfoCallLog}{Extension\+Info\+Call\+Log}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a02fd8530ae64d8da860e66dc5351cbb2}{extension}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a52ff7ab1c5e1767cd2d1c465be7c92a5}{telephony\+Session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Telephony identifier of a call session \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_ac2a09c6ce48fddd97399520629c8ba35}{sip\+Uuid\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call session identifier, required for Telephony REST API \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogRecordTransferTarget}{Call\+Log\+Record\+Transfer\+Target}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a7049811a5b5f843126e5cf02e2fe5f5b}{transfer\+Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogRecordTransferee}{Call\+Log\+Record\+Transferee}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a6be53150eb68e30fa11f0c2316e01192}{transferee}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a7eb6840d247243fbae9a050147c366a5}{party\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal Identifier of \mbox{\hyperlink{classRingCentral_1_1Participant}{Participant}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a643ffc6a545825987f90e3a0618068f0}{transport}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of call transport. \textquotesingle{}PSTN\textquotesingle{} indicates that a call leg was initiated from the PSTN network provider; \textquotesingle{}Vo\+IP\textquotesingle{} -\/ from an RC phone. Required Enum\+: PSTN, Vo\+IP \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogFromParty}{Call\+Log\+From\+Party}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a44e7d9ac74f5819467057a55198546e5}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogToParty}{Call\+Log\+To\+Party}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_ad71039fb3994741be2b29f398cbb9be1}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a797dd8375dca56d9ca6b1bb2b1570379}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of call Required Enum\+: Voice, Fax \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_ac4a94b90dd4fec4fd9c864d9e359e1af}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The direction of a call Required Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogRecordMessage}{Call\+Log\+Record\+Message}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a616a1ad8ef37305ac0724d0cd240518e}{message}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogDelegateInfo}{Call\+Log\+Delegate\+Info}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a2af587070fd5b5469fdcabeca9a9fca6}{delegate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a211f7ff32292fe3aba75afc58ec46c55}{delegation\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call delegation type Enum\+: Coworker, Unknown \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_aa347efcd3b560acae2aa3de59ac1c902}{action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The internal action corresponding to the call operation Required Enum\+: Accept Call, Barge In Call, Call Park, Call Return, Call\+Out-\/\+Call\+Me, Calling Card, Conference Call, E911 Update, Emergency, External Application, Find\+Me, Follow\+Me, Free\+SPDL, Hunting, Incoming Fax, Monitoring, Move, Outgoing Fax, \mbox{\hyperlink{classRingCentral_1_1Paging}{Paging}}, Park Location, Phone Call, Phone Login, Pickup, RC Meetings, Ring Directly, Ring\+Me, Ring\+Out Mobile, Ring\+Out PC, Ring\+Out Web, Sip Forwarding, Support, Text Relay, Transfer, Unknown, Vo\+IP Call \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a3e0aea02e86d5b2203d9a4385433ad90}{result}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The result of the call operation Enum\+: 911, 933, Abandoned, Accepted, Answered Not Accepted, Blocked, Busy, Call Failed, Call Failure, Call connected, Carrier is not active, Declined, EDGE trunk misconfigured, Fax Not Sent, Fax Partially Sent, Fax Poor Line, Fax Receipt Error, Fax on Demand, Hang Up, IP Phone Offline, In Progress, Internal Error, International Disabled, International Restricted, Missed, No Answer, No Calling Credit, Not Allowed, Partial Receive, Phone Login, Receive Error, Received, Rejected, Reply, Restricted Number, Send Error, Sent, Sent to Voicemail, Stopped, Suspended account, Unknown, Voicemail, Wrong Number \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a8020f47ea779193187a0f0477051c8d6}{reason}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The reason of the call result\+: \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a848d7a74e0938469f780ea42881d43c9}{reason\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The detailed reason description of the call result \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_aae05f10ee53929c3fc027e3f40ec7c81}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The call start datetime in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Required Format\+: date-\/time \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a5f4c148192d25420d06f76a24673b976}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call duration in seconds Required Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a9dfa931e83aba5f748abe013c0a3cabf}{duration\+Ms}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call duration in milliseconds Required Format\+: int32 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogRecordingInfo}{Call\+Log\+Recording\+Info}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_abec4663d2c47ce7d9a51c270947a23e1}{recording}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a59736b18951cd9a4d28596fc56bc5eec}{short\+Recording}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates that the recording is too short and therefore wouldn\textquotesingle{}t be returned. The flag is not returned if the value is false \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1BillingInfo}{Billing\+Info}} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_ab01346a9443bbd48e1d4ad68a3108f26}{billing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a8ee634995e9e5f48f40695e5a4afd479}{internal\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The internal type of the call Enum\+: Local, Long\+Distance, International, Sip, Ring\+Me, Ring\+Out, Usual, Toll\+Free\+Number, Verification\+Number, Vma, Local\+Number, Ims\+Outgoing, Ims\+Incoming \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a1543180683972e8d84819c75d66f5572}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a call log record Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a23e8377f4ad3e107f149a1c07c5038f2}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of a call log record Required Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_aa29a7136269b2e034da6b5a0ff0c098a}{session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a call session Required \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a1243dcaf4e015ea4596e83668af623e6}{deleted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the record is deleted. Returned for deleted records, for ISync requests \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallLogRecordLegInfo}{Call\+Log\+Record\+Leg\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_aefc26f79c07bf3fe2a388e336ee86abd}{legs}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For \textquotesingle{}Detailed\textquotesingle{} view only. Leg description \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CallLogRecord_a4883c1725b123bf321046801cdc7d7fa}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For \textquotesingle{}Detailed\textquotesingle{} view only. The datetime when the call log record was modified in (ISO 8601)\mbox{[}\href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+ISO\+\_\+8601}}\mbox{]} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Call log record 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_aa347efcd3b560acae2aa3de59ac1c902}\label{classRingCentral_1_1CallLogRecord_aa347efcd3b560acae2aa3de59ac1c902}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!action@{action}}
+\index{action@{action}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The internal action corresponding to the call operation Required Enum\+: Accept Call, Barge In Call, Call Park, Call Return, Call\+Out-\/\+Call\+Me, Calling Card, Conference Call, E911 Update, Emergency, External Application, Find\+Me, Follow\+Me, Free\+SPDL, Hunting, Incoming Fax, Monitoring, Move, Outgoing Fax, \mbox{\hyperlink{classRingCentral_1_1Paging}{Paging}}, Park Location, Phone Call, Phone Login, Pickup, RC Meetings, Ring Directly, Ring\+Me, Ring\+Out Mobile, Ring\+Out PC, Ring\+Out Web, Sip Forwarding, Support, Text Relay, Transfer, Unknown, Vo\+IP Call 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_ab01346a9443bbd48e1d4ad68a3108f26}\label{classRingCentral_1_1CallLogRecord_ab01346a9443bbd48e1d4ad68a3108f26}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!billing@{billing}}
+\index{billing@{billing}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{billing}{billing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1BillingInfo}{Billing\+Info}} Ring\+Central.\+Call\+Log\+Record.\+billing\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a2af587070fd5b5469fdcabeca9a9fca6}\label{classRingCentral_1_1CallLogRecord_a2af587070fd5b5469fdcabeca9a9fca6}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!delegate@{delegate}}
+\index{delegate@{delegate}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{delegate}{delegate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogDelegateInfo}{Call\+Log\+Delegate\+Info}} Ring\+Central.\+Call\+Log\+Record.\+delegate\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a211f7ff32292fe3aba75afc58ec46c55}\label{classRingCentral_1_1CallLogRecord_a211f7ff32292fe3aba75afc58ec46c55}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!delegationType@{delegationType}}
+\index{delegationType@{delegationType}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{delegationType}{delegationType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+delegation\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call delegation type Enum\+: Coworker, Unknown 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a1243dcaf4e015ea4596e83668af623e6}\label{classRingCentral_1_1CallLogRecord_a1243dcaf4e015ea4596e83668af623e6}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!deleted@{deleted}}
+\index{deleted@{deleted}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{deleted}{deleted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Call\+Log\+Record.\+deleted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates whether the record is deleted. Returned for deleted records, for ISync requests 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_ac4a94b90dd4fec4fd9c864d9e359e1af}\label{classRingCentral_1_1CallLogRecord_ac4a94b90dd4fec4fd9c864d9e359e1af}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!direction@{direction}}
+\index{direction@{direction}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The direction of a call Required Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a5f4c148192d25420d06f76a24673b976}\label{classRingCentral_1_1CallLogRecord_a5f4c148192d25420d06f76a24673b976}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!duration@{duration}}
+\index{duration@{duration}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Call\+Log\+Record.\+duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call duration in seconds Required Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a9dfa931e83aba5f748abe013c0a3cabf}\label{classRingCentral_1_1CallLogRecord_a9dfa931e83aba5f748abe013c0a3cabf}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!durationMs@{durationMs}}
+\index{durationMs@{durationMs}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{durationMs}{durationMs}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Call\+Log\+Record.\+duration\+Ms\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call duration in milliseconds Required Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a02fd8530ae64d8da860e66dc5351cbb2}\label{classRingCentral_1_1CallLogRecord_a02fd8530ae64d8da860e66dc5351cbb2}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!extension@{extension}}
+\index{extension@{extension}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ExtensionInfoCallLog}{Extension\+Info\+Call\+Log}} Ring\+Central.\+Call\+Log\+Record.\+extension\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a44e7d9ac74f5819467057a55198546e5}\label{classRingCentral_1_1CallLogRecord_a44e7d9ac74f5819467057a55198546e5}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!from@{from}}
+\index{from@{from}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogFromParty}{Call\+Log\+From\+Party}} Ring\+Central.\+Call\+Log\+Record.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a1543180683972e8d84819c75d66f5572}\label{classRingCentral_1_1CallLogRecord_a1543180683972e8d84819c75d66f5572}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!id@{id}}
+\index{id@{id}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a call log record Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a8ee634995e9e5f48f40695e5a4afd479}\label{classRingCentral_1_1CallLogRecord_a8ee634995e9e5f48f40695e5a4afd479}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!internalType@{internalType}}
+\index{internalType@{internalType}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{internalType}{internalType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+internal\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The internal type of the call Enum\+: Local, Long\+Distance, International, Sip, Ring\+Me, Ring\+Out, Usual, Toll\+Free\+Number, Verification\+Number, Vma, Local\+Number, Ims\+Outgoing, Ims\+Incoming 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a4883c1725b123bf321046801cdc7d7fa}\label{classRingCentral_1_1CallLogRecord_a4883c1725b123bf321046801cdc7d7fa}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For \textquotesingle{}Detailed\textquotesingle{} view only. The datetime when the call log record was modified in (ISO 8601)\mbox{[}\href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+ISO\+\_\+8601}}\mbox{]} format including timezone, for example {\itshape 2016-\/03-\/10T18\+:07\+:52.\+534Z} Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_aefc26f79c07bf3fe2a388e336ee86abd}\label{classRingCentral_1_1CallLogRecord_aefc26f79c07bf3fe2a388e336ee86abd}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!legs@{legs}}
+\index{legs@{legs}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{legs}{legs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogRecordLegInfo}{Call\+Log\+Record\+Leg\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Call\+Log\+Record.\+legs\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For \textquotesingle{}Detailed\textquotesingle{} view only. Leg description 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a616a1ad8ef37305ac0724d0cd240518e}\label{classRingCentral_1_1CallLogRecord_a616a1ad8ef37305ac0724d0cd240518e}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!message@{message}}
+\index{message@{message}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogRecordMessage}{Call\+Log\+Record\+Message}} Ring\+Central.\+Call\+Log\+Record.\+message\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a7eb6840d247243fbae9a050147c366a5}\label{classRingCentral_1_1CallLogRecord_a7eb6840d247243fbae9a050147c366a5}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!partyId@{partyId}}
+\index{partyId@{partyId}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{partyId}{partyId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+party\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal Identifier of \mbox{\hyperlink{classRingCentral_1_1Participant}{Participant}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a8020f47ea779193187a0f0477051c8d6}\label{classRingCentral_1_1CallLogRecord_a8020f47ea779193187a0f0477051c8d6}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!reason@{reason}}
+\index{reason@{reason}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{reason}{reason}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+reason\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The reason of the call result\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Accepted} -\/ The call was connected to and accepted by this number
+\item {\ttfamily Connected} -\/ The call was answered, but there was no response on how to handle the call (for example, a voice mail system answered the call and did not push \char`\"{}1\char`\"{} to accept)
+\item {\ttfamily Line Busy} -\/ The phone number you dialed was busy
+\item {\ttfamily Not Answered} -\/ The phone number you dialed was not answered
+\item {\ttfamily No Answer} -\/ You did not answer the call
+\item {\ttfamily Hang Up} -\/ The caller hung up before the call was answered
+\item {\ttfamily Stopped} -\/ This attempt was stopped because the call was answered by another phone
+\item {\ttfamily Internal Error} -\/ An internal error occurred when making the call. Please try again
+\item {\ttfamily No Credit} -\/ There was not enough Calling Credit on your account to make this call
+\item {\ttfamily Restricted Number} -\/ The number you dialed is restricted by \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}}
+\item {\ttfamily Wrong Number} -\/ The number you dialed has either been disconnected or is not a valid phone number. Please check the number and try again
+\item {\ttfamily International Disabled} -\/ International calling is not enabled on your account. Contact customer service to activate International Calling
+\item {\ttfamily International Restricted} -\/ The country and/or area you attempted to call has been prohibited by your administrator
+\item {\ttfamily Bad Number} -\/ An error occurred when making the call. Please check the number before trying again
+\item {\ttfamily Info 411 Restricted} -\/ Calling to 411 Information Services is restricted
+\item {\ttfamily Customer 611 Restricted} -\/ 611 customer service is not supported. Please contact customer service at $<$(888) 555-\/1212$>$
+\item {\ttfamily No Digital Line} -\/ This Digital\+Line was either not plugged in or did not have an internet connection
+\item {\ttfamily Failed Try Again} -\/ Call failed. Please try again
+\item {\ttfamily Max Call Limit} -\/ The number of simultaneous calls to your account has reached its limit
+\item {\ttfamily Too Many Calls} -\/ The number of simultaneous calls for per Digital\+Line associated with Other Phone has reached its limit. Please contact customer service
+\item {\ttfamily Calls Not Accepted} -\/ Your account was not accepting calls at this time
+\item {\ttfamily Number Not Allowed} -\/ The number that was dialed to access your account is not allowed
+\item {\ttfamily Number Blocked} -\/ This number is in your Blocked Numbers list
+\item {\ttfamily Number Disabled} -\/ The phone number and/or area you attempted to call has been prohibited by your administrator
+\item {\ttfamily Resource Error} -\/ An error occurred when making the call. Please try again
+\item {\ttfamily Call Loop} -\/ A call loop occurred due to an incorrect call forwarding configuration. Please check that you are not forwarding calls back to your own account
+\item {\ttfamily Fax Not Received} -\/ An incoming fax could not be received because a proper connection with the sender\textquotesingle{}s fax machine could not be established
+\item {\ttfamily Fax Partially Sent} -\/ The fax was only partially sent. Possible explanations include phone line quality to poor to maintain the connection or the call was dropped
+\item {\ttfamily Fax Not Sent} -\/ An attempt to send the fax was made, but could not connect with the receiving fax machine
+\item {\ttfamily Fax Poor Line} -\/ An attempt to send the fax was made, but the phone line quality was too poor to send the fax
+\item {\ttfamily Fax Prepare Error} -\/ An internal error occurred when preparing the fax. Please try again
+\item {\ttfamily Fax Save Error} -\/ An internal error occurred when saving the fax. Please try again
+\item {\ttfamily Fax Send Error} -\/ An error occurred when sending the fax. Please try again
+\item {\ttfamily Emergency Address not defined} -\/ The call was rejected due to no E911 address
+\item {\ttfamily Carrier is not active} -\/ The call was rejected due to carrier inactivity
+\item {\ttfamily EDGE trunk misconfigured} -\/ The call was rejected due to error in EDGE trunk configuration
+\item {\ttfamily Internal Call Error} -\/ An internal error occurred when making the call. Please try again
+\item {\ttfamily Receive Error} -\/ Fax receive error Enum\+: Accepted, Bad Number, Call Loop, Calls Not Accepted, Carrier is not active, Connected, Customer 611 Restricted, EDGE trunk misconfigured, Emergency Address not defined, Failed Try Again, Fax Not Received, Fax Not Sent, Fax Partially Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error, Hang Up, Info 411 Restricted, Internal Call Error, Internal Error, International Disabled, International Restricted, Line Busy, Max Call Limit, No Answer, No Credit, No Digital Line, Not Answered, Number Blocked, Number Disabled, Number Not Allowed, Receive Error, Resource Error, Restricted Number, Stopped, Too Many Calls, Unknown, Wrong Number
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a848d7a74e0938469f780ea42881d43c9}\label{classRingCentral_1_1CallLogRecord_a848d7a74e0938469f780ea42881d43c9}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!reasonDescription@{reasonDescription}}
+\index{reasonDescription@{reasonDescription}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{reasonDescription}{reasonDescription}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+reason\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The detailed reason description of the call result 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_abec4663d2c47ce7d9a51c270947a23e1}\label{classRingCentral_1_1CallLogRecord_abec4663d2c47ce7d9a51c270947a23e1}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!recording@{recording}}
+\index{recording@{recording}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{recording}{recording}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogRecordingInfo}{Call\+Log\+Recording\+Info}} Ring\+Central.\+Call\+Log\+Record.\+recording\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a3e0aea02e86d5b2203d9a4385433ad90}\label{classRingCentral_1_1CallLogRecord_a3e0aea02e86d5b2203d9a4385433ad90}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!result@{result}}
+\index{result@{result}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+result\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The result of the call operation Enum\+: 911, 933, Abandoned, Accepted, Answered Not Accepted, Blocked, Busy, Call Failed, Call Failure, Call connected, Carrier is not active, Declined, EDGE trunk misconfigured, Fax Not Sent, Fax Partially Sent, Fax Poor Line, Fax Receipt Error, Fax on Demand, Hang Up, IP Phone Offline, In Progress, Internal Error, International Disabled, International Restricted, Missed, No Answer, No Calling Credit, Not Allowed, Partial Receive, Phone Login, Receive Error, Received, Rejected, Reply, Restricted Number, Send Error, Sent, Sent to Voicemail, Stopped, Suspended account, Unknown, Voicemail, Wrong Number 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_aa29a7136269b2e034da6b5a0ff0c098a}\label{classRingCentral_1_1CallLogRecord_aa29a7136269b2e034da6b5a0ff0c098a}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!sessionId@{sessionId}}
+\index{sessionId@{sessionId}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{sessionId}{sessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a call session Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a59736b18951cd9a4d28596fc56bc5eec}\label{classRingCentral_1_1CallLogRecord_a59736b18951cd9a4d28596fc56bc5eec}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!shortRecording@{shortRecording}}
+\index{shortRecording@{shortRecording}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{shortRecording}{shortRecording}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Call\+Log\+Record.\+short\+Recording\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates that the recording is too short and therefore wouldn\textquotesingle{}t be returned. The flag is not returned if the value is false 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_ac2a09c6ce48fddd97399520629c8ba35}\label{classRingCentral_1_1CallLogRecord_ac2a09c6ce48fddd97399520629c8ba35}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!sipUuidInfo@{sipUuidInfo}}
+\index{sipUuidInfo@{sipUuidInfo}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{sipUuidInfo}{sipUuidInfo}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+sip\+Uuid\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call session identifier, required for Telephony REST API 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_aae05f10ee53929c3fc027e3f40ec7c81}\label{classRingCentral_1_1CallLogRecord_aae05f10ee53929c3fc027e3f40ec7c81}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The call start datetime in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Required Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a52ff7ab1c5e1767cd2d1c465be7c92a5}\label{classRingCentral_1_1CallLogRecord_a52ff7ab1c5e1767cd2d1c465be7c92a5}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!telephonySessionId@{telephonySessionId}}
+\index{telephonySessionId@{telephonySessionId}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{telephonySessionId}{telephonySessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+telephony\+Session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Telephony identifier of a call session 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_ad71039fb3994741be2b29f398cbb9be1}\label{classRingCentral_1_1CallLogRecord_ad71039fb3994741be2b29f398cbb9be1}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!to@{to}}
+\index{to@{to}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogToParty}{Call\+Log\+To\+Party}} Ring\+Central.\+Call\+Log\+Record.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a6be53150eb68e30fa11f0c2316e01192}\label{classRingCentral_1_1CallLogRecord_a6be53150eb68e30fa11f0c2316e01192}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!transferee@{transferee}}
+\index{transferee@{transferee}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{transferee}{transferee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogRecordTransferee}{Call\+Log\+Record\+Transferee}} Ring\+Central.\+Call\+Log\+Record.\+transferee\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a7049811a5b5f843126e5cf02e2fe5f5b}\label{classRingCentral_1_1CallLogRecord_a7049811a5b5f843126e5cf02e2fe5f5b}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!transferTarget@{transferTarget}}
+\index{transferTarget@{transferTarget}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{transferTarget}{transferTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallLogRecordTransferTarget}{Call\+Log\+Record\+Transfer\+Target}} Ring\+Central.\+Call\+Log\+Record.\+transfer\+Target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a643ffc6a545825987f90e3a0618068f0}\label{classRingCentral_1_1CallLogRecord_a643ffc6a545825987f90e3a0618068f0}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!transport@{transport}}
+\index{transport@{transport}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{transport}{transport}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+transport\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of call transport. \textquotesingle{}PSTN\textquotesingle{} indicates that a call leg was initiated from the PSTN network provider; \textquotesingle{}Vo\+IP\textquotesingle{} -\/ from an RC phone. Required Enum\+: PSTN, Vo\+IP 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a797dd8375dca56d9ca6b1bb2b1570379}\label{classRingCentral_1_1CallLogRecord_a797dd8375dca56d9ca6b1bb2b1570379}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!type@{type}}
+\index{type@{type}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of call Required Enum\+: Voice, Fax 
+
+\mbox{\Hypertarget{classRingCentral_1_1CallLogRecord_a23e8377f4ad3e107f149a1c07c5038f2}\label{classRingCentral_1_1CallLogRecord_a23e8377f4ad3e107f149a1c07c5038f2}} 
+\index{RingCentral.CallLogRecord@{RingCentral.CallLogRecord}!uri@{uri}}
+\index{uri@{uri}!RingCentral.CallLogRecord@{RingCentral.CallLogRecord}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Call\+Log\+Record.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of a call log record Required Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Call\+Log\+Record.\+cs\end{DoxyCompactItemize}

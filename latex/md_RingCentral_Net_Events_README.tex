@@ -1,0 +1,24 @@
+This extension provides your with events about HTTP requests, so that you can subscribe to them.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var rc = \textcolor{keyword}{new} RestClient(}
+\DoxyCodeLine{    Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_CLIENT\_ID"{}}),}
+\DoxyCodeLine{    Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_CLIENT\_SECRET"{}}),}
+\DoxyCodeLine{    Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_SERVER\_URL"{}})}
+\DoxyCodeLine{)}
+\DoxyCodeLine{var eventsExtension = new EventsExtension();}
+\DoxyCodeLine{await rc.InstallExtension(eventsExtension);}
+\DoxyCodeLine{}
+\DoxyCodeLine{var count = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} EventHandler(\textcolor{keywordtype}{object} sender, HttpMessages httpMessages)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{// do something with httpMessages}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{eventsExtension.RequestSuccess += EventHandler;}
+
+\end{DoxyCode}
+\hypertarget{md_RingCentral_Net_Events_README_autotoc_md478}{}\doxysection{More documentation}\label{md_RingCentral_Net_Events_README_autotoc_md478}
+This extension is inspired by \href{https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/events}{\texttt{ its Type\+Script counterpart}} , check its documentation for more information. 

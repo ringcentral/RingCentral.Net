@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="RingCentral.MakeRingOutCaller\lInfoRequestTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1MakeRingOutCallerInfoRequestTo.html",tooltip="Phone number of a called party. This number corresponds to the 2nd leg of a RingOut call"];
+}

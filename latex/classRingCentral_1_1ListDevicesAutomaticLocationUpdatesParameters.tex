@@ -1,0 +1,119 @@
+\hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters}{}\doxysection{Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters Class Reference}
+\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters}\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+
+
+Query parameters for operation list\+Devices\+Automatic\+Location\+Updates  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a9787f002cb0b30503bcdc7af4f2725fe}{site\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a5c4221cd551eafe5001dd02198bebae6}{feature\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters entries by their status of Automatic Location Updates feature \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a63de639f0cbca7d88aaf7d757dd1c4c2}{model\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a device model for filtering. Multiple values are supported \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a0a9bc5b24604340316e7c2df80797559}{compatible\+Only}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters devices which support HELD protocol \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a98757c3507f601e3c160d6cd09816c40}{search\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters entries which have device name or model name containing the mentioned substring. The value should be split by spaces; the range is 0 -\/ 64 characters, not case-\/sensitive. If empty the filter is ignored \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_ac984aae7ff1ff3973a66af7eb0950b5b}{order\+By}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comma-\/separated list of fields to order results prefixed by plus sign \textquotesingle{}+\textquotesingle{} (ascending order) or minus sign \textquotesingle{}-\/\textquotesingle{} (descending order). Supported values\+: \textquotesingle{}name\textquotesingle{}, \textquotesingle{}model\+Name\textquotesingle{}, \textquotesingle{}site\+Name\textquotesingle{}, \textquotesingle{}feature\+Enabled\textquotesingle{}. The default sorting is by {\ttfamily name} \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_af87a77481ae5d51ac3738980648dd5e2}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a393110f24b98cd85098bf358c2a2c437}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates a page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+Devices\+Automatic\+Location\+Updates 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a0a9bc5b24604340316e7c2df80797559}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a0a9bc5b24604340316e7c2df80797559}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!compatibleOnly@{compatibleOnly}}
+\index{compatibleOnly@{compatibleOnly}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{compatibleOnly}{compatibleOnly}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+compatible\+Only\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filters devices which support HELD protocol 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a5c4221cd551eafe5001dd02198bebae6}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a5c4221cd551eafe5001dd02198bebae6}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!featureEnabled@{featureEnabled}}
+\index{featureEnabled@{featureEnabled}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{featureEnabled}{featureEnabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+feature\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filters entries by their status of Automatic Location Updates feature 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a63de639f0cbca7d88aaf7d757dd1c4c2}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a63de639f0cbca7d88aaf7d757dd1c4c2}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!modelId@{modelId}}
+\index{modelId@{modelId}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{modelId}{modelId}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+model\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a device model for filtering. Multiple values are supported 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_ac984aae7ff1ff3973a66af7eb0950b5b}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_ac984aae7ff1ff3973a66af7eb0950b5b}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{orderBy}{orderBy}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+order\+By\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Comma-\/separated list of fields to order results prefixed by plus sign \textquotesingle{}+\textquotesingle{} (ascending order) or minus sign \textquotesingle{}-\/\textquotesingle{} (descending order). Supported values\+: \textquotesingle{}name\textquotesingle{}, \textquotesingle{}model\+Name\textquotesingle{}, \textquotesingle{}site\+Name\textquotesingle{}, \textquotesingle{}feature\+Enabled\textquotesingle{}. The default sorting is by {\ttfamily name} 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a393110f24b98cd85098bf358c2a2c437}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a393110f24b98cd85098bf358c2a2c437}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!page@{page}}
+\index{page@{page}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page number to retrieve. Only positive number values are supported Format\+: int32 Default\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_af87a77481ae5d51ac3738980648dd5e2}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_af87a77481ae5d51ac3738980648dd5e2}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates a page size (number of items). The values supported\+: {\ttfamily Max} or numeric value. If not specified, 100 records are returned per one page Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a98757c3507f601e3c160d6cd09816c40}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a98757c3507f601e3c160d6cd09816c40}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!searchString@{searchString}}
+\index{searchString@{searchString}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{searchString}{searchString}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+search\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filters entries which have device name or model name containing the mentioned substring. The value should be split by spaces; the range is 0 -\/ 64 characters, not case-\/sensitive. If empty the filter is ignored 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a9787f002cb0b30503bcdc7af4f2725fe}\label{classRingCentral_1_1ListDevicesAutomaticLocationUpdatesParameters_a9787f002cb0b30503bcdc7af4f2725fe}} 
+\index{RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}!siteId@{siteId}}
+\index{siteId@{siteId}!RingCentral.ListDevicesAutomaticLocationUpdatesParameters@{RingCentral.ListDevicesAutomaticLocationUpdatesParameters}}
+\doxysubsubsection{\texorpdfstring{siteId}{siteId}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+site\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a site for filtering. To indicate company main site {\ttfamily main-\/site} value should be specified. Supported only if multi-\/site feature is enabled for the account. Multiple values are supported. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+Devices\+Automatic\+Location\+Updates\+Parameters.\+cs\end{DoxyCompactItemize}

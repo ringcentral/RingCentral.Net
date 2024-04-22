@@ -1,0 +1,169 @@
+\hypertarget{classRingCentral_1_1PresenceInfoResponse}{}\doxysection{Ring\+Central.\+Presence\+Info\+Response Class Reference}
+\label{classRingCentral_1_1PresenceInfoResponse}\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_abc9230df1ffca9c308431ce689593868}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Link to the presence resource Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_a11c23823108e58da599744f043b10214}{user\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Offline, Busy, Available \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_a08240c21d4542b370a52122f42c3e050}{dnd\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Take\+All\+Calls, Do\+Not\+Accept\+Department\+Calls, Take\+Department\+Calls\+Only, Do\+Not\+Accept\+Any\+Calls, Unknown \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_a2a4605567cc00eb354f70156f923bff1}{message}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_a1142d1753dad310cdde259822f386634}{allow\+See\+My\+Presence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_afc4c8c836c00cace117ec982b7e631ac}{caller\+Id\+Visibility}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Configures the user presence visibility. When the {\ttfamily allow\+See\+My\+Presence} parameter is set to {\ttfamily true}, the following visibility options are supported via this parameter -\/ All, None, Permitted\+Users Enum\+: All, None, Permitted\+Users \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_ab5a70456d8f837b470bba185e8783c03}{ring\+On\+Monitored\+Call}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_a06c4560a2c8e5af5dd0a7e33f373f7ab}{pick\+Up\+Calls\+On\+Hold}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ActiveCallInfo}{Active\+Call\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_a881d87e9c24745d977ce62bf6667cdc8}{active\+Calls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1GetPresenceExtensionInfo}{Get\+Presence\+Extension\+Info}} \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_add835a252b250406a6ccd37255adb17f}{extension}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_a933060860605704cdb4c9fc8a8cbf0f3}{meeting\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Meetings presence status Enum\+: Connected, Disconnected \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_acc429c50d829bb6a5caf3f71899a0427}{telephony\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Telephony presence status. Returned if telephony status is changed Enum\+: No\+Call, Call\+Connected, Ringing, On\+Hold, Parked\+Call \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1PresenceInfoResponse_ae6481a6943b839b7bc9584bbc30f4261}{presence\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aggregated presence status, calculated from a number of sources Enum\+: Offline, Busy, Available \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_a881d87e9c24745d977ce62bf6667cdc8}\label{classRingCentral_1_1PresenceInfoResponse_a881d87e9c24745d977ce62bf6667cdc8}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!activeCalls@{activeCalls}}
+\index{activeCalls@{activeCalls}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{activeCalls}{activeCalls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfo}{Active\+Call\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Presence\+Info\+Response.\+active\+Calls\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_a1142d1753dad310cdde259822f386634}\label{classRingCentral_1_1PresenceInfoResponse_a1142d1753dad310cdde259822f386634}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!allowSeeMyPresence@{allowSeeMyPresence}}
+\index{allowSeeMyPresence@{allowSeeMyPresence}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{allowSeeMyPresence}{allowSeeMyPresence}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Presence\+Info\+Response.\+allow\+See\+My\+Presence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_afc4c8c836c00cace117ec982b7e631ac}\label{classRingCentral_1_1PresenceInfoResponse_afc4c8c836c00cace117ec982b7e631ac}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!callerIdVisibility@{callerIdVisibility}}
+\index{callerIdVisibility@{callerIdVisibility}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{callerIdVisibility}{callerIdVisibility}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+caller\+Id\+Visibility\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Configures the user presence visibility. When the {\ttfamily allow\+See\+My\+Presence} parameter is set to {\ttfamily true}, the following visibility options are supported via this parameter -\/ All, None, Permitted\+Users Enum\+: All, None, Permitted\+Users 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_a08240c21d4542b370a52122f42c3e050}\label{classRingCentral_1_1PresenceInfoResponse_a08240c21d4542b370a52122f42c3e050}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!dndStatus@{dndStatus}}
+\index{dndStatus@{dndStatus}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{dndStatus}{dndStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+dnd\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Take\+All\+Calls, Do\+Not\+Accept\+Department\+Calls, Take\+Department\+Calls\+Only, Do\+Not\+Accept\+Any\+Calls, Unknown 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_add835a252b250406a6ccd37255adb17f}\label{classRingCentral_1_1PresenceInfoResponse_add835a252b250406a6ccd37255adb17f}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!extension@{extension}}
+\index{extension@{extension}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1GetPresenceExtensionInfo}{Get\+Presence\+Extension\+Info}} Ring\+Central.\+Presence\+Info\+Response.\+extension\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_a933060860605704cdb4c9fc8a8cbf0f3}\label{classRingCentral_1_1PresenceInfoResponse_a933060860605704cdb4c9fc8a8cbf0f3}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!meetingStatus@{meetingStatus}}
+\index{meetingStatus@{meetingStatus}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{meetingStatus}{meetingStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+meeting\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Meetings presence status Enum\+: Connected, Disconnected 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_a2a4605567cc00eb354f70156f923bff1}\label{classRingCentral_1_1PresenceInfoResponse_a2a4605567cc00eb354f70156f923bff1}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!message@{message}}
+\index{message@{message}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+message\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_a06c4560a2c8e5af5dd0a7e33f373f7ab}\label{classRingCentral_1_1PresenceInfoResponse_a06c4560a2c8e5af5dd0a7e33f373f7ab}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!pickUpCallsOnHold@{pickUpCallsOnHold}}
+\index{pickUpCallsOnHold@{pickUpCallsOnHold}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{pickUpCallsOnHold}{pickUpCallsOnHold}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Presence\+Info\+Response.\+pick\+Up\+Calls\+On\+Hold\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_ae6481a6943b839b7bc9584bbc30f4261}\label{classRingCentral_1_1PresenceInfoResponse_ae6481a6943b839b7bc9584bbc30f4261}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!presenceStatus@{presenceStatus}}
+\index{presenceStatus@{presenceStatus}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{presenceStatus}{presenceStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+presence\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Aggregated presence status, calculated from a number of sources Enum\+: Offline, Busy, Available 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_ab5a70456d8f837b470bba185e8783c03}\label{classRingCentral_1_1PresenceInfoResponse_ab5a70456d8f837b470bba185e8783c03}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!ringOnMonitoredCall@{ringOnMonitoredCall}}
+\index{ringOnMonitoredCall@{ringOnMonitoredCall}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{ringOnMonitoredCall}{ringOnMonitoredCall}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Presence\+Info\+Response.\+ring\+On\+Monitored\+Call\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_acc429c50d829bb6a5caf3f71899a0427}\label{classRingCentral_1_1PresenceInfoResponse_acc429c50d829bb6a5caf3f71899a0427}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!telephonyStatus@{telephonyStatus}}
+\index{telephonyStatus@{telephonyStatus}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{telephonyStatus}{telephonyStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+telephony\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Telephony presence status. Returned if telephony status is changed Enum\+: No\+Call, Call\+Connected, Ringing, On\+Hold, Parked\+Call 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_abc9230df1ffca9c308431ce689593868}\label{classRingCentral_1_1PresenceInfoResponse_abc9230df1ffca9c308431ce689593868}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!uri@{uri}}
+\index{uri@{uri}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Link to the presence resource Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1PresenceInfoResponse_a11c23823108e58da599744f043b10214}\label{classRingCentral_1_1PresenceInfoResponse_a11c23823108e58da599744f043b10214}} 
+\index{RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}!userStatus@{userStatus}}
+\index{userStatus@{userStatus}!RingCentral.PresenceInfoResponse@{RingCentral.PresenceInfoResponse}}
+\doxysubsubsection{\texorpdfstring{userStatus}{userStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Presence\+Info\+Response.\+user\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Offline, Busy, Available 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Presence\+Info\+Response.\+cs\end{DoxyCompactItemize}

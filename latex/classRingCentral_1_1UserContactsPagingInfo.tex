@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1UserContactsPagingInfo}{}\doxysection{Ring\+Central.\+User\+Contacts\+Paging\+Info Class Reference}
+\label{classRingCentral_1_1UserContactsPagingInfo}\index{RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}}
+
+
+Information on paging  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserContactsPagingInfo_acc6af1e3d185d50b7026157ae4151e52}{page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if the result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserContactsPagingInfo_a0ee622ec8f2de487909cbc822d52b9e8}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current page size, describes how many items each page contains. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserContactsPagingInfo_ad319a9cf6aa7bd7450689066fb5c3f80}{page\+Start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zero-\/based number of the first element on the current page. Omitted if a page is omitted or the result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserContactsPagingInfo_a92a3e4026209f53f0170784d534cc50a}{page\+End}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zero-\/based index of the last element on the current page. Omitted if a page is omitted or the result is empty Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserContactsPagingInfo_a1e115405fef13aca8899710eab60ae95}{total\+Pages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1UserContactsPagingInfo_a99616627de3093c723cd1e93e277fe5f}{total\+Elements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information on paging 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1UserContactsPagingInfo_acc6af1e3d185d50b7026157ae4151e52}\label{classRingCentral_1_1UserContactsPagingInfo_acc6af1e3d185d50b7026157ae4151e52}} 
+\index{RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}!page@{page}}
+\index{page@{page}!RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Contacts\+Paging\+Info.\+page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current page number. 1-\/indexed, so the first page is 1 by default. May be omitted if the result is empty (because non-\/existent page was specified or per\+Page=0 was requested) Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserContactsPagingInfo_a92a3e4026209f53f0170784d534cc50a}\label{classRingCentral_1_1UserContactsPagingInfo_a92a3e4026209f53f0170784d534cc50a}} 
+\index{RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}!pageEnd@{pageEnd}}
+\index{pageEnd@{pageEnd}!RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageEnd}{pageEnd}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Contacts\+Paging\+Info.\+page\+End\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zero-\/based index of the last element on the current page. Omitted if a page is omitted or the result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserContactsPagingInfo_ad319a9cf6aa7bd7450689066fb5c3f80}\label{classRingCentral_1_1UserContactsPagingInfo_ad319a9cf6aa7bd7450689066fb5c3f80}} 
+\index{RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}!pageStart@{pageStart}}
+\index{pageStart@{pageStart}!RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}}
+\doxysubsubsection{\texorpdfstring{pageStart}{pageStart}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Contacts\+Paging\+Info.\+page\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zero-\/based number of the first element on the current page. Omitted if a page is omitted or the result is empty Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserContactsPagingInfo_a0ee622ec8f2de487909cbc822d52b9e8}\label{classRingCentral_1_1UserContactsPagingInfo_a0ee622ec8f2de487909cbc822d52b9e8}} 
+\index{RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Contacts\+Paging\+Info.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current page size, describes how many items each page contains. Default value is 100. Maximum value is 1000. If per\+Page value in the request is greater than 1000, the maximum value (1000) is applied Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserContactsPagingInfo_a99616627de3093c723cd1e93e277fe5f}\label{classRingCentral_1_1UserContactsPagingInfo_a99616627de3093c723cd1e93e277fe5f}} 
+\index{RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}!totalElements@{totalElements}}
+\index{totalElements@{totalElements}!RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalElements}{totalElements}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Contacts\+Paging\+Info.\+total\+Elements\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total number of elements in a dataset. May be omitted for some resource due to performance reasons Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1UserContactsPagingInfo_a1e115405fef13aca8899710eab60ae95}\label{classRingCentral_1_1UserContactsPagingInfo_a1e115405fef13aca8899710eab60ae95}} 
+\index{RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}!totalPages@{totalPages}}
+\index{totalPages@{totalPages}!RingCentral.UserContactsPagingInfo@{RingCentral.UserContactsPagingInfo}}
+\doxysubsubsection{\texorpdfstring{totalPages}{totalPages}}
+{\footnotesize\ttfamily long? Ring\+Central.\+User\+Contacts\+Paging\+Info.\+total\+Pages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total number of pages in a dataset. May be omitted for some resources due to performance reasons Format\+: int32 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/User\+Contacts\+Paging\+Info.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\hypertarget{classRingCentral_1_1AccountPhoneNumberInfo}{}\doxysection{Ring\+Central.\+Account\+Phone\+Number\+Info Class Reference}
+\label{classRingCentral_1_1AccountPhoneNumberInfo}\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_a722030a9d5b54c8b5c406bf4cf89c974}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal unique identifier of a phone number Required Example\+: 1162820004 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_a9348701a0362892acf888e9601a8af30}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in e.\+164 format (with \textquotesingle{}+\textquotesingle{} prefix) Required Example\+: +16501234567 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_a594ab21500438c3f6d7d8511aecf4e2b}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of phone number Enum\+: Voice\+Fax, Voice\+Only, Fax\+Only \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_a826a10d32a51912d0be08bc4205f4010}{toll\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if a number is toll or toll-\/free Required Example\+: Toll Enum\+: Toll, Toll\+Free \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_a09fffc4b0e8dae1b1eea7ecfba4d60ae}{usage\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Usage type of phone number Required Enum\+: Main\+Company\+Number, Direct\+Number, Inventory, Inventory\+Partner\+Business\+Mobile\+Number, Partner\+Business\+Mobile\+Number, Additional\+Company\+Number, Company\+Number, Phone\+Line, Company\+Fax\+Number, Forwarded\+Number, Forwarded\+Company\+Number, Contact\+Center\+Number, Conferencing\+Number, Meetings\+Number, Business\+Mobile\+Number, ELIN \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_a0f51a795e5d785b5ac6e2d341449340a}{byoc\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_a58ffe4fb0afe0aaca4f0743f3b990471}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Status of a phone number. If the value is \textquotesingle{}Normal\textquotesingle{}, the phone number is ready to be used. Otherwise, it is an external number not yet ported to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Required Enum\+: Normal, Pending, Ported\+In, Temporary, Unknown \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfoExtension}{Account\+Phone\+Number\+Info\+Extension}} \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo_ab355c8c1aadc0cc8b80535ddb31e716b}{extension}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Reference to the extension this number is assigned to. Omitted for company numbers \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_a0f51a795e5d785b5ac6e2d341449340a}\label{classRingCentral_1_1AccountPhoneNumberInfo_a0f51a795e5d785b5ac6e2d341449340a}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!byocNumber@{byocNumber}}
+\index{byocNumber@{byocNumber}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{byocNumber}{byocNumber}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Account\+Phone\+Number\+Info.\+byoc\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_ab355c8c1aadc0cc8b80535ddb31e716b}\label{classRingCentral_1_1AccountPhoneNumberInfo_ab355c8c1aadc0cc8b80535ddb31e716b}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!extension@{extension}}
+\index{extension@{extension}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfoExtension}{Account\+Phone\+Number\+Info\+Extension}} Ring\+Central.\+Account\+Phone\+Number\+Info.\+extension\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Reference to the extension this number is assigned to. Omitted for company numbers 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_a722030a9d5b54c8b5c406bf4cf89c974}\label{classRingCentral_1_1AccountPhoneNumberInfo_a722030a9d5b54c8b5c406bf4cf89c974}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!id@{id}}
+\index{id@{id}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+Phone\+Number\+Info.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal unique identifier of a phone number Required Example\+: 1162820004 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_a9348701a0362892acf888e9601a8af30}\label{classRingCentral_1_1AccountPhoneNumberInfo_a9348701a0362892acf888e9601a8af30}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+Phone\+Number\+Info.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in e.\+164 format (with \textquotesingle{}+\textquotesingle{} prefix) Required Example\+: +16501234567 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_a58ffe4fb0afe0aaca4f0743f3b990471}\label{classRingCentral_1_1AccountPhoneNumberInfo_a58ffe4fb0afe0aaca4f0743f3b990471}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!status@{status}}
+\index{status@{status}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+Phone\+Number\+Info.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Status of a phone number. If the value is \textquotesingle{}Normal\textquotesingle{}, the phone number is ready to be used. Otherwise, it is an external number not yet ported to \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} Required Enum\+: Normal, Pending, Ported\+In, Temporary, Unknown 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_a826a10d32a51912d0be08bc4205f4010}\label{classRingCentral_1_1AccountPhoneNumberInfo_a826a10d32a51912d0be08bc4205f4010}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!tollType@{tollType}}
+\index{tollType@{tollType}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{tollType}{tollType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+Phone\+Number\+Info.\+toll\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if a number is toll or toll-\/free Required Example\+: Toll Enum\+: Toll, Toll\+Free 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_a594ab21500438c3f6d7d8511aecf4e2b}\label{classRingCentral_1_1AccountPhoneNumberInfo_a594ab21500438c3f6d7d8511aecf4e2b}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!type@{type}}
+\index{type@{type}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+Phone\+Number\+Info.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of phone number Enum\+: Voice\+Fax, Voice\+Only, Fax\+Only 
+
+\mbox{\Hypertarget{classRingCentral_1_1AccountPhoneNumberInfo_a09fffc4b0e8dae1b1eea7ecfba4d60ae}\label{classRingCentral_1_1AccountPhoneNumberInfo_a09fffc4b0e8dae1b1eea7ecfba4d60ae}} 
+\index{RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}!usageType@{usageType}}
+\index{usageType@{usageType}!RingCentral.AccountPhoneNumberInfo@{RingCentral.AccountPhoneNumberInfo}}
+\doxysubsubsection{\texorpdfstring{usageType}{usageType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Account\+Phone\+Number\+Info.\+usage\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Usage type of phone number Required Enum\+: Main\+Company\+Number, Direct\+Number, Inventory, Inventory\+Partner\+Business\+Mobile\+Number, Partner\+Business\+Mobile\+Number, Additional\+Company\+Number, Company\+Number, Phone\+Line, Company\+Fax\+Number, Forwarded\+Number, Forwarded\+Company\+Number, Contact\+Center\+Number, Conferencing\+Number, Meetings\+Number, Business\+Mobile\+Number, ELIN 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Account\+Phone\+Number\+Info.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,141 @@
+\hypertarget{classRingCentral_1_1ContentAttachment}{}\doxysection{Ring\+Central.\+Content\+Attachment Class Reference}
+\label{classRingCentral_1_1ContentAttachment}\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a3397bdb628139c4052cbfced7a2f1eba}{\mbox{[}instance initializer\mbox{]}}}
+\begin{DoxyCompactList}\small\item\em Privacy setting of the attachment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a8df8ec63be65d16b5913c1c813e7ffc3}{content\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the attachment, which is generally a MIME attachment type like \char`\"{}image/jpeg\char`\"{}, etc. Security level in ED determines what type of attachment is allowed. Based on the security level the following attachment types are supported. \char`\"{}\+Strict\char`\"{} level allows safe extensions below\+: Content name and supported types \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_ad0b5b0741714bf23f050d7be12ecf792}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Creation time of the attachment. Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a4d6d2547a5659012d3d1c087aec3a3b9}{embedded}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Embedded in a content. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a1c61bfe23c76f9468aa5d5467897c049}{filename}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filename of the attachment. Example\+: 0.\+jpeg \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a48bf808052fe67f81cc50972b72cecfc}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of the attachment. Example\+: 54085e5b7aa58d8b5d00006c \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a0c9b4b5f9b7a6758eab592841b588fef}{size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of the attachment. Format\+: int32 Example\+: 217571 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a89b1cf0ae0310da2a5d43b95b5c83722}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time when the last modification was completed. Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentAttachment_a9d86921e9c70d26bfe37150ba59b376c}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Uri of the attachment. Format\+: uri Example\+: \href{https://example.digital.ringcentral.com/files/attachments/54085e5b7aa58d8b5d00006c}{\texttt{ https\+://example.\+digital.\+ringcentral.\+com/files/attachments/54085e5b7aa58d8b5d00006c}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a3397bdb628139c4052cbfced7a2f1eba}\label{classRingCentral_1_1ContentAttachment_a3397bdb628139c4052cbfced7a2f1eba}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!\mbox{[}instance initializer\mbox{]}@{[instance initializer]}}
+\index{\mbox{[}instance initializer\mbox{]}@{[instance initializer]}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{[instance initializer]()}{[instance initializer]()}}
+{\footnotesize\ttfamily Ring\+Central.\+Content\+Attachment.\mbox{[}instance initializer\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Privacy setting of the attachment. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a8df8ec63be65d16b5913c1c813e7ffc3}\label{classRingCentral_1_1ContentAttachment_a8df8ec63be65d16b5913c1c813e7ffc3}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!contentType@{contentType}}
+\index{contentType@{contentType}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{contentType}{contentType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Attachment.\+content\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of the attachment, which is generally a MIME attachment type like \char`\"{}image/jpeg\char`\"{}, etc. Security level in ED determines what type of attachment is allowed. Based on the security level the following attachment types are supported. \char`\"{}\+Strict\char`\"{} level allows safe extensions below\+: Content name and supported types 
+
+
+\begin{DoxyItemize}
+\item audio (supports aac mp3 ogg m4a)
+\item image (supports bmp gif jpg jpeg png svg webp)
+\item pdf (supports pdf)
+\item text (supports csv txt log)
+\item video (supports avi flv m4v mkv mov mp4 mpg qt wmv)
+\item other (supports amr dms vcard tif tiff mpeg) \char`\"{}\+Relaxed\char`\"{} level allows documents\+: Content name and supported types
+\item excel (supports xls xlsm xlsx xlc xlt xltm xltx)
+\item presentation (supports key odp otp)
+\item powerpoint (supports pps ppt pptx pot)
+\item spreadsheet (supports numbers ods ots)
+\item word (supports doc docm docx dotm dotx)
+\item word\+\_\+processing (supports pages odt ott rtf) \char`\"{}\+Permissive\char`\"{} level allows all documents. However, there are no security level restrictions for content posted through the channel. Example\+: image/jpeg
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_ad0b5b0741714bf23f050d7be12ecf792}\label{classRingCentral_1_1ContentAttachment_ad0b5b0741714bf23f050d7be12ecf792}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Attachment.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Creation time of the attachment. Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a4d6d2547a5659012d3d1c087aec3a3b9}\label{classRingCentral_1_1ContentAttachment_a4d6d2547a5659012d3d1c087aec3a3b9}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!embedded@{embedded}}
+\index{embedded@{embedded}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{embedded}{embedded}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Content\+Attachment.\+embedded\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Embedded in a content. 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a1c61bfe23c76f9468aa5d5467897c049}\label{classRingCentral_1_1ContentAttachment_a1c61bfe23c76f9468aa5d5467897c049}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!filename@{filename}}
+\index{filename@{filename}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Attachment.\+filename\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Filename of the attachment. Example\+: 0.\+jpeg 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a48bf808052fe67f81cc50972b72cecfc}\label{classRingCentral_1_1ContentAttachment_a48bf808052fe67f81cc50972b72cecfc}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!id@{id}}
+\index{id@{id}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Attachment.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of the attachment. Example\+: 54085e5b7aa58d8b5d00006c 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a89b1cf0ae0310da2a5d43b95b5c83722}\label{classRingCentral_1_1ContentAttachment_a89b1cf0ae0310da2a5d43b95b5c83722}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Attachment.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time when the last modification was completed. Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a0c9b4b5f9b7a6758eab592841b588fef}\label{classRingCentral_1_1ContentAttachment_a0c9b4b5f9b7a6758eab592841b588fef}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!size@{size}}
+\index{size@{size}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Content\+Attachment.\+size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Size of the attachment. Format\+: int32 Example\+: 217571 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentAttachment_a9d86921e9c70d26bfe37150ba59b376c}\label{classRingCentral_1_1ContentAttachment_a9d86921e9c70d26bfe37150ba59b376c}} 
+\index{RingCentral.ContentAttachment@{RingCentral.ContentAttachment}!uri@{uri}}
+\index{uri@{uri}!RingCentral.ContentAttachment@{RingCentral.ContentAttachment}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Attachment.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Uri of the attachment. Format\+: uri Example\+: \href{https://example.digital.ringcentral.com/files/attachments/54085e5b7aa58d8b5d00006c}{\texttt{ https\+://example.\+digital.\+ringcentral.\+com/files/attachments/54085e5b7aa58d8b5d00006c}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Content\+Attachment.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\hypertarget{classRingCentral_1_1ListA2PSMSParameters}{}\doxysection{Ring\+Central.\+List\+A2\+PSMSParameters Class Reference}
+\label{classRingCentral_1_1ListA2PSMSParameters}\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+
+
+Query parameters for operation list\+A2\+PSMS  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_a497b86d4d3d280776ff81d8918171c6e}{batch\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message batch to filter the response Example\+: 55577 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_a3b8f2583098b8ca092a8a30f3956f162}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Direction of the SMS message Example\+: Inbound Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_afd7ec35cae71d77ce0ec4fcd4f0c4eac}{date\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end of the time range to filter the results in ISO 8601 format including timezone. Default is the \textquotesingle{}date\+To\textquotesingle{} minus 24 hours Format\+: date-\/time Example\+: 2020-\/11-\/09T16\+:07\+:52.\+597Z \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_a3fa250c6d6f6a8040801fae19e865490}{date\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end of the time range to filter the results in ISO 8601 format including timezone. Default is the current time Format\+: date-\/time Example\+: 2020-\/11-\/25T16\+:07\+:52.\+597Z \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_a36a27000af84d0472021ed0f2b80853a}{view}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if the response has to be detailed, includes text in the response if detailed Default\+: Simple Enum\+: Simple, Detailed \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_ac69de49880ad8f7f41947a914deba16e}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of phone numbers (specified in \textquotesingle{}to\textquotesingle{} or \textquotesingle{}from\textquotesingle{} fields of a message) to filter the results. Maximum number of phone numbers allowed to be specified as filters is 15 Example\+: 15551234455,15551235577 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_afd292ae78038d03bc22584f4b2d250f3}{page\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The page token of the page to be retrieved. Example\+: pgt1 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ListA2PSMSParameters_a025ec6f8fabe6a187c8b1458d54b6885}{per\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of messages to be returned per request Format\+: int32 Example\+: 1 Default\+: 1000 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation list\+A2\+PSMS 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_a497b86d4d3d280776ff81d8918171c6e}\label{classRingCentral_1_1ListA2PSMSParameters_a497b86d4d3d280776ff81d8918171c6e}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!batchId@{batchId}}
+\index{batchId@{batchId}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{batchId}{batchId}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+A2\+PSMSParameters.\+batch\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a message batch to filter the response Example\+: 55577 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_afd7ec35cae71d77ce0ec4fcd4f0c4eac}\label{classRingCentral_1_1ListA2PSMSParameters_afd7ec35cae71d77ce0ec4fcd4f0c4eac}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!dateFrom@{dateFrom}}
+\index{dateFrom@{dateFrom}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{dateFrom}{dateFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+A2\+PSMSParameters.\+date\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end of the time range to filter the results in ISO 8601 format including timezone. Default is the \textquotesingle{}date\+To\textquotesingle{} minus 24 hours Format\+: date-\/time Example\+: 2020-\/11-\/09T16\+:07\+:52.\+597Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_a3fa250c6d6f6a8040801fae19e865490}\label{classRingCentral_1_1ListA2PSMSParameters_a3fa250c6d6f6a8040801fae19e865490}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!dateTo@{dateTo}}
+\index{dateTo@{dateTo}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{dateTo}{dateTo}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+A2\+PSMSParameters.\+date\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The end of the time range to filter the results in ISO 8601 format including timezone. Default is the current time Format\+: date-\/time Example\+: 2020-\/11-\/25T16\+:07\+:52.\+597Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_a3b8f2583098b8ca092a8a30f3956f162}\label{classRingCentral_1_1ListA2PSMSParameters_a3b8f2583098b8ca092a8a30f3956f162}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!direction@{direction}}
+\index{direction@{direction}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+A2\+PSMSParameters.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Direction of the SMS message Example\+: Inbound Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_afd292ae78038d03bc22584f4b2d250f3}\label{classRingCentral_1_1ListA2PSMSParameters_afd292ae78038d03bc22584f4b2d250f3}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!pageToken@{pageToken}}
+\index{pageToken@{pageToken}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{pageToken}{pageToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+A2\+PSMSParameters.\+page\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The page token of the page to be retrieved. Example\+: pgt1 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_a025ec6f8fabe6a187c8b1458d54b6885}\label{classRingCentral_1_1ListA2PSMSParameters_a025ec6f8fabe6a187c8b1458d54b6885}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!perPage@{perPage}}
+\index{perPage@{perPage}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{perPage}{perPage}}
+{\footnotesize\ttfamily long? Ring\+Central.\+List\+A2\+PSMSParameters.\+per\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of messages to be returned per request Format\+: int32 Example\+: 1 Default\+: 1000 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_ac69de49880ad8f7f41947a914deba16e}\label{classRingCentral_1_1ListA2PSMSParameters_ac69de49880ad8f7f41947a914deba16e}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+List\+A2\+PSMSParameters.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of phone numbers (specified in \textquotesingle{}to\textquotesingle{} or \textquotesingle{}from\textquotesingle{} fields of a message) to filter the results. Maximum number of phone numbers allowed to be specified as filters is 15 Example\+: 15551234455,15551235577 
+
+\mbox{\Hypertarget{classRingCentral_1_1ListA2PSMSParameters_a36a27000af84d0472021ed0f2b80853a}\label{classRingCentral_1_1ListA2PSMSParameters_a36a27000af84d0472021ed0f2b80853a}} 
+\index{RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}!view@{view}}
+\index{view@{view}!RingCentral.ListA2PSMSParameters@{RingCentral.ListA2PSMSParameters}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily string Ring\+Central.\+List\+A2\+PSMSParameters.\+view\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if the response has to be detailed, includes text in the response if detailed Default\+: Simple Enum\+: Simple, Detailed 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/List\+A2\+PSMSParameters.\+cs\end{DoxyCompactItemize}

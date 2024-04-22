@@ -1,0 +1,107 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_af509143e2dd8932dbabf5a744e41020b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_af509143e2dd8932dbabf5a744e41020b}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Index}{Address\+Book.\+Index}} parent, string contact\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a52e0c26edd164df7096e80f22b0d5fb6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a52e0c26edd164df7096e80f22b0d5fb6}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ContactList}{Contact\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_ab7779abf9bd4dc9014df3f8c3829e677}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListContactsParameters}{List\+Contacts\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the user personal contacts. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact Rate Limit Group\+: Heavy App Permission\+: Read\+Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Personal\+Contacts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_aa582b6b39227f12361070e6ff04ba388}{Post}} (\mbox{\hyperlink{classRingCentral_1_1PersonalContactRequest}{Personal\+Contact\+Request}} personal\+Contact\+Request, \mbox{\hyperlink{classRingCentral_1_1CreateContactParameters}{Create\+Contact\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates the user personal contact. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_ad902c427a981787b6d2b63e16ea79b3c}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the user personal contact(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Personal\+Contacts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_af4095f2d0a66a2267c46404afa27971d}{Put}} (\mbox{\hyperlink{classRingCentral_1_1PersonalContactRequest}{Personal\+Contact\+Request}} personal\+Contact\+Request, \mbox{\hyperlink{classRingCentral_1_1UpdateContactParameters}{Update\+Contact\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the user personal contact(s) (full resource update). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a91fe32716f9920fd511dcd7f7841099e}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes the user personal contact(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a69f60060e05654befb9c761e4b515fde}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1PersonalContactRequest}{Personal\+Contact\+Request}} personal\+Contact\+Request, \mbox{\hyperlink{classRingCentral_1_1PatchContactParameters}{Patch\+Contact\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates particular values of a personal contact attributes specified in request (partial resource update). Omitted attributes will remain unchanged. If any attribute is passed in request body with the null value, then this attribute value will be removed. HTTP Method\+: patch Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a29dfc14fe4cf360e82cc58ab45a21c72}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a29dfc14fe4cf360e82cc58ab45a21c72}} 
+string {\bfseries contact\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a4519850a7b189cccd0838c7c0c296d43}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a4519850a7b189cccd0838c7c0c296d43}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Index}{Address\+Book.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a06ee9c5f47ce9796a338f67221126c0a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a06ee9c5f47ce9796a338f67221126c0a}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a91fe32716f9920fd511dcd7f7841099e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a91fe32716f9920fd511dcd7f7841099e}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the user personal contact(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_ad902c427a981787b6d2b63e16ea79b3c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_ad902c427a981787b6d2b63e16ea79b3c}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the user personal contact(s). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Read\+Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Personal\+Contacts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_ab7779abf9bd4dc9014df3f8c3829e677}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_ab7779abf9bd4dc9014df3f8c3829e677}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ContactList}{Contact\+List}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListContactsParameters}{List\+Contacts\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the user personal contacts. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact Rate Limit Group\+: Heavy App Permission\+: Read\+Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Personal\+Contacts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a69f60060e05654befb9c761e4b515fde}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_a69f60060e05654befb9c761e4b515fde}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1PersonalContactRequest}{Personal\+Contact\+Request}}}]{personal\+Contact\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1PatchContactParameters}{Patch\+Contact\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates particular values of a personal contact attributes specified in request (partial resource update). Omitted attributes will remain unchanged. If any attribute is passed in request body with the null value, then this attribute value will be removed. HTTP Method\+: patch Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_aa582b6b39227f12361070e6ff04ba388}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_aa582b6b39227f12361070e6ff04ba388}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1PersonalContactRequest}{Personal\+Contact\+Request}}}]{personal\+Contact\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1CreateContactParameters}{Create\+Contact\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the user personal contact. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_af4095f2d0a66a2267c46404afa27971d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1AddressBook_1_1Contact_1_1Index_af4095f2d0a66a2267c46404afa27971d}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index@{RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PersonalContactResource}{Personal\+Contact\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Address\+Book.\+Contact.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1PersonalContactRequest}{Personal\+Contact\+Request}}}]{personal\+Contact\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateContactParameters}{Update\+Contact\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the user personal contact(s) (full resource update). \href{https://developers.ringcentral.com/api-reference/Batch-Requests}{\texttt{ Batch request syntax}} is supported. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/address-\/book/contact/\{contact\+Id\} Rate Limit Group\+: Heavy App Permission\+: Contacts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Personal\+Contacts 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Address\+Book/\+Contact/Index.\+cs\end{DoxyCompactItemize}

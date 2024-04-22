@@ -1,0 +1,121 @@
+\hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate}{}\doxysection{Ring\+Central.\+Company\+Answering\+Rule\+Update Class Reference}
+\label{classRingCentral_1_1CompanyAnsweringRuleUpdate}\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_af72f1bd343f89e18a8a11ceb33412cec}{enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if a rule is active or inactive. The default value is {\ttfamily true} Default\+: true \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_a62da87a72204ac9bc78aa75295b0c44a}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of an answering rule specified by user. Max number of symbols is 30. The default value is \textquotesingle{}My Rule N\textquotesingle{} where \textquotesingle{}N\textquotesingle{} is the first free number \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleCallersInfoRequest}{Company\+Answering\+Rule\+Callers\+Info\+Request}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_ae13f8f51b76905f30e27fe810639ea63}{callers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Answering rule will be applied when calls are received from the specified caller(s) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleCalledNumberInfo}{Company\+Answering\+Rule\+Called\+Number\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_a625e221ea40b178aa8b3514eaf022b92}{called\+Numbers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Answering rule will be applied when calling the specified number(s) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleScheduleInfoRequest}{Company\+Answering\+Rule\+Schedule\+Info\+Request}} \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_a73c8a23109b6d116908342683c041dfe}{schedule}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_a610e552b419311bed0ed40fc65960ba9}{call\+Handling\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies how incoming calls are forwarded. The default value is \textquotesingle{}Operator\textquotesingle{} \textquotesingle{}Operator\textquotesingle{} -\/ play company greeting and forward to operator extension \textquotesingle{}Disconnect\textquotesingle{} -\/ play company greeting and disconnect \textquotesingle{}Bypass\textquotesingle{} -\/ bypass greeting to go to selected extension = \mbox{[}\textquotesingle{}Operator\textquotesingle{}, \textquotesingle{}Disconnect\textquotesingle{},\textquotesingle{}Bypass\textquotesingle{}\mbox{]} Enum\+: Operator, Disconnect, Bypass \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_ac0da9e00f39a6a1d6b263326b11056c8}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of an answering rule Default\+: Custom Enum\+: Business\+Hours, After\+Hours, Custom \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleCallersInfoRequest}{Company\+Answering\+Rule\+Callers\+Info\+Request}} \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_ae570b361f89cee36c1d1e3c540c72e7b}{extension}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1GreetingInfo}{Greeting\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleUpdate_a511e10d207e7a2d5d776cebcf1ea48c4}{greetings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_a625e221ea40b178aa8b3514eaf022b92}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_a625e221ea40b178aa8b3514eaf022b92}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!calledNumbers@{calledNumbers}}
+\index{calledNumbers@{calledNumbers}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{calledNumbers}{calledNumbers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleCalledNumberInfo}{Company\+Answering\+Rule\+Called\+Number\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Company\+Answering\+Rule\+Update.\+called\+Numbers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Answering rule will be applied when calling the specified number(s) 
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_ae13f8f51b76905f30e27fe810639ea63}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_ae13f8f51b76905f30e27fe810639ea63}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!callers@{callers}}
+\index{callers@{callers}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{callers}{callers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleCallersInfoRequest}{Company\+Answering\+Rule\+Callers\+Info\+Request}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Company\+Answering\+Rule\+Update.\+callers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Answering rule will be applied when calls are received from the specified caller(s) 
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_a610e552b419311bed0ed40fc65960ba9}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_a610e552b419311bed0ed40fc65960ba9}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!callHandlingAction@{callHandlingAction}}
+\index{callHandlingAction@{callHandlingAction}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{callHandlingAction}{callHandlingAction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Company\+Answering\+Rule\+Update.\+call\+Handling\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies how incoming calls are forwarded. The default value is \textquotesingle{}Operator\textquotesingle{} \textquotesingle{}Operator\textquotesingle{} -\/ play company greeting and forward to operator extension \textquotesingle{}Disconnect\textquotesingle{} -\/ play company greeting and disconnect \textquotesingle{}Bypass\textquotesingle{} -\/ bypass greeting to go to selected extension = \mbox{[}\textquotesingle{}Operator\textquotesingle{}, \textquotesingle{}Disconnect\textquotesingle{},\textquotesingle{}Bypass\textquotesingle{}\mbox{]} Enum\+: Operator, Disconnect, Bypass 
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_af72f1bd343f89e18a8a11ceb33412cec}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_af72f1bd343f89e18a8a11ceb33412cec}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!enabled@{enabled}}
+\index{enabled@{enabled}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Company\+Answering\+Rule\+Update.\+enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if a rule is active or inactive. The default value is {\ttfamily true} Default\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_ae570b361f89cee36c1d1e3c540c72e7b}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_ae570b361f89cee36c1d1e3c540c72e7b}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!extension@{extension}}
+\index{extension@{extension}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleCallersInfoRequest}{Company\+Answering\+Rule\+Callers\+Info\+Request}} Ring\+Central.\+Company\+Answering\+Rule\+Update.\+extension\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_a511e10d207e7a2d5d776cebcf1ea48c4}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_a511e10d207e7a2d5d776cebcf1ea48c4}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!greetings@{greetings}}
+\index{greetings@{greetings}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{greetings}{greetings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1GreetingInfo}{Greeting\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Company\+Answering\+Rule\+Update.\+greetings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List 
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_a62da87a72204ac9bc78aa75295b0c44a}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_a62da87a72204ac9bc78aa75295b0c44a}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!name@{name}}
+\index{name@{name}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Company\+Answering\+Rule\+Update.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name of an answering rule specified by user. Max number of symbols is 30. The default value is \textquotesingle{}My Rule N\textquotesingle{} where \textquotesingle{}N\textquotesingle{} is the first free number 
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_a73c8a23109b6d116908342683c041dfe}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_a73c8a23109b6d116908342683c041dfe}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!schedule@{schedule}}
+\index{schedule@{schedule}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{schedule}{schedule}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CompanyAnsweringRuleScheduleInfoRequest}{Company\+Answering\+Rule\+Schedule\+Info\+Request}} Ring\+Central.\+Company\+Answering\+Rule\+Update.\+schedule\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1CompanyAnsweringRuleUpdate_ac0da9e00f39a6a1d6b263326b11056c8}\label{classRingCentral_1_1CompanyAnsweringRuleUpdate_ac0da9e00f39a6a1d6b263326b11056c8}} 
+\index{RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}!type@{type}}
+\index{type@{type}!RingCentral.CompanyAnsweringRuleUpdate@{RingCentral.CompanyAnsweringRuleUpdate}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Company\+Answering\+Rule\+Update.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of an answering rule Default\+: Custom Enum\+: Business\+Hours, After\+Hours, Custom 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Company\+Answering\+Rule\+Update.\+cs\end{DoxyCompactItemize}

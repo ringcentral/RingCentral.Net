@@ -1,0 +1,73 @@
+\hypertarget{classRingCentral_1_1NotificationRecipientInfo}{}\doxysection{Ring\+Central.\+Notification\+Recipient\+Info Class Reference}
+\label{classRingCentral_1_1NotificationRecipientInfo}\index{RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo_a25330ca886e54b3e9f5b5a4e3b45d9d6}{phone\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in E.\+164 (with \textquotesingle{}+\textquotesingle{} sign) format \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo_a02827f75c2f1552b41c0146e9567296e}{extension\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension number \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo_a6c7144ed3156d5d748eabc39e9125ac9}{target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True specifies that message is sent exactly to this recipient. Returned in to field for group MMS. Useful if one extension has several phone numbers\textquotesingle{} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo_aae7dabe2d0831fb695e6cb6da816b9c5}{location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Contains party location (city, state) if one can be determined from phone\+Number. This property is filled only when phone\+Number is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-\/free numbers) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationRecipientInfo_a931fc9d121acebb3ad57e7c8a4bc5f8e}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Symbolic name associated with a caller/callee. If the phone does not belong to the known extension, only the location is returned, the name is not determined then \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1NotificationRecipientInfo_a02827f75c2f1552b41c0146e9567296e}\label{classRingCentral_1_1NotificationRecipientInfo_a02827f75c2f1552b41c0146e9567296e}} 
+\index{RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}!extensionNumber@{extensionNumber}}
+\index{extensionNumber@{extensionNumber}!RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}}
+\doxysubsubsection{\texorpdfstring{extensionNumber}{extensionNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Recipient\+Info.\+extension\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension number 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationRecipientInfo_aae7dabe2d0831fb695e6cb6da816b9c5}\label{classRingCentral_1_1NotificationRecipientInfo_aae7dabe2d0831fb695e6cb6da816b9c5}} 
+\index{RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}!location@{location}}
+\index{location@{location}!RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Recipient\+Info.\+location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Contains party location (city, state) if one can be determined from phone\+Number. This property is filled only when phone\+Number is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-\/free numbers) 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationRecipientInfo_a931fc9d121acebb3ad57e7c8a4bc5f8e}\label{classRingCentral_1_1NotificationRecipientInfo_a931fc9d121acebb3ad57e7c8a4bc5f8e}} 
+\index{RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}!name@{name}}
+\index{name@{name}!RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Recipient\+Info.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Symbolic name associated with a caller/callee. If the phone does not belong to the known extension, only the location is returned, the name is not determined then 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationRecipientInfo_a25330ca886e54b3e9f5b5a4e3b45d9d6}\label{classRingCentral_1_1NotificationRecipientInfo_a25330ca886e54b3e9f5b5a4e3b45d9d6}} 
+\index{RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}!phoneNumber@{phoneNumber}}
+\index{phoneNumber@{phoneNumber}!RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}}
+\doxysubsubsection{\texorpdfstring{phoneNumber}{phoneNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Recipient\+Info.\+phone\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in E.\+164 (with \textquotesingle{}+\textquotesingle{} sign) format 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationRecipientInfo_a6c7144ed3156d5d748eabc39e9125ac9}\label{classRingCentral_1_1NotificationRecipientInfo_a6c7144ed3156d5d748eabc39e9125ac9}} 
+\index{RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}!target@{target}}
+\index{target@{target}!RingCentral.NotificationRecipientInfo@{RingCentral.NotificationRecipientInfo}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Notification\+Recipient\+Info.\+target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+True specifies that message is sent exactly to this recipient. Returned in to field for group MMS. Useful if one extension has several phone numbers\textquotesingle{} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Notification\+Recipient\+Info.\+cs\end{DoxyCompactItemize}

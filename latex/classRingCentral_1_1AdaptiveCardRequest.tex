@@ -1,0 +1,145 @@
+\hypertarget{classRingCentral_1_1AdaptiveCardRequest}{}\doxysection{Ring\+Central.\+Adaptive\+Card\+Request Class Reference}
+\label{classRingCentral_1_1AdaptiveCardRequest}\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_af557dccdda0034345b02ecb1b12ac33a}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of attachment. This field is mandatory and filled on server side -\/ will be ignored if set in request body Required Enum\+: Adaptive\+Card \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_abec0887eeb7c0f1771f77298e7bf77d5}{version}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Version. This field is mandatory and filled on server side -\/ will be ignored if set in request body Required \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AdaptiveCardInfoRequest}{Adaptive\+Card\+Info\+Request}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_a813fdbb2c4addf57108b70f7a8826a70}{body}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of adaptive cards with the detailed information \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1AdaptiveCardAction}{Adaptive\+Card\+Action}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_a22b0fb61db25be53505c278c3b861cdb}{actions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1AdaptiveCardSelectAction}{Adaptive\+Card\+Select\+Action}} \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_af8b2b7e4c488beaca7ae384d1b3c998a}{select\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_a98be9f10fb6bd00f2df5bdf1b8009c75}{fallback\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1BackgroundImage}{Background\+Image}} \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_a501f64c2ca17427aa1c118106825a37d}{background\+Image}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_a8dc37e20b009bc88175c4574a1da40be}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the minimum height of the card in pixels Example\+: 50px \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_a7d121d4d90975dacd45a96ade35d472c}{speak}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies what should be spoken for this entire card. This is simple text or SSML fragment \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_aec0b77be10697875a4db817fdc0e6019}{lang}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The 2-\/letter ISO-\/639-\/1 language used in the card. Used to localize any date/time functions Enum\+: en, fr, es \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardRequest_ad313ff463a3d2c33827c596f48eec42b}{vertical\+Content\+Alignment}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines how the content should be aligned vertically within the container. Only relevant for fixed-\/height cards, or cards with a {\ttfamily min\+Height} specified Enum\+: top, center, bottom \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_a22b0fb61db25be53505c278c3b861cdb}\label{classRingCentral_1_1AdaptiveCardRequest_a22b0fb61db25be53505c278c3b861cdb}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!actions@{actions}}
+\index{actions@{actions}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{actions}{actions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardAction}{Adaptive\+Card\+Action}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Adaptive\+Card\+Request.\+actions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_a501f64c2ca17427aa1c118106825a37d}\label{classRingCentral_1_1AdaptiveCardRequest_a501f64c2ca17427aa1c118106825a37d}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!backgroundImage@{backgroundImage}}
+\index{backgroundImage@{backgroundImage}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{backgroundImage}{backgroundImage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1BackgroundImage}{Background\+Image}} Ring\+Central.\+Adaptive\+Card\+Request.\+background\+Image\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF 
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_a813fdbb2c4addf57108b70f7a8826a70}\label{classRingCentral_1_1AdaptiveCardRequest_a813fdbb2c4addf57108b70f7a8826a70}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!body@{body}}
+\index{body@{body}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardInfoRequest}{Adaptive\+Card\+Info\+Request}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Adaptive\+Card\+Request.\+body\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of adaptive cards with the detailed information 
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_a98be9f10fb6bd00f2df5bdf1b8009c75}\label{classRingCentral_1_1AdaptiveCardRequest_a98be9f10fb6bd00f2df5bdf1b8009c75}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!fallbackText@{fallbackText}}
+\index{fallbackText@{fallbackText}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{fallbackText}{fallbackText}}
+{\footnotesize\ttfamily string Ring\+Central.\+Adaptive\+Card\+Request.\+fallback\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_aec0b77be10697875a4db817fdc0e6019}\label{classRingCentral_1_1AdaptiveCardRequest_aec0b77be10697875a4db817fdc0e6019}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!lang@{lang}}
+\index{lang@{lang}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{lang}{lang}}
+{\footnotesize\ttfamily string Ring\+Central.\+Adaptive\+Card\+Request.\+lang\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The 2-\/letter ISO-\/639-\/1 language used in the card. Used to localize any date/time functions Enum\+: en, fr, es 
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_a8dc37e20b009bc88175c4574a1da40be}\label{classRingCentral_1_1AdaptiveCardRequest_a8dc37e20b009bc88175c4574a1da40be}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!minHeight@{minHeight}}
+\index{minHeight@{minHeight}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{minHeight}{minHeight}}
+{\footnotesize\ttfamily string Ring\+Central.\+Adaptive\+Card\+Request.\+min\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the minimum height of the card in pixels Example\+: 50px 
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_af8b2b7e4c488beaca7ae384d1b3c998a}\label{classRingCentral_1_1AdaptiveCardRequest_af8b2b7e4c488beaca7ae384d1b3c998a}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!selectAction@{selectAction}}
+\index{selectAction@{selectAction}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{selectAction}{selectAction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AdaptiveCardSelectAction}{Adaptive\+Card\+Select\+Action}} Ring\+Central.\+Adaptive\+Card\+Request.\+select\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_a7d121d4d90975dacd45a96ade35d472c}\label{classRingCentral_1_1AdaptiveCardRequest_a7d121d4d90975dacd45a96ade35d472c}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!speak@{speak}}
+\index{speak@{speak}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{speak}{speak}}
+{\footnotesize\ttfamily string Ring\+Central.\+Adaptive\+Card\+Request.\+speak\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies what should be spoken for this entire card. This is simple text or SSML fragment 
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_af557dccdda0034345b02ecb1b12ac33a}\label{classRingCentral_1_1AdaptiveCardRequest_af557dccdda0034345b02ecb1b12ac33a}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!type@{type}}
+\index{type@{type}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Adaptive\+Card\+Request.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of attachment. This field is mandatory and filled on server side -\/ will be ignored if set in request body Required Enum\+: Adaptive\+Card 
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_abec0887eeb7c0f1771f77298e7bf77d5}\label{classRingCentral_1_1AdaptiveCardRequest_abec0887eeb7c0f1771f77298e7bf77d5}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!version@{version}}
+\index{version@{version}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily string Ring\+Central.\+Adaptive\+Card\+Request.\+version\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Version. This field is mandatory and filled on server side -\/ will be ignored if set in request body Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1AdaptiveCardRequest_ad313ff463a3d2c33827c596f48eec42b}\label{classRingCentral_1_1AdaptiveCardRequest_ad313ff463a3d2c33827c596f48eec42b}} 
+\index{RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}!verticalContentAlignment@{verticalContentAlignment}}
+\index{verticalContentAlignment@{verticalContentAlignment}!RingCentral.AdaptiveCardRequest@{RingCentral.AdaptiveCardRequest}}
+\doxysubsubsection{\texorpdfstring{verticalContentAlignment}{verticalContentAlignment}}
+{\footnotesize\ttfamily string Ring\+Central.\+Adaptive\+Card\+Request.\+vertical\+Content\+Alignment\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Defines how the content should be aligned vertically within the container. Only relevant for fixed-\/height cards, or cards with a {\ttfamily min\+Height} specified Enum\+: top, center, bottom 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Adaptive\+Card\+Request.\+cs\end{DoxyCompactItemize}

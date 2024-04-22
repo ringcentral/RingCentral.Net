@@ -1,0 +1,109 @@
+\hypertarget{classRingCentral_1_1SessionInfoResponse}{}\doxysection{Ring\+Central.\+Session\+Info\+Response Class Reference}
+\label{classRingCentral_1_1SessionInfoResponse}\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_a1c04bb439a189c31b050b2a1f60c5c1f}{client\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier (key) of a client application Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_af3946179f1659bbc5e7207d9423844dc}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of permissions (space separated) granted to the application with this token Example\+: \mbox{\hyperlink{classRingCentral_1_1AccountInfo}{Account\+Info}} Call\+Log \mbox{\hyperlink{classRingCentral_1_1ExtensionInfo}{Extension\+Info}} Messages SMS \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_a5ca9fdbdf5bd7304b79338ff32bee4a2}{sub}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Subject of the token (extension ID or the owner) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_adfb70ea07e558136cd1f66e64c636d84}{account\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em RC account ID associated with the token \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_ac21c6b38564350bc8ad8269ec22d1f88}{session\+\_\+expires\+\_\+in}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Remaining time in seconds until session expiration due to absolute timeout Format\+: int32 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_ac75f7a33d44039393cdda50a874908f2}{session\+\_\+expiration\+\_\+time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Absolute value of session expiration time in ISO date formatted string Format\+: date-\/time Example\+: 2023-\/04-\/01T12\+:00\+:01Z \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_a55b6b11062ec5bd1de89221311da9b7a}{session\+\_\+id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em OAuth session ID Required \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1SessionInfoResponse_a17982bd2f5f784874b0e31289f9d4ae3}{session\+\_\+idle\+\_\+timeout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nominal value of session idle timeout in seconds Format\+: int32 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_adfb70ea07e558136cd1f66e64c636d84}\label{classRingCentral_1_1SessionInfoResponse_adfb70ea07e558136cd1f66e64c636d84}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!account\_id@{account\_id}}
+\index{account\_id@{account\_id}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{account\_id}{account\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Info\+Response.\+account\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+RC account ID associated with the token 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_a1c04bb439a189c31b050b2a1f60c5c1f}\label{classRingCentral_1_1SessionInfoResponse_a1c04bb439a189c31b050b2a1f60c5c1f}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!client\_id@{client\_id}}
+\index{client\_id@{client\_id}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{client\_id}{client\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Info\+Response.\+client\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier (key) of a client application Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_af3946179f1659bbc5e7207d9423844dc}\label{classRingCentral_1_1SessionInfoResponse_af3946179f1659bbc5e7207d9423844dc}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!scope@{scope}}
+\index{scope@{scope}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Info\+Response.\+scope\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of permissions (space separated) granted to the application with this token Example\+: \mbox{\hyperlink{classRingCentral_1_1AccountInfo}{Account\+Info}} Call\+Log \mbox{\hyperlink{classRingCentral_1_1ExtensionInfo}{Extension\+Info}} Messages SMS 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_ac75f7a33d44039393cdda50a874908f2}\label{classRingCentral_1_1SessionInfoResponse_ac75f7a33d44039393cdda50a874908f2}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!session\_expiration\_time@{session\_expiration\_time}}
+\index{session\_expiration\_time@{session\_expiration\_time}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{session\_expiration\_time}{session\_expiration\_time}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Info\+Response.\+session\+\_\+expiration\+\_\+time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Absolute value of session expiration time in ISO date formatted string Format\+: date-\/time Example\+: 2023-\/04-\/01T12\+:00\+:01Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_ac21c6b38564350bc8ad8269ec22d1f88}\label{classRingCentral_1_1SessionInfoResponse_ac21c6b38564350bc8ad8269ec22d1f88}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!session\_expires\_in@{session\_expires\_in}}
+\index{session\_expires\_in@{session\_expires\_in}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{session\_expires\_in}{session\_expires\_in}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Session\+Info\+Response.\+session\+\_\+expires\+\_\+in\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Remaining time in seconds until session expiration due to absolute timeout Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_a55b6b11062ec5bd1de89221311da9b7a}\label{classRingCentral_1_1SessionInfoResponse_a55b6b11062ec5bd1de89221311da9b7a}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!session\_id@{session\_id}}
+\index{session\_id@{session\_id}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{session\_id}{session\_id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Info\+Response.\+session\+\_\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+OAuth session ID Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_a17982bd2f5f784874b0e31289f9d4ae3}\label{classRingCentral_1_1SessionInfoResponse_a17982bd2f5f784874b0e31289f9d4ae3}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!session\_idle\_timeout@{session\_idle\_timeout}}
+\index{session\_idle\_timeout@{session\_idle\_timeout}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{session\_idle\_timeout}{session\_idle\_timeout}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Session\+Info\+Response.\+session\+\_\+idle\+\_\+timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nominal value of session idle timeout in seconds Format\+: int32 
+
+\mbox{\Hypertarget{classRingCentral_1_1SessionInfoResponse_a5ca9fdbdf5bd7304b79338ff32bee4a2}\label{classRingCentral_1_1SessionInfoResponse_a5ca9fdbdf5bd7304b79338ff32bee4a2}} 
+\index{RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}!sub@{sub}}
+\index{sub@{sub}!RingCentral.SessionInfoResponse@{RingCentral.SessionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{sub}{sub}}
+{\footnotesize\ttfamily string Ring\+Central.\+Session\+Info\+Response.\+sub\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Subject of the token (extension ID or the owner) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Session\+Info\+Response.\+cs\end{DoxyCompactItemize}

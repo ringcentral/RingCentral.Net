@@ -1,0 +1,98 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Ivr\+Prompts.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index}\index{RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Ivr\+Prompts.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a222bb0bd6b130f800abe1f8100782120}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a222bb0bd6b130f800abe1f8100782120}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Content_1_1Index}{Content.\+Index}} {\bfseries Content} ()
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a962e2d78ed29a5268560f5b4c807a7a4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a962e2d78ed29a5268560f5b4c807a7a4}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} parent, string prompt\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_ad3c76e334f35fe0962280849d4f22b9f}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_ad3c76e334f35fe0962280849d4f22b9f}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1IvrPrompts}{Ring\+Central.\+Ivr\+Prompts}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_ab6cd4dfa98354374e16bf7126e53e907}{List}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the list of IVR prompts. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Greetings \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PromptInfo}{Prompt\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_aa962d5e4a33ea603247eb6fdf73a32a2}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateIVRPromptRequest}{Create\+IVRPrompt\+Request}} create\+IVRPrompt\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates an IVR prompt. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Greetings \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PromptInfo}{Prompt\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a2763895d31f877519f9b391fd8126a5e}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns an IVR prompt by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts/\{prompt\+Id\} Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Greetings \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PromptInfo}{Prompt\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_aa68c2fe35211d66bb21ac20ce585b281}{Put}} (\mbox{\hyperlink{classRingCentral_1_1UpdateIVRPromptRequest}{Update\+IVRPrompt\+Request}} update\+IVRPrompt\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates an IVR prompt by ID HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts/\{prompt\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Greetings \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a3f95ea673d60924fe2bd91546169e538}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes an IVR prompt by ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts/\{prompt\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Greetings \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a55839ba981565dad33ac01b4fc1f8fe1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a55839ba981565dad33ac01b4fc1f8fe1}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Account.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a25337ad3501a235be3d76805df61b127}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a25337ad3501a235be3d76805df61b127}} 
+string {\bfseries prompt\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a49758b548d9474a561f0ddfb532ec949}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a49758b548d9474a561f0ddfb532ec949}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a3f95ea673d60924fe2bd91546169e538}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a3f95ea673d60924fe2bd91546169e538}} 
+\index{RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Ivr\+Prompts.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes an IVR prompt by ID. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts/\{prompt\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Greetings 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a2763895d31f877519f9b391fd8126a5e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_a2763895d31f877519f9b391fd8126a5e}} 
+\index{RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PromptInfo}{Prompt\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Ivr\+Prompts.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an IVR prompt by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts/\{prompt\+Id\} Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Greetings 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_ab6cd4dfa98354374e16bf7126e53e907}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_ab6cd4dfa98354374e16bf7126e53e907}} 
+\index{RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1IvrPrompts}{Ring\+Central.\+Ivr\+Prompts}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Ivr\+Prompts.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of IVR prompts. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Company\+Greetings 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_aa962d5e4a33ea603247eb6fdf73a32a2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_aa962d5e4a33ea603247eb6fdf73a32a2}} 
+\index{RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PromptInfo}{Prompt\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Ivr\+Prompts.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateIVRPromptRequest}{Create\+IVRPrompt\+Request}}}]{create\+IVRPrompt\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an IVR prompt. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Greetings 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_aa68c2fe35211d66bb21ac20ce585b281}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1IvrPrompts_1_1Index_aa68c2fe35211d66bb21ac20ce585b281}} 
+\index{RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.IvrPrompts.Index@{RingCentral.Paths.Restapi.Account.IvrPrompts.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PromptInfo}{Prompt\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Ivr\+Prompts.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateIVRPromptRequest}{Update\+IVRPrompt\+Request}}}]{update\+IVRPrompt\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an IVR prompt by ID HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/ivr-\/prompts/\{prompt\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Greetings 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Ivr\+Prompts/\+Content/Index.\+cs\end{DoxyCompactItemize}

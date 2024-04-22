@@ -1,0 +1,131 @@
+\hypertarget{classRingCentral_1_1MessageBatchResponse}{}\doxysection{Ring\+Central.\+Message\+Batch\+Response Class Reference}
+\label{classRingCentral_1_1MessageBatchResponse}\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+
+
+Batch of A2P SMS messages. This object provides a specification to send message(s) to many recipients. It contains top-\/level attributes which apply to all messages. In addition to that, it is possible to override this attribute for each message. This way a single API call may be used to send individual messages to many recipients  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_aa05bf24b3d16ecc8d827c4c9187db684}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unique identifier of the message batch Example\+: 12345 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_a8dfa413b8f061c68446274362c260202}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format from which the messages are going to be sent Example\+: +15551234567 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_a9d45e39728d0360c6b1282796db47916}{batch\+Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of messages in the accepted batch Format\+: int32 Example\+: 5 \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_af827412258376f42474a3086bfed4a64}{processed\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of messages currently processed in the batch Format\+: int32 Example\+: 1 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_a7dc73988b891b05d0cb5055af26c917f}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The last time the batch was processed. Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_a235df3bb6a4ba458442f44b05f8d5047}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current status of a message batch Example\+: Processing Enum\+: Processing, Completed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_af86ba9860a3db34f908255875a89df5c}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time at which the batch was created Format\+: date-\/time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1RejectedRecipientResponseResource}{Rejected\+Recipient\+Response\+Resource}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_a9d8230e43934f466b5ce8f5a3ef084e6}{rejected}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of rejected/invalid recipients \end{DoxyCompactList}\item 
+decimal? \mbox{\hyperlink{classRingCentral_1_1MessageBatchResponse_a7d921469907ffe042f935e190cf4dd08}{cost}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The estimated batch cost for completed batch. Calculated after batch processing is completed. Format\+: double Example\+: 0.\+007 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Batch of A2P SMS messages. This object provides a specification to send message(s) to many recipients. It contains top-\/level attributes which apply to all messages. In addition to that, it is possible to override this attribute for each message. This way a single API call may be used to send individual messages to many recipients 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_a9d45e39728d0360c6b1282796db47916}\label{classRingCentral_1_1MessageBatchResponse_a9d45e39728d0360c6b1282796db47916}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!batchSize@{batchSize}}
+\index{batchSize@{batchSize}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{batchSize}{batchSize}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Message\+Batch\+Response.\+batch\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total number of messages in the accepted batch Format\+: int32 Example\+: 5 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_a7d921469907ffe042f935e190cf4dd08}\label{classRingCentral_1_1MessageBatchResponse_a7d921469907ffe042f935e190cf4dd08}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!cost@{cost}}
+\index{cost@{cost}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily decimal? Ring\+Central.\+Message\+Batch\+Response.\+cost\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The estimated batch cost for completed batch. Calculated after batch processing is completed. Format\+: double Example\+: 0.\+007 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_af86ba9860a3db34f908255875a89df5c}\label{classRingCentral_1_1MessageBatchResponse_af86ba9860a3db34f908255875a89df5c}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+Batch\+Response.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time at which the batch was created Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_a8dfa413b8f061c68446274362c260202}\label{classRingCentral_1_1MessageBatchResponse_a8dfa413b8f061c68446274362c260202}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!from@{from}}
+\index{from@{from}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+Batch\+Response.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number in \href{https://www.itu.int/rec/T-REC-E.164-201011-I}{\texttt{ E.\+164}} format from which the messages are going to be sent Example\+: +15551234567 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_aa05bf24b3d16ecc8d827c4c9187db684}\label{classRingCentral_1_1MessageBatchResponse_aa05bf24b3d16ecc8d827c4c9187db684}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!id@{id}}
+\index{id@{id}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+Batch\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Unique identifier of the message batch Example\+: 12345 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_a7dc73988b891b05d0cb5055af26c917f}\label{classRingCentral_1_1MessageBatchResponse_a7dc73988b891b05d0cb5055af26c917f}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+Batch\+Response.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The last time the batch was processed. Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_af827412258376f42474a3086bfed4a64}\label{classRingCentral_1_1MessageBatchResponse_af827412258376f42474a3086bfed4a64}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!processedCount@{processedCount}}
+\index{processedCount@{processedCount}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{processedCount}{processedCount}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Message\+Batch\+Response.\+processed\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total number of messages currently processed in the batch Format\+: int32 Example\+: 1 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_a9d8230e43934f466b5ce8f5a3ef084e6}\label{classRingCentral_1_1MessageBatchResponse_a9d8230e43934f466b5ce8f5a3ef084e6}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!rejected@{rejected}}
+\index{rejected@{rejected}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{rejected}{rejected}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1RejectedRecipientResponseResource}{Rejected\+Recipient\+Response\+Resource}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Message\+Batch\+Response.\+rejected\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of rejected/invalid recipients 
+
+\mbox{\Hypertarget{classRingCentral_1_1MessageBatchResponse_a235df3bb6a4ba458442f44b05f8d5047}\label{classRingCentral_1_1MessageBatchResponse_a235df3bb6a4ba458442f44b05f8d5047}} 
+\index{RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}!status@{status}}
+\index{status@{status}!RingCentral.MessageBatchResponse@{RingCentral.MessageBatchResponse}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Message\+Batch\+Response.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current status of a message batch Example\+: Processing Enum\+: Processing, Completed 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Message\+Batch\+Response.\+cs\end{DoxyCompactItemize}

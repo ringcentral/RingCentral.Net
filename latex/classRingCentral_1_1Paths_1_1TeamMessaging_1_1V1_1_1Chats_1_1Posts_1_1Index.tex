@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Posts.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index}\index{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Posts.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a3f6dc0d14a051f86b93eefee51fcbab2}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a3f6dc0d14a051f86b93eefee51fcbab2}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index}{Chats.\+Index}} parent, string post\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_aa3d5249cb1843f94076d70b7d5b75b9e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_aa3d5249cb1843f94076d70b7d5b75b9e}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMPostsList}{TMPosts\+List}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_acf3f3b4b9b39c6951f39724714c2752b}{List}} (\mbox{\hyperlink{classRingCentral_1_1ReadGlipPostsNewParameters}{Read\+Glip\+Posts\+New\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of posts from the specified chat. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMPostInfo}{TMPost\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a2f6c8afdb0097e14456a641923ecfa0f}{Post}} (\mbox{\hyperlink{classRingCentral_1_1TMCreatePostRequest}{TMCreate\+Post\+Request}} t\+MCreate\+Post\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a post in the chat specified in path. Any mention can be added within the {\ttfamily text} attribute of the request body in .md format -\/ {\ttfamily !\mbox{[}\+:Type\mbox{]}(id)}, where {\ttfamily type} is one of (Person, Team, File, Note, Task, Event, Link, Card) and {\ttfamily id} is a unique identifier of the mentioned object of the specified type. Attachments of the following types (File, Card, Event, Note) can also be added to a post by passing type and ID of attachment(s) in request body. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMPostInfo}{TMPost\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a08d69a506f505a3083db0abf5ed87722}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns information about the specified post. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts/\{post\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a8d089b6ca23089fcb30debe1482be3d1}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes the specified post from the chat. HTTP Method\+: delete Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts/\{post\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1TMPostInfo}{TMPost\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a1a6158d3c1af29a32896aebf31527702}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1TMUpdatePostRequest}{TMUpdate\+Post\+Request}} t\+MUpdate\+Post\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a specific post within a chat. HTTP Method\+: patch Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts/\{post\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_ae4149b2cfacd71012a8bd3fb8a68088e}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_ae4149b2cfacd71012a8bd3fb8a68088e}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Index}{Chats.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a1b291f506878e8f66d53d17a3bfb7520}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a1b291f506878e8f66d53d17a3bfb7520}} 
+string {\bfseries post\+Id}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_ab3e101c28bf9fdcfc5dc1aecf59f2415}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_ab3e101c28bf9fdcfc5dc1aecf59f2415}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a8d089b6ca23089fcb30debe1482be3d1}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a8d089b6ca23089fcb30debe1482be3d1}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Posts.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the specified post from the chat. HTTP Method\+: delete Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts/\{post\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a08d69a506f505a3083db0abf5ed87722}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a08d69a506f505a3083db0abf5ed87722}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMPostInfo}{TMPost\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Posts.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns information about the specified post. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts/\{post\+Id\} Rate Limit Group\+: Light App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_acf3f3b4b9b39c6951f39724714c2752b}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_acf3f3b4b9b39c6951f39724714c2752b}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMPostsList}{TMPosts\+List}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Posts.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReadGlipPostsNewParameters}{Read\+Glip\+Posts\+New\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of posts from the specified chat. HTTP Method\+: get Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a1a6158d3c1af29a32896aebf31527702}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a1a6158d3c1af29a32896aebf31527702}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMPostInfo}{TMPost\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Posts.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1TMUpdatePostRequest}{TMUpdate\+Post\+Request}}}]{t\+MUpdate\+Post\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a specific post within a chat. HTTP Method\+: patch Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts/\{post\+Id\} Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a2f6c8afdb0097e14456a641923ecfa0f}\label{classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Chats_1_1Posts_1_1Index_a2f6c8afdb0097e14456a641923ecfa0f}} 
+\index{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index@{RingCentral.Paths.TeamMessaging.V1.Chats.Posts.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1TMPostInfo}{TMPost\+Info}}$>$ Ring\+Central.\+Paths.\+Team\+Messaging.\+V1.\+Chats.\+Posts.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1TMCreatePostRequest}{TMCreate\+Post\+Request}}}]{t\+MCreate\+Post\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a post in the chat specified in path. Any mention can be added within the {\ttfamily text} attribute of the request body in .md format -\/ {\ttfamily !\mbox{[}\+:Type\mbox{]}(id)}, where {\ttfamily type} is one of (Person, Team, File, Note, Task, Event, Link, Card) and {\ttfamily id} is a unique identifier of the mentioned object of the specified type. Attachments of the following types (File, Card, Event, Note) can also be added to a post by passing type and ID of attachment(s) in request body. HTTP Method\+: post Endpoint\+: /team-\/messaging/v1/chats/\{chat\+Id\}/posts Rate Limit Group\+: Medium App Permission\+: \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1TeamMessaging}{Team\+Messaging}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Team\+Messaging/\+V1/\+Chats/\+Posts/Index.\+cs\end{DoxyCompactItemize}

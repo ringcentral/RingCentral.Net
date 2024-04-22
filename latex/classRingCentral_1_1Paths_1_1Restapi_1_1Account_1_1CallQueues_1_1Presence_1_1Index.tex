@@ -1,0 +1,56 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Queues.\+Presence.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index}\index{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index@{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Queues.\+Presence.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_ab23f69d28e1825f3b24091ec2496e734}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_ab23f69d28e1825f3b24091ec2496e734}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Index}{Call\+Queues.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a73fcc743bc464704fb12b53932f0ccd2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a73fcc743bc464704fb12b53932f0ccd2}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallQueuePresence}{Call\+Queue\+Presence}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a7fa1be9e1f3e6c688ea60562faee06b8}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns presence status of the call queue members. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/queues/\{group\+Id\}/presence Rate Limit Group\+: Light App Permission\+: Read\+Presence \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CallQueuePresence}{Call\+Queue\+Presence}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a032f28039046e55d7fba212c042c0459}{Put}} (\mbox{\hyperlink{classRingCentral_1_1CallQueueUpdatePresence}{Call\+Queue\+Update\+Presence}} call\+Queue\+Update\+Presence, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates presence status of the call queue members in the specified queue. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/queues/\{group\+Id\}/presence Rate Limit Group\+: Medium App Permission\+: Edit\+Presence \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a169734f5a8d36d2777a2e59884b6f5ca}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a169734f5a8d36d2777a2e59884b6f5ca}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Index}{Call\+Queues.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a73c5c1c9e4266595200e5589db4b7b39}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a73c5c1c9e4266595200e5589db4b7b39}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a7fa1be9e1f3e6c688ea60562faee06b8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a7fa1be9e1f3e6c688ea60562faee06b8}} 
+\index{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index@{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index@{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallQueuePresence}{Call\+Queue\+Presence}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Queues.\+Presence.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns presence status of the call queue members. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/queues/\{group\+Id\}/presence Rate Limit Group\+: Light App Permission\+: Read\+Presence 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a032f28039046e55d7fba212c042c0459}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallQueues_1_1Presence_1_1Index_a032f28039046e55d7fba212c042c0459}} 
+\index{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index@{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index}!Put@{Put}}
+\index{Put@{Put}!RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index@{RingCentral.Paths.Restapi.Account.CallQueues.Presence.Index}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CallQueuePresence}{Call\+Queue\+Presence}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Call\+Queues.\+Presence.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CallQueueUpdatePresence}{Call\+Queue\+Update\+Presence}}}]{call\+Queue\+Update\+Presence,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates presence status of the call queue members in the specified queue. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/call-\/queues/\{group\+Id\}/presence Rate Limit Group\+: Medium App Permission\+: Edit\+Presence 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Call\+Queues/\+Presence/Index.\+cs\end{DoxyCompactItemize}

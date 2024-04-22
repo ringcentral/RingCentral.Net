@@ -1,0 +1,424 @@
+\hypertarget{classRingCentral_1_1ContentModel}{}\doxysection{Ring\+Central.\+Content\+Model Class Reference}
+\label{classRingCentral_1_1ContentModel}\index{RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ContentModel_a2ac7a5a48cb459594ee3fb3706550c94}{\mbox{[}instance initializer\mbox{]}}}
+\begin{DoxyCompactList}\small\item\em True if the content is publicly visible on the remote channel (default). Private content is NOT supported on every channel. Required Default\+: true \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ContentAttachment}{Content\+Attachment}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ContentModel_ab74d75542ae0c2fd5aab51d35b34172f}{attachments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array containing the attachments that are attached to the content. Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_ae3ed262626c2d5dfbac82792170792bf}{author\+Identity\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identity identifier of the author of content. Not mandatory on creation, by default it uses the token\textquotesingle{}s user first identity on channel. Required Example\+: 541014e17aa58d8ccf000023 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ContentModel_ab779b66e36a7bf27becb90bd536a33e4}{auto\+Submitted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Auto submitted content\+: \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a35fb57d8a4bc9cf5e9e3b29008eeb5f6}{body}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The content\textquotesingle{}s body. On creation this field is mandatory except for Whats\+App content using templates. The following are the max length restrictions for the different channels supported. Channel and max length \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ContentBodyFormatted}{Content\+Body\+Formatted}} \mbox{\hyperlink{classRingCentral_1_1ContentModel_a3fa72e6bb1c9fb19c422941284ee2a07}{body\+Formatted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a9d680aeee484b0e649c5aab8a29d64de}{body\+Input\+Format}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Values can be Text or Html. Required Enum\+: Text, Html \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ContentModel_ad16575f0440e6a8f0b6d095ee99f0a66}{category\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of the category identifiers of the content. Required Example\+: 541014e17aa58d8ccf000023,541014e17aa58d8ccf002023 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ContentContextData}{Content\+Context\+Data}} \mbox{\hyperlink{classRingCentral_1_1ContentModel_ad7148a34b52c616988dc27e18c8f5040}{context\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a71ae0524e304cb9084fb5a54aa7c7a69}{creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Creation time of the resource. Required Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_af7e3c07779779db36b2b43b4b2d5ddcd}{created\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Created from of the content. Required Enum\+: Synchronizer, Interface, Api, Auto\+Survey, Auto\+Response\+Trigger, Auto\+Request\+Email \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_aabe993368be043c95f9f1a811f8bcac8}{creator\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em RC user id of the creator Required Example\+: 2683222036 \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ContentModel_aa08cdcaeecff966f3796a2beccc32d58}{foreign\+Categories}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em External categories of the content. Present only if the content has foreign\+Categories. Example\+: foreign\+\_\+category\+\_\+id \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_ad8fbdb23bcaf6a354abe4516d9d84dd3}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of the content. Required Example\+: 541014e17aa58d8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a7c47c44b0d16f82c978b73c51d883ef7}{in\+Reply\+To\+Author\+Identity\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The identity identifier of the content to which this content is a reply to. Required Example\+: 541014e17asdd8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_aa87eae7abbeb62bd165c1e3f395b774d}{in\+Reply\+To\+Content\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The content identifier to which this content is a reply to. On creation, if omitted, a new discussion will be created. If the channel does not support to initiate discussion this parameter is mandatory. Required Example\+: 123414e17asdd8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_ac6c779d71ea96f598e237cb4312cc30c}{intervention\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The intervention identifier of the content. Required Example\+: 123415437asdd8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_aa77e6db28e6c768d85833bb154ec5330}{language}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Language of the content. Required Example\+: En \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ContentModel_a6a6561e7e1f8d062b47a7ae3f85305eb}{published}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the content is published on the remote channel. Required Example\+: true \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ContentModel_ab3e857c0707724618995739da722b09f}{rating}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Rating of the content. Present only if the content supports rating and rating is filled. Required Format\+: int32 Example\+: 4 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ContentModel_a06c9942ba201e7e3362aac78daec3f77}{remotely\+Deleted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the content has been deleted on the remote channel. Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_af8bfcb94cc9585fb177e231af2316c2b}{source\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifier of the channel. On creation if {\ttfamily in\+Reply\+To\+Content\+Id} is specified, the channel will be determined from it. Otherwise, this parameter is mandatory. Required Example\+: fff415437asdd8ccf000023 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a5fcb01476741d5d300275d0ffbead82d}{source\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the channel. Required Enum\+: Apple\+Messages\+For\+Business, Email, Engage\+Messaging, Facebook, Google\+Business\+Messages, Google\+My\+Business, Instagram, Instagram\+Messaging, Linkedin, Messenger, Twitter, Viber, Whats\+App, Youtube \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a2c8d41f7407ca78e8bc7887be4f03d49}{source\+Uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em External Uri of the content channel. Required Format\+: uri \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a59451259cf516069335db3279126085a}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Content status. Required Enum\+: New, Assigned, Replied, User\+Reply, User\+Initiated, Ignored \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a27cd7296df19d208fcc532f39939207f}{synchronization\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Synchronization status. Required Example\+: success \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a78483d2b0b50819d1c1cc5e30b102e67}{synchronization\+Error}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Synchronization error details. Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a2666fab12344450d1f348c0bbc53f242}{thread\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Content thread identifier of the content. Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a50eac6cfb6862d800a79036fcb0c5d40}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Applicable to Email channels only. The subject of the email. This field is mandatory when initiating a discussion. Required Example\+: An email title \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_aed20d8944a7b17c31a4836d535269b70}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the content. Required Example\+: Email Enum\+: Album, Authenticate\+Message, Authenticate\+Response, Carousel, Carousel\+Message, Comment, Contact\+Message, Content, Email, Form\+Message, Form\+Response, Hsm\+Message, Link, List\+Message, Media, Message, Outbound\+Message, Payment\+Message, Photo, Postback\+Message, Private\+Tweet, Prompt\+Message, Question, Review, Review\+Response, Rich\+Link\+Message, Select\+Message, Status, Template\+Message, Time\+Picker\+Message, Tweet, Video, Video\+Call\+Request\+Message \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ContentModel_a271fe7d9086f35436384c030015b924e}{last\+Modified\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time when the last modification was completed. Required Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ContentModel_a8ef006a2d10f16250161e3fcb233d6e3}{capabilities\+Supported}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Types of structured messages that can be used to reply to this type of message. Required \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a2ac7a5a48cb459594ee3fb3706550c94}\label{classRingCentral_1_1ContentModel_a2ac7a5a48cb459594ee3fb3706550c94}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!\mbox{[}instance initializer\mbox{]}@{[instance initializer]}}
+\index{\mbox{[}instance initializer\mbox{]}@{[instance initializer]}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{[instance initializer]()}{[instance initializer]()}}
+{\footnotesize\ttfamily Ring\+Central.\+Content\+Model.\mbox{[}instance initializer\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+True if the content is publicly visible on the remote channel (default). Private content is NOT supported on every channel. Required Default\+: true 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ab74d75542ae0c2fd5aab51d35b34172f}\label{classRingCentral_1_1ContentModel_ab74d75542ae0c2fd5aab51d35b34172f}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!attachments@{attachments}}
+\index{attachments@{attachments}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{attachments}{attachments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ContentAttachment}{Content\+Attachment}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Content\+Model.\+attachments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An array containing the attachments that are attached to the content. Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ae3ed262626c2d5dfbac82792170792bf}\label{classRingCentral_1_1ContentModel_ae3ed262626c2d5dfbac82792170792bf}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!authorIdentityId@{authorIdentityId}}
+\index{authorIdentityId@{authorIdentityId}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{authorIdentityId}{authorIdentityId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+author\+Identity\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identity identifier of the author of content. Not mandatory on creation, by default it uses the token\textquotesingle{}s user first identity on channel. Required Example\+: 541014e17aa58d8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ab779b66e36a7bf27becb90bd536a33e4}\label{classRingCentral_1_1ContentModel_ab779b66e36a7bf27becb90bd536a33e4}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!autoSubmitted@{autoSubmitted}}
+\index{autoSubmitted@{autoSubmitted}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{autoSubmitted}{autoSubmitted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Content\+Model.\+auto\+Submitted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Auto submitted content\+: 
+
+
+\begin{DoxyItemize}
+\item won\textquotesingle{}t reopen tasks or interventions
+\item can be used to send automatic messages like asking an user to follow on twitter, sending a survey, etc,
+\item doesn\textquotesingle{}t get included in statistics Required
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a35fb57d8a4bc9cf5e9e3b29008eeb5f6}\label{classRingCentral_1_1ContentModel_a35fb57d8a4bc9cf5e9e3b29008eeb5f6}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!body@{body}}
+\index{body@{body}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+body\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The content\textquotesingle{}s body. On creation this field is mandatory except for Whats\+App content using templates. The following are the max length restrictions for the different channels supported. Channel and max length 
+
+
+\begin{DoxyItemize}
+\item Apple Messages For Business (max length 10000)
+\item Email (max length 262144)
+\item Ring\+CX Digital Messaging (max length 1024)
+\item Facebook (max length 8000)
+\item Google\+Business\+Messages (max length 3000)
+\item Google My Business (max length 4000)
+\item Instagram (max length 950)
+\item Instagram Messaging (max length 1000)
+\item Linked\+In (max length 3000)
+\item Messenger (max length 2000)
+\item Twitter (max length 280)
+\item Viber (max length 7000)
+\item Whats\+App (max length 3800)
+\item Youtube (max length 8000) Required Example\+: Body of the content
+\end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a3fa72e6bb1c9fb19c422941284ee2a07}\label{classRingCentral_1_1ContentModel_a3fa72e6bb1c9fb19c422941284ee2a07}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!bodyFormatted@{bodyFormatted}}
+\index{bodyFormatted@{bodyFormatted}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{bodyFormatted}{bodyFormatted}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ContentBodyFormatted}{Content\+Body\+Formatted}} Ring\+Central.\+Content\+Model.\+body\+Formatted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a9d680aeee484b0e649c5aab8a29d64de}\label{classRingCentral_1_1ContentModel_a9d680aeee484b0e649c5aab8a29d64de}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!bodyInputFormat@{bodyInputFormat}}
+\index{bodyInputFormat@{bodyInputFormat}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{bodyInputFormat}{bodyInputFormat}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+body\+Input\+Format\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Values can be Text or Html. Required Enum\+: Text, Html 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a8ef006a2d10f16250161e3fcb233d6e3}\label{classRingCentral_1_1ContentModel_a8ef006a2d10f16250161e3fcb233d6e3}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!capabilitiesSupported@{capabilitiesSupported}}
+\index{capabilitiesSupported@{capabilitiesSupported}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{capabilitiesSupported}{capabilitiesSupported}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Content\+Model.\+capabilities\+Supported\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Types of structured messages that can be used to reply to this type of message. Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ad16575f0440e6a8f0b6d095ee99f0a66}\label{classRingCentral_1_1ContentModel_ad16575f0440e6a8f0b6d095ee99f0a66}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!categoryIds@{categoryIds}}
+\index{categoryIds@{categoryIds}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{categoryIds}{categoryIds}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Content\+Model.\+category\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of the category identifiers of the content. Required Example\+: 541014e17aa58d8ccf000023,541014e17aa58d8ccf002023 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ad7148a34b52c616988dc27e18c8f5040}\label{classRingCentral_1_1ContentModel_ad7148a34b52c616988dc27e18c8f5040}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!contextData@{contextData}}
+\index{contextData@{contextData}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{contextData}{contextData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ContentContextData}{Content\+Context\+Data}} Ring\+Central.\+Content\+Model.\+context\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_af7e3c07779779db36b2b43b4b2d5ddcd}\label{classRingCentral_1_1ContentModel_af7e3c07779779db36b2b43b4b2d5ddcd}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!createdFrom@{createdFrom}}
+\index{createdFrom@{createdFrom}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{createdFrom}{createdFrom}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+created\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Created from of the content. Required Enum\+: Synchronizer, Interface, Api, Auto\+Survey, Auto\+Response\+Trigger, Auto\+Request\+Email 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a71ae0524e304cb9084fb5a54aa7c7a69}\label{classRingCentral_1_1ContentModel_a71ae0524e304cb9084fb5a54aa7c7a69}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!creationTime@{creationTime}}
+\index{creationTime@{creationTime}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{creationTime}{creationTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+creation\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Creation time of the resource. Required Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_aabe993368be043c95f9f1a811f8bcac8}\label{classRingCentral_1_1ContentModel_aabe993368be043c95f9f1a811f8bcac8}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!creatorId@{creatorId}}
+\index{creatorId@{creatorId}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{creatorId}{creatorId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+creator\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+RC user id of the creator Required Example\+: 2683222036 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_aa08cdcaeecff966f3796a2beccc32d58}\label{classRingCentral_1_1ContentModel_aa08cdcaeecff966f3796a2beccc32d58}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!foreignCategories@{foreignCategories}}
+\index{foreignCategories@{foreignCategories}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{foreignCategories}{foreignCategories}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Content\+Model.\+foreign\+Categories\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+External categories of the content. Present only if the content has foreign\+Categories. Example\+: foreign\+\_\+category\+\_\+id 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ad8fbdb23bcaf6a354abe4516d9d84dd3}\label{classRingCentral_1_1ContentModel_ad8fbdb23bcaf6a354abe4516d9d84dd3}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!id@{id}}
+\index{id@{id}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of the content. Required Example\+: 541014e17aa58d8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a7c47c44b0d16f82c978b73c51d883ef7}\label{classRingCentral_1_1ContentModel_a7c47c44b0d16f82c978b73c51d883ef7}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!inReplyToAuthorIdentityId@{inReplyToAuthorIdentityId}}
+\index{inReplyToAuthorIdentityId@{inReplyToAuthorIdentityId}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{inReplyToAuthorIdentityId}{inReplyToAuthorIdentityId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+in\+Reply\+To\+Author\+Identity\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The identity identifier of the content to which this content is a reply to. Required Example\+: 541014e17asdd8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_aa87eae7abbeb62bd165c1e3f395b774d}\label{classRingCentral_1_1ContentModel_aa87eae7abbeb62bd165c1e3f395b774d}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!inReplyToContentId@{inReplyToContentId}}
+\index{inReplyToContentId@{inReplyToContentId}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{inReplyToContentId}{inReplyToContentId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+in\+Reply\+To\+Content\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The content identifier to which this content is a reply to. On creation, if omitted, a new discussion will be created. If the channel does not support to initiate discussion this parameter is mandatory. Required Example\+: 123414e17asdd8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ac6c779d71ea96f598e237cb4312cc30c}\label{classRingCentral_1_1ContentModel_ac6c779d71ea96f598e237cb4312cc30c}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!interventionId@{interventionId}}
+\index{interventionId@{interventionId}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{interventionId}{interventionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+intervention\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The intervention identifier of the content. Required Example\+: 123415437asdd8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_aa77e6db28e6c768d85833bb154ec5330}\label{classRingCentral_1_1ContentModel_aa77e6db28e6c768d85833bb154ec5330}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!language@{language}}
+\index{language@{language}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{language}{language}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+language\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Language of the content. Required Example\+: En 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a271fe7d9086f35436384c030015b924e}\label{classRingCentral_1_1ContentModel_a271fe7d9086f35436384c030015b924e}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!lastModifiedTime@{lastModifiedTime}}
+\index{lastModifiedTime@{lastModifiedTime}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{lastModifiedTime}{lastModifiedTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+last\+Modified\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The time when the last modification was completed. Required Format\+: date-\/time Example\+: 2023-\/02-\/04T12\+:43\+:07Z 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a6a6561e7e1f8d062b47a7ae3f85305eb}\label{classRingCentral_1_1ContentModel_a6a6561e7e1f8d062b47a7ae3f85305eb}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!published@{published}}
+\index{published@{published}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{published}{published}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Content\+Model.\+published\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+True if the content is published on the remote channel. Required Example\+: true 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_ab3e857c0707724618995739da722b09f}\label{classRingCentral_1_1ContentModel_ab3e857c0707724618995739da722b09f}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!rating@{rating}}
+\index{rating@{rating}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{rating}{rating}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Content\+Model.\+rating\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Rating of the content. Present only if the content supports rating and rating is filled. Required Format\+: int32 Example\+: 4 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a06c9942ba201e7e3362aac78daec3f77}\label{classRingCentral_1_1ContentModel_a06c9942ba201e7e3362aac78daec3f77}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!remotelyDeleted@{remotelyDeleted}}
+\index{remotelyDeleted@{remotelyDeleted}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{remotelyDeleted}{remotelyDeleted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Content\+Model.\+remotely\+Deleted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+True if the content has been deleted on the remote channel. Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_af8bfcb94cc9585fb177e231af2316c2b}\label{classRingCentral_1_1ContentModel_af8bfcb94cc9585fb177e231af2316c2b}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!sourceId@{sourceId}}
+\index{sourceId@{sourceId}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{sourceId}{sourceId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+source\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifier of the channel. On creation if {\ttfamily in\+Reply\+To\+Content\+Id} is specified, the channel will be determined from it. Otherwise, this parameter is mandatory. Required Example\+: fff415437asdd8ccf000023 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a5fcb01476741d5d300275d0ffbead82d}\label{classRingCentral_1_1ContentModel_a5fcb01476741d5d300275d0ffbead82d}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!sourceType@{sourceType}}
+\index{sourceType@{sourceType}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{sourceType}{sourceType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+source\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of the channel. Required Enum\+: Apple\+Messages\+For\+Business, Email, Engage\+Messaging, Facebook, Google\+Business\+Messages, Google\+My\+Business, Instagram, Instagram\+Messaging, Linkedin, Messenger, Twitter, Viber, Whats\+App, Youtube 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a2c8d41f7407ca78e8bc7887be4f03d49}\label{classRingCentral_1_1ContentModel_a2c8d41f7407ca78e8bc7887be4f03d49}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!sourceUri@{sourceUri}}
+\index{sourceUri@{sourceUri}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{sourceUri}{sourceUri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+source\+Uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+External Uri of the content channel. Required Format\+: uri 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a59451259cf516069335db3279126085a}\label{classRingCentral_1_1ContentModel_a59451259cf516069335db3279126085a}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!status@{status}}
+\index{status@{status}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Content status. Required Enum\+: New, Assigned, Replied, User\+Reply, User\+Initiated, Ignored 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a78483d2b0b50819d1c1cc5e30b102e67}\label{classRingCentral_1_1ContentModel_a78483d2b0b50819d1c1cc5e30b102e67}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!synchronizationError@{synchronizationError}}
+\index{synchronizationError@{synchronizationError}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{synchronizationError}{synchronizationError}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+synchronization\+Error\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Synchronization error details. Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a27cd7296df19d208fcc532f39939207f}\label{classRingCentral_1_1ContentModel_a27cd7296df19d208fcc532f39939207f}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!synchronizationStatus@{synchronizationStatus}}
+\index{synchronizationStatus@{synchronizationStatus}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{synchronizationStatus}{synchronizationStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+synchronization\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Synchronization status. Required Example\+: success 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a2666fab12344450d1f348c0bbc53f242}\label{classRingCentral_1_1ContentModel_a2666fab12344450d1f348c0bbc53f242}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!threadId@{threadId}}
+\index{threadId@{threadId}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{threadId}{threadId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+thread\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Content thread identifier of the content. Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_a50eac6cfb6862d800a79036fcb0c5d40}\label{classRingCentral_1_1ContentModel_a50eac6cfb6862d800a79036fcb0c5d40}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!title@{title}}
+\index{title@{title}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Applicable to Email channels only. The subject of the email. This field is mandatory when initiating a discussion. Required Example\+: An email title 
+
+\mbox{\Hypertarget{classRingCentral_1_1ContentModel_aed20d8944a7b17c31a4836d535269b70}\label{classRingCentral_1_1ContentModel_aed20d8944a7b17c31a4836d535269b70}} 
+\index{RingCentral.ContentModel@{RingCentral.ContentModel}!type@{type}}
+\index{type@{type}!RingCentral.ContentModel@{RingCentral.ContentModel}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Content\+Model.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of the content. Required Example\+: Email Enum\+: Album, Authenticate\+Message, Authenticate\+Response, Carousel, Carousel\+Message, Comment, Contact\+Message, Content, Email, Form\+Message, Form\+Response, Hsm\+Message, Link, List\+Message, Media, Message, Outbound\+Message, Payment\+Message, Photo, Postback\+Message, Private\+Tweet, Prompt\+Message, Question, Review, Review\+Response, Rich\+Link\+Message, Select\+Message, Status, Template\+Message, Time\+Picker\+Message, Tweet, Video, Video\+Call\+Request\+Message 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Content\+Model.\+cs\end{DoxyCompactItemize}

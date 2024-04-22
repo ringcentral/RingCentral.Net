@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Supervise.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index}\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Supervise.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a90fc5b269b8c84027d25bfd2a3b4f5c5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a90fc5b269b8c84027d25bfd2a3b4f5c5}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a668dec80776adb755c0e556e2d7e7843}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a668dec80776adb755c0e556e2d7e7843}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1PartySuperviseResponse}{Party\+Supervise\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a8b8320b49c3424ceb757b2d7471dcaa1}{Post}} (\mbox{\hyperlink{classRingCentral_1_1PartySuperviseRequest}{Party\+Supervise\+Request}} party\+Supervise\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Allows to monitor a call party in \textquotesingle{}Listen\textquotesingle{} mode. Input parameters are extension number of a monitored user and internal identifier of a supervisor\textquotesingle{}s device. Call session and party identifiers should be specified in path. Please note that for this method dual channel audio flow is supported, which means that you need to make one more request for monitoring the second participant of a call. And as a result of each monitoring request the client receives SIP invite with the following header {\ttfamily p-\/rc-\/api-\/monitoring-\/ids} containing IDs of the monitored party and session. The flow is supported for calls with no more than 2 participants. Currently this method is supported for Softphone/\+Hardphone only, since device IDs for Web\+RTC/\+Mobile apps cannot be obtained. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/supervise Rate Limit Group\+: Light App Permission\+: Call\+Control \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a1b1fdce61d97b6e6963d86e6ab491bba}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a1b1fdce61d97b6e6963d86e6ab491bba}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Index}{Parties.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a087b9be6fd45e2a6bd47fc13d0e4f7f3}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a087b9be6fd45e2a6bd47fc13d0e4f7f3}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a8b8320b49c3424ceb757b2d7471dcaa1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Supervise_1_1Index_a8b8320b49c3424ceb757b2d7471dcaa1}} 
+\index{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise.Index@{RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Supervise.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1PartySuperviseResponse}{Party\+Supervise\+Response}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Telephony.\+Sessions.\+Parties.\+Supervise.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1PartySuperviseRequest}{Party\+Supervise\+Request}}}]{party\+Supervise\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows to monitor a call party in \textquotesingle{}Listen\textquotesingle{} mode. Input parameters are extension number of a monitored user and internal identifier of a supervisor\textquotesingle{}s device. Call session and party identifiers should be specified in path. Please note that for this method dual channel audio flow is supported, which means that you need to make one more request for monitoring the second participant of a call. And as a result of each monitoring request the client receives SIP invite with the following header {\ttfamily p-\/rc-\/api-\/monitoring-\/ids} containing IDs of the monitored party and session. The flow is supported for calls with no more than 2 participants. Currently this method is supported for Softphone/\+Hardphone only, since device IDs for Web\+RTC/\+Mobile apps cannot be obtained. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/telephony/sessions/\{telephony\+Session\+Id\}/parties/\{party\+Id\}/supervise Rate Limit Group\+: Light App Permission\+: Call\+Control 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Telephony/\+Sessions/\+Parties/\+Supervise/Index.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+Web\+Socket Extension adds support for Web\+Socket protocol.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var rc = \textcolor{keyword}{new} RestClient(...);}
+\DoxyCodeLine{var webSocketExtension = \textcolor{keyword}{new} WebSocketExtension(...);}
+\DoxyCodeLine{await rc.InstallExtension(webSocketExtension);}
+\DoxyCodeLine{}
+\DoxyCodeLine{var eventFilters = \textcolor{keyword}{new}[]}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}/restapi/v1.0/account/\string~/extension/\string~/message-\/store"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{var subscription = await webSocketExtension.Subscribe(eventFilters, message =>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{// do something with message}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_RingCentral_Net_WebSocket_README_autotoc_md1}{}\doxysection{Limitations}\label{md_RingCentral_Net_WebSocket_README_autotoc_md1}
+Each Web\+Socket\+Extension can only create one subscription. If you need to create multiple subscriptions, you need to create multiple Web\+Socket\+Extension instances. Creating multiple subscriptions with one Web\+Socket\+Extension instance will cause the last subscription to override the previous ones.\hypertarget{md_RingCentral_Net_WebSocket_README_autotoc_md2}{}\doxysection{24 $\ast$ 7 long running applications}\label{md_RingCentral_Net_WebSocket_README_autotoc_md2}
+In order to keep your Web\+Socket appliation 24 $\ast$ 7 running, there are several things that you need to handle\+:
+
+
+\begin{DoxyItemize}
+\item first of all, you need to keep you token valid. You can use {\ttfamily rc.\+Refresh()} to refresh the token.
+\item secondly, you need to handle network outage. If there is a network outage, you need to {\ttfamily ws\+Extension.\+Reconnect()} when network is back.
+\item lastly, there is a rare case\+: There is a 5 active oauth sessions per user per app limit. If you try to create 5 + sessions, existing ones will be revoked and {\ttfamily rc.\+Refresh()} will fail and your Web\+Socket connection will not function either. In this case, you need to generate a new token and {\ttfamily ws\+Extension.\+Reconnect()}.
+\end{DoxyItemize}
+
+Please refer to this demo code\+: \href{https://github.com/tylerlong/RingCentral.WebSocket.Demo/blob/main/RingCentral.WebSocket.Demo/Program.cs}{\texttt{ https\+://github.\+com/tylerlong/\+Ring\+Central.\+Web\+Socket.\+Demo/blob/main/\+Ring\+Central.\+Web\+Socket.\+Demo/\+Program.\+cs}}
+
+Please read the {\bfseries{comments}} in the code carefully. 

@@ -1,0 +1,325 @@
+\hypertarget{classRingCentral_1_1GetExtensionInfoResponse}{}\doxysection{Ring\+Central.\+Get\+Extension\+Info\+Response Class Reference}
+\label{classRingCentral_1_1GetExtensionInfoResponse}\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long? \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ad5e0dfae3ae7dbb00823e5dd82393ef4}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an extension Format\+: int64 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ab14a29ff97423b2194a3fe82db8e2e1c}{uri}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of an extension Format\+: uri \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1GetExtensionAccountInfo}{Get\+Extension\+Account\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a4c2e8a39680466ea4ff4a6df70d74e51}{account}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ContactInfo}{Contact\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a7e932a118cbaa840e63a469468f28d80}{contact}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1CostCenterInfo}{Cost\+Center\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_acc758cb53a42f18ac0f95f7c8101df56}{cost\+Center}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1CustomFieldInfo}{Custom\+Field\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a7d59453ba32b7f38144a287f7118281a}{custom\+Fields}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1DepartmentInfo}{Department\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a8ecec3c07fad49f9365629382c745f47}{departments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extension\+Id. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a9d9cbe1bc2da8825e49c6063d232a4ff}{extension\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension short number \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_adfee7c1bf63264b7640e31ccd33cb2b9}{extension\+Numbers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a7f38f069125e046cbd28040b83f24b50}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension name. For user extension types the value is a combination of the specified first name and last name \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a7eb3c6539f601bc016361905af4bbb3e}{partner\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For Partner Applications Internal identifier of an extension created by partner. The \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} supports mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} native IDs as path parameters using {\ttfamily pid=XXX} clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partner\+Id attributes of account and extension \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ExtensionPermissions}{Extension\+Permissions}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ac0e681ceead9f1f86822d1074e0da28b}{permissions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ProfileImageInfo}{Profile\+Image\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a3f68f0ce2aea5fbc290bbc72726a5731}{profile\+Image}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ReferenceInfo}{Reference\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_aec656c4282539590f099b7a60281f103}{references}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of non-\/\+RC internal identifiers assigned to an extension \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1Roles}{Roles}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_acbefc26d87c0d634e26abb5174ccec7c}{roles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1RegionalSettings}{Regional\+Settings}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ad66b54496e168ba0a646a4dcbde638fd}{regional\+Settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1ExtensionServiceFeatureInfo}{Extension\+Service\+Feature\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a9d2a88c9aa5421f06050758b4d12253a}{service\+Features}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension service features is returned in response only when the logged-\/in user requests their own extension info, see also Extension Service Features \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a6685c25c01111beeba7ef3a2a7eb73d1}{setup\+Wizard\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies extension configuration wizard state (web service setup) Default\+: Not\+Started Enum\+: Not\+Started, Incomplete, Completed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ad0436a568bf4b59b2496b55ee4935e2f}{status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension current state. If \textquotesingle{}Unassigned\textquotesingle{} is specified, then extensions without {\ttfamily extension\+Number} are returned. If not specified, then all extensions are returned Enum\+: Enabled, Disabled, Frozen, Not\+Activated, Unassigned \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ExtensionStatusInfo}{Extension\+Status\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ae08c4897437e227c0f80492d9d8d6ad1}{status\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_aba1007cd903f42b0ce7cdeab7608b9b5}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension type. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Fax\+User, Flexible\+User, Virtual\+User, Digital\+User, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Ivr\+Menu, Application\+Extension, Park\+Location, Bot, Room, Room\+Connector, Limited, Site, Proxy\+Admin, Delegated\+Lines\+Group, Group\+Call\+Pickup \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ae9b694f61db86f4f150d95e47579eae7}{sub\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extension subtype, if applicable. For any unsupported subtypes the {\ttfamily Unknown} value will be returned Enum\+: Video\+Pro, Video\+Pro\+Plus, Digital\+Signage, Unknown, Emergency \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallQueueExtensionInfo}{Call\+Queue\+Extension\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a44b05401db0eb111109e246333fcc2cb}{call\+Queue\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a83fc7c4a52047ed7d47c9f568902c225}{hidden}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Hides extension from showing in company directory. Supported for extensions of \mbox{\hyperlink{classRingCentral_1_1User}{User}} type only \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ProvisioningSiteInfo}{Provisioning\+Site\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_ac73a3ac07103d8e53d93d6149ac3b035}{site}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classRingCentral_1_1AssignedCountryInfo}{Assigned\+Country\+Info}} \mbox{\hyperlink{classRingCentral_1_1GetExtensionInfoResponse_a8104f6d1e90e7d8e65e7b9c217e2f609}{assigned\+Country}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a4c2e8a39680466ea4ff4a6df70d74e51}\label{classRingCentral_1_1GetExtensionInfoResponse_a4c2e8a39680466ea4ff4a6df70d74e51}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!account@{account}}
+\index{account@{account}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{account}{account}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1GetExtensionAccountInfo}{Get\+Extension\+Account\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+account\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a8104f6d1e90e7d8e65e7b9c217e2f609}\label{classRingCentral_1_1GetExtensionInfoResponse_a8104f6d1e90e7d8e65e7b9c217e2f609}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!assignedCountry@{assignedCountry}}
+\index{assignedCountry@{assignedCountry}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{assignedCountry}{assignedCountry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1AssignedCountryInfo}{Assigned\+Country\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+assigned\+Country\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a44b05401db0eb111109e246333fcc2cb}\label{classRingCentral_1_1GetExtensionInfoResponse_a44b05401db0eb111109e246333fcc2cb}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!callQueueInfo@{callQueueInfo}}
+\index{callQueueInfo@{callQueueInfo}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{callQueueInfo}{callQueueInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallQueueExtensionInfo}{Call\+Queue\+Extension\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+call\+Queue\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a7e932a118cbaa840e63a469468f28d80}\label{classRingCentral_1_1GetExtensionInfoResponse_a7e932a118cbaa840e63a469468f28d80}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!contact@{contact}}
+\index{contact@{contact}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{contact}{contact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ContactInfo}{Contact\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+contact\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_acc758cb53a42f18ac0f95f7c8101df56}\label{classRingCentral_1_1GetExtensionInfoResponse_acc758cb53a42f18ac0f95f7c8101df56}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!costCenter@{costCenter}}
+\index{costCenter@{costCenter}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{costCenter}{costCenter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CostCenterInfo}{Cost\+Center\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+cost\+Center\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a7d59453ba32b7f38144a287f7118281a}\label{classRingCentral_1_1GetExtensionInfoResponse_a7d59453ba32b7f38144a287f7118281a}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!customFields@{customFields}}
+\index{customFields@{customFields}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{customFields}{customFields}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CustomFieldInfo}{Custom\+Field\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Extension\+Info\+Response.\+custom\+Fields\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a8ecec3c07fad49f9365629382c745f47}\label{classRingCentral_1_1GetExtensionInfoResponse_a8ecec3c07fad49f9365629382c745f47}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!departments@{departments}}
+\index{departments@{departments}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{departments}{departments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1DepartmentInfo}{Department\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Extension\+Info\+Response.\+departments\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extension\+Id. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a9d9cbe1bc2da8825e49c6063d232a4ff}\label{classRingCentral_1_1GetExtensionInfoResponse_a9d9cbe1bc2da8825e49c6063d232a4ff}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!extensionNumber@{extensionNumber}}
+\index{extensionNumber@{extensionNumber}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{extensionNumber}{extensionNumber}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+extension\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension short number 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_adfee7c1bf63264b7640e31ccd33cb2b9}\label{classRingCentral_1_1GetExtensionInfoResponse_adfee7c1bf63264b7640e31ccd33cb2b9}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!extensionNumbers@{extensionNumbers}}
+\index{extensionNumbers@{extensionNumbers}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{extensionNumbers}{extensionNumbers}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Extension\+Info\+Response.\+extension\+Numbers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a83fc7c4a52047ed7d47c9f568902c225}\label{classRingCentral_1_1GetExtensionInfoResponse_a83fc7c4a52047ed7d47c9f568902c225}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!hidden@{hidden}}
+\index{hidden@{hidden}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{hidden}{hidden}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Get\+Extension\+Info\+Response.\+hidden\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Hides extension from showing in company directory. Supported for extensions of \mbox{\hyperlink{classRingCentral_1_1User}{User}} type only 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ad5e0dfae3ae7dbb00823e5dd82393ef4}\label{classRingCentral_1_1GetExtensionInfoResponse_ad5e0dfae3ae7dbb00823e5dd82393ef4}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!id@{id}}
+\index{id@{id}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily long? Ring\+Central.\+Get\+Extension\+Info\+Response.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an extension Format\+: int64 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a7f38f069125e046cbd28040b83f24b50}\label{classRingCentral_1_1GetExtensionInfoResponse_a7f38f069125e046cbd28040b83f24b50}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!name@{name}}
+\index{name@{name}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension name. For user extension types the value is a combination of the specified first name and last name 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a7eb3c6539f601bc016361905af4bbb3e}\label{classRingCentral_1_1GetExtensionInfoResponse_a7eb3c6539f601bc016361905af4bbb3e}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!partnerId@{partnerId}}
+\index{partnerId@{partnerId}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{partnerId}{partnerId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+partner\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For Partner Applications Internal identifier of an extension created by partner. The \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} supports mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} native IDs as path parameters using {\ttfamily pid=XXX} clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partner\+Id attributes of account and extension 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ac0e681ceead9f1f86822d1074e0da28b}\label{classRingCentral_1_1GetExtensionInfoResponse_ac0e681ceead9f1f86822d1074e0da28b}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!permissions@{permissions}}
+\index{permissions@{permissions}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{permissions}{permissions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ExtensionPermissions}{Extension\+Permissions}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+permissions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a3f68f0ce2aea5fbc290bbc72726a5731}\label{classRingCentral_1_1GetExtensionInfoResponse_a3f68f0ce2aea5fbc290bbc72726a5731}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!profileImage@{profileImage}}
+\index{profileImage@{profileImage}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{profileImage}{profileImage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ProfileImageInfo}{Profile\+Image\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+profile\+Image\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_aec656c4282539590f099b7a60281f103}\label{classRingCentral_1_1GetExtensionInfoResponse_aec656c4282539590f099b7a60281f103}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!references@{references}}
+\index{references@{references}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{references}{references}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ReferenceInfo}{Reference\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Extension\+Info\+Response.\+references\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of non-\/\+RC internal identifiers assigned to an extension 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ad66b54496e168ba0a646a4dcbde638fd}\label{classRingCentral_1_1GetExtensionInfoResponse_ad66b54496e168ba0a646a4dcbde638fd}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!regionalSettings@{regionalSettings}}
+\index{regionalSettings@{regionalSettings}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{regionalSettings}{regionalSettings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1RegionalSettings}{Regional\+Settings}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+regional\+Settings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_acbefc26d87c0d634e26abb5174ccec7c}\label{classRingCentral_1_1GetExtensionInfoResponse_acbefc26d87c0d634e26abb5174ccec7c}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!roles@{roles}}
+\index{roles@{roles}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{roles}{roles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1Roles}{Roles}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Extension\+Info\+Response.\+roles\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a9d2a88c9aa5421f06050758b4d12253a}\label{classRingCentral_1_1GetExtensionInfoResponse_a9d2a88c9aa5421f06050758b4d12253a}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!serviceFeatures@{serviceFeatures}}
+\index{serviceFeatures@{serviceFeatures}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{serviceFeatures}{serviceFeatures}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ExtensionServiceFeatureInfo}{Extension\+Service\+Feature\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Get\+Extension\+Info\+Response.\+service\+Features\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension service features is returned in response only when the logged-\/in user requests their own extension info, see also Extension Service Features 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_a6685c25c01111beeba7ef3a2a7eb73d1}\label{classRingCentral_1_1GetExtensionInfoResponse_a6685c25c01111beeba7ef3a2a7eb73d1}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!setupWizardState@{setupWizardState}}
+\index{setupWizardState@{setupWizardState}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{setupWizardState}{setupWizardState}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+setup\+Wizard\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies extension configuration wizard state (web service setup) Default\+: Not\+Started Enum\+: Not\+Started, Incomplete, Completed 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ac73a3ac07103d8e53d93d6149ac3b035}\label{classRingCentral_1_1GetExtensionInfoResponse_ac73a3ac07103d8e53d93d6149ac3b035}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!site@{site}}
+\index{site@{site}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{site}{site}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ProvisioningSiteInfo}{Provisioning\+Site\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+site\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ad0436a568bf4b59b2496b55ee4935e2f}\label{classRingCentral_1_1GetExtensionInfoResponse_ad0436a568bf4b59b2496b55ee4935e2f}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!status@{status}}
+\index{status@{status}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension current state. If \textquotesingle{}Unassigned\textquotesingle{} is specified, then extensions without {\ttfamily extension\+Number} are returned. If not specified, then all extensions are returned Enum\+: Enabled, Disabled, Frozen, Not\+Activated, Unassigned 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ae08c4897437e227c0f80492d9d8d6ad1}\label{classRingCentral_1_1GetExtensionInfoResponse_ae08c4897437e227c0f80492d9d8d6ad1}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!statusInfo@{statusInfo}}
+\index{statusInfo@{statusInfo}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{statusInfo}{statusInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ExtensionStatusInfo}{Extension\+Status\+Info}} Ring\+Central.\+Get\+Extension\+Info\+Response.\+status\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ae9b694f61db86f4f150d95e47579eae7}\label{classRingCentral_1_1GetExtensionInfoResponse_ae9b694f61db86f4f150d95e47579eae7}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!subType@{subType}}
+\index{subType@{subType}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{subType}{subType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+sub\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension subtype, if applicable. For any unsupported subtypes the {\ttfamily Unknown} value will be returned Enum\+: Video\+Pro, Video\+Pro\+Plus, Digital\+Signage, Unknown, Emergency 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_aba1007cd903f42b0ce7cdeab7608b9b5}\label{classRingCentral_1_1GetExtensionInfoResponse_aba1007cd903f42b0ce7cdeab7608b9b5}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!type@{type}}
+\index{type@{type}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Extension type. Please note that legacy \textquotesingle{}Department\textquotesingle{} extension type corresponds to \textquotesingle{}Call Queue\textquotesingle{} extensions in modern \mbox{\hyperlink{namespaceRingCentral}{Ring\+Central}} product terminology Enum\+: \mbox{\hyperlink{classRingCentral_1_1User}{User}}, Fax\+User, Flexible\+User, Virtual\+User, Digital\+User, Department, Announcement, Voicemail, Shared\+Lines\+Group, Paging\+Only, Ivr\+Menu, Application\+Extension, Park\+Location, Bot, Room, Room\+Connector, Limited, Site, Proxy\+Admin, Delegated\+Lines\+Group, Group\+Call\+Pickup 
+
+\mbox{\Hypertarget{classRingCentral_1_1GetExtensionInfoResponse_ab14a29ff97423b2194a3fe82db8e2e1c}\label{classRingCentral_1_1GetExtensionInfoResponse_ab14a29ff97423b2194a3fe82db8e2e1c}} 
+\index{RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}!uri@{uri}}
+\index{uri@{uri}!RingCentral.GetExtensionInfoResponse@{RingCentral.GetExtensionInfoResponse}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily string Ring\+Central.\+Get\+Extension\+Info\+Response.\+uri\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Canonical URI of an extension Format\+: uri 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Get\+Extension\+Info\+Response.\+cs\end{DoxyCompactItemize}

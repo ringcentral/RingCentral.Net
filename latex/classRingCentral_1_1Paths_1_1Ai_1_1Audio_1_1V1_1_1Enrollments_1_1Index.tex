@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Ai.\+Audio.\+V1.\+Enrollments.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index}\index{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Ai.\+Audio.\+V1.\+Enrollments.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_aa11faf656fb0944e53506216197f82bd}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_aa11faf656fb0944e53506216197f82bd}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Index}{V1.\+Index}} parent, string speaker\+Id=null)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a041e38202dbdd7a998a095fd06141860}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a041e38202dbdd7a998a095fd06141860}} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1ListEnrolledSpeakers}{List\+Enrolled\+Speakers}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_af17082a7a4f1861bc68edf2cc752331e}{List}} (\mbox{\hyperlink{classRingCentral_1_1CaiEnrollmentsListParameters}{Cai\+Enrollments\+List\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the List of Enrolled Speakers HTTP Method\+: get Endpoint\+: /ai/audio/v1/enrollments Rate Limit Group\+: Heavy App Permission\+: AI \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EnrollmentStatus}{Enrollment\+Status}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_ade9b62d773492a7db6742c3aa074e81e}{Post}} (\mbox{\hyperlink{classRingCentral_1_1EnrollmentInput}{Enrollment\+Input}} enrollment\+Input, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates Enrollment for the provided Speaker. HTTP Method\+: post Endpoint\+: /ai/audio/v1/enrollments Rate Limit Group\+: Heavy App Permission\+: AI \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EnrollmentStatus}{Enrollment\+Status}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a9de595ea65d6bb9dde1fc4aba0b7fdec}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Get The \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Ai_1_1Status}{Status}} of Enrollment for the provided Speaker. HTTP Method\+: get Endpoint\+: /ai/audio/v1/enrollments/\{speaker\+Id\} Rate Limit Group\+: Heavy App Permission\+: AI \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a70866c738ce393dc0d792dd5d7e2ced5}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Delete The Enrollment for the provided Speaker. HTTP Method\+: delete Endpoint\+: /ai/audio/v1/enrollments/\{speaker\+Id\} Rate Limit Group\+: Heavy App Permission\+: AI \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EnrollmentStatus}{Enrollment\+Status}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a4b87f47846ddadfec4f95c0896454b77}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1EnrollmentPatchInput}{Enrollment\+Patch\+Input}} enrollment\+Patch\+Input, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Add newer audio data to improve an existing speaker enrollment HTTP Method\+: patch Endpoint\+: /ai/audio/v1/enrollments/\{speaker\+Id\} Rate Limit Group\+: Heavy App Permission\+: AI \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a83b1274672a8d5026a3b65678d380519}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a83b1274672a8d5026a3b65678d380519}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Index}{V1.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a41acfdc07bd909f9bf44e6eaf1485760}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a41acfdc07bd909f9bf44e6eaf1485760}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_abf4b7df0e0616898c84dd50aa49f075d}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_abf4b7df0e0616898c84dd50aa49f075d}} 
+string {\bfseries speaker\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a70866c738ce393dc0d792dd5d7e2ced5}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a70866c738ce393dc0d792dd5d7e2ced5}} 
+\index{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}!Delete@{Delete}}
+\index{Delete@{Delete}!RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Ai.\+Audio.\+V1.\+Enrollments.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delete The Enrollment for the provided Speaker. HTTP Method\+: delete Endpoint\+: /ai/audio/v1/enrollments/\{speaker\+Id\} Rate Limit Group\+: Heavy App Permission\+: AI 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a9de595ea65d6bb9dde1fc4aba0b7fdec}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a9de595ea65d6bb9dde1fc4aba0b7fdec}} 
+\index{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1EnrollmentStatus}{Enrollment\+Status}}$>$ Ring\+Central.\+Paths.\+Ai.\+Audio.\+V1.\+Enrollments.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get The \mbox{\hyperlink{namespaceRingCentral_1_1Paths_1_1Ai_1_1Status}{Status}} of Enrollment for the provided Speaker. HTTP Method\+: get Endpoint\+: /ai/audio/v1/enrollments/\{speaker\+Id\} Rate Limit Group\+: Heavy App Permission\+: AI 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_af17082a7a4f1861bc68edf2cc752331e}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_af17082a7a4f1861bc68edf2cc752331e}} 
+\index{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1ListEnrolledSpeakers}{List\+Enrolled\+Speakers}}$>$ Ring\+Central.\+Paths.\+Ai.\+Audio.\+V1.\+Enrollments.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CaiEnrollmentsListParameters}{Cai\+Enrollments\+List\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the List of Enrolled Speakers HTTP Method\+: get Endpoint\+: /ai/audio/v1/enrollments Rate Limit Group\+: Heavy App Permission\+: AI 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a4b87f47846ddadfec4f95c0896454b77}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_a4b87f47846ddadfec4f95c0896454b77}} 
+\index{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1EnrollmentStatus}{Enrollment\+Status}}$>$ Ring\+Central.\+Paths.\+Ai.\+Audio.\+V1.\+Enrollments.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1EnrollmentPatchInput}{Enrollment\+Patch\+Input}}}]{enrollment\+Patch\+Input,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add newer audio data to improve an existing speaker enrollment HTTP Method\+: patch Endpoint\+: /ai/audio/v1/enrollments/\{speaker\+Id\} Rate Limit Group\+: Heavy App Permission\+: AI 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_ade9b62d773492a7db6742c3aa074e81e}\label{classRingCentral_1_1Paths_1_1Ai_1_1Audio_1_1V1_1_1Enrollments_1_1Index_ade9b62d773492a7db6742c3aa074e81e}} 
+\index{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Ai.Audio.V1.Enrollments.Index@{RingCentral.Paths.Ai.Audio.V1.Enrollments.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1EnrollmentStatus}{Enrollment\+Status}}$>$ Ring\+Central.\+Paths.\+Ai.\+Audio.\+V1.\+Enrollments.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1EnrollmentInput}{Enrollment\+Input}}}]{enrollment\+Input,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates Enrollment for the provided Speaker. HTTP Method\+: post Endpoint\+: /ai/audio/v1/enrollments Rate Limit Group\+: Heavy App Permission\+: AI 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Ai/\+Audio/\+V1/\+Enrollments/Index.\+cs\end{DoxyCompactItemize}

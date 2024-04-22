@@ -1,0 +1,44 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Replace.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index}\index{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Replace.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Replace.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Replace.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_a429dd5e6f82c4afbcb9dbb8cb132667c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_a429dd5e6f82c4afbcb9dbb8cb132667c}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index}{Phone\+Numbers.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_ad3a230dfd9d6185b9fffdad6d7f53378}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_ad3a230dfd9d6185b9fffdad6d7f53378}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo}{Account\+Phone\+Number\+Info}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_aa0142de1e9890105b296e3c03aa3946c}{Post}} (\mbox{\hyperlink{classRingCentral_1_1ReplacePhoneNumberRequest}{Replace\+Phone\+Number\+Request}} replace\+Phone\+Number\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Replaces (swaps) phone numbers from Inventory with the main, company, direct or company fax numbers. This method is used to replace temporary numbers when the porting process is complete. HTTP Method\+: post Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/phone-\/numbers/\{phone\+Number\+Id\}/replace Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Phone\+Numbers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_ad97329308689ce640d95b4938d2871e4}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_ad97329308689ce640d95b4938d2871e4}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Index}{Phone\+Numbers.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_a4f6022d0697df4775625ce6451f750dc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_a4f6022d0697df4775625ce6451f750dc}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_aa0142de1e9890105b296e3c03aa3946c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1PhoneNumbers_1_1Replace_1_1Index_aa0142de1e9890105b296e3c03aa3946c}} 
+\index{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Replace.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Replace.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Replace.Index@{RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Replace.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1AccountPhoneNumberInfo}{Account\+Phone\+Number\+Info}}$>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Phone\+Numbers.\+Replace.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ReplacePhoneNumberRequest}{Replace\+Phone\+Number\+Request}}}]{replace\+Phone\+Number\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces (swaps) phone numbers from Inventory with the main, company, direct or company fax numbers. This method is used to replace temporary numbers when the porting process is complete. HTTP Method\+: post Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/phone-\/numbers/\{phone\+Number\+Id\}/replace Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Company\+Phone\+Numbers 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+V2/\+Accounts/\+Phone\+Numbers/\+Replace/Index.\+cs\end{DoxyCompactItemize}

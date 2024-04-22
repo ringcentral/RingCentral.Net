@@ -1,0 +1,95 @@
+\hypertarget{classRingCentral_1_1NotificationDeliveryModeRequest}{}\doxysection{Ring\+Central.\+Notification\+Delivery\+Mode\+Request Class Reference}
+\label{classRingCentral_1_1NotificationDeliveryModeRequest}\index{RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}}
+
+
+Notification delivery transport information  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryModeRequest_a6ae2f322dbdeca94c9bf1b6d86461941}{transport\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The transport type for this subscription, or the channel by which an app should be notified of an event Required Enum\+: Web\+Hook, RC/\+APNS, RC/\+GCM, Pub\+Nub \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryModeRequest_a5cf5077ec63073c72865f95204d3fd72}{address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URL to which notifications should be delivered. This is only applicable for the {\ttfamily Web\+Hook} transport type, for which it is a required field. Required Format\+: uri Example\+: \href{https://acme.com/myservice/webhook}{\texttt{ https\+://acme.\+com/myservice/webhook}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryModeRequest_a1c87587767b4a3a4cbcde9315dcfa7b6}{verification\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An optional validation token used to verify the authenticity of the incoming webhook. Applicable only for the {\ttfamily Web\+Hook} transport type. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryModeRequest_a68a769e48da74bd42eebc55e8fbb9300}{certificate\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Certificate name for mobile notification transports Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryModeRequest_a7cb1706f2b02df790e079faa6b10786e}{registration\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Device instance ID for mobile notification transports Required Example\+: 38b062ae-\/85f8-\/4dcc-\/8734-\/04d3f7393d42 \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryModeRequest_aa2b246245d93dfe0404567006b0db6ea}{encryption}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional. Specifies if notification messages will be encrypted or not. Please note that for some event filters (e.\+g. presence) encryption is mandatory and {\ttfamily false} value provided by caller will be ignored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notification delivery transport information 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryModeRequest_a5cf5077ec63073c72865f95204d3fd72}\label{classRingCentral_1_1NotificationDeliveryModeRequest_a5cf5077ec63073c72865f95204d3fd72}} 
+\index{RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}!address@{address}}
+\index{address@{address}!RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode\+Request.\+address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The URL to which notifications should be delivered. This is only applicable for the {\ttfamily Web\+Hook} transport type, for which it is a required field. Required Format\+: uri Example\+: \href{https://acme.com/myservice/webhook}{\texttt{ https\+://acme.\+com/myservice/webhook}} 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryModeRequest_a68a769e48da74bd42eebc55e8fbb9300}\label{classRingCentral_1_1NotificationDeliveryModeRequest_a68a769e48da74bd42eebc55e8fbb9300}} 
+\index{RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}!certificateName@{certificateName}}
+\index{certificateName@{certificateName}!RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{certificateName}{certificateName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode\+Request.\+certificate\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Certificate name for mobile notification transports Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryModeRequest_aa2b246245d93dfe0404567006b0db6ea}\label{classRingCentral_1_1NotificationDeliveryModeRequest_aa2b246245d93dfe0404567006b0db6ea}} 
+\index{RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}!encryption@{encryption}}
+\index{encryption@{encryption}!RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{encryption}{encryption}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Notification\+Delivery\+Mode\+Request.\+encryption\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional. Specifies if notification messages will be encrypted or not. Please note that for some event filters (e.\+g. presence) encryption is mandatory and {\ttfamily false} value provided by caller will be ignored. 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryModeRequest_a7cb1706f2b02df790e079faa6b10786e}\label{classRingCentral_1_1NotificationDeliveryModeRequest_a7cb1706f2b02df790e079faa6b10786e}} 
+\index{RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}!registrationId@{registrationId}}
+\index{registrationId@{registrationId}!RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{registrationId}{registrationId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode\+Request.\+registration\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Device instance ID for mobile notification transports Required Example\+: 38b062ae-\/85f8-\/4dcc-\/8734-\/04d3f7393d42 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryModeRequest_a6ae2f322dbdeca94c9bf1b6d86461941}\label{classRingCentral_1_1NotificationDeliveryModeRequest_a6ae2f322dbdeca94c9bf1b6d86461941}} 
+\index{RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}!transportType@{transportType}}
+\index{transportType@{transportType}!RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{transportType}{transportType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode\+Request.\+transport\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The transport type for this subscription, or the channel by which an app should be notified of an event Required Enum\+: Web\+Hook, RC/\+APNS, RC/\+GCM, Pub\+Nub 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryModeRequest_a1c87587767b4a3a4cbcde9315dcfa7b6}\label{classRingCentral_1_1NotificationDeliveryModeRequest_a1c87587767b4a3a4cbcde9315dcfa7b6}} 
+\index{RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}!verificationToken@{verificationToken}}
+\index{verificationToken@{verificationToken}!RingCentral.NotificationDeliveryModeRequest@{RingCentral.NotificationDeliveryModeRequest}}
+\doxysubsubsection{\texorpdfstring{verificationToken}{verificationToken}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode\+Request.\+verification\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An optional validation token used to verify the authenticity of the incoming webhook. Applicable only for the {\ttfamily Web\+Hook} transport type. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Notification\+Delivery\+Mode\+Request.\+cs\end{DoxyCompactItemize}

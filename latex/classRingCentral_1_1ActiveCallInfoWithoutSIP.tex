@@ -1,0 +1,181 @@
+\hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP}{}\doxysection{Ring\+Central.\+Active\+Call\+Info\+Without\+SIP Class Reference}
+\label{classRingCentral_1_1ActiveCallInfoWithoutSIP}\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a0ed38afef964c3dc5fc45a177ddc5160}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a call \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a1432a7cf6f71d4a1947c302635c7ea2b}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call direction Enum\+: Inbound, Outbound \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a05e9dde003121f6dac55c7c144bc2a6c}{queue\+Call}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifies if a call belongs to the call queue \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_aa6319b821aef9732382bc56073888599}{from}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number or extension number of a caller. For GCM transport type \textquotesingle{}\+\_\+from\textquotesingle{} property should be used \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab78c3a25151347bcd8468e22308a1fbf}{from\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of a caller \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a9ba7811130c91289df3494917085b229}{to}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number or extension number of a callee \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab21ef9f2779cd7d0ece2502616e317a5}{to\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of a callee \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a37bee4c6de0951ee21239ec358652ebf}{party\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a call party \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a0fa9166711e9c6fc8a6508f0a27f3f0a}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time when the call is actually started Format\+: date-\/time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_aa405dee1bef975bb6c85b88034893307}{session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a call session \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a3225cc0f6c846be4f2dbf0ca481a356f}{telephony\+Session\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Telephony identifier of a call session \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a14b4b62eb138c1d3315dad968f24c19b}{telephony\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Telephony call status Enum\+: No\+Call, Call\+Connected, Ringing, On\+Hold, Parked\+Call \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_a87eca9e9065efdb0a102147fe97bced1}{termination\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of call termination. Supported for calls in \textquotesingle{}No\+Call\textquotesingle{} status. If the returned termination type is \textquotesingle{}intermediate\textquotesingle{} it means the call is not actually ended, the connection is established on one of the devices Enum\+: final, intermediate \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CallInfoCQ}{Call\+Info\+CQ}} \mbox{\hyperlink{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab3f088eb866da86d82b21f536bbd4a04}{call\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab3f088eb866da86d82b21f536bbd4a04}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab3f088eb866da86d82b21f536bbd4a04}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!callInfo@{callInfo}}
+\index{callInfo@{callInfo}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{callInfo}{callInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CallInfoCQ}{Call\+Info\+CQ}} Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+call\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a1432a7cf6f71d4a1947c302635c7ea2b}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a1432a7cf6f71d4a1947c302635c7ea2b}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!direction@{direction}}
+\index{direction@{direction}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Call direction Enum\+: Inbound, Outbound 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_aa6319b821aef9732382bc56073888599}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_aa6319b821aef9732382bc56073888599}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!from@{from}}
+\index{from@{from}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+from\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number or extension number of a caller. For GCM transport type \textquotesingle{}\+\_\+from\textquotesingle{} property should be used 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab78c3a25151347bcd8468e22308a1fbf}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab78c3a25151347bcd8468e22308a1fbf}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!fromName@{fromName}}
+\index{fromName@{fromName}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{fromName}{fromName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+from\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name of a caller 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a0ed38afef964c3dc5fc45a177ddc5160}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a0ed38afef964c3dc5fc45a177ddc5160}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!id@{id}}
+\index{id@{id}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a call 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a37bee4c6de0951ee21239ec358652ebf}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a37bee4c6de0951ee21239ec358652ebf}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!partyId@{partyId}}
+\index{partyId@{partyId}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{partyId}{partyId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+party\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a call party 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a05e9dde003121f6dac55c7c144bc2a6c}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a05e9dde003121f6dac55c7c144bc2a6c}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!queueCall@{queueCall}}
+\index{queueCall@{queueCall}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{queueCall}{queueCall}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+queue\+Call\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifies if a call belongs to the call queue 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_aa405dee1bef975bb6c85b88034893307}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_aa405dee1bef975bb6c85b88034893307}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!sessionId@{sessionId}}
+\index{sessionId@{sessionId}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{sessionId}{sessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of a call session 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a0fa9166711e9c6fc8a6508f0a27f3f0a}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a0fa9166711e9c6fc8a6508f0a27f3f0a}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!startTime@{startTime}}
+\index{startTime@{startTime}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Time when the call is actually started Format\+: date-\/time 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a3225cc0f6c846be4f2dbf0ca481a356f}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a3225cc0f6c846be4f2dbf0ca481a356f}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!telephonySessionId@{telephonySessionId}}
+\index{telephonySessionId@{telephonySessionId}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{telephonySessionId}{telephonySessionId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+telephony\+Session\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Telephony identifier of a call session 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a14b4b62eb138c1d3315dad968f24c19b}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a14b4b62eb138c1d3315dad968f24c19b}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!telephonyStatus@{telephonyStatus}}
+\index{telephonyStatus@{telephonyStatus}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{telephonyStatus}{telephonyStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+telephony\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Telephony call status Enum\+: No\+Call, Call\+Connected, Ringing, On\+Hold, Parked\+Call 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a87eca9e9065efdb0a102147fe97bced1}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a87eca9e9065efdb0a102147fe97bced1}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!terminationType@{terminationType}}
+\index{terminationType@{terminationType}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{terminationType}{terminationType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+termination\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of call termination. Supported for calls in \textquotesingle{}No\+Call\textquotesingle{} status. If the returned termination type is \textquotesingle{}intermediate\textquotesingle{} it means the call is not actually ended, the connection is established on one of the devices Enum\+: final, intermediate 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_a9ba7811130c91289df3494917085b229}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_a9ba7811130c91289df3494917085b229}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!to@{to}}
+\index{to@{to}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+to\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Phone number or extension number of a callee 
+
+\mbox{\Hypertarget{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab21ef9f2779cd7d0ece2502616e317a5}\label{classRingCentral_1_1ActiveCallInfoWithoutSIP_ab21ef9f2779cd7d0ece2502616e317a5}} 
+\index{RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}!toName@{toName}}
+\index{toName@{toName}!RingCentral.ActiveCallInfoWithoutSIP@{RingCentral.ActiveCallInfoWithoutSIP}}
+\doxysubsubsection{\texorpdfstring{toName}{toName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Active\+Call\+Info\+Without\+SIP.\+to\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name of a callee 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Active\+Call\+Info\+Without\+SIP.\+cs\end{DoxyCompactItemize}

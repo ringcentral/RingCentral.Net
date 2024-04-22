@@ -1,0 +1,131 @@
+\hypertarget{classRingCentral_1_1NotificationDeliveryMode}{}\doxysection{Ring\+Central.\+Notification\+Delivery\+Mode Class Reference}
+\label{classRingCentral_1_1NotificationDeliveryMode}\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+
+
+Notification delivery transport information  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_a649d408715f11083d49a7794273db42d}{transport\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The transport type for this subscription, or the channel by which an app should be notified of an event Required Enum\+: Web\+Hook, RC/\+APNS, RC/\+GCM, Pub\+Nub, Web\+Socket \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_a1eef77ae5bc9db13e189b7d43f8155e7}{address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pub\+Nub channel name Required Format\+: uri Example\+: 54770517599294\+\_\+6dda849e \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_ae1bccd17747972656da5a268a1d54fb0}{encryption}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional. Specifies if notification messages will be encrypted or not. Please note that for some event filters (e.\+g. presence) encryption is mandatory and {\ttfamily false} value provided by caller will be ignored. Required Enum\+: false \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_af93c6735e4904a1374399122c009ac67}{certificate\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Certificate name for mobile notification transports Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_a052c68f64780390c385e5f057e545975}{registration\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Device instance ID for mobile notification transports Required Example\+: 38b062ae-\/85f8-\/4dcc-\/8734-\/04d3f7393d42 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_af329d91f4f79c65f90d1dbc8f55c4499}{subscriber\+Key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pub\+Nub credential required to subscribe to the channel Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_a95bcf099becd00030a9eac788612734e}{secret\+Key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pub\+Nub credential required to subscribe to the channel Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_aafe9d622844982c702f5c954f067688a}{encryption\+Algorithm}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em (Only for a \char`\"{}\+Pub\+Nub\char`\"{} transport, returned only if {\ttfamily encryption} is {\ttfamily true}) Encryption algorithm used Enum\+: AES \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NotificationDeliveryMode_ae07c01b3d019aad74a3d6797ed4ca5b9}{encryption\+Key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em (Only for a \char`\"{}\+Pub\+Nub\char`\"{} transport, returned only if {\ttfamily encryption} is {\ttfamily true}) Cryptographic key to decrypt Pub\+Nub notification messages \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notification delivery transport information 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_a1eef77ae5bc9db13e189b7d43f8155e7}\label{classRingCentral_1_1NotificationDeliveryMode_a1eef77ae5bc9db13e189b7d43f8155e7}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!address@{address}}
+\index{address@{address}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Pub\+Nub channel name Required Format\+: uri Example\+: 54770517599294\+\_\+6dda849e 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_af93c6735e4904a1374399122c009ac67}\label{classRingCentral_1_1NotificationDeliveryMode_af93c6735e4904a1374399122c009ac67}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!certificateName@{certificateName}}
+\index{certificateName@{certificateName}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{certificateName}{certificateName}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+certificate\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Certificate name for mobile notification transports Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_ae1bccd17747972656da5a268a1d54fb0}\label{classRingCentral_1_1NotificationDeliveryMode_ae1bccd17747972656da5a268a1d54fb0}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!encryption@{encryption}}
+\index{encryption@{encryption}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{encryption}{encryption}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Notification\+Delivery\+Mode.\+encryption\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional. Specifies if notification messages will be encrypted or not. Please note that for some event filters (e.\+g. presence) encryption is mandatory and {\ttfamily false} value provided by caller will be ignored. Required Enum\+: false 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_aafe9d622844982c702f5c954f067688a}\label{classRingCentral_1_1NotificationDeliveryMode_aafe9d622844982c702f5c954f067688a}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!encryptionAlgorithm@{encryptionAlgorithm}}
+\index{encryptionAlgorithm@{encryptionAlgorithm}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{encryptionAlgorithm}{encryptionAlgorithm}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+encryption\+Algorithm\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+(Only for a \char`\"{}\+Pub\+Nub\char`\"{} transport, returned only if {\ttfamily encryption} is {\ttfamily true}) Encryption algorithm used Enum\+: AES 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_ae07c01b3d019aad74a3d6797ed4ca5b9}\label{classRingCentral_1_1NotificationDeliveryMode_ae07c01b3d019aad74a3d6797ed4ca5b9}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!encryptionKey@{encryptionKey}}
+\index{encryptionKey@{encryptionKey}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{encryptionKey}{encryptionKey}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+encryption\+Key\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+(Only for a \char`\"{}\+Pub\+Nub\char`\"{} transport, returned only if {\ttfamily encryption} is {\ttfamily true}) Cryptographic key to decrypt Pub\+Nub notification messages 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_a052c68f64780390c385e5f057e545975}\label{classRingCentral_1_1NotificationDeliveryMode_a052c68f64780390c385e5f057e545975}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!registrationId@{registrationId}}
+\index{registrationId@{registrationId}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{registrationId}{registrationId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+registration\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Device instance ID for mobile notification transports Required Example\+: 38b062ae-\/85f8-\/4dcc-\/8734-\/04d3f7393d42 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_a95bcf099becd00030a9eac788612734e}\label{classRingCentral_1_1NotificationDeliveryMode_a95bcf099becd00030a9eac788612734e}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!secretKey@{secretKey}}
+\index{secretKey@{secretKey}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{secretKey}{secretKey}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+secret\+Key\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Pub\+Nub credential required to subscribe to the channel Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_af329d91f4f79c65f90d1dbc8f55c4499}\label{classRingCentral_1_1NotificationDeliveryMode_af329d91f4f79c65f90d1dbc8f55c4499}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!subscriberKey@{subscriberKey}}
+\index{subscriberKey@{subscriberKey}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{subscriberKey}{subscriberKey}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+subscriber\+Key\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Pub\+Nub credential required to subscribe to the channel Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1NotificationDeliveryMode_a649d408715f11083d49a7794273db42d}\label{classRingCentral_1_1NotificationDeliveryMode_a649d408715f11083d49a7794273db42d}} 
+\index{RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}!transportType@{transportType}}
+\index{transportType@{transportType}!RingCentral.NotificationDeliveryMode@{RingCentral.NotificationDeliveryMode}}
+\doxysubsubsection{\texorpdfstring{transportType}{transportType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Notification\+Delivery\+Mode.\+transport\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The transport type for this subscription, or the channel by which an app should be notified of an event Required Enum\+: Web\+Hook, RC/\+APNS, RC/\+GCM, Pub\+Nub, Web\+Socket 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Notification\+Delivery\+Mode.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions}{}\doxysection{Ring\+Central.\+Net.\+Retry.\+Retry\+Options Class Reference}
+\label{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions}\index{RingCentral.Net.Retry.RetryOptions@{RingCentral.Net.Retry.RetryOptions}}
+
+
+Collaboration diagram for Ring\+Central.\+Net.\+Retry.\+Retry\+Options\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Func$<$ \mbox{\hyperlink{classRingCentral_1_1RestException}{Rest\+Exception}}, int, int $>$ {\bfseries retry\+Interval}
+\item 
+Func$<$ \mbox{\hyperlink{classRingCentral_1_1RestException}{Rest\+Exception}}, int, bool $>$ {\bfseries should\+Retry}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions_a4f2701e26a51cc2db70c9ba81957dc14}\label{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions_a4f2701e26a51cc2db70c9ba81957dc14}} 
+static readonly \mbox{\hyperlink{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions}{Retry\+Options}} {\bfseries Default\+Instance} = new \mbox{\hyperlink{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions}{Retry\+Options}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions_ac68dfa8f94a5751f89ef9343ba019480}\label{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions_ac68dfa8f94a5751f89ef9343ba019480}} 
+\index{RingCentral.Net.Retry.RetryOptions@{RingCentral.Net.Retry.RetryOptions}!retryInterval@{retryInterval}}
+\index{retryInterval@{retryInterval}!RingCentral.Net.Retry.RetryOptions@{RingCentral.Net.Retry.RetryOptions}}
+\doxysubsubsection{\texorpdfstring{retryInterval}{retryInterval}}
+{\footnotesize\ttfamily Func$<$\mbox{\hyperlink{classRingCentral_1_1RestException}{Rest\+Exception}}, int, int$>$ Ring\+Central.\+Net.\+Retry.\+Retry\+Options.\+retry\+Interval}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= (restException, retriesAttempted) =>}
+\DoxyCodeLine{            (\textcolor{keywordtype}{int}) (60 * 1000 * Math.Pow(2, retriesAttempted))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions_a89436a98370cd78ead00088e6cd05e90}\label{classRingCentral_1_1Net_1_1Retry_1_1RetryOptions_a89436a98370cd78ead00088e6cd05e90}} 
+\index{RingCentral.Net.Retry.RetryOptions@{RingCentral.Net.Retry.RetryOptions}!shouldRetry@{shouldRetry}}
+\index{shouldRetry@{shouldRetry}!RingCentral.Net.Retry.RetryOptions@{RingCentral.Net.Retry.RetryOptions}}
+\doxysubsubsection{\texorpdfstring{shouldRetry}{shouldRetry}}
+{\footnotesize\ttfamily Func$<$\mbox{\hyperlink{classRingCentral_1_1RestException}{Rest\+Exception}}, int, bool$>$ Ring\+Central.\+Net.\+Retry.\+Retry\+Options.\+should\+Retry}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= (restException, retriesAttempted) =>}
+\DoxyCodeLine{            retriesAttempted < 3 \&\&}
+\DoxyCodeLine{            Array.Exists(\textcolor{keyword}{new}[] \{429, 503\},}
+\DoxyCodeLine{                element => (HttpStatusCode) element == restException.httpResponseMessage.StatusCode)}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net.\+Retry/Definitions.\+cs\end{DoxyCompactItemize}

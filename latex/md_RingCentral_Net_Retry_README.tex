@@ -1,0 +1,18 @@
+This extension allows you to retry a REST request if there is {\ttfamily Rest\+Exception}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var rc = \textcolor{keyword}{new} RestClient(}
+\DoxyCodeLine{    Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_CLIENT\_ID"{}}),}
+\DoxyCodeLine{    Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_CLIENT\_SECRET"{}}),}
+\DoxyCodeLine{    Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_SERVER\_URL"{}})}
+\DoxyCodeLine{);}
+\DoxyCodeLine{await rc.Authorize(}
+\DoxyCodeLine{    Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_JWT\_TOKEN"{}})}
+\DoxyCodeLine{);}
+\DoxyCodeLine{var retryExtension = \textcolor{keyword}{new} RetryExtension();}
+\DoxyCodeLine{await rc.InstallExtension(retryExtension);}
+
+\end{DoxyCode}
+\hypertarget{md_RingCentral_Net_Retry_README_autotoc_md487}{}\doxysection{More documentation}\label{md_RingCentral_Net_Retry_README_autotoc_md487}
+This extension is inspired by \href{https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry}{\texttt{ its Type\+Script counterpart}} , check its documentation for more information. 

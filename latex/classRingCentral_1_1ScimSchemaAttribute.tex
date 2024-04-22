@@ -1,0 +1,157 @@
+\hypertarget{classRingCentral_1_1ScimSchemaAttribute}{}\doxysection{Ring\+Central.\+Scim\+Schema\+Attribute Class Reference}
+\label{classRingCentral_1_1ScimSchemaAttribute}\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_a8fc31d72d8a793de25dd609ae501a4c1}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the attribute Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_aef9c1115a7264b319725c88096202b97}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required Enum\+: string, boolean, decimal, integer, date\+Time, reference, complex \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute}{Scim\+Schema\+Attribute}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_a0a0326adaddcd4b14a1a86793de72b96}{sub\+Attributes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_aef60a66369d984e19417b729a8aba2f2}{multi\+Valued}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A Boolean value indicating the attribute\textquotesingle{}s plurality Required \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_a17e19a12e9fc2e0ebd4f84c88e3cd45c}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The description of the attribute \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_adee2359f8baca7e66d1c8785d720accf}{required}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_a0b064d3b0e53cf8b4f2afb670e884635}{canonical\+Values}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A collection of suggested canonical values \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_ad88ee7e6cc93ef7ec7d448b1238a790e}{case\+Exact}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_a455e3f909dcb36eada41d759492348f7}{mutability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates the circumstances under which the value of the attribute can be (re)defined Required Enum\+: read\+Only, read\+Write, immutable, write\+Only \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_a0ccc959e3f307a4e581889fb9f2f0f70}{returned}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates when an attribute and associated values are returned Required Enum\+: always, never, default, request \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_ab6bb133e0ac4dfd3e1078aa183443e37}{uniqueness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies how the service provider enforces uniqueness of attribute values Required Enum\+: none, server, global \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute_a37d6001a64a84914bd533300c1d1ae34}{reference\+Types}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates the SCIM resource types that be referenced \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_a0b064d3b0e53cf8b4f2afb670e884635}\label{classRingCentral_1_1ScimSchemaAttribute_a0b064d3b0e53cf8b4f2afb670e884635}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!canonicalValues@{canonicalValues}}
+\index{canonicalValues@{canonicalValues}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{canonicalValues}{canonicalValues}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Scim\+Schema\+Attribute.\+canonical\+Values\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A collection of suggested canonical values 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_ad88ee7e6cc93ef7ec7d448b1238a790e}\label{classRingCentral_1_1ScimSchemaAttribute_ad88ee7e6cc93ef7ec7d448b1238a790e}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!caseExact@{caseExact}}
+\index{caseExact@{caseExact}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{caseExact}{caseExact}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Scim\+Schema\+Attribute.\+case\+Exact\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_a17e19a12e9fc2e0ebd4f84c88e3cd45c}\label{classRingCentral_1_1ScimSchemaAttribute_a17e19a12e9fc2e0ebd4f84c88e3cd45c}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!description@{description}}
+\index{description@{description}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Ring\+Central.\+Scim\+Schema\+Attribute.\+description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The description of the attribute 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_aef60a66369d984e19417b729a8aba2f2}\label{classRingCentral_1_1ScimSchemaAttribute_aef60a66369d984e19417b729a8aba2f2}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!multiValued@{multiValued}}
+\index{multiValued@{multiValued}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{multiValued}{multiValued}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Scim\+Schema\+Attribute.\+multi\+Valued\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A Boolean value indicating the attribute\textquotesingle{}s plurality Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_a455e3f909dcb36eada41d759492348f7}\label{classRingCentral_1_1ScimSchemaAttribute_a455e3f909dcb36eada41d759492348f7}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!mutability@{mutability}}
+\index{mutability@{mutability}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{mutability}{mutability}}
+{\footnotesize\ttfamily string Ring\+Central.\+Scim\+Schema\+Attribute.\+mutability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates the circumstances under which the value of the attribute can be (re)defined Required Enum\+: read\+Only, read\+Write, immutable, write\+Only 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_a8fc31d72d8a793de25dd609ae501a4c1}\label{classRingCentral_1_1ScimSchemaAttribute_a8fc31d72d8a793de25dd609ae501a4c1}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!name@{name}}
+\index{name@{name}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Scim\+Schema\+Attribute.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The name of the attribute Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_a37d6001a64a84914bd533300c1d1ae34}\label{classRingCentral_1_1ScimSchemaAttribute_a37d6001a64a84914bd533300c1d1ae34}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!referenceTypes@{referenceTypes}}
+\index{referenceTypes@{referenceTypes}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{referenceTypes}{referenceTypes}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Scim\+Schema\+Attribute.\+reference\+Types\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates the SCIM resource types that be referenced 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_adee2359f8baca7e66d1c8785d720accf}\label{classRingCentral_1_1ScimSchemaAttribute_adee2359f8baca7e66d1c8785d720accf}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!required@{required}}
+\index{required@{required}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{required}{required}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Scim\+Schema\+Attribute.\+required\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Required 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_a0ccc959e3f307a4e581889fb9f2f0f70}\label{classRingCentral_1_1ScimSchemaAttribute_a0ccc959e3f307a4e581889fb9f2f0f70}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!returned@{returned}}
+\index{returned@{returned}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{returned}{returned}}
+{\footnotesize\ttfamily string Ring\+Central.\+Scim\+Schema\+Attribute.\+returned\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates when an attribute and associated values are returned Required Enum\+: always, never, default, request 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_a0a0326adaddcd4b14a1a86793de72b96}\label{classRingCentral_1_1ScimSchemaAttribute_a0a0326adaddcd4b14a1a86793de72b96}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!subAttributes@{subAttributes}}
+\index{subAttributes@{subAttributes}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{subAttributes}{subAttributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ScimSchemaAttribute}{Scim\+Schema\+Attribute}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Scim\+Schema\+Attribute.\+sub\+Attributes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_aef9c1115a7264b319725c88096202b97}\label{classRingCentral_1_1ScimSchemaAttribute_aef9c1115a7264b319725c88096202b97}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!type@{type}}
+\index{type@{type}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Ring\+Central.\+Scim\+Schema\+Attribute.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Required Enum\+: string, boolean, decimal, integer, date\+Time, reference, complex 
+
+\mbox{\Hypertarget{classRingCentral_1_1ScimSchemaAttribute_ab6bb133e0ac4dfd3e1078aa183443e37}\label{classRingCentral_1_1ScimSchemaAttribute_ab6bb133e0ac4dfd3e1078aa183443e37}} 
+\index{RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}!uniqueness@{uniqueness}}
+\index{uniqueness@{uniqueness}!RingCentral.ScimSchemaAttribute@{RingCentral.ScimSchemaAttribute}}
+\doxysubsubsection{\texorpdfstring{uniqueness}{uniqueness}}
+{\footnotesize\ttfamily string Ring\+Central.\+Scim\+Schema\+Attribute.\+uniqueness\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies how the service provider enforces uniqueness of attribute values Required Enum\+: none, server, global 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Scim\+Schema\+Attribute.\+cs\end{DoxyCompactItemize}

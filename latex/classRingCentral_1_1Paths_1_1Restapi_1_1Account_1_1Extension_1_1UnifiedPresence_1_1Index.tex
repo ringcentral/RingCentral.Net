@@ -1,0 +1,56 @@
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Unified\+Presence.\+Index Class Reference}
+\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index@{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Unified\+Presence.\+Index\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_ada8813b9a41f96a00377a431b008a324}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_ada8813b9a41f96a00377a431b008a324}} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent)
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_adb04a67f9d8f90771f96c35d04d3e9a6}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_adb04a67f9d8f90771f96c35d04d3e9a6}} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1UnifiedPresence}{Ring\+Central.\+Unified\+Presence}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_aef9ca5dd4337700eafde0016bd545034}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the unified presence status of the requested user(s). The set of parameters returned by this method differs whether you return the requester\textquotesingle{}s presence or any other user presence. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/unified-\/presence Rate Limit Group\+: Medium App Permission\+: Read\+Presence \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Presence\+Status \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1UnifiedPresence}{Ring\+Central.\+Unified\+Presence}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_ac8681347bc8610dd64ab718d88f42883}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1UpdateUnifiedPresence}{Update\+Unified\+Presence}} update\+Unified\+Presence, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the unified presence for the current user specified in path. HTTP Method\+: patch Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/unified-\/presence Rate Limit Group\+: Medium App Permission\+: Edit\+Presence \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Presence\+Status \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_a71386f4897309bd75be7e64951ce9404}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_a71386f4897309bd75be7e64951ce9404}} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_a78cdc3b0d2b841682952b285f1d952ca}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_a78cdc3b0d2b841682952b285f1d952ca}} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_aef9ca5dd4337700eafde0016bd545034}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_aef9ca5dd4337700eafde0016bd545034}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index@{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index@{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1UnifiedPresence}{Ring\+Central.\+Unified\+Presence}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Unified\+Presence.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the unified presence status of the requested user(s). The set of parameters returned by this method differs whether you return the requester\textquotesingle{}s presence or any other user presence. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/unified-\/presence Rate Limit Group\+: Medium App Permission\+: Read\+Presence \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Read\+Presence\+Status 
+
+\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_ac8681347bc8610dd64ab718d88f42883}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1UnifiedPresence_1_1Index_ac8681347bc8610dd64ab718d88f42883}} 
+\index{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index@{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index}!Patch@{Patch}}
+\index{Patch@{Patch}!RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index@{RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence.Index}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1UnifiedPresence}{Ring\+Central.\+Unified\+Presence}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Unified\+Presence.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateUnifiedPresence}{Update\+Unified\+Presence}}}]{update\+Unified\+Presence,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the unified presence for the current user specified in path. HTTP Method\+: patch Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/unified-\/presence Rate Limit Group\+: Medium App Permission\+: Edit\+Presence \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Edit\+Presence\+Status 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Extension/\+Unified\+Presence/Index.\+cs\end{DoxyCompactItemize}
